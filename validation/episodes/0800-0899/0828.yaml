@@ -1,0 +1,73 @@
+episode: 828
+status: clean
+analyzed_at: "2026-01-25T11:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  total_duration_sec: 9840.8
+  guest_count: 1
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Anya"
+    total_duration_sec: 1315.5
+    replies_count: 357
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет гостя в самом начале подкаста (4.86s): "Сегодня у нас Аня."
+        Далее объясняет: "она подсидела Грэя" (11.97s), что указывает на то, что Аня
+        замещает отсутствующего ведущего Gray.
+
+        Anya активно участвует в обсуждении на протяжении всего эпизода (357 реплик,
+        21.9 минут общей длительности), что подтверждает её роль как полноценного участника.
+
+        В справочнике people.yaml есть запись:
+        - id: "anya"
+          canonical_name: "Anya"
+          aliases: ["Аня"]
+          real_name: "Анна"
+          info: "13 выпусков"
+
+      possible_matches: []
+
+      # Задание на voice comparison не требуется - идентификация очевидна
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    - Все спикеры корректно представлены в начале эпизода
+    - Anya была явно представлена Umputun'ом как замена Gray
+    - Распределение реплик логичное: ведущие активно участвуют, гость тоже вовлечён
+    - Нет подозрительных SPEAKER_NN или Guest записей
+    - Реклама (_ad) корректно выделена в отдельного спикера
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+metadata:
+  date: "2022-10-15"
+  gray_absent: true
+  guest_role: "temporary_host"
+  notes: |
+    Эпизод 828 является примером чистой разметки:
+    - Единственный гость (Anya) был явно представлен
+    - Все спикеры корректно идентифицированы
+    - Нет ошибок автоматического распознавания
+    - Разметка не требует исправлений

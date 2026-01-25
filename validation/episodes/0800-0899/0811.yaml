@@ -1,0 +1,53 @@
+episode: 811
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 7087.7
+
+  # Детальная статистика ведущих
+  host_stats:
+    - speaker: Bobuk
+      replies_count: 627
+      total_duration_sec: 2422
+      first_appearance_sec: 22
+
+    - speaker: Umputun
+      replies_count: 587
+      total_duration_sec: 1845
+      first_appearance_sec: 0
+
+    - speaker: Gray
+      replies_count: 279
+      total_duration_sec: 1128
+      first_appearance_sec: 118
+
+    - speaker: Alek.sys
+      replies_count: 255
+      total_duration_sec: 857
+      first_appearance_sec: 25
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+  notes:
+    - "В начале эпизода Umputun упоминает 'суровый мужской состав', что соответствует присутствию только 4 ведущих-мужчин"
+    - "Все 4 ведущих появляются в первые 2 минуты эпизода (0-118 сек)"
+    - "Никаких упоминаний о гостях в тексте не обнаружено"
+    - "Все реплики корректно атрибутированы известным ведущим или рекламе (_ad)"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Общее заключение
+conclusion: |
+  Эпизод 811 имеет чистую разметку спикеров. Присутствуют только 4 известных ведущих
+  (Umputun, Bobuk, Gray, Alek.sys) и реклама (_ad). Неизвестные спикеры отсутствуют.
+  Все реплики корректно атрибутированы. Дополнительная очистка или идентификация не требуется.

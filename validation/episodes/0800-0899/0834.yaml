@@ -1,0 +1,55 @@
+episode: 834
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 8838.23
+  notes: |
+    В эпизоде участвуют 4 ведущих. Ksenks отсутствует, что отмечено
+    в начале выпуска ("Без прекрасной петели на сегодня").
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# В эпизоде нет неизвестных спикеров (SPEAKER_XX, Guest, и т.д.)
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все присутствующие ведущие представлены/упомянуты естественным образом:
+    - Umputun: начинает выпуск (0:00)
+    - Bobuk: упомянут Umputun в начале, первая реплика в 32s
+    - Gray: первая реплика в 159.72s (2:39)
+    - Alek.sys: первая реплика в 179.82s (2:59)
+    - Ksenks: отсутствует, упомянута как "прекрасная петя"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет необходимости в правилах очистки - все спикеры корректно идентифицированы
+
+# Дополнительная информация
+metadata:
+  episode_date: "2022-11-26"
+  episode_duration_formatted: "2:27:18"
+  speakers_stats:
+    Umputun:
+      replies_count: 855
+      total_duration_sec: 2843
+      first_reply_at: 0.49
+    Bobuk:
+      replies_count: 679
+      total_duration_sec: 2443
+      first_reply_at: 32.24
+    Gray:
+      replies_count: 429
+      total_duration_sec: 1699
+      first_reply_at: 159.72
+    Alek.sys:
+      replies_count: 261
+      total_duration_sec: 893
+      first_reply_at: 179.82
+    _ad:
+      note: "Рекламные сегменты"

@@ -1,0 +1,66 @@
+episode: 820
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6127.8
+  special_speakers: [_ad]
+
+# Детальная статистика по ведущим
+hosts_statistics:
+  - name: Umputun
+    replies_count: 723
+    total_duration_sec: 2329.5
+    first_appearance_sec: 0.2
+    introduced: true
+    introduction_context: "Ведет эпизод с самого начала"
+
+  - name: Bobuk
+    replies_count: 321
+    total_duration_sec: 1186.4
+    first_appearance_sec: 124.5
+    introduced: false
+    introduction_context: "Присоединяется к разговору без представления"
+
+  - name: Alek.sys
+    replies_count: 294
+    total_duration_sec: 917.9
+    first_appearance_sec: 26.1
+    introduced: false
+    introduction_context: "Присоединяется к разговору без представления"
+
+  - name: Gray
+    replies_count: 215
+    total_duration_sec: 910.4
+    first_appearance_sec: 130.6
+    introduced: false
+    introduction_context: "Присоединяется к разговору без представления"
+
+  - name: Ksenks
+    replies_count: 180
+    total_duration_sec: 674.0
+    first_appearance_sec: 598.1
+    introduced: true
+    introduction_context: "Umputun в 11.9s: 'Ожидаем Ксюшу к прибытиям'. В 583.6s: 'Ксюша, ты к нам зашла?'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  notes: "Ksenks была упомянута как ожидаемая в начале и подтверждено её присоединение. Остальные ведущие (Bobuk, Gray, Alek.sys) присоединяются без формального представления, что является нормой для регулярных ведущих."
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes:
+  - "Эпизод полностью чист - все спикеры корректно идентифицированы"
+  - "Присутствуют только известные ведущие и рекламные вставки (_ad)"
+  - "Нет неизвестных спикеров типа SPEAKER_XX или Guest"
+  - "Ksenks присоединяется позже (~10 минут), что было анонсировано в начале"
+  - "Umputun отмечает, что вернулся после отпуска ('после такого долгого и неподобающее долгого перерыва')"

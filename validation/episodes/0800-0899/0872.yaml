@@ -1,0 +1,50 @@
+episode: 872
+status: clean
+analyzed_at: "2026-01-25T11:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys]
+  total_duration_sec: 7689
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Эпизод начинается с представления Umputun в 1s"
+    - "Umputun упоминает 'сурово мужской суставчик' (14-19s), подразумевая отсутствие Gray и Ksenks"
+    - "Bobuk и Alek.sys начинают говорить сразу в первую минуту (19-20s)"
+    - "Все три ведущих активно участвуют в подкасте с примерно равным распределением времени"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+analysis_notes:
+  - "В эпизоде присутствуют только три известных ведущих: Umputun, Bobuk, Alek.sys"
+  - "Неизвестных спикеров (SPEAKER_*, Guest*) не обнаружено"
+  - "Разметка спикеров выглядит корректной и консистентной"
+  - "Общая длительность эпизода: ~128 минут"
+
+speaker_statistics:
+  - speaker: Umputun
+    replies_count: 779
+    total_duration_sec: 2976
+    first_appearance_sec: 1
+    percentage_of_airtime: 38.7
+
+  - speaker: Bobuk
+    replies_count: 739
+    total_duration_sec: 2786
+    first_appearance_sec: 19
+    percentage_of_airtime: 36.2
+
+  - speaker: Alek.sys
+    replies_count: 356
+    total_duration_sec: 1412
+    first_appearance_sec: 20
+    percentage_of_airtime: 18.4

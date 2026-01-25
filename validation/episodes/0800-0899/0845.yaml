@@ -1,0 +1,64 @@
+episode: 845
+status: clean
+analyzed_at: "2026-01-25T11:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9667.0
+  total_replies: 2443
+
+# Детальная статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 760
+    total_duration_sec: 2590.3
+    first_appearance_sec: 0.9
+    role: main_host
+
+  - speaker: Bobuk
+    replies_count: 592
+    total_duration_sec: 2214.3
+    first_appearance_sec: 20.7
+    role: co-host
+
+  - speaker: Gray
+    replies_count: 399
+    total_duration_sec: 1881.6
+    first_appearance_sec: 35.6
+    role: co-host
+
+  - speaker: Ksenks
+    replies_count: 421
+    total_duration_sec: 1399.6
+    first_appearance_sec: 193.8
+    role: co-host
+    note: "Присоединилась через ~3 минуты после начала, как и упоминал Umputun в начале"
+
+  - speaker: Alek.sys
+    replies_count: 271
+    total_duration_sec: 1013.2
+    first_appearance_sec: 56.8
+    role: co-host
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "В начале выпуска Umputun упоминает, что 'состав ожидается самый, что есть полный', 'пока он унылый, но Ксюша подойдет'"
+    - "Ksenks действительно присоединяется позже (~3:14), что соответствует вступлению"
+    - "Все пять ведущих корректно идентифицированы"
+    - "Неизвестных или проблемных спикеров не обнаружено"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Выводы
+conclusion: |
+  Эпизод 845 имеет идеальную разметку спикеров. Присутствуют только 5 известных ведущих,
+  все корректно идентифицированы. Неизвестных спикеров (SPEAKER_*, Guest*) нет.
+  Распределение реплик естественное для полного состава. Никаких действий не требуется.

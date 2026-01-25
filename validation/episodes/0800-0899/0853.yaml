@@ -1,0 +1,57 @@
+episode: 853
+status: clean
+analyzed_at: "2026-01-25T20:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk, Ksenks]
+  total_duration_sec: 6541
+
+# Детальная статистика ведущих
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 830
+    total_duration_sec: 2507
+    first_appearance_sec: 0
+    introduced: true
+    introduction_context: "Начинает эпизод как основной ведущий"
+
+  - speaker: Gray
+    replies_count: 423
+    total_duration_sec: 1417
+    first_appearance_sec: 26
+    introduced: true
+    introduction_context: "Упомянут Umputun: 'Грей в ассортименте' (24s)"
+
+  - speaker: Bobuk
+    replies_count: 391
+    total_duration_sec: 1049
+    first_appearance_sec: 14
+    introduced: true
+    introduction_context: "Представлен Umputun: 'Сегодня Бобук почтил нас своим драгоценным присутствием' (8s)"
+
+  - speaker: Ksenks
+    replies_count: 258
+    total_duration_sec: 735
+    first_appearance_sec: 1667
+    introduced: true
+    introduction_context: "Позднее присоединение с явным упоминанием: 'Ксюша, я заметил, что ты зашла' (1660s)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Общие замечания
+notes:
+  - "Эпизод полностью чистый, все спикеры корректно идентифицированы"
+  - "Все четыре ведущих (Umputun, Bobuk, Gray, Ksenks) присутствуют и представлены"
+  - "Ksenks присоединяется позже (~27 минут от начала), что отражено в транскрипте"
+  - "Никаких SPEAKER_*, Guest* или других неизвестных спикеров не обнаружено"
+  - "Длительность эпизода: 109 минут (6541 секунд)"

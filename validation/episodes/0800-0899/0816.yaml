@@ -1,0 +1,93 @@
+episode: 816
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8850
+
+# Статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 910
+    total_duration_sec: 3112
+    first_appearance_sec: 0.69
+
+  - speaker: Bobuk
+    replies_count: 540
+    total_duration_sec: 2276
+    first_appearance_sec: 127.21
+
+  - speaker: Ksenks
+    replies_count: 299
+    total_duration_sec: 1162
+    first_appearance_sec: 647.54
+
+  - speaker: Alek.sys
+    replies_count: 236
+    total_duration_sec: 790
+    first_appearance_sec: 23.22
+
+  - speaker: Gray
+    replies_count: 159
+    total_duration_sec: 684
+    first_appearance_sec: 124.69
+
+# Специальные спикеры
+special_speakers:
+  - speaker: _ad
+    replies_count: 18
+    total_duration_sec: 115
+    first_appearance_sec: 42.62
+    type: advertisement
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_notes:
+    - speaker: Umputun
+      introduced_at_sec: 0.69
+      note: "Открывает эпизод, объявляет номер и дату выпуска"
+
+    - speaker: Bobuk
+      introduced_at_sec: 18.16
+      note: "Умпутун упоминает 'Бобук с нами' в 18.16s"
+
+    - speaker: Alek.sys
+      introduced_at_sec: 19.14
+      note: "Умпутун спрашивает про Лёху ('А Лёхи в прошлый раз не было, да?'), Alek.sys отвечает в 23.22s"
+
+    - speaker: Gray
+      introduced_at_sec: 107.4
+      note: "Умпутун обращается к Павлу ('Первую тему, Павел, к тебе'), Gray/Павел отвечает в 124.69s"
+
+    - speaker: Ksenks
+      introduced_at_sec: 643.2
+      note: "Умпутун обращается 'Ксения, а как твое отношение с Gnome', она отвечает в 647.54s. Также упоминалась в начале как 'Маруся опоздала' (6.93s)"
+
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заметки по анализу
+analysis_notes: |
+  Эпизод 816 имеет чистую разметку спикеров:
+
+  1. Все 5 ведущих (Umputun, Bobuk, Gray, Ksenks, Alek.sys) присутствуют и корректно размечены
+  2. Нет неизвестных спикеров (SPEAKER_XX, Guest, и т.д.)
+  3. Все ведущие были представлены или упомянуты по имени в начале эпизода
+  4. Ksenks упоминается как "Маруся" в начале (6.93s), позже обращение по имени "Ксения" (643.2s)
+  5. Gray известен как Павел, что подтверждается обращением "Первую тему, Павел, к тебе" (107.4s)
+  6. Присутствует только рекламный блок (_ad) как специальный спикер
+
+  Распределение речи нормальное для стандартного выпуска:
+  - Umputun доминирует как главный ведущий (3112 сек, 35% времени)
+  - Bobuk второй по активности (2276 сек, 26%)
+  - Остальные ведущие в ожидаемых пропорциях
+
+  Никаких действий по очистке не требуется.

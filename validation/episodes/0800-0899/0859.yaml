@@ -1,0 +1,58 @@
+episode: 859
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7161.2
+
+  # Детальная статистика по ведущим
+  hosts_stats:
+    - speaker: Umputun
+      replies_count: 747
+      total_duration_sec: 2682
+      first_appearance_sec: 0.7
+
+    - speaker: Gray
+      replies_count: 319
+      total_duration_sec: 1579
+      first_appearance_sec: 67.9
+
+    - speaker: Ksenks
+      replies_count: 350
+      total_duration_sec: 1371
+      first_appearance_sec: 70.8
+
+    - speaker: Alek.sys
+      replies_count: 294
+      total_duration_sec: 1062
+      first_appearance_sec: 13.8
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Все четыре ведущих представлены в начале эпизода"
+    - "Umputun начинает эпизод с приветствия (0.7s)"
+    - "Alek.sys упоминается как 'чувак, который гнусит' и появляется с 13.8s"
+    - "Gray и Ksenks присоединяются к обсуждению в первых двух минутах (67.9s и 70.8s)"
+    - "Ksenks упоминается напрямую по имени ('Ксюш') в 73.7s"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Итоговые выводы
+summary: |
+  Эпизод 859 имеет чистую разметку спикеров. Присутствуют только четыре известных
+  ведущих (Umputun, Gray, Ksenks, Alek.sys), все корректно идентифицированы.
+
+  Неизвестных спикеров (SPEAKER_*, Guest*, и т.д.) в эпизоде нет. Все участники
+  были представлены или упомянуты в начале эпизода. Ошибок атрибуции не обнаружено.
+
+  Статистика участия сбалансирована и соответствует обычному распределению для
+  эпизода с четырьмя ведущими.

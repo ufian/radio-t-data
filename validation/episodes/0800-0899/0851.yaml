@@ -1,0 +1,63 @@
+episode: 851
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8555.4
+  total_replies: 2791
+
+# Детальная статистика по спикерам
+speakers_details:
+  - speaker: Umputun
+    replies_count: 1144
+    total_duration_sec: 2840.5
+    first_appearance_sec: 0.2
+    notes: "Основной ведущий, начал эпизод"
+
+  - speaker: Bobuk
+    replies_count: 680
+    total_duration_sec: 1873.4
+    first_appearance_sec: 53.1
+    notes: "Ведущий, присутствовал с начала"
+
+  - speaker: Gray
+    replies_count: 377
+    total_duration_sec: 1081.5
+    first_appearance_sec: 26.3
+    notes: "Ведущий, присутствовал с начала"
+
+  - speaker: Ksenks
+    replies_count: 367
+    total_duration_sec: 1066.3
+    first_appearance_sec: 184.4
+    notes: "Ведущая, присоединилась на ~3 минуте. Umputun в начале сказал 'Выпуск пока без Ксюши', затем она присоединилась со шуткой про 'робота Ксения'"
+
+  - speaker: Alek.sys
+    replies_count: 223
+    total_duration_sec: 603.9
+    first_appearance_sec: 29.2
+    notes: "Ведущий, присутствовал с начала"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры - известные ведущие. Ksenks присоединилась позже (184.4s),
+    что было отмечено шуткой Umputun'a про "робота Ксения" в 02:59-03:02.
+    Нет неизвестных или неидентифицированных спикеров.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные замечания
+analysis_notes: |
+  Эпизод 851 имеет чистую разметку спикеров. Все участники - известные
+  ведущие подкаста. Отсутствуют SPEAKER_* маркеры, гости или ошибки
+  распознавания. Позднее присоединение Ksenks было органичным и отмечено
+  в диалоге.

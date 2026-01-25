@@ -1,0 +1,76 @@
+episode: 886
+status: clean
+analyzed_at: "2026-01-25T14:22:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9723  # ~162 минуты (2 часа 42 минуты)
+  host_statistics:
+    Umputun:
+      replies_count: 1117
+      total_duration_sec: 4019
+      first_appearance_sec: 1
+    Bobuk:
+      replies_count: 506
+      total_duration_sec: 1935
+      first_appearance_sec: 25
+    Gray:
+      replies_count: 367
+      total_duration_sec: 1676
+      first_appearance_sec: 109
+    Ksenks:
+      replies_count: 306
+      total_duration_sec: 1348
+      first_appearance_sec: 2706  # Присоединилась на 45-й минуте как и было объявлено
+    Alek.sys:
+      replies_count: 166
+      total_duration_sec: 745
+      first_appearance_sec: 88
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - speaker: Umputun
+      introduced: true
+      method: "Начинает эпизод, представляет выпуск"
+      timestamp_sec: 1
+
+    - speaker: Bobuk
+      introduced: true
+      method: "Явно упомянут в начале: 'и даже Бобок, о котором мы уже забыли' (12.6s), начинает говорить в 25s"
+      timestamp_sec: 25
+
+    - speaker: Gray
+      introduced: true
+      method: "Упомянут в начале как один из присутствующих ('все остальные в ассортименте'), начинает говорить в 109s"
+      timestamp_sec: 109
+
+    - speaker: Alek.sys
+      introduced: true
+      method: "Упомянут как 'Леха, который пришел тут последним, предпоследним' (74s), начинает говорить в 88s"
+      timestamp_sec: 88
+
+    - speaker: Ksenks
+      introduced: true
+      method: "Явно объявлено в начале: 'Ксюша задержалась больше всех, придет позже' (12.6s). Присоединяется на 45-й минуте (2706s) с упоминанием от Umputun: 'Ксюша, зря ты выдаешь свой почтенный возраст' (2700s)"
+      timestamp_sec: 2706
+
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+notes: |
+  Эпизод 886 имеет чистую разметку спикеров:
+  - Присутствуют только 5 известных ведущих, неизвестных спикеров нет
+  - Все ведущие были явно представлены или упомянуты в начале эпизода
+  - Ksenks присоединилась позже (на 45-й минуте), что было заранее объявлено
+  - Никаких артефактов распознавания (SPEAKER_*, Guest*, SPEAKER_99, _ad) не обнаружено
+  - Статистика разумная: Umputun как главный ведущий имеет наибольшее время эфира
+  - Не требуется никаких действий по очистке или дополнительному анализу

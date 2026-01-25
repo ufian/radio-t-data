@@ -1,0 +1,74 @@
+episode: 893
+status: clean
+analyzed_at: "2026-01-25T11:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 10386.08
+
+# Детальная статистика по ведущим
+hosts_statistics:
+  - speaker: "Umputun"
+    total_duration_sec: 2743.34
+    replies_count: 848
+    first_appearance_sec: 1.18
+    introduced: false
+    note: "Начал эпизод, представление не требуется"
+
+  - speaker: "Bobuk"
+    total_duration_sec: 2027.88
+    replies_count: 570
+    first_appearance_sec: 21.64
+    introduced: false
+    note: "Присоединился с задержкой, о чём упомянул Umputun в начале"
+
+  - speaker: "Gray"
+    total_duration_sec: 2005.92
+    replies_count: 490
+    first_appearance_sec: 109.75
+    introduced: false
+    note: "Присоединился без специального представления"
+
+  - speaker: "Ksenks"
+    total_duration_sec: 1641.82
+    replies_count: 428
+    first_appearance_sec: 105.84
+    introduced: true
+    note: "Умputun попросил её поздороваться: 'Скажи нам здрасте нашим слушателям' (101.94s)"
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 1062.81
+    replies_count: 285
+    first_appearance_sec: 244.97
+    introduced: false
+    note: "Присоединился без специального представления"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: "Присоединился с задержкой (21.64s), но это было объяснено Umputun в начале эпизода"
+      severity: "info"
+
+    - speaker: "Gray"
+      issue: "Присоединился на 109.75s без представления, но это нормально для регулярных ведущих"
+      severity: "info"
+
+    - speaker: "Alek.sys"
+      issue: "Присоединился на 244.97s без представления, но это нормально для регулярных ведущих"
+      severity: "info"
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules: []
+
+# Общий вывод
+summary: |
+  Эпизод 893 содержит только пять известных ведущих подкаста: Umputun, Bobuk, Gray, Ksenks и Alek.sys.
+  Неизвестных спикеров (SPEAKER_*, Guest*) в данном эпизоде нет.
+  Все спикеры корректно идентифицированы, ошибок разметки не обнаружено.
+  Эпизод можно считать чистым (clean) и не требующим дополнительной обработки.

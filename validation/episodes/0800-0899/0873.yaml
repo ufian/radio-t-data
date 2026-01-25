@@ -1,0 +1,53 @@
+episode: 873
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: ["Umputun", "Ksenks"]
+  total_duration_sec: 7445.0
+  episode_duration_min: 124.1
+
+# Детальная информация о ведущих
+hosts_analysis:
+  - speaker: "Umputun"
+    total_duration_sec: 3608.9
+    replies_count: 971
+    first_reply_at_sec: 0.1
+    last_reply_at_sec: 7443.9
+    introduced: true
+    introduction_quote: "Это Ксюша и я. Я и Ксюша."
+    introduction_time_sec: 8.93
+
+  - speaker: "Ksenks"
+    total_duration_sec: 3368.8
+    replies_count: 760
+    first_reply_at_sec: 23.7
+    last_reply_at_sec: 7445.0
+    introduced: true
+    introduction_quote: "Это Ксюша и я. Я и Ксюша."
+    introduction_time_sec: 8.93
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  absent_hosts_mentioned: ["Bobuk", "Alek.sys"]
+  absent_hosts_mention_quote: "Ни Бобука, ни Лехи. Никого из этих противных мужланов нет."
+  absent_hosts_mention_time_sec: 10.95
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+notes: |
+  Эпизод 873 имеет идеальную разметку спикеров:
+  - Только два ведущих: Umputun и Ksenks
+  - Оба четко представлены в начале выпуска (8.93s)
+  - Явно упомянуто отсутствие других ведущих (Bobuk, Alek.sys)
+  - Неизвестных спикеров (SPEAKER_*, Guest*) не обнаружено
+  - Ошибок распознавания не выявлено
+  - Правила очистки не требуются

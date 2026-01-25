@@ -1,0 +1,61 @@
+episode: 847
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8806.2
+  notes: |
+    Bobuk отсутствует по семейным обстоятельствам (упоминается в начале).
+    Все четыре ведущих активно участвуют в эпизоде.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+  speaker_statistics:
+    - speaker: Umputun
+      replies: 1035
+      duration_sec: 3661
+      first_appearance_sec: 1
+      role: main_host
+
+    - speaker: Gray
+      replies: 437
+      duration_sec: 2014
+      first_appearance_sec: 320
+      role: co_host
+
+    - speaker: Ksenks
+      replies: 462
+      duration_sec: 1801
+      first_appearance_sec: 27
+      role: co_host
+      notes: "Заменяет отсутствующего Bobuk, ведёт рекламный блок"
+
+    - speaker: Alek.sys
+      replies: 361
+      duration_sec: 1331
+      first_appearance_sec: 70
+      role: co_host
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заметки об эпизоде
+notes: |
+  Эпизод 847 от 25 февраля 2023 года.
+
+  В начале эпизода Umputun упоминает, что Bobuk выбыл по семейным обстоятельствам,
+  вместо него пришла Ksenks (цитата: "Вместо выбывшего по семейным обстоятельствам
+  Бобука у нас сегодня вовремя пришедшая Ксюша").
+
+  Все спикеры чётко идентифицированы, ошибок разметки не обнаружено.
+  Распределение речи нормальное для выпуска с четырьмя ведущими.
+
+  Никаких SPEAKER_* или Guest* спикеров нет - качественная разметка.

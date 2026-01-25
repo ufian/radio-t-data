@@ -1,0 +1,102 @@
+episode: 810
+status: needs_review
+analyzed_at: "2026-01-25T11:47:51+00:00"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8885
+
+# Статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 845
+    total_duration_sec: 2397
+    first_appearance_sec: 0.51
+    introduced: true
+    introduction_context: "Основной ведущий, начинает выпуск"
+
+  - speaker: Bobuk
+    replies_count: 765
+    total_duration_sec: 2935
+    first_appearance_sec: 18.44
+    introduced: true
+    introduction_context: "Участвует в обсуждении состава с начала выпуска"
+
+  - speaker: Gray
+    replies_count: 365
+    total_duration_sec: 1404
+    first_appearance_sec: 20.70
+    introduced: true
+    introduction_context: "Участвует в обсуждении состава с начала выпуска"
+
+  - speaker: Ksenks
+    replies_count: 333
+    total_duration_sec: 1178
+    first_appearance_sec: 1275.51
+    introduced: true
+    introduction_context: "Представлена явно: 'Чувствую Ксюшу дыхание' (1270.99s)"
+
+  - speaker: Alek.sys
+    replies_count: 4
+    total_duration_sec: 10
+    first_appearance_sec: 1314.51
+    introduced: false
+    introduction_context: null
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: Alek.sys
+      issue: "Не представлен явно, имеет только 4 короткие реплики (10 сек суммарно). Нигде не упоминается по имени в тексте эпизода. Появляется в 1314.5s без контекста."
+      severity: medium
+      note: "Реплики выглядят осмысленными и вписываются в контекст разговора, но крайне малое участие и отсутствие представления вызывают вопросы."
+
+  replicas_details:
+    Alek.sys:
+      - time: 1314.51
+        text: "Ну, далеко не все так делают."
+        context: "Обсуждение редактирования сообщений в мессенджерах"
+
+      - time: 7041.25
+        text: "Становится хуже."
+        context: "Обсуждение утечек памяти в Chrome"
+
+      - time: 7490.86
+        text: "Это старого уровня."
+        context: "Обсуждение GitHub достижений"
+
+      - time: 7528.83
+        text: "Оба в твой репозиторий, я думаю, в 2012 году."
+        context: "Обсуждение pull-request'ов в репозитории Gray"
+
+# Специальные спикеры
+special_speakers:
+  - speaker: _ad
+    replies_count: 18
+    total_duration_sec: 118
+    first_appearance_sec: 58.40
+    type: advertisement
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии аналитика
+notes: |
+  Эпизод в целом чистый. Все ведущие правильно идентифицированы.
+
+  Основная проблема: Alek.sys появляется без представления и имеет минимальное участие.
+  Возможные объяснения:
+  1. Alek.sys действительно присутствовал, но его участие было минимальным (возможно технические проблемы со связью)
+  2. Часть реплик других ведущих ошибочно распознана как Alek.sys
+
+  Рекомендация: Voice comparison для всех 4 реплик Alek.sys с референсными записями его голоса
+  из других эпизодов, где он активно участвовал. Если голос не совпадает - переатрибутировать
+  реплики правильному ведущему на основе акустического анализа.
+
+  Все остальные спикеры (Umputun, Bobuk, Gray, Ksenks) представлены корректно и их участие
+  соответствует обычным паттернам подкаста.

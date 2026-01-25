@@ -1,0 +1,62 @@
+episode: 825
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  total_duration_sec: 8064.8
+  episode_duration_minutes: 134.4
+
+speakers_stats:
+  - speaker: Umputun
+    replies_count: 873
+    total_duration_sec: 2872.5
+    first_appearance_sec: 0.6
+    role: host
+
+  - speaker: Bobuk
+    replies_count: 674
+    total_duration_sec: 2392.5
+    first_appearance_sec: 24.0
+    role: host
+
+  - speaker: Ksenks
+    replies_count: 474
+    total_duration_sec: 1999.9
+    first_appearance_sec: 58.0
+    role: host
+
+  - speaker: _ad
+    replies_count: 20
+    total_duration_sec: 121.8
+    first_appearance_sec: 100.3
+    role: advertisement
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quality: excellent
+  introduction_summary: |
+    Все три ведущих были представлены в первой минуте эпизода:
+    - Umputun открывает подкаст (0.6s)
+    - Упоминает "мы с Ксюшей" (5.2s), представляя Ksenks
+    - Упоминает "Бобук помешал" (10.4s), представляя Bobuk
+    - Bobuk говорит первую реплику (24.0s)
+    - Ksenks говорит первую реплику (58.0s)
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заметки
+notes: |
+  Эпизод 825 имеет идеальную разметку:
+  - Все три ведущих правильно идентифицированы
+  - Нет неизвестных спикеров (SPEAKER_XX, Guest, и т.д.)
+  - Все участники представлены в начале
+  - Реклама правильно размечена как _ad
+  - Никаких аномалий или ошибок распознавания не обнаружено

@@ -1,0 +1,75 @@
+episode: 823
+status: clean
+analyzed_at: "2026-01-25T18:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  total_duration_sec: 8203.0
+  episode_duration_minutes: 136.7
+
+# Статистика по каждому ведущему
+hosts_stats:
+  - name: Umputun
+    replies_count: 941
+    total_duration_sec: 3016.8
+    first_appearance_sec: 0.8
+    last_appearance_sec: 8137.2
+    role: main_host
+
+  - name: Gray
+    replies_count: 498
+    total_duration_sec: 1879.1
+    first_appearance_sec: 18.8
+    last_appearance_sec: 8128.9
+    role: co_host
+
+  - name: Bobuk
+    replies_count: 586
+    total_duration_sec: 2355.1
+    first_appearance_sec: 1253.3
+    last_appearance_sec: 8089.8
+    role: co_host
+    notes: "Присоединился на ~21 минуте (1253s) - типичная ситуация"
+
+# Специальные спикеры
+special_speakers:
+  - name: _ad
+    replies_count: 18
+    total_duration_sec: 123.3
+    type: advertisement
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_notes: |
+    - Umputun начинает выпуск с приветствия (0.8s): "Доброго времени суток, 10 сентября 2022 года, подкаст выходного дня Радио-Т, выпуск 823"
+    - Gray присутствует с начала, начинает говорить на 18.8s
+    - Упоминается необычный состав - только двое в начале
+    - Gray упоминает на 34.1s: "Но сегодня Бобук обещал подойти"
+    - Bobuk присоединяется на 1253.3s (~21 минута), органично включается в разговор про Apple Watch
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Общий вывод
+validation_notes: |
+  Эпизод 823 полностью чист и не требует корректировки.
+
+  Особенности:
+  - Редкий состав из трех ведущих: Umputun, Gray, Bobuk
+  - Bobuk присоединился позже (~21 минута), что является нормой для подкаста
+  - Все ведущие правильно идентифицированы
+  - Нет неопознанных спикеров типа SPEAKER_XX или Guest
+  - Присутствуют только рекламные вставки (_ad), что нормально
+
+  Статистика говорения:
+  - Umputun: 50% времени речи (941 реплика)
+  - Bobuk: 39% времени речи (586 реплик)
+  - Gray: 31% времени речи (498 реплик)
+
+  Выпуск не требует дополнительной валидации или создания правил очистки.

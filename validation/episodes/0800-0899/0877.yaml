@@ -1,0 +1,63 @@
+episode: 877
+status: clean
+analyzed_at: "2026-01-25T12:00:00"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 8893
+  total_replies: 2263
+
+# Детальная статистика по каждому ведущему
+speakers_detailed:
+  - speaker: Umputun
+    replies_count: 1209
+    total_duration_sec: 3970
+    first_appearance_sec: 0
+    introduced: true
+    introduction_context: "Основной ведущий, открывает подкаст (0.5s): 'Доброго времени суток, 23 сентября 2023 года, подкаст выходного дня Радио Ти'"
+
+  - speaker: Gray
+    replies_count: 406
+    total_duration_sec: 1861
+    first_appearance_sec: 21
+    introduced: true
+    introduction_context: "Упоминается в начале Umputun-ом (6.8s): 'В составе без Бобу, как Ксюша подойдет в процессе', начинает говорить естественно в 21s"
+
+  - speaker: Alek.sys
+    replies_count: 381
+    total_duration_sec: 1478
+    first_appearance_sec: 40
+    introduced: true
+    introduction_context: "Упоминается косвенно ('Лёха') в начале, присутствует с начала эпизода, начинает говорить в 40s"
+
+  - speaker: Ksenks
+    replies_count: 267
+    total_duration_sec: 974
+    first_appearance_sec: 3312
+    introduced: true
+    introduction_context: "Явно упоминается в начале (6.8s): 'Ксюша подойдет в процессе', приветствуется при подключении (3308s): 'О, Ксюша зашла. Здравствуй, Ксюша'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все 4 ведущих явно представлены или упомянуты в начале эпизода"
+    - "Bobuk отсутствует в этом эпизоде (упомянуто: 'В составе без Бобу')"
+    - "Ksenks присоединилась к эфиру в середине (55 минута), что было заявлено в начале"
+    - "Нет неизвестных спикеров (SPEAKER_*, Guest*)"
+    - "Нет специальных спикеров (_ad, SPEAKER_99)"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные замечания
+remarks:
+  - "Эпизод полностью размечен, все спикеры идентифицированы"
+  - "Разметка консистентная, ошибок не обнаружено"
+  - "Эпизод длится 2.47 часа (8893 секунды)"
+  - "Формат эпизода: 3 ведущих с начала + 1 присоединился позже"

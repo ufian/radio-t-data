@@ -1,0 +1,72 @@
+episode: 887
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7567
+  episode_duration_min: 126
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+  # В этом эпизоде нет неизвестных спикеров
+  # Все реплики атрибутированы 5 известным ведущим
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_notes: |
+    Umputun в начале эпизода (00:05) объявляет "Полный состав", что является
+    стандартной формулировкой подкаста Radio-T для обозначения присутствия
+    всех пяти ведущих. Формального поименного представления не было, но это
+    нормально для эпизодов с постоянным составом.
+
+  speaker_first_appearances:
+    - speaker: Umputun
+      first_time_sec: 0
+      role: host
+      note: Открывает эпизод, объявляет тему
+
+    - speaker: Gray
+      first_time_sec: 12
+      role: host
+      note: Первая реплика в самом начале
+
+    - speaker: Bobuk
+      first_time_sec: 34
+      role: host
+      note: Присоединяется к обсуждению докера
+
+    - speaker: Ksenks
+      first_time_sec: 275
+      role: host
+      note: Первая реплика на 5-й минуте
+
+    - speaker: Alek.sys
+      first_time_sec: 628
+      role: host
+      note: Первая реплика на 10-й минуте
+
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+  # Эпизод чистый, правила очистки не требуются
+
+# Дополнительные заметки
+notes: |
+  Эпизод 887 имеет корректную разметку спикеров. Все реплики атрибутированы
+  пяти известным ведущим (Umputun, Bobuk, Gray, Ksenks, Alek.sys) без ошибок
+  распознавания SPEAKER_XX или неидентифицированных гостей.
+
+  Статистика подтверждает типичное распределение реплик для стандартного
+  выпуска:
+  - Umputun: 821 реплик, 2542 сек (лидирует как главный ведущий)
+  - Bobuk: 362 реплик, 1191 сек
+  - Gray: 291 реплик, 1327 сек
+  - Ksenks: 292 реплик, 1070 сек
+  - Alek.sys: 221 реплик, 682 сек
+
+  Тема эпизода: умные устройства (smart home, IoT), докер.
+  Дата: 9 декабря 2023 года.

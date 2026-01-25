@@ -1,0 +1,62 @@
+episode: 894
+status: clean
+analyzed_at: "2026-01-25T18:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 7405.4
+  notes: |
+    Episode features 4 hosts. Bobuk was mentioned as absent (confirmed he wouldn't join).
+    Ksenks joins later in the episode as mentioned in the opening.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Episode opening clearly states the lineup:
+    - Umputun introduces the episode at 0.4s
+    - Gray is present from 16.6s
+    - Alek.sys is present from 271.9s
+    - Ksenks is announced to join later and appears at 1492.4s (24.9 min)
+    - Bobuk's absence is explicitly mentioned
+
+    All hosts are properly attributed. No unknown speakers detected.
+    No speaker attribution errors found.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные наблюдения
+observations:
+  - episode_number: 894
+    date_mentioned: "27 января 2024 года"
+    hosts_statistics:
+      - name: Umputun
+        replies: 947
+        duration_sec: 3247.8
+        first_appearance_sec: 0.4
+        role: "Main host, introduces episode"
+      - name: Gray
+        replies: 358
+        duration_sec: 1558.0
+        first_appearance_sec: 16.6
+        role: "Co-host, present from start"
+      - name: Alek.sys
+        replies: 228
+        duration_sec: 807.8
+        first_appearance_sec: 271.9
+        role: "Co-host, joins early"
+      - name: Ksenks
+        replies: 404
+        duration_sec: 1791.8
+        first_appearance_sec: 1492.4
+        role: "Co-host, joins at ~25 min mark as announced"
+
+  transcript_quality: excellent
+  speaker_attribution_accuracy: high
+  special_speakers_used: false

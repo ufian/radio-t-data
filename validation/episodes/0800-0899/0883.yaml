@@ -1,0 +1,83 @@
+episode: 883
+status: clean
+analyzed_at: "2026-01-25T14:09:00+00:00"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  hosts_absent: [Alek.sys]
+  total_duration_sec: 10115.9
+  episode_date: "2023-11-11"
+
+# Детальная статистика присутствующих ведущих
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 907
+    total_duration_sec: 2837.8
+    first_appear_sec: 0.2
+    role: main_host
+
+  - speaker: Bobuk
+    replies_count: 605
+    total_duration_sec: 2495.1
+    first_appear_sec: 100.0
+    role: co_host
+
+  - speaker: Gray
+    replies_count: 528
+    total_duration_sec: 2302.9
+    first_appear_sec: 26.5
+    role: co_host
+
+  - speaker: Ksenks
+    replies_count: 516
+    total_duration_sec: 1828.0
+    first_appear_sec: 71.2
+    role: co_host
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_notes: |
+    В начале эпизода (9.7s) Umputun явно упоминает состав:
+    "На четверк сегодня, без Алексея, и зато есть Грей"
+
+    Это означает:
+    - Alek.sys отсутствует (явно упомянуто "без Алексея")
+    - Gray присутствует (явно упомянуто "зато есть Грей")
+    - Остальные ведущие присутствуют по умолчанию
+
+    Все четыре присутствующих ведущих действительно говорят в эпизоде.
+
+  opening_statement: |
+    [0.2s] Umputun: "Доброго времени суток, 11 ноября 2023 года, подкаст выходного дня Радио ИТ, выпуск 883."
+    [9.7s] Umputun: "На четверк сегодня, без Алексея, и зато есть Грей..."
+
+  no_guests: true
+  no_guest_mentions: true
+
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Эпизод 883 является идеальным примером чистой разметки спикеров:
+
+  1. Все спикеры - известные ведущие (Umputun, Bobuk, Gray, Ksenks)
+  2. Нет неизвестных спикеров (SPEAKER_*, Guest*)
+  3. Нет гостей в этом эпизоде
+  4. Состав явно объявлен в начале
+  5. Отсутствие Alek.sys явно упомянуто
+  6. Все статистические данные консистентны (все ведущие активно участвуют)
+
+  Никаких действий по очистке не требуется.
+
+  Технические детали первых минут:
+  - Основная тема начала: обсуждение технической проблемы с дыханием Gray в
+    предыдущих выпусках (проблема была в настройках буста на стороне Umputun)
+  - Это типичное начало для Radio-T с техническим обсуждением и юмором

@@ -1,0 +1,64 @@
+episode: 898
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 6753.62
+  hosts_absent: [Ksenks]
+  absence_mentioned: true
+  absence_mention_details: "Umputun упоминает в начале эпизода (10.1s): 'Ксюши нет' и повторяет (117.0s): 'Да, Ксюши не будет'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все присутствующие ведущие (Umputun, Bobuk, Gray, Alek.sys) участвуют в диалоге с самого начала"
+    - "Отсутствие Ksenks явно упомянуто ведущим Umputun"
+    - "Не обнаружено неидентифицированных спикеров (Guest*, SPEAKER_*)"
+    - "Распределение реплик естественное для 4-х ведущих"
+
+# Статистика по ведущим
+host_statistics:
+  - speaker: Umputun
+    replies_count: 814
+    total_duration_sec: 2582
+    first_appearance_sec: 0.27
+    last_appearance_sec: 6753.62
+    percentage_of_total: 38.2
+
+  - speaker: Bobuk
+    replies_count: 530
+    total_duration_sec: 1896
+    first_appearance_sec: 41.42
+    last_appearance_sec: 6736.43
+    percentage_of_total: 28.1
+
+  - speaker: Gray
+    replies_count: 233
+    total_duration_sec: 1018
+    first_appearance_sec: 57.27
+    last_appearance_sec: 6651.02
+    percentage_of_total: 15.1
+
+  - speaker: Alek.sys
+    replies_count: 181
+    total_duration_sec: 617
+    first_appearance_sec: 21.58
+    last_appearance_sec: 6728.99
+    percentage_of_total: 9.1
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+conclusion: |
+  Эпизод 898 имеет чистую разметку спикеров. Присутствуют только 4 известных ведущих:
+  Umputun, Bobuk, Gray и Alek.sys. Отсутствие пятого ведущего (Ksenks) явно упомянуто
+  в начале эпизода. Не обнаружено неидентифицированных спикеров, ошибок распознавания
+  или несоответствий. Очистка не требуется.

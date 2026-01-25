@@ -1,0 +1,64 @@
+episode: 897
+status: clean
+analyzed_at: "2026-01-25T11:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 10496.4
+
+  detailed_stats:
+    - speaker: Umputun
+      replies: 903
+      duration_sec: 2991.3
+      first_appearance_sec: 0.7
+
+    - speaker: Bobuk
+      replies: 878
+      duration_sec: 3452.6
+      first_appearance_sec: 34.2
+
+    - speaker: Gray
+      replies: 389
+      duration_sec: 1570.9
+      first_appearance_sec: 41.5
+
+    - speaker: Ksenks
+      replies: 250
+      duration_sec: 945.5
+      first_appearance_sec: 99.4
+
+    - speaker: Alek.sys
+      replies: 175
+      duration_sec: 631.9
+      first_appearance_sec: 31.2
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+  notes:
+    - "All 5 hosts (Umputun, Bobuk, Gray, Ksenks, Alek.sys) spoke in the first 15 minutes"
+    - "No guest mentions found in the episode - this is a hosts-only episode"
+    - "Umputun opened with standard introduction at 0.7s: 'Доброго времени суток. 17 февраля 2024 года. Подкаст выходного дня Радио-Т.'"
+    - "No unknown speakers (SPEAKER_XX, Guest, etc.) detected"
+    - "Episode duration: 174.9 minutes"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Итоги валидации
+validation_summary:
+  total_speakers: 5
+  identified_speakers: 5
+  unknown_speakers: 0
+  errors_found: 0
+  needs_manual_review: false
+
+  conclusion: |
+    Эпизод 897 полностью чистый. Все спикеры корректно идентифицированы как постоянные
+    ведущие. Гостей в выпуске не было. Разметка не требует исправлений.

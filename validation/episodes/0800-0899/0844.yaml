@@ -1,0 +1,57 @@
+episode: 844
+status: clean
+analyzed_at: "2026-01-25T16:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Gray]
+  total_duration_sec: 8417
+  episode_duration_minutes: 140
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Эпизод не содержит неизвестных спикеров (SPEAKER_*, Guest*)"
+    - "Все четыре ведущих присутствуют с нормальным временем эфира"
+    - "Umputun упоминает Гимлеса (6868-6872s), но только как третье лицо в контексте защиты диссертации"
+    - "В people.yaml указано что Gimlis был гостем в выпуске 844, но это ошибка - Гимлес только обсуждается, не присутствует"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+metadata:
+  people_yaml_inconsistency: true
+  people_yaml_note: "В guests.gimlis указан выпуск 844, но Gimlis не является гостем этого выпуска, только упоминается в обсуждении"
+  recommendation: "Удалить 844 из списка выпусков для Gimlis в people.yaml"
+
+# Распределение времени по ведущим
+host_statistics:
+  - name: Umputun
+    replies: 741
+    duration_sec: 2725
+    duration_percent: 32.4
+    first_appearance_sec: 1
+
+  - name: Bobuk
+    replies: 675
+    duration_sec: 2190
+    duration_percent: 26.0
+    first_appearance_sec: 40
+
+  - name: Alek.sys
+    replies: 442
+    duration_sec: 1558
+    duration_percent: 18.5
+    first_appearance_sec: 19
+
+  - name: Gray
+    replies: 338
+    duration_sec: 1434
+    duration_percent: 17.0
+    first_appearance_sec: 44

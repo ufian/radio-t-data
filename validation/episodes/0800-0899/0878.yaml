@@ -1,0 +1,55 @@
+episode: 878
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  hosts_absent: [Gray]
+  total_duration_sec: 7713
+  total_replies: 2038
+
+# Детальная статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 928
+    total_duration_sec: 3155
+    first_reply_time_sec: 0
+
+  - speaker: Bobuk
+    replies_count: 719
+    total_duration_sec: 2746
+    first_reply_time_sec: 28
+
+  - speaker: Alek.sys
+    replies_count: 201
+    total_duration_sec: 635
+    first_reply_time_sec: 34
+
+  - speaker: Ksenks
+    replies_count: 190
+    total_duration_sec: 600
+    first_reply_time_sec: 62
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  all_speakers_consistent: true
+  issues: []
+  notes:
+    - "Грей отсутствует - явно упомянут Umputun в начале эпизода (0:13): 'Грей сегодня отсутствует'"
+    - "Все присутствующие ведущие начинают говорить с самого начала эпизода"
+    - "Никаких неизвестных спикеров или гостей в этом эпизоде не обнаружено"
+    - "Распределение реплик нормальное для 4 ведущих"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+conclusion: |
+  Эпизод 878 имеет чистую разметку спикеров. Присутствуют 4 из 5 постоянных ведущих
+  (отсутствует Gray, что явно объявлено в начале). Неизвестных спикеров, гостей или
+  ошибок разметки не обнаружено. Никаких действий по очистке не требуется.

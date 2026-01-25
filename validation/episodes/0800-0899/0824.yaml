@@ -1,0 +1,61 @@
+episode: 824
+status: clean
+analyzed_at: "2026-01-25T11:30:00+00:00"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8106.13
+  notes: |
+    Bobuk отсутствует (дали выходной по уважительной причине, упомянуто в начале эфира).
+    Ksenks присоединилась на 27-й минуте эфира (1619s).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Состав был анонсирован в начале эфира (0:12-0:21):
+    - "Состав пока не до конца набранный"
+    - "Бобуку мы сегодня дали выходной по уважительной причине"
+    - "Ксюша должна подкрести" (Ksenks присоединилась в 1619s)
+    - "Лёха вернулся из заплыва глубокого своего" (Alek.sys)
+
+    Все ведущие, которые участвовали в эфире, были упомянуты.
+    Присутствует также спикер _ad (реклама, 19 реплик) - это стандартный технический спикер.
+
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+metadata:
+  speakers_stats:
+    - speaker: Umputun
+      replies_count: 1011
+      total_duration_sec: 3191
+      first_appearance_sec: 0.74
+
+    - speaker: Gray
+      replies_count: 387
+      total_duration_sec: 1621
+      first_appearance_sec: 27.63
+
+    - speaker: Ksenks
+      replies_count: 332
+      total_duration_sec: 1275
+      first_appearance_sec: 1619.36
+      note: "Присоединилась на 27-й минуте во время обсуждения фильма 'Хакеры'"
+
+    - speaker: Alek.sys
+      replies_count: 283
+      total_duration_sec: 1135
+      first_appearance_sec: 23.61
+
+    - speaker: _ad
+      replies_count: 19
+      type: advertisement
+      note: "Рекламные вставки"

@@ -1,0 +1,88 @@
+episode: 815
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  total_duration_sec: 6843
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 10
+    replies_count: 5
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        Высокая вероятность ошибки распознавания:
+        1. Не представлен в начале эпизода (в 9.73s Umputun представил только Bobuk, Ksenks и Gray)
+        2. Появляется поздно (первая реплика в 4172s ≈ 69 мин, это 61% эпизода)
+        3. Все 5 реплик очень короткие (1-3 сек каждая)
+        4. Разрозненные односложные вставки: "Он в восторге", "Да", "Нет ресурса буквально"
+        5. Общая длительность всего 10 сек при 5 репликах
+        6. Типичный паттерн ошибки распознавания - короткие междометия/реакции
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "2 из 5 реплик окружены Umputun до и после, может быть неправильно распознанный Umputun"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "2 из 5 реплик окружены Bobuk до и после, может быть неправильно распознанный Bobuk"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "1 реплика рядом с Gray, менее вероятно"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4219.8
+          etime: 4222.9
+          text: "Ох, как мы разыграем весь чатик."
+        additional_segments:
+          - stime: 4172.5
+            etime: 4174.9
+            text: "Он в восторге."
+          - stime: 6453.0
+            etime: 6455.6
+            text: "Но вдруг он ган, а потом вернулся."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys не был представлен в начале эпизода. Umputun в 9.73s представил
+        только трех участников: Бобука (вернувшегося), Ksenks (Маруся) и Gray.
+        При этом Alek.sys появляется в транскрипте через 69 минут с короткими
+        односложными репликами, что нетипично для реального участника.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: voice_comparison_needed
+    episode: 815
+    speaker: "Alek.sys"
+    confidence: high
+    reason: |
+      Необходимо прослушать реплики Alek.sys и сравнить с голосами основных
+      ведущих (Umputun, Bobuk, Gray), чтобы определить кто был неправильно
+      распознан. Наиболее вероятны Umputun или Bobuk (по окружающему контексту).
+    action: |
+      1. Прослушать сегменты 4172.5-4174.9, 4219.8-4222.9, 6453.0-6455.6
+      2. Сравнить с эталонными голосами Umputun, Bobuk, Gray
+      3. После идентификации создать правило переименования:
+         - Если это Umputun: rename Alek.sys -> Umputun
+         - Если это Bobuk: rename Alek.sys -> Bobuk
+         - Если это Gray: rename Alek.sys -> Gray
+         - Если действительно Alek.sys (маловероятно): оставить как есть

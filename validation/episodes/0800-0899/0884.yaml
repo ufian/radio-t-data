@@ -1,0 +1,53 @@
+episode: 884
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys]
+  hosts_absent: [Bobuk, Ksenks]
+  total_duration_sec: 6971
+  total_replies: 1667
+
+# Детальная статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 1031
+    total_duration_sec: 3300
+    first_reply_at: 1
+    role: main_host
+
+  - speaker: Gray
+    replies_count: 343
+    total_duration_sec: 1941
+    first_reply_at: 56
+    role: co-host
+
+  - speaker: Alek.sys
+    replies_count: 293
+    total_duration_sec: 1045
+    first_reply_at: 31
+    role: co-host
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_found: true
+  introduction_timestamp: 0.6
+  introduction_quote: "Бобок по причинам непонятным не отсутствует, Ксюша по причинам понятным не отсутствует тоже. Зато Лёха с Грэем в ассортименте"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии
+notes:
+  - "Чистый эпизод без неизвестных спикеров"
+  - "Присутствуют только три регулярных ведущих: Umputun, Gray, Alek.sys"
+  - "Бобук и Ksenks отсутствуют, что явно упомянуто в начале выпуска"
+  - "Все спикеры корректно атрибутированы на протяжении всего эпизода"
+  - "Общая длительность: ~116 минут"
+  - "Основная тема: увольнение Сэма Альтмана из OpenAI (ноябрь 2023)"

@@ -1,0 +1,86 @@
+episode: 817
+status: clean
+analyzed_at: "2026-01-25T11:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Gray, Ksenks]
+  total_duration_sec: 8081
+
+# Контекст эпизода
+episode_context:
+  special_circumstances: "Umputun опоздал на начало выпуска (едет через Чикаго), вступление читает Alek.sys"
+  umputun_arrival_time: 376  # ~6:16, первая реплика
+  ksenks_arrival_time: 841   # ~14:01, первая реплика
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Umputun"
+      issue: "Не представлен формально, но его отсутствие объясняется в начале ('Умпутун где-то едет'). Появляется в 376s с репликой 'а это мне стоило один раз не прийти', что подтверждает контекст."
+      severity: "info"
+
+    - speaker: "Ksenks"
+      issue: "Не представлена формально в начале, появляется в 841s. Представление происходит через обращение Alek.sys: 'Ксюша, ты же наверняка эксперт по C++'"
+      severity: "info"
+
+    - speaker: "Gray"
+      issue: "Не представлен формально, упоминается косвенно ('Женя предпочитает её'). Начинает говорить с 123s без представления."
+      severity: "info"
+
+  notes:
+    - "Эпизод начинается нестандартно - Умпутun опаздывает, выпуск ведут трое (Alek.sys, Bobuk, Gray)"
+    - "Формального представления участников нет, все сразу переходят к обсуждению тем"
+    - "Все 5 ведущих легко идентифицируются по контексту и продолжительности участия"
+    - "Упоминание 'Женя' в 123s указывает на Умпутun (его реальное имя - Евгений)"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная статистика по ведущим
+hosts_statistics:
+  - name: Umputun
+    replies_count: 809
+    duration_sec: 2400
+    first_appearance_sec: 376
+    notes: "Опоздал на начало, но активно участвует после появления"
+
+  - name: Bobuk
+    replies_count: 573
+    duration_sec: 2207
+    first_appearance_sec: 31
+    notes: "Второй по активности после Умпутun"
+
+  - name: Alek.sys
+    replies_count: 435
+    duration_sec: 1276
+    first_appearance_sec: 0
+    notes: "Ведет начало эпизода вместо Умпутun"
+
+  - name: Ksenks
+    replies_count: 256
+    duration_sec: 907
+    first_appearance_sec: 841
+    notes: "Присоединяется к эпизоду через ~14 минут"
+
+  - name: Gray
+    replies_count: 120
+    duration_sec: 410
+    first_appearance_sec: 123
+    notes: "Меньше всех участвует в этом выпуске"
+
+# Заключение
+conclusion: |
+  Эпизод 817 имеет чистую разметку спикеров. Все 5 ведущих корректно идентифицированы.
+  Неизвестных спикеров (SPEAKER_XX, Guest) нет.
+
+  Особенности эпизода:
+  - Umputun опоздал на начало выпуска (~6 минут)
+  - Ksenks присоединилась позже (~14 минут)
+  - Нет формального представления участников, но все идентифицируются по контексту
+
+  Статус: CLEAN - правила очистки не требуются.

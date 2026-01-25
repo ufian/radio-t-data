@@ -1,0 +1,49 @@
+episode: 831
+status: clean
+analyzed_at: "2026-01-25T11:45:00+03:00"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 8666.77
+  notes: "Эпизод без гостей. Состав: все ведущие, кроме Alek.sys (как объявлено в начале)"
+
+# Детальная статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 995
+    total_duration_sec: 3061.87
+    first_appearance_sec: 0.37
+
+  - speaker: Bobuk
+    replies_count: 583
+    total_duration_sec: 1898.83
+    first_appearance_sec: 309.62
+
+  - speaker: Ksenks
+    replies_count: 409
+    total_duration_sec: 1424.30
+    first_appearance_sec: 25.24
+
+  - speaker: Gray
+    replies_count: 335
+    total_duration_sec: 1296.05
+    first_appearance_sec: 250.92
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quote: "831 выпуск, состав все, кроме Лёхи."
+  introduction_timestamp: 6.65
+  issues: []
+  notes:
+    - "Все спикеры явно представлены в начале выпуска"
+    - "Отсутствие Alek.sys подтверждено словами ведущего"
+    - "Неизвестных спикеров нет"
+    - "Эпизод полностью чистый, валидация не требуется"
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,50 @@
+episode: 862
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 8510.32
+  speaker_stats:
+    - speaker: Bobuk
+      replies_count: 778
+      total_duration_sec: 3127
+      first_appearance_sec: 21
+    - speaker: Umputun
+      replies_count: 636
+      total_duration_sec: 2281
+      first_appearance_sec: 1
+    - speaker: Ksenks
+      replies_count: 400
+      total_duration_sec: 1402
+      first_appearance_sec: 1211
+    - speaker: Gray
+      replies_count: 317
+      total_duration_sec: 1202
+      first_appearance_sec: 17
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Все 4 ведущих корректно идентифицированы"
+    - "Umputun, Bobuk и Gray начинают эпизод с самого начала"
+    - "Ksenks присоединилась на 20:11 (1211 сек), её появление естественно обозначено в диалоге: 'Я уже давно пришла. Нет, я слушала, как вы обсуждаете MacStudio'"
+    - "Нет неизвестных спикеров типа SPEAKER_NN или Guest"
+    - "Эпизод посвящён обсуждению Apple (WWDC 2023), длительность 2ч 22мин"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+conclusion: |
+  Эпизод 862 имеет чистую и корректную разметку спикеров:
+  - Все 4 ведущих правильно идентифицированы
+  - Нет неизвестных или ошибочно размеченных спикеров
+  - Присутствие всех ведущих естественно отражено в транскрипте
+  - Не требуется никаких исправлений или дополнительного анализа

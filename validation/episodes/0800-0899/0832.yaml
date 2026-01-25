@@ -1,0 +1,124 @@
+episode: 832
+status: needs_review
+analyzed_at: "2026-01-25T12:32:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 8387
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest_01"
+    total_duration_sec: 675
+    replies_count: 113
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Не зарегистрирована в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Гость представилась в начале эпизода (146.86s):
+        "Да, в общем-то, я Саша, спасибо, что позвали."
+        "Я, в первую очередь, кей-энтезиастка, а также, во вторую очередь, я продакт-менеджер в JetBrains Aqua."
+
+        Имя: Саша (Sasha, женское)
+        Роль: Product Manager в JetBrains Aqua, K8s энтузиаст
+
+      # Возможные совпадения (для регистрации в people.yaml)
+      possible_matches:
+        - person_id: "sasha_jetbrains_aqua"  # предлагаемый ID
+          confidence: 1.0
+          reason: "Чёткое представление, полное имя и роль озвучены"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: false  # Идентификация уже выполнена с высокой уверенностью
+        reference_segment:
+          stime: 2134.17
+          etime: 2228.32
+          text: "Длинный монолог о продукте Aqua и QA комьюнити (90 секунд)"
+
+  - speaker: "Guest_02"
+    total_duration_sec: 350
+    replies_count: 65
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Не зарегистрирован в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Гость представился в начале эпизода (167.0s):
+        "Да, гость №2, мы тоже коллега Александра, меня зовут Розмик,
+        мы занимаемся как раз JetBrains Aqua..."
+
+        Имя: Розмик (Rozmik, мужское)
+        Роль: Коллега Саши, работает над JetBrains Aqua
+
+      # Возможные совпадения (для регистрации в people.yaml)
+      possible_matches:
+        - person_id: "rozmik_jetbrains_aqua"  # предлагаемый ID
+          confidence: 1.0
+          reason: "Чёткое представление, полное имя и роль озвучены"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: false  # Идентификация уже выполнена с высокой уверенностью
+        reference_segment:
+          stime: 1656.67
+          etime: 1730.59
+          text: "Монолог о плейлистах IntelliJ и комментарии по продукту (66 секунд)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все ведущие появились в начале эпизода в ожидаемом порядке"
+    - "Ksenks присоединилась позже (2626s), что соответствует её комментарию о том, что молчала"
+    - "Оба гостя были представлены в начале (142-167s) перед началом основной дискуссии"
+    - "Guest_01 (Саша) - женщина, K8s энтузиаст, PM в JetBrains Aqua"
+    - "Guest_02 (Розмик) - мужчина, коллега Саши, работает над JetBrains Aqua"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 832
+    from_speaker: "Guest_01"
+    to_speaker: "SashaJetBrains"  # предлагаемое каноническое имя
+    confidence: high
+    reason: "Чётко представлена как 'Саша', PM в JetBrains Aqua"
+
+  - type: rename
+    episode: 832
+    from_speaker: "Guest_02"
+    to_speaker: "RozmikJetBrains"  # предлагаемое каноническое имя
+    confidence: high
+    reason: "Чётко представлен как 'Розмик', работает в JetBrains Aqua"
+
+# Рекомендации для people.yaml
+recommendations:
+  new_guests_to_register:
+    - id: "sasha_jetbrains"
+      canonical_name: "SashaJetBrains"
+      aliases: ["Саша", "Sasha", "Guest_01"]
+      real_name: "Александра"  # полное имя от сокращения "Саша"
+      info: "Product Manager в JetBrains Aqua, K8s энтузиаст, выпуск 832"
+
+    - id: "rozmik_jetbrains"
+      canonical_name: "RozmikJetBrains"
+      aliases: ["Розмик", "Rozmik", "Guest_02"]
+      real_name: "Розмик"
+      info: "Разработчик JetBrains Aqua, выпуск 832"

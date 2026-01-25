@@ -1,0 +1,96 @@
+episode: 890
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  total_duration_sec: 9236.7
+  guest_count: 1
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 1003
+    replies_count: 272
+    pattern: consecutive
+    first_appearance_sec: 2413.5
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: "anton_jetbrains"  # Needs to be added to people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Прямые обращения к гостю по имени "Антон":
+        - 2406.1s: Umputun: "Я пробовал в режиме приватного доступа того, какая у вас закрытая бета была, Антон, по-моему, по этому поводу."
+        - 3240.7s: Alek.sys: "Я не знаю, вот он тебе или гостю, Антону."
+        - 3557.8s, 3601.6s, 3689.2s, 4104.8s и др.: множественные обращения "Антон"
+
+        Контекст:
+        - Обсуждение JetBrains AI Assistant (основная тема)
+        - Guest1 защищает продукт и объясняет технические детали
+        - Упоминания "у вас" (в JetBrains), "ваш продукт"
+        - Экспертиза в IDE и AI-ассистентах
+
+        Фамилия не установлена из транскрипта, но кандидат: Антон Архипов (известный JetBrains Developer Advocate)
+
+      possible_matches:
+        - person_id: "anton_arkhipov"
+          confidence: 0.8
+          reason: "Антон Архипов - известный Developer Advocate в JetBrains, регулярно выступает от компании по вопросам IDE и инструментов разработки"
+
+      # Задание на voice comparison (для окончательного подтверждения)
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2940.4
+          etime: 2959.3
+          text: "Он смотрит, где у тебя код, ну, find usages, грубо говоря, где у тебя этот код используется, или что этот код использует, если, например, про Java говорим, у тебя какой-то там контроллер, на котором ты вызвал этот экшен, он использует какие-то утилитарные классы, он эти классы тоже добавит в этот запрос."
+          duration_sec: 18.9
+        alternative_segments:
+          - stime: 2604.6
+            etime: 2619.8
+            duration_sec: 15.2
+          - stime: 3153.6
+            etime: 3168.4
+            duration_sec: 14.8
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Guest1"
+      issue: "Гость не представлен формально в начале выпуска. Первое упоминание имени 'Антон' в контексте на 2406s (~40 минут). Нет полного представления с фамилией."
+      severity: minor
+      note: "Однако из контекста однозначно следует, что это представитель JetBrains, обсуждающий AI Assistant"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 890
+    from_speaker: "Guest1"
+    to_speaker: "AntonArkhipov"  # Предположительно
+    confidence: high
+    reason: |
+      Множественные прямые обращения по имени "Антон" от всех ведущих.
+      Контекст: защита и объяснение JetBrains AI Assistant.
+      Экспертиза соответствует профилю Антона Архипова (JetBrains Developer Advocate).
+      Рекомендуется подтверждение через voice comparison или проверку анонсов выпуска.
+    action_required: |
+      1. Проверить анонсы эпизода 890 на предмет упоминания гостя
+      2. Выполнить voice comparison с известными выступлениями Антона Архипова
+      3. Добавить подтвержденную запись в people.yaml
+      4. Применить правило переименования в cleaning/configs/
+
+# Дополнительные заметки
+notes:
+  - "Эпизод 890 от 30 декабря 2023 года"
+  - "Основная тема: критика и обсуждение JetBrains AI Assistant"
+  - "Guest1 активно участвует в дискуссии ~1000 секунд (16+ минут чистой речи)"
+  - "Все 5 основных ведущих присутствуют в этом выпуске"
+  - "Высокое качество разметки ведущих - ошибок не обнаружено"

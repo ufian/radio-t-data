@@ -1,0 +1,69 @@
+episode: 869
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  total_duration_sec: 9218
+
+# Детальный анализ
+speakers_analysis:
+  umputun:
+    replies_count: 1112
+    total_duration_sec: 3652
+    first_appearance_sec: 1
+    pattern: consistent
+    status: verified_host
+
+  bobuk:
+    replies_count: 710
+    total_duration_sec: 2960
+    first_appearance_sec: 17
+    pattern: consistent
+    status: verified_host
+
+  ksenks:
+    replies_count: 545
+    total_duration_sec: 1950
+    first_appearance_sec: 1333
+    pattern: consecutive
+    status: verified_host
+    notes: |
+      Появляется в эпизоде без явного представления в ~22 минуты (1332.88 сек).
+      Первое обращение к ней по имени "Ксюша" в ~37 минут (2246.47 сек).
+      Регулярная ведущая, поэтому отсутствие представления не является проблемой.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: "Не было явного представления в начале эпизода"
+      severity: low
+      explanation: |
+        Ксюша является регулярной ведущей подкаста (468 эпизодов).
+        Она присоединяется к разговору в середине записи без формального представления,
+        что является нормальной практикой для постоянных ведущих.
+        Её идентичность подтверждается обращениями по имени в тексте.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+notes: |
+  Эпизод 869 от 29 июля 2023 года.
+  Длительность: ~2.5 часа (9218 секунд).
+  Состав: Umputun, Bobuk, Ksenks (только ведущие, гостей нет).
+
+  Разметка спикеров выглядит корректной:
+  - Все три участника являются постоянными ведущими
+  - Нет неизвестных спикеров (SPEAKER_XX, Guest и т.д.)
+  - Нет явных ошибок распознавания
+  - Паттерны речи соответствуют ожиданиям
+
+  Единственная особенность: Ksenks присоединяется к записи в середине эпизода
+  без формального представления, что является нормальной практикой.
