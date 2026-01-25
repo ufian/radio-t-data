@@ -1,0 +1,145 @@
+episode: 225
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6349  # примерно, на основе времени реплик
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 329
+    replies_count: 95
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (~67-68 сек) Bobuk говорит "И Маринка молчит. Маринка, ты почему молчишь?"
+        и далее Marin_k_a отвечает "Маринка молчит, Маринка не жует...".
+        Марина (Marin_k_a) - бывшая ведущая подкаста, присутствует в people.yaml.
+        95 реплик и 329 секунд речи подтверждают полноценное участие в выпуске.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 9
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие односложные реплики (<3 сек), разбросанные по всему выпуску:
+        - 932s: "Ух ты." (0.5s), "А за что?" (1.2s) - реакция на новость
+        - 2395s: "50 раз в день." (2s) - эхо-повтор фразы Gray
+        - 2950s: "Пикколо?" (1.7s) - переспрос слова Bobuk
+        - 3985s: "Да." (0.9s) - междометие
+        - 4426s: "Я как раз про него читаю сейчас." (2s) - единственная осмысленная фраза
+        - 6931s: "Угу." (0.5s) - междометие
+
+        Паттерн типичен для ошибки распознавания: реплики следуют сразу за речью
+        основных ведущих и представляют собой реакции/эхо. Скорее всего это
+        плохо распознанные голоса Marin_k_a или Gray.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: |
+            Реплики "Ух ты.", "А за что?" в 932s идут перед репликой Marin_k_a "Что ты сделал?" (934s).
+            Контекст диалога предполагает, что это один человек задаёт вопросы.
+        - person_id: "gray"
+          confidence: 0.3
+          reason: |
+            Реплика "50 раз в день" (2395s) идёт сразу после фразы Gray и повторяет её.
+            Может быть эхо Gray или ошибка сегментации.
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        # Реплики слишком короткие для надёжного voice comparison
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика (841.95-843.31s): "Гуглон будут сокращать, наверное."
+        Имя спикера уже содержит "MISATTRIBUTED" - это отменённое ошибочное присвоение.
+        Контекст: между репликами Umputun "Явно какой-то Африка попахивает" и "Нигерия попахивает".
+        Скорее всего это плохо распознанный голос одного из ведущих (вероятно Marin_k_a или Bobuk).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Marin_k_a активно участвует в этом выпуске, реплика вписывается в общий разговор"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk тоже мог прокомментировать тему сокращений"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        # Реплика слишком короткая для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все ведущие и гости упомянуты в начале выпуска:
+    - Umputun открывает шоу (2.7s)
+    - Bobuk представлен Umputun'ом (33.9s)
+    - Gray упомянут Bobuk'ом (49.9s): "голос, который внезапно возник в ваших наушниках, это был Грей"
+    - Marin_k_a представлена Bobuk'ом (66.9s): "И Маринка молчит. Маринка, ты почему молчишь?"
+
+    Выпуск чистый - Marin_k_a корректно идентифицирована, SPEAKER_04 и
+    SPEAKER_MISATTRIBUTED_LAVALE представляют собой ошибки распознавания
+    с минимальным влиянием (суммарно ~10 сек из ~7000 сек выпуска).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 225
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: |
+      Большинство реплик SPEAKER_04 по контексту принадлежат Marin_k_a.
+      Однако уверенность medium из-за возможности принадлежности части реплик Gray.
+      Рекомендуется voice comparison для подтверждения.
+
+  - type: rename
+    episode: 225
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: |
+      По контексту диалога и активному участию Marin_k_a в выпуске.
+      Спикер уже помечен как MISATTRIBUTED, требуется переатрибуция.

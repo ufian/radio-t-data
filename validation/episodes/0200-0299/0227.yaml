@@ -1,0 +1,239 @@
+episode: 227
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Olyapka, Plushev, Svan]
+  absent_mentioned: [Bobuk, Marin_k_a]  # Gray в начале говорит: Маринка болеет (39°), Бобук в больнице
+  total_duration_sec: 7033
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 316
+    replies_count: 116
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        - 23.95s Umputun: "И я представлю вам прежде всего Олечку, которую смешно просто представлять"
+        - 31.66s SPEAKER_00: "Здравствуйте, да"
+        - 1205.86s Umputun: "о которой Оля рассказывает"
+        - 6946.36s Umputun: "Олечка, спасибо, что пришла"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 903
+    replies_count: 284
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "plushev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        - 517.32s Umputun: "Привет тебе, Саша"
+        - 520.56s Umputun: "К нам присоединился Саша Плющев"
+        - 528.91s SPEAKER_05: "Здрасте, дорогие"
+        - 5206.57s SPEAKER_05: "Пока" (уходит раньше окончания)
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 466
+    replies_count: 130
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # Svan отсутствует в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        - 68.32s Umputun: "А есть еще у нас человек со странным голосом"
+        - 98.84s SPEAKER_06: "Почему у меня-то странный голос?"
+        - 128.52s Gray: "Ну, в общем, это Сван, если кто его не узнал"
+        - 6972.46s SPEAKER_06 отвечает когда Umputun говорит о Сване
+      possible_matches:
+        - person_id: "svan"
+          confidence: 1.0
+          reason: "Явное представление Gray + контекст финала"
+      voice_task:
+        needed: false
+      note: "Svan отсутствует в people.yaml, нужно добавить"
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 293
+    replies_count: 43
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибка атрибуции: это реплики Olyapka, ошибочно приписанные Marin_k_a.
+        Gray в начале (226.42s) явно говорит: "у Маринки, как следует из ее твиттера, там чуть ли не 39" -
+        т.е. Марина болеет и НЕ участвует в этом эпизоде.
+        Реплики Marin_k_a чередуются с SPEAKER_00 в одном и том же контексте (напр. 1149-1199s).
+      identified_as: "olyapka"
+      confidence: high
+      evidence: "Контекст болезни + чередование с SPEAKER_00"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие междометия в разных местах эпизода:
+        - 177.16s: "Айфон это еще ладно" (между репликами Gray и Umputun)
+        - 4008.43s: "Отправьте в самый основной мир" (бессмысленная фраза)
+        - 5337.67s: "Плюм" (0.3 сек)
+        - 6546.91s: "Отлично" (0.8 сек)
+        - 7031.21s: "Пока" (после финального "Пока" от Umputun)
+        Скорее всего ошибки распознавания - перебивки/эхо от других участников.
+      identified_as: null
+      confidence: medium
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 57
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Уже помеченные как misattributed реплики.
+        Lavale НЕ участвует в этом эпизоде.
+        Короткие реплики в диалогах с Плющевым и другими.
+      identified_as: null
+      confidence: medium
+      note: "Требуется voice comparison для определения реального автора"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1655.54
+          etime: 1657.77
+          text: "Там же тоже 10 дюймов, чем он лучше-то?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 10
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Уже помеченные как misattributed реплики.
+        Эльдар НЕ участвует в этом эпизоде (хотя упоминается: "Эльдар абсолютно прав").
+        Короткие реплики.
+      identified_as: null
+      confidence: medium
+      note: "Требуется voice comparison для определения реального автора"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3819.18
+          etime: 3824.02
+          text: "Например, как одна из... Ну, не знаю, у меня вот примерно такие ощущения были."
+
+  - speaker: "Bobuk"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Bobuk НЕ участвует в этом эпизоде!
+        Gray в начале (226.42s) прямо говорит: "Гриша, который Бобук, он просто вот сдал сегодня утром телефон,
+        и два дня его даже в телефоне не будет. Он в больнице."
+        Единственная реплика (5502.47s): "Есть такая штука, называется TwitterBerry" -
+        между репликами Gray, это явно кто-то другой (возможно Svan или Olyapka).
+      identified_as: null
+      confidence: high
+      note: "100% ошибка - Bobuk в больнице, нужно переатрибутировать"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5502.47
+          etime: 5503.43
+          text: "Есть такая штука, называется TwitterBerry."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: "Присутствует 1 реплика, но Bobuk явно отсутствует (в больнице по словам Gray)"
+
+    - speaker: "Marin_k_a"
+      issue: "43 реплики приписаны Марине, но она болеет (39°) и не участвует"
+
+    - speaker: "SPEAKER_06"
+      issue: "Идентифицирован как Svan, но Svan отсутствует в people.yaml"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 227
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Olyapka"
+    confidence: high
+    reason: "Явное представление в начале, обращение по имени Оля/Олечка"
+
+  - type: rename
+    episode: 227
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: "Явное представление: 'К нам присоединился Саша Плющев'"
+
+  - type: rename
+    episode: 227
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Svan"
+    confidence: high
+    reason: "Явное представление Gray: 'это Сван, если кто его не узнал'"
+
+  - type: rename
+    episode: 227
+    from_speaker: "Marin_k_a"
+    to_speaker: "Olyapka"
+    confidence: high
+    reason: "Марина болеет и не участвует; реплики чередуются с SPEAKER_00 в одном контексте"
+
+  - type: delete_or_reassign
+    episode: 227
+    from_speaker: "Bobuk"
+    confidence: high
+    reason: "Bobuk в больнице и не участвует; 1 реплика явно ошибочна"
+
+  - type: delete_or_reassign
+    episode: 227
+    from_speaker: "SPEAKER_02"
+    confidence: medium
+    reason: "Короткие междометия (0.3-1.9 сек) - ошибки распознавания"
+
+# Рекомендации для people.yaml
+people_yaml_updates:
+  - action: add_guest
+    id: "svan"
+    canonical_name: "Svan"
+    real_name: null
+    info: "Выпуски 227 и др., говорил через Samsung Galaxy Tab"

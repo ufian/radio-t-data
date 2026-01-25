@@ -1,0 +1,213 @@
+episode: 282
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6500  # ~1.8 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 689
+    replies_count: 179
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в начале: 'Привел с собой в семью тоже блудную же Маринку' (12.71s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 19
+    replies_count: 9
+    pattern: scattered
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики указывают на активного участника:
+        - "Это ты хочешь сказать, что это не product placement, да?" (904.8s)
+        - "Гриша, я от тебя это тоже услышал, да" (1941.6s) - обращение к Бобуку
+        - "А вы знаете, я до сих пор думаю, какое это отношение имеет к Double Click" (1195.9s)
+        Фамильярный тон, активное участие в дискуссии.
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Фамильярный тон, активное участие. Марина уже в эпизоде, возможно часть реплик не распознаны как её."
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Острые комментарии характерны для Umputun, но он обычно хорошо распознаётся"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1941.6
+          etime: 1948.77
+          text: "Гриша, я от тебя это тоже услышал, да. Да, вот сейчас, вот сейчас, да."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 32
+    replies_count: 13
+    pattern: scattered
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Название указывает на ранее ошибочную атрибуцию Эльдару Муртазину.
+        Эльдар НЕ участвовал в этом выпуске (только Umputun, Bobuk, Gray, Marin_k_a).
+        Примеры реплик:
+        - "Бакулы, шмакулы, что угодно для того, чтобы все заработало" (919.7s)
+        - "Какой смысл менять то, что пять лет уже как работает?" (971.3s)
+        - "Если на него не звонить, Wi-Fi не включать и GSM выключить, то он живет не меньше, чем iOS" (5457.6s)
+        Технические комментарии, возможно Umputun или Bobuk.
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Технические комментарии о бэкапах, характерный стиль"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Контекст разговора о бэкапах начинался с Бобука"
+        - person_id: "marin_k_a"
+          confidence: 0.2
+          reason: "Марина в эпизоде, могла комментировать"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5457.6
+          etime: 5462.84
+          text: "Если на него не звонить, Wi-Fi не включать и GSM выключить, то он живет не меньше, чем iOS."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Название указывает на ранее ошибочную атрибуцию Lavale.
+        Lavale НЕ участвовала в этом выпуске.
+        Примеры:
+        - "Мне казалось, что это просто настолько давно было, что... Не-не, ленты это дешевые" (990.9s)
+        - "А я вот дизайнер не помню" (3172.5s)
+        Второй пример вызвал реакцию Umputun: "Как дизайнер не помнишь?"
+        Возможно Marin_k_a (она дизайнер).
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Упоминание себя как дизайнера. Марина - дизайнер."
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Мог комментировать"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3172.49
+          etime: 3174.89
+          text: "А я вот дизайнер не помню."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики без смыслового контекста, скорее всего ошибки распознавания"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Всего 3 реплики по 2 секунды каждая в разных местах эпизода:
+        - "ВГЕТ, ух ты." (1193.6s) - возможно реакция на упоминание wget
+        - "Ну ладно." (4468.7s)
+        - "Основателя республики и так далее." (7092.6s)
+        Типичные короткие реакции, которые алгоритм не смог атрибутировать.
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Короткие реакции характерны для менее активного участника"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray иногда плохо распознаётся"
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: consecutive
+    analysis:
+      is_error: true
+      error_reason: "Англоязычная реклама Winamp, аудио-вставка"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Все реплики - англоязычная реклама:
+        - "Это Твиттер." (2556.1s) - возможно ошибка
+        - "Audio bandwidth for this week in tech is provided by the new Winamp for Android..." (2566.5s)
+        - "Now with free daily music downloads and full-length CD listening parties." (2567.6s)
+        Это рекламный джингл, должен быть помечен как SPEAKER_99 или _ad.
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: "Не идентифицирован. 9 реплик разбросаны по эпизоду. Контекст указывает на Marin_k_a."
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "13 реплик. Эльдар не участвовал в выпуске. Требуется voice comparison."
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "2 реплики. Lavale не участвовала. Одна реплика ('дизайнер') указывает на Marin_k_a."
+    - speaker: "SPEAKER_00"
+      issue: "Англоязычная реклама Winamp. Должна быть помечена как _ad или SPEAKER_99."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 282
+    from_speaker: "SPEAKER_00"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Англоязычная реклама Winamp, явно рекламная вставка"
+
+  - type: rename
+    episode: 282
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Реплика 'я вот дизайнер не помню' указывает на Марину (она дизайнер). Требует voice comparison для подтверждения."
+
+  - type: voice_comparison_needed
+    episode: 282
+    speakers: ["SPEAKER_04", "SPEAKER_MISATTRIBUTED_ELDAR"]
+    compare_with: ["Marin_k_a", "Umputun", "Bobuk", "Gray"]
+    reason: "Необходимо сравнить голоса для точной атрибуции. Все эти реплики принадлежат одному из 4 участников эпизода."
+
+# Метаданные эпизода
+episode_info:
+  date: "2012-03-31"
+  participants_announced: ["Umputun", "Bobuk", "Gray", "Marin_k_a"]
+  introduction_quote: "Грей решил вернуться в семью. Привел с собой в семью тоже блудную же Маринку."

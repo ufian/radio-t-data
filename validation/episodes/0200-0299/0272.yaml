@@ -1,0 +1,175 @@
+episode: 272
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7559  # ~2 часа 6 минут (Bobuk 3595 + Umputun 2988 + Marin_k_a 964 + небольшие сегменты)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 964
+    replies_count: 280
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. В начале выпуска (строка 37) Bobuk говорит: "Маручика обещала подойти"
+        2. При появлении (1847s) Bobuk: "Кстати, здравствуй, Маринка"
+        3. Umputun (1848s): "Здравствуй, Маруся"
+        4. Marin_k_a - бывшая ведущая подкаста, указана в people.yaml
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 12
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это ошибочная атрибуция - короткие реплики (2-3 секунды каждая),
+        разбросанные по выпуску, перемежаются с репликами Marin_k_a.
+        Контекст показывает, что это голос Marin_k_a:
+        - 3246s: "Там, где кружочки вместо крестиков" - сразу после вопроса Bobuk к группе,
+          следующая реплика Marin_k_a продолжает мысль
+        - 5150s: "Ну при чем здесь фотография?" - Umputun обращается "Маруся, ну что ты?",
+          следующая реплика Marin_k_a продолжает диалог
+        - 5569s: "А что это за ягода такая?" - следующая реплика Marin_k_a: "Или это не ягода вовсе?"
+        - 7748s: "Нет, ну как-то это не поможет" - следующая реплика Marin_k_a: "Это только усугубит"
+        - 7818s: "Но у нас народных умельцев отменили, да?" - продолжение диалога о телефонах
+
+        Lavale в этом эпизоде НЕ участвовала.
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: "Все реплики SPEAKER_MISATTRIBUTED_LAVALE являются частью диалогов с Marin_k_a"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция - очень короткие реплики (0.5-1 секунда):
+        - 7195s: "Не стал" - ответ на вопрос Bobuk "ты же, конечно, не поставил, да?",
+          следующая реплика Umputun: "Я даже тему не открывал" - это Umputun отвечает
+        - 7690s: "Почему глупо?" - после реплики Marin_k_a "Ну это глупо",
+          Bobuk сразу отвечает "Это как раз очень логично" - скорее всего это Bobuk
+        - 8045s: "Мне приходится защищать" - Bobuk перед этим говорит "Дорогая, ну так вы с Умпутуном против",
+          контекст указывает на Marin_k_a
+
+        Eldar Murtazin в этом эпизоде НЕ участвовал. Только Umputun, Bobuk и Marin_k_a.
+
+      identified_as: null  # Требуется voice comparison для точного определения
+      identification_method: null
+      confidence: low
+      evidence: "Реплики слишком короткие для однозначной идентификации"
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Реплика 7195s 'Не стал' в ответ на вопрос к Umputun"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Реплика 7690s 'Почему глупо?' - стиль вопроса похож на Bobuk"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Реплика 8045s 'Мне приходится защищать' - обращение 'дорогая' к Marin_k_a"
+
+      voice_task:
+        needed: false  # Реплики слишком короткие для voice comparison
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика длиной 0.5 секунды: "А Яндексу?" (2003.6s).
+        Контекст: Bobuk рассказывает про Twitter API, кто-то переспрашивает.
+        Скорее всего это Marin_k_a, которая присоединилась незадолго до этого (1841s)
+        и активно участвует в обсуждении.
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Marin_k_a подключилась ~160 секунд назад и активно участвует в диалоге"
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Временная близость к первому появлению, женский голос"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Возможно переспрос"
+        - person_id: "bobuk"
+          confidence: 0.1
+          reason: "Маловероятно - он в этот момент рассказывает"
+
+      voice_task:
+        needed: false  # Реплика слишком короткая
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    - Marin_k_a упомянута в начале как "Маручика", приветствована при появлении (1847s)
+    - Все SPEAKER_MISATTRIBUTED_* являются ошибками распознавания
+    - Выпуск 272 от 14 января 2012 года вёлся втроём: Umputun, Bobuk, Marin_k_a
+    - Ни Lavale, ни Eldar Murtazin в этом эпизоде не участвовали
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 272
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Все 5 реплик являются частью диалогов Marin_k_a, контекст однозначный"
+
+  - type: rename
+    episode: 272
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Короткий переспрос от недавно подключившейся Marin_k_a"
+
+  - type: rename
+    episode: 272
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Marin_k_a"
+    confidence: low
+    reason: |
+      Реплики слишком короткие для уверенной идентификации.
+      Рекомендуется voice comparison или ручная проверка.
+      Альтернативы: 7195s может быть Umputun, 7690s может быть Bobuk.

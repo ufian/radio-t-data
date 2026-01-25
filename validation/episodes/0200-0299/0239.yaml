@@ -1,0 +1,230 @@
+episode: 239
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: 6740  # ~1:52 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 572
+    replies_count: 125
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: >
+        В начале эпизода (94-103s) Umputun представляет: "у нас есть два дорогих гостя...
+        Гостья у нас Лена, которая не первый и даже не второй раз".
+        SPEAKER_05 сразу отвечает "Здравствуйте" и активно участвует в обсуждении.
+        Говорит, что живёт за границей, пользуется американской Википедией,
+        упоминает знакомых "эдиторов" (редакторов) американской Википедии.
+      possible_matches:
+        - person_id: "lena_unknown"
+          confidence: 0.85
+          reason: "Явное представление как 'Лена', постоянная гостья, живёт за рубежом (вероятно США)"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1329.98
+          etime: 1359.26
+          text: >
+            Что интересно, то, что у Скайпа пользователей намного меньше, чем у
+            микрософтовского чата... когда они купили Скайп, то они хотят конкурировать
+            с Гуглом и с Эпплом...
+        audio_url: "https://cdn.radio-t.com/rt_podcast239.mp3"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 252
+    replies_count: 81
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: >
+        Представлен как "Васисуалий" / "Василиус" (120-150s): "А еще у нас есть человек
+        с римским именем Васисуали... во второй раз у нас в гостях, а в первый раз он
+        чем-то прославился". Сам гость говорит про "старый-старый бородатый анекдот,
+        на который потом в Твиттере налепили копирайт Радио-Т".
+      possible_matches:
+        - person_id: "vasilius_unknown"
+          confidence: 0.8
+          reason: "Явное представление как 'Василиус', второй раз в гостях, рассказывал анекдот в первый визит"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 152.05
+          etime: 164.58
+          text: >
+            По-моему, я прославился вот этим вот старым-старым бородатым анекдотом,
+            на который уже потом в Твиттере налепили копирайт «Радио Ти», как положено.
+            Что-то такое было.
+        audio_url: "https://cdn.radio-t.com/rt_podcast239.mp3"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 39
+    replies_count: 15
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие реплики (<3 сек каждая), разбросанные по эпизоду.
+        Типичные фразы: "Кстати, да", "Правильно", краткие комментарии.
+        Скорее всего ошибка распознавания одного из ведущих или гостей.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Возможно ошибка распознавания Маринки - женский голос, короткие комментарии"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть ошибочно приписаны Gray"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 754.56
+          etime: 757.42
+          text: "Но опять же здесь, давай я скажу, а то вы меня все перебиваете."
+        audio_url: "https://cdn.radio-t.com/rt_podcast239.mp3"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 25
+    replies_count: 10
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: >
+        Очень короткие реплики (2-3 сек), всего 10 штук за весь эпизод.
+        Примеры: "Поэтому качество звука будет не очень", "Как-то так, да".
+        Явная ошибка распознавания - это комментарии от одного из участников.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Контекст реплик похож на комментарии Gray"
+        - person_id: "SPEAKER_04"
+          confidence: 0.4
+          reason: "Может быть продолжение речи Василиуса"
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 24
+    replies_count: 8
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: >
+        Маркировка "MISATTRIBUTED" указывает на отменённое ошибочное присвоение.
+        Короткие реплики вроде "Так они и так сейчас идут лесом", "Ну, когда ты появляешься".
+        Вероятно это реплики Marin_k_a или одного из гостей, ошибочно приписанные Lavale.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплика 'Так они и так сейчас идут лесом' (1649s) - продолжение темы Umputun про Linux"
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Реплики похожи на стиль Маринки, идут в контексте её высказываний"
+        - person_id: "SPEAKER_05"
+          confidence: 0.3
+          reason: "Возможно реплики гостьи Лены"
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: >
+        Только 4 реплики по 2 секунды каждая: "Нет", "Может, это для этого все?".
+        Типичные односложные ответы - явная ошибка сегментации речи.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: "Представлена как 'Лена', но ID не привязан к people.yaml. Нужно добавить гостя."
+    - speaker: "SPEAKER_04"
+      issue: "Представлен как 'Василиус', но ID не привязан к people.yaml. Нужно добавить гостя."
+    - speaker: "EldarMurtazin"
+      issue: >
+        Эльдар появляется с 498 секунды, но формального представления нет.
+        Его упоминают позже (2675s): "Скажи спасибо Эльдару".
+        Вероятно представлен в первых минутах, но не зафиксировано явно.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 239
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Lena"
+    confidence: high
+    reason: "Явное представление в начале эпизода: 'Гостья у нас Лена'"
+
+  - type: rename
+    episode: 239
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Vasilius"
+    confidence: high
+    reason: "Явное представление как 'Василиус', второй визит в подкаст"
+
+  - type: merge_with_verification
+    episode: 239
+    from_speaker: "SPEAKER_06"
+    to_speaker: null  # требуется voice comparison
+    confidence: low
+    reason: "Короткие разрозненные реплики, требуется определить кто это"
+
+  - type: merge_with_verification
+    episode: 239
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Контекст реплик указывает на Маринку, но нужна верификация"
+
+# Примечания
+notes: |
+  Эпизод 239 от 14 мая 2011 года.
+
+  Основной состав: Umputun, Gray, Bobuk, Marin_k_a (Маринка).
+
+  Гости:
+  1. Лена (SPEAKER_05) - постоянная гостья, живёт за рубежом, не первый раз в подкасте
+  2. Василиус (SPEAKER_04) - второй раз в гостях, в первый раз рассказал анекдот
+  3. EldarMurtazin - мобильный аналитик, уже известен системе
+
+  Требуется:
+  1. Добавить гостей Lena и Vasilius в people.yaml
+  2. Создать правила переименования SPEAKER_05 → Lena, SPEAKER_04 → Vasilius
+  3. Верифицировать SPEAKER_06 через voice comparison
+  4. Проверить SPEAKER_MISATTRIBUTED_LAVALE - вероятно это Marin_k_a

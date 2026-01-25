@@ -1,0 +1,186 @@
+episode: 284
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  total_duration_sec: 7415  # Примерно 2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 212
+    replies_count: 57
+    pattern: consecutive
+    first_appearance_sec: 2034
+    last_appearance_sec: 3000
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Контекст: студент-украинец, учится в Испании
+      # Umputun прямо спрашивает: "Ты у нас студент, да?" - "Студент"
+      # "Я украинец", учится в Испании, рассказывает про образование
+      notes: |
+        Реальный гость - слушатель, позвонивший в эфир через Google+ Hangout.
+        Украинец, студент в Испании. Рассказывает про обучение в Испании.
+        Имя не называется. Это типичный "слушатель в эфире" (listener call-in).
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2107.48
+          etime: 2127.57
+          text: "Ну, для начала вас попросят сдать вступительные экзамены. Ну, не особо сложно, если честно, если подготовиться... На испанском языке. Для людей, которые старше 25 лет, сильно проще тест, чем для студентов стандартных. А для людей старше, чем 45, еще проще."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 75
+    replies_count: 12
+    pattern: consecutive
+    first_appearance_sec: 1370
+    last_appearance_sec: 1541
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Контекст: программист C++/Python, пишет системные программы под Linux
+      # для систем навигации, только закончил университет
+      notes: |
+        Реальный гость - слушатель, позвонивший в эфир через Google+ Hangout.
+        Программист (C++, Python, Perl), пишет системные программы под Linux
+        для систем навигации. Только закончил университет.
+        Рассказывает про Google+ видео-встречи. Имя не называется.
+        Umputun прощается с ним: "Спасибо, что пришел к нам... За это я тебя и отключаю."
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1431.88
+          etime: 1454.70
+          text: "Ну, в последнее время программировал на C++, до этого программировал на Python и Perl'е в первое время, но потом от этого отказался... Дело в том, что я пишу, скажем так, системные программки под Linux для систем навигации."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 12
+    replies_count: 6
+    pattern: scattered
+    first_appearance_sec: 174
+    last_appearance_sec: 7114
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (1-4 сек каждая), разбросанные по всему эпизоду.
+        Это ошибки распознавания голоса одного из ведущих, ошибочно
+        приписанные некому "Eldar". В эпизоде 284 нет гостя Эльдара Муртазина.
+        Реплики: "Ну, вот просто как...", "Да, я программист.",
+        "Пишу еще с третьего курса.", "Это очень здорово, это очень круто.",
+        "First 1 терабайт per month.", "Ну, в общем, пропускаем..."
+        Некоторые реплики явно относятся к SPEAKER_02 (например "Да, я программист"
+        и "Пишу еще с третьего курса" - продолжение разговора с программистом).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "SPEAKER_02"
+          confidence: 0.7
+          reason: "Реплики 1430s и 1521s относятся к разговору с программистом"
+        - person_id: "Gray"
+          confidence: 0.5
+          reason: "Остальные разбросанные реплики могут быть ошибкой распознавания Gray"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+    first_appearance_sec: 146
+    last_appearance_sec: 7415
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три короткие реплики: "Не знаю." (146s), "Но устал." (415s), "Угу." (7415s)
+        Это ошибки распознавания - односложные фразы, разбросанные по эпизоду.
+        Скорее всего неверно атрибутированные реплики одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Gray"
+          confidence: 0.6
+          reason: "Реплика 'Не знаю.' в 146s идёт перед репликой Gray 'Не знаю.' в 148s - возможно дубликат"
+        - person_id: "Umputun"
+          confidence: 0.5
+          reason: "Реплика 'Но устал.' может быть продолжением речи Umputun"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "Слушатель в эфире (call-in), имя не называется"
+    - speaker: "SPEAKER_02"
+      issue: "Слушатель в эфире (call-in), имя не называется"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Ошибочная атрибуция - в эпизоде нет Эльдара Муртазина"
+    - speaker: "SPEAKER_00"
+      issue: "Ошибки распознавания, короткие односложные реплики"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # SPEAKER_MISATTRIBUTED_ELDAR реплики которые явно относятся к SPEAKER_02
+  - type: rename
+    episode: 284
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "SPEAKER_02"
+    time_range: [1430, 1526]
+    confidence: high
+    reason: "Реплики 'Да, я программист.' и 'Пишу еще с третьего курса.' - это продолжение разговора с программистом SPEAKER_02"
+
+# Комментарии по эпизоду
+episode_notes: |
+  Эпизод 284 от 14 апреля 2012 года (пасхальный выпуск).
+
+  Участники:
+  - Umputun - ведущий, присутствует с начала
+  - Gray - ведущий, присутствует с начала
+  - Bobuk - ведущий, присоединился с ~260s
+  - Ksenks - не участвует (печёт куличи)
+
+  Слушатели в эфире (Google+ Hangouts):
+  - SPEAKER_02: программист C++/Linux (~1370-1541s)
+  - SPEAKER_01: украинский студент в Испании (~2034-3000s)
+
+  Ошибки распознавания:
+  - SPEAKER_00: 3 коротких реплики - ошибки
+  - SPEAKER_MISATTRIBUTED_ELDAR: 6 реплик - часть относится к SPEAKER_02,
+    часть - ошибки распознавания Gray или других ведущих

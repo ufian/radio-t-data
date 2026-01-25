@@ -1,0 +1,202 @@
+episode: 233
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Marin_k_a]
+  guests_present: []
+  total_hosts_duration_sec: 6337  # Umputun: 3546 + Bobuk: 2371 + Marin_k_a: 418 + Gray: 2
+
+# Контекст эпизода
+episode_context:
+  date: "2011-04-02"
+  notes: |
+    В начале эпизода Marin_k_a представляет состав: Umputun, Bobuk (с iPad 2),
+    и отсутствующий Gray ("Небритыш"). Gray не смог настроить интернет и не участвовал
+    в этом выпуске (упоминается в 0:20 "у нас сегодня нету только нашего Небритыша").
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 418
+    replies_count: 143
+    first_appearance_sec: 13
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun обращается к ней по имени в 0:04: "Маринка сказала, это какой, 233?"
+        Bobuk в 0:43: "Мариночка, мне кажется, ты имеешь что-то против Грея."
+        В people.yaml: Marin_k_a - бывшая ведущая подкаста (id: marin_k_a).
+        Активно участвует в обсуждении на протяжении всего выпуска.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Gray"
+    total_duration_sec: 2
+    replies_count: 1
+    first_appearance_sec: 4189
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Gray явно отсутствует в этом выпуске - об этом говорится в начале:
+        0:20 Marin_k_a: "у нас сегодня нету только нашего Небритыша. Небритыш, Чебурашка, Грей,
+        он не смог настроить интернет"
+
+        Единственная реплика "Не догадываешься даже, да?" (4188-4191s) - это очевидная
+        ошибка распознавания, скорее всего это реплика Marin_k_a или одного из ведущих.
+        Контекст: обсуждение MongoDB, после вопроса "Нет?" следует эта реплика.
+      identified_as: null
+      identification_method: null
+      confidence: high
+      evidence: "Gray отсутствует в эпизоде по его же словам в начале выпуска"
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Короткая реплика могла быть произнесена Marin_k_a"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Также возможна ошибка атрибуции к Bobuk"
+      voice_task:
+        needed: false
+        reason: "Явная ошибка разметки - Gray отсутствовал в выпуске"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 9
+    replies_count: 3
+    first_appearance_sec: 2777
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Маркер SPEAKER_MISATTRIBUTED_LAVALE означает, что это была ошибочная
+        атрибуция к Lavale, которая уже была отменена. Короткие разрозненные
+        реплики в разных частях эпизода:
+        - 2777s: "Инвалид это ветеран по-французски." (после слова "инвалид" в речи Umputun)
+        - 5267s: "Ну, это бывает и очень часто." (реакция на комментарий о Visual Basic)
+        - 5456s: "Я вот что-то не могу понять." (обрывается, далее продолжает Umputun)
+
+        Все три реплики - короткие комментарии/реакции, типичные для ошибок
+        атрибуции при автоматическом распознавании. Скорее всего это реплики
+        одного из присутствующих ведущих (Bobuk или Marin_k_a).
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Три коротких разрозненных реплики без контекста представления"
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Реплики могут принадлежать Marin_k_a"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Также возможно это Bobuk"
+      voice_task:
+        needed: true
+        reason: "Требуется сравнение голоса для определения реального спикера"
+        reference_segment:
+          stime: 2777.46
+          etime: 2780.02
+          text: "Инвалид это ветеран по-французски."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 27
+    replies_count: 7
+    first_appearance_sec: 5601
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_00 появляется в двух местах:
+
+        1) 5601s - одна короткая реплика "А, вот, нашел." (1 сек)
+           Контекст: Umputun говорит "Кручу, кручу, пауза в эфире... Ну, не помню."
+           Сразу после "А, вот, нашел" Umputun продолжает "Нашел, что он сказал."
+           Очевидно это реплика Umputun, ошибочно распознанная как SPEAKER_00.
+
+        2) 6957-6986s - рекламный блок FastVPS (6 реплик, ~29 сек)
+           Контекст: Umputun говорит "Давай, крути рекламу. Потому что спонсоры..."
+           Затем идёт рекламный ролик FastVPS, который должен быть маркирован как _ad.
+           Последняя реплика "Редактор субтитров А.Семкин Корректор А.Егорова" -
+           это технический текст, не речь.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Первая реплика - ошибка Umputun, остальные - рекламный блок"
+      possible_matches: []
+      voice_task:
+        needed: false
+        reason: "Первая реплика = Umputun (очевидно из контекста), остальное = реклама"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray помечен как спикер с 1 репликой, но в начале эпизода явно сказано,
+        что он отсутствует ("у нас сегодня нету только нашего Небритыша").
+        Эта реплика должна быть переатрибутирована другому спикеру.
+    - speaker: "SPEAKER_00"
+      issue: |
+        Рекламный блок FastVPS (6957-6986s) помечен как SPEAKER_00,
+        должен быть переименован в _ad.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 233
+    from_speaker: "SPEAKER_00"
+    to_speaker: "_ad"
+    stime_range: [6957, 6986]
+    confidence: high
+    reason: "Рекламный блок FastVPS после фразы 'крути рекламу'"
+
+  - type: rename
+    episode: 233
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Umputun"
+    stime: 5601.35
+    confidence: high
+    reason: |
+      Короткая реплика "А, вот, нашел." - это продолжение монолога Umputun,
+      который до этого говорил "Кручу, кручу... Ну, не помню" и сразу после
+      продолжает "Нашел, что он сказал."
+
+  - type: rename
+    episode: 233
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_MISATTRIBUTED_GRAY"
+    stime: 4188.76
+    confidence: high
+    reason: "Gray отсутствовал в выпуске, требуется voice comparison для атрибуции"
+
+# Задания на голосовое сравнение
+voice_comparison_tasks:
+  - task_id: "ep233_misattributed_lavale"
+    speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    candidates: ["marin_k_a", "bobuk"]
+    reference_segments:
+      - stime: 2777.46
+        etime: 2780.02
+        text: "Инвалид это ветеран по-французски."
+    audio_url: null  # Нет данных из desc.json
+
+  - task_id: "ep233_misattributed_gray"
+    speaker: "Gray"
+    candidates: ["marin_k_a", "bobuk"]
+    reference_segments:
+      - stime: 4188.76
+        etime: 4191.08
+        text: "Не догадываешься даже, да?"
+    audio_url: null

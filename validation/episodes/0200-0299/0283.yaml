@@ -1,0 +1,199 @@
+episode: 283
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7840
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 448
+    replies_count: 130
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun представляет в начале: 'А еще у нас есть Маруся' (52.9s). Обращается к ней 'Марусенька' (73s), 'Маруся' (6771s). В people.yaml: marin_k_a - бывшая ведущая Марина."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 9
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные реплики ('Да, совершенно верно', 'Ну, да', 'Деревня', 'Шо?'), разбросанные по эпизоду между репликами ведущих. Типичные ошибки автоматического распознавания спикеров."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Большинство реплик появляются в контексте диалога Bobuk, могут быть неправильно сегментированы части его речи"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Некоторые реплики ('Ты?' в 3665s) могут принадлежать Marin_k_a"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Три изолированные реплики. 'Текстами, а не текстами' (2151s) - вставка в диалог Bobuk/Umputun. 'Да, я качала' (2751s) - женский род, возможно Marin_k_a. 'Мы причем устроили сессию через ТМУКС' (5536s) - явно продолжение речи Umputun, который сразу после говорит про tmux-сессию."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Реплика про ТМУКС (5536s) - продолжение речи Umputun, он говорит до и после про ту же сессию"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "'Да, я качала' - женский род, может быть Marin_k_a"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две очень короткие реплики ('Ну, конечно' 2.5s, 'Облачко' 0.7s) в случайных местах диалога. Типичные ошибки сегментации."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "'Ну, конечно' (4622s) следует сразу после вопроса Bobuk 'Надо, да?'"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Может быть краткая реакция Gray"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплики 'У меня у босса двухступенчатая авторизация' (3090s) и 'А почему у вас Music до сих пор бета?' (3988s) - осмысленные вопросы участника эпизода. Lavale не упоминается в этом выпуске. Скорее всего это Marin_k_a, которая активно участвует."
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Marin_k_a - единственная женщина-гость в эпизоде, активно участвует в обсуждениях, задаёт вопросы ведущим"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3090.77
+          etime: 3092.71
+          text: "У меня у босса двухступенчатая авторизация."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 7
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие фрагменты ('куски планов знаю важные', 'Конечно', 'Внучек, хорошо'), которые являются продолжением или реакцией на реплики Bobuk. Эльдар Муртазин не упоминается в эпизоде и не участвует. Это ошибки сегментации речи Bobuk или краткие реакции других участников."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "'куски планов знаю важные' (4871s) - продолжение фразы Bobuk про планы сервиса. 'Внучек, хорошо' (7833s) - эхо реплики Bobuk 'Он внучек будет у нас'"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "'Конечно' (6763s) может быть краткой реакцией Marin_k_a"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Lavale не упоминается и не представляется в эпизоде. Реплики скорее принадлежат Marin_k_a."
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар Муртазин не участвует в эпизоде 283. Реплики - ошибки сегментации речи Bobuk."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 283
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Единственная женщина-гость в эпизоде, активно участвует. Требуется voice comparison для подтверждения."
+
+  - type: rename
+    episode: 283
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Реплики являются продолжениями/эхо речи Bobuk. Эльдар не участвует в эпизоде."
+
+# Примечания
+notes: |
+  Эпизод 283 от 7 апреля 2012 года.
+  Участники: Umputun, Bobuk, Gray + гостья Marin_k_a (Маруся/Марина).
+
+  Основные проблемы:
+  1. SPEAKER_MISATTRIBUTED_LAVALE и SPEAKER_MISATTRIBUTED_ELDAR - ошибочные метки,
+     эти люди не участвуют в эпизоде. Lavale и Eldar - гости других выпусков.
+  2. SPEAKER_03, SPEAKER_04, SPEAKER_06 - типичные ошибки автоматической
+     сегментации (короткие фразы между репликами ведущих).
+
+  Marin_k_a корректно идентифицирована - это бывшая ведущая Марина,
+  представленная Umputun в начале выпуска как "Маруся".

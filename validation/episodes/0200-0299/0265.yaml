@@ -1,0 +1,232 @@
+episode: 265
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 5832
+
+# Контекст эпизода
+episode_context:
+  date: "2011-11-26"
+  introduction: |
+    Umputun в начале представляет: "представлять, кроме Бубука и Маруси, особо некого"
+    Marin_k_a (Маруся) - известная бывшая ведущая, зарегистрирована в people.yaml
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 27
+    replies_count: 20
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Большинство реплик принадлежит Marin_k_a
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun обращается: "Марусенька, будь такая любезная. Говори в микрофон." (3341s)
+           Сразу после этого SPEAKER_00: "Я стараюсь очень сильно." (3343s)
+        2. Женские формы глаголов: "Не общалась" (1591s), "А я не поняла" (4571s)
+        3. Многие реплики идут до/после Marin_k_a (1203s, 5233s, 6153s)
+
+      # Исключения - возможно другие ведущие
+      exceptions:
+        - text: "Я бы взял"
+          stime: 4573
+          note: "Мужской род, может быть Umputun или Bobuk"
+        - text: "Благодарю"
+          stime: 3334
+          note: "Короткая реплика между Bobuk, может быть ошибка атрибуции"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 10
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. "Я видела пару девчонок, которые на питоне пишут" (1583s) - женский род "видела"
+        2. "Я готова" (5100s) - женский род "готова"
+        3. В выпуске только одна женщина - Marin_k_a (Маруся)
+        4. Реплика "Нет, я могу сказать" (2334s) - сразу после Marin_k_a говорит (2340s)
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие нейтральные реплики ("Это же прекрасно", "Вот сейчас бы не пришли").
+        Эльдар Муртазин НЕ участвует в этом выпуске (представлены только Бубук и Маруся).
+        Вероятно это ошибочная атрибуция одного из ведущих или Marin_k_a.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "После реплики на 1834s сразу говорит Marin_k_a"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Нейтральные короткие реплики, могут быть ведущими"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Нейтральные короткие реплики, могут быть ведущими"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 372.3
+          etime: 372.9
+          text: "Это же прекрасно."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (1.4 сек суммарно) в разное время (272s и 6153s).
+        "Arch и Linux from Scratch обязательно" (272s) - техническая фраза, похоже на Bobuk или Umputun.
+        "Ага" (6153s) - междометие, сразу после Bobuk "Вы что?", сразу перед Marin_k_a.
+        Скорее всего ошибки распознавания голосов ведущих или Marin_k_a.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Реплика про Arch идёт сразу перед 'Вот Arch я считаю самый true Linux' от Bobuk"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "'Ага' (6153s) идёт перед репликой Marin_k_a"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_99"
+    total_duration_sec: 2
+    replies_count: 14
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Аудио-артефакты, джинглы, звуковые эффекты. Игнорировать."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Лаваль не участвует в этом выпуске. Реплики принадлежат Marin_k_a."
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар Муртазин не участвует в этом выпуске. Реплики требуют переатрибуции."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 265
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Прямое обращение Umputun: "Марусенька, говори в микрофон" -> SPEAKER_00: "Я стараюсь".
+      Женские формы глаголов совпадают с единственной женщиной в выпуске.
+    exceptions:
+      - stime: 4573
+        text: "Я бы взял"
+        note: "Мужской род - возможно другой спикер, требует проверки"
+
+  - type: rename
+    episode: 265
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Женские формы глаголов: "видела", "готова".
+      Лаваль не участвует в выпуске, единственная женщина - Marin_k_a.
+
+  - type: rename
+    episode: 265
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: |
+      Эльдар не участвует в выпуске.
+      После реплики на 1834s сразу говорит Marin_k_a.
+      Требует дополнительной проверки голоса.
+
+  - type: rename
+    episode: 265
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: |
+      Реплика про Arch семантически связана с последующей фразой Bobuk.
+      Короткое "Ага" не позволяет надёжно идентифицировать.
+
+# Итоговые рекомендации
+recommendations:
+  - action: "apply_rules"
+    priority: high
+    description: |
+      Применить правила переименования SPEAKER_00 и SPEAKER_MISATTRIBUTED_LAVALE в Marin_k_a.
+      Уверенность высокая благодаря прямому обращению и женским формам глаголов.
+
+  - action: "manual_review"
+    priority: medium
+    description: |
+      Проверить реплику SPEAKER_00 "Я бы взял" (4573s) - мужской род не соответствует Marin_k_a.
+      Возможно это Umputun или Bobuk.
+
+  - action: "voice_comparison"
+    priority: low
+    description: |
+      Опционально: сравнить голос SPEAKER_MISATTRIBUTED_ELDAR с Marin_k_a для подтверждения.

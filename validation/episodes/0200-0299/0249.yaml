@@ -1,0 +1,191 @@
+episode: 249
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_duration_sec: 8790  # ~2.5 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 2256
+    replies_count: 574
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале (145s) Umputun говорит: 'Эльдар пришел не один, а с многими мальчиками... Ты кого с собой привел, Эльдар?'"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 647
+    replies_count: 170
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале (79-87s) Umputun представляет: 'пришедшая Маруся, которую мы от Марусеньки понизили просто до Марусики'. Marin_k_a подтверждает: 'Марусики, угу, угу, угу.'"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 12
+    replies_count: 13
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики, все с женским родом ('Что я сказала?', 'Я, кстати, согласна'), появляются между репликами Marin_k_a - это ошибка распознавания Marin_k_a"
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Все реплики с женским родом:
+        - 855s: "Что я сказала?"
+        - 3942s: "Я, кстати, согласна."
+        - 8784s: "Бульк? Нет, нет возражений." (сразу после Umputun говорит "Маруся, я так понимаю, ты «за»")
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики-вопросы в контексте, где говорят Marin_k_a и другие. Фразы 'Это ты про кого?', 'Это кто не знает?' - типичные уточняющие вопросы, которые могут принадлежать любому участнику"
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: "Реплики слишком короткие для идентификации (1-2 сек каждая)"
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Появляется между репликами Marin_k_a"
+        - person_id: "eldar_murtazin"
+          confidence: 0.3
+          reason: "Находится в сегменте активного обсуждения"
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 13
+    replies_count: 7
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибка распознавания EldarMurtazin. Явное доказательство:
+        - 6158s SPEAKER_05: "Дай мне слово."
+        - 6158s EldarMurtazin: "Дай мне слово." (та же фраза сразу после - дублирование)
+        Другие реплики также в контексте речи Эльдара (обсуждение чатика, кузнец)
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        - 6158s: дубликат реплики с EldarMurtazin "Дай мне слово"
+        - 6094s: "Зачем же ссориться, да?" - в контексте обсуждения
+        - 6153s: "Зачем нам кузнец?" - цитата из фильма, стиль Эльдара
+        - 6251-6258s: вопросы про чатик - типично для Эльдара, который жаловался на чатик в начале
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 8
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Маркер MISATTRIBUTED указывает на отменённое ошибочное присвоение. Реплики разрозненные и короткие, контекст не позволяет однозначно определить автора"
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        Реплики:
+        - 6312s: "Это совершенно не Стиви." (2.5s)
+        - 6453s: "Нет общего понятия, что такое сисадмин." (2s)
+        - 7844s: "Ну, посмотрю я. А залогинены, я их вижу." (3.5s)
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Реплика про сисадминов после обсуждения, которое вела Marin_k_a ('Маринка, ты много рассказывала про сисадминов')"
+        - person_id: "eldar_murtazin"
+          confidence: 0.3
+          reason: "Реплика про 'залогинены' может относиться к Эльдару, который следил за чатиком"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6453.58
+          etime: 6455.56
+          text: "Нет общего понятия, что такое сисадмин."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: "Очень мало реплик (8 реплик, 23 сек) для основного ведущего. Возможно, часть реплик ошибочно атрибутирована другим спикерам"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 249
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Все реплики с женским родом, контекст указывает на Марину (сразу после SPEAKER_00 Umputun обращается к 'Маруся')"
+
+  - type: rename
+    episode: 249
+    from_speaker: "SPEAKER_05"
+    to_speaker: "EldarMurtazin"
+    confidence: high
+    reason: "Дублирование реплики 'Дай мне слово' с EldarMurtazin, контекст реплик соответствует участию Эльдара в обсуждении"
+
+  - type: rename
+    episode: 249
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Появляется в контексте речи Marin_k_a, короткие уточняющие вопросы"
+
+  - type: rename
+    episode: 249
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Реплика про сисадминов в контексте обсуждения, которое вела Марина. Требует voice verification для подтверждения"
+
+# Примечания
+notes: |
+  Выпуск 249 от 30 июля 2011 года.
+
+  Состав:
+  - Ведущие: Umputun (основной), Gray, Bobuk (минимальное участие)
+  - Гости: EldarMurtazin (активный участник), Marin_k_a (Маруся/Маринка)
+
+  Особенности:
+  - EldarMurtazin и Marin_k_a уже идентифицированы корректно в транскрипте
+  - SPEAKER_00, SPEAKER_01, SPEAKER_05 - ошибки распознавания, скорее всего Marin_k_a или EldarMurtazin
+  - SPEAKER_MISATTRIBUTED_LAVALE - отменённое ошибочное присвоение, требует проверки
+  - Bobuk очень мало говорит в этом выпуске (возможно, технические проблемы или отсутствие большую часть)

@@ -1,0 +1,192 @@
+episode: 290
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Marin_k_a]
+  guests_present: []
+  total_duration_sec: 7766
+  note: "Gray отсутствовал (Marin_k_a: 'Грей второй раз подряд прогуливает')"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 173
+    replies_count: 126
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка ASR-системы. Реплики явно принадлежат Marin_k_a: женский голос, активное участие в дискуссии, характерные фразы ('Не заставляй меня быть блондинкой', 'Я вспомнила анекдот', 'Ну, я вместо Грея')"
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        - Реплика 4041s: "Я вспомнила анекдот" / "Ну, я вместо Грея" — явно Марина
+        - Реплика 974s: "Не заставляй меня быть блондинкой" — женский голос
+        - Реплика 2174s: "Пошла читать" — женский род глагола
+        - Реплика 7714s: "Это я должна готовиться?" — женский род
+        - Стиль общения соответствует Marin_k_a в начале выпуска
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 12
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики, вероятно ошибки ASR. Некоторые реплики женского рода ('Конечно, я всегда особенная') указывают на Marin_k_a"
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        - Реплика 3474s: "Конечно, я всегда особенная" — женский голос
+        - Реплика 3784s: "Да, это смешно" — короткая реакция
+        - Остальные реплики односложные: "Пимкнуть", "Хрупает?", "Боже мой"
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Некоторые короткие реплики могут быть от Bobuk"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единичная короткая реплика (2 сек) — типичная ошибка ASR"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплика 307s: 'Да, это сильно было, да.' — односложная реакция"
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Контекст обсуждения Хабра, активная участница"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Может быть реакция Bobuk"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две очень короткие реплики в разных частях выпуска — ошибки ASR"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        - Реплика 5987s: "Да-да-да." (2.5 сек)
+        - Реплика 7766s: "Ура!" (0.14 сек) — финальная реплика выпуска
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Эмоциональные возгласы характерны для женского голоса"
+
+      voice_task:
+        needed: false
+
+  - speaker: "Gray"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Gray в этом выпуске не участвовал. Marin_k_a в начале (35-41s): 'Грей второй раз подряд прогуливает'. Реплика 'Вот.' ошибочно размечена."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        - Реплика 5257s: "Вот." (4 сек)
+        - Контекст: Bobuk говорит про auncube.com, затем Umputun отвечает "Удивительно"
+        - Скорее всего это Umputun или Bobuk
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Реакция на слова Bobuk"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Продолжение своей мысли"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: "Размечен как спикер, но отсутствовал в выпуске (прогулял)"
+    - speaker: "SPEAKER_02"
+      issue: "126 реплик неправильно размечены как SPEAKER_02 вместо Marin_k_a"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 290
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Женский голос, активное участие, характерные фразы ('я вместо Грея', 'быть блондинкой')"
+
+  - type: rename
+    episode: 290
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Реплики женского рода ('я всегда особенная'), короткие реакции"
+
+  - type: rename
+    episode: 290
+    from_speaker: "Gray"
+    to_speaker: "NEEDS_REVIEW"
+    confidence: high
+    reason: "Gray отсутствовал в этом выпуске, реплика ошибочно размечена"
+
+  - type: delete_or_merge
+    episode: 290
+    speaker: "SPEAKER_00"
+    confidence: low
+    reason: "Единичная короткая реплика, требует voice comparison для точной атрибуции"
+
+  - type: delete_or_merge
+    episode: 290
+    speaker: "SPEAKER_04"
+    confidence: low
+    reason: "Две очень короткие реплики, требует voice comparison"
+
+# Примечания
+notes: |
+  Выпуск 290 от 26 мая 2012 года.
+  Состав: Umputun, Bobuk, Marin_k_a.
+  Gray отсутствовал ("прогулял второй раз подряд").
+
+  Основная проблема: SPEAKER_02 — это Marin_k_a (126 реплик неправильно атрибуированы).
+  ASR-система разметила часть реплик Марины как SPEAKER_02.
+
+  Рекомендация: объединить SPEAKER_02 и SPEAKER_01 с Marin_k_a после верификации.

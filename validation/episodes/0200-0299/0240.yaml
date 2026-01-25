@@ -1,0 +1,215 @@
+episode: 240
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: ["Андрей Сибрант (Яндекс)", "Марина (Marin_k_a)"]
+  total_duration_sec: 7831.7
+
+# КРИТИЧЕСКАЯ ОШИБКА: Неправильная идентификация гостя
+critical_issues:
+  - type: wrong_guest_identity
+    current_name: "PetrDidenko"
+    actual_name: "Андрей Сибрант"
+    evidence: |
+      В начале выпуска (48.5s) Bobuk явно представляет гостя:
+      "Человека зовут Андрей Сибрант"
+      Затем обращается: "Андрей, ты можешь вот честно сейчас сказать здравствуйте"
+      И Umputun: "Андрей, пока ты не стал рассказывать про себя..."
+
+      Bobuk также называет его "главным шоуменом Яндекса" (35.9s)
+    action_required: |
+      1. Переименовать PetrDidenko -> AndreySibrant в этом выпуске
+      2. Объединить SPEAKER_00 -> AndreySibrant (96 переходов между ними)
+      3. Добавить Андрея Сибранта в people.yaml
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 771.8
+    replies_count: 136
+    pattern: consecutive
+    analysis:
+      is_error: true
+      error_reason: "Неправильное имя - это Андрей Сибрант, не Пётр Диденко"
+      identified_as: null  # Нужен новый ID: andrey_sibrant
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        48.5s Bobuk: "Человека зовут Андрей Сибрант"
+        49.6s Bobuk: "Андрей, ты можешь вот честно сейчас сказать здравствуйте"
+        Гость работает в Яндексе, описывается как "главный шоумен Яндекса"
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 449.9
+    replies_count: 192
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null  # Должен стать andrey_sibrant
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        96 переходов между SPEAKER_00 и PetrDidenko указывают,
+        что это один и тот же человек (Андрей Сибрант).
+        Реплики логически связаны и продолжают друг друга.
+        Пример (86.7s): Umputun спрашивает "Маньяк ли ты на самом деле?",
+        SPEAKER_00 отвечает "Ну, маньяк", затем PetrDidenko продолжает
+        "У меня вот сейчас там три монитора передо мной"
+      voice_task:
+        needed: false
+        reason: "Контекстуально очевидно, что это тот же человек"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 6.7
+    replies_count: 2
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        941.9s Bobuk: "Слушай, идеальная женщина сидит рядом и молчит"
+        945.0s SPEAKER_MISATTRIBUTED_MARIN: "Да, я вернулась в семью"
+        961.2s Bobuk: "Давайте Марусечка наладит микрофон"
+        Это явно Марина (Marin_k_a), бывшая ведущая
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 6.9
+    replies_count: 3
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Эльдар Муртазин не участвовал в этом выпуске. Ошибочная разметка."
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        Три короткие реплики (774.5s, 6750.8s, 7216.9s) разбросаны по выпуску.
+        Эльдар не представлен, нет упоминаний о его участии.
+        Вероятно ошибка автоматического распознавания.
+        Реплики могут принадлежать Андрею Сибранту или ведущим.
+      possible_matches:
+        - person_id: "andrey_sibrant"
+          confidence: 0.5
+          reason: "Гость активно участвовал, реплики могут быть его"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Ошибка распознавания голоса ведущего"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 774.49
+          etime: 777.09
+          text: "Национальный центр по использованию суперкомпьютеров."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3.5
+    replies_count: 3
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Короткие реакции и смех, вероятно ошибка распознавания"
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        Две реплики (955.2s, 956.7s) в момент появления Марины -
+        "Отлично, отлично" и "Еще и микрофон"
+        Третья реплика (5145.9s) - просто смех "Ха-ха-ха"
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Появляется в момент её входа в эфир"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Предыдущая реплика от Gray"
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики для идентификации"
+
+  - speaker: "SPEAKER_99"
+    total_duration_sec: -3.9
+    replies_count: 11
+    pattern: scattered
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: null
+      confidence: high
+      evidence: "Отрицательная длительность указывает на артефакты разметки. Игнорировать."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "PetrDidenko"
+      issue: "КРИТИЧНО: Имя не соответствует представлению. Гость представлен как Андрей Сибрант."
+    - speaker: "SPEAKER_00"
+      issue: "Не объединён с основным спикером (PetrDidenko/AndreySibrant)"
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Должен быть переименован в Marin_k_a"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар не участвовал в выпуске, требуется ручная проверка"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 240
+    from_speaker: "PetrDidenko"
+    to_speaker: "AndreySibrant"
+    confidence: high
+    reason: "Bobuk явно представляет гостя: 'Человека зовут Андрей Сибрант' (48.5s)"
+
+  - type: rename
+    episode: 240
+    from_speaker: "SPEAKER_00"
+    to_speaker: "AndreySibrant"
+    confidence: high
+    reason: "96 переходов с PetrDidenko, логически связанные реплики"
+
+  - type: rename
+    episode: 240
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Bobuk обращается 'Марусечка', контекст подтверждает"
+
+  - type: rename
+    episode: 240
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "SPEAKER_UNIDENTIFIED"
+    confidence: medium
+    reason: "Эльдар не участвовал, требуется ручная проверка"
+
+  - type: rename
+    episode: 240
+    from_speaker: "SPEAKER_04"
+    to_speaker: "SPEAKER_UNIDENTIFIED"
+    confidence: medium
+    reason: "Слишком короткие реплики, вероятно Марина или артефакт"
+
+# Требуется добавить в people.yaml
+new_guest_to_add:
+  id: "andrey_sibrant"
+  canonical_name: "AndreySibrant"
+  aliases: ["Андрей", "Сибрант"]
+  real_name: "Андрей Сибрант"
+  info: "Яндекс, 'главный шоумен Яндекса' по словам Bobuk. Выпуск 240."
+
+# Voice comparison tasks (если потребуется)
+voice_comparison_tasks:
+  - task_id: "240_eldar_check"
+    description: "Проверить, кому принадлежат реплики SPEAKER_MISATTRIBUTED_ELDAR"
+    reference_segments:
+      - stime: 774.49
+        etime: 777.09
+        text: "Национальный центр по использованию суперкомпьютеров."
+    compare_with: ["AndreySibrant", "Umputun", "Bobuk", "Gray"]
+    audio_url: null  # desc.json отсутствует в data_clean

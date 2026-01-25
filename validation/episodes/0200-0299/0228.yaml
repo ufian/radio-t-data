@@ -1,0 +1,156 @@
+episode: 228
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_duration_sec: 6800
+  notes: |
+    Umputun в начале говорит "не в полном составе" - Bobuk присоединился позже (на ~870 сек).
+    Гости представлены явно: Эльдар Муртазин ("Ильдар") и "Маруся" (Marin_k_a).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 121
+    replies_count: 78
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_08 это дублированная разметка Marin_k_a.
+        Доказательства:
+        1. Реплики SPEAKER_08 идут непосредственно перед/после реплик Marin_k_a (разница в доли секунды)
+        2. Примеры: 41.76s SPEAKER_08 "Я посчитала", 42.48s Marin_k_a "Я посчитала целых два выпуска"
+        3. Контекст разговора один и тот же - обсуждение с Умпутуном о пропущенных выпусках
+        4. Обе говорят женским голосом, обращаются к "Грейту" и "Эльдару"
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        41.76-42.42s: SPEAKER_08 "Я посчитала" → 42.48-44.64s: Marin_k_a "Я посчитала целых два выпуска"
+        53.59-54.95s: SPEAKER_08 "И все это ты пропустила" → 54.97-59.51s: Marin_k_a продолжает тему
+        128.23-129.59s: SPEAKER_08 "Ну подожди, Эльдар, подожди" → 129.63-133.05s: Marin_k_a спрашивает Эльдара
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики-реакции (1-2 сек каждая), разбросанные по всему эпизоду.
+        Характерные фразы ("Грязные детали?", "Да ты шо?", "Правда?") похожи на стиль Umputun.
+        Слишком мало материала для отдельного спикера - вероятно ошибка распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Стиль фраз и интонации похожи на Umputun"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможно Gray с искаженным голосом"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие фрагменты (1-2 сек) для сравнения голосов"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 3 очень короткие реплики (~1 сек каждая):
+        - 2457.69s: "Да-да-да"
+        - 4603.89s: "Русскими и кириллицами"
+        - 6272.52s: "Не заканчиваются"
+        Типичные междометия/реакции, вероятно ошибочно отделённые от основного спикера.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплики следуют перед/после Gray"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Возможно Umputun"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие фрагменты для сравнения"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk появляется только на 869 секунде (14.5 минут).
+        Это объясняется фразой Umputun в начале: "не в полном составе".
+        Bobuk видимо присоединился позже к трансляции.
+        НЕ ОШИБКА - корректное позднее присоединение.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 228
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      SPEAKER_08 это та же Марина (Marin_k_a).
+      Реплики идут парами с разницей в доли секунды.
+      Контекст и содержание реплик однозначно указывают на одного спикера.
+
+  - type: delete_or_merge
+    episode: 228
+    from_speaker: "SPEAKER_01"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      5 коротких реплик - вероятно ошибки распознавания.
+      Требуется ручная проверка, к какому спикеру отнести каждую реплику.
+      Возможные кандидаты: Umputun, Gray.
+
+  - type: delete_or_merge
+    episode: 228
+    from_speaker: "SPEAKER_06"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      3 очень короткие реплики - междометия.
+      Требуется ручная проверка для определения истинного спикера.
+
+# Дополнительные заметки
+notes: |
+  Эпизод 228 от 26 февраля 2011 года.
+
+  Участники:
+  - Umputun (ведущий)
+  - Gray (ведущий)
+  - Bobuk (присоединился позже)
+  - EldarMurtazin (гость, представлен как "Ильдар" в 20-21 сек)
+  - Marin_k_a (гостья "Маруся", представлена в 38 сек)
+
+  Основная проблема: SPEAKER_08 = Marin_k_a (дублирование разметки).
+  SPEAKER_01 и SPEAKER_06 - минорные ошибки распознавания, небольшой объём.

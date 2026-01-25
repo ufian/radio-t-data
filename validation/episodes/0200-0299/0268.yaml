@@ -1,0 +1,101 @@
+episode: 268
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko]
+  total_duration_sec: 6812
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1383
+    replies_count: 407
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале выпуска Umputun обращается: 'Петя, а ты там ржешь?' (58s) и 'А ты к нам, Петя, пришел' (80s). Также упоминается как бывший сотрудник Microsoft: 'У нас много тем про твоего бывшего работодателя' (87s)"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 25
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Эльдар Муртазин не присутствует в этом эпизоде. Он упоминается только в третьем лице ('Мне вспомнился Муртазин', 'Эльдар до сих пор обещает'). Спикер явно помечен как MISATTRIBUTED. Реплики короткие (2-7 сек) и разбросаны по эпизоду. Скорее всего это ошибочно атрибутированные реплики одного из ведущих или PetrDidenko."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "petr_didenko"
+          confidence: 0.4
+          reason: "Некоторые реплики (например, 'Слушайте, проблема с емкостью вообще-то не является критичной' в 4336s) продолжаются репликой PetrDidenko ('Ну да, но только...')"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплика 'Очень удобно.' (1903s) идёт сразу после длинной реплики Gray и перекрывается с его следующей репликой"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Некоторые короткие реплики могут быть его комментариями"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4336.21
+          etime: 4343.35
+          text: "Слушайте, проблема с емкостью вообще-то не является критичной."
+
+  - speaker: "SPEAKER_99"
+    total_duration_sec: -6
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Отрицательная общая длительность указывает на ошибки в таймстемпах. SPEAKER_99 традиционно используется для аудио-артефактов и джинглов."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "8 реплик атрибутированы несуществующему в эпизоде спикеру. Требуется voice comparison для определения реального спикера."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Нет правил с high confidence. SPEAKER_MISATTRIBUTED_ELDAR требует ручной проверки
+  # или voice comparison для определения кому принадлежат реплики
+  []
+
+# Дополнительные заметки
+notes:
+  - "Дата выпуска: 17 декабря 2011 года"
+  - "PetrDidenko (Пётр Диденко) - постоянный гость, бывший сотрудник Microsoft"
+  - "SPEAKER_MISATTRIBUTED_ELDAR - 8 реплик требуют ручной переатрибуции"
+  - "Эльдар Муртазин НЕ присутствует в эпизоде, только упоминается"

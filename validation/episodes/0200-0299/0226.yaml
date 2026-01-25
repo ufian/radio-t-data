@@ -1,0 +1,64 @@
+episode: 226
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [EldarMurtazin, PetrDidenko]
+  total_duration_sec: 7392  # ~2 часа, сумма: Umputun 2093 + EldarMurtazin 3916 + PetrDidenko 1383
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 0.08  # 1785.38 - 1785.3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Односложная реплика 'Угу' длительностью 0.08 сек между репликами Umputun и EldarMurtazin. Типичная ошибка распознавания - короткий звук согласия, который мог принадлежать любому из участников."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Предыдущая реплика принадлежит Umputun, звук мог быть его реакцией"
+        - person_id: "eldar_murtazin"
+          confidence: 0.4
+          reason: "Следующая реплика от EldarMurtazin, звук мог быть его подтверждением перед развёрнутым ответом"
+        - person_id: "petr_didenko"
+          confidence: 0.2
+          reason: "Также участвует в выпуске, но менее вероятно по контексту"
+
+      voice_task:
+        needed: false
+        # Реплика слишком короткая (0.08 сек) для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quote: "Вместо Бобука у нас сегодня Эльдар, вместо Маринки у нас сегодня Петя."
+  introduction_timestamp: 14.06
+  issues: []
+
+# Комментарии к анализу
+notes:
+  - "Эпизод 226 от 12 февраля 2011 года"
+  - "Нестандартный состав: Umputun + гости EldarMurtazin и PetrDidenko вместо обычных ведущих"
+  - "Гости явно представлены в начале выпуска (14.06 сек)"
+  - "SPEAKER_04 - единственный неизвестный спикер, является ошибкой распознавания"
+  - "Файл метаданных (226_desc.json) отсутствует в data_clean"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete_or_merge
+    episode: 226
+    speaker: "SPEAKER_04"
+    action: "merge_to_context"
+    confidence: high
+    reason: "Односложное 'Угу' (0.08 сек) - артефакт распознавания, можно удалить или объединить с предыдущей/следующей репликой"

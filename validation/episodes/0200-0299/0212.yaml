@@ -1,0 +1,153 @@
+episode: 212
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6916  # примерно 1ч55м
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 417
+    replies_count: 95
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (12-25s) Umputun говорит: "после долгого перерыва, который вызвал
+        массу криков «Верните Маринку!»... И вам ее вернули."
+        Marin_k_a подтверждает (27-40s): "вернули наконец-то меня. Меня не было ровно
+        4 выпуска, если кто-то не считал."
+        Bobuk называет её "Мариночкой" (5050s).
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 4
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие односложные реплики (0.1-2 сек) разбросаны по всему выпуску:
+        - 1537s: "А иначе как?" (1 сек)
+        - 2278s: "Нет?" (0.16 сек)
+        - 5044s: "Почему?" (0.2 сек)
+        - 6673s: "Ну, да." (2 сек)
+        Скорее всего это ошибки распознавания реплик одного из ведущих или Марины.
+        Контекст показывает, что это реакции участников дискуссии.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Реплика 'Почему?' (5044s) непосредственно перед репликой Marin_k_a 'Читала, конечно.' — возможно это её голос"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Короткие реакции типичны для дискуссии"
+
+      voice_task:
+        needed: false
+        # Слишком короткие реплики для voice comparison
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ультракороткие реплики-междометия:
+        - 2594s: "Гуано, да, да." (0.5 сек) — контекст: обсуждение названий
+        - 5666s: "Угу." (0.1 сек)
+        Это типичные артефакты распознавания — короткие подтверждающие звуки,
+        которые система распознавания ошибочно выделила в отдельного спикера.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика (6449s): "Бобок, а что такое?"
+        Судя по имени спикера, это было ошибочно приписано Lavale, но затем отменено.
+        Контекст: сразу после этого идёт реплика Marin_k_a с продолжением мысли
+        ("Расскажи мне про этот самый...").
+        Вероятнее всего это реплика Marin_k_a — она обращается к Бобуку с вопросом,
+        а затем продолжает объяснять что имеет в виду.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.85
+          reason: |
+            Реплика непосредственно перед репликой Marin_k_a (6450s),
+            является началом её обращения к Бобуку про статью о Unicorn.
+            Стилистика ("Бобок, а что такое?") согласуется с женским голосом.
+
+      voice_task:
+        needed: false
+        # Очень короткая реплика, но высокая уверенность по контексту
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарий
+notes: |
+  Эпизод 212 от 6 ноября 2010 года. Участвуют три постоянных ведущих (Umputun, Bobuk, Gray)
+  и одна гостья — Marin_k_a (Марина), которая вернулась после 4-выпускового перерыва.
+
+  Все неизвестные спикеры (SPEAKER_02, SPEAKER_04, SPEAKER_MISATTRIBUTED_LAVALE) —
+  это ошибки автоматического распознавания: ультракороткие реплики (0.1-2 сек),
+  междометия и подтверждающие звуки, которые скорее всего принадлежат основным участникам.
+
+  SPEAKER_MISATTRIBUTED_LAVALE почти наверняка принадлежит Marin_k_a — это начало её
+  обращения к Бобуку, которое продолжается в следующей реплике.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 212
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Реплика "Бобок, а что такое?" (6449s) является началом обращения,
+      которое продолжается репликой Marin_k_a (6450s): "Расскажи мне про этот самый..."
+      Контекст однозначно указывает на Марину.

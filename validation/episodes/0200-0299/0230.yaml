@@ -1,0 +1,213 @@
+episode: 230
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Эпизод от 12 марта 2011 года
+# Представлены в начале: Umputun, Плющев (Саша), Маруся (Marin_k_a)
+# Bobuk отсутствует (отключение электричества в Москве)
+# Gray НЕ представлен и НЕ упоминается
+
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Marin_k_a, EldarMurtazin, Plushev]
+  total_duration_sec: ~6400
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1941
+    replies_count: 531
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "plushev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Строка 28: Umputun представляет "господин Плющев"
+        Строка 307: Umputun обращается "Саша, у меня к тебе вопрос"
+        SPEAKER_04 начинает говорить сразу после представления (73.9s)
+        Живёт в Алтуфьево (далеко от центра Москвы) - упоминает сам
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1150
+    replies_count: 242
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Строка 46: Umputun представляет "Маруся, которая второй выпуск подряд"
+        Строка 271: "Маруся, ты догадалась..."
+        Уже правильно размечена в транскрипте
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 158
+    replies_count: 19
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Характерный стиль речи: "мои коллеги", "у моих СМИ"
+        Говорит о мобильной индустрии как инсайдер
+        Уже правильно размечен в транскрипте
+        Упоминает "публичность" и "аудиторию" - известный блогер
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 9
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это ошибка распознавания голоса Marin_k_a:
+        1. "Я с тобой полностью согласна" (3341s) - сразу после идёт Marin_k_a продолжая мысль
+        2. "вселенская лень" (5033s) - Marin_k_a развивает тему в следующей реплике
+        3. "Я как раз тогда не была" (5569s) - ответ на вопрос Umputun "Маруся, ты помнишь?"
+        Все реплики женским голосом, по контексту принадлежат Marin_k_a
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплика 3: Umputun спрашивает "Маруся, ты помнишь?" - ответ идёт от этого спикера
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две очень короткие реплики-междометия:
+        1. "Большое." (5377s, 1.12 сек) - вставка в монолог Umputun про яблоко MacBook
+        2. "Угу." (5660s, 0.18 сек!) - поддакивание в монологе Umputun
+        Обе вклиниваются в речь между SPEAKER_04 и Umputun
+        Скорее всего это SPEAKER_04 (Плющев) поддакивает
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "plushev"
+          confidence: 0.7
+          reason: "Реплики идут в контексте диалога SPEAKER_04 и Umputun"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Gray"
+    total_duration_sec: 9
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Gray НЕ был представлен в начале эпизода - Umputun упомянул только Плющева и Марусю.
+        Bobuk отсутствует из-за отключения электричества.
+        Обе реплики Gray вклиниваются в середину речи SPEAKER_04:
+        1. (2282s) между репликами SPEAKER_04
+        2. (4476s) между репликами SPEAKER_04
+        Это типичная ошибка распознавания - часть речи Плющева ошибочно атрибутирована Gray
+
+      identified_as: "plushev"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Gray не представлен в начале, выпуск "в половинчатом составе".
+        Реплики Gray находятся в середине монологов SPEAKER_04 (Плющева).
+
+      possible_matches:
+        - person_id: "plushev"
+          confidence: 0.8
+          reason: "Реплики в контексте речи SPEAKER_04, Gray не представлен"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2282.1
+          etime: 2288.11
+          text: "И вот это единственное, пожалуй, объяснение, которое еще зацепляет меня как-то за планшетники."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Не представлен в начале эпизода, но имеет 2 реплики - вероятно ошибка распознавания"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Должен быть переименован в Marin_k_a - это её голос по контексту"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 230
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: "Представлен как 'господин Плющев', обращение 'Саша' (Александр Плющев)"
+
+  - type: rename
+    episode: 230
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Контекст указывает на Marin_k_a: ответ на вопрос 'Маруся, ты помнишь?'"
+
+  - type: rename
+    episode: 230
+    from_speaker: "Gray"
+    to_speaker: "Plushev"
+    confidence: medium
+    reason: "Gray не представлен, реплики вклиниваются в речь SPEAKER_04 (Плющева)"
+
+  - type: rename
+    episode: 230
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Plushev"
+    confidence: medium
+    reason: "Короткие поддакивания в контексте диалога Плющева и Umputun"

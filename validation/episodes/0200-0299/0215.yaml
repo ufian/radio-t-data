@@ -1,0 +1,172 @@
+episode: 215
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a, Plushev]
+  total_duration_sec: 6700  # ~1ч 52мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1795
+    replies_count: 548
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "plushev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (76.6s): "Александр, добрый день."
+        SPEAKER_02 (78.8s): "Да, добрый вечер. Я из города-героя Москва тоже."
+        Umputun (101.6s): "Он, вот этот господин Плющев..."
+        Также SPEAKER_02 рассказывает о ведении Премии Рунета-2010, что соответствует биографии Плющева.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 8
+    replies_count: 3
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это женщина, соведущая Плющева, но не идентифицирована
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Umputun (129.3s): "Мы не будем долго представлять твою соведущую, а сразу дадим ей слово"
+        SPEAKER_00 (136.2s): "Ну и на этом можно заканчивать. Суперкомпьютеры, которые стали орудием в руках стран..."
+        Umputun (145.1s): "Ой, она что страшное хотела объявить, я остановил вовремя."
+        Контекст: женщина, пришла с Плющевым, имеет профессиональное радио-представление (упоминание "зубр микрофона").
+        Возможно это журналистка с "Эха Москвы" или другая соведущая Плющева.
+
+      possible_matches:
+        - person_id: null
+          confidence: 0.3
+          reason: "Соведущая Плющева с профессиональным радио-опытом, возможно Лариса Ясногородская или другая журналистка"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 136.24
+          etime: 144.1
+          text: "Ну и на этом можно заканчивать. Суперкомпьютеры, которые стали орудием в руках стран, еще одним способом конкурировать друг с другом. Внимание!"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные реплики разбросаны по всему выпуску: 'Содержание' (1379s), '280 долларов' (5123s), 'Кто жил?' (5296s), 'А, сайт' (5300s), 'Ух ты' (6770s). Типичные ошибки распознавания - реакции других участников."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 50
+    replies_count: 12
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка сегментации. Все 12 реплик идут между репликами SPEAKER_02 (Плющева) и являются продолжением его речи. Содержание соответствует контексту разговора Плющева (о церемонии Премии Рунета, о работе шеф-редактора). Это реплики Плющева, неправильно размеченные."
+
+      identified_as: "plushev"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Пример 1 (891s): SPEAKER_02 "Я знал это с самого начала" -> SPEAKER_MISATTRIBUTED_ELDAR "Я подумал, ну, это вызов такой, челлендж" -> SPEAKER_02 "Удастся жизнь вдохнуть или нет?"
+        Пример 2 (3922s): SPEAKER_02 "То есть он... Почему?" -> SPEAKER_MISATTRIBUTED_ELDAR "То есть мне, например, мой шеф-редактор говорит..." -> SPEAKER_02 "Мне дико неудобно с ним"
+        Все реплики - продолжение речи Плющева, прерванное ошибкой распознавания.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 654
+    replies_count: 164
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (24.5s): "А Маруся, она в другом городе? Киеве?"
+        Marin_k_a (27.0s): "Героя, Герой."
+        Marin_k_a (29.9s): "Прихожу четвертый раз подряд."
+        Зарегистрирована в people.yaml как "Марина, бывшая ведущая".
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: "Соведущая Плющева упомянута ('твою соведущую'), но не названа по имени. Говорит только 3 реплики (8 сек)."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 215
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: "Явное представление как 'Александр' и 'господин Плющев', подтверждено контекстом (ведущий Премии Рунета-2010)"
+
+  - type: rename
+    episode: 215
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: "Ошибка сегментации - все 12 реплик являются продолжением речи Плющева (SPEAKER_02)"
+
+  - type: delete_or_merge
+    episode: 215
+    from_speaker: "SPEAKER_01"
+    to_speaker: null
+    confidence: medium
+    reason: "5 коротких ошибочных реплик, требуют ручной проверки для определения реального автора каждой"
+
+# Комментарии
+notes: |
+  Эпизод 215 от 27 ноября 2010 года.
+
+  Гости: Александр Плющев (журналист "Эха Москвы", ведущий Премии Рунета-2010) и его соведущая.
+
+  SPEAKER_02 - это Плющев, 548 реплик. Требуется переименование.
+  SPEAKER_MISATTRIBUTED_ELDAR - это тоже Плющев, ошибка сегментации. Требуется переименование.
+  SPEAKER_00 - соведущая Плющева, личность не установлена (3 реплики). Требуется voice comparison.
+  SPEAKER_01 - ошибки распознавания (5 коротких реплик).
+
+  В people.yaml указано что Плющев участвовал в выпусках 194, 211. Нужно добавить 215.

@@ -1,0 +1,227 @@
+episode: 252
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Marin_k_a, Alexmak, Plushev, Grigoriy_Ruby]
+  total_duration_sec: 5300  # ~88 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 793
+    replies_count: 129
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alexmak"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "43.5s: 'Алекс Мак, да, автор блога alexmak.net и вообще Алекс Пацай.' Также 26s Umputun говорит 'Мака Фил, Мака Люб, Мака Фаг'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 409
+    replies_count: 93
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Григорий, но нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: "74s: 'Я автор подкаста безымянного Руби, который rubi.arpod'. Umputun 62s: 'А вот кто у нас не был, это некий Григорий.' В конце 5280s: 'Спасибо, Григорий, что пришел.'"
+
+      possible_matches:
+        - person_id: "grigoriy_ruby"
+          confidence: 1.0
+          reason: "Явное представление как автор Ruby-подкаста (rubi.arpod), обращение по имени Григорий/Гриша"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1333
+    replies_count: 347
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "plushev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "1072s Umputun: 'К нам тут господин Плющев, который не товарищ, но господин, присоединился. Мы тут, Саша, хороним Apple.' Далее SPEAKER_02 отвечает 'Добрый вечер.'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 28
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Эльдар Муртазин не был гостем эпизода 252. Его только упоминают (1450s: 'твит Эльдара'). Реплики SPEAKER_MISATTRIBUTED_ELDAR идут внутри монологов Плющева (SPEAKER_02) - это ошибка сегментации речи одного человека."
+
+      identified_as: "plushev"
+      identification_method: "context"
+      confidence: high
+      evidence: "Все 6 реплик находятся посреди речи SPEAKER_02 (Плющев), тематически продолжают его мысль. Пример: 1687s после реплики Плющева о 'Точке' идёт 'Ну, это не значит, что я халтурил' - продолжение той же темы."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Lavale не была гостем эпизода 252. Единственная реплика (4795s: 'Вот на кого это все рассчитано, я на секундочку себе представила') - женский голос. В эпизоде только одна женщина - Marin_k_a (Марина)."
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Реплика идёт между репликами Umputun и Marin_k_a, женский род ('представила'). Marin_k_a - единственная женщина в этом эпизоде."
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.8
+          reason: "Единственная женщина в эпизоде, реплика в женском роде"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4795.84
+          etime: 4799.3
+          text: "Вот на кого это все рассчитано, я на секундочку себе представила."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "3 очень короткие реплики (<1 сек каждая) разбросаны по эпизоду. Это ошибки распознавания или наложение голосов."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплики: 1414s 'Сам сдашься, что ли?' (0.3 сек), 2611s 'Так ли им это надо?' (0.5 сек). Слишком короткие и случайные."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 582
+    replies_count: 131
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "pre-identified"
+      confidence: high
+      evidence: "Уже размечена в транскрипте. Umputun в начале: '50% состав костяк присутствует, на который мы попытались с Маруся'. В конце 5282s: 'Ну и была Маруся, которая молодец.'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: "Только 1 реплика в 3364s ('Оба, все трое.'). Возможно позвонил на секунду. Marin_k_a в 198s упоминает 'У нас же еще есть товарищ Грей', Umputun отвечает 'Как есть, его здесь нет' и далее про день рождения Грея."
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Ошибочно присвоено - Эльдар Муртазин не участвовал в эпизоде. Это реплики Плющева."
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Ошибочно присвоено - Lavale не участвовала в эпизоде. Вероятно это Marin_k_a."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 252
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Alexmak"
+    confidence: high
+    reason: "Явное представление: 'Алекс Мак, автор блога alexmak.net и вообще Алекс Пацай'"
+
+  - type: rename
+    episode: 252
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: "Явное представление Umputun: 'К нам тут господин Плющев присоединился'"
+
+  - type: rename
+    episode: 252
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: "Эльдар не был гостем. Реплики являются продолжением речи Плющева (SPEAKER_02)"
+
+  - type: rename
+    episode: 252
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Lavale не была гостем. Женский голос, единственная женщина в эпизоде - Marin_k_a"
+
+  - type: delete
+    episode: 252
+    from_speaker: "SPEAKER_00"
+    to_speaker: null
+    confidence: medium
+    reason: "3 артефактные реплики по 0.3-0.5 сек, ошибки распознавания"
+
+# Требуется добавить в people.yaml
+new_guests_to_add:
+  - id: "grigoriy_ruby"
+    canonical_name: "GrigoriyRuby"
+    aliases: ["Гриша", "Григорий"]
+    real_name: "Григорий"
+    info: "Автор подкаста про Ruby (rubi.arpod), выпуск 252"
+
+# Примечания
+notes: |
+  Эпизод 252 - юбилейный (5 лет подкасту), 27 августа 2011.
+  Отсутствует второй основатель (Bobuk). У Gray день рождения - он только на секунду появился.
+  Гости: Alexmak (Алекс Пацай), Григорий (Ruby-подкастер), Plushev (присоединился позже).
+
+  SPEAKER_04 = Григорий, автор rubi.arpod. Его нет в people.yaml - нужно добавить.
+
+  Эльдар Муртазин НЕ участвовал - его только упомянули про твит.
+  Lavale НЕ участвовала - это ошибка распознавания голоса Marin_k_a.

@@ -1,0 +1,277 @@
+episode: 259
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, Golodniy]
+  total_duration_sec: 6800  # ~1h53m
+
+# Заметки по эпизоду
+notes:
+  - Umputun в начале представляет гостя "Голодный" (18-27s)
+  - Umputun представляет "Марусю" (Marin_k_a) (43-54s)
+  - В конце (6510s) Umputun говорит "у нас нету Греи" - подтверждает отсутствие Gray
+  - Единственная реплика Gray (0.7 сек) - скорее всего ошибка распознавания
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 289
+    replies_count: 99
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "golodniy"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 18-27s: "Ведь дорогого гостя у нас сегодня голодный, который к 4 утра и сголодался весь"
+        SPEAKER_05 в 28s: "Ой, здравствуйте, я тоже голодный"
+        Golodniy известен из people.yaml (выпуск 196)
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 58
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это тот же голос что и SPEAKER_05 (Golodniy). Реплики чередуются
+        в естественном диалоге с SPEAKER_05 (например, 5647s и 5684s).
+        Ошибочно присвоено имя Petr из-за похожих интонаций.
+      identified_as: "golodniy"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Контекст 5647-5686s: SPEAKER_05 и SPEAKER_MISATTRIBUTED_PETR чередуются
+        в одном диалоге о проблемах с мессенджером.
+        Контекст 6685-6703s: Аналогичное чередование в диалоге о конференции.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 22
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Аналогично SPEAKER_MISATTRIBUTED_PETR - это голос Golodniy (SPEAKER_05).
+        Чередуется с SPEAKER_05 в диалоге (3319-3337s, 5261-5275s).
+      identified_as: "golodniy"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Контекст 3319-3337s: Обсуждение legacy-систем, реплики чередуются
+        с SPEAKER_05 без пауз.
+        Контекст 5261-5275s: Обсуждение Facebook vs Google+.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная короткая реплика "Твиттер это наше все" (1.4 сек).
+        В контексте диалога между Umputun и Bobuk о Twitter.
+        Вероятно ошибка распознавания одного из участников.
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        5422s: Реплика между Umputun и Bobuk.
+        Может быть Marin_k_a, Golodniy или ошибка распознавания ведущих.
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Марина активный участник, могла вставить реплику"
+        - person_id: "golodniy"
+          confidence: 0.3
+          reason: "Golodniy также присутствует в этом выпуске"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5422.17
+          etime: 5423.55
+          text: "Твиттер это наше все."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 7
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие фрагменты (0.3-2.5 сек) разбросаны по эпизоду.
+        Типичные междометия: "Не смог, не смог", "Ну, ну, ну", "Как?"
+        Вероятно ошибки сегментации голосов участников.
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        432s: "Не смог, не смог" - короткое эхо-подтверждение
+        2247s: "Ну, ну, ну" - междометие
+        4449s: "Как?" - реакция на новость
+        5881s: "Для Путина битли не надо" - повторение за Marin_k_a
+      possible_matches:
+        - person_id: "golodniy"
+          confidence: 0.5
+          reason: "Голодный мог вставлять короткие реакции"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Характерные для Bobuk короткие реакции"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5881.65
+          etime: 5884.15
+          text: "Для Путина битли не надо."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 7
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "golodniy"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        5994s: "Я тебя люблю" + "Почему?" + "Подожди, Мариночка, ты против, что он тебя любит?"
+        Обращение к Мариночке (Marin_k_a) от третьего лица - это гость.
+        5267s: "Фотографии мы все..." - обрывается, продолжает SPEAKER_05.
+        6508s: "Вот именно" - короткое согласие.
+      possible_matches: []
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5998.29
+          etime: 6001.11
+          text: "Подожди, Мариночка, ты против, что он тебя любит?"
+
+  - speaker: "Gray"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика 0.7 сек в середине диалога Bobuk-Marin_k_a.
+        Umputun в конце выпуска (6510s) говорит "у нас нету Греи".
+        Скорее всего ошибка распознавания.
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        223.79s: "Apple Twitter или Twitter Apple?" между репликами Bobuk и Marin_k_a.
+        6510s: Umputun подтверждает отсутствие Gray.
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Реплика сразу после Bobuk, возможно продолжение"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Marin_k_a отвечает сразу после"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 223.79
+          etime: 224.47
+          text: "Apple Twitter или Twitter Apple?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    - Umputun представил Голодного в 18-27s
+    - Umputun представил Марину (Маруся) в 43-54s
+    - Bobuk представился сам в диалоге с Marin_k_a (69-80s)
+    - Gray не представлен и подтверждённо отсутствует (6510s)
+  issues:
+    - speaker: "Gray"
+      issue: "1 реплика 0.7 сек, но Umputun говорит что Gray отсутствует"
+    - speaker: "SPEAKER_MISATTRIBUTED_*"
+      issue: "Ошибочная атрибуция голоса Golodniy как Petr/Eldar/Lavale"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 259
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Golodniy"
+    confidence: high
+    reason: "Представлен Umputun как 'голодный' в начале выпуска"
+
+  - type: rename
+    episode: 259
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Golodniy"
+    confidence: high
+    reason: "Тот же голос что SPEAKER_05, чередуется в диалоге"
+
+  - type: rename
+    episode: 259
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Golodniy"
+    confidence: high
+    reason: "Тот же голос что SPEAKER_05, чередуется в диалоге"
+
+  - type: rename
+    episode: 259
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Golodniy"
+    confidence: medium
+    reason: "Контекст показывает что это гость (обращение к Мариночке)"
+
+  - type: delete
+    episode: 259
+    speaker: "Gray"
+    confidence: medium
+    reason: "1 реплика 0.7 сек, Umputun подтверждает отсутствие Gray"
+
+  - type: needs_voice_comparison
+    episode: 259
+    speakers: ["SPEAKER_01", "SPEAKER_MISATTRIBUTED_LAVALE"]
+    confidence: low
+    reason: "Короткие реплики без чёткого контекста"
+
+# Метаданные для voice comparison
+voice_comparison_tasks:
+  - task_id: "259_gray_check"
+    speaker: "Gray"
+    segment:
+      stime: 223.79
+      etime: 224.47
+    compare_with: ["Bobuk", "Marin_k_a"]
+
+  - task_id: "259_speaker01_check"
+    speaker: "SPEAKER_01"
+    segment:
+      stime: 5881.65
+      etime: 5884.15
+    compare_with: ["Golodniy", "Bobuk", "Marin_k_a"]
+
+  - task_id: "259_lavale_check"
+    speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    segment:
+      stime: 5422.17
+      etime: 5423.55
+    compare_with: ["Marin_k_a", "Golodniy"]

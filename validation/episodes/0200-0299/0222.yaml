@@ -1,0 +1,270 @@
+episode: 222
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Marin_k_a]
+  guests_present: ["Елена Сагалаева (Алена C++)"]
+  total_duration_sec: 7000  # ~1h 57min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # Marin_k_a - это ведущая Маринка, уже корректно размечена
+  - speaker: "Marin_k_a"
+    total_duration_sec: 841
+    replies_count: 184
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале выпуска Bobuk: 'ну и Маринка из Киева'. Marin_k_a: 'Маринка, да, из Киева'"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # SPEAKER_01 - это гостья Алена (Елена Сагалаева), автор блога "Алена C++"
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 389
+    replies_count: 150
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null  # Нужно добавить в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 29.3s Marin_k_a (ошибка - это Алена) говорит: "Здравствуйте, меня зовут Елена Сагалаева,
+        я веду популярный блог Алена Си Плюс Плюс". Umputun также называет её "Алена ЦПП".
+        SPEAKER_01 использует женские формы глаголов ("посмотрела", "закрыла", "писала"),
+        обсуждает C++ как эксперт.
+      possible_matches:
+        - person_id: "alena_cpp"
+          confidence: 0.95
+          reason: "Представилась как Елена Сагалаева, автор блога Алена C++"
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 185.66
+          etime: 190.68
+          text: "Я посмотрела, что С++ все время довольно высоко и, в общем, закрыла."
+
+  # SPEAKER_00 - короткие реплики в середине выпуска, вероятно ошибка распознавания
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 7
+    replies_count: 5
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (1-3 сек) разбросаны по выпуску.
+        Типичные фразы: "А, ну понятно, окей", "Понятия не имею" - односложные реакции.
+        В контексте разговора с Умпутуном о Сиэтле - скорее всего это Алена (гостья),
+        поскольку она живёт в США и отвечает на вопросы о местоположении.
+      identified_as: null
+      possible_matches:
+        - person_id: "alena_cpp"
+          confidence: 0.7
+          reason: "Контекст разговора о Сиэтле и AT&T указывает на гостью"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5832.07
+          etime: 5838.97
+          text: "А, ну понятно, окей. [...] Понятия не имею."
+
+  # SPEAKER_07 - короткие реплики, вероятно ошибка распознавания
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики: "Вы знаете, да?", "Да, да, да" - типичные междометия.
+        Разбросаны по выпуску, вероятно это кто-то из ведущих (неправильно распознан).
+      identified_as: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Стиль междометий похож на Bobuk"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможно Gray"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5135.92
+          etime: 5139.72
+          text: "Вы знаете, да?"
+
+  # SPEAKER_02 - короткие реплики, ошибка распознавания
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (~1 сек каждая): "И расследования, да", "Google захотел странного".
+        Скорее всего это один из ведущих, неправильно распознанный.
+      identified_as: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Контекст и стиль фраз"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Женский голос возможен"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2965.44
+          etime: 2966.96
+          text: "И расследования, да."
+
+  # SPEAKER_MISATTRIBUTED_LAVALE - ошибочная маркировка, не Лаваль
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Лаваль в этом выпуске не участвовала. Это реплики гостьи Алены или кого-то из ведущих.
+        Первая реплика (34.6s): "Возможно, вы его читали" - продолжение представления Алены.
+        Вторая (379.8s): "Какая у них методика подсчета популярности?" - вопрос от Алены.
+        Третья (6894.4s): "Да, уже, я здесь" - короткая реакция.
+      identified_as: null
+      possible_matches:
+        - person_id: "alena_cpp"
+          confidence: 0.8
+          reason: "Первые две реплики явно от гостьи Алены - продолжение её речи"
+      voice_task:
+        needed: false
+
+  # SPEAKER_MISATTRIBUTED_ELDAR - ошибочная маркировка, не Эльдар Муртазин
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин в этом выпуске не участвовал. Короткие междометия:
+        "Например" (857.9s) - сразу после такой же реплики Bobuk (дублирование?)
+        "А, вот оно что" (5768.5s) - короткая реакция
+        Скорее всего ошибка распознавания кого-то из ведущих.
+      identified_as: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Первая реплика идёт сразу после реплики Bobuk с тем же словом"
+        - person_id: "alena_cpp"
+          confidence: 0.3
+          reason: "Вторая реплика может быть от гостьи"
+      voice_task:
+        needed: false
+
+  # SPEAKER_MISATTRIBUTED_PETR - ошибочная маркировка, не Пётр Диденко
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 6
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Пётр Диденко в этом выпуске не участвовал. Реплика (1360.5s):
+        "ЛИСП, низкоуровневая работа с памятью, он умеет?"
+        Идёт сразу после SPEAKER_01 (Алена) сказала "ЛИСП" - это продолжение её вопроса.
+      identified_as: null
+      possible_matches:
+        - person_id: "alena_cpp"
+          confidence: 0.85
+          reason: "Продолжение разговора SPEAKER_01 о Лиспе"
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        Первая реплика Marin_k_a (29.3s) содержит представление Алены Сагалаевой,
+        а не Маринки. Это ошибка разметки - реплика должна принадлежать гостье.
+    - speaker: "SPEAKER_01"
+      issue: |
+        150 реплик SPEAKER_01 принадлежат идентифицированной гостье Елене Сагалаевой (Алена C++).
+        Нужно добавить её в people.yaml и переименовать SPEAKER_01 -> AlenaCPP
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Главная задача: добавить гостью в справочник и переименовать
+  - type: add_person
+    person:
+      id: "alena_cpp"
+      canonical_name: "AlenaCPP"
+      aliases: ["Алена", "Елена Сагалаева"]
+      real_name: "Елена Сагалаева"
+      info: "Автор блога 'Алена C++', выпуск 222"
+    confidence: high
+    reason: "Представилась в начале выпуска"
+
+  - type: rename
+    episode: 222
+    from_speaker: "SPEAKER_01"
+    to_speaker: "AlenaCPP"
+    confidence: high
+    reason: "SPEAKER_01 - это гостья Елена Сагалаева, идентифицирована по представлению в начале"
+
+  - type: rename
+    episode: 222
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "AlenaCPP"
+    confidence: high
+    reason: "Реплики 34.6s и 379.8s явно принадлежат гостье Алене (продолжение её речи)"
+    segments:
+      - stime: 34.6
+        etime: 36.94
+      - stime: 379.75
+        etime: 382.15
+
+  - type: rename
+    episode: 222
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "AlenaCPP"
+    confidence: high
+    reason: "Реплика о Лиспе - продолжение разговора Алены"
+
+  - type: rename
+    episode: 222
+    from_speaker: "SPEAKER_00"
+    to_speaker: "AlenaCPP"
+    confidence: medium
+    reason: "Контекст разговора о Сиэтле указывает на гостью из США"
+
+  # Исправление ошибки в первой реплике Marin_k_a
+  - type: rename
+    episode: 222
+    from_speaker: "Marin_k_a"
+    to_speaker: "AlenaCPP"
+    confidence: high
+    reason: "Первая реплика содержит представление Алены, а не Маринки"
+    segments:
+      - stime: 29.34
+        etime: 34.56
+        text: "Здравствуйте, меня зовут Елена Сагалаева, я веду популярный блог Алена Си Плюс Плюс."
+
+# Примечания
+notes: |
+  Выпуск 222 от 15 января 2011 года.
+  Гость: Елена Сагалаева (Алена C++) - автор популярного блога о C++.
+
+  Основная проблема: реплики гостьи разметены частично как SPEAKER_01, частично
+  ошибочно попали в Marin_k_a (первая реплика с представлением) и в различные
+  SPEAKER_MISATTRIBUTED_* категории.
+
+  Маринка (Marin_k_a) также присутствует как ведущая - большинство её реплик корректны.

@@ -1,0 +1,63 @@
+episode: 260
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 6490  # ~1h 48m based on reply counts and average durations
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1.24
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Одиночная короткая реплика (1.24 сек) в середине диалога между Umputun и Bobuk.
+        Фраза "Да, конечно, никому не нужен." является типичной репликой-подхватом
+        в контексте обсуждения: Bobuk спрашивает "Кому на серверах нужен свежий софт?",
+        Umputun отвечает "Кому нужен питон старше 24? Никому не нужен.", и эта реплика
+        просто повторяет мысль. В эпизоде заявлены только двое ведущих ("Нас двое").
+
+      # Попытка идентификации
+      identified_as: "bobuk"
+      identification_method: "context"
+      confidence: medium
+      evidence: >
+        1) В начале эпизода Umputun говорит "Нас двое" - гостей нет.
+        2) Реплика идёт сразу после Umputun и сразу перед Bobuk.
+        3) По стилю и содержанию ("Да, конечно, никому не нужен") это продолжение
+        саркастического диалога о ненужности свежего софта, который вёл Bobuk.
+        4) Имя "MISATTRIBUTED_ELDAR" указывает на предыдущую ошибочную попытку
+        атрибуции Эльдару Муртазину, которая была отменена.
+
+      possible_matches: []
+
+      # Задание на voice comparison не нужно - это явная ошибка
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    В начале эпизода Umputun явно говорит "Нас двое", подтверждая что в выпуске
+    участвуют только он и Bobuk. SPEAKER_99 (8 реплик) - аудио-артефакты, игнорируются.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 260
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: >
+      Единственная реплика в эпизоде с двумя ведущими. По контексту диалога
+      это скорее Bobuk (продолжение его саркастических вопросов о "ненужности"
+      свежего софта). Короткая фраза-подхват, типичная для перебивок в разговоре.

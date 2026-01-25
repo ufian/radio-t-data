@@ -1,0 +1,304 @@
+episode: 247
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: ~5400
+  notes: |
+    Выпуск от 16 июля 2011 года. Umputun ведёт почти весь выпуск.
+    Bobuk присоединяется позже (с 2304s, ~38 минут от начала).
+    Марина (Marin_k_a) участвует, но уходит раньше (день рождения).
+    Эльдар Муртазин (EldarMurtazin) уже размечен в транскрипте.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 463
+    replies_count: 137
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 113-127s: "В Ассисуале, который у нас тут тоже не первый, не второй,
+        даже, по-моему, не третий раз. Я прав? Четвертый. Четвертый раз."
+        Далее в 300s Umputun обращается: "Василий, а ты?"
+        SPEAKER_01 отвечает: "Я не замолчал, педалька у меня не сработала."
+        Это гость по имени Василий, ник "Ассисуал" (Assisual).
+
+      possible_matches:
+        - person_id: "assisual"
+          confidence: 0.95
+          reason: |
+            Umputun прямо называет его "Ассисуал" и "Василий".
+            Говорит, что это его 4-й визит на подкаст.
+            Нужно добавить в people.yaml как нового гостя.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 328.72
+          etime: 345.12
+          text: "Поскольку Твиттер мне, прямо скажем, ближе. Хотя, да, Mozilla это, конечно, серьезно. И это мой основной браузер и так далее и тому подобное. Но это менее интересно, чем Твиттер. Превосходно. Вот само по себе."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 763
+    replies_count: 154
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 90-103s: "Лена пришла к нам вообще даже не по первому зову,
+        а по первому миганию. Оперативно так среагировала."
+        В 238s: "Лена, у меня к тебе вопрос."
+        Многократные обращения к "Лена" по всему выпуску (~30+ раз).
+        SPEAKER_03 сразу отвечает на каждое обращение.
+        Это гостья по имени Лена, специалист по рекламе/монетизации.
+
+      possible_matches:
+        - person_id: "lena_247"
+          confidence: 0.95
+          reason: |
+            Umputun представляет её как "Лена".
+            Говорит, что она "с черной стороны" (видимо, чёрный PR/маркетинг).
+            Обсуждает рекламу в Twitter (150k за promoted tweets).
+            Нужно добавить в people.yaml.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 932.94
+          etime: 958.25
+          text: "У них уже есть реклама и так далее, но никто... Очень дорогая. Это 150 тысяч надо иметь для того, чтобы твиты были promoted. А в телевизоре сколько стоит? Отдалека, да, у меня только на онлайн."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 16
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это ошибочная сегментация SPEAKER_03 (Лена).
+        Первая реплика "Спасибо. Пригласили, значит, я уже здесь." (108-111s)
+        идёт сразу после слов Umputun о Лене.
+        Остальные реплики — короткие односложные фразы.
+
+      identified_as: "SPEAKER_03"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        108-111s: После слов Umputun "Вот это полная готовность всегда"
+        следует реплика SPEAKER_04 "Спасибо. Пригласили, значит, я уже здесь."
+        Это явно Лена, которую только что представили.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 37
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Вероятно ошибка сегментации или фоновые реплики.
+        Первая реплика (156s): "Я хочу добавить, что я, в общем-то,
+        довольно далеко даже от Умпутуна" — контекст не ясен.
+        Остальные реплики разбросаны и короткие.
+        Может быть неправильно атрибутированный SPEAKER_01 (Василий).
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: null
+
+      possible_matches:
+        - person_id: "SPEAKER_01"
+          confidence: 0.6
+          reason: "Контекст похож на манеру речи Василия (Ассисуала)"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4583.03
+          etime: 4592.10
+          text: "Да, вот, и при том, что она как раз эту сотню-то и не написала, вот это как раз выглядит и подозрительно, поэтому ты же прав абсолютно."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (<2 сек каждая), разбросанные по выпуску.
+        Типичные фразы: "Это пока что.", "Операционная система?"
+        Скорее всего ошибки распознавания или фоновые комментарии.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 3 реплики, 4 секунды. Фразы: "Не могу расстаться.",
+        "На самом деле... Замечательно, давай."
+        Ошибки сегментации, возможно части реплик других спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 реплики по ~1 сек: "Это в раке, да." и "Ну, вот это сложно."
+        Маркировка указывает на ранее отменённое присвоение к Lavale.
+        В этом выпуске Lavale не участвует.
+        Это ошибки распознавания или обрывки чужих реплик.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: |
+        Гость Василий (Ассисуал) не добавлен в people.yaml.
+        Umputun говорит, что это его 4-й визит, значит он был в ~3 предыдущих выпусках.
+    - speaker: "SPEAKER_03"
+      issue: |
+        Гостья Лена не добавлена в people.yaml.
+        Нужно определить её полное имя и найти другие выпуски с её участием.
+    - speaker: "SPEAKER_04"
+      issue: |
+        Это та же Лена (SPEAKER_03), неправильная сегментация.
+        Нужно объединить с SPEAKER_03.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 247
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Assisual"
+    confidence: high
+    reason: |
+      Umputun прямо называет его "Ассисуал" и "Василий".
+      Нужно сначала добавить Assisual в people.yaml.
+
+  - type: rename
+    episode: 247
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Lena"
+    confidence: high
+    reason: |
+      Umputun многократно обращается к ней "Лена".
+      Нужно сначала добавить Lena в people.yaml.
+
+  - type: rename
+    episode: 247
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Lena"
+    confidence: high
+    reason: |
+      Контекст показывает, что это та же Лена.
+      Первая реплика идёт сразу после представления Лены.
+
+  - type: delete_or_merge
+    episode: 247
+    from_speaker: "SPEAKER_06"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Слишком короткие реплики, вероятно ошибки.
+      Требуется voice comparison для точного определения.
+
+  - type: delete_or_merge
+    episode: 247
+    from_speaker: "SPEAKER_07"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Всего 3 реплики, 4 секунды. Ошибки сегментации.
+
+  - type: delete
+    episode: 247
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: null
+    confidence: high
+    reason: |
+      Lavale не участвует в этом выпуске.
+      Реплики слишком короткие, это ошибки.
+
+# Рекомендации для people.yaml
+new_guests_to_add:
+  - id: "assisual"
+    canonical_name: "Assisual"
+    aliases: ["Ассисуал", "Василий"]
+    real_name: null  # Требуется уточнение
+    info: "Гость, минимум 4 выпуска включая 247"
+
+  - id: "lena_marketing"
+    canonical_name: "Lena"
+    aliases: ["Лена"]
+    real_name: null  # Требуется уточнение
+    info: "Специалист по рекламе/маркетингу, выпуск 247"
+
+# Аудио для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast247.mp3"

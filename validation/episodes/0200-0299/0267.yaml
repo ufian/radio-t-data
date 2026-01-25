@@ -1,0 +1,162 @@
+episode: 267
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Дата выпуска: 10 декабря 2011 (из транскрипта)
+# URL аудио: https://cdn.radio-t.com/rt_podcast267.mp3
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7221  # ~2 часа, по репликам из конца выпуска
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 843
+    replies_count: 238
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        В начале выпуска (14-21s) Umputun представляет: "Бобук, который с другой стороны океана,
+        а Маруся, которая тоже с какой-то стороны океана". Bobuk обращается к ней "Марусечка" (31s).
+        Marin_k_a - это Марина, бывшая ведущая, подтверждено в people.yaml.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 21
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это скорее всего Marin_k_a - женский голос с осмысленными репликами
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Все реплики - это осмысленные комментарии женским голосом:
+        - 523s: "А я могу стать паблишером?" (Bobuk отвечает "Можешь")
+        - 2132s: "Раньше это тоже было. Только это было не очень удобно."
+        - 4132s: "То есть китайцы будут работать только на США?"
+        - 4622s: "Я тоже никогда не люблю карусельки."
+        - 7180s: "Часа два где-то." (о длительности выпуска)
+        В этом выпуске только одна женщина - Marin_k_a (Маруся/Марина).
+        Реплики идеально вписываются в диалог и соответствуют её манере участия.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 12
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие эмоциональные реакции, разбросанные по выпуску:
+        - 2027s: "Ух ты!" (2 сек)
+        - 2973s: "Хо-хо-хо-хо." (3 сек) - смех после реплики Marin_k_a
+        - 6050s: "Угу." (2.5 сек)
+        - 6282s: "У вас все жестоко?" (2 сек)
+        - 6800s: "Угу." (0.5 сек)
+        - 7220s: "Разрезать есть кого-то." (2 сек) - Bobuk сразу повторяет эту фразу
+        Это ошибки распознавания - короткие реакции ведущих (скорее всего Marin_k_a или Bobuk),
+        которые плохо атрибутированы. Суммарно 12 секунд на 6 реплик - типичная картина
+        ошибок whisper при коротких междометиях.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Реплики типа 'Ух ты!' могут быть женскими реакциями"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Смех 'Хо-хо-хо-хо' может быть Бобуком"
+
+      voice_task:
+        needed: false
+        # Слишком короткие сегменты для voice comparison
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика (7187s): "Около двух часов." длительностью 0.66 сек.
+        Это явный дубль/эхо реплики Umputun, который за 2 секунды до этого (7186s)
+        говорит "Нет, около двух часов, Жень." Скорее всего это артефакт распознавания -
+        переотражение или наложение аудио.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: >
+        Имя "LAVALE" в идентификаторе не соответствует реальному спикеру.
+        Это Marin_k_a, а не Lavale. Требуется переименование.
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: >
+        Имя "ELDAR" в идентификаторе не соответствует содержимому.
+        Это артефакт/эхо реплики Umputun, не Эльдар Муртазин.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 267
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: >
+      Все 10 реплик - осмысленные комментарии женским голосом в диалоге.
+      В выпуске только одна женщина - Marin_k_a. Контекст подтверждает.
+
+  - type: rename
+    episode: 267
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: >
+      Вероятно ошибки атрибуции коротких реакций Марины.
+      Требует voice comparison для подтверждения, но реплики слишком короткие.
+      Альтернатива: оставить как есть или удалить как артефакты.
+
+  - type: delete
+    episode: 267
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: null
+    confidence: high
+    reason: >
+      Единственная реплика - эхо/дубль слов Umputun. Артефакт распознавания.

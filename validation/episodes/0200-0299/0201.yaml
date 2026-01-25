@@ -1,0 +1,90 @@
+episode: 201
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, Olyapka]
+  total_duration_sec: 6938
+  note: "Выпуск с двумя ведущими и двумя известными гостьями (бывшими ведущими)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1504
+    replies_count: 369
+    pattern: consecutive
+    first_appearance_sec: 709
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Умпутун в эпизоде говорит (1139-1145 сек):
+        "Были крики «давайте оляпку, пожалуйста».
+         Как только появилась оляпка, появились крики «давайте Маринку».
+         Мы тут поработали, постарались и смогли удовлетворить."
+        Также обращается "Марусенька" (1145-1147 сек).
+        В people.yaml указано: Marin_k_a - Марина, бывшая ведущая.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Olyapka"
+    total_duration_sec: 277
+    replies_count: 132
+    pattern: consecutive
+    first_appearance_sec: 700
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Бобук обращается к ней по имени (696-700 сек):
+        "Вот Олечка сейчас нам не даст соврать, да, Олечка?
+         Скажи, ты в форсквер играешь?"
+        Также (735-740 сек): "Ты не застала, да, Олечка?
+         Ты не застала, как мы в Москве устроили флешмоб в Форскворе?"
+        Умпутун упоминает (1136-1142 сек):
+        "Были крики «давайте оляпку, пожалуйста»"
+        В people.yaml указано: Olyapka - Ольга, бывшая ведущая.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале выпуска (0-40 сек) Умпутун и Бобук представляют друг друга.
+    Гостьи присоединяются позже (около 700 сек) и упоминаются по именам.
+    Формат "oldsсhool" выпуска с малым составом объяснён в самом начале.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Эпизод 201 от 21 августа 2010 года.
+  "Олдскул" выпуск только с двумя ведущими (Umputun, Bobuk).
+  Две бывшие ведущие (Marin_k_a/Марина и Olyapka/Оля) присоединяются
+  примерно на 700-й секунде по просьбам слушателей в чате.
+
+  Все спикеры корректно идентифицированы, ошибок разметки не обнаружено.
+  Статус: clean - никаких действий не требуется.

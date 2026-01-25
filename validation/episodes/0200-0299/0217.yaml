@@ -1,0 +1,239 @@
+episode: 217
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: ["Кирилл Готовцев (Msadu)", "Marin_k_a"]
+  total_duration_sec: 8267
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1309
+    replies_count: 334
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "KirillGotovtsev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 37.3s Bobuk представляет гостя: "В качестве гостя у нас сегодня Кирилл Готовцев.
+        Многие в ЖЖ и прочих социальных сетях знают его как Мсаду."
+        SPEAKER_06 начинает говорить в 78.3s сразу после представления,
+        продолжая разговор о "гаремном" агентстве (рекламное агентство Готовцева).
+        К Кириллу обращаются по имени на протяжении всего выпуска: 183.8s, 2315.7s, 3042.5s и др.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 135
+    replies_count: 19
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция. Пётр Диденко НЕ упоминается в этом выпуске.
+        Реплики PetrDidenko продолжают ту же мысль, что и SPEAKER_06:
+        - 78.3s SPEAKER_06: "Не, я поднабрал мальчик."
+        - 79.9s PetrDidenko: "Не-не-не, у меня хватает мальчиков."
+        - 85.8s SPEAKER_06: "Мы очень долго пытались."
+        - 87.9s PetrDidenko: "Мы очень долго пытались выдержать стиль..."
+        Это явно ОДИН человек - гость Кирилл Готовцев.
+
+      identified_as: "KirillGotovtsev"
+      identification_method: "context"
+      confidence: high
+      evidence: "Реплики чередуются с SPEAKER_06 и продолжают одну мысль"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 37
+    replies_count: 12
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "KirillGotovtsev"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Реплики осмысленные и длинные (про Аську, контакт-лист 968 человек, Ашманова).
+        Появляется в середине выпуска (1803s), в контексте разговора где участвует
+        только один гость - Кирилл. После реплик SPEAKER_05 часто отвечает SPEAKER_06
+        (тоже идентифицированный как Кирилл), что подтверждает это один человек
+        с ошибкой разметки на разные SPEAKER_ID.
+
+      possible_matches:
+        - person_id: "KirillGotovtsev"
+          confidence: 0.8
+          reason: "Единственный гость, контекст совпадает"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1950.0
+          etime: 1970.2
+          text: "Кстати, я совершенно не понимаю, почему Ашманов не сделал подключение инфа к этому самому... Ну да, да. То есть просто переключать. А сейчас вместо меня остался этот. Я бы с удовольствием читал периодически, чем он там беседует."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 11
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие разрозненные реплики: "Какой?" (177s), "Он злобный" (2841s),
+        "Он читал Эдварда Кнута" (5689s), "Да" (7942s).
+        Типичные ошибки распознавания - случайные фразы разбросаны по всему выпуску
+        без какой-либо связности.
+
+      identified_as: null
+      possible_matches:
+        - person_id: "Marin_k_a"
+          confidence: 0.4
+          reason: "Реплика 5689s идёт после обращения к Маринке"
+        - person_id: "Gray"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть неверно атрибутированы Gray"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики для voice comparison"
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 9
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие разрозненные реплики: "А яндексе?" (1131s), "Одну. И какую?" (1687s),
+        "Понимаете?" (3897s), "Вообще мог бы. Еще раз." (3966s), "Да" (6848s).
+        Каждая реплика менее 2 секунд, типичные ошибки распознавания.
+
+      identified_as: null
+      possible_matches:
+        - person_id: "KirillGotovtsev"
+          confidence: 0.5
+          reason: "Некоторые реплики в контексте его высказываний"
+
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 7
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие односложные реплики: "Всегда" (143s), "Да" (276s),
+        "Нет, я на Джабере" (1731s), "И все, да" (7909s), "Да-да-да" (8175s).
+        Реплика "Нет, я на Джабере" (1731s) - может быть Marin_k_a,
+        т.к. следующая реплика от неё: "Нет, так я не на Вконтактовском."
+
+      identified_as: null
+      possible_matches:
+        - person_id: "Marin_k_a"
+          confidence: 0.6
+          reason: "Реплика 1731s логически связана с её следующей фразой"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 2 реплики за весь выпуск: "Но потоп выглядел назад" (2526s)
+        и "Вполне" (8258s). Типичные ошибки распознавания.
+
+      identified_as: null
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 7
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Уже помечен как MISATTRIBUTED - Эльдар Муртазин не участвовал в выпуске 217.
+        Реплики: "Да, если сейчас есть кто в чате..." (1319s),
+        "Кстати говоря, там про голых девушек еще будет" (3722s),
+        "Штука, которая щелкнула, у тебя все вылезло" (4357s).
+        Могут принадлежать Кириллу Готовцеву или одному из ведущих.
+
+      identified_as: null
+      possible_matches:
+        - person_id: "KirillGotovtsev"
+          confidence: 0.6
+          reason: "Контекст разговора с гостем"
+        - person_id: "Gray"
+          confidence: 0.3
+          reason: "Рядом реплики Gray о похожих темах"
+
+      voice_task:
+        needed: false
+        reason: "Реплики короткие и разрозненные"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "PetrDidenko"
+      issue: "Ошибочно присвоен. Пётр Диденко не упоминается в выпуске, гость - Кирилл Готовцев"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 217
+    from_speaker: "SPEAKER_06"
+    to_speaker: "KirillGotovtsev"
+    confidence: high
+    reason: "Гость представлен Бобуком в 37s, SPEAKER_06 начинает говорить сразу после"
+
+  - type: rename
+    episode: 217
+    from_speaker: "PetrDidenko"
+    to_speaker: "KirillGotovtsev"
+    confidence: high
+    reason: "Ошибочная атрибуция. Пётр Диденко не участвовал, реплики принадлежат гостю Кириллу"
+
+  - type: rename
+    episode: 217
+    from_speaker: "SPEAKER_05"
+    to_speaker: "KirillGotovtsev"
+    confidence: medium
+    reason: "Вероятно тот же гость, контекст и паттерн разговора совпадают"
+
+# Новый гость для добавления в people.yaml
+new_guest:
+  id: "kirill_gotovtsev"
+  canonical_name: "KirillGotovtsev"
+  aliases: ["Msadu", "Мсаду", "Кирилл"]
+  real_name: "Кирилл Готовцев"
+  info: "Интернет-деятель, владелец рекламного агентства. Выпуск 217"

@@ -1,0 +1,62 @@
+episode: 287
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 6708  # ~111 минут (1036+750 реплик)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткая реплика (2.32 сек) между двумя репликами Umputun.
+        Контекст: Umputun спрашивает "Кто писал?" (на OCaml), затем идёт эта реплика
+        "Ну, серьезно, на кого это рассчитано?", и сразу Umputun продолжает
+        про статью 2007 года. Это типичная ошибка распознавания — короткая
+        реплика-реакция, скорее всего от Bobuk, который говорил за 14 секунд
+        до этого (2680s про OCaml). Название SPEAKER_MISATTRIBUTED_PETR
+        указывает, что попытка атрибутировать её Петру Диденко была отменена,
+        что подтверждает, что это не реальный гость.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Bobuk"
+          confidence: 0.7
+          reason: >
+            Bobuk говорил непосредственно перед этим (2680s),
+            реплика звучит как его саркастическая реакция на
+            обсуждение функционального программирования.
+
+      voice_task:
+        needed: false
+        # Реплика слишком короткая (2.32 сек) для надёжного
+        # сравнения голоса. Кроме того, это явно ошибка
+        # распознавания, а не реальный гость.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  # В начале эпизода упоминаются только Umputun и Bobuk.
+  # Гостей нет. SPEAKER_MISATTRIBUTED_PETR — это ошибка
+  # распознавания, не реальный участник.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Никаких правил не предлагается, т.к.:
+# 1. Спикер уже помечен как MISATTRIBUTED (ошибка была исправлена)
+# 2. Реплика слишком короткая для уверенной атрибуции Bobuk
+# 3. Статус "clean" — дополнительных действий не требуется

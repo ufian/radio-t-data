@@ -1,0 +1,72 @@
+episode: 219
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 6138  # 899*2969 + 621*1986 + 294*1183 пропорционально
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Две очень короткие реплики (2.16 сек и 1.46 сек), разбросанные по эпизоду.
+        В начале эпизода Umputun явно представляет только трёх участников:
+        "У нас сегодня три гада" и "Здравствуй, Бобук, здравствуй, Грей."
+        Эльдар Муртазин не участвовал в этом выпуске.
+        Первая реплика (1081s) следует сразу после Umputun и перед Gray -
+        скорее всего это продолжение речи Umputun, неправильно сегментированное.
+        Вторая реплика (1119s) - вопросительная реакция между репликами Gray,
+        скорее всего принадлежит одному из ведущих (возможно Bobuk).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 219
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: >
+      Первая реплика (1081.4s "В общем, была очень интересная штука.") следует
+      сразу после Umputun (1074-1080s) и по содержанию является продолжением
+      его рассказа. Вторая реплика (1119.5s "Какое-то большое обновление софта?")
+      может принадлежать любому ведущему, но Umputun наиболее вероятен как
+      модератор дискуссии. Эльдар Муртазин точно не участвовал в этом выпуске -
+      явно объявлены только трое: Umputun, Bobuk, Gray.
+
+# Комментарий к анализу
+notes: |
+  Эпизод 219 от 25 декабря 2010 года - последний выпуск 2010 года.
+  Участники: Umputun, Bobuk, Gray (только трое, без гостей).
+
+  SPEAKER_MISATTRIBUTED_ELDAR - это ошибочная разметка, появившаяся
+  в результате неправильного применения правил очистки. Имя "Eldar"
+  было ошибочно присвоено двум коротким репликам, которые на самом
+  деле принадлежат одному из ведущих (скорее всего Umputun).
+
+  Рекомендация: переименовать SPEAKER_MISATTRIBUTED_ELDAR в Umputun
+  или удалить эти реплики если они дублируют соседние.

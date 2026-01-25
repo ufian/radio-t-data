@@ -1,0 +1,243 @@
+episode: 299
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Marin_k_a]
+  guests_present: [Alexmak]  # SPEAKER_06
+  callers: ["Руслан"]  # Позвонивший слушатель, ошибочно размечен как EldarMurtazin
+  total_duration_sec: ~7500  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2116
+    replies_count: 368
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "alexmak"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в 192-198s: 'А у нас еще Алекс Мак присоединился, у которого скиллов таких наверняка ноль, потому что он маковод'. SPEAKER_06 появляется сразу после в 201s и говорит про Mac."
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 925
+    replies_count: 236
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Уже размечена корректно. Umputun обращается к ней 'Маруся' (строка ~80: 'Марусь, повтори номер')."
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 137
+    replies_count: 35
+    pattern: consecutive
+    analysis:
+      is_error: true
+      error_reason: "ОШИБКА АТРИБУЦИИ. Спикер явно представляется 'Меня зовут Руслан' (3944s), а не Эльдар Муртазин. Это позвонивший слушатель, а не Эльдар Муртазин."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "3943s: 'Всем привет.' 3944s: 'Меня зовут Руслан.' Umputun отвечает: 'Руслан, ты человек с улицы просто, который видел Mac в руках друга?' и 'Я тебя, Руслан, надеюсь, не обижу.'"
+      possible_matches:
+        - person_id: "unknown_caller_ruslan"
+          confidence: 0.9
+          reason: "Слушатель по имени Руслан, позвонивший в эфир. Не идентифицирован как известный гость."
+      voice_task:
+        needed: false
+        # Не требуется - спикер явно называет своё имя
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 22
+    replies_count: 6
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Ранее ошибочно атрибутировано как Lavale, затем отменено. Это короткие реплики, вероятно принадлежащие одному из основных участников (Marin_k_a или Alexmak)."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Пример 1953s: 'А пока Женя пробует, я хочу сказать слушателям...' - женский голос, вероятно Marin_k_a.
+        Пример 153s: 'Ты когда-нибудь был системным администратором?' - контекст диалога указывает на Marin_k_a.
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Контекст и содержание реплик согласуются с Marin_k_a"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1953.84
+          etime: 1957.76
+          text: "А пока Женя пробует, я хочу сказать слушателям... А он создался."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 11
+    replies_count: 9
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-2 сек каждая), разбросанные по эпизоду. Вероятно ошибки распознавания одного из основных участников."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        1658s: 'Мы OmniFocus не любим, ты забыл.' - говорится в контексте диалога SPEAKER_06 (Alexmak) с Umputun
+        3085s: 'Мы про Messages говорили.' - короткая реплика между Umputun и другими
+        3154s: 'Pixelmator и такая же фигня.' - технический комментарий
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Некоторые реплики по контексту могут быть Marin_k_a"
+        - person_id: "alexmak"
+          confidence: 0.4
+          reason: "Технические комментарии могут принадлежать Alexmak"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3154.91
+          etime: 3156.22
+          text: "Pixelmator и такая же фигня."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 7
+    replies_count: 6
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (1-2 сек), разбросанные по эпизоду. Односложные реакции типа 'Да', 'Ну, да', 'Кстати, да', 'Пока'."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        756s: 'Маруся, ты... Это на полтора.' - обращение к Marin_k_a
+        4303s: 'Кстати, да.' - реакция на слова Umputun
+        7477s: 'И я бы рекомендовала, да.' - ЖЕНСКИЙ ГОЛОС ('рекомендовала')
+        7491s: 'Пока.' - прощание в конце эпизода
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Реплика 'И я бы рекомендовала' указывает на женский голос"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7477.82
+          etime: 7479.52
+          text: "И я бы рекомендовала, да."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Три короткие реплики, скорее всего ошибки распознавания."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        344s: 'Фу-фу-фу!' - эмоциональная реакция
+        900s: 'Что включилось, это неинтересно.' - комментарий между репликами Marin_k_a
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Контекст рядом с репликами Marin_k_a"
+        - person_id: "alexmak"
+          confidence: 0.3
+          reason: "Возможно комментарий от Alexmak"
+      voice_task:
+        needed: false
+        # Слишком короткие реплики для надежного сравнения
+
+  - speaker: "Gray"
+    total_duration_sec: 12
+    replies_count: 1
+    pattern: single_reply
+    analysis:
+      is_error: true
+      error_reason: "АНОМАЛИЯ: Gray появляется только один раз (4242s, 12 сек) в контексте разговора с позвонившим Русланом. Gray не был представлен в начале эпизода и не упоминается как участник. Вероятно ошибочная атрибуция."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        4242s: 'А вот эта вот синенькая полоска, которая молниеносно так заполняется, функционально, по-моему, вещь абсолютно бесполезная, но настолько клевая, что просто приятно лазить по сайтам.'
+        Это технический комментарий о Safari, который мог принадлежать позвонившему Руслану или Alexmak.
+      possible_matches:
+        - person_id: "unknown_caller_ruslan"
+          confidence: 0.4
+          reason: "Реплика в контексте звонка Руслана"
+        - person_id: "alexmak"
+          confidence: 0.5
+          reason: "Технический комментарий о Mac, стилистически похож на Alexmak"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4242.89
+          etime: 4255.18
+          text: "А вот эта вот синенькая полоска, которая молниеносно так заполняется, функционально, по-моему, вещь абсолютно бесполезная, но настолько клевая, что просто приятно лазить по сайтам."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: "КРИТИЧЕСКАЯ ОШИБКА: размечен как EldarMurtazin, но представляется как 'Руслан'. Нужно переименовать."
+    - speaker: "Gray"
+      issue: "Gray не упоминается в начале эпизода как участник. Единственная реплика (12 сек) подозрительна - возможно ошибка атрибуции."
+    - speaker: "SPEAKER_06"
+      issue: "Не размечен как Alexmak, хотя Umputun явно представляет его 'Алекс Мак присоединился'."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 299
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Alexmak"
+    confidence: high
+    reason: "Umputun представляет гостя: 'А у нас еще Алекс Мак присоединился'. SPEAKER_06 появляется сразу после и говорит про Mac."
+
+  - type: rename
+    episode: 299
+    from_speaker: "EldarMurtazin"
+    to_speaker: "Ruslan"
+    confidence: high
+    reason: "Спикер явно представляется 'Меня зовут Руслан', не Эльдар Муртазин. Umputun также обращается к нему 'Руслан'."
+
+  - type: merge_review
+    episode: 299
+    speakers: ["SPEAKER_MISATTRIBUTED_LAVALE", "SPEAKER_03"]
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Короткие реплики, по контексту и женскому роду глаголов ('рекомендовала') принадлежат Marin_k_a."
+
+  - type: needs_voice_comparison
+    episode: 299
+    speaker: "Gray"
+    reason: "Единственная реплика Gray (12 сек) без представления. Проверить голос - может быть Ruslan или Alexmak."
+
+# Дополнительные заметки
+notes: |
+  Эпизод 299 от 28 июля 2012 года.
+
+  Участники по данным транскрипта:
+  - Umputun (ведущий, 1074 реплики)
+  - Marin_k_a (соведущая, 236 реплик) - называется "Маруся"
+  - Alexmak (гость, 368 реплик как SPEAKER_06) - представлен как "Алекс Мак"
+  - Ruslan (позвонивший слушатель, 35 реплик как EldarMurtazin) - представился сам
+
+  Основные проблемы:
+  1. EldarMurtazin -> Ruslan (критическая ошибка)
+  2. SPEAKER_06 -> Alexmak (пропущенная идентификация)
+  3. Gray - подозрительная единственная реплика
+  4. Мелкие SPEAKER_* - вероятно ошибки распознавания Marin_k_a

@@ -1,0 +1,256 @@
+episode: 242
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [PetrDidenko, Marin_k_a, Alexmak, Bialex]
+  absent_hosts: [Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7458  # примерно 2 часа по последним репликам
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1502
+    replies_count: 252
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alexmak"
+      identification_method: "context"
+      confidence: high
+      evidence: "Umputun в 217.63s говорит 'Алекс, ты ответь им как к программисту' — сразу после чего SPEAKER_05 отвечает. В начале эпизода (61-77s) Umputun представляет 'Алекса Мака' как второго гостя, представителя светлой стороны (Apple)"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 908
+    replies_count: 221
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "bialex"  # новый гость, нужно добавить в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 1761-1777s SPEAKER_04 сам представляется: 'В Твиттере меня кое-кто знает как Биалекс, в Мак-сообществе тоже примерно так же', 'на сайте Тадж-Лев я Шурик Бабаев'. Umputun отвечает: 'будешь у нас Шуриком, чтобы тебя с другим Алексом не пугать'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+      new_person_to_add:
+        id: "bialex"
+        canonical_name: "Bialex"
+        aliases: ["Биалекс", "Шурик", "Шурик Бабаев"]
+        real_name: "Александр Бабаев"
+        info: "Выпуск 242, Mac-сообщество"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 7
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Это Marin_k_a — женский голос, говорит 'Я читала, я не смотрела'. В эпизоде только одна женщина — Маруся"
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: "В 1658.45s говорит 'Я читала, я не смотрела, я читала' — женский род глаголов. Единственная женщина в выпуске — Marin_k_a (Маруся)"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика 'Угу, угу, угу' — междометие, артефакт распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 16
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Уже помечен как ошибочное присвоение Lavale. Нужно определить реального спикера"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплики разбросаны: 103s, 1715s, 1804s, 3074s, 6102s. Контекст реплик технический, скорее всего один из мужчин-гостей"
+
+      possible_matches:
+        - person_id: "alexmak"
+          confidence: 0.4
+          reason: "Технические темы, но голос не выделяется из контекста"
+        - person_id: "petr_didenko"
+          confidence: 0.4
+          reason: "Активный участник обсуждений"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1715.63
+          etime: 1720.61
+          text: "Жалко только, что не все вел Стиви."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Уже помечен как ошибочное присвоение Eldar (Муртазин). Eldar не участвовал в этом эпизоде"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Одна реплика в 6714s 'Но я думаю, что здесь сотрудничество взаимовыгодное'. Скорее всего один из гостей"
+
+      possible_matches:
+        - person_id: "alexmak"
+          confidence: 0.5
+          reason: "Обсуждается Apple/Twitter интеграция, следующая реплика от SPEAKER_05 продолжает мысль"
+        - person_id: "petr_didenko"
+          confidence: 0.3
+          reason: "Возможный участник дискуссии"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6714.87
+          etime: 6718.94
+          text: "Но я думаю, что здесь сотрудничество взаимовыгодное."
+
+  - speaker: "Bobuk"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Bobuk (Григорий) отсутствовал в эпизоде — Umputun в начале не понимает, кто такой 'Гриша', Маруся говорит что заменяет отсутствующих"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "В начале (103-113s) идёт диалог: кто-то говорит 'Это Сережу и Гришу', Umputun спрашивает 'Кто такой Гриша?' — это показывает, что Bobuk не участвует"
+
+      possible_matches:
+        - person_id: "alexmak"
+          confidence: 0.5
+          reason: "Реплика техническая про iMessage, SPEAKER_05 (Alexmak) — основной эксперт по Apple темам"
+        - person_id: "petr_didenko"
+          confidence: 0.3
+          reason: "Активный участник, но менее вероятно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6864.22
+          etime: 6867.86
+          text: "Если есть iMessage, он просто-напросто тупо переключает с смс-ки на iMessage."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: "Гость появился только в 1761s (29 минут), представился сам. Это нормально — гости иногда подключаются позже"
+    - speaker: "Bobuk"
+      issue: "Помечен как спикер (1 реплика), но отсутствовал в эпизоде согласно представлению в начале"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "5 реплик помечены как отменённое присвоение, но реальный спикер не определён"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "1 реплика помечена как отменённое присвоение Eldar, но он не участвовал в этом выпуске"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 242
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Alexmak"
+    confidence: high
+    reason: "Прямое обращение Umputun 'Алекс, ты ответь' + представление в начале эпизода"
+
+  - type: rename
+    episode: 242
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Bialex"
+    confidence: high
+    reason: "Самопредставление: 'В Твиттере меня знают как Биалекс', 'Шурик Бабаев'"
+
+  - type: rename
+    episode: 242
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Женский голос ('Я читала'), единственная женщина в выпуске — Маруся"
+
+  - type: delete_or_merge
+    episode: 242
+    from_speaker: "SPEAKER_06"
+    to_speaker: null
+    confidence: medium
+    reason: "Единственная реплика 'Угу, угу, угу' — артефакт распознавания"
+
+  - type: rename
+    episode: 242
+    from_speaker: "Bobuk"
+    to_speaker: "Alexmak"
+    confidence: medium
+    reason: "Bobuk отсутствовал. Реплика про iMessage — скорее всего Alexmak (эксперт по Apple)"
+
+# Требуется добавить в people.yaml
+new_guests_to_register:
+  - id: "bialex"
+    canonical_name: "Bialex"
+    aliases: ["Биалекс", "Шурик", "Шурик Бабаев"]
+    real_name: "Александр Бабаев"
+    info: "Mac-сообщество, выпуск 242"
+
+# Примечания
+notes: |
+  Выпуск 242 от 11 июня 2011.
+  Ведущий: Umputun
+  Гости: PetrDidenko (тёмная сторона), Alexmak (светлая сторона/Apple), Marin_k_a (Маруся), Bialex (Шурик Бабаев, подключился позже)
+  Отсутствуют: Bobuk (Гриша), Gray (Серёжа)
+
+  SPEAKER_05 — это Alexmak с высокой уверенностью (прямое обращение "Алекс").
+  SPEAKER_04 — это Bialex (новый гость, нужно добавить в справочник).
+  SPEAKER_03 — ошибочно размечен, на самом деле Marin_k_a.
+  Bobuk помечен ошибочно — он не участвовал в этом выпуске.

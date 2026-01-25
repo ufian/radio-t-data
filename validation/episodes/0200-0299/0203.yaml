@@ -1,0 +1,118 @@
+episode: 203
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  total_duration_sec: 6918
+  notes: "Эпизод 203 от 4 сентября 2010 года. Apple-эвент."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Alexmak"
+    total_duration_sec: 1043
+    replies_count: 214
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alexmak"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Gray (33-39 сек): "Вот тот голос, который все решили, что это Грей,
+        это не Грей, это Алекс Мак."
+        Umputun (39-45 сек): "Алекс Мак, у тебя такая кликуха с другой буквой К..."
+        Alexmak (46-57 сек): "...я просто в свое время работал в компании,
+        которая называлась именно МАК, М-А-К..."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Guest1"
+    total_duration_sec: 68
+    replies_count: 13
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "listener_dmitry"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (3853-3858 сек): "Слушатель, ты по скайпу Дмитрий, у тебя
+        какое-то погоняло есть специальное интернетовское, по которому тебя знают?"
+        Слушатель звонит из чата, обсуждает Samsung Galaxy Tab vs iPad.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+    suggested_rename:
+      to: "listener:Dmitry"
+      reason: "Слушатель представлен по имени Дмитрий"
+
+  - speaker: "Guest2"
+    total_duration_sec: 55
+    replies_count: 11
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "listener_vlad"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (5055-5059 сек): "А я впустил, впустил нам человека,
+        который был у нас в прошлый раз."
+        Umputun (5059-5061 сек): "Ты был у нас, Влад, в прошлый раз, да?"
+        Обсуждает Gmail Priority Inbox, утверждает что был в бете.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+    suggested_rename:
+      to: "listener:Vlad"
+      reason: "Слушатель представлен по имени Влад, был в прошлом выпуске"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры идентифицированы:
+    - Umputun и Gray - ведущие
+    - Alexmak - приглашённый гость, Apple-энтузиаст, явно представлен в начале
+    - Guest1 (Дмитрий) - слушатель по скайпу, обсуждает планшеты
+    - Guest2 (Влад) - слушатель, был в предыдущем выпуске, обсуждает Gmail
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 203
+    from_speaker: "Guest1"
+    to_speaker: "listener:Dmitry"
+    confidence: high
+    reason: "Слушатель явно назван по имени 'Дмитрий' в 3853-3858 сек"
+
+  - type: rename
+    episode: 203
+    from_speaker: "Guest2"
+    to_speaker: "listener:Vlad"
+    confidence: high
+    reason: "Слушатель явно назван по имени 'Влад' в 5059-5061 сек"

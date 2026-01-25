@@ -1,0 +1,69 @@
+episode: 236
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 6265.7
+  notes: "Эпизод от 23 апреля 2011 года"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 10.3
+    replies_count: 6
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        Все 6 реплик короткие (1-2 сек), разбросаны по эпизоду (1329s, 2455s, 3555s, 3927s, 4023s, 5749s).
+        Типичный паттерн ошибки автоматического распознавания спикеров.
+
+        Эльдар Муртазин НЕ присутствует в этом выпуске как гость:
+        - На 955s Umputun только цитирует его мнение: "известный конспиролог и аналитик Эльдар Муртазин"
+        - Фраза "не чуждый нашему подкасту" указывает на прошлые визиты, не текущий
+        - В начале эпизода представлены только Umputun, Bobuk и Gray
+
+        Контекст реплик указывает на ведущих:
+        1. "Я думаю, что там гораздо проще" - между Umputun и Gray, про Samsung/Apple
+        2. "Ну, тема очень простая" - между Umputun и Gray
+        3. "Может, ему запрещать его зашифровывать, а?" - вопрос в контексте обсуждения ведущих
+        4. "Ты часто пользуешься?" - Bobuk обращается к "Жень", ответ продолжает Umputun
+        5. "Но он пока запущен в трех городах" - осведомленность о сервисе (ведущие)
+        6. "Ты что?" - дубликат с Bobuk (5750s)
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Реплика 6 идентична следующей реплике Bobuk ('Ты что?'). Возможно ошибка сегментации."
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Реплики 1-2 находятся в диалоге между Umputun и Gray."
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete_speaker
+    episode: 236
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    confidence: high
+    reason: |
+      Эльдар Муртазин не участвовал в эпизоде 236 как гость.
+      6 коротких реплик (10.3 сек) - это ошибки распознавания речи ведущих.
+      Рекомендуется удалить спикера или объединить реплики с соседними спикерами.

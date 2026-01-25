@@ -1,0 +1,223 @@
+episode: 275
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 7867
+  guests_announced: 1
+  guest_name: "Андрей Бреслав (Брислав)"
+  guest_role: "Ведущий разработчик проекта Kotlin, JetBrains"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1615
+    replies_count: 385
+    pattern: consecutive
+    first_reply_at: 90
+
+    analysis:
+      is_error: false
+      identified_as: "andrey_breslav"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В строке 109 Bobuk говорит: 'Собственно, гость у нас зовут Андрей Брислав, он просил себя представить как ведущий разработчик проекта Kotlin'. SPEAKER_01 начинает говорить сразу после этого представления (строка 154) и рассказывает про остров Котлин и происхождение названия проекта."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 235
+    replies_count: 32
+    pattern: scattered
+    first_reply_at: 1448
+
+    analysis:
+      is_error: true
+      error_reason: "В эпизоде представлен только один гость - Андрей Бреслав. Пётр Диденко не упоминается и не представляется. Реплики PetrDidenko по тематике (Scala, компиляторы, типизация) полностью соответствуют экспертизе Андрея Бреслава как разработчика языка Kotlin. Вероятно, это ошибочная атрибуция реплик SPEAKER_01."
+
+      identified_as: "andrey_breslav"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Реплики PetrDidenko появляются в контексте обсуждения Kotlin vs Scala. Например, в 1448s: 'если я беру просто компилятор обычный, не FST...' - это технический контекст разработки языков. В эпизоде гость только один, и это Андрей Бреслав."
+
+      possible_matches:
+        - person_id: "andrey_breslav"
+          confidence: 0.85
+          reason: "Единственный гость в эпизоде, тематика реплик совпадает"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1448.17
+          etime: 1461.41
+          text: "Ну что ты, если я беру просто компилятор обычный, не FST, который за полчаса наворачивается, а просто скаловский компилятор, он пока запустится, пройдет как раз время, чтобы у меня остался кофе."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 23
+    replies_count: 12
+    pattern: scattered
+    first_reply_at: 244
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (в среднем 2 сек каждая). Контекст показывает участие в диалоге о программировании - скорее всего это ошибочно распознанный Андрей Бреслав или один из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: "Пример реплики в 283.8s: 'Не уверен, что точно так же, но припоминаю' - ответ на вопрос Umputun о 1992 годе. Следующая реплика SPEAKER_01 продолжает тему про компиляторы C++."
+
+      possible_matches:
+        - person_id: "andrey_breslav"
+          confidence: 0.6
+          reason: "Реплики в контексте диалога с гостем, тематика совпадает"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk иногда пропадал из эфира, мог быть неправильно распознан"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 461.47
+          etime: 463.29
+          text: "Рядом поставить компьютер и программировать на C++."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 19
+    replies_count: 2
+    pattern: scattered
+    first_reply_at: 2643
+
+    analysis:
+      is_error: true
+      error_reason: "Уже помечен как misattributed (ошибочно атрибутирован Marina). Реплики технические, про LISP и рекурсию - явно относятся к Андрею Бреславу, а не к Marina."
+
+      identified_as: "andrey_breslav"
+      identification_method: "context"
+      confidence: high
+      evidence: "Реплика в 2643s: 'На самом деле, ну, во-первых, LISP там существовал с незапамятных времен...' - технический контент про языки программирования. Следующая реплика SPEAKER_01 в 2663s продолжает ту же тему ('Ты же понимаешь, что это все примерно одно семейство'). Marina не участвует в этом эпизоде."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    first_reply_at: 8216
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика в 1 секунду в конце эпизода. Скорее всего артефакт распознавания или случайная фраза одного из ведущих/гостя."
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: "Реплика в 8216s: 'Ну что, хорошо поговорим.' - типичная завершающая фраза, могла быть сказана любым участником."
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Завершающая фраза после прощания, похоже на стиль ведущего"
+        - person_id: "andrey_breslav"
+          confidence: 0.3
+          reason: "Гость мог сказать на прощание"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "PetrDidenko"
+      issue: "Спикер не представлен в эпизоде. Единственный объявленный гость - Андрей Бреслав. PetrDidenko скорее всего ошибочно атрибутированные реплики."
+    - speaker: "SPEAKER_00"
+      issue: "Множественные короткие реплики без идентификации. Требует voice comparison."
+
+# Предлагаемые изменения в справочник
+suggested_people_yaml_additions:
+  - id: "andrey_breslav"
+    canonical_name: "AndreyBreslav"
+    aliases: ["Андрей Бреслав", "Брислав"]
+    real_name: "Андрей Бреслав"
+    info: "Ведущий разработчик Kotlin, JetBrains. Выпуск 275"
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules:
+  - type: rename
+    episode: 275
+    from_speaker: "SPEAKER_01"
+    to_speaker: "AndreyBreslav"
+    confidence: high
+    reason: "Явное представление гостя в начале эпизода: 'гость у нас зовут Андрей Брислав, он просил себя представить как ведущий разработчик проекта Kotlin'"
+
+  - type: rename
+    episode: 275
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "AndreyBreslav"
+    confidence: high
+    reason: "Marina не участвует в эпизоде. Реплики технические (LISP, рекурсия), соответствуют экспертизе Бреслава."
+
+  - type: rename
+    episode: 275
+    from_speaker: "PetrDidenko"
+    to_speaker: "AndreyBreslav"
+    confidence: medium
+    reason: "Пётр Диденко не представлен в эпизоде. Единственный гость - Андрей Бреслав. Требует подтверждения через voice comparison."
+
+  - type: delete_or_merge
+    episode: 275
+    from_speaker: "SPEAKER_00"
+    to_speaker: null
+    confidence: low
+    reason: "Короткие разрозненные реплики. Требует voice comparison для определения - это Бреслав, Бобук или артефакт."
+
+  - type: delete
+    episode: 275
+    from_speaker: "SPEAKER_05"
+    confidence: medium
+    reason: "Единственная реплика в 1 секунду в конце. Скорее всего артефакт или неточная атрибуция."
+
+# Задания на ручную проверку
+manual_review_tasks:
+  - task: "voice_comparison"
+    description: "Сравнить голос PetrDidenko с голосом SPEAKER_01 (Андрей Бреслав)"
+    segments_to_compare:
+      - speaker: "PetrDidenko"
+        stime: 1448.17
+        etime: 1461.41
+      - speaker: "SPEAKER_01"
+        stime: 90.38
+        etime: 115.74
+    expected_result: "same_person"
+
+  - task: "voice_comparison"
+    description: "Определить кому принадлежат реплики SPEAKER_00"
+    segments_to_compare:
+      - speaker: "SPEAKER_00"
+        stime: 283.8
+        etime: 288.02
+      - speaker: "SPEAKER_01"
+        stime: 288.1
+        etime: 303.09
+    expected_result: "determine_speaker"
+
+notes: |
+  Эпизод 275 - гиковский выпуск про языки программирования с гостем Андреем Бреславом,
+  ведущим разработчиком языка Kotlin из JetBrains.
+
+  Основные проблемы:
+  1. SPEAKER_01 уверенно идентифицирован как Андрей Бреслав (высокая уверенность)
+  2. PetrDidenko вероятно ошибочная разметка - Пётр не представлен в эпизоде
+  3. SPEAKER_MISATTRIBUTED_MARIN - точно ошибка, Marina не участвует
+  4. SPEAKER_00 и SPEAKER_05 - артефакты распознавания, требуют проверки
+
+  Интересный факт: имя "Бреслав" транскрибировано как "Брислав" в оригинале.

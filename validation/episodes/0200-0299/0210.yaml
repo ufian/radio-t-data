@@ -1,0 +1,79 @@
+episode: 210
+status: needs_review
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 6734  # 951+709+183 hosts + 132 guest replicas time
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 499
+    replies_count: 132
+    pattern: consecutive  # Множественные последовательные реплики, активное участие в диалоге
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: "lena_california"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет гостью по имени на 103-109 сек:
+        "Лена, ты у нас экстерная совершенно из какой-то вообще дыры, которой многим нашим слушателям незнакома. Ты откуда?"
+
+        Гостья отвечает (110.55 сек): "Здравствуйте, я из Калифорнии, рядом с Кремниевой долиной."
+
+        Дополнительные упоминания по имени:
+        - 193 сек: "Лена, у вас в силиконовой долине..."
+        - 297 сек: "Лена, у вас там в Калифорнии такой магазин водится?"
+        - 1202 сек: "Бобук, ты можешь так сказать iPad, как Лена сказала?"
+
+      # Гость не найден в people.yaml - нужно добавить
+      possible_matches: []
+
+      # Voice comparison не требуется - идентификация по имени однозначная
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 210
+    from_speaker: "Guest"
+    to_speaker: "LenaCalifornia"
+    confidence: high
+    reason: |
+      Гостья представлена Umputun'ом по имени "Лена", сама сообщила что живёт
+      в Калифорнии рядом с Кремниевой долиной. Активное участие в обсуждении
+      (132 реплики, ~8 минут речи), знание местных реалий (AT&T, Verizon,
+      Apple Store).
+
+# Метаданные эпизода
+episode_metadata:
+  date: "2010-10-23"
+  audio_url: "https://cdn.radio-t.com/rt_podcast210.mp3"
+
+# Действия для выполнения
+action_items:
+  - action: add_to_people_yaml
+    person:
+      id: "lena_california"
+      canonical_name: "LenaCalifornia"
+      aliases: ["Лена"]
+      real_name: "Елена"
+      info: "Гостья из Калифорнии (Кремниевая долина), выпуск 210"
+
+  - action: create_cleaning_rule
+    description: "Переименовать Guest -> LenaCalifornia в эпизоде 210"

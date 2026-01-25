@@ -1,0 +1,177 @@
+episode: 292
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7400  # ~2 часа
+  notes: |
+    Бобук отсутствовал большую часть выпуска (в начале Umputun говорит "Бобук решил к нам сегодня не приходить"),
+    но имеет 2 реплики — возможно зашёл ненадолго или это ошибка распознавания.
+    Marin_k_a (Маруся/Марина) — бывшая ведущая, активно участвует.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 878
+    replies_count: 202
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun явно обращается к ней по имени множество раз:
+        - "Грей или Маруся?" (24s)
+        - "Я надеюсь, Маруся, ты качеством контента нас не обидишь сегодня?"
+        - "Прекрати, Марина."
+        - "Маруся, ты понимаешь про хэши хоть что-нибудь?"
+        Marin_k_a — каноническое имя из people.yaml для бывшей ведущей Марины.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 47
+    replies_count: 15
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин не участвовал в этом выпуске. Реплики разбросаны по эпизоду,
+        короткие (2-8 сек), и по контексту являются продолжением речи ведущих.
+        Примеры:
+        - "Короче, и тут возникает та самая соль." (2255s) — сразу после Gray "Да." и перед Gray "Почему говорят там подсоленные пароли"
+        - "Все, больше ничего не надо." (4076s) — между двумя репликами Gray
+        Это ошибка автоматического распознавания, реплики принадлежат Gray или Umputun.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Большинство реплик окружены репликами Gray и по стилю технические объяснения"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть продолжением мысли Umputun"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2696.18
+          etime: 2701.89
+          text: "Чем быстрее ты считаешь хэш, набор данных, тем быстрее злодей сможет много-много-много хэшей посчитать для своих злодейских целей."
+        compare_with: [Gray, Umputun]
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 8
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Lavale не участвовала в этом выпуске. Обе реплики по контексту принадлежат Marin_k_a:
+        - "Это к вопросу о скорости, да, я так понимаю?" (2799s) — сразу после реплики Marin_k_a
+        - "Да, собственные Apple-овские карты, и потом еще... С 3D-визуализацией." (3511s) —
+          сразу после неё Marin_k_a продолжает: "Да, с 3D-шечкой."
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Обе реплики тематически связаны с окружающими репликами Marin_k_a.
+        Вторая реплика про Apple карты продолжается репликой Marin_k_a "Да, с 3D-шечкой."
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.8
+          reason: "Контекст и тематическая связь с соседними репликами Marin_k_a"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3511.65
+          etime: 3517.12
+          text: "Да, собственные Apple-овские карты, и потом еще... С 3D-визуализацией."
+        compare_with: [Marin_k_a]
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики-подтверждения:
+        - "Угу." (2220s) — после объяснения Umputun про MD5
+        - "Конечно." (7354s) — сразу после вопроса Umputun к Марусе: "да ты, Маруся?"
+        Вторая реплика явно принадлежит Marin_k_a (ответ на прямое обращение).
+        Первая тоже вероятно Marin_k_a — типичная короткая реакция слушателя.
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Вторая реплика "Конечно." (7354s) — прямой ответ на вопрос Umputun:
+        "Пришла Маруся, которая в прошлый раз пропустила гнусно... да ты, Маруся?"
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.9
+          reason: "Прямой ответ на обращение по имени"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики для сравнения голоса"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале Umputun упоминает "Грей или Маруся?" — оба присутствуют.
+    Бобук упомянут как отсутствующий ("Бобук решил к нам сегодня не приходить"),
+    но имеет 2 реплики — возможно зашёл позже ненадолго.
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Объявлен как отсутствующий в начале выпуска, но имеет 2 реплики
+        (1581s и 4051s). Нужно проверить — действительно ли это Bobuk
+        или ошибка распознавания.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 292
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Контекст указывает на Marin_k_a, реплики тематически связаны с её речью"
+
+  - type: rename
+    episode: 292
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Вторая реплика — прямой ответ на обращение к Марусе"
+
+  - type: needs_voice_comparison
+    episode: 292
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    candidates: [Gray, Umputun]
+    confidence: null
+    reason: |
+      15 реплик требуют сравнения голоса для определения — Gray или Umputun.
+      По контексту большинство скорее Gray.

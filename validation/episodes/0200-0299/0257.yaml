@@ -1,0 +1,101 @@
+episode: 257
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [PetrDidenko, Marin_k_a]
+  total_duration_sec: 8629
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 997
+    replies_count: 273
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Представлен Umputun'ом на 51.62s: "Петя, а ты согласен с подходами?"
+        Упомянут в конце на 8615.71s: "где Петя не будет засыпать"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 379
+    replies_count: 121
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Представлена Umputun'ом на 74.54s: "Маруси, Маруси, а ты как?"
+        Упомянута в конце на 8615.71s: "а Маринка будет говорить больше, чем 2 секунды"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две очень короткие реплики (<1 сек каждая), вклинивающиеся между
+        репликами ведущих. Эльдар Муртазин не участвует в этом выпуске
+        (нет упоминаний, нет представления). Контекст указывает на
+        ошибку распознавания голоса Bobuk'а:
+        - 2603.85s: "Это чистый JS." — между двумя репликами Bobuk'а о JS/BSON
+        - 6383.33s: "Тут то же самое." — между Bobuk и Umputun
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.8
+          reason: "Обе реплики находятся в контексте технических обсуждений Bobuk'а"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 257
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: |
+      Эльдар Муртазин не участвует в выпуске 257. Обе реплики — короткие
+      технические комментарии (<1 сек), вклинивающиеся между репликами
+      Bobuk'а в контексте его технических объяснений.

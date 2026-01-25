@@ -1,0 +1,122 @@
+episode: 209
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk]
+  guests_present: [PetrDidenko, Guest1, Guest2]
+  total_duration_sec: 4644  # ~77 минут
+  note: "Специальный выпуск без Umputun, Gray и Ksenks. Umputun работает звукооператором."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1430
+    replies_count: 364
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Бобук в начале выпуска (24-26 сек): "Вот у нас есть наш постоянный гость... Это Петя Диденко. Петя, ты у нас тут, на месте?"
+        PetrDidenko отвечает: "Да, я у нас тут."
+        В финале (4604 сек): "у нас был просто Петя Вейденко" (ошибка транскрипции имени)
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest1"
+    total_duration_sec: 380
+    replies_count: 134
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # Сван - нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Бобук в начале (45-55 сек): "Это великий, собственно, великий сван, который поддерживал этот чат... Он сегодня будет делать вид, что он грей."
+        Guest1 сам подтверждает (233 сек): "Слушайте, я же как грейда, я должен всех перебить."
+        Многократные упоминания "Сван" в выпуске: "У Свана я знаю что-то вроде из Nokia" (2449), "я сейчас свана поддержу" (5221), "Сван большой любитель телевизора" (5923), "Сван, дорогой, мы с тобой обслуживаем где-то примерно 0.3 от всего интернета" (10045)
+        В финале (4604 сек): "у нас был просто Сван"
+      possible_matches:
+        - person_id: "swan_new"
+          confidence: 1.0
+          reason: "Явное представление и многократные обращения по имени 'Сван'"
+      voice_task:
+        needed: false  # Идентификация высокой уверенности
+
+  - speaker: "Guest2"
+    total_duration_sec: 129
+    replies_count: 53
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      identified_as: "mika"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Бобук в начале (56-64 сек): "Еще у нас должна быть девушка... которая будет выполнять роль Маринки."
+        Бобук обращается к ней (566 сек): "Мика, ты тут еще скажи."
+        Guest2 отвечает женским голосом, использует женский род: "Не уверена" (585 сек)
+        В финале (4604 сек): "у нас была Мика, которая сегодня в первый раз, по-моему, вообще оказалась в эфире"
+        Также (4616-4622 сек): "Мика пыталась имитировать Маринку, но при этом слишком много молчала"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "PetrDidenko"
+      issue: "Уже идентифицирован в транскрипте - корректно"
+    - speaker: "Guest1"
+      issue: "Сван - отсутствует в people.yaml, требуется добавление"
+    - speaker: "Guest2"
+      issue: "Мика - есть в people.yaml, но указан только выпуск 211, нужно обновить info"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 209
+    from_speaker: "Guest1"
+    to_speaker: "Swan"
+    confidence: high
+    reason: "Явное представление в начале выпуска и многократные обращения по имени"
+
+  - type: rename
+    episode: 209
+    from_speaker: "Guest2"
+    to_speaker: "Mika"
+    confidence: high
+    reason: "Явное представление и обращение 'Мика, ты тут еще скажи'"
+
+# Предлагаемые дополнения в people.yaml
+suggested_people_updates:
+  - action: add
+    person:
+      id: "swan"
+      canonical_name: "Swan"
+      aliases: ["Сван"]
+      real_name: null
+      info: "Поддерживал чат подкаста, выпуск 209"
+
+  - action: update
+    person_id: "mika"
+    field: "info"
+    old_value: "Выпуск 211"
+    new_value: "Выпуски 209, 211 (первый эфир в 209)"
+
+# Дополнительные заметки
+notes:
+  - "Специальный выпуск: Umputun отсутствует в эфире, работает звукооператором"
+  - "Бобук играет роль Umputun, Сван играет роль Gray, Мика играет роль Marin_k_a"
+  - "Петя Диденко уже правильно размечен как PetrDidenko"
+  - "Аудио-файл недоступен (нет 209_desc.json в репозитории)"

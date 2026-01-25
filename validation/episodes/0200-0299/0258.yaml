@@ -1,0 +1,112 @@
+episode: 258
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 7040
+  notes: |
+    Эпизод от 8 октября 2011 года. В гостях Эльдар Муртазин и Марина (Marin_k_a).
+    Все спикеры представлены в начале выпуска.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1425
+    replies_count: 370
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (54с) Марина спрашивает: "А Эльдар сегодня с анекдотами или без будет?"
+        Грей подтверждает (58с): "Эльдар..."
+        Затем Бобук просит Эльдара подвинуться к микрофону (62с): "Чуть ближе к микрофону, тебя сейчас очень плохо слышно."
+        Эльдар Муртазин - известный мобильный аналитик, постоянный гость подкаста.
+        370 реплик, 1425 секунд - активное участие на протяжении всего выпуска.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 294
+    replies_count: 84
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (28с) Umputun говорит: "Есть Маруся, которой заслуги приписывать не надо,
+        потому что просто ходит туда-сюда, и то хорошо."
+        Затем Marin_k_a отвечает (35с): "Куда туда-сюда?"
+        На 4685с Бобук говорит "Маручка даже поцеловала" - уменьшительное от Маруся.
+        Марина (Marin_k_a) - бывшая ведущая подкаста, известный участник.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика в 4688с: "Это вообще-то он путун."
+        Контекст: после фразы Бобука "Маручка даже поцеловала" (4685-4688с).
+        Это явно реплика Марины (Marin_k_a), которая шутит про поцелуй.
+        Lavale в этом выпуске не участвует - она появлялась в других эпизодах.
+        Маркер SPEAKER_MISATTRIBUTED_LAVALE указывает на ранее отменённую ошибочную атрибуцию.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.9
+          reason: |
+            Контекст диалога про "Маручку" и поцелуй явно относится к Марине.
+            Предыдущая реплика Marin_k_a была в 4683с "Поздравляем."
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 258
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Контекст диалога явно указывает на Марину. Бобук говорит про "Маручку" (Марусю),
+      и следующая реплика "Это вообще-то он путун" - шутливая реакция Марины.
+      Lavale не участвовала в этом выпуске.

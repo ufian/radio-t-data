@@ -1,0 +1,382 @@
+episode: 232
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Эпизод 232 от 26 марта 2011 года
+# Особенности: много гостей по Skype, несколько звонков слушателей
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, PetrDidenko]
+  total_duration_sec: 6500  # ~1:48:00 приблизительно
+  notes: |
+    Bobuk присутствует минимально (1 реплика в 1469s).
+    Основные участники: Umputun, Marin_k_a (Марина), PetrDidenko (Голодный).
+    Несколько звонков слушателей через Skype.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 461
+    replies_count: 154
+    pattern: consecutive
+    first_appearance_sec: 36.7
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # SPEAKER_07 появляется с первых минут и активно участвует в диалоге.
+      # По контексту: "Ну, с женщиной нельзя не согласиться" (36.7s) -
+      # это ответ на реплику Marin_k_a "Да, голодный?" (34.6s).
+      # Затем PetrDidenko говорит "Меня зовут Голодный, я из Иркутска" (56.3s).
+      #
+      # Вывод: SPEAKER_07 и PetrDidenko - один человек (Голодный/Пётр Диденко).
+      # Автоматическая транскрипция разделила его голос на два ID.
+
+      identified_as: "petr_didenko"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Marin_k_a обращается "Да, голодный?" (34.6s), сразу отвечает SPEAKER_07 (36.7s)
+        2. PetrDidenko представляется "Меня зовут Голодный" (56.3s)
+        3. SPEAKER_07 говорит "Я нахожусь дома у своих родителей" (53.7s) - соответствует контексту
+        4. Umputun обращается "вот мы с Голодным старые" (72.8s)
+        5. Реплики SPEAKER_07 и PetrDidenko перемежаются в диалоге - это один человек
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 217
+    replies_count: 59
+    pattern: consecutive
+    first_appearance_sec: 2192.9
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Появляется в 2191s после фразы Umputun "Василий, с нами..."
+      # Отвечает "Да, я с вами приветствую. Привет."
+      # Далее: "я в Лос-Анджелесе нахожусь" (2197s)
+      # Это звонок слушателя по Skype.
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun представляет: "Василий, с нами..." (2191s)
+        2. SPEAKER_04 отвечает: "Да, я с вами приветствую" (2193s)
+        3. Уточняет: "я в Лос-Анджелесе нахожусь" (2197s)
+        4. Говорит: "я нанимал в России программистов" (2279s)
+        Это слушатель Василий из Лос-Анджелеса.
+
+      possible_matches:
+        - person_id: "vasily_la"
+          confidence: 0.9
+          reason: "Явно представлен как Василий, говорит из Лос-Анджелеса"
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 2197.86
+          etime: 2205.09
+          text: "Кстати, это довольно весело по поводу мексиканцев, поскольку я практически в Мексике, я в Лос-Анджелесе нахожусь."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 58
+    replies_count: 12
+    pattern: scattered
+    first_appearance_sec: 2286.7
+
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_MISATTRIBUTED_ELDAR - это продолжение речи SPEAKER_04 (Василий из LA).
+        Реплики идут непрерывно: SPEAKER_04 (2279s) → SPEAKER_MISATTRIBUTED_ELDAR (2286s).
+        Контекст един: обсуждение найма российских программистов.
+        Ошибочная атрибуция в прошлом (возможно, кто-то подумал, что это Эльдар Муртазин).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 142
+    replies_count: 41
+    pattern: consecutive
+    first_appearance_sec: 4366.8
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Звонок слушателя. Появляется после "Пока к нам шел устал, давай, соберись" (4363s).
+      # Отвечает: "Все готов. Большое спасибо, что сегодня пригласили всех моих любимых подкастеров" (4369s).
+      # Далее обсуждает Firefox 4.
+      # Не представился по имени явно.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Слушатель-звонящий. Обсуждает Firefox 4.
+        Спрашивает "У девушек же много в подкасте сменилось? Целых четыре?" - хорошо знаком с историей подкаста.
+        Umputun: "Видно, видно, эксперт. Ты нам скажи, Firefox 4 ставил?"
+        Имя не называется явно.
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4396.46
+          etime: 4417.07
+          text: "Я на всем своем Linux, на Windows и на Mac OS X поставил, и, скажем так, ощущение гораздо лучше, чем от третьего. Я просто в свое время отказался от Mozilla 3, потому что, скажем так, при открытии где-то приблизительно 50 вкладок оно начинало жутко тормозить."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 336
+    replies_count: 92
+    pattern: consecutive
+    first_appearance_sec: 5272.4
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Звонок слушателя. Контекст: обсуждение никнейма "Nevy" (Иван).
+      # Umputun: "То есть ты как-то, видимо, осознанно взял, да, такой псевдоним?" (5268s)
+      # SPEAKER_03: "Уважаемый Упутун тоже понимает, что Неви пишется немножко по-другому.
+      #              А тут имеет место просто имя Иван, написанное другой стороной." (5272s)
+      # SPEAKER_03: "Да-да, Марусь, не расстраивайся, я живу в самом что ни на есть морском городе,
+      #              город Мурманск." (5292s)
+      # Umputun называет его "Винтик" (5291s).
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        1. Ник: Nevy (NAVI - Иван наоборот)
+        2. Имя: Иван
+        3. Город: Мурманск
+        4. Umputun называет "Винтик" (возможно, ник в чате)
+        5. Обсуждает Firefox, JavaScript-движки - технически грамотен
+
+      possible_matches:
+        - person_id: "nevy_ivan"
+          confidence: 0.8
+          reason: "Иван из Мурманска, ник Nevy/NAVI"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5306.14
+          etime: 5342.16
+          text: "По поводу Firefox, товарищ, который звонил до этого, немножко упустил некие вещи, которые были бы интересны всем, возможно, кто хочет, возможно, поставить достаточно быстро на данный момент браузер. Во-первых, действительно появился новый движок, который тестировался, по-моему, не с первых бет, но уже где-то с середины периода тестирования он уже вышел на продакшн рельсы."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 47
+    replies_count: 12
+    pattern: scattered
+    first_appearance_sec: 182.2
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики разбросаны в диалоге между Marin_k_a, SPEAKER_07 и PetrDidenko.
+        "Помню, как сейчас, 24 марта начались продажи новой операционной системы" (182s) -
+        это продолжение речи кого-то из участников (возможно Marin_k_a или PetrDidenko).
+        "Чита — это, знаешь, обезьяна Чи-Чи-Чи" (299s) - тоже встроено в общий диалог.
+        Ошибочная атрибуция - Lavale в этом выпуске не было.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 182.17
+          etime: 188.41
+          text: "Помню, как сейчас, 24 марта начались продажи новой операционной системы."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 17
+    replies_count: 4
+    pattern: consecutive
+    first_appearance_sec: 3962.7
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это рекламный блок FastVPS!
+      # "FastVPS гарантирует помощь профессиональных интернет-стюартов..."
+      # "Скидки и бонусы."
+      # "Летайте только первым классом от FastVPS."
+      # Должен быть переименован в _ad.
+
+      identified_as: "_ad"
+      identification_method: "context"
+      confidence: high
+      evidence: "Рекламный блок FastVPS - типичная реклама спонсора подкаста"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 1690.1
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 2 реплики по ~2.5 секунды каждая:
+        1. "Да, да, да." (1690s) - скорее всего это кто-то из ведущих/гостей
+        2. "Извиняюсь." (2497s) - короткая вставка
+        Слишком мало данных, вероятно ошибка распознавания голоса одного из участников.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_07"
+      issue: |
+        Разделение одного человека (PetrDidenko/Голодный) на два спикера.
+        Рекомендуется объединить SPEAKER_07 → PetrDidenko.
+
+    - speaker: "SPEAKER_04"
+      issue: |
+        Слушатель Василий из Лос-Анджелеса корректно идентифицирован в начале,
+        но далее часть его реплик ошибочно помечена как SPEAKER_MISATTRIBUTED_ELDAR.
+        Рекомендуется объединить оба спикера.
+
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: |
+        Lavale не участвовала в этом выпуске. Реплики принадлежат кому-то из
+        Marin_k_a, PetrDidenko или SPEAKER_07. Требуется voice comparison.
+
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk имеет только 1 реплику (1469s). Это странно мало для выпуска.
+        Возможно, часть его реплик размечена как другие спикеры.
+        Или он действительно минимально участвовал в этом выпуске.
+
+    - speaker: "SPEAKER_00"
+      issue: |
+        Это реклама FastVPS, должен быть переименован в _ad.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 232
+    from_speaker: "SPEAKER_07"
+    to_speaker: "PetrDidenko"
+    confidence: high
+    reason: |
+      SPEAKER_07 и PetrDidenko - один человек (Голодный из Иркутска).
+      Контекст: Marin_k_a обращается "Да, голодный?" → SPEAKER_07 отвечает.
+      PetrDidenko: "Меня зовут Голодный, я из города Иркутска."
+
+  - type: rename
+    episode: 232
+    from_speaker: "SPEAKER_00"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Рекламный блок FastVPS - реклама спонсора"
+
+  - type: rename
+    episode: 232
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "VasilyLA"
+    confidence: high
+    reason: |
+      Часть реплик слушателя Василия из Лос-Анджелеса.
+      Ошибочно помечено как SPEAKER_MISATTRIBUTED_ELDAR.
+      Должно быть объединено с SPEAKER_04.
+
+  - type: rename
+    episode: 232
+    from_speaker: "SPEAKER_04"
+    to_speaker: "VasilyLA"
+    confidence: high
+    reason: |
+      Слушатель Василий из Лос-Анджелеса.
+      Umputun представляет: "Василий, с нами..."
+      Сам говорит: "я в Лос-Анджелесе нахожусь"
+
+  - type: rename
+    episode: 232
+    from_speaker: "SPEAKER_03"
+    to_speaker: "NevyIvan"
+    confidence: medium
+    reason: |
+      Слушатель Иван из Мурманска, ник Nevy (NAVI наоборот).
+      Звонит обсудить Firefox 4.
+
+  - type: needs_review
+    episode: 232
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Lavale не участвовала в выпуске 232.
+      Реплики принадлежат кому-то другому.
+      Требуется voice comparison для точной атрибуции.
+
+  - type: needs_review
+    episode: 232
+    from_speaker: "SPEAKER_06"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Слушатель-звонящий, имя не названо.
+      Обсуждает Firefox 4, знаком с историей подкаста.
+      Требуется voice comparison или поиск в чате.
+
+  - type: delete_or_merge
+    episode: 232
+    from_speaker: "SPEAKER_02"
+    to_speaker: null
+    confidence: low
+    reason: |
+      2 короткие реплики ("Да, да, да" и "Извиняюсь").
+      Вероятно ошибка распознавания одного из участников.
+
+# Аудио для voice comparison
+audio_url: null  # Нужно получить из data/232/232_desc.json
+
+# Участники для добавления в people.yaml
+new_guests_to_add:
+  - id: "vasily_la"
+    canonical_name: "VasilyLA"
+    aliases: []
+    real_name: "Василий"
+    info: "Слушатель из Лос-Анджелеса, выпуск 232. Работает с аутсорсингом ПО."
+
+  - id: "nevy_ivan"
+    canonical_name: "NevyIvan"
+    aliases: ["Nevy", "NAVI"]
+    real_name: "Иван"
+    info: "Слушатель из Мурманска, выпуск 232. Ник Nevy (NAVI наоборот)."

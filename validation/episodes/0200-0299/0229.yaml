@@ -1,0 +1,160 @@
+episode: 229
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6897
+  notes: |
+    Gray указан в транскрипте с 1 репликой, но в 6719s Marin_k_a говорит
+    "Это потому, что Грея нет" - явное указание на отсутствие Gray в этом выпуске.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 14
+    replies_count: 4
+    pattern: consecutive
+    time_range: "6736-6765s"
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "_ad"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплики содержат рекламный текст FastVPS:
+        - "Хостинг, виртуальные и выделенные серверы от 129 рублей в месяц."
+        - "Это FastVPS."
+        - "Летайте только первым классом от FastVPS."
+        - "При оформлении заказа на сайте fastvps.ru укажите промокод RADIOT и получите скидку 10%."
+        Находится между репликами _ad - это рекламный диктор.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 12
+    replies_count: 7
+    pattern: scattered
+    time_range: "2015-6886s"
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Множественные признаки идентификации как Marin_k_a:
+        1. В 4406s после обращения Bobuk "Нет, Маринечка..." SPEAKER_01 отвечает "Так все же свои"
+        2. В 4210s "Я тут... Да, я тут... Все, я зависла" - женский голос, характерная речь
+        3. В 6884s закрывает выпуск: "229 выпуск подходит к завершению. Бобок, у тебя нет возражений?"
+        4. Marin_k_a уже идентифицирована в этом выпуске с 115 репликами - это тот же голос.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+    time_range: "4151s"
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Lavale не участвовала в этом выпуске. Реплика "Мне до тебя еще далеко" (4151s)
+        находится в контексте диалога между Bobuk и Marin_k_a. Это скорее всего Marin_k_a.
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Реплика находится между репликами Bobuk (4150s "Ну, понятно просто") и
+        Bobuk (4153s "Дело в том, что я в такой ситуации..."). По контексту и
+        составу участников выпуска - это Marin_k_a.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Единственная женщина в выпуске, контекст диалога"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4151.62
+          etime: 4153.84
+          text: "Мне до тебя еще далеко."
+        compare_with:
+          speaker: "Marin_k_a"
+          stime: 20.42
+          etime: 34.23
+          text: "Ну, нет, нет, конечно, не прав, потому что сплошное P2 не получится..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray указан в транскрипте с 1 репликой "Ужас" (6139s), но в 6719s
+        Marin_k_a прямо говорит "Это потому, что Грея нет" - указывая на
+        отсутствие Gray в выпуске. Реплика Gray - ошибка распознавания,
+        вероятно это Bobuk или Marin_k_a (короткая реакция между репликами Bobuk и Umputun).
+    - speaker: "Marin_k_a"
+      issue: |
+        Представлена в начале как "Маруся" (18s: "Прав ли я, Маруся?").
+        Это бывшая ведущая Марина (marin_k_a из people.yaml).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 229
+    from_speaker: "SPEAKER_03"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Рекламный диктор FastVPS, 4 реплики с рекламным текстом"
+
+  - type: rename
+    episode: 229
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Контекст диалога, обращение 'Маринечка', характер реплик"
+
+  - type: rename
+    episode: 229
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Lavale не участвовала, единственная женщина в выпуске - Marin_k_a"
+
+  - type: rename
+    episode: 229
+    from_speaker: "Gray"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: |
+      Gray не участвовал в выпуске (подтверждено репликой в 6719s).
+      Короткая реакция "Ужас" (6139s) - скорее всего Marin_k_a или Bobuk.
+      Требует voice comparison для точного определения.
+
+# Дополнительные заметки
+notes: |
+  Выпуск 229 от 5 марта 2011 года.
+  Состав: Umputun, Bobuk, Marin_k_a (бывшая ведущая Марина, представлена как "Маруся").
+  Gray в этом выпуске НЕ участвовал - подтверждено прямой цитатой.
+
+  Рекомендуется:
+  1. Автоматически применить правила для SPEAKER_03 и SPEAKER_01 (high confidence)
+  2. Провести voice comparison для Gray и SPEAKER_MISATTRIBUTED_LAVALE (medium confidence)

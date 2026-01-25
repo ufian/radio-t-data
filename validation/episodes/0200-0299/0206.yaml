@@ -1,0 +1,45 @@
+episode: 206
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6112
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Анализ известных гостей
+known_guests:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 725
+    replies_count: 170
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        В начале выпуска (1s) Umputun приветствует "классический, полный состав".
+        На 55s обращается напрямую: "А, Грейг, ты же там рядом был, ты как, не махнул в Киев вместе с Маруськой?"
+        На 152s: "Маринку спрашивать просто глупо, помнить ли она, как все это начиналось."
+        Marin_k_a активно участвует в разговоре как полноправная ведущая, рассказывает личные истории.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарий
+notes: >
+  Эпизод 206 от 25 сентября 2010 года.
+  Чистый состав: три основных ведущих (Umputun, Bobuk, Gray) плюс бывшая ведущая Марина (Marin_k_a).
+  Все спикеры правильно идентифицированы, неизвестных SPEAKER_* нет.
+  Марина упоминается по имени ("Маруська", "Маринка") несколько раз в начале выпуска.

@@ -1,0 +1,162 @@
+episode: 244
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_speakers: 4
+  note: "Выпуск с двумя гостями: Эльдар Муртазин и Марина"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 15
+    replies_count: 12
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (12 штук, 15 сек), перемежаются с репликами EldarMurtazin. Контекст: 'Особенно такие темы сладкие. Я просто предвкушаю' (20s) сразу после представления Эльдара; 'Бобл, готовься биться' (936s) — типичная фраза для Эльдара. Похоже на ошибки распознавания голоса Эльдара."
+
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Реплики появляются в контексте диалога Эльдара: после его представления (20s), перед его длинной репликой (936s-949s). Фраза 'Бобл, готовься биться' — характерный стиль Эльдара."
+
+      possible_matches:
+        - person_id: "eldar_murtazin"
+          confidence: 0.75
+          reason: "Контекст, позиция реплик, стиль речи"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 936.94
+          etime: 941.25
+          text: "Бобл, готовься биться. Слушай, я уже..."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 15
+    replies_count: 14
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики. Ключевая улика: на 8156s Бобук обращается 'Мариночка, ты знаешь...', а SPEAKER_01 отвечает 'То есть я толстая, я бы сняла, да' — явно женский голос, ответ на обращение к Марине."
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: "8155s: Bobuk спрашивает 'Мариночка, ты знаешь, что такое жирное нельзя?', 8156s: SPEAKER_01 отвечает 'То есть я толстая, я бы сняла, да' — прямое обращение к Маринке и женский ответ."
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.9
+          reason: "Прямое обращение Бобука к Мариночке, женский голос в ответе"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Три очень короткие реплики (по 1 сек каждая) в разных частях подкаста: 'Это да' (3557s), 'Ну, нормально' (4032s), 'Правильно' (5871s). Типичные односложные реакции, которые система распознавания могла неверно атрибутировать."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "eldar_murtazin"
+          confidence: 0.4
+          reason: "Мог быть любой из присутствующих, недостаточно контекста"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Мог быть любой из присутствующих"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Реплики слишком короткие (<2 сек), невозможно идентифицировать по голосу"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: single
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика 'У меня все хорошо с памятью' (5395s) в ответ на шутку Бобука о памяти, обращённую к Маринке. Ранее была ошибочно приписана Lavale, но Lavale не участвовала в этом выпуске."
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: "5394s: Bobuk говорит 'докупить память... Тогда все будет хорошо', 5395s: SPEAKER отвечает 'У меня все хорошо с памятью' — логичный ответ Маринки на шутку о её памяти. Lavale не была представлена в начале выпуска."
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.85
+          reason: "Контекст диалога о памяти, адресован Маринке"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: "12 реплик ошибочно не атрибутированы EldarMurtazin"
+    - speaker: "SPEAKER_01"
+      issue: "14 реплик ошибочно не атрибутированы Marin_k_a"
+    - speaker: "SPEAKER_00"
+      issue: "3 короткие реплики без атрибуции, невозможно точно определить"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Ошибочно помечена как Lavale, скорее всего Marin_k_a"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 244
+    from_speaker: "SPEAKER_04"
+    to_speaker: "EldarMurtazin"
+    confidence: medium
+    reason: "Контекстный анализ показывает, что реплики появляются в диалогах Эльдара"
+
+  - type: rename
+    episode: 244
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Прямое обращение Бобука к Мариночке с последующим женским ответом"
+
+  - type: rename
+    episode: 244
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Контекст диалога о памяти, Lavale не участвовала в выпуске"
+
+  - type: delete_or_ignore
+    episode: 244
+    from_speaker: "SPEAKER_00"
+    to_speaker: null
+    confidence: low
+    reason: "Слишком короткие реплики для идентификации, можно оставить как есть или удалить"
+
+# Примечания для ручной проверки
+notes:
+  - "Выпуск 244 от 25 июня 2011 года"
+  - "Участники: Umputun, Bobuk, EldarMurtazin, Marin_k_a"
+  - "Эльдар представлен в начале выпуска (14s): 'четвертым будет Эльдар'"
+  - "Марина (Маринка/Маруся) упоминается как 'Маринка', 'Маруся', 'Мариночка'"
+  - "SPEAKER_04 и SPEAKER_01 требуют voice comparison для 100% уверенности"

@@ -1,0 +1,127 @@
+episode: 280
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 7295  # ~2 часа (расчётно по последней реплике)
+  guests_announced: false
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все 5 реплик — короткие вставки (1-2 сек каждая), разбросанные по эпизоду.
+        Контекстный анализ показывает, что это ошибки распознавания реплик ведущих:
+        1. 196.7s "По-русски из трех букв?" — переспрос, вероятно Bobuk или Gray
+        2. 1529.9s "Говоришь, ты опять с нами?" — вопрос к Umputun, вероятно Bobuk
+        3. 3609.5s "Это такие мелочи вообще" — эхо фразы Bobuk (он сказал то же самое в 3607-3609)
+        4. 5495.9s "Чего париться-то?" — короткий комментарий, вероятно один из ведущих
+        5. 6487.7s "Очень хочется там попробовать, я туда попаду" — контекст про Apple Store,
+           Umputun отвечает "А тебе до Польши не ближе?" — обращение к Gray (он в России)
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Эльдар Муртазин НЕ участвовал в этом выпуске — только упоминался вскользь.
+        Имя SPEAKER_MISATTRIBUTED_ELDAR указывает, что ранее кто-то пытался приписать
+        эти реплики Эльдару, но это ошибочно — он не был гостем.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        # Не нужно, так как это явные ошибки распознавания коротких фраз ведущих
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 0.14
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Угу" длительностью 0.14 секунды (7620.25-7620.39)
+        посреди длинного монолога Bobuk об архивации. Это типичная ошибка
+        распознавания — короткое междометие одного из ведущих (вероятно Umputun или Gray,
+        подтверждающие слова Bobuk).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        # Слишком короткая реплика для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true  # Это обычный выпуск с тремя основными ведущими
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Ошибочное имя спикера — Эльдар Муртазин не участвовал в этом выпуске.
+        5 коротких реплик были неправильно атрибутированы. Рекомендуется удалить
+        этот псевдо-спикер и либо переназначить реплики ведущим, либо пометить
+        как SPEAKER_99 (артефакт).
+    - speaker: "SPEAKER_03"
+      issue: |
+        Единственная реплика "Угу" (0.14 сек) — артефакт распознавания.
+        Рекомендуется удалить или пометить как SPEAKER_99.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Реплика 3: точное дублирование фразы Bobuk
+  - type: rename
+    episode: 280
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    time_range: [3609.0, 3612.0]
+    confidence: high
+    reason: |
+      Фраза "Это такие мелочи вообще" (3609.5s) — эхо фразы Bobuk
+      "Но это такие мелочи" (3607.8s). Либо это перекрытие речи,
+      либо продолжение мысли самого Bobuk.
+
+  # Реплика 5: обращение к Gray
+  - type: rename
+    episode: 280
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    time_range: [6487.0, 6490.0]
+    confidence: medium
+    reason: |
+      Фраза "Очень хочется там попробовать, я туда попаду" произнесена
+      после реплики Gray про Apple Store в Амстердаме. Umputun отвечает
+      "А тебе до Польши не ближе?" — типичное обращение к Gray (в России).
+
+  # Оставшиеся 3 реплики — требуют ручного прослушивания
+  - type: mark_for_review
+    episode: 280
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    times: [196.67, 1529.92, 5495.87]
+    reason: |
+      Короткие переспросы/комментарии. Вероятно, Bobuk или Gray,
+      но без voice comparison невозможно определить точно.
+      Рекомендуется ручное прослушивание.
+
+  # SPEAKER_03 — удалить как артефакт
+  - type: rename
+    episode: 280
+    from_speaker: "SPEAKER_03"
+    to_speaker: "SPEAKER_99"
+    confidence: high
+    reason: |
+      Реплика "Угу" (0.14 сек) — слишком короткая для атрибуции,
+      типичный артефакт распознавания.

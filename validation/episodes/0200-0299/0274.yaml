@@ -1,0 +1,236 @@
+episode: 274
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6858  # ~1h54m (последняя реплика ~6858s)
+
+# Примечание к эпизоду
+episode_notes: |
+  Выпуск от 28 января 2012 года. Состав: Umputun, Bobuk, Gray + Marin_k_a (Маруся/Марина).
+  Marin_k_a представлена в начале выпуска как "Маруся" (22.9s: "Здравствуйте, Маруся").
+  Файл метаданных отсутствует в data_clean.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 663
+    replies_count: 201
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (16-24s) Umputun: "пришла в самый последний момент Маруся... Здравствуйте, Маруся."
+        Marin_k_a отвечает: "Здравствуйте, дорогой Мпутун". Bobuk обращается к ней "Марусечка".
+        Это известная бывшая ведущая Марина (Marin_k_a) из people.yaml.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три короткие разрозненные реплики (<2s каждая) в случайные моменты:
+        - 354s: "Да." (после вопроса про iPad и женщин, отвечает Marin_k_a следующей репликой)
+        - 2089s: "Я не понимаю тебя." (в контексте обсуждения зарядки Apple)
+        - 2712s: "Какие меры?" (в контексте шутки про Google)
+        Все три - типичные короткие реакции/вопросы, которые мог сказать любой из присутствующих.
+        Скорее всего ошибка распознавания одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Первая реплика (354s) идёт перед ответом Marin_k_a, возможно её реакция"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Реплики похожи на быстрые комментарии Bobuk"
+
+      voice_task:
+        needed: false
+        # Реплики слишком короткие для voice comparison
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три короткие реплики (<2s каждая):
+        - 1483s: "Померяться." (одно слово в обсуждении процессоров)
+        - 1593s: "Одному." (эхо слова Gray "Одному?")
+        - 2533s: "Они у него есть." (повтор слов Bobuk "Они у меня есть")
+        Паттерн указывает на эхо/перекрытие речи других спикеров.
+        Скорее всего ошибка распознавания или наложение голосов.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Может быть реакции Маруси"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Вторая реплика - эхо вопроса Gray"
+
+      voice_task:
+        needed: false
+        # Реплики слишком короткие
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики с пометкой MISATTRIBUTED (ошибочно приписанные Lavale):
+        - 1065s: "Я не знаю, как вы живете." (реакция на обсуждение интерфейса)
+        - 6856s: "Подготовился чувак." (комментарий к статье)
+        Lavale не участвовала в выпуске 274. Это ошибочное распознавание.
+        Реплики скорее всего принадлежат Marin_k_a или одному из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Стиль реплик похож на Марусю, она участник этого выпуска"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Вторая реплика может быть комментарием Bobuk"
+
+      voice_task:
+        needed: false
+        # Реплики слишком короткие, спикер помечен как MISATTRIBUTED
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 9
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Четыре реплики с пометкой MISATTRIBUTED (ошибочно приписанные Eldar Murtazin):
+        - 1155s: "А почему это убожество?" (вопрос к Marin_k_a про iPad)
+        - 1248s: "то оно у тебя всплывает экранчиком." (продолжение фразы Umputun)
+        - 3295s: "Вот совсем свежее мне." (в контексте обсуждения)
+        - 6548s: "Приглашали, он не пришел." (комментарий к приглашению гостя)
+        Eldar Murtazin не участвовал в выпуске 274. Это ошибочное распознавание.
+        Вторая реплика (1248s) - явно продолжение речи Umputun (он начал "А если я лежу...").
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Реплика 1248s - прямое продолжение предыдущей фразы Umputun"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Некоторые реплики похожи на стиль Bobuk"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Может быть вопросы/комментарии Gray"
+
+      voice_task:
+        needed: false
+        # Спикер помечен как MISATTRIBUTED, очевидно ошибка
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна короткая реплика с пометкой MISATTRIBUTED (ошибочно приписанная Petr Didenko):
+        - 3896s: "Это что такое?" (вопрос к картинке/статье)
+        Petr Didenko не участвовал в выпуске 274. Это ошибочное распознавание.
+        Контекст: перед репликой SPEAKER_99 ("Sketch a search"), после - Umputun объясняет картинку.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Может быть вопрос Маруси"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Или реакция Bobuk на показанную картинку"
+
+      voice_task:
+        needed: false
+        # Одна реплика <1s, спикер помечен как MISATTRIBUTED
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры в этом эпизоде идентифицированы корректно:
+    - Ведущие Umputun, Bobuk, Gray - стандартный состав
+    - Гостья Marin_k_a (Маруся) представлена в начале (22.9s)
+    - Неизвестные SPEAKER_* - короткие ошибки распознавания (<10 реплик суммарно, <17s)
+    - SPEAKER_MISATTRIBUTED_* - уже помечены как ошибочные присвоения
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 274
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Umputun"
+    segments: [1248.73]  # "то оно у тебя всплывает" - продолжение фразы Umputun
+    confidence: high
+    reason: "Прямое продолжение предыдущей реплики Umputun (1243-1247s)"
+
+  # Остальные MISATTRIBUTED и SPEAKER_* требуют voice comparison или ручной проверки
+  # Но учитывая их малое количество и длительность, можно оставить как есть
+
+# Итоговый статус
+validation_summary: |
+  Эпизод 274 в целом чистый. Основные спикеры идентифицированы корректно:
+  - 3 ведущих (Umputun, Bobuk, Gray)
+  - 1 гостья (Marin_k_a / Маруся)
+
+  Неизвестные спикеры (SPEAKER_03, SPEAKER_05) и ошибочно приписанные
+  (SPEAKER_MISATTRIBUTED_*) составляют менее 0.3% от общего объёма (~17s из ~6858s).
+  Это типичные ошибки автоматического распознавания: короткие реплики, эхо, перекрытия.
+
+  Рекомендация: можно оставить как есть или удалить SPEAKER_MISATTRIBUTED_* реплики,
+  так как они уже помечены как ошибочные.

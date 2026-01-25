@@ -1,0 +1,197 @@
+episode: 214
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: 6960
+  note: "Umputun в начале говорит 'все три, кто сегодня собрались' - изначально Umputun, Bobuk, Marin_k_a. Эльдар подключается позже на ~485с."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+    first_appearance_sec: 416
+    examples:
+      - time: 415.8
+        text: "Боже мой."
+      - time: 5247.2
+        text: "Ой."
+      - time: 6547.4
+        text: "Спасибо."
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка распознавания речи Umputun. На 6547с Bobuk говорит 'Женя, с днем рождения', SPEAKER_01 отвечает 'Спасибо' - это явно Umputun (его зовут Евгений/Женя)."
+
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: high
+      evidence: "Bobuk: 'Женя, с днем рождения.' -> SPEAKER_01: 'Спасибо.' Umputun продолжает разговор."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 36
+    replies_count: 17
+    pattern: scattered
+    first_appearance_sec: 2719
+    examples:
+      - time: 2719.3
+        text: "Мне больше всего понравилось."
+      - time: 2721.2
+        text: "А можно без купюры историю рассказать?"
+      - time: 3681.9
+        text: "Маринка, а с формами жизни?"
+      - time: 4814.9
+        text: "Фрэндиха Маринка."
+      - time: 6245.9
+        text: "И рассказывал, что он исключительно держит в туалете свой айпэд."
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка распознавания одного из ведущих. SPEAKER_03 обращается к Маринке по имени ('Маринка, а с формами жизни?'), продолжает мысли Umputun, участвует в общем разговоре. Стиль речи и интонации указывают на мужского ведущего."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.7
+          reason: "SPEAKER_03 продолжает реплику Umputun (6245с: Umputun начинает -> SPEAKER_03 заканчивает). Стиль шуток соответствует."
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Альтернативный вариант - Bobuk, также присутствует в выпуске."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2721.21
+          etime: 2725.01
+          text: "А можно без купюры историю рассказать? Она очень смешная, на самом деле."
+        candidates_to_compare: [umputun, bobuk]
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 7
+    replies_count: 6
+    pattern: scattered
+    first_appearance_sec: 1406
+    examples:
+      - time: 1406.3
+        text: "Гад какой."
+      - time: 1480.1
+        text: "Кстати, да."
+      - time: 2436.8
+        text: "Сколько он стоит, по-твоему?"
+      - time: 6959.8
+        text: "Пока."
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (все <3 сек), разбросаны по эпизоду. Типичная ошибка распознавания коротких реакций одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Некоторые реплики ('Гад какой', 'Кстати, да') похожи на женский голос по контексту."
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Может быть короткая реакция Umputun."
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Может быть короткая реакция Bobuk."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2436.75
+          etime: 2439.31
+          text: "Сколько он стоит, по-твоему?"
+        candidates_to_compare: [marin_k_a, umputun, bobuk]
+
+# Проверенные гости (не требуют изменений)
+verified_guests:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 2049
+    replies_count: 592
+    first_appearance_sec: 485
+    verification:
+      method: "introduction"
+      evidence: "Umputun на 483с: 'Эльдар, появился?' -> EldarMurtazin: 'Всем привет, привет, ребят.'"
+      confidence: high
+      status: correct
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 844
+    replies_count: 211
+    first_appearance_sec: 69
+    verification:
+      method: "introduction"
+      evidence: "Umputun на 91с обращается: 'Маринка, у тебя мозг контролирует дыхание?'. Также на 255с: 'молодое поколение, вот в лице Маруси'. Marin_k_a - бывшая ведущая Марина."
+      confidence: high
+      status: correct
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_summary: |
+    - Umputun (2с): ведущий, открывает выпуск
+    - Bobuk (36с): ведущий, участвует с начала
+    - Marin_k_a (69с): гость/бывшая ведущая, Umputun обращается к ней 'Маринка', 'Маруся'
+    - EldarMurtazin (485с): подключается позже, Umputun спрашивает 'Эльдар, появился?'
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: "17 реплик (36 сек) - явно не шум, но не идентифицирован. Вероятно ошибка распознавания Umputun."
+    - speaker: "SPEAKER_06"
+      issue: "6 коротких реплик - ошибки распознавания ведущих."
+    - speaker: "SPEAKER_01"
+      issue: "3 реплики - ошибка распознавания Umputun (подтверждено контекстом поздравления)."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 214
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: "На 6547с Bobuk говорит 'Женя, с днем рождения', SPEAKER_01 отвечает 'Спасибо'. Umputun = Евгений/Женя."
+
+# Требуется дополнительная проверка голоса
+pending_voice_comparison:
+  - speaker: "SPEAKER_03"
+    priority: medium
+    audio_url: null  # требуется из desc.json
+    segments:
+      - stime: 2721.21
+        etime: 2725.01
+        text: "А можно без купюры историю рассказать? Она очень смешная, на самом деле."
+      - stime: 3681.95
+        etime: 3689.53
+        text: "Маринка, а с формами жизни? Малоизвестными у тебя контакты третьего рода бывают?"
+
+  - speaker: "SPEAKER_06"
+    priority: low
+    audio_url: null
+    segments:
+      - stime: 2436.75
+        etime: 2439.31
+        text: "Сколько он стоит, по-твоему?"
+
+# Метаданные
+metadata:
+  date: "2010-11-20"
+  audio_url: null  # файл 214_desc.json не найден в data_clean
+  note: "Файл метаданных отсутствует в data_clean/214/"

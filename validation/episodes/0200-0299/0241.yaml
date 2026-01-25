@@ -1,0 +1,207 @@
+episode: 241
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Marin_k_a]
+  total_duration_sec: 6449
+  notes: |
+    Выпуск от 4 июня 2011 года. Полный состав ведущих плюс гость Егор из JetBrains
+    для обсуждения TeamCity и CI/CD.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 590
+    replies_count: 110
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "yegor_jetbrains"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Прямое представление в начале:
+        - 526s Umputun: "Здравствуй, дорогой гость, ты кто?"
+        - 529s SPEAKER_01: "Привет."
+        - 530s SPEAKER_01: "Я Егор."
+        - 533s Umputun: "Хорошо, Егор."
+        - 558s Umputun: "Фирма, которая называется на J и заканчивается на Brains."
+        Гость обсуждает TeamCity как представитель JetBrains.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 129
+    replies_count: 30
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Маруся упоминается Umputun в начале выпуска:
+        - 6s: "Маруся мне только что сказал 2006"
+        - 70s: "Бобук проявил себя, Маруся проявила себя спичем"
+        Известная бывшая ведущая, её участие подтверждено.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 47
+    replies_count: 37
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Реплики в женском роде указывают на Марусю:
+        - 4620s: "Я заходила, я зашла на нетти."
+        - 6204s: "Ты бы Грею дал сказать."
+        - 5595s: "Это все бобук, я считаю."
+        Короткие реактивные реплики разбросаны по всему выпуску.
+        Паттерн совпадает с ошибками распознавания голоса Маруси.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.75
+          reason: "Реплики в женском роде, реактивный стиль"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4620.9
+          etime: 4622.96
+          text: "Я заходила, я зашла на нетти."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибка распознавания. Первая реплика (1896s: "Которыми рисуют, да.") —
+        дубль/эхо реплики Umputun непосредственно перед ней (1895s: "Которыми рисуют, да?").
+        Вторая реплика (5519s: "Ты даже стихотворение туда записываешь.") —
+        изолированная короткая фраза между репликами Bobuk, вероятно его же голос.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Первая реплика — точный дубль его слов"
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Вторая реплика в контексте его монолога"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Явная ошибка распознавания. Реплика (199s: "Не в курсе.") —
+        это эхо/часть предыдущей реплики Bobuk (196s: "модно говорить, я не в курсе").
+        Сразу после неё Bobuk продолжает: "Да, да, Александр."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.8
+          reason: "Эхо его собственной фразы"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: |
+        Вероятно Marin_k_a с ошибкой распознавания. Рекомендуется voice comparison
+        для подтверждения перед объединением.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 241
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Yegor"
+    confidence: high
+    reason: |
+      Гость представился: "Я Егор" (530s). Работает в JetBrains (TeamCity).
+      Следует добавить в people.yaml как нового гостя.
+
+  - type: delete
+    episode: 241
+    from_speaker: "SPEAKER_05"
+    to_speaker: null
+    confidence: high
+    reason: |
+      Ошибка распознавания — эхо реплики Bobuk. Можно удалить или
+      объединить с предыдущей репликой Bobuk.
+
+  - type: delete
+    episode: 241
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Ошибки распознавания. Первая реплика — дубль Umputun,
+      вторая — вероятно Bobuk. Рекомендуется удалить обе.
+
+  - type: rename
+    episode: 241
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: |
+      Реплики в женском роде, Маруся — единственная женщина в выпуске.
+      Требуется voice comparison для подтверждения.
+
+# Новый гость для добавления в people.yaml
+new_guest:
+  id: "yegor_jetbrains"
+  canonical_name: "Yegor"
+  aliases: ["Егор"]
+  real_name: "Егор"
+  info: "JetBrains (TeamCity), выпуск 241"

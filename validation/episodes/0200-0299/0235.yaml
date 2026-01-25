@@ -1,0 +1,138 @@
+episode: 235
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [PetrDidenko, Marin_k_a]
+  total_duration_sec: 8155  # примерно 2ч 16мин
+
+# Комментарий по составу
+notes: |
+  Umputun в начале говорит: "три четверти есть, а недостающую четверть... заменяет пришедший гость, Петя".
+  Упомянуто: "Грей и Маринка". "Эльдара нет" - т.е. Eldar НЕ участвовал.
+  Bobuk имеет только 2 реплики (1097s и 6235s) - возможно подключался ненадолго.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1868
+    replies_count: 486
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в начале: 'заменяет пришедший гость, Петя' (6-33s)"
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 466
+    replies_count: 117
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun: 'Грей и Маринка, они к калмыкам, конечно, относятся' (54-57s)"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 5
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные реплики (<1 сек каждая), разбросаны по всему выпуску. Типичные фразы-ошибки: 'Хорошо', 'Понял', 'Пока'"
+      possible_matches:
+        - person_id: "petr_didenko"
+          confidence: 0.5
+          reason: "Реплики 3413-3418s ('Да, утюг...', 'Бита...') в контексте диалога, где участвует Петя"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплика 90s 'Хорошо' после вопроса к Gray"
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики (<2 сек), невозможно надёжно сравнить голос"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 13
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Lavale НЕ участвовала в этом эпизоде. Реплики по контексту принадлежат Marin_k_a"
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.85
+          reason: |
+            1) Реплика 3715s "Подождите, а у Google при этом сколько?" - сразу после идёт Marin_k_a с продолжением темы
+            2) Реплика 4173s "По поводу бинга все-таки" - перед серией реплик Marin_k_a про Bing
+            3) Реплики 5374-5383s "У меня один вопрос, Сережа" + вопрос про Яндекс - обращение к Gray (Сергею), типичный стиль Марины
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5375.51
+          etime: 5382.95
+          text: "А какая у вас у Яндекса, это же наверняка не секрет, вот вообще цель по жизни, вот чего хотят добиться в итоге?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Эльдар Муртазин НЕ участвовал в этом эпизоде. Umputun явно говорит: 'Эльдара нет' (86-89s)"
+      possible_matches:
+        - person_id: "petr_didenko"
+          confidence: 0.6
+          reason: "Реплика 2675s 'Нет, ксумы там лежат' - в контексте диалога с PetrDidenko"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Короткие реплики могут быть ошибочно отнесены"
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие (2-3 сек) для надёжного voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: "Только 2 реплики (4 сек) за весь выпуск. Возможно: 1) ненадолго подключался; 2) ошибка распознавания; 3) реплики других спикеров ошибочно атрибутированы как Bobuk"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Lavale не участвовала, но есть 4 реплики с её меткой - требуется переатрибуция"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Eldar не участвовал (подтверждено текстом), но есть 2 реплики - требуется переатрибуция"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 235
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Lavale не участвовала. По контексту реплики принадлежат Marin_k_a (обращение к 'Сереже', темы Яндекса/Bing)"
+
+  - type: rename
+    episode: 235
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "PetrDidenko"
+    confidence: medium
+    reason: "Eldar не участвовал (Umputun: 'Эльдара нет'). Короткие реплики в контексте диалога с Петей"
+
+  - type: delete_or_merge
+    episode: 235
+    speaker: "SPEAKER_04"
+    confidence: low
+    reason: "Артефакты распознавания - односложные реплики <1 сек. Требуется ручная проверка каждой реплики"

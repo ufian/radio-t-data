@@ -1,0 +1,236 @@
+episode: 296
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a, Viktor]
+  total_duration_sec: 7800  # ~2h 10min по статистике
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 972
+    replies_count: 239
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "viktor_guest_296"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в начале (26-38 сек): "у нас сегодня новый человек, который пробуется
+        на постоянное место. Виктор. Правильно ли тебе Виктора называть?"
+        SPEAKER_00 отвечает (29-38 сек): "Мне можно Виктор, да. Меня все и так знают
+        как Виктор. Всем привет. Рад присутствовать..."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 105
+    replies_count: 60
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        SPEAKER_04 и Marin_k_a чередуются в диалогах, говорят от одного лица.
+        Пример (87-97 сек): Umputun: "Была и сейчас есть Маринка."
+        SPEAKER_04: "Была и сейчас есть."
+        Marin_k_a: "Не перебивай меня, как всегда."
+        SPEAKER_04: "Я его хвалю, он перебивает."
+        Marin_k_a: "Грей очень хорошо шутил."
+        Это явно один человек - Марина.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 200
+    replies_count: 45
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Марина - известная бывшая ведущая. Упоминается Umputun ("Маринка была",
+        "Марусенька"), Gray ("Которая тоже, кстати, где-то тут есть").
+        Правильно идентифицирована в транскрипте.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 31
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин не был гостем в этом эпизоде (нет представления,
+        не упоминается в диалогах). Реплики типа "PHP прям под Джавой",
+        "Что было бы, если бы IDE были бы проститутками?" - технические
+        обсуждения, характерные для основных ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Техническая тематика, стиль высказываний"
+        - person_id: "viktor_guest_296"
+          confidence: 0.3
+          reason: "Гость-разработчик, тоже говорит о технологиях"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3287.13
+          etime: 3295.96
+          text: "И в один прекрасный момент вот как раз сменились пароли, в которых появились плюсы, хэш и прочая такая вот приятная штука в пароле."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Lavale не была гостем в этом эпизоде. Две короткие реплики
+        ("Да, но на будущее мира это повлияет очень плохо, и это грустно.",
+        "Ты развращаешь людей.") - это скорее всего Marin_k_a или один из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Женский голос, эмоциональное высказывание"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Короткие шутливые комментарии"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4681.23
+          etime: 4685.37
+          text: "Да, но на будущее мира это повлияет очень плохо, и это грустно."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три короткие реплики в разных местах эпизода:
+        - "Бобук, бобук, бобук." (3367 сек)
+        - "Вот именно." (4716 сек)
+        - "Жень, а ты как делаешь?" (6056 сек)
+        Это типичные ошибки распознавания - короткие фразы одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Обращение 'Жень' - характерно для близких, Марина могла так обратиться"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Короткие реплики-реакции"
+        - person_id: "viktor_guest_296"
+          confidence: 0.3
+          reason: "Гость тоже мог задать вопрос ведущему"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6056.12
+          etime: 6058.32
+          text: "Жень, а ты как делаешь?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: "Должен быть объединён с Marin_k_a - это один человек (Марина)"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар не участвовал в этом эпизоде, реплики требуют переатрибуции"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Lavale не участвовала в этом эпизоде, реплики требуют переатрибуции"
+
+# Информация о новом госте (для добавления в people.yaml)
+new_guest_info:
+  - id: "viktor_guest_296"
+    suggested_canonical_name: "Viktor"
+    real_name: "Виктор"
+    info: "Гость выпуска 296, пробовался на место Бобука"
+    notes: |
+      Не удалось определить фамилию или ник. Umputun говорит "ты у нас уже был" -
+      возможно был в предыдущих выпусках. Нужно проверить выпуски до 296
+      на предмет гостя Виктора.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 296
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Viktor"
+    confidence: high
+    reason: "Явное представление в начале выпуска: 'у нас сегодня новый человек... Виктор'"
+
+  - type: rename
+    episode: 296
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "SPEAKER_04 и Marin_k_a чередуются в одних диалогах, это один человек - Марина"
+
+# Заметки
+notes: |
+  1. Bobuk появляется на 217 секунде, хотя в начале Umputun шутит про его "выбытие" -
+     Bobuk присоединился позже к выпуску.
+
+  2. Виктор - реальный гость, но его полная идентификация требует дополнительного
+     исследования предыдущих выпусков (Umputun говорит "ты у нас уже был").
+
+  3. SPEAKER_MISATTRIBUTED_* реплики требуют voice comparison для точной атрибуции,
+     так как контекст не даёт однозначного ответа кому они принадлежат.

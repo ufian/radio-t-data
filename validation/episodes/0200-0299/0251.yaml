@@ -1,0 +1,154 @@
+episode: 251
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_duration_sec: 6584  # ~1h50m podcast
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 853
+    replies_count: 177
+    pattern: consecutive
+    first_appearance_sec: 153
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "VladimirIvanov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Бобук в начале (54-61s): "Это Володя Иванов, который у нас уже был.
+           Его в интернете все знают, как и Влада."
+        2. SPEAKER_03 говорит о внутренних делах Яндекса от первого лица:
+           - 183s: "В 2004 году проблема была в том, что кончилась солярка на девятке"
+           - 478s: "А ты знаешь историю о том, что в один прекрасный день мы закрыли пинги на Яру"
+           - 1043s: Объясняет OSPF как сетевой специалист
+           - 1060s: "Например, Яндекс - это автономная система некая с точки зрения интернета"
+        3. Прощание с Володей происходит в ~2478s, последняя реплика SPEAKER_03 в 2224s
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 18
+    replies_count: 7
+    pattern: scattered
+    first_appearance_sec: 136
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "VladimirIvanov"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. SPEAKER_02 появляется в контексте разговора с Володей о падении Яндекса (136s)
+        2. В 1990s отвечает на технический вопрос о BGP: "Потому что мы смотрели,
+           каким образом, чего приезжает из BGP в этот момент"
+        3. В 2474s говорит "А пока обращайся ко мне в Твиттер" - сразу перед тем,
+           как Бобук прощается: "Все, спасибо, Володь, большое, что пришел" (2478s)
+        4. В 2505s говорит "Пока-пока" при уходе
+
+        SPEAKER_02 и SPEAKER_03 - один и тот же человек (Володя Иванов),
+        автоматическая разметка присвоила разные ID.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 6
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 1050
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эта реплика (1050s) является продолжением речи Володи Иванова об OSPF.
+        До неё SPEAKER_03 говорит: "Ну вот, значит, ОСПФ это расшифровывается..."
+        После неё SPEAKER_03 продолжает: "Автономная система – это совокупность сетей..."
+        Это ошибочное присвоение имени Петра Диденко реплике Володи.
+
+      identified_as: "VladimirIvanov"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплика 1050s: "Такой протокол динамической маршрутизации, который используется,
+        как правило, внутри автономной системы" - это продолжение объяснения OSPF
+        от Володи Иванова, а не от Петра Диденко.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: "Должен быть переименован в VladimirIvanov (Володя Иванов из Яндекса)"
+    - speaker: "SPEAKER_02"
+      issue: "Должен быть переименован в VladimirIvanov (тот же человек, что SPEAKER_03)"
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Ошибочно помечен как Пётр Диденко, должен быть VladimirIvanov"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 251
+    from_speaker: "SPEAKER_03"
+    to_speaker: "VladimirIvanov"
+    confidence: high
+    reason: |
+      Представлен Бобуком как "Володя Иванов", говорит о внутренних делах Яндекса
+      от первого лица. Сетевой специалист, объясняет OSPF, BGP, инфраструктуру Яндекса.
+
+  - type: rename
+    episode: 251
+    from_speaker: "SPEAKER_02"
+    to_speaker: "VladimirIvanov"
+    confidence: high
+    reason: |
+      Тот же человек, что SPEAKER_03. Подтверждается прощанием (2474-2505s) и
+      техническими репликами о BGP (1990s).
+
+  - type: rename
+    episode: 251
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "VladimirIvanov"
+    confidence: high
+    reason: |
+      Ошибочная разметка. Реплика является частью объяснения OSPF Володей Ивановым.
+      Пётр Диденко не участвовал в этом выпуске.
+
+# Примечания
+notes: |
+  Выпуск 251 (20 августа 2011):
+  - Ведущие: Umputun, Bobuk, Gray, Marin_k_a (Маринка)
+  - Гости: Эльдар Муртазин (из Эстонии), Володя Иванов (из Яндекса)
+
+  Володя Иванов - сетевой специалист Яндекса, приглашён обсудить падение Яндекса
+  на 3.5-4 часа. Детально объясняет OSPF, BGP, инфраструктуру дата-центров.
+
+  Требуется добавить VladimirIvanov в people.yaml:
+    - id: "vladimir_ivanov"
+      canonical_name: "VladimirIvanov"
+      aliases: ["Володя", "Volodya"]
+      real_name: "Владимир Иванов"
+      info: "Сетевой специалист Яндекса, выпуски 250(?), 251"

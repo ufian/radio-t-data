@@ -1,0 +1,65 @@
+episode: 273
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Marin_k_a]
+  total_speakers: 3
+  total_replies: 1751
+
+# Детальный анализ спикеров
+speakers:
+  - speaker: "Umputun"
+    role: host
+    replies_count: 912
+    first_appearance_sec: 3.64
+    introduced: true
+    introduction_evidence: "Начинает выпуск, основной ведущий"
+
+  - speaker: "Gray"
+    role: host
+    replies_count: 634
+    first_appearance_sec: 14.12
+    introduced: true
+    introduction_evidence: "Umputun говорит 'Коллега Грей' в начале выпуска (stime: 12.97)"
+
+  - speaker: "Marin_k_a"
+    role: guest
+    replies_count: 205
+    first_appearance_sec: 1315.04
+    introduced: true
+    introduction_evidence: "Umputun спрашивает 'Маруся, ты вернулась к нам?' (stime: 1311.9)"
+
+# Анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров - Marin_k_a уже идентифицирован в people.yaml
+
+# Идентификация Marin_k_a
+identified_speakers:
+  - speaker: "Marin_k_a"
+    identified_as: "marin_k_a"
+    identification_method: "registry_match"
+    confidence: high
+    evidence:
+      - "Присутствует в people.yaml как 'Марина' (бывшая ведущая)"
+      - "Umputun обращается 'Маруся, ты вернулась к нам?' (stime: 1311.9)"
+      - "Gray упоминает 'Маринке' в контексте разговора (stime: 3096.27)"
+      - "Umputun говорит 'то, что Маринка рассказывает' (stime: 5044)"
+      - "Gray обращается напрямую 'Марина' (stime: 6414)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Примечания
+notes:
+  - "Марина (Marin_k_a) присоединилась позже в выпуске (~22 минута)"
+  - "Обсуждали электронные учебники Apple для школ"
+  - "Все спикеры корректно идентифицированы, ошибок разметки не обнаружено"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не нужны - разметка корректна

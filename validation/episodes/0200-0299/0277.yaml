@@ -1,0 +1,161 @@
+episode: 277
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7106  # ~118 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 624
+    replies_count: 202
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале выпуска (28s): 'Это я. Это я. Я пришла...' после слов Umputun 'прежде всего, прекрасной четвертины нашей'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 10
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (1-3 сек), вклиниваются в диалог между известными спикерами. Примеры: 'А зачем ты снаружи шел?' (112.7s) - сразу после этого Bobuk повторяет тот же вопрос; 'Вжык, вжык' (4255s) - звукоподражание; '7-8' (2976s) - обрывок фразы"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Контекст первой реплики (112.7s) показывает шутливый диалог, в котором участвует Марина"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Сразу после SPEAKER_00 Bobuk повторяет похожую фразу"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 112.71
+          etime: 114.29
+          text: "А зачем ты снаружи шел?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 17
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Эльдар Муртазин не участвовал в выпуске 277 (25 февраля 2012). Реплики разнородные по стилю и разбросаны по всему выпуску. Это ошибочная атрибуция системой, вероятно остаток от неудачной попытки идентификации"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Некоторые реплики короткие вопросы, характерные для стиля Марины в этом выпуске"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплика про Украину (6755s) идёт после слов Gray про домены"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Реплика 'Во-первых, это красиво' (7760s) — классический мем, мог быть Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6755.64
+          etime: 6758.94
+          text: "Ну, в Украине примерно то же самое происходит."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 8
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Lavale не участвовала в этом выпуске. Обе реплики используют женский род ('хотела'), что указывает на Marin_k_a — единственную женщину в выпуске"
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Реплика (3249s): 'Ой, я хотела что-то, да, что-то почморить, но забыла' — женский род глагола, в выпуске только одна женщина (Марина)"
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.85
+          reason: "Женский род глаголов ('хотела'), единственная женщина в выпуске"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: "7 коротких реплик ошибочно выделены как отдельный спикер"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар Муртазин не участвовал в выпуске, это ошибочная атрибуция"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Lavale не участвовала, реплики принадлежат Marin_k_a"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 277
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Женский род в речи, единственная женщина в выпуске — Марина"
+
+  - type: voice_comparison_needed
+    episode: 277
+    speaker: "SPEAKER_00"
+    candidates: ["Marin_k_a", "Bobuk"]
+    reason: "Короткие реплики требуют voice comparison для точной атрибуции"
+
+  - type: voice_comparison_needed
+    episode: 277
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    candidates: ["Marin_k_a", "Gray", "Bobuk"]
+    reason: "Разнородные реплики, требуется voice comparison"
+
+# Аудио для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast277.mp3"  # Стандартный формат URL Radio-T
+
+notes: |
+  Выпуск 277 от 25 февраля 2012 года. Ведущие: Umputun, Bobuk, Gray.
+  Гость: Marin_k_a (Марина, бывшая ведущая).
+
+  Марина представлена в начале выпуска (28s) словами Umputun "прекрасной четвертины нашей"
+  и её ответом "Это я. Это я. Я пришла..."
+
+  Основные проблемы:
+  1. SPEAKER_MISATTRIBUTED_LAVALE — почти наверняка Marin_k_a (женский род)
+  2. SPEAKER_MISATTRIBUTED_ELDAR — Эльдар точно не участвовал, нужно определить реального спикера
+  3. SPEAKER_00 — короткие реплики, вероятно ошибки распознавания

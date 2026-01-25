@@ -1,0 +1,215 @@
+episode: 234
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Marin_k_a]
+  guests_present: [SPEAKER_03]
+  total_duration_sec: 6850  # примерно 1:54:10
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1783
+    replies_count: 387
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # нужно добавить в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в начале эпизода (16.83s): "Лена, здравствуй."
+        SPEAKER_03 отвечает (18.91s): "Здравствуйте."
+        В конце (6774.57s): "Второй раз в гости пришла Лена."
+        Многократные обращения к "Лена" с ответами SPEAKER_03.
+
+      # Предлагаемая идентичность
+      proposed_identity:
+        name: "Лена"
+        info: "Гостья, второй раз в эфире. Специалист по продвижению в социальных сетях (SMM). Живёт в США. Работает с видео, использует Windows и Linux серверы."
+        first_appearance: "неизвестно (нужно найти в архивах)"
+        episodes: [234]
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1580
+    replies_count: 344
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это известная ведущая
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Umputun (38.8s): "Маруся, ты и так, конечно, не можешь сексуально говорить..."
+        Marin_k_a активно участвует во всём эпизоде как соведущая.
+        В конце (6805.19s): "Вот теперь он говорит Маринка."
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 42
+    replies_count: 22
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (1-4 сек) разбросаны по всему эпизоду.
+        Женский голос судя по содержанию ("Эх, жалко, не пробилась я в чат",
+        "Вот он решил посмотреть, чтобы я помучилась тут", "Я поменяла мнение свое").
+        Скорее всего это ошибки распознавания Marin_k_a или Лены (SPEAKER_03).
+        Первая реплика (346.92s) идёт сразу после обращения к Лене.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "SPEAKER_03"
+          confidence: 0.6
+          reason: "Первая реплика идёт сразу после обращения 'Лена', женский голос"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Также женский голос, могут быть ошибки распознавания"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1351.94
+          etime: 1355.96
+          text: "Вот он решил посмотреть, чтобы я помучилась тут. Конечно."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 25
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Маркировка указывает что это ошибочная атрибуция Lavale.
+        Lavale не была в этом выпуске (подтверждено в конце эпизода:
+        "И он говорил Умпутун, Бобук, Грей и Лавалле. Вот теперь он говорит Маринка").
+        6 коротких реплик — скорее всего ошибки распознавания других спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Женский голос, содержание реплик похоже на стиль Marin_k_a"
+        - person_id: "SPEAKER_03"
+          confidence: 0.4
+          reason: "Также женский голос"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4787.59
+          etime: 4799.08
+          text: "Хотя, когда начинаешь что-то у них покупать, допустим, хостинг, то на каждом экране они тебе стараются продать что-то еще и еще и еще."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 3 очень короткие реплики (суммарно ~5 сек):
+        - "Будут говорить слово теракт" (3501s, ~2 сек)
+        - "Теракт, теракт, теракт" (3503s, ~2 сек)
+        - "Нечеловеческий" (5947s, ~1 сек)
+        Это явно ошибки автоматического распознавания —
+        либо смех/реакция кого-то из участников, либо артефакт.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: "Гостья Лена представлена в начале, но не добавлена в people.yaml как отдельная персона"
+    - speaker: "SPEAKER_02"
+      issue: "22 коротких реплики без идентификации — требуется voice comparison"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "6 реплик помечены как ошибочная атрибуция Lavale, но не переатрибутированы"
+    - speaker: "SPEAKER_04"
+      issue: "3 реплики — вероятно артефакты, можно игнорировать или удалить"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 234
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Lena"
+    confidence: high
+    reason: |
+      Явное представление в начале эпизода ("Лена, здравствуй"),
+      многократные обращения по имени, подтверждение в конце эпизода.
+      Требуется сначала добавить Lena в people.yaml.
+
+  - type: investigate
+    episode: 234
+    speakers: ["SPEAKER_02", "SPEAKER_MISATTRIBUTED_LAVALE"]
+    action: "voice_comparison"
+    reason: |
+      Короткие разбросанные реплики от женских голосов.
+      Нужно сравнить с Marin_k_a и Лена (SPEAKER_03).
+
+  - type: delete_or_reassign
+    episode: 234
+    from_speaker: "SPEAKER_04"
+    confidence: medium
+    reason: |
+      3 очень короткие реплики, похожи на артефакты или смех.
+      Можно переназначить на SPEAKER_99 или удалить.
+
+# Примечания
+notes: |
+  Эпизод 234 от 9 апреля 2011 года.
+
+  Участники:
+  - Umputun (ведущий) — 779 реплик
+  - Marin_k_a (Маруся/Маринка, соведущая) — 344 реплики
+  - Лена (гостья, SPEAKER_03) — 387 реплик
+
+  Отсутствующие обычные ведущие: Bobuk, Gray, Ksenks, Alek.sys
+
+  Гостья Лена — "специалист по продвижению в социальных сетях",
+  живёт в США, работает с видео на Windows, серверы на Linux.
+  Это её второе появление в подкасте (первое нужно найти в архивах).
+
+  SPEAKER_02 и SPEAKER_MISATTRIBUTED_LAVALE — вероятно ошибки
+  распознавания Marin_k_a или Лены.
