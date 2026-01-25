@@ -17,9 +17,8 @@ build/
 .DS_Store
 Thumbs.db
 
-# Data (large files)
+# Data (original - large files)
 data/
-data_clean/
 
 # Temporary
 *.tmp
