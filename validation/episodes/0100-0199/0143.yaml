@@ -1,0 +1,110 @@
+episode: 143
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Guest1, Guest2]
+  total_duration_sec: 6751  # сумма всех реплик
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1444
+    replies_count: 351
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Bobuk представляет гостя в 45-50 сек: 'Это Эльдар Мортайзен, которого вы уже практически все знаете'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Guest1"
+    total_duration_sec: 87
+    replies_count: 25
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "pavel_plotnikov_drweb"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Самопредставление в 778 сек: 'Добрый день, меня зовут Павел Плотников, я GUI-архитектор компании Доктор Веб'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Guest2"
+    total_duration_sec: 266
+    replies_count: 49
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "sergey_komarov_drweb"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Представлен Guest1 в 782 сек: 'Рядом со мной Сергей Комаров, начальник отдела разработок компании Доктор Веб'. Guest2 сразу отвечает в 788 сек: 'Тоже добрый день.'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 143
+    from_speaker: "Guest1"
+    to_speaker: "PavelPlotnikov"
+    confidence: high
+    reason: "Прямое самопредставление: 'меня зовут Павел Плотников, я GUI-архитектор компании Доктор Веб'"
+
+  - type: rename
+    episode: 143
+    from_speaker: "Guest2"
+    to_speaker: "SergeyKomarov"
+    confidence: high
+    reason: "Представлен коллегой Павлом Плотниковым: 'Рядом со мной Сергей Комаров, начальник отдела разработок компании Доктор Веб'"
+
+# Новые гости для добавления в people.yaml
+new_guests:
+  - id: "pavel_plotnikov_drweb"
+    canonical_name: "PavelPlotnikov"
+    aliases: ["Павел Плотников"]
+    real_name: "Павел Плотников"
+    info: "GUI-архитектор компании Доктор Веб, выпуск 143"
+
+  - id: "sergey_komarov_drweb"
+    canonical_name: "SergeyKomarov"
+    aliases: ["Сергей Комаров"]
+    real_name: "Сергей Комаров"
+    info: "Начальник отдела разработок компании Доктор Веб, выпуск 143"
+
+# Примечания
+notes:
+  - "EldarMurtazin уже правильно размечен в транскрипте"
+  - "Guest1 (Павел Плотников) и Guest2 (Сергей Комаров) - представители Доктор Веб, приглашены для комментариев по теме антивируса для Mac OS X"
+  - "Оба гостя появляются только в сегменте обсуждения Доктор Веб (примерно 778-1400 сек)"
+  - "Файл метаданных 143_desc.json отсутствует в репозитории"

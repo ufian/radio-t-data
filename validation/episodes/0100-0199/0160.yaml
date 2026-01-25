@@ -1,0 +1,43 @@
+episode: 160
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6036
+
+# Детальный анализ спикеров
+unknown_speakers: []
+
+# Идентифицированные гости
+identified_guests:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 913
+    replies_count: 236
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (22-29s): "У нас есть Грей, который где-то на выезде, судя по слухам, и Маринка, которая вообще никуда из дома не выходит"
+        Marin_k_a подтверждает (30s): "Да. И еще с нами есть Умпутун..."
+        В people.yaml: marin_k_a - бывшая ведущая Марина
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Примечания
+notes:
+  - "Эпизод от 7 ноября 2009 года"
+  - "Сокращенный состав: Bobuk отсутствует (упоминается как уставший/нездоровый)"
+  - "Gray на MediaCamp, Marin_k_a и Gray в Киеве"
+  - "Marin_k_a уже корректно идентифицирована в справочнике people.yaml"
+
+# Предлагаемые правила очистки
+suggested_rules: []

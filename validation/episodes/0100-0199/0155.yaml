@@ -1,0 +1,101 @@
+episode: 155
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Marin_k_a]
+  guests_present: [EldarMurtazin]
+  total_duration_sec: 8571
+  total_replies: 1937
+
+# Детали по спикерам
+speakers_detail:
+  - speaker: Bobuk
+    replies_count: 665
+    total_duration_sec: 2771
+    first_appearance_sec: 38
+    role: host
+
+  - speaker: Umputun
+    replies_count: 705
+    total_duration_sec: 2439
+    first_appearance_sec: 7
+    role: host
+
+  - speaker: EldarMurtazin
+    replies_count: 257
+    total_duration_sec: 1223
+    first_appearance_sec: 30
+    role: guest
+
+  - speaker: Gray
+    replies_count: 240
+    total_duration_sec: 1085
+    first_appearance_sec: 54
+    role: host
+
+  - speaker: Marin_k_a
+    replies_count: 70
+    total_duration_sec: 294
+    first_appearance_sec: 67
+    role: former_host
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Анализ идентифицированных гостей
+identified_guests:
+  - speaker: EldarMurtazin
+    total_duration_sec: 1223
+    replies_count: 257
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: eldar_murtazin
+      identification_method: introduction
+      confidence: high
+      evidence: "Umputun в 27.77-29.95s: 'Короче говоря, Эльдар, привет.' EldarMurtazin в 29.99s: 'Привет, привет.'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: Marin_k_a
+    total_duration_sec: 294
+    replies_count: 70
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: marin_k_a
+      identification_method: introduction
+      confidence: high
+      evidence: "Bobuk в 55.6-66.67s: 'И Маринке, которая сегодня из Киева... Послушайте все, вы услышите, насколько прекрасно звучит сегодня Маринка.'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии
+notes: |
+  Эпизод полностью валиден. Все спикеры явно представлены в начале выпуска:
+  - Umputun представляет себя и гостя Эльдара Муртазина (27-30 сек)
+  - Bobuk представляет Gray (Сергей Петренко) и Marin_k_a (55-67 сек)
+  - Marin_k_a представляет Umputun'а (75-84 сек)
+
+  Нет неизвестных спикеров (SPEAKER_*, Guest*).
+  Все метки соответствуют справочнику people.yaml.

@@ -1,0 +1,77 @@
+episode: 123
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Lavale]
+  guests_present: [PetrDidenko]
+  total_duration_sec: 6766
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 619
+    replies_count: 167
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        4387s: Bobuk спрашивает "Ты морально готов подключить еще одного участника?"
+        4391s: Gray говорит "Пусть он нам расскажет про шесть эдиций" (Windows 7)
+        4399s: Umputun говорит "Я его уже позвал, и он уже здесь"
+        4408s: Umputun обращается "Петя"
+        4408s: PetrDidenko отвечает "Да, я тут, здравствуйте"
+        Контекст: обсуждение Windows 7 и Microsoft, где Пётр Диденко работал
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Lavale"
+    total_duration_sec: 356
+    replies_count: 113
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        19s: Umputun представляет "Конечно, это Лавале из-за не самого центра Москвы"
+        24s: "Как говорят, она вообще коренная москвичка"
+        26s: Lavale отвечает "У нас, между прочим, под окном метро строят"
+        Lavale была соведущей в ранних выпусках подкаста
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарий к эпизоду
+notes: |
+  Эпизод 123 от 7 февраля 2009 года.
+  Полный состав ведущих: Umputun, Bobuk, Gray, Lavale.
+  Гость: Пётр Диденко (Microsoft) - подключился в ~73 минуте для обсуждения Windows 7.
+  Lavale - бывшая соведущая, в справочнике people.yaml указана как гость, но в этом
+  выпуске выступает как полноценная ведущая (представлена в начале наравне с другими).
+
+# Предлагаемые правила очистки
+suggested_rules: []

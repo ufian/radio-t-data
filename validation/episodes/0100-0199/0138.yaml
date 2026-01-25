@@ -1,0 +1,78 @@
+episode: 138
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin]
+  total_speakers: 4
+  total_replies: 1826
+
+# Детали по спикерам
+speakers:
+  - name: Umputun
+    role: host
+    replies_count: 796
+
+  - name: Bobuk
+    role: host
+    replies_count: 488
+
+  - name: EldarMurtazin
+    role: guest
+    replies_count: 379
+
+  - name: Gray
+    role: host
+    replies_count: 163
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Анализ гостей
+guests_analysis:
+  - speaker: EldarMurtazin
+    total_replies: 379
+    first_appearance_sec: 124.61
+
+    analysis:
+      is_error: false
+      identified_as: eldar_murtazin
+      identification_method: introduction
+      confidence: high
+      evidence: |
+        Явное представление ведущим Umputun в начале эпизода (108-128 сек):
+        "А у нас тут в эфире... четвертым гостем, который даже и не гость, а,
+        так сказать, полноправный почти участник... Эльдар, ты из колец?"
+        Ответ гостя: "Ну да, я из колец. Между МКАДом и третьим."
+
+      people_yaml_match:
+        id: eldar_murtazin
+        canonical_name: EldarMurtazin
+        real_name: "Эльдар Муртазин"
+        info: "Ведущий мобильный аналитик"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  lavale_mentioned_absent: true
+  notes: |
+    В начале эпизода Umputun отмечает, что "все, кто должен быть, за исключением Лавале".
+    Bobuk объясняет отсутствие Лавале. Gray упоминается как ведущий из-под Киева.
+    Эльдар Муртазин представлен как "четвёртый гость, который даже и не гость,
+    а полноправный почти участник".
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 138 от 23 мая 2009 года полностью чистый.
+  Все спикеры идентифицированы корректно:
+  - Три ведущих: Umputun, Bobuk, Gray
+  - Один гость: Эльдар Муртазин (известный мобильный аналитик)
+
+  Лавале отсутствует в эпизоде — это упомянуто в начале выпуска.
+  Нет неидентифицированных спикеров (SPEAKER_*, Guest).

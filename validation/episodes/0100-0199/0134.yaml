@@ -1,0 +1,56 @@
+episode: 134
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Lavale]
+  total_duration_sec: 6923
+  notes: "Олдскульный состав - Umputun, Bobuk и бывшая ведущая Lavale. Gray, Ksenks, Alek.sys отсутствуют."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Lavale не является неизвестным спикером - это идентифицированная бывшая ведущая
+
+# Идентифицированные гости/участники
+identified_speakers:
+  - speaker: "Lavale"
+    total_duration_sec: 471
+    replies_count: 186
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в начале эпизода (4.74-30.6s): "С нами, конечно, прекрасная Лавале. Привет"
+        Bobuk (73.26-77.97s): "монотонного бубнения нас с Лавале"
+        Umputun (91.41-93.87s): "Меня недавно спрашивали, почему держите Лавале?"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Никаких правил не требуется - все спикеры корректно идентифицированы
+
+# Дополнительные заметки
+notes: |
+  Эпизод 134 от 25 апреля 2009 года.
+  "Олдскульный состав" - Umputun, Bobuk и бывшая ведущая Lavale.
+  Lavale - известный участник, записана в people.yaml как бывшая ведущая.
+  Все спикеры явно представлены в начале подкаста.
+  Никаких ошибок разметки не обнаружено.

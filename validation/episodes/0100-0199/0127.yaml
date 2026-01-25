@@ -1,0 +1,51 @@
+episode: 127
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  hosts_absent: [Bobuk]
+  guests_present: [Lavale]
+  total_duration_sec: 5180  # ~86 минут (637+438+161 реплик)
+
+# Детальный анализ спикеров
+speaker_analysis:
+  - speaker: "Lavale"
+    total_duration_sec: 489
+    replies_count: 161
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun представляет в начале выпуска (26-37 сек): 'с точки зрения обаятельности у нас есть прелестная Лавале из города Москва. Сегодня она самая центровая, потому что более обычного центрового бубука с нами нет'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Umputun представляет всех в начале выпуска (2-78 сек)"
+    - "Lavale представлена как участница из Москвы, замещающая Bobuk"
+    - "Gray представлен как 'самый одесский'"
+    - "Bobuk явно отсутствует ('более обычного центрового бубука с нами нет')"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные замечания
+notes:
+  - "Эпизод от 7 марта 2009 года"
+  - "Lavale уже корректно размечена в транскрипте и есть в people.yaml"
+  - "Все спикеры корректно идентифицированы, ошибок разметки не обнаружено"

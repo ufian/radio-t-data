@@ -1,0 +1,83 @@
+episode: 177
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [EldarMurtazin, PetrDidenko, Marin_k_a]
+  total_duration_sec: 6660
+
+# Детальный анализ спикеров
+speakers_analysis:
+  - speaker: "Umputun"
+    role: host
+    total_duration_sec: 1714
+    replies_count: 527
+    first_appearance_sec: 3
+    introduced: true
+    introduction_context: "Самопредставление как ведущий в начале выпуска"
+
+  - speaker: "Bobuk"
+    role: host
+    total_duration_sec: 1722
+    replies_count: 462
+    first_appearance_sec: 51
+    introduced: true
+    introduction_context: "Представлен Umputun'ом как 'Бобук' (75-97s)"
+
+  - speaker: "EldarMurtazin"
+    role: guest
+    total_duration_sec: 1003
+    replies_count: 232
+    first_appearance_sec: 40
+    introduced: true
+    introduction_context: "Umputun: 'Есть Эльдар. Эльдар, есть ли ты?' (37-39s)"
+    identified_as: "eldar_murtazin"
+    identification_method: "introduction"
+    confidence: high
+    evidence: "Явное представление по имени в начале выпуска"
+
+  - speaker: "PetrDidenko"
+    role: guest
+    total_duration_sec: 998
+    replies_count: 255
+    first_appearance_sec: 47
+    introduced: true
+    introduction_context: "Umputun: 'есть еще один, более другой гость, Петя' (42-47s), Bobuk: 'Петя Диденко, просто Петя Диденко' (62-64s)"
+    identified_as: "petr_didenko"
+    identification_method: "introduction"
+    confidence: high
+    evidence: "Явное представление по имени и фамилии в начале выпуска"
+
+  - speaker: "Marin_k_a"
+    role: guest
+    total_duration_sec: 668
+    replies_count: 123
+    first_appearance_sec: 22
+    introduced: true
+    introduction_context: "Umputun: 'С нами единственная представительница лучшего пола Маринка' (16-21s)"
+    identified_as: "marin_k_a"
+    identification_method: "introduction"
+    confidence: high
+    evidence: "Явное представление по имени в начале выпуска"
+
+# Неизвестных спикеров нет
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 177 от 6 марта 2010 года (праздничный выпуск к 8 марта).
+  Все участники были явно представлены в начале выпуска (первые 80 секунд).
+  Ведущие: Umputun и Bobuk.
+  Гости: Эльдар Муртазин (мобильный аналитик), Пётр Диденко (независимый эксперт),
+  Марина (единственная женщина в выпуске, бывшая ведущая).
+  Разметка спикеров полностью корректна, исправления не требуются.

@@ -1,0 +1,73 @@
+episode: 129
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Lavale]
+  total_duration_sec: 6665
+
+# Детали по спикерам
+speakers_detail:
+  - speaker: Umputun
+    role: host
+    replies_count: 675
+    total_duration_sec: 2458
+    first_appearance_sec: 2
+
+  - speaker: Bobuk
+    role: host
+    replies_count: 403
+    total_duration_sec: 1508
+    first_appearance_sec: 49
+
+  - speaker: Gray
+    role: host
+    replies_count: 320
+    total_duration_sec: 1536
+    first_appearance_sec: 87
+
+  - speaker: Lavale
+    role: guest
+    replies_count: 189
+    total_duration_sec: 544
+    first_appearance_sec: 27
+
+# Анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все спикеры представлены в начале выпуска:
+    - Umputun (2s): "с вами постоянный, стабильный состав ведущих... наша замечательная Лаваля"
+    - Lavale (27s): "Спасибо, дорогой Умпутун с Чикагщины"
+    - Bobuk (49s): упомянут Umputun'ом (39s): "про Бобука, который молчит"
+    - Gray (87s): представлен Bobuk'ом (69s): "Сережа Петренко, которого... называют как Грей"
+  issues: []
+
+# Идентификация Lavale
+guest_identification:
+  - speaker: Lavale
+    identified_as: lavale
+    identification_method: introduction
+    confidence: high
+    evidence: |
+      1. Umputun представляет её в начале (10s): "наша замечательная Лаваля"
+      2. Bobuk подтверждает (66s): "Это действительно Лавале, она где-то тут из Амкада вещает"
+      3. В people.yaml: Lavale - бывшая ведущая
+      4. Активно участвует в обсуждении на протяжении всего выпуска (189 реплик, 544 сек)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Итоговый комментарий
+summary: |
+  Эпизод 129 полностью чистый. Все 4 спикера правильно идентифицированы:
+  - 3 основных ведущих: Umputun, Bobuk, Gray
+  - 1 гостья/бывшая ведущая: Lavale (уже записана в people.yaml)
+
+  Представление всех участников происходит в первые 90 секунд выпуска.
+  Неизвестных спикеров (SPEAKER_*, Guest*) в этом эпизоде нет.

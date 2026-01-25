@@ -1,0 +1,68 @@
+episode: 189
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6213
+
+# Детальный анализ спикеров
+speakers_analysis:
+  - speaker: "Umputun"
+    total_duration_sec: 2514
+    replies_count: 761
+    first_appearance_sec: 1.4
+    role: host
+
+  - speaker: "Bobuk"
+    total_duration_sec: 1668
+    replies_count: 461
+    first_appearance_sec: 19.1
+    role: host
+
+  - speaker: "Gray"
+    total_duration_sec: 1506
+    replies_count: 355
+    first_appearance_sec: 23.2
+    role: host
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 525
+    replies_count: 119
+    first_appearance_sec: 82.8
+    role: guest
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Bobuk at 110.6s: 'это Грей, это Маринка, а тут еще я сижу'. Also mentioned at 30.2s: 'Маринка тоже'"
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 3454.8
+          etime: 3519.9
+          text: "Кстати, я соглашусь с Мбутуном по поводу того, что действительно, когда-то вот такой вот инстант-мессенджинг..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_location: "Bobuk at 110.6s explicitly names all participants"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 189 от 29 мая 2010 года.
+  Состав: три ведущих (Umputun, Bobuk, Gray) и гостья Marin_k_a (Маринка, бывшая ведущая).
+  Все спикеры корректно размечены и представлены в начале выпуска.
+  Marin_k_a уже есть в people.yaml как известная участница (бывшая ведущая).

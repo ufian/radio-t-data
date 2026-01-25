@@ -1,0 +1,137 @@
+episode: 188
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Marin_k_a, PetrDidenko, Olyapka, Guest]
+  total_duration_sec: 5786
+  notes: >
+    Особый выпуск без Bobuk и Gray (дата: 22 мая 2010).
+    Umputun ведёт с тремя бывшими участниками и одним неизвестным гостем.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 151
+    replies_count: 32
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: >
+        Umputun спрашивает (78s): "Мальчик, а, кстати, как тебя называть в нашем эфире? Саша или Паша?"
+        Guest отвечает (79s): "Паша."
+        Марина представляет (27s): "он программист, он питончик, и не только, достаточно умный молодой человек"
+        Guest (36s): "Привет, я тут действительно мальчик, никто не знает, кто я такой."
+
+      possible_matches:
+        - person_id: "pasha_pc"
+          confidence: 0.7
+          reason: >
+            Имя "Паша", программист Python, пришёл с Мариной (Marin_k_a).
+            Марина упоминает "ник из загадочной PC".
+            Активно участвует в обсуждении технических тем (шрифты, Google TV, нетбуки).
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2105.48
+          etime: 2138.39
+          text: >
+            Длинный сегмент о шрифтах: "Очень сложно найти шрифт, который под правильной
+            лицензией распространяется... Вот такие простые проблемы позволяют решать"
+        additional_segments:
+          - stime: 3948.55
+            etime: 4001.09
+            text: "Обсуждение нетбуков - длинный монолог о использовании нетбука"
+          - stime: 3504.52
+            etime: 3524.92
+            text: "Мнение о переходе IT-стартапов в Google"
+
+# Известные гости (уже идентифицированы в транскрипте)
+known_guests:
+  - speaker: "Marin_k_a"
+    person_id: "marin_k_a"
+    total_duration_sec: 1146
+    replies_count: 239
+    introduced_at: 16
+    introduction: "Умпутун: Маруся пропустила прошлый выпуск, в этот раз пришла не одна"
+    status: confirmed
+
+  - speaker: "PetrDidenko"
+    person_id: "petr_didenko"
+    total_duration_sec: 1706
+    replies_count: 367
+    introduced_at: 48
+    introduction: "Марина: еще у нас есть Петя, Диденко наш любимый и многоуважаемый"
+    status: confirmed
+
+  - speaker: "Olyapka"
+    person_id: "olyapka"
+    total_duration_sec: 285
+    replies_count: 99
+    introduced_at: 1044
+    introduction: "Представилась сама около 17 минуты: 'я с вами, только боюсь, я Бобука заменить не смогу'"
+    status: confirmed
+    notes: >
+      Первые реплики (127s) - короткие ответы "Готовы", "Как никогда" на вопрос Umputun.
+      Полноценное представление только на 1044s, что необычно для такого активного участника.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Olyapka"
+      issue: >
+        Olyapka отвечает уже на 127 секунде ("Готовы", "Как никогда"),
+        но официально представляется только на 1044 секунде.
+        Возможно, Umputun просто забыл её представить в начале, так как она бывшая ведущая
+        и все её знают. Не является ошибкой разметки.
+    - speaker: "Guest"
+      issue: >
+        Guest не представлен по имени полностью. Известно только имя "Паша"
+        и что он программист Python, пришёл с Мариной.
+        Требует идентификации или добавления в people.yaml как нового гостя.
+
+# Предлагаемые действия
+suggested_actions:
+  - type: add_guest
+    person_id: "pasha"
+    canonical_name: "Pasha"
+    real_name: "Паша"
+    info: "Программист Python, выпуск 188, пришёл с Мариной"
+    confidence: medium
+    reason: >
+      Guest - это реальный гость по имени Паша, программист.
+      Если не удастся идентифицировать точнее, добавить как "Pasha" в people.yaml.
+
+  - type: rename
+    episode: 188
+    from_speaker: "Guest"
+    to_speaker: "Pasha"
+    confidence: medium
+    reason: >
+      Если добавим гостя "Pasha" в people.yaml, нужно переименовать
+      все 32 реплики Guest в этом эпизоде.
+
+# Дополнительные наблюдения
+notes: >
+  Интересный выпуск без основных соведущих (Bobuk, Gray).
+  Все 4 спикера кроме Guest уже корректно идентифицированы в транскрипте.
+
+  Guest (Паша) говорит осмысленные вещи о технологиях:
+  - Шрифты и лицензии (2105-2178s)
+  - Google TV и нетбуки (3948-4001s)
+  - Будущее IT-стартапов (3504-3524s)
+  - Альфа vs бета тестирование (4573-4583s)
+
+  Это точно реальный гость, а не ошибка распознавания.

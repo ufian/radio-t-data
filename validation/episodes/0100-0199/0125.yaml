@@ -1,0 +1,93 @@
+episode: 125
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Lavale]
+  total_duration_sec: 6983  # ~778*3.5 + 346*4.5 + 290*4.2 + 237*4.6 + 144*2.8 (примерная оценка)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1103
+    replies_count: 237
+    first_appearance_sec: 124.1
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Gray представил гостя в начале выпуска (71-76 сек):
+        "А еще с нами сегодня гость. Мы уже почти не зовем гостем,
+        потому что это Эльдар Муртазин. С ним есть сегодня о чем
+        поговорить на тему всяких мобильничков."
+
+        Umputun также упоминает его по имени (117-124 сек):
+        "Сайта нашего гостя Mobile Review, дорогой Эльдар, и глубоко
+        уважаемый, к тебе имеет отношение или ты к нему имеешь отношение?"
+
+        Первая реплика EldarMurtazin'а (124 сек): "Да, конечно, это наш сайт."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Lavale"
+    total_duration_sec: 397
+    replies_count: 144
+    first_appearance_sec: 26.4
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представил Лавале в начале выпуска (18-26 сек):
+        "У нас там есть Лавале, которая с трудом сдерживается,
+        чтобы не смеяться в эфир. Так ей нравится её собственный смех.
+        Лавале, ты у нас из Москвы?"
+
+        Lavale отвечает (26 сек): "Да."
+        Затем представляет Bobuk'а (27-30 сек):
+        "Еще из Москвы Бобук, который тоже не смеется в эфир."
+
+        Lavale - бывшая ведущая подкаста, записана в people.yaml.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все участники представлены в первые 2 минуты выпуска:
+    - Umputun представлен Bobuk'ом (92-106 сек): "бэкграундный голос, это Путун из Чикаго"
+    - Bobuk представлен Lavale (27-30 сек): "из Москвы Бобук"
+    - Gray представлен Bobuk'ом (52-57 сек): "Сережа Петренко, который находится в Украине"
+    - Lavale представлена Umputun'ом (18-26 сек)
+    - EldarMurtazin представлен Gray'ем (71-76 сек)
+
+    Дата выпуска: 21 февраля 2009 года (упомянута Umputun'ом в начале)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - все спикеры уже корректно идентифицированы

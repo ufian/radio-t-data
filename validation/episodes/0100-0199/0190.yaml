@@ -1,0 +1,82 @@
+episode: 190
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Станислав Протасов]
+  total_duration_sec: 6044
+
+# Детальная статистика спикеров
+speaker_stats:
+  - speaker: Umputun
+    replies_count: 751
+    total_duration_sec: 2692
+    first_appearance_sec: 4.7
+  - speaker: Bobuk
+    replies_count: 530
+    total_duration_sec: 1878
+    first_appearance_sec: 14.7
+  - speaker: Guest
+    replies_count: 253
+    total_duration_sec: 1474
+    first_appearance_sec: 38.4
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 1474
+    replies_count: 253
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: "stanislav_protasov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление в начале эпизода (29.72-31.8s):
+        Bobuk: "Зато у нас есть сегодня гость особенный. Это Станислав Протасов."
+        Bobuk: "Как тебя, Стас, правильно представлять? CTO ты, наверное?"
+        Guest (38.36s): "Нет, я SVP Engineering."
+
+        Контекст: Станислав Протасов — SVP Engineering в Parallels/Acronis.
+        Обсуждают виртуализацию, Microsoft, энтерпрайз-продукты.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    - Umputun и Bobuk присутствуют как основные ведущие
+    - Gray и Ksenks отсутствуют (Bobuk упоминает это в 20.53s: "Сегодня с нами наших соведущих основных нет")
+    - Гость Станислав Протасов явно представлен в начале выпуска
+    - Все реплики Guest принадлежат одному человеку (последовательный паттерн, осмысленные ответы)
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 190
+    from_speaker: "Guest"
+    to_speaker: "StanislavProtasov"
+    confidence: high
+    reason: "Явное представление: Bobuk называет гостя 'Станислав Протасов' и 'Стас'"
+
+# Предлагаемое добавление в people.yaml
+new_person:
+  id: "stanislav_protasov"
+  canonical_name: "StanislavProtasov"
+  aliases: ["Стас", "Протасов"]
+  real_name: "Станислав Протасов"
+  info: "SVP Engineering в Parallels/Acronis. Выпуск 190"

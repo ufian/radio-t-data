@@ -1,0 +1,40 @@
+episode: 175
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Marin_k_a]
+  total_duration_sec: 6657  # 2600 + 2049 + 1564 + 444
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Примечание: Marin_k_a в предрасчитанной статистике помечена как неизвестная,
+# но она полностью идентифицирована в справочнике people.yaml как бывшая ведущая Марина.
+
+# Идентификация Marin_k_a
+identified_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 444
+    replies_count: 111
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Умпутун явно называет по имени: "И Маринка должна нам всем по индивидуальному
+        поздравлению подготовить" (153.42s). Бобук: "Маринка нам сделает какой-нибудь
+        глубокий подарок" (197.99s). Марина представлена в начале как часть "полного
+        состава" из Украины вместе с Gray.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: Никаких изменений не требуется. Эпизод полностью размечен корректно.

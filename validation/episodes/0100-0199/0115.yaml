@@ -1,0 +1,58 @@
+episode: 115
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Lavale]
+  total_duration_sec: 8993.9
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Lavale"
+    total_duration_sec: 296.1
+    replies_count: 109
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (30-40s) Bobuk говорит: "И он путанул из Чикаго, который слегка
+        поторопился увольнять нашу, давайте скажем так, непостоянную собеседницу.
+        Я думаю, что она где-нибудь после шоу к нам присоединится."
+
+        На отметке 4300s Umputun явно зовёт её по имени: "Лавале, лавале."
+        Lavale отвечает: "Прекрасный четверть, привет." и "Одна шестнадцатая прибыла в студию."
+
+        Lavale — известная бывшая ведущая подкаста, указана в people.yaml.
+
+      possible_matches: []
+
+      # Голосовое сравнение не требуется
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Эпизод чист. Все 4 спикера корректно идентифицированы:
+  - Umputun, Bobuk, Gray — постоянные ведущие
+  - Lavale — бывшая ведущая, присоединилась во второй половине выпуска
+
+  Lavale упоминается в people.yaml как известный гость (id: lavale).
+  Дата выпуска: 6 декабря 2008 года (упомянуто в транскрипте).

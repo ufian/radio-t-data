@@ -1,0 +1,52 @@
+episode: 142
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_duration_sec: 5828
+  episode_duration_sec: 6405
+
+# Детали по каждому спикеру
+speakers_detail:
+  - speaker: Umputun
+    replies_count: 751
+    total_duration_sec: 2712
+    first_appearance_sec: 3.9
+    role: host
+
+  - speaker: Bobuk
+    replies_count: 467
+    total_duration_sec: 1748
+    first_appearance_sec: 27.1
+    role: host
+
+  - speaker: Gray
+    replies_count: 265
+    total_duration_sec: 1368
+    first_appearance_sec: 63.81
+    role: host
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_evidence: "Umputun в начале (15-20 сек): 'Скажу, что там Бобук и Грей сидят в разных местах'"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод чистый - только три основных ведущих (Umputun, Bobuk, Gray).
+  Ksenks и Alek.sys отсутствуют в этом выпуске.
+  Гостей нет. Все спикеры представлены в начале.
+  Дата записи: 27 июня 2009 года (упоминается в начале).
+  Юбилей: 100 выпусков в прямом эфире.

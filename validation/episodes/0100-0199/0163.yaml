@@ -1,0 +1,67 @@
+episode: 163
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [PetrDidenko, Marin_k_a]
+  total_duration_sec: 6704.6
+
+# Детальный анализ спикеров
+speakers:
+  - speaker: "Umputun"
+    role: host
+    total_duration_sec: 2390.1
+    replies_count: 638
+    first_appearance_sec: 5.8
+    last_appearance_sec: 6704.6
+    introduced_at: "implicit (opening)"
+
+  - speaker: "Gray"
+    role: host
+    total_duration_sec: 1632.2
+    replies_count: 350
+    first_appearance_sec: 35.4
+    last_appearance_sec: 6684.4
+    introduced_at: "46-65s (Маринка представляет: 'Грей из Одессы')"
+
+  - speaker: "PetrDidenko"
+    role: guest
+    total_duration_sec: 1454.5
+    replies_count: 336
+    first_appearance_sec: 34.9
+    last_appearance_sec: 6668.0
+    introduced_at: "25-34s (Умпутун: 'Петя есть, который с Майкрософтом связан')"
+    person_id: "petr_didenko"
+    identification_confidence: high
+    evidence: "Явное представление в начале выпуска"
+
+  - speaker: "Marin_k_a"
+    role: guest
+    total_duration_sec: 609.5
+    replies_count: 123
+    first_appearance_sec: 53.6
+    last_appearance_sec: 6676.3
+    introduced_at: "46-53s (Gray: 'Маринка из района Киева')"
+    person_id: "marin_k_a"
+    identification_confidence: high
+    evidence: "Явное представление в начале выпуска"
+
+# Неизвестных спикеров нет
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  all_speakers_active_until_end: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заметки
+notes: |
+  Эпизод полностью размечен. Все 4 спикера идентифицированы и представлены
+  в первые 70 секунд выпуска. Bobuk отсутствует (упомянуто в начале).
+  Все спикеры активны до самого конца (~111 мин).

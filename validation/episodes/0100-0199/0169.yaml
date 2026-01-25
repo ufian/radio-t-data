@@ -1,0 +1,73 @@
+episode: 169
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_speakers: 5
+
+# Детальная статистика
+speakers_stats:
+  - speaker: Umputun
+    role: host
+    replies_count: 581
+    first_appearance_sec: 5.72
+    note: "Ведущий, начинает выпуск"
+
+  - speaker: Bobuk
+    role: host
+    replies_count: 404
+    first_appearance_sec: 1144.35
+    note: "Присоединился позже (~19 мин), анонсировано в начале выпуска"
+
+  - speaker: Gray
+    role: host
+    replies_count: 335
+    first_appearance_sec: 85.09
+    note: "Представлен в начале"
+
+  - speaker: EldarMurtazin
+    role: guest
+    replies_count: 242
+    first_appearance_sec: 158.71
+    note: "Представлен явно: 'Привет, Эльдар!' (5.72s), 'Пришел Эльдар' (60.66s)"
+    person_id: eldar_murtazin
+
+  - speaker: Marin_k_a
+    role: guest
+    replies_count: 89
+    first_appearance_sec: 75.1
+    note: "Представлена: 'Маринка там подхихикивает' (67.74s), 'Здравствуй, Маруся' (73.4s)"
+    person_id: marin_k_a
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом выпуске
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  all_speakers_identified: true
+  issues: []
+  notes:
+    - "Все 5 спикеров корректно идентифицированы"
+    - "Все спикеры представлены в начале выпуска"
+    - "Bobuk анонсирован как опаздывающий на ~40 минут, присоединился на 19-й минуте"
+    - "EldarMurtazin - гость, специалист по мобильным устройствам (тема CES и Nexus One)"
+    - "Marin_k_a (Марина) - бывшая ведущая, в справочнике есть"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - все спикеры корректно размечены
+
+# Контекст выпуска
+episode_context:
+  topics:
+    - "Google Nexus One"
+    - "Consumer Electronics Show (CES)"
+  date_approx: "январь 2010"
+  special_notes:
+    - "Эльдар Муртазин приглашён как эксперт по мобильным устройствам"
+    - "Обсуждение 'киллера iPhone' и позиции Google на рынке смартфонов"

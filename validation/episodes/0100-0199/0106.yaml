@@ -1,0 +1,86 @@
+episode: 106
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [ArtemRosnovskiy, Marin_k_a]
+  total_duration_sec: 6477
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "ArtemRosnovskiy"
+    total_duration_sec: 694
+    replies_count: 164
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "artem_rosnovsky"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет гостя в начале эпизода (56-64 сек):
+        "Это Росновский, он же Артем, он же из небезызвестного подкаста его же имени.
+        Артем, ты с нами?"
+        Артём отвечает: "Доброго всем вечера. Здравствуйте, я здесь."
+
+        Также в people.yaml указано: "Выпуски 69, 101, 106" - подтверждает участие.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 787
+    replies_count: 153
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет гостью в начале эпизода (108-117 сек):
+        "Возвращаясь к гости, гост у нас, гост у нас, ого, какая гость,
+        восходящая звезда российского женского подкастинга.
+        Как я тебя, Маринка, представил? Достойно?"
+
+        Марина отвечает (118-132 сек):
+        "Скорее, украинского, конечно. Я все-таки к России имею такое
+        непосредственное отношение. Но я из Киева, да, всем привет.
+        Я не Оляпка, сразу говорю. И не Анфиса Чехова."
+
+        В people.yaml указано: info: "Бывшая ведущая" - это Марина,
+        которая позже стала ведущей подкаста.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода (28-44 сек) Bobuk объявляет:
+    "Выпуск сегодня немножко необычный, потому что мы сегодня, с одной стороны,
+    в неполном, а с другой стороны, в переполненном составе.
+    ...у нас есть целых два гостя, или правильнее, наверное, сказать, гость и гостья."
+
+    Gray и другие ведущие в этом выпуске отсутствуют ("неполный состав").
+    Оба гостя (Артём Росновский и Марина) явно представлены и активно участвуют в обсуждении.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не нужны - все спикеры корректно идентифицированы

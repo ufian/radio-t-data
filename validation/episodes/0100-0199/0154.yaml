@@ -1,0 +1,75 @@
+episode: 154
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a, PetrDidenko]
+  total_duration_sec: 6774
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1062
+    replies_count: 300
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 51-65s: "На заднем плане появился наш гость, который пишет Евангелие...
+        Ты с нами, Петя?" - PetrDidenko в 65s: "Да, здравствуйте."
+        Далее активно участвует в обсуждении с осмысленными репликами.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 287
+    replies_count: 84
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Gray в 39-47s: "Ну и еще с нами не менее постоянная в последнее время ведущая,
+        это Маринка из Киева." - Marin_k_a в 47s: "Да, это я."
+        Bobuk в 49s: "Наконец-то Маринка к нам вернулась."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод полностью чист. Все 5 спикеров корректно идентифицированы:
+  - Umputun, Bobuk, Gray — основные ведущие
+  - Marin_k_a — бывшая ведущая, представлена в начале как "Маринка из Киева"
+  - PetrDidenko — постоянный гость (148 выпусков), представлен как "Петя"
+
+  Оба "неизвестных" спикера уже присутствуют в people.yaml и были
+  явно представлены в первую минуту выпуска.

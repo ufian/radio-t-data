@@ -1,0 +1,70 @@
+episode: 146
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+  guests_present:
+    - EldarMurtazin
+    - Marin_k_a
+  total_duration_sec: 7027
+
+# Детальный анализ спикеров
+speakers_analysis:
+  - speaker: "Umputun"
+    role: host
+    total_duration_sec: 2727
+    replies_count: 924
+    first_appearance_sec: 5.5
+    introduced: true
+    notes: "Ведущий, начинает выпуск с приветствия"
+
+  - speaker: "Bobuk"
+    role: host
+    total_duration_sec: 2304
+    replies_count: 630
+    first_appearance_sec: 32.4
+    introduced: true
+    notes: "Представлен Umputun'ом как 'наш старенький Бобук'"
+
+  - speaker: "EldarMurtazin"
+    role: guest
+    total_duration_sec: 1401
+    replies_count: 332
+    first_appearance_sec: 49.5
+    introduced: true
+    notes: "Представлен как 'вечно прекрасный Эльдар'. Известный мобильный аналитик."
+
+  - speaker: "Marin_k_a"
+    role: guest
+    total_duration_sec: 596
+    replies_count: 117
+    first_appearance_sec: 28.4
+    introduced: true
+    notes: "Представлена как 'наша новенькая Маринка'. Бывшая ведущая подкаста."
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  all_speakers_identified: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод полностью очищен. Все 4 спикера идентифицированы и представлены в начале выпуска:
+  - Umputun представляет участников в первые 50 секунд
+  - Маринка представлена в 24-28 сек ("наша новенькая Маринка")
+  - Бобук представлен в 30-32 сек ("наш старенький Бобук")
+  - Эльдар представлен в 41-49 сек ("вечно прекрасный Эльдар")
+
+  Нет неидентифицированных спикеров (SPEAKER_*, Guest*).
+  Валидация не выявила проблем.

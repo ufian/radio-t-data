@@ -1,0 +1,64 @@
+episode: 182
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6445.5
+
+# Детальный анализ спикеров
+speakers:
+  - speaker: "Umputun"
+    role: host
+    total_duration_sec: 2507.6
+    replies_count: 816
+    first_appearance_sec: 4.0
+    introduced: true
+    introduction_time_sec: 4.0
+    introduction_context: "Начинает подкаст: 'Доброго времени суток, 10 апреля 2010 года, подкаст выходного дня Радио ИТ'"
+
+  - speaker: "Bobuk"
+    role: host
+    total_duration_sec: 1947.5
+    replies_count: 602
+    first_appearance_sec: 22.9
+    introduced: true
+    introduction_time_sec: 22.9
+    introduction_context: "Umputun передает слово: 'передаю руль управления не кому-либо, а именно самому Бобуку'"
+
+  - speaker: "Gray"
+    role: host
+    total_duration_sec: 1702.0
+    replies_count: 397
+    first_appearance_sec: 57.0
+    introduced: true
+    introduction_time_sec: 36.2
+    introduction_context: "Bobuk представляет: 'Одну зовут Грей, а второго...'"
+
+  - speaker: "Marin_k_a"
+    role: guest
+    total_duration_sec: 288.4
+    replies_count: 96
+    first_appearance_sec: 46.2
+    introduced: true
+    introduction_time_sec: 36.2
+    introduction_context: "Bobuk представляет: '...зовут Маринка, и она, кажется, где-то там же обитает'"
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод полностью размечен. Все четыре спикера явно представлены в начале подкаста (4-57 секунды).
+  Marin_k_a - это Марина, бывшая ведущая подкаста, присутствует в people.yaml.
+  Дата записи: 10 апреля 2010 года.

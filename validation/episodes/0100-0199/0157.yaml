@@ -1,0 +1,63 @@
+episode: 157
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_speakers: 4
+  total_replies: 1888
+
+# Детальный анализ спикеров
+speakers:
+  - speaker: "Umputun"
+    type: host
+    replies_count: 885
+    first_appearance_sec: 6.02
+    notes: "Основной ведущий, начал выпуск"
+
+  - speaker: "Bobuk"
+    type: host
+    replies_count: 532
+    first_appearance_sec: 40.57
+    notes: "Ведущий, был болен (больной голос)"
+
+  - speaker: "Gray"
+    type: host
+    replies_count: 327
+    first_appearance_sec: 22.46
+    notes: "Ведущий, вещал из Одессы"
+
+  - speaker: "Marin_k_a"
+    type: guest
+    replies_count: 144
+    first_appearance_sec: 3240.5
+    total_duration_sec: 564
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. В начале выпуска (46-55с) Bobuk говорит: "Маринка обещала, что она попытается подойти к нам чуть попозже. Будем пытаться ее дожидаться..."
+        2. При появлении (3239с) Umputun приветствует: "Маринка?"
+        3. На 3257с Bobuk обращается к ней: "Правильно, Марина."
+        4. Marin_k_a - известная бывшая ведущая, указана в people.yaml
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры корректно идентифицированы:
+    - Три ведущих (Umputun, Bobuk, Gray) представлены в начале выпуска
+    - Marin_k_a анонсирована в начале и представлена при появлении
+    - Нет неизвестных спикеров (SPEAKER_*, Guest*)
+    - Нет аудио-артефактов (SPEAKER_99) или рекламы (_ad)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - все спикеры корректно идентифицированы

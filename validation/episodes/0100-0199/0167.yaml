@@ -1,0 +1,68 @@
+episode: 167
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko, Marin_k_a]
+  total_duration_sec: 6640
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# В этом эпизоде нет SPEAKER_* или Guest* - все спикеры идентифицированы
+
+# Статистика по спикерам
+speaker_stats:
+  - speaker: Umputun
+    replies_count: 729
+    total_duration_sec: 2340
+    first_appearance_sec: 6
+    role: host
+
+  - speaker: Bobuk
+    replies_count: 491
+    total_duration_sec: 1594
+    first_appearance_sec: 38
+    role: host
+
+  - speaker: PetrDidenko
+    replies_count: 433
+    total_duration_sec: 1396
+    first_appearance_sec: 87
+    role: guest
+    analysis:
+      identified_as: petr_didenko
+      identification_method: introduction
+      confidence: high
+      evidence: "В начале эпизода Umputun: 'И есть Петя, который почти постоянно или смыкается с постоянным Бобуком уже даже местами.'"
+
+  - speaker: Gray
+    replies_count: 190
+    total_duration_sec: 753
+    first_appearance_sec: 55
+    role: host
+
+  - speaker: Marin_k_a
+    replies_count: 150
+    total_duration_sec: 557
+    first_appearance_sec: 62
+    role: guest
+    analysis:
+      identified_as: marin_k_a
+      identification_method: introduction
+      confidence: high
+      evidence: "В начале эпизода Bobuk: 'есть Грей, есть Маринка, оба они из Украины'"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все 5 участников представлены в первые 2 минуты эпизода"
+    - "PetrDidenko (Петя) - постоянный гость, 148 выпусков по справочнику"
+    - "Marin_k_a (Маринка) - бывшая ведущая из Украины"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Никаких правил не требуется - эпизод чистый

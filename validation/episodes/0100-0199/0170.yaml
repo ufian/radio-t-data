@@ -1,0 +1,54 @@
+episode: 170
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6764
+
+# Детальный анализ спикеров, помеченных как "неизвестные"
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 703
+    replies_count: 139
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 51.7s Bobuk явно представляет: "Практически рядом с нами тут вот из Украины Маринка и Грей"
+        На 91.7s Umputun обращается по имени: "Я думаю, Маринка, ты все поняла"
+        Участница уже зарегистрирована в people.yaml как бывшая ведущая
+
+      # Нет необходимости в voice comparison
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Примечания
+notes: |
+  Эпизод чистый. Все спикеры корректно идентифицированы:
+  - Umputun, Bobuk, Gray - постоянные ведущие
+  - Marin_k_a (Марина) - бывшая ведущая, представлена в начале выпуска
+
+  Marin_k_a была ошибочно помечена как "неизвестный спикер" в предрассчитанной
+  статистике, но она уже есть в people.yaml и корректно идентифицирована в транскрипте.
+
+# Предлагаемые правила очистки
+suggested_rules: []

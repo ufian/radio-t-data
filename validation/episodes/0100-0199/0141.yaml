@@ -1,0 +1,24 @@
+episode: 141
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 6107
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    В начале эпизода (17-26 сек) Umputun явно представляет сокращённый состав:
+    "состав незаменимому, постоянному, хотя немножко сокращенному в лице
+    Бобука из Москвы, Грея, из Украины". Кsenks и Alek.sys отсутствуют,
+    что соответствует фразе о сокращённом составе. Гостей нет.
+
+# Предлагаемые правила очистки
+suggested_rules: []

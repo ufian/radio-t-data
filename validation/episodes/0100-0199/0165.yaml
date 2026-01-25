@@ -1,0 +1,52 @@
+episode: 165
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7746  # ~2ч 9мин на основе статистики
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 652
+    replies_count: 158
+    pattern: consecutive  # активное участие в диалогах на протяжении всего выпуска
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "people.yaml registry match"
+      confidence: high
+      evidence: >
+        Спикер Marin_k_a уже зарегистрирован в people.yaml как Марина, бывшая ведущая.
+        В выпуске участвует активно: 158 реплик, 652 сек общей длительности.
+        Характер участия - полноценный со-ведущий: длинные осмысленные реплики,
+        участие в обсуждениях Chrome, Thunderbird, IT-изданий.
+        Первая реплика в 91.6с сразу по делу (про Chrome для Mac/Linux).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true  # Ведущие и Marin_k_a известны из контекста начала выпуска
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Marin_k_a (Марина) - бывшая ведущая подкаста Radio-T.
+  В данном выпуске участвует как полноценный со-ведущий.
+  Спикер уже корректно идентифицирован в транскрипте.
+  Никаких ошибок разметки не обнаружено.

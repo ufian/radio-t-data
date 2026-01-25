@@ -1,0 +1,28 @@
+episode: 108
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_duration_sec: 6793
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Эпизод записан из Киева ("конспиративная квартира радиотиз").
+    Все ведущие представлены в начале:
+    - Umputun начинает выпуск (6s): "Доброго времени суток"
+    - Bobuk представляется (30s): "Меня зовут Бобук"
+    - Gray представлен Бобуком как "Сережа Петренко" (55s) и подтверждает участие (62s)
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

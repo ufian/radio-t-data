@@ -1,0 +1,66 @@
+episode: 185
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_duration_sec: 7738
+
+# Детальный анализ спикеров (все уже идентифицированы)
+unknown_speakers: []
+
+# Идентифицированные гости в этом эпизоде
+identified_guests:
+  - speaker: "EldarMurtazin"
+    person_id: "eldar_murtazin"
+    total_duration_sec: 1360
+    replies_count: 339
+    first_appearance_sec: 37
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        39s Umputun: "Это был Эльдар"
+        216s Umputun: "Мы не зря Эльдара пригласили, потому что..."
+        Эльдар Муртазин - известный мобильный аналитик, регулярный гость подкаста.
+        Обсуждает темы HP/Palm, Nokia, мобильные устройства - его профильная экспертиза.
+
+  - speaker: "Marin_k_a"
+    person_id: "marin_k_a"
+    total_duration_sec: 336
+    replies_count: 105
+    first_appearance_sec: 64
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        61s Gray: "Еще, наверное, не менее виновата Маринка"
+        159s Gray: "Маринка придет пешком, я это подозреваю"
+        434s Umputun: "Мариночка, а у тебя что-то с этого праздника жизни было?"
+        520s Umputun: "Мариночка, а ты что знала?"
+        Марина - бывшая ведущая подкаста, регулярно участвовала в выпусках того периода.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 185 (1 мая 2010) - все спикеры корректно идентифицированы.
+  Гости:
+  - Эльдар Муртазин (EldarMurtazin) - мобильный аналитик, приглашён для обсуждения
+    покупки Palm компанией HP и других мобильных тем.
+  - Марина (Marin_k_a) - бывшая ведущая, участвовала как обычный член команды.
+
+  Все представления гостей происходят в первые 2 минуты эпизода.
+  Спикеры активно участвуют в дискуссии на протяжении всего выпуска.

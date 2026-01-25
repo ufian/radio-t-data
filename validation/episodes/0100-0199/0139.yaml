@@ -1,0 +1,59 @@
+episode: 139
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Lavale]
+  total_duration_sec: 5427  # Umputun: 2622 + Bobuk: 2279 + Lavale: 526
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Все спикеры идентифицированы:
+# - Umputun: 798 реплик, 2622 сек (основной ведущий)
+# - Bobuk: 639 реплик, 2279 сек (со-ведущий)
+# - Lavale: 184 реплики, 526 сек (гостья/бывшая ведущая)
+
+# Детали по Lavale (единственный не-ведущий спикер)
+identified_speakers:
+  - speaker: "Lavale"
+    total_duration_sec: 526
+    replies_count: 184
+    pattern: consecutive  # участвует в диалогах на протяжении всего выпуска
+
+    analysis:
+      is_error: false
+      identified_as: "lavale"  # id из people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Umputun в начале выпуска (17-26 сек): "Начиная с достойных, конечно,
+        не забуду представить Лавале, которая подзадержала наш выпуск на
+        каких-то смешных 23 минуты, но тем не менее мы здесь."
+        Bobuk также упоминает помощь ей в подключении к эфиру (26-34 сек).
+
+      voice_task:
+        needed: false
+        # Идентификация полная, voice comparison не требуется
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  # Все спикеры представлены в начале выпуска:
+  # - Umputun: представлен Bobuk'ом (41-50 сек)
+  # - Bobuk: представляет себя через действия (35-55 сек)
+  # - Lavale: явно представлена Umputun'ом (17-26 сек)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Очистка не требуется - все спикеры корректно размечены
+
+# Дополнительные заметки
+notes:
+  date: "2009-06-06"
+  context: >
+    Эпизод начинается с объявления о спонсоре (SoftKey).
+    Lavale — бывшая ведущая, присутствует в people.yaml.
+    Эпизод чистый, разметка корректная.

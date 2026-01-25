@@ -1,0 +1,70 @@
+episode: 181
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 5753.7
+  total_replies: 1609
+
+# Детальный анализ по каждому спикеру
+speakers:
+  - speaker: Umputun
+    role: host
+    replies_count: 830
+    total_duration_sec: 2713.8
+    first_appearance_sec: 4.6
+
+  - speaker: Bobuk
+    role: host
+    replies_count: 427
+    total_duration_sec: 1457.0
+    first_appearance_sec: 25.0
+
+  - speaker: Gray
+    role: host
+    replies_count: 239
+    total_duration_sec: 1034.3
+    first_appearance_sec: 226.1
+
+  - speaker: Marin_k_a
+    role: guest
+    replies_count: 113
+    total_duration_sec: 548.6
+    first_appearance_sec: 90.4
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Анализ идентифицированных гостей
+identified_guests:
+  - speaker: Marin_k_a
+    identified_as: marin_k_a
+    identification_method: introduction
+    confidence: high
+    evidence: |
+      Bobuk напрямую обращается к ней по имени в 94.24s:
+      "Слушай, ну, прости, Маринка..."
+      Umputun также подтверждает в 101.57s:
+      "У нас вот это Маринка говорила..."
+      Марина находится в Киеве, что она сама подтверждает в 111.33s.
+    notes: |
+      Марина (Marin_k_a) — бывшая ведущая подкаста.
+      Эпизод записывается в необычной конфигурации: Bobuk прилетел
+      к Umputun в Америку, а Марина и Gray участвуют удалённо из Украины.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все участники эпизода идентифицированы:
+    - Umputun и Bobuk находятся вместе в США (упомянуто в 29-78s)
+    - Marin_k_a (Марина) в Киеве (упомянуто в 111-129s)
+    - Gray в Одессе (упомянуто в 111-129s)
+    Необычная конфигурация явно обсуждается в начале подкаста.
+
+# Предлагаемые правила очистки
+suggested_rules: []

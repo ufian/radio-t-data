@@ -1,0 +1,92 @@
+episode: 173
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_speakers: 5
+  # Общая длительность речи по спикерам (в секундах)
+  speaker_durations:
+    Umputun: 2521
+    Bobuk: 2212
+    EldarMurtazin: 1259
+    Gray: 999
+    Marin_k_a: 394
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1259
+    replies_count: 283
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 32.47s Umputun явно представляет: "Он сказал слово, это Эльдар был, если вдруг кто-то не узнал, но, по-моему, вполне акцент заметен."
+        Эльдар Муртазин - известный мобильный аналитик, в people.yaml указан как "Ведущий мобильный аналитик".
+        В диалогах обращается к Марине по имени (1204.8s: "Марина, ты понимаешь...").
+        Обсуждает мобильные устройства, называет iPad "разжиревшими фоторамочками" (221.9s, 1887.66s).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 394
+    replies_count: 88
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 70.62s Bobuk явно представляет: "Это Маринка, которая у нас сегодня из Киева непосредственно, если я ничего не путаю."
+        Marin_k_a подтверждает (75.16s): "Да, ты ничего не путаешь."
+        Затем сама представляет Gray (80.27s): "И Грей, который наверняка из Одессы, но, возможно, еще в другом каком-то месте, потому что любит поездить."
+        В people.yaml указана как "Бывшая ведущая" с real_name "Марина".
+        Активно участвует в обсуждениях, ведёт себя как соведущая.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все 5 участников явно представлены в первые 90 секунд выпуска"
+    - "Umputun открывает выпуск (6.77s), упоминает 'расширенный состав' (17.94s)"
+    - "Bobuk представляет Umputun (54.86s), Maрину (70.62s)"
+    - "Marin_k_a представляет Gray (80.27s)"
+    - "EldarMurtazin представлен Umputun-ом (32.47s)"
+    - "Эпизод от 6 февраля 2010 года"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии
+comments: |
+  Эпизод полностью размечен корректно. Все спикеры идентифицированы:
+  - 3 ведущих: Umputun, Bobuk, Gray
+  - 2 гостя/соведущих: EldarMurtazin (Эльдар Муртазин), Marin_k_a (Марина)
+
+  EldarMurtazin и Marin_k_a уже прописаны в people.yaml с корректными данными.
+  Никаких SPEAKER_* или Guest* записей в этом эпизоде нет.
+  Дополнительная валидация или исправления не требуются.

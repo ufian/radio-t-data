@@ -1,0 +1,89 @@
+episode: 156
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Marin_k_a]
+  guests_present: [Guest]
+  total_duration_sec: 6979  # ~116 минут (308+75+560+452+224 реплик = примерно 7000 сек активной речи)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 1721
+    replies_count: 308
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "sergey_belousov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Бобук в начале эпизода (62.79-67.05 сек): "Еще сегодня у нас есть особый специальный гость.
+        Это Сергей Белоусов, генеральный директор компании Parallels, если я не ошибаюсь."
+        Гость подтверждает: "Да-да-да, правильно." (68.69 сек)
+
+        Контекст речи гостя подтверждает идентификацию:
+        - Рассказывает о компаниях Sunrise, Rolsen, Solomon Software, SWSoft, Parallels, Acronis
+        - Упоминает интервью на CNN/CNBC
+        - Описывает историю создания и развития своих компаний
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 294
+    replies_count: 75
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в начале эпизода (23.06-26.34 сек): "Начну, конечно, с самой прекрасной его
+        подкаста четвертины. У нас Маринка из города-героя Киева."
+        Marin_k_a отвечает: "Да, привет всем." (26.72 сек)
+
+        Соответствует справочнику people.yaml: Marin_k_a (Марина) - бывшая ведущая.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 156
+    from_speaker: "Guest"
+    to_speaker: "SergeyBelousov"
+    confidence: high
+    reason: |
+      Явное представление Бобуком: "Сергей Белоусов, генеральный директор компании Parallels"
+      Гость подтверждает идентификацию. Контент речи полностью соответствует биографии
+      Сергея Белоусова (основатель Parallels, Acronis, SWSoft, Rolsen, Sunrise).
+
+# Примечание: требуется добавить нового гостя в people.yaml
+new_guest_for_people_yaml:
+  id: "sergey_belousov"
+  canonical_name: "SergeyBelousov"
+  aliases: ["Сергей Белоусов", "Белоусов"]
+  real_name: "Сергей Белоусов"
+  info: "CEO Parallels, основатель Acronis, SWSoft. Выпуск 156"

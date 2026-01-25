@@ -1,0 +1,83 @@
+episode: 116
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko]
+  total_duration_sec: 6858
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1846
+    replies_count: 491
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Gray в начале выпуска (71.52s): "Это Петя Диденко."
+        Gray (74.24s): "Петя, у тебя, по-моему, должность называется евангелист, да, что-то вроде этого, в компании «Майкрософт Россия»."
+        Сам гость подтверждает (81.47s): "Да, здравствуйте." и далее (82.79s): "Действительно, я Петр Диденко."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика (2534.34s) находится между двумя репликами PetrDidenko
+        и является продолжением его мысли о разговорах с бизнесами про безопасность.
+        Lavale не участвует в этом выпуске - Umputun в начале (18.01s) говорит:
+        "одна из полупостоянных ведущих Лавале, видимо, не будет с нами."
+
+      identified_as: "petr_didenko"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Контекст: PetrDidenko говорит (2528.58s): "Я иногда имею разговоры о безопасности с какими-то средними и мелкими бизнесами."
+        SPEAKER_MISATTRIBUTED_LAVALE (2534.34s): "Я у них спрашиваю все время, вот вы говорите информационная безопасность, информационная безопасность."
+        PetrDidenko продолжает (2539.59s): "А скажите, а вот эту вот бухгалтерию..."
+        Это явно один и тот же человек продолжает свою мысль.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры представлены в начале выпуска:
+    - Umputun: ведущий, представляется сам
+    - Bobuk: "незаменимый Бобук из Москвы" (24.23s)
+    - Gray: "незаменимый Грей из Одессы" (28.27s)
+    - PetrDidenko: "Это Петя Диденко" (71.52s), евангелист Microsoft Россия
+    - Lavale: явно сказано что НЕ участвует (18.01s)
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 116
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "PetrDidenko"
+    confidence: high
+    reason: |
+      Единственная реплика SPEAKER_MISATTRIBUTED_LAVALE (2534.34s-2539.57s) является
+      продолжением речи PetrDidenko. Контекст: он рассказывает о разговорах с бизнесами
+      про безопасность, и эта реплика - часть того же рассказа. Lavale отсутствует
+      в этом выпуске (явно сказано в начале).

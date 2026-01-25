@@ -1,0 +1,28 @@
+episode: 112
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_duration_sec: 6352
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все три ведущих представлены в начале выпуска:
+    - Umputun открывает выпуск в 7 сек
+    - Bobuk представляет Umputun в 21-45 сек
+    - Gray вступает в разговор в 47 сек
+    - Umputun явно называет Грея и Бобука в 66-77 сек
+
+# Предлагаемые правила очистки
+suggested_rules: []

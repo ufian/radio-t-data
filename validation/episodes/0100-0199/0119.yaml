@@ -1,0 +1,28 @@
+episode: 119
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  total_duration_sec: 6162.3
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# В эпизоде нет неизвестных спикеров
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quote: "В суженном, но прекрасном составе ведущих в лице Бубука из Москвы, Грея из Киева"
+  introduction_time_sec: 25
+  issues: []
+  notes:
+    - "Umputun представляет выпуск и упоминает Bobuk и Gray"
+    - "Gray уточняет что он из Киева, а не из Одессы"
+    - "Все три спикера активно участвуют на протяжении выпуска"
+    - "Дата записи: 10 января 2009 года"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет правил - эпизод чистый

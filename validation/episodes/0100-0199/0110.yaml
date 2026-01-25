@@ -1,0 +1,153 @@
+episode: 110
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Lavale, Guest]
+  total_speakers: 6
+  total_duration_sec: 7098
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1507
+    replies_count: 307
+    first_appearance_sec: 169
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление в начале эпизода (80-86s):
+        "специальный приглашенный гость Эльдар Муртазин...
+        ведущий обозреватель MobileReview.com и вообще большой человек в мире телефонов"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Lavale"
+    total_duration_sec: 318
+    replies_count: 93
+    first_appearance_sec: 63
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление (53-65s):
+        "У нас сегодня двое гостей, одну гостью вы уже слышали... её зовут Лавале"
+        Подтверждает сама: "Я лаять не буду, привет, я Лавале, да."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Guest"
+    total_duration_sec: 231
+    replies_count: 84
+    first_appearance_sec: 3739
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Представлен как "Дима" в контексте:
+        - 3716s: "Ну что, господа и дамы, я включаю Диму"
+        - 3722s: "О, привет, Дима"
+        - 7691s: "Вокруг меня тут сидит Дима, известный по подкасту «Янки после пьянки»"
+
+        Дима присоединился к эфиру примерно на 62 минуте (3720s).
+        Его представляют, он отвечает "Я знаю много Саш, я не уверен."
+
+      possible_matches:
+        - person_id: "dima_yanki"
+          confidence: 0.85
+          reason: "Явно назван 'Дима из подкаста Янки после пьянки'"
+
+      voice_task:
+        needed: true
+        reason: "Дима отсутствует в people.yaml, требуется создать запись"
+        reference_segment:
+          stime: 5041.1
+          etime: 5050.5
+          text: "Сначала я смотрел, думаю, может быть, действительно, может, я их случайно знаю, может быть, не знаю..."
+        alternative_segments:
+          - stime: 3820.8
+            etime: 3828.7
+            text: "Вот объясните мне, я еще не был в Киеве, поэтому я не понял, зачем нужен Твиттер?"
+          - stime: 5813.2
+            etime: 5820.1
+            text: "А мне вот непонятно, кто будет решать, что соответствует, что не соответствует."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Guest"
+      issue: |
+        Guest (Дима) присоединился на 62 минуте, представлен Umputun'ом.
+        Идентифицирован как ведущий подкаста "Янки после пьянки".
+        Требуется добавить в people.yaml с корректным id.
+
+# Предлагаемые действия
+suggested_actions:
+  - type: add_to_people_yaml
+    person:
+      id: "dima_yanki"
+      canonical_name: "DimaYanki"
+      aliases: ["Дима"]
+      real_name: "Дима"
+      info: "Ведущий подкаста 'Янки после пьянки', выпуск 110"
+    confidence: medium
+    reason: "Явное представление в эфире с указанием подкаста"
+
+  - type: rename
+    episode: 110
+    from_speaker: "Guest"
+    to_speaker: "DimaYanki"
+    confidence: medium
+    reason: |
+      Guest присоединился в 3720s, сразу после фразы "я включаю Диму".
+      В конце эпизода (7691s) подтверждено: "Дима, известный по подкасту Янки после пьянки".
+
+# Примечания
+notes: |
+  Эпизод 110 от 1 ноября 2008 года.
+  Расширенный состав: 3 ведущих (Umputun, Bobuk, Gray) + 3 гостя.
+
+  EldarMurtazin и Lavale уже есть в people.yaml и корректно размечены.
+
+  Guest (Дима) требует:
+  1. Создания записи в people.yaml
+  2. Переименования Guest -> DimaYanki в транскрипте
+
+  ВАЖНО: Дима из "Янки после пьянки" - регулярный участник послешоу Radio-T.
+  Упоминается в эпизодах: 17, 24, 27, 48, 49, 55, 59, 60, 63, 65, 66, 76, 82,
+  91, 99, 100, 102, 104, 106, 108, 110, 112, 117, 124, 133, 162, 167, 176, 179,
+  188, 202, 207, 260, 265, 308 и др.
+
+  Дима живёт в Чикаго рядом с Umputun ("Вокруг меня тут сидит Дима").
+  Ведёт подкаст "Янки после пьянки" совместно с Umputun.
+
+  В эпизоде 517 есть гость Дима: "Всем привет, меня зовут Дима, и я сегодня
+  нарушаю все diversity в подкасте" — возможно тот же человек, требует проверки.

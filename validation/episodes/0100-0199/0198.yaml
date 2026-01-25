@@ -1,0 +1,86 @@
+episode: 198
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Marin_k_a, PetrDidenko]
+  total_duration_sec: 7305
+
+# Детальный анализ спикеров
+speakers_analysis:
+  - speaker: "Umputun"
+    role: host
+    total_duration_sec: 3086
+    replies_count: 905
+    first_appearance_sec: 3.0
+    introduced: true
+    notes: "Ведущий, начинает эпизод"
+
+  - speaker: "Gray"
+    role: host
+    total_duration_sec: 2068
+    replies_count: 412
+    first_appearance_sec: 20.8
+    introduced: true
+    notes: "Ведущий, представляет Marin_k_a и PetrDidenko"
+
+  - speaker: "Marin_k_a"
+    role: guest
+    total_duration_sec: 478
+    replies_count: 118
+    first_appearance_sec: 11.7
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет на 57-70s: "А вот я вас не обману, сказавши,
+        что есть у нас там Маринка, которая только что выступила."
+        Также упоминает, что она "бедненькая, больная" и пришла "через не могу".
+
+    voice_task:
+      needed: false
+
+  - speaker: "PetrDidenko"
+    role: guest
+    total_duration_sec: 934
+    replies_count: 216
+    first_appearance_sec: 105.8
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Gray представляет на 99-105s: "Ну, короче, у нас в гостях Петя Дизденко,
+        то есть уже даже не в гостях, а уже как на правах полупостоянного хозяина."
+        PetrDidenko отвечает: "Да, привет из солнечной Москвы."
+        Umputun шутит про "удмурта" и "комяка", что подтверждает личность.
+
+    voice_task:
+      needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Примечания
+notes: |
+  Эпизод полностью размечен. Все четыре участника идентифицированы:
+  - Umputun и Gray - постоянные ведущие
+  - Marin_k_a (Марина) - бывшая ведущая, представлена в начале
+  - PetrDidenko (Пётр Диденко) - постоянный гость, представлен Gray
+
+  Никаких SPEAKER_XX или неидентифицированных спикеров нет.
+  Метаданные эпизода (198_desc.json) отсутствуют в data_clean.
+
+# Предлагаемые правила очистки
+suggested_rules: []

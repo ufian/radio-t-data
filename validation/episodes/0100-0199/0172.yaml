@@ -1,0 +1,78 @@
+episode: 172
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [PetrDidenko, Olyapka]
+  total_duration_sec: 7225
+  total_replies: 1585
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1249
+    replies_count: 337
+    pattern: consecutive
+    first_appearance_sec: 56
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 48.96-54.86s Umputun явно представляет: "Еще у нас в гостях есть Петя,
+        который уж не такой уж редкий гость, но все равно приятно. Давно не был?"
+        PetrDidenko отвечает в 55.85s: "Да, давно не было. Здравствуйте, здравствуйте."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Olyapka"
+    total_duration_sec: 572
+    replies_count: 122
+    pattern: consecutive
+    first_appearance_sec: 44
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 40.60-43.70s Umputun явно представляет: "Оляпка в гостях. Ура, товарищи!"
+        Olyapka отвечает в 43.94s: "Здравствуйте, да. Я вас тоже очень рада
+        всех так виртуально видеть и слышать."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все участники явно представлены в начале выпуска (0-75s):
+    - Umputun - ведущий, начинает выпуск в 5.83s
+    - Olyapka - представлена в 40.6s как "Оляпка в гостях"
+    - PetrDidenko - представлен в 48.96s как "Петя... не такой уж редкий гость"
+    - Gray - представлен в 65.61s: "У нас есть Грей"
+
+    Первые реплики спикеров соответствуют моменту представления.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+metadata:
+  date: "2010-01-30"
+  episode_title: "Радио-Т 172"
+  source_note: "Дата извлечена из транскрипта: '30 января 2010 года'"

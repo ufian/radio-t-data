@@ -1,0 +1,49 @@
+episode: 118
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Lavale]
+  total_duration_sec: 6453  # 2472 + 1456 + 1889 + 636
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Lavale"
+    total_duration_sec: 636
+    replies_count: 182
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в 39-45 сек: 'Из Одессы и Лавале, которая вроде бы недалеко от Москвы, хотя Бобук это место Москвой не признает.'"
+
+      # Дополнительная информация
+      possible_matches: []
+
+      # Voice comparison не нужен
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 118 от 27 декабря 2008 года — итоговый выпуск года.
+  Lavale (Лаваль) была одной из ведущих подкаста в тот период.
+  В справочнике people.yaml она уже корректно указана как "Бывшая ведущая".
+  Все спикеры в выпуске правильно идентифицированы.

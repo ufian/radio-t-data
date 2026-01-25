@@ -1,0 +1,51 @@
+episode: 153
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  hosts_absent: [Ksenks]
+  total_duration_sec: 6890
+
+# Детали по каждому спикеру
+speakers_details:
+  - speaker: Bobuk
+    replies_count: 713
+    total_duration_sec: 2789
+    first_appearance_sec: 38.5
+    introduced: true
+    introduction_evidence: "Bobuk представляет Umputun (38.5s), сам упоминается Umputun'ом в 34.6s"
+
+  - speaker: Umputun
+    replies_count: 662
+    total_duration_sec: 2380
+    first_appearance_sec: 2.2
+    introduced: true
+    introduction_evidence: "Открывает выпуск приветствием, представлен Bobuk'ом как 'Путун' в 38.5s"
+
+  - speaker: Gray
+    replies_count: 280
+    total_duration_sec: 1046
+    first_appearance_sec: 80.2
+    introduced: true
+    introduction_evidence: "Umputun представляет: 'у нас есть Грей из Украины' (22.1s)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  ksenks_absence_explained: true
+  ksenks_absence_evidence: "Umputun: 'Маринка подзадержится, возможно, появится' (17.2s); Bobuk: 'Маринки сегодня действительно нет' (50.6s)"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes:
+  - "Выпуск записан в День программиста (256-й день года, 13 сентября)"
+  - "Ksenks (Маринка) отсутствует, это явно объяснено в начале выпуска"
+  - "Все три присутствующих ведущих взаимно представлены в первые 80 секунд"

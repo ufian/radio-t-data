@@ -1,0 +1,48 @@
+episode: 152
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 5998  # ~100 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 559
+    replies_count: 120
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Успешная идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun представляет в начале (22.91s): "С нами Маринка и Грей"
+        2. Umputun обращается напрямую (105.49s): "Маринка, ты поставила основу леопарда?"
+        3. Bobuk подтверждает состав (384.19s): "есть Маринка, есть Умпутун, есть Грей"
+        4. Marin_k_a отвечает осмысленно, участвует в диалогах на протяжении всего выпуска
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Bobuk присоединился позже (~384s), что было анонсировано Gray в начале (35.58s): 'Он очень обещал, что пойдет'"
+    - "Все 4 участника явно названы в эпизоде"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Marin_k_a уже корректно размечена в people.yaml как гость (бывшая ведущая)

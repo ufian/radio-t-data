@@ -1,0 +1,61 @@
+episode: 178
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Marin_k_a]
+  absent_hosts: [Bobuk, Ksenks, Alek.sys]
+  total_duration_sec: 6317  # ~105 минут (873+446+214 реплик)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 918
+    replies_count: 214
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun явно представляет Марину в начале выпуска (21-28 сек):
+        - "Потому что, если бы я говорил не про Грею, а про Маринку, я бы сказал «Паразитка»."
+        - "Маринка, ты с нами?"
+        - Marin_k_a отвечает: "Конечно, я с вами, да."
+
+        Gray также подтверждает её присутствие (34 сек):
+        - "Да, и с нами еще действительно Ум Путон, и с нами сегодня нет Бобука."
+
+        Марина активно участвует в обсуждении технических тем (SearchWiki и др.),
+        что соответствует её роли бывшей ведущей подкаста.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры корректно идентифицированы:
+    - Umputun - ведущий, представляет выпуск
+    - Gray - ведущий, упомянут Umputun ("про Грею")
+    - Marin_k_a - бывшая ведущая, явно представлена по имени
+    - Bobuk отсутствует (Gray: "с нами сегодня нет Бобука")
+
+    Дата выпуска: 13 марта 2010 года (из первой реплики Umputun)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Marin_k_a уже корректно размечена, правила не требуются
