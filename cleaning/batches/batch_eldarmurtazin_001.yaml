@@ -1,0 +1,1194 @@
+batch_id: eldarmurtazin_001
+description: EldarMurtazin с 0-10 сек речи — требует проверки
+status: open
+github_issue: null
+entries:
+- episode: 307
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 0.5
+  timestamp: '68:20'
+  audio_url: https://cdn.radio-t.com/rt_podcast307.mp3#t=4100
+  text: Я считаю, что...
+  context_before:
+  - |-
+    Bobuk: Но последние 4 года, чем дальше, тем страшнее становится смотреть на все это хоз
+  - 'Bobuk: У меня есть по этому поводу теория.'
+  decision: null
+- episode: 439
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 0.6
+  timestamp: '4:57'
+  audio_url: https://cdn.radio-t.com/rt_podcast439.mp3#t=297
+  text: Это зачем так?
+  context_before:
+  - 'PetrDidenko: Можно считать, что так и есть.'
+  - 'Bobuk: Слушай, а что это за огораживание?'
+  decision: null
+- episode: 267
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 0.7
+  timestamp: '119:47'
+  audio_url: https://cdn.radio-t.com/rt_podcast267.mp3#t=7187
+  text: Около двух часов.
+  context_before:
+  - 'Umputun: Я субъективно чувствую, что меньше.'
+  - 'Umputun: Нет, около двух часов, Жень.'
+  decision: null
+- episode: 330
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 0.7
+  timestamp: '9:33'
+  audio_url: https://cdn.radio-t.com/rt_podcast330.mp3#t=573
+  text: Ну, хорошо, да.
+  context_before:
+  - "Umputun: В результате вот этого fade in и fade out включается мгновенно дискретная карта "
+  - 'Umputun: И никогда после этого не выключается.'
+  decision: null
+- episode: 492
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 0.7
+  timestamp: '8:11'
+  audio_url: https://cdn.radio-t.com/rt_podcast492.mp3#t=491
+  text: Да нет, почему?
+  context_before:
+  - "Umputun: Их конференция какая-то, какая-то тусовка, но нам-то, правильным пацанам, Грей, "
+  - 'Umputun: Вот этот самый, который на две одинаковые буквы называется?'
+  decision: null
+- episode: 417
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 0.9
+  timestamp: '130:34'
+  audio_url: https://cdn.radio-t.com/rt_podcast417.mp3#t=7834
+  text: Короче, непонятно.
+  context_before:
+  - 'Gray: Да, поздравляем еще раз.'
+  - 'Gray: Да, невнятный немножко текст про ультрадим SSD.'
+  decision: null
+- episode: 328
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.0
+  timestamp: '2:57'
+  audio_url: https://cdn.radio-t.com/rt_podcast328.mp3#t=177
+  text: Хорошо.
+  context_before:
+  - 'Bobuk: Скажи, пожалуйста, на какой e-mail тебе его передать?'
+  - 'Umputun: Например, умпутун собака радио минус ти точка ком.'
+  decision: null
+- episode: 466
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.0
+  timestamp: '53:55'
+  audio_url: https://cdn.radio-t.com/rt_podcast466.mp3#t=3235
+  text: Ну, ты что?
+  context_before:
+  - 'Umputun: Ну, там разные фонтики можно, хедеры какие-то.'
+  - 'Bobuk: Да, ну, никто этим не пользуется.'
+  decision: null
+- episode: 464
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.1
+  timestamp: '59:46'
+  audio_url: https://cdn.radio-t.com/rt_podcast464.mp3#t=3586
+  text: Ну так и продолжай жить.
+  context_before:
+  - 'Umputun: Мы живем в Меркуриале.'
+  - 'Umputun: То есть все разработчики живут в Меркуриале.'
+  decision: null
+- episode: 257
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 1.2
+  timestamp: '43:23'
+  audio_url: https://cdn.radio-t.com/rt_podcast257.mp3#t=2603
+  text: Это чистый JS.
+  context_before:
+  - 'Bobuk: Конечно, он компилированный.'
+  - |-
+    Bobuk: Кстати, они добавили ключик под названием JSMOD, который говорит о том, что этот
+  decision: null
+- episode: 260
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.2
+  timestamp: '12:30'
+  audio_url: https://cdn.radio-t.com/rt_podcast260.mp3#t=750
+  text: Да, конечно, никому не нужен.
+  context_before:
+  - 'Umputun: Кому нужен питон старше 24?'
+  - 'Umputun: Никому не нужен.'
+  decision: null
+- episode: 310
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.3
+  timestamp: '13:11'
+  audio_url: https://cdn.radio-t.com/rt_podcast310.mp3#t=791
+  text: Все гораздо проще.
+  context_before:
+  - 'Bobuk: Да что бегать и переживать?'
+  - |-
+    Bobuk: Если ты хочешь сам контролировать время простоя, ты не должен пользоваться амазо
+  decision: null
+- episode: 389
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 1.5
+  timestamp: '32:04'
+  audio_url: https://cdn.radio-t.com/rt_podcast389.mp3#t=1924
+  text: Сразу.
+  context_before:
+  - |-
+    Bobuk: Типа, в Твиттер мне не с кем поболтать, в Фейсбук мне про что-то написать, в Инс
+  - 'Bobuk: Так вот, мы это увидим же.'
+  decision: null
+- episode: 530
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.5
+  timestamp: '121:40'
+  audio_url: https://cdn.radio-t.com/rt_podcast530.mp3#t=7300
+  text: Нет, последняя тема.
+  context_before:
+  - 'Gray: Давайте последнюю тему.'
+  - 'Bobuk: Ну, хватит уже.'
+  decision: null
+- episode: 391
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.6
+  timestamp: '27:36'
+  audio_url: https://cdn.radio-t.com/rt_podcast391.mp3#t=1656
+  text: И вот сейчас это результаты апелляции.
+  context_before:
+  - |-
+    Bobuk: В первом слушании, насколько я понимаю, им отказали, им сказали, что API не може
+  - 'Bobuk: И, собственно говоря, они подали апелляцию.'
+  decision: null
+- episode: 468
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.6
+  timestamp: '100:43'
+  audio_url: https://cdn.radio-t.com/rt_podcast468.mp3#t=6043
+  text: Короче, раст 1.4.
+  context_before:
+  - 'Umputun: Что-то в нем есть.'
+  - 'Gray: Что-то народ так активно про этот.'
+  decision: null
+- episode: 485
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.6
+  timestamp: '23:12'
+  audio_url: https://cdn.radio-t.com/rt_podcast485.mp3#t=1392
+  text: Ой, они, кстати, сейчас инвайты открыли.
+  context_before:
+  - 'Umputun: Да, несомненно.'
+  - |-
+    Umputun: Он, конечно, глюковатый, с ним пока работают, но он альфа, они прямо и признаютс
+  decision: null
+- episode: 208
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.7
+  timestamp: '6:08'
+  audio_url: https://cdn.radio-t.com/rt_podcast208.mp3#t=368
+  text: ПКГ и CRC, да?
+  context_before:
+  - 'Umputun: Да-да-да, и выбрали.'
+  - 'Umputun: Ты посмотри, что они выбрали за основу.'
+  decision: null
+- episode: 447
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.7
+  timestamp: '136:37'
+  audio_url: https://cdn.radio-t.com/rt_podcast447.mp3#t=8197
+  text: Ну, хорошо, что в небо.
+  context_before:
+  - 'Bobuk: Мне очень нравится вообще этот человек.'
+  - 'Bobuk: Давайте все-таки считать, что в небо попал.'
+  decision: null
+- episode: 469
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.7
+  timestamp: '109:35'
+  audio_url: https://cdn.radio-t.com/rt_podcast469.mp3#t=6575
+  text: Так, ну что?
+  context_before:
+  - 'Gray: Угу.'
+  - 'Gray: Ну, тоже, да, как-то не очень хорошо.'
+  decision: null
+- episode: 222
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 1.8
+  timestamp: '14:17'
+  audio_url: https://cdn.radio-t.com/rt_podcast222.mp3#t=857
+  text: Например.
+  context_before:
+  - 'Bobuk: И новые точно так же будут.'
+  - 'Bobuk: Например.'
+  decision: null
+- episode: 349
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.8
+  timestamp: '86:39'
+  audio_url: https://cdn.radio-t.com/rt_podcast349.mp3#t=5199
+  text: Что сейчас было про это рассказывать?
+  context_before:
+  - 'Umputun: Типа как-нибудь?'
+  - 'Bobuk: Ну, а какой смысл?'
+  decision: null
+- episode: 442
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 1.8
+  timestamp: '126:46'
+  audio_url: https://cdn.radio-t.com/rt_podcast442.mp3#t=7606
+  text: Вот тут я вынужден всех разочаровать.
+  context_before:
+  - 'Umputun: У нас, понимаешь, чтобы ты понял...'
+  - "Umputun: Чтобы ты понял разницу, у меня стоянка под вашим ковворкер-центром стоила бы за "
+  decision: null
+- episode: 390
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 2.0
+  timestamp: '117:27'
+  audio_url: https://cdn.radio-t.com/rt_podcast390.mp3#t=7047
+  text: Ну, к счастью, не последнего.
+  context_before:
+  - 'Umputun: Ну что, темы наших слушателей пришли.'
+  - 'Umputun: У нас много неосмотренного.'
+  decision: null
+- episode: 395
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 2.0
+  timestamp: '109:27'
+  audio_url: https://cdn.radio-t.com/rt_podcast395.mp3#t=6567
+  text: У вас в стране так не принято.
+  context_before:
+  - |-
+    Marin_k_a: Нет, я не настолько европейски ориентирована, чтобы у меня была бы борода.
+  - 'Bobuk: А вот что вот это за сексизм сейчас?'
+  decision: null
+- episode: 454
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 2.1
+  timestamp: '128:12'
+  audio_url: https://cdn.radio-t.com/rt_podcast454.mp3#t=7692
+  text: Да, все вроде изучили.
+  context_before:
+  - 'Gray: Слушай, ну тогда, наверное, все, по идее, да?'
+  - 'Bobuk: Ну, вроде бы, больше вроде бы никаких интересных тем у нас нет.'
+  decision: null
+- episode: 272
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 2.2
+  timestamp: '119:55'
+  audio_url: https://cdn.radio-t.com/rt_podcast272.mp3#t=7195
+  text: Не стал.
+  context_before:
+  - 'Bobuk: Да.'
+  - 'Bobuk: Ну, что про FreeBZ, ты же, конечно же, не поставил, да?'
+  decision: null
+- episode: 290
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 2.2
+  timestamp: '67:36'
+  audio_url: https://cdn.radio-t.com/rt_podcast290.mp3#t=4056
+  text: Он же еще не зарелизился вроде.
+  context_before:
+  - 'Umputun: Это же мажорный релиз.'
+  - 'Umputun: То есть не для мажоров, а серьезный релиз.'
+  decision: null
+- episode: 301
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 2.3
+  timestamp: '24:55'
+  audio_url: https://cdn.radio-t.com/rt_podcast301.mp3#t=1495
+  text: Задняя память, хорошо, молодец.
+  context_before:
+  - 'Bobuk: Ну, он не настолько все-таки переписывал'
+  - |-
+    Umputun: Но они там EventBus полностью переписали, связь между компонентами по новой сдел
+  decision: null
+- episode: 346
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 2.3
+  timestamp: '31:10'
+  audio_url: https://cdn.radio-t.com/rt_podcast346.mp3#t=1870
+  text: А зачем сразу выкладывать на YouTube?
+  context_before:
+  - 'Marin_k_a: Ну подожди, альтернатив, по-моему, особенных нету.'
+  - 'SPEAKER_01: Если ты не... Skype для видео, чтобы сразу выкладывать на YouTube.'
+  decision: null
+- episode: 342
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 2.4
+  timestamp: '41:52'
+  audio_url: https://cdn.radio-t.com/rt_podcast342.mp3#t=2512
+  text: Ну, а что, конечно.
+  context_before:
+  - 'Umputun: А идея вот такой запросто может сделать.'
+  - |-
+    Umputun: Оно как-то веб-пай у меня где-то не там нашло, или два разных нашло, и решило дл
+  decision: null
+- episode: 304
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 2.5
+  timestamp: '123:57'
+  audio_url: https://cdn.radio-t.com/rt_podcast304.mp3#t=7437
+  text: Я не очень знаю.
+  context_before:
+  - "Bobuk: Но, собственно говоря, от нас-то тоже в основном вся деятельность заключается в "
+  - 'Bobuk: Поэтому посмотрим.'
+  decision: null
+- episode: 331
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 2.6
+  timestamp: '16:00'
+  audio_url: https://cdn.radio-t.com/rt_podcast331.mp3#t=960
+  text: То есть ура, товарищи.
+  context_before:
+  - 'Bobuk: То есть я не вижу другой причины.'
+  - 'Bobuk: Там, говорят, Сван в чатик пришел.'
+  decision: null
+- episode: 480
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 2.7
+  timestamp: '20:09'
+  audio_url: https://cdn.radio-t.com/rt_podcast480.mp3#t=1209
+  text: А, кстати, видели, что у них появился еще WorkMail?
+  context_before:
+  - 'Umputun: 100 штук заведу и буду радоваться.'
+  - 'Umputun: Зато сертификаты...'
+  decision: null
+- episode: 281
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 2.9
+  timestamp: '84:06'
+  audio_url: https://cdn.radio-t.com/rt_podcast281.mp3#t=5046
+  text: Ну, три-четыре года, где-то так.
+  context_before:
+  - 'Umputun: Ну, а сколько у тебя сервер живет?'
+  - 'Umputun: Три года?'
+  decision: null
+- episode: 335
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 3.0
+  timestamp: '24:03'
+  audio_url: https://cdn.radio-t.com/rt_podcast335.mp3#t=1443
+  text: Жаль, что к стейбл-версии теряется это преимущество скорости.
+  context_before:
+  - 'Bobuk: Ну, слушай, каждая следующая бета быстрее предыдущей, это же логика.'
+  - 'Bobuk: Разумеется.'
+  decision: null
+- episode: 523
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 3.0
+  timestamp: '13:30'
+  audio_url: https://cdn.radio-t.com/rt_podcast523.mp3#t=810
+  text: Зачем мучиться так?
+  context_before:
+  - 'Umputun: И я бы понял, если бы ты был не из питонов, Бубук.'
+  - 'Bobuk: Если бы ты пришел из мира... Давай XML тогда возьмем.'
+  decision: null
+- episode: 314
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 3.1
+  timestamp: '124:27'
+  audio_url: https://cdn.radio-t.com/rt_podcast314.mp3#t=7467
+  text: Через пять месяцев дети, среди прочего, научились хакать Android.
+  context_before:
+  - |-
+    Gray: В глухие эфиопские деревни завезли кучу планшетов с солнечными батареями, датчик
+  - |-
+    Gray: Планшеты оставили там без инструкции, без учителей, с софтом на английском.
+  decision: null
+- episode: 497
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 3.1
+  timestamp: '47:13'
+  audio_url: https://cdn.radio-t.com/rt_podcast497.mp3#t=2833
+  text: У них, по-моему, голова где-то в Калифорнии.
+  context_before:
+  - 'Umputun: Это китайщина, да, какая-то?'
+  - 'Gray: Не совсем.'
+  decision: null
+- episode: 538
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 3.3
+  timestamp: '106:15'
+  audio_url: https://cdn.radio-t.com/rt_podcast538.mp3#t=6375
+  text: Давайте посмотрим на тему наших слушателей.
+  context_before:
+  - 'Umputun: Окей, ну что, тема наших слушателей?'
+  - 'Bobuk: Давайте посмотрим.'
+  decision: null
+- episode: 265
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 3.4
+  timestamp: '6:12'
+  audio_url: https://cdn.radio-t.com/rt_podcast265.mp3#t=372
+  text: Это же прекрасно.
+  context_before:
+  - 'Bobuk: Есть Gnome, Gnome, Gnome и чуть-чуть совсем KDE.'
+  - 'Bobuk: Будет противостояние Gnome 3 против Unity.'
+  decision: null
+- episode: 532
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 3.4
+  timestamp: '76:04'
+  audio_url: https://cdn.radio-t.com/rt_podcast532.mp3#t=4564
+  text: Ну, я не знаю.
+  context_before:
+  - 'Umputun: Да не, не переводная.'
+  - 'Bobuk: Нет?'
+  decision: null
+- episode: 219
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 3.6
+  timestamp: '18:01'
+  audio_url: https://cdn.radio-t.com/rt_podcast219.mp3#t=1081
+  text: В общем, была очень интересная штука.
+  context_before:
+  - 'Umputun: Скайп, Одноклассники и какой еще третий?'
+  - 'Umputun: И ВКонтакте это интернет и есть.'
+  decision: null
+- episode: 333
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 3.6
+  timestamp: '42:33'
+  audio_url: https://cdn.radio-t.com/rt_podcast333.mp3#t=2553
+  text: Радиоприемника.
+  context_before:
+  - |-
+    Gray: Типа вот эта вот имитация отрывной бумаги в календаре, в подкастах это, если я н
+  - 'Gray: Радиоприемника.'
+  decision: null
+- episode: 326
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 3.7
+  timestamp: '25:40'
+  audio_url: https://cdn.radio-t.com/rt_podcast326.mp3#t=1540
+  text: Конечно.
+  context_before:
+  - 'Umputun: Ой, как я вот ненавижу.'
+  - 'Umputun: Ты с MySQL занимался кластерингом?'
+  decision: null
+- episode: 352
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 3.7
+  timestamp: '64:46'
+  audio_url: https://cdn.radio-t.com/rt_podcast352.mp3#t=3886
+  text: Это нормальные пионеры.
+  context_before:
+  - 'Umputun: Потому что это редкое явление.'
+  - 'Umputun: После этого руки опускаются.'
+  decision: null
+- episode: 382
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 3.8
+  timestamp: '19:19'
+  audio_url: https://cdn.radio-t.com/rt_podcast382.mp3#t=1159
+  text: Он в два раза глупее тебя, ты считаешь?
+  context_before:
+  - 'Umputun: Сван это может делать за 10 минут.'
+  - 'Umputun: Будем считать, правильно?'
+  decision: null
+- episode: 482
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 3.8
+  timestamp: '100:30'
+  audio_url: https://cdn.radio-t.com/rt_podcast482.mp3#t=6030
+  text: Это вообще про что?
+  context_before:
+  - 'Bobuk: Поэтому сравнивать их вообще как-то очень сложно.'
+  - |-
+    Umputun: А в двух словах для неинициированных, которые это слово первый раз слышат?
+  decision: null
+- episode: 332
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 3.9
+  timestamp: '115:35'
+  audio_url: https://cdn.radio-t.com/rt_podcast332.mp3#t=6935
+  text: Сейчас объясню, почему.
+  context_before:
+  - |-
+    Bobuk: Если в твоем подчинении больше, чем 5 человек, то ты не можешь писать код.
+  - 'Bobuk: С этим я согласен на 100%.'
+  decision: null
+- episode: 521
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 3.9
+  timestamp: '132:36'
+  audio_url: https://cdn.radio-t.com/rt_podcast521.mp3#t=7956
+  text: Со вторника, если я не ошибаюсь.
+  context_before:
+  - 'Gray: Какая следующая тема?'
+  - 'Gray: Ленин будет заблокирован для России.'
+  decision: null
+- episode: 235
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 4.0
+  timestamp: '44:35'
+  audio_url: https://cdn.radio-t.com/rt_podcast235.mp3#t=2675
+  text: Нет, ксумы там лежат.
+  context_before:
+  - 'PetrDidenko: А уж куда там все эти ксумы?'
+  - 'PetrDidenko: Вы что?'
+  decision: null
+- episode: 471
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 4.0
+  timestamp: '28:17'
+  audio_url: https://cdn.radio-t.com/rt_podcast471.mp3#t=1697
+  text: Там же выглядит очень просто.
+  context_before:
+  - 'Gray: Ну, не знаю.'
+  - |-
+    Gray: Посмотри на самом деле на сообщение про то, что они там разруливали это банкротс
+  decision: null
+- episode: 242
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 4.1
+  timestamp: '111:54'
+  audio_url: https://cdn.radio-t.com/rt_podcast242.mp3#t=6714
+  text: Но я думаю, что здесь сотрудничество взаимовыгодное.
+  context_before:
+  - |-
+    SPEAKER_05: То есть это клево, действительно, это компенсация за неудавшийся пинг, по большо
+  - |-
+    SPEAKER_05: И я думаю, что PING в перспективе будет сильно интегрироваться с тем же Twitter.
+  decision: null
+- episode: 487
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 4.1
+  timestamp: '8:19'
+  audio_url: https://cdn.radio-t.com/rt_podcast487.mp3#t=499
+  text: Я не думаю, что оно вообще нужно.
+  context_before:
+  - |-
+    Umputun: Вы слышали, что выход EFS, Elastic File System, похоже, задерживается на неопред
+  - |-
+    Umputun: То есть они попытались теперь сделать, Грей, вот как тебе хочется, уже давно, уж
+  decision: null
+- episode: 490
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 4.4
+  timestamp: '95:13'
+  audio_url: https://cdn.radio-t.com/rt_podcast490.mp3#t=5713
+  text: |-
+    И получается, что передача сообщений между различными клиентами будет через сторч.
+  context_before:
+  - 'Umputun: Кому-то держать все это понадобится, я согласен.'
+  - |-
+    Umputun: Но с другой стороны, 21 век на дворе, держи там короткие соединения, ответь, умр
+  decision: null
+- episode: 300
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 4.5
+  timestamp: '70:00'
+  audio_url: https://cdn.radio-t.com/rt_podcast300.mp3#t=4200
+  text: Вот я пишу.
+  context_before:
+  - 'Umputun: Больше всего 56 ответов.'
+  - 'Umputun: И мне кажется, это самый правильный ответ.'
+  decision: null
+- episode: 491
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 4.5
+  timestamp: '101:47'
+  audio_url: https://cdn.radio-t.com/rt_podcast491.mp3#t=6107
+  text: Тут то же самое.
+  context_before:
+  - 'Umputun: А, нотс, нотс, да.'
+  - 'Umputun: Он заставил нас написать свою программу со временем.'
+  decision: null
+- episode: 238
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 4.6
+  timestamp: '37:57'
+  audio_url: https://cdn.radio-t.com/rt_podcast238.mp3#t=2277
+  text: Чуть даже старше.
+  context_before:
+  - 'Umputun: Питон уже сто лет в обед.'
+  - 'Umputun: Он как Джава по возрасту.'
+  decision: null
+- episode: 455
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 4.8
+  timestamp: '35:29'
+  audio_url: https://cdn.radio-t.com/rt_podcast455.mp3#t=2129
+  text: Я не помню, на конференции на какой-то кто-то приезжал из...
+  context_before:
+  - |-
+    Bobuk: Я просто к тому, что тот момент, когда я его чекал, это был просто, типа, правил
+  - 'Umputun: А откуда ты это знаешь?'
+  decision: null
+- episode: 476
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 4.8
+  timestamp: '6:26'
+  audio_url: https://cdn.radio-t.com/rt_podcast476.mp3#t=386
+  text: Обычно нет.
+  context_before:
+  - 'Umputun: Access Point, Wi-Fi, это DNS.'
+  - 'Umputun: Он вообще кеширующий или нет?'
+  decision: null
+- episode: 451
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 5.0
+  timestamp: '126:54'
+  audio_url: https://cdn.radio-t.com/rt_podcast451.mp3#t=7614
+  text: Соответственно, завтра вечером покажут работающий прототип.
+  context_before:
+  - |-
+    Gray: То есть 11 проектов набрало достаточное количество саппортеров, которые хоть зах
+  - 'Gray: Ну, вот 11 проектов.'
+  decision: null
+- episode: 444
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 5.1
+  timestamp: '74:10'
+  audio_url: https://cdn.radio-t.com/rt_podcast444.mp3#t=4450
+  text: А как бы... А общего... А Product Owner не оказалось.
+  context_before:
+  - |-
+    Gray: Слушай, ну там на самом деле, извини, Жень, по-моему, проблема, ну точнее, компл
+  - |-
+    Gray: У разработчиков была задача собрать картинки, а у пиарщиков была задача рассказа
+  decision: null
+- episode: 450
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 5.4
+  timestamp: '28:50'
+  audio_url: https://cdn.radio-t.com/rt_podcast450.mp3#t=1730
+  text: Ну, он, по крайней мере, работает.
+  context_before:
+  - 'Bobuk: Ну, частью, нет.'
+  - 'Bobuk: Ужасное решение, да.'
+  decision: null
+- episode: 322
+  author: EldarMurtazin
+  lines: 4
+  duration_sec: 5.5
+  timestamp: '51:30'
+  audio_url: https://cdn.radio-t.com/rt_podcast322.mp3#t=3090
+  text: Вообще есть еще один выход.
+  context_before:
+  - 'Bobuk: И вперед.'
+  - 'Umputun: Попробовать можно чего-нибудь интересное.'
+  decision: null
+- episode: 429
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 5.5
+  timestamp: '54:30'
+  audio_url: https://cdn.radio-t.com/rt_podcast429.mp3#t=3270
+  text: Я думаю, что все не так просто.
+  context_before:
+  - 'Umputun: Ну да.'
+  - |-
+    Umputun: Нужно взять одного программиста, одна штука программист, приковать его цепью к к
+  decision: null
+- episode: 218
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 5.6
+  timestamp: '17:02'
+  audio_url: https://cdn.radio-t.com/rt_podcast218.mp3#t=1022
+  text: Короче, возьми TrueCrypt и дай мозг.
+  context_before:
+  - 'Umputun: И когда оно при маунте, оно не обновляется.'
+  - 'Umputun: Короче, какой-то позор.'
+  decision: null
+- episode: 370
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 5.7
+  timestamp: '29:16'
+  audio_url: https://cdn.radio-t.com/rt_podcast370.mp3#t=1756
+  text: Ну вот, собственно говоря, Google их купил.
+  context_before:
+  - 'Bobuk: Делали они это, в первую очередь, по заказам Пентагона.'
+  - |-
+    Bobuk: Это были такие роботы, которые изначально военные с самого начала, предназначены
+  decision: null
+- episode: 245
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 5.8
+  timestamp: '27:51'
+  audio_url: https://cdn.radio-t.com/rt_podcast245.mp3#t=1671
+  text: И потом его дорожно сношу.
+  context_before:
+  - 'Marin_k_a: Это должен был же Грей поставить.'
+  - 'Marin_k_a: Он всегда ставит себе клипс и рассказывает потом про него.'
+  decision: null
+- episode: 276
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 5.9
+  timestamp: '24:08'
+  audio_url: https://cdn.radio-t.com/rt_podcast276.mp3#t=1448
+  text: Ну, в общем, сейчас уже это все-таки достаточно сильный такой вчерашний день.
+  context_before:
+  - |-
+    Gray: Это попытка создать новую NT, при этом NT существует и сейчас, то есть повторить
+  - 'Gray: И существует только под другими именами XP и Vista.'
+  decision: null
+- episode: 415
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 5.9
+  timestamp: '113:23'
+  audio_url: https://cdn.radio-t.com/rt_podcast415.mp3#t=6803
+  text: Нет, почему?
+  context_before:
+  - 'Umputun: Давайте последнюю.'
+  - "Umputun: Давайте последнюю тему и перейдем к теме наших пользователей, потому что Google "
+  decision: null
+- episode: 316
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 6.0
+  timestamp: '10:46'
+  audio_url: https://cdn.radio-t.com/rt_podcast316.mp3#t=646
+  text: Ну, это жестоко, конечно.
+  context_before:
+  - |-
+    Bobuk: Так вот, меня, понимаешь, парит, что нет просто текущей стабильной версии Linux,
+  - |-
+    Bobuk: То, что есть, говорит мне, значит, ты потеряешь 802.11n, ты начнешь в два раза м
+  decision: null
+- episode: 308
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 6.1
+  timestamp: '94:04'
+  audio_url: https://cdn.radio-t.com/rt_podcast308.mp3#t=5644
+  text: У нас, по-моему, в нашей области они запрещены, радары.
+  context_before:
+  - 'Umputun: Я бы назвал эту аппликацию «Опаньки менты».'
+  - 'Umputun: Примерно так.'
+  decision: null
+- episode: 250
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 6.3
+  timestamp: '78:07'
+  audio_url: https://cdn.radio-t.com/rt_podcast250.mp3#t=4687
+  text: Летают сообщения.
+  context_before:
+  - 'Bobuk: Есть месседжи.'
+  - 'Bobuk: Месседж очень простая фигня.'
+  decision: null
+- episode: 376
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 6.3
+  timestamp: '107:43'
+  audio_url: https://cdn.radio-t.com/rt_podcast376.mp3#t=6463
+  text: Да, их совсем немного.
+  context_before:
+  - 'Gray: Их мало.'
+  - 'Gray: Куда ж без них?'
+  decision: null
+- episode: 533
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 6.5
+  timestamp: '8:23'
+  audio_url: https://cdn.radio-t.com/rt_podcast533.mp3#t=503
+  text: |-
+    То есть мне нужно знать... Ты нажимаешь на кнопку, и у тебя через 5 минут все обновлено.
+  context_before:
+  - 'Gray: Зачем за ним бегать с лопатой?'
+  - 'Umputun: Это то же самое «бегать», только другими словами.'
+  decision: null
+- episode: 283
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 6.7
+  timestamp: '81:11'
+  audio_url: https://cdn.radio-t.com/rt_podcast283.mp3#t=4871
+  text: куски планов знаю важные.
+  context_before:
+  - 'Bobuk: При этом я знаю для себя кучу профитов от Яндекс.Диска.'
+  - |-
+    Bobuk: Я, к сожалению, знаю планы сервиса, поэтому ничего вам про них рассказать не мог
+  decision: null
+- episode: 377
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 6.7
+  timestamp: '21:02'
+  audio_url: https://cdn.radio-t.com/rt_podcast377.mp3#t=1262
+  text: Расскажешь?
+  context_before:
+  - |-
+    Bobuk: А во-вторых, давайте уже, там, понимаете, есть смежная история, очень интересная
+  - |-
+    Marin_k_a: Да, это, по-моему, Грей хотел сказать новость, самая большая новость в прошлой н
+  decision: null
+- episode: 351
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 6.8
+  timestamp: '17:42'
+  audio_url: https://cdn.radio-t.com/rt_podcast351.mp3#t=1062
+  text: Я тут на парочку сайтов посмотрел через Е6.
+  context_before:
+  - 'Bobuk: Ну, даже не лапу.'
+  - 'Gray: Знаешь, давно пора.'
+  decision: null
+- episode: 240
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 6.9
+  timestamp: '12:54'
+  audio_url: https://cdn.radio-t.com/rt_podcast240.mp3#t=774
+  text: Национальный центр по использованию суперкомпьютеров.
+  context_before:
+  - 'Bobuk: Не помнишь, что такое NCSA?'
+  - 'Umputun: Не помню, но он американский был.'
+  decision: null
+- episode: 355
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 7.0
+  timestamp: '12:42'
+  audio_url: https://cdn.radio-t.com/rt_podcast355.mp3#t=762
+  text: Я думаю, что вообще говоря, нет.
+  context_before:
+  - 'Umputun: Если вы, как я, то палец вниз.'
+  - 'Umputun: Туда ее, в качель, пальцем вниз.'
+  decision: null
+- episode: 463
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 7.0
+  timestamp: '43:14'
+  audio_url: https://cdn.radio-t.com/rt_podcast463.mp3#t=2594
+  text: То есть только ошибки компилятора, да?
+  context_before:
+  - |-
+    Ksenks: Нет, я думаю, во-первых, мне надо выключить все нотификации и, ну так, сделать т
+  - 'Umputun: У меня включены все нотификации, которые мне интересны.'
+  decision: null
+- episode: 416
+  author: EldarMurtazin
+  lines: 1
+  duration_sec: 7.2
+  timestamp: '34:44'
+  audio_url: https://cdn.radio-t.com/rt_podcast416.mp3#t=2084
+  text: |-
+    А в случае генерации файлов, генерация файлов это процесс, который как инициируется?
+  context_before:
+  - 'Bobuk: Главная идея консула, так же как и TCD, это consistency.'
+  - 'Bobuk: Прости.'
+  decision: null
+- episode: 217
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 7.4
+  timestamp: '21:59'
+  audio_url: https://cdn.radio-t.com/rt_podcast217.mp3#t=1319
+  text: Да, если сейчас есть кто в чате, то...
+  context_before:
+  - 'Bobuk: Да какая мировая закулиса?'
+  - 'Bobuk: Наверняка просто какая-то хорошая коммерческая организация.'
+  decision: null
+- episode: 449
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 7.5
+  timestamp: '10:56'
+  audio_url: https://cdn.radio-t.com/rt_podcast449.mp3#t=656
+  text: В чем проблема?
+  context_before:
+  - 'Bobuk: Давайте не будем придумывать новый стандарт.'
+  - |-
+    Bobuk: Возьмем Asm.js и его реализуем в браузере, а все остальное, ну да, будет компили
+  decision: null
+- episode: 378
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 7.7
+  timestamp: '88:32'
+  audio_url: https://cdn.radio-t.com/rt_podcast378.mp3#t=5312
+  text: Там просто есть... У него законопроекты все еще нет?
+  context_before:
+  - 'Gray: К вопросу, кому что запрещать надо.'
+  - |-
+    Gray: Ну, там на самом деле какие-то, там нет, по-моему, никаких вот именно запоэтов.
+  decision: null
+- episode: 422
+  author: EldarMurtazin
+  lines: 4
+  duration_sec: 7.7
+  timestamp: '24:32'
+  audio_url: https://cdn.radio-t.com/rt_podcast422.mp3#t=1472
+  text: Понятное дело, это гораздо более законная часть.
+  context_before:
+  - 'Gray: Нет, Windows 8 через торренты это наказуемо, а торренты-то при чем здесь?'
+  - |-
+    Ksenks: Нет, ну я имею в виду, ну обычно молодое поколение с торрентов скачивает там про
+  decision: null
+- episode: 339
+  author: EldarMurtazin
+  lines: 5
+  duration_sec: 7.8
+  timestamp: '42:34'
+  audio_url: https://cdn.radio-t.com/rt_podcast339.mp3#t=2554
+  text: То есть там ничего исправлять не надо.
+  context_before:
+  - 'Bobuk: А дальше там все модульно, плагинисто, все как надо.'
+  - 'Bobuk: Дальше там все, в общем, на юзерском уровне совершенно читается.'
+  decision: null
+- episode: 394
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 7.8
+  timestamp: '23:25'
+  audio_url: https://cdn.radio-t.com/rt_podcast394.mp3#t=1405
+  text: Да, ну можно же было придумать какую-нибудь причину, нормальная причина.
+  context_before:
+  - 'SPEAKER_05: Если честно, я думаю, ни к чему.'
+  - 'SPEAKER_02: Просто так?'
+  decision: null
+- episode: 501
+  author: EldarMurtazin
+  lines: 4
+  duration_sec: 8.0
+  timestamp: '34:59'
+  audio_url: https://cdn.radio-t.com/rt_podcast501.mp3#t=2099
+  text: Вот у меня что-то такое ощущение.
+  context_before:
+  - 'Umputun: Поезд ушел.'
+  - |-
+    Gray: Я думаю, что, если честно, во-первых, как-то немножко ушло во имя таких вот боль
+  decision: null
+- episode: 253
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 8.1
+  timestamp: '112:48'
+  audio_url: https://cdn.radio-t.com/rt_podcast253.mp3#t=6768
+  text: Начали потихоньку разбираться.
+  context_before:
+  - |-
+    Gray: Стандартную большую страшилку, большое предупреждение о современных браузерах, ч
+  - 'Gray: Хотя человек явно заходил на Google.'
+  decision: null
+- episode: 280
+  author: EldarMurtazin
+  lines: 5
+  duration_sec: 8.1
+  timestamp: '3:16'
+  audio_url: https://cdn.radio-t.com/rt_podcast280.mp3#t=196
+  text: По-русски из трех букв?
+  context_before:
+  - 'Umputun: Ну, три буквы.'
+  - 'Umputun: Точно, точно.'
+  decision: null
+- episode: 426
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 8.2
+  timestamp: '19:33'
+  audio_url: https://cdn.radio-t.com/rt_podcast426.mp3#t=1173
+  text: Ну, то есть, они рассчитывали на самом деле просто вот...
+  context_before:
+  - "Gray: А может быть, так было просто дешевле приехать, показаться, завязать контакты и "
+  - 'Bobuk: Ну, может быть, может быть.'
+  decision: null
+- episode: 266
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 8.3
+  timestamp: '24:11'
+  audio_url: https://cdn.radio-t.com/rt_podcast266.mp3#t=1451
+  text: Письмо оригинальное я, по-моему, не нашел.
+  context_before:
+  - 'Umputun: Да нет, в письме он явно говорит.'
+  - 'PetrDidenko: Ты письмо читал оригинальное?'
+  decision: null
+- episode: 324
+  author: EldarMurtazin
+  lines: 6
+  duration_sec: 8.3
+  timestamp: '1:41'
+  audio_url: https://cdn.radio-t.com/rt_podcast324.mp3#t=101
+  text: Бабучка.
+  context_before:
+  - 'Bobuk: Бабучочка.'
+  - 'Umputun: Доколе их можно унижать?'
+  decision: null
+- episode: 311
+  author: EldarMurtazin
+  lines: 4
+  duration_sec: 8.4
+  timestamp: '64:27'
+  audio_url: https://cdn.radio-t.com/rt_podcast311.mp3#t=3867
+  text: Kindle Fire понятно, почему продается.
+  context_before:
+  - 'SPEAKER_99: Nexus.'
+  - 'Gray: Про Nexus, кстати говоря, вопрос на самом деле.'
+  decision: null
+- episode: 489
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 8.5
+  timestamp: '15:50'
+  audio_url: https://cdn.radio-t.com/rt_podcast489.mp3#t=950
+  text: |-
+    Кстати, еще интересно будет посмотреть, меня лично интересует в этом новом iPhone камера.
+  context_before:
+  - 'Umputun: Или платформу больше не поддерживают через полгода.'
+  - |-
+    Umputun: Ну, всякие разные интересные штуки, от которых мы далеки, но там люди страдают.
+  decision: null
+- episode: 278
+  author: EldarMurtazin
+  lines: 5
+  duration_sec: 8.6
+  timestamp: '19:58'
+  audio_url: https://cdn.radio-t.com/rt_podcast278.mp3#t=1198
+  text: Да, замечательная штука.
+  context_before:
+  - 'Bobuk: А сублим тебе все-таки понравился, да?'
+  - 'Bobuk: Скажи честно.'
+  decision: null
+- episode: 274
+  author: EldarMurtazin
+  lines: 4
+  duration_sec: 8.9
+  timestamp: '19:15'
+  audio_url: https://cdn.radio-t.com/rt_podcast274.mp3#t=1155
+  text: А почему это убожество?
+  context_before:
+  - 'Marin_k_a: Ну, то, что сейчас, это реально копия вот то, что на айфоне.'
+  - 'Marin_k_a: На айфоне оно офигенски красиво, на iPad это какое-то убожество.'
+  decision: null
+- episode: 428
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 9.1
+  timestamp: '2:14'
+  audio_url: https://cdn.radio-t.com/rt_podcast428.mp3#t=134
+  text: В общем, разъясним народу, как правильно.
+  context_before:
+  - 'Umputun: Что, им жалко, что ли, разными буквами сделать?'
+  - 'Gray: Нет, я думаю, что там может быть действительно что-то истекло, но...'
+  decision: null
+- episode: 309
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 9.3
+  timestamp: '34:48'
+  audio_url: https://cdn.radio-t.com/rt_podcast309.mp3#t=2088
+  text: Ну, написал что-то.
+  context_before:
+  - 'SPEAKER_00: Я вот как раз недавно ставил семерку несколько дней назад из RPM.'
+  - 'SPEAKER_00: Но я на CentOS ставил.'
+  decision: null
+- episode: 227
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 9.5
+  timestamp: '63:39'
+  audio_url: https://cdn.radio-t.com/rt_podcast227.mp3#t=3819
+  text: Например, как одна из... Ну, не знаю, у меня вот примерно такие ощущения были.
+  context_before:
+  - |-
+    SPEAKER_05: Это, опять же, сложно себе представить, но правда, это совершенно спокойно возмо
+  - |-
+    SPEAKER_05: в нашей системе, что следователь не смог войти, в связи с этим продолжение следс
+  decision: null
+- episode: 357
+  author: EldarMurtazin
+  lines: 2
+  duration_sec: 9.6
+  timestamp: '76:40'
+  audio_url: https://cdn.radio-t.com/rt_podcast357.mp3#t=4600
+  text: Ты просто не помнишь, видимо, как апгрейдилось iOS, по-моему, 2 на iPod Touch.
+  context_before:
+  - 'Umputun: Ну, как ни крути, это жлобство.'
+  - 'Umputun: Не то, что они не нужны.'
+  decision: null
+- episode: 458
+  author: EldarMurtazin
+  lines: 3
+  duration_sec: 9.7
+  timestamp: '22:17'
+  audio_url: https://cdn.radio-t.com/rt_podcast458.mp3#t=1337
+  text: Да, он типа приордер.
+  context_before:
+  - 'Umputun: Но оказалось, что купить его нельзя.'
+  - 'Umputun: Он типа приордер.'
+  decision: null
+- episode: 502
+  author: EldarMurtazin
+  lines: 4
+  duration_sec: 9.9
+  timestamp: '44:52'
+  audio_url: https://cdn.radio-t.com/rt_podcast502.mp3#t=2692
+  text: Ну, почему нет?
+  context_before:
+  - 'Umputun: Зачем?'
+  - 'Umputun: Ну, а как ты это заливаешь на докерхаб, что ли?'
+  decision: null

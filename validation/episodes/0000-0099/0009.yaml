@@ -1,0 +1,24 @@
+episode: 9
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 3265
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Ведущие представлены в начале выпуска:
+    - Umputun (5.92s): "...с вами в студии, как обычно, Бобук из Москвы"
+    - Bobuk (17.96s): "И Умпутун из Чикаго, здравствуйте все"
+    Гостей в этом выпуске нет.
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules: []

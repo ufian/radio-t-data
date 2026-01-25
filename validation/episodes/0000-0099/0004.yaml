@@ -1,0 +1,53 @@
+episode: 4
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+  total_duration_sec: 1919.2
+  total_replies: 349
+
+# Детали по каждому спикеру
+speakers_details:
+  - speaker: "Bobuk"
+    replies_count: 187
+    total_duration_sec: 1051.5
+    first_appearance_sec: 22.1
+  - speaker: "Umputun"
+    replies_count: 162
+    total_duration_sec: 867.7
+    first_appearance_sec: 14.1
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - speaker: "Umputun"
+      introduced_at_sec: 14.1
+      introduction_text: "Добрый день, уважаемые слушатели. Мы начинаем наш пятый подкаст номер 4."
+    - speaker: "Bobuk"
+      introduced_at_sec: 18.6
+      introduction_text: "С вами в студии, как обычно, Бобук из Москвы."
+      introduced_by: "Umputun"
+  issues: []
+
+# Метаданные эпизода
+episode_metadata:
+  date: "2006-10-01"
+  audio_url: "https://cdn.radio-t.com/rt_podcast4.mp3"
+  topics_count: 5
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии
+notes: |
+  Ранний эпизод подкаста (октябрь 2006). Только два ведущих: Umputun и Bobuk.
+  Оба ведущих корректно представлены в начале выпуска.
+  Транскрипт полностью чистый, без неизвестных спикеров и артефактов.

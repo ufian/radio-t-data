@@ -1,0 +1,1348 @@
+[
+  {
+    "episode": 2,
+    "guest_id": "Guest",
+    "name": "Мистер Муви",
+    "confidence": "high",
+    "source": "гость представился в начале"
+  },
+  {
+    "episode": 32,
+    "guest_id": "Guest1",
+    "name": "Артем Росновский",
+    "confidence": "high",
+    "source": "ведущие назвали по имени: Артем Росновский"
+  },
+  {
+    "episode": 34,
+    "guest_id": "Guest3",
+    "name": "Сергей",
+    "confidence": "high",
+    "source": "ведущий Bobuk назвал: Сергей, мы тебя слушаем"
+  },
+  {
+    "episode": 35,
+    "guest_id": "Guest",
+    "name": "Вячеслав",
+    "confidence": "high",
+    "source": "ведущий Bobuk назвал: Да, Вячеслав"
+  },
+  {
+    "episode": 49,
+    "guest_id": "Guest1",
+    "name": "Артем Росновский",
+    "confidence": "high",
+    "source": "ведущие назвали: Артем Росновский, один из первых гостей"
+  },
+  {
+    "episode": 49,
+    "guest_id": "Guest3",
+    "name": "Magic Lantern",
+    "confidence": "high",
+    "source": "гость представился в аудиофидбэке: это Magic Lantern"
+  },
+  {
+    "episode": 49,
+    "guest_id": "Guest4",
+    "name": "Evil Penguin",
+    "confidence": "high",
+    "source": "ведущий назвал: аудиофидбэк от Эвил Пингвина"
+  },
+  {
+    "episode": 49,
+    "guest_id": "Guest2",
+    "name": "Казах",
+    "confidence": "medium",
+    "source": "ведущий назвал: Казах из Канады, подкастер"
+  },
+  {
+    "episode": 62,
+    "guest_id": "Guest1",
+    "name": "Гимлес",
+    "confidence": "high",
+    "source": "ведущий назвал: известный в широких и узких кругах Гимлес"
+  },
+  {
+    "episode": 72,
+    "guest_id": "Guest",
+    "name": "Леша",
+    "confidence": "high",
+    "source": "ведущий Umputun назвал: Леша, как тебя называют в этом великом и могучем интернете"
+  },
+  {
+    "episode": 100,
+    "guest_id": "Guest6",
+    "name": "Гимлис",
+    "confidence": "high",
+    "source": "гость представился и ведущие назвали: Гимлис дозвонился"
+  },
+  {
+    "episode": 100,
+    "guest_id": "Guest3",
+    "name": "Вокабри",
+    "confidence": "medium",
+    "source": "ведущий назвал Вокабри, гость ответил много информации"
+  },
+  {
+    "episode": 100,
+    "guest_id": "Guest4",
+    "name": "Айрат",
+    "confidence": "high",
+    "source": "гость представился: меня зовут Айрат, и ведущие подтвердили: Спасибо, Айрат"
+  },
+  {
+    "episode": 114,
+    "guest_id": "Guest",
+    "name": "Дима Жемеров",
+    "confidence": "high",
+    "source": "гость представился: я зовут Дима Жемеров, я из города Санкт-Петербурга"
+  },
+  {
+    "episode": 121,
+    "guest_id": "Guest",
+    "name": "Ильдар",
+    "confidence": "high",
+    "source": "ведущий назвал: Ильдар, ты был рад сегодня с нами посидеть"
+  },
+  {
+    "episode": 133,
+    "guest_id": "Guest",
+    "name": "Дима",
+    "confidence": "high",
+    "source": "ведущий упомянул: Пока подключают Диму, и Дима Жемеров возможный кандидат"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest8",
+    "name": "Антон Борисов",
+    "confidence": "medium",
+    "source": "ведущий упомянул: комментатор и слушатель Антон Борисов"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest10",
+    "name": "Вячеслав",
+    "confidence": "medium",
+    "source": "ведущий упомянул: поздравление от Вячеслава"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest29",
+    "name": "Кат",
+    "confidence": "high",
+    "source": "гость представился: Многие меня знают под ником Кат. Хочется поздравить подкаст из Финляндии"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest15",
+    "name": "Василий",
+    "confidence": "medium",
+    "source": "контекст: герой непроизносимо слушает из далекой Финляндии"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest21",
+    "name": "Визар Вэ",
+    "confidence": "high",
+    "source": "гость представился: Меня зовут Визар Вэ. Я передаю привет из Урала"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest28",
+    "name": "Иван",
+    "confidence": "high",
+    "source": "ведущий назвал: Иван? Да, привет"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest24",
+    "name": "Тимур",
+    "confidence": "high",
+    "source": "ведущий: Тимур, ты с нами? и гость: Да, я с вами"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest12",
+    "name": "Ольга Тихира",
+    "confidence": "high",
+    "source": "гость представилась: Меня зовут Ольга Тихира"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest7",
+    "name": "Пингвинатор",
+    "confidence": "high",
+    "source": "гость представился: Это Пингвинатор, который к вам дозвонился в 100 выпуске"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest18",
+    "name": "Макс",
+    "confidence": "high",
+    "source": "ведущий назвал: Макс, звонящий гость"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest17",
+    "name": "Визи Пулатов",
+    "confidence": "high",
+    "source": "гость представился: Меня зовут Визи Пулатов, и я звонил поздравить вас"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest2",
+    "name": "Голодный",
+    "confidence": "high",
+    "source": "гость представился: Меня зовут Голодный, я из Иркутска"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest11",
+    "name": "Ксеникс",
+    "confidence": "high",
+    "source": "ведущий упомянул: фидбэк от Ксеникса"
+  },
+  {
+    "episode": 150,
+    "guest_id": "Guest26",
+    "name": "Владимир",
+    "confidence": "high",
+    "source": "гость представился: Зовут меня Владимир. Я из города Волгограда"
+  },
+  {
+    "episode": 179,
+    "guest_id": "Guest",
+    "name": "DJ Steve (Саша)",
+    "confidence": "high",
+    "source": "гость представился: Сашу, и она вот скажет сейчас привет"
+  },
+  {
+    "episode": 183,
+    "guest_id": "Guest",
+    "name": "Володя",
+    "confidence": "high",
+    "source": "ведущий назвал: Помню, что я знаю, что ты Володя сидел и копался"
+  },
+  {
+    "episode": 188,
+    "guest_id": "Guest",
+    "name": "Паша",
+    "confidence": "high",
+    "source": "гость представился: Паша. А портал, он питончик"
+  },
+  {
+    "episode": 190,
+    "guest_id": "Guest",
+    "name": "Станислав Протасов",
+    "confidence": "high",
+    "source": "ведущий назвал: гость особенный - Станислав Протасов"
+  },
+  {
+    "episode": 193,
+    "guest_id": "Guest1",
+    "name": "Денис",
+    "confidence": "high",
+    "source": "ведущий назвал: Денис, а ты откуда? Из Санкт-Петербурга"
+  },
+  {
+    "episode": 193,
+    "guest_id": "Guest2",
+    "name": "Голодный",
+    "confidence": "high",
+    "source": "ведущий назвал: человек со странным именем Голодный из Иркутска"
+  },
+  {
+    "episode": 202,
+    "guest_id": "Guest2",
+    "name": "Лея",
+    "confidence": "high",
+    "source": "ведущий назвал: девушка Лея, которая хочет позвонить и поздравить"
+  },
+  {
+    "episode": 202,
+    "guest_id": "Guest11",
+    "name": "Сергей",
+    "confidence": "high",
+    "source": "ведущий назвал: Я прав, дорогой Сергей? У вас в Красноярске медведи ходят?"
+  },
+  {
+    "episode": 202,
+    "guest_id": "Guest3",
+    "name": "Влад",
+    "confidence": "high",
+    "source": "ведущий назвал: Здравствуй, дорогой. И появился у нас некий Влад"
+  },
+  {
+    "episode": 202,
+    "guest_id": "Guest4",
+    "name": "Никитчук Антон",
+    "confidence": "high",
+    "source": "гость представился: Меня зовут Никитчук Антон, представитель юзер-группы SPB.net"
+  },
+  {
+    "episode": 203,
+    "guest_id": "Guest1",
+    "name": "Дмитрий",
+    "confidence": "high",
+    "source": "ведущий назвал: Слушатель, ты по скайпу Дмитрий"
+  },
+  {
+    "episode": 203,
+    "guest_id": "Guest2",
+    "name": "Влад",
+    "confidence": "high",
+    "source": "ведущий: Ты был у нас, Влад, в прошлый раз, да?"
+  },
+  {
+    "episode": 255,
+    "guest_id": "SPEAKER_00",
+    "name": "Алексей",
+    "confidence": "high",
+    "source": "Umputun: 'Алексей, Алексей, Алексей, не ты ли на меня наезжал в комментариях, Алексей?'"
+  },
+  {
+    "episode": 255,
+    "guest_id": "SPEAKER_99",
+    "name": "EldarMurtazin",
+    "confidence": "high",
+    "source": "Embedded speaker tag in context - known host/contributor"
+  },
+  {
+    "episode": 256,
+    "guest_id": "SPEAKER_04",
+    "name": "Илья Сигалович (Илюш)",
+    "confidence": "high",
+    "source": "Bobuk: 'второй молодой человек на фотографиях, такой с бородкой такой щегольской, это Илюш Сигалович, Илья Сигалович, наш директор по технологиям'"
+  },
+  {
+    "episode": 256,
+    "guest_id": "SPEAKER_99",
+    "name": "Marin_k_a",
+    "confidence": "high",
+    "source": "Embedded speaker tag in context - known host"
+  },
+  {
+    "episode": 257,
+    "guest_id": "SPEAKER_99",
+    "name": "PetrDidenko",
+    "confidence": "high",
+    "source": "Embedded speaker tag in context - known contributor"
+  },
+  {
+    "episode": 258,
+    "guest_id": "SPEAKER_99",
+    "name": "EldarMurtazin",
+    "confidence": "high",
+    "source": "Embedded speaker tag in context"
+  },
+  {
+    "episode": 259,
+    "guest_id": "SPEAKER_04",
+    "name": "EldarMurtazin",
+    "confidence": "high",
+    "source": "Embedded speaker tag in context"
+  },
+  {
+    "episode": 259,
+    "guest_id": "SPEAKER_99",
+    "name": "Bobuk",
+    "confidence": "high",
+    "source": "Embedded speaker tag and context"
+  },
+  {
+    "episode": 260,
+    "guest_id": "SPEAKER_99",
+    "name": "Bobuk",
+    "confidence": "high",
+    "source": "Embedded speaker tag in context"
+  },
+  {
+    "episode": 261,
+    "guest_id": "SPEAKER_01",
+    "name": "Lavale",
+    "confidence": "high",
+    "source": "Bobuk: 'Lavale: А у меня первый, знаешь, какой был?' - speaker identification"
+  },
+  {
+    "episode": 261,
+    "guest_id": "SPEAKER_99",
+    "name": "Bobuk",
+    "confidence": "high",
+    "source": "Embedded speaker tag"
+  },
+  {
+    "episode": 262,
+    "guest_id": "SPEAKER_02",
+    "name": "Вера",
+    "confidence": "high",
+    "source": "Umputun: 'некая Вера' - explicitly introduced as Vera"
+  },
+  {
+    "episode": 262,
+    "guest_id": "SPEAKER_03",
+    "name": "Виктор (Гамуса)",
+    "confidence": "high",
+    "source": "Виктор: 'Я, Виктор, также известный как Гамуса в некоторых кругах, участвую в подкасте The Art of Programming'"
+  },
+  {
+    "episode": 264,
+    "guest_id": "SPEAKER_06",
+    "name": "Филипп",
+    "confidence": "medium",
+    "source": "Bobuk: 'Что тебе, Лев?' + 'У меня тоже, Филипп' - inferred from conversation"
+  },
+  {
+    "episode": 341,
+    "guest_id": "SPEAKER_99",
+    "name": "Петр Диденко",
+    "confidence": "high",
+    "source": "context - Umputun calls him directly: 'PetrDidenko:' in speaker attribution"
+  },
+  {
+    "episode": 345,
+    "guest_id": "SPEAKER_01",
+    "name": "Олег",
+    "confidence": "medium",
+    "source": "context - Umputun says 'я на тебя, Олег, намекаю' and introduces as фанат/гик"
+  },
+  {
+    "episode": 353,
+    "guest_id": "SPEAKER_06",
+    "name": "Кирилл Титов",
+    "confidence": "high",
+    "source": "self-introduction: 'Меня зовут Кирилл Титов, я из города-героя Киева'"
+  },
+  {
+    "episode": 353,
+    "guest_id": "SPEAKER_07",
+    "name": "Алексей Абашов",
+    "confidence": "high",
+    "source": "self-introduction: 'Меня зовут Абашов Алексей. Я тоже из дружественного подкаста «Разбор полетов»'"
+  },
+  {
+    "episode": 353,
+    "guest_id": "SPEAKER_05",
+    "name": "Виктор Гамов",
+    "confidence": "high",
+    "source": "self-introduction: 'Да, всем привет, с вами Виктор Гамов, известный также по подкасту «Разбор полетов»'"
+  },
+  {
+    "episode": 354,
+    "guest_id": "SPEAKER_01",
+    "name": "Роман",
+    "confidence": "high",
+    "source": "self-introduction: 'Здравствуйте. Да, я Роман, я из Литвы, работаю в Barclays, работаю в основном как Unix-инженер'"
+  },
+  {
+    "episode": 358,
+    "guest_id": "SPEAKER_00",
+    "name": "Алексей",
+    "confidence": "medium",
+    "source": "context - described as украинец живущий в Испании, works with ZFS, Umputun says 'Алле, Алексей'"
+  },
+  {
+    "episode": 358,
+    "guest_id": "SPEAKER_01",
+    "name": "Энни Омск (Анна)",
+    "confidence": "high",
+    "source": "self-introduction: 'Нет, у меня в интернетах Энни Омск зовут' and 'Дорогая Анна, тебя как зовут в интернете?'"
+  },
+  {
+    "episode": 363,
+    "guest_id": "SPEAKER_03",
+    "name": "Плющев Александр",
+    "confidence": "high",
+    "source": "context - Umputun directly names: 'Это я про Плющева Александра. Небезызвестного'"
+  },
+  {
+    "episode": 370,
+    "guest_id": "SPEAKER_00",
+    "name": "Марк Шаттлворт (Mark Shuttleworth)",
+    "confidence": "high",
+    "source": "context - Bobuk explicitly names: 'Мы с Марком Шатубортом, который очень известен в России, потому что он создатель Ubuntu-платформы'"
+  },
+  {
+    "episode": 375,
+    "guest_id": "SPEAKER_00",
+    "name": "Дмитрий",
+    "confidence": "medium",
+    "source": "context - Umputun addresses: 'Это Дмитрий. Дмитрий, ты попал в радиотип'"
+  },
+  {
+    "episode": 381,
+    "guest_id": "SPEAKER_06",
+    "name": "Алексей Абашев или коллеги из 'Разбор полетов'",
+    "confidence": "medium",
+    "source": "context - 'Да-да, это коллеги из подкаста «Разбор полетов»'"
+  },
+  {
+    "episode": 382,
+    "guest_id": "SPEAKER_01",
+    "name": "Водом",
+    "confidence": "high",
+    "source": "self-introduction and context - 'Водом, я тебя не обидел' and 'americhka.us - это мой подкаст'"
+  },
+  {
+    "episode": 382,
+    "guest_id": "SPEAKER_03",
+    "name": "Сван (Владимир)",
+    "confidence": "high",
+    "source": "context - 'Я не зря Свана позвал' and later 'Сван, как известно, в Твиттере почему-то называется «собака Апле говно»'"
+  },
+  {
+    "episode": 383,
+    "guest_id": "SPEAKER_04",
+    "name": "Саша (Александр)",
+    "confidence": "high",
+    "source": "context - Umputun directly: 'мы про тебя, Саша, немножко подзабыли'"
+  },
+  {
+    "episode": 386,
+    "guest_id": "SPEAKER_04",
+    "name": "Олег",
+    "confidence": "high",
+    "source": "self-introduction: 'Я являюсь профессиональным астрономом' and context 'Олег, ты попал в шоу'"
+  },
+  {
+    "episode": 390,
+    "guest_id": "SPEAKER_02",
+    "name": "Андрей",
+    "confidence": "medium",
+    "source": "context - Umputun: 'Я включил к нам Андрея в разговор' при обсуждении интеграционных тестов"
+  },
+  {
+    "episode": 393,
+    "guest_id": "SPEAKER_01",
+    "name": "Дмитрий (Surface защитник)",
+    "confidence": "medium",
+    "source": "context - Umputun: 'Ты у нас защитник поверхностей... Дмитрий, здравствуй'"
+  },
+  {
+    "episode": 393,
+    "guest_id": "SPEAKER_03",
+    "name": "Элдар Муртазин",
+    "confidence": "high",
+    "source": "speaker attribution 'EldarMurtazin:' в контексте обсуждения поиска и информации"
+  },
+  {
+    "episode": 395,
+    "guest_id": "SPEAKER_02",
+    "name": "Сван (из Разбора полетов)",
+    "confidence": "high",
+    "source": "context - 'Сван, как известно, в Твиттере почему-то называется «собака Апле говно»... MacBook Pro 13, и рядом лежит айфон'"
+  },
+  {
+    "episode": 395,
+    "guest_id": "SPEAKER_06",
+    "name": "Лавале (из подкаста Разбор полетов)",
+    "confidence": "medium",
+    "source": "контекст - говорит о дизайн-сессиях WWDC, коллега из другого подкаста"
+  },
+  {
+    "episode": 400,
+    "guest_id": "SPEAKER_01",
+    "name": "Ти",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 401,
+    "guest_id": "SPEAKER_06",
+    "name": "Говорят",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 402,
+    "guest_id": "SPEAKER_99",
+    "name": "Эээ",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 421,
+    "guest_id": "SPEAKER_04",
+    "name": "Слушай",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 423,
+    "guest_id": "SPEAKER_09",
+    "name": "Грей",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 425,
+    "guest_id": "SPEAKER_02",
+    "name": "Руслан",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 425,
+    "guest_id": "SPEAKER_03",
+    "name": "Руслан",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 426,
+    "guest_id": "SPEAKER_99",
+    "name": "Ксюш",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 433,
+    "guest_id": "SPEAKER_04",
+    "name": "Артем",
+    "confidence": "medium",
+    "source": "self_id_first_line"
+  },
+  {
+    "episode": 433,
+    "guest_id": "SPEAKER_99",
+    "name": "Гимлис",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 434,
+    "guest_id": "SPEAKER_01",
+    "name": "Алексей",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 441,
+    "guest_id": "SPEAKER_06",
+    "name": "Будам",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 441,
+    "guest_id": "SPEAKER_03",
+    "name": "Будам",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 445,
+    "guest_id": "SPEAKER_02",
+    "name": "Алексей",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 445,
+    "guest_id": "SPEAKER_06",
+    "name": "Иван",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 445,
+    "guest_id": "SPEAKER_05",
+    "name": "Хироку",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 452,
+    "guest_id": "SPEAKER_02",
+    "name": "Кион",
+    "confidence": "high",
+    "source": "zvat_introduction"
+  },
+  {
+    "episode": 458,
+    "guest_id": "SPEAKER_01",
+    "name": "Иван",
+    "confidence": "high",
+    "source": "self_introduction_first_line"
+  },
+  {
+    "episode": 465,
+    "guest_id": "SPEAKER_03",
+    "name": "Руслан",
+    "confidence": "high",
+    "source": "direct_address"
+  },
+  {
+    "episode": 469,
+    "guest_id": "SPEAKER_99",
+    "name": "Никогда",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 470,
+    "guest_id": "SPEAKER_03",
+    "name": "Надер",
+    "confidence": "high",
+    "source": "self_introduction_first_line"
+  },
+  {
+    "episode": 472,
+    "guest_id": "SPEAKER_99",
+    "name": "Грей",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 474,
+    "guest_id": "SPEAKER_05",
+    "name": "Саша",
+    "confidence": "medium",
+    "source": "direct_address_simple"
+  },
+  {
+    "episode": 539,
+    "guest_id": "SPEAKER_04",
+    "name": "Женя",
+    "confidence": "high",
+    "source": "Контекст: Gray упоминает 'Женя, я так подозреваю' и 'один из организаторов этой конференции'"
+  },
+  {
+    "episode": 539,
+    "guest_id": "SPEAKER_02",
+    "name": "Гусь",
+    "confidence": "medium",
+    "source": "Контекст: Umputun обращается 'дорогой Гусь, представься'"
+  },
+  {
+    "episode": 541,
+    "guest_id": "SPEAKER_03",
+    "name": "Алексей",
+    "confidence": "high",
+    "source": "Самопредставление: контекст содержит 'Вот он. Алексей.'"
+  },
+  {
+    "episode": 543,
+    "guest_id": "SPEAKER_01",
+    "name": "Ксюша",
+    "confidence": "high",
+    "source": "Контекст: Umputun обращается 'Ксюша. Говорит, busy. Чем же она занята?'"
+  },
+  {
+    "episode": 545,
+    "guest_id": "SPEAKER_02",
+    "name": "Леша",
+    "confidence": "high",
+    "source": "Контекст: Umputun говорит 'вместо прекрасной Ксюши совершенно менее прекрасный Леша зашел'"
+  },
+  {
+    "episode": 546,
+    "guest_id": "SPEAKER_08",
+    "name": "Алексей",
+    "confidence": "high",
+    "source": "Первая репика гостя: 'И раз уж мы уже в эфире, меня зовут Алексей'"
+  },
+  {
+    "episode": 546,
+    "guest_id": "SPEAKER_99",
+    "name": "Alek.sys",
+    "confidence": "high",
+    "source": "Упоминание в контексте: 'Alek.sys: Телефон до странности помятый'"
+  },
+  {
+    "episode": 546,
+    "guest_id": "SPEAKER_07",
+    "name": "Димлес",
+    "confidence": "high",
+    "source": "Первая репика: 'Я Димлес, несколько раз уже участвовал в подкасте'"
+  },
+  {
+    "episode": 548,
+    "guest_id": "SPEAKER_04",
+    "name": "Егор",
+    "confidence": "high",
+    "source": "Контекст: Umputun обращается 'А как ты к нам попал, Егор?' и гость отвечает 'Я написал вам e-mail и сказал, что я очень к вам хочу'"
+  },
+  {
+    "episode": 557,
+    "guest_id": "SPEAKER_05",
+    "name": "Валентин",
+    "confidence": "high",
+    "source": "Контекст и репика: Umputun спрашивает 'Здравствуй, дорогой, ты кто?' и гость отвечает 'Зовут меня Валентин'"
+  },
+  {
+    "episode": 561,
+    "guest_id": "SPEAKER_03",
+    "name": "Григорий",
+    "confidence": "high",
+    "source": "Первая репика: 'Меня зовут Орло Григорий. Я работаю в компании Brain4Net'"
+  },
+  {
+    "episode": 564,
+    "guest_id": "SPEAKER_06",
+    "name": "Владимир",
+    "confidence": "high",
+    "source": "Контекст: Umputun пытается подключить гостя 'пытаюсь я его внести к нам' и гость отвечает 'владимир привет'"
+  },
+  {
+    "episode": 566,
+    "guest_id": "SPEAKER_05",
+    "name": "Артур",
+    "confidence": "high",
+    "source": "Контекст: Umputun обращается 'Здравствуй, дорогой. Ты кто, Артур?' и гость отвечает 'Да, системизирует, Артур'"
+  },
+  {
+    "episode": 575,
+    "guest_id": "SPEAKER_01",
+    "name": "Оля",
+    "confidence": "high",
+    "source": "Контекст: Umputun обращается 'Олечка, спасибо, что зашла' и ведет диалог о 10-летнем юбилее участия"
+  },
+  {
+    "episode": 584,
+    "guest_id": "SPEAKER_02",
+    "name": "Леша",
+    "confidence": "high",
+    "source": "Контекст: Umputun обращается 'в виде плюс один пришел Леша' - поздравляют с днем рождения"
+  },
+  {
+    "episode": 584,
+    "guest_id": "SPEAKER_99",
+    "name": "Джим",
+    "confidence": "medium",
+    "source": "Контекст в истории: 'жил-был товарищ, которого звали Джим. У него был популярный репозиторий Go библиотеки'"
+  },
+  {
+    "episode": 586,
+    "guest_id": "SPEAKER_02",
+    "name": "Маринка",
+    "confidence": "high",
+    "source": "Контекст: Ksenks упоминает 'А потом как-то вернулись Бобики Грей... ушла Маринка' в контексте истории подкаста"
+  },
+  {
+    "episode": 586,
+    "guest_id": "SPEAKER_06",
+    "name": "Анна",
+    "confidence": "high",
+    "source": "Контекст: Ksenks представляет 'И Анна' и Anна отвечает 'Всем привет. Я тут самая новенькая'"
+  },
+  {
+    "episode": 587,
+    "guest_id": "SPEAKER_03",
+    "name": "Алексей",
+    "confidence": "high",
+    "source": "Первая репика: 'Я Алексей из соседнего подкаста. Я к вам приходил уже несколько раз'"
+  },
+  {
+    "episode": 589,
+    "guest_id": "SPEAKER_04",
+    "name": "Владика",
+    "confidence": "high",
+    "source": "Самопредставление гостя: 'Владика называется'"
+  },
+  {
+    "episode": 598,
+    "guest_id": "SPEAKER_04",
+    "name": "Денис Довгополый",
+    "confidence": "high",
+    "source": "Представление ведущим (Gray): 'Денис Довгополый... предприниматель, он занимается стартапами'"
+  },
+  {
+    "episode": 603,
+    "guest_id": "SPEAKER_01",
+    "name": "Антон",
+    "confidence": "high",
+    "source": "Обращение Umputun: 'Антон, ты к нам зашел?'"
+  },
+  {
+    "episode": 608,
+    "guest_id": "SPEAKER_05",
+    "name": "Аня",
+    "confidence": "high",
+    "source": "Обращения ведущих и контекст: женский голос, регулярно упоминаемая гостья"
+  },
+  {
+    "episode": 611,
+    "guest_id": "SPEAKER_05",
+    "name": "Аня",
+    "confidence": "high",
+    "source": "Упоминание ведущих: 'с Аней это долго планировали'"
+  },
+  {
+    "episode": 616,
+    "guest_id": "SPEAKER_01",
+    "name": "Алексей (Леша)",
+    "confidence": "medium",
+    "source": "Контекст: 'Алексей' упоминается в начале выпуска как 'тот Алексей, о котором вы уже и думать перестали'"
+  },
+  {
+    "episode": 626,
+    "guest_id": "SPEAKER_09",
+    "name": "Аня (из Amazon)",
+    "confidence": "high",
+    "source": "Прямое обращение Umputun: 'Знала ли ты, Аня' и контекст про Amazon"
+  },
+  {
+    "episode": 675,
+    "guest_id": "SPEAKER_05",
+    "name": "Алексей / Леша",
+    "confidence": "high",
+    "source": "контекст: Umputun: Ты, Леша, добавляешь той самой концентрации... Ты доложи, как. Это явное обращение к Леше (Алексей / Alek.sys)"
+  },
+  {
+    "episode": 677,
+    "guest_id": "SPEAKER_03",
+    "name": "Алексей / Леша",
+    "confidence": "high",
+    "source": "контекст: Alek.sys: Гарри, ты был в Техасе? - явное обращение к гостю Гарри (Gray), это Леша"
+  },
+  {
+    "episode": 678,
+    "guest_id": "SPEAKER_03",
+    "name": "Гарри / Грей (Gray)",
+    "confidence": "high",
+    "source": "контекст: Gray: Слушай, ну да, просто у тебя, вообще, строго говоря... Явное обращение и реплики, начинающиеся с Gray:"
+  },
+  {
+    "episode": 678,
+    "guest_id": "SPEAKER_99",
+    "name": "Боб / Бобук (Bobuk)",
+    "confidence": "high",
+    "source": "контекст: Bobuk: В смысле? Ну, ты знаешь, наверное, да, что есть амазоновский проект... Явное обращение Bobuk:"
+  },
+  {
+    "episode": 681,
+    "guest_id": "SPEAKER_08",
+    "name": "Александр",
+    "confidence": "high",
+    "source": "контекст: Bobuk: Александр, здравствуй, дорогой. Явное представление и обращение: Всем здравствуйте. Первая реплика показывает представление: Всю свою жизнь я занимался медициной и стыком с наукой."
+  },
+  {
+    "episode": 681,
+    "guest_id": "SPEAKER_01",
+    "name": "Женя / Евгений",
+    "confidence": "high",
+    "source": "контекст: Bobuk: У меня к тебе странный вопрос, Жень. - явное обращение к Жене (Женя, Евгений)"
+  },
+  {
+    "episode": 683,
+    "guest_id": "SPEAKER_02",
+    "name": "Аня",
+    "confidence": "high",
+    "source": "контекст: Umputun: Аня даже фоточки прислала... и Umputun: Ксюша говорила, что отошла, но ты уже вернулась к нам, Рыбанька? - явное упоминание имени Аня"
+  },
+  {
+    "episode": 686,
+    "guest_id": "SPEAKER_06",
+    "name": "Ксюша",
+    "confidence": "high",
+    "source": "контекст: Umputun: Ксюша, догадайся, каким первым образом Умпутун проверяет поисковые движки? и Ksenks: - явное обращение к Ксюше"
+  },
+  {
+    "episode": 686,
+    "guest_id": "SPEAKER_03",
+    "name": "Алексей / Леша (Alek.sys)",
+    "confidence": "high",
+    "source": "контекст: Umputun: Леша, догадайся... - явное обращение и реплики Alek.sys:"
+  },
+  {
+    "episode": 687,
+    "guest_id": "SPEAKER_02",
+    "name": "Ксюша",
+    "confidence": "high",
+    "source": "контекст: Ksenks: - явное обращение к Ксюше, рассуждение про микросервисы"
+  },
+  {
+    "episode": 687,
+    "guest_id": "SPEAKER_04",
+    "name": "Аня",
+    "confidence": "high",
+    "source": "контекст: Umputun: Доброго времени суток, 1 февраля 2020 года... Ксюша подойдет попозже, Аня зашла к нам на огонек вместо выбывшего Грея. - явное представление Ани"
+  },
+  {
+    "episode": 693,
+    "guest_id": "SPEAKER_02",
+    "name": "Ксюша",
+    "confidence": "high",
+    "source": "контекст: Ksenks: обсуждение про Zoom и meetings. Явное обращение к Ксюше"
+  },
+  {
+    "episode": 696,
+    "guest_id": "SPEAKER_08",
+    "name": "Ксюша",
+    "confidence": "high",
+    "source": "контекст: Ksenks: обсуждение про тестирование и grace period"
+  },
+  {
+    "episode": 697,
+    "guest_id": "SPEAKER_03",
+    "name": "Ксюша",
+    "confidence": "high",
+    "source": "контекст: Ksenks: обсуждение про маски и Apple"
+  },
+  {
+    "episode": 698,
+    "guest_id": "SPEAKER_01",
+    "name": "Аня",
+    "confidence": "high",
+    "source": "контекст: Umputun: На смену пришла Аня, которой не было давно... Явное представление Ани"
+  },
+  {
+    "episode": 699,
+    "guest_id": "SPEAKER_07",
+    "name": "Таня / Танечка",
+    "confidence": "medium",
+    "source": "контекст: Bobuk: Давайте это будет Таня. - Bobuk предлагает имя Таня, но это может быть шуткой или гадание"
+  },
+  {
+    "episode": 701,
+    "guest_id": "SPEAKER_05",
+    "name": "Аня",
+    "confidence": "high",
+    "source": "контекст: Umputun: Аня, ты знаешь, мы... Умпутун говорит про Аню. Явное обращение"
+  },
+  {
+    "episode": 702,
+    "guest_id": "SPEAKER_07",
+    "name": "Грей (Gray)",
+    "confidence": "high",
+    "source": "контекст: Gray: и обращение Umputun к Грею про его режиссерскую работу"
+  },
+  {
+    "episode": 702,
+    "guest_id": "SPEAKER_08",
+    "name": "Саня / Александр",
+    "confidence": "medium",
+    "source": "контекст: Umputun: Я с Саней согласен. - вероятное обращение к гостю как Саня"
+  },
+  {
+    "episode": 702,
+    "guest_id": "SPEAKER_06",
+    "name": "Аня",
+    "confidence": "high",
+    "source": "контекст: Umputun: Дорогая Аня, или там многоуважаемая Аня... Явное обращение к Ане"
+  },
+  {
+    "episode": 704,
+    "guest_id": "SPEAKER_01",
+    "name": "Ксюша",
+    "confidence": "high",
+    "source": "контекст: Ksenks: говорит про JavaScript и TypeScript"
+  },
+  {
+    "episode": 706,
+    "guest_id": "SPEAKER_01",
+    "name": "Ксюша",
+    "confidence": "high",
+    "source": "контекст: Ksenks: обсуждение про MongoDB и DNS"
+  },
+  {
+    "episode": 707,
+    "guest_id": "SPEAKER_08",
+    "name": "Ксюша",
+    "confidence": "high",
+    "source": "контекст: Ksenks: обсуждение про фронтенд и Flash"
+  },
+  {
+    "episode": 713,
+    "guest_id": "SPEAKER_01",
+    "name": "Иван / Ваня (Емщуков)",
+    "confidence": "high",
+    "source": "контекст: Gray: Ваня Емщуков... Явное представление гостя по имени Иван/Ваня"
+  },
+  {
+    "episode": 713,
+    "guest_id": "SPEAKER_99",
+    "name": "Стас Ангелек",
+    "confidence": "high",
+    "source": "контекст: Gray: А еще один наш гость, это Стас Ангелек, это разработчик библиотеки машинного обучения... Явное представление имени Стас"
+  },
+  {
+    "episode": 714,
+    "guest_id": "SPEAKER_05",
+    "name": "Аня",
+    "confidence": "high",
+    "source": "контекст: Umputun: Ксюша привела девочку... и Umputun: Аня, хорошо, что ты зашла. Явное обращение к Ане"
+  },
+  {
+    "episode": 734,
+    "guest_id": "Guest",
+    "name": "Алексей",
+    "confidence": "high",
+    "source": "контекст: Umputun: Меня зовут Алексей. Явное самопредставление: первая реплика гостя - Я работаю в компании Раусфорд, full-stack инженером. И пришел сегодня рассказать немножко про Руби."
+  },
+  {
+    "episode": 787,
+    "guest_id": "Guest1",
+    "name": "Заяц",
+    "confidence": "medium",
+    "source": "контекст: Gray: Это Заяц?, Alek.sys: Заяц, это ты? - предположение о имени Заяц"
+  },
+  {
+    "episode": 792,
+    "guest_id": "Guest1",
+    "name": "Олександр / Олег / украинское имя",
+    "confidence": "high",
+    "source": "контекст: Umputun: Человек, которого зовут Олександр. Явное представление с объяснением: Всем привет. Я из Украины. Поэтому Олександр. Украинская мова."
+  },
+  {
+    "episode": 792,
+    "guest_id": "Guest2",
+    "name": "Владислав / Влад / Владик Хонанов",
+    "confidence": "high",
+    "source": "контекст: Umputun: Дорогой, представьтесь... Первая реплика гостя: Добрый вечер или доброго времени суток тут принято говорить. Меня зовут Владик Хонанов или Влад, можно Владислав Григорьевич. Явное самопредставление с полным именем"
+  },
+  {
+    "episode": 832,
+    "guest_id": "Guest_01",
+    "name": "Саша (женщина)",
+    "confidence": "high",
+    "source": "контекст: Umputun: представьтесь... Первая реплика: Да, в общем-то, я Саша, спасибо, что позвали. Я, в первую очередь, кей-энтезиастка, а также, во вторую очередь, я продакт-менеджер в JetBrains Aqua. Явное самопредставление"
+  },
+  {
+    "episode": 832,
+    "guest_id": "Guest_02",
+    "name": "Розмик",
+    "confidence": "high",
+    "source": "контекст: Umputun: представьтесь... Первая реплика гостя: Всем привет. Привет-привет. Саша, давайте, первая. Да, гость №2, мы тоже коллега Александра, меня зовут Розмик, мы занимаемся как раз JetBrains Aqua. Явное самопредставление по имени Розмик"
+  },
+  {
+    "episode": 857,
+    "guest_id": "SPEAKER_00",
+    "name": "Инженер из Amazon",
+    "confidence": "medium",
+    "source": "контекст: Umputun: Вот, смотри. Гост, и первая реплика показывает: Смотри, смотри, Лёша. А у меня, наверное, хороший микрофон. Ну, я инженер, но вообще я работаю в Амазоне. Могу с вами поговорить по этому поводу. - представление как инженер Amazon"
+  },
+  {
+    "episode": 885,
+    "guest_id": "Guest1",
+    "name": "Сергей",
+    "confidence": "high",
+    "source": "контекст: Umputun: Сергей, который также известен как Guest1, скажи да, слышу, принимаю. Явное представление по имени Сергей"
+  },
+  {
+    "episode": 885,
+    "guest_id": "Guest2",
+    "name": "Михаил / Миша",
+    "confidence": "high",
+    "source": "контекст: Umputun: И Михаил, у которого нет никакого ника, как-то он просто Миша. И Umputun: Миша. Явное представление по имени Миша"
+  },
+  {
+    "episode": 890,
+    "guest_id": "Guest1",
+    "name": "Антон",
+    "confidence": "high",
+    "source": "контекст: Umputun: я пробовал в режиме приватного доступа того, какая у вас закрытая бета была, Антон, по-моему, по этому поводу. Явное обращение по имени Антон"
+  },
+  {
+    "episode": 895,
+    "guest_id": "Guest1",
+    "name": "Андрей",
+    "confidence": "high",
+    "source": "контекст: Umputun: Андрей, а ты как? Это гость номер один. Явное обращение по имени Андрей"
+  },
+  {
+    "episode": 895,
+    "guest_id": "Guest2",
+    "name": "Алекс",
+    "confidence": "high",
+    "source": "контекст: Umputun: Второй гость, который Алекс... Явное обращение по имени Алекс"
+  },
+  {
+    "episode": 896,
+    "guest_id": "Guest1",
+    "name": "Алекс",
+    "confidence": "high",
+    "source": "контекст: Umputun: Один проверенный товарищ, Алекс, ты проверенный, ведь ты уже был один раз. Явное обращение по имени Алекс"
+  },
+  {
+    "episode": 896,
+    "guest_id": "Guest2",
+    "name": "Дэн",
+    "confidence": "high",
+    "source": "контекст: Umputun: Второй гость, который тоже любезно к нам пришел... Дэн, я тебя на Го подцепил. Явное обращение по имени Дэн"
+  },
+  {
+    "episode": 946,
+    "guest_id": "Guest1",
+    "name": "Стив",
+    "confidence": "high",
+    "source": "контекст: Umputun: Дорогой Стив, ты можешь отмютить себя. Явное обращение по имени Стив. Первая реплика подтверждает: Вы же сами позвонили."
+  },
+  {
+    "episode": 968,
+    "guest_id": "Guest1",
+    "name": "Миша",
+    "confidence": "high",
+    "source": "контекст: первая реплика: Ну да, вопросы хорошие. Так, зовут меня Миша, собственно, да, живу вообще в Польше. Явное самопредставление по имени Миша"
+  },
+  {
+    "episode": 983,
+    "guest_id": "Guest1",
+    "name": "Андрей",
+    "confidence": "high",
+    "source": "контекст: Umputun: И пришел гость, дорогой Андрей. Здоров! Ты прямо у нас тут частый гость. Явное обращение по имени Андрей"
+  },
+  {
+    "episode": 298,
+    "guest_id": "SPEAKER_05",
+    "context": [
+      "Umputun: Доброго времени суток, 21 июля 2012 года, подкаст выходного дня Радио Ти.",
+      "Umputun: Сегодня численно полном, а качественно, я бы сказал, интересном составе.",
+      "Umputun: Редко бывает такое, что, во-первых, приходит дорогой гость, гость, который был у нас уже однажды.",
+      "Umputun: Ну вот пришел, по-моему, во второй раз.",
+      "Umputun: Я прав, Станислав?",
+      "Umputun: Во второй или в третий?"
+    ],
+    "first_lines": [
+      "Во второй пока же.",
+      "Я всегда готов.",
+      "Это почему-то мы жадные.",
+      "Ну, причина-то она понятна, в общем-то, да, то есть программисты, они единожды поев, отказываются не продолжать это, и все равно приходят за зарплатой, и развитие продукта все равно требует денег.",
+      "А единственный способ нам собирать деньги, это, в сущности, продавать."
+    ],
+    "timestamp_sec": 25.29,
+    "timestamp": "0:25",
+    "audio_url": "https://cdn.radio-t.com/rt_podcast298.mp3",
+    "episode_date": "2012-07-21",
+    "total_time": 2790.5,
+    "line_count": 563,
+    "identified_name": "Станислав",
+    "source": "контекст: Umputun спрашивает \"Я прав, Станислав?\""
+  },
+  {
+    "episode": 305,
+    "guest_id": "SPEAKER_04",
+    "context": [
+      "Umputun: доброго времени суток, 8 сентября 2012 года, подкаст выходного дня радио ТИ, выпуск 305.",
+      "Umputun: Как мне подсказал гость.",
+      "Umputun: Гость, про него многое говорили, чего тут разного.",
+      "Umputun: Но сказали, раз придет этот гость, значит опять жди.",
+      "Umputun: Я культурно пытаюсь это как-то перевести, потому что у нас тут и девушка.",
+      "Umputun: Но жди особого возбуждения при слове Apple.",
+      "Umputun: Алекс, так ли это?"
+    ],
+    "first_lines": [
+      "Ну, если коротко, то нет.",
+      "Более развернуто я могу сказать, что я лично отношусь хорошо ко всем качественным технологиям и, в частности, мне нравится...",
+      "Windows Phone платформа.",
+      "Мне нравится устройство, которое показал Amazon на этой неделе, о которых мы будем говорить позже.",
+      "Собственно, я способен оценить все, что сделано и работает хорошо."
+    ],
+    "timestamp_sec": 31.26,
+    "timestamp": "0:31",
+    "audio_url": "https://cdn.radio-t.com/rt_podcast305.mp3",
+    "episode_date": "2012-09-08",
+    "total_time": 2667.5,
+    "line_count": 394,
+    "identified_name": "Алекс",
+    "source": "контекст: Umputun обращается \"Алекс, так ли это?\""
+  },
+  {
+    "episode": 242,
+    "guest_id": "SPEAKER_05",
+    "context": [
+      "PetrDidenko: Руководитель Майкрософт в России Николай Прянишников, выступая на конференции, не то сказанул, и его не так поняли, а потом недолго оправдывались.",
+      "PetrDidenko: Но мы-то знаем, что в принципе Майкрософт, кажется, может передать исходники Скайпа ФСБ.",
+      "PetrDidenko: Для того, чтобы они проверили, а нет ли в этих исходниках закладок для несанкционированного доступа шпионского со стороны различных зарубежных государств.",
+      "Marin_k_a: Я думаю, после того, как они посмотрят, есть они или нет, если их вдруг нет, то они обязательно добавят.",
+      "PetrDidenko: Я вот тоже подумал.",
+      "PetrDidenko: Я вот тоже подумал.",
+      "PetrDidenko: И знаете, что они сказали, если продолжить эту мысль?",
+      "PetrDidenko: Они сказали, потом, когда начали оправдываться, они сказали, ну, мы же просто исходники передадим, мы же алгоритмы шифрования не передадим.",
+      "PetrDidenko: А вот мне интересно, как же эти алгоритмы шифрования без исходников могут быть реализованы в этом самом скайпе?",
+      "PetrDidenko: Кто знает?",
+      "Marin_k_a: Ну, то есть, есть две отдельные папочки.",
+      "Marin_k_a: Исходный код и алгоритмы шифрования.",
+      "PetrDidenko: Исходный код написан на C++, а алгоритмы шифрования Святым Духом написаны, да?",
+      "Marin_k_a: На сэмблере представляешь?",
+      "Umputun: Алекс, ты ответь им как к программисту, что ерунду они все несут."
+    ],
+    "first_lines": [
+      "На самом деле, то, что я слышал по поводу Microsoft и исходников Skype, основная жалоба наших чекистов в том, что Skype слишком защищенный протокол, и бедные чекисты не могут послушать, о чем же говорят через Skype.",
+      "Поэтому они хотят получить доступ к исходникам, чтобы иметь возможность слушать то, что мы все говорим.",
+      "Ну, я не знаю.",
+      "На самом деле, конечно, если нам исходники передать, то они там все смогут послушать, но я все-таки надеюсь, что Microsoft будет разумнее и не станет раздавать исходники Skype направо-налево после того, как они его купили.",
+      "Ну, это будет выглядеть, мне кажется, не сильно хорошо."
+    ],
+    "timestamp_sec": 221.89,
+    "timestamp": "3:41",
+    "audio_url": "https://cdn.radio-t.com/rt_podcast242.mp3",
+    "episode_date": "2011-06-12",
+    "total_time": 1502.0,
+    "line_count": 252,
+    "identified_name": "Алекс",
+    "source": "контекст: найдено имя Алекс в обращении"
+  },
+  {
+    "episode": 490,
+    "guest_id": "SPEAKER_03",
+    "context": [
+      "Umputun: Подкаст выходного дня Радио Ти.",
+      "Umputun: Номер выпуска я даже не буду пытаться говорить.",
+      "Umputun: Помню, мы были в районе процессоров.",
+      "Umputun: 487 был там.",
+      "Umputun: Наверное, сейчас 488, 9, где-то так.",
+      "Umputun: Сколько?",
+      "Umputun: 490.",
+      "Umputun: О, как время идет.",
+      "Umputun: Выпуск первого, первого, первого, первого, первой выходной этого месяца, и поэтому он гиговский.",
+      "Umputun: Но, кроме того, это страшная смесь из трех подкастов в одном флаконе.",
+      "Umputun: Такого никогда не было.",
+      "Umputun: И вот опять.",
+      "Umputun: Два гостя заглянули.",
+      "Umputun: Алексей и Алексей.",
+      "Umputun: Алексей, представься."
+    ],
+    "first_lines": [
+      "Как всегда, меня зовут Табаш Алексей, я из дружественного подкаста «Разбор полетов».",
+      "Другой Алексей просто не фанат Digital Ocean.",
+      "Я... Говори.",
+      "Не, ну эти же два магнитофона отечественных, это же не деньги.",
+      "Это какие-то фантики, которые тебе где-то там показали в какой-то веб-пилоте."
+    ],
+    "timestamp_sec": 50.14,
+    "timestamp": "0:50",
+    "audio_url": "https://cdn.radio-t.com/rt_podcast490.mp3",
+    "episode_date": "2016-04-02",
+    "total_time": 1647.7,
+    "line_count": 266,
+    "identified_name": "Табаш Алексей",
+    "source": "самопредставление: \"Как всегда, меня зовут Табаш Алексей\""
+  },
+  {
+    "episode": 221,
+    "guest_id": "SPEAKER_00",
+    "context": [
+      "Umputun: Это грустно, и слезы у нас наворачиваются на глаза.",
+      "Umputun: Но, во-первых, с нами есть Грей, а во-вторых, Грей пришел не сам.",
+      "Gray: Да, во-первых, я пришел, точнее, я поехал.",
+      "Gray: Во-вторых, да, пришел не сам.",
+      "Gray: У нас сегодня в гостях совершенно уникальное сочетание всяких всевозможных качеств, напрямую имеющих отношение к гиковости и к нашему подкасту.",
+      "Gray: То есть, во-первых, это непременный антураж, так сказать, соблюден.",
+      "Gray: У нас в подкасте есть женский голос.",
+      "Gray: Во-вторых, значит, это блондинка.",
+      "Gray: В-третьих, это вице-президент компании IBM.",
+      "Gray: И мы сейчас у нее подробно расспросим, вице-президент, почему именно блондинка.",
+      "Gray: А в-четвертых, это еще и автор очень хорошей книги, которая вышла совсем недавно и успела войти даже в список бестселлеров деловой литературы на Азоне.",
+      "Gray: И, в общем, встречайте, где там, Женя, у тебя были эффекты.",
+      "Gray: В общем, встречайте Инна Кузнецова.",
+      "Umputun: Инна, не жди эффектов, это он так пошутил, неудачно пошутил шутку.",
+      "Umputun: Инна, ты к нам пришла как едина в трех лицах, хотя тут Грэй насчитал четыре."
+    ],
+    "first_lines": [
+      "Ты какое свое лицо считаешь основным?",
+      "Вот блондинка, IBM или книгописатель?",
+      "Я считаю, что я едина, как ты только что заметил.",
+      "Потому что, конечно, одна часть жизни всегда подпитывает другое.",
+      "Моя книга бы не случилась, если бы не случилась моя карьера в IBM."
+    ],
+    "timestamp_sec": 106.73,
+    "timestamp": "1:46",
+    "audio_url": "https://cdn.radio-t.com/rt_podcast221.mp3",
+    "episode_date": "2011-01-09",
+    "total_time": 1572.0,
+    "line_count": 260,
+    "identified_name": "Инна",
+    "source": "контекст: обращение по имени Инна"
+  }
+]

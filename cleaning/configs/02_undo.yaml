@@ -1,0 +1,60 @@
+# Отмена ошибочно присвоенных имён гостей по времени речи
+# Приоритет: 2 (выполняется после нормализации)
+#
+# Анализ показал, что многие гости имеют эпизоды с 1-2 репликами (<2 сек),
+# которые являются ошибками voice assignment (короткие фразы типа "Хорошо", "Нет").
+#
+# Статистика эпизодов с <60 сек речи:
+#   - EldarMurtazin: 182 эпизода (из 268) — 68% ошибок
+#   - Lavale: 120 эпизодов (из 149) — 81% ошибок
+#   - PetrDidenko: 100 эпизодов (из 148) — 68% ошибок
+#   - Marin_k_a: 79 эпизодов (из 286) — 28% ошибок
+#
+# Надёжные гости (всегда с существенным участием):
+#   - Olyapka: 0 эпизодов с <60 сек (30 выпусков, всегда >10 мин)
+#   - Anya: 0 эпизодов с <60 сек (13 выпусков, всегда >12 мин)
+#
+version: 1
+name: "Отмена ошибочных присвоений"
+priority: 2
+
+rules:
+  # === Гости с высоким процентом ошибок ===
+  # Используем уникальные имена для каждого спикера, чтобы можно было
+  # разделить реплики при последующей ручной разметке
+
+  - id: undo_eldar_threshold
+    type: duration_threshold
+    author: "EldarMurtazin"
+    max_duration_sec: 60
+    action:
+      rename_to: "SPEAKER_MISATTRIBUTED_ELDAR"
+    reason: "182 эпизода с <60 сек — 68% всех появлений ошибочны"
+
+  - id: undo_lavale_threshold
+    type: duration_threshold
+    author: "Lavale"
+    max_duration_sec: 60
+    action:
+      rename_to: "SPEAKER_MISATTRIBUTED_LAVALE"
+    reason: "120 эпизодов с <60 сек — 81% всех появлений ошибочны"
+
+  - id: undo_petr_threshold
+    type: duration_threshold
+    author: "PetrDidenko"
+    max_duration_sec: 60
+    action:
+      rename_to: "SPEAKER_MISATTRIBUTED_PETR"
+    reason: "100 эпизодов с <60 сек — 68% всех появлений ошибочны"
+
+  - id: undo_marin_threshold
+    type: duration_threshold
+    author: "Marin_k_a"
+    max_duration_sec: 60
+    action:
+      rename_to: "SPEAKER_MISATTRIBUTED_MARIN"
+    reason: "79 эпизодов с <60 сек — 28% всех появлений ошибочны"
+
+  # === Не требуют undo (надёжные гости) ===
+  # Olyapka — всегда существенное участие (avg 10+ мин на выпуск)
+  # Anya — всегда существенное участие (avg 12+ мин на выпуск)

@@ -1,0 +1,23 @@
+episode: 15
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 2935  # 1418 (Umputun) + 1517 (Bobuk)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Оба ведущих представлены в начале выпуска (Umputun в 6s, Bobuk в 24s)"
+    - "Bobuk явно упоминает Umputun по имени в 43-67s"
+    - "Эпизод записан вдвоем, без гостей"
+
+# Предлагаемые правила очистки
+suggested_rules: []

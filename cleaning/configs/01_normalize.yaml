@@ -1,0 +1,109 @@
+# Нормализация имён спикеров
+# Приоритет: 1 (выполняется первым)
+# Правила сгенерированы на основе people.yaml
+version: 1
+name: "Нормализация имён"
+priority: 1
+
+rules:
+  # === Ведущие ===
+
+  - id: normalize_umputun
+    type: normalize
+    from: [" Umputun", "umputun"]
+    to: "Umputun"
+    reason: "Нормализация имени ведущего"
+
+  - id: normalize_bobuk
+    type: normalize
+    from: ["TheBobuk", " Bobuk"]
+    to: "Bobuk"
+    reason: "Нормализация имени со-ведущего"
+
+  - id: normalize_gray
+    type: normalize
+    from: ["Grey", " Gray", "gray"]
+    to: "Gray"
+    reason: "Нормализация имени со-ведущего"
+
+  - id: normalize_ksenks
+    type: normalize
+    from: ["Ксюша", "Псюша", " Ksenks"]
+    to: "Ksenks"
+    reason: "Нормализация имени со-ведущей"
+
+  - id: normalize_alek_sys
+    type: normalize
+    from: ["Alex.sys", " Alek.sys", "Alek sys"]
+    to: "Alek.sys"
+    reason: "Нормализация имени со-ведущего"
+
+  # === Гости ===
+
+  - id: normalize_marin_k_a
+    type: normalize
+    from: ["Marina", "Марина"]
+    to: "Marin_k_a"
+    reason: "Нормализация имени гостя"
+
+  - id: normalize_eldar_murtazin
+    type: normalize
+    from: ["Эльдар", "Murtazin", "Eldar"]
+    to: "EldarMurtazin"
+    reason: "Нормализация имени гостя"
+
+  - id: normalize_petr_didenko
+    type: normalize
+    from: ["Петя", "Didenko", "Пётр"]
+    to: "PetrDidenko"
+    reason: "Нормализация имени гостя"
+
+  - id: normalize_olyapka
+    type: normalize
+    from: ["Оля"]
+    to: "Olyapka"
+    reason: "Нормализация имени гостя"
+
+  - id: normalize_anya
+    type: normalize
+    from: ["Аня"]
+    to: "Anya"
+    reason: "Нормализация имени гостя"
+
+  - id: normalize_plushev
+    type: normalize
+    from: ["Плющев"]
+    to: "Plushev"
+    reason: "Нормализация имени гостя"
+
+  - id: normalize_artem_rosnovskiy
+    type: normalize
+    from: ["Артём"]
+    to: "ArtemRosnovskiy"
+    reason: "Нормализация имени гостя"
+
+  - id: normalize_golodniy
+    type: normalize
+    from: ["Голодный"]
+    to: "Golodniy"
+    reason: "Нормализация имени гостя"
+
+  - id: normalize_mika
+    type: normalize
+    from: ["Мика"]
+    to: "Mika"
+    reason: "Нормализация имени гостя"
+
+  - id: normalize_vasya_strelnikov
+    type: normalize
+    from: ["Вася"]
+    to: "VasyaStrelnikov"
+    reason: "Нормализация имени гостя"
+
+  # === Специальные ===
+
+  - id: normalize_ad
+    type: normalize
+    from: ["_ad_"]
+    to: "_ad"
+    reason: "Нормализация рекламных вставок"

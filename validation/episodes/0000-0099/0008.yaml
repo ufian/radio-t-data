@@ -1,0 +1,66 @@
+episode: 8
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 2654.4
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "VasyaStrelnikov"
+    total_duration_sec: 33.4
+    replies_count: 8
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "vasya_strelnikov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 624.84s: "И в заключении нашей эпловской темы я предлагаю перейти
+        к проигрыванию первого и единственного на сегодняшний день фидбэка,
+        который нам прислал аудиофидбэк один из наших слушателей."
+
+        Василий сам представляется в 671.62s: "С уважением, ваш слушатель Василий."
+
+        Bobuk в 676.91s подтверждает: "Ну, мне кажется, что Вася просто негодяй..."
+
+      # Не требуется voice comparison
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Специальные спикеры (игнорируются)
+special_speakers_found:
+  - speaker: "_ad"
+    replies_count: 4
+    duration_sec: 7.8
+    note: "Рекламные вставки - игнорируется согласно инструкции"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 8 - ранний выпуск подкаста (2006-10-29).
+
+  VasyaStrelnikov - это слушатель Василий Стрельников, который прислал
+  аудиофидбэк (голосовое сообщение с вопросом). Это НЕ гость в студии,
+  а записанное голосовое сообщение, которое было проиграно во время выпуска.
+
+  Спикер уже корректно идентифицирован в people.yaml как vasya_strelnikov
+  с info: "Выпуск 8". Дополнительных действий не требуется.

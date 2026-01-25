@@ -1,0 +1,55 @@
+episode: 6
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Alex]
+  total_replies: 479
+  total_duration_sec: 2581  # сумма из предрассчитанной статистики: 994 + 1122 + 465
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Alex"
+    total_duration_sec: 465
+    replies_count: 88
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "alex"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале эпизода (35.9s) представился: 'И Алекс из Силиконовой долины.' Активно участвует в обсуждении технических тем (PayPal, Google Checkout, YouTube), рассказывает истории из личного опыта работы в Силиконовой долине."
+
+      # Не требуется - идентифицирован
+      possible_matches: []
+
+      # Voice task не нужен - гость идентифицирован
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарии
+notes: |
+  Эпизод 6 от 2006-10-15 имеет чистую разметку спикеров.
+  Все три участника идентифицированы:
+  - Umputun: ведущий из Чикаго (189 реплик)
+  - Bobuk: ведущий из Москвы (202 реплики)
+  - Alex: гость из Силиконовой долины (88 реплик)
+
+  Alex упоминается в people.yaml как участник выпусков 5, 6, 17.
+  В начале эпизода Umputun говорит "подкаст у нас соображен на троих",
+  затем представляет участников: Бобук из Москвы, Алекс из Силиконовой долины.
+
+# Предлагаемые правила очистки - не требуются
+suggested_rules: []

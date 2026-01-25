@@ -1,0 +1,56 @@
+episode: 2
+status: has_tasks
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 1836  # приблизительно (721+1030+85)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 85
+    replies_count: 16
+    pattern: consecutive  # реплики идут блоками, участвует в диалоге
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: "alex"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun представляет гостя на 164.44s: "И у нас есть сегодня третий гость... известный вам, я надеюсь, многим из вас."
+        2. На 164.44-166.36s Umputun спрашивает: "Как ты себя называешь? Мистер Муви?"
+        3. Гость отвечает на 166.54s: "Мистер Муви ЛХФ."
+        4. На 226.91-229.29s Umputun обращается к гостю по имени: "Как тебе новый iMac, Алекс?"
+        5. В people.yaml есть запись: id: "alex", canonical_name: "Alex", info: "Выпуски 5, 6, 17"
+        6. Это ранний выпуск (2006-09-14), гость участвует осмысленно, обсуждает покупку iMac.
+        7. Вероятно, "Alex" участвовал в большем количестве ранних выпусков, включая выпуск 2.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 2
+    from_speaker: "Guest"
+    to_speaker: "Alex"
+    confidence: high
+    reason: |
+      Гость явно представлен в начале подкаста как "Мистер Муви ЛХФ" и к нему обращаются по имени "Алекс" (226.91s).
+      В справочнике people.yaml уже есть запись для "Alex" (id: alex) с выпусками 5, 6, 17.
+      Выпуск 2 - ранний (2006-09-14), и это логично, что тот же гость участвовал в нескольких ранних выпусках.
+      Рекомендуется также обновить info в people.yaml, добавив выпуск 2 к списку выпусков Alex.

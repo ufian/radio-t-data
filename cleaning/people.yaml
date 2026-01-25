@@ -1,0 +1,138 @@
+# Единый справочник всех участников подкаста Радио-Т
+# Этот файл используется для нормализации имён и связывания участников между выпусками
+version: 1
+
+hosts:
+  - id: "umputun"
+    canonical_name: "Umputun"
+    aliases: [" Umputun", "umputun"]
+    real_name: "Евгений"
+    role: "Ведущий"
+
+  - id: "bobuk"
+    canonical_name: "Bobuk"
+    aliases: ["TheBobuk", " Bobuk"]
+    real_name: "Григорий Бакунов"
+    role: "Ведущий"
+
+  - id: "gray"
+    canonical_name: "Gray"
+    aliases: ["Grey", " Gray", "gray"]
+    real_name: "Евгений"
+    role: "Ведущий"
+
+  - id: "ksenks"
+    canonical_name: "Ksenks"
+    aliases: ["Ксюша", "Псюша", " Ksenks"]
+    real_name: "Ксения"
+    role: "Ведущая"
+
+  - id: "alek_sys"
+    canonical_name: "Alek.sys"
+    aliases: ["Alex.sys", " Alek.sys", "Alek sys"]
+    real_name: "Алексей"
+    role: "Ведущий"
+
+guests:
+  - id: "marin_k_a"
+    canonical_name: "Marin_k_a"
+    aliases: ["Marina", "Марина"]
+    real_name: "Марина"
+    info: "Бывшая ведущая"
+
+  - id: "eldar_murtazin"
+    canonical_name: "EldarMurtazin"
+    aliases: ["Эльдар", "Murtazin", "Eldar"]
+    real_name: "Эльдар Муртазин"
+    info: "Ведущий мобильный аналитик"
+
+  - id: "petr_didenko"
+    canonical_name: "PetrDidenko"
+    aliases: ["Петя", "Didenko", "Пётр"]
+    real_name: "Пётр Диденко"
+    info: "Разработчик, 148 выпусков"
+
+  - id: "olyapka"
+    canonical_name: "Olyapka"
+    aliases: ["Оля"]
+    real_name: "Ольга"
+    info: "Бывшая ведущая"
+
+  - id: "lavale"
+    canonical_name: "Lavale"
+    aliases: []
+    real_name: "Лаваль"
+    info: "Бывшая ведущая"
+
+  - id: "anya"
+    canonical_name: "Anya"
+    aliases: ["Аня"]
+    real_name: "Анна"
+    info: "13 выпусков"
+
+  - id: "plushev"
+    canonical_name: "Plushev"
+    aliases: ["Плющев"]
+    real_name: "Александр Плющев"
+    info: "Журналист, выпуски 194, 211"
+
+  - id: "artem_rosnovsky"
+    canonical_name: "Rosnovsky"
+    aliases: ["Артём"]
+    real_name: "Артём Росновский"
+    info: "Выпуски 69, 101, 106"
+
+  - id: "alexmak"
+    canonical_name: "Alexmak"
+    aliases: []
+    real_name: "Алексей"
+    info: "Выпуски 196, 203"
+
+  - id: "alex"
+    canonical_name: "Alex"
+    aliases: []
+    real_name: "Алекс"
+    info: "Выпуски 5, 6, 17"
+
+  - id: "another_alex"
+    canonical_name: "AnotherAlex"
+    aliases: []
+    real_name: "Алексей"
+    info: "Выпуски 857, 858"
+
+  - id: "grinch"
+    canonical_name: "Grinch"
+    aliases: []
+    real_name: "Гринч"
+    info: "Выпуск 196"
+
+  - id: "golodniy"
+    canonical_name: "Golodniy"
+    aliases: ["Голодный"]
+    real_name: null
+    info: "Выпуск 196"
+
+  - id: "mika"
+    canonical_name: "Mika"
+    aliases: ["Мика"]
+    real_name: null
+    info: "Выпуск 211"
+
+  - id: "vasya_strelnikov"
+    canonical_name: "VasyaStrelnikov"
+    aliases: ["Вася"]
+    real_name: "Василий Стрельников"
+    info: "Выпуск 8"
+
+# Специальные спикеры (не люди)
+special:
+  - id: "ad"
+    canonical_name: "_ad"
+    aliases: ["_ad_"]
+    type: "advertisement"
+
+  - id: "speaker_99"
+    canonical_name: "SPEAKER_99"
+    aliases: []
+    type: "artifact"
+    info: "Аудио-артефакты, джинглы, звуковые эффекты"

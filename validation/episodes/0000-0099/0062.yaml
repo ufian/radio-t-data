@@ -1,0 +1,62 @@
+episode: 62
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Guest1]
+  total_duration_sec: 4376.8
+  notes: >
+    Эпизод от 2007-11-25. Bobuk отсутствует, его заменяет гость Gimles.
+    В начале Umputun объясняет, что выпуск поздний и с соведущим-гостем.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 957.0
+    replies_count: 210
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "gimles"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        В 32.4 сек Umputun прямо обращается: "Гимлес, скажи, ты откуда?"
+        Гость отвечает, что он из Москвы.
+        В 4276.9 сек снова: "Как ты, коллега Гимлис, согласен со мной?"
+        Также в all_identified_guests.md уже есть запись:
+        "62 | Guest1 | Гимлес | high | ведущий назвал"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    Umputun представляет гостя в начале (13.4-32.4 сек),
+    обращается к нему по имени "Гимлес/Гимлис" несколько раз.
+    Гость объясняет, что он из Москвы (как и Bobuk, но с другого конца).
+    Никаких проблем с атрибуцией не выявлено.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 62
+    from_speaker: "Guest1"
+    to_speaker: "Gimles"
+    confidence: high
+    reason: >
+      Гость явно представлен как Гимлес в 32.4 сек.
+      Уже подтверждено в all_identified_guests.md.

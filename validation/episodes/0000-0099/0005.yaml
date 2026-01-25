@@ -1,0 +1,50 @@
+episode: 5
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Alex]
+  total_duration_sec: 2096
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Примечание: В этом эпизоде нет неизвестных спикеров (SPEAKER_*, Guest* и т.п.)
+# Все три спикера идентифицированы: Umputun, Bobuk и Alex
+
+# Анализ гостей
+identified_guests:
+  - speaker: "Alex"
+    total_duration_sec: 500
+    replies_count: 100
+    first_appearance_sec: 39
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alex"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет гостя в начале эпизода (30.71-38.54s):
+        "Алекс, известный подкастер из подкаста из Силиконовой долины,
+        а также из Дольчвили, сегодня у нас в гостях."
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры явно представлены в начале эпизода:
+    - Umputun упоминает себя (17.74-30.67s): "Умпутуна на той стороне из Чикаго"
+    - Umputun упоминает Bobuk (17.74-30.67s): "кроме обычного Бобука из Москвы"
+    - Umputun представляет Alex (30.71-38.54s): "Алекс, известный подкастер..."
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: Правила очистки не требуются - все спикеры корректно идентифицированы

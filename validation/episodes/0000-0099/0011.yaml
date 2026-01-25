@@ -1,0 +1,40 @@
+episode: 11
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 2817.8
+
+# Детали по спикерам
+speakers_details:
+  - speaker: Bobuk
+    replies_count: 249
+    duration_sec: 1496.8
+    first_appearance_sec: 31.0
+  - speaker: Umputun
+    replies_count: 222
+    duration_sec: 1312.9
+    first_appearance_sec: 6.2
+  - speaker: _ad
+    replies_count: 4
+    duration_sec: 8.1
+    first_appearance_sec: 1563.4
+    type: advertisement
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Оба ведущих представлены в начале эпизода:
+    - Umputun представляет себя и Bobuk в первой реплике (6-30 сек)
+    - Bobuk подтверждает представление (31-35 сек)
+    Гостей в этом выпуске нет.
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,27 @@
+episode: 10
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 3052
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Эпизод 10 - юбилейный выпуск (10-й по нумерации с нуля).
+    В начале эпизода ведущие представляются:
+    - Umputun (0:09): "Как обычно, Бобок из Москвы."
+    - Bobuk (0:12): "И Умпутун из Чикаго."
+    Других спикеров в эпизоде нет.
+    Дата: 2006-11-12.
+    Темы: Xbox vs iTV, Microsoft+Novell, Zune, вирус Macarena, MacBook Core 2 Duo, Kodak, Gmail, GPU в суперкомпьютерах.
+
+# Предлагаемые правила очистки
+suggested_rules: []
