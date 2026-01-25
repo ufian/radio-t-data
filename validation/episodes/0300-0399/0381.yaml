@@ -1,0 +1,306 @@
+episode: 381
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 8222
+  notes: |
+    Выпуск от 1 марта 2014 года. В начале Umputun говорит: "Сегодня вместо выбывшего Грея...
+    пришла целая команда подкаста «Разбор полетов»". Gray присоединяется только с 4287 секунды (71 мин).
+    В эпизоде участвует Ksenks (Ксюша), но она ошибочно размечена как SPEAKER_07.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1047
+    replies_count: 194
+    first_appearance_sec: 36
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alexey_abashev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. В начале эпизода (39s) Umputun говорит: "Да-да, это коллеги из подкаста «Разбор полетов»"
+        2. В 2749.7s Umputun обращается: "Понимаешь, у них концептуально есть такая... вещь, Леш..."
+           Перед этим говорил SPEAKER_00.
+        3. В 1342.9s Marin_k_a говорит: "Ну там же Леша просто сказал"
+           В 1344.5s SPEAKER_00 подтверждает: "Да, Леша"
+        4. Подкаст "Разбор полетов" ведут Алексей Абашев и Виктор Гамов (Java-разработчики).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 872
+    replies_count: 228
+    first_appearance_sec: 29
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "viktor_gamov"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Второй ведущий подкаста "Разбор полетов" (Виктор Гамов).
+        2. В начале (42.2s) говорит: "Он ни разу не сказал «Разбор полетов» за все время,
+           пока мы тут общаемся" — типичная шутка соведущего.
+        3. Говорит о Java-темах (TypeScript, JavaScript компиляция в 4278-4314s).
+        4. Объем реплик сопоставим со SPEAKER_00 — оба активные участники.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 369
+    replies_count: 127
+    first_appearance_sec: 102
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. В 993.9s Umputun говорит: "Ксюша, у меня к тебе вопрос" → в 1000.7s SPEAKER_07 отвечает
+        2. В 1718.4s Umputun: "Ксюша, знаешь ли ты такую науку-комбинаторику?" →
+           в 1723.2s SPEAKER_07: "Да, слышала, чуток"
+        3. В 1739.1s SPEAKER_07: "Не, ну так и так, в принципе, понятно" — продолжает разговор
+        4. Обращения к "Ксюше" последовательно получают ответы от SPEAKER_07.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 525
+    replies_count: 81
+    first_appearance_sec: 140
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Уже корректно идентифицирована в справочнике people.yaml как бывшая ведущая Марина.
+        Участвует в технических обсуждениях (монады, функциональное программирование).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 37
+    replies_count: 18
+    first_appearance_sec: 54
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие разрозненные реплики (37 сек на 18 реплик = ~2 сек в среднем).
+        Типичные фразы: "Ну да, может быть 10", "Берите", "А что?".
+        Вероятно ошибки распознавания одного из присутствующих спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Может быть ошибка распознавания Ксюши"
+        - person_id: "alexey_abashev"
+          confidence: 0.3
+          reason: "Или одного из гостей из Разбор полетов"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5024.8
+          etime: 5029.5
+          text: "Да, но быстро закончится это парное программирование, ты останешься один."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 26
+    replies_count: 6
+    first_appearance_sec: 380
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Название указывает на ошибочную атрибуцию к Эльдару Муртазину.
+        6 коротких реплик, разбросанных по эпизоду.
+        Реплики по содержанию относятся к Java-разработке ("саджавийские чуваки", "BlueSync").
+        Скорее всего ошибки распознавания SPEAKER_00 или SPEAKER_04.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alexey_abashev"
+          confidence: 0.5
+          reason: "Java-тематика реплик, соответствует профилю"
+        - person_id: "viktor_gamov"
+          confidence: 0.5
+          reason: "Также Java-разработчик"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 10
+    replies_count: 5
+    first_appearance_sec: 1187
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        5 очень коротких реплик (всего 10 секунд).
+        Типичные фразы: "Да", "Шампанского", "Очень интересно, расскажи".
+        Ошибки распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Короткие одобрительные реплики"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 1
+    replies_count: 1
+    first_appearance_sec: 7256
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика в 1 секунду: "Есть такое, да."
+        Очевидная ошибка распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Gray"
+    total_duration_sec: 56
+    replies_count: 6
+    first_appearance_sec: 4287
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "gray"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Gray появляется только с 4287 секунды (71 минута эпизода).
+        В начале (12s) Umputun говорит: "Сегодня вместо выбывшего Грея... по понятным причинам".
+        Вероятно Gray присоединился к трансляции позже.
+        Содержание реплик техническое, соответствует стилю Gray.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_07"
+      issue: "Ksenks (Ксюша) участвует в эпизоде, но размечена как SPEAKER_07. Нужно переименовать."
+    - speaker: "SPEAKER_00"
+      issue: "Алексей Абашев из 'Разбор полетов' не представлен по имени, но идентифицирован через обращение 'Леша'"
+    - speaker: "SPEAKER_04"
+      issue: "Виктор Гамов из 'Разбор полетов' не представлен по имени напрямую"
+    - speaker: "Gray"
+      issue: "Появляется только с 4287s, хотя в начале сказано что он 'выбыл'"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 381
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Отвечает на прямые обращения к Ксюше в нескольких местах эпизода"
+
+  - type: rename
+    episode: 381
+    from_speaker: "SPEAKER_00"
+    to_speaker: "AlexeyAbashev"
+    confidence: high
+    reason: "Ведущий подкаста 'Разбор полетов', обращаются как 'Леша'"
+
+  - type: rename
+    episode: 381
+    from_speaker: "SPEAKER_04"
+    to_speaker: "ViktorGamov"
+    confidence: high
+    reason: "Второй ведущий подкаста 'Разбор полетов'"
+
+# Новые гости для добавления в people.yaml
+new_guests_for_registry:
+  - id: "alexey_abashev"
+    canonical_name: "AlexeyAbashev"
+    aliases: ["Алексей", "Леша", "Лёша", "Abashev"]
+    real_name: "Алексей Абашев"
+    info: "Ведущий подкаста 'Разбор полетов', Java-разработчик"
+
+  - id: "viktor_gamov"
+    canonical_name: "ViktorGamov"
+    aliases: ["Виктор", "Витя", "Gamov"]
+    real_name: "Виктор Гамов"
+    info: "Ведущий подкаста 'Разбор полетов', Java-разработчик"

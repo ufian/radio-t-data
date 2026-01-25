@@ -1,0 +1,178 @@
+episode: 397
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Дмитрий (SPEAKER_04), Руслан (SPEAKER_06)]
+  total_duration_sec: 7009  # приблизительно по последней реплике
+
+# Критические проблемы
+critical_issues:
+  - issue: "EldarMurtazin ошибочно присвоен"
+    evidence:
+      - "2515.95s: Umputun говорит 'Жалко нет Эльдара, который бы наверняка разбил бы всю эту идею'"
+      - "3383.07s: Umputun говорит 'Мое такое сугубое мнение, жалко нет Эльдара, он бы нам добавил'"
+    conclusion: "Эльдар Муртазин НЕ участвовал в этом выпуске. Все 24 реплики EldarMurtazin ошибочны."
+    recommended_action: "Переименовать EldarMurtazin -> SPEAKER_04 (Дмитрий)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 939
+    replies_count: 175
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null  # Не зарегистрирован в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        44.19s: Umputun говорит "Это я про тебя, Дмитрий"
+        224.41s: Umputun говорит "молодой наш Дмитрий"
+        288.08s: Umputun говорит "Дмитрий, как молодой, молодым у нас везде дорога"
+      real_name: "Дмитрий"
+      notes: |
+        Представлен как "молодой" гость, "буквально руки со скамейки запасных".
+        Описан как тот, кто "никогда в NBA не играл" (т.е. новичок в подкасте).
+        Активно участвует в технических дискуссиях про Docker, Go, FPGA.
+      possible_matches: []
+      voice_task:
+        needed: false  # Уже идентифицирован по имени
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 255
+    replies_count: 59
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null  # Не зарегистрирован в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        52.96s: Umputun спрашивает "Руслан, два раза?"
+        54.43s: SPEAKER_06 отвечает "Да, правда, два раза был"
+        64.65s: Umputun говорит "Или отключай, Руслан"
+        1393.7s: SPEAKER_04 говорит "Да, да, я полностью согласен с Русланом"
+      real_name: "Руслан"
+      notes: |
+        Представлен как гость, который уже был на подкасте 2 раза.
+        Umputun отмечает, что его "не отключали досрочно, что редкость".
+        Активно участвует в технических дискуссиях.
+      possible_matches: []
+      voice_task:
+        needed: false  # Уже идентифицирован по имени
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 106
+    replies_count: 24
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин НЕ участвовал в выпуске 397.
+        Прямое доказательство: Umputun дважды говорит "жалко нет Эльдара":
+        - 2515.95s: "Жалко нет Эльдара, который бы наверняка разбил бы всю эту идею"
+        - 3383.07s: "жалко нет Эльдара, он бы нам добавил"
+        Все реплики EldarMurtazin являются ошибочной разметкой.
+      likely_real_speaker: "SPEAKER_04"
+      evidence_for_reassignment: |
+        Первая реплика EldarMurtazin (302.46s) идёт сразу после SPEAKER_04 (301.66s)
+        и продолжает ту же тему (Docker, VirtualInf, контейнеризация).
+        Следующая реплика SPEAKER_04 (309.18s) продолжает тот же монолог.
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 10
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика в 3632.9s: "Наверное, нас скоро ждет следующий этап развития..."
+        Сразу после неё SPEAKER_04 продолжает ту же мысль (3643.35s):
+        "То есть копировать данные, например, на DigitalOcean из Амазона..."
+        Это явно часть одного монолога SPEAKER_04.
+      likely_real_speaker: "SPEAKER_04"
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная короткая реплика в 1816.61s: "Потому что никто еще в жизни не попользовался"
+        Скорее всего ошибка распознавания - короткая фраза в случайный момент.
+      likely_real_speaker: "unknown"
+      notes: "Недостаточно контекста для определения реального спикера"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале выпуска (34-67s) Umputun представляет обоих гостей:
+    - Дмитрий: "Это я про тебя, Дмитрий" (44.19s), описан как новичок
+    - Руслан: "Руслан, два раза?" (52.96s), был 2 раза ранее
+    Bobuk отсутствует в начале, появляется позже (421.58s)
+    Ksenks отсутствует ("пропали одновременно и Ксюша, и Бобок")
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: |
+        Эльдар НЕ был представлен и НЕ присутствовал в выпуске.
+        Umputun дважды говорит "жалко нет Эльдара".
+        Все реплики EldarMurtazin - ошибка разметки.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 397
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_04"
+    confidence: high
+    reason: |
+      Эльдар Муртазин НЕ участвовал в выпуске (доказано фразами Umputun).
+      Реплики по контексту принадлежат SPEAKER_04 (Дмитрий).
+
+  - type: rename
+    episode: 397
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "SPEAKER_04"
+    confidence: high
+    reason: |
+      Единственная реплика является частью монолога SPEAKER_04.
+      Контекст и содержание совпадают.
+
+  - type: delete_or_merge
+    episode: 397
+    speaker: "SPEAKER_05"
+    confidence: medium
+    reason: |
+      Единственная короткая реплика, скорее всего ошибка распознавания.
+      Требуется voice comparison для точного определения.
+
+# Задачи для дальнейшей работы
+tasks:
+  - type: add_to_people_yaml
+    priority: high
+    description: |
+      Добавить двух новых гостей в people.yaml:
+      1. Дмитрий - молодой разработчик, первое появление
+      2. Руслан - был 2 раза ранее на подкасте
+    note: "Требуется найти фамилии/никнеймы для полной идентификации"
+
+  - type: find_previous_episodes
+    priority: medium
+    description: |
+      Найти 2 предыдущих выпуска с участием Руслана
+      для установления его полного имени и person_id
+
+  - type: voice_comparison
+    priority: low
+    speaker: "SPEAKER_05"
+    description: |
+      Определить, кому принадлежит единственная реплика SPEAKER_05
+    reference_segment:
+      stime: 1816.61
+      etime: 1819.86
+      text: "Потому что никто еще в жизни не попользовался"

@@ -1,0 +1,210 @@
+episode: 399
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  # Gray отсутствует - это явно указано в начале выпуска: "Состав у нас все, кроме Грея"
+  # Также участвуют: Marin_k_a (Марина, бывшая ведущая) и Ksenks (под SPEAKER_01)
+  total_duration_sec: 7883
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 317
+    replies_count: 127
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация: это Ksenks (Ксюша)
+      # Доказательства:
+      # 1. В начале выпуска Umputun представляет состав: "Бобук... и Ксюша" (50-55s)
+      # 2. Ksenks НЕ появляется ни разу как author в этом выпуске
+      # 3. Umputun неоднократно обращается к "Ксюше", и отвечает SPEAKER_01
+      #    Пример: 4765s "Ксюша, ты читала статью..." -> 4771s SPEAKER_01: "Ну вот я сейчас в процессе..."
+      # 4. Marin_k_a и SPEAKER_01 - разные люди, чередуются в диалогах
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет Ksenks в начале (50s): "И есть Ксюша..."
+        Обращения к Ксюше с ответами SPEAKER_01:
+        - 4765s: "Ксюша, ты читала статью..." -> 4771s SPEAKER_01: "Ну вот я сейчас в процессе..."
+        - 4817s: Bobuk: "Ксюша?" -> 4822s SPEAKER_01: "Почему?"
+        В эпизоде нет ни одной реплики от автора "Ksenks", но есть 127 реплик SPEAKER_01.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 679
+    replies_count: 165
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация: гость "Алексей"
+      # Это слушатель из чата, который раньше защищал Ruby
+      identified_as: null  # Неизвестный гость, нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun зовёт гостя по имени (4743s): "Алексей?"
+        Гость отвечает (4749s): "Да, я уже второй раз Ruby защищал у вас."
+        Контекст: дискуссия о переходе TJ Holowaychuk с Node.js на Go.
+        Гость активно участвует в обсуждении Go vs Node.js/Ruby.
+
+      possible_matches:
+        - person_id: "new_guest_alexey_ruby"
+          confidence: 0.9
+          reason: "Представился как Алексей, говорит что второй раз защищал Ruby"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5022.75
+          etime: 5046.42
+          text: "Да, кстати, ещё. Ну, он очень интересный чувак, потому что у него нет формального образования. Он всё освоил сам. И вот на это все обращают внимание — как это он умудрился без формального образования."
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 597
+    replies_count: 112
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это Марина - бывшая ведущая, известный участник
+      identified_as: "marin_k_a"
+      identification_method: "known_participant"
+      confidence: high
+      evidence: "Marin_k_a - известный участник из people.yaml (бывшая ведущая Марина)"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 5
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (всего 5 сек на 4 реплики), разбросаны по эпизоду:
+        - 1586s: "Меня не угнетает." (1 сек) - в контексте слов Bobuk
+        - 2830s: "Нет." (0.2 сек) - одно слово
+        - 4912s: "Хочешь, я тебе расскажу?" (2.5 сек) - после вопроса к Ксюше
+        - 4940s: "Наоборот." (1 сек) - одно слово
+        Это ошибки распознавания, скорее всего перебивки других спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплика 4912s идёт сразу после вопроса к Ксюше - может быть её ответ"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Marin_k_a также активна в этом эпизоде"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна короткая реплика (1 сек) в 3834s: "Мне понадобилось поднять Private Registry."
+        Контекст: Umputun рассказывает о Docker Registry, и эта реплика - часть его рассказа.
+        Маркер MISATTRIBUTED указывает, что это уже была отмечена как ошибочная атрибуция.
+        Скорее всего это реплика Umputun, ошибочно вырезанная как отдельный спикер.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.8
+          reason: "Реплика в контексте монолога Umputun о Docker Registry"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "Должен быть переименован в Ksenks - это явно Ксюша на основании контекста"
+    - speaker: "SPEAKER_02"
+      issue: "Гость 'Алексей' не добавлен в people.yaml - нужно создать запись"
+    - speaker: "SPEAKER_05"
+      issue: "Ошибки распознавания - нужно проверить и переатрибутировать"
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Скорее всего реплика Umputun - требует проверки"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 399
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun представляет Ksenks в начале выпуска.
+      Все обращения к "Ксюше" получают ответы от SPEAKER_01.
+      В эпизоде нет реплик от автора "Ksenks", но есть 127 реплик SPEAKER_01.
+
+  - type: rename
+    episode: 399
+    from_speaker: "SPEAKER_02"
+    to_speaker: "GuestAlexey399"
+    confidence: high
+    reason: |
+      Umputun зовёт гостя "Алексей" в 4743s.
+      Гость представляется: "второй раз Ruby защищал у вас".
+      Нужно также добавить в people.yaml.
+
+  - type: rename
+    episode: 399
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: |
+      Реплика в контексте монолога Umputun о Docker.
+      Требует дополнительной проверки по голосу.
+
+# Примечания
+notes: |
+  Эпизод 399 от 5 июля 2014 года.
+  Состав: Umputun, Bobuk, Ksenks (как SPEAKER_01), Marin_k_a.
+  Gray отсутствует (явно указано в начале).
+
+  Гость: Алексей (SPEAKER_02) - слушатель из чата, защищал Ruby ранее.
+  Появляется с 4750s, активно участвует в обсуждении Go vs Node.js.
+
+  SPEAKER_05 - ошибки распознавания (4 короткие реплики).
+  SPEAKER_MISATTRIBUTED_PETR - уже помечена как ошибка, 1 реплика.

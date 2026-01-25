@@ -1,0 +1,224 @@
+episode: 307
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Lavale, Marin_k_a]
+  new_host_debut: Ksenks  # дебют как постоянная ведущая
+  total_duration_sec: 7800  # ~2h 10min
+
+notes: |
+  Эпизод 307 (22 сентября 2012) — исторический выпуск, в котором представлена
+  новая постоянная ведущая Ksenks (Ксения/Алиса). Gray упоминается как отсутствующий
+  в начале эпизода ("есть еще Грей, но Грей отсутствует"). Присутствуют бывшие
+  ведущие Lavale и Marin_k_a как гости.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 589
+    replies_count: 180
+    pattern: consecutive
+    first_appearance_sec: 252.85
+
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. В 241-250 сек Umputun говорит: "И поэтому мы выбрали самую целебную,
+           самую подходящую нам кандидатку... И приветствуем ее сегодня первый раз
+           в этой студии... в качестве ведущей. Ура!"
+        2. Bobuk говорит "Здравствуй, дорогая" (250.91s), и SPEAKER_02 отвечает "Привет" (252.85s)
+        3. По тексту её называют "Алиса" (например, "Алиса, ты меня не путай" - строки 7651, 10747)
+        4. SPEAKER_02 использует женский род: "Я тоже очень рада" (307.83s),
+           "Я пробежала с глазами" (1798.57s), "я стану ведущей" (5144.57s)
+        5. Ksenks в справочнике people.yaml имеет alias "Ксюша", и в эпизоде
+           упоминается "приходила к Ксюше несколько раз" (204.7s)
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Lavale"
+    total_duration_sec: 246
+    replies_count: 32
+    pattern: consecutive
+    first_appearance_sec: 322.67
+
+    analysis:
+      is_error: false
+      identified_as: "lavale"
+      identification_method: "already_identified"
+      confidence: high
+      evidence: |
+        Lavale уже идентифицирована в справочнике people.yaml как бывшая ведущая.
+        Присутствует в этом эпизоде как гость вместе с Marin_k_a.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 70
+    replies_count: 11
+    pattern: consecutive
+    first_appearance_sec: 577.07
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "already_identified"
+      confidence: high
+      evidence: |
+        Marin_k_a уже идентифицирована в справочнике people.yaml как Марина,
+        бывшая ведущая. В эпизоде есть упоминание "правду про Маринку" (6908.16s).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Gray"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 185.55
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Gray явно упомянут как ОТСУТСТВУЮЩИЙ в начале эпизода (77.92s):
+        "то есть есть еще Грей, но Грей отсутствует".
+        Две короткие реплики (185.55s "Какие другие?" и 895.10s "Ты будь аккуратней")
+        скорее всего ошибочно атрибутированы — это могут быть реплики Bobuk или Umputun.
+
+      identified_as: null
+      confidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Реплики звучат как комментарии соведущего, Gray отсутствует"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Альтернативный вариант атрибуции"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 185.55
+          etime: 186.19
+          text: "Какие другие?"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 7594.97
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Или паркуется" (3.5 сек) в конце подкаста (7595s).
+        Вероятно это ошибочно выделенная реплика одного из участников —
+        скорее всего Ksenks (SPEAKER_02), учитывая женский характер комментария.
+
+      identified_as: null
+      confidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Стиль комментария похож на SPEAKER_02, активную в этом эпизоде"
+        - person_id: "lavale"
+          confidence: 0.2
+          reason: "Альтернативный вариант — другая женщина-участница"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7594.97
+          etime: 7598.51
+          text: "Или паркуется."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 4100.32
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна очень короткая обрывочная реплика "Я считаю, что..." (0.52 сек)
+        между двумя репликами Bobuk. Эльдар Муртазин не участвовал в этом эпизоде.
+        Это явно ошибочно отделённая часть речи Bobuk — он говорит
+        "У меня есть по этому поводу теория" (4098.76s), затем идёт этот обрывок,
+        и сразу продолжение Bobuk "Сначала большим-большим-большим злом стала компания IBM" (4101.93s).
+
+      identified_as: null
+      confidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.95
+          reason: "Обрывок между репликами Bobuk, часть его монолога"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray помечен как спикер (2 реплики), но в начале эпизода явно сказано,
+        что он отсутствует. Требуется проверка — возможно ошибочная атрибуция.
+    - speaker: "SPEAKER_02"
+      issue: |
+        Основная новая ведущая (Ksenks) помечена как SPEAKER_02 вместо
+        канонического имени. Требуется переименование.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 307
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_02 — это дебют Ksenks как постоянной ведущей. Явное представление
+      в начале эпизода, обращение по имени "Алиса" по ходу подкаста,
+      использование женского рода в речи.
+
+  - type: rename
+    episode: 307
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: high
+    reason: |
+      Обрывочная реплика (0.52 сек) между двумя репликами Bobuk.
+      Эльдар Муртазин не участвовал в эпизоде.
+
+  - type: investigate
+    episode: 307
+    speaker: "Gray"
+    confidence: medium
+    reason: |
+      Gray объявлен отсутствующим в начале эпизода, но имеет 2 короткие реплики.
+      Требуется voice comparison для определения реального спикера.
+
+  - type: investigate
+    episode: 307
+    speaker: "SPEAKER_03"
+    confidence: medium
+    reason: |
+      Единственная короткая реплика в конце эпизода. Вероятно Ksenks,
+      но требуется подтверждение.

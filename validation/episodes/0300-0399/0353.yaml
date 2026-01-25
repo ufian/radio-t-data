@@ -1,0 +1,306 @@
+episode: 353
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_identified: [Marin_k_a]
+  total_hosts_duration_sec: 3448  # Umputun 3293 + Gray 141 + Bobuk 14
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 889
+    replies_count: 205
+    first_appearance_sec: 105
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "viktor_gamov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "110.4s: 'Да, всем привет, с вами Виктор Гамов, известный также по подкасту Разбор полетов.'"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 602
+    replies_count: 107
+    first_appearance_sec: 144
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "alexey_abashov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "167.8s: 'Меня зовут Абашов Алексей. Я тоже из дружественного подкаста Разбор полетов.'"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 532
+    replies_count: 124
+    first_appearance_sec: 227
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "kirill_titov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "247s: 'Меня зовут Кирилл Титов, я из города-героя Киева... И работаю в одном большом фотостоке.'"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 879
+    replies_count: 160
+    first_appearance_sec: 2377
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "ivan_it_consultant"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "2420s: 'Меня зовут Иван. Я занимаюсь IT-консалтингом. Вытаскиваю разные компании из всяких IT-кризисов.'"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 515
+    replies_count: 193
+    first_appearance_sec: 37
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Контекст начала выпуска: Umputun говорит 'Ксюша сказала нагло',
+        затем SPEAKER_01 отвечает. Umputun обращается к Ксюше напрямую,
+        а SPEAKER_01 отвечает. Паттерн совпадает с ведущей Ksenks.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 471
+    replies_count: 85
+    first_appearance_sec: 67
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "existing_label"
+      confidence: high
+      evidence: "Уже размечена как Marin_k_a (Марина, бывшая ведущая согласно people.yaml)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 61
+    replies_count: 12
+    first_appearance_sec: 814
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "artem_guest"
+      identification_method: "introduction"
+      confidence: medium
+      evidence: >
+        813.5s: 'Меня зовут Артем. Возможно, меня кто-то по голосу уже узнал, что я тут был.'
+        Гость говорит, что уже был на подкасте ранее. Говорит о Debian и BigBlueButton.
+        Может быть Артём Росновский (был на выпусках 69, 101, 106) но требует voice comparison.
+      possible_matches:
+        - person_id: "artem_rosnovsky"
+          confidence: 0.4
+          reason: "Был на Radio-T ранее, упомянул это. Но нет явного подтверждения имени."
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 827.24
+          etime: 842.68
+          text: "Делали мы сервер сначала OpenMeeting, потом BigBlueButton. Кто не в курсе, это две таких штуковины, которые позволяют делать в локальных сетках такой сервер для видеоконференций."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 56
+    replies_count: 8
+    first_appearance_sec: 479
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Это отменённые присвоения спикера EldarMurtazin.
+        Реплики разбросаны (479s, 3140s, 5409s, 5948s, 6153s, 6263s, 6617s, 6644s).
+        Содержание реплик не соответствует Эльдару - это технические комментарии гостей.
+        Скорее всего это ошибки распознавания других спикеров (возможно гостей из Разбор полетов).
+      identified_as: null
+      possible_matches:
+        - person_id: "viktor_gamov"
+          confidence: 0.3
+          reason: "Некоторые реплики могут принадлежать Гамову по контексту"
+        - person_id: "alexey_abashov"
+          confidence: 0.3
+          reason: "Некоторые реплики могут принадлежать Абашову"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5409.17
+          etime: 5419.47
+          text: "Люди подходят после этой вещи и говорят, слушайте, откуда у вас время нахрен на это все, что вот вы тут все это дело рассказываете и вы вроде еще в этом всем разбираетесь и так далее."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 4
+    replies_count: 2
+    first_appearance_sec: 1016
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Это отменённые присвоения спикера PetrDidenko.
+        Всего 2 коротких реплики (1015s и 1088s) - вероятно ошибки распознавания.
+        Контекст не соответствует Петру Диденко.
+      identified_as: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 6
+    replies_count: 4
+    first_appearance_sec: 6112
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Реплики в конце выпуска (6111-6125s): 'Приглашаем найти события нового формата',
+        '24 и 25 августа', 'Таллинн', 'Бесплатный вход и участие'.
+        Это явно рекламное объявление или джингл, должен быть SPEAKER_99 или _ad.
+      identified_as: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 4
+    replies_count: 2
+    first_appearance_sec: 1687
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Всего 2 короткие реплики: 'Да.' (1687s) и 'Голубой вагон, который пока целый.' (3684s).
+        Разбросаны по времени, короткие - скорее всего ошибки распознавания кого-то из гостей.
+      identified_as: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    Выпуск 353 - спецвыпуск с гостями из подкаста "Разбор полетов" (Виктор Гамов, Алексей Абашов)
+    и слушателями (Кирилл Титов, Иван, Артем). Все основные гости представились в начале.
+    Gray появляется с 1129s, Bobuk с 4177s - они присоединились позже.
+    SPEAKER_01 с высокой вероятностью = Ksenks (193 реплики, 515 сек с самого начала).
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "Не размечен как Ksenks, хотя контекст явно указывает на это (обращения 'Ксюша' от Umputun)"
+    - speaker: "SPEAKER_00"
+      issue: "Рекламный блок/джингл размечен как спикер, должен быть _ad или SPEAKER_99"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Отменённые присвоения требуют переатрибуции к реальным спикерам"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 353
+    from_speaker: "SPEAKER_05"
+    to_speaker: "ViktorGamov"
+    confidence: high
+    reason: "Явное представление: 'с вами Виктор Гамов, известный также по подкасту Разбор полетов'"
+
+  - type: rename
+    episode: 353
+    from_speaker: "SPEAKER_07"
+    to_speaker: "AlexeyAbashov"
+    confidence: high
+    reason: "Явное представление: 'Меня зовут Абашов Алексей. Я тоже из дружественного подкаста Разбор полетов.'"
+
+  - type: rename
+    episode: 353
+    from_speaker: "SPEAKER_06"
+    to_speaker: "KirillTitov"
+    confidence: high
+    reason: "Явное представление: 'Меня зовут Кирилл Титов, я из города-героя Киева'"
+
+  - type: rename
+    episode: 353
+    from_speaker: "SPEAKER_02"
+    to_speaker: "IvanITConsultant"
+    confidence: high
+    reason: "Явное представление: 'Меня зовут Иван. Я занимаюсь IT-консалтингом.'"
+
+  - type: rename
+    episode: 353
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Контекст: Umputun обращается 'Ксюша', SPEAKER_01 отвечает. 193 реплики с начала выпуска."
+
+  - type: rename
+    episode: 353
+    from_speaker: "SPEAKER_00"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Рекламный блок: 'Приглашаем найти события нового формата. 24 и 25 августа. Таллинн.'"
+
+  - type: delete
+    episode: 353
+    speaker: "SPEAKER_08"
+    confidence: medium
+    reason: "Короткие разбросанные реплики - ошибки распознавания. Можно слить с ближайшим спикером."
+
+# Гости для добавления в people.yaml
+new_guests_to_add:
+  - id: "viktor_gamov"
+    canonical_name: "ViktorGamov"
+    aliases: ["Виктор", "Гамов"]
+    real_name: "Виктор Гамов"
+    info: "Подкастер, соведущий 'Разбор полетов', выпуск 353"
+
+  - id: "alexey_abashov"
+    canonical_name: "AlexeyAbashov"
+    aliases: ["Алексей", "Абашов"]
+    real_name: "Алексей Абашов"
+    info: "Подкастер, соведущий 'Разбор полетов', выпуск 353"
+
+  - id: "kirill_titov"
+    canonical_name: "KirillTitov"
+    aliases: ["Кирилл", "Титов"]
+    real_name: "Кирилл Титов"
+    info: "Слушатель из Киева, работает в фотостоке, выпуск 353"
+
+  - id: "ivan_it_consultant"
+    canonical_name: "IvanITConsultant"
+    aliases: ["Иван"]
+    real_name: "Иван"
+    info: "IT-консультант, выпуск 353"

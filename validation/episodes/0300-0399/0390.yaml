@@ -1,0 +1,226 @@
+episode: 390
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  # Ksenks присутствует, но размечена как Marin_k_a/SPEAKER_02/SPEAKER_01
+  total_duration_sec: 7060  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 571
+    replies_count: 83
+    pattern: consecutive  # Чередуется с SPEAKER_02
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная атрибуция. Umputun многократно обращается к 'Ксюша' (Ksenks) на протяжении всего выпуска (183s, 1580s, 1701s, 2146s, 2249s, 2336s, 2528s, 3178s, 3752s и др.), а Марина ни разу не упоминается. В начале эпизода Umputun говорит 'выпуск 390 в классическом полном составе'. Контент реплик соответствует участию в дискуссии как ведущей."
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "183s Umputun: 'Ну что, Ксюша, хочу тебя спросить, как самую молодую' -> SPEAKER_02 отвечает"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 509
+    replies_count: 190
+    pattern: consecutive  # Чередуется с Marin_k_a
+
+    analysis:
+      is_error: true
+      error_reason: "Тот же голос что и Marin_k_a, разбитый системой распознавания. Реплики идут вперемешку с Marin_k_a, формируя единую линию диалога."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "186s после обращения Umputun к 'Ксюша' отвечает SPEAKER_02: 'Я тоже, да', затем 'Я не так молода'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 18
+    replies_count: 9
+    pattern: scattered  # Короткие реплики в случайные моменты
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики разбросаны по эпизоду. Одна реплика явно женского рода (2367s: 'я прошла сверху на горы и спустилась') указывает на женский голос - скорее всего тоже Ksenks, но требуется voice comparison."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: "2367s: 'Ну, ладно, я прошла сверху на горы и спустилась с другой стороны' - женский род"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Женский род в речи, контекст диалога"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2366.62
+          etime: 2370.94
+          text: "Да, конечно. Ну, ладно, я прошла сверху на горы и спустилась с другой стороны."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (<2 сек каждая), разбросаны. Скорее всего ошибки распознавания одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Возможно тот же голос"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможно Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6878.19
+          etime: 6880.27
+          text: "Слушай, а не страшно ли? Нет?"
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие односложные реплики (<1 сек): 'Кошмар какой-то', 'Не знаю', 'Давай'. Типичные ошибки распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Короткие реакции могут быть от любого ведущего"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Короткие реакции могут быть от любого ведущего"
+
+      voice_task:
+        needed: false  # Слишком короткие для идентификации
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна реплика (7047s: 'Ну, к счастью, не последнего'). Название спикера указывает на ранее отменённую ошибочную атрибуцию Эльдару Муртазину. Эльдар не участвует в этом эпизоде."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Контекст: Umputun говорит 'У нас много неосмотренного', затем эта реплика, затем Gray продолжает"
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплика между Umputun и Gray, скорее всего Gray"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Возможно Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7047.47
+          etime: 7049.47
+          text: "Ну, к счастью, не последнего."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: "Не размечена как Ksenks. Вместо неё: Marin_k_a (83 реплики), SPEAKER_02 (190 реплик), возможно SPEAKER_01 (9 реплик). Umputun многократно обращается к 'Ксюша', подтверждая её присутствие."
+    - speaker: "Marin_k_a"
+      issue: "Марина не упоминается в эпизоде, но размечена как спикер. Это ошибка - на самом деле это Ksenks."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 390
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Umputun многократно обращается к 'Ксюша', Марина не упоминается. В начале: 'полный классический состав'."
+
+  - type: rename
+    episode: 390
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Тот же голос что Marin_k_a, чередуются в диалогах. Umputun обращается к 'Ксюша' перед репликами SPEAKER_02."
+
+  - type: rename
+    episode: 390
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Женский род в речи ('прошла', 'спустилась'). Требуется voice comparison для подтверждения."
+
+  - type: rename
+    episode: 390
+    from_speaker: "SPEAKER_05"
+    to_speaker: "SPEAKER_UNIDENTIFIED"
+    confidence: low
+    reason: "Слишком короткие реплики для идентификации без voice comparison."
+
+  - type: rename
+    episode: 390
+    from_speaker: "SPEAKER_07"
+    to_speaker: "SPEAKER_UNIDENTIFIED"
+    confidence: low
+    reason: "Односложные реплики, невозможно идентифицировать без voice comparison."
+
+  - type: rename
+    episode: 390
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "SPEAKER_UNIDENTIFIED"
+    confidence: low
+    reason: "Одна короткая реплика, требуется voice comparison. Скорее всего Gray или Bobuk."
+
+# Комментарии
+notes: |
+  Главная проблема эпизода: Ksenks полностью отсутствует как спикер, хотя:
+  1. Umputun в начале говорит "выпуск 390 в классическом полном составе"
+  2. Umputun многократно обращается к "Ксюша" (17+ раз по тексту)
+  3. Marin_k_a (Марина) ни разу не упоминается
+
+  Реплики Ksenks распределены между:
+  - Marin_k_a: 83 реплики, 571 сек
+  - SPEAKER_02: 190 реплик, 509 сек
+  - SPEAKER_01: 9 реплик, 18 сек (вероятно)
+
+  Итого ~1080 сек (~18 минут) - соответствует типичному участию ведущей.
+
+  Рекомендация: объединить Marin_k_a и SPEAKER_02 в Ksenks с высокой уверенностью.
+  SPEAKER_01 требует voice comparison для подтверждения.

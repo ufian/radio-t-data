@@ -1,0 +1,255 @@
+episode: 325
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [EldarMurtazin]
+  total_duration_sec: 7600  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # --- EldarMurtazin: уже идентифицирован, 456 реплик ---
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1896
+    replies_count: 456
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun на 49.8s: 'Эльдар, здравствуй', SPEAKER_00 на 51.4s отвечает 'Привет, ребят', затем EldarMurtazin появляется как спикер с 94.58s"
+
+  # --- Marin_k_a: ОШИБКА - это на самом деле Ksenks ---
+  - speaker: "Marin_k_a"
+    total_duration_sec: 931
+    replies_count: 216
+    pattern: consecutive
+    analysis:
+      is_error: false  # спикер реальный, но неправильно идентифицирован
+      error_reason: null
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. На 1304.78s Umputun говорит: "Ксюшенька появилась, рыбонька"
+        2. Сразу после этого (1307.56s) Marin_k_a говорит: "Привет всем"
+        3. На 6916.68s Umputun говорит: "Ксюша, расскажи пока что-нибудь"
+        4. На 6919.67s отвечает Marin_k_a
+        Marin_k_a в people.yaml - это Марина (бывшая ведущая), но в этом эпизоде
+        это явно Ksenks (Ксения), которую называют "Ксюша/Ксюшенька"
+
+  # --- SPEAKER_00: 4 реплики, требует разбора ---
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+    analysis:
+      is_error: false  # часть реплик - Эльдар, часть - ошибки распознавания
+
+      # Разбор по репликам:
+      detailed_breakdown:
+        - stime: 51.4
+          etime: 52.98
+          text: "Привет, ребят."
+          verdict: "EldarMurtazin"
+          confidence: high
+          reason: "Umputun только что сказал 'Эльдар, здравствуй' (49.8s)"
+
+        - stime: 3445.12
+          etime: 3445.42
+          text: "А почему нет Cisco?"
+          verdict: "unknown_short_interjection"
+          confidence: low
+          reason: "Очень короткая реплика (0.3 сек), вставлена между репликами Gray. Может быть любой участник."
+
+        - stime: 5012.68
+          etime: 5013.1
+          text: "Нет."
+          verdict: "unknown_short_interjection"
+          confidence: low
+          reason: "Односложный ответ на вопрос Umputun. Может быть любой участник."
+
+        - stime: 5301.21
+          etime: 5305.34
+          text: "Спариваться на ходу небезопасно?"
+          verdict: "likely_EldarMurtazin_or_Ksenks"
+          confidence: medium
+          reason: "Шутка в ответ на реплику Umputun 'Я париться не буду'. Стиль юмора подходит Эльдару или Ксении."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5301.21
+          etime: 5305.34
+          text: "Спариваться на ходу небезопасно?"
+          reason: "Единственный сегмент достаточной длины для voice comparison"
+
+  # --- SPEAKER_MISATTRIBUTED_PETR: 3 реплики ---
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 11
+    replies_count: 3
+    pattern: scattered
+    analysis:
+      is_error: true  # MISATTRIBUTED означает, что атрибуция была отменена
+      error_reason: "Ранее эти реплики были ошибочно присвоены PetrDidenko, но Пётр не участвует в этом эпизоде"
+
+      detailed_breakdown:
+        - stime: 2128.84
+          etime: 2134.2
+          text: "Так и было, я слышал."
+          verdict: "likely_EldarMurtazin_or_Gray"
+          reason: "Контекст: обсуждение критики. Скорее всего кто-то из основных участников."
+
+        - stime: 6512.1
+          etime: 6514.0
+          text: "А говорить по пультику."
+          verdict: "likely_EldarMurtazin"
+          reason: "Контекст: обсуждение гаджетов, тема Эльдара."
+
+        - stime: 6910.57
+          etime: 6914.08
+          text: "Они не понимают."
+          verdict: "likely_Ksenks"
+          reason: "Между репликами Umputun, сразу после Umputun говорит 'Ксюша, расскажи'"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2128.84
+          etime: 2134.2
+          text: "Так и было, я слышал."
+          reason: "Самый длинный сегмент (5.4 сек)"
+
+  # --- SPEAKER_MISATTRIBUTED_LAVALE: 1 реплика ---
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Ранее реплика была ошибочно присвоена Lavale, но Лаваль не участвует в этом эпизоде"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Реплика идёт сразу после Marin_k_a (которая = Ksenks):
+        - Marin_k_a (6977.01s): "И вот в этом плане поиск BlackBerry ушел."
+        - SPEAKER_MISATTRIBUTED_LAVALE (6981.15s): "Ну и в плане общего впечатления от интерфейсов, наверное."
+        Это продолжение мысли, скорее всего тот же спикер = Ksenks
+
+      voice_task:
+        needed: false  # достаточно контекста для идентификации
+
+  # --- Bobuk: 1 реплика, подозрительно ---
+  - speaker: "Bobuk"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        В начале эпизода (12.62s) Umputun говорит: "состав у нас сегодня непростой, потому что Бобук решил..."
+        и далее объясняет, что Бобук не участвует. Единственная реплика "Bobuk" на 4885.73s
+        между репликами Gray - скорее всего ошибка распознавания.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплика между двумя репликами Gray, может быть его же реплика"
+        - person_id: "eldar_murtazin"
+          confidence: 0.3
+          reason: "Обсуждают iTunes, тема гаджетов"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Ksenks также присутствует в эпизоде"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4885.73
+          etime: 4889.37
+          text: "И почему она работает только для тех, у кого есть американский iTunes?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        КРИТИЧЕСКАЯ ОШИБКА: Marin_k_a (Марина) в этом эпизоде - это на самом деле Ksenks (Ксения).
+        Umputun явно называет её "Ксюшенька" и "Ксюша" перед её репликами.
+        Требуется переименование: Marin_k_a -> Ksenks для эпизода 325.
+
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk не участвует в эпизоде (сказано в начале), но есть 1 реплика.
+        Скорее всего ошибка распознавания - требует voice comparison.
+
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Вероятно это Ksenks (продолжение речи после Marin_k_a=Ksenks)"
+
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "3 реплики требуют идентификации, Пётр не участвует в эпизоде"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 325
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun называет спикера "Ксюшенька" (1304.78s) и "Ксюша" (6916.68s).
+      Marin_k_a (Марина) - другой человек. В этом эпизоде это Ksenks (Ксения).
+
+  - type: rename
+    episode: 325
+    from_speaker: "SPEAKER_00"
+    to_speaker: "EldarMurtazin"
+    stime: 51.4
+    etime: 52.98
+    confidence: high
+    reason: "Прямое представление: 'Эльдар, здравствуй' -> 'Привет, ребят'"
+
+  - type: rename
+    episode: 325
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Продолжение мысли сразу после Marin_k_a (=Ksenks)"
+
+  - type: remove_or_reassign
+    episode: 325
+    from_speaker: "Bobuk"
+    confidence: medium
+    reason: "Bobuk не участвует в эпизоде (объявлено в начале), 1 реплика - ошибка распознавания"
+
+# Задания на voice comparison
+voice_comparison_tasks:
+  - task_id: "325_speaker00_5301"
+    speaker: "SPEAKER_00"
+    segment:
+      stime: 5301.21
+      etime: 5305.34
+      text: "Спариваться на ходу небезопасно?"
+    compare_with: ["EldarMurtazin", "Ksenks"]
+
+  - task_id: "325_misattributed_petr_2128"
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    segment:
+      stime: 2128.84
+      etime: 2134.2
+      text: "Так и было, я слышал."
+    compare_with: ["EldarMurtazin", "Gray", "Ksenks"]
+
+  - task_id: "325_bobuk_4885"
+    speaker: "Bobuk"
+    segment:
+      stime: 4885.73
+      etime: 4889.37
+      text: "И почему она работает только для тех, у кого есть американский iTunes?"
+    compare_with: ["Gray", "EldarMurtazin", "Ksenks"]

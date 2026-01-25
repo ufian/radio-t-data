@@ -1,0 +1,166 @@
+episode: 376
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  # Ksenks присутствует но атрибутирована как SPEAKER_00
+  total_duration_sec: ~7500  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 450
+    replies_count: 91
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "registry"
+      confidence: high
+      evidence: "Marin_k_a уже зарегистрирована в people.yaml как бывшая ведущая Марина"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 352
+    replies_count: 157
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      # Очень высокая уверенность: контекст показывает что это Ksenks
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. В начале выпуска (50s) Umputun говорит "Ксюша больше меня пропускала"
+        2. SPEAKER_00 сразу отвечает (54s): "Хотя она... Нет, такого просто не может быть" — о себе
+        3. SPEAKER_00 спорит о сроках своего присоединения (59s): "Какой 6?", "Меньше"
+        4. Реплики SPEAKER_00 используют женский род: "я забыла" (3365s)
+        5. К SPEAKER_00 обращаются как к "Ксюша" (279s, 500s, 709s и др.)
+        6. Ksenks вообще отсутствует как спикер в файле (0 реплик)
+
+      voice_task:
+        needed: true
+        reason: "Подтвердить идентификацию голосовым сравнением"
+        reference_segment:
+          stime: 3362.79
+          etime: 3375.42
+          text: "И на iOS я часто пользуюсь поиском. Как раз если я забыла какое-то тестовое приложение, помню только название, оно у меня в папочке «тест», но там много этих приложений, искать неудобно."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 15
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эти реплики помечены как SPEAKER_MISATTRIBUTED_LAVALE — это означает,
+        что ранее они были ошибочно атрибутированы как Lavale, но потом
+        атрибуция была отменена. Судя по контексту (2245s, 4686s) и содержанию,
+        эти реплики принадлежат кому-то из присутствующих женщин-ведущих
+        (Ksenks или Marin_k_a).
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Контекст показывает женский голос, рядом реплики SPEAKER_00"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Marin_k_a тоже участвует в этом выпуске"
+
+      voice_task:
+        needed: true
+        reason: "Определить кому принадлежат эти реплики"
+        reference_segment:
+          stime: 2245.36
+          etime: 2255.14
+          text: "Я вот недавно свежий обладатель буквально, однодневный практически, но у макбука просто с ретиной, и прям вообще не закат, по-моему."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эти реплики помечены как SPEAKER_MISATTRIBUTED_ELDAR — ранее были
+        ошибочно атрибутированы как Eldar (Эльдар Муртазин), но Эльдар
+        не участвует в этом выпуске. Короткие реплики (6463s, 7318s),
+        вероятно ошибки распознавания.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Короткие поддакивания, рядом реплики SPEAKER_00"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Может быть ошибка распознавания Bobuk"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Может быть ошибка распознавания Gray"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: |
+        157 реплик атрибутированы как SPEAKER_00, хотя это явно Ksenks.
+        Ksenks участвует в разговоре, к ней обращаются по имени,
+        но ни одна реплика не атрибутирована как Ksenks.
+    - speaker: "Umputun"
+      issue: |
+        Реплика на 63.59s содержит текст с женским родом: "Ну и вообще я была слушателем".
+        Это вероятно слова Ksenks, ошибочно атрибутированные Umputun.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 376
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_00 = Ksenks: контекст разговора о пропусках, обращения по имени "Ксюша",
+      женский род в речи ("я забыла"), полное отсутствие Ksenks среди спикеров
+
+  - type: rename
+    episode: 376
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Вероятно принадлежит Ksenks — рядом реплики SPEAKER_00, женский контекст.
+      Требует voice comparison для подтверждения.
+
+  - type: single_fix
+    episode: 376
+    stime: 63.59
+    from_speaker: "Umputun"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Текст "Ну и вообще я была слушателем" — женский род,
+      это явно слова Ksenks о своём прошлом как слушателя подкаста.
+
+# Примечания
+notes: |
+  Выпуск 376 от 25 января 2014 года.
+  Участники: Umputun, Bobuk, Gray, Ksenks (как SPEAKER_00), Marin_k_a.
+
+  Основная проблема: Ksenks полностью атрибутирована как SPEAKER_00 (157 реплик).
+  Это требует массового переименования после подтверждения через voice comparison.
+
+  SPEAKER_MISATTRIBUTED_* — это следы предыдущих ошибочных исправлений,
+  которые были откачены. Нужно определить реального спикера.

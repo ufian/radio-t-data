@@ -1,0 +1,244 @@
+episode: 327
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Контекст: Umputun в начале эпизода (17-23s) сказал "сегодня Ксюша и я. Я и Ксюша. И все."
+# Однако позже появились звонящие гости через Skype
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]  # Bobuk и Gray отсутствовали (явно сказано "мы без Бобука")
+  guests_present: [Marin_k_a, VasyaStrelnikov, Ruslan]
+  total_duration_sec: 6400  # примерно 1ч 46мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # SPEAKER_00 - это Ksenks (Ксюша)
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1027
+    replies_count: 383
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "34.58s: 'Да, привет, я Ксюша, а говорит со мной у Бутон' (искажённое Umputun)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # SPEAKER_02 - это Руслан (гость/слушатель)
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 220
+    replies_count: 54
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # не в people.yaml, нужно добавить
+      identification_method: "introduction"
+      confidence: high
+      evidence: "1202-1212s: Umputun говорит 'Да, всем привет Привет, Руслан Ты сказал, что на любую тему...'"
+      possible_matches:
+        - person_id: "ruslan_listener"
+          confidence: 0.95
+          reason: "Прямое обращение по имени от Umputun"
+      voice_task:
+        needed: false  # уже идентифицирован по имени
+
+  # SPEAKER_03 - это Василий Стрельников
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 82
+    replies_count: 36
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "vasya_strelnikov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "342-345s: Umputun спрашивает 'Василий, это ты появился и шумишь?' и ответ 'Да, я появился и уже шумлю.'"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # Bobuk - ошибка распознавания
+  - speaker: "Bobuk"
+    total_duration_sec: 6
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Umputun в начале эпизода (221-226s) явно сказал 'Поскольку мы без Бобука'. Единственная реплика Bobuk (440s) находится в середине диалога SPEAKER_03 (Василия) с плохим звуком"
+      identified_as: null
+      possible_matches:
+        - person_id: "vasya_strelnikov"
+          confidence: 0.8
+          reason: "Реплика между репликами SPEAKER_03, Василий звонил с плохим звуком"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 440.25
+          etime: 446.03
+          text: "Вроде сделано отлично, вроде все работает, а что-то не то."
+
+  # Gray - ошибка распознавания
+  - speaker: "Gray"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "В начале эпизода Umputun сказал только 'Ксюша и я'. Реплика Gray (424s) находится в том же диалоге, где Василий звонит с плохим звуком"
+      identified_as: null
+      possible_matches:
+        - person_id: "vasya_strelnikov"
+          confidence: 0.7
+          reason: "Реплика в контексте диалога с Василием о плохом звуке"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 423.74
+          etime: 429.16
+          text: "Ну да, ну вот как всегда, я приду и у меня сразу такой звук."
+
+  # SPEAKER_MISATTRIBUTED_ELDAR - ошибочно помеченный как Эльдар
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 54
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: false  # это реальный голос, просто неверно атрибутирован
+      error_reason: null
+      identified_as: null
+      possible_matches:
+        - person_id: "ruslan_listener"
+          confidence: 0.7
+          reason: "Реплики в контексте обсуждения iPad/Surface, где участвовал SPEAKER_02 (Руслан)"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Может быть Ksenks с искажением голоса"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1335.02
+          etime: 1347.39
+          text: "Банально, бывают такие ситуации в работе, когда действительно на коленке очень прикольно какую-нибудь презентажку сбацать..."
+
+  # SPEAKER_MISATTRIBUTED_LAVALE - ошибочно помеченный как Lavale
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 24
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: false  # это реальный голос, просто неверно атрибутирован
+      error_reason: null
+      identified_as: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Может быть Ksenks"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Может быть Марина"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2943.98
+          etime: 2951.52
+          text: "Я, насколько помню, многие сходятся во мнении, что Python вообще идеален для изучения, для первого программерского языка."
+
+  # SPEAKER_MISATTRIBUTED_PETR - ошибочно помеченный как Пётр
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 7
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false  # это реальный голос, просто неверно атрибутирован
+      error_reason: null
+      identified_as: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Одиночная реплика, может быть кто угодно из присутствующих"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Обсуждение bash/табов - техническая тема"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3180.68
+          etime: 3187.56
+          text: "То, что они на баше, там табы не очень... Нет, я просто не вижу такой прям хорошей альтернативы."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: "Помечен как участник, но Umputun явно сказал 'мы без Бобука'. Вероятно ошибка распознавания."
+    - speaker: "Gray"
+      issue: "Помечен как участник, но в начале не упоминался. Вероятно ошибка распознавания."
+    - speaker: "SPEAKER_02"
+      issue: "Идентифицирован как Руслан, но нет записи в people.yaml. Нужно добавить гостя."
+    - speaker: "Marin_k_a"
+      issue: "Марина не была представлена в начале выпуска. Возможно присоединилась позже или это Ksenks."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 327
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Прямое представление: 'Да, привет, я Ксюша'"
+
+  - type: rename
+    episode: 327
+    from_speaker: "SPEAKER_03"
+    to_speaker: "VasyaStrelnikov"
+    confidence: high
+    reason: "Прямое обращение: 'Василий, это ты появился?' - 'Да, я появился'"
+
+  - type: rename
+    episode: 327
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ruslan"
+    confidence: high
+    reason: "Прямое обращение: 'Привет, Руслан' (нужно добавить в people.yaml)"
+
+  - type: rename
+    episode: 327
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_NEEDS_REVIEW"
+    confidence: medium
+    reason: "Umputun сказал 'мы без Бобука'. Нужна voice verification для определения спикера."
+
+  - type: rename
+    episode: 327
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_NEEDS_REVIEW"
+    confidence: medium
+    reason: "Gray не упоминался в начале. Нужна voice verification для определения спикера."
+
+# Дополнительные заметки
+notes: |
+  Эпизод 327 (9 февраля 2013):
+  - Основной состав: Umputun + Ksenks (только они двое анонсированы)
+  - Марина (Marin_k_a) присутствует, но не представлена - возможно это всё ещё Ksenks
+  - Гость Василий Стрельников звонил по Skype с плохим качеством звука
+  - Гость Руслан (слушатель) позвонил в эфир
+  - Bobuk и Gray - скорее всего ошибки распознавания из-за плохого звука Василия
+
+  Требуется:
+  1. Voice verification для Bobuk (440s) и Gray (424s)
+  2. Добавить Ruslan в people.yaml как гостя-слушателя
+  3. Проверить, не является ли Marin_k_a ошибочной атрибуцией Ksenks
+  4. Определить кому принадлежат SPEAKER_MISATTRIBUTED_* реплики

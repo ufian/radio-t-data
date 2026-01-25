@@ -1,0 +1,153 @@
+episode: 305
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7745
+  notes: |
+    Эпизод от 8 сентября 2012 года. В конце Umputun говорит "полтора ведущих",
+    что указывает на неполный состав. Гость Alexmak (SPEAKER_04) и кандидат
+    в ведущие Marin_k_a (проходила кастинг).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 2667
+    replies_count: 395
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alexmak"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Многократные обращения "Алекс" к этому спикеру:
+        - 27s: "Алекс, так ли это?"
+        - 7660s: "Спасибо, Алекс, что пришел." (прощание в конце)
+        Контекст: специалист по Apple/Mac, обсуждает технологии.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 9
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие односложные реплики ("Нет", "Пока") разбросаны по эпизоду.
+        Обращение "Алик" (6683s) скорее всего к Alexmak (сокращение от Алекс).
+        Реплики в 6686-6691s ("Да я же вообще не программист", "Я не по этим делам")
+        скорее принадлежат Alexmak, но распознаны как отдельный спикер.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alexmak"
+          confidence: 0.7
+          reason: |
+            Обращение "Алик" к этому спикеру, что похоже на уменьшительное от Алекс.
+            Реплики появляются в диалогах где до/после говорит Alexmak (SPEAKER_04).
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6686.26
+          etime: 6691.37
+          text: "Да я же вообще не программист. Ты так погулять вышел? Я не по этим делам."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Мне кажется, это очень здорово" (577s) между
+        репликами SPEAKER_04 и Marin_k_a. Вероятно ошибка распознавания -
+        может принадлежать любому из трёх присутствующих (Umputun, Alexmak, Marin_k_a).
+        Маркер MISATTRIBUTED указывает на отменённое ошибочное присвоение.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Следующая реплика (583s) принадлежит Marin_k_a на ту же тему"
+        - person_id: "alexmak"
+          confidence: 0.3
+          reason: "Предыдущая реплика (570s) принадлежит SPEAKER_04 (Alexmak)"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 577.34
+          etime: 582.83
+          text: "Мне кажется, это очень здорово."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        К ней обращаются как "Ксюша" в тексте (строки 433, 469, 694 и др.),
+        но согласно people.yaml её зовут Марина. Возможно путаница с Ksenks,
+        или "Ксюша" - прозвище. Требует проверки.
+    - speaker: "SPEAKER_04"
+      issue: |
+        Представлен как гость в начале (11s: "про него многое говорили"),
+        но формального представления по имени нет. Идентификация по обращениям.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 305
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Alexmak"
+    confidence: high
+    reason: |
+      Многократные прямые обращения "Алекс" + прощание "Спасибо, Алекс, что пришел"
+      в конце эпизода. Alexmak известен как специалист по Apple (выпуски 196, 203).
+
+  - type: merge
+    episode: 305
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Alexmak"
+    confidence: medium
+    reason: |
+      Обращение "Алик" (уменьшительное от Алекс), короткие реплики в контексте
+      диалогов с участием Alexmak. Требует voice comparison для подтверждения.
+
+# Дополнительные заметки
+notes: |
+  Эпизод 305 от 8 сентября 2012 года. Особенности:
+
+  1. Марина (Marin_k_a) проходит кастинг на ведущую - это её ранний выпуск
+  2. Alexmak - гость, известный Apple-энтузиаст
+  3. Umputun в конце говорит "полтора ведущих" - состав неполный
+  4. Обращения "Ксюша" к кому-то из участниц требуют уточнения
+
+  Для полного закрытия нужно:
+  - Voice comparison для SPEAKER_03 vs Alexmak
+  - Уточнение по обращению "Ксюша" (к кому?)
+
+  URL аудио: недоступен (файл метаданных не найден в data_clean)

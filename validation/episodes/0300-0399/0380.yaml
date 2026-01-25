@@ -1,0 +1,176 @@
+episode: 380
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7300  # ~2 часа, примерная оценка
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 589
+    replies_count: 220
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Umputun спрашивает 'Ксюшу' в начале (9.5s), SPEAKER_00 отвечает (22.9s). Множество обращений к Ксюше в течение выпуска, SPEAKER_00 участвует в диалогах как полноценный ведущий. 220 реплик - типичный объём для ведущего."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 738
+    replies_count: 124
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "registry"
+      confidence: high
+      evidence: "Marin_k_a уже присутствует в people.yaml как Марина (бывшая ведущая). Первая реплика (77s): 'Мы будем сегодня с Бабуком читать стихи' - участвует в шутливом диалоге с ведущими как свой человек."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики (1.2 сек и 2.3 сек) в разных частях выпуска (1369s и 4126s). Типичные ошибки автоматического распознавания - короткие фразы, вклинившиеся в диалог ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Первая реплика (1369s) 'Зачем ты это хочешь?' следует за репликой Umputun, возможно продолжение его речи"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Вторая реплика (4126s) 'Какому-то Яндеху' - ироничный комментарий, может быть Gray"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткие сегменты для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 13
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплика (4386s, 13 сек): 'А, нет, позволяет, нет, ну, в смысле провиженинг телефонов через, там, эпловые провиженинг профайлы...' - техническая речь про MDM. Следует за репликой Gray про mobile device management."
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Техническая тема (MDM, provisioning), продолжение мысли Gray"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk часто обсуждает корпоративные IT-решения"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4386.12
+          etime: 4399.15
+          text: "А, нет, позволяет, нет, ну, в смысле провиженинг телефонов через, там, эпловые провиженинг профайлы и так далее, установку, это позволяет, конечно, да."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики в разных частях выпуска. Первая (6165s): 'Может быть, у Бобука есть что по этому поводу сказать?' - обращение к Bobuk, типичная фраза ведущего. Вторая (7260s): 'Это как-то очень странно' - короткий комментарий."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Первая реплика следует за репликой Marin_k_a (6161s). Возможно продолжение её речи, неправильно разделённое."
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Манера обращения к Bobuk характерна для Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6165.72
+          etime: 6169.31
+          text: "Может быть, у Бобука есть что по этому поводу сказать?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: "220 реплик от неидентифицированного спикера. По контексту это Ksenks, рекомендуется переименовать."
+    - speaker: "SPEAKER_04"
+      issue: "2 короткие реплики - ошибки распознавания. Рекомендуется присвоить ближайшему ведущему или удалить."
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Название предполагает отменённое присвоение Петру Диденко. Нужна ручная проверка голоса."
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Название предполагает отменённое присвоение Лавале. Скорее всего ошибка распознавания, реплики принадлежат другому ведущему."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 380
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Контекстуальный анализ: Umputun обращается к 'Ксюше', SPEAKER_00 отвечает. 220 реплик, 589 сек - полноценное участие ведущего."
+
+  - type: merge_with_context
+    episode: 380
+    from_speaker: "SPEAKER_04"
+    confidence: medium
+    reason: "2 короткие ошибочные реплики. Нужна ручная проверка контекста для определения, кому они принадлежат."
+
+  - type: voice_verification_needed
+    episode: 380
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    confidence: medium
+    reason: "Одна реплика 13 сек с технической речью. Требуется voice comparison для определения спикера."
+
+  - type: merge_with_context
+    episode: 380
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    confidence: medium
+    reason: "2 короткие реплики, скорее всего принадлежат Marin_k_a или Ksenks. Первая реплика следует за Marin_k_a."

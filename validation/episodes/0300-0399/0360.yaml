@@ -1,0 +1,153 @@
+episode: 360
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Golodniy]
+  total_duration_sec: 6400  # ~1h 46min
+  notes: |
+    Эпизод от 5 октября 2013 года.
+    Gray и Ksenks отсутствуют (упомянуто в начале).
+    Единственный гость — Голодный (подтверждено в начале и конце эпизода).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 342
+    replies_count: 103
+    pattern: consecutive
+    first_appearance_sec: 33.4
+
+    analysis:
+      is_error: false
+      identified_as: "golodniy"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        30.46s Umputun: "Голодный."
+        31.26s Umputun: "Почему до сих пор голодный?"
+        33.36s SPEAKER_00: "Да, ну, как бы, тут жена у меня уехала в отпуск, она сейчас в Китае находится, и вот я немножко задержался, я в Иркутске живу..."
+
+        Также в конце эпизода (15805): "Я напомню, что был у нас в гостях голодный..."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 49
+    replies_count: 4
+    pattern: scattered
+    first_appearance_sec: 1402
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это реплики, которые ранее были ошибочно приписаны Эльдару Муртазину,
+      # но затем атрибуция была отменена. Судя по контексту, это Голодный.
+      identified_as: "golodniy"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Ключевое доказательство (строка 10810):
+        4454.97s Umputun: "Голодный, ты это восхищен?"
+        4457.47s SPEAKER_MISATTRIBUTED_ELDAR: "Да, красивая история..."
+
+        Umputun обращается к "Голодному", и SPEAKER_MISATTRIBUTED_ELDAR отвечает.
+        Это однозначно указывает, что эти реплики принадлежат Голодному.
+
+        Эльдар Муртазин не участвовал в этом эпизоде (не упоминается в представлении).
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 32
+    replies_count: 5
+    pattern: scattered
+    first_appearance_sec: 193
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Реплики, ранее ошибочно приписанные Петру Диденко.
+      # Судя по контексту и отсутствию Петра в эпизоде, это тоже Голодный.
+      identified_as: "golodniy"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Петр Диденко не упоминается в этом эпизоде (не представлен).
+        В финале эпизода подтверждается единственный гость — Голодный.
+
+        Примеры реплик SPEAKER_MISATTRIBUTED_PETR:
+        192.57s: "Мне кажется, любое направление можно превратить в карго-культ..."
+        3444.11s: "Учитывая весь этот геморрой и то количество серверов..."
+
+        Контекст соответствует техническому обсуждению, в котором участвует гость (Голодный).
+        Однако без voice comparison нельзя быть на 100% уверенным.
+
+      possible_matches:
+        - person_id: "golodniy"
+          confidence: 0.75
+          reason: "Единственный гость в эпизоде, технический контекст соответствует"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3444.11
+          etime: 3452.20
+          text: "Учитывая весь этот геморрой и то количество серверов, которые ты сказал, как у тебя вообще с коллабилити в трех зонах?"
+        compare_with:
+          speaker: "SPEAKER_00"
+          stime: 33.36
+          etime: 50.43
+          text: "Да, ну, как бы, тут жена у меня уехала в отпуск, она сейчас в Китае находится..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Голодный явно представлен в начале эпизода (30.46s).
+    В конце эпизода подтверждается состав: "был у нас в гостях голодный, был у нас не в гостях, а дома Бобук"
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Требуется voice comparison для подтверждения, что это Голодный"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 360
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Golodniy"
+    confidence: high
+    reason: "Явное представление в начале эпизода и подтверждение в конце"
+
+  - type: rename
+    episode: 360
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Golodniy"
+    confidence: high
+    reason: "Umputun обращается к Голодному, SPEAKER_MISATTRIBUTED_ELDAR отвечает (4454-4457s)"
+
+  - type: rename
+    episode: 360
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Golodniy"
+    confidence: medium
+    reason: "Единственный гость в эпизоде; требуется voice comparison для подтверждения"
+
+# Дополнительные заметки
+notes: |
+  Эпизод 360 имеет чистую структуру с одним гостем.
+
+  SPEAKER_MISATTRIBUTED_* — это маркеры отменённых ошибочных атрибуций.
+  Ранее эти реплики были приписаны Эльдару Муртазину и Петру Диденко,
+  но затем атрибуция была отменена, так как ни один из них не участвовал в этом эпизоде.
+
+  После voice comparison все три спикера (SPEAKER_00, SPEAKER_MISATTRIBUTED_ELDAR,
+  SPEAKER_MISATTRIBUTED_PETR) должны быть объединены под именем Golodniy.

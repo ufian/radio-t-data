@@ -1,0 +1,213 @@
+episode: 324
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 7623  # ~2h07m
+
+# Главная проблема выпуска
+critical_issue:
+  description: "Все реплики Ksenks ошибочно помечены как Marin_k_a"
+  evidence:
+    - "В начале Umputun представляет: 'с нами Ксюша есть сегодня' (18.7s)"
+    - "Bobuk обращается: 'Ксюша, обрати внимание' (40.5s)"
+    - "Umputun на 4846s говорит: 'Это если бы Маруся была бы, она бы сказала' - подтверждает что Марины НЕТ на выпуске"
+    - "К спикеру Marin_k_a обращаются как 'Ксюша' в 9 местах выпуска"
+  resolution: "Переименовать все Marin_k_a -> Ksenks"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 662
+    replies_count: 165
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная атрибуция. Это Ksenks (Ксюша), не Marin_k_a (Марина). Umputun на 4846s прямо говорит что Маруси нет на выпуске."
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun в начале: "с нами Ксюша есть сегодня" (18.7s)
+        2. Umputun: "Оксана" (30.3s) — завершает представление
+        3. На 4846s: "Это если бы Маруся была бы, она бы сказала" — Марины нет
+        4. К Marin_k_a обращаются "Ксюша" минимум 9 раз в выпуске
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 8
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики, рассеянные по выпуску. Все являются продолжениями или эхом соседних реплик ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "3 из 6 реплик идут сразу после/перед репликами Gray"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Реплика на 2354s продолжает речь Ksenks (помечена как Marin_k_a)"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики (<2 сек каждая) для voice comparison"
+
+      details:
+        - stime: 101.42
+          text: "Бабучка."
+          context: "Эхо фразы Bobuk 'Бабучочка' (98.6s)"
+          likely_speaker: "Bobuk или артефакт"
+        - stime: 2354.87
+          text: "Это просто не нужно."
+          context: "Продолжение Ksenks 'Это не нужно' (2352.5s)"
+          likely_speaker: "Ksenks"
+        - stime: 2861.37
+          text: "И пока, в общем, ничего не противоречит."
+          context: "Между репликами Gray о поиске и соцсетях"
+          likely_speaker: "Gray"
+        - stime: 4071.64
+          text: "И все станет хорошо."
+          context: "После Bobuk о ретина-дисплеях"
+          likely_speaker: "Bobuk"
+        - stime: 4842.57
+          text: "Мне кажется, что прям закладка."
+          context: "После Gray 'Закладка. Да, кажется'"
+          likely_speaker: "Gray"
+        - stime: 7506.38
+          text: "Правда, его нет под Mac."
+          context: "Между репликами Gray об игре"
+          likely_speaker: "Gray"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две очень короткие реплики - междометия, типичные ошибки транскрибирования"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Первая реплика (110s) идёт после диалога о Ксюше"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Короткие реакции характерны для всех ведущих"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики (<2 сек)"
+
+      details:
+        - stime: 110.39
+          text: "Да, как-то так."
+          context: "После обсуждения Бобука"
+          likely_speaker: "Ksenks или Bobuk"
+        - stime: 6014.49
+          text: "Хе-хе."
+          context: "Смех после шутки Umputun"
+          likely_speaker: "любой ведущий"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная короткая реплика между высказываниями Ksenks"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Реплика логически продолжает мысль Ksenks и идёт между её репликами"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткая реплика"
+
+      details:
+        - stime: 5706.62
+          text: "Но это уже не прогрессивно."
+          context: "Между репликами Ksenks (помечена как Marin_k_a) о Google аутентификации"
+          likely_speaker: "Ksenks"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a"
+      issue: "Ошибочное имя. Это Ksenks - представлена в начале как 'Ксюша' и 'Оксана'"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 324
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun в начале представляет Ксюшу (18.7s, 30.3s).
+      На 4846s говорит "если бы Маруся была бы" - подтверждает отсутствие Марины.
+      К спикеру обращаются "Ксюша" минимум 9 раз в выпуске.
+      165 реплик, 662 сек - это полноценное участие ведущей, не гостя.
+
+  - type: merge_or_delete
+    episode: 324
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    action: "Требует ручного анализа каждой реплики"
+    confidence: medium
+    reason: "6 коротких реплик, большинство вероятно принадлежат Gray или Ksenks"
+
+  - type: merge_or_delete
+    episode: 324
+    speaker: "SPEAKER_04"
+    action: "Можно удалить или приписать соседнему спикеру"
+    confidence: medium
+    reason: "2 междометия, нет смысловой нагрузки"
+
+  - type: merge_to_ksenks
+    episode: 324
+    speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    action: "Переименовать в Ksenks"
+    confidence: medium
+    reason: "Реплика логически продолжает мысль Ksenks"
+
+# Дополнительные заметки
+notes: |
+  Эпизод 324 (19 января 2013) - выпуск с "полным составом": Umputun, Bobuk, Gray, Ksenks.
+
+  Главная проблема: Все реплики Ksenks ошибочно атрибутированы как Marin_k_a.
+
+  Доказательства:
+  1. Представление в начале: "с нами Ксюша есть сегодня" (Umputun, 18.7s)
+  2. Называет по имени: "Оксана" (Umputun, 30.3s)
+  3. Явное отрицание присутствия Марины: "Это если бы Маруся была бы, она бы сказала" (Umputun, 4846s)
+  4. Многочисленные обращения "Ксюша" к спикеру Marin_k_a
+
+  Рекомендация: Создать правило очистки для переименования Marin_k_a -> Ksenks в эпизоде 324.

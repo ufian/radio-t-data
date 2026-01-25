@@ -1,0 +1,270 @@
+episode: 394
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  hosts_mentioned_but_missing: [Ksenks]  # Упоминается как "Ксюша", но нет как спикер
+  guests_identified: [Влад]  # Гость по Skype, эксперт по TrueCrypt
+  total_duration_sec: 8500  # примерно 2.3 часа
+
+# Ключевая проблема: Marin_k_a - это на самом деле Ksenks!
+critical_issues:
+  - issue: "Marin_k_a в этом эпизоде - это Ksenks (Ксюша)"
+    evidence:
+      - "В начале Umputun говорит: 'Ты да я, да Грей, да Ксюша' (время 126.15s) - упоминает только 4 человека"
+      - "Umputun обращается: 'Ксюша, расскажи нам вкратце историю вопроса' (время 396.46s)"
+      - "Сразу после отвечает Marin_k_a (время 400.37s) - явно отвечая на обращение к Ксюше"
+      - "Имя 'Марина' или 'Marina' НЕ упоминается в транскрипте ни разу"
+      - "Слово 'Ксюша' упоминается 15+ раз как обращение к присутствующему участнику"
+    confidence: high
+    suggested_action: "Переименовать Marin_k_a -> Ksenks для эпизода 394"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1070
+    replies_count: 202
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная маркировка. Это Ksenks (Ксюша), не Марина."
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun обращается 'Ксюша, расскажи нам...' в 396.46s, отвечает Marin_k_a в 400.37s"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Контекст однозначен
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 688
+    replies_count: 114
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null  # Новый гость "Влад"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk в 638.54s: "А, дорогой Влад, а что ты вздыхаешь?"
+        Bobuk в 640.26s: "У тебя же есть скайп, ты очень легко можешь присоединиться к нашей беседе"
+        Bobuk в 648.55s: "это будет комментарий действительно опытного специалиста"
+        Bobuk в 726.1s: "Дорогой Влад, блин, в скайп"
+        Umputun в 740.86s: "Да, Володь, Умпутун в скайпе Умпутун"
+        SPEAKER_05 начинает в 986.68s с экспертным рассказом о TrueCrypt
+
+      possible_matches:
+        - person_id: "vlad_new_guest"
+          confidence: 0.95
+          reason: "Гость по имени Влад (Володя), эксперт по криптографии/TrueCrypt"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1000.43
+          etime: 1014.24
+          text: "Вы, наверное, знаете, и я думаю, здесь много раз обсуждалось, что в некоторых странах факт отказа от выдачи ключей соответствующим органам, если вдруг ты оказываешься перед судом,"
+        notes: "Длинный экспертный монолог, хорошее качество для идентификации"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 505
+    replies_count: 246
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Вероятно также Ksenks - реплики перемежаются с Marin_k_a в одном диалоге"
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        SPEAKER_02 и Marin_k_a участвуют в одном диалоге о TrueCrypt
+        Например: SPEAKER_02 в 411.86s и Marin_k_a в 429.27s обсуждают одну тему
+        Обе говорят про FileVault/шифрование женским голосом
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.75
+          reason: "Участвует в диалоге как Ксюша, голос похож на Marin_k_a"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 417.74
+          etime: 427.99
+          text: "Но в Маке это может быть системная возможность, то есть ты в References можешь галочку в нужном месте поставить, а TrueCrypt это приложение, я так понимаю, для Windows."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 28
+    replies_count: 15
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики, вероятно ошибка распознавания одного из ведущих"
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        Примеры реплик: "Как неожиданно, да." (745s), "Представляешь?" (2865s)
+        Слишком короткие для идентификации по контексту
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Короткие реактивные фразы, возможно Ксюша"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Мог быть Бобук с плохим распознаванием"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2865.01
+          etime: 2868.77
+          text: "Представляешь? Да, и руки после этого не мою."
+        notes: "Лучший сегмент из имеющихся, но все равно короткий"
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна реплика 'Отлично' (0.4 сек) - явная ошибка распознавания"
+      identified_as: null
+      identification_method: null
+      confidence: high
+      evidence: "Единственная реплика: 'Отлично.' в 2899.04s длительностью 0.4 сек"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        notes: "Слишком короткая реплика для идентификации"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 8
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Помечено как 'misattributed' - ранее ошибочно присвоено Эльдару"
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        3 короткие реплики в разных местах:
+        - 1405.35s: "Да, ну можно же было придумать какую-нибудь причину, нормальная причина."
+        - 2776.64s: "Ну, короче, оно примерно так."
+        - 8260.26s: "Нет, что-то."
+
+      possible_matches:
+        - person_id: "speaker_05_vlad"
+          confidence: 0.5
+          reason: "Первая реплика в контексте обсуждения TrueCrypt, где говорит Влад"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1405.35
+          etime: 1408.79
+          text: "Да, ну можно же было придумать какую-нибудь причину, нормальная причина."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Помечено как 'misattributed' - ранее ошибочно присвоено Лаваль"
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        2 короткие реплики:
+        - 6906.76s: "Просто все думают, ну что это он такой странный."
+        - 8311.91s: "То есть, не совсем что новый."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Между репликами Marin_k_a, возможно тот же спикер"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6906.76
+          etime: 6909.68
+          text: "Просто все думают, ну что это он такой странный."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Упоминается в начале ('да Грей'), но только 2 реплики за весь выпуск (5299.57s и 8217.67s). Либо подключился позже и мало говорил, либо часть реплик неправильно атрибутирована."
+
+    - speaker: "Ksenks"
+      issue: "Упоминается как 'Ксюша' многократно, но как спикер отсутствует. Вместо этого есть Marin_k_a и SPEAKER_02 - вероятно это и есть Ксюша."
+
+    - speaker: "SPEAKER_05"
+      issue: "Гость Влад - не представлен формально в начале, но приглашен в чате (~640s). Нужно добавить в справочник people.yaml."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 394
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun обращается "Ксюша, расскажи нам..." в 396.46s,
+      отвечает Marin_k_a в 400.37s.
+      Имя "Марина" не упоминается в транскрипте.
+      В начале перечислены только Umputun, Bobuk, Gray, Ксюша.
+
+  - type: rename
+    episode: 394
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      SPEAKER_02 участвует в том же диалоге что и Marin_k_a,
+      реплики перемежаются. Вероятно это тот же человек (Ксюша)
+      с ошибкой распознавания голоса.
+
+  - type: add_guest
+    episode: 394
+    speaker: "SPEAKER_05"
+    guest_name: "Vlad"
+    confidence: high
+    reason: |
+      Bobuk обращается "дорогой Влад" в 638.54s,
+      приглашает в Skype для экспертного комментария.
+      SPEAKER_05 начинает говорить в 986.68s с экспертизой по TrueCrypt.
+      Нужно добавить в people.yaml как нового гостя.
+
+  - type: delete_or_merge
+    episode: 394
+    speaker: "SPEAKER_07"
+    confidence: high
+    reason: "Одна реплика 'Отлично' (0.4 сек) - явная ошибка распознавания, можно удалить или смержить с соседним спикером"
+
+# Метаданные для дальнейшей обработки
+audio_url: null  # Нужно взять из data/394/394_desc.json если есть
+needs_manual_review:
+  - "Подтвердить, что Marin_k_a = Ksenks голосовым сравнением"
+  - "Проверить, что SPEAKER_02 = Ksenks"
+  - "Идентифицировать гостя Влада (SPEAKER_05) - найти полное имя"
+  - "Разобраться с SPEAKER_MISATTRIBUTED_ELDAR и SPEAKER_MISATTRIBUTED_LAVALE"

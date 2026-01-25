@@ -1,0 +1,46 @@
+episode: 356
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 6983  # ~1358 реплик Umputun + 731 реплик Bobuk
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 0.06
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Одиночное короткое междометие 'Эээ...' длительностью 0.06 сек между репликами Bobuk и Umputun. Типичная ошибка распознавания — реакция одного из ведущих (вероятно Umputun, который отвечает сразу после)."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: "Эпизод 356 от 27 сентября 2013 года. В начале Umputun упоминает технические проблемы с записью. Участвуют только два ведущих: Umputun и Bobuk. Гостей нет."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 356
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: "Короткое междометие 'Эээ...' (0.06 сек) в 4651s непосредственно перед ответом Umputun на вопрос Bobuk. Контекст: Bobuk спрашивает 'Как тебе формулировка?', следует 'Эээ...', затем Umputun отвечает 'А зачем?'. Логически это раздумье Umputun перед ответом."

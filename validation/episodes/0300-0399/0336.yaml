@@ -1,0 +1,205 @@
+episode: 336
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Ksenks]  # Ksenks выступает как гость, не ведущая в этом выпуске
+  total_duration_sec: 7500  # ~2 часа (приблизительно)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 859
+    replies_count: 230
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 34.9 сек Umputun говорит: "Ксюша наверняка знает, она недавно в школе училась."
+        В 38.6 сек SPEAKER_01 отвечает: "Нет, ну я не так уж недавно, но я согласна с Бабуком, определенно грек."
+        Прямое обращение по имени и ответ от SPEAKER_01 - явная идентификация.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 254
+    replies_count: 43
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # В people.yaml Marin_k_a - это Марина, бывшая ведущая
+      # Однако контекст показывает проблему: на "Ксюшенька" отвечает Marin_k_a
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Проблема идентификации: в 280 сек Umputun говорит "Ксюшенька, ты как?",
+        но отвечает Marin_k_a (286 сек). Это может означать:
+        1) Marin_k_a - это на самом деле Ksenks (ошибка разметки)
+        2) Марина и Ксюша обе присутствуют, но их путают
+        В people.yaml Marin_k_a записана как отдельный человек "Марина, бывшая ведущая".
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "На обращение 'Ксюшенька' отвечает Marin_k_a"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "В people.yaml это отдельный гость 'Марина'"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 286.25
+          etime: 301.8
+          text: "Ну да, я тут еще недавно была на конференции, там был работник GitHub, у него перед докладом были технические проблемы, и он предложил задавать ему любые вопросы, вплоть до, не знаю, что-нибудь рассказать о своих дочерях, и вот спросили..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 33
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Метка MISATTRIBUTED указывает, что ранее ошибочно присвоено Lavale
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики ранее были ошибочно присвоены Lavale и отменены.
+        Пример реплики (2283.9s): "Давайте сделаем вот просто там на каждую десятую дюйма, так будет классно."
+        Следующая реплика (2296.6s): "Мне очень понравилась шутка в плане этого устройства."
+        Контекст - обсуждение Samsung Galaxy Mega с Ксюшей.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Реплики в контексте обсуждения с Ксюшей, вероятно это её голос с ошибкой распознавания"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2283.92
+          etime: 2288.94
+          text: "Давайте сделаем вот просто там на каждую десятую дюйма, так будет классно."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (2 шт, 6 сек), ранее ошибочно присвоенные Петру Диденко"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплика 1 (1226.9s): "Там так все непрактично сделано." - в контексте обсуждения iOS клиента
+        Реплика 2 (6104.6s): "К сожалению или к счастью... Расскажи, да, ты же с ними общался?" - в контексте обсуждения образования
+        Обе реплики короткие, разбросаны на ~80 минут, не типичны для настоящего гостя.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Может быть Ксюша с ошибкой распознавания"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Контекст вопроса про образование указывает на возможную ошибку при Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 28
+    replies_count: 15
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики, типичные ошибки распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Первые реплики (49-51 сек): "Арифм." и "Да-да-да." - эхо/повтор за Umputun
+        Остальные реплики разбросаны по выпуску, все короткие (1-3 сек).
+        Примеры: "Так что мы еще услышим", "Именно так", "Странное, да, голосование"
+        Типичные фразы-подтверждения от разных спикеров.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        Неясно, присутствует ли в эпизоде отдельно Марина или это ошибка разметки Ksenks.
+        На обращение "Ксюшенька" отвечает Marin_k_a, что указывает на возможную путаницу.
+        Требуется voice comparison для подтверждения.
+
+    - speaker: "SPEAKER_01 vs Marin_k_a"
+      issue: |
+        Оба спикера демонстрируют связь с Ксюшей, но размечены по-разному.
+        Возможно это один человек (Ksenks) с двумя разными тегами из-за ошибки распознавания.
+        Рекомендуется проверить голосом и объединить если подтвердится.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 336
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Явное представление: Umputun обращается 'Ксюша', SPEAKER_01 отвечает от первого лица"
+
+  - type: rename
+    episode: 336
+    from_speaker: "SPEAKER_00"
+    to_speaker: "SPEAKER_99"
+    confidence: medium
+    reason: "Короткие эхо-реплики, типичные артефакты распознавания, можно игнорировать"
+
+  - type: investigate
+    episode: 336
+    speakers: ["Marin_k_a", "SPEAKER_MISATTRIBUTED_LAVALE"]
+    confidence: medium
+    reason: |
+      Требуется voice comparison:
+      1) Определить, является ли Marin_k_a на самом деле Ksenks
+      2) Если Marin_k_a != Ksenks, определить кому принадлежат SPEAKER_MISATTRIBUTED_LAVALE
+
+# Примечания
+notes: |
+  Эпизод 336 от 13 апреля 2013 года.
+  Ведущие: Umputun (основной) и Bobuk (удалённо, "через спутник").
+  Гость: Ksenks (Ксюша) - упоминается явно.
+
+  Главная проблема: путаница между Marin_k_a и SPEAKER_01.
+  Оба могут быть Ksenks, но требуется проверка.
+
+  В people.yaml Marin_k_a записана как "Марина, бывшая ведущая" -
+  если это отдельный человек, то в эпизоде могут быть и Марина, и Ксюша одновременно.

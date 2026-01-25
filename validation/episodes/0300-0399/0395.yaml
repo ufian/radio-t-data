@@ -1,0 +1,298 @@
+episode: 395
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray]
+  guests_present: [Marin_k_a, Ksenks, Swan]
+  total_duration_sec: 7964
+  notes: |
+    Umputun НЕ присутствует в этом эпизоде. В начале явно говорят:
+    "ужасная бородатая половина" (Bobuk + Gray) и "прекрасная половина" (Ksenks + Marin_k_a).
+    Сван сидит рядом с Bobuk и комментирует через его микрофон.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 896
+    replies_count: 356
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 185-188s Gray спрашивает "Ксюша, ты тут ли?" и SPEAKER_03 отвечает
+        "Да, я тут. Всем привет." Также SPEAKER_03 говорит "Но мы-то с Грэм далеко"
+        (335s), указывая что она из другого места чем Bobuk и Сван.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1647
+    replies_count: 258
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Уже промаркирована как Marin_k_a. Это Марина (бывшая ведущая согласно people.yaml).
+        Активно участвует в техническом обсуждении iOS/Swift наравне с Ksenks.
+        Bobuk говорит "ты сегодня не одна у нас в нашей прекрасной половине" —
+        подразумевая двух женщин-участниц (Ksenks и Marin_k_a).
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 112
+    replies_count: 45
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "swan"
+          confidence: 0.9
+          reason: |
+            Сван упоминается многократно как сидящий рядом с Bobuk.
+            SPEAKER_06 говорит характерные для Свана фразы: "Apple уже не тот",
+            "Ой, Сережа, перестань" (обращение к Gray), "Ксюша, не позорище ли..."
+            Bobuk в 271s говорит: "Сван сидит рядом со мной... его периодически будет слышно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2547.8
+          etime: 2559.3
+          text: "Нет, относительно Samsung они, конечно, молодцы, да. Но нельзя сравнивать это с Samsung в этом месте. Но столько лет делать таким невыносимым..."
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 13
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "swan"
+          confidence: 0.7
+          reason: |
+            Короткие реплики через микрофон Bobuk'а.
+            "Ура, и ты даже через правильный микрофон" (189s) — приветствует Ksenks.
+            Может быть Сван или кто-то рядом с Bobuk.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2758.6
+          etime: 2761.0
+          text: "Что значит чистый? Это если ты, пока ты до удобств не дошла."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 9
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие случайные реплики: "Что договорились", "Окей", "Почему?".
+        Скорее всего ошибки сегментации — реплики других спикеров.
+
+      possible_matches:
+        - person_id: "swan"
+          confidence: 0.5
+          reason: "Возможно реплики Свана через микрофон Bobuk'а"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 3 реплики за 6 секунд в одном месте (3913-3920s).
+        "Из симбокса через файловую систему" — технический комментарий.
+        Скорее всего ошибка сегментации одного из основных спикеров.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 3 короткие реплики: "25-й" (369s), "Одинаково холодно, да?" (381s),
+        "Нет, я не кричу вообще сегодня" (3319s). Ошибки сегментации.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Маркер отменённой ошибочной атрибуции. 2 реплики в контексте
+        обсуждения презентации Apple — не имеют отношения к Lavale.
+        Скорее всего это Ksenks или Marin_k_a.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Маркер отменённой ошибочной атрибуции. 1 реплика "У вас в стране так не принято"
+        в контексте обсуждения сексизма. Не имеет отношения к Эльдару Муртазину.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Umputun"
+    total_duration_sec: 7
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Umputun НЕ присутствует в эпизоде 395. В начале эпизода явно говорят
+        только о двух ведущих (Bobuk + Gray) и двух гостях (Ksenks + Marin_k_a).
+        4 короткие реплики (макс. 2.4 сек каждая) — ошибочная атрибуция.
+        Это скорее всего Сван, говорящий через микрофон Bobuk'а.
+
+      possible_matches:
+        - person_id: "swan"
+          confidence: 0.8
+          reason: "Короткие комментарии рядом с Bobuk — типичный паттерн для Свана в этом эпизоде"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7868.0
+          etime: 7870.4
+          text: "Ну, собственно, там, где платить просят."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Umputun"
+      issue: |
+        Umputun НЕ присутствует в этом эпизоде, но 4 реплики помечены его именем.
+        В начале эпизода представляют только: Bobuk, Gray, Ksenks (Ксюша),
+        и упоминают Marin_k_a. Сван сидит рядом с Bobuk как гость, не ведущий.
+
+    - speaker: "Swan"
+      issue: |
+        Сван активно комментирует весь эпизод (упоминается ~20 раз),
+        но нет консистентной маркировки его реплик. SPEAKER_06 — наиболее вероятно Сван.
+
+    - speaker: "SPEAKER_03"
+      issue: |
+        Нужно переименовать в Ksenks — идентификация подтверждена с высокой уверенностью.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 395
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Прямое представление: Gray спрашивает "Ксюша, ты тут ли?" и SPEAKER_03 отвечает
+      "Да, я тут. Всем привет." Также SPEAKER_03 говорит "мы-то с Грэм далеко".
+
+  - type: rename
+    episode: 395
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Swan"
+    confidence: medium
+    reason: |
+      Контекстуальный анализ: Сван сидит рядом с Bobuk (подтверждено в 271s),
+      SPEAKER_06 делает характерные для Свана комментарии про Apple/iOS,
+      обращается к ведущим по имени. Требуется voice comparison для подтверждения.
+
+  - type: delete
+    episode: 395
+    speaker: "Umputun"
+    confidence: high
+    reason: |
+      Umputun НЕ участвует в эпизоде 395. 4 реплики — ошибочная атрибуция,
+      скорее всего это Сван через микрофон Bobuk'а.
+
+  - type: merge
+    episode: 395
+    from_speakers: ["SPEAKER_08", "SPEAKER_01", "SPEAKER_02"]
+    to_speaker: "Swan"
+    confidence: low
+    reason: |
+      Все эти спикеры — короткие разрозненные реплики, вероятно Сван через микрофон.
+      Требуется voice comparison для подтверждения.
+
+  - type: delete
+    episode: 395
+    speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    confidence: high
+    reason: "Маркер отменённой ошибочной атрибуции. Требуется переприсвоение к Ksenks или Marin_k_a."
+
+  - type: delete
+    episode: 395
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    confidence: high
+    reason: "Маркер отменённой ошибочной атрибуции. Требуется переприсвоение."
+
+# Дополнительные заметки
+notes: |
+  Эпизод 395 записан без Umputun. Состав ведущих: Bobuk + Gray.
+  Гости: Ksenks (Ксюша) и Marin_k_a (Марина).
+  Сван присутствует физически рядом с Bobuk и комментирует через его микрофон.
+
+  Основная проблема: Сван не имеет консистентной маркировки — его реплики
+  разбросаны по SPEAKER_06, SPEAKER_08, SPEAKER_01, SPEAKER_02 и даже Umputun.
+
+  Для точной атрибуции реплик Свана требуется voice comparison с известными
+  записями его голоса.
+
+  Swan отсутствует в people.yaml — требуется добавление.

@@ -1,0 +1,225 @@
+episode: 378
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a]  # Марина - бывшая ведущая
+  total_duration_sec: 7800  # ~2 часа 10 минут
+
+# Контекст из начала эпизода
+episode_context:
+  intro_notes: |
+    Umputun: "Бобук с нами пока отсутствует, все остальные зато тут"
+    Umputun спрашивает "Ксюша, ты из места постоянного базирования?" - SPEAKER_01 отвечает.
+    Bobuk появляется позже (~343s).
+    Marin_k_a участвует активно наравне с ведущими.
+  participants_mentioned:
+    - Umputun (ведущий, из США)
+    - Gray (из домашней студии, Киев упоминается)
+    - Ksenks (место постоянного базирования = Финляндия)
+    - Bobuk (присоединяется позже)
+    - Marin_k_a (активный участник - Марина, бывшая ведущая)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 991
+    replies_count: 360
+    first_appearance_sec: 57
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun спрашивает "Ксюша, ты из места постоянного базирования?" (54-57s),
+        SPEAKER_01 отвечает "Да, из места постоянного базирования." (57s).
+        Упоминание Финляндии в контексте биатлона также связано с Ksenks.
+        Активное участие на протяжении всего выпуска (360 реплик).
+
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1189
+    replies_count: 185
+    first_appearance_sec: 84
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Уже идентифицирована в people.yaml как Марина (бывшая ведущая).
+        Активное участие в дискуссиях, женский голос (видно по грамматике: "мне кажется", "я знаю").
+        Длительные содержательные реплики о технологиях.
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 98
+    replies_count: 41
+    first_appearance_sec: 157
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие разрозненные реплики (в среднем 2.4 сек каждая).
+        Появляются между репликами основных спикеров.
+        Примеры: "То есть как бы нужно понять еще какие" (157s),
+        "Все, пока ты тудуист" (654s), "Да" (2084s), "То есть это был баг?" (2086s).
+        Вероятно это ошибки распознавания голосов Ksenks или Marin_k_a,
+        либо перекрывающаяся речь.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Многие реплики вписываются в контекст диалога с Ksenks"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть Мариной"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2079.72
+          etime: 2086.56
+          text: "У меня с того... На телевизоре? / Да / То есть это был баг? / Все."
+          note: "Серия коротких реплик, нужно сравнить с голосами Ksenks и Marin_k_a"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 2
+    replies_count: 1
+    first_appearance_sec: 796
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Это всякое бывает" (796s) между репликами Gray.
+        Скорее всего ошибка сегментации - это продолжение речи Gray или
+        короткая реакция одного из участников.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплика между двумя репликами Gray, может быть его же речь"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Короткая реакция участника диалога"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткий сегмент (2 сек) для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 5
+    replies_count: 3
+    first_appearance_sec: 1090
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Помечено как MISATTRIBUTED - ранее ошибочно присвоено Lavale.
+        Короткие фразы между репликами Marin_k_a и Gray:
+        - "С одной стороны, ты прав." (1090s)
+        - "У них виндовые компьютеры." (1123s)
+        - "То есть у меня не последний андроид, как видно." (2121s)
+        Все реплики вписываются в контекст речи Marin_k_a.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.8
+          reason: "Реплики идут в контексте речи Marin_k_a, тематически связаны"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Альтернативный вариант"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие сегменты, контекст указывает на Marin_k_a"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 8
+    replies_count: 3
+    first_appearance_sec: 5313
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Помечено как MISATTRIBUTED - ранее ошибочно присвоено Эльдару Муртазину.
+        Короткие фразы в разных частях выпуска:
+        - "Там просто есть... У него законопроекты все еще нет?" (5313s)
+        - "Система продажи игр." (6831s)
+        - "Совершенно нечего." (7668s)
+        Эльдар Муртазин не был гостем этого выпуска.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Активный участник диалога, короткие реакции характерны"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможно реплики Gray"
+        - person_id: "marin_k_a"
+          confidence: 0.2
+          reason: "Альтернативный вариант"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5312.66
+          etime: 5317.62
+          text: "Там просто есть... У него законопроекты все еще нет?"
+          note: "Самый длинный сегмент MISATTRIBUTED_ELDAR, нужно определить спикера"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: "Не представлена явно, но идентифицируется по обращению 'Ксюша' и вопросу про Финляндию"
+    - speaker: "Marin_k_a"
+      issue: "Не представлена явно в начале, но активно участвует с ~84 секунды"
+    - speaker: "Bobuk"
+      issue: "Присоединяется позже (~343s), что объясняется в начале выпуска"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 378
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun обращается к Ксюше (54s), SPEAKER_01 отвечает.
+      360 реплик, 991 сек - активный участник на протяжении всего выпуска.
+      Контекст разговора про Финляндию подтверждает идентификацию.
+
+  - type: rename
+    episode: 378
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: |
+      Короткие реплики в контексте речи Marin_k_a.
+      Тематически связаны с окружающими репликами Марины.
+      Lavale не была гостем этого выпуска.
+
+# Дополнительные наблюдения
+notes: |
+  1. Выпуск 378 (февраль 2014) - обсуждение Олимпиады в Сочи, биатлона.
+  2. Марина (Marin_k_a) - активный участник, бывшая ведущая, уже в справочнике.
+  3. SPEAKER_00 требует дополнительного анализа - много коротких реплик.
+  4. SPEAKER_MISATTRIBUTED_* уже помечены как ошибки в предыдущих чистках.
+  5. Bobuk мало говорит (6 реплик, 23 сек) - возможно были технические проблемы.

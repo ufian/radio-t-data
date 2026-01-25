@@ -1,0 +1,244 @@
+episode: 372
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Marin_k_a]
+  total_duration_sec: 7001
+  notes: "Эпизод от 28 декабря 2013. В гостях представитель QuickBlocks (BaaS сервис)."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 639
+    replies_count: 117
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: "Marin_k_a уже идентифицирована в транскрипте как Марина, бывшая ведущая. В people.yaml есть запись с id: marin_k_a"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 376
+    replies_count: 168
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Прямое подтверждение в строке 12421: Umputun спрашивает "Но я не понимаю, почему молчите вы, Ксения?" и в строке 12436 SPEAKER_03 отвечает: "Да, я изучаю следующую тему, а то меня же спросят, что дальше."
+        Также в строке 1432 Umputun говорит "Ксюша, у меня для тебя плохие новости есть" после реплики SPEAKER_03.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 337
+    replies_count: 67
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Гость представляет сервис QuickBlocks (Backend as a Service).
+        Появляется в 2072 сек, Umputun приветствует: "Здравствуй, дорогой".
+        Не был представлен по имени в транскрипте.
+        Говорит про технические детали BaaS: "В общем, у нас QuickBlocks два в одном. Это BaaS и Communication as a Service."
+      possible_matches:
+        - person_id: "quickblocks_guest"
+          confidence: 0.3
+          reason: "Представитель стартапа QuickBlocks, имя неизвестно"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2329.57
+          etime: 2360.86
+          text: "Есть куча сервисов для Push Notifications, например, Urban Airship, можно на Амазоне свой поднять. Но опять же, вы хотите админку сделать, сертификаты подписывать, очередь, queue service и так далее. Потом, естественно, потребуется чат, инфикация юзеров, location, различные другие API, сохранение файлов. И все это вместе, все в одном, естественно, называется Backend as a Service. Но мы сейчас делали фокус на Communication..."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 35
+    replies_count: 17
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка распознавания голоса Ksenks. Короткие реплики, перемежающиеся с SPEAKER_03 (тоже Ksenks). Паттерн: отвечает на обращения к Ксюше, но реже чем SPEAKER_03."
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Строка 12574: Umputun говорит "Ксюша, ты так и не понял, о чем он говорит..."
+        Строка 12580: SPEAKER_02 отвечает "А Бобук понял?"
+        Реплики короткие: "Нет", "А почему для девочек не работает?", "Ты меня пугаешь"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 23
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Реплики ранее ошибочно атрибутированы EldarMurtazin. Эльдар не участвовал в этом выпуске. Требуется определить реального автора."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Примеры: 'Ну, как обычно же.', 'Очень хорошо возразил Ом Малик.' - похоже на голос одного из ведущих"
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Возможно та же ошибка распознавания что и SPEAKER_02/SPEAKER_03"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Могла быть ошибочно распознана"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 326.36
+          etime: 329.98
+          text: "Очень хорошо возразил Ом Малик."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 22
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Реплики ранее ошибочно атрибутированы Lavale. Лаваль не участвовала в этом выпуске. Требуется определить реального автора."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Примеры: 'Как раз в тему, что покупки заменяют инновации.', 'Что Google не хочет растить внутри себя инновации...' - осмысленные комментарии по теме"
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Тематика реплик совпадает с участием Ksenks в обсуждении"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Марина активно участвует в обсуждении IT-тем"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1120.9
+          etime: 1129.35
+          text: "Как раз в тему, что покупки заменяют инновации. Что Google не хочет растить внутри себя инновации, а хочет, видимо, их покупать."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 16
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные реплики, разбросанные по эпизоду. Типичные ошибки автоматического распознавания."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Примеры: 'Как?', 'Пьют, конечно.', 'И дома пьют.', 'Не, ну это пилгейт, вроде все честно.'"
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Женский голос в контексте разговора"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Женский голос в контексте разговора"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (1-2 сек), типичные ошибки распознавания: 'Вот что-то ты сломал.', 'Раздавят.'"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Артефакт. Единственная реплика 'Ну-ну-ну-ну-ну-ну-ну.' в 6610 сек - похоже на звуковой эффект или помеху."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_07"
+      issue: "Гость из QuickBlocks не был представлен по имени. Umputun приветствует его как 'дорогой' в 2069 сек."
+    - speaker: "Ksenks"
+      issue: "Ксюша упоминается 20+ раз по имени, но атрибутирована как SPEAKER_03 (168 реплик) и частично SPEAKER_02 (17 реплик). Требуется объединение."
+    - speaker: "SPEAKER_MISATTRIBUTED_*"
+      issue: "Присутствуют метки ошибочной атрибуции (ELDAR, LAVALE), требуется определить реальных авторов."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 372
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Прямое подтверждение: обращение 'Ксения' с ответом SPEAKER_03"
+
+  - type: rename
+    episode: 372
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Ответы на обращения к Ксюше, короткие реплики - вероятно та же ошибка распознавания"
+
+  - type: rename
+    episode: 372
+    from_speaker: "SPEAKER_04"
+    to_speaker: "SPEAKER_99"
+    confidence: high
+    reason: "Артефакт: 'Ну-ну-ну-ну-ну-ну-ну' - не речь"
+
+  - type: manual_review
+    episode: 372
+    speakers: ["SPEAKER_MISATTRIBUTED_ELDAR", "SPEAKER_MISATTRIBUTED_LAVALE", "SPEAKER_00", "SPEAKER_01"]
+    reason: "Требуется voice comparison для определения реальных авторов"
+
+  - type: add_guest
+    episode: 372
+    speaker: "SPEAKER_07"
+    suggested_id: "quickblocks_guest_372"
+    reason: "Представитель QuickBlocks, имя не было названо в эфире. Требуется внешнее исследование для идентификации."
+
+# Аудио для voice comparison
+audio_reference:
+  url: null  # Метаданные не найдены в data_clean, требуется проверка в data/
+  episode_date: "2013-12-28"

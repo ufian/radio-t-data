@@ -1,0 +1,179 @@
+episode: 311
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 7690
+  notes: >
+    Ksenks присутствует в эпизоде (явно представлена в начале как "Ксюша"),
+    но её реплики размечены как Marin_k_a и SPEAKER_00.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 264
+    replies_count: 43
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        В начале эпизода (91.45s) Umputun говорит: "У нас есть Ксюша сегодня".
+        На протяжении эпизода ведущие обращаются к этому спикеру как "Ксюша":
+        - 636.76s: "Ксюша, скажи мне вот что" -> следующая реплика Marin_k_a
+        - 1544.19s: "Видела ли ты, Ксюша, картинки Google дата-центра?"
+        - 3700s: "Ксюша, не уходя от микрофона далеко..."
+        - Многие другие обращения по имени "Ксюша"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 223
+    replies_count: 69
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        SPEAKER_00 и Marin_k_a чередуются в одних и тех же диалогах, отвечая на
+        обращения к "Ксюше". Например:
+        - 1544s: Umputun спрашивает "Видела ли ты, Ксюша..." -> SPEAKER_00 отвечает "Видела"
+        - Реплика 8240.8s: "Я задала вопрос" - женский род подтверждает идентификацию
+        - SPEAKER_00 продолжает мысли Marin_k_a и наоборот (одна речь разбита между двумя метками)
+        Суммарно Marin_k_a + SPEAKER_00 = 112 реплик, 487 сек - типичный объём для соведущей
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Эльдар Муртазин НЕ присутствует в этом эпизоде - на него ссылаются в третьем лице
+        ("тебе к Эльдару за такими ответами", "любимая Эльдаром компания").
+        Метка MISATTRIBUTED указывает, что эти реплики были ошибочно присвоены.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: >
+            Учитывая контекст и то, что все другие неизвестные спикеры - это Ksenks,
+            вероятно эти 4 реплики тоже принадлежат ей. Однако без voice comparison
+            нельзя быть уверенным - могут быть и ошибки распознавания других ведущих.
+        - person_id: "gray"
+          confidence: 0.3
+          reason: >
+            Реплика 4360.8s ("Есть 2 терабайта сейлота, 256 solid-state drive")
+            идёт сразу после Gray и продолжает технический диалог.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3867.68
+          etime: 3869.28
+          text: "Kindle Fire понятно, почему продается."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная короткая реплика (1.5 сек) "Что и всегда." в середине диалога.
+        Типичная ошибка автоматического распознавания - неправильно атрибутированная
+        короткая фраза одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: >
+            Реплика идёт сразу после Bobuk (4108-4110s) и перед Gray.
+            Может быть продолжением его мысли.
+        - person_id: "gray"
+          confidence: 0.4
+          reason: Следующая реплика Gray, возможно начал говорить раньше.
+
+      voice_task:
+        needed: false  # слишком короткий сегмент для идентификации
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Ksenks"
+      issue: >
+        Ксения представлена в начале эпизода, но её реплики размечены
+        как Marin_k_a (43 реплики) и SPEAKER_00 (69 реплик) вместо Ksenks.
+        Требуется переименование.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 311
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Явное представление "У нас есть Ксюша сегодня" + многочисленные
+      обращения по имени "Ксюша" к этому спикеру.
+
+  - type: rename
+    episode: 311
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      SPEAKER_00 отвечает на обращения к "Ксюше", использует женский род
+      ("Я задала вопрос"), чередуется с Marin_k_a в тех же диалогах.
+
+  - type: rename
+    episode: 311
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: >
+      Эльдар не присутствует в эпизоде. Вероятнее всего это Ksenks,
+      но требуется voice comparison для подтверждения.
+
+  - type: rename
+    episode: 311
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Bobuk"  # или Gray - требуется проверка
+    confidence: low
+    reason: >
+      Единственная короткая реплика, контекст неоднозначен.
+      Требуется voice comparison или можно оставить как есть (незначительно).

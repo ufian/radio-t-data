@@ -1,0 +1,278 @@
+episode: 328
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 6500  # ~1:48 часов
+  notes: |
+    В транскрипте присутствует третий спикер помимо Umputun и Bobuk.
+    Umputun неоднократно обращается к "Ксюше" (17+ раз за выпуск).
+    Однако Ksenks НЕ размечена как спикер.
+    Вместо неё размечены Marin_k_a (112 реплик) и SPEAKER_00 (154 реплики).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 628
+    replies_count: 112
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Ключевая проблема идентификации
+      identified_as: null  # Требует уточнения - см. ниже
+      identification_method: null
+      confidence: null
+      evidence: |
+        КРИТИЧЕСКИЙ ВОПРОС: Marin_k_a - это Ksenks или отдельный человек?
+
+        Факты ЗА то, что это Ksenks:
+        1. Umputun 17+ раз обращается к "Ксюше" за выпуск
+        2. На каждое обращение к "Ксюше" отвечает Marin_k_a или SPEAKER_00
+        3. Пример 1 (31s): "Ксюша, ты как не обиделась?" -> SPEAKER_00: "Нет, я не обиделась"
+        4. Пример 2 (2067s): "Ксюша, тебе грустно или весело?" -> Marin_k_a отвечает
+        5. Пример 3 (2753s): "А ты, Ксюша, с гитхабом как на ты?" -> Marin_k_a отвечает
+        6. Пример 4 (5611s): "Ты, Ксюша, понял, да?" -> SPEAKER_00 отвечает
+
+        Факты ПРОТИВ:
+        1. В people.yaml Marin_k_a - отдельный гость (Марина, "Бывшая ведущая")
+        2. Ksenks - отдельная запись с real_name "Ксения"
+        3. Марина и Ксения - разные люди
+
+        ВЕРОЯТНАЯ ПРИЧИНА:
+        Marin_k_a и SPEAKER_00 в этом выпуске - это на самом деле Ksenks.
+        Ошибка произошла при первичной разметке транскрипта.
+        Возможно автоматический распознаватель или человек ошибочно
+        приписал голос Ксении к профилю Marin_k_a.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.85
+          reason: "Umputun обращается к 'Ксюше', отвечает Marin_k_a/SPEAKER_00"
+        - person_id: "marin_k_a"
+          confidence: 0.15
+          reason: "Размечено как Marin_k_a в транскрипте, но контекст противоречит"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2757.55
+          etime: 2771.25
+          text: "Ну, я как ты, но так как я смогла с ним разобраться прямо сразу и с насколько не особо там вчиливаясь, я поняла, что гитхаб все-таки написан не чужими для хищников. Бывают, конечно, непонятные моменты."
+        notes: |
+          Сравнить с голосом Ksenks из других выпусков (например, 330-340).
+          Если это Ksenks - все реплики Marin_k_a и SPEAKER_00 нужно переразметить.
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 392
+    replies_count: 154
+    pattern: scattered
+
+    analysis:
+      is_error: false  # Не ошибка распознавания - это реальный человек
+      error_reason: null
+
+      identified_as: null  # Тот же человек, что и Marin_k_a
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        SPEAKER_00 и Marin_k_a - один человек, разбитый на два спикера.
+
+        Доказательства непрерывной речи:
+        1. 38.75s Marin_k_a -> 44.35s SPEAKER_MISATTRIBUTED -> 48.11s SPEAKER_00
+           Один диалог разбит между тремя спикерами
+
+        2. 405.27-409.89s Marin_k_a: "И после этого у меня теперь..."
+           409.95-416.52s SPEAKER_00: "Теперь я могу... Там появилась..."
+           Продолжение одной мысли
+
+        3. 5619.12s Marin_k_a: "Если сравнить сейчас питончик..."
+           5635.99s SPEAKER_00: "Тебе так не кажется?"
+           Одна мысль, завершённая вопросом
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.85
+          reason: "Тот же человек что и Marin_k_a, вероятно Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 409.95
+          etime: 417.1
+          text: "Теперь я могу... Там появилась такая кнопочка Open Folder, и можно смотреть в ней файлики. Ну, в общем..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция. Реплика находится между Marin_k_a и SPEAKER_00
+        в одном непрерывном диалоге (38-48 секунды).
+        Текст: "В общем, я думаю, это какие-то счеты между вами, а я ни при чем."
+        Это продолжение предыдущей реплики Marin_k_a, тот же спикер.
+
+      identified_as: null  # Тот же человек что Marin_k_a/SPEAKER_00
+      identification_method: "context"
+      confidence: high
+      evidence: "Контекст диалога 38-48s показывает непрерывную речь одного человека"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.85
+          reason: "Часть непрерывной речи того же человека"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Односложная реплика "Хорошо" (177.58-178.58s) между репликами
+        Umputun (177.54s) и Bobuk (178.64s).
+        Вероятно ошибка распознавания или короткая реакция одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Односложное 'Хорошо' в разговоре Umputun-Bobuk"
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Bobuk говорит сразу после этой реплики"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Третий участник выпуска"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Односложное "Да" (715.33-716.11s) между репликами Umputun.
+        Типичная ошибка распознавания короткой реакции.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        709.78-715.19s Umputun: "Прям в проводах мало информации хранится"
+        715.33-716.11s SPEAKER_03: "Да."
+        716.15-719.67s Umputun: "А на раутерах..."
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Мог быть краткий ответ Bobuk"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Мог быть краткий ответ третьего участника"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: |
+        Ksenks НЕ размечена как спикер, хотя Umputun обращается к "Ксюше" 17+ раз.
+        Её реплики размечены как Marin_k_a и SPEAKER_00.
+
+    - speaker: "Marin_k_a"
+      issue: |
+        В справочнике Marin_k_a = Марина (бывшая ведущая), но здесь к ней
+        обращаются как к "Ксюше". Вероятная ошибка первичной разметки.
+
+    - speaker: "Gray"
+      issue: |
+        Gray не присутствует в этом выпуске (только Umputun и Bobuk из ведущих).
+        Это нормально - не все ведущие участвуют в каждом выпуске.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 328
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Umputun обращается к "Ксюше", отвечает Marin_k_a.
+      ТРЕБУЕТСЯ VOICE COMPARISON для подтверждения.
+
+  - type: rename
+    episode: 328
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      SPEAKER_00 и Marin_k_a - один человек (анализ непрерывной речи).
+      Если Marin_k_a = Ksenks, то и SPEAKER_00 = Ksenks.
+      ТРЕБУЕТСЯ VOICE COMPARISON для подтверждения.
+
+  - type: rename
+    episode: 328
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Часть непрерывного диалога Marin_k_a/SPEAKER_00.
+      Зависит от идентификации основного спикера.
+
+  - type: delete_or_merge
+    episode: 328
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    action: "Определить принадлежность или удалить как шум"
+    confidence: low
+    reason: "Односложная реплика, требует дополнительного анализа"
+
+  - type: delete_or_merge
+    episode: 328
+    from_speaker: "SPEAKER_03"
+    action: "Определить принадлежность или удалить как шум"
+    confidence: low
+    reason: "Односложная реплика 'Да', вероятно ошибка"
+
+# Резюме для ручной проверки
+manual_review_required:
+  priority: high
+  main_question: |
+    Является ли Marin_k_a в этом выпуске на самом деле Ksenks?
+
+  verification_steps:
+    - step: 1
+      action: "Voice comparison Marin_k_a ep.328 vs Ksenks из ep.330-340"
+      audio_url: "Нужно найти в data/328/328_desc.json или использовать CDN"
+      reference_time: "2757-2771 секунды"
+
+    - step: 2
+      action: "Voice comparison Marin_k_a ep.328 vs Marin_k_a из других выпусков"
+      purpose: "Убедиться что это НЕ настоящая Марина"
+
+    - step: 3
+      action: "Если подтвердится Ksenks - применить rename rules"
+
+  expected_outcome: |
+    После voice comparison должно быть ясно:
+    - Если голос = Ksenks: переименовать Marin_k_a, SPEAKER_00, SPEAKER_MISATTRIBUTED_LAVALE -> Ksenks
+    - Если голос = Marin_k_a: понять почему Umputun называет её "Ксюша" (возможно ошибка в транскрипте текста?)

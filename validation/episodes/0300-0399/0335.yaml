@@ -1,0 +1,228 @@
+episode: 335
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Ksenks]  # размечена как Marin_k_a и SPEAKER_00
+  total_duration_sec: 8689.68
+
+# Ключевое наблюдение
+# В конце эпизода (8620-8627с) Umputun прямо говорит:
+# "Я напомню, что с нами, хотя многие не заметили, была Ксюша"
+# SPEAKER_00 отвечает: "Да, я была чуть-чуть"
+# Это однозначно подтверждает, что SPEAKER_00 = Ksenks
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 292.1
+    replies_count: 52
+    pattern: consecutive  # появляется блоками, ведёт технические диалоги
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная разметка. Это Ksenks, не Марина. Подтверждается: (1) Umputun обращается к 'Ксюше' перед репликами (680с, 2541с), (2) В финале (8620с) подтверждается присутствие Ксюши, (3) Технические темы (Java, Objective-C, тесты) соответствуют профилю Ksenks"
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        8620с: Umputun: "Я напомню, что с нами, хотя многие не заметили, была Ксюша"
+        680с: Umputun: "Ксюша, у меня к тебе вопрос, как к специалисту по конспирологии" -> Marin_k_a отвечает
+        2541с: Umputun: "Ксюшенька, у меня к тебе вот вопрос" -> после этого идёт диалог
+
+      possible_matches: []
+      voice_task:
+        needed: false  # идентификация надёжная
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 117.7
+    replies_count: 53
+    pattern: scattered  # короткие реплики вперемежку с Marin_k_a
+
+    analysis:
+      is_error: true
+      error_reason: "Это тот же человек что и Marin_k_a = Ksenks. Реплики чередуются в одном диалоге (например, 713-724с)"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        8625с: После "была Ксюша" отвечает SPEAKER_00: "Да, я была чуть-чуть"
+        47с: Umputun: "Ксюша, здравствуй" -> SPEAKER_00: "Здравствуйте"
+        157-161с: SPEAKER_00 отвечает на вопросы, адресованные Ксюше
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 1.1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткая реплика (1 сек) в середине диалога Umputun. Скорее всего ошибка распознавания или это один из ведущих"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "1132с: 'И начнут от него чего-то.' — обрывок фразы между репликами Umputun"
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Контекст — Umputun говорит до и после, могла быть ошибка сегментации"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Также участвует в диалоге"
+
+      voice_task:
+        needed: false  # слишком короткая реплика
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 3.0
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткая реплика о скорости браузеров. Контекст: разговор о Chrome/Blink. Нет признаков присутствия Эльдара"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "1443с: 'Жаль, что к стейбл-версии теряется это преимущество скорости.' — технический комментарий"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Тема соответствует, Ksenks активна в этот момент"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk отвечает сразу после"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 0.9
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткая реплика сразу после обращения к Ксюше. Это явно Ksenks"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        2541с: Umputun: "Ксюшенька, у меня к тебе вот вопрос, потому что Грею с таким вопросом ходить смешно"
+        2546с: SPEAKER_MISATTRIBUTED_LAVALE: "Лучше к Бобуку" — ответ на обращение к Ксюше
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 0.4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Односложная реплика 'Да.' в конце эпизода (5501с). Скорее всего ошибка распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "5501с: 'Да.' — слишком короткая для идентификации"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Ksenks активна в эпизоде"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Участвует в разговоре"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Ksenks представлена в начале (47с) и подтверждена в конце (8620с).
+    Однако её реплики ошибочно размечены как Marin_k_a и SPEAKER_00.
+    Нет реального спикера Ksenks в транскрипте несмотря на её участие.
+
+  issues:
+    - speaker: "Ksenks"
+      issue: "Отсутствует в разметке, хотя явно участвует. Реплики ошибочно приписаны Marin_k_a и SPEAKER_00"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 335
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun явно обращается к Ксюше перед репликами Marin_k_a (680с, 2541с).
+      В конце эпизода подтверждается участие Ксюши (8620с).
+      Марина (Marin_k_a) не упоминается в эпизоде.
+
+  - type: rename
+    episode: 335
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Прямое подтверждение: Umputun говорит "была Ксюша", SPEAKER_00 отвечает "Да, я была".
+      SPEAKER_00 отвечает на обращения к "Ксюше" (47с, 157с).
+
+  - type: rename
+    episode: 335
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Реплика сразу после прямого обращения к Ксюше"
+
+  - type: delete_or_merge
+    episode: 335
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    confidence: medium
+    reason: "Обрывок фразы в середине монолога Umputun, вероятно ошибка сегментации"
+
+  - type: delete_or_merge
+    episode: 335
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    confidence: medium
+    reason: "Короткая реплика без контекста присутствия Эльдара"
+
+  - type: delete_or_merge
+    episode: 335
+    speaker: "SPEAKER_04"
+    confidence: medium
+    reason: "Односложная реплика, ошибка распознавания"
+
+# Референсные сегменты для voice comparison (если понадобится)
+voice_reference_segments:
+  marin_k_a_long:
+    description: "Длинный осмысленный фрагмент Marin_k_a (=Ksenks)"
+    stime: 1599.49
+    etime: 1625.71
+    duration_sec: 26.2
+    text_preview: "То есть, если в какой-то момент... Ну, Google никак не может повлиять..."
+
+  speaker_00_confirmation:
+    description: "SPEAKER_00 подтверждает что она Ксюша"
+    stime: 8625.24
+    etime: 8627.14
+    duration_sec: 1.9
+    text: "Да, я была чуть-чуть."

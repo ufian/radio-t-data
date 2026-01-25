@@ -1,0 +1,296 @@
+episode: 359
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a, SPEAKER_03]
+  total_duration_sec: 7200  # примерно 2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # SPEAKER_02 - это Ksenks (Ксюша)
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 348
+    replies_count: 137
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Umputun обращается "Ксюш, можно я скажу..." (311s),
+        после чего SPEAKER_02 отвечает "Конечно, да, надо рассказать..." (318s).
+        Также "Ксюша, ты думаешь, мы про тебя забыли?" (274s),
+        "Откуда у вас там интернет, Ксюша?" (337s).
+        137 реплик, распределённых по эпизоду - типичный паттерн ведущей.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  # SPEAKER_03 - гость, представитель магазина LED-ламп
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 389
+    replies_count: 83
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Появляется с 3340s после слов Gray: "представитель того самого
+        магазина с теплым ламповым светом" (3304s).
+        Umputun спрашивает: "В этом магазине есть кто-то, кроме тебя?" (3337s).
+        SPEAKER_03 отвечает: "Не, ну, вообще-то есть, да. У меня еще сотрудники."
+        Говорит экспертно о LED-лампах, светодиодах, сроке службы, цветопередаче.
+        Имя не названо в эпизоде.
+
+      possible_matches:
+        - person_id: "unknown_led_shop_owner"
+          confidence: 0.9
+          reason: "Владелец/представитель магазина LED-ламп, рекламодатель"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3434.77
+          etime: 3455.4
+          text: "Я вот возьму такой пример, если взять, к примеру, смартфоны на основе Unix ядра, то есть это, допустим, Apple, Android, там Ubuntu сейчас собираются делать, Firefox, то есть у всех ядро и примерно основа одна и та же, но куча нюансов существует."
+
+  # EldarMurtazin - ОШИБКА атрибуции, это смесь Gray и SPEAKER_03
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 187
+    replies_count: 32
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин НЕ присутствует в этом выпуске:
+        1. Его имя НЕ упоминается в тексте (не представляли)
+        2. Реплики на 186-3025s - продолжения речи Gray (о блокноте Evernote,
+           Nexus, SDK). Пример: Gray говорит о своём почерке (171-185s),
+           затем EldarMurtazin: "рукописный почерк у меня" (186s) - это ТОТ ЖЕ человек!
+        3. Реплики на 3838-4025s - это SPEAKER_03 (про LED-лампы).
+           Пример: "параметры светодиодных лампочек" (4025s) идёт перед
+           репликой SPEAKER_03 о цветопередаче.
+        Явная ошибка автоматической атрибуции.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Реплики до 3025s - продолжения речи Gray"
+        - person_id: "SPEAKER_03"
+          confidence: 0.3
+          reason: "Реплики про LED-лампы (3838s, 4025s)"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  # SPEAKER_01 - одиночная короткая реплика
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одиночная реплика (2 сек) в 5742s: "А, то есть это именно компания
+        Parallax сделала..." - скорее всего ошибка распознавания одного из
+        ведущих. Перед ней SPEAKER_02 (Ksenks), после - Gray.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Контекст диалога, Gray отвечает сразу после"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  # SPEAKER_MISATTRIBUTED_PETR - уже помечена как ошибка
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 16
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Префикс SPEAKER_MISATTRIBUTED_ указывает на отменённую ошибочную атрибуцию.
+        Реплика о Knowledge Graph (1246s): "Они говорят, что они используют, там,
+        у них 570 миллионов концептов..." - экспертная речь о технологии Google.
+        Пётр Диденко в выпуске не упоминается.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Gray говорит сразу после этой реплики, контекст совпадает"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk говорит сразу перед репликой"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1246.57
+          etime: 1262.48
+          text: "Они говорят, что они используют, там, у них 570 миллионов концептов, ну, то есть, я так понимаю, каких-то семантических форм, которые они будут использовать для того, чтобы..."
+
+  # SPEAKER_MISATTRIBUTED_LAVALE - уже помечена как ошибка
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Префикс SPEAKER_MISATTRIBUTED_ указывает на отменённую ошибочную атрибуцию.
+        Одиночная короткая реплика (4 сек) в 5858s: "Просто три ключа, то есть
+        они просто безлимитные" - в контексте розыгрыша Parallels.
+        Лаваль в выпуске не упоминается.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Marin_k_a говорит до и после этой реплики о розыгрыше Parallels"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  # Marin_k_a - уже идентифицирована, но проверим
+  - speaker: "Marin_k_a"
+    total_duration_sec: 299
+    replies_count: 46
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "known_participant"
+      confidence: high
+      evidence: |
+        Marin_k_a (Марина) - известная бывшая ведущая подкаста.
+        Первая реплика в 341s: "Я читала, что Google хочет запустить воздушные шары."
+        Активно участвует в обсуждениях на протяжении всего выпуска.
+        46 реплик - типичный паттерн участника.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_02"
+      issue: "Ksenks присутствует, но помечена как SPEAKER_02. Требуется переименование."
+    - speaker: "SPEAKER_03"
+      issue: "Гость (представитель магазина LED-ламп) не назван по имени в эпизоде."
+    - speaker: "EldarMurtazin"
+      issue: "Эльдар Муртазин НЕ присутствует в выпуске. Все реплики - ошибки атрибуции (Gray + SPEAKER_03)."
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Пётр Диденко НЕ присутствует в выпуске. Уже помечено как ошибка."
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Лаваль НЕ присутствует в выпуске. Уже помечено как ошибка."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 359
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Umputun многократно обращается к 'Ксюше' перед репликами SPEAKER_02"
+
+  - type: rename
+    episode: 359
+    from_speaker: "EldarMurtazin"
+    to_speaker: "Gray"
+    time_range: [0, 3300]
+    confidence: medium
+    reason: |
+      Реплики EldarMurtazin до 3300s - продолжения речи Gray.
+      Требует voice comparison для подтверждения.
+
+  - type: rename
+    episode: 359
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_03"
+    time_range: [3300, 10000]
+    confidence: medium
+    reason: |
+      Реплики EldarMurtazin про LED-лампы (3838s, 4025s) - это речь гостя SPEAKER_03.
+      Требует voice comparison для подтверждения.
+
+  - type: rename
+    episode: 359
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Реплика в контексте речи Marin_k_a о розыгрыше Parallels"
+
+  - type: investigate
+    episode: 359
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    reason: "Требуется voice comparison - может быть Gray или Bobuk"
+
+  - type: investigate
+    episode: 359
+    speaker: "SPEAKER_01"
+    reason: "Одиночная реплика, вероятно Gray или ошибка распознавания"
+
+# Примечания
+notes: |
+  Эпизод 359 от 28 сентября 2013 года.
+
+  Основные участники:
+  - Ведущие: Umputun, Bobuk, Gray, Ksenks (помечена как SPEAKER_02)
+  - Гости: Marin_k_a (бывшая ведущая), SPEAKER_03 (представитель магазина LED-ламп)
+
+  Критическая проблема: EldarMurtazin ОШИБОЧНО присутствует в эпизоде.
+  Все 32 его реплики - ошибки автоматической атрибуции:
+  - ~70% - продолжения речи Gray
+  - ~30% - реплики SPEAKER_03 (про лампы)
+
+  Требуется voice comparison для точного разделения реплик EldarMurtazin между Gray и SPEAKER_03.

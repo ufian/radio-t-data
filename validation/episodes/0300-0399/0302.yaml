@@ -1,0 +1,87 @@
+episode: 302
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 6648.6
+  notes: >
+    Парный выпуск. Bobuk ведёт из машины по 3G с iPad, что объясняет
+    возможные артефакты распознавания из-за нестабильного соединения.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2.1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Две очень короткие реплики (0.14 сек и 2 сек), разбросанные по эпизоду.
+        Первая "Они" (504.9s) — обрыв фразы между репликами Umputun.
+        Вторая "Да ты шо?" (7185.5s) — характерная реакция, скорее всего Bobuk,
+        но ошибочно выделена как отдельный спикер из-за плохого 3G соединения.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.7
+          reason: >
+            "Да ты шо?" — типичная фраза Bobuk, реплика звучит сразу после его слов
+            об операционных системах Samsung. Bobuk вёл из машины по 3G, что могло
+            вызвать артефакты распознавания.
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 0.2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика "Да." длительностью 0.18 сек между двумя репликами
+        Umputun. Типичная ошибка распознавания — короткое междометие, выделенное
+        как отдельный спикер.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: >
+            Короткое "Да." как подтверждение слов Umputun о десятиминутном подкасте.
+            Bobuk был в эфире, мог коротко отреагировать.
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    В начале эпизода (0-100 сек) Umputun объясняет, что выпуск "парный" — только
+    он и Bobuk. Bobuk подтверждает, что ведёт из машины по 3G с iPad. Других
+    участников в этом выпуске нет. Все неизвестные спикеры — артефакты
+    распознавания.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не нужны — реплики слишком короткие и не несут смысловой нагрузки.
+# При желании их можно удалить или объединить с ближайшими репликами ведущих,
+# но это не критично для качества данных.

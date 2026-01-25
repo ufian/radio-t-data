@@ -1,0 +1,308 @@
+episode: 351
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: ~7300  # ~2 часа
+  notes: |
+    Выпуск 351 от 3 августа 2013 года.
+    Umputun в начале говорит "в полном составе" и упоминает Ксюшу.
+    Однако спикер Ksenks не размечен - её реплики, вероятно, записаны как SPEAKER_01.
+    Марина (Marin_k_a) присутствует - бывшая ведущая.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # === SPEAKER_01: Очень вероятно Ksenks ===
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 196
+    replies_count: 85
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun упоминает "Ксюша какая-то сегодня с немножко поздним зажиганием" (51-58s)
+        2. Bobuk обращается к ней "Ксюша, ты можешь рассказать..." (228-237s)
+        3. SPEAKER_01 использует женские формы глаголов:
+           - "Я хотела сказать, да, в стиле iOS 7" (144s)
+           - "я решила задать вопрос" (3398s)
+           - "я поняла, что вообще все не знают" (3491s)
+           - "Я посмотрела Хаоса" (5976s)
+        4. Активно участвует в технических обсуждениях как ведущая
+        5. 85 реплик на 196 секунд - характерно для ведущего
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Высокая уверенность, контекст достаточен
+
+  # === SPEAKER_05: Скорее всего Gray (ошибка распознавания) ===
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 39
+    replies_count: 31
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие фрагментарные реплики (1-2 сек), разбросанные по эпизоду.
+        Контекст показывает, что это вставки в диалоги между известными ведущими.
+        Вероятно, ошибки распознавания спикера - части реплик Gray или Bobuk.
+        Примеры: "Новый тренд" (1 сек), "А Е6?" (2 сек), "Да" (1 сек), "Ну..." (0.1 сек)
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Короткие реплики в технических дискуссиях, Gray присутствует"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Некоторые реплики близки к стилю Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2824.59
+          etime: 2828.31
+          text: "Тут просто используются эластисити и спикабилити."
+        notes: "Самый длинный сегмент SPEAKER_05 (4 сек)"
+
+  # === SPEAKER_00: Реклама/объявление ===
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "_ad"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Все реплики - рекламное объявление мероприятия:
+        - "Приглашаем на IT-события нового формата" (4274s)
+        - "24 и 25 августа" (4283s)
+        - "Спортхолл Калев" (4285s)
+        - "Таллинн" (4286s)
+        - "Бесплатный вход и участие" (4286s)
+        Это типичная рекламная вставка.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  # === SPEAKER_02: Короткие вставки, вероятно ошибка ===
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 2 коротких реплики (1-2 сек) в одном месте (2820s).
+        "Ну не гибкость" и "Эластичность, да" - это части общего диалога
+        о терминах scalability/elasticity. Скорее всего, ошибка в разделении
+        реплик между Gray, Bobuk или Ksenks.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray обсуждал технические термины в этом сегменте"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Ksenks активно участвовала в обсуждении"
+
+      voice_task:
+        needed: false  # Слишком короткие для надёжного сравнения
+
+  # === SPEAKER_07: Минимальные реплики ===
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 односложных реплики: "Угу" (0.1s) и "Нет" (0.4s).
+        Типичные ошибки распознавания - краткие реакции,
+        ошибочно выделенные в отдельного спикера.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Слишком короткие
+
+  # === SPEAKER_MISATTRIBUTED_LAVALE: Ошибочно присвоено Лаваль ===
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false  # Это маркер отменённого присвоения
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Это реплики, которые ранее были ошибочно присвоены Lavale.
+        Маркер SPEAKER_MISATTRIBUTED означает, что присвоение отменено.
+        Реплики (256s и 4138s) требуют переатрибуции.
+        Контекст: технические вопросы про GUI и коммиты.
+        Скорее всего принадлежат одному из ведущих.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Реплики в контексте объяснений для 'не-технарей'"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Марина также участвовала в обсуждении Bootstrap"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 256.97
+          etime: 260.57
+          text: "Ну, то есть, я так понимаю, что это очень связано с GUI, всякие кнопочки там."
+
+  # === SPEAKER_MISATTRIBUTED_ELDAR: Ошибочно присвоено Эльдар ===
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false  # Это маркер отменённого присвоения
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики ранее ошибочно присвоены EldarMurtazin.
+        - "Я тут на парочку сайтов посмотрел через Е6" (1062s)
+        - "Поддержка Python 3 из коробки Тебя не интересует?" (7105s)
+        Эльдар Муртазин - мобильный аналитик, не участвовал в этом выпуске.
+        Контекст указывает на одного из ведущих.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Обсуждение браузера IE6 и Python характерно для Gray"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Umputun также обсуждал Python в этом выпуске"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7105.93
+          etime: 7109.47
+          text: "Поддержка Python 3 из коробки Тебя не интересует?"
+
+  # === Marin_k_a: Подтверждённая участница ===
+  - speaker: "Marin_k_a"
+    total_duration_sec: 439
+    replies_count: 81
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "registry"
+      confidence: high
+      evidence: |
+        Марина (Marin_k_a) - бывшая ведущая, есть в people.yaml.
+        81 реплика на 439 секунд - полноценное участие в выпуске.
+        Первая реплика на 22s - участвует с самого начала.
+        Контекст подтверждает участие в обсуждениях Bootstrap и других тем.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: |
+        Ksенks (Ксюша) упоминается Umputun в начале выпуска ("Ксюша какая-то сегодня..."),
+        но нет реплик с author="Ksenks". Её реплики записаны как SPEAKER_01.
+
+    - speaker: "SPEAKER_01"
+      issue: |
+        85 реплик приписаны SPEAKER_01, но контекст явно указывает на Ksenks.
+        Требуется переименование SPEAKER_01 → Ksenks для этого эпизода.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 351
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_01 использует женские формы глаголов ("хотела", "решила", "поняла", "посмотрела").
+      К ней обращаются как "Ксюша" (228s, 828s, 929s и др.).
+      Umputun в начале говорит о присутствии Ксюши.
+      Стиль реплик соответствует ведущей.
+
+  - type: rename
+    episode: 351
+    from_speaker: "SPEAKER_00"
+    to_speaker: "_ad"
+    confidence: high
+    reason: |
+      Все 5 реплик SPEAKER_00 - рекламное объявление о мероприятии в Таллинне.
+      Это стандартная рекламная вставка, должна быть маркирована как _ad.
+
+# Задания для ручной проверки
+manual_review_tasks:
+  - task: "Verify SPEAKER_01 = Ksenks"
+    priority: low
+    description: "Высокая уверенность, но можно подтвердить голосом"
+
+  - task: "Identify SPEAKER_MISATTRIBUTED_LAVALE"
+    priority: medium
+    description: "2 реплики требуют атрибуции - вероятно Ksenks или Marin_k_a"
+
+  - task: "Identify SPEAKER_MISATTRIBUTED_ELDAR"
+    priority: medium
+    description: "2 реплики про IE6 и Python - вероятно Gray или Umputun"
+
+  - task: "Review SPEAKER_05 segments"
+    priority: low
+    description: "31 короткая реплика - ошибки распознавания, можно игнорировать или удалить"

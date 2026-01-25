@@ -1,0 +1,295 @@
+episode: 385
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6500  # ~1:48:20
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 566
+    replies_count: 229
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Umputun несколько раз обращается к "Ксюше", а SPEAKER_00 отвечает:
+        - 245-252s: "Ксюша, такое быть в этом великое и могучее русское языка" -> SPEAKER_00: "Облако трясения, это можно, конечно"
+        - 309-315s: "Ксюша, что за новость была?" -> SPEAKER_00: "Новый сервис от Google, а ты имеешь в виду?"
+        - 393s: "Ксюша, записывай за мной" -> SPEAKER_00 продолжает диалог
+        Женский голос, участвует в обсуждениях как ведущая.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 974
+    replies_count: 149
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Уже идентифицирована в people.yaml как "Марина - бывшая ведущая".
+        Активно участвует в обсуждении тем про Google Cloud, Microsoft Office, iPad.
+        Явно женский голос, отличный от Ksenks (SPEAKER_00).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 35
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин отсутствует в этом выпуске. Помечено как MISATTRIBUTED,
+        что означает ошибочное присвоение. Реплики разбросаны и по контексту
+        принадлежат либо Marin_k_a, либо Ksenks (SPEAKER_00).
+        Например, 2335s: "Ну, у них чеки ведь и самые параноидальные" - женский голос в контексте обсуждения.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Контекст и расположение рядом с репликами Marin_k_a"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Может быть Ksenks (SPEAKER_00)"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3855.9
+          etime: 3870.0
+          text: "А юбилейная тема у нас сегодня вообще-то весь мир отмечал и продолжает отмечать..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 26
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Пётр Диденко отсутствует в этом выпуске. Помечено как MISATTRIBUTED.
+        Реплики по контексту принадлежат Marin_k_a - например, 2873s продолжает
+        её мысль про Office 365 и iPad.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.8
+          reason: "Реплика 2873s непосредственно продолжает мысль Marin_k_a про Office 365"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2873.0
+          etime: 2884.0
+          text: "То есть пользователей iPad достаточно много, и если они смогут их законвертить в пользователей Office 365, для них это будет большое дело."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 16
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Лаваль отсутствует в этом выпуске. Помечено как MISATTRIBUTED.
+        Реплики по контексту принадлежат Marin_k_a или Ksenks.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Контекст и расположение рядом с репликами Marin_k_a (886s)"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Может быть Ksenks"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (2-3 сек каждая), разбросаны по всему эпизоду.
+        Типичные ошибки распознавания - фрагменты перебивок или коротких реакций.
+        "Если вы хотите, чтобы они работали, заплатите деньги" (2191s) - может быть Gray.
+        "Постоянно в контакте с Фейсбуком" (5472s) - короткая перебивка.
+        "Он пойдет в суд" (6486s) - короткая реакция.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Некоторые реплики похожи на перебивки Gray"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Женский голос в 5472s рядом с репликами Marin_k_a"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Молодец" (3361s) длительностью 2.5 секунды.
+        Типичная ошибка распознавания - односложная реакция.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Bobuk"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "bobuk"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Единственная реплика в 4867s: "Нет, что значит против?"
+        Контекст: Umputun говорит о Яндексе и брендинге, возможно Bobuk
+        кратко подключился к обсуждению или это ошибка распознавания.
+        Bobuk отсутствует в начале (передаёт приветы через Umputun),
+        но мог подключиться позже.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Может быть реплика Gray, неверно атрибутированная"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4867.65
+          etime: 4869.51
+          text: "Нет, что значит против?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: |
+        SPEAKER_00 - это Ksenks (Ксюша), но не размечена правильно.
+        Umputun обращается к "Ксюше" в начале, она отвечает как SPEAKER_00.
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk упоминается в начале как отсутствующий (передаёт приветы через Umputun),
+        но появляется одна реплика в 4867s. Требует проверки - подключился ли он позже
+        или это ошибка атрибуции.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 385
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun многократно обращается к "Ксюше", и SPEAKER_00 отвечает.
+      Примеры: 245s, 309s, 393s, 428s. Женский голос ведущей.
+
+  - type: rename
+    episode: 385
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: |
+      Реплика 2873s продолжает мысль Marin_k_a про Office 365 и iPad.
+      Пётр Диденко не участвовал в этом выпуске.
+
+  - type: delete_or_merge
+    episode: 385
+    speaker: "SPEAKER_03"
+    confidence: low
+    reason: |
+      Очень короткие реплики (2-3 сек), разбросаны по эпизоду.
+      Скорее всего ошибки сегментации. Требует voice comparison.
+
+  - type: delete_or_merge
+    episode: 385
+    speaker: "SPEAKER_05"
+    confidence: high
+    reason: |
+      Единственная реплика "Молодец" 2.5 сек - ошибка распознавания.
+
+# Примечания
+notes: |
+  Этот выпуск (385, 29 марта 2014) ведут Umputun, Gray и Ksenks.
+  Гостья - Marin_k_a (Марина, бывшая ведущая).
+  Bobuk отсутствует (передаёт приветы в начале через Umputun), но есть одна
+  реплика в 4867s - требует проверки.
+
+  Основная проблема: SPEAKER_00 (229 реплик, 566 сек) - это Ksenks,
+  но не размечена корректно. Рекомендуется переименовать.
+
+  SPEAKER_MISATTRIBUTED_* - это маркеры ошибочных атрибуций из предыдущих
+  итераций очистки. Большинство из них принадлежат Marin_k_a или Ksenks.

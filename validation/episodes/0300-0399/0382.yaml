@@ -1,0 +1,272 @@
+episode: 382
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7200  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 935
+    replies_count: 258
+    pattern: consecutive
+    first_appearance_sec: 49
+    analysis:
+      is_error: false
+      identified_as: "Vodom"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 46s Umputun говорит: "Водом, я тебя не обидел, что мы тебя не сильно звали?"
+        На 82s SPEAKER_01 говорит: "Ну, если вам интересна жизнь в Америке, то americhka.us. Это мой подкаст"
+        Уже идентифицирован в all_identified_guests.json
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1168
+    replies_count: 306
+    pattern: consecutive
+    first_appearance_sec: 151
+    analysis:
+      is_error: false
+      identified_as: "Swan"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 123s Umputun говорит: "Самый большой скандал недели, и тут я не зря Свана позвал"
+        На 166s Umputun говорит: "Нет, Сван, давай вот пока мы к теме не перешли"
+        Сван - сисадмин, активно участвует в дискуссии о DevOps
+        Уже идентифицирован в all_identified_guests.json как "Сван (Владимир)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 481
+    replies_count: 172
+    pattern: consecutive
+    first_appearance_sec: 19
+    analysis:
+      is_error: false
+      identified_as: "Ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 11-17s Umputun говорит: "В этом составчике вы не найдете ни Бобука, ни Грея... но найдете Ксюшу"
+        На 19s SPEAKER_04 отвечает: "Найдете меня"
+        На 335s Umputun обращается: "Ксюша, догадайся, что я им говорю" - затем SPEAKER_04 отвечает
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 639
+    replies_count: 119
+    pattern: consecutive
+    first_appearance_sec: 162
+    analysis:
+      is_error: false
+      identified_as: "Marin_k_a"
+      identification_method: "already_labeled"
+      confidence: high
+      evidence: "Уже размечена в транскрипте как Marin_k_a (Марина, бывшая ведущая)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 404
+    replies_count: 91
+    pattern: consecutive
+    first_appearance_sec: 1491
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Появляется на 1491s, когда Umputun говорит "Нет, ты прямо скажи, Умпутун несет чушь, а Сван красавец"
+        На 1495s SPEAKER_02 говорит: "Сван, ты тоже урод, как и я. Приятно быть в хорошей компании"
+        На 1581s: "Ну, я работал сам-то в Barclay..."
+        Это НЕ Водом (SPEAKER_01 продолжает говорить отдельно после 2005s)
+        Возможно это ошибка распознавания Водома или третий неанонсированный участник
+        В начале выпуска Umputun говорит о двух гостях (Водом и Сван), но SPEAKER_02 - отдельный голос
+      possible_matches:
+        - person_id: "Vodom"
+          confidence: 0.4
+          reason: "Возможно это тот же Водом, но ошибочно размеченный как SPEAKER_02"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1581.82
+          etime: 1609.64
+          text: "Ну, я работал сам-то в Barclay, не буду раскрывать слишком много деталей, понимаете, почему, но у них-то не один дата-центр, у них действительно, ну, на всех почти континентах свой дата-центр..."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 4701
+    analysis:
+      is_error: true
+      error_reason: "Одна короткая изолированная реплика ('Мы болтики, мы болтики-отвертки') - скорее всего ошибка распознавания"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 10
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 344
+    analysis:
+      is_error: true
+      error_reason: "Отменённое ошибочное присвоение - реплики ранее ошибочно приписаны PetrDidenko"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        343.7s: "Зачем вам вообще даже один дата-центр?" - контекст после Umputun спрашивает "Ксюша, догадайся" и SPEAKER_04 отвечает
+        6329.5s: "Да, нужно закрывать хозяина контента..." - изолированная реплика
+        Требуется voice comparison для определения реального спикера
+      possible_matches:
+        - person_id: "Ksenks"
+          confidence: 0.5
+          reason: "Первая реплика идёт в контексте диалога с Ксюшей"
+        - person_id: "Vodom"
+          confidence: 0.3
+          reason: "Может быть Водом"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6329.51
+          etime: 6336.91
+          text: "Да, нужно закрывать хозяина контента, а не того, кто просто... Хозяин контента сидит где-то в Амазоне."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 1159
+    analysis:
+      is_error: true
+      error_reason: "Отменённое ошибочное присвоение - реплики ранее ошибочно приписаны EldarMurtazin (Эльдар не участвует в этом выпуске)"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        1159.1s: "Он в два раза глупее тебя, ты считаешь?"
+        2865.5s: "Будешь читать через АПИ?"
+        Короткие реплики, требуют voice comparison
+      possible_matches:
+        - person_id: "Swan"
+          confidence: 0.4
+          reason: "Может быть Сван (SPEAKER_03)"
+        - person_id: "Vodom"
+          confidence: 0.3
+          reason: "Может быть Водом (SPEAKER_01)"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1159.13
+          etime: 1161.54
+          text: "Он в два раза глупее тебя, ты считаешь?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 11
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 3776
+    analysis:
+      is_error: true
+      error_reason: "Отменённое ошибочное присвоение - реплики ранее ошибочно приписаны Lavale (Лаваль не участвует в этом выпуске)"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        3775.6s: "Но мне кажется, что вообще логично, что в каждой команде нужно думать про архитектуру тоже"
+        4761.0s: "Помнишь, как вот Марко, по-моему, что-то продавал?"
+        Требуют voice comparison
+      possible_matches:
+        - person_id: "Marin_k_a"
+          confidence: 0.5
+          reason: "Может быть Марина - женский голос"
+        - person_id: "Ksenks"
+          confidence: 0.4
+          reason: "Может быть Ксюша - женский голос"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3775.64
+          etime: 3784.14
+          text: "Но мне кажется, что вообще логично, что в каждой команде нужно думать про архитектуру тоже."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_02"
+      issue: |
+        Umputun в начале анонсирует только двух гостей (Водом и Сван), но SPEAKER_02 появляется как третий
+        голос с 1491s и имеет 91 реплику (404 сек). Возможно это ошибка распознавания Водома,
+        но нужно voice comparison для подтверждения.
+    - speaker: "SPEAKER_MISATTRIBUTED_*"
+      issue: |
+        Три спикера с префиксом MISATTRIBUTED - это отменённые ошибочные присвоения.
+        Нужен voice comparison для корректной атрибуции.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 382
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Vodom"
+    confidence: high
+    reason: "Явное представление: подкаст americhka.us, обращение 'Водом'"
+
+  - type: rename
+    episode: 382
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Swan"
+    confidence: high
+    reason: "Явное представление: 'тут я не зря Свана позвал', многократные обращения по имени"
+
+  - type: rename
+    episode: 382
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Явное представление: 'но найдете Ксюшу' -> 'Найдете меня', обращения 'Ксюша'"
+
+  - type: delete
+    episode: 382
+    speaker: "SPEAKER_05"
+    confidence: medium
+    reason: "Одна короткая изолированная реплика - ошибка распознавания"
+
+# Примечания
+notes: |
+  Эпизод 382 (8 марта 2014) - особый выпуск без Бобука и Грея.
+
+  Участники по данным начала выпуска:
+  - Umputun (ведущий)
+  - Ксюша (Ksenks) - "найдете Ксюшу"
+  - Водом - подкаст americhka.us
+  - Сван - сисадмин
+  - Марина (Marin_k_a) - не анонсирована, но присутствует
+
+  SPEAKER_02 требует дополнительного анализа - либо это ошибка распознавания Водома,
+  либо третий неанонсированный гость. Реплика о работе в Barclays уникальна.
+
+  Все SPEAKER_MISATTRIBUTED_* - это реплики, ранее ошибочно атрибутированные
+  участникам, которые НЕ участвуют в этом выпуске (Petr, Eldar, Lavale).

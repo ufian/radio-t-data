@@ -1,0 +1,267 @@
+episode: 369
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7568  # ~2h 6min estimated
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1621
+    replies_count: 364
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        При представлении Umputun спрашивает "Виктор, а у тебя как? Ты Виктор и ты программист на джаве?"
+        SPEAKER_05 отвечает "Нет, я шоумен, зачем? У меня же отдельное шоу, все его знают.
+        Даже Великий Ампутунг нам заходил один раз."
+        Позже Umputun говорит "Ты, Виктор, в ID живёшь или в Eclipse?"
+        Это гость по имени Виктор, у которого своё шоу, возможно подкастер.
+      possible_matches: []
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 242.15
+          etime: 255.43
+          text: >
+            У нас, понимаешь, у нас объем информации слишком большой за выпуск,
+            поэтому мы ее как-то размазываем по две недельки.
+            Мы не каждую неделю выходим, мы каждые две недели в основном.
+    suggested_name: "Viktor"
+    suggested_real_name: "Виктор"
+    suggested_info: "Подкастер, Java-разработчик, выпуск 369"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 701
+    replies_count: 171
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Явное представление в начале выпуска (100.8s):
+        "Здравствуйте, я Роман. Работаю в Dell. Был у вас тут один раз.
+        Про OpenStack рассказывал. Тогда еще работал в Barclay."
+        Повторный гость, ранее рассказывал про OpenStack.
+      possible_matches: []
+      voice_task:
+        needed: false  # Чётко представился, можно искать в предыдущих выпусках
+        reference_segment: null
+    suggested_name: "Roman"
+    suggested_real_name: "Роман"
+    suggested_info: "Работает в Dell, ранее Barclay, специалист по OpenStack, выпуски 369 и предыдущий"
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 255
+    replies_count: 70
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Явное представление (185.9s-192.6s):
+        "Добрый вечер. Меня зовут Андрей. Я джава-разработчик. Работаю в Deutsche Bank."
+        Umputun реагирует "Здравствуй, Андрей!"
+      possible_matches: []
+      voice_task:
+        needed: false  # Чётко представился
+        reference_segment: null
+    suggested_name: "AndreyDeutscheBank"
+    suggested_real_name: "Андрей"
+    suggested_info: "Java-разработчик, Deutsche Bank, выпуск 369"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 308
+    replies_count: 117
+    pattern: scattered
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: >
+        Женский голос (77.5s: "Я с конями так представила").
+        Umputun в начале эпизода обращается "Ксюша" (15.3s, 42.7s).
+        SPEAKER_04 отвечает на обращения к Ксюше, активно участвует в техническом обсуждении.
+        Однако в этом же эпизоде есть Marin_k_a (тоже женщина).
+        Возможна путаница между Ksenks и кем-то другим.
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Umputun обращается 'Ксюша', SPEAKER_04 отвечает женским голосом"
+        - person_id: "marin_k_a"
+          confidence: 0.2
+          reason: "Marin_k_a уже размечена отдельно, маловероятно"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 77.53
+          etime: 82.2
+          text: "Я с конями так представила. Потому что как зубы голову на бок."
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 108
+    replies_count: 13
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: >
+        Контекст реплик - технические обсуждения JetBrains IDE, плагины, PyCharm.
+        Эльдар Муртазин - мобильный аналитик, не Java-разработчик.
+        Реплики идут в середине разговора между SPEAKER_05 (Виктор) и Umputun об IDE.
+        Скорее всего это ошибка распознавания, реплики принадлежат SPEAKER_05 (Виктор).
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: >
+        Пример реплики (404.2s): "Тебе просто пойдёшь, поставишь плагин через их репозиторий, и все, и вперед."
+        Это продолжение разговора о JetBrains, который ведёт SPEAKER_05 (Виктор).
+      possible_matches:
+        - person_id: "viktor"
+          confidence: 0.8
+          reason: "Контекст - продолжение речи SPEAKER_05 об IDE"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1123.18
+          etime: 1130.01
+          text: >
+            Когда ты запускаешь, у тебя пустой вордспейс, ничего нет, да,
+            и у тебя такой, сейчас он серенький такой, клевый, в стиле Маверикса
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 11
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Уже помечен как ошибочно приписанный. Короткие фрагменты в случайных местах."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "2 короткие реплики в разных частях подкаста (6429s, 6959s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: >
+        Очень короткие фразы (менее 1 сек суммарно) в разных частях подкаста.
+        Типичные фразы-ошибки: "Больше седьмого, да." (29.4s), "Да." (8392s).
+        Вероятно ошибка распознавания кого-то из участников.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "2 односложные реплики в разных частях"
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: >
+        Не представлен явно. По контексту похож на Ksenks (обращения "Ксюша"),
+        но требует voice comparison для подтверждения.
+    - speaker: "EldarMurtazin"
+      issue: >
+        Ошибочная разметка! Эльдар Муртазин не участвовал в этом выпуске.
+        Реплики относятся к техническому обсуждению IDE, скорее всего это SPEAKER_05 (Виктор).
+    - speaker: "Bobuk"
+      issue: >
+        Только 1 реплика (1216s). Возможно Bobuk был кратко или это ошибка распознавания.
+        Требует проверки - был ли Bobuk объявлен как участник выпуска.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 369
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_05"
+    confidence: high
+    reason: >
+      Реплики EldarMurtazin идут в контексте технического обсуждения JetBrains IDE,
+      которое ведёт SPEAKER_05 (Виктор). Эльдар Муртазин - мобильный аналитик,
+      такие реплики ему не характерны. Ошибка автоматической разметки.
+
+  - type: rename
+    episode: 369
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: >
+      Женский голос, отвечает на обращения "Ксюша". Требует voice comparison
+      для окончательного подтверждения, так как в эпизоде есть и Marin_k_a.
+
+  - type: remove_or_reassign
+    episode: 369
+    from_speaker: "SPEAKER_03"
+    to_speaker: null
+    confidence: medium
+    reason: >
+      Всего 2 односложные реплики (<1 сек суммарно). Вероятно ошибка распознавания,
+      нужно определить кому они принадлежат по контексту.
+
+# Новые гости для добавления в people.yaml
+new_guests_to_register:
+  - id: "viktor_podkaster"
+    canonical_name: "Viktor"
+    real_name: "Виктор"
+    info: "Подкастер с собственным шоу, Java-разработчик, выпуск 369"
+    notes: "Требует уточнения фамилии и названия шоу"
+
+  - id: "roman_dell"
+    canonical_name: "Roman"
+    real_name: "Роман"
+    info: "Работает в Dell (ранее Barclay), специалист по OpenStack, повторный гость"
+    notes: "Нужно найти предыдущий выпуск с его участием"
+
+  - id: "andrey_deutschebank"
+    canonical_name: "AndreyDeutscheBank"
+    real_name: "Андрей"
+    info: "Java-разработчик, Deutsche Bank, выпуск 369"
+
+# Резюме
+summary: |
+  Эпизод 369 (7 декабря 2013) - выпуск с несколькими гостями:
+
+  Ведущие: Umputun (основной), Gray (с 532s), Bobuk (1 реплика, возможно ошибка)
+
+  Идентифицированные гости:
+  - Marin_k_a (Марина) - уже размечена, бывшая ведущая
+  - SPEAKER_02 = Роман (Dell, OpenStack) - чётко представился
+  - SPEAKER_00 = Андрей (Java, Deutsche Bank) - чётко представился
+  - SPEAKER_05 = Виктор (подкастер, Java) - идентифицирован по контексту
+
+  Требуют проверки:
+  - SPEAKER_04 - вероятно Ksenks, но нужен voice comparison
+  - EldarMurtazin - ОШИБКА! Это не Эльдар, а скорее всего Виктор
+
+  Ошибки распознавания:
+  - SPEAKER_03 - артефакт (2 односложные реплики)
+  - SPEAKER_MISATTRIBUTED_LAVALE - уже помечен как ошибка

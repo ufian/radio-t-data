@@ -1,0 +1,223 @@
+episode: 342
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7605  # ~2 часа 6 минут (по статистике из задания)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 405
+    replies_count: 175
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (8-11s) Umputun обращается: "Ксюша, выпуск номер?"
+        SPEAKER_00 отвечает (24-26s): "342 я запомнила", "И этот 342 выпуск..."
+        Umputun (47s): "Ксюша, ты за два" — SPEAKER_00 отвечает: "Я даже подумала, что я за два"
+        Женский голос, активное участие в диалогах, обращения по имени.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 991
+    replies_count: 164
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Уже идентифицирована в people.yaml как Марина (бывшая ведущая).
+        Активно участвует в обсуждениях, ведёт темы (222s: рассказывает о статье Guardian про ВКонтакте).
+        Говорит связными длинными репликами, участвует на протяжении всего выпуска.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 5
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (0.1-2 сек) разбросаны по всему выпуску:
+        - 870s: "Да." (0.14 сек) x2 — ответ на вопрос Umputun "Ты в многоэтажном доме живешь?"
+        - 2639s: "Конечно, сэр." — Umputun сразу повторяет "Конечно, сэр." (вероятно, его реплика)
+        - 3623s: "4 тысячи лет?"
+        - 3705s: "Да, да."
+        - 7187s: "Бисексуалам тоже можно." — вставка между Marin_k_a и SPEAKER_00
+        Похоже на ошибки сегментации при распознавании речи — реплики других участников.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Часть коротких реплик может быть от Ksenks (SPEAKER_00)"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Реплика 'Конечно, сэр' в контексте диалога с Umputun"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Реплика про бисексуалов между её высказываниями"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единичная реплика (2513s): "Ну, а что, конечно."
+        Ранее была ошибочно присвоена Эльдару Муртазину и отменена.
+        В контексте: Umputun говорит про веб-пай, затем эта реплика, затем снова Umputun "Простите."
+        Скорее всего это реплика одного из ведущих (Bobuk или реакция на что-то).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Короткая ироничная реакция, типичная для Bobuk"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Может быть реакция Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2512.67
+          etime: 2515.06
+          text: "Ну, а что, конечно."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единичная реплика (4340s): "Либо там это были просто гики какие-то, которых Google тоже мало."
+        Ранее была ошибочно присвоена Лаваль и отменена.
+        Контекст: обсуждение Google Code, до реплики SPEAKER_00, после — Marin_k_a.
+        По смыслу продолжает мысль SPEAKER_00 о Google.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Продолжение мысли SPEAKER_00 (Ksenks), тот же контекст"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Рядом с её репликами, похожий стиль"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4339.98
+          etime: 4344.81
+          text: "Либо там это были просто гики какие-то, которых Google тоже мало."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: |
+        Ksenks присутствует под неправильным именем SPEAKER_00.
+        Требуется переименование SPEAKER_00 -> Ksenks.
+    - speaker: "Marin_k_a"
+      issue: |
+        Марина не была явно представлена в начале (не нашёл фразы "у нас в гостях Марина").
+        Однако она упоминается как "Ксюшенька" рядом, что указывает на знакомство.
+        Возможно представление было в предыдущих выпусках или отрезано.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 342
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun явно обращается к SPEAKER_00 как "Ксюша" (8s, 47s).
+      SPEAKER_00 отвечает женским голосом, участвует активно.
+      175 реплик, 405 сек — слишком много для случайной ошибки.
+
+  - type: merge_or_review
+    episode: 342
+    from_speaker: "SPEAKER_03"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      6 коротких реплик (<5 сек суммарно) — скорее всего ошибки сегментации.
+      Нужен ручной анализ каждой реплики для определения реального спикера.
+
+  - type: review
+    episode: 342
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Единичная короткая реплика. Требует voice comparison для определения.
+
+  - type: review
+    episode: 342
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Единичная реплика в контексте обсуждения Google Code.
+      Вероятно Ksenks (продолжение её мысли), но нужна проверка.
+
+# Заметки для ручной проверки
+notes: |
+  Эпизод 342 от 25 мая 2013 года.
+  Состав: Umputun, Bobuk, Ksenks (как SPEAKER_00), Marin_k_a (Марина).
+
+  Основное действие: переименовать SPEAKER_00 -> Ksenks (высокая уверенность).
+
+  SPEAKER_03, SPEAKER_MISATTRIBUTED_ELDAR, SPEAKER_MISATTRIBUTED_LAVALE —
+  единичные/короткие реплики, скорее всего ошибки распознавания.
+  Суммарно ~12 сек из 7600+ сек — незначительное влияние на качество.

@@ -1,0 +1,250 @@
+episode: 350
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: 7541  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 444
+    replies_count: 149
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun говорит "пришла Ксюша" (12.2s), SPEAKER_07 сразу отвечает (25.6s)
+        2. Umputun обращается к "Ксюшенька" и SPEAKER_07/Marin_k_a чередуются в ответах
+        3. Женский голос, участвует как постоянный ведущий
+        4. Реплика "В Москве какое-то очень хреновое лето" — московская, как и Ksenks
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 15
+    replies_count: 7
+    pattern: scattered
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        1. На вопрос Umputun'а "Ксюшенька, ты знаешь про модели опций?" (1836s)
+           SPEAKER_06 отвечает "Не уверена, что ты имеешь в виду" (1846s)
+        2. Женский голос, говорит "мне баба сказала не ходить"
+        3. Вероятно тот же голос что SPEAKER_07, но другой идентификатор из-за технических причин
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.2
+          reason: "Также женский голос, присутствует в эпизоде"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1846.78
+          etime: 1848.30
+          text: "Не уверена, что ты имеешь в виду."
+        compare_with: "SPEAKER_07 сегмент 25.6-33.9s для сравнения голосов"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 173
+    replies_count: 25
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реальный гость-слушатель из эфира:
+        - Представился: "Меня зовут Артем" (503.6s)
+        - Работает на "нефтегазовом заводе"
+        - Участвует в обсуждении про сисадминов
+      possible_matches: []
+      voice_task:
+        needed: false
+        note: "Анонимный слушатель, идентификация не требуется"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 248
+    replies_count: 48
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реальный гость-слушатель из эфира:
+        - Представился как работник ЦЕРНа в Швейцарии (973.5s)
+        - Рассказывает про разделение аникейщиков и сисадминов в ЦЕРНе
+        - Обслуживает эксперимент на Большом Адронном Коллайдере
+      possible_matches: []
+      voice_task:
+        needed: false
+        note: "Анонимный слушатель, идентификация не требуется"
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 8
+    replies_count: 6
+    pattern: consecutive
+    analysis:
+      is_error: true
+      error_reason: "Рекламный/анонсовый аудио-вставка мероприятия 'Рок-АйТи' в Таллинне"
+      identified_as: null
+      evidence: |
+        Все реплики — анонс мероприятия:
+        - "Приглашаем найти события нового формата" (5528s)
+        - "Рок-АйТи" (5531s)
+        - "24 и 25 августа" (5537s)
+        - "Спортхолл Калев. Таллинн" (5540s)
+        - "Бесплатный вход и участие" (5541s)
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (<2 сек), вероятно ошибка распознавания. Одна реплика 'Электропочта' дублирует контекст обсуждения."
+      identified_as: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Контекст вокруг реплик принадлежит Gray"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Также присутствует в контексте"
+      voice_task:
+        needed: false
+        note: "Слишком короткие сегменты для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Ранее ошибочно приписана Lavale, отменено. Короткая одиночная реплика."
+      identified_as: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 855
+    replies_count: 141
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "known_guest"
+      confidence: high
+      evidence: "Уже идентифицирована в справочнике как бывшая ведущая Марина"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 288
+    replies_count: 54
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "known_guest"
+      confidence: high
+      evidence: "Уже идентифицирован в справочнике. Первая реплика — вопрос про Helpdesk (386.9s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: |
+        Ksenks упоминается в начале как "Ксюша" (12.2s), но её реплики размечены как SPEAKER_07 и SPEAKER_06.
+        В транскрипте отсутствует спикер "Ksenks", хотя она явно присутствует.
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk имеет только 4 реплики (14 сек), первая в 987s. Это нетипично мало для ведущего.
+        Возможно часть его реплик неправильно атрибутирована другим спикерам.
+    - speaker: "SPEAKER_01"
+      issue: "Слушатель-гость Артём не представлен формально в начале, пришёл по ходу эфира (~503s)"
+    - speaker: "SPEAKER_02"
+      issue: "Слушатель из ЦЕРНа не представлен формально, пришёл по ходу эфира (~969s)"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 350
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_07 — это Ksenks (Ксюша):
+      1. Umputun упоминает "пришла Ксюша" в начале, SPEAKER_07 сразу реагирует
+      2. Говорит про Москву (где живёт Ksenks)
+      3. Участвует как постоянный ведущий на протяжении всего эпизода
+      4. 149 реплик, 444 сек — типичный объём для ведущего
+
+  - type: rename
+    episode: 350
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      SPEAKER_06 отвечает на прямое обращение к Ксюше:
+      Umputun: "Ксюшенька, ты знаешь про модели опций?" (1836s)
+      SPEAKER_06: "Не уверена, что ты имеешь в виду." (1846s)
+      Требуется voice comparison для подтверждения.
+
+  - type: rename
+    episode: 350
+    from_speaker: "SPEAKER_00"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Рекламный анонс мероприятия 'Рок-АйТи', не человек-участник"
+
+  - type: delete_or_merge
+    episode: 350
+    from_speaker: "SPEAKER_05"
+    confidence: medium
+    reason: "2 коротких реплики (<4 сек), вероятно ошибка распознавания Gray или Umputun"
+
+  - type: keep_as_is
+    episode: 350
+    speaker: "SPEAKER_01"
+    reason: "Реальный гость-слушатель Артём, имя известно, но person_id не нужен"
+
+  - type: keep_as_is
+    episode: 350
+    speaker: "SPEAKER_02"
+    reason: "Реальный гость-слушатель из ЦЕРНа, имя неизвестно, но это реальный участник"
+
+# Примечания
+notes: |
+  Эпизод 350 (27 июля 2013) — юбилейный выпуск с Днём системного администратора.
+
+  Состав:
+  - Ведущие: Umputun, Gray, Bobuk (мало реплик), Ksenks (размечена как SPEAKER_07)
+  - Гости: Marin_k_a (Марина), EldarMurtazin (Эльдар Муртазин)
+  - Слушатели в эфире: Артём (SPEAKER_01), сотрудник ЦЕРНа (SPEAKER_02)
+
+  Основные проблемы:
+  1. Ksenks не размечена своим именем — все её реплики под SPEAKER_07 и частично SPEAKER_06
+  2. У Bobuk подозрительно мало реплик для ведущего
+  3. SPEAKER_00 — реклама, должна быть _ad

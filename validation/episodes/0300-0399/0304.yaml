@@ -1,0 +1,198 @@
+episode: 304
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Ksenks]  # первый гиковский выпуск Ксении
+  total_duration_sec: 7250  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 299
+    replies_count: 106
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. В 74с Umputun представляет: "Ксения. Ксюша." -> сразу SPEAKER_00 отвечает "Привет" (76с)
+        2. В 976с: "Ксения, ты с нами или ты заснула?" -> SPEAKER_00 отвечает "Нет, нет, мне очень интересно"
+        3. В 1343с SPEAKER_00 говорит "в первом же выпуске" — это её первый гиковский выпуск
+        4. Чередуется с Marin_k_a в одних диалогах, продолжая друг друга
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 346
+    replies_count: 48
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция. В эпизоде 304 нет Марины (Marin_k_a).
+        Это Ксения (Ksenks) — её первый гиковский выпуск.
+        Система распознавания ошибочно разделила реплики Ксении между
+        SPEAKER_00 и Marin_k_a. Реплики чередуются в одних диалогах,
+        продолжая мысль друг друга (см. 1750-1778с про шардинг).
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun представляет только Ксению, не Марину
+        2. Marin_k_a и SPEAKER_00 чередуются в одном разговоре (1754-1778с)
+        3. Контекст реплик показывает одного человека, а не двух
+        4. В эпизоде упоминается только Ксюша/Ксения
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ранее ошибочно атрибутировано как Lavale, затем отменено.
+        Реплика "Например, посылку каких-то данных по сети" (6797с)
+        находится между репликами SPEAKER_00 (=Ksenks) и продолжает её мысль.
+        Lavale не участвовала в этом эпизоде.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Окружающий контекст (6793-6805с):
+        - SPEAKER_00: "Но есть же такие действия, которые вообще в принципе нельзя откатить."
+        - MISATTRIBUTED_LAVALE: "Например, посылку каких-то данных по сети."
+        - SPEAKER_00: "Ты уже никак их не откатишь, если ты их уже послал."
+        Это единый диалог одного человека (Ksenks).
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.75
+          reason: "Продолжение мысли, окружена репликами SPEAKER_00=Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6793.3
+          etime: 6805.15
+          text: "Но есть же такие действия... Например, посылку... Ты уже никак их не откатишь..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ранее ошибочно атрибутировано как Eldar, затем отменено.
+        Короткая реплика "Я не очень знаю" (7437с) между репликами Bobuk.
+        Эльдар Муртазин не участвовал в этом эпизоде.
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        Контекст (7436-7442с):
+        - Bobuk: "Поэтому посмотрим."
+        - MISATTRIBUTED_ELDAR: "Я не очень знаю."
+        - Bobuk: "Посмотрим, может быть, они что-то реально делают."
+        Слишком короткая реплика для точной идентификации.
+        Может быть Bobuk (продолжение), Ksenks, или ошибка распознавания.
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Между его репликами, может быть часть его речи"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Активный участник эпизода"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7436.35
+          etime: 7442.2
+          text: "Поэтому посмотрим. Я не очень знаю. Посмотрим, может быть..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a"
+      issue: "Ошибочная атрибуция: должно быть Ksenks"
+    - speaker: "SPEAKER_00"
+      issue: "Не переименован в Ksenks"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 304
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun представляет Ксению в начале эпизода (74с),
+      SPEAKER_00 отвечает. Прямое обращение "Ксения, ты с нами?" (976с)
+      -> ответ SPEAKER_00. Её первый гиковский выпуск.
+
+  - type: rename
+    episode: 304
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Марина не участвовала в этом эпизоде.
+      Все реплики Marin_k_a принадлежат Ксении.
+      Система ошибочно разделила реплики между SPEAKER_00 и Marin_k_a.
+
+  - type: rename
+    episode: 304
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Реплика является частью диалога Ksenks (контекст 6793-6805с).
+      Lavale не участвовала в эпизоде 304.
+
+  - type: needs_verification
+    episode: 304
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Слишком короткая реплика (2с) для точной идентификации.
+      Требуется voice comparison или ручная проверка.
+      Вероятные кандидаты: Bobuk, Ksenks.
+
+# Примечания
+notes: |
+  Эпизод 304 — первый гиковский выпуск с участием Ксении (Ksenks).
+  Дата: 1 сентября 2012 года (День знаний).
+
+  Основная проблема: система распознавания разделила реплики Ксении
+  между тремя идентификаторами (SPEAKER_00, Marin_k_a, SPEAKER_MISATTRIBUTED_LAVALE).
+
+  После применения правил очистки все 154+ реплики (SPEAKER_00: 106, Marin_k_a: 48,
+  MISATTRIBUTED_LAVALE: 1) должны быть атрибутированы как Ksenks.

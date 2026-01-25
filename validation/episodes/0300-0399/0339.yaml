@@ -1,0 +1,246 @@
+episode: 339
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  guests_present: [Marin_k_a, "Guest_Alexey"]
+  total_duration_sec: 8938  # ~2.5 часа
+  notes: |
+    В начале подкаста представлены 4 участника: Umputun, Bobuk, Ksenks и гость Алексей.
+    Gray не был представлен и, скорее всего, не участвовал в этом выпуске.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 321
+    replies_count: 85
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        stime=58.98: Umputun: "И есть у нас еще одна участница... Ксения, пожалуйста, как ваше отчество?"
+        stime=67.63: SPEAKER_00: "Погонял, я думала, ты сейчас спросишь."
+        stime=71.27: SPEAKER_00: "А, отчество, точно, настаиваешь, Викторовна."
+        stime=74.55: Umputun: "Так вот, это Ксюша."
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1291
+    replies_count: 226
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        stime=21.3: Umputun: "Прежде всего, гость. Я представлю гостя. Как тебя представляют?"
+        stime=25.1: SPEAKER_02: "Алексей."
+        stime=26.82: Umputun: "Вот никакого погоняла, никаких имен поганых. Чисто Алексей, как мама с папой."
+        stime=32.6: SPEAKER_02: "Да, как назвали."
+
+        Гость представлен только как "Алексей" без фамилии/никнейма.
+        Существенное участие в обсуждении (1291 сек, 226 реплик).
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.2
+          reason: "Имя Алексей, но Alek.sys обычно представлен как ведущий, а не гость"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 179.48
+          etime: 183.69
+          text: "Хорошая ремарка была как для меня, как для профессора."
+        notes: |
+          Нужно определить, кто этот гость Алексей.
+          Возможно, это разовый гость. Нужен voice comparison или поиск в архивах подкаста.
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 336
+    replies_count: 56
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Marin_k_a уже есть в people.yaml как "Марина, бывшая ведущая".
+        Активное участие в технических обсуждениях (ООП, git bisect).
+        stime=138.27: "Объектно-ориентированное программирование уже не стоит изучать..."
+        stime=4154.05: "Смотри, Жень, ты можешь запустить... У тебя есть проект, у тебя есть тесты..." (объясняет git bisect)
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 19
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это отменённые ошибочные присвоения (MISATTRIBUTED).
+        Короткие фрагменты (3 реплики, 19 сек) в потоке речи других спикеров.
+        stime=208.32: "Но вообще есть мнение, что если человек..." — находится между репликами SPEAKER_00 (Ksenks).
+        stime=211.74: SPEAKER_00 продолжает: "только после учебного заведения..."
+        Это явно продолжение речи Ksenks, разбитое на части.
+      identified_as: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Контекст показывает продолжение речи SPEAKER_00"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Отменённые ошибочные присвоения.
+        Очень короткие фрагменты (5 реплик, 8 сек) — типичные ошибки распознавания.
+        stime=2554.34: "То есть там ничего исправлять не надо." (1.5 сек)
+        stime=4049.09: "Ничего себе у тебя вопросы." (1.7 сек)
+        Короткие реакции, вероятно принадлежащие кому-то из ведущих.
+      identified_as: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Короткие реактивные фразы типичны для Бобука"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Может быть Umputun"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика длительностью 0.48 сек.
+        stime=4151.72: "Объясните мне."
+        Находится между Bobuk ("А что это такое?") и Marin_k_a (объяснение git bisect).
+        Скорее всего это продолжение вопроса Bobuk или артефакт.
+      identified_as: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.7
+          reason: "Логическое продолжение его вопроса 'А что это такое?'"
+      voice_task:
+        needed: false
+
+  - speaker: "Gray"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Gray НЕ БЫЛ представлен в начале подкаста.
+        Umputun представил только: гостя Алексея, Bobuk, Ksenks.
+        Единственная реплика Gray в 7480s: "Ну, понятно." (3 сек).
+        Это явная ошибка распознавания — Gray не участвовал в этом выпуске.
+      identified_as: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Короткая подтверждающая фраза между репликами Umputun и Bobuk"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Может быть реакция Umputun"
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray не был представлен в начале подкаста, но имеет 1 реплику.
+        В начале Umputun представил состав: "четырех специалистов широкого профиля" —
+        гость Алексей, Bobuk, Ksenks и сам Umputun. Gray не упоминался.
+        Реплика Gray в 7480s скорее всего ошибка распознавания.
+
+    - speaker: "SPEAKER_02"
+      issue: |
+        Гость представлен только как "Алексей" без дополнительной информации.
+        Нужно определить его личность для корректной атрибуции.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 339
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Явное представление: 'Ксения... Викторовна... это Ксюша'"
+
+  - type: rename
+    episode: 339
+    from_speaker: "Gray"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: |
+      Gray не был представлен в этом выпуске.
+      Единственная реплика "Ну, понятно" находится в контексте разговора
+      между Umputun и Bobuk. Скорее всего это Bobuk.
+
+  - type: merge_into_previous
+    episode: 339
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    confidence: medium
+    reason: "Фрагменты являются продолжением речи SPEAKER_00 (Ksenks)"
+
+  - type: merge_into_previous
+    episode: 339
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Единственная реплика — продолжение вопроса Bobuk"
+
+  - type: ignore
+    episode: 339
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    confidence: low
+    reason: "Короткие артефактные реплики, нужна дополнительная проверка"
+
+# Задачи требующие внимания
+tasks:
+  - type: identify_guest
+    speaker: "SPEAKER_02"
+    priority: medium
+    description: |
+      Определить кто такой гость "Алексей" в выпуске 339.
+      Нужно: поиск в архивах подкаста, voice comparison.
+    reference_segment:
+      stime: 179.48
+      etime: 183.69
+      text: "Хорошая ремарка была как для меня, как для профессора."
+
+  - type: verify_voice
+    speaker: "Gray"
+    priority: low
+    description: |
+      Подтвердить, что реплика "Ну, понятно." в 7480s не принадлежит Gray.
+      Скорее всего это Bobuk.

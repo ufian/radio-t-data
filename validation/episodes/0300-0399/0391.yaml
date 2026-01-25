@@ -1,0 +1,217 @@
+episode: 391
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7311  # ~2 часа
+  notes: |
+    Umputun представляет "Ксюша и Бобук" в начале эпизода (56.95s).
+    Однако в разметке присутствует Marin_k_a (бывшая ведущая Марина).
+    SPEAKER_01 активно участвует в обсуждении и отвечает на обращения "Ксюша".
+    Вероятно, SPEAKER_01 = Ksenks.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1040
+    replies_count: 417
+    pattern: consecutive
+    first_appearance_sec: 65.56
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun в начале представляет "Ксюша и Бобук" (56.95s)
+        2. На обращение "Ксюша, расскажи мне..." (262.36s) отвечает SPEAKER_01 (271.7s)
+        3. Многочисленные обращения Umputun к "Ксюша" с ответами от SPEAKER_01
+        4. 417 реплик, 1040 сек - объём соответствует со-ведущему
+
+        ВАЖНО: Одна аномалия - в 3046.26s SPEAKER_01 говорит "Ты меня прости, Ксюша" -
+        это скорее всего ошибка diarization (реплика Марины ошибочно приписана SPEAKER_01).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1366
+    replies_count: 230
+    pattern: consecutive
+    first_appearance_sec: 79.26
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "existing_markup"
+      confidence: high
+      evidence: |
+        Спикер уже размечен как Marin_k_a (бывшая ведущая Марина).
+        230 реплик, 1366 сек - объём соответствует активному участнику.
+        Участвует в обсуждениях наравне с ведущими.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+    first_appearance_sec: 88.55
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие изолированные реплики (1-2 сек каждая) в случайные моменты.
+        Lavale не участвует в этом эпизоде - в начале представлены только
+        "Ксюша и Бобук", плюс присутствует Марина (Marin_k_a).
+        Это ошибочные присвоения, которые уже помечены как MISATTRIBUTED.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Короткие реплики могут быть от любого участника"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Короткие реплики могут быть от любого участника"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткие реплики для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 1656.61
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одиночная реплика 1.5 сек.
+        Эльдар Муртазин не участвует в этом эпизоде.
+        Это ошибочное присвоение, которое уже помечено как MISATTRIBUTED.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Реплика между репликами Bobuk об апелляции Apple"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Umputun отвечает сразу после"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткая реплика для voice comparison"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+    first_appearance_sec: 4298.7
+
+    analysis:
+      is_error: true
+      error_reason: |
+        3 коротких изолированных реплики (0.06-2.1 сек) в разных частях эпизода:
+        - 4298.7s: "Это британские ученые?" (2.1 сек)
+        - 6513.27s: "Угу." (0.06 сек)
+        - 7258.67s: "Хороший докладчик." (1.18 сек)
+
+        Короткие разрозненные реплики типичны для ошибок diarization.
+        Скорее всего это ошибочно вычлененные реплики одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Первая реплика похожа на уточняющий вопрос от Ксюши"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Может быть Марина"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Bobuk отвечает 'В смысле?' после первой реплики"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткие реплики для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: |
+        SPEAKER_01 с высокой вероятностью является Ksenks (Ксюшей),
+        которая упомянута в представлении. Рекомендуется переименовать.
+    - speaker: "Marin_k_a"
+      issue: |
+        Марина (Marin_k_a) участвует в эпизоде, но не была представлена
+        в начале (Umputun сказал только "Ксюша и Бобук"). Возможно:
+        1) Умпутун не упомянул её отдельно
+        2) Или Marin_k_a это на самом деле кто-то другой
+        Нужна ручная проверка аудио.
+    - speaker: "SPEAKER_01"
+      issue: |
+        Аномалия: в 3046.26s SPEAKER_01 говорит "Ты меня прости, Ксюша" -
+        это противоречит идентификации SPEAKER_01 как Ksenks.
+        Вероятно, эта конкретная реплика ошибочно приписана SPEAKER_01
+        и на самом деле принадлежит Марине (Marin_k_a).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 391
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_01 отвечает на обращения "Ксюша" от Umputun.
+      Umputun в начале представляет "Ксюша и Бобук".
+      417 реплик соответствуют объёму со-ведущего.
+
+      ВНИМАНИЕ: требуется ручная проверка реплики 3046.26s
+      ("Ты меня прости, Ксюша") - она может принадлежать Marin_k_a.
+
+# Дополнительные заметки для ручной проверки
+manual_review_notes: |
+  1. Проверить аудио в начале эпизода - действительно ли участвует Марина
+     или это ошибка разметки (и Marin_k_a на самом деле кто-то другой).
+
+  2. Проверить реплику 3046.26s "Ты меня прости, Ксюша" - определить
+     голос говорящего (вероятно это Marin_k_a, а не SPEAKER_01/Ksenks).
+
+  3. Подтвердить идентификацию SPEAKER_01 = Ksenks прослушиванием
+     длинного сегмента (например, 271.7s - ответ на "Ксюша, расскажи").

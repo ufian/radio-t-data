@@ -1,0 +1,241 @@
+episode: 337
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Marin_k_a]
+  # Bobuk, Gray, Ksenks, Alek.sys отсутствуют (Umputun: "подкаст в половинном составе")
+  total_duration_sec: ~7500
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 859
+    replies_count: 349
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска Umputun говорит "Сегодня Ксюша будет зажигать" (56.67s),
+        затем SPEAKER_03 отвечает "Я сегодня за гада?" (60.38s).
+        SPEAKER_03 активно участвует во всём выпуске, ведёт темы,
+        говорит "Я помню, да" на вопрос о традициях подкаста.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 25
+    replies_count: 13
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие разрозненные реплики ("Да", "Ну да", "PCRE, да").
+        Появляется в начале (7.6s) когда Umputun спрашивает "Ксюша?".
+        Скорее всего это ошибочно распознанные реплики Ksenks (SPEAKER_03).
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.9
+          reason: "Первая реплика — ответ на 'Ксюша?', все реплики короткие подтверждения"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 118
+    replies_count: 35
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Слушатель по имени Руслан, позвонивший рассказать про Xen.
+        Umputun: "Руслан говорит, хочу про Зен рассказать" (5470.29s),
+        "Ну, расскажи нам, Руслан" (5473.61s), затем SPEAKER_00: "Алло, привет" (5480.44s).
+        Рассказывает о своём опыте использования Xen в продакшене.
+      possible_matches: []
+      voice_task:
+        needed: false
+        # Слушатель-звонящий, не требует идентификации
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 111
+    replies_count: 13
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция. Это НЕ Эльдар Муртазин, а тот же слушатель Руслан.
+        Реплики EldarMurtazin идут вперемежку с SPEAKER_00 в том же разговоре о Xen.
+        Контекст: обсуждение Xen в продакшене продолжается без смены говорящего.
+        EldarMurtazin (5568s): "Ну, я его использую в продакшене последние 3-4 года"
+        — это продолжение рассказа Руслана.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "listener_ruslan"
+          confidence: 0.95
+          reason: "Тот же контекст разговора, что и SPEAKER_00, без смены темы"
+      voice_task:
+        needed: false
+
+  - speaker: "Bobuk"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Bobuk отсутствует в этом выпуске (Umputun: "половинный состав").
+        Единственная реплика (5852.84s) идёт в контексте разговора Руслана о Xen,
+        между репликами EldarMurtazin и SPEAKER_00. Это часть того же монолога.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "listener_ruslan"
+          confidence: 0.95
+          reason: "Реплика между другими репликами того же говорящего в разговоре о Xen"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 9
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Уже помечен как MISATTRIBUTED. Реплики принадлежат другим спикерам:
+        - 2167.46s: продолжение монолога Marin_k_a об обсуждениях в команде
+        - 5417.67s: вероятно SPEAKER_03 (Ksenks), переход к теме слушателей
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.8
+          reason: "Реплика в 2167s — продолжение речи Марины"
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Реплика в 5417s — рядом с SPEAKER_03"
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1754
+    replies_count: 270
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Марина (бывшая ведущая) — один из двух ведущих в "половинном составе".
+        Активно участвует с самого начала (27.78s), обсуждает темы наравне с Umputun.
+        Упоминается контекстно: "Мариса в гнев вошла" (2111.86s, Umputun цитирует историю).
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: "Ошибочная атрибуция — это слушатель Руслан, не Эльдар Муртазин"
+    - speaker: "Bobuk"
+      issue: "Bobuk отсутствует в выпуске, реплика принадлежит Руслану"
+    - speaker: "SPEAKER_02"
+      issue: "Скорее всего это Ksenks, ошибочно распознанная отдельно"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 337
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Явное представление в начале выпуска: 'Ксюша будет зажигать'"
+
+  - type: rename
+    episode: 337
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Короткие реплики, первая — ответ на обращение 'Ксюша?'"
+
+  - type: rename
+    episode: 337
+    from_speaker: "EldarMurtazin"
+    to_speaker: "Ruslan_listener"
+    confidence: high
+    reason: "Это слушатель Руслан, не Эльдар Муртазин; тот же контекст что и SPEAKER_00"
+
+  - type: rename
+    episode: 337
+    from_speaker: "Bobuk"
+    to_speaker: "Ruslan_listener"
+    confidence: high
+    reason: "Bobuk отсутствует в выпуске; реплика внутри монолога Руслана о Xen"
+
+  - type: rename
+    episode: 337
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ruslan_listener"
+    confidence: high
+    reason: "Слушатель Руслан, представлен Umputun'ом перед звонком"
+
+  - type: merge
+    episode: 337
+    speakers: ["SPEAKER_MISATTRIBUTED_LAVALE"]
+    to_speaker: "Marin_k_a"
+    segments: [2167.46]
+    confidence: medium
+    reason: "Продолжение монолога Марины"
+
+  - type: merge
+    episode: 337
+    speakers: ["SPEAKER_MISATTRIBUTED_LAVALE"]
+    to_speaker: "Ksenks"
+    segments: [5417.67]
+    confidence: medium
+    reason: "Объявление темы слушателей, рядом с репликами SPEAKER_03"
+
+# Дополнительные замечания
+notes: |
+  Выпуск 337 от 20 апреля 2013 года.
+  "Половинный состав" — только Umputun и Marin_k_a (Марина) из постоянных ведущих.
+  Ksenks (SPEAKER_03) — со-ведущая, но распознана как SPEAKER_03.
+
+  Слушатель Руслан позвонил рассказать про Xen (~5470-5900 сек).
+  Его реплики ошибочно размечены как SPEAKER_00, EldarMurtazin и Bobuk.
+
+  ВАЖНО: EldarMurtazin — это НЕ известный мобильный аналитик Эльдар Муртазин.
+  В контексте выпуска это имя никогда не звучит, только "Руслан".

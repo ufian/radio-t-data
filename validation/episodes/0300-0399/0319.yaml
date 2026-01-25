@@ -1,0 +1,237 @@
+episode: 319
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [SPEAKER_00, Marin_k_a]
+  total_duration_sec: 7286
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 869
+    replies_count: 205
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 135.56s Umputun: "Дорогой Андрей, надо было сказать, я фанат шоу, мы бы тебя быстрее пустили."
+        На 142.82s: "Прав ли я, Андрей?"
+        На 20602s: "Андрей, спасибо, что пришел, рассказал нам всякие глупости про всякие глупые Apple."
+        SPEAKER_00 сам представился: "Я, поскольку сам инженер, закончил радиотехнические институции"
+        Гость по имени Андрей, инженер, любитель плов и техники Apple, уважает Возняка больше Джобса.
+
+      possible_matches:
+        - person_id: "andrey_guest_319"
+          confidence: 0.95
+          reason: "Явное представление по имени Андрей, полноценное участие в выпуске (869 сек речи)"
+
+      voice_task:
+        needed: true
+        reason: "Для идентификации гостя в других выпусках"
+        reference_segment:
+          stime: 1537.92
+          etime: 1556.2
+          text: "Господа, кстати, вы заметили, что когда выпускали приложения Google, которые были в период конфронтации с компанией Apple, они выпускались, как везде писали, на черном фоне."
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 803
+    replies_count: 217
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # ВАЖНО: несоответствие имени!
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        К этому спикеру обращаются как "Ксюша" минимум 20 раз по всему выпуску:
+        - "Кроме Ксюши" (1387)
+        - "Да, нет, Ксюша, конечно, ей 17" (1396)
+        - "Итак, Ксюша, ты ведь к тарелочкам самая близкая из нас из всех, правильно?" (2134)
+        - "Ну, Ксюш, ну, пойми, что XR они с горячей заменой" (9424)
+
+        Также обращаются как "Оксана" (~10 раз), что может быть прозвищем или полным именем Ксении.
+        Marin_k_a в people.yaml = Марина, но к спикеру НЕ обращаются как Марина ни разу.
+
+        ВЫВОД: Спикер неправильно размечен. Это Ksenks (Ксения), не Marin_k_a (Марина).
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.95
+          reason: "К спикеру обращаются 'Ксюша' и 'Оксана' на протяжении всего выпуска"
+
+      voice_task:
+        needed: false
+        reason: "Идентификация не требуется - это известная ведущая Ksenks"
+
+  - speaker: "Gray"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 1 реплика длительностью 4 секунды.
+        Gray не упоминается в начале выпуска среди участников.
+        Umputun говорит "нас четверо" - это Umputun, Bobuk, Ksenks и гость Андрей.
+        Реплика "А новое приложение как-то достаточно радостно выглядит" идёт после SPEAKER_00.
+        Вероятно это ошибка распознавания - реплика принадлежит одному из участников (Bobuk, Umputun, или SPEAKER_00).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reason: "Проверить, кому принадлежит эта реплика"
+        reference_segment:
+          stime: 1556.34
+          etime: 1559.97
+          text: "А новое приложение как-то достаточно радостно выглядит."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        3 очень короткие реплики (суммарно 5 секунд) разбросаны по выпуску:
+        - 2802s: "Нет, главное, что... Конечно." (3.3s)
+        - 5509s: "Ну, запустили недавно, да." (1.3s)
+        - 8040s: "Пока." (0.7s, прощание в конце)
+
+        Это типичные фразы-заполнители, скорее всего ошибочно приписаны отдельному спикеру.
+        Вероятно принадлежат одному из ведущих (Umputun, Bobuk) или гостю Андрею.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие для voice matching"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 15
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Имя спикера указывает на ошибочную атрибуцию к Эльдару Муртазину.
+        3 реплики:
+        - 3608s: "Не, ну, Ксюш, ну, пойми, что XR они с горячей заменой хотя бы..." (12.9s)
+        - 4216s: "Это же... Как ее зовут?" (1.3s)
+        - 5410s: "Или ты сейчас про что?" (1.0s)
+
+        Первая реплика обращается к "Ксюш" - так говорят ведущие.
+        Также в реплике упоминается "Андрей, я тебе расскажу" - обращение к гостю.
+        Это явно один из ведущих (Umputun или Bobuk), не Эльдар.
+
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: "Обращение 'Ксюш' и 'Андрей' указывает на ведущего, знающего участников выпуска"
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Umputun часто обращается к участникам по именам"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk также мог произнести эти реплики"
+
+      voice_task:
+        needed: true
+        reason: "Определить, кому принадлежат реплики (Umputun или Bobuk)"
+        reference_segment:
+          stime: 3608.47
+          etime: 3621.41
+          text: "Не, ну, Ксюш, ну, пойми, что XR они с горячей заменой хотя бы, а вот у тебя вылетает один диск или сейчас там уже диски... Андрей, я тебе расскажу, как поступаешь."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Gray не представлен в начале выпуска, но есть 1 реплика - вероятно ошибка распознавания"
+    - speaker: "Marin_k_a"
+      issue: |
+        КРИТИЧЕСКАЯ ОШИБКА РАЗМЕТКИ: спикер помечен как Marin_k_a (Марина),
+        но к нему обращаются как 'Ксюша' и 'Оксана'.
+        Это Ksenks (Ксения), не Marin_k_a.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 319
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "К спикеру обращаются 'Ксюша' (~20 раз) и 'Оксана' (~10 раз), но никогда 'Марина'"
+
+  - type: rename
+    episode: 319
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Andrey_Guest_319"
+    confidence: high
+    reason: "Гость представлен по имени Андрей, инженер с радиотехническим образованием"
+
+  - type: delete_speaker
+    episode: 319
+    speaker: "Gray"
+    confidence: medium
+    reason: "1 реплика 4 сек, Gray не упоминается в начале выпуска, вероятно ошибка распознавания"
+
+  - type: merge_into
+    episode: 319
+    from_speaker: "SPEAKER_04"
+    merge_strategy: "voice_match_required"
+    confidence: low
+    reason: "3 короткие реплики (5 сек суммарно), ошибки распознавания"
+
+  - type: merge_into
+    episode: 319
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    merge_strategy: "voice_match_required"
+    confidence: medium
+    reason: "Ошибочная атрибуция к Эльдару, реплики принадлежат одному из ведущих"
+
+# Дополнительные заметки
+notes: |
+  1. Эпизод 319 (15 декабря 2012):
+     - Umputun (ведущий)
+     - Bobuk (ведущий)
+     - Ksenks/Ксюша/Оксана (неправильно размечена как Marin_k_a)
+     - Гость Андрей (инженер, любитель Apple)
+
+  2. Gray НЕ участвовал в этом выпуске - 1 реплика это ошибка.
+
+  3. SPEAKER_MISATTRIBUTED_ELDAR - это маркер ранее ошибочно приписанных Эльдару реплик,
+     которые на самом деле принадлежат кому-то из ведущих.
+
+  4. Фраза "У меня, Маруся, у меня, Оксана" может указывать на то, что к Ksenks
+     обращаются разными именами (Маруся, Оксана, Ксюша) - возможно это шутливые прозвища.

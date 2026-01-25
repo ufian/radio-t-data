@@ -1,0 +1,223 @@
+episode: 310
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: ~7200  # ~2 hours based on timestamps
+  notes: >
+    В начале Umputun объявляет состав: "Бобук, Ксюша и ваш покорный слуга",
+    но называет Марину (Marin_k_a) Ксюшей — вероятно шутка или ошибка.
+    Ksenks в этом выпуске отсутствует.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 599
+    replies_count: 198
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Реплики SPEAKER_03 перемежаются с репликами Marin_k_a в одних и тех же диалогах
+        (например, строки 2293-2314: SPEAKER_03 → Marin_k_a → SPEAKER_03 в непрерывном разговоре).
+        Это явно один человек, разбитый на две сущности автораспознаванием.
+        Стиль речи идентичен. В выпуске только одна женщина.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 444
+    replies_count: 81
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "existing_label"
+      confidence: high
+      evidence: >
+        Уже правильно размечена в people.yaml как бывшая ведущая.
+        В начале эпизода представлена как "Ксюша" (вероятно, шутка Umputun).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 22
+    replies_count: 14
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Реплика "Я бы сходила" (2648s) — женский род, в выпуске только одна женщина (Марина).
+        Остальные реплики вписываются в тот же паттерн — короткие вопросы/комментарии.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 33
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Метка SPEAKER_MISATTRIBUTED_* означает, что ранее реплика была ошибочно
+        атрибутирована другому человеку (Lavale), потом это исправление было отменено.
+        Lavale участвовала в других выпусках, но не в этом.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: >
+            В выпуске только три участника: Umputun, Bobuk, Marin_k_a.
+            Реплики скорее всего принадлежат Марине или одному из ведущих.
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Некоторые реплики могут принадлежать Бобуку (например, про HTML5)."
+        - person_id: "umputun"
+          confidence: 0.1
+          reason: "Маловероятно, но возможно."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2700.09
+          etime: 2710.17
+          text: "То есть, насколько я сейчас понимаю, HTML5, ну, оно еще не в таком вот прямо состоянии, когда можно просто взять и полностью заменить Flash везде."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 8
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика, ранее ошибочно атрибутированная Петру Диденко.
+        Пётр не участвовал в этом выпуске.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Женский участник в выпуске."
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Мог быть Бобук, обсуждающий Flash."
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Возможно Umputun."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2913.2
+          etime: 2921.23
+          text: "Ну, то есть это так сложно реализовать все 20%, значит, непонятно будет, как переходить с этого флэша на что-то другое."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная очень короткая реплика "Все гораздо проще." (1.27 сек).
+        Эльдар Муртазин не участвовал в этом выпуске.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Реплика следует сразу после Бобука, может быть его продолжением."
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Женский участник."
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Возможно."
+
+      voice_task:
+        needed: false  # Слишком короткая реплика для voice comparison
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Marin_k_a"
+      issue: >
+        Umputun объявил "Бобук, Ксюша и ваш покорный слуга", но на самом деле вместо
+        Ksenks участвует Marin_k_a. Либо это шутка, либо в 2012 году "Ксюша" было
+        альтернативным именем для Марины. Требует уточнения.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 310
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: >
+      SPEAKER_03 и Marin_k_a — один человек, разделённый автораспознаванием.
+      198 реплик SPEAKER_03 должны быть объединены с Marin_k_a.
+
+  - type: rename
+    episode: 310
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: >
+      SPEAKER_02 использует женский род ("Я бы сходила"), в выпуске одна женщина.
+      14 реплик принадлежат Марине.
+
+  - type: review_needed
+    episode: 310
+    speakers: ["SPEAKER_MISATTRIBUTED_LAVALE", "SPEAKER_MISATTRIBUTED_PETR", "SPEAKER_MISATTRIBUTED_ELDAR"]
+    reason: >
+      Эти метки означают ранее отменённые ошибочные атрибуции.
+      Нужно voice comparison чтобы определить кому реально принадлежат реплики:
+      Marin_k_a, Bobuk или Umputun.

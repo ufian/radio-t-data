@@ -1,0 +1,222 @@
+episode: 334
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7772
+  notes: |
+    Umputun в начале говорит "безбубуковский состав" (9-12 сек),
+    но Bobuk присоединяется с 544 секунды (первая реплика).
+    Marin_k_a вызывается как "Ксюша" Umputun'ом — это НЕ Ksenks,
+    а другой человек (Марина), которую называли Ксюшей.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 431
+    replies_count: 169
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        SPEAKER_00 использует женский род: "я видела" (1451s, 1456s),
+        "я общалась" (3173s), "я вспомнила" (4797s), "я перестала" (3723s).
+        Чередуется с Marin_k_a в одном монологе — реплики продолжают друг друга:
+        - Marin_k_a (1443-1450): "я видела это только вот у IT гиков"
+        - SPEAKER_00 (1451-1456): "в их руках я видела, а у живых людей"
+        - Marin_k_a (1456-1459): "это тоже были такие люди"
+        Это один человек, разбитый на два спикера автотранскрипцией.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Идентифицирован по контексту с высокой уверенностью"
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1026
+    replies_count: 166
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun обращается "Ксюша, можешь повторить?" (30s),
+        Marin_k_a отвечает "Нет, но я попробую" (32s).
+        Umputun: "Ксюша, тебе выбор" (77s).
+        В people.yaml Marin_k_a записана как "Марина (бывшая ведущая)".
+        Возможно, "Ксюша" — это домашнее/ласкательное прозвище Марины.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Уже идентифицирован в people.yaml"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (в среднем 1.25 сек), разбросанные по всему эпизоду:
+        - 374s: "Кому это нужно вообще?" (1.8 сек)
+        - 1546s: "У тебя еще и доисторическая." (2.6 сек)
+        - 6849s: "Ну..." (0.04 сек)
+        - 7349s: "Хотя я не знаю..." (0.8 сек)
+        Это ошибки распознавания — короткие реплики одного из ведущих,
+        неправильно атрибутированные.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Некоторые реплики по стилю похожи на Gray"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Может быть неправильно распознанная Marin_k_a"
+
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 31
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Маркер SPEAKER_MISATTRIBUTED означает отменённое ранее присвоение.
+        Реплики разбросаны: 966s, 2114s, 2266s, 3403s, 4311s, 6502s, 7632s, 7646s.
+        Контекст реплик:
+        - "А он по ВНС куда пошел?" (966s) — вопрос о VNC, технический
+        - "Там супер-пупер атака" (2114s) — обсуждение DDoS-атак
+        - "Windows RT" тема (7632-7646s)
+        Голос мужской, но не похож на Eldar Murtazin (который не участвует в 334).
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Технические вопросы о VNC, атаках — похоже на стиль Gray"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk появляется позже, некоторые реплики могут быть его"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7632.23
+          etime: 7649.94
+          text: "Нет, ну тут есть еще темы про Windows 8 и опять про Украину. ... Microsoft прекращает поддержку Windows RT как самостоятельного продукта."
+          notes: "Самый длинный непрерывный сегмент SPEAKER_MISATTRIBUTED_ELDAR"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 реплики, 6 секунд суммарно:
+        - 2965s: "А так все остальное вообще... Ты понимаешь, там конкретные просто наезды." (3.8 сек)
+        - 5719s: "Потому что я был не в курсе." (2.3 сек)
+        Очень мало данных для идентификации. Скорее всего ошибки распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Первая реплика идёт сразу после Umputun, может быть его продолжением"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Вторая реплика в контексте обсуждения с Gray"
+
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  bobuk_late_arrival: true
+  notes: |
+    1. Umputun говорит "безбубуковский состав" в начале (9-12 сек),
+       но Bobuk появляется с 544 секунды — возможно, присоединился позже по звонку.
+    2. Marin_k_a называется "Ксюша" — в people.yaml она Марина.
+       Требует уточнения: либо это прозвище, либо ошибка в справочнике.
+    3. SPEAKER_00 = Marin_k_a с высокой уверенностью (женский род, чередование реплик).
+
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: "Должен быть переименован в Marin_k_a"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Требует voice comparison для идентификации"
+    - speaker: "Marin_k_a"
+      issue: "В people.yaml указано real_name='Марина', но Umputun называет её 'Ксюша'"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 334
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      SPEAKER_00 использует женский род, чередуется с Marin_k_a в едином монологе,
+      продолжая её мысли. Это один и тот же человек.
+
+  - type: delete
+    episode: 334
+    speaker: "SPEAKER_01"
+    confidence: medium
+    reason: |
+      4 реплики по 1-2 сек каждая — типичные ошибки распознавания.
+      Можно удалить или оставить для ручной проверки.
+
+# Вопросы для ручной проверки
+manual_review_questions:
+  - question: "Marin_k_a — это Марина или Ксения (Ksenks)?"
+    context: |
+      Umputun обращается к ней как "Ксюша", но в people.yaml
+      она записана как Марина (бывшая ведущая).
+      Возможно, "Ксюша" — ласкательное от "Марина"?
+      Или это разные люди?
+
+  - question: "Кто такой SPEAKER_MISATTRIBUTED_ELDAR?"
+    context: |
+      8 реплик (31 сек) с мужским голосом.
+      Eldar Murtazin не участвует в этом выпуске.
+      Возможно Gray или другой ведущий.

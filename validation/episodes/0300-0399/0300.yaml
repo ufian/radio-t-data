@@ -1,0 +1,218 @@
+episode: 300
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko, Marin_k_a]
+  total_duration_sec: 8774
+  notes: |
+    Юбилейный 300-й выпуск (фактически 301-й если считать с нуля).
+    Пётр Диденко присутствовал физически в студии ("вторая напервильская студия").
+    Марина участвовала удалённо.
+    Представление участников: 85-98 сек.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 775
+    replies_count: 228
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        95s: "Петя, скажи здрасте гостям" (Umputun)
+        97s: "Всем привет. Привет из второй напервильской." (PetrDidenko)
+        Пётр уже в справочнике как известный постоянный гость (148 выпусков).
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 408
+    replies_count: 153
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        116s: "Марусенька, ты с нами?" (Umputun)
+        118s: "Я с вами, я никогда не сидела на твоём диване..." (Marin_k_a)
+        Марина (Marin_k_a) уже в справочнике как бывшая ведущая.
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Это явно не Эльдар Муртазин - он не участвовал в выпуске 300.
+        Короткие фразы ("Вот я пишу", "Ну а что тебе пуша?", "Я даже понимаю...")
+        Все в контексте диалога Umputun с другими ведущими.
+        Скорее всего это ошибочно атрибутированные реплики одного из ведущих.
+      identified_as: null
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: |
+            4201s: "Вот я пишу" - следует сразу за репликой Umputun "это самый правильный ответ",
+            затем Bobuk говорит "пока Женя там пишет стоп" - подтверждает что это Umputun.
+        - person_id: "gray"
+          confidence: 0.3
+          reason: Мог быть Gray, судя по тону некоторых реплик.
+      voice_task:
+        needed: false
+        reason: Слишком короткие фрагменты для voice comparison.
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика: 6121s "Итак, я пишу стоп."
+        Сразу после Umputun "Смотрю, дробной части нет" и до Bobuk "Жень, ты в следующий раз проси делить."
+        Контекст явно указывает что это Umputun пишет "стоп" в чат для розыгрыша.
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Bobuk обращается "Жень" сразу после этой реплики, подтверждая что говорил Umputun.
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 3
+    replies_count: 6
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Все реплики очень короткие (0.1-1.7 сек): "Да", "Да", "Это от грозы", "Ага", "Уходи дважды", "Пока".
+        Разбросаны по всему выпуску - типичные ошибки распознавания.
+        Скорее всего это подхватки других участников, неверно атрибутированные.
+      identified_as: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: 4295s "Это от грозы" - следует за репликой Umputun, мог быть комментарий Gray.
+        - person_id: "petr_didenko"
+          confidence: 0.3
+          reason: Пётр был в студии, некоторые подхватки могли быть его.
+        - person_id: "marin_k_a"
+          confidence: 0.2
+          reason: 8774s "Пока" - в самом конце, могла быть Марина.
+      voice_task:
+        needed: false
+        reason: Слишком короткие фрагменты (<2 сек) для достоверного voice comparison.
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика 6971s: "Мы можем просто разыграть."
+        Находится между репликами Marin_k_a (6970s и 6973s).
+        Lavale не участвовала в выпуске 300.
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплика окружена репликами Marin_k_a, продолжает её мысль о розыгрыше.
+        Скорее всего ошибка транскрипции - это Марина.
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 6
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика 8153s: "Т-А-Р-А-К-И-Т-И-К-О-С" - побуквенное произношение.
+        Контекст: Umputun 8149s говорит "Таракитос", затем эта реплика, затем PetrDidenko отвечает.
+        Это Umputun произносит ник по буквам для розыгрыша в чате.
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        8149s Umputun: "Таракитос."
+        8153s SPEAKER_00: "Т-А-Р-А-К-И-Т-И-К-О-С." (побуквенно)
+        8159s PetrDidenko: "Слушай, я считаю..."
+        8164s Umputun: "Таракитос."
+        Явно Umputun продолжает диктовать ник победителя розыгрыша.
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все участники представлены в начале выпуска (85-130 сек):
+    - Umputun: ведёт с самого начала (5 сек)
+    - Bobuk: первая реплика 36 сек
+    - Gray: первая реплика 71 сек
+    - PetrDidenko: представлен на 95 сек ("Петя, скажи здрасте")
+    - Marin_k_a: представлена на 116 сек ("Марусенька, ты с нами?")
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 300
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: |
+      Единственная реплика "Итак, я пишу стоп" явно принадлежит Umputun -
+      Bobuk сразу после обращается "Жень".
+
+  - type: rename
+    episode: 300
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: |
+      Побуквенное произношение "Т-А-Р-А-К-И-Т-И-К-О-С" следует за репликой Umputun "Таракитос" -
+      это он диктует ник победителя розыгрыша.
+
+  - type: rename
+    episode: 300
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Реплика "Мы можем просто разыграть" окружена репликами Marin_k_a и продолжает её мысль.
+      Lavale не участвовала в выпуске 300.
+
+  - type: delete_misattribution_marker
+    episode: 300
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    confidence: medium
+    reason: |
+      Эльдар не участвовал в выпуске. Первая реплика ("Вот я пишу") - точно Umputun
+      (Bobuk подтверждает: "пока Женя там пишет"). Остальные две неясны, но тоже не Эльдар.
+    suggested_action: |
+      Переименовать первую реплику (4201s) в Umputun.
+      Две другие требуют дополнительного анализа контекста.
+
+  - type: ignore
+    episode: 300
+    speaker: "SPEAKER_06"
+    confidence: medium
+    reason: |
+      6 очень коротких реплик (0.1-1.7 сек) разбросаны по выпуску.
+      Это типичные ошибки распознавания - подхватки и междометия.
+      Недостаточно данных для точной атрибуции без voice comparison.

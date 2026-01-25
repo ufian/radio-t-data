@@ -1,0 +1,345 @@
+episode: 309
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray]
+  # Gray присутствует минимально (3 реплики), возможно ошибка распознавания
+  total_duration_sec: 8619  # ~2.4 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 849
+    replies_count: 209
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Гость представлен явно
+      identified_as: null  # Имя "Алексей/Лёха" известно, но person_id неизвестен
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 64s: "Дорогой, Алексей."
+        Umputun в 67s: "Он же Леха."
+        Umputun в 71-77s: "Ты нам известен... Ты тут уже был."
+        SPEAKER_00 в 74-76s: "Бывал. Я тут отмечался."
+        Umputun в 77s: "Говорят, ты большой специалист по джавам"
+        Гость активно обсуждает Java, ZFS, технические темы весь выпуск.
+        В конце выпуска (9475s): "Алексей, спасибо, что пришел."
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.4
+          reason: "Имя Алексей/Лёха совпадает, но Alek.sys — постоянный ведущий, а гость представлен как 'уже бывал'"
+        - person_id: null
+          confidence: 0.6
+          reason: "Скорее всего это другой Алексей, не из справочника. Нужен voice comparison"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 458.48
+          etime: 469.1
+          text: "Я как человек близкий к всяким ZFS, хотел бы высказать, что можете делать сколько хотите снапшотов на некоторых файловых системах."
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 527
+    replies_count: 96
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "pre-labeled"
+      confidence: high
+      evidence: "Уже размечена в транскрипте. Марина — бывшая ведущая, указана в people.yaml"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 235
+    replies_count: 105
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в начале (8-28s) говорит о Ксюше:
+        "Я даже без Ксюши, которая пришла, как она обычно приходит"
+        "И Ксюша опять пришла, но опять с таким плохим микрофоном"
+        Первая реплика SPEAKER_04 (45s): "Я затаила обиду" — ответ на шутку про "дама".
+        На протяжении выпуска Umputun обращается к Ксюше, и следующие реплики — от SPEAKER_04:
+        - 587s: "Ксюша, ты понимаешь..." → 606s SPEAKER_04: "Как-то они раньше"
+        - 895s: "Ксюша, знаешь, да, проблему?" → 899s SPEAKER_04 отвечает
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 20
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_MISATTRIBUTED_* — это отменённые ошибочные присвоения.
+        Lavale — бывшая ведущая, но не участвовала в выпуске 309.
+        Реплики (422s, 1660s) скорее всего принадлежат одному из присутствующих.
+        По контексту (1660s про Jenkins и плагины) — вероятно SPEAKER_00 (Алексей).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: null  # SPEAKER_00 (Алексей)
+          confidence: 0.7
+          reason: "Технический контекст про Jenkins характерен для гостя-Java разработчика"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1660.59
+          etime: 1676.08
+          text: "И вот так исторически сложилось, что он для Jenkins..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 9
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_MISATTRIBUTED_ELDAR — отменённое ошибочное присвоение Эльдару Муртазину.
+        Эльдар не участвовал в выпуске 309.
+        Реплики короткие (2088s: "Ну, написал что-то", 9017s: про DNS) — вероятно ошибка распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Короткие реплики между репликами ведущих, вероятно ошибка сегментации"
+        - person_id: null  # SPEAKER_00
+          confidence: 0.3
+          reason: "Реплика про DNS (9017s) может быть технической вставкой гостя"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 9
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_MISATTRIBUTED_PETR — отменённое ошибочное присвоение Петру Диденко.
+        Пётр не участвовал в выпуске 309.
+        Реплики короткие и разбросанные (1523s, 3311s, 6973s).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Короткие вопросы, характерные для ведущего"
+        - person_id: null  # SPEAKER_00
+          confidence: 0.4
+          reason: "Могут быть репликами гостя"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 7
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (2162s: "Ну, я уважаю людей", 2388-2392s: про тестовую базу и паспорт).
+        Вероятно ошибка сегментации — реплики должны принадлежать одному из ведущих или SPEAKER_00.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "По стилю похоже на короткие вставки Bobuk"
+        - person_id: null  # SPEAKER_00
+          confidence: 0.3
+          reason: "Технический контекст про базу данных"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 2 реплики по 1-2 секунды каждая:
+        - 6338s: "Темы слушателей." — вероятно джингл или вставка
+        - 8166s: "Молодцы." — короткая реакция
+        Скорее всего ошибка распознавания или аудио-артефакт.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: null  # SPEAKER_99 (артефакт)
+          confidence: 0.7
+          reason: "Темы слушателей" — типичная вставка/джингл"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Молодцы" может быть репликой ведущего"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Gray"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Gray помечен как присутствующий, но имеет только 3 очень короткие реплики:
+        - 3466s: "Я же говорю, гид вручную." (1s)
+        - 4068s: "Так что..." (0.3s)
+        - 6107s: "В 2012 году." (1.4s)
+        Суммарно ~3 секунды на 2.4-часовой подкаст — крайне маловероятно.
+        Вероятно ошибка распознавания — эти реплики принадлежат другому спикеру.
+
+      identified_as: null  # Требует проверки, присутствовал ли Gray вообще
+      identification_method: null
+      confidence: null
+      evidence: |
+        В начале выпуска Umputun не упоминает Gray среди присутствующих.
+        Говорит только про Ксюшу (Ksenks) и гостя Алексея.
+        Bobuk упоминает "Диму Завалишина", которого ждали, но он не пришёл.
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Короткие вставки могут быть Bobuk"
+        - person_id: null  # SPEAKER_00
+          confidence: 0.3
+          reason: "Могут быть репликами гостя"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3466.09
+          etime: 3467.11
+          text: "Я же говорю, гид вручную."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray НЕ был представлен/упомянут в начале выпуска.
+        Umputun говорит только про Ксюшу и гостя Алексея.
+        3 реплики по 1 секунде за 2.4 часа — вероятно ошибка разметки.
+        Требуется проверка: присутствовал ли Gray в выпуске 309.
+
+    - speaker: "SPEAKER_00"
+      issue: |
+        Гость Алексей (Лёха) представлен, но не идентифицирован полностью.
+        Известно: специалист по Java/ZFS, уже бывал на подкасте.
+        Не найден в справочнике guests — нужно добавить или найти соответствие.
+
+    - speaker: "Marin_k_a"
+      issue: |
+        Марина присутствует в выпуске, но не была представлена явно.
+        Вероятно её присутствие предполагалось известным слушателям.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 309
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_04 — это Ксюша (Ksenks). Доказательства:
+      1. Umputun упоминает Ксюшу в начале (8-28s)
+      2. Первая реплика SPEAKER_04 (45s) — ответ на шутку про "дама"
+      3. Umputun обращается к Ксюше, и SPEAKER_04 отвечает
+
+  - type: rename
+    episode: 309
+    from_speaker: "SPEAKER_05"
+    to_speaker: "SPEAKER_99"
+    confidence: medium
+    reason: |
+      "Темы слушателей" (6338s) — типичный джингл/вставка.
+      Должен быть помечен как SPEAKER_99 (артефакт).
+
+  - type: investigate
+    episode: 309
+    from_speaker: "Gray"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Требуется проверка: присутствовал ли Gray в выпуске 309.
+      Только 3 реплики по ~1 секунде — вероятно ошибка разметки.
+      Если не присутствовал — реплики нужно переназначить.
+
+  - type: investigate
+    episode: 309
+    from_speaker: "SPEAKER_00"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Гость Алексей/Лёха идентифицирован по имени, но не найден в people.yaml.
+      Варианты:
+      1. Добавить нового гостя "aleksey_java" или подобное
+      2. Найти в истории подкаста, кто этот Алексей (бывал раньше)
+      3. Voice comparison с другими Алексеями в архиве

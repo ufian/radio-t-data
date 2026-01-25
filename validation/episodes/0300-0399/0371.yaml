@@ -1,0 +1,210 @@
+episode: 371
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6581  # ~1h 50min based on speaker stats
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 397
+    replies_count: 185
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Multiple direct name calls with immediate responses:
+        - 2159s: Umputun "Наверное, Ксюша, ты ходила" -> SPEAKER_04 "Да, я ходила"
+        - 2375s: Gray "Ксюша, видела видео?" -> SPEAKER_04 "Да, я видела"
+        - 1197s: SPEAKER_04 responds in dialogue about tech topics as active participant
+        Pattern: Consistent female voice throughout episode, addressed as "Ксюша"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Single word 'русский' (216.5s) between Gray's utterances. Likely a fragment of Gray's speech incorrectly split by ASR."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.9
+          reason: "Fragment appears mid-sentence in Gray's monologue about translation"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 21
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Previously misattributed to EldarMurtazin. Eldar does not appear in this episode (371, Dec 2013). These are likely host utterances incorrectly identified."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Examples of misattributed speech:
+        - 369s: "Они его закатили довольно быстро, кстати" - tech discussion context
+        - 1168s: "Подожди, как на 10?" - question in dialogue with Gray
+        Short interjections that could be any host.
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Some interjections match Bobuk's style"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Contextual proximity to Gray's speech"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Could be any host"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 369.86
+          etime: 371.64
+          text: "Они его закатили довольно быстро, кстати."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 22
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Previously misattributed to Lavale. Lavale does not appear in this episode. These are likely host utterances incorrectly identified."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Examples:
+        - 936s: "Понятное дело, что если есть технологии, то есть люди, которые хотят ими пользоваться"
+        - 1930s: "Ну, то есть они делают только маленькую коробочку, в которую ты сам втыкаешь сво..."
+        These are substantive comments in discussion context.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Female voice, substantive tech commentary"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Could be Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 936.71
+          etime: 940.81
+          text: "Понятное дело, что если есть технологии, то есть люди, которые хотят ими пользоваться."
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 678
+    replies_count: 146
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Marin_k_a (Marina) is a known former host. However, there's potential confusion:
+        - At 25s: Umputun addresses "Ксюша" about being late, Marin_k_a responds
+        - At 238s: Umputun asks "Ксюша" about disappointments, Marin_k_a responds
+        This may indicate some of Marin_k_a's lines actually belong to Ksenks.
+
+        However, there are clear dialogues where BOTH Marin_k_a and SPEAKER_04 (Ksenks)
+        speak in sequence (e.g., 1208-1223s, 2163-2195s), confirming they are different people.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: "Not explicitly introduced at start, but consistently addressed as 'Ксюша' throughout. Should be renamed to Ksenks."
+
+    - speaker: "Marin_k_a"
+      issue: "Responds to 'Ксюша' address at 25s and 238s, but Ксюша is Ksenks's nickname. Possible misattribution of some early Ksenks lines to Marin_k_a, OR Umputun addressed wrong person."
+
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "10 orphaned utterances from incorrect Eldar attribution. Need voice comparison to identify actual speaker."
+
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "5 orphaned utterances from incorrect Lavale attribution. Need voice comparison to identify actual speaker."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 371
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Direct name addressing: 'Ксюша, ты ходила' -> 'Да, я ходила'; 'Ксюша, видела?' -> 'Да, я видела'. Ksenks is canonical name for Ксюша."
+
+  - type: rename
+    episode: 371
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: "Single word fragment between Gray's sentences, likely ASR split error."
+
+# Примечания для ручной проверки
+notes: |
+  1. SPEAKER_04 -> Ksenks: HIGH confidence rename. Multiple direct name-response pairs.
+
+  2. Potential issue with early Marin_k_a lines (25s-59s):
+     Umputun says "Хорошо, Ксюша, что ты нам зашла... ты просто опоздала молча"
+     Marin_k_a responds about being ready and waiting.
+     This could mean:
+     a) Marin_k_a was also late and responded, not Ksenks
+     b) These lines are actually Ksenks misattributed to Marin_k_a
+     c) Both were present; Marin_k_a spoke up though Umputun addressed Ksenks
+
+     Recommendation: Voice comparison needed for 33-59s segment.
+
+  3. SPEAKER_MISATTRIBUTED_* entries indicate previously corrected errors.
+     These need voice comparison to properly attribute.
+
+  4. Episode has 4 participants: Umputun, Bobuk, Gray, and two female voices
+     (Marin_k_a and Ksenks). Total 5 active speakers + misattributed fragments.
+
+# Audio reference for voice comparison
+audio_url: null  # Check data/371/371_desc.json for CDN URL

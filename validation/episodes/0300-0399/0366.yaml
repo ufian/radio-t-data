@@ -1,0 +1,202 @@
+episode: 366
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7200  # ~2 часа (примерная оценка)
+
+  # Подробная статистика (из предрассчитанных данных)
+  speaker_stats:
+    - speaker: Umputun
+      replies: 1206
+      duration_sec: 3397
+      first_at: 4
+    - speaker: Bobuk
+      replies: 752
+      duration_sec: 2355
+      first_at: 21
+    - speaker: Marin_k_a
+      replies: 167
+      duration_sec: 870
+      first_at: 84
+    - speaker: SPEAKER_00
+      replies: 236
+      duration_sec: 439
+      first_at: 23
+    - speaker: SPEAKER_MISATTRIBUTED_LAVALE
+      replies: 10
+      duration_sec: 36
+      first_at: 179
+    - speaker: SPEAKER_03
+      replies: 3
+      duration_sec: 2
+      first_at: 1601
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: SPEAKER_00
+    total_duration_sec: 439
+    replies_count: 236
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: ksenks
+      identification_method: introduction
+      confidence: high
+      evidence: |
+        1. Umputun представляет в начале: "У нас есть Ксюша, у нас есть Бобук" (13.5s)
+        2. SPEAKER_00 говорит "я была" в женском роде (29.4s)
+        3. Прямое обращение Umputun: "А ты, Ксюша?" (194.3s), после чего SPEAKER_00 отвечает (196.6s)
+        4. Bobuk: "Ксюша, давай, включайся" (199.2s), SPEAKER_00 отвечает (200.7s)
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: Marin_k_a
+    total_duration_sec: 870
+    replies_count: 167
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Уже идентифицирована в people.yaml
+      identified_as: marin_k_a
+      identification_method: context
+      confidence: high
+      evidence: |
+        Marin_k_a уже идентифицирована в people.yaml как Марина (бывшая ведущая).
+        Подтверждается женским родом в репликах:
+        - "я тогда думала" (4612.5s)
+        - "я согласна" (6035.9s)
+        Активное участие (167 реплик, 870 сек) подтверждает статус участника.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: SPEAKER_MISATTRIBUTED_LAVALE
+    total_duration_sec: 36
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Спикер помечен как MISATTRIBUTED — это ошибочная атрибуция, которая была отменена.
+        Анализ контекста показывает, что реплики относятся к Ksenks (SPEAKER_00):
+        - 178.9s: продолжение разговора SPEAKER_00 о цифровых темах
+        - Женский голос, согласуется с Ksenks
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: ksenks
+          confidence: 0.8
+          reason: Контекст указывает на продолжение реплик Ksenks
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3147.64
+          etime: 3169.25
+          text: |
+            "Зато во всех магазинах и во всех каких-то точках понатыкано уже вот этих автоматов."
+            "То есть везде все больше и больше появляется возможность платить картой."
+            "Это такая карта, которая агрегирует кучу карт."
+          note: "Самый длинный непрерывный сегмент (~22 сек)"
+
+  - speaker: SPEAKER_03
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 3 очень короткие реплики (<2 сек каждая) в разных частях эпизода:
+        - 1600.6s: "Не?" (0.9 сек)
+        - 2519.1s: "Ребята честные, да?" (1.8 сек)
+        - 6561.5s: "Может, ты чистую поставил?" (аномальный etime < stime)
+        Типичные фразы-ошибки распознавания, вероятно принадлежат одному из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: ksenks
+          confidence: 0.5
+          reason: Короткие реплики в диалоге, могут быть ошибочно отсечены от SPEAKER_00
+        - person_id: bobuk
+          confidence: 0.3
+          reason: Контекст некоторых реплик около высказываний Bobuk
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        note: "Слишком короткие сегменты для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: Marin_k_a
+      issue: |
+        Марина не представлена в начале эпизода. Umputun говорит только
+        "У нас есть Ксюша, у нас есть Бобук" (13.5s), но Марина появляется
+        с первой репликой уже на 83.6s, активно участвуя в разговоре.
+        Возможно представление было неполным или она известна слушателям как постоянная участница.
+    - speaker: SPEAKER_00
+      issue: |
+        SPEAKER_00 (Ksenks) не был автоматически переименован, хотя идентификация очевидна.
+        236 реплик должны быть переименованы в Ksenks.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 366
+    from_speaker: SPEAKER_00
+    to_speaker: Ksenks
+    confidence: high
+    reason: |
+      Прямая идентификация через представление и обращения:
+      - "У нас есть Ксюша" (13.5s)
+      - "А ты, Ксюша?" -> SPEAKER_00 отвечает (194-196s)
+      - "Ксюша, давай, включайся" -> SPEAKER_00 отвечает (199-200s)
+
+  - type: rename
+    episode: 366
+    from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
+    to_speaker: Ksenks
+    confidence: medium
+    reason: |
+      Контекст указывает на продолжение реплик Ksenks.
+      Требует подтверждения через voice comparison.
+
+  - type: delete_or_merge
+    episode: 366
+    from_speaker: SPEAKER_03
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Ошибки распознавания: 3 очень короткие реплики (<2 сек).
+      Одна реплика имеет аномальный timestamp (etime < stime).
+      Требует ручной проверки для определения реального автора.

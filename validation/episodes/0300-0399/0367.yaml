@@ -1,0 +1,215 @@
+episode: 367
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 5353  # ~89 минут
+
+# Примечание: в начале выпуска Umputun говорит "нас трое"
+# Ведущие: Umputun, Gray, Marin_k_a (Марина была ведущей в выпусках 106-538)
+# Bobuk присутствует минимально (8 реплик) - возможно подключился кратко
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1243
+    replies_count: 335
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Marin_k_a (Марина) была ведущей в выпусках 106-538 (согласно participants.md).
+        Эпизод 367 входит в этот диапазон. Umputun обращается к ней "Ксюша" -
+        возможно прозвище или шутливое обращение. Ksenks начала вести только с 409 выпуска.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 42
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это не Эльдар Муртазин - метка говорит что присвоение было ошибочным и отменено
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики разбросаны по всему выпуску. Содержание технических комментариев:
+        - "Это означает, что какие-то части доступны без HTTPS" (3330s)
+        - "Нет, нет, нет, это не по Google Voice совершенно" (4699s) - Umputun отвечает "у вас там свой Яндекс.Войс"
+        - "LG, насколько я понимаю, пообещала очень серьезно разобраться с этим" (5738s)
+
+        Стиль речи похож на ведущего. Учитывая что Bobuk из Яндекса и реплика про Яндекс.Войс,
+        возможно это Bobuk, ошибочно распознанный. Однако уверенности нет.
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Стиль ведущего, тема Яндекса, Bobuk работает в Яндексе"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Технические комментарии, активный участник"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5725.21
+          etime: 5737.89
+          text: "И все это, соответственно, что пользователь делает, что он ищет в этих смарт-оболочках, любимые программы и все такое прочее, это все дело сливалось туда."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 15
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это не Пётр Диденко - метка говорит что присвоение было ошибочным и отменено
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Три реплики в разное время:
+        - "Вообще не очень этично, в принципе, на своего конкурента как-то возводить какие-то..." (268s)
+        - "А тут они могут что-то заработать даже" (1838s)
+        - "Ты учишься 5 лет в институте" (2674s)
+
+        Стиль похож на реплики ведущего в дискуссии.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Стиль комментариев, активный участник обсуждения"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Короткие комментарии в дискуссии"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 268.26
+          etime: 276.57
+          text: "Вообще не очень этично, в принципе, на своего конкурента как-то возводить какие-то... С другой же стороны, есть же свобода слова, правильно?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это не Лаваль - метка говорит что присвоение было ошибочным и отменено
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Три короткие реплики:
+        - "Ну, конечно, это очень дорого." (1087s)
+        - "Так, которые в онлайн же денег вроде не стоят." (1390s)
+        - "Это классная штука, мне кажется." (5143s)
+
+        Очень короткие реплики, похожи на ошибки распознавания или реплики в общем потоке.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Короткие комментарии, может быть неправильно распознанная Марина"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Комментарии в дискуссии"
+
+      voice_task:
+        needed: false  # Слишком короткие реплики для сравнения
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие односложные реплики (0.8-2 сек), разбросаны по выпуску - типичная ошибка распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Три односложные реплики:
+        - "Каждый день?" (3940s, 0.8 сек)
+        - "Почему?" (5164s, 0.8 сек)
+        - "Понятно." (6003s, 2.1 сек)
+
+        Это типичные короткие вставки, которые распознаватель не смог атрибутировать.
+        Скорее всего это реплики одного из ведущих (Gray, Marin_k_a или Umputun).
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Короткие уточняющие реплики во время обсуждения"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Короткие реакции"
+
+      voice_task:
+        needed: false  # Слишком короткие реплики для надёжного сравнения
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        Umputun обращается к спикеру как "Ксюша", но это Марина (Marin_k_a).
+        Ksenks начала участвовать только с выпуска 409, поэтому в 367 её быть не могло.
+        Возможно "Ксюша" - прозвище Марины или Umputun шутит/ошибается в обращении.
+        Требует уточнения - проверить другие выпуски с Marin_k_a на предмет обращения.
+
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk присутствует минимально (8 реплик, 19 сек). В начале Umputun говорит
+        "без нашего индюка" и спрашивает "где Бобок". Bobuk ответил "Далеко очень".
+        Вероятно Bobuk был на связи недолго или только наблюдал. Нужно проверить,
+        не атрибутированы ли его реплики как SPEAKER_MISATTRIBUTED_*.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Пока нет достаточной уверенности для автоматической переатрибуции.
+# Требуется voice comparison для SPEAKER_MISATTRIBUTED_ELDAR и SPEAKER_MISATTRIBUTED_PETR.
+
+# Задания на следующий этап
+next_steps:
+  - type: voice_comparison
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    compare_with: [Bobuk, Gray]
+    reference_audio_time: "1:35:25-1:35:38"  # 5725-5738s
+
+  - type: voice_comparison
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    compare_with: [Gray, Bobuk]
+    reference_audio_time: "0:04:28-0:04:36"  # 268-276s
+
+  - type: research
+    question: "Как Umputun обращается к Marin_k_a в других выпусках? Называет ли её Ксюшей?"
+    check_episodes: [365, 366, 368, 369]

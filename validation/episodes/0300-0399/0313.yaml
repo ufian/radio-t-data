@@ -1,0 +1,144 @@
+episode: 313
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6443  # ~1ч 47мин по статистике
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 896
+    replies_count: 221
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Marin_k_a из people.yaml - бывшая ведущая Марина
+      # Однако в эпизоде её называют "Ксюш" (строка 46: "Не те темы, Ксюш?")
+      # Ksenks в people.yaml имеет alias "Ксюша"
+      # Требуется проверка: это действительно Марина или Ксения?
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: "В people.yaml Marin_k_a = Марина. Но в эпизоде обращение 'Ксюш' (26.33-28.79s). Активно участвует в технических дискуссиях (эксепшны, состояние программ). 221 реплика указывает на ведущую, а не гостя."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Обращение 'Ксюш' совпадает с alias Ksenks='Ксюша'. Если Marin_k_a неправильно размечена, это может быть Ksenks."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 845.29
+          etime: 863.15
+          text: "Да. Этот эксепшн прокидывается дальше и дальше. И в каком месте ты его обрабатываешь, это вовсе не то место, в котором она впервые заимитилась. Поэтому получается, что ты не знаешь свое состояние всегда."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики (по ~1 сек) в разных местах: 'Морализонского' (эхо Umputun) и 'Не брала, да' (ответ на обращение 'Ксюша'). Типичная ошибка автоматической разметки - фразы скорее всего принадлежат Marin_k_a или кому-то из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Ответ на 'Ксюша, скажи, не брала' - прямое обращение к тому же человеку, которого называют Ксюшей (Marin_k_a в этом эпизоде)"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Первая реплика 'Морализонского' может быть ответом Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Название спикера указывает на уже отменённое ошибочное присвоение. Одна короткая реплика 'Вы не умеете их готовить, наверное' в контексте обсуждения потоков - скорее всего Marin_k_a или кто-то из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Женский голос в разговоре с двумя мужчинами-ведущими. Marin_k_a активно участвует в обсуждении в этот момент."
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Ироничная реплика в стиле Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Marin_k_a"
+      issue: "Не найдено явного представления в начале. Участвует с первых секунд как соведущая. Обращение 'Ксюш' вместо 'Марина' требует проверки - возможна путаница с Ksenks."
+    - speaker: "SPEAKER_02"
+      issue: "Автоматическая разметка. 2 короткие реплики - нужно слить с основным спикером (вероятно Marin_k_a)."
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Уже помечено как ошибочное присвоение. Нужно определить реального спикера."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 313
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Обе реплики SPEAKER_02 являются короткими ответами в контексте, где говорит Marin_k_a. Вторая реплика - прямой ответ на обращение 'Ксюша'."
+
+  - type: rename
+    episode: 313
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: low
+    reason: "Женский голос в разговоре. Требует voice verification."
+
+# Дополнительные заметки
+notes: |
+  Ключевой вопрос: кто такая Marin_k_a в этом эпизоде?
+
+  В people.yaml:
+  - marin_k_a: canonical_name="Marin_k_a", real_name="Марина", info="Бывшая ведущая"
+  - ksenks: canonical_name="Ksenks", aliases=["Ксюша"], real_name="Ксения", role="Ведущая"
+
+  В эпизоде 313:
+  - Umputun (26.33s): "Не те темы, Ксюш?"
+  - Marin_k_a (28.85s): "Ну, не совсем темы, да."
+
+  Это может означать:
+  1. Marin_k_a = Ksenks (ошибка в разметке всего эпизода)
+  2. Марину называют "Ксюша" как прозвище (маловероятно)
+  3. Ksenks отсутствует, но была упомянута, а ответила Марина
+
+  Рекомендуется voice comparison между:
+  - Marin_k_a в эпизоде 313
+  - Ksenks в других эпизодах
+  - Marin_k_a в других эпизодах
+
+  Если голоса Marin_k_a(313) и Ksenks совпадают - переименовать всю разметку 313 эпизода.

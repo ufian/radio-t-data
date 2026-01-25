@@ -1,0 +1,172 @@
+episode: 344
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_announced:
+    - name: "Петя"
+      identified_as: PetrDidenko
+      announced_at_sec: 29.84
+    - name: "гость Андрей из Mirantis"
+      identified_as: SPEAKER_04
+      announced_at_sec: 80.67
+  total_duration_sec: 7780  # ~2 часа 10 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 741
+    replies_count: 197
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале (29.84s) Umputun представляет: 'Во-первых, Петя. Петр, здравствуй'. Далее обращается к нему по имени."
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 498
+    replies_count: 103
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 120.9s представляется: 'Меня зовут Андрей. Я в Москве нахожусь. Компания Mirantis. Мы занимаемся... OpenStack.' Гость пришёл рассказать про FuelWeb."
+
+      guest_info:
+        name: "Андрей"
+        company: "Mirantis"
+        topic: "OpenStack, FuelWeb"
+        note: "Пришёл по собственной инициативе, не от маркетинга компании"
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reason: "Нужно создать запись в people.yaml для идентификации в других эпизодах"
+        reference_segment:
+          stime: 305.45
+          etime: 320.18
+          duration_sec: 14.73
+          text: "исторически сложилось, что нам это надо часто делать, поэтому мы стали разрабатывать удобные инструментарии, потому что действительно OpenStack очень тяжело развертывать руками на стану, допустим, надо на каждую зайти, и даже если скриптик, все равно это грустно."
+        alternate_segment:
+          stime: 151.54
+          etime: 162.87
+          duration_sec: 11.33
+          text: "И все мое общение с нашим любимым шоу и его ведущими началось вчера. И сегодня благополучно закончилось тем, что я присутствую сейчас на онлайн-трансляции, за что огромнейшее спасибо."
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 62
+    replies_count: 14
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Эльдар Муртазин — регулярный гость подкаста (86 выпусков).
+        В соседних выпусках (340, 345) также присутствует с большим количеством реплик.
+        Однако в этом выпуске:
+        - НЕ был представлен в начале (только Петя и гость Андрей)
+        - Реплики разбросаны (scattered pattern)
+        - Малое количество реплик (14) по сравнению с другими выпусками (29-63)
+
+        Возможные объяснения:
+        1. Подключился позже без формального представления (типично для регулярных гостей)
+        2. Частичная ошибка атрибуции — некоторые реплики могут принадлежать ведущим
+
+      possible_matches:
+        - person_id: "eldar_murtazin"
+          confidence: 0.7
+          reason: "Регулярный участник, похожий стиль комментариев"
+        - person_id: null  # ошибка атрибуции
+          confidence: 0.3
+          reason: "Не был представлен, реплики разрозненные"
+
+      voice_task:
+        needed: true
+        reason: "Подтвердить, что это действительно Эльдар, а не ошибка атрибуции ведущих"
+        reference_segment:
+          stime: 3060.12
+          etime: 3065.97
+          duration_sec: 5.85
+          text: "Я на самом деле жду, что они вот чего-то сделают с MacBook, потому что очень как-то не хочется."
+        alternate_segment:
+          stime: 6848.69
+          etime: 6858.15
+          duration_sec: 9.46
+          text: "Короче, суть сводится к тому, что доступ к продукту имеют только платные подписчики, а только через некоторое время код передается в публичный доступ."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 0.22
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна короткая реплика 'Ну-ну' (0.22 сек) в 7652s между репликами Bobuk — явная ошибка распознавания речи"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.8
+          reason: "Реплика окружена репликами Bobuk (7650-7652, затем 7655-7661), вероятно его же голос"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткая реплика для анализа (0.22 сек)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: "Не был представлен в начале выпуска. Возможно подключился позже или ошибка атрибуции."
+    - speaker: "SPEAKER_04"
+      issue: "Идентифицирован как Андрей из Mirantis, но нет записи в people.yaml"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 344
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Короткая реплика 'Ну-ну' между репликами Bobuk, вероятная ошибка сегментации"
+
+  - type: add_person
+    person_id: "andrey_mirantis"
+    canonical_name: "AndreyMirantis"
+    aliases: []
+    real_name: "Андрей"
+    info: "Mirantis, OpenStack/FuelWeb, выпуск 344"
+    note: "Требуется поиск фамилии и проверка других эпизодов"
+
+# Задачи требующие ручной проверки
+manual_review_tasks:
+  - task: "voice_comparison"
+    speaker: "EldarMurtazin"
+    description: "Сравнить голос с эталонным выпуском (напр. 345) для подтверждения идентификации"
+    priority: medium
+
+  - task: "identify_full_name"
+    speaker: "SPEAKER_04"
+    description: "Найти полное имя Андрея из Mirantis (возможно в блогах, LinkedIn, или других источниках о FuelWeb 2013)"
+    priority: low

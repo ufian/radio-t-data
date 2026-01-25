@@ -1,0 +1,169 @@
+episode: 340
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  # Ksenks присутствует но размечена как SPEAKER_05
+  total_duration_sec: 8550  # примерно 2.4 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 237
+    replies_count: 88
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Это Ksenks (Ксюша), ошибка автоматического распознавания"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Umputun обращается: "Ксюша, а у меня к тебе вопрос" (3861s),
+        следующая реплика SPEAKER_05 (3875s): "Нет, в смысле, а что с ним случилось?"
+        Также в начале эпизода (28s): "У нас есть Ксюша, которая приходит постоянно",
+        но её реплики (74s+) размечены как SPEAKER_05.
+        SPEAKER_05 говорит от первого лица женского рода: "я очень активно пилила" (288s)
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 428
+    replies_count: 59
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Marin_k_a уже в people.yaml как Марина (бывшая ведущая).
+        Реплики технически содержательные, участвует в обсуждениях
+        Ubuntu, Debian, Windows 8, iOS разработки.
+        Не была явно представлена в начале эпизода, но это типично
+        для бывших ведущих.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 129
+    replies_count: 29
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        EldarMurtazin уже в people.yaml. Первое появление (1513s) —
+        комментарий про Microsoft и Tami Reller. Обсуждает мобильные
+        технологии, Windows, игры — типичные для него темы.
+        Подключился без явного представления (возможно по звонку).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 4
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (0.08-1.78 сек) разбросаны по эпизоду:
+        - 4803s: "Угу." (0.08 сек)
+        - 6261s: "И ужаснуться." + "Подожди, подожди..." (1.9 сек)
+        - 7992s: "Угу." (0.12 сек)
+        - 8524s: "Давайте заканчиваем." (1.78 сек)
+        Паттерн типичен для ошибок распознавания — междометия и короткие
+        реплики ведущих неправильно атрибутированы.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Реплика 'Давайте заканчиваем' (8524s) типична для ведущего"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Междометия 'Угу' могут быть от любого ведущего"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6261.84
+          etime: 6263.76
+          text: "И ужаснуться. Подожди, подожди, нет, ты..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: |
+        Ksenks (Ксюша) упомянута в начале ("У нас есть Ксюша"),
+        но все её реплики размечены как SPEAKER_05.
+        Требуется переименование SPEAKER_05 -> Ksenks.
+
+    - speaker: "Marin_k_a"
+      issue: |
+        Марина не была представлена в начале эпизода.
+        Это может быть нормально для бывшей ведущей, но стоит проверить.
+
+    - speaker: "EldarMurtazin"
+      issue: |
+        Эльдар Муртазин не был представлен в начале.
+        Появляется внезапно на 1513s в контексте обсуждения Microsoft.
+        Возможно подключился по звонку или присоединился позже.
+
+    - speaker: "SPEAKER_04"
+      issue: |
+        Неопределённый спикер с короткими репликами.
+        Скорее всего ошибки распознавания ведущих.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 340
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Прямое доказательство: Umputun обращается "Ксюша" -> следует ответ SPEAKER_05.
+      Ксюша упомянута как присутствующая в начале, но реплики размечены как SPEAKER_05.
+      SPEAKER_05 говорит от женского рода ("я пилила").
+
+  - type: review_manual
+    episode: 340
+    from_speaker: "SPEAKER_04"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      5 коротких реплик по всему эпизоду — требуется voice comparison
+      для определения, это один из ведущих или отдельный спикер.
+      Рекомендуется прослушать сегменты вокруг 6261-6263s и 8524-8526s.
+
+# Audio URL для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast340.mp3"

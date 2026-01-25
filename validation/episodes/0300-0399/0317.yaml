@@ -1,0 +1,177 @@
+episode: 317
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  absent_hosts: [Gray]  # "тот из нас, кто самый менее гик, решил просто не приходить"
+  total_duration_sec: 8100  # ~2 часа 15 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 467
+    replies_count: 183
+    first_reply_at: 35.47
+    pattern: consecutive  # много реплик, активное участие в диалогах
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Прямое доказательство: на 33-35 секундах эпизода
+        Umputun: "Вот Ксюша может. Ксюша, ты можешь?" (33.44-34.12s)
+        SPEAKER_00: "Да, я могу." (35.47-36.15s)
+
+        Дополнительно: к "Ксюше" обращаются 25+ раз в течение выпуска,
+        и SPEAKER_00 активно участвует в диалогах.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 408
+    replies_count: 82
+    first_reply_at: 36.19
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Marin_k_a уже идентифицирована в people.yaml как бывшая ведущая
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Марина (Marin_k_a) — известная бывшая ведущая подкаста.
+        В этом выпуске присутствует вместе с Ksenks.
+        Имя "Марина" не упоминается явно в транскрипте, но голос
+        распознан системой как отдельный от SPEAKER_00 (Ksenks).
+        Реплики содержательные, участвует в обсуждении технических тем.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 3
+    replies_count: 1
+    first_reply_at: 7676.57
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Ближайшие полгода, год?" (7676.57-7679.75s)
+        идёт сразу после вопроса Marin_k_a "И как скоро, в какой перспективе?"
+        Контекст: обсуждение цен на Amazon хранилища.
+        Скорее всего это продолжение вопроса Marin_k_a или ошибка сегментации.
+        Ранее была ошибочно присвоена Петру Диденко, но отменена.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Продолжение её предыдущего вопроса о перспективах"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Может быть голос Ksenks неправильно распознан"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7676.57
+          etime: 7679.75
+          text: "Ближайшие полгода, год?"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1
+    replies_count: 2
+    first_reply_at: 7236.78
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две очень короткие реплики:
+        1. "Ха-ха-ха." (7236.78-7237.08s) — смех после шутки Bobuk про "шлюхокот"
+        2. "Компилятор?" (7887.47-7888.41s) — переспрос после вопроса Umputun
+        Обе <1 сек, это артефакты автоматического распознавания голосов.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Обе реплики могут принадлежать Bobuk (реакции на его же контекст)"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Женский смех мог быть неправильно распознан"
+
+      voice_task:
+        needed: false
+        reference_segment: null  # слишком короткие для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: |
+        SPEAKER_00 — это Ksenks с высокой уверенностью.
+        Нужно переименовать в Ksenks.
+    - speaker: "Marin_k_a"
+      issue: |
+        Марина присутствует в выпуске, но её участие не было явно анонсировано
+        в начале ("полный состав для гиковских выпусков"). Возможно, она
+        участвовала как постоянная со-ведущая и не требовала представления.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 317
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Прямая идентификация: ответ "Да, я могу" на вопрос "Ксюша, ты можешь?"
+      183 реплики, 467 секунд — значительное участие в выпуске.
+
+  - type: merge_or_delete
+    episode: 317
+    from_speaker: "SPEAKER_03"
+    to_speaker: null  # рекомендуется удалить или смержить в соседние реплики
+    confidence: medium
+    reason: |
+      Ошибка распознавания: 2 реплики <1 сек каждая.
+      "Ха-ха-ха" — смех, "Компилятор?" — переспрос.
+      Можно удалить или присоединить к соседним репликам Bobuk.
+
+  - type: needs_voice_comparison
+    episode: 317
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Одна реплика 3 сек. Может быть Marin_k_a (продолжение вопроса)
+      или ошибка распознавания. Требует voice comparison.

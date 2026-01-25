@@ -1,0 +1,185 @@
+episode: 398
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_identified: [EldarMurtazin, Marin_k_a]
+  total_duration_sec: 7946  # примерно 2ч 12мин (судя по статистике)
+
+# Представление участников в начале эпизода:
+# - Umputun приветствует "Ксюша" в 15-17с (обращение к SPEAKER_01)
+# - Bobuk появляется с 56с
+# - Marin_k_a (Маруся) - обсуждается 300-й выпуск (35с)
+# - EldarMurtazin представлен как "Эльдар" (91-100с), шутка про "Ильдар.Мортазин" в скайпе
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 806
+    replies_count: 275
+    first_reply_at: 14.8
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (15-17с):
+        - Umputun: "Уже была ты, Ксюша, с нами, когда мы праздновали 300-й?"
+        - SPEAKER_01: "Конечно. Ну, нет. Наверное, еще нет."
+        Обращение по имени "Ксюша" однозначно указывает на Ksenks.
+        Активное участие на протяжении всего выпуска, осмысленные реплики.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 2402
+    replies_count: 519
+    first_reply_at: 100.4
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (91-104с):
+        - Umputun: "Эльдар. Ты же дважды Эльдар Советского Союза."
+        - EldarMurtazin: "Слушай, у меня в скайпе написано Ильдар.Мортазин."
+        Гость уже корректно идентифицирован в транскрипте.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 651
+    replies_count: 102
+    first_reply_at: 35.5
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        В начале эпизода (35с) при обсуждении 300-го выпуска:
+        - Umputun: "подарки, я помню, Маруся, настоящая... она подарки раздавала тогда"
+        - Marin_k_a: "Ну да, по-моему, она как раз тогда и объявила, что это ее последний выпуск"
+        Уже корректно идентифицирована в транскрипте.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 4
+    replies_count: 3
+    first_reply_at: 1654.7
+    pattern: consecutive
+
+    analysis:
+      is_error: false  # Скорее всего ошибка распознавания, но не артефакт
+      error_reason: null
+
+      identified_as: null  # Требует voice verification
+      identification_method: null
+      confidence: null
+      evidence: |
+        Три короткие последовательные реплики (1654-1658с):
+        - "В смысле?"
+        - "Да вы что, нет?"
+        - "Блин, да я серьезно сейчас."
+        Эмоциональные реакции в контексте обсуждения алгоритмов Tinder.
+        По характеру реплик похоже на женский голос (Ksenks или Marin_k_a).
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Эмоциональная реакция, женский голос, активное участие в выпуске"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Женский голос, присутствует в выпуске"
+
+      voice_task:
+        needed: true
+        reason: "Короткий сегмент, требуется сравнение с голосами Ksenks и Marin_k_a"
+        reference_segment:
+          stime: 1654.69
+          etime: 1658.82
+          text: "В смысле? Да вы что, нет? Блин, да я серьезно сейчас."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 3
+    replies_count: 1
+    first_reply_at: 1563.0
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная атрибуция - одиночная реплика между двумя репликами Marin_k_a"
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Одна реплика (1563с): "Ну, в общем, это привлекает внимание."
+        Контекст:
+        - Marin_k_a (1547-1563с): обсуждает iPhone в магазинах
+        - SPEAKER_MISATTRIBUTED_LAVALE (1563-1565с): "Ну, в общем, это привлекает внимание"
+        - Marin_k_a (1565-1576с): продолжает тему
+        Логическое продолжение речи Марины. Lavale не присутствует в этом эпизоде.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.8
+          reason: "Продолжение её речи, нет разрыва темы"
+        - person_id: "ksenks"
+          confidence: 0.15
+          reason: "Тоже присутствует в выпуске"
+
+      voice_task:
+        needed: false
+        reason: "Очевидная ошибка атрибуции, скорее всего Marin_k_a"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "Должен быть переименован в Ksenks - однозначное обращение по имени"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Ошибочная атрибуция, Lavale не участвует в этом выпуске"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 398
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Umputun обращается 'Ксюша' в 15-17с, однозначная идентификация"
+
+  - type: rename
+    episode: 398
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Одиночная реплика между репликами Marin_k_a, логическое продолжение её речи"
