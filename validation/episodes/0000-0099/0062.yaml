@@ -8,7 +8,7 @@ speakers_summary:
   guests_present: [Guest1]
   total_duration_sec: 4376.8
   notes: >
-    Эпизод от 2007-11-25. Bobuk отсутствует, его заменяет гость Gimles.
+    Эпизод от 2007-11-25. Bobuk отсутствует, его заменяет гость Gimlis.
     В начале Umputun объясняет, что выпуск поздний и с соведущим-гостем.
 
 # Детальный анализ неизвестных спикеров
@@ -24,7 +24,7 @@ unknown_speakers:
       error_reason: null
 
       # Идентификация
-      identified_as: "gimles"
+      identified_as: "gimlis"
       identification_method: "introduction"
       confidence: high
       evidence: >
@@ -55,7 +55,7 @@ suggested_rules:
   - type: rename
     episode: 62
     from_speaker: "Guest1"
-    to_speaker: "Gimles"
+    to_speaker: "Gimlis"
     confidence: high
     reason: >
       Гость явно представлен как Гимлес в 32.4 сек.

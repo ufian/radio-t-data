@@ -70,6 +70,12 @@ guests:
     real_name: "Анна"
     info: "13 выпусков"
 
+  - id: "gimlis"
+    canonical_name: "Gimlis"
+    aliases: ["Гимлес", "Гимлис", "Gimles"]
+    real_name: null
+    info: "Подкастер, выпуски 62, 79, 844"
+
   - id: "plushev"
     canonical_name: "Plushev"
     aliases: ["Плющев"]

@@ -109,14 +109,14 @@ speakers_summary:
 
 unknown_speakers:
   - speaker: "Guest1"
-    identified_as: "gimles"
+    identified_as: "gimlis"
     confidence: high
     evidence: "Представлен как Гимлес в 32.4s"
 
 suggested_rules:
   - type: rename
     from_speaker: "Guest1"
-    to_speaker: "Gimles"
+    to_speaker: "Gimlis"
 ```
 
 ## Очистка данных
