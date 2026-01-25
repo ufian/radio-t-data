@@ -1,0 +1,46 @@
+episode: 595
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7236
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Одиночная реплика 'Окей.' (<1 сек) между Bobuk и Gray в 7837 сек - типичная ошибка распознавания короткой реакции"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарий
+notes: |
+  В начале эпизода Umputun объявляет: Bobuk с нами, Ксюша подтянется, Леша (Alek.sys) здесь.
+  Gray появляется на 69 сек. Все ведущие присутствуют, гостей нет.
+  SPEAKER_05 - единственный неизвестный спикер с репликой "Окей." в 7837.15-7838.11 сек.
+  Это очевидная ошибка автоматического распознавания - односложная реплика между
+  двумя ведущими (Bobuk говорит до, Gray говорит сразу после).
+
+# Предлагаемые правила очистки
+suggested_rules: []

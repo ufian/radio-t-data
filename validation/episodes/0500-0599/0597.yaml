@@ -1,0 +1,152 @@
+episode: 597
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  guests_present: [Anya]
+  total_duration_sec: 8243  # ~2h 17min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 468
+    replies_count: 105
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация как Anya
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (25-36s) Umputun говорит: "Но можно считать, Аня, что я тебя привел"
+        и "И она зашла". Gray подтверждает (50s): "Поскольку Аня уже сильно не первый раз".
+        SPEAKER_08 использует женские формы глаголов: "была в Лос-Анджелесе" (820s),
+        "я только сейчас поняла" (1981s), "я сюда только приехала и была студентом" (6355s).
+        Это соответствует Anya из people.yaml (13 выпусков).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_09"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (1-3 сек) разбросаны по эпизоду: "Ого, вернулся" (216s),
+        "Угу" (1006s), "Чего мы вообще не спорим?" (3877s), "Куда пойдем?" (6242s).
+        Все реплики односложные или очень короткие. Скорее всего это ошибочное
+        распознавание одного из ведущих или Ани.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Реплика 'Чего мы вообще не спорим?' похожа на стиль Ксюши"
+        - person_id: "anya"
+          confidence: 0.3
+          reason: "Могла быть ошибочно отделена от SPEAKER_08"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики: "Ну да" (1586s), "Для того, чтобы составить изначально
+        расписание" (3641s), "Угу" (3646s). Все появляются в середине диалога между
+        основными спикерами. Вероятно ошибка распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Реплика про расписание в контексте обсуждения Google Assistant"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 3 короткие реплики: "Что у тебя Мистер Кент?" (5964s),
+        "Или наоборот" (6423s). Типичные ошибки распознавания - короткие фразы
+        посреди диалога.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Контекст вокруг - обсуждение YouTube"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Реплика 'Мистер Кент' - отсылка к Супермену, характерно для Бобука"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys присутствует минимально (5 реплик, 6 сек). Не был представлен
+        в начале, появляется в 537s. Возможно подключился позже или его реплики
+        частично приписаны другим спикерам.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 597
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Anya"
+    confidence: high
+    reason: |
+      Явное представление в начале эпизода ("Аня, я тебя привел"),
+      женские глагольные формы, активное участие в техническом обсуждении.
+      Anya из people.yaml участвовала в 13 выпусках.
+
+# Примечания
+notes: |
+  Эпизод от 2018-05-12, тема - обсуждение Google I/O и Microsoft Build.
+  Аня (SPEAKER_08) активно участвует в обсуждении, особенно тем про Google Assistant
+  и Windows. Упоминает, что "приехала сюда" как студент и работает с C#/Java.
+  SPEAKER_09, SPEAKER_07, SPEAKER_05 - мелкие ошибки распознавания, не требуют
+  отдельного внимания, можно игнорировать или пометить для ручной проверки.

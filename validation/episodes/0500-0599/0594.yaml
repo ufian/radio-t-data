@@ -1,0 +1,213 @@
+episode: 594
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  # Bobuk отмечен в начале как отсутствующий ("сегодня у нас тоже Бобука нет"),
+  # но появляется в 5157s - это ошибочная атрибуция, см. анализ ниже
+  total_duration_sec: 7364
+
+# Важная проблема с атрибуцией
+attribution_issues:
+  - speaker: "Bobuk"
+    issue: "misattribution"
+    description: |
+      В начале выпуска (29.65s) Umputun явно говорит "сегодня у нас тоже Бобука нет".
+      Однако реплики с author="Bobuk" появляются начиная с 5157s (33 реплики, 164 сек).
+      Эти реплики появляются в контексте звонка слушателя Мэверика (SPEAKER_04).
+
+      В 5127s Alek.sys спрашивает "У вас двое?", а Gray отвечает "И он настоящий Грей".
+      Это указывает на то, что позвонили ДВА слушателя, и второй назвался Grey/Грей.
+
+      Вероятнее всего, реплики "Bobuk" принадлежат второму звонящему слушателю
+      (который назвался Grey/Грей), ошибочно атрибутированные системой распознавания.
+    evidence:
+      - stime: 29.65
+        text: "Но зато сегодня у нас тоже Бобука нет. Вместо него Леша опять зашел."
+      - stime: 5127.64
+        text: "У вас двое?"
+      - stime: 5133.12
+        text: "И он настоящий Грей, да."
+    suggested_action: |
+      Все реплики Bobuk (33 шт, stime >= 5157s) должны быть переименованы
+      в отдельного гостя. Предлагаемое имя: "Guest_Grey" или "Listener_Grey"
+      (второй звонящий слушатель, который представился как Grey).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 293
+    replies_count: 114
+    first_appearance_sec: 5116.74
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 5117.82s спикер представился: "Я Мэверик Англей."
+        Umputun переспросил "Мэверик" (5120.44s).
+        Это слушатель, позвонивший в эфир для обсуждения темы о тестовых заданиях.
+
+      possible_matches: []
+
+      # Гость идентифицирован, нужно добавить в people.yaml
+      guest_identification:
+        name: "Maverick Angley"
+        name_russian: "Мэверик Англей"
+        context: "Слушатель, позвонивший для обсуждения темы о тестовых заданиях на собеседованиях"
+        first_stime: 5116.74
+
+      voice_task:
+        needed: false
+        reason: "Спикер представился сам"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 7
+    replies_count: 3
+    first_appearance_sec: 2918.88
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три короткие реплики в разных местах подкаста:
+        1. 2918.88s: "А я ее уже и выбрал." (2 сек)
+        2. 3281.53s: "Он действительно сильнее популярен, чем многие другие." (4 сек)
+        3. 5821.15s: "Продукт не взлетел." (1 сек)
+
+        Все реплики короткие, разбросаны по выпуску, контекстуально вписываются
+        в разговор ведущих. Скорее всего это ошибочная атрибуция одного из ведущих
+        (вероятнее всего Umputun или Gray, судя по контексту).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Реплики контекстуально следуют за репликами Umputun"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Возможно ошибка распознавания голоса Gray"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Менее вероятно, но возможно"
+
+      voice_task:
+        needed: true
+        reference_segments:
+          - stime: 3281.53
+            etime: 3285.16
+            text: "Он действительно сильнее популярен, чем многие другие."
+        audio_url: "https://cdn.radio-t.com/rt_podcast594.mp3"
+        comparison_needed_with: [Umputun, Gray, Ksenks, Alek.sys]
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 1
+    replies_count: 1
+    first_appearance_sec: 5230.19
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Окей." (0.86 сек) в момент 5230.19s.
+        Появляется посреди рассказа Мэверика (SPEAKER_04) о тестовом задании.
+        Скорее всего это короткая реакция одного из ведущих (Umputun говорит
+        "Отвесить" сразу после в 5239.58s), либо самого Мэверика/второго звонящего.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Umputun часто говорит 'Окей' как реакцию"
+        - person_id: null
+          confidence: 0.3
+          reason: "Может быть второй звонящий слушатель (тот который помечен как Bobuk)"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткая реплика (0.86 сек) для надежного voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        КРИТИЧЕСКАЯ ПРОБЛЕМА: Bobuk отмечен как отсутствующий в начале выпуска
+        (29.65s: "сегодня у нас тоже Бобука нет"), но 33 реплики атрибутированы ему.
+        Это ошибка распознавания - реплики принадлежат второму звонящему слушателю.
+    - speaker: "SPEAKER_04"
+      issue: |
+        Спикер представился как "Мэверик Англей", но не добавлен в people.yaml.
+        Нужно создать запись для этого гостя.
+    - speaker: "Second_caller"
+      issue: |
+        Второй звонящий слушатель (который назвался Grey) не имеет корректной разметки.
+        Его реплики ошибочно атрибутированы как "Bobuk".
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 594
+    from_speaker: "SPEAKER_04"
+    to_speaker: "MaverickAngley"
+    confidence: high
+    reason: |
+      Спикер представился в 5117.82s: "Я Мэверик Англей."
+      Umputun подтвердил имя, переспросив "Мэверик".
+
+  - type: rename
+    episode: 594
+    from_speaker: "Bobuk"
+    to_speaker: "ListenerGrey"
+    stime_min: 5100
+    confidence: high
+    reason: |
+      Bobuk отсутствует в выпуске (явно сказано в начале).
+      Эти реплики принадлежат второму звонящему слушателю,
+      который назвался Grey (см. реплику Gray в 5133.12s: "И он настоящий Грей, да").
+
+  - type: investigate
+    episode: 594
+    speaker: "SPEAKER_02"
+    confidence: medium
+    reason: |
+      Требуется voice comparison для определения, кому из ведущих принадлежат
+      эти 3 короткие реплики.
+
+  - type: delete_or_merge
+    episode: 594
+    speaker: "SPEAKER_07"
+    confidence: medium
+    reason: |
+      Единственная реплика "Окей" слишком короткая. Вероятно ошибка
+      сегментации, можно объединить с предыдущей или следующей репликой.
+
+# Дополнительные заметки
+notes:
+  - |
+    Эпизод содержит звонок слушателей во второй половине (около 1:25:17).
+    Позвонили два человека: Мэверик Англей (SPEAKER_04) и второй слушатель,
+    который назвался Grey/Грей (ошибочно размечен как Bobuk).
+  - |
+    Тема обсуждения со слушателями: тестовые задания при устройстве на работу.
+    Мэверик рассказывал о своем опыте с домашним заданием (написание стек-сервера).
+  - |
+    Необходимо добавить в people.yaml:
+    - maverick_angley: гость эпизода 594
+    - listener_grey: гость эпизода 594 (второй звонящий)

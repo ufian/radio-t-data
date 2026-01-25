@@ -1,0 +1,131 @@
+episode: 596
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  hosts_absent: [Gray]  # Явно упомянуто в начале: "Грея с нами нет"
+  total_duration_sec: 8200  # ~2ч 17м
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная короткая реплика (1.4 сек) - ответ 'Developer Experience, я думаю' на вопрос Umputun 'Что такое DX?'. Типичная ошибка распознавания при быстром ответе одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk мог ответить на технический вопрос, его стиль речи"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Ksenks также участвует в обсуждении"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Три односложные реакции ('Правильно', 'Окей', 'Окей, окей') разбросаны в диапазоне 6565-6604s. Все реплики - типичные междометия, вставленные между репликами Bobuk и Umputun."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Ksenks присутствует и говорит сразу после этих реплик (6608s)"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk говорит непосредственно до и после этих реплик"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Три короткие реплики ('Какое?', 'Ну, окей.', 'ГОС скажет, что это такое?') разбросаны по эпизоду (7234s, 7560s, 8021s). В начале эпизода Umputun явно говорит 'Грея с нами нет' и представляет только Bobuk и Ksenks. Alek.sys не был представлен и не упоминается в выпуске. Реплики скорее всего ошибочно приписаны - похоже на голос Ksenks."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Начало эпизода (9.87s): 'Выпуск, черт знает какой, Грея с нами нет' и далее представление только Bobuk и Ksenks"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Характер реплик (короткие вопросы/реакции) и женский голос указывают на Ksenks. Она активно участвует в обсуждении в эти моменты."
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Реплика 'ГОС скажет, что это такое?' может быть self-interruption Umputun"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8021.64
+          etime: 8023.34
+          text: "ГОС скажет, что это такое?"
+          note: "Самая длинная реплика Alek.sys для сравнения с голосом Ksenks"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Появляется в эпизоде с 3 репликами, но не был представлен в начале. В начале явно сказано, что участвуют только Umputun, Bobuk и Ksenks. Высокая вероятность ошибки транскрипции."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 596
+    from_speaker: "SPEAKER_04"
+    to_speaker: "SPEAKER_MISATTRIBUTED_04"
+    confidence: high
+    reason: "Одиночная короткая реплика, явная ошибка распознавания"
+
+  - type: rename
+    episode: 596
+    from_speaker: "SPEAKER_06"
+    to_speaker: "SPEAKER_MISATTRIBUTED_06"
+    confidence: high
+    reason: "Три односложные реакции, явные ошибки распознавания"
+
+  - type: rename
+    episode: 596
+    from_speaker: "Alek.sys"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Alek.sys не был представлен в эпизоде (явно упомянуто 'Грея с нами нет' в начале, только Bobuk и Ksenks). Реплики короткие, характерные для женского голоса. Требуется voice comparison для подтверждения."
+
+# Дополнительные заметки
+notes:
+  - "Эпизод от 2018-05-05, выпуск 596"
+  - "Аудио: https://cdn.radio-t.com/rt_podcast596.mp3"
+  - "Gray отсутствует (подтверждено в начале эпизода)"
+  - "SPEAKER_99 (7 реплик) - артефакты, игнорируются"
+  - "_ad (17 реплик) - реклама, игнорируется"

@@ -1,0 +1,60 @@
+episode: 593
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9531
+  notes: |
+    Umputun уходит около 78s и возвращается около 4616s (отсутствие ~76 минут).
+    Bobuk отсутствует в этом выпуске.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 666
+    replies_count: 135
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 2091.3s Ksenks говорит: "Смотри, вот в Facebook... Дай Ане сказать, пожалуйста"
+        Сразу после в 2095.8s SPEAKER_05 говорит: "Я хотела спросить, вот смотри, в Facebook и в Messenger тоже ведь есть Secret Conversations."
+        SPEAKER_05 использует женские формы глаголов: "я поняла", "я хотела", "я приехала", "я делала", "я думала".
+        Anya есть в справочнике people.yaml (id: anya, real_name: Анна, info: 13 выпусков).
+
+      possible_matches: []
+
+      # Задание на voice comparison (если нужно)
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 4400.67
+          etime: 4425.13
+          text: "Потому что я так поняла, что не пользовались они никакими лазейками, а собрали данные тех пользователей Facebook, которые использовали приложения внутри Facebook а-ля тест на совместимость или, не знаю, определить мой вид через 85 лет, как я буду выглядеть."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 593
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Anya"
+    confidence: high
+    reason: |
+      Явное представление в 2091.3s: Ksenks говорит "Дай Ане сказать, пожалуйста".
+      SPEAKER_05 использует женские формы глаголов.
+      Anya — известный гость подкаста (13 выпусков).
