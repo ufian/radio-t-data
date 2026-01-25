@@ -1,0 +1,56 @@
+episode: 600
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  hosts_with_minimal_presence: [Gray]  # 2 реплики, 2 сек - возможно ошибка
+  total_duration_sec: 8000  # примерная оценка
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 0.04
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Фрагмент длительностью 0.04 сек с текстом 'Ну,' между репликами Umputun и Bobuk. Скорее всего начало фразы Bobuk ('Ну, да да'), неверно сегментированное."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.9
+          reason: "Следующая реплика Bobuk начинается с 'Да, да.' - вероятно 'Ну,' это начало его фразы"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Только 2 короткие реплики (2362.2s: 'Помнишь, Женя?' и 7938.6s: 'Ну вот.'). Gray не представлен в начале эпизода. Возможно, не участвовал в выпуске и эти реплики - ошибки распознавания других спикеров."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 600
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Bobuk"
+    confidence: high
+    reason: "Односложное 'Ну,' (0.04 сек) между Umputun и Bobuk. Следующая реплика Bobuk - 'Да, да.' Очевидно начало его фразы."
+
+  - type: review
+    episode: 600
+    speaker: "Gray"
+    confidence: medium
+    reason: "Только 2 реплики по ~1 сек. Требуется проверка - был ли Gray в выпуске или это ошибки атрибуции."

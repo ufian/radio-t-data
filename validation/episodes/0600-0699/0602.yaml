@@ -1,0 +1,137 @@
+episode: 602
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 9028  # приблизительно, сумма всех ведущих
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 8
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (1-2 сек каждая), разбросанные по всему эпизоду.
+        Все реплики — типичные короткие комментарии/вопросы ведущих:
+        - 187s: "Да, окей.", "Кто-то заметил?", "Давайте так." — после реплики Umputun
+        - 2156s: "Это же из друзей цитата." — между репликами Alek.sys
+        - 5088s: "Почему не случайный лес?", "Случайный лес вообще классно звучит." — между Bobuk и Umputun
+        - 5218s: "Крылья прочитал." — между Bobuk и Umputun
+        Паттерн указывает на ошибку распознавания голоса одного из ведущих,
+        скорее всего Bobuk или Alek.sys (реплики расположены рядом с их речью).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: |
+            Реплики часто появляются в контексте диалога с Bobuk.
+            В 5088s реплика следует сразу за "О, кстати, блин" от Bobuk.
+            В 5218s реплика следует за "Одержимость" от Bobuk.
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: |
+            Первый блок реплик (187s) мог быть от Alek.sys -
+            он активен в этом эпизоде и контекст про Apple Maps
+            допускает его участие.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5088.58
+          etime: 5092.0
+          text: "Почему не случайный лес? Случайный лес вообще классно звучит."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 2 односложные реплики за весь эпизод:
+        - 216s: "Вот." — сразу после реплики Ksenks
+        - 9939s: "Пока." — прощание в самом конце эпизода
+        Обе реплики типичны для любого из ведущих.
+        "Вот" — скорее всего продолжение речи Ksenks (216s почти совпадает с её репликой в 216s).
+        "Пока" — стандартное прощание одного из ведущих в конце.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: |
+            Реплика "Вот" (216s) идёт сразу после реплики Ksenks
+            "Даже представить я себе не могла, что сломались карты".
+            Скорее всего это её продолжение или междометие.
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: |
+            Реплика "Пока" (9939s) идёт сразу после "Поехали" от Umputun.
+            Может быть любой из ведущих прощается.
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        В начале эпизода Umputun шутит "состав полный, плюс один" и говорит
+        "Леша, ну все равно, хорошо, что ты зашел, хотя пятым будешь".
+        Это подтверждает присутствие Alek.sys (Алексей) как "лишнего" участника,
+        которого забыли убрать из Skype-чата. Все ведущие фактически представлены.
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules:
+  - type: rename
+    episode: 602
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: |
+      Реплики SPEAKER_00 в 5088-5092s и 5218s расположены между репликами Bobuk
+      и стилистически соответствуют его манере (короткие комментарии).
+      Требуется voice comparison для подтверждения.
+  - type: rename
+    episode: 602
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    stime_filter: 216.5
+    etime_filter: 216.64
+    confidence: medium
+    reason: |
+      Реплика "Вот" (216s) идёт сразу после реплики Ksenks и является
+      логическим продолжением её мысли.
+
+# Примечания
+notes: |
+  Эпизод 602 от 16 июня 2018. Состав: Umputun, Bobuk, Gray, Alek.sys, Ksenks.
+  В начале шутка про "плюс одного" - Alek.sys случайно остался в Skype-чате.
+
+  Неизвестные спикеры SPEAKER_00 и SPEAKER_06 — ошибки автоматического распознавания.
+  Все их реплики короткие (1-2 сек), разбросаны по эпизоду, и контекстуально
+  являются репликами ведущих.
+
+  Рекомендуется voice comparison для SPEAKER_00 в сегменте 5088-5092s
+  для подтверждения, что это Bobuk.
+
+  Audio URL: https://cdn.radio-t.com/rt_podcast602.mp3

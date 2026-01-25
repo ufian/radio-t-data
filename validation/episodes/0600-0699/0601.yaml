@@ -1,0 +1,71 @@
+episode: 601
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8313
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-4 сек каждая) появляются в контексте диалога между ведущими. Первые две реплики ('Что?', 'Какие подбородки выбрать?') следуют сразу после вопроса Alek.sys к Ksenks и перед ответом Ksenks — явная ошибка разметки, это Ksenks. Вторые две реплики ('И всякие другие штуки', 'Ну, вот как-то так') также в контексте обсуждения Memoji, где активно участвует Ksenks."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Реплики 1525-1528 сек появляются после вопроса Alek.sys к Ксюше и перед ответом Ksenks о Memoji. Реплики 1624-1628 сек также в том же обсуждении."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две разрозненные короткие реплики (2-3 сек каждая) на расстоянии 96 минут друг от друга. Обе реплики — переходные фразы между репликами других ведущих. Первая ('Ну окей, в общем, все поняли, да.') между Gray и Bobuk. Вторая ('Он распознает, говорит, картинки и добавляет 5 дюймов.') между Gray и Bobuk при чтении треда."
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Обе реплики находятся перед репликами Bobuk, могут быть его неправильно атрибутированными фразами"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Альтернативная версия — мог быть Umputun в диалоге"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: "В начале выпуска Umputun говорит 'Состав полный плюс один. Плюс один, как обычно.' — это шутка про полный состав ведущих (включая Ksenks), а не про внешнего гостя. Все 5 основных ведущих активно участвуют в выпуске."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 601
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Контекст однозначно указывает на Ksenks — реплики появляются в диалоге с ней о Memoji"
