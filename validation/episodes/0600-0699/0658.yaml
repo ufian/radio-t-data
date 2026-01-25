@@ -1,0 +1,53 @@
+episode: 658
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6411
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Короткая реплика 'Ну да.' (0.86 сек) между двумя репликами Bobuk. Типичная ошибка распознавания — реактивное междометие, скорее всего принадлежащее одному из ведущих (вероятно Gray или Umputun, реагирующие на объяснение Bobuk про покер)"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 658
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Реплика 'Ну да.' в контексте диалога Bobuk скорее всего его же согласие/подтверждение. Расположена между двумя его репликами (4995-4998 и 5000-5006 сек)"
+
+# Дополнительные заметки
+notes: |
+  Эпизод чистый, все 5 ведущих активны с первых минут.
+  SPEAKER_07 — единственный неизвестный спикер, одна реплика менее 1 секунды.
+  Это явная ошибка автоматического распознавания голоса.
+  Контекст: обсуждение AI-покера (тема "AI покер обыгрывает людей", начало 01:17:08).
+  Реплика в 4998 сек = ~1:23:18, когда Gray и Bobuk обсуждают правила покера.

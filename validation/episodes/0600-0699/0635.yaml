@@ -1,0 +1,167 @@
+episode: 635
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks]
+  hosts_absent: [Bobuk]  # Явно объявлено в начале выпуска (41s)
+  total_duration_sec: 8630  # ~2h 23min
+
+# Примечание: в начале (41-58s) Umputun говорит "У нас Бубука нет",
+# Gray подтверждает "нас тут вообще двое". Ksenks присоединяется позже (442s).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered  # 420s и 1406s - разные моменты
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-2 сек), разбросаны. Первая реплика с женским родом ('пошла плакать') - явно Ksenks отвечает на вопрос Umputun."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        420s: Umputun спрашивает "обозвал программистом фронт-энда, и после этого ты исчез"
+        SPEAKER_07: "Да, я пошла плакать в угол" - женский род, контекст диалога с Ksenks
+        1406s: "Хорошо" - междометие между репликами Ksenks
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 8
+    replies_count: 2
+    pattern: scattered  # 1265s и 4160s
+
+    analysis:
+      is_error: true
+      error_reason: "Вторая реплика (4160s) - явный дубль/эхо фразы Umputun"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        1265s: "Но все это такое какое-то... Я даже не знаю" - в диалоге Umputun и Ksenks о HashiCorp/плагинах
+        4160s: "У нас весь UI в терминале" - ДУБЛЬ реплики Umputun (4155s: "У нас весь UI-чик в терминале")
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.7
+          reason: "Вторая реплика - дубль Umputun, первая может быть эхо или ошибка распознавания"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Первая реплика в диалоге с Ksenks, но контекст скорее Umputun"
+
+      voice_task:
+        needed: false  # Слишком короткие реплики для voice comparison
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered  # 5922s и 8261s
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие междометия (2 сек каждое), типичные фразы-ошибки"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        5922s: "Ну и что?" - короткое междометие в диалоге о тестах
+        8261s: "Нет, ну это интересно" - междометие, сразу после идут реплики Bobuk
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Gray активен в этом выпуске, междометия могут быть его"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Ksenks также активна, особенно в обсуждении тестов"
+
+      voice_task:
+        needed: false  # Слишком короткие для идентификации
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk явно объявлен отсутствующим в начале (41s: "У нас Бубука нет"),
+        но имеет 2 реплики в конце выпуска (8263-8269s).
+        Возможные объяснения:
+        1. Bobuk подключился в конце выпуска (без объявления)
+        2. Ошибка распознавания - реплики принадлежат Gray
+        Требуется проверка: voice comparison или ручной прослух.
+
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys имеет только 1 реплику (6119s: "Просто зуб даю") -
+        это эхо/подхват фразы Umputun (6116s: "И я зуб даю, забудьте в имени поменять").
+        Не объявлен в начале, не упомянут как присутствующий.
+        Вероятно ошибка распознавания - реплика принадлежит одному из ведущих.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 635
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Женский род в первой реплике, контекст диалога с Ksenks"
+
+  - type: rename
+    episode: 635
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: "Вторая реплика - явный дубль Umputun, первая вероятно тоже"
+
+  - type: investigate
+    episode: 635
+    speaker: "Bobuk"
+    confidence: medium
+    reason: "Нужен прослух: Bobuk объявлен отсутствующим, но есть 2 реплики в конце"
+
+  - type: investigate
+    episode: 635
+    speaker: "Alek.sys"
+    confidence: medium
+    reason: "Единственная реплика - эхо Umputun, не объявлен в выпуске"
+
+  - type: delete_or_rename
+    episode: 635
+    from_speaker: "SPEAKER_05"
+    to_speaker: null  # Требуется определить
+    confidence: low
+    reason: "Короткие междометия, могут быть Gray или Ksenks"
+
+# Задания на voice comparison (если нужен прослух)
+voice_comparison_tasks:
+  - task_id: "635_bobuk_check"
+    description: "Проверить, действительно ли Bobuk в конце выпуска"
+    audio_url: "https://cdn.radio-t.com/rt_podcast635.mp3"
+    segments:
+      - stime: 8263.65
+        etime: 8269.75
+        speaker: "Bobuk"
+        text: "Аэска гугла, вот вся. То есть вот, ну да, понятно, весь клауд в том числе."
+    compare_with: ["Gray"]  # Сравнить с голосом Gray
+
+  - task_id: "635_alek_sys_check"
+    description: "Проверить реплику Alek.sys"
+    audio_url: "https://cdn.radio-t.com/rt_podcast635.mp3"
+    segments:
+      - stime: 6119.44
+        etime: 6122.13
+        speaker: "Alek.sys"
+        text: "Просто зуб даю."
+    compare_with: ["Umputun", "Gray", "Ksenks"]

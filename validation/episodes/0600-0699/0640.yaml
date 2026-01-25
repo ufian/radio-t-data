@@ -1,0 +1,58 @@
+episode: 640
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9182  # сумма времени всех ведущих
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 4
+    replies_count: 4
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие реактивные реплики (1-2 сек каждая), разбросанные по всему выпуску.
+        В начале эпизода Umputun говорит "Состав классический" - гостей нет.
+        Все 4 реплики - типичные фразы-подтверждения ("Да, да, да", "Понятно, да")
+        или короткие вопросы, которые являются частью диалога ведущих.
+        Паттерн характерен для ошибки автоматического распознавания спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: >
+            Первая реплика SPEAKER_07 (3933.2s) идёт сразу после Ksenks (3930.5-3933.2s)
+            и перед ней же (3934.9s). Вопрос "То есть к теме плохо подготовилась?"
+            звучит как самоирония Ksenks, которая только что сказала "Я не очень понимаю, зачем это надо".
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        # Слишком короткие сегменты (<2 сек) для надёжного сравнения голосов
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Только 5 реплик за весь выпуск (14 сек), что очень мало для ведущего.
+        Возможно часть его реплик ошибочно атрибутирована другим спикерам,
+        но без voice comparison сложно определить. Не критично.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет достаточно уверенных идентификаций для создания правил.
+# SPEAKER_07 скорее всего ошибка, но 4 сек слишком мало для изменений.

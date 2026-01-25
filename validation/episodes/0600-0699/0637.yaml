@@ -1,0 +1,57 @@
+episode: 637
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8712
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 10.2
+    replies_count: 9
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие реплики (в среднем 1 сек), разбросанные по всему эпизоду.
+        Все реплики - типичные короткие вопросы и комментарии ведущих.
+        В контексте 5993.5s Gray обращается "Женя, расскажи..." и SPEAKER_03
+        отвечает "Это к чему?" - Gray продолжает обращаться к нему же.
+        Это явно Umputun с плохим распознаванием голоса.
+
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Gray@5989s: "Женя, расскажи, почему не воспользоваться?" ->
+        SPEAKER_03@5993s: "Это к чему?" ->
+        Gray@5995s: "Ну, мы с тобой это дело обсуждали как-то."
+        "Женя" = Umputun (Евгений). Gray явно продолжает диалог с тем же человеком.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 637
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: >
+      9 коротких реплик (10 сек суммарно), типичные уточняющие вопросы.
+      В контексте 5993s Gray обращается к "Женя" (Umputun) и SPEAKER_03 отвечает.
+      Все реплики по характеру соответствуют стилю Umputun.

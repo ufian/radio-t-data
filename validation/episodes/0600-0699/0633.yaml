@@ -1,0 +1,124 @@
+episode: 633
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys, Gray, Bobuk]
+  total_duration_sec: 8011
+  notes: |
+    Bobuk появляется позже в эпизоде (первая реплика в 2675s, всего 5 реплик, 15 сек).
+    В начале упомянуто: "Состав сдвинутый. Мы сдвинули Ксюшу на позицию Бобука."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 18
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие односложные реплики (1-4 сек каждая), разбросанные по всему эпизоду.
+        Типичные фразы: "Не может удержаться, не пошутить.", "Окей, окей.", "Это да.", "Так что да."
+        Контекст: все реплики вклиниваются между репликами известных ведущих.
+        В начале эпизода (327s) - между Ksenks и Alek.sys, по контексту это реакция на шутку.
+        Вероятно ошибка распознавания одного из присутствующих ведущих.
+        Последние 3 реплики (8155-8161s): "Да-да, Ксюша, перформанс.", "Забросаем железом.", "Конечно." -
+        судя по обращению к Ксюше, это не она, а один из мужчин-ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Gray присутствует в эпизоде, некоторые реплики между его выступлениями"
+        - person_id: "alek_sys"
+          confidence: 0.4
+          reason: "Alek.sys активно участвует, некоторые реплики рядом с его"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики (1-4 сек) для надежного сравнения голоса"
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 8
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 3 реплики по 1-5 сек, разбросаны по эпизоду:
+        - 1676s: "Язык, да." (между репликами Umputun)
+        - 1947s: "Именно меня." (между репликами Umputun)
+        - 2286s: "Я не знаю, зачем это было придумано, но, короче, лет уже 20 такое."
+        Последняя реплика длиннее и по контексту про Украину - это скорее всего Gray
+        (разговор об украинских документах, после реплики Umputun "в Украине").
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Третья реплика (2286s) про украинские документы, Gray - из Украины"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Первые две реплики вклиниваются в монолог Umputun"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики для надежного сравнения"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика в 2554s: "Да, доллар, доллар, решетка, решетка."
+        Длительность 2 сек, встроена между репликами Alek.sys о паролях.
+        Это продолжение мысли о символах в паролях - скорее всего ошибочно
+        выделенная часть речи Alek.sys или кого-то из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.7
+          reason: "Реплика между двумя репликами Alek.sys на ту же тему"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Обсуждение про пароли с её участием"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткая реплика (2 сек) для сравнения"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале эпизода сказано "Мы сдвинули Ксюшу на позицию Бобука", что подразумевает
+        его отсутствие. Однако Bobuk появляется позже в эпизоде (с 2675s).
+        Это не ошибка - вероятно, он подключился позже.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет правил для автоматической очистки - все SPEAKER_* имеют слишком
+# короткие реплики для надежной идентификации. Рекомендуется оставить как есть
+# или пометить как ошибки распознавания без присвоения конкретному ведущему.

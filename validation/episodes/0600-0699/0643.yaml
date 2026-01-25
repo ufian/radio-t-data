@@ -1,0 +1,117 @@
+episode: 643
+status: needs_review
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9527
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 412
+    replies_count: 96
+    pattern: consecutive
+    first_appearance_sec: 4232
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        В 4205-4226s Umputun говорит "Бов(ук) к нам привел" и "Давай я его дерну за вами. Леху. Еще один Леха будет."
+        Bobuk подтверждает: "он сам пришел, поэтому ты можешь его там подергать".
+        В 4226s: "Алексей, перестань стучать по клавиатуре, скажи голосом".
+        Гость отвечает в 4231s: "Да-да-да, всем привет, я тут отрубал наследство."
+        Обсуждает тему WASI/WebAssembly (из темы эпизода "WASI — WebAssembly вне браузера").
+
+      possible_matches:
+        - person_id: "another_alex"
+          confidence: 0.3
+          reason: "Имя Алексей, но другой период (another_alex - выпуски 857, 858)"
+        - person_id: "unknown_alexey_wasm"
+          confidence: 0.7
+          reason: "Новый гость Алексей, эксперт по WebAssembly/WASI, приглашен Бобуком"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4399.4
+          etime: 4449.1
+          text: "В общем, да, это правда. Лучше всего начать с самого начала... (объяснение WebAssembly и сравнение с Docker)"
+        audio_url: "https://cdn.radio-t.com/rt_podcast643.mp3"
+        notes: "Чистый сегмент ~47 сек без перебивок, гость объясняет WebAssembly"
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 1225
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две очень короткие реплики (0.6s и 0.8s) в разных частях эпизода:
+        1. 1225s "Нет, бумажные" - в контексте обсуждения журналов между Gray и Alek.sys
+        2. 5277s "Не все" - в контексте технического обсуждения WebAssembly с Alek.sys
+        Обе реплики односложные, скорее всего это ошибочно распознанные реплики других спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Первая реплика (1225s) идет сразу после Gray и относится к его контексту про журналы"
+        - person_id: "speaker_02"
+          confidence: 0.5
+          reason: "Вторая реплика (5277s) в контексте разговора с гостем про WASM"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        notes: "Слишком короткие реплики (0.6s, 0.8s) для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_02"
+      issue: "Гость представлен только по имени (Алексей/Леха), фамилия не названа. Требуется идентификация через внешние источники или voice comparison с известными гостями."
+    - speaker: "SPEAKER_08"
+      issue: "Вероятно ошибки распознавания, рекомендуется переназначить реплики соответствующим спикерам."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 643
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Gray"
+    time_range: [1225, 1226]
+    confidence: medium
+    reason: "Реплика 'Нет, бумажные' (1225s) логически продолжает разговор Gray о журналах"
+
+  - type: rename
+    episode: 643
+    from_speaker: "SPEAKER_08"
+    to_speaker: "SPEAKER_02"
+    time_range: [5277, 5279]
+    confidence: medium
+    reason: "Реплика 'Не все' (5277s) в контексте обсуждения WASM с гостем Алексеем"
+
+# Дополнительные заметки
+notes: |
+  Эпизод от 30 марта 2019 года. Полный состав ведущих + гость.
+
+  Гость Алексей (SPEAKER_02) приглашен Бобуком для обсуждения темы WASI/WebAssembly.
+  Появляется с 4232s (примерно 1:10:32) и активно участвует до конца выпуска.
+
+  Требуется:
+  1. Идентификация гостя Алексея (возможно через записи темы WASI на prep-643 или внешние источники)
+  2. Верификация предложенных переназначений SPEAKER_08 через прослушивание

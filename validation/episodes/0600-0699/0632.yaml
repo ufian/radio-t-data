@@ -1,0 +1,59 @@
+episode: 632
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  hosts_absent: [Gray]  # Umputun сказал "Леша вместо Грея"
+  total_duration_sec: 8838
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (2-3 сек), разбросаны по эпизоду. Контекст показывает что это Ksenks - Umputun просит 'Отожми микрофон и скажи да', SPEAKER_01 отвечает 'Я отожмала', затем Bobuk говорит 'Можно я за Ксюшу скажу?'"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "5702s: Umputun: 'Отожми микрофон и скажи да' -> SPEAKER_01: 'Я отожмала' -> Bobuk: 'Можно я за Ксюшу скажу?'. Женский род глагола 'отожмала' и последующее упоминание Ксюши подтверждают идентификацию."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: "Gray присутствует в 2 репликах (324s, 3770s), но Umputun в начале сказал 'Леша вместо Грея'. Gray не участвует в этом выпуске - это ошибки распознавания."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 632
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Контекст диалога однозначно указывает на Ksenks - женский род глагола, последующее упоминание 'за Ксюшу'"
+
+  - type: rename
+    episode: 632
+    from_speaker: "Gray"
+    to_speaker: "Alek.sys"
+    confidence: high
+    reason: "Umputun в начале выпуска сказал 'Леша вместо Грея' - Gray не участвует. Обе реплики Gray идут сразу после реплик Alek.sys и являются ошибками распознавания."
+
+# Дополнительные заметки
+notes:
+  - "Эпизод от 2019-01-12"
+  - "Ведущие: Umputun, Bobuk, Alek.sys (заменяет Gray), Ksenks"
+  - "Gray отсутствует, но ошибочно размечен в 2 местах"

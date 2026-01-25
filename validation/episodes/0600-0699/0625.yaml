@@ -1,0 +1,94 @@
+episode: 625
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  guests_present: [Anya]
+  total_duration_sec: 8003
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 321
+    replies_count: 108
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода Umputun явно представляет:
+        - 13.65s: "Аня пришла."
+        - 14.45s: "Аня, хорошо, что ты пришла."
+        Сразу после этого SPEAKER_06 отвечает (24.26s): "Спасибо, что позвали."
+        Дополнительно:
+        - 73.26s SPEAKER_06: "Я уверена, они не имели в виду ничего плохого" - женский род
+        - 1627s Umputun спрашивает "Аня, у тебя что имеет Logitech..." и далее SPEAKER_06 отвечает
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 9
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Разбросанные короткие реплики (по 1-3 сек каждая) в разных местах эпизода.
+        Скорее всего это ошибки распознавания одного из ведущих или Ани.
+        Примеры реплик:
+        - 1036.9s: "Какой хромосомы не хватает?" (контекст: диалог о хромосомах)
+        - 1912.6s: "Это же Apple." (очень короткая вставка)
+        - 2707.8s: "25 долларов в месяц." (уточнение цены)
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "anya"
+          confidence: 0.6
+          reason: "Несколько реплик в женском контексте, может быть плохо распознанная Аня"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Ksenks тоже присутствует, могла быть неправильно распознана"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1036.87
+          etime: 1043.95
+          text: "Какой хромосомы не хватает? Игрек, если только. Чтобы гемофилиния была."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_06"
+      issue: "Должна быть переименована в Anya"
+    - speaker: "SPEAKER_05"
+      issue: "Ошибки распознавания, требуется определить кто это"
+    - speaker: "Ksenks"
+      issue: "Первое появление на 598s, не представлена в начале - возможно присоединилась позже или молчала"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 625
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Явное представление в начале эпизода: 'Аня пришла', 'Аня, хорошо, что ты пришла', ответ 'Спасибо, что позвали'"

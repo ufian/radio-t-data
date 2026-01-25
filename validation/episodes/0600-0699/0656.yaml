@@ -1,0 +1,121 @@
+episode: 656
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  total_duration_sec: 7710
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 13
+    replies_count: 3
+    pattern: consecutive
+    time_range: "5523s-5539s"
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Контекст: Umputun включает демонстрацию синтезатора речи Poly (Amazon Polly).
+        Реплики SPEAKER_00 - это голос синтезатора или реакция ведущих на него.
+        "Сейчас" (5523s) - возможно, начало включения аудио.
+        "Вы не слышали, да, всего, что он говорил?" и "Нет, мы не слышали" -
+        это диалог между ведущими о том, слышали ли другие участники синтезатор.
+        По контексту это скорее всего Ksenks или Alek.sys, которые не слышали демонстрацию.
+        Сразу после этого Umputun подтверждает: "Он говорил круто".
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Реплика 'Вы не слышали?' может быть от Ksenks, которая часто задаёт уточняющие вопросы"
+        - person_id: "alek_sys"
+          confidence: 0.4
+          reason: "Alek.sys также мог не слышать демонстрацию и спросить об этом"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5532.4
+          etime: 5539.1
+          text: "Вы не слышали, да, всего, что он говорил? / Нет, мы не слышали."
+        audio_url: "https://cdn.radio-t.com/rt_podcast656.mp3"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+    time_range: "573s-1689s"
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все 3 реплики - короткие фразы-реакции (1-2 секунды):
+        - "А, вас легализовали." (573s) - реакция на слова Alek.sys о легализации
+        - "Поздравляю." (574s) - продолжение предыдущей реплики
+        - "Ну, конечно." (1688s) - поддакивание словам Ksenks
+
+        Все реплики находятся в контексте активного диалога известных ведущих.
+        В 573-575s контекст: Alek.sys говорит "Легализовали", затем кто-то реагирует
+        "А, вас легализовали. Поздравляю." - это скорее всего Ksenks (она спрашивала
+        "А что у вас?" прямо перед этим в 570s).
+
+        В 1688s контекст: Ksenks говорит, затем кто-то добавляет "Ну, конечно",
+        после чего Ksenks продолжает "Я согласна..." - это выглядит как её собственная
+        реплика, неправильно разделённая на два спикера.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        1) В 570s Ksenks спрашивает "А что у вас?", в 572s Alek.sys отвечает "Легализовали",
+           затем сразу SPEAKER_02: "А, вас легализовали. Поздравляю." - логичное продолжение диалога от Ksenks.
+        2) В 1688s реплика "Ну, конечно" вставлена между двумя репликами Ksenks о том же предмете,
+           это выглядит как её же слова.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Контекст и порядок диалога указывают на Ksenks"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале (3-51s) Umputun представляет состав:
+    - "Состав почти полный"
+    - "Вместо выбывшего Грея у нас другой железнодорожник" (Alek.sys)
+    - "Есть Ксюша" (Ksenks)
+    - Bobuk присоединяется в диалог с 25s
+    Гости не объявлены - эпизод без гостей.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 656
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Все 3 реплики SPEAKER_02 по контексту принадлежат Ksenks:
+      короткие реакции в диалоге, где Ksenks - активный участник.
+
+  - type: investigate
+    episode: 656
+    speaker: "SPEAKER_00"
+    confidence: low
+    reason: |
+      Требуется voice comparison для определения спикера.
+      Контекст: демонстрация синтезатора речи Polly.
+      Возможные варианты: Ksenks или Alek.sys.

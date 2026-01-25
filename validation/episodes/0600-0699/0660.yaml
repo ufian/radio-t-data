@@ -1,0 +1,83 @@
+episode: 660
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Alek.sys
+  hosts_absent:
+    - Gray
+    - Ksenks
+  total_duration_sec: 7467
+
+# Контекст эпизода
+episode_context:
+  date: "2019-07-27"
+  notes: |
+    В начале эпизода Umputun объясняет отсутствие участников:
+    - Gray отсутствует
+    - Ksenks в длинном отпуске на исторической родине
+    - Bobuk задерживается из-за "народного гуляния" (протесты в Москве 27 июля 2019)
+    Bobuk присоединяется на 1188 секунде (~20 минут от начала).
+
+# Детальный анализ спикеров
+speakers:
+  - speaker: "Umputun"
+    replies_count: 1045
+    total_duration_sec: 3977
+    first_appearance_sec: 1
+    role: host
+
+  - speaker: "Bobuk"
+    replies_count: 480
+    total_duration_sec: 1595
+    first_appearance_sec: 1188
+    role: host
+    notes: "Присоединился позже из-за задержки на протестах в Москве"
+
+  - speaker: "Alek.sys"
+    replies_count: 296
+    total_duration_sec: 1204
+    first_appearance_sec: 21
+    role: host
+
+  - speaker: "_ad"
+    replies_count: 9
+    role: advertisement
+    notes: "Рекламные вставки - игнорируются"
+
+  - speaker: "SPEAKER_99"
+    replies_count: 3
+    role: artifact
+    analysis:
+      is_error: false
+      error_reason: null
+      notes: |
+        Три коротких фрагмента, типичные для SPEAKER_99:
+        - "120 Lifetime." (3080.83s) - цитата из обсуждаемого материала
+        - "Yet another Go interpreter." (4418.23s) - название обсуждаемого проекта Yaegi
+        - "Solarized." (5846.23s) - название темы оформления
+        Все фрагменты имеют практически нулевую длительность (etime ≈ stime),
+        что указывает на озвучку с экрана или звуковые вставки.
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода (0:00-0:40) Umputun представляет состав:
+    - Объявляет выпуск 660
+    - Говорит, что Грея не будет
+    - Объясняет отсутствие Ксюши (отпуск)
+    - Упоминает задержку Бобука
+    Alek.sys участвует с 21 секунды, отвечая Umputun.
+    Все присутствующие спикеры корректно идентифицированы.
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,89 @@
+episode: 655
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Ksenks]
+  total_duration_sec: 7819
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1091
+    replies_count: 231
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (27с) Umputun говорит: "И это не может, наверное, Ксюшу и Ане не радовать."
+        Ksenks (62с): "Мы с Аней это долго планировали."
+        Umputun (400с): "Аня дам тебе слово"
+        Umputun (1829с): "Спросим Аню. Аня, сам нагрел паяльной лампой..."
+        Umputun (2072с): "Аня, знаешь, как мы параноики носим в Apple свои ноутбуки..."
+        Umputun (2881с): "перескажет Аня"
+        Ksenks (3335с): "Аня, я с тобой абсолютно согласна"
+        SPEAKER_05 участвует в обсуждениях как полноправный участник подкаста.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная короткая реплика (3 сек) "И тем более сейчас 27" на 1084с,
+        вставлена между двумя репликами Alek.sys (1083с и 1087с).
+        Скорее всего это часть реплики Alek.sys, неверно атрибутированная распознаванием.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.8
+          reason: "Реплика находится между двумя репликами Alek.sys в середине его рассуждения"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 655
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Anya"
+    confidence: high
+    reason: |
+      Гостья явно представлена в начале выпуска и многократно обращаются по имени.
+      231 реплика, 1091 сек - полноценный участник выпуска.
+
+  - type: rename
+    episode: 655
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Alek.sys"
+    confidence: medium
+    reason: |
+      Единственная короткая реплика между двумя репликами Alek.sys,
+      продолжает его мысль о 27 компаниях-партнерах Libra.

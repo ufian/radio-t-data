@@ -1,0 +1,66 @@
+episode: 652
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks, Gray]
+  total_duration_sec: 7739  # ~2h 9min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 0.3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Односложная реплика 'Да.' (0.3 сек) между SPEAKER_99 и Umputun. Типичная ошибка атрибуции короткого междометия."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткая реплика 'Спасибо.' (3 сек) между репликами Umputun и Bobuk. Типичная ошибка атрибуции короткого слова."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Gray упомянут в начале ('Смотри, Грэй, твоя функция почти вернулась' в 11s), но первая реплика только в 1762s"
+    - "Bobuk упомянут в 115s ('Бобук, я тебя хочу спросить'), первая реплика в 133s"
+    - "Ksenks не представлена явно, первая реплика в 792s"
+    - "Все неизвестные спикеры - ошибки распознавания (очень короткие односложные реплики)"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: SPEAKER_02 и SPEAKER_07 - единичные очень короткие реплики,
+# которые можно оставить как есть или удалить как шум.
+# Они не влияют на качество транскрипта.

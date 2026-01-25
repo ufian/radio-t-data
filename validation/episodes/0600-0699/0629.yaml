@@ -1,0 +1,100 @@
+episode: 629
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7466  # ~2 часа 4 минуты
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Все 5 реплик - короткие односложные фразы (1-2 сек каждая), разбросанные по выпуску:
+        "Стабилизатор?" (2218s), "100 миллионов" (4387s), "Там что-то, по-моему, апрель, июнь" (5639s),
+        "Так и послали" (8298s), "Чуть-чуть" (8304s).
+        Контекст показывает, что это реплики ведущих, неверно атрибутированные распознаванием.
+        Особенно показательны реплики в 8298-8304s - идет диалог между Umputun и Ksenks,
+        а SPEAKER_03 вставляет комментарии между их фразами - это типичная ошибка diarization.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Всего 2 короткие реплики: "Давайте" (5993s) в ответ на вопрос Umputun'а "Ну что, темы наших слушателей?",
+        и "Ардуина" (6376s) - поправка произношения после того, как Umputun сказал "Адурина?".
+        Обе реплики - типичные реакции ведущих в диалоге. Контекст указывает на ошибку diarization.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Три очень короткие реплики: "В полиэтиленовом мешке?" (2576s) - вопрос в диалоге с Umputun'ом,
+        "Ну" (4862s) - реакция на вопрос Umputun'а "Готов?",
+        "Неа" (7692s) - ответ на вопрос Umputun'а к Bobuk'у "Бобок, у тебя есть гениальная идея?".
+        Последняя реплика особенно показательна - Umputun обращается к Bobuk'у, и ответ "Неа" скорее всего
+        принадлежит Bobuk'у, но неверно атрибутирован. Все реплики - ошибки diarization.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    В начале выпуска (23s) Umputun говорит "А, да, все тут свои. Чего представлять?" -
+    формального представления нет, но все 5 ведущих (Umputun, Bobuk, Gray, Ksenks, Alek.sys)
+    присутствуют и активно участвуют. Alek.sys имеет всего 3 реплики (4 сек), что нетипично мало,
+    но реплики осмысленные и появляются в контексте обсуждений. Гостей в этом выпуске нет.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Все SPEAKER_* в этом выпуске - кратковременные ошибки diarization,
+# которые можно игнорировать (суммарно 10 сек из ~2 часов).
+# Нет достаточных оснований для автоматического переименования.

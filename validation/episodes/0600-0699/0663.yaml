@@ -1,0 +1,94 @@
+episode: 663
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  hosts_announced: "Umputun явно объявил в начале: 'сегодня без девчонок и без грубиянов и без добрых лёш вообще без никого вот тригада собрались'"
+  total_duration_sec: 7047
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 0.58
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткая реплика (0.58 сек) 'Они по-своему...' между репликами Gray и Bobuk. Это перебивка/наложение голосов - кто-то начал говорить одновременно с Gray. Скорее всего это Bobuk, который сразу после этого продолжает мысль 'Они там решили полезное заблокировать'."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.7
+          reason: "Сразу после SPEAKER_04 Bobuk продолжает с похожей мысли 'Они там решили...', что выглядит как продолжение оборванной фразы"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Gray говорил прямо перед этим, возможно это его продолжение"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Ошибочно атрибутированные ведущие
+misattributed_hosts:
+  - speaker: "Alek.sys"
+    total_duration_sec: 2.1
+    replies_count: 2
+    issue: "Alek.sys НЕ участвовал в этом выпуске (Umputun объявил в начале 'без добрых лёш'), но система атрибутировала 2 реплики"
+
+    instances:
+      - stime: 1755.61
+        etime: 1757.31
+        text: "И что предлагается играть?"
+        context: "Между Umputun и Gray, короткая реплика-перебивка"
+        likely_speaker: "Gray или Umputun"
+
+      - stime: 3820.29
+        etime: 3820.69
+        text: "Это правда."
+        context: "Сразу после Bobuk, который говорит 'это правда' - либо эхо, либо поддакивание"
+        likely_speaker: "Umputun или Gray"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  hosts_match_announcement: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Присутствует в разметке (2 реплики), но Umputun явно объявил его отсутствие в начале выпуска"
+    - speaker: "SPEAKER_04"
+      issue: "Единичная короткая реплика-перебивка, не реальный гость"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 663
+    from_speaker: "SPEAKER_04"
+    to_speaker: "SPEAKER_MISATTRIBUTED_04"
+    confidence: high
+    reason: "Единичная 0.58-сек реплика между Gray и Bobuk - явная ошибка распознавания, не гость"
+
+  - type: rename
+    episode: 663
+    from_speaker: "Alek.sys"
+    to_speaker: "SPEAKER_MISATTRIBUTED_ALEK"
+    confidence: high
+    reason: "Alek.sys отсутствовал в этом выпуске (объявлено в начале), обе реплики - ошибки атрибуции"
+
+# Заметки
+notes: |
+  Эпизод 663 от 2019-08-17. Выпуск с тремя ведущими: Umputun, Bobuk, Gray.
+  В начале Umputun явно говорит об отсутствии Ksenks и Alek.sys.
+
+  Обнаружены ошибки атрибуции:
+  1. SPEAKER_04 - одна короткая перебивка, не гость
+  2. Alek.sys - 2 реплики ошибочно атрибутированы отсутствующему ведущему
+
+  Требуется ручная проверка: подтвердить переименование ошибочных спикеров.

@@ -1,0 +1,182 @@
+episode: 628
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk, Gray]
+  guests_present: [Anya, "Леша (гость)"]
+  total_duration_sec: 9142
+
+# Важные находки
+notes: |
+  В конце выпуска Umputun явно говорит: "Леш, спасибо, что зашел,
+  поддержал отсутствующего одновременно Бобука и Грея" (9138s).
+  Это означает:
+  1. Bobuk и Gray отсутствуют в этом выпуске
+  2. Леша - гость, который "заменил" их
+  3. 30 реплик, атрибутированных Bobuk - ошибка транскрипции
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 2267
+    replies_count: 468
+    pattern: consecutive
+    first_appearance_sec: 429
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Umputun многократно обращается к этому спикеру как "Леша", "Алёха":
+        - 1180s: "Вариативность у ребенка, видимо, высокая, Алёха."
+        - 3313s: "Да ты же, Леша, все не так красиво как ты рассказываешь."
+        - 7111s: "Там был разговор, Леша выбрал, ты рассказывай."
+        - 9138s: "Леш, спасибо, что зашел..."
+        Гость работает с технологиями (code review, Go), знает всех ведущих.
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.1
+          reason: "Маловероятно - Alek.sys присутствует отдельно с 6 репликами"
+        - person_id: "petr_didenko"
+          confidence: 0.3
+          reason: "Пётр - частый гость, но его называют Петя, не Леша"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3211.04
+          etime: 3239.92
+          text: |
+            Вот как раз я стараюсь таким не быть. Но там про злобного гада,
+            который открывает пул реквест от разработчика какого-то, и начинает
+            всячески его понукать, что не так ты это делаешь, не туда ты засунул,
+            не то это делать. И отправляет, и пишет, что сейчас мы вообще тебя
+            уволим. 200 комментариев я тебе написал, и ты вообще тупой. И типа,
+            иди отсюда.
+        audio_url: "https://cdn.radio-t.com/rt_podcast628.mp3"
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 521
+    replies_count: 164
+    pattern: consecutive
+    first_appearance_sec: 180
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun явно представляет и обращается к этому спикеру как "Аня":
+        - 316s: "В хорошем смысле этого слова экивок, Аня."
+        - 352s: "Расскажи, Аня, как вы до жизни такой дошли..."
+        Аня рассказывает про Apple Music на Amazon Echo (работает в Apple/Amazon).
+        В people.yaml есть Anya с 13 выпусками.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+    first_appearance_sec: 3003
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (в среднем 1.5 сек), разбросанные по эпизоду.
+        Реплики:
+        - 3003s: "Лимиты увеличить?" (1.3 сек)
+        - 3178s: "А я, кстати, тоже ее хотела, на самом деле." (2 сек) - женский род
+        - 3194s: "Стоит?" (0.7 сек)
+        - 7014s: "Подожди, но они появились одной темой." (2.2 сек)
+        Скорее всего это неправильно атрибутированные реплики Ksenks или Anya.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплика 3178s в женском роде, сразу после Ksenks продолжает ту же мысль"
+        - person_id: "anya"
+          confidence: 0.3
+          reason: "Тоже женский голос, присутствует в выпуске"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие сегменты для сравнения голосов"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        30 реплик атрибутированы Bobuk, но Umputun в 9138s явно говорит,
+        что Bobuk отсутствует ("поддержал отсутствующего одновременно Бобука и Грея").
+        Эти реплики скорее всего принадлежат гостю Леше (SPEAKER_04).
+
+    - speaker: "Alek.sys"
+      issue: |
+        Всего 6 реплик (37 сек) - необычно мало для ведущего.
+        Возможно, часть его реплик неправильно атрибутирована как SPEAKER_04.
+        Однако Umputun обращается к SPEAKER_04 как "Леша/Алёха", а Alek.sys
+        тоже Алексей - нужна проверка голосов.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 628
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Явное представление по имени в начале выпуска"
+
+  - type: rename
+    episode: 628
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_04"
+    confidence: high
+    reason: |
+      Umputun явно говорит, что Bobuk отсутствует в выпуске (9138s).
+      Реплики Bobuk - ошибка транскрипции.
+
+  - type: rename
+    episode: 628
+    from_speaker: "SPEAKER_01"
+    to_speaker: "SPEAKER_MISATTRIBUTED_01"
+    confidence: medium
+    reason: |
+      Вероятно ошибки распознавания Ksenks/Anya.
+      Требует ручной проверки каждой реплики.
+
+# Открытые вопросы
+open_questions:
+  - question: "Кто такой гость Леша?"
+    context: |
+      SPEAKER_04 - гость по имени Леша с большим участием (468 реплик, 2267 сек).
+      Знает технологии (Go, code review), знаком с ведущими.
+      Нужно определить его идентификатор для people.yaml.
+    suggested_action: "Voice comparison или поиск в истории выпусков"
+
+  - question: "Нужно ли разделять SPEAKER_04 и ошибочные реплики Bobuk?"
+    context: |
+      После переименования Bobuk -> SPEAKER_04, нужно убедиться что
+      все реплики действительно принадлежат одному человеку.
+    suggested_action: "Проверить контекст переходов между репликами"

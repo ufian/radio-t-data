@@ -1,0 +1,105 @@
+episode: 642
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6817
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: consecutive  # все реплики в районе 3527-3560s
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие уточняющие реплики в середине технической дискуссии про Git хуки. Все 3 реплики подряд в одном диалоге. Скорее всего ошибочно распознанный один из ведущих (вероятно Ksenks или Bobuk - после реплики SPEAKER_06 сразу идет реплика Ksenks с продолжением темы)."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплика Ksenks в 3560s продолжает тему реплики SPEAKER_06 в 3558s"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk активен в этом диалоге"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 6
+    replies_count: 6
+    pattern: scattered  # реплики разбросаны: 4590s, 4915s, 5925s, 6213s
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие переспрашивания и эхо-реплики разбросанные по всему эпизоду. Типичные фразы: 'Олень?' (x3), 'Как это нет?', 'В смысле?', 'Это FTT исключили.' - характерные ошибки распознавания реакций ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Ksenks активна в эпизоде, короткие переспрашивания характерны"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray присутствует, но менее активен"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered  # реплики в 1269s, 5719s, 5724s
+
+    analysis:
+      is_error: true
+      error_reason: "Односложные переспрашивания и эхо-реплики: 'Слишком секси?' (повтор фразы Umputun), 'Забывчивость.' и 'Простительность.' (переводы/повторы слов). Типичная ошибка распознавания коротких реакций."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "В контексте 5719-5724s реплики между Umputun и далее Ksenks"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk присутствует в диалоге в 1269s"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода Umputun представляет состав: "Бобу, Ксюша, игры в ассортименте" и
+    приветствует Лешу (Alek.sys). Грей появляется позже (первая реплика в 160s).
+    Все 5 основных ведущих присутствуют. Гостей в этом эпизоде нет.
+
+    Неизвестные спикеры SPEAKER_04, SPEAKER_06, SPEAKER_08 - это ошибки автоматической
+    транскрипции, характерные для коротких реплик-переспрашиваний и эхо.
+    Суммарная длительность всех неизвестных спикеров: ~15 секунд из ~6800 секунд эпизода.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Не предлагаем правила автоматического переименования, так как:
+# 1. Реплики слишком короткие для надежной идентификации
+# 2. Они разбросаны по эпизоду и могут принадлежать разным ведущим
+# 3. Общая длительность минимальна (15 сек) - не влияет на качество транскрипта

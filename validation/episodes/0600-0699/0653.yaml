@@ -1,0 +1,82 @@
+episode: 653
+status: needs_review
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9380
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 15
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разбросанные реплики (6 шт, 15 сек), похожие по стилю на реплики Ksenks. В 1039s SPEAKER_06 спрашивает 'В 11 утра попиваю коньяк?', а в 1043s Ksenks спрашивает почти идентично 'Подожди, час дня попиваю коньяк?' - явный признак ошибочной атрибуции одного спикера."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.75
+          reason: "Похожий стиль речи и вопросительные интонации. Реплика в 1039s по смыслу идентична реплике Ksenks в 1043s. Реплики 'Какая разница?' (223s) - после неё сразу Ksenks продолжает тему. В 8289s 'Не ври, Умбадун' - после неё сразу реплика Ksenks (8289.8s)."
+        - person_id: "alek_sys"
+          confidence: 0.15
+          reason: "Alek.sys также участвует в выпуске, теоретически возможно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 218.25
+          etime: 222.93
+          text: "Подожди, но у тебя есть номер на бутон, а она ходит в футболке раз."
+
+  - speaker: "SPEAKER_99"
+    total_duration_sec: 0.4
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (<0.5 сек), большинство с отрицательной длительностью. Содержимое - эхо/переспросы других спикеров ('Mac Pro', '12', 'DisplayLink?', 'Ха-ха', '104?'). Типичные артефакты распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_06"
+      issue: "6 реплик неизвестного спикера при полном составе ведущих. Вероятно ошибка распознавания Ksenks."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 653
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Высокая корреляция с репликами Ksenks: похожий стиль вопросов, реплики идут непосредственно перед/после реплик Ksenks. Рекомендуется voice comparison для подтверждения."
+
+  - type: delete
+    episode: 653
+    from_speaker: "SPEAKER_99"
+    to_speaker: null
+    confidence: high
+    reason: "Артефакты распознавания: эхо, переспросы, смех. Реплики с нулевой/отрицательной длительностью."

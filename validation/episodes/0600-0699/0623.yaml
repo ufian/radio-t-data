@@ -1,0 +1,154 @@
+episode: 623
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  total_duration_sec: 8728  # ~2.4 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 566
+    replies_count: 152
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 226.93s Alek.sys обращается: "Подожди, Аня, давай сразу расставим все точки."
+        Перед этим SPEAKER_01 говорит: "Слушайте, если бы у меня в команде было достаточно девушек, я бы программировала парня."
+        На 162.85s Alek.sys: "Аня потому что поддерживает Ксюшу, а мы нет."
+        Гость Anya зарегистрирована в people.yaml (13 выпусков).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 11
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие разрозненные реплики (6 реплик, 11 сек), разбросанные по всему подкасту (1522s-8723s).
+        Примеры: "На него я все... Это не работает." (1522s), "Про грипп?" (8002s), "Пока." (8723s).
+        Вероятно, ошибочное распознавание реплик ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Женский голос, короткие реплики могут быть от Ксюши"
+        - person_id: "anya"
+          confidence: 0.4
+          reason: "Также женский гость, может быть ошибочно разделена на два спикера"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5183.37
+          etime: 5187.44
+          text: "Маглула и Маглула, кажется... По-моему, они Маглула и Уплула."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 7
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие разрозненные реплики (4 реплики, 7 сек).
+        Примеры: "Где есть реклама?" (460s), "Маглула и Уплула." (5231s), "Да, слыхали." (6175s), "Окей." (8292s).
+        Типичные короткие реакции, вероятно ошибочно отделённые от другого спикера.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Характер реплик похож на короткие вставки Бобука"
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Также может быть Алексеем"
+
+      voice_task:
+        needed: false  # Реплики слишком короткие для voice comparison
+        reference_segment: null
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Минимальное количество коротких реплик (3 реплики, 5 сек).
+        Примеры: "Очевидно, правильно?" (3536s), "Наверное, нет." (4620s), "Так это же нормально." (8514s).
+        Короткие реакции/комментарии, скорее всего ошибка распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Реплики в контексте технических обсуждений, могут быть от Umputun"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Также могут быть от Bobuk"
+
+      voice_task:
+        needed: false  # Реплики слишком короткие для voice comparison
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "Идентифицирована как Anya по обращению Alek.sys, но формального представления в начале подкаста нет"
+    - speaker: "Gray"
+      issue: "Упомянут в начале выпуска (50.72s: 'Грей все перепутал и сказал, что сегодня я не приду'), но отсутствует в эпизоде"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 623
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Прямое обращение по имени от Alek.sys (226.93s): 'Подожди, Аня, давай сразу расставим все точки'"
+
+# Примечания
+notes: |
+  Эпизод 623 от 10 ноября 2018 года.
+  Ведущие: Umputun, Bobuk, Ksenks, Alek.sys (Gray отсутствует).
+  Гость: Аня (SPEAKER_01) - женщина-разработчик, активно участвует в обсуждении.
+
+  SPEAKER_02, SPEAKER_04, SPEAKER_08 - скорее всего ошибки распознавания.
+  Все три спикера имеют очень короткие разрозненные реплики.
+  SPEAKER_02 требует дополнительной проверки, так как имеет более осмысленную реплику про Маглулу.
+
+audio_url: "https://cdn.radio-t.com/rt_podcast623.mp3"

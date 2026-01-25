@@ -1,0 +1,52 @@
+episode: 667
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Gray, Ksenks]
+  total_duration_sec: 7336  # 944*3.4 + 612*3.3 + 196*4.2 + 172*4.0 + 149*4.2 approx
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 4
+    replies_count: 4
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные реакции (<2 сек каждая), разбросанные по эпизоду в 836s, 3964s, 8165s, 8167s. Типичные фразы-ошибки: 'Да.', 'Кошмар, кошмар.', 'Да?' — характерные междометия, которые система распознавания ошибочно выделила в отдельного спикера."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Ksenks присутствует в выпуске, короткие реакции могут быть её"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray также присутствует, возможный источник коротких реплик"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все 5 ведущих присутствуют: Umputun (с 3s), Bobuk (с 30s), Alek.sys (с 32s), Ksenks (с 140s), Gray (с 205s)"
+    - "В начале (строка 79-82) Umputun упоминает 'Грейс Бобуком' — подтверждает присутствие Gray и Bobuk"
+    - "Ксюша явно упоминается и отвечает на 140s"
+    - "SPEAKER_06 — артефакт распознавания, не гость"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+  # Не предлагаем правило rename, т.к. нельзя с уверенностью определить кому принадлежат эти реплики.
+  # Рекомендация: оставить как есть или удалить SPEAKER_06 как шум.

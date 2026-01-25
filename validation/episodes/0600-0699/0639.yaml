@@ -1,0 +1,61 @@
+episode: 639
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7933  # ~2h 12m
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Все 5 реплик - короткие реактивные фразы (0.3-3.1 сек):
+        "Да, да.", "Конечно, конечно.", "А знаешь, сколько продление? 35.", "Угу.", "Это хитро."
+        Разбросаны по эпизоду (497s, 4337s, 6098s, 6161s). Типичный паттерн ошибки
+        распознавания - система не смогла определить говорящего для коротких междометий.
+        Все 5 ведущих присутствуют и представлены в начале эпизода.
+        Контекст указывает на ведущих (реплики в диалогах между Ksenks/Bobuk/Gray/Umputun).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: >
+            Реплики 1-2 (496-499s) идут между Ksenks и Bobuk, могут быть его междометиями.
+            Реплика 3 (4337s) про стоимость продления домена - Bobuk до этого говорил о доменах.
+        - person_id: "gray"
+          confidence: 0.3
+          reason: >
+            Реплика 5 (6161s) между Gray и Umputun. Реплика 4 (6098s) - реакция на вопрос Bobuk.
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: >
+            Реплики 1-2 идут сразу после длинного высказывания Ksenks о языках.
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+  # Не предлагаю правила т.к. SPEAKER_01 - это короткие реплики,
+  # которые невозможно однозначно атрибутировать без voice comparison.
+  # Суммарная длительность 6 секунд незначительна для эпизода ~2 часа.

@@ -1,0 +1,169 @@
+episode: 645
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys, Gray, Bobuk]
+  total_duration_sec: 7545
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 9
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Женский род речи ('согласна', 'думала') + короткие разрозненные реплики. Ошибка распознавания Ksenks."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Фразы 'я согласна' (2087s), 'Большинство это от 5 до 9 лет' (3524s) в контексте обсуждения Stack Overflow Survey - тема где Ksenks активно участвует. Женский род глаголов."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Женский род речи ('думала', 'помню') + короткие реплики. Ошибка распознавания Ksenks."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Фразы 'Я думала, ты про Windows удивишься' (4688s), 'Я помню, да, чмот' (6921s) - женский род, контекст активного участия в обсуждении."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Женский род ('не уверена') + одиночная короткая реплика сразу после упоминания Ксюши."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Фраза 'Я вот, кстати, не уверена' (5981s) сразу после слов Umputun 'говорит Ксюша нам в следующей статье'. Следующая реплика от Ksenks. Женский род."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (1-2 сек каждая), вероятно ошибки распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: "Реплики: 'Понимаешь, много людей' (2491s), 'Да ладно, серьезно, у него не было бы ничего' (6479s), 'А, какой-то новый JPEG?' (7407s). Слишком короткие и разрозненные для уверенной идентификации."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Контекст обсуждений - Ksenks участвует. Но род речи неопределён."
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Некоторые реплики в техническом контексте."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6479.34
+          etime: 6481.52
+          text: "Да ладно, серьезно, у него не было бы ничего."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие одиночные реплики (2 сек каждая), разбросанные во времени."
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: "Реплики: 'Зачем ты это делаешь?' (5047s), 'БМП?' (7401s). Слишком короткие для идентификации."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Вопросительные реплики в стиле ведущих."
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray также задаёт уточняющие вопросы."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5047.07
+          etime: 5049.67
+          text: "Зачем ты это делаешь?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: "Всего 3 реплики за весь эпизод (7 сек). Не представлен в начале, появляется спорадически с 728s. Возможно подключился удалённо или это ошибки распознавания."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 645
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Женский род речи ('согласна'), контекст участия в обсуждении Stack Overflow Survey, характер реплик."
+
+  - type: rename
+    episode: 645
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Женский род речи ('думала', 'помню'), типичные для Ksenks комментарии."
+
+  - type: rename
+    episode: 645
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Женский род ('не уверена'), реплика сразу после упоминания Ксюши по имени."
+
+# Метаданные эпизода
+metadata:
+  date: "2019-04-13"
+  audio_url: "https://cdn.radio-t.com/rt_podcast645.mp3"
+  topics:
+    - "Новинки от DigitalOcean"
+    - "25 лет Рунету"
+    - "Stack Overflow Developer Survey 2019"
+    - "Разработчиков надо выращивать"
+    - "Темы слушателей"

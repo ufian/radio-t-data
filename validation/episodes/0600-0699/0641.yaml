@@ -1,0 +1,74 @@
+episode: 641
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Episode metadata
+episode_date: "2019-03-16"
+audio_url: "https://cdn.radio-t.com/rt_podcast641.mp3"
+
+# Statistics for all speakers
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  hosts_announced: [Umputun, Bobuk, Gray, Ksenks]  # From intro at 14-20s
+  total_duration_sec: 7356.6
+
+# Note: No unknown SPEAKER_* or Guest entries in this episode
+# However, Alek.sys appears but was NOT announced in the intro
+
+unknown_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 1.8
+    replies_count: 2
+    pattern: scattered  # Two isolated short replies at 3539s and 6544s
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Alek.sys was NOT announced in the intro. Umputun explicitly listed the participants at 14-20s:
+        "Ксюша пришла первой сегодня. Грэй потянулся следом, ну а там уже и мы с Бобуком подбежали."
+        This means the episode has: Umputun, Bobuk, Gray, Ksenks - NO Alek.sys.
+        The 2 short replies attributed to Alek.sys (total 1.8 sec) are likely misattributed from one of the actual hosts.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Ksenks"
+          confidence: 0.4
+          reason: "Short reactive phrases could match Ksenks' speaking style"
+        - person_id: "Gray"
+          confidence: 0.4
+          reason: "Short reactive phrases could also match Gray"
+
+      voice_task:
+        needed: true
+        reference_segments:
+          - stime: 3539.36
+            etime: 3539.96
+            text: "И все хана."
+          - stime: 6544.09
+            etime: 6545.29
+            text: "Там же очень прикольно."
+
+# Consistency check
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Speaker appears with 2 short replies but was NOT announced in the episode intro.
+        Intro at 14-20s explicitly names only: Ksenks, Gray, Umputun, Bobuk.
+        This is likely a transcription error - these replies should be attributed to one of the actual hosts.
+
+# Suggested rules
+suggested_rules:
+  - type: investigate
+    episode: 641
+    speaker: "Alek.sys"
+    confidence: high
+    reason: |
+      Alek.sys not announced but has 2 short replies (1.8s total).
+      Requires voice comparison to determine actual speaker (likely Ksenks or Gray).
+      Timestamps for voice comparison: 3539.36-3539.96 and 6544.09-6545.29

@@ -1,0 +1,117 @@
+episode: 646
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  guests_present: [Anya]
+  total_duration_sec: 6994
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 383
+    replies_count: 107
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun обращается напрямую: 'Аня, ты не поверишь...' (674.61s). Использует женский род: 'загуглила', 'начала забывать', 'пикнула'. Участвует в техническом обсуждении фуллстек-разработки."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (1-2 сек) разбросаны по эпизоду: 'А-а-а.' (685s), 'Подожди, подожди.' (3783s), 'Короче, там все как бы виднее.' (6743s). Типичный паттерн ошибки автоматического распознавания — односложные реакции или перебивки."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "anya"
+          confidence: 0.4
+          reason: "Первая реплика 'А-а-а.' следует сразу после обращения Umputun к Ане"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Может быть ошибочно атрибутированные реплики Ксюши"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Единственная реплика 'Точно, точно.' (7568s, ~1 сек) в конце эпизода. В начале Umputun говорит 'состав полный с одним постоянным гостем' — вероятно имеется в виду что Alek.sys отсутствует и вместо него гость Anya. Эта реплика скорее всего ошибка распознавания (атрибуция Bobuk или другого ведущего)."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 646
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Umputun обращается 'Аня, ты не поверишь...' на 674.61s. 107 реплик, 383 сек — реальный участник."
+
+  - type: delete_or_merge
+    episode: 646
+    from_speaker: "SPEAKER_07"
+    to_speaker: null
+    confidence: medium
+    reason: "3 реплики по 1-2 сек, разбросаны по эпизоду. Скорее всего ошибки распознавания — требует voice comparison для точной атрибуции."
+
+  - type: rename
+    episode: 646
+    from_speaker: "Alek.sys"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Единственная реплика ~1 сек в диалоге Umputun-Gray-Bobuk. Alek.sys не представлен и не упоминается в эпизоде. Требуется voice comparison для подтверждения."
+
+# Задания на voice comparison
+voice_tasks:
+  - task_id: "646_alek_sys_verify"
+    speaker: "Alek.sys"
+    description: "Проверить, действительно ли реплика принадлежит Alek.sys или это ошибка атрибуции к Bobuk"
+    audio_url: "https://cdn.radio-t.com/rt_podcast646.mp3"
+    segments:
+      - stime: 7568.14
+        etime: 7569.26
+        text: "Точно, точно."
+    compare_with: ["Bobuk", "Gray"]
+    context: "В диалоге участвуют Umputun, Gray, Bobuk. Alek.sys не был представлен в начале эпизода."
+
+  - task_id: "646_speaker_07_identify"
+    speaker: "SPEAKER_07"
+    description: "Определить, кому принадлежат короткие реплики — Anya, Ksenks или это артефакты"
+    audio_url: "https://cdn.radio-t.com/rt_podcast646.mp3"
+    segments:
+      - stime: 685.55
+        etime: 686.41
+        text: "А-а-а."
+      - stime: 3783.83
+        etime: 3784.34
+        text: "Подожди, подожди."
+      - stime: 6743.35
+        etime: 6745.71
+        text: "Короче, там все как бы виднее."
+    compare_with: ["Anya", "Ksenks"]
+    context: "Короткие реплики, разбросанные по эпизоду. Могут быть ошибками распознавания."

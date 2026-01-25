@@ -1,0 +1,129 @@
+episode: 649
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6467
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая (1 сек) обрезанная реплика 'И ты строишь из него разные.' между репликами Umputun. Фраза не имеет самостоятельного смысла - явно часть предложения. С большой вероятностью это ошибка распознавания, обрезок речи Umputun."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.7
+          reason: "Реплика находится между двумя репликами Umputun (1339s и 1348s), фраза обрезана"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика 'А это хорошая мысль.' (2.5 сек) между Alek.sys и Umputun. Типичная фраза-реакция, которая могла быть неправильно атрибутирована."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Следующая реплика принадлежит Umputun, мог быть его комментарий"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Ksenks также активна в этом сегменте (следующие реплики после Umputun)"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 13
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk имеет всего 2 реплики (37s и 5607s), что нехарактерно. SPEAKER_03 появляется только после 4424s. Возможно, Bobuk присоединился удалённо и его голос плохо распознан. Фраза 'Я специально для Лёхи сфотографирую' указывает на близкое знакомство с Alek.sys."
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть ошибочно атрибутированы от Umputun, особенно короткие комментарии"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Gray активен в этом эпизоде, мог быть неправильно распознан"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4804.12
+          etime: 4810.39
+          text: "Я специально для Лёхи сфотографирую, а то он просто не знает, как это бывает у людей."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: "Всего 2 реплики (7 сек) за весь выпуск - нехарактерно мало для ведущего. Либо Bobuk почти не участвовал, либо часть его реплик неправильно атрибутирована (возможно как SPEAKER_03)."
+    - speaker: "SPEAKER_03"
+      issue: "7 реплик (13 сек), все во второй половине выпуска (после 4424s). Требуется voice comparison для идентификации."
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules:
+  - type: rename
+    episode: 649
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: "Единственная обрезанная реплика между двумя репликами Umputun"
+
+  - type: rename
+    episode: 649
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Umputun"
+    confidence: low
+    reason: "Короткая реплика-реакция, вероятно неправильно атрибутирована. Требуется проверка."
+
+# Заметки
+notes: |
+  Эпизод с 5 ведущими: Umputun, Bobuk, Gray, Ksenks, Alek.sys.
+
+  Bobuk необычно мало говорит (всего 2 реплики). Это может объясняться:
+  1. Удалённым участием с плохим качеством связи
+  2. Поздним подключением к эфиру
+  3. Неправильной атрибуцией его реплик как SPEAKER_03
+
+  SPEAKER_03 требует voice comparison - самая длинная реплика на 4804s (6 сек)
+  подходит для сравнения голоса.
+
+  Audio URL: https://cdn.radio-t.com/rt_podcast649.mp3
+  Reference segment для SPEAKER_03: 4804.12-4810.39s

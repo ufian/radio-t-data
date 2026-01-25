@@ -1,0 +1,115 @@
+episode: 638
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  hosts_mentioned_but_absent: [Alek.sys]
+  total_duration_sec: 7817
+
+# Анализ проблемных спикеров
+problematic_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+    first_appearance_sec: 5475
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        В начале эпизода Umputun явно говорит "мы тут на троих мужиков сообразили" (34.95-40.13s),
+        что означает присутствие только 3 ведущих: Umputun, Bobuk, Gray.
+        Alek.sys не был представлен и не упоминался как участник.
+        Упоминание "Алекс говорит" в 5840s - это цитата из чата, не живое участие.
+        Все 4 реплики - короткие (0.8-2.5 сек), разбросаны по эпизоду,
+        вставлены между репликами других ведущих - типичный паттерн ошибки распознавания.
+
+      identified_as: null
+      possible_misattribution:
+        - likely_speaker: "Bobuk"
+          for_segments: [5474.83-5476.07]
+          reason: "Реплика между высказываниями Bobuk, продолжает его мысль"
+        - likely_speaker: "Gray"
+          for_segments: [5740.25-5741.89]
+          reason: "Реплика между высказываниями Gray"
+        - likely_speaker: "Umputun"
+          for_segments: [7482.02-7484.54, 7518.48-7519.3]
+          reason: "Реплики между высказываниями Umputun/Bobuk, контекст обсуждения Apple"
+
+# Детали реплик Alek.sys
+alek_sys_segments:
+  - stime: 5474.83
+    etime: 5476.07
+    duration: 1.24
+    text: "Тут ничего не поделаешь."
+    context_before: "Bobuk: Ты так или иначе привязан к своему DNS-провайдеру."
+    context_after: "Umputun: Да нет, тут что я привязан к провайдеру-то?"
+
+  - stime: 5740.25
+    etime: 5741.89
+    duration: 1.64
+    text: "Но там просто это выглядит так."
+    context_before: "Gray: У меня не включено, по-моему, MFA."
+    context_after: "Gray: Сначала введите e-mail, нажмите submit..."
+
+  - stime: 7482.02
+    etime: 7484.54
+    duration: 2.52
+    text: "Так тут тоже не запускай игру, все хорошо будет."
+    context_before: "Umputun: Не обязательно ей пользоваться."
+    context_after: "Umputun: Apple Music — это не продукт."
+
+  - stime: 7518.48
+    etime: 7519.3
+    duration: 0.82
+    text: "Можно ли так делать?"
+    context_before: "Bobuk: Ну, типа, это понятная такая история про дистрибуцию."
+    context_after: "Bobuk: Ну, можно."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys не был представлен в начале эпизода. Umputun явно указал на трёх участников.
+        4 реплики общей длительностью 6 сек - это ошибки распознавания голоса.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 638
+    from_speaker: "Alek.sys"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Alek.sys"
+    confidence: high
+    reason: |
+      Alek.sys не участвовал в эпизоде (в начале сказано "на троих мужиков").
+      Все 4 реплики - короткие, разбросанные, типичные ошибки распознавания.
+      Требуется voice comparison для определения реального спикера каждой реплики,
+      но безопасно переименовать в SPEAKER_MISATTRIBUTED для предотвращения
+      ложной атрибуции.
+
+# Задание на voice comparison
+voice_task:
+  needed: true
+  audio_url: "https://cdn.radio-t.com/rt_podcast638.mp3"
+  segments_to_identify:
+    - stime: 5474.83
+      etime: 5476.07
+      text: "Тут ничего не поделаешь."
+      likely_speaker: "Bobuk"
+    - stime: 5740.25
+      etime: 5741.89
+      text: "Но там просто это выглядит так."
+      likely_speaker: "Gray"
+    - stime: 7482.02
+      etime: 7484.54
+      text: "Так тут тоже не запускай игру, все хорошо будет."
+      likely_speaker: "Umputun"
+    - stime: 7518.48
+      etime: 7519.3
+      text: "Можно ли так делать?"
+      likely_speaker: "Bobuk"

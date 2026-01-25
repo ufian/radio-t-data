@@ -1,0 +1,43 @@
+episode: 630
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+  total_duration_sec: 8346  # ~2ч 19мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Единственная реплика (1 сек) в 7795.66-7796.83: "Если круто выглядит".
+        В начале эпизода сказано "традиционный составчик, все тут на месте" без упоминания Alek.sys.
+        Контекст: обсуждение Sketch Cloud дизайна.
+        До реплики: Gray (7761), Ksenks (7759), Bobuk (7791).
+        После реплики: Umputun (7797), далее Ksenks (7855) хвалит дизайн.
+        Скорее всего ошибка распознавания - реплика принадлежит Gray или Ksenks.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: voice_comparison_needed
+    episode: 630
+    speaker: "Alek.sys"
+    stime: 7795.66
+    etime: 7796.83
+    text: "Если круто выглядит"
+    confidence: high
+    reason: |
+      Alek.sys не был представлен в начале эпизода.
+      Единственная реплика за весь выпуск (1 сек).
+      Вероятная ошибка распознавания - требуется voice comparison.
+      Кандидаты: Gray (говорил до 7768), Ksenks (говорила до 7761, после 7855).

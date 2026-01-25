@@ -1,0 +1,251 @@
+episode: 626
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  guests_mentioned: ["Аня (Amazon)", "Алексей Первый"]
+  total_duration_sec: 9200  # ~2.5 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1658
+    replies_count: 375
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Новый гость, нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (54-61s) Umputun говорит:
+        "Ну, если она не сможет ее поддерживать, у нас Алексей Первый."
+        "Алексей Первый пришел к нам в студию сегодня."
+
+        SPEAKER_04 отвечает на "Есть у тебя фанаты?" (68s).
+        Использует мужской род: "я цисгендерный" (361s).
+        Обсуждает технические темы AWS как эксперт.
+
+      possible_matches:
+        - person_id: "alexey_perviy"  # Новый ID для добавления
+          confidence: 0.95
+          reason: "Прямое представление в начале выпуска как 'Алексей Первый'"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5843.9
+          etime: 5870.1
+          text: "Не, мы что-то пробовали его у себя развернуть, но как бы изначально концепция привязки репозиториев..."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 325
+    replies_count: 85
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (22-31s) Umputun говорит:
+        "Также и не будет ни у кого вопросов, а почему мы в этот раз Аню пригласили?"
+        "По сути, на этот выпуск можно было бы только Аню пригласить..."
+        SPEAKER_03 первой отвечает на эти реплики.
+
+        Gray говорит (338s): "...а потом уже Аня помолчит на Amazon"
+        SPEAKER_03 отвечает (350s): "Ну, я не буду молчать."
+
+        Использует женский род: "я не слушала" (3808s), "я не поняла" (3589s).
+        Umputun напрямую: "Аня" (3858s).
+        Работает с AWS (DynamoDB, Lambda и др.).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Уже идентифицирована
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 11
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибка распознавания голоса Ани (SPEAKER_03).
+        Контекст: обсуждает ту же проблему с сайтом, что SPEAKER_03 (5283-5320s).
+        Использует женский род: "я сделала рефреш" (5454s).
+        Umputun говорит (5324s): "пока Аня выкладывает" — сразу после реплик SPEAKER_02.
+
+      identified_as: "anya"
+      identification_method: "context"
+      confidence: high
+      evidence: "Продолжение разговора SPEAKER_03, та же тема, женский род"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики в случайные моменты.
+        Реплики: "А я не понимаю, почему вам так... Извини, говори." (1702s)
+        "Говори, говори." (1705s), "Так, сейчас читаю." (7778s)
+        Вероятно ошибка распознавания одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "anya"
+          confidence: 0.5
+          reason: "Может быть Аня, реплика 7778s рядом с обращением к Ане"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Может быть Bobuk, распознанный неверно"
+
+      voice_task:
+        needed: false  # Слишком короткие сегменты для сравнения
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие односложные реплики:
+        "Говори." (3827s), "Фаеркрекер." (7754s), "Окей, окей." (8366s)
+        Типичные ошибки распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Реплики в стиле ведущего"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk исправляет 'Фаертрекер' на 'Фаеркрекер' (7751s), сразу SPEAKER_07 повторяет"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_09"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики:
+        "Каким решением?" (1950s), "Потому что я еврей." (7484s), "Да." (9185s)
+        Вероятно ошибки распознавания разных спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "anya"
+          confidence: 0.4
+          reason: "Реплика 1950s в контексте разговора про Amazon с Аней"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале выпуска (0-100s) представлены:
+    - Umputun (ведущий)
+    - Gray (ведущий, "Грэй скажет сейчас номер" 7s)
+    - Аня (гостья Amazon, 22-31s)
+    - Алексей Первый (гость, 54-61s)
+    - Bobuk (ведущий, упомянут 89s, первая реплика 369s)
+    - Ksenks упоминается (44s), но первая реплика только в 2347s
+    - Alek.sys (ведущий) не представлен, первая реплика 4394s
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Ведущий не представлен в начале, появляется только с 4394s. Возможно присоединился позже."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 626
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Anya"
+    confidence: high
+    reason: |
+      Прямая идентификация через обращения Umputun ("Аня") и контекст
+      (работает в Amazon, обсуждает AWS сервисы, женский род).
+
+  - type: rename
+    episode: 626
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Anya"
+    confidence: high
+    reason: |
+      Ошибка распознавания того же спикера (Ани).
+      Продолжение разговора, женский род, тот же контекст.
+
+  - type: add_guest
+    person_id: "alexey_perviy"
+    canonical_name: "AlexeyPerviy"
+    real_name: "Алексей"
+    info: "Гость, выпуск 626. Упоминается как 'Алексей Первый'."
+    notes: |
+      Нужно добавить в people.yaml перед переименованием SPEAKER_04.
+
+  - type: rename
+    episode: 626
+    from_speaker: "SPEAKER_04"
+    to_speaker: "AlexeyPerviy"
+    confidence: high
+    reason: |
+      Прямое представление в начале как "Алексей Первый" (54-61s).
+      Много экспертных реплик по AWS, мужской род.
+
+# Дополнительные замечания
+notes: |
+  Эпизод 626 от 2018-12-01 посвящён AWS (после re:Invent).
+
+  Гости:
+  1. Аня (SPEAKER_03, SPEAKER_02) — работает в Amazon, эксперт по AWS сервисам
+  2. Алексей Первый (SPEAKER_04) — гость, технический эксперт
+
+  Мелкие ошибки распознавания (SPEAKER_01, SPEAKER_07, SPEAKER_09) —
+  короткие реплики, не влияют на общую картину, можно оставить как есть
+  или объединить с наиболее вероятным спикером.
+
+audio_url: "https://cdn.radio-t.com/rt_podcast626.mp3"

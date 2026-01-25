@@ -1,0 +1,88 @@
+episode: 636
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks]
+  guests_present: [Anya]
+  total_duration_sec: 5640  # примерно 94 минуты по audio
+  notes: |
+    В начале эпизода Umputun объявляет состав: "Две девчонки, две мальчишки" -
+    Ксюша, Аня, Gray, Alek.sys. Явно говорит "Леха вместо Бобука",
+    т.е. Bobuk отсутствует в этом выпуске.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 455
+    replies_count: 115
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. В начале (41.99s-62.58s) Umputun представляет состав: "Из двух девочек у нас
+           Ксюша... и Аня, которая точно подключена к чужой сети..."
+        2. Прямое обращение к SPEAKER_02 по имени (691.73s): "Я тебя вот что, Аня, спрошу"
+           - и SPEAKER_02 сразу отвечает.
+        3. SPEAKER_02 использует женский род: "включила", "пользовалась".
+        4. Ksenks (Ксюша) уже идентифицирована отдельно (171 реплика),
+           значит SPEAKER_02 - это вторая "девочка", т.е. Аня.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале эпизода явно сказано "Леха вместо Бобука", однако в транскрипте
+        присутствуют 3 реплики, размеченные как Bobuk (суммарно 9 сек):
+        - 453.25s: "Ну, в общем, как?"
+        - 661.67s: "Кстати, да, и Ксюша и Леша куда-то ели."
+        - 4465.12s: "Патреон, который... Ну давай, ты знаешь, про что это, поэтому рассказывай."
+
+        Это скорее всего ошибки распознавания - вероятно это Gray или Alek.sys.
+        Требуется voice comparison для точного определения.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 636
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Anya"
+    confidence: high
+    reason: |
+      Прямое обращение по имени в контексте (691.73s): "Я тебя вот что, Аня, спрошу",
+      представление в начале эпизода, использование женского рода в речи.
+
+# Задания на дополнительную проверку
+additional_tasks:
+  - task: "voice_comparison"
+    speaker: "Bobuk"
+    description: |
+      Проверить 3 реплики, размеченные как Bobuk - вероятно это ошибка,
+      т.к. в начале выпуска сказано что Bobuk отсутствует.
+    segments:
+      - stime: 453.25
+        etime: 455.33
+        text: "Ну, в общем, как?"
+      - stime: 661.67
+        etime: 664.21
+        text: "Кстати, да, и Ксюша и Леша куда-то ели."
+      - stime: 4465.12
+        etime: 4469.94
+        text: "Патреон, который... Ну давай, ты знаешь, про что это, поэтому рассказывай."
+    audio_url: "https://cdn.radio-t.com/rt_podcast636.mp3"

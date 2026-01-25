@@ -1,0 +1,52 @@
+episode: 659
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys]
+  hosts_absent: [Gray, Ksenks]
+  total_duration_sec: 6994
+  notes: "Gray отсутствует - явно упомянуто в начале ('а Греи нет')"
+
+# Подтверждение представления ведущих
+introduction_check:
+  timestamp_sec: 17
+  text: "Есть Бобук и Лёха, и Бобук сегодня будет на коне."
+  hosts_mentioned: [Bobuk, Alek.sys]
+  hosts_confirmed: true
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров (SPEAKER_00-08, Guest*) в этом эпизоде
+
+# Специальные спикеры (игнорируются)
+special_speakers:
+  - speaker: "SPEAKER_99"
+    replies_count: 9
+    analysis: "Аудио-артефакты, все реплики с нулевой/отрицательной длительностью (etime <= stime), английские фразы типа 'Exactly my point', 'Digital Ocean' - стандартный шум от автоматической транскрипции"
+  - speaker: "_ad"
+    replies_count: 12
+    analysis: "Рекламные вставки DigitalOcean"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_found: true
+  issues: []
+
+# Статистика по ведущим (для справки)
+host_statistics:
+  - speaker: Umputun
+    replies_count: 859
+    role: "Main host"
+  - speaker: Bobuk
+    replies_count: 658
+    role: "Co-host"
+  - speaker: Alek.sys
+    replies_count: 277
+    role: "Co-host"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Эпизод чистый, правила не требуются

@@ -1,0 +1,143 @@
+episode: 662
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks, Bobuk]
+  total_duration_sec: 6408
+  notes: |
+    Bobuk отсутствовал в начале эпизода ("ныне отсутствующий Бобок"),
+    подключился позже примерно на 2192 секунде (36:32).
+    Два гостя: Аня и "плохой Леша" (второй Алексей).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 154
+    replies_count: 30
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Прямое обращение Umputun: "Так я тебя, Аня, буду сегодня называть" (98s).
+        Umputun спрашивает: "Аня, ты вообще кто такая?" (137s).
+        SPEAKER_06 сама представляется: "Я полтора года назад написала Унпутуну и Бобок,
+        назвала его Бобок, что я хочу в эфир, и теперь иногда меня приглашают." (162s).
+        Подтверждает Umputun: "Аня, она и есть Аня" (159s).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1158
+    replies_count: 265
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "unknown_lesha_bad"
+          confidence: 0.9
+          reason: |
+            Называется "плохой Леша" в противовес "хорошему британскому Леше" (Alek.sys).
+            Umputun: "Плохой Леша тоже зашел" (188s).
+            Umputun обращается к нему: "Леш, ты, конечно, ты сам понимаешь" (238s).
+            SPEAKER_04 отвечает на вопросы про фрак: "Я во фраке фалды не поднимаю" (247s).
+            Активно участвует в технических обсуждениях (CI/CD).
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 566.86
+          etime: 590.11
+          text: |
+            Но вопрос в том, что делать, если у тебя, например, какое-то действие
+            внутри этой цепочки отвалилось, и что делать в таком случае?
+            Например, ты раскатываешь 10 микросервисов, один микросервис отвалился,
+            что должно происходить в этом случае? Ты должен все 10 откатывать
+            или ты должен только один откатывать, а все оставшиеся 9 должны работать?
+        audio_url: "https://cdn.radio-t.com/rt_podcast662.mp3"
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Единственная реплика "Треть чего?" (123s) в контексте разговора о "третине" -
+        двух женщинах (Ксюша и Аня) как трети состава.
+        Реплика звучит после фраз о "третине" и перед ответом Gray: "Их вдвоем, с Ксюшей" (124s).
+        Ksenks отвечает: "Да все правильно, два Леши, Грей и Умпутун, и мы с тобой" (126s).
+        Логически это вопрос от Ани, которая не поняла про "треть".
+
+      possible_matches:
+        - person_id: "anya"
+          confidence: 0.7
+          reason: "Контекст разговора о двух женщинах указывает на Аню"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: |
+        Гость "плохой Леша" не представлен формально по имени/фамилии.
+        Называется только по прозвищу "плохой Леша" в противовес Alek.sys ("хороший Леша").
+        Требуется идентификация по голосу или внешняя информация о том,
+        кто был гостем в выпуске 662.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 662
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Прямое представление в эфире, обращение по имени"
+
+  - type: rename
+    episode: 662
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Anya"
+    confidence: medium
+    reason: "Контекстная идентификация - единственная реплика в разговоре о 'третине' (двух женщинах)"
+
+# Дополнительные заметки
+notes: |
+  1. SPEAKER_04 ("плохой Леша") - активный гость с техническим бэкграундом (DevOps/CI-CD).
+     Участвовал в обсуждении GitHub Actions, CI vs CD, Spinnaker.
+     Суммарно ~1158 сек (19+ минут) речи - это существенный вклад.
+
+  2. В people.yaml нет записи для "плохого Леши" из выпуска 662.
+     Возможно стоит добавить нового гостя после идентификации.
+
+  3. Bobuk подключился позже - это нормальная практика для подкаста,
+     когда кто-то из ведущих присоединяется по ходу эфира.

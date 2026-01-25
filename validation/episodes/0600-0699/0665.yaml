@@ -1,0 +1,158 @@
+episode: 665
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk]  # Явно сказано в начале что он отсутствует
+  total_duration_sec: 7150
+  notes: |
+    В начале подкаста Umputun говорит: "Ксюша все еще недоступна, Бобук организовал
+    преступную группу". Однако Ksenks реально участвует с 155 секунды (410 реплик).
+    Возможно, формулировка была иронической или она присоединилась позже.
+
+    Bobuk помечен как отсутствующий - 2 его реплики являются ошибками распознавания.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (1-3 сек каждая), разбросанные в разных местах подкаста.
+        Все три реплики вклиниваются между репликами известных ведущих (в основном Ksenks)
+        и по смыслу продолжают их речь. Типичная ошибка автоматической сегментации речи.
+
+        Примеры:
+        - 1085s: "Ну да, это рак нашего общества." - продолжение темы Ksenks о Microsoft/open source
+        - 2390s: "У тебя большие... Да нет, это те, кто..." - прерванная фраза между репликами Ksenks
+        - 6790s: "Мы же это дело делаем." - 0.8 сек, между Umputun и Ksenks
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Все три реплики находятся в контексте речи Ksenks, скорее всего это её фразы с ошибкой сегментации"
+
+      voice_task:
+        needed: false  # Слишком короткие фрагменты для сравнения голоса
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 13
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Разрозненные короткие реплики в разных частях подкаста:
+        - 4504s: "Почему все считают Google таким злом?" - 3.5 сек, одиночный вопрос
+        - 6166-6175s: две реплики подряд (~9 сек суммарно) о пакетах
+        - 7145s: "Пока." - 0.2 сек, прощание в конце
+
+        Последняя реплика (7145s) явно ошибка - одновременное прощание нескольких человек.
+        Первые три реплики могут быть одним из ведущих (Gray или Alek.sys) с ошибкой распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Gray отвечает сразу после первого вопроса SPEAKER_07 о Google - возможно это его же вопрос с ошибкой сегментации"
+        - person_id: "alek_sys"
+          confidence: 0.4
+          reason: "Alek.sys активно участвует в обсуждении в те же моменты времени"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6166.49
+          etime: 6175.36
+          text: "Мне тоже кажется, что не будет у тебя этих... Опасения есть ненулевые. Да ну, я не думаю, что он будет чужим."
+
+  - speaker: "Bobuk"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        В начале подкаста (15-27 сек) Umputun явно говорит:
+        "Ксюша все еще недоступна, Бобук организовал преступную группу, именуемую в народе Шайка.
+        Он и его жена друг другу справки выписывают о освобождении от Радио Ти."
+
+        Это однозначно указывает на отсутствие Bobuk в этом выпуске.
+        Две реплики, помеченные как Bobuk (3180s и 6746s), являются ошибками распознавания.
+
+        Реплики:
+        - 3180s: "Если ты объявил две переменные, правильно?" - между репликами Alek.sys
+        - 6746s: "Кстати, некоторые из них так делают." - между Umputun и Gray
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.6
+          reason: "Первая реплика (3180s) находится в диалоге с Alek.sys о переменных"
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Вторая реплика (6746s) между Umputun и Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3180.09
+          etime: 3182.04
+          text: "Если ты объявил две переменные, правильно?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk явно объявлен отсутствующим в начале подкаста, но 2 реплики размечены как его.
+        Это ошибки распознавания, требующие исправления.
+    - speaker: "Ksenks"
+      issue: |
+        В начале говорится "Ксюша все еще недоступна", но она активно участвует (410 реплик).
+        Возможно, это была ирония или она присоединилась после вступления.
+        Не является ошибкой разметки, но отмечено для полноты.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 665
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Bobuk"
+    confidence: high
+    reason: |
+      Bobuk явно отсутствует в этом эпизоде (объявлено в начале подкаста).
+      Все 2 реплики Bobuk - ошибки распознавания.
+      Переименовать в SPEAKER_MISATTRIBUTED для последующего ручного определения.
+
+  - type: rename
+    episode: 665
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Все 3 реплики SPEAKER_01 находятся в контексте речи Ksenks и по смыслу
+      продолжают её высказывания. Вероятная ошибка сегментации.
+      Требует voice comparison для подтверждения.

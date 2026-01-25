@@ -1,0 +1,89 @@
+episode: 661
+status: needs_review
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys]
+  hosts_absent: [Gray, Ksenks]
+  total_duration_sec: 7703
+  notes: "В начале подкаста (83-92s) Umputun прямо говорит 'без Грея' - гиковский выпуск"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 4645.1
+
+    analysis:
+      is_error: true
+      error_reason: "Две очень короткие реплики (<2 сек каждая) в разных частях выпуска, типичные фразы-реакции"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Первая реплика (4645s 'О, гаш.') - реакция в разговоре об ООП"
+        - person_id: "alek_sys"
+          confidence: 0.4
+          reason: "Вторая реплика (7822s 'Я пока не смотрю.') - ответ на вопрос Umputun"
+
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие для voice comparison (<2 сек)"
+
+    replics:
+      - stime: 4645.1
+        etime: 4647.13
+        text: "О, гаш."
+        context_before: "Umputun: Условия должны заменяться наследованием."
+        context_after: "Umputun: А циклы это как раз жупил для функционального мира."
+
+      - stime: 7822.73
+        etime: 7823.45
+        text: "Я пока не смотрю."
+        context_before: "Umputun: Кто-нибудь видит тему?"
+        context_after: "Alek.sys: Сейчас закрою все лишнее."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Gray имеет 1 реплику (1590.8s), но Umputun в начале подкаста (83-92s) прямо говорит 'без Грея'. Это ошибка атрибуции."
+      evidence: "Umputun (83-86s): 'Прекрасной четвертины сегодня, но зато и без Грея'"
+      replics_count: 1
+      total_duration_sec: 1.38
+      replic_text: "Нет, он ползут, он ползут."
+      replic_time: 1590.8
+      context: "Разговор о Vue vs Angular. Перед репликой Umputun говорит 'Весь кровавый Enterprise на Angular сидит и будет сидеть.'"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 661
+    from_speaker: "Gray"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Gray отсутствует в эпизоде (объявлено в начале). Единственная реплика Gray - короткое перебивание 'Нет, он ползут' в дискуссии о фреймворках. Bobuk активно участвовал в этом разговоре непосредственно перед этим."
+    stime: 1590.8
+    etime: 1592.18
+
+  - type: rename
+    episode: 661
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Bobuk"
+    confidence: low
+    reason: "Короткие реакции, скорее всего один из ведущих. Возможно Bobuk или Alek.sys."
+    note: "Рекомендуется voice comparison или ручная проверка"
+
+# Финальные рекомендации
+recommendations:
+  - "Исправить атрибуцию Gray -> Bobuk (высокий приоритет, явная ошибка)"
+  - "SPEAKER_04 можно оставить или удалить как шум - реплики слишком короткие для надежной идентификации"

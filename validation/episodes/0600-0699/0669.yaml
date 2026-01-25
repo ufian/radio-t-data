@@ -1,0 +1,98 @@
+episode: 669
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 8146
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 218
+    replies_count: 81
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "222.9s: 'Всем привет, меня зовут Роман, я из дутнет-тусовки. Я работаю в Тинькофф.ру и темли двух дутнет-команд внутри компании.'"
+
+      # Это реальный гость, но его нет в people.yaml
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+    notes: |
+      Гость представился как Роман из .NET-тусовки, работает в Тинькофф.ру.
+      Пришёл рассказать про .NET Core 3.0 (первая тема выпуска, 00:05:14).
+      Его участие продолжается с 222s до ~1576s (когда Umputun говорит "Спасибо тебе, дружище, что зашел").
+      Идентификация ясна из представления - Роман, .NET-разработчик из Tinkoff.
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 9
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (4 штуки за весь выпуск), содержание - типичные реакции и шутки, которые могли быть произнесены любым ведущим. Реплики: 'Боже мой, вы еще и просыпаетесь вместе' (1722s), 'Ты сейчас про Echo Studio, да?' (1801s), 'Отправь смс на короткий номер' (3399s), 'Чем больше смс, тем круче ты не лох' (3402s). Последние две - явно шутка/подколка от кого-то из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Первая реплика (1722s) следует сразу за обращением Umputun к Ксюше, голос женский по контексту"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Вторая реплика (1801s) - технический уточняющий вопрос, характерный для Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3399.27
+          etime: 3405.21
+          text: "Отправь смс на короткий номер. Чем больше смс, тем круче ты не лох."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: add_guest
+    person_id: "roman_tinkoff"
+    canonical_name: "Roman"
+    real_name: "Роман"
+    info: ".NET-разработчик из Тинькофф, выпуск 669"
+    confidence: high
+    reason: "Представился в эфире: 'Всем привет, меня зовут Роман, я из дутнет-тусовки. Я работаю в Тинькофф.ру'"
+
+  - type: rename
+    episode: 669
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Roman"
+    confidence: high
+    reason: "Гость представился как Роман из Тинькофф, пришёл рассказать про .NET Core 3.0"
+
+notes: |
+  Эпизод 669 от 2019-09-28. Темы: .NET Core 3.0, Amazon новинки, Alexa голоса, Serverless, WARP, Uber.
+
+  Гость Роман пришёл специально рассказать про .NET Core 3.0 - это видно из контекста
+  (Umputun упоминает письмо от человека который хочет рассказать про "Netcore").
+
+  SPEAKER_03 - скорее всего ошибки распознавания голоса ведущих (короткие реакции).
+  Требуется voice comparison для точного определения.

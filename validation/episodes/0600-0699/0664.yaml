@@ -1,0 +1,71 @@
+episode: 664
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk, Alek.sys]
+  guests_present: [Anya]
+  total_duration_sec: 7015
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1065
+    replies_count: 307
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun в начале эпизода (68.67s): "А Аня будет представлять что-нибудь такое не сексистское"
+        2. Прямое обращение (435.4s): "Аня, а у тебя как с Битбакитом и Меркуриалом?"
+        3. Обращение на "ты" как к постоянному участнику (285.9s): "Ты как к функциональному программированию относишься?"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_99"
+    total_duration_sec: 0
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Аудио-артефакты: английские фразы из видео/аудио вставок (Goldman Sachs, MySQL/Redis/PSQL, Center for Disease Control)"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: "5 реплик, но не представлен явно в начале. Возможно, присоединился позже или слушал молча. Контекст реплик показывает, что это действительно Bobuk (например, обсуждение пин-кодов карт, квантовой запутанности)."
+    - speaker: "Alek.sys"
+      issue: "2 реплики за весь эпизод (561.6s и 1785.3s), очень короткие. Не упомянут в представлении участников. Скорее всего, присутствует, но в основном молчит. Контекст реплик не противоречит атрибуции."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 664
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Явное представление в начале эпизода и прямые обращения по имени"

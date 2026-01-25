@@ -1,0 +1,148 @@
+episode: 647
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8814
+  notes: |
+    Umputun говорит "состав полный плюс один" - имея в виду Bobuk, который часто
+    пропускает выпуски. Реального гостя в этом эпизоде нет, все 5 ведущих присутствуют.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        В 5930s Umputun спрашивает "Ты знала это, Ксения?" и сразу после (5932s)
+        SPEAKER_01 отвечает "В смысле?" - прямое обращение по имени.
+        Также в 6276s ответ "Нет, это не то слово" на реплику Alek.sys -
+        типичный женский ответ в контексте обсуждения.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 16
+    replies_count: 13
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (0.5-3 сек), разбросанные по всему эпизоду.
+        Типичные фразы-вставки: "Да", "Да, да, да", "Ну, и что?", "Ран что?",
+        "Увольняет, да", "Никто не смотрел", "А, перевязывать?".
+        Это характерные короткие реакции/междометия одного из ведущих,
+        неверно распознанные как отдельный спикер. Паттерн scattered
+        (реплики в разные моменты: 721s, 2368s, 4803s, 5176s, 5254s, 5664s,
+        7653s, 7903s, 9289s) подтверждает, что это не гость, а ошибка
+        диаризации разных ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Некоторые реплики идут после вопросов к нему"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Короткие реакции типичны для ведущего"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 10
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие вопросительные реплики разбросаны по эпизоду:
+        "Кто они?" (4988s), "Я до сих пор так делаю" (6045s),
+        "Потому что он говорит о библиотеке о времени" (6173s),
+        "Окей, окей" (7070s), "Ты про что?" (8668s).
+        Scattered pattern с очень короткими репликами указывает на
+        ошибки диаризации ведущих. Особенно характерно, что
+        реплика "Потому что он говорит о библиотеке о времени" идёт
+        сразу после Ksenks "Мы должны начать вовремя" - явный
+        признак неверного разделения спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Реплика в 6173s продолжает мысль Ksenks"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Вопрос 'Кто они?' идёт после реплики Gray"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "Скорее всего это Ksenks, неверно распознанная в 5 местах"
+    - speaker: "SPEAKER_02"
+      issue: "Ошибки диаризации - короткие реакции ведущих"
+    - speaker: "SPEAKER_03"
+      issue: "Ошибки диаризации - короткие реакции ведущих"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 647
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Прямое обращение Umputun "Ты знала это, Ксения?" перед репликой SPEAKER_01.
+      Все 5 реплик SPEAKER_01 по контексту подходят Ksenks.
+
+  - type: rename
+    episode: 647
+    from_speaker: "SPEAKER_02"
+    to_speaker: "SPEAKER_MISATTRIBUTED_02"
+    confidence: medium
+    reason: |
+      Нет единого источника для этих реплик. Это ошибки диаризации
+      нескольких ведущих. Требуется voice comparison для точного
+      определения каждой реплики. Переименование в SPEAKER_MISATTRIBUTED
+      маркирует их как требующие ручного разбора.
+
+  - type: rename
+    episode: 647
+    from_speaker: "SPEAKER_03"
+    to_speaker: "SPEAKER_MISATTRIBUTED_03"
+    confidence: medium
+    reason: |
+      Аналогично SPEAKER_02 - это ошибки диаризации нескольких
+      ведущих. Одна реплика явно продолжает мысль Ksenks.

@@ -1,0 +1,95 @@
+episode: 627
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 7572  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 315
+    replies_count: 94
+    pattern: consecutive  # участвует в дискуссиях осмысленно
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # требуется voice comparison
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        1. Женщина - говорит "Я написала" (390.97s), Bobuk говорит ей "Ты права" (4171.72s)
+        2. Упоминается как "Саня" дважды:
+           - "Ксюша Саня еще целевая аудитория Тумблера" (381.51s)
+           - "Вон Саня уже сидит из подобной компании, которая тоже телефон делала" (6302.66s)
+        3. Web-разработчик с экспертизой в CSS/accessibility (4109-4170s - обсуждает :focus селекторы)
+        4. Работала в компании, делавшей телефоны
+
+      possible_matches:
+        - person_id: "sanya_unknown"
+          confidence: 0.7
+          reason: "Явно названа по имени 'Саня', женщина, web-разработчик, связана с телефонной компанией"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5267.99
+          etime: 5300.62
+          text: |
+            Знаете, мессенджеров много, и много из них выполняют такие функции, как просто отправить сообщение и сделать видеозвонок.
+            Но для работы, например, тоже иногда нужны такого типа приложения.
+            И я знаю, у меня знакомые, которые работают консультантами,
+            Им нужно связываться с клиентами и помогать чинить какую-то проблему.
+            И при этом им нужно перехватывать их экран.
+            И вот таких мессенджеров или средств коммуникации хороших нет.
+        audio_url: "https://cdn.radio-t.com/rt_podcast627.mp3"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered  # единственная короткая реплика
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная односложная реплика 'Ага' (1 сек) между репликами Bobuk - типичная ошибка распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "2911.47-2912.45s: 'Ага' - вставлено между репликами Bobuk (2898.5-2911.43s и 2913.93-2919.18s)"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_02 (Саня)"
+      issue: "Гость не представлен формально в начале выпуска, но упоминается по имени в ходе подкаста"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 627
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Единственная реплика 'Ага' между репликами Bobuk, вероятно его голос неверно распознан"
+
+# Заметки для ручной проверки
+notes: |
+  SPEAKER_02 - это реальный гость по имени Саня (женщина, web-разработчик).
+  Для окончательной идентификации требуется:
+  1. Voice comparison с известными гостями-женщинами
+  2. Поиск информации о Сане, работавшей в телефонной компании
+
+  SPEAKER_01 - с высокой вероятностью ошибка распознавания, рекомендуется переименовать в Bobuk.

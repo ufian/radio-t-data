@@ -1,0 +1,108 @@
+episode: 648
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Ksenks, Gray]
+  # Bobuk отсутствует (упоминается в начале что его "забыли")
+  # Одна реплика Bobuk на 5496s скорее всего ошибка распознавания
+  total_duration_sec: 6998
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 27
+    replies_count: 15
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Реплики SPEAKER_04 всегда следуют за репликами Alek.sys или в контексте обсуждения Java/Spring тем, которые ведет Alek.sys. Umputun обращается 'Леша' перед некоторыми репликами. Вероятно ошибка распознавания голоса Alek.sys."
+
+      identified_as: "alek_sys"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        1. Реплика 4890s "С Кернстейном не знаком" - ответ на вопрос Umputun "Ты с Крейгом знаком? Он какой-то из ваших"
+        2. Реплика 6763s "Что, это Spring?" - вопрос в контексте обсуждения Java
+        3. Реплика 6682s "Спинговый толстый джарт 26 гигабайт" - продолжает тему про размеры Java-приложений
+        4. Реплики про LTS/1.6 версии (6542-6555s) - технические детали про Java версии
+        5. Alek.sys - известный Java-разработчик среди ведущих
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.75
+          reason: "Технический контекст Java/Spring, обращение 'Леша', реплики следуют за Alek.sys"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3563.58
+          etime: 3568.43
+          text: "Так что, ты знаешь, эти примеры в обе стороны работают, к сожалению."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная односложная реплика 'Правильно?' (0.5 сек) - типичная ошибка распознавания короткой реакции"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Реплика следует сразу после слов Umputun 'Должно быть просто' и перед его ответом 'Конечно'"
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Контекст дискуссии о подходах к программированию"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале выпуска (14s) Umputun говорит "Бобука мы забыли, это точно. Но это по его вине."
+        Bobuk имеет только 1 реплику на 5496s среди 1823 реплик эпизода.
+        Эта единственная реплика скорее всего ошибка распознавания - следует сразу после Alek.sys
+        и по контексту может быть его репликой.
+    - speaker: "SPEAKER_04"
+      issue: "Не представлен, но реплики технического характера указывают на Alek.sys"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 648
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Alek.sys"
+    confidence: medium
+    reason: "Контекст обсуждения Java/Spring, обращения 'Леша' от Umputun, реплики следуют за/перед Alek.sys"
+
+  - type: rename
+    episode: 648
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Umputun"
+    confidence: low
+    reason: "Односложная реплика между двумя репликами Umputun, вероятно его голос не распознан"
+
+  - type: rename
+    episode: 648
+    from_speaker: "Bobuk"
+    to_speaker: "Alek.sys"
+    confidence: low
+    reason: |
+      Bobuk отсутствует в выпуске (упомянуто в начале).
+      Единственная его реплика на 5496s следует сразу после Alek.sys и продолжает его мысль.
+      Требует voice comparison для подтверждения.

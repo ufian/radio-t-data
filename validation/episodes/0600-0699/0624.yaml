@@ -1,0 +1,45 @@
+episode: 624
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Gray]
+  total_duration_sec: 6675
+  notes: "Ksenks отсутствует (упомянута в начале - занята тушением пожаров в Калифорнии)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики (<1 сек каждая) в разных частях эпизода. Первая (0.3 сек) - вклинивается между репликами Bobuk, вероятно часть его речи. Вторая - маркер 'СМЕХ', явный аудио-артефакт."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: "Umputun в начале (8-15 сек) объясняет отсутствие Ksenks - 'Ксюша, которая там героически тушит огонь и поэтому не могла прийти'. Остальные ведущие (Bobuk, Gray, Alek.sys) присутствуют с начала эпизода."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 624
+    from_speaker: "SPEAKER_01"
+    to_speaker: "SPEAKER_99"
+    confidence: high
+    reason: "Обе реплики являются артефактами: первая - 0.3 сек фрагмент речи между репликами Bobuk, вторая - маркер 'СМЕХ'. Типичные признаки SPEAKER_99."

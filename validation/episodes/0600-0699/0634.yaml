@@ -1,0 +1,53 @@
+episode: 634
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6812  # ~1:53:32 (сумма 2728+1544+1068+781+691)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 6
+    replies_count: 6
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Все 6 реплик очень короткие (0.24-1.84 сек), разбросаны по эпизоду.
+        Типичные фразы: "Угу", "Не всегда, да", "Претензия", "Такие дела" -
+        это классические ошибки распознавания, когда система не смогла
+        атрибутировать короткую реакцию кому-то из известных спикеров.
+        На 1429s реплика "Не всегда, да" явно продолжение речи Gray
+        (до и после идёт Gray с "Не всегда, не всегда" и "Зависит, но варят").
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    В начале эпизода (0:06-0:86) Umputun представляет всех ведущих:
+    - "Радио ТВ, выпуск 634, состав полный плюс один" (шутка про плохой звук Бобука)
+    - Упоминает Бобука, Ксюшу, Лёшу, Грея
+    Гостей в эпизоде нет.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# SPEAKER_01 слишком разбросан и имеет слишком мало контекста для
+# уверенного переименования. Рекомендуется оставить как есть или
+# удалить эти реплики как шум.
