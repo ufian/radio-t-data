@@ -1,0 +1,88 @@
+episode: 599
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7405
+  notes: |
+    В начале эпизода Umputun говорит "Гостей нет сегодня" (52s).
+    Упоминает гостя из Англии и "американскую гостью", но оба отсутствуют.
+    Alek.sys имеет всего 4 реплики (7 сек) - возможно ошибки распознавания.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: consecutive
+    time_range: "5531-5536s (1:32:11-1:32:16)"
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики подряд (по ~2 сек каждая) в середине диалога между Ksenks и Umputun.
+        Контекст: обсуждение показанного токена.
+        - Ksenks (5533s): "Теперь все знают твой токен."
+        - SPEAKER_05 (5534s): "Меняй скорее."
+        Реплики по стилю и контексту похожи на Ksenks - продолжение шутки о токене.
+        В начале эпизода гости не заявлены ("гостей нет сегодня").
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: |
+            Реплики идут сразу после/перед репликами Ksenks.
+            Стиль и контекст соответствуют - продолжение шутки о токене.
+            Короткие фразы характерны для подобных шутливых реплик.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5531.44
+          etime: 5536.56
+          text: "Все, все скопировали себе. / Меняй скорее."
+        compare_with:
+          - speaker: "Ksenks"
+            nearby_segment:
+              stime: 5533.12
+              etime: 5534.56
+              text: "Теперь все знают твой токен."
+            reason: "Реплика между двумя репликами SPEAKER_05"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Только 4 реплики (7 сек суммарно) разбросаны по эпизоду.
+        Не представлен в начале (Umputun упоминает только Bobuk, Gray, Ksenks).
+        Возможно ошибки распознавания или реплики из чата/звонков.
+        Реплики: "Пусть докажут" (814s), "Ты ожидал, что будет разумная регуляция?" (1031s),
+        "Ты плохо слышишь?" (3986s), "В смысле, что ты можешь играть в игру" (5915s).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 599
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Реплики по контексту и расположению похожи на Ksenks.
+      Требуется voice comparison для подтверждения.
+
+# Дополнительные наблюдения
+notes: |
+  1. SPEAKER_05 - скорее всего ошибочно распознанная Ksenks (2 реплики, 4 сек).
+  2. Alek.sys вызывает вопросы - не представлен, очень мало реплик.
+     Рекомендуется проверить его 4 реплики на предмет правильной атрибуции.
+  3. Аудио для проверки: https://cdn.radio-t.com/rt_podcast599.mp3

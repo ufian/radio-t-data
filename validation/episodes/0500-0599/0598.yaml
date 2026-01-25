@@ -1,0 +1,112 @@
+episode: 598
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 7528  # ~2ч 5м
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 242
+    replies_count: 56
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "denis_dovgopoliy"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Gray в 87-112 сек: 'Гость хорошо известен совершенно точно украинской аудитории нашей, потому что Денис Довгополый. Он предприниматель, он занимается стартапами'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-2 сек каждая) в разные моменты подкаста. Все фразы - типичные переспросы и реакции: 'Вообще, все-все?', 'То есть за все свои лучшие выписки?', 'А, все четыре?', 'Так мы еще не начали?', 'Раз в день?'. Контекст 810-823 сек показывает диалог с Ksenks - Umputun обращается к Ксюше, а SPEAKER_01 переспрашивает. Скорее всего это ошибочно распознанная Ksenks."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Контекст диалога в 810-823 сек: Umputun говорит 'Ксюша, мы бы с тебя первую тему не трогали', затем SPEAKER_01 переспрашивает. Сразу после (814 сек) появляется Ksenks с похожим вопросом."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 810.7
+          etime: 823.41
+          text: "Вообще, все-все? То есть за все свои лучшие выписки? А, все четыре? ... Так мы еще не начали?"
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 0
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две односложные реплики по 0.2 сек и 0.06 сек: 'Окей.' (4299 сек) и 'Да.' (8274 сек). Типичные артефакты распознавания - слишком короткие для реальных реплик."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 598
+    from_speaker: "SPEAKER_04"
+    to_speaker: "DenisDovgopoliy"
+    confidence: high
+    reason: "Чёткое представление гостя Gray в 87-112 сек: 'Денис Довгополый, предприниматель, занимается стартапами'. Гость активно участвует в обсуждении (56 реплик, 242 сек)."
+
+  - type: rename
+    episode: 598
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Контекст указывает на Ksenks: Umputun обращается к Ксюше, затем идёт SPEAKER_01. Требует voice comparison для подтверждения."
+
+  - type: delete
+    episode: 598
+    from_speaker: "SPEAKER_00"
+    to_speaker: null
+    confidence: medium
+    reason: "Артефакты распознавания - односложные реплики менее 0.2 сек. Можно объединить с предыдущим спикером или удалить."
+
+# Новый гость для добавления в people.yaml
+new_guest:
+  id: "denis_dovgopoliy"
+  canonical_name: "DenisDovgopoliy"
+  aliases: ["Денис", "Dovgopoliy", "Довгополый"]
+  real_name: "Денис Довгополый"
+  info: "Предприниматель, занимается стартапами и инвестициями. Украина. Выпуск 598."
