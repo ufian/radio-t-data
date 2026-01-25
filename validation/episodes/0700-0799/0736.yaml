@@ -1,0 +1,30 @@
+episode: 736
+status: clean
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Alek.sys
+    - Gray
+  total_duration_sec: 6757
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (0:07-0:46) Umputun представляет состав:
+    - "Состав без девочек" (Ksenks отсутствует)
+    - "Перед кем ты, Бобук, будешь хвост распускать?" - Bobuk упомянут
+    - Упоминание Леши (Alek.sys) в диалоге
+    - "Грей на месте, Бобук на месте" (42s) - Gray и Bobuk подтверждены
+    Все четыре присутствующих ведущих представлены в начале.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

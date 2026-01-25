@@ -1,0 +1,62 @@
+episode: 794
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  hosts_absent: [Gray]
+  total_duration_sec: 7106  # примерно 1:58:26
+
+# Важное наблюдение: в начале выпуска (00:09-00:14) явно сказано, что Gray отсутствует
+# Umputun: "А где Грэвин? Отпрашивался на сегодня?"
+# Bobuk: "Отпрашивался. Было дело. У него справка есть. У него трамвай вообще сломался."
+
+# Однако есть 1 реплика, размеченная как Gray
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray отмечен отсутствующим в начале выпуска (00:09-00:14): "А где Грэвин?
+        Отпрашивался на сегодня?" - "Отпрашивался. Было дело."
+        Однако на отметке 4710.88s (1:18:30) появляется реплика Gray: "Так что глаза вытекают" (1.4 сек).
+        Контекст: разговор про экраны ноутбуков между Umputun и Bobuk.
+        Это ошибка распознавания - реплика принадлежит одному из присутствующих ведущих.
+      evidence:
+        timestamp_sec: 4710.88
+        duration_sec: 1.4
+        text: "Так что глаза вытекают."
+        context_before: "Bobuk: 'Не какой-то вот это Full HD.'"
+        context_after: "Umputun: 'Full HD на 13 дюймов, ну ничего, еще нормально.'"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 794
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Gray"
+    confidence: high
+    reason: |
+      Gray явно отсутствует в этом выпуске (подтверждено в начале подкаста).
+      Единственная реплика Gray (1.4 сек) - это короткая фраза в середине диалога
+      между другими ведущими. Скорее всего это ошибка распознавания голоса.
+      Требуется voice comparison для определения реального спикера.
+      Вероятные кандидаты: Bobuk (по контексту разговора) или Alek.sys.
+
+# Задание на voice comparison
+voice_comparison_task:
+  needed: true
+  misattributed_segment:
+    speaker: "Gray"
+    stime: 4710.88
+    etime: 4712.28
+    text: "Так что глаза вытекают."
+  candidates:
+    - speaker: Bobuk
+      reason: "Непосредственно до этой реплики говорил Bobuk"
+    - speaker: Alek.sys
+      reason: "Активный участник эпизода, часто комментирует тему hardware"

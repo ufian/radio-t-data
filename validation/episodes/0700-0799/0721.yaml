@@ -1,0 +1,98 @@
+episode: 721
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  guests_present: [Anya]
+  total_duration_sec: 7271  # ~2h 1m
+
+# Проблемы с атрибуцией спикеров
+speaker_issues:
+  - speaker: "Gray"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Gray не участвовал в этом выпуске. Ведущие многократно упоминают его в третьем лице ('Грей бы одобрил', 'что скажет Грей'). Единственная реплика 'Бегем' на 5950s - ошибка распознавания, скорее всего это один из присутствующих ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Контекст:
+        - 1844s: "Потом ты просто привык, что Грей всегда отвечает сразу же, когда ты задаешь вопрос"
+        - 3189s: "А Грей бы одобрил"
+        - 5977s: "Как-то Грей про это еще не сказал"
+        - 6028s: "Ну, поглянем, что скажет Грей"
+        - 6218s: "Грей бы прокомментировал, мне кажется"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Присутствовала в выпуске, могла повторить 'Бегем' после Umputun"
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Присутствовал в выпуске"
+        - person_id: "anya"
+          confidence: 0.3
+          reason: "Присутствовала как гость"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5950.22
+          etime: 5951.1
+          text: "Бегем."
+        context: "Umputun говорит 'Все бегим.' (5949s), затем кто-то повторяет 'Бегем.' - скорее всего Ksenks или Alek.sys"
+
+# Анализ неизвестных спикеров (из предрассчитанной статистики)
+unknown_speakers:
+  - speaker: "Anya"
+    total_duration_sec: 815
+    replies_count: 203
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в начале выпуска (20-26s): "Ксюша и Аня сегодня представляют лучшие половины нашего выпуска."
+        Также (81-98s): "Поскольку мы не просто так Аню пригласили... первая тема про Амазон."
+        Это указывает, что Anya работает в Amazon и приглашена как эксперт.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: "Атрибутирован как спикер, но отсутствовал в выпуске (упоминается только в третьем лице)"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 721
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Gray"
+    confidence: high
+    reason: "Gray не участвовал в выпуске. Ведущие многократно говорят о нём в третьем лице. Единственная реплика 'Бегем' (1 сек) - явная ошибка распознавания голоса."
+
+# Примечания
+notes: |
+  Выпуск 721 от 26 сентября 2020 года.
+  Состав: Umputun, Ksenks, Alek.sys + гость Anya (работает в Amazon).
+  Gray отсутствует - многократно упоминается в третьем лице.
+  Anya корректно размечена и есть в people.yaml (id: anya, 13 выпусков).

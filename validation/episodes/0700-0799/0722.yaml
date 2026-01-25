@@ -1,0 +1,27 @@
+episode: 722
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk, Gray]
+  total_duration_sec: 7768
+
+# Комментарий по составу
+notes: |
+  Эпизод от 3 октября 2020 года.
+  Umputun в начале объясняет состав: Ксюша присутствует, Аня (вероятно Gray) отказалась,
+  Лёха (Alek.sys) "на правах гостя" из-за проблем с техникой, Bobuk отсутствует
+  по уважительной причине третий раз подряд.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

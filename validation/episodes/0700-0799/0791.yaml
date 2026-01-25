@@ -1,0 +1,88 @@
+episode: 791
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  hosts_absent: [Gray]
+  total_speakers: 5
+  notes: >
+    В начале выпуска Umputun явно говорит "состав без Грэя" и "Грэй только нет",
+    что подтверждает отсутствие Gray в этом эпизоде.
+
+# Проблемы консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: >
+        Gray отмечен как отсутствующий в начале эпизода (Umputun: "состав без Грэя"),
+        но имеет 1 реплику на отметке 3716 сек. Это явная ошибка распознавания.
+
+# Детальный анализ проблемных спикеров
+problem_speakers:
+  - speaker: "Gray"
+    total_duration_sec: 1.26
+    replies_count: 1
+    first_appearance_sec: 3716.06
+    pattern: single_isolated
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Gray явно отсутствует в этом выпуске — Umputun сказал это в начале эпизода.
+        Реплика "Отказался, гад." (3716-3717 сек) — короткая фраза в диалоге между
+        Umputun, Bobuk и Alek.sys. Контекст: обсуждают кого-то, кто отказался дать деньги.
+        Bobuk сразу после говорит "Просто реально отказался", что подтверждает —
+        это скорее всего его реплика, ошибочно приписанная Gray.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Bobuk"
+          confidence: 0.7
+          reason: >
+            Bobuk участвует в этом диалоге, сразу после говорит похожую фразу
+            "Просто реально отказался". Интонация и контекст совпадают.
+        - person_id: "Umputun"
+          confidence: 0.2
+          reason: >
+            Umputun ведёт этот диалог, но менее вероятно — у него другой стиль речи.
+
+      voice_task:
+        needed: true
+        reason: >
+          Для точного определения, кому принадлежит реплика, нужно сравнить голоса.
+          Предположительно Bobuk, но требуется подтверждение.
+        reference_segment:
+          stime: 3716.06
+          etime: 3717.32
+          text: "Отказался, гад."
+        compare_with:
+          - speaker: "Bobuk"
+            reference_stime: 3717.78
+            reference_etime: 3718.84
+            reference_text: "Просто реально отказался."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 791
+    from_speaker: "Gray"
+    to_speaker: "Bobuk"
+    stime: 3716.06
+    etime: 3717.32
+    confidence: medium
+    reason: >
+      Gray отсутствует в выпуске (подтверждено Umputun в начале).
+      Контекст и последующая реплика Bobuk ("Просто реально отказался")
+      указывают на него как вероятного автора. Требуется voice comparison
+      для повышения уверенности до high.
+
+# Неизвестные спикеры
+unknown_speakers: []
+# В этом эпизоде нет SPEAKER_* или Guest* спикеров

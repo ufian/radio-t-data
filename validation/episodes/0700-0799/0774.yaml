@@ -1,0 +1,57 @@
+episode: 774
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  guests_present: [Anya]
+  total_duration_sec: 9900
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Все спикеры идентифицированы:
+# - Umputun: 812 реплик, 2653 сек (ведущий)
+# - Bobuk: 1014 реплик, 3797 сек (ведущий)
+# - Ksenks: 555 реплик, 2164 сек (ведущая)
+# - Anya: 133 реплики, 451 сек (гость из people.yaml)
+# - _ad: 11 реплик, 77 сек (реклама - игнорируется)
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - speaker: Anya
+      introduced_at: 27s
+      evidence: "Bobuk: 'ты напомни всем, что у нас тут Аня еще есть'"
+    - speaker: Ksenks
+      introduced_at: 156s
+      evidence: "Ksenks: 'Привет, Ань.' - Umputun: 'Привет, Ксюш.'"
+    - context: "В начале (0-1s) Umputun объясняет: 'состав необычный... Грей гуляет, Леха шляется в отпуске'"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не нужны - все спикеры корректно размечены
+
+# Дополнительная информация
+metadata:
+  date: "2021-10-02"
+  duration_min: 165
+  speakers_breakdown:
+    - speaker: Bobuk
+      replies: 1014
+      duration_sec: 3797
+      first_appearance_sec: 27
+    - speaker: Umputun
+      replies: 812
+      duration_sec: 2653
+      first_appearance_sec: 1
+    - speaker: Ksenks
+      replies: 555
+      duration_sec: 2164
+      first_appearance_sec: 156
+    - speaker: Anya
+      replies: 133
+      duration_sec: 451
+      first_appearance_sec: 98

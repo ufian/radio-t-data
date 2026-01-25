@@ -1,0 +1,65 @@
+episode: 705
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  # Gray отсутствует (озвучено в начале: "нет Грея")
+  total_duration_sec: 8975  # ~2.5 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 0.36
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика "Ну да." (0.36 сек) в момент 8547.8s появляется между
+        двумя репликами Ksenks. Ksenks до этого говорит о теме, затем SPEAKER_06
+        произносит "Ну да.", и сразу после Ksenks продолжает с "Ну да, просто мне кажется...".
+        Это типичная ошибка ASR, когда система разбивает одну фразу на двух спикеров.
+        Контекст подтверждает: речь Ksenks логически непрерывна.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - >
+      В начале эпизода (0:06-0:19) Umputun явно представляет состав:
+      "Состав сегодня странный. Потому что, во-первых, нет Грея, во-вторых, нет Бобука.
+      Вместо Бобука к нам зашел Гоша. И у нас сегодня будет Гоша и Леша."
+      Гоша — это Bobuk (Григорий Бакунов), Леша — Alek.sys. Далее присоединяется Ksenks.
+    - >
+      Реплика "Бобука, ты тоже не можешь писать в Телеграм?" (245s) подтверждает,
+      что Bobuk присутствует и это именно Гоша. Шутка в начале про "нет Бобука" —
+      обыгрывание его имени Георгий/Гоша.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 705
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      SPEAKER_06 имеет единственную реплику "Ну да." (8547.8-8548.2s) между
+      репликами Ksenks. Сразу после этого Ksenks говорит "Ну да, просто мне кажется..." —
+      это одна непрерывная мысль, ошибочно разделённая ASR. Контекст, интонация и
+      логика речи однозначно указывают на Ksenks.

@@ -1,0 +1,52 @@
+episode: 727
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+  total_duration_sec: 8153
+
+# Детальный анализ спикеров
+speakers_stats:
+  - speaker: Umputun
+    replies_count: 1007
+    total_duration_sec: 3266
+    first_appearance_sec: 1
+  - speaker: Bobuk
+    replies_count: 643
+    total_duration_sec: 2253
+    first_appearance_sec: 18
+  - speaker: Alek.sys
+    replies_count: 296
+    total_duration_sec: 1066
+    first_appearance_sec: 28
+  - speaker: Gray
+    replies_count: 196
+    total_duration_sec: 679
+    first_appearance_sec: 14
+  - speaker: _ad
+    replies_count: 10
+    total_duration_sec: 88
+    first_appearance_sec: 77
+    note: "рекламные вставки - игнорируются"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все четыре ведущих присутствуют с первых секунд эпизода.
+    Umputun начинает со стандартного приветствия "Доброго времени суток".
+    Gray, Bobuk и Alek.sys включаются в разговор в течение первых 30 секунд.
+    Гостей в этом выпуске нет.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

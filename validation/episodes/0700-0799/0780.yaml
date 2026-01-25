@@ -1,0 +1,26 @@
+episode: 780
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Alek.sys
+    - Ksenks
+  total_duration_sec: 8386
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Эпизод начинается как "дуэт" (Umputun + Alek.sys).
+    Ksenks присоединяется позже (~16 мин), что явно обозначено в диалоге:
+    "Ксюша, ты дышишь к нам?" (982.5s) - "Да, я дышу к вам" (985.9s).
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

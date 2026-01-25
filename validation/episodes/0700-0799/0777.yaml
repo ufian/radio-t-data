@@ -1,0 +1,25 @@
+episode: 777
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7400
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Эпизод начинается с приветствия Umputun (0.8s), Gray отвечает (12.2s),
+    Alek.sys подключается (24.5s), Bobuk вступает (94.8s), Ksenks присоединяется (483.6s).
+    Все ведущие появляются естественно без формального представления - это типично
+    для постоянного состава. Ksenks упоминается в начале как "лучшая пятерина"
+    которая "подгребет" (реплика 2, 13.4s).
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

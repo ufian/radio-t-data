@@ -1,0 +1,68 @@
+episode: 701
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  guests_present: [Anya]
+  total_duration_sec: 10501
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 511
+    replies_count: 139
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода Umputun представляет участников (68.9s):
+        "На месте, значит, Бобу, Грей, Леха и Аня."
+
+        До этого (11.7s-22.8s) обращается к Ане напрямую:
+        "Аня зашла на конек. Аня, ты знаешь... Леша показывает тебе, как приходящий гость..."
+
+        SPEAKER_05 отвечает на вопросы, адресованные Ане:
+        - "А вы считаете мои выпуски?" (42.0s)
+        - "Да я как-то все время стесняюсь проситься" (63.9s)
+
+        Характер реплик соответствует гостю-участнику:
+        - Задаёт вопросы о технических темах
+        - Участвует в обсуждении на протяжении всего эпизода (511 сек)
+
+      possible_matches: []
+
+      # Voice task не требуется - идентификация высокой уверенности
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 8244.8
+          etime: 8261.4
+          text: "Потому что, да, так было, когда все только началось, но буквально несколько дней назад я заказывала..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 701
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Anya"
+    confidence: high
+    reason: |
+      SPEAKER_05 идентифицирован как Аня (anya из people.yaml) на основании:
+      1. Явное представление в начале эпизода: "На месте Бобу, Грей, Леха и Аня"
+      2. Прямое обращение Umputun к Ане перед репликами SPEAKER_05
+      3. Ответные реплики соответствуют контексту диалога с Аней
+      4. 139 реплик, 511 сек - активное участие на протяжении всего эпизода

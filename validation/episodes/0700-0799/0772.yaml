@@ -1,0 +1,63 @@
+episode: 772
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray, Alek.sys, Ksenks]
+  hosts_absent: [Umputun]
+  total_duration_sec: 8327
+  notes: >
+    В начале выпуска Gray шутит: "Надо честно сказать, что мы просто Женю выгнали,
+    потому что он в прошлый раз сказал «Добрый вечер», и вот это была, конечно, ошибка."
+    Umputun (Евгений) отсутствует в этом эпизоде.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проблемные спикеры (ведущие с аномалиями)
+host_anomalies:
+  - speaker: "Umputun"
+    total_duration_sec: 1
+    replies_count: 1
+    first_appearance_sec: 1355
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Umputun отсутствует в этом выпуске (подтверждено шуткой в начале эпизода
+        о том, что "Женю выгнали"). Единственная реплика длительностью 1 сек
+        ("Нет, нет, нет.") в середине диалога между Alek.sys и Bobuk -
+        это явная ошибка автоматического распознавания.
+
+      likely_actual_speaker: "Bobuk"
+      confidence: high
+      evidence: >
+        Контекст: Alek.sys спрашивает "Неужели там собирают спайс?" (1348-1349),
+        5 сек паузы, затем "Нет, нет, нет." (1354-1355), и сразу Bobuk продолжает
+        "Вы не представляете, откуда этот спайс берется." (1355-1358).
+        Bobuk отвечает на вопрос Alek.sys, реплика "Нет, нет, нет" - начало его ответа.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Umputun"
+      issue: >
+        1 реплика (1 сек) от Umputun при его подтвержденном отсутствии в выпуске.
+        Ошибка распознавания, скорее всего реплика принадлежит Bobuk.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 772
+    from_speaker: "Umputun"
+    to_speaker: "Bobuk"
+    segment:
+      stime: 1354.59
+      etime: 1355.64
+      text: "Нет, нет, нет."
+    confidence: high
+    reason: >
+      Umputun отсутствует в выпуске (подтверждено вступлением).
+      Единственная реплика в контексте диалога Bobuk - это начало его ответа.

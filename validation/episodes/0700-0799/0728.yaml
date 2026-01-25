@@ -1,0 +1,31 @@
+episode: 728
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+    - Alek.sys
+    - Gray
+  total_duration_sec: 7435.6
+  notes: "Эпизод посвящён Apple-сходке (презентация Apple Silicon M1, 14 ноября 2020)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все пять постоянных ведущих присутствуют в эпизоде.
+    В начале (0:00-2:30) Umputun ведёт вступление, далее появляются Alek.sys (28s),
+    Bobuk (30s), Gray (113s), Ksenks (140s). Все ведущие активно участвуют в обсуждении.
+    Ksenks упоминается по имени в реплике Umputun (131s): "Те, кто с нами тут не был
+    на сходке, по-моему, ты, Ксюша, не зашла в наше гордое общество."
+
+# Предлагаемые правила очистки
+suggested_rules: []

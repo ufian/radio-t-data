@@ -1,0 +1,65 @@
+episode: 796
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+    - Gray
+    - Alek.sys
+  total_duration_sec: 7596
+  total_replies: 2096
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Неизвестных спикеров в этом эпизоде нет.
+# Все спикеры — известные ведущие + реклама (_ad).
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Gray отсутствовал в начале эпизода (упомянуто на 17s: 'У нас Грэй нету')"
+    - "Gray присоединился на 1246s (≈21 мин), приветствие от Ksenks: 'О, привет'"
+    - "Ksenks упомянута на 22s ('Ксюша пришла'), первая реплика на 78s"
+    - "Alek.sys не был явно представлен, но участвует с 101s — стандартный ведущий"
+    - "Bobuk вступает с 14s, участвует в обсуждении о смене ника Грея в Twitter"
+  issues: []
+
+# Статистика по ведущим
+hosts_stats:
+  - name: Umputun
+    replies: 752
+    duration_sec: 2132
+    first_appearance_sec: 1
+  - name: Bobuk
+    replies: 519
+    duration_sec: 1809
+    first_appearance_sec: 14
+  - name: Ksenks
+    replies: 325
+    duration_sec: 1107
+    first_appearance_sec: 78
+  - name: Gray
+    replies: 277
+    duration_sec: 1065
+    first_appearance_sec: 1246
+    note: "Присоединился позже, изначально отсутствовал"
+  - name: Alek.sys
+    replies: 206
+    duration_sec: 624
+    first_appearance_sec: 101
+
+# Специальные спикеры
+special_speakers:
+  - name: _ad
+    replies: 17
+    duration_sec: 120
+    note: "Рекламные вставки"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются — эпизод чистый

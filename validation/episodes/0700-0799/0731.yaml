@@ -1,0 +1,49 @@
+episode: 731
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+    - Alek.sys
+  guests_present:
+    - Anya
+  total_duration_sec: 8709  # ~2.4 часа (сумма: 2881+3071+1193+956+608)
+
+# Детальный анализ спикеров
+unknown_speakers: []
+# Все спикеры в этом эпизоде идентифицированы:
+# - Umputun: 833 реплик, 2881 сек
+# - Bobuk: 834 реплик, 3071 сек
+# - Ksenks: 316 реплик, 1193 сек
+# - Alek.sys: 267 реплик, 956 сек
+# - Anya: 139 реплик, 608 сек (гость, есть в people.yaml)
+# - _ad: 11 реплик (реклама, игнорируется)
+
+# Информация о госте
+identified_guests:
+  - speaker: "Anya"
+    person_id: "anya"
+    total_duration_sec: 608
+    replies_count: 139
+    identification_method: "introduction"
+    confidence: high
+    evidence: |
+      91.95s Umputun: "Вместо Грея мы сегодня Аню пригласили."
+      Также в people.yaml: id=anya, real_name="Анна", info="13 выпусков"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Gray отсутствует в этом выпуске (явно упомянуто: 'вместо Грея')"
+    - "Anya представлена в начале выпуска (91.95s)"
+    - "Ksenks опоздала из-за разряженного ноутбука (130.37s)"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Очистка не требуется - все спикеры корректно идентифицированы

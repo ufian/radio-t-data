@@ -1,0 +1,130 @@
+episode: 763
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Gray, Alek.sys]
+  hosts_absent: [Bobuk]  # Явно сказано в эпизоде: "Бобука нет"
+  total_duration_sec: 6985  # ~116 минут, сумма всех реплик
+
+# Ведущие подтверждены
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 916
+    total_duration_sec: 3527
+    first_appearance_sec: 1
+  - speaker: Ksenks
+    replies_count: 320
+    total_duration_sec: 1339
+    first_appearance_sec: 1672  # Присоединилась позже
+  - speaker: Gray
+    replies_count: 276
+    total_duration_sec: 1324
+    first_appearance_sec: 41
+  - speaker: Alek.sys
+    replies_count: 205
+    total_duration_sec: 785
+    first_appearance_sec: 14
+
+# Проблемные реплики - Bobuk
+# ВАЖНО: На 177 сек Umputun говорит "Но Бобука нет", то есть Bobuk НЕ участвует в этом выпуске
+# Однако 4 реплики ошибочно помечены как Bobuk - это ошибка распознавания
+misattributed_speaker:
+  speaker: Bobuk
+  replies_count: 4
+  total_duration_sec: 10
+
+  evidence_absent: |
+    На 177 секунде Umputun говорит: "Но Бобука нет, поэтому тебе придется ее нежно любить."
+    Это однозначно указывает, что Bobuk не участвует в данном выпуске.
+
+  misattributed_replies:
+    - stime: 4853.82
+      etime: 4856.22
+      text: "Слушай, ну и Женеция, и Евросоюза вообще-то."
+      context_before: "Alek.sys: Случаи растут на острове Рьюнион..."
+      context_after: "Alek.sys: Ну да, не поспорю."
+      likely_speaker: Ksenks
+      confidence: medium
+      reason: "Реплика между высказываниями Alek.sys, по смыслу комментарий к географии"
+
+    - stime: 5274.22
+      etime: 5276.44
+      text: "По-моему, все, что можно просрать, они все просрали."
+      context_before: "Alek.sys: Правительство провафлило..."
+      context_after: "Gray: Все, что можно... Потому что, нет, ну, во-первых, да."
+      likely_speaker: Ksenks
+      confidence: medium
+      reason: "Эмоциональный комментарий в диалоге об ошибках правительства"
+
+    - stime: 5281.12
+      etime: 5284.3
+      text: "Конечно, они все не умеют так быстро реагировать."
+      context_before: "Gray: Все, что можно... Потому что, нет, ну, во-первых, да."
+      context_after: "Gray: Да."
+      likely_speaker: Ksenks
+      confidence: medium
+      reason: "Продолжение обсуждения, идет сразу после Gray"
+
+    - stime: 7469.85
+      etime: 7472.35
+      text: "Потому что ты поворот не включил."
+      context_before: "Gray: А знаешь, почему она это делает?"
+      context_after: "Umputun: Поворот не включил это раз."
+      likely_speaker: Ksenks
+      confidence: medium
+      reason: "Ответ на вопрос Gray, по смыслу подхватывается Umputun"
+
+# Нет неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: Bobuk
+      issue: |
+        4 реплики помечены как Bobuk, хотя он явно отсутствует в эпизоде.
+        На 177 сек Umputun говорит: "Но Бобука нет".
+        Требуется переатрибуция этих реплик, вероятно на Ksenks.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 763
+    from_speaker: Bobuk
+    to_speaker: SPEAKER_MISATTRIBUTED_BOBUK
+    confidence: high
+    reason: |
+      Bobuk отсутствует в эпизоде (подтверждено фразой Umputun на 177 сек).
+      4 реплики ошибочно атрибутированы как Bobuk.
+      Переименование в SPEAKER_MISATTRIBUTED_BOBUK для дальнейшего voice comparison.
+
+# Задания на voice comparison
+voice_tasks:
+  - task_id: "763_bobuk_misattribution"
+    description: "Определить реального автора реплик, ошибочно помеченных как Bobuk"
+    priority: medium
+    audio_url: null  # Требуется найти в desc.json
+
+    candidate_speakers:
+      - Ksenks  # Наиболее вероятный кандидат
+      - Gray
+      - Alek.sys
+
+    reference_segments:
+      # Самая длинная из ошибочных реплик
+      - speaker: "Bobuk (misattributed)"
+        stime: 5281.12
+        etime: 5284.3
+        text: "Конечно, они все не умеют так быстро реагировать."
+        duration_sec: 3.18
+
+      # Референс Ksenks для сравнения
+      - speaker: "Ksenks"
+        stime: 1672.2
+        etime: 1673.86
+        text: "А я, может, могу придвинуться?"
+        duration_sec: 1.66
+        note: "Первая реплика Ksenks в эпизоде"

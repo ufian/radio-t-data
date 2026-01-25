@@ -1,0 +1,59 @@
+episode: 789
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Ksenks, Gray]
+  guests_present: [Anya]
+  total_duration_sec: 7771
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Anya"
+    total_duration_sec: 1371
+    replies_count: 368
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun явно представляет Аню в начале выпуска (39.8s):
+        "Мы Ксюше разрешили уйти на покой, но поменяли ее на Аню, чтобы сохранить баланс."
+        Также обращается к ней по имени (58.7s):
+        "Аня, мы рады всегда, когда ты приходишь..."
+        Anya отвечает (70.6s): "Спасибо, я тоже всегда рада прийти."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Примечания по ведущим
+hosts_notes:
+  - speaker: "Ksenks"
+    note: |
+      Несмотря на шутку Umputun в начале ("Ксюше разрешили уйти на покой"),
+      Ksenks активно участвует в выпуске (59 реплик, 381 сек).
+      Первая реплика на 595.6s, потом активное участие в дискуссии.
+  - speaker: "Gray"
+    note: |
+      Gray в этом выпуске в основном озвучивает рекламу DigitalOcean (10 из 11 реплик).
+      Реклама звучит дважды: в начале (97.8-132.6s) и в конце (8393.1-8427.9s).
+      Одна живая реплика (4631.9s): "Может быть, я сангвиник и хожусь улыбаюсь всем на поворотах?"
+
+# Предлагаемые правила очистки
+suggested_rules: []

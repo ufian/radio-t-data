@@ -1,0 +1,58 @@
+episode: 762
+status: clean
+analyzed_at: "2026-01-25"
+
+# Особенность эпизода: Alek.sys вёл один первые ~65 минут,
+# затем присоединились Ksenks и Umputun
+
+speakers_summary:
+  hosts_present:
+    - Alek.sys
+    - Umputun
+    - Ksenks
+  total_duration_sec: 10407
+
+# Детальная статистика по ведущим
+hosts_statistics:
+  - speaker: Alek.sys
+    replies_count: 1193
+    total_duration_sec: 4663
+    first_appearance_sec: 1.2
+    note: "Вёл выпуск один первые ~65 минут"
+
+  - speaker: Umputun
+    replies_count: 972
+    total_duration_sec: 2880
+    first_appearance_sec: 3898
+    note: "Присоединился на ~65 минуте"
+
+  - speaker: Ksenks
+    replies_count: 490
+    total_duration_sec: 1879
+    first_appearance_sec: 3894
+    note: "Присоединилась на ~65 минуте"
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале выпуска Alek.sys объясняет, что ведёт один:
+    "В этот раз выпуск будет настолько необычный, что из ведущих не будет никого.
+    Буду только я. Так что этот подкаст превращается в weekly Алексей подкаст.
+    Ну, есть надежда, что дойдет Ксюша с холодильником, но пока непонятно."
+
+    Ksenks и Umputun присоединяются позже (~3894 сек), что подтверждается
+    диалогом: "Ты до сих пор один?" - "Да."
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Чистый эпизод. Все спикеры корректно идентифицированы.
+  Нет неизвестных спикеров (SPEAKER_*, Guest и т.п.).
+  Рекламный блок (_ad) в конце — стандартный паттерн.

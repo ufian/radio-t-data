@@ -1,0 +1,174 @@
+episode: 767
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  hosts_announced: [Umputun, Bobuk, Gray]  # В начале сказано "тригада", "классический плюс Грей"
+  total_duration_sec: 7112  # ~2 часа
+
+# Спикеры с аномалиями
+anomalous_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 10
+    replies_count: 7
+    pattern: scattered  # разбросаны по всему выпуску
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Alek.sys НЕ участвовал в этом выпуске. В начале подкаста (0:08-0:25)
+        Umputun явно объявляет состав: "тригада", "унылый мальчуковый состав,
+        который классический 2", "классический плюс Грей" - это означает
+        Umputun, Bobuk и Gray без Alek.sys.
+
+        Все 7 реплик Alek.sys - очень короткие (0.4-2.8 сек) переходные фразы,
+        вставленные между репликами других ведущих:
+        1. "Ну, типа того, да" (0.4 сек) - между Bobuk и Gray
+        2. "Второй, это за что вы гнобите Грея?" (1.5 сек) - продолжение мысли Bobuk
+        3. "То есть это очень хорошее издевательство" (2.8 сек) - между Umputun
+        4. "Открыл?" (0.5 сек) - вопрос между Umputun и Bobuk
+        5. "Так тоже можно, да" (2.1 сек) - между Umputun
+        6. "Это что еще надо?" (1.2 сек) - между Bobuk и Umputun
+        7. "Ну, типа того, типа того" (1.6 сек) - между Umputun и Bobuk
+
+        Это ошибки автоматической атрибуции голоса.
+
+      identified_as: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.7
+          reason: |
+            Большинство реплик (особенно #2 "Второй, это за что вы гнобите Грея?"
+            и #4 "Открыл?") по контексту явно принадлежат Bobuk - они продолжают
+            его мысли или являются его вопросами.
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: |
+            Некоторые реплики могут быть ошибочно отделены от речи Umputun.
+
+# Неизвестные спикеры
+unknown_speakers: []  # Нет SPEAKER_* или Guest*
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys размечен как спикер, но НЕ был объявлен в начале выпуска.
+        Umputun явно говорит о "тригаде" (трое участников) и "классическом
+        мальчуковом составе плюс Грей", что означает Umputun+Bobuk+Gray.
+        Все реплики Alek.sys - ошибки атрибуции.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Реплика 1: "Ну, типа того, да" (1249.26-1249.66)
+  # Контекст: после длинной реплики Bobuk о криптовалюте
+  - type: rename
+    episode: 767
+    from_speaker: "Alek.sys"
+    to_speaker: "Bobuk"
+    stime: 1249.26
+    etime: 1249.66
+    text: "Ну, типа того, да."
+    confidence: medium
+    reason: "Короткое подтверждение после реплики Bobuk, вероятно его голос"
+
+  # Реплика 2: "Второй, это за что вы гнобите Грея?" (2991.55-2993.03)
+  # Контекст: продолжает мысль Bobuk "первый вопрос... это как к клавиатуре"
+  - type: rename
+    episode: 767
+    from_speaker: "Alek.sys"
+    to_speaker: "Bobuk"
+    stime: 2991.55
+    etime: 2993.03
+    text: "Второй, это за что вы гнобите Грея?"
+    confidence: high
+    reason: |
+      Прямое продолжение мысли Bobuk: "первый вопрос... как к клавиатуре" ->
+      "Второй, это за что вы гнобите Грея?" Явно один и тот же спикер.
+
+  # Реплика 3: "То есть это очень хорошее издевательство" (4967.02-4969.84)
+  - type: rename
+    episode: 767
+    from_speaker: "Alek.sys"
+    to_speaker: "Bobuk"
+    stime: 4967.02
+    etime: 4969.84
+    text: "То есть это очень хорошее издевательство."
+    confidence: medium
+    reason: "Комментарий к обсуждению ZeroVer, вероятно Bobuk"
+
+  # Реплика 4: "Открыл?" (5058.88-5059.4)
+  # Контекст: Bobuk просит открыть сайт -> Umputun "Я на нем" -> "Открыл?" -> Bobuk "Да"
+  - type: rename
+    episode: 767
+    from_speaker: "Alek.sys"
+    to_speaker: "Bobuk"
+    stime: 5058.88
+    etime: 5059.4
+    text: "Открыл?"
+    confidence: high
+    reason: |
+      Вопрос Bobuk к Umputun: Bobuk просит открыть zerover.org,
+      Umputun говорит "Я на нем", "Открыл?" - вопрос Bobuk,
+      затем Bobuk отвечает "Да" и продолжает.
+
+  # Реплика 5: "Так тоже можно, да" (5206.29-5208.43)
+  - type: rename
+    episode: 767
+    from_speaker: "Alek.sys"
+    to_speaker: "Bobuk"
+    stime: 5206.29
+    etime: 5208.43
+    text: "Так тоже можно, да."
+    confidence: medium
+    reason: "Короткий комментарий между репликами Umputun"
+
+  # Реплика 6: "Это что еще надо?" (6989.4-6990.56)
+  # Umputun сразу повторяет "Что еще надо?" - возможно это его реплика
+  - type: rename
+    episode: 767
+    from_speaker: "Alek.sys"
+    to_speaker: "Umputun"
+    stime: 6989.4
+    etime: 6990.56
+    text: "Это что еще надо?"
+    confidence: medium
+    reason: |
+      Umputun сразу после повторяет "Что еще надо?" - вероятно это
+      одна и та же фраза, разделённая ошибочно
+
+  # Реплика 7: "Ну, типа того, типа того" (7591.84-7593.48)
+  - type: rename
+    episode: 767
+    from_speaker: "Alek.sys"
+    to_speaker: "Bobuk"
+    stime: 7591.84
+    etime: 7593.48
+    text: "Ну, типа того, типа того."
+    confidence: medium
+    reason: "Переходная фраза между Umputun и Bobuk, вероятно Bobuk"
+
+# Задание на voice comparison
+voice_comparison_task:
+  needed: true
+  description: |
+    Требуется проверка голоса для всех 7 реплик Alek.sys.
+    Основная гипотеза: это Bobuk (5-6 реплик) и Umputun (1 реплика).
+  reference_segments:
+    - speaker: "Alek.sys"
+      stime: 2991.55
+      etime: 2993.03
+      text: "Второй, это за что вы гнобите Грея?"
+      hypothesis: "Bobuk"
+      confidence: high
+    - speaker: "Alek.sys"
+      stime: 5058.88
+      etime: 5059.4
+      text: "Открыл?"
+      hypothesis: "Bobuk"
+      confidence: high
+  audio_url: null  # Файл 767_desc.json не найден, URL недоступен

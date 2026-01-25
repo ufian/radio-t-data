@@ -1,0 +1,207 @@
+episode: 717
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray]
+  hosts_absent: [Alek.sys]
+  total_duration_sec: 9193.9
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 21.6
+    replies_count: 11
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        Alek.sys явно отсутствует в эпизоде. Прямые подтверждения:
+        1. Ksenks [4941.9s]: "Мне прям очень грустно обсуждать это без Леши"
+        2. Umputun [5533.5s]: "Был бы Леша, он бы подтвердил"
+        Все 11 реплик - ошибки автоматического распознавания спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Возможные реальные авторы ошибочных реплик
+      possible_matches:
+        - person_id: "Ksenks"
+          confidence: 0.4
+          reason: "Некоторые реплики могут принадлежать Ksenks (женский голос)"
+        - person_id: "Umputun"
+          confidence: 0.3
+          reason: "Реплики #4 и #6 контекстуально связаны с речью Umputun"
+        - person_id: "Gray"
+          confidence: 0.2
+          reason: "Реплики #7-8 обращены к Сереже (Gray), могут быть его же"
+        - person_id: "Bobuk"
+          confidence: 0.1
+          reason: "Маловероятно, но возможно для некоторых коротких реплик"
+
+      # Детализация по репликам
+      detailed_analysis:
+        - reply_num: 1
+          time: "909.0-910.4"
+          text: "Ты просто по-русски пошел."
+          duration_sec: 1.3
+          likely_speaker: "unknown"
+          reason: "Короткая реплика, недостаточно контекста"
+
+        - reply_num: 2
+          time: "3308.6-3309.6"
+          text: "Это легкая артиллерия."
+          duration_sec: 1.0
+          likely_speaker: "unknown"
+          reason: "Короткая реплика между Umputun и Bobuk"
+
+        - reply_num: 3
+          time: "5870.7-5871.7"
+          text: "У нас такой дак."
+          duration_sec: 1.0
+          likely_speaker: "Umputun"
+          reason: "Продолжает свою речь о duck typing, следующая реплика тоже Umputun"
+
+        - reply_num: 4
+          time: "6047.0-6048.2"
+          text: "Погоди, погоди."
+          duration_sec: 1.2
+          likely_speaker: "Umputun"
+          reason: "Umputun сразу продолжает 'Погоди, совершенно прелестный экстеншн'"
+
+        - reply_num: 5
+          time: "6880.8-6882.6"
+          text: "С одной стороны, с другой стороны, дорогое."
+          duration_sec: 1.7
+          likely_speaker: "unknown"
+          reason: "В контексте обсуждения кабелей, недостаточно данных"
+
+        - reply_num: 6
+          time: "7008.5-7011.0"
+          text: "Так три раза уже делал."
+          duration_sec: 2.4
+          likely_speaker: "Umputun"
+          reason: "Umputun говорит о своих попытках обжать кабель, он же продолжает тему"
+
+        - reply_num: 7
+          time: "7153.3-7155.4"
+          text: "Слушай, Сереж, с кем мы вообще разговариваем?"
+          duration_sec: 2.0
+          likely_speaker: "Ksenks"
+          reason: "Обращение к Сереже (Gray), скорее всего Ksenks комментирует технический спор"
+
+        - reply_num: 8
+          time: "7157.8-7159.7"
+          text: "Ох уж мне эти программисты."
+          duration_sec: 1.9
+          likely_speaker: "Ksenks"
+          reason: "Продолжение реплики #7, иронический комментарий"
+
+        - reply_num: 9
+          time: "7200.6-7205.3"
+          text: "Вам не кажется, что когда он буду разговаривать про что-либо?"
+          duration_sec: 4.7
+          likely_speaker: "Ksenks"
+          reason: "Стилистически похоже на Ksenks, возможно обрезанная/искаженная реплика"
+
+        - reply_num: 10
+          time: "8183.5-8184.5"
+          text: "Вы верите в эту херню?"
+          duration_sec: 1.0
+          likely_speaker: "unknown"
+          reason: "Короткая эмоциональная реакция, может быть любой ведущий"
+
+        - reply_num: 11
+          time: "8655.4-8658.6"
+          text: "Непобедимое солнце, по-моему."
+          duration_sec: 3.2
+          likely_speaker: "Umputun"
+          reason: "Gray спрашивает название книги Пелевина, кто-то отвечает; Umputun затем говорит 'Мы не знаем, о чем ты'"
+
+      voice_task:
+        needed: false
+        reason: "Alek.sys доказанно отсутствует в эпизоде, voice comparison не требуется"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys размечен в транскрипте (11 реплик, 21.6 сек), но:
+        1. В начале эпизода НЕ представлен
+        2. Участники явно говорят о его отсутствии ("без Леши", "был бы Леша")
+        3. Все 11 реплик - ошибки распознавания, требуют переатрибуции
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Высокая уверенность - продолжение речи Umputun
+  - type: rename
+    episode: 717
+    from_speaker: "Alek.sys"
+    to_speaker: "Umputun"
+    time_range: "5870.7-5871.7"
+    confidence: medium
+    reason: "Продолжает речь о duck typing, следующая реплика Umputun 'Сплошные даки'"
+
+  - type: rename
+    episode: 717
+    from_speaker: "Alek.sys"
+    to_speaker: "Umputun"
+    time_range: "6047.0-6048.2"
+    confidence: high
+    reason: "'Погоди, погоди' - Umputun продолжает 'Погоди, совершенно прелестный экстеншн'"
+
+  - type: rename
+    episode: 717
+    from_speaker: "Alek.sys"
+    to_speaker: "Umputun"
+    time_range: "7008.5-7011.0"
+    confidence: high
+    reason: "'Так три раза уже делал' - Umputun говорит о своих попытках обжать кабель"
+
+  # Средняя уверенность - вероятно Ksenks
+  - type: rename
+    episode: 717
+    from_speaker: "Alek.sys"
+    to_speaker: "Ksenks"
+    time_range: "7153.3-7159.7"
+    confidence: medium
+    reason: |
+      Две последовательные реплики: 'Слушай, Сереж, с кем мы вообще разговариваем?'
+      и 'Ох уж мне эти программисты' - стилистически похоже на ироничный комментарий Ksenks
+      к техническому спору мужчин о витой паре
+
+  - type: rename
+    episode: 717
+    from_speaker: "Alek.sys"
+    to_speaker: "Ksenks"
+    time_range: "7200.6-7205.3"
+    confidence: low
+    reason: "Продолжение ироничного комментирования технического спора"
+
+  # Низкая уверенность - требует ручной проверки
+  - type: needs_manual_review
+    episode: 717
+    speaker: "Alek.sys"
+    time_ranges:
+      - "909.0-910.4"
+      - "3308.6-3309.6"
+      - "6880.8-6882.6"
+      - "8183.5-8184.5"
+      - "8655.4-8658.6"
+    reason: "Короткие реплики без достаточного контекста для определения реального спикера"
+
+# Дополнительные наблюдения
+notes:
+  - |
+    Эпизод 717 (29 августа 2020) - празднование 14-летия подкаста и дня рождения Gray.
+    В начале Umputun говорит "одни мальчики, причем нечетное количество" - это 3 человека
+    (Umputun, Bobuk, Gray). Ksenks присоединяется позже (~1360 сек).
+  - |
+    Alek.sys (Лёша/Алексей) доказанно отсутствует. Это должно быть исправлено в данных.

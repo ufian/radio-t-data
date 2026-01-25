@@ -1,0 +1,34 @@
+episode: 737
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Alek.sys
+    - Ksenks
+    - Gray
+  total_duration_sec: 9131
+  notes: "Полный состав всех 5 ведущих. Umputun в начале говорит: 'Состав полный, совершенно полный'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все ведущие присутствуют и активно участвуют в обсуждении.
+    Первые появления:
+    - Umputun: 1s (открывает выпуск)
+    - Bobuk: 14s (сразу вступает в диалог)
+    - Alek.sys: 35s (участвует в шутке про "широкую кость")
+    - Gray: 124s
+    - Ksenks: 166s (упоминается раньше - "кроме Ксюши" в 28s)
+    Реклама (_ad) корректно размечена отдельно.
+
+# Предлагаемые правила очистки
+suggested_rules: []

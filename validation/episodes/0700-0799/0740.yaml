@@ -1,0 +1,98 @@
+episode: 740
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  guests_present: [Anya]
+  total_duration_sec: 8336.9
+
+# Детальный анализ спикеров
+speakers_analysis:
+  hosts:
+    - speaker: Umputun
+      replies_count: 926
+      total_duration_sec: 3056.8
+      first_appearance_sec: 0.7
+      status: confirmed
+      notes: "Основной ведущий, начинает эпизод"
+
+    - speaker: Gray
+      replies_count: 262
+      total_duration_sec: 1098.2
+      first_appearance_sec: 117.0
+      status: confirmed
+      notes: "Появляется на 2 минуте"
+
+    - speaker: Bobuk
+      replies_count: 295
+      total_duration_sec: 1071.5
+      first_appearance_sec: 41.6
+      status: confirmed
+      notes: "Появляется на 42 секунде"
+
+    - speaker: Alek.sys
+      replies_count: 279
+      total_duration_sec: 1067.2
+      first_appearance_sec: 72.7
+      status: confirmed
+      notes: "Появляется на 73 секунде"
+
+    - speaker: Ksenks
+      replies_count: 131
+      total_duration_sec: 443.8
+      first_appearance_sec: 1300.9
+      status: confirmed
+      notes: "Присоединяется позже (~22 мин), многократно упоминается по имени (Ксюша, Ксения)"
+
+  guests:
+    - speaker: Anya
+      replies_count: 228
+      total_duration_sec: 819.0
+      first_appearance_sec: 277.9
+      pattern: consecutive
+
+      analysis:
+        is_error: false
+        identified_as: "anya"
+        identification_method: "context"
+        confidence: high
+        evidence: |
+          Многократно обращаются по имени:
+          - 923.9s [Umputun]: "Ты не играешь, да, Аня, ни во что вот в этом?"
+          - 1231.8s [Umputun]: "Аня, ты согласна..."
+          - 2887.8s [Umputun]: "Аня, ты у нас довольно долго молчишь."
+          - 5072.1s [Umputun]: "Аня, это нормально..."
+          Упоминается в people.yaml как постоянная гостья (13 выпусков).
+
+      reference_segment:
+        stime: 7904.7
+        etime: 7923.9
+        duration_sec: 19.2
+        text: "Мне подружка рассказала, как ее менеджер, я не буду говорить, в какой компании, в течение дня, так к..."
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Anya"
+      issue: "Не представлена в начале эпизода, но это нормально - постоянная гостья"
+    - speaker: "Ksenks"
+      issue: "Не представлена в начале, присоединяется на 22 минуте - нормальная ситуация"
+  notes: |
+    Эпизод начинается с обсуждения новых сетапов (M1 Mac).
+    Формального представления участников нет, но это типичная ситуация для постоянного состава.
+    Anya и Ksenks многократно упоминаются по имени в ходе эпизода.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Эпизод 740 (6 февраля 2021) - полный состав ведущих + постоянная гостья Anya.
+  Все спикеры корректно идентифицированы, артефактов и ошибок распознавания не обнаружено.
+  Рекламные блоки (_ad) корректно размечены.

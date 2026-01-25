@@ -1,0 +1,63 @@
+episode: 720
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks]
+  hosts_absent: [Bobuk]
+  total_duration_sec: 8994
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Комментарий: В эпизоде нет неизвестных спикеров.
+# Все реплики атрибутированы известным ведущим или рекламе (_ad).
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - В начале (0:56-0:58) Umputun объявляет отсутствие Bobuk: "Сегодня нету Бобука"
+    - Umputun также упоминает отсутствие Ksenks (1:04-1:07): "Я уж не говорю о том, что Ксюши нет"
+    - Однако Ksenks появляется в эпизоде с 355 сек (5:55)
+    - При первом появлении Ksenks (355с) Umputun сразу обращается к ней по имени (377с): "Побуду Греем, Ксюша"
+    - Gray и Alek.sys участвуют с самого начала без формального представления (это нормально для постоянных ведущих)
+  issues:
+    - speaker: Ksenks
+      issue: "Umputun упомянул её отсутствие в начале (67с), но она появилась позже (355с). Вероятно, присоединилась позже к записи."
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Комментарий: Правила очистки не требуются - эпизод чистый.
+
+# Дополнительная информация
+metadata:
+  episode_date: "2020-09-19"
+  absent_hosts:
+    - name: Bobuk
+      reason: "Объявлено Umputun в начале выпуска"
+  late_arrivals:
+    - name: Ksenks
+      first_appearance_sec: 355
+      note: "Присоединилась позже, хотя в начале было сказано об отсутствии"
+  speaker_stats:
+    Umputun:
+      replies: 1117
+      duration_sec: 3558
+      first_at_sec: 0.3
+    Gray:
+      replies: 462
+      duration_sec: 2246
+      first_at_sec: 67.2
+    Alek.sys:
+      replies: 368
+      duration_sec: 1303
+      first_at_sec: 17.0
+    Ksenks:
+      replies: 253
+      duration_sec: 1055
+      first_at_sec: 355.4
+    _ad:
+      replies: 7
+      duration_sec: 38
+      first_at_sec: 144.0

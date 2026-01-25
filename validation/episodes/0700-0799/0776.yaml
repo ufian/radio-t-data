@@ -1,0 +1,55 @@
+episode: 776
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks, Gray]
+  total_duration_sec: 8702
+
+# Детальная статистика ведущих
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 805
+    duration_sec: 2214
+    first_appearance_sec: 2
+  - speaker: Bobuk
+    replies_count: 612
+    duration_sec: 2196
+    first_appearance_sec: 84
+  - speaker: Alek.sys
+    replies_count: 496
+    duration_sec: 1770
+    first_appearance_sec: 9
+  - speaker: Ksenks
+    replies_count: 300
+    duration_sec: 1116
+    first_appearance_sec: 1149
+  - speaker: Gray
+    replies_count: 133
+    duration_sec: 513
+    first_appearance_sec: 1336
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Umputun открывает выпуск, упоминает что Ксюша должна подойти (16s)"
+    - "Ksenks присоединяется на 1149s (19 мин), её приход анонсирует Umputun: 'К нам Ксюша заглянула на огонек'"
+    - "Gray присоединяется на 1336s (22 мин) без явного анонса - включается в разговор репликой. Это нормально для регулярного ведущего"
+    - "Bobuk и Alek.sys присутствуют с начала"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарий
+analysis_notes: |
+  Эпизод полностью чистый. Все 5 основных ведущих присутствуют.
+  Неизвестных спикеров (SPEAKER_*, Guest*) нет.
+  Присутствуют только рекламные вставки (_ad), которые корректно размечены.
+  Ksenks и Gray присоединились позже (19 и 22 минуты соответственно),
+  что является обычной практикой для подкаста.

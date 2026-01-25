@@ -1,0 +1,66 @@
+episode: 773
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 8668
+  ad_duration_sec: 88
+
+# Детальный анализ спикеров
+speakers_analysis:
+  Umputun:
+    replies_count: 869
+    total_duration_sec: 2582
+    first_appearance_sec: 0
+    role: main_host
+    notes: "Открывает эпизод, ведёт обсуждение"
+
+  Bobuk:
+    replies_count: 691
+    total_duration_sec: 2295
+    first_appearance_sec: 150
+    role: co_host
+    notes: "Появляется после рекламы, активно участвует"
+
+  Gray:
+    replies_count: 403
+    total_duration_sec: 1791
+    first_appearance_sec: 99
+    role: co_host
+    notes: "Появляется сразу после рекламы"
+
+  Ksenks:
+    replies_count: 276
+    total_duration_sec: 1065
+    first_appearance_sec: 1884
+    role: co_host
+    notes: "Присоединилась позже (31 мин), Umputun пошутил 'Спасибо, что ты пришла в конце концов'"
+
+  Alek.sys:
+    replies_count: 13
+    total_duration_sec: 23
+    first_appearance_sec: 2447
+    role: co_host
+    notes: "Минимальное участие, короткие реплики (0.6-3.4 сек), но осмысленные и распределены по эпизоду"
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все спикеры — известные ведущие подкаста"
+    - "Ksenks присоединилась позже (~31 мин), что отмечено Umputun"
+    - "Alek.sys имеет очень мало реплик (13 шт, 23 сек), но они осмысленны и распределены по эпизоду (2447-8587 сек)"
+
+# Предлагаемые правила очистки
+suggested_rules: []

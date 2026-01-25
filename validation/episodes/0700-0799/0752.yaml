@@ -1,0 +1,25 @@
+episode: 752
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8570
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun во вступлении (8-19s): "Ксюша еще не пришла, Бобук уже позорно здесь,
+    Леха с нами, Грей на удивление на месте".
+    Ksenks присоединилась позже — первая реплика в 3511s (~58 мин).
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются — все спикеры корректно идентифицированы

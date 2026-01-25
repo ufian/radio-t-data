@@ -1,0 +1,24 @@
+episode: 764
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  total_duration_sec: 8963
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (0:40) Umputun говорит "составчик на троих" — это Umputun, Bobuk, Alek.sys.
+    Про Ksenks говорят, что она "в полёте" и может отсутствовать.
+    Ksenks появляется на 800 сек (~13 мин) без формального представления —
+    просто присоединяется к обсуждению, что логично учитывая контекст.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

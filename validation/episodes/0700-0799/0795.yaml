@@ -1,0 +1,45 @@
+episode: 795
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Gray]
+  hosts_absent: [Ksenks]
+  total_duration_sec: 6859
+  episode_date: "2022-02-26"
+  note: "Выпуск от 26 февраля 2022 года (начало войны в Украине). Ksenks отсутствует, что подтверждается фразой Umputun: 'Ксюша, которая пока не пришла'."
+
+# Детали по ведущим
+hosts_details:
+  - speaker: Umputun
+    replies_count: 921
+    total_duration_sec: 2810
+    first_appearance_sec: 0.5
+  - speaker: Bobuk
+    replies_count: 472
+    total_duration_sec: 1583
+    first_appearance_sec: 18.8
+  - speaker: Alek.sys
+    replies_count: 395
+    total_duration_sec: 1364
+    first_appearance_sec: 50.9
+  - speaker: Gray
+    replies_count: 299
+    total_duration_sec: 1102
+    first_appearance_sec: 62.2
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все 4 присутствующих ведущих участвуют в диалоге с первой минуты"
+    - "Ksenks упомянута как отсутствующая в начале выпуска"
+    - "Нет неизвестных спикеров (SPEAKER_*, Guest*)"
+
+# Предлагаемые правила очистки
+suggested_rules: []

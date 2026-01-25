@@ -1,0 +1,78 @@
+episode: 709
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7253
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 5.9
+    replies_count: 4
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие разрозненные реплики (4 штуки, 5.9 сек суммарно) разбросаны по всему эпизоду.
+        Паттерн типичен для ошибок распознавания спикера:
+        1) 125.1s "Ты его нарушил сейчас?" — диалог с Umputun до появления Bobuk
+        2) 129.4s "А вдруг кто-нибудь напишет?" — продолжение того же диалога
+        3) 2892.6s "На фоне Джавы, конечно" — ответ в дискуссии с Ksenks, Bobuk, Alek.sys
+        4) 7002.5s "Не спрашивают" — сразу после этого Bobuk говорит то же самое (7003.4s)
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.7
+          reason: >
+            Реплика 7002.5s "Не спрашивают" сразу повторяется Bobuk (7003.4s).
+            Первые реплики (125s, 129s) появляются до официального входа Bobuk (169s),
+            но он мог участвовать раньше без правильной разметки.
+            Стиль коротких комментариев характерен для Bobuk.
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: >
+            Реплика 2892.6s в дискуссии о Go vs Java где активно участвует Alek.sys.
+            Однако Alek.sys появляется только с 213.8s, а первые реплики SPEAKER_05 в 125s.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 125.1
+          etime: 131.5
+          text: "Ты его нарушил сейчас? ... А вдруг кто-нибудь напишет?"
+          note: "Две подряд реплики, суммарно ~6 секунд. Сравнить с голосом Bobuk."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    В начале эпизода (0.7s) Umputun говорит: "...без Ксюши, которая скорее всего в процессе подойдет,
+    но зато с Греем". Упомянуты Gray (входит с 29.6s), Ksenks (появляется с 929s).
+    Bobuk и Alek.sys не упомянуты явно в начале, но входят с 169s и 213s соответственно.
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: >
+        4 реплики приписаны неизвестному спикеру. По контексту это скорее всего
+        ошибочно размеченный Bobuk (или реже Alek.sys). Требуется voice comparison.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 709
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: >
+      Реплика "Не спрашивают" (7002.5s) сразу повторяется Bobuk (7003.4s) —
+      типичный паттерн ошибки распознавания. Остальные реплики короткие комментарии,
+      характерные для стиля Bobuk. Требуется подтверждение через voice comparison.

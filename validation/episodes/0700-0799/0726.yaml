@@ -1,0 +1,27 @@
+episode: 726
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8623.8
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров (SPEAKER_*, Guest*) в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun ведёт шоу с самого начала (0.15s)"
+    - "Gray упоминается в диалоге, первая реплика в 8.42s"
+    - "Alek.sys первая реплика в 32.65s, упоминается Bobuk как 'Серёжа' (39.47s: 'у нас с Сережей 10 часов')"
+    - "Bobuk первая реплика в 39.47s"
+    - "Ksenks упоминается Umputun (18s: 'Ксюша зашла вовремя'), первая реплика в 171.14s"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Эпизод чистый, правила не требуются

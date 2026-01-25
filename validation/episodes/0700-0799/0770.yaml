@@ -1,0 +1,26 @@
+episode: 770
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Gray]
+  total_duration_sec: 5630
+  episode_duration_sec: 6156
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    Стандартный выпуск с четырьмя основными ведущими.
+    Все ведущие активно участвуют с первых минут.
+    Umputun открывает выпуск (0s), Bobuk вступает на 93s,
+    Alek.sys на 122s, Gray на 131s.
+    Гостей в этом выпуске нет.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,64 @@
+episode: 724
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+  hosts_absent:
+    - Ksenks
+  total_duration_sec: 7227.8
+  total_replies: 2237
+
+# Детальная статистика ведущих
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 1008
+    total_duration_sec: 2982.9
+    first_appearance_sec: 0.36
+  - speaker: Bobuk
+    replies_count: 656
+    total_duration_sec: 2174.2
+    first_appearance_sec: 24.3
+  - speaker: Gray
+    replies_count: 276
+    total_duration_sec: 1069.1
+    first_appearance_sec: 13.91
+  - speaker: Alek.sys
+    replies_count: 286
+    total_duration_sec: 1001.6
+    first_appearance_sec: 32.65
+
+# Специальные спикеры (игнорируются)
+special_speakers:
+  - speaker: _ad
+    replies_count: 11
+    total_duration_sec: 88.1
+    note: "Рекламные вставки"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Umputun упоминает возвращение Bobuk в начале выпуска (5.8s): 'Выпуск удивительный в том смысле, что сам Бобук пришел'"
+    - "Umputun упоминает отсутствие Ksenks (51.02s): 'Зато нет ксюши'"
+    - "Umputun упоминает Alek.sys (82.49s): 'У нас Леха пришел, хотя он в прошлый раз пропустил, но ему можно'"
+    - "Gray участвует в диалоге с 13.91s без явного представления (постоянный ведущий)"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Итоговое заключение
+conclusion: |
+  Эпизод 724 полностью размечен. Присутствуют 4 постоянных ведущих:
+  Umputun, Bobuk, Gray и Alek.sys. Ksenks отсутствует, что явно упоминается
+  в начале выпуска. Неизвестных спикеров (SPEAKER_*, Guest*) нет.
+  Дополнительная очистка не требуется.

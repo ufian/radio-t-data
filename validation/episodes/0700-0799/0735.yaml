@@ -1,0 +1,101 @@
+episode: 735
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Ksenks, Gray]
+  hosts_absent: [Bobuk]
+  total_duration_sec: 7773  # ~2h 9min
+
+# Аномалия: Bobuk с минимальным участием
+anomalies:
+  - speaker: "Bobuk"
+    issue: "extremely_low_participation"
+    description: |
+      Bobuk имеет всего 2 реплики (4 сек) за весь 2-часовой выпуск.
+      Это указывает на то, что Bobuk НЕ участвовал в выпуске,
+      а 2 реплики — ошибки атрибуции речи.
+
+    evidence:
+      - stime: 382.93
+        etime: 385.01
+        text: "Я вам на самом деле вот что скажу, что V8,"
+        context: |
+          Реплика обрывается на полуслове. Сразу после неё Gray
+          продолжает мысль про V8: "То есть, JIT в JavaScript
+          внутри браузера. Это, вообще говоря, довольно большой
+          скачок, который случился в 2008 году."
+          Вероятно, это начало реплики Gray, неправильно атрибутированное.
+        likely_speaker: "Gray"
+        confidence: medium
+
+      - stime: 6033.68
+        etime: 6035.92
+        text: "Нет, конечно, не 60 км в час."
+        context: |
+          Короткая реплика (2 сек) в диалоге между Umputun и Gray
+          о скорости электросамоката. До: Umputun говорит "Нет, он
+          не гонится так." После: Umputun продолжает про моща для горки.
+          Вероятно это Umputun или Gray.
+        likely_speaker: "Umputun"
+        confidence: low
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk не представлен в начале и имеет всего 2 коротких реплики
+        за весь выпуск. Высокая вероятность, что он не участвовал,
+        а эти реплики — ошибки распознавания.
+
+    - speaker: "hosts_in_intro"
+      issue: |
+        В начале выпуска (0-125 сек) говорят только Umputun и Gray.
+        Ksenks появляется с 123 сек, Alek.sys с 225 сек.
+        Явного представления участников нет — выпуск начинается
+        с обсуждения даты (2 января 2021).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 735
+    from_speaker: "Bobuk"
+    to_speaker: "Gray"
+    segment:
+      stime: 382.93
+      etime: 385.01
+    confidence: medium
+    reason: |
+      Реплика обрывается, Gray сразу продолжает ту же мысль о V8.
+      Bobuk не участвовал в выпуске.
+
+  - type: rename
+    episode: 735
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Bobuk"
+    segment:
+      stime: 6033.68
+      etime: 6035.92
+    confidence: low
+    reason: |
+      Не удаётся точно определить кто это сказал (Umputun или Gray).
+      Помечаем как требующее дополнительной проверки.
+
+# Задание на ручную проверку
+manual_review_task:
+  description: |
+    Подтвердить, что Bobuk не участвовал в выпуске 735.
+    Если подтвердится:
+    1. Убрать Bobuk из списка ведущих этого эпизода
+    2. Переатрибутировать 2 реплики корректному спикеру
+
+  verification_steps:
+    - "Послушать аудио на 382-386 сек — чей голос?"
+    - "Послушать аудио на 6033-6036 сек — чей голос?"
+    - "Проверить архивы/чат подкаста — кто был в выпуске 735?"

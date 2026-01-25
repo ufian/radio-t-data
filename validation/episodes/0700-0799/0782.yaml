@@ -1,0 +1,64 @@
+episode: 782
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Alek.sys, Gray]
+  guests_present: [Anya]
+  hosts_absent: [Umputun, Ksenks]
+  total_duration_sec: 7447  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Anya"
+    total_duration_sec: 1107
+    replies_count: 221
+    pattern: consecutive  # активное участие в диалогах на протяжении всего выпуска
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk в начале выпуска (0:37-0:43): "Это был типичный пример такого мэнсплейнинга, и сейчас Аня нам объяснит, почему это был именно мэнсплейнинг."
+        Bobuk (2:07-2:11): "Мы ради этого, конечно, Аню позвали. Сейчас она нам все про это расскажет."
+        Anya упоминает работу в MDB (MongoDB), говорит о Java, C#, JavaScript.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Контекст из транскрипта
+context:
+  episode_intro: |
+    Bobuk открывает выпуск (0:00-0:21):
+    "Доброго времени суток, подкаст выходного дня Радио Ти, напоминаю, что выпуск 782-й...
+    Умпутуна сегодня с нами нет, он как бы с нами, но только морально..."
+  guest_intro: |
+    Anya представлена Bobuk'ом как знакомый гость подкаста.
+    Обсуждают её прошлый опыт с C# и .NET.
+    Она работает в MDB (MongoDB) как веб-разработчик (Java, JavaScript).
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  umputun_absence_explained: true  # Bobuk объяснил в начале
+  issues: []
+
+# Соответствие people.yaml
+people_yaml_match:
+  anya:
+    canonical_name: "Anya"
+    real_name: "Анна"
+    info: "13 выпусков"
+    matched: true
+
+# Предлагаемые правила очистки
+suggested_rules: []  # Всё корректно, изменений не требуется

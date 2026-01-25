@@ -1,0 +1,36 @@
+episode: 719
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+    - Ksenks
+  total_duration_sec: 7993
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Неизвестных спикеров в этом эпизоде нет.
+# Все реплики принадлежат известным ведущим или рекламным блокам (_ad).
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (0:08-0:12) Umputun объявляет: "Состав, на удивление, полный, и Ксюша пришла вовремя."
+    Это подтверждает присутствие всех пяти ведущих: Umputun, Bobuk, Gray, Alek.sys, Ksenks.
+    Первые реплики каждого ведущего:
+    - Umputun: 1s (ведёт эпизод)
+    - Gray: 18s
+    - Ksenks: 21s
+    - Alek.sys: 27s
+    - Bobuk: 100s
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются — эпизод чистый.

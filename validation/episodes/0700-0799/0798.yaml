@@ -1,0 +1,27 @@
+episode: 798
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Alek.sys
+    - Gray
+    - Ksenks
+  total_duration_sec: 10353
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - speaker: Ksenks
+      note: "Упомянута в начале ('если Ксюша приедет'), присоединилась на 56 минуте (3378s). Это нормально - она подключилась позже."
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
