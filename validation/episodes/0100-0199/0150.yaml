@@ -1,0 +1,526 @@
+episode: 150
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Описание эпизода
+episode_info:
+  date: "2009-08-22"
+  type: jubilee  # Юбилейный выпуск с множеством звонков слушателей
+  description: "150-й выпуск с поздравлениями от слушателей и гостей"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  regular_guests: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: ~7200  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # === ИДЕНТИФИЦИРОВАННЫЕ ГОСТИ ===
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 644
+    replies_count: 226
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Умпутун в начале: 'Костяк... про тебя, Маринка' (28s). Марина - бывшая ведущая подкаста"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 151
+    replies_count: 42
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Бобук: 'Эльдар у нас всяко лучше Татарина' (816s), 'какую мы интригу развели, прежде чем Эльдар у нас появился' (836s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest1"
+    total_duration_sec: 141
+    replies_count: 51
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "artem_rosnovsky"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Бобук: 'Здравствуй, Артем' (211s), 'Артем сам по себе выдающийся подкастер, был одним из первых наших гостей' (331s). Умпутун: 'Росновский вас заразил' (885s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # === ЗВОНКИ СЛУШАТЕЛЕЙ (одноразовые поздравления) ===
+  # Юбилейный выпуск содержит множество звонков от слушателей с поздравлениями
+  # Эти люди не являются постоянными гостями - это формат "звонок в студию"
+
+  - speaker: "Guest2"
+    total_duration_sec: 36
+    replies_count: 9
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "golodniy"
+      identification_method: "self-introduction"
+      confidence: high
+      evidence: "Сам представился: 'Меня зовут Голодный, я из Иркутска' (697s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest3"
+    total_duration_sec: 26
+    replies_count: 4
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null  # Аудио-поздравление без представления
+      identification_method: null
+      confidence: null
+      evidence: "Аудио-сообщение со стихом: 'Радио-Т это вам не самолет' (1137s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+        reason: "Аудио-поздравление, представление не требуется"
+
+  - speaker: "Guest4"
+    total_duration_sec: 24
+    replies_count: 5
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null  # Слушатель-подкастер Алексей Пономарь
+      identification_method: "self-introduction"
+      confidence: medium
+      evidence: "Сам представился: 'Меня зовут Алексей Пономарь, я подкастер из Ульяновска' (1733s)"
+      possible_matches:
+        - person_id: "alexey_ponomar"
+          confidence: 0.7
+          reason: "Представился как подкастер Алексей Пономарь из Ульяновска"
+      voice_task:
+        needed: false
+        reason: "Одноразовое поздравление от слушателя"
+
+  - speaker: "Guest5"
+    total_duration_sec: 17
+    replies_count: 5
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Короткое поздравление: 'Всем привет. Чуваки, вы лучшие' (2115s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest6"
+    total_duration_sec: 22
+    replies_count: 8
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "self-introduction"
+      confidence: low
+      evidence: "Представился: 'Меня зовут Александр' (2404s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest7"
+    total_duration_sec: 41
+    replies_count: 9
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Поздравление: 'Хочу вас поздравить с вашим юбилейным 150 выпуском' (2546s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest8"
+    total_duration_sec: 16
+    replies_count: 4
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Аудио-поздравление: 'Поздравляю вас с юбилеем, с 150 выпуском' (2782s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest9"
+    total_duration_sec: 68
+    replies_count: 17
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Привет, любимый Радио-Т. Привет, Умпутун. Привет, Бобук' (2977s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest10"
+    total_duration_sec: 55
+    replies_count: 9
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Аудио-сообщение: 'Радио-Т это часть моей жизни' (3786s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest11"
+    total_duration_sec: 28
+    replies_count: 5
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Поздравление: 'Поздравляю с юбилеем' (4013s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest12"
+    total_duration_sec: 22
+    replies_count: 7
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Поздравление: 'Хочу вас от всей души поздравить со 150 выпуском' (4274s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest13"
+    total_duration_sec: 26
+    replies_count: 11
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "nickname"
+      confidence: low
+      evidence: "Упомянул ник: 'Да, я пингвинатор' (4375s)"
+      possible_matches:
+        - person_id: "pingvinator"
+          confidence: 0.5
+          reason: "Слушатель с ником Пингвинатор"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest14"
+    total_duration_sec: 112
+    replies_count: 35
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Привет, ребят. О подкастинге узнал благодаря вам' (4491s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest15"
+    total_duration_sec: 89
+    replies_count: 16
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Слушаю вас уже очень-очень давно' (4622s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest16"
+    total_duration_sec: 103
+    replies_count: 23
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "self-introduction"
+      confidence: medium
+      evidence: "Сам представился: 'Меня зовут Визи Пулатов' (4845s)"
+      possible_matches:
+        - person_id: "vizi_pulatov"
+          confidence: 0.6
+          reason: "Слушатель Визи Пулатов, начинающий подкастер"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest17"
+    total_duration_sec: 38
+    replies_count: 10
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Присылал, присылал, было дело' (5103s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest18"
+    total_duration_sec: 40
+    replies_count: 11
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Вот-вот, я здесь с вами' (5223s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest19"
+    total_duration_sec: 53
+    replies_count: 16
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Всем здравствуйте' (5378s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest20"
+    total_duration_sec: 49
+    replies_count: 10
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Наконец-то я попал на радиотик' (5597s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest21"
+    total_duration_sec: 42
+    replies_count: 13
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "self-introduction"
+      confidence: medium
+      evidence: "Сам представился: 'Меня зовут Визар Вэ. Меня вы можете найти в подкасте Уральские вареники' (5691s)"
+      possible_matches:
+        - person_id: "visar_v"
+          confidence: 0.7
+          reason: "Подкастер Визар Вэ из 'Уральских вареников'"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest22"
+    total_duration_sec: 49
+    replies_count: 10
+    pattern: scattered  # Две несвязанные реплики
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Две реплики: 'Нет, все хорошо' (5175s) и 'Привет' (5956s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest23"
+    total_duration_sec: 47
+    replies_count: 14
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Я парень' (6069s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest24"
+    total_duration_sec: 36
+    replies_count: 10
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Доброго времени суток, уважаемая радиотайм' (6231s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest25"
+    total_duration_sec: 38
+    replies_count: 11
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Всем здравствуйте. Поздравляю' (6338s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest26"
+    total_duration_sec: 46
+    replies_count: 12
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "self-introduction"
+      confidence: low
+      evidence: "Сам представился: 'Зовут меня Владимир. Я из города Волгограда' (6560s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest27"
+    total_duration_sec: 17
+    replies_count: 5
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Короткие реплики: 'Я не думаю, что со звуком плохо' (6781s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest28"
+    total_duration_sec: 48
+    replies_count: 16
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Алло, меня слышно вообще, нет?' (6860s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest29"
+    total_duration_sec: 57
+    replies_count: 13
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонок: 'Здравствуйте. Спасибо, Гриша, большое' (7024s)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Это юбилейный 150-й выпуск с особым форматом - множество звонков от слушателей
+    с поздравлениями. Все основные спикеры представлены в начале:
+    - Ведущие (Umputun, Bobuk, Gray) и Марина представлены Umputun-ом (28s)
+    - Guest1/Артём Росновский представлен Бобуком (211s, 331s)
+    - EldarMurtazin представлен Бобуком (816s)
+    - Guest2-Guest29 - это одноразовые звонки слушателей с поздравлениями,
+      многие представились сами (имя/ник), но не являются постоянными гостями
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 150
+    from_speaker: "Guest1"
+    to_speaker: "Rosnovsky"
+    confidence: high
+    reason: "Артём Росновский - подкастер, частый гость. Бобук: 'Здравствуй, Артем', Умпутун: 'Росновский вас заразил'"
+
+  - type: rename
+    episode: 150
+    from_speaker: "Guest2"
+    to_speaker: "Golodniy"
+    confidence: high
+    reason: "Представился как 'Голодный из Иркутска' - слушатель с известным ником"
+
+# Комментарий
+notes: |
+  Юбилейный выпуск №150 (22 августа 2009) имеет особый формат:
+
+  ОСНОВНЫЕ УЧАСТНИКИ (идентифицированы корректно):
+  - Umputun, Bobuk, Gray - ведущие
+  - Marin_k_a (Марина) - бывшая ведущая, представлена в начале
+  - EldarMurtazin - частый гость, представлен Бобуком
+
+  ТРЕБУЕТ ПЕРЕИМЕНОВАНИЯ:
+  - Guest1 → Rosnovsky (Артём Росновский) - HIGH confidence
+  - Guest2 → Golodniy - HIGH confidence
+
+  ОДНОРАЗОВЫЕ ЗВОНКИ СЛУШАТЕЛЕЙ (Guest3-Guest29):
+  Это формат "звонок в студию" для юбилейного выпуска.
+  Слушатели звонили с поздравлениями, некоторые представились:
+  - Guest4: Алексей Пономарь из Ульяновска
+  - Guest6: Александр
+  - Guest13: ник "Пингвинатор"
+  - Guest16: Визи Пулатов
+  - Guest21: Визар Вэ (подкаст "Уральские вареники")
+  - Guest26: Владимир из Волгограда
+
+  Эти люди не являются постоянными гостями подкаста, их идентификация
+  не критична для целей очистки транскрипта. Можно оставить как Guest*.

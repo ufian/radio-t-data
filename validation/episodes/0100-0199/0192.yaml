@@ -1,0 +1,68 @@
+episode: 192
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_speakers: 4
+  total_replies: 1776
+
+# Детальный анализ спикеров
+speakers:
+  - speaker: "Umputun"
+    role: host
+    replies_count: 738
+    introduced: true
+    introduction_time: 5.43
+    notes: "Ведущий, начинает выпуск"
+
+  - speaker: "Bobuk"
+    role: host
+    replies_count: 716
+    introduced: true
+    introduction_time: 35.67
+    notes: "Ведущий, обращается к Gray как 'Сергеич'"
+
+  - speaker: "Gray"
+    role: host
+    replies_count: 216
+    introduced: true
+    introduction_time: 26.36
+    notes: "Ведущий, вернулся после двухнедельного перерыва"
+
+  - speaker: "Marin_k_a"
+    role: guest
+    replies_count: 106
+    introduced: true
+    introduction_time: 59.0
+    notes: "Бывшая ведущая Марина, известна из people.yaml"
+
+# Анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все 4 спикера представлены в первые 2 минуты выпуска:
+    - Umputun начинает и приветствует Gray (5-26 сек)
+    - Gray отвечает (26 сек)
+    - Bobuk приветствует Gray как "Сергеича" (35 сек)
+    - Gray упоминает Marin_k_a: "притаилась Маринка" (52-58 сек)
+    - Marin_k_a подтверждает: "это я" (59-73 сек)
+
+    Marin_k_a указана в people.yaml как бывшая ведущая.
+    Umputun шутит, что у неё проблемы со связью и она "ничего не слышит".
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Итог
+summary: |
+  Эпизод 192 от 19 июня 2010 года.
+  Все спикеры идентифицированы и представлены в начале выпуска.
+  Неизвестных или ошибочно размеченных спикеров нет.
+  Статус: clean (не требует изменений).

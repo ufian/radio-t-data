@@ -1,0 +1,61 @@
+episode: 145
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Marin_k_a, PetrDidenko]
+  total_duration_sec: 6994
+
+# Детальный анализ спикеров
+# Примечание: PetrDidenko и Marin_k_a были указаны как "неизвестные" в предрассчитанной статистике,
+# но на самом деле уже идентифицированы в транскрипте и присутствуют в people.yaml
+
+speakers:
+  - speaker: "Umputun"
+    total_duration_sec: 1336
+    replies_count: 402
+    role: host
+    introduced_at: 0  # Ведущий, начинает выпуск
+
+  - speaker: "Gray"
+    total_duration_sec: 2660
+    replies_count: 491
+    role: host
+    introduced_at: 37  # "А у нас есть Грей, который..."
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1128
+    replies_count: 242
+    role: guest
+    identified: true
+    person_id: marin_k_a
+    introduced_at: 16
+    introduction_quote: "я счастлив представить вам нашу новую, в то же время и старую Маринку"
+    introduction_by: Umputun
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1870
+    replies_count: 514
+    role: guest
+    identified: true
+    person_id: petr_didenko
+    introduced_at: 46
+    introduction_quote: "А еще у нас сегодня в гостях Петя Диденко, который является... сотрудником Microsoft"
+    introduction_by: Gray
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  bobuk_mentioned_but_absent: true
+  issues: []
+
+# Комментарий к анализу
+notes:
+  - "Bobuk упомянут как отсутствующий в начале выпуска (10-16 сек)"
+  - "Все участники явно представлены в первые 80 секунд"
+  - "Эпизод полностью размечен, неизвестных спикеров нет"
+
+# Предлагаемые правила очистки
+suggested_rules: []

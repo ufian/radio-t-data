@@ -1,0 +1,52 @@
+episode: 166
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_duration_sec: 8296
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 381
+    replies_count: 86
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk представляет её в начале эпизода (51.23s):
+        "это как бы не мешает нам вспомнить, что у нас еще Маринка в Киеве есть"
+        Она отвечает (56.76s): "Маринка в Киеве есть, и снега у нас достаточно много"
+        Также в справочнике people.yaml Marin_k_a указана как "Бывшая ведущая" с real_name "Марина"
+
+      # Задание на voice comparison не нужно
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Эпизод 166 от 19 декабря 2009 года.
+  Состав: Umputun (Чикаго), Bobuk (Москва), Gray (Одесса), Marin_k_a (Киев).
+  Marin_k_a (Марина) - бывшая ведущая, активно участвует в дискуссии на протяжении всего выпуска.
+  Её присутствие явно обозначено в начале и она говорит до самого конца (последняя реплика в 8295.6s: "Пока").

@@ -1,0 +1,95 @@
+episode: 121
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Lavale, EldarMurtazin]
+  total_duration_sec: 6955  # до официального каста, после шоу отдельно
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1465
+    replies_count: 323
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Gray в 54s: 'Гостья зовут Эльдар Муртазин, ведущий аналитик как Mobile Review Group и сайта mobilereview.com'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Lavale"
+    total_duration_sec: 176
+    replies_count: 78
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в 15s: 'неподражаемую лавале, которая нам только что напомнила за эфиром, какой номер выпуска'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest"
+    total_duration_sec: 28
+    replies_count: 12
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это слушатель, звонящий в эфир
+      identified_as: null
+      identification_method: "context"
+      confidence: high
+      evidence: "Gray в 6905s: 'Подкуда пытается побиться Дима?' - это слушатель по имени Дима, который звонит с вопросом про машину Тьюринга"
+
+      # Это не гость для идентификации - это формат call-in слушателя
+      possible_matches:
+        - person_id: "listener_dima"
+          confidence: 0.9
+          reason: "Слушатель из чата по имени Дима, звонит с вопросом о машине Тьюринга в конце выпуска"
+
+      voice_task:
+        needed: false
+        # Нет необходимости - это call-in слушатель, не регулярный гость
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарии
+notes: |
+  Выпуск 121 от 24 января 2009 года.
+
+  Ведущие: Umputun, Bobuk, Gray, Lavale (соведущая в этом выпуске).
+
+  Основной гость: Эльдар Муртазин - ведущий аналитик Mobile Research Group,
+  явно представлен в начале выпуска (54s).
+
+  Guest - это слушатель по имени Дима, который звонит в эфир в конце выпуска
+  (~6908s) с вопросом о машине Тьюринга. Это стандартный формат call-in,
+  не требует переименования - "Guest" корректно отражает его статус.
+
+  Lavale уже корректно идентифицирована как соведущая в файле.
+  EldarMurtazin уже корректно идентифицирован как гость в файле.
+
+  Все спикеры представлены в начале выпуска. Данные консистентны.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет необходимости в правилах - все спикеры уже корректно размечены

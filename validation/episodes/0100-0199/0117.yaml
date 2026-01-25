@@ -1,0 +1,75 @@
+episode: 117
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Lavale]
+  total_duration_sec: 6851
+
+# Детальный анализ по спикерам
+speakers:
+  - speaker: Umputun
+    role: host
+    replies_count: 815
+    total_duration_sec: 2448
+    first_appearance_sec: 7.0
+
+  - speaker: Bobuk
+    role: host
+    replies_count: 460
+    total_duration_sec: 1752
+    first_appearance_sec: 43.6
+
+  - speaker: Gray
+    role: host
+    replies_count: 297
+    total_duration_sec: 1467
+    first_appearance_sec: 54.6
+
+  - speaker: Lavale
+    role: guest
+    replies_count: 165
+    total_duration_sec: 504
+    first_appearance_sec: 71.3
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []  # Нет неизвестных спикеров в этом эпизоде
+
+# Анализ гостей
+guest_analysis:
+  - speaker: Lavale
+    analysis:
+      is_error: false
+      identified_as: lavale
+      identification_method: introduction
+      confidence: high
+      evidence: |
+        Gray представляет её в начале (64-71 сек):
+        "А еще с нами наша полупостоянная, в общем, почти постоянная ведущая, это Саша, то есть Лавале."
+
+        Umputun обращается к ней по имени (73 сек):
+        "А здорово ли ты, Саша, с нами?"
+
+        Также прямое обращение (line 3268):
+        "Поэтому я тебе не собирался давать слово, Лаваль..."
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []  # Правила не требуются - эпизод чистый
+
+# Примечания
+notes: |
+  Эпизод 117 полностью чистый. Все спикеры идентифицированы:
+  - Три постоянных ведущих: Umputun, Bobuk, Gray
+  - Одна гостья: Lavale (Саша) - бывшая ведущая, представлена в начале эпизода
+
+  Lavale уже указана в people.yaml как бывшая ведущая.
+  Неизвестных спикеров (SPEAKER_*, Guest*) в эпизоде нет.

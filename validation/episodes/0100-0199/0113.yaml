@@ -1,0 +1,61 @@
+episode: 113
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Lavale]
+  total_duration_sec: 7154
+
+# Детальный анализ спикеров
+speakers:
+  - speaker: "Umputun"
+    role: host
+    total_duration_sec: 2568
+    replies_count: 869
+    first_appearance_sec: 6
+
+  - speaker: "Bobuk"
+    role: host
+    total_duration_sec: 2185
+    replies_count: 563
+    first_appearance_sec: 46
+
+  - speaker: "Gray"
+    role: host
+    total_duration_sec: 2045
+    replies_count: 426
+    first_appearance_sec: 26
+
+  - speaker: "Lavale"
+    role: guest
+    total_duration_sec: 356
+    replies_count: 125
+    first_appearance_sec: 35
+    analysis:
+      is_error: false
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в начале эпизода (21s): 'Либо Лавале вообще из центра России' - явное представление участницы"
+
+# Анализ неизвестных спикеров
+unknown_speakers: []
+# В этом эпизоде нет SPEAKER_*, Guest* или других неизвестных спикеров.
+# Все 4 спикера идентифицированы:
+# - 3 ведущих (Umputun, Bobuk, Gray)
+# - 1 известный гость (Lavale - бывшая ведущая из people.yaml)
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun представляет всех участников в начале (17-23s): Bobuk, Gray, Lavale"
+    - "Lavale записана в people.yaml как бывшая ведущая"
+    - "Эпизод датирован 22 ноября 2008 года (упоминается в 6-9s)"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - все спикеры корректно идентифицированы

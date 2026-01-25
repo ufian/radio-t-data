@@ -1,0 +1,57 @@
+episode: 184
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6181.7
+
+# Детальный анализ спикеров
+speakers_analysis:
+  - speaker: "Umputun"
+    role: host
+    replies_count: 692
+    total_duration_sec: 2376.1
+    first_appearance_sec: 4.7
+
+  - speaker: "Bobuk"
+    role: host
+    replies_count: 593
+    total_duration_sec: 2048.4
+    first_appearance_sec: 10.3
+
+  - speaker: "Gray"
+    role: host
+    replies_count: 323
+    total_duration_sec: 1382.3
+    first_appearance_sec: 11.1
+
+  - speaker: "Marin_k_a"
+    role: guest
+    replies_count: 126
+    total_duration_sec: 374.9
+    first_appearance_sec: 46.7
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Gray явно представляет в начале эпизода (30-40s): 'чуть-чуть севернее от меня еще сидит сейчас Маринка'. Также Umputun обращается к ней по имени (74s): 'Маринка, скажи ему что-нибудь ласковое'"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Эпизод полностью чист. Все четыре участника идентифицированы:
+    - Три основных ведущих (Umputun, Bobuk, Gray)
+    - Marin_k_a (Марина) - бывшая ведущая, явно представлена в начале выпуска
+    Нет SPEAKER_* или Guest* записей. Нет ошибок атрибуции.
+
+# Нет неизвестных спикеров
+unknown_speakers: []
+
+# Нет предлагаемых правил очистки
+suggested_rules: []

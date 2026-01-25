@@ -1,0 +1,78 @@
+episode: 114
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Lavale]
+  total_duration_sec: 7461  # ~2 часа (874+606+326 ведущие + 222 Guest + 93 Lavale реплик)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 926
+    replies_count: 222
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Гость успешно идентифицирован
+      identified_as: "dima_zhemerov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Гость представился на 188.75s: 'Я зовут Дима Жемеров. Я из города Санкт-Петербурга... работаю в компании JetBrains и занимаюсь разработкой... IntelliJ IDEA'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Lavale"
+    total_duration_sec: 216
+    replies_count: 93
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Lavale — известная ведущая, уже в people.yaml
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun представил на 19.39s: 'Это Лавале из города Москва'. Lavale отвечает и участвует в диалоге как соведущая. Известная бывшая ведущая подкаста."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все участники представлены в начале выпуска (5-111s)"
+    - "Umputun представил Lavale (19s), Gray (46s), Bobuk упомянут (21s)"
+    - "Гость Дима Жемеров представлен на 183-204s"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 114
+    from_speaker: "Guest"
+    to_speaker: "DimaZhemerov"
+    confidence: high
+    reason: "Гость явно представился: 'Я зовут Дима Жемеров... работаю в компании JetBrains'"
+
+# Дополнительная информация для people.yaml
+new_guest_suggestion:
+  id: "dima_zhemerov"
+  canonical_name: "DimaZhemerov"
+  aliases: ["Дима", "Жемеров", "yole"]
+  real_name: "Дмитрий Жемеров"
+  info: "Разработчик JetBrains (IntelliJ IDEA), выпуски 114, 133, 173, 484"

@@ -1,0 +1,49 @@
+episode: 162
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Marin_k_a]
+  total_duration_sec: 6597
+
+# Детальный анализ спикеров
+host_stats:
+  - speaker: "Bobuk"
+    replies_count: 676
+    total_duration_sec: 2923
+    first_appearance_sec: 30.2
+
+  - speaker: "Umputun"
+    replies_count: 532
+    total_duration_sec: 2000
+    first_appearance_sec: 5.8
+
+  - speaker: "Gray"
+    replies_count: 295
+    total_duration_sec: 1311
+    first_appearance_sec: 24.0
+
+  - speaker: "Marin_k_a"
+    replies_count: 94
+    total_duration_sec: 362
+    first_appearance_sec: 21.8
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Umputun в первой же реплике (5.8s) представляет всех ведущих:
+    "У нас там Бобук есть, у нас там Гры есть, есть, конечно же, Маринка."
+
+    Marin_k_a — бывшая ведущая подкаста (запись в people.yaml: id=marin_k_a).
+    Активно участвует в выпуске: поёт "каравай" на день рождения Umputun,
+    участвует в обсуждениях. Bobuk обращается к ней по имени (476s):
+    "Маринка, тебе зарплату повысили?"
+
+# Предлагаемые правила очистки
+suggested_rules: []

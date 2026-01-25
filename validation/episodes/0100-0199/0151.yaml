@@ -1,0 +1,69 @@
+episode: 151
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a, PetrDidenko]
+  total_duration_sec: 6841
+
+# Детальный анализ спикеров (не-ведущих)
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 196
+    replies_count: 58
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 75s Umputun: 'А вот у нас есть еще Маринка, которая наверняка присоединится к поздравлениям своего земляка. Скажи ему что-нибудь по-своему.'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 505
+    replies_count: 178
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 2695s Umputun: 'Петя?' — приглашение гостя к разговору о Windows 7. Пётр работал в Microsoft, что подтверждается его репликой в 2740s: 'У нас теперь без сервис-пака все работает. Можно просто ставить Windows 7 и жить.'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарии
+notes: |
+  Эпизод 151 от 29 августа 2009 года — последний выпуск летнего сезона.
+  День рождения Gray отмечается в начале выпуска.
+
+  Все спикеры корректно идентифицированы:
+  - Ведущие: Umputun, Bobuk, Gray
+  - Marin_k_a (Марина) — бывшая ведущая, землячка Gray (оба из Запорожья)
+  - PetrDidenko (Пётр Диденко) — гость из Microsoft, обсуждает Windows 7
+
+# Предлагаемые правила очистки
+suggested_rules: []

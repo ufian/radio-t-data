@@ -1,0 +1,166 @@
+episode: 186
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko, Marin_k_a, Olyapka]
+  total_hosts_replies: 1372
+  total_duration_sec: 4613  # Umputun 1783 + Bobuk 2069 + Gray 761
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 678
+    replies_count: 188
+    pattern: consecutive
+    first_appearance_sec: 133.64
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 148.14s Bobuk представляет: "А еще правее сидит еще одна наша постоянная
+        ведущая Маринка, и у Маринки сейчас в руках вы не представляете что."
+        В 156.04s Marin_k_a отвечает: "Ух ты боже мой, да, всем привет, у меня
+        сейчас в руках штукенция Бобука."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 471
+    replies_count: 168
+    pattern: consecutive
+    first_appearance_sec: 103.75
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 99.70s Bobuk представляет: "Тут сидит Петя Диденко, и он молчит."
+        В 103.75s PetrDidenko отвечает: "Да, это ужасно, потому что мне дали
+        первый раз в жизни нормальный микрофон."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Olyapka"
+    total_duration_sec: 143
+    replies_count: 62
+    pattern: scattered
+    first_appearance_sec: 295.61
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 128.69s Bobuk представляет: "Рядом с нами сидит Аляпка."
+        В 130.37s добавляет: "Прям вот сидит и молчит в наушниках."
+        Однако первая реплика Olyapka появляется только в 295.61s.
+
+      # ВАЖНО: Обнаружена путаница между Marin_k_a и Olyapka
+      attribution_issue:
+        description: |
+          Найдены случаи перепутанной атрибуции реплик между Marin_k_a и Olyapka.
+          Обе участницы сидят рядом в студии, их голоса иногда путаются.
+
+        examples:
+          - timestamp: 776.42
+            assigned_to: "Marin_k_a"
+            text: "Я вот вообще давно хочу сказать про этот Foursquare, что Маринка вот его сегодня впервые открыла."
+            issue: "Говорит про Маринку в третьем лице - это должна быть Olyapka"
+
+          - timestamp: 781.72
+            assigned_to: "Olyapka"
+            text: "Я его открыла не впервые, но я о нем впервые из Твиттера увидела."
+            issue: "Отвечает на предыдущую реплику - это должна быть Marin_k_a"
+
+          - timestamp: 295.61-321.84
+            context: "Обсуждение Tumblr - реплики переплетены между двумя спикерами"
+            issue: "Сложно определить без voice comparison, кто именно говорит"
+
+      possible_matches: []
+      voice_task:
+        needed: true
+        reason: "Необходимо разделить голоса Marin_k_a и Olyapka"
+        reference_segments:
+          - speaker: "Olyapka"
+            stime: 785.74
+            etime: 791.93
+            text: "И он мне, честно говоря, вот я не понимаю для себя полезности этого сервиса и не вижу для себя модели его использования."
+
+          - speaker: "Marin_k_a"
+            stime: 792.99
+            etime: 803.67
+            text: "Я его очень много вижу в Твиттере, и там очень многие люди начинают постить вот именно просто вот я там-то..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a / Olyapka"
+      issue: |
+        Обнаружена систематическая путаница атрибуции между двумя гостями.
+        Обе представлены в начале подкаста (128-156 сек), но их реплики
+        местами перепутаны. Ключевой маркер: когда один спикер упоминает
+        другого в третьем лице, но реплика атрибутирована ему самому.
+
+        Требуется voice comparison для корректной переатрибуции.
+
+    - speaker: "Olyapka"
+      issue: |
+        Между представлением Оляпки (128.69s) и её первой репликой (295.61s)
+        проходит 167 секунд. Возможно, часть её ранних реплик атрибутирована
+        как Marin_k_a. Bobuk даже спрашивает "Почему молчит?" в 132.33s.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: swap
+    episode: 186
+    description: "Поменять местами атрибуцию в сегменте про Foursquare"
+    segment:
+      stime: 776.42
+      etime: 781.68
+    from_speaker: "Marin_k_a"
+    to_speaker: "Olyapka"
+    confidence: high
+    reason: "Говорит про Маринку в третьем лице"
+
+  - type: swap
+    episode: 186
+    description: "Поменять местами атрибуцию в ответе про Foursquare"
+    segment:
+      stime: 781.72
+      etime: 791.93
+    from_speaker: "Olyapka"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Маринка отвечает на вопрос о себе"
+
+# Рекомендация по дальнейшим действиям
+recommendation: |
+  1. Провести voice comparison между Marin_k_a и Olyapka для выявления
+     всех случаев неправильной атрибуции в эпизоде.
+
+  2. Особое внимание на сегменты:
+     - 295-325 сек (обсуждение Tumblr)
+     - 775-820 сек (обсуждение Foursquare)
+
+  3. Маркер для различения: Оляпка чаще использует "честно говоря",
+     Маринка - более эмоциональные выражения ("Ух ты боже мой").

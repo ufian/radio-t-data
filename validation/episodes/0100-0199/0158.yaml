@@ -1,0 +1,68 @@
+episode: 158
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko, Marin_k_a]
+  total_duration_sec: 8335
+  total_replies: 2128
+
+# Детальная статистика спикеров
+speakers_stats:
+  - speaker: Umputun
+    role: host
+    replies_count: 818
+    total_duration_sec: 2572
+    first_appearance_sec: 6
+
+  - speaker: Bobuk
+    role: host
+    replies_count: 400
+    total_duration_sec: 1355
+    first_appearance_sec: 30
+
+  - speaker: Gray
+    role: host
+    replies_count: 309
+    total_duration_sec: 1352
+    first_appearance_sec: 44
+
+  - speaker: PetrDidenko
+    role: guest
+    replies_count: 505
+    total_duration_sec: 1928
+    first_appearance_sec: 93
+    person_id: petr_didenko
+    real_name: "Петр Диденко"
+    introduced_at_sec: 52
+    introduction_quote: "специальный гость, который в данном случае как нельзя кстати, это Петя Зиденко"
+
+  - speaker: Marin_k_a
+    role: guest
+    replies_count: 96
+    total_duration_sec: 358
+    first_appearance_sec: 372
+    person_id: marin_k_a
+    real_name: "Марина"
+    introduced_at_sec: 44
+    introduction_quote: "из более северного в Украине города Киева Маринка"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Заметки
+notes:
+  - "Эпизод посвящен выходу Windows 7 (24 октября 2009)"
+  - "PetrDidenko - частый гость, упоминается что приходил больше чем Эльдар Муртазин"
+  - "Marin_k_a - бывшая ведущая, в этом выпуске участвует как обычный участник"
+  - "Все спикеры представлены в первые 2 минуты эпизода"
+
+# Предлагаемые правила очистки
+suggested_rules: []

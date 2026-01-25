@@ -1,0 +1,97 @@
+episode: 122
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Lavale]
+  guests_present: [Guest]
+  total_duration_sec: 6746  # ~112 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 956
+    replies_count: 209
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "pavel_kartaev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление в начале выпуска (51-55s):
+        Bobuk: "И специально приглашенный гость, которого мы совершенно случайно зазвали
+        поговорить на всякие интересные темы. Гостья зовут Павел Картаев, он из Москвы."
+
+        Дополнительные подтверждения:
+        - Guest (227s): "Павел Картаев, одно слово, павелкартаев.rpod.ru"
+        - Упоминает подкаст "Человек и айфон" и "Сиськи-письки шоу"
+        - Umputun (274-280s): "Многие, наверное, знают, кто писал самые первые тексты для сиськи-письки-шоу"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Lavale"
+    total_duration_sec: 383
+    replies_count: 127
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление в начале выпуска (25-31s):
+        Umputun: "Бобук у нас из Москвы, постоянно наш ведущий, а также у нас есть
+        еще Лавале из почти Москвы."
+
+        Lavale уже есть в people.yaml как бывшая ведущая.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры эпизода представлены в первые 55 секунд:
+    - Umputun начинает выпуск (5s)
+    - Lavale представлена Umputun'ом (25-31s)
+    - Gray представлен Umputun'ом (33-41s)
+    - Bobuk говорит (44s)
+    - Павел Картаев (Guest) представлен Bobuk'ом (51-55s)
+
+# Предлагаемые изменения
+
+## 1. Добавить в people.yaml нового гостя
+new_guest_entry:
+  id: "pavel_kartaev"
+  canonical_name: "PavelKartaev"
+  aliases: ["Павел", "Картаев"]
+  real_name: "Павел Картаев"
+  info: "Подкастер, ведущий 'Сиськи-письки шоу' и 'Человек и айфон'. Выпуск 122."
+
+## 2. Правило очистки для этого эпизода
+suggested_rules:
+  - type: rename
+    episode: 122
+    from_speaker: "Guest"
+    to_speaker: "PavelKartaev"
+    confidence: high
+    reason: "Явное представление Bobuk'ом: 'Гостья зовут Павел Картаев' (51s)"

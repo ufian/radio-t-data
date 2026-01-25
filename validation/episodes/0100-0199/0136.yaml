@@ -1,0 +1,61 @@
+episode: 136
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Lavale]
+  total_duration_sec: 6874
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Анализ Lavale (указан в задании как "неизвестный", но это известный участник)
+known_guest_verification:
+  - speaker: "Lavale"
+    total_duration_sec: 369
+    replies_count: 131
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в начале эпизода (14.3s-22.8s): "И, конечно, полноту и прекрасность
+        нашему мужскому скромному сообществу привносит Лавале, которая из города-героя Москва."
+        Затем (22.8s-24.5s): "Лавале, а с нами ли ты сегодня?"
+        Lavale отвечает (24.6s): "Да, я с вами сегодня."
+
+      # Дополнительное подтверждение
+      additional_evidence:
+        - Gray (73.2s-78.0s) упоминает Лавале по имени
+        - Bobuk (122.0s-125.8s) также обращается к Лавале
+        - Реплики согласованы по всему эпизоду (от 24.6s до 5458.4s)
+        - Характер реплик соответствует активному участнику обсуждения
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Примечания
+notes: |
+  Эпизод 136 от 9 мая 2009 года.
+  Все спикеры идентифицированы корректно.
+  Lavale — бывшая ведущая, зарегистрирована в people.yaml.
+  В этом выпуске участвует как соведущая наряду с Umputun, Bobuk и Gray.
+  Ksenks и Alek.sys в этом выпуске отсутствуют.
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules: []

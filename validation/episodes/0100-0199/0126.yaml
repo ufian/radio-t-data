@@ -1,0 +1,60 @@
+episode: 126
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Lavale]
+  total_duration_sec: 5982
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Примечание: Lavale уже идентифицирована в people.yaml как "Бывшая ведущая"
+
+# Анализ идентифицированных гостей
+identified_guests:
+  - speaker: "Lavale"
+    total_duration_sec: 445
+    replies_count: 178
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "23.0s [Umputun]: 'Это была Лавале из города-героя Москва.'"
+
+      # Подтверждение участия
+      participation_notes: |
+        Активное участие на протяжении всего эпизода (17.5s - 5620.9s).
+        Обсуждает технические темы: Nokia, Google, файловые менеджеры.
+        Характерная фраза в 5502.1s: "Да, я обычно так басом говорю." (самоирония).
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - speaker: Umputun
+      introduced_at_sec: 43.3
+      introduced_by: Bobuk
+      quote: "вот этот голос, который с самого начала нас всех представил, это Умпутун из Чикаго"
+    - speaker: Lavale
+      introduced_at_sec: 23.0
+      introduced_by: Umputun
+      quote: "Это была Лавале из города-героя Москва"
+    - speaker: Bobuk
+      introduced_at_sec: 27.9
+      introduced_by: Umputun
+      quote: "Кроме «Лавале» у нас есть «Бобук» из того же города"
+    - speaker: Gray
+      introduced_at_sec: 406.4
+      introduced_by: Umputun
+      quote: "Ты, Грей, который там молчит..."
+      note: "Поздний вход в эфир, первая реплика в 418.1s"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: Эпизод полностью чистый, все спикеры корректно размечены

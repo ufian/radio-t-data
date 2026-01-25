@@ -1,0 +1,51 @@
+episode: 147
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Marin_k_a]
+  total_duration_sec: 6252  # 791+585+214 ведущих + 404 Marin_k_a = ~6000+ с учётом пауз
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 404
+    replies_count: 109
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (29-39 сек) Umputun представляет ведущих:
+        "Грей и Маринка" — прямое упоминание имени.
+        Первая реплика Marin_k_a в 41.1s: "Привет, да." —
+        непосредственно после представления.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Marin_k_a — бывшая соведущая подкаста Радио-Т (Марина).
+  Уже присутствует в справочнике people.yaml под id "marin_k_a".
+  Эпизод 147 датирован 1 августа 2009 года (по транскрипту).
+  В выпуске участвуют 4 соведущих: Umputun, Bobuk, Gray, Marin_k_a.
+  Гостей в этом выпуске нет — Umputun упоминает, что "гость пока не подгрёб".

@@ -1,0 +1,70 @@
+episode: 128
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Lavale]
+  total_duration_sec: 6884
+
+# Детальный анализ спикеров (кроме стандартных ведущих)
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1816
+    replies_count: 399
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (1.7s) Umputun говорит: "подкаст выходного дня Радио Ти в полном сегодня составе
+        и даже к нам вот-вот забредет гость". На 83s: "давайте, пока мы до юбилеев не тронули, пока гость
+        там не заснул, я его впущу в эфир". На 100s Umputun обращается к гостю: "любимый гость нашей
+        очаровательной лавале, особенно темы, которые ты затрагиваешь". Первая реплика гостя (118s) -
+        "Да нет, не глупости, там про Skype было несколько слов сказано" - показывает экспертизу в
+        мобильных технологиях, характерную для Эльдара Муртазина. На 1555s Эльдар спрашивает:
+        "Лавале, я правильно сказал это слово?" - подтверждает, что он знает других участников.
+        Эльдар Муртазин - известный мобильный аналитик, постоянный гость подкаста.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Lavale"
+    total_duration_sec: 122
+    replies_count: 47
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 20s Umputun говорит: "Лавале к этому гостю вообще особенно трогатель, относится особенно
+        к темам, которые наш гость может затронуть". На 41s Bobuk представляет: "тот женский голос
+        и смех за кадром, это традиционно Лавале из далекого Замкадья". На 49s: "у нее есть педали".
+        Lavale - бывшая ведущая подкаста, участвовала в выпусках как постоянный участник.
+        Её реплики соответствуют женскому голосу и участию в общих дискуссиях.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все участники представлены в начале эпизода:
+    - Umputun, Bobuk, Gray - постоянные ведущие, "полный состав" (1.7s)
+    - Lavale - представлена на 41s как "тот женский голос и смех за кадром"
+    - EldarMurtazin - гость, впущен в эфир на ~88s
+    Выпуск 128 (80 в hex) - юбилейный, дата 14 марта 2009 года.
+
+# Предлагаемые правила очистки
+suggested_rules: []

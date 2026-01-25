@@ -1,0 +1,52 @@
+episode: 161
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 5526
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 431
+    replies_count: 126
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Бобук в начале выпуска (62.98s): 'Есть еще два наших традиционных ведущих, это Маринка и, собственно, Грей'. Marin_k_a уже присутствует в people.yaml как бывшая ведущая."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарий
+notes: |
+  Эпизод 161 от 14 ноября 2009 года. Все спикеры корректно идентифицированы:
+  - Umputun представлен Бобуком (46.17s)
+  - Bobuk ведёт из Москвы
+  - Gray представлен Бобуком вместе с Маринкой (62.98s)
+  - Marin_k_a (Марина) представлена как "традиционный ведущий" (62.98s)
+
+  Marin_k_a активно участвует в обсуждениях: Firefox, браузеры, операционные системы.
+  126 реплик общей длительностью 431 сек — типичный объём для ведущей.
+
+# Предлагаемые правила очистки
+suggested_rules: []

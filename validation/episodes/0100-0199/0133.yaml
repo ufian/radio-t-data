@@ -1,0 +1,125 @@
+episode: 133
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_identified: [EldarMurtazin, Lavale]
+  total_duration_sec: 7620  # примерно 2:07:00
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 911
+    replies_count: 223
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun явно представляет его в начале выпуска (42.62s):
+        "Эльдар, мы тебя рады приветствовать в нашем шоу, как обычно."
+        И ранее (34.97s): "Она сказала, пока этот гость не придет, я в эфир не выйду."
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Lavale"
+    total_duration_sec: 272
+    replies_count: 113
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет её в начале (17.61s):
+        "Начну с прекрасных наших, это, конечно, Лавале из города Москва,
+        которая по неожиданным причинам пропускала, по-моему, полтора или два последних выпуска"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest"
+    total_duration_sec: 47
+    replies_count: 22
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Частичная идентификация
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Контекст указывает на человека по имени "Дима":
+        - Gray (6727.63s): "Сейчас Дима пойдет и еще тоже присоединится."
+        - Umputun (6732.59s): "Откуда ты знаешь, что Дима пришел?"
+        - Umputun (6734.25s): "Он только что пришел, я ему дал ключи."
+        - Umputun (6925.48s): "Дима, скажи еще раз."
+        - Bobuk (6936.19s): "Так, Нима, ты меня пытаешься сейчас обидеть, да?" (Нима = опечатка Дима)
+
+        Guest упоминает что приносил коньяк в прошлый раз (6846.59s):
+        "Он весь коньяк выпил, который я в прошлый раз принес."
+
+        Это локальный гость в Чикаго, пришедший в студию Umputun во время записи.
+
+      possible_matches:
+        - person_id: "unknown_dima_chicago"
+          confidence: 0.7
+          reason: "По имени 'Дима', локальный знакомый Umputun в Чикаго, был на записях раньше"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6946.12
+          etime: 6954.48
+          text: |
+            "Понимаешь, если 90%, так я честно говорю, что 90%, а не вру.
+            Другой приходил бы, например, на 10%, сказал бы, что на 100%.
+            А я на 90% прихожу, на 90% и говорю..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Guest"
+      issue: |
+        Гость появляется только в конце выпуска (~6727s = 1:52:07), упоминается как "Дима".
+        Не представлен формально, но понятно что это локальный знакомый Umputun.
+        Рекомендуется: переименовать в "Dima" или найти полное имя для people.yaml.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 133
+    from_speaker: "Guest"
+    to_speaker: "Dima"
+    confidence: medium
+    reason: |
+      Контекст явно указывает на имя "Дима":
+      - Umputun дважды обращается по имени
+      - Gray упоминает "Сейчас Дима пойдет"
+      Без фамилии идентификация неполная, но имя подтверждено.
+
+# Дополнительные замечания
+notes: |
+  Эпизод 133 от 18 апреля 2009 года.
+
+  Основной состав: Umputun, Bobuk, Gray + гостья Lavale + гость Эльдар Муртазин.
+
+  Локальный гость "Дима" появляется в конце выпуска (~1:52), физически находится
+  в Чикаго у Umputun. Упоминает что "в прошлый раз принес коньяк" - значит был
+  на записях раньше.
+
+  Для полной идентификации Димы нужно:
+  1. Проверить предыдущие выпуски на упоминание "Димы" в Чикаго
+  2. Или использовать voice comparison с другими эпизодами

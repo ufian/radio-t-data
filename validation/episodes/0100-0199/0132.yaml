@@ -1,0 +1,74 @@
+episode: 132
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Guest]
+  total_duration_sec: 7123
+  note: "Lavale упоминается в начале (94s) как отсутствующая - 'Лаваль у нас сегодня пока не будет, она где-то подлетает'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 3126
+    replies_count: 629
+    pattern: consecutive
+    first_appearance_sec: 38
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: "stepan_pachikov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление в начале эпизода (25-43s):
+        - Bobuk (25s): "В гостях у нас Степан Пачиков, правильно называется?"
+        - Bobuk (29s): "его обычно представляют как чифт-продакт-архитектор компании Evernote"
+        - Guest (38s): "Ну, я обычно почитаю, чтобы меня оценили как фаундер"
+        - Bobuk (41s): "Ну, хорошо, пусть будет фаундер компании Evernote"
+
+        Дополнительное подтверждение:
+        - Gray (392s): "Степан, у меня все-таки вопрос про русскую локализацию"
+        - Guest активно обсуждает историю Evernote, Paragraph, работу с Apple
+        - Упоминает своих коллег: Андрей Синько (вице-президент по маркетингу),
+          Филипп Либин (CEO), связи с Эстер Дайсон и Макс Левчин
+
+      possible_matches: []
+
+      # Voice task не нужен - гость явно идентифицирован
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все три ведущих (Umputun, Bobuk, Gray) представлены в начале"
+    - "Гость Степан Пачиков явно представлен Бобуком в 25-43s"
+    - "Lavale упомянута как отсутствующая (94s)"
+    - "Ksenks и Alek.sys не участвуют в этом эпизоде"
+
+# Информация о госте для people.yaml
+new_guest_info:
+  id: "stepan_pachikov"
+  canonical_name: "StepanPachikov"
+  aliases: ["Степан", "Пачиков"]
+  real_name: "Степан Пачиков"
+  info: "Основатель (founder) компании Evernote, ранее основатель Paragraph. Эпизод 132 (2009-04-11)"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 132
+    from_speaker: "Guest"
+    to_speaker: "StepanPachikov"
+    confidence: high
+    reason: "Гость явно представлен в начале эпизода как Степан Пачиков, основатель Evernote"

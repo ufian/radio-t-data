@@ -1,0 +1,106 @@
+episode: 195
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_duration_sec: 7195  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1449
+    replies_count: 363
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk на 56.28 сек: "У нас сегодня в гостях опять Эльдар Муртазин,
+        который прямо сейчас, прямо еще до сих пор на свободе и без особого
+        трепета, по-моему, готов с нами про все поговорить."
+
+        Первая реплика EldarMurtazin на 72.93 сек: "Да, здесь всем привет."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 363
+    replies_count: 93
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun на 806.86 сек: "Маринка, ты у нас появилась."
+        Marin_k_a на 808.89 сек: "Да, я появилась, наконец-то, через все
+        эти перипетии с поваленными деревьями."
+
+        Bobuk на 823.83 сек: "Мы тут все соскучились за твоим голосом,
+        кстати, Мариночкой."
+
+        Марина (Marin_k_a) - бывшая ведущая подкаста, указана в people.yaml.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "_extra"
+    total_duration_sec: 60
+    replies_count: 44
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Это аудиовставки - видеоролик "Сван пытается продать девушке HTC".
+
+        Начинается на ~2038 сек с английского текста:
+        "And it doesn't require you to be on Wi-Fi to use video chat."
+        "I don't care."
+
+        Продолжается на русском языке (перевод/озвучка ролика).
+
+        На 2111 сек подтверждение: "Да, эта сценка называется
+        «Сван пытается продать девушке HTC»."
+
+        _extra - специальный маркер для аудиовставок, не требует
+        идентификации как гость.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры корректно идентифицированы:
+    - Umputun, Bobuk, Gray - основные ведущие (представлены в начале)
+    - EldarMurtazin - явно представлен как гость на 56 сек
+    - Marin_k_a - явно приветствуется на 807 сек (подключилась позже)
+    - _extra - аудиовставки из видеоролика (не человек)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - все спикеры уже корректно размечены

@@ -1,0 +1,42 @@
+episode: 159
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 6400.6
+  episode_duration_sec: 7009.9
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_analysis:
+    - speaker: Umputun
+      introduced_at_sec: 31.48
+      introduced_by: Bobuk
+      quote: "Это Умпутун из Чикаго."
+    - speaker: Bobuk
+      introduced_at_sec: 8.72
+      introduced_by: Umputun
+      quote: "...известного знатока и любителя экзотических фруктов, Бобука из города Москва."
+  context_notes: |
+    В начале выпуска (8.72 сек) Umputun явно говорит про "суженный состав" и
+    представляет Bobuk'a. Затем (31.48 сек) Bobuk представляет Umputun'a и
+    подтверждает, что это "классический состав с самого начала".
+    Эпизод от 31 октября 2009 года - это ранний период подкаста, когда
+    выходили выпуски только с двумя ведущими.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Итоговое заключение
+summary: |
+  Эпизод 159 полностью чистый. В нём участвуют только два ведущих - Umputun и Bobuk.
+  Оба явно представлены в начале выпуска. Никаких неизвестных спикеров,
+  автоматических меток или артефактов не обнаружено.
+  Статистика: Umputun (963 реплики, 3395 сек), Bobuk (740 реплик, 3006 сек).

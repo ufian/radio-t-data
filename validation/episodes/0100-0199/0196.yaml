@@ -1,0 +1,159 @@
+episode: 196
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [PetrDidenko, Marin_k_a, Alexmak, Grinch, Golodniy]
+  callers: [Guest1, Guest2]
+  total_speakers: 8
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # === ПОСТОЯННЫЕ ГОСТИ (уже идентифицированы в people.yaml) ===
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1393
+    replies_count: 297
+    first_appearance_sec: 20
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале выпуска (17.51s): 'Соединенный, Петя, как это по-русски сказать?' - Umputun обращается к нему. Петр присутствует в студии, упомянут как 'Петя' несколько раз."
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 927
+    replies_count: 201
+    first_appearance_sec: 51
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале (47.1s): 'У нас есть Маринка, которая, несомненно, с ногами.' (50.3s): 'Маринка.' Затем её ответ (51.4s): 'Да, я с ногами, с красивыми ногами из Киева'. Поздравляют с днём рождения."
+      voice_task:
+        needed: false
+
+  - speaker: "Alexmak"
+    total_duration_sec: 668
+    replies_count: 135
+    first_appearance_sec: 1751
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "alexmak"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Сам представляется (1751.4s): 'Здесь Алекс Мак.' Umputun подтверждает (1752.77s): 'Алекс Мак, это был ты?'"
+      voice_task:
+        needed: false
+
+  - speaker: "Grinch"
+    total_duration_sec: 466
+    replies_count: 106
+    first_appearance_sec: 74
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "grinch"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале (72.36s): 'Здравствуй, Гринч.' Ответ (73.84s): 'Здравствуй, дорогой.' Упомянуто что они с Голодным 'приходят на пару'."
+      voice_task:
+        needed: false
+
+  - speaker: "Golodniy"
+    total_duration_sec: 199
+    replies_count: 47
+    first_appearance_sec: 112
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "golodniy"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале (109.5s): 'Скажи брату Гринчу, брат ли ты его?' - обращение к Голодному. Его ответ (111.56s) подтверждает идентификацию."
+      voice_task:
+        needed: false
+
+  # === ЗВОНКИ СЛУШАТЕЛЕЙ (не идентифицированы) ===
+
+  - speaker: "Guest2"
+    total_duration_sec: 86
+    replies_count: 18
+    first_appearance_sec: 859
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Сам представляется (858.95s): 'Меня зовут Антон.' Говорит что звонил на юбилейный выпуск. Обсуждает iPhone 4."
+      possible_matches:
+        - person_id: "anton_caller"
+          confidence: 0.9
+          reason: "Слушатель по имени Антон, звонил на юбилейный выпуск ранее"
+      suggested_name: "Anton_caller_196"
+      voice_task:
+        needed: false
+        reason: "Идентифицирован по имени (Антон), но это разовый звонок слушателя, не постоянный гость"
+
+  - speaker: "Guest1"
+    total_duration_sec: 82
+    replies_count: 14
+    first_appearance_sec: 3691
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun обращается (3681.54s): 'Здравствуй, Евгений.' Говорит про камеры и мегапиксели, похоже разбирается в фототехнике."
+      possible_matches:
+        - person_id: "evgeniy_caller"
+          confidence: 0.9
+          reason: "Слушатель по имени Евгений, 'тёзка' Umputun'а"
+      suggested_name: "Evgeniy_caller_196"
+      voice_task:
+        needed: false
+        reason: "Идентифицирован по имени (Евгений), разовый звонок слушателя"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все основные участники представлены в начале выпуска"
+    - "Bobuk отсутствует в этом выпуске (упомянуто: 'Несмотря на то, что Бобука нет в этом шоу')"
+    - "Guest1 и Guest2 - это звонки слушателей в эфир, не гости студии"
+    - "Выпуск посвящён дню рождения Marin_k_a"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 196
+    from_speaker: "Guest2"
+    to_speaker: "Anton_caller"
+    confidence: high
+    reason: "Слушатель представился 'Меня зовут Антон' (858.95s)"
+
+  - type: rename
+    episode: 196
+    from_speaker: "Guest1"
+    to_speaker: "Evgeniy_caller"
+    confidence: high
+    reason: "Umputun называет его 'Евгений' и 'тёзка' (3681.54s)"
+
+# Дополнительные заметки
+notes:
+  - "Эпизод от 17 июля 2010 года"
+  - "Состав: Umputun + PetrDidenko (в студии), Marin_k_a (Киев), Grinch + Golodniy (гости), Alexmak (звонок/подключение)"
+  - "Два звонка слушателей: Антон (про iPhone 4) и Евгений (про камеры)"
+  - "Все спикеры корректно идентифицированы, нужен только review для возможного переименования Guest1/Guest2"

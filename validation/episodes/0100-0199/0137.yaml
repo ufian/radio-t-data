@@ -1,0 +1,45 @@
+episode: 137
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Lavale]
+  total_duration_sec: 6000  # ~100 мин, типичная длина
+
+# Все спикеры в этом эпизоде известны
+# Lavale - бывшая ведущая, есть в people.yaml (id: lavale)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров (SPEAKER_* или Guest*)
+# Все 4 спикера идентифицированы
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_evidence:
+    - speaker: Lavale
+      timestamp_sec: 20.95
+      quote: "Наша постоянная соведущая Лаваля из города Москва"
+    - speaker: Bobuk
+      timestamp_sec: 24.52
+      quote: "А с ней там рядом Бобук"
+    - speaker: Gray
+      timestamp_sec: 54.77
+      quote: "Его зовут Грей, и он сегодня, кажется, все-таки из Одессы"
+    - speaker: Umputun
+      timestamp_sec: 64.31
+      quote: "начинал это все, естественно, как всегда, Умпутун"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Эпизод чистый, правки не требуются
+
+# Примечания
+notes: |
+  Lavale указана в предрассчитанной статистике как "неизвестный спикер",
+  но она уже есть в people.yaml (id: lavale) как бывшая ведущая.
+  Все 4 участника явно представлены в начале выпуска (первые 75 секунд).

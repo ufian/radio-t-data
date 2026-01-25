@@ -1,0 +1,76 @@
+episode: 194
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Plushev, Marin_k_a]
+  total_duration_sec: 7317  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Plushev"
+    total_duration_sec: 954
+    replies_count: 242
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "plushev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Бобук явно представляет гостя в начале эпизода (60-68 сек):
+        "У нас сегодня человек-легенда в прямом эфире... У нас Александр Владимирович Плющев."
+        Гость подтверждает: "Да, совершенно верно. Добрый вечер, здрасте."
+        Позже сам говорит: "Мне нравится просто Плющев" (89-91 сек).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 490
+    replies_count: 137
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет участников в начале (30-35 сек):
+        "Была Маруся, которая незаменима не менее, хотя более прекрасна."
+        Маруся/Марина — бывшая ведущая, зарегистрирована в people.yaml как Marin_k_a.
+        Первая реплика в 16 сек: "День рождения Оляпки?" — показывает знание внутренних шуток.
+        Активно участвует в обсуждениях (например, история про iPhone и маникюр в 400-437 сек).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарий
+notes: |
+  Эпизод 194 от 3 июля 2010 года.
+  Все спикеры корректно идентифицированы:
+  - Ведущие: Umputun, Bobuk, Gray
+  - Гости: Plushev (Александр Плющев, журналист), Marin_k_a (Марина, бывшая ведущая)
+
+  Оба гостя были явно представлены в начале эпизода и имеют значительное эфирное время,
+  что указывает на корректную разметку.

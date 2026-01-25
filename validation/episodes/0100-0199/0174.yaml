@@ -1,0 +1,72 @@
+episode: 174
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [PetrDidenko, Marin_k_a]
+  total_duration_sec: 7020.6
+  date: "2009-02-13"
+
+# Детальный анализ спикеров
+speakers:
+  - speaker: "Umputun"
+    role: host
+    total_duration_sec: 2568.2
+    replies_count: 717
+    first_appearance_sec: 3.9
+    introduced: true
+    introduction_evidence: "Ведущий, представляет остальных участников"
+
+  - speaker: "Gray"
+    role: host
+    total_duration_sec: 2057.2
+    replies_count: 423
+    first_appearance_sec: 74.7
+    introduced: true
+    introduction_evidence: "78.2s: Umputun - 'Это, кстати, Грей там у нас басит и бархатит'; Gray подтверждает что он из Одессы"
+
+  - speaker: "PetrDidenko"
+    role: guest
+    total_duration_sec: 1750.6
+    replies_count: 498
+    first_appearance_sec: 33.5
+    introduced: true
+    introduction_evidence: "21-33s: Umputun представляет - 'У нас сегодня гость... он взял, подхватил просто выпавшее знамя из рук... бобука. Петя, спасибо, что пришел.'"
+    identified_as: "petr_didenko"
+    identification_method: "introduction"
+    confidence: high
+    person_info: "Пётр Диденко - разработчик, частый гость подкаста (148 выпусков по справочнику)"
+
+  - speaker: "Marin_k_a"
+    role: guest
+    total_duration_sec: 644.6
+    replies_count: 138
+    first_appearance_sec: 69.8
+    introduced: true
+    introduction_evidence: "40-47s: Umputun - 'И есть у нас Маринка из славного города Киева... О, Маринка из города Киева.'"
+    identified_as: "marin_k_a"
+    identification_method: "introduction"
+    confidence: high
+    person_info: "Марина - бывшая ведущая из Киева"
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  bobuk_absent: true
+  bobuk_absence_explained: "Umputun упоминает 'наполовину больного бобука', Петя 'подхватил знамя'"
+  issues: []
+
+# Примечания
+notes:
+  - "Эпизод от 13 февраля 2009 года"
+  - "Bobuk отсутствует по болезни, его заменяет Пётр Диденко"
+  - "Все 4 спикера явно представлены в первые 2 минуты подкаста"
+  - "Транскрипт полностью очищен - нет SPEAKER_* или Guest меток"
+
+# Предлагаемые правила очистки
+suggested_rules: []

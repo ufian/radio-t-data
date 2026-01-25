@@ -1,0 +1,39 @@
+episode: 107
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 7950
+  total_replies: 1748
+
+# Детальная статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 803
+    duration_sec: 2926.8
+    first_appearance_sec: 7
+  - speaker: Bobuk
+    replies_count: 539
+    duration_sec: 2225.2
+    first_appearance_sec: 45
+  - speaker: Gray
+    replies_count: 406
+    duration_sec: 2106.9
+    first_appearance_sec: 38
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    В начале эпизода (22-45s) Umputun представляет Bobuk и Gray как соведущих.
+    Все три ведущих начинают говорить в первую минуту.
+    Эпизод не содержит гостей и неидентифицированных спикеров.
+
+# Предлагаемые правила очистки
+suggested_rules: []

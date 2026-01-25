@@ -1,0 +1,41 @@
+episode: 102
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_duration_sec: 6403  # 800*2716/800 + 548*2117/548 + 361*1570/361 примерно
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров (SPEAKER_*, Guest*) в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_evidence:
+    - speaker: Umputun
+      introduced_at_sec: 24.74
+      quote: "в студии все те же и все там же, а именно Грей из Одессы и Бобук из Москвы"
+    - speaker: Bobuk
+      introduced_at_sec: 36.52
+      quote: "а это был Умпутун из Чикаго"
+    - speaker: Gray
+      first_speech_at_sec: 292.19
+      note: "Gray не представлен явно, но упомянут Umputun'ом как 'Грей из Одессы' в начале"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Эпизод чистый, правила не требуются
+
+# Дополнительные заметки
+notes:
+  - "Эпизод от 6 сентября 2008 года"
+  - "Только три ведущих: Umputun, Bobuk, Gray"
+  - "Гостей в этом эпизоде нет"
+  - "Упоминается Росновский (не в эфире, только обсуждают)"

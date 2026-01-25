@@ -1,0 +1,40 @@
+episode: 197
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_replies: 1699
+  # Umputun: 765 реплик, Bobuk: 563 реплик, Gray: 371 реплик
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - speaker: Umputun
+      introduced_at_sec: 19.56
+      evidence: "Бобук, как? Потянем?" (Umputun обращается к Bobuk)
+    - speaker: Bobuk
+      introduced_at_sec: 29.97
+      evidence: "Кроме того, кроме Мпутуна, который, собственно, вступил, как обычно, и начал наш подкаст, есть еще Грей сегодня из-под Киева"
+    - speaker: Gray
+      introduced_at_sec: 40.09
+      evidence: "Не почему-то, а потому что ты говоришь." (Gray отвечает после представления Bobuk'ом)
+  issues: []
+
+# Примечания
+notes:
+  - "Чисто мальчиковый состав" - Umputun отмечает отсутствие Ksenks
+  - Дата выпуска 24 июля 2010 года
+  - Гостей нет
+
+# Предлагаемые правила очистки
+suggested_rules: []

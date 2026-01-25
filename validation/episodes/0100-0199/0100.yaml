@@ -1,0 +1,183 @@
+episode: 100
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Olyapka]
+  callers_count: 6
+  total_duration_sec: 7680  # ~2 часа 8 минут
+
+# Контекст выпуска
+episode_context:
+  note: "Юбилейный 100-й выпуск. Olyapka - бывшая ведущая, приглашена как гость. Во второй половине выпуска - телефонные звонки слушателей с поздравлениями."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 755
+    replies_count: 224
+    first_appearance_sec: 97
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 89-122s Umputun представляет: 'бывший ведущий уступил вытеснившему ее Грею и теперь пришел в виде гостя'"
+
+  - speaker: "Guest6"
+    total_duration_sec: 77
+    replies_count: 19
+    first_appearance_sec: 5447
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      context: "Звонящий слушатель. Упоминает участие в Авторпати, был на Радио-Т ранее, запускает свой подкаст. Имя не названо."
+      possible_matches: []
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5511.81
+          etime: 5543.8
+          text: "Ну, если не учитывая то, что я сейчас второй раз в Радио Т попадаю, до этого я был еще парочку раз после шоу, которое называется Авторпати..."
+
+  - speaker: "Guest4"
+    total_duration_sec: 52
+    replies_count: 14
+    first_appearance_sec: 2027
+    pattern: scattered
+    analysis:
+      is_error: partial
+      error_reason: "Первая реплика в 2027s ('Неужели, неужели так?') - ошибка распознавания, должно быть Olyapka (контекст разговора Бобука с 'Олечкой'). Остальные реплики (7075-7150s) - реальный звонящий слушатель Айрат."
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: "В 7079s: 'Здравствуйте, меня зовут Айрат'"
+      possible_matches: []
+      voice_task:
+        needed: false
+        note: "Имя известно (Айрат), но нет записи в people.yaml"
+
+  - speaker: "Guest1"
+    total_duration_sec: 51
+    replies_count: 10
+    first_appearance_sec: 6163
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      context: "Звонящий слушатель, поздравляет со 100-м выпуском. Слушает подкаст месяц. Имя не названо."
+      possible_matches: []
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6173.67
+          etime: 6189.87
+          text: "Хотя порой не достает профессиональных мнений. То есть просто обычные люди говорят о том, как развивается этот мир в плане хай-тека. С другой стороны, это большой плюс..."
+
+  - speaker: "Guest3"
+    total_duration_sec: 48
+    replies_count: 13
+    first_appearance_sec: 6910
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      context: "Звонящая слушательница (говорит 'я говорила'). Первый звонок по Skype. Упоминает подкаст 'Японский чай'."
+      possible_matches: []
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6975.3
+          etime: 6996.83
+          text: "Действительно, хочу поздравить с сотым выпуском... пожелать еще сотен... Пожелать удачи в частных подкастах Оляпки, Бобука, Умпутуна и Грея."
+
+  - speaker: "Guest2"
+    total_duration_sec: 45
+    replies_count: 15
+    first_appearance_sec: 6635
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "self-introduction"
+      confidence: medium
+      evidence: "В 6635s: 'Меня зовут Александр'. В 6828s: 'У меня подкаст называется Позитив'. В 6835s: 'Сайт Светляк.ру'."
+      context: "Звонящий слушатель Александр, ведёт подкаст 'Позитив' на сайте Светляк.ру."
+      possible_matches: []
+      voice_task:
+        needed: false
+        note: "Имя известно (Александр), подкаст Позитив, сайт Светляк.ру"
+
+  - speaker: "Guest5"
+    total_duration_sec: 38
+    replies_count: 17
+    first_appearance_sec: 7245
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "self-introduction"
+      confidence: medium
+      evidence: "В 7245s: 'Ну, я пингвинатор'. В 7251s: 'Пингвинатор'."
+      context: "Звонящий слушатель с ником 'Пингвинатор'."
+      possible_matches: []
+      voice_task:
+        needed: false
+        note: "Известен как Пингвинатор"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  hosts_check:
+    - speaker: Umputun
+      introduced: true
+      note: "Основной ведущий, представляет выпуск"
+    - speaker: Bobuk
+      introduced: true
+      note: "Представлен в начале как 'Бубук из Москвы'"
+    - speaker: Gray
+      introduced: true
+      note: "Представлен как 'Сергей, известный также как Грей из Одессы'"
+  issues:
+    - speaker: "Guest4"
+      issue: "Реплика в 2027s ошибочно приписана Guest4, должна быть Olyapka"
+      severity: minor
+      suggested_fix: "Переименовать реплику с id 65c7dade1e26cdb62a82207b в Olyapka"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename_single
+    episode: 100
+    replica_id: "65c7dade1e26cdb62a82207b"
+    from_speaker: "Guest4"
+    to_speaker: "Olyapka"
+    confidence: high
+    reason: "Контекст разговора: Бобук обращается к 'Олечке' (Olyapka), реплика 'Неужели, неужели так?' - её реакция"
+
+# Новые участники для добавления в people.yaml (опционально)
+new_participants_candidates:
+  - name: "Айрат"
+    type: "caller"
+    episode: 100
+    note: "Звонящий слушатель в юбилейном выпуске"
+  - name: "Александр (Позитив)"
+    type: "caller"
+    episode: 100
+    note: "Подкастер, сайт Светляк.ру, подкаст Позитив"
+  - name: "Пингвинатор"
+    type: "caller"
+    episode: 100
+    note: "Звонящий слушатель"

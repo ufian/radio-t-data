@@ -1,0 +1,22 @@
+episode: 105
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 5957
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Gray отсутствует — упомянуто в начале выпуска (57-75 сек): 'Коллега Грей по своим причинам к нам не может присоединиться'"
+    - "Эпизод проведён в сокращённом составе из двух ведущих"
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,38 @@
+episode: 124
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Lavale]
+  total_duration_sec: 6879.6
+
+# В этом эпизоде нет неизвестных спикеров
+# Все 4 спикера идентифицированы:
+# - Umputun, Bobuk, Gray - постоянные ведущие
+# - Lavale - бывшая ведущая, явно представлена в начале эпизода
+
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Подробности идентификации Lavale
+identification_notes:
+  lavale:
+    person_id: "lavale"
+    canonical_name: "Lavale"
+    identification_method: "introduction"
+    confidence: high
+    evidence: |
+      Umputun в начале эпизода (34.9-40.6s): "В лице лавалея из города Москва, не из самого, к сожалению, ее центра, но тем не менее."
+      Bobuk подтверждает (93.9-98.2s): "Это Лавале попыталась выступить главным, так сказать, блюстителем порядка."
+    statistics:
+      replies_count: 149
+      total_duration_sec: 364.0
+      first_appearance_sec: 89.4
+
+# Предлагаемые правила очистки
+suggested_rules: []

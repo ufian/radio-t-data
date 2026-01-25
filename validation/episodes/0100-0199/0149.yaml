@@ -1,0 +1,55 @@
+episode: 149
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Marin_k_a]
+  total_duration_sec: 7258
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 765
+    replies_count: 181
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. В начале выпуска (16-26 сек) Umputun представляет ведущих: "А к этому подкасту, который называется Радио Ти, сразу ведущая. Из которых Маринка, пропустившая прошлый выпуск..."
+        2. На 131-142 сек Bobuk говорит: "У Маринки все гораздо проще, ей нужно купить хорошую камеру..."
+        3. Первая реплика Marin_k_a (142 сек): "И купить уже все, что захочу сама" - прямой ответ на слова Bobuk о Маринке
+        4. Marin_k_a указана в people.yaml как бывшая ведущая (id: marin_k_a, real_name: Марина)
+        5. 181 реплика и 765 секунд речи - типичный объем для соведущего
+
+      # Не требуется
+      possible_matches: []
+
+      # Voice comparison не требуется
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 149 от 15 августа 2009 года.
+  В эпизоде участвуют три человека: Umputun (ведущий), Bobuk (соведущий) и Marin_k_a (Марина, бывшая ведущая).
+  Все спикеры корректно идентифицированы, представлены в начале выпуска.
+  Marin_k_a - это Марина, которая упоминается как "Маринка" в представлении.
+  Спикер Marin_k_a уже присутствует в people.yaml с правильным id.

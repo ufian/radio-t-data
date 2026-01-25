@@ -1,0 +1,56 @@
+episode: 103
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Olyapka]
+  total_duration_sec: 7502  # ~2 часа 5 минут (3297 + 3239 + 966)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 966
+    replies_count: 202
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 67-75 сек: "А если вдруг вы подключились к подкасту или только включили
+        свои интернет-радиоприемники, с нами Оляпка. Известнейший персонаж."
+
+        Olyapka отвечает в 82-94 сек: "Да, ну как бы известно, я была изначально
+        благодаря Радио Ти, это самый великий подкаст, который сделал меня знаменитой..."
+
+        Также упоминается в 114 сек (Gray): "Оляпка!"
+        И в 124 сек (Umputun): "Народ не поймет, опять начнет за оляпку заступаться"
+
+      # Задание на voice comparison не требуется
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Эпизод 103 от 13 сентября 2008 года.
+    Ведущие: Umputun (из Чикаго), Gray.
+    Отсутствует Bobuk (упоминается что "сорвал голос").
+    Гостья Olyapka представлена в первые 2 минуты выпуска.
+    Все спикеры корректно идентифицированы, ошибок разметки не обнаружено.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Никаких изменений не требуется - разметка корректна

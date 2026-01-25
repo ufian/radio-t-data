@@ -1,0 +1,49 @@
+episode: 111
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  hosts_absent: [Bobuk]  # упоминается что в Екатеринбурге без интернета
+  guests_present: [Lavale]
+  total_duration_sec: 6121
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Lavale"
+    total_duration_sec: 854
+    replies_count: 243
+    pattern: consecutive  # активное участие в диалогах на протяжении всего выпуска
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Gray представляет в начале (42.89-51.69s): 'А еще с нами Лавале, то есть Саша, она с традиционного места, она всегда из Москвы'"
+
+      possible_matches: []
+
+      # Задание на voice comparison не требуется
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Umputun представляется как ведущий в начале (7.3s)"
+    - "Gray представлен Umputun'ом (21.97-32.04s)"
+    - "Lavale представлена Gray'ем (42.89-51.69s)"
+    - "Bobuk упоминается как отсутствующий (92.73-99.86s) - в командировке в Екатеринбурге без интернета"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет необходимости - Lavale уже корректно атрибутирована в транскрипте

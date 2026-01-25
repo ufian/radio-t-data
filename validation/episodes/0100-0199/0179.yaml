@@ -1,0 +1,114 @@
+episode: 179
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Guest]
+  total_duration_sec: 6856  # Примерно 114 минут (последняя реплика Guest)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 560
+    replies_count: 147
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет его в начале выпуска (16.78-24.6s):
+        "У нас Эльдар, который, как бы гостем называть его странно,
+        но он сегодня двулик, как этот самый Янус."
+        Эльдар Муртазин - известный мобильный аналитик, постоянный гость подкаста.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest"
+    total_duration_sec: 166
+    replies_count: 56
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        Эльдар представляет её в начале выпуска (28.92-38.46s):
+        "Я двулик, наверное, и сегодня я привел коллегу по подкасту
+        DJ Steve, Сашу, и она вот скажет сейчас привет, наверное."
+
+        Дополнительный контекст:
+        - Женщина (использует женский род в речи)
+        - Занимается журналистикой в сфере гаджетов/технологий (1459-1466s)
+        - Использует Android (3477-3480s)
+        - Коллега Эльдара по подкасту (вероятно Mobile Review)
+        - Обращение к ней как "Саша" (4364.51s)
+
+        Имя: Саша (Александра)
+        Псевдоним: DJ Steve
+        Контекст: Подкаст вместе с Эльдаром Муртазиным
+
+      possible_matches:
+        - person_id: "dj_steve"
+          confidence: 0.85
+          reason: |
+            Прямое представление Эльдаром как "коллега по подкасту DJ Steve, Саша".
+            Нужно добавить в people.yaml как нового гостя.
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 4343.57
+          etime: 4357.84
+          text: |
+            "Слушайте, ну, хочется, конечно, верить, что вот все эти стартаперы,
+            которые болтаются по всяким вечерним кафешкам, там, не знаю, грубо говоря,
+            подворотням, теперь получат место, где они смогут концентрироваться."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: add_person
+    person_id: "dj_steve"
+    canonical_name: "DJSteve"
+    aliases: ["DJ Steve", "Саша"]
+    real_name: "Александра"
+    info: "Коллега Эльдара Муртазина по подкасту, журналист в сфере гаджетов. Выпуск 179"
+    confidence: high
+    reason: |
+      Прямое представление в начале выпуска: "коллега по подкасту DJ Steve, Сашу"
+
+  - type: rename
+    episode: 179
+    from_speaker: "Guest"
+    to_speaker: "DJSteve"
+    confidence: high
+    reason: |
+      Guest - это DJ Steve (Саша), представлена Эльдаром в начале выпуска.
+      Все 56 реплик Guest принадлежат ей - это подтверждается:
+      1. Женский род в речи
+      2. Контекст разговоров (журналистика, гаджеты)
+      3. Обращение "Саша" к ней
+
+notes: |
+  Эпизод 179 от 20 марта 2010 года.
+  Расширенный состав: Umputun, Bobuk, Gray + гости Эльдар Муртазин и DJ Steve (Саша).
+
+  DJ Steve - новый гость, нужно добавить в people.yaml.
+  После добавления можно применить правило переименования Guest -> DJSteve.

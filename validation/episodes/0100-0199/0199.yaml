@@ -1,0 +1,43 @@
+episode: 199
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Lavale]
+  total_duration_sec: 6458  # 730+555+365+201 реплик, примерно 1.8ч
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде.
+# Все 4 спикера идентифицированы:
+# - Umputun (730 реплик) - ведущий
+# - Bobuk (555 реплик) - ведущий
+# - Gray (365 реплик) - ведущий
+# - Lavale (201 реплика, 538 сек) - бывшая соведущая
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - Lavale представлена в самом начале выпуска (15.5s)
+    - Umputun называет её "старая соведущая" (15.5-22.5s)
+    - Bobuk подтверждает "Это же Лавале" (37.5s)
+  issues: []
+
+# Идентификация гостей
+guest_identification:
+  - speaker: "Lavale"
+    identified_as: "lavale"  # person_id из people.yaml
+    identification_method: "introduction"
+    confidence: high
+    evidence: |
+      - Umputun (15.5s): "У нас в гостях... наша старая соведущая, старая и добрая"
+      - Bobuk (37.5s): "Это же Лавале"
+      - Lavale активно участвует в обсуждении (201 реплика, 538 сек)
+      - Контекст: обсуждение московских пожаров лета 2010 года
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет ошибок для исправления - эпизод чист

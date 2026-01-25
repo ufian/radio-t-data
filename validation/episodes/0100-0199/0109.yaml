@@ -1,0 +1,130 @@
+episode: 109
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray]
+  guests_present: [Lavale]
+  total_duration_sec: 6622.9
+  notes: |
+    Выпуск без Umputun - это явно сказано в начале (85-91s):
+    "У нас сегодня совершенно необычный выпуск, уникальный, потому что это первый выпуск радио Ти без Умпутуна"
+    "Действительно, Женя сегодня немножко занят, и мы сегодня немножко без него"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Lavale"
+    total_duration_sec: 675.0
+    replies_count: 204
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Gray представляет её в начале (73.16-77.54s):
+        - Gray: "У нас сегодня еще одна девушка в эфире. Это Лавали."
+        - Lavale: "Лавали." (подтверждает своё имя)
+
+        Описана как "бывшая ведущая" в people.yaml.
+        Активно участвует в обсуждении на протяжении всего выпуска (675 сек речи).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Umputun"
+    total_duration_sec: 6.4
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        В начале эпизода явно сказано, что Umputun отсутствует:
+        "первый выпуск радио Ти без Умпутуна" (85-91s)
+        "Женя сегодня немножко занят" (100-104s)
+
+        Все 4 реплики очень короткие (1-3 сек) и разбросаны по эпизоду:
+        1. "Простите." (702.3s, 0.9 сек)
+        2. "с двухгодичным." (2975.2s, 1.2 сек)
+        3. "Ура, товарищи!" (4455.8s, 1.0 сек)
+        4. "А потом они слетают... Да-да." (5263.8s, 3.4 сек)
+
+        Это явные ошибки распознавания - скорее всего один из других участников
+        (Bobuk, Gray или Lavale).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Короткие реплики, встроенные между репликами Bobuk"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Некоторые реплики после Gray"
+        - person_id: "lavale"
+          confidence: 0.2
+          reason: "Возможно женский голос был неверно атрибутирован"
+
+      voice_task:
+        needed: true
+        reason: "Нужно определить, кому принадлежат эти 4 короткие реплики"
+        reference_segments:
+          - stime: 702.26
+            etime: 703.18
+            text: "Простите."
+          - stime: 2975.2
+            etime: 2976.36
+            text: "с двухгодичным."
+          - stime: 4455.78
+            etime: 4456.74
+            text: "Ура, товарищи!"
+          - stime: 5263.79
+            etime: 5267.18
+            text: "А потом они слетают... Да-да."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Umputun"
+      issue: |
+        4 реплики помечены как Umputun, хотя в начале эпизода явно сказано,
+        что Umputun отсутствует. Это ошибки автоматического распознавания спикеров.
+        Реплики нужно переатрибутировать одному из реальных участников (Bobuk, Gray, Lavale).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 109
+    from_speaker: "Umputun"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Umputun"
+    confidence: high
+    reason: |
+      Umputun отсутствует в этом выпуске (явно сказано в начале).
+      Пометить как SPEAKER_MISATTRIBUTED для последующего voice comparison
+      и определения реального спикера.
+
+# Дополнительные заметки
+notes: |
+  Дата выпуска: 25 октября 2008 года (упомянуто в 9-11s)
+
+  Это исторический выпуск - один из первых без Umputun.
+  Бобук вёл из Чикаго через remote desktop на машину Umputun.
+
+  Lavale - подтверждённый гость (бывшая ведущая), правильно идентифицирована.
+
+  Файл метаданных (109_desc.json) отсутствует в data_clean, поэтому
+  нет информации о URL аудио для voice comparison.

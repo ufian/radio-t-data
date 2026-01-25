@@ -1,0 +1,69 @@
+episode: 130
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Lavale]
+  total_duration_sec: 5616
+  # Lavale - бывшая ведущая, участвует как со-ведущая
+
+# Детальный анализ спикеров
+speakers:
+  - speaker: "Umputun"
+    replies_count: 702
+    role: "main_host"
+    notes: "Представляет всех участников в начале"
+
+  - speaker: "Bobuk"
+    replies_count: 383
+    role: "co_host"
+    notes: "Представлен как 'более центровой'"
+
+  - speaker: "Gray"
+    replies_count: 260
+    role: "co_host"
+    notes: "Представлен Umputun'ом в начале"
+
+  - speaker: "Lavale"
+    replies_count: 99
+    role: "co_host"
+    notes: "Бывшая ведущая. Открывает эпизод приветствием и объявлением номера выпуска"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Эпизод не содержит неизвестных спикеров (SPEAKER_*, Guest*)
+# Все 4 спикера корректно идентифицированы
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - speaker: "Lavale"
+      introduced_at: 10.89
+      quote: "Это была Лавале, которая смело взялась начать или начать подкаст"
+      introduced_by: "Umputun"
+    - speaker: "Bobuk"
+      introduced_at: 18.16
+      quote: "кроме нее там еще есть более центровой, как он утверждает, про себя Бобук"
+      introduced_by: "Umputun"
+    - speaker: "Gray"
+      introduced_at: 31.26
+      quote: "И Грей, который молчит и ничего из своей интимной жизни никому не рассказывает"
+      introduced_by: "Umputun"
+    - speaker: "Umputun"
+      introduced_at: 52.88
+      quote: "осталось только представить Умпутуна"
+      introduced_by: "Gray"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - все спикеры корректно размечены
+
+# Дополнительные заметки
+notes: |
+  Эпизод полностью чистый. Все 4 участника (Umputun, Bobuk, Gray, Lavale)
+  корректно идентифицированы и представлены в начале выпуска.
+  Lavale - бывшая ведущая, зарегистрирована в people.yaml.
+  В этом эпизоде она открывает подкаст приветствием.

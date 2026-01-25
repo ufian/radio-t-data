@@ -1,0 +1,62 @@
+episode: 148
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko]
+  total_duration_sec: 6640.6
+
+# Ведущие
+hosts:
+  - speaker: Umputun
+    replies_count: 723
+    total_duration_sec: 2377.2
+    first_appearance_sec: 3.5
+
+  - speaker: Bobuk
+    replies_count: 506
+    total_duration_sec: 1856.3
+    first_appearance_sec: 63.5
+
+  - speaker: Gray
+    replies_count: 211
+    total_duration_sec: 998.4
+    first_appearance_sec: 46.1
+
+# Гости (идентифицированные)
+guests:
+  - speaker: PetrDidenko
+    replies_count: 402
+    total_duration_sec: 1408.7
+    first_appearance_sec: 26.9
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: petr_didenko
+      identification_method: introduction
+      confidence: high
+      evidence: |
+        Umputun представляет гостя в начале выпуска (24-28 сек):
+        - "Зато у нас есть гость. Петя. Здравствуй, Петя."
+        - PetrDidenko отвечает: "Здравствуйте, здравствуйте."
+        Контекст: обсуждение Windows 7, гость работает в Microsoft
+        (упоминает "выпустили мы ее 22 июля", был на мероприятии с Балмером)
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    - Umputun начинает выпуск и объясняет, что "самая прекрасная четверть
+      нашего шоу выбыла из строя по причине болезни" (имеется в виду Ksenks)
+    - Представлены: Бобук из Москвы, Грэй на выезде (не в Одессе), гость Петя
+    - Все спикеры корректно размечены
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

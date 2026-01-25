@@ -1,0 +1,80 @@
+episode: 171
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_duration_sec: 7100.4
+  total_replies: 1639
+
+# Детальная статистика
+speakers_stats:
+  - speaker: Umputun
+    replies_count: 618
+    duration_sec: 2466.8
+    first_appearance_sec: 3.8
+    role: host
+
+  - speaker: Bobuk
+    replies_count: 408
+    duration_sec: 1713.0
+    first_appearance_sec: 53.1
+    role: host
+
+  - speaker: Gray
+    replies_count: 279
+    duration_sec: 1361.6
+    first_appearance_sec: 44.8
+    role: host
+
+  - speaker: EldarMurtazin
+    replies_count: 268
+    duration_sec: 1214.6
+    first_appearance_sec: 31.0
+    role: guest
+    person_id: eldar_murtazin
+
+  - speaker: Marin_k_a
+    replies_count: 66
+    duration_sec: 344.3
+    first_appearance_sec: 20.2
+    role: guest
+    person_id: marin_k_a
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров - все уже идентифицированы
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - speaker: Marin_k_a
+      introduced_at_sec: 18.4
+      introduced_by: Umputun
+      quote: "Здравствуй, Маринка."
+    - speaker: EldarMurtazin
+      introduced_at_sec: 21.6
+      introduced_by: Marin_k_a
+      quote: "но в гостях у нас дружеский человек Эльдар"
+    - speaker: Gray
+      introduced_at_sec: 33.9
+      introduced_by: Umputun
+      quote: "У нас есть, в принципе, такие же дружеские Грей и Бобук"
+    - speaker: Bobuk
+      introduced_at_sec: 33.9
+      introduced_by: Umputun
+      quote: "У нас есть, в принципе, такие же дружеские Грей и Бобук"
+  issues: []
+
+# Метаданные эпизода
+episode_metadata:
+  date: "2010-01-23"
+  participants_count: 5
+  note: "Выпуск с Эльдаром Муртазиным и Мариной (бывшая ведущая)"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет необходимости в правилах - все спикеры корректно размечены

@@ -1,0 +1,45 @@
+episode: 120
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Lavale]
+  total_duration_sec: 5868.68
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Известные гости (идентифицированы)
+identified_guests:
+  - speaker: "Lavale"
+    total_duration_sec: 578.1
+    replies_count: 218
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "lavale"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Представлена Umputun в начале выпуска (22.96s):
+        "с нами Лавале, наша замечательная почти из города Москва, из далекого, из-за снежного Подмосковья"
+        Участвует на протяжении всего эпизода (32s - 5867s), прощается в конце ("Пока").
+        Зарегистрирована в people.yaml как бывшая ведущая.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    - Umputun: главный ведущий, открывает выпуск, представляет участников
+    - Bobuk: представлен Lavale в 35.8s ("С нами непосредственно в Москве... находится Бобук")
+    - Lavale: представлена Umputun в 22.96s
+    - Gray: отсутствует (упомянуто, что болен ангиной в 62.15s)
+
+# Предлагаемые правила очистки
+suggested_rules: []

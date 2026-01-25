@@ -1,0 +1,146 @@
+episode: 193
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Marin_k_a, Guest1, Guest2]
+  total_duration_sec: 6983
+  notes: "Bobuk отсутствует (проблемы с интернетом, упомянуто в начале)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 961
+    replies_count: 261
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "grinch"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun явно представляет в начале (86-94s):
+        "Гринч известен так же, как Денис и так же, как, я даже не знаю кто, как Радио Гринч.
+        Денис, а ты откуда?"
+        Guest1 отвечает: "Я из бывшего Ленинграда, ныне из Санкт-Петербурга."
+        Далее (130-148s): "Денис, ты тоже вроде как подкастер, говорят."
+        Guest1: "Да, я вроде как подкастер уже с 2008 с марта."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Guest2"
+    total_duration_sec: 537
+    replies_count: 174
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "golodniy"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun явно представляет в начале (101-112s):
+        "А вот человек со странным именем Голодный, который утверждал нам до эфира,
+        что наелся вовсю и не будет просить у нас хлебушка, крошечку. А ты откуда?"
+        Guest2 отвечает: "Ой, да я из Сибири, прямо-таки из Иркутска."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 716
+    replies_count: 180
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun обращается по имени (62s): "Маринка, а ты из города-героя Киев?"
+        Marin_k_a отвечает (64s): "Ну, я непосредственно из города-героя Киева,
+        я за тобой поплагиатирую из второй Маринкиной студии..."
+        Спикер уже корректно размечен в транскрипте как Marin_k_a.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры явно представлены в первые 3 минуты выпуска:
+    - Umputun представляет себя и ситуацию (Bobuk отсутствует)
+    - Gray представлен как "из города Одесса"
+    - Marin_k_a представлена как "Маринка из города-героя Киев"
+    - Guest1 (Grinch/Денис) представлен как подкастер из Санкт-Петербурга
+    - Guest2 (Golodniy) представлен как "человек со странным именем Голодный" из Иркутска
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 193
+    from_speaker: "Guest1"
+    to_speaker: "Grinch"
+    confidence: high
+    reason: "Явное представление Umputun'ом: 'Гринч известен так же, как Денис... Радио Гринч'"
+
+  - type: rename
+    episode: 193
+    from_speaker: "Guest2"
+    to_speaker: "Golodniy"
+    confidence: high
+    reason: "Явное представление Umputun'ом: 'человек со странным именем Голодный'"
+
+# Дополнительные референсные сегменты для voice comparison (если понадобится)
+voice_reference_segments:
+  Guest1_Grinch:
+    - stime: 2421.0
+      etime: 2445.2
+      duration: 24.2
+      text: "Мне тогда придется ставить и сразу гонконгские Там вообще страшные, жуткие розетки..."
+    - stime: 5843.1
+      etime: 5864.9
+      duration: 21.7
+      text: "Еще у них есть виджет, который можно добавлять на любой сайт..."
+
+  Guest2_Golodniy:
+    - stime: 5916.8
+      etime: 5934.1
+      duration: 17.3
+      text: "То есть вот вы находитесь где-то на совещании, вам хотят люди позвонить..."
+    - stime: 4671.3
+      etime: 4681.7
+      duration: 10.4
+      text: "Мне кажется, совершенно неважно, сколько они там будут стоить..."
+
+  Marin_k_a:
+    - stime: 4824.8
+      etime: 4852.9
+      duration: 28.1
+      text: "И при том, что я этим вот так вот не пользуюсь И они удивляются..."
+    - stime: 2721.3
+      etime: 2743.9
+      duration: 22.6
+      text: "Ну вот смотри, вот лежит планшетка, да, человек ее использовал..."

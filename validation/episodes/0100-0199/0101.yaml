@@ -1,0 +1,58 @@
+episode: 101
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [ArtemRosnovskiy]
+  total_duration_sec: 8483
+  total_replies: 2093
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Все спикеры в этом эпизоде идентифицированы
+
+# Идентифицированные гости
+identified_guests:
+  - speaker: "ArtemRosnovskiy"
+    total_duration_sec: 916
+    replies_count: 229
+    first_appearance_sec: 74
+    last_appearance_sec: 8426
+    pattern: consecutive  # Участвует на протяжении всего выпуска
+
+    analysis:
+      is_error: false
+      identified_as: "artem_rosnovsky"  # person_id из people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 43.8s Бобук представляет гостя: "Его зовут Артем Росновский."
+        На 45.35s: "И сейчас он там нам помахает рукой, мне кажется."
+        На 74.34s первая реплика Артёма: "Так, ну тогда я свое эго сейчас тоже немножко взбодрю."
+        На 77.56s представляется сам: "Помимо всего прочего, я еще работаю на радио Маяк."
+        На 80.44s упоминает свой подкаст: "Вот, есть у меня подкаст, он называется «Росновский парк в Виклии», rosnovski.ru."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - |
+      Все ведущие представлены в начале выпуска:
+      - Umputun упоминается как ведущий из Чикаго (109s Gray: "не представили Умпутуна, который из далекой Чикагщины")
+      - Bobuk: "коллега Бобук" упомянут Умпутуном (21.52s)
+      - Gray: "постоянный ведущий Грей из города Одесса" (21.52s)
+      - ArtemRosnovskiy: явно представлен Бобуком (43.8s)
+    - |
+      Несоответствие naming convention: в транскрипте используется "ArtemRosnovskiy",
+      а в people.yaml canonical_name = "Rosnovsky". Рекомендуется добавить
+      "ArtemRosnovskiy" в aliases для artem_rosnovsky в people.yaml.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: add_alias
+    person_id: "artem_rosnovsky"
+    alias: "ArtemRosnovskiy"
+    reason: "В транскрипте эпизода 101 используется вариант ArtemRosnovskiy"
