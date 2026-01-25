@@ -1,0 +1,30 @@
+episode: 909
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Alek.sys
+    - Ksenks
+  total_duration_sec: 8901
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале подкаста (0:00-0:40) Umputun представляет состав:
+    - "тригада традиционных" — Umputun, Gray, Alek.sys
+    - "Бобука мы отпустили сегодня на домашние работы"
+    - "Мы ждём пока Ксюша вернётся"
+    Ksenks присоединяется в 5207s (~1:27), что соответствует анонсу.
+    Umputun приветствует её: "Ксюша, ты пришла рассудительно с ГРЭМ"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

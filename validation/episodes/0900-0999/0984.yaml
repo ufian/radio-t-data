@@ -1,0 +1,61 @@
+episode: 984
+status: clean
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Ksenks
+    - Alek.sys
+  hosts_absent:
+    - Bobuk  # упоминается в начале, что его ждут
+  total_duration_sec: 9042.4
+  total_replies: 2357
+
+# Детали по каждому ведущему
+hosts_details:
+  - speaker: Umputun
+    replies_count: 890
+    total_duration_sec: 2997.3
+    first_appearance_sec: 0.0
+    introduction: "Начинает выпуск приветствием"
+
+  - speaker: Gray
+    replies_count: 559
+    total_duration_sec: 2411.2
+    first_appearance_sec: 79.9
+    introduction: "Присоединяется к обсуждению без формального представления (постоянный ведущий)"
+
+  - speaker: Ksenks
+    replies_count: 505
+    total_duration_sec: 1775.2
+    first_appearance_sec: 166.7
+    introduction: "Umputun приветствует: 'Ксюша, здоров. Ты пришел? Пришел, дорогая?'"
+
+  - speaker: Alek.sys
+    replies_count: 403
+    total_duration_sec: 1439.9
+    first_appearance_sec: 21.3
+    introduction: "Umputun обращается: 'Ну, рассказывай, Алексей, давно тебя не было'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  bobuk_mentioned: true
+  bobuk_reason: "Umputun говорит в начале: 'Бобука мы ожидаем последнее время. Но он все ближе и ближе к прибытию, судя по слухам.'"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes:
+  - "Эпизод полностью чистый — все 4 спикера являются известными ведущими"
+  - "Отсутствует Bobuk — упоминается, что его ждут"
+  - "Нет неизвестных спикеров (SPEAKER_*, Guest*)"
+  - "Длительность эпизода: ~2.5 часа (150.7 мин)"

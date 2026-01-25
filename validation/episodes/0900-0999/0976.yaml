@@ -1,0 +1,89 @@
+episode: 976
+status: has_tasks
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys]
+  guests_present: [Guest1]
+  absent_hosts: [Bobuk, Ksenks]
+  total_duration_sec: 7892
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 969
+    replies_count: 186
+    first_appearance_sec: 156
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "Andrey"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Множественные обращения по имени в транскрипте:
+        - 1520.7s [Umputun]: "Меня зовут Андрей"
+        - 1522.0s [Umputun]: "Андрей, прости, дружище, у меня прямо гест написан, а я же всех вас не упомню"
+        - 1529.2s [Umputun]: "Андрей и Леха, скажите, как вам тема про то, что тесты надо удалять?"
+        - 2239.8s [Umputun]: "А ты, Андрей, считаешь, надо удалять тесты?"
+        - 8274.1s [Umputun]: "Вместо выбывшей Ксюши второй раз ее подменяет добрый Андрей"
+        - 8298.3s [Umputun]: "Так что, Андрей, ты смотри, еще пару раз придешь, и все"
+
+      # Дополнительная информация
+      guest_profile: |
+        Технический специалист (бэкенд-разработчик), разбирается в:
+        - Тестировании (integration tests, flaky tests, Kafka)
+        - AI-инструментах (Claude, Gemini CLI, Cursor, OpenCode)
+        - Протоколах (Agent Client Protocol)
+        Второй раз замещает Ksenks (первый раз не указан)
+
+      # Возможные совпадения в people.yaml
+      possible_matches: []
+
+      # Задание на добавление в people.yaml
+      new_person_task:
+        needed: true
+        suggested_entry:
+          id: "andrey_guest_976"
+          canonical_name: "Andrey"
+          aliases: ["Андрей"]
+          real_name: "Андрей"
+          info: "Гость, замещал Ksenks в выпусках ~975-976"
+
+      # Voice comparison не нужен - уже идентифицирован
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Гость Андрей был представлен в середине выпуска (1520s), а не в начале.
+    Это второй выпуск с его участием (замена Ksenks).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 976
+    from_speaker: "Guest1"
+    to_speaker: "Andrey"
+    confidence: high
+    reason: "Umputun многократно обращается к Guest1 по имени 'Андрей' (1520s, 1522s, 1529s, 2239s, 8274s, 8298s)"
+
+# Задачи для выполнения
+tasks:
+  - type: add_to_people_yaml
+    priority: medium
+    description: "Добавить гостя Andrey в people.yaml"
+
+  - type: rename_speaker
+    priority: high
+    description: "Переименовать Guest1 в Andrey в эпизоде 976"

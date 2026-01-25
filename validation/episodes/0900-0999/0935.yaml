@@ -1,0 +1,48 @@
+episode: 935
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Ksenks
+    - Gray
+    - Alek.sys
+  hosts_absent:
+    - Bobuk
+  total_duration_sec: 8677
+  notes: |
+    Umputun в начале эпизода говорит: "Все пришли, кроме Бобука,
+    который ожидался, что будет отсутствовать."
+
+# Статистика по спикерам
+speakers_stats:
+  - speaker: Umputun
+    replies_count: 922
+    first_appearance_sec: 1
+  - speaker: Ksenks
+    replies_count: 519
+    first_appearance_sec: 23
+  - speaker: Gray
+    replies_count: 462
+    first_appearance_sec: 21
+  - speaker: Alek.sys
+    replies_count: 361
+    first_appearance_sec: 39
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (0:07-0:16) Umputun представляет состав:
+    - "Все пришли, кроме Бобука" - подтверждает присутствие всех кроме Bobuk
+    - Упоминает Ксюшу (Ksenks) по имени
+    - Gray и Alek.sys участвуют в диалоге с первых секунд
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

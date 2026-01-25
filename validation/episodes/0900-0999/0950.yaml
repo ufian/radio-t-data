@@ -1,0 +1,55 @@
+episode: 950
+status: clean
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 10942
+
+  # Детализация по ведущим
+  host_stats:
+    Umputun:
+      replies: 1268
+      duration_sec: 4440
+      first_appearance_sec: 0
+    Gray:
+      replies: 704
+      duration_sec: 3123
+      first_appearance_sec: 96
+    Ksenks:
+      replies: 356
+      duration_sec: 1471
+      first_appearance_sec: 20
+    Alek.sys:
+      replies: 370
+      duration_sec: 1295
+      first_appearance_sec: 189
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Стандартный выпуск с четырьмя ведущими.
+    Umputun открывает выпуск в 0s ("Доброго времени суток. 1 марта 25 года. Подкаст выходного дня Радио-Т. 950 выпуск").
+    Ksenks сразу включается в диалог (20s).
+    Gray появляется после рекламы (96s).
+    Alek.sys подключается чуть позже (189s).
+    Гостей в этом выпуске нет.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные наблюдения
+observations:
+  - Выпуск от 1 марта 2025 года
+  - Основные темы: Claude 3.7 Sonnet, Claude Code
+  - Реклама присутствует (_ad: 18 реплик, 107 сек)

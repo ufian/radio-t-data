@@ -1,0 +1,60 @@
+episode: 947
+status: clean
+analyzed_at: "2026-01-25"
+
+# Комментарий к анализу
+# Umputun в начале эпизода (0:00-0:15) явно говорит:
+# "в обычном полном составе, никаких гостей, зато все хозяева пригребли практически вовремя"
+# Все пять ведущих присутствуют и появляются в первые 2 минуты.
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 12725
+
+  host_stats:
+    - name: Umputun
+      replies: 1194
+      duration_sec: 3907
+      first_appearance_sec: 0.03
+    - name: Bobuk
+      replies: 1035
+      duration_sec: 4040
+      first_appearance_sec: 27.72
+    - name: Gray
+      replies: 382
+      duration_sec: 1651
+      first_appearance_sec: 19.67
+    - name: Alek.sys
+      replies: 442
+      duration_sec: 1543
+      first_appearance_sec: 112.94
+    - name: Ksenks
+      replies: 352
+      duration_sec: 1583
+      first_appearance_sec: 124.9
+
+  # Рекламные вставки (игнорируются)
+  ad_segments:
+    count: 18
+    duration_sec: 104
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quote: "в обычном полном составе, никаких гостей, зато все хозяева пригребли практически вовремя"
+  introduction_time_sec: 0.03
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются — эпизод полностью чистый

@@ -1,0 +1,53 @@
+episode: 929
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+  total_duration_sec: 9000
+
+  # Детализация по ведущим
+  host_stats:
+    - speaker: Bobuk
+      replies_count: 849
+      total_duration_sec: 3551
+      first_appearance_sec: 82
+    - speaker: Gray
+      replies_count: 652
+      total_duration_sec: 3212
+      first_appearance_sec: 8
+    - speaker: Umputun
+      replies_count: 372
+      total_duration_sec: 1266
+      first_appearance_sec: 1
+    - speaker: Alek.sys
+      replies_count: 16
+      total_duration_sec: 29
+      first_appearance_sec: 39
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun начинает выпуск и косвенно упоминает состав:
+    - "Состав суровый мужской, мало того, ещё на треть классический"
+    - "У нас из классического состава мы тут ещё с одним чувачком, а Грей из этих, которые понаехали"
+    Все четыре ведущих (Umputun, Bobuk, Gray, Alek.sys) присутствуют с первых минут.
+  issues: []
+
+# Особенности выпуска
+episode_notes:
+  - Выпуск от 5 октября 2024 года
+  - Участвуют только постоянные ведущие, гостей нет
+  - Alek.sys говорит мало (16 реплик, 29 сек) - возможно был занят или просто слушал
+
+# Предлагаемые правила очистки
+suggested_rules: []

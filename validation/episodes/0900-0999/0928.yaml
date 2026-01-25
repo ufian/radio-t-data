@@ -1,0 +1,65 @@
+episode: 928
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 8214
+  notes: "Полный состав ведущих. Umputun в начале говорит 'состав полный'."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "GPT"
+    total_duration_sec: 51
+    replies_count: 18
+    pattern: consecutive
+    first_appearance_sec: 6670.78
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "chatgpt_voice"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Bobuk демонстрирует голосовой режим ChatGPT во время эфира.
+
+        Контекст первого появления (6662-6709s):
+        - Bobuk: "Привет. Привет, как дела?"
+        - Bobuk: "Ты что-нибудь знаешь про русскоязычный подкаст, который называется «Радио-Т»?"
+        - GPT: "Да, радиотеатр. Это русский подкаст, который посвящён радиодрамам..."
+        - Umputun: "Офигеть."
+        - Bobuk исправляет: "есть такой подкаст, он называется «Радио минус Т»"
+        - GPT: "Да, конечно, знаю. Радио-Т -- это подкаст о технологиях..."
+
+        Далее (6997-7080s) Bobuk просит GPT написать стих про Ксению с одесским акцентом.
+        GPT генерирует хайку: "Ксения светит. Звезда над Молдаванкой. Тепло в одесской ночи."
+
+        После этого Bobuk объясняет: "Я, собственно, зачем вам все это пытаюсь показать?
+        Вы чувствуете, что это совершенно другое поколение общения?"
+
+      # Это AI-ассистент, не человек-гость
+      speaker_type: "ai_assistant"
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все пять постоянных ведущих присутствуют.
+    Umputun в начале (0.51s): "состав полный".
+    GPT — это голосовой ChatGPT, демонстрируемый Bobuk'ом как часть темы про AI voice mode.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# GPT корректно размечен как отдельный спикер (AI-ассистент).
+# Не требует переименования или удаления.

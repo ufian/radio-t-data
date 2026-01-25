@@ -1,0 +1,54 @@
+episode: 941
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+  total_duration_sec: 8526
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все четыре ведущих естественно участвуют в разговоре с первых минут.
+    - Umputun открывает эфир (1s): "Доброго времени суток"
+    - Gray вступает на 18s: "Ну, так же красиво звучит"
+    - Alek.sys на 26s: "А ты что, на моряке?"
+    - Bobuk включается на 74s: "А еще я вам хочу сказать..."
+    Это типичный паттерн для Радио-Т, где ведущие вступают в беседу
+    по ходу обсуждения без формального представления.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+metadata:
+  date: "2024-12-28"
+  total_replies: 2589
+  episode_duration_sec: 9456
+  speakers_stats:
+    Umputun:
+      replies: 1234
+      duration_sec: 3901
+      first_appearance_sec: 1
+    Bobuk:
+      replies: 958
+      duration_sec: 3172
+      first_appearance_sec: 74
+    Gray:
+      replies: 290
+      duration_sec: 1112
+      first_appearance_sec: 18
+    Alek.sys:
+      replies: 107
+      duration_sec: 341
+      first_appearance_sec: 26

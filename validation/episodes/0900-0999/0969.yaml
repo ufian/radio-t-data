@@ -1,0 +1,32 @@
+episode: 969
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Alek.sys
+    - Ksenks
+  hosts_absent:
+    - Bobuk  # Явно упомянут как отсутствующий в начале выпуска
+  total_duration_sec: 8302
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом выпуске
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun в начале выпуска (0:09) явно говорит "Традиционно без Бобука в составе собрались".
+    Ksenks упоминается как опоздавшая (~на полчаса).
+    Все четыре активных ведущих (Umputun, Gray, Alek.sys, Ksenks) участвуют с первых минут.
+    Разметка спикеров корректна и консистентна.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет ошибок, требующих исправления

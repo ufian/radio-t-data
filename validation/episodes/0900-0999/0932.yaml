@@ -1,0 +1,25 @@
+episode: 932
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks]
+  hosts_absent: [Bobuk]
+  total_duration_sec: 9014
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    - Umputun в начале (13s) говорит «состав неполный, но боевой» и «одни мужики собрались»
+    - Это указывает на присутствие только Umputun, Gray, Alek.sys в начале
+    - Ksenks присоединилась позже — Umputun приветствует её в 663s: «Ксюша, здравствуй, дорогая»
+    - Bobuk отсутствует в эпизоде (0 реплик)
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

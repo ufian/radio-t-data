@@ -1,0 +1,54 @@
+episode: 926
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk]
+  total_duration_sec: 8942.8
+  note: "Bobuk отсутствует — упомянуто в начале: 'Мы долго ждали Бобука... но не дождались'"
+
+# Детальная статистика по ведущим
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 952
+    total_duration_sec: 3147.2
+    first_appearance_sec: 1
+    percentage_of_speech: 38.5
+
+  - speaker: Gray
+    replies_count: 540
+    total_duration_sec: 2241.3
+    first_appearance_sec: 91
+    percentage_of_speech: 27.4
+
+  - speaker: Ksenks
+    replies_count: 490
+    total_duration_sec: 1922.6
+    first_appearance_sec: 33
+    percentage_of_speech: 23.5
+
+  - speaker: Alek.sys
+    replies_count: 248
+    total_duration_sec: 878.9
+    first_appearance_sec: 58
+    percentage_of_speech: 10.7
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  bobuk_absence_explained: true
+  issues: []
+  notes:
+    - "Umputun упоминает Ксению в начале (9-14 сек): 'в том числе из-за опоздания очередного Ксении'"
+    - "Ksenks впервые говорит на 33 сек, подтверждая своё присутствие"
+    - "Alek.sys впервые говорит на 58 сек"
+    - "Gray впервые говорит на 91 сек"
+    - "Bobuk явно упомянут как отсутствующий (17-21 сек): 'Мы долго ждали Бобука... но не дождались'"
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,63 @@
+episode: 937
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  # Ksenks отсутствует - это объяснено в начале выпуска ("Ксюша пошла деревья обнимать")
+  total_duration_sec: 8563  # ~2ч 22мин (сумма времени всех ведущих)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "ElevenLabs"
+    total_duration_sec: 16
+    replies_count: 2
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это не гость и не ошибка - это демонстрация TTS
+      identified_as: null
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Bobuk в 9033s: "Послушайте, как Eleven Lab читает русский текст."
+        Bobuk в 9037s: "Сейчас вам сначала включу, подождите."
+        Затем следуют 2 реплики ElevenLabs - это AI-синтезированный голос (демонстрация TTS).
+        После демонстрации Alek.sys комментирует: "Паузы, паузы, да? Как-то странно немножко."
+
+      # Не гость, не требует идентификации
+      possible_matches: []
+
+      # Voice comparison не нужен
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - speaker: "Ksenks"
+      note: "Отсутствие объяснено в 0:08 - 'Ксюша пошла деревья обнимать, ее с нами не будет'"
+    - speaker: "ElevenLabs"
+      note: "Это демонстрация TTS-сервиса ElevenLabs, не живой участник"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# ElevenLabs корректно размечен как отдельный спикер - это демонстрация AI-голоса,
+# и такая разметка логична. Переименовывать не нужно.
+
+# Дополнительные комментарии
+notes: |
+  Эпизод 937 (30 ноября 2024) - чистый выпуск без проблем разметки.
+
+  Состав ведущих: Umputun, Bobuk, Gray, Alek.sys (без Ksenks).
+
+  Единственный "неизвестный" спикер ElevenLabs - это не ошибка распознавания
+  и не гость, а демонстрация AI TTS-сервиса, которую Bobuk включил во время
+  обсуждения. Разметка корректная.

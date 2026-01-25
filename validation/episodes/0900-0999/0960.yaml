@@ -1,0 +1,32 @@
+episode: 960
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Alek.sys
+    - Ksenks
+  hosts_absent:
+    - Bobuk  # упомянуто в начале: "Все еще без Бобука"
+  total_duration_sec: 8595  # 4136+2007+1621+831
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров (SPEAKER_*, Guest*)
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Umputun открывает выпуск, упоминает отсутствие Bobuk"
+    - "Ksenks упомянута в начале (опоздание на 12 минут)"
+    - "Gray говорит с 19 сек, участвует в обсуждении"
+    - "Alek.sys говорит с 219 сек, к нему обращаются как 'Леха' на 235 сек"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются — все спикеры корректно идентифицированы

@@ -1,0 +1,82 @@
+episode: 968
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys]
+  total_duration_sec: 8494  # ~2.5 часа, оценка на основе последних таймстемпов
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 617.55
+    replies_count: 143
+    pattern: consecutive  # Активный участник диалога на протяжении всего выпуска
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: null  # Нет в people.yaml, новый гость
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Гость представился в начале выпуска (33.76s): "Так, зовут меня Миша, собственно, да, живу вообще в Польше."
+        Umputun подтверждает (53.09s): "Михаил пришел на замену Лехе, который не дает себя подсидеть."
+        На вопрос о профессии (1039.78s): "Пишу в основном на Python, немного на Go, еще свободное время на Ziggy."
+        К нему обращаются по имени (Михаил/Миша) множество раз на протяжении выпуска.
+
+      # Информация о госте
+      guest_info:
+        name: "Миша"
+        full_name: "Михаил"
+        location: "Польша"
+        profession: "программист"
+        languages: ["Python", "Go", "Zig"]
+        listener_since: "5-7 лет"
+
+      # Возможные совпадения
+      possible_matches: []  # Новый гость, нет в базе
+
+      # Voice comparison не нужен - гость идентифицирован
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 968
+    from_speaker: "Guest1"
+    to_speaker: "Misha"  # Предлагается добавить в people.yaml как нового гостя
+    confidence: high
+    reason: |
+      Гость явно представился как "Миша" (33.76s).
+      Ведущие обращаются к нему как "Михаил".
+      Это реальный гость из Польши, программист.
+
+# Рекомендации
+notes: |
+  Этот эпизод чистый с точки зрения разметки спикеров.
+  Единственный неизвестный спикер (Guest1) - это реальный гость Миша/Михаил.
+
+  Рекомендуется:
+  1. Добавить Мишу в people.yaml как нового гостя
+  2. Применить правило переименования Guest1 -> Misha для эпизода 968
+
+  Для добавления в people.yaml:
+  ```yaml
+  - id: "misha_poland"
+    canonical_name: "Misha"
+    aliases: ["Михаил", "Миша"]
+    real_name: "Михаил"
+    info: "Программист из Польши (Python, Go, Zig), выпуск 968"
+  ```

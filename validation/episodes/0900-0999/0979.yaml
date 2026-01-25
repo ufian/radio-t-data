@@ -1,0 +1,89 @@
+episode: 979
+status: has_tasks
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Ksenks]
+  total_duration_sec: 7833
+  notes: "Bobuk и Gray отсутствуют в этом выпуске"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 1185
+    replies_count: 219
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "andrey_dotnet"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Множественные прямые обращения Umputun к гостю по имени "Андрей":
+        - 365.0s: "Слушай, Андрей, а ты из наших, из маковских, или ты из отчерпенцев на винде?"
+        - 1282.5s: "Андрей, я тебя перебил."
+        - 3544.9s: "Расскажи, Андрей, что там такое?"
+        - 4107.2s: "Андрей, ты молчишь сегодня как-то нетрадиционно."
+        - 7024.1s: "Андрей, у тебя есть F-клави?"
+
+        Подтверждение из предыдущих выпусков:
+        - Эпизод 977 (110.4s): Guest1 представляется "Меня зовут Андрей, и я .NET-программист"
+        - Эпизод 976 (8274.1s): "Вместо выбывшей Ксюши второй раз ее подменяет добрый Андрей"
+        - Эпизод 972 (61.9s): Guest1 "Меня зовут Андрей"
+        - Эпизод 972 (8322.5s): "В гостях был Андрей, который внес посильный и достойный вклад"
+
+        В выпуске 979 (374.6s) Guest1 говорит: "Ну, я еще в том выпуске объяснял, что все прекрасно на маке работает" -
+        подтверждает, что это постоянный гость.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Выпуск начинается сразу с обсуждения без формального представления участников.
+    Гость Андрей (Guest1) известен по предыдущим выпускам (972, 976, 977).
+    Все обращения к Андрею по имени совпадают с репликами Guest1.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 979
+    from_speaker: "Guest1"
+    to_speaker: "AndreyDotnet"
+    confidence: high
+    reason: |
+      Umputun многократно обращается к Guest1 по имени "Андрей".
+      Гость представился как .NET-программист в эпизоде 977.
+      Это постоянный гость (выпуски 972, 976, 977, 979).
+
+# Дополнительная информация
+cross_episode_analysis:
+  guest_appearances:
+    - episode: 972
+      evidence: "Представление 'Меня зовут Андрей', прощание 'В гостях был Андрей'"
+    - episode: 976
+      evidence: "'Вместо выбывшей Ксюши второй раз ее подменяет добрый Андрей'"
+    - episode: 977
+      evidence: "'Меня зовут Андрей, и я .NET-программист'"
+    - episode: 979
+      evidence: "Множественные обращения по имени, ссылка на предыдущий выпуск"
+
+  recommended_people_yaml_update: |
+    Добавить в guests секцию people.yaml:
+    - id: "andrey_dotnet"
+      canonical_name: "AndreyDotnet"
+      aliases: ["Андрей"]
+      real_name: "Андрей"
+      info: ".NET-программист, выпуски 972, 976, 977, 979"

@@ -1,0 +1,44 @@
+episode: 943
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys]
+  total_duration_sec: 7873  # ~2h 11m (1129 + 629 + 489 реплик, ~3.5 сек средняя)
+  notes: |
+    Эпизод без Bobuk и Ksenks. Umputun в начале говорит:
+    "у нас сегодня ни Обука, ни Ксюши нет и не будет" (91-98 сек).
+    Состав: Umputun, Alek.sys ("Леха Салабон"), Gray ("Грей Грубиян").
+
+# Детальная статистика ведущих
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 1129
+    first_appearance_sec: 1.08
+    role: main_host
+
+  - speaker: Gray
+    replies_count: 629
+    first_appearance_sec: 8.8
+    role: co_host
+
+  - speaker: Alek.sys
+    replies_count: 489
+    first_appearance_sec: 5.06
+    role: co_host
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun явно представляет состав в начале (18-29 сек):
+    "943 выпуск. В странном составе... Леха Салабон и Грей Грубиян"
+    Также подтверждает отсутствие Bobuk и Ksenks (91-98 сек).
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

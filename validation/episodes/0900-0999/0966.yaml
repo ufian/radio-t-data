@@ -1,0 +1,37 @@
+episode: 966
+status: clean
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Alek.sys
+    - Ksenks
+  hosts_absent:
+    - Bobuk  # Явно упомянуто в начале: "Бобука пока нет" (7.9s)
+  total_duration_sec: 8037  # сумма: 3765 + 2006 + 1432 + 834
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  bobuk_absence_explained: true
+  introduction_quote: "Бобука пока нет. Есть шанс, что подойдет. Но остальные на месте."
+  introduction_timestamp: 7.9
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - эпизод чистый
+
+# Дополнительные заметки
+notes:
+  - Эпизод от 21 июня 2025 года (упомянуто в начале)
+  - Все 4 присутствующих ведущих идентифицированы корректно
+  - Отсутствие Bobuk объяснено Umputun в начале эпизода
+  - Нет SPEAKER_*, Guest* или других неизвестных спикеров

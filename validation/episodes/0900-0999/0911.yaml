@@ -1,0 +1,32 @@
+episode: 911
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Bobuk
+    - Alek.sys
+  hosts_absent:
+    - Ksenks  # "ждали Ксюшу, но не дождались" (0:11-0:16)
+  total_duration_sec: 7020  # ~117 минут (сумма реплик ведущих)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# В эпизоде нет неизвестных спикеров (SPEAKER_*, Guest* и т.д.)
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quote: "Состав суровый мужской" (0:08)
+  notes:
+    - Umputun представляет состав в начале
+    - Упоминает отсутствие Ksenks ("ждали Ксюшу, но не дождались")
+    - Явно обращается к Bobuk, Gray и Alek.sys в диалоге
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правил не требуется - эпизод полностью чистый

@@ -1,0 +1,30 @@
+episode: 975
+status: clean
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Ksenks
+    - Alek.sys
+  hosts_absent:
+    - Bobuk
+  total_duration_sec: 9252
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Umputun ведёт с начала (0s), представляет выпуск 975 от 23 августа 2025"
+    - "Alek.sys (Леха) упомянут в начале, говорит с 20s"
+    - "Gray присоединяется с 56s"
+    - "Ksenks (Ксюша) анонсирована как 'на подходе', присоединяется на 908s"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

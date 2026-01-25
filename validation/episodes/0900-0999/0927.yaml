@@ -1,0 +1,50 @@
+episode: 927
+status: clean
+analyzed_at: "2026-01-25"
+
+# Episode info
+date: "2024-09-21"
+intro_quote: "Доброго времени суток, 21 сентября 2024 года, подкаст выходного дня Радио-Т, выпуск 927, состав полный"
+
+# Speaker statistics
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 8372
+  host_stats:
+    - name: Bobuk
+      replies: 684
+      duration_sec: 2654
+      first_at_sec: 53
+    - name: Umputun
+      replies: 661
+      duration_sec: 2043
+      first_at_sec: 1
+    - name: Gray
+      replies: 374
+      duration_sec: 1481
+      first_at_sec: 24
+    - name: Ksenks
+      replies: 289
+      duration_sec: 1113
+      first_at_sec: 21
+    - name: Alek.sys
+      replies: 297
+      duration_sec: 1081
+      first_at_sec: 33
+
+# Unknown speakers analysis
+unknown_speakers: []
+
+# Consistency check
+consistency_check:
+  all_speakers_introduced: true
+  full_cast_announced: true
+  issues: []
+
+# No suggested rules needed
+suggested_rules: []

@@ -1,0 +1,25 @@
+episode: 967
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk]
+  total_duration_sec: 10094
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    - Umputun открывает выпуск и явно говорит "Состав все еще без Бобука"
+    - Обращается к "Леше" (Alek.sys) в 15.2s
+    - Обращается к "Ксюше" (Ksenks) в 34.6s
+    - Gray участвует в диалоге с 27.3s без формального представления (типично для постоянного ведущего)
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

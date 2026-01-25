@@ -1,0 +1,92 @@
+episode: 983
+status: has_tasks
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks]
+  hosts_absent: [Bobuk, Alek.sys]
+  total_duration_sec: 10680
+  total_entries: 2592
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 490
+    replies_count: 108
+    pattern: consecutive
+    first_appearance_sec: 38.0
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "andrey_dotnet"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (22-25s) Umputun явно представляет гостя:
+        "И пришел гость, дорогой Андрей. Здоров! Ты прямо у нас тут частый гость..."
+        Это тот же Андрей (andrey_dotnet), который был гостем в выпусках 972, 976, 977, 979.
+        Контекст подтверждает: говорит про C#, Claude, программирование, презентации на slide.dev.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: ""
+    total_duration_sec: 0.1
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 1870.4
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Два очень коротких фрагмента (0.06s каждый) с односложными словами "Да." и "Ну,".
+        Первый (1870.4s) дублирует реплику Guest1 в тот же момент времени.
+        Второй (5606.2s) обрезанное начало реплики Ksenks (5606.2s).
+        Это артефакты распознавания речи, не реальные отдельные спикеры.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Umputun в начале (7-33s) объясняет состав:
+    - Alek.sys отпущен по уважительной причине
+    - Bobuk "готовится вернуться"
+    - Присутствуют: Ksenks, Gray, гость Андрей
+    Все упомянутые спикеры соответствуют данным в транскрипте.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 983
+    from_speaker: "Guest1"
+    to_speaker: "AndreyDotnet"
+    confidence: high
+    reason: |
+      Явное представление гостя в начале выпуска: "И пришел гость, дорогой Андрей".
+      Тот же гость, что в выпусках 972, 976, 977, 979. Контекст (C#, Claude, презентации) совпадает.
+
+  - type: delete
+    episode: 983
+    from_speaker: ""
+    to_speaker: null
+    confidence: high
+    reason: |
+      Пустой автор - артефакты распознавания: 2 реплики по 0.06s с текстом "Да." и "Ну,".
+      Дублируют или являются обрезками реплик других спикеров в те же моменты времени.

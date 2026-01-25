@@ -1,0 +1,95 @@
+episode: 985
+status: clean
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 11025
+  notes: "Bobuk отсутствует (упомянуто в начале: 'Пока без Бобука')"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 0.36
+    replies_count: 5
+    pattern: scattered
+
+    # Все 5 реплик с пустым автором
+    occurrences:
+      - stime: 2228.9
+        etime: 2229.0
+        duration: 0.1
+        text: "Ну..."
+        context_before: "Gray: Угадай, что он написал."
+        context_after: "Gray: (продолжает)"
+
+      - stime: 7968.45
+        etime: 7968.53
+        duration: 0.08
+        text: "Нет."
+        context_before: "Gray: И поэтому... И, Ксюша, как будто наша ручата начиталась..."
+        context_after: "Gray: (продолжает)"
+
+      - stime: 8974.79
+        etime: 8974.85
+        duration: 0.06
+        text: "Да."
+        context_before: "Gray: Помните, такой был?"
+        context_after: "Umputun: (продолжает)"
+
+      - stime: 9675.91
+        etime: 9675.97
+        duration: 0.06
+        text: "Да."
+        context_before: "Gray: ...искусственного интеллекта запрещают давать вам военные советы, да."
+        context_after: "Gray: (продолжает)"
+
+      - stime: 10980.3
+        etime: 10980.36
+        duration: 0.06
+        text: "Да."
+        context_before: "Ksenks: Новый веб-кодер?"
+        context_after: "Umputun: (продолжает)"
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        Все 5 реплик с пустым автором являются ошибками автоматического распознавания:
+        1. Длительность каждой реплики менее 0.1 секунды (от 0.06 до 0.1 сек)
+        2. Содержат только односложные междометия: "Ну...", "Нет.", "Да."
+        3. Расположены внутри диалогов между известными ведущими
+        4. Скорее всего это фрагменты речи соседних спикеров, которые система
+           не смогла корректно атрибутировать из-за пересечения аудиодорожек
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие сегменты (< 0.1 сек) для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (0:00-1:32) Umputun объявляет:
+    - "Подкаст выходного дня Радио-Т, 985 выпуск"
+    - "Состав обычный. Последнее время. Пока без Бобука."
+    Далее в диалоге участвуют все 4 присутствующих ведущих:
+    - Umputun (с 0 сек)
+    - Alek.sys (с 20 сек)
+    - Ksenks (с 32 сек)
+    - Gray (с 42 сек)
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: Пустые авторы не требуют правил очистки,
+# так как эти реплики слишком короткие и не несут смысловой нагрузки.
+# Их можно игнорировать или удалить при дальнейшей обработке.

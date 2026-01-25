@@ -1,0 +1,56 @@
+episode: 991
+status: clean
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Alek.sys
+    - Bobuk
+    - Ksenks
+  total_duration_sec: 8955
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Эпизод начинается с Umputun, Alek.sys, Gray и Ksenks.
+    Bobuk присоединяется позже на ~40 минуте (2431 сек), что явно
+    отмечено в диалоге: Gray шутит "Откуда-то из очень далекой
+    вселенной вдруг до нас донесся голос".
+    Все 5 ведущих корректно идентифицированы, неизвестных спикеров нет.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+metadata:
+  date: "2025-12-13"
+  total_subs: 2358
+  speaker_stats:
+    - speaker: Umputun
+      replies: 1103
+      duration_sec: 3655
+      first_appearance_sec: 0
+    - speaker: Gray
+      replies: 341
+      duration_sec: 1536
+      first_appearance_sec: 61
+    - speaker: Alek.sys
+      replies: 321
+      duration_sec: 1252
+      first_appearance_sec: 27
+    - speaker: Bobuk
+      replies: 378
+      duration_sec: 1183
+      first_appearance_sec: 2431
+    - speaker: Ksenks
+      replies: 215
+      duration_sec: 935
+      first_appearance_sec: 325

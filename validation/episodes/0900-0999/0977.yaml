@@ -1,0 +1,97 @@
+episode: 977
+status: has_tasks
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys]
+  guests_present: [Guest1]
+  absent_hosts: [Bobuk, Ksenks]
+  total_duration_sec: 7617
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 865
+    replies_count: 180
+    first_appearance_sec: 109
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "andrey_dotnet"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление гостя в начале выпуска:
+        - 107.6s [Umputun]: "Представься."
+        - 109.2s [Guest1]: "Да."
+        - 110.4s [Guest1]: "Меня зовут Андрей, и я .NET-программист."
+        - 114.8s [Umputun]: "Я бы даже сказал, все еще зовут Андрей."
+        - 120.2s [Umputun]: "Да, это тот же самый чувак."
+
+        Umputun подтверждает, что это тот же гость из выпуска 976.
+        В 976 он также представлен как Андрей.
+
+      # Дополнительная информация
+      guest_profile: |
+        .NET-программист, разбирается в:
+        - Claude Code и AI-агентах (подробно обсуждает workflow с Claude)
+        - Архитектуре и backend-разработке
+        - Linux (объясняет immutable OS, KDE, Arch)
+        - JWT и авторизации
+        Третий раз замещает Ksenks (выпуски 976, 977)
+
+      # Возможные совпадения в people.yaml
+      possible_matches:
+        - person_id: "andrey_guest_976"
+          confidence: 1.0
+          reason: "Тот же человек из 976 - Umputun явно подтверждает 'это тот же самый чувак'"
+
+      # Voice comparison не нужен - уже идентифицирован
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Гость Андрей явно представлен в начале (110s).
+    Umputun подтверждает, что это тот же гость из прошлого выпуска.
+    Все спикеры корректно размечены - Umputun, Gray, Alek.sys, Guest1.
+    Нет SPEAKER_*, _ad или других артефактов.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 977
+    from_speaker: "Guest1"
+    to_speaker: "Andrey"
+    confidence: high
+    reason: "Явное представление: 'Меня зовут Андрей, и я .NET-программист' (110s), подтверждение Umputun (120s)"
+
+# Задачи для выполнения
+tasks:
+  - type: update_people_yaml
+    priority: medium
+    description: "Обновить info для andrey_dotnet - добавить выпуск 977"
+
+  - type: rename_speaker
+    priority: high
+    description: "Переименовать Guest1 в Andrey в эпизоде 977"
+
+# Примечания
+notes: |
+  Эпизод чистый по структуре спикеров. Единственный неизвестный спикер (Guest1) -
+  это реальный гость Андрей, .NET-программист, который участвует второй раз подряд.
+
+  Рекомендации:
+  1. Переименовать Guest1 -> Andrey в 977
+  2. Обновить people.yaml с указанием выпусков 976, 977
+  3. Возможно создать единый id "andrey_dotnet" для связи выпусков

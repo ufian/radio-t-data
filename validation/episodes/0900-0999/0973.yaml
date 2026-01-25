@@ -1,0 +1,59 @@
+episode: 973
+status: clean
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Alek.sys
+    - Ksenks
+  hosts_absent:
+    - Bobuk  # "пока все еще без Бобука"
+  total_duration_sec: 9428
+
+# Детальная статистика ведущих
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 1152
+    total_duration_sec: 3940
+    first_appearance_sec: 0
+    introduced: true
+    introduction_method: "host_opens_show"
+  - speaker: Gray
+    replies_count: 535
+    total_duration_sec: 2228
+    first_appearance_sec: 184
+    introduced: false
+    introduction_method: null
+    note: "Постоянный ведущий, не требует представления"
+  - speaker: Alek.sys
+    replies_count: 402
+    total_duration_sec: 1474
+    first_appearance_sec: 48
+    introduced: false
+    introduction_method: null
+    note: "Постоянный ведущий, не требует представления"
+  - speaker: Ksenks
+    replies_count: 338
+    total_duration_sec: 1383
+    first_appearance_sec: 51
+    introduced: true
+    introduction_method: "mentioned_by_name"
+    evidence: "Зато вернулась Ксюша вместо гостя, который в прошлый раз достойно выступил"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Bobuk отсутствует, явно упомянуто в начале выпуска"
+    - "Gray и Alek.sys не представлены явно, но это постоянные ведущие"
+    - "Ksenks представлена как вернувшаяся после отсутствия"
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,31 @@
+episode: 951
+status: clean
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+  hosts_absent:
+    - Ksenks
+  total_duration_sec: 9478.5
+  total_replies: 2642
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    Выпуск от 8 марта 2025 года. Все присутствующие ведущие представлены
+    в первые 60 секунд. Ksenks отсутствует, но упоминается в контексте
+    ("выпуск для Ксюши" на 8 марта). Бобук упомянут Умпутуном на 27-й секунде,
+    отвечает на 34-й.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

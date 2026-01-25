@@ -1,0 +1,51 @@
+episode: 970
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Alek.sys
+    - Ksenks
+  total_duration_sec: 9402.7
+  total_replies: 2373
+
+# Детальная статистика по ведущим
+hosts_statistics:
+  - speaker: Gray
+    replies_count: 688
+    total_duration_sec: 3326.8
+    first_appearance_sec: 14.9
+
+  - speaker: Umputun
+    replies_count: 1008
+    total_duration_sec: 3090.4
+    first_appearance_sec: 0.0
+
+  - speaker: Alek.sys
+    replies_count: 364
+    total_duration_sec: 1404.2
+    first_appearance_sec: 10.4
+
+  - speaker: Ksenks
+    replies_count: 313
+    total_duration_sec: 1124.4
+    first_appearance_sec: 54.6
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все 4 ведущих присутствуют с первой минуты выпуска.
+    Umputun открывает выпуск (0s), затем сразу включаются Alek.sys (10s),
+    Gray (15s) и Ksenks (55s). Взаимные обращения в начале подтверждают
+    присутствие: Umputun упоминает "Грея" и обращается к Ksenks ("Клесеша").
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

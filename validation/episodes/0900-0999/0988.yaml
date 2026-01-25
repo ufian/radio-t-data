@@ -1,0 +1,64 @@
+episode: 988
+status: clean
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks]
+  hosts_absent: [Bobuk]
+  total_duration_sec: 8756  # ~2.4 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 0.08
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Очень короткая реплика (0.08 сек) 'Угу' между двумя репликами Alek.sys. Это подтверждающее междометие от одного из ведущих (вероятно Umputun, который задавал вопрос ранее). Ошибка автоматической разметки спикера."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Umputun"
+          confidence: 0.7
+          reason: "Umputun задавал вопрос непосредственно перед этим (5946-5954s), Alek.sys отвечал. 'Угу' - вероятно подтверждение Umputun, что он понял объяснение."
+        - person_id: "Gray"
+          confidence: 0.15
+          reason: "Gray присутствует в эпизоде, мог слушать и подтвердить"
+        - person_id: "Ksenks"
+          confidence: 0.15
+          reason: "Ksenks присутствует в эпизоде, могла слушать и подтвердить"
+
+      voice_task:
+        needed: false
+        # Слишком короткая реплика (0.08 сек) для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Эпизод начинается стандартно с Umputun. Все четыре ведущих (Umputun, Gray, Alek.sys, Ksenks)
+    появляются в первые 2 минуты. Бобук явно упоминается как отсутствующий ("когда Бобук придёт").
+    Гостей в этом эпизоде нет.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete_or_merge
+    episode: 988
+    target_speaker: ""
+    action: "Удалить или объединить с соседней репликой Alek.sys"
+    confidence: high
+    reason: |
+      Реплика 'Угу' (5984.3-5984.38s) с пустым спикером - это ошибка распознавания.
+      Длительность 0.08 сек слишком мала для осмысленной атрибуции.
+      Вариант 1: Удалить эту реплику как шум
+      Вариант 2: Объединить с соседней репликой (но это изменит атрибуцию)
+      Рекомендация: Удалить, так как невозможно достоверно определить спикера.

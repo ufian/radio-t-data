@@ -1,0 +1,31 @@
+episode: 980
+status: clean
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Alek.sys
+    - Ksenks
+  total_duration_sec: 8118
+  notes: "Bobuk отсутствует (упоминается в начале: 'Все еще ждем Бобука')"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все четыре ведущих присутствуют с самого начала:
+    - Umputun: первая реплика в 0s (приветствие)
+    - Alek.sys: первая реплика в 15s
+    - Ksenks: первая реплика в 32s
+    - Gray: первая реплика в 76s
+    Bobuk явно отмечен как отсутствующий в начале выпуска.
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,33 @@
+episode: 907
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 8189
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все 5 постоянных ведущих присутствуют в эпизоде.
+    Гостей в этом выпуске нет.
+    Все спикеры появляются в первые 2 минуты:
+    - Umputun: 0.4s (ведет)
+    - Ksenks: 21.0s
+    - Gray: 44.4s
+    - Bobuk: 87.9s
+    - Alek.sys: 105.1s
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

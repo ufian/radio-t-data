@@ -1,0 +1,58 @@
+episode: 905
+status: clean
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 9020
+  total_replies: 2276
+
+# Детальный анализ по каждому спикеру
+speakers_stats:
+  - speaker: Umputun
+    replies_count: 793
+    duration_sec: 2689
+    first_appearance_sec: 1
+    role: host
+  - speaker: Bobuk
+    replies_count: 645
+    duration_sec: 2208
+    first_appearance_sec: 14
+    role: host
+  - speaker: Gray
+    replies_count: 308
+    duration_sec: 1449
+    first_appearance_sec: 43
+    role: host
+  - speaker: Ksenks
+    replies_count: 331
+    duration_sec: 1172
+    first_appearance_sec: 37
+    role: host
+  - speaker: Alek.sys
+    replies_count: 199
+    duration_sec: 742
+    first_appearance_sec: 18
+    role: host
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все 5 ведущих присутствуют с начала эпизода.
+    В начале упоминается, что "Аня не пришла" - вероятно, ещё один постоянный участник.
+    Ksenks также упоминается как "Маринка" (настоящее имя Марина).
+    Гостей в этом выпуске нет.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

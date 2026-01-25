@@ -1,0 +1,29 @@
+episode: 916
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 7621
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - speaker: Ksenks
+      note: "Присоединилась на 54-й минуте, что явно прокомментировано в диалоге ('А какую мы тему обсуждаем?', 'я так спешила, так старалась')"
+    - speaker: Alek.sys
+      note: "Появился на 15-й минуте, анонсирован в начале ('есть шанс, что Леха подойдет')"
+
+# Предлагаемые правила очистки
+suggested_rules: []

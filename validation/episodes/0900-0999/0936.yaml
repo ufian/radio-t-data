@@ -1,0 +1,66 @@
+episode: 936
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Ksenks
+    - Bobuk
+    - Alek.sys
+  total_duration_sec: 10215
+
+# Детальный анализ спикеров
+speakers_analysis:
+  - speaker: Umputun
+    replies_count: 1149
+    total_duration_sec: 3405
+    first_appearance_sec: 1
+    role: main_host
+    notes: "Ведет выпуск с начала"
+
+  - speaker: Gray
+    replies_count: 515
+    total_duration_sec: 2008
+    first_appearance_sec: 18
+    role: co_host
+    notes: "Присутствует с начала выпуска"
+
+  - speaker: Bobuk
+    replies_count: 350
+    total_duration_sec: 1131
+    first_appearance_sec: 26
+    role: co_host
+    notes: "Присутствует с начала выпуска"
+
+  - speaker: Alek.sys
+    replies_count: 322
+    total_duration_sec: 1050
+    first_appearance_sec: 679
+    role: co_host
+    notes: "Подключился на ~11 минуте, анонсирован в начале как 'Леха подойдет в процессе'"
+
+  - speaker: Ksenks
+    replies_count: 454
+    total_duration_sec: 1754
+    first_appearance_sec: 1406
+    role: co_host
+    notes: "Подключилась на ~23 минуте, анонсирована в начале как 'Ксюша подойдет в процессе', первая фраза 'А меня слышно сейчас?'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    На 64-67 сек Umputun говорит: "Так, у нас Леха и Ксюша подойдут в процессе"
+    Все ведущие либо присутствуют с начала (Umputun, Gray, Bobuk),
+    либо анонсированы и подключаются позже (Alek.sys на 679 сек, Ksenks на 1406 сек).
+    Гостей в этом выпуске нет.
+
+# Предлагаемые правила очистки
+suggested_rules: []

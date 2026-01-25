@@ -1,0 +1,55 @@
+episode: 912
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Ksenks
+    - Alek.sys
+    - Gray
+    - Bobuk
+  total_duration_sec: 8942  # сумма: 4073 + 1899 + 1329 + 1249 + 392
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# В этом эпизоде нет неизвестных спикеров (SPEAKER_*, Guest*)
+# Все 2472 реплики принадлежат пяти известным ведущим
+
+# Статистика по ведущим (для справки)
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 1229
+    total_duration_sec: 4073
+    first_appearance_sec: 1
+  - speaker: Ksenks
+    replies_count: 468
+    total_duration_sec: 1899
+    first_appearance_sec: 853
+  - speaker: Alek.sys
+    replies_count: 369
+    total_duration_sec: 1329
+    first_appearance_sec: 151
+  - speaker: Gray
+    replies_count: 292
+    total_duration_sec: 1249
+    first_appearance_sec: 42
+  - speaker: Bobuk
+    replies_count: 114
+    total_duration_sec: 392
+    first_appearance_sec: 23
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Эпизод 912 от 1 июня 2024 года - гиковский выпуск (первое число месяца).
+    В начале Umputun упоминает "мужской суровый состав" и возможное присоединение
+    "лучшей пятерины" (Ksenks), которая появляется позже (~14 минута).
+    Все пять ведущих корректно идентифицированы, гостей нет.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - разметка корректна

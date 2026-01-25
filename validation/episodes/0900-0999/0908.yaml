@@ -1,0 +1,30 @@
+episode: 908
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+  total_duration_sec: 7653
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun открывает выпуск (0s), говорит что это гиковский выпуск"
+    - "Gray вступает на 20s в диалог с Umputun"
+    - "Umputun обращается к Ксюше по имени (35-41s), она молчит (технические проблемы?)"
+    - "Umputun обращается к Бобуку по имени (48s)"
+    - "Bobuk вступает на 55s"
+    - "Ksenks вступает позже на 337s (первая реплика 'Глаголы?')"
+
+# Предлагаемые правила очистки
+suggested_rules: []
