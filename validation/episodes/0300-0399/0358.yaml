@@ -1,0 +1,204 @@
+episode: 358
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_identified: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: 5269  # Umputun 3447 + Gray 1793 + Bobuk 29
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 794
+    replies_count: 188
+    first_appearance_sec: 113
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "viktor_gamov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        108.3s: Umputun говорит "А наш второй гость Виктор, ты тоже какой-то сибиряк?"
+        SPEAKER_03 отвечает "Нет, это у меня был коллега по другому подкасту, он был сибиряк.
+        Только он был из Иркутска. А я москаль центрального региона. Но сейчас в центральном Нью-Джерси."
+        Виктор - подкастер из Москвы, живёт в Нью-Джерси. Участвует в технических дискуссиях о Stack Overflow, C#.
+        В выпуске 353 был тот же Виктор Гамов из подкаста "Разбор полетов" - вероятно тот же человек.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 138
+    replies_count: 66
+    first_appearance_sec: 75
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "annie_omsk"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        70.7s: Umputun: "Дорогая Анна, тебя как зовут в интернете?"
+        75.5s: SPEAKER_01: "Нет, у меня в интернетах Энни Омск зовут."
+        Также подтверждено в all_identified_guests.json.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 299
+    replies_count: 67
+    first_appearance_sec: 1314
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "alexey_spain"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        1314.2s: SPEAKER_00: "Алло."
+        1316.8s: Umputun: "А вот гость, который пришел... Ты говоришь, дорогой... Во-первых, ты кто?"
+        1325.3s: SPEAKER_00: "Алексей."
+        1329.6s: SPEAKER_00: "Я вообще украинец, но в данный момент живу в Испании."
+        Звонящий слушатель, пришёл обсудить ZFS. Также подтверждено в all_identified_guests.json.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 4
+    replies_count: 4
+    first_appearance_sec: 4602
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Всего 4 короткие реплики разбросаны по эпизоду: "Угу" (4602s), "Да" (5685s),
+        "Угу" (7294s), "Как иначе?" (7405s).
+        Это типичные ошибки автоматического распознавания - междометия и короткие реакции,
+        которые алгоритм не смог атрибутировать корректно.
+        Скорее всего принадлежат одному из ведущих (Gray или Bobuk) или EldarMurtazin.
+      identified_as: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray активен в этом эпизоде, короткие реакции могут быть его"
+        - person_id: "eldar_murtazin"
+          confidence: 0.3
+          reason: "Эльдар также присутствует, мог бы быть источником"
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 286
+    replies_count: 63
+    first_appearance_sec: 103
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "existing_label"
+      confidence: high
+      evidence: "Уже размечена как Marin_k_a (Марина, бывшая ведущая согласно people.yaml)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 224
+    replies_count: 50
+    first_appearance_sec: 184
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "existing_label"
+      confidence: high
+      evidence: >
+        Уже размечен как EldarMurtazin (Эльдар Муртазин, ведущий мобильный аналитик согласно people.yaml).
+        Появляется без явного представления в начале - известный регулярный гость.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    Выпуск 358 от 21 сентября 2013. Состав: Umputun, Gray + два гостя (Анна/Энни Омск и Виктор).
+    Bobuk отсутствует в начале ("вместо выбывшего Бобука"), но появляется с 336s (подключился позже).
+    Marin_k_a (Марина) присутствует как ведущая.
+    EldarMurtazin появляется без представления - известный регулярный гость.
+    SPEAKER_00 (Алексей из Испании) - звонящий слушатель, пришёл в 1314s обсудить ZFS.
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "Не размечен как AnnieOmsk, хотя явно представилась как Энни Омск"
+    - speaker: "SPEAKER_03"
+      issue: "Не размечен как ViktorGamov, хотя Umputun представил как 'наш гость Виктор'"
+    - speaker: "SPEAKER_00"
+      issue: "Не размечен как AlexeySpain, хотя представился как Алексей из Испании"
+    - speaker: "SPEAKER_05"
+      issue: "Ошибки распознавания - короткие разбросанные реплики"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 358
+    from_speaker: "SPEAKER_03"
+    to_speaker: "ViktorGamov"
+    confidence: high
+    reason: >
+      Явное представление от Umputun: "А наш второй гость Виктор".
+      Виктор - подкастер из Москвы, живёт в Нью-Джерси.
+      Вероятно тот же Виктор Гамов из выпуска 353.
+
+  - type: rename
+    episode: 358
+    from_speaker: "SPEAKER_01"
+    to_speaker: "AnnieOmsk"
+    confidence: high
+    reason: >
+      Явное представление: "Дорогая Анна, тебя как зовут в интернете?" - "Энни Омск".
+      Подтверждено в all_identified_guests.json.
+
+  - type: rename
+    episode: 358
+    from_speaker: "SPEAKER_00"
+    to_speaker: "AlexeySpain"
+    confidence: high
+    reason: >
+      Представился: "Алексей. Я вообще украинец, но в данный момент живу в Испании."
+      Звонящий слушатель с 1314s, обсуждал ZFS.
+
+  - type: delete_or_merge
+    episode: 358
+    speaker: "SPEAKER_05"
+    confidence: medium
+    reason: >
+      4 короткие разбросанные реплики ("Угу", "Да") - ошибки распознавания.
+      Можно удалить или слить с ближайшим по времени спикером.
+
+# Гости для добавления в people.yaml
+new_guests_to_add:
+  - id: "annie_omsk"
+    canonical_name: "AnnieOmsk"
+    aliases: ["Энни", "Энни Омск", "Анна"]
+    real_name: "Анна"
+    info: "Слушательница из Омска, выпуск 358"
+
+  - id: "alexey_spain"
+    canonical_name: "AlexeySpain"
+    aliases: ["Алексей"]
+    real_name: "Алексей"
+    info: "Украинец живущий в Испании, обсуждал ZFS, выпуск 358"
+
+# Примечание: Виктор Гамов уже предложен к добавлению в выпуске 353

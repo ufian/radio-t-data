@@ -1,0 +1,200 @@
+episode: 396
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray]
+  hosts_absent: [Umputun, Ksenks, Alek.sys]
+  total_duration_sec: 8961
+  notes: "Gray ведет эпизод, Umputun в отъезде (упоминается что гоняет мечехвостов)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1310
+    replies_count: 428
+    first_appearance_sec: 36
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Женский род глаголов: "обклеила", "гордилась", "хотела", "согласна", "удивилась"
+        2. Реплики чередуются с Marin_k_a без паузы (84.8s Marin_k_a -> 87.0s SPEAKER_04)
+        3. Тематически одинаковый контент - воспоминания о Тетрисе, девайсах, общие темы
+        4. Суммарно SPEAKER_04 + Marin_k_a = 597 реплик, 2325 сек - типичный объём для активного участника
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Идентификация высокой уверенности по грамматике и контексту"
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1015
+    replies_count: 169
+    first_appearance_sec: 85
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+
+      identified_as: "marin_k_a"
+      identification_method: "known_speaker"
+      confidence: high
+      evidence: "Marin_k_a - известный спикер (Марина, бывшая ведущая) в people.yaml"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 18
+    replies_count: 8
+    first_appearance_sec: 669
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин не участвует в этом эпизоде (ведущие - только Bobuk и Gray + гость Marin_k_a).
+        Реплики вклиниваются между Gray и Bobuk без логического перехода.
+        Пример: Gray "Есть совсем попсовая тема" -> MISATTRIBUTED_ELDAR "Именно про попсу" -> Gray "Иногда про рок"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Реплики логически продолжают речь Gray, между его фразами"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Альтернативный вариант - могут быть короткие вставки Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 671.67
+          etime: 675.89
+          text: "Это про то, что Амазон запустил онлайн-стриминг."
+        compare_with: ["Gray", "Bobuk"]
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 15
+    replies_count: 3
+    first_appearance_sec: 6243
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Lavale не участвует в этом эпизоде.
+        Все 3 реплики появляются между репликами Marin_k_a в одном разговоре про Evernote/TestFlight.
+        Тематически и контекстуально это продолжение речи Marin_k_a.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.8
+          reason: "Реплики между Marin_k_a, продолжают её мысль об Evernote и девайсах"
+        - person_id: "bobuk"
+          confidence: 0.15
+          reason: "Bobuk мог вставить комментарий, но контекст указывает на Marin_k_a"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6622.76
+          etime: 6630.63
+          text: "Во-первых, тысяча не устройств, а конкретных пользователей, у которых может быть не один девайс, а несколько."
+        compare_with: ["Marin_k_a", "Bobuk"]
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 2
+    replies_count: 2
+    first_appearance_sec: 2226
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 коротких реплики-междометия ("Непривязанное государство, да." и "Вау.").
+        Типичные ошибки распознавания коротких реакций.
+        "Вау" появляется сразу после рассказа Bobuk и он же продолжает "Вау, так не бывает."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Первая реплика в контексте разговора Bobuk о биткоине"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray мог вставить короткую реплику"
+        - person_id: "marin_k_a"
+          confidence: 0.2
+          reason: "Marin_k_a как активный участник могла сказать 'Вау'"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики (<2 сек) для надёжного voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Gray начинает эпизод с приветствия (3s).
+    Bobuk подхватывает (15s), упоминает отсутствие Umputun.
+    Marin_k_a/SPEAKER_04 присоединяется с 36s - не представлена явно,
+    но по голосам узнаваема (Gray говорит "по голосам понятно" в 64s).
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: "Это Marin_k_a, требуется объединение под одним спикером"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Ошибочная атрибуция, Эльдар не участвует в эпизоде"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Ошибочная атрибуция, Lavale не участвует в эпизоде"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 396
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Женский род, чередование реплик с Marin_k_a, тематическая консистентность"
+
+  - type: rename
+    episode: 396
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Реплики между Marin_k_a, продолжают её разговор. Требует voice verification."
+
+  - type: voice_verification_needed
+    episode: 396
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    candidates: ["Gray", "Bobuk"]
+    confidence: medium
+    reason: "Короткие реплики между ведущими, нужно определить чей голос"
+
+  - type: error_likely
+    episode: 396
+    speaker: "SPEAKER_03"
+    reason: "2 коротких междометия, слишком мало данных для идентификации"

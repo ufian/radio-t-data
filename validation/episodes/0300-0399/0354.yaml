@@ -1,0 +1,223 @@
+episode: 354
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: 8230  # ~2.3 hours based on last Eldar reply
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1485
+    replies_count: 388
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "47s: 'у нас сегодня редкая гостья' (Umputun), 49s: 'Я редкая гостья' (Marin_k_a), 67s: 'Это Маруся, конечно, была' (Umputun). Марина - бывшая ведущая подкаста."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 287
+    replies_count: 52
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: "Первая реплика 168s в контексте разговора о ком-то, кто 'летит из Америки'. В 1691s Marin_k_a говорит 'Он на Муртазина похож чем-то' и 'Муртазин хороший' - явное упоминание присутствующего гостя. Эльдар Муртазин - известный мобильный аналитик, частый гость подкаста."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 369
+    replies_count: 79
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "4979s: Umputun спрашивает 'Роман, ты кто такой?', 4981s: SPEAKER_01 отвечает 'Да, я Роман, я из Литвы, работаю в Barclays, работаю в основном как Unix-инженер'. Это звонок от слушателя."
+
+      possible_matches:
+        - person_id: "roman_from_lithuania"
+          confidence: 1.0
+          reason: "Явное самопредставление: Роман из Литвы, Unix-инженер в Barclays"
+
+      voice_task:
+        needed: false
+        note: "Это звонок слушателя (не постоянный гость), идентификация не требуется"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 9
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные фразы ('Не знаю даже', 'Так почему?'), разбросанные по выпуску. Вероятно ошибочная атрибуция реплик одного из присутствующих ведущих или гостей."
+
+      identified_as: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Реплика 3817s 'Так почему?' идёт после реплики Marin_k_a и перед её следующей репликой - возможно это её слова"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможно ошибка распознавания голоса Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5861.95
+          etime: 5865.96
+          text: "Самый длинный сегмент SPEAKER_06 (~4 сек)"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 9
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "4 короткие реплики в разных частях выпуска: 'Ух ты' (1633s), 'У Грея глаза голубые' (6489s). Типичные ошибки транскрипции - междометия и случайные фразы."
+
+      identified_as: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Реплика 'У Грея глаза голубые' (6489s) появляется в контексте разговора ведущих, следующая реплика - Marin_k_a"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможно ошибка распознавания"
+
+      voice_task:
+        needed: false
+        note: "Слишком короткие сегменты для voice comparison (макс ~5 сек)"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 7
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "5 очень коротких реплик: 'Почему?' (3776s), 'Это неважно' (4598s). Односложные реакции, типичные для ошибок автоматической транскрипции."
+
+      identified_as: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Короткие реплики в контексте диалогов с Marin_k_a"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможно ошибка распознавания Gray"
+
+      voice_task:
+        needed: false
+        note: "Слишком короткие сегменты (<2 сек каждый)"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна реплика 'И вот не убавить, не прибавить' (5788s). Маркер MISATTRIBUTED указывает на ранее отменённое ошибочное присвоение Петру Диденко. Это реакция на реплику SPEAKER_01 (Романа) об OpenStack."
+
+      identified_as: null
+      possible_matches:
+        - person_id: "roman_from_lithuania"
+          confidence: 0.6
+          reason: "Контекст: это часть разговора со звонящим Романом (SPEAKER_01), скорее всего его реплика"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Предыдущая и последующая реплики - Umputun"
+
+      voice_task:
+        needed: false
+        note: "Одна короткая реплика, недостаточно для идентификации"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Marin_k_a (Марина) - явно представлена в начале как 'редкая гостья'"
+    - "EldarMurtazin - не представлен явно, но упоминается по фамилии в разговоре (1691s)"
+    - "SPEAKER_01 (Роман) - звонок слушателя, представился сам"
+    - "Bobuk появляется с 1001s - вероятно подключился позже"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 354
+    from_speaker: "SPEAKER_01"
+    to_speaker: "CallerRoman"
+    confidence: high
+    reason: "Явное самопредставление: 'Да, я Роман, я из Литвы, работаю в Barclays'"
+
+  - type: merge_or_delete
+    episode: 354
+    speaker: "SPEAKER_06"
+    action: "investigate"
+    confidence: medium
+    reason: "5 коротких реплик, вероятно ошибки атрибуции Marin_k_a или Gray"
+
+  - type: merge_or_delete
+    episode: 354
+    speaker: "SPEAKER_04"
+    action: "investigate"
+    confidence: medium
+    reason: "4 короткие реплики, вероятно ошибки атрибуции"
+
+  - type: merge_or_delete
+    episode: 354
+    speaker: "SPEAKER_03"
+    action: "investigate"
+    confidence: medium
+    reason: "5 очень коротких реплик (<2 сек), вероятно ошибки атрибуции"
+
+  - type: rename_or_delete
+    episode: 354
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    action: "investigate"
+    confidence: medium
+    reason: "Одна реплика, скорее всего принадлежит SPEAKER_01 (Роман) или Umputun"
+
+# Комментарии
+comments: |
+  Эпизод 354 от 24 августа 2013 года.
+
+  Основные участники:
+  - Umputun (ведущий, 1204 реплики)
+  - Gray (ведущий, 326 реплик)
+  - Bobuk (ведущий, подключился позже - с 1001s, 19 реплик)
+  - Marin_k_a (гостья - бывшая ведущая Марина, 388 реплик)
+  - EldarMurtazin (гость - мобильный аналитик, 52 реплики)
+
+  Звонки слушателей:
+  - SPEAKER_01 = Роман из Литвы (Unix-инженер в Barclays), 79 реплик
+
+  Ошибки транскрипции:
+  - SPEAKER_03, SPEAKER_04, SPEAKER_06 - короткие ошибочные атрибуции
+  - SPEAKER_MISATTRIBUTED_PETR - ранее ошибочно приписано Петру Диденко
+
+  Статус: clean - все основные спикеры идентифицированы, оставшиеся
+  неизвестные - это мелкие ошибки транскрипции, не влияющие на качество.

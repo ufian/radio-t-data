@@ -1,0 +1,308 @@
+episode: 326
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  guests_present: []
+  total_duration_sec: 8453
+
+# Примечание: Gray появляется только на 3084s с 2 репликами (4 сек)
+# Ксюша (Ksenks) размечена под двумя разными идентификаторами: Marin_k_a и SPEAKER_00
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 742
+    replies_count: 124
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. На 7828s Bobuk говорит "Пока Ксюша смотрит" сразу после реплики Marin_k_a "Я не уверена, что там прям будет очень весело"
+        2. На 4455s Umputun говорит "А мне кажется, Вобук, ты с Ксюшей не поймете" в контексте диалога с этим спикером
+        3. В people.yaml Marin_k_a описана как "Марина, бывшая ведущая", но контекст ясно показывает что здесь это Ксюша
+        4. На 7821s говорит "Я не Грей" - указывает на женский голос, не Марину
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 420
+    replies_count: 175
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. На 19s отвечает "Викторовна" когда Umputun спрашивает "как по отчеству?" после упоминания "Ксения"
+        2. На 47s отвечает "Надо бы меня не заразить" после слов Bobuk "Из гиков сегодня у нас одна Ксюша"
+        3. Реплики SPEAKER_00 и Marin_k_a не пересекаются по времени - это один человек с разной разметкой
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 6
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие изолированные фразы в разных местах эпизода (2939s, 7817s).
+        На 2939s - серия коротких фраз ("Ты так написал?", "Посмотри в чатике") в диалоге между SPEAKER_00 и этим спикером - возможно ошибка разделения голоса Ксюши или Бобука.
+        На 7817s - "Оксана?" - возможно фоновая реплика или артефакт.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Контекст диалога с SPEAKER_00, может быть та же Ксюша с неправильной сегментацией"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "На 2939s фразы похожи на технические указания, что характерно для Бобука"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2939.16
+          etime: 2947.06
+          text: "Ты так написал? Посмотри в чатике. Ну, показываю. Копии, подожди. Копии раз. Шер с вами."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие подряд реплики "Ну, да" на 2650s и 2651s.
+        Типичные подтверждающие междометия, вероятно ошибка распознавания одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Bobuk задает вопрос про Amazon Transcoder, кто-то соглашается 'Ну, да' - вероятно Umputun"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Также может быть Ксюша подтверждающая слова"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 11
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Эти реплики были ошибочно отнесены к Lavale и помечены как MISATTRIBUTED
+      # Требуется определить реального автора
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        1. На 212s реплика продолжает мысль Marin_k_a (которая = Ksenks) о комьюнити GitHub
+        2. На 4437s реплика в контексте разговора с Ксюшей (после неё Bobuk говорит "как ты написала")
+        Вероятно это реплики Ксюши, ошибочно размеченные как Lavale и затем помеченные как MISATTRIBUTED
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Обе реплики в контексте диалогов где участвует Ксюша"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4437.14
+          etime: 4442.18
+          text: "Вот сейчас там пофишу у себя где-нибудь локально и напишу какое-нибудь там тихое письмо."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (1-2 сек каждая) в разных частях эпизода.
+        "Конечно" (1540s), "Ужас и кошмар" (3551s), "Просто хитрый перец" (5220s).
+        Эльдар Муртазин НЕ участвовал в этом эпизоде (в начале представлены только Umputun, Bobuk, Ksenks).
+        Это короткие реакции кого-то из присутствующих ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Короткие эмоциональные реакции могут быть от Umputun"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Или от Bobuk - оба используют такие фразы"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Менее вероятно Ксюша"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3551.19
+          etime: 3552.93
+          text: "Ужас и кошмар."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 7
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики в разных частях:
+        "Скорости мне немало и раньше было" (3209s), "Какая маленькая проблема у меня?" (4574s), "Нельзя поднять ничего такого" (7593s).
+        Пётр Диденко НЕ участвовал в этом эпизоде.
+        Реплики выглядят как часть диалога с ведущими.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Реплики на 4574s и 7593s продолжают технические обсуждения Umputun"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Или Bobuk в техническом контексте"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Менее вероятно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4574.66
+          etime: 4576.6
+          text: "Какая маленькая проблема у меня?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода Umputun представляет участников: "Ксения Викторовна сегодня зашла к нам на огонек, и Бобук Батькович тоже с нами".
+    Gray появляется позже (3084s) без отдельного представления.
+    Эпизод гиковский, гостей нет.
+
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        Неправильный идентификатор спикера. Marin_k_a в people.yaml - это Марина (бывшая ведущая),
+        но в этом эпизоде под этим ID размечена Ksenks (Ксюша). Требуется переименование.
+
+    - speaker: "SPEAKER_00"
+      issue: |
+        Также является Ksenks, но часть её реплик размечена отдельно как SPEAKER_00.
+        Требуется объединение с Marin_k_a и переименование обоих в Ksenks.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 326
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Контекст однозначно показывает что это Ксюша (Ksenks):
+      - Bobuk называет её "Ксюша" во время её реплик
+      - Umputun обращается к "Ксюше" и получает ответ от этого спикера
+      В people.yaml Marin_k_a - это Марина, но здесь это ошибка разметки
+
+  - type: rename
+    episode: 326
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      В начале эпизода SPEAKER_00 отвечает "Викторовна" на вопрос об отчестве Ксении.
+      Это тот же человек что и Marin_k_a, просто с другой разметкой.
+
+  - type: rename
+    episode: 326
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Обе реплики в контексте разговоров с Ксюшей и продолжают её мысли.
+      Требует voice verification.
+
+# Задания для voice comparison
+voice_comparison_tasks:
+  - task_id: "326_speaker01"
+    speaker: "SPEAKER_01"
+    segment:
+      stime: 2939.16
+      etime: 2947.06
+    candidates: [ksenks, bobuk]
+    priority: low
+
+  - task_id: "326_misattributed_lavale"
+    speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    segment:
+      stime: 4437.14
+      etime: 4442.18
+    candidates: [ksenks]
+    priority: medium
+
+  - task_id: "326_misattributed_eldar"
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    segment:
+      stime: 3551.19
+      etime: 3552.93
+    candidates: [umputun, bobuk]
+    priority: low
+
+  - task_id: "326_misattributed_petr"
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    segment:
+      stime: 4574.66
+      etime: 4576.6
+    candidates: [umputun, bobuk]
+    priority: low

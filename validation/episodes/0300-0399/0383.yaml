@@ -1,0 +1,239 @@
+episode: 383
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  hosts_absent: [Gray, Alek.sys]
+  guests_identified: [Marin_k_a, EldarMurtazin]
+  guest_in_episode: "Александр Плющев (SPEAKER_04)"
+  total_duration_sec: 7894
+
+# Важное замечание в начале эпизода
+episode_context: |
+  Umputun (1-20s): "Сегодня все четыре человека пришло, но один из них вместо Грея.
+  И не просто вместо Грея. Он гость, который редкий, которого мы звали-звали.
+  И вот он пришел. Хотя, конечно, мы про тебя, Саша, немножко подзабыли."
+
+  В конце (7850-7854s): "В гостях Александр Плющев, небезызвестный вам."
+
+  Это подтверждает: Gray ОТСУТСТВУЕТ, гость - Александр Плющев.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1405
+    replies_count: 360
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+
+      identified_as: "plushev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. В начале: "Хотя, конечно, мы про тебя, Саша, немножко подзабыли" (17.93s)
+        2. В конце: "В гостях Александр Плющев, небезызвестный вам" (7850.89s)
+        3. Множественные обращения "Саша", "Александр", "Плющев" по тексту
+        4. Упоминание "Саша Плющева" (строка 13132)
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 487
+    replies_count: 189
+    pattern: scattered
+
+    analysis:
+      is_error: false
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        1. Umputun (63.63s): "Мы с Ксюшей тут каждую неделю сидим"
+        2. SPEAKER_00 отвечает на эту фразу: "Да, все записываем в тетрадочку" (66.81s)
+        3. Множественные обращения "Ксюша" по тексту направлены к этому спикеру
+        4. Паттерн коротких реплик характерен для Ksenks в других эпизодах
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.85
+          reason: "Контекст и обращения 'Ксюша'"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 417.18
+          etime: 431.72
+          text: "Что ты качал? Что, бобук? ... Да, лицензионного не было."
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 461
+    replies_count: 78
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "pre-labeled"
+      confidence: high
+      evidence: "Уже размечена в файле, известная участница подкаста"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 290
+    replies_count: 50
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "pre-labeled"
+      confidence: high
+      evidence: "Уже размечен в файле, известный мобильный аналитик"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 36
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Отменённое ошибочное присвоение. Судя по контексту, это могут быть реплики
+        Ksenks (SPEAKER_00) или других участников. Короткие фразы разбросаны по эпизоду.
+        Lavale не была упомянута и не представлена в этом эпизоде.
+
+      identified_as: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Короткие реплики похожи на паттерн Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6125.39
+          etime: 6165.19
+          text: "То есть, например, у нас была достаточно интересная магистратура... Если эта программа вам не интересна..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Отменённое ошибочное присвоение. Всего 2 короткие реплики (6 сек).
+        Пётр Диденко не был упомянут и не представлен в этом эпизоде.
+        Скорее всего это ошибки распознавания других участников.
+
+      identified_as: null
+      possible_matches:
+        - person_id: "unknown"
+          confidence: 0.3
+          reason: "Слишком мало данных для идентификации"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проблема с Gray
+gray_issue:
+  description: |
+    КРИТИЧЕСКАЯ ОШИБКА: Gray размечен в файле (2 реплики), но Umputun явно сказал
+    в начале "один из них ВМЕСТО Грея" - Gray отсутствовал в этом эпизоде!
+
+  evidence:
+    - timestamp: 8.3
+      quote: "Сегодня все четыре человека пришло, но один из них вместо Грея"
+    - timestamp: 12.05
+      quote: "И не просто вместо Грея"
+
+  gray_lines:
+    - stime: 545.16
+      etime: 546.18
+      text: "Нет, подожди, подожди."
+    - stime: 6048.13
+      etime: 6053.07
+      text: "Там у вас холодина была и озеро сейчас замерзало даже вот тут."
+
+  suggested_action: "Реплики Gray нужно переатрибутировать другому спикеру (вероятно Ksenks или EldarMurtazin)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Размечен как присутствующий, но явно сказано что отсутствует"
+    - speaker: "SPEAKER_00"
+      issue: "Не представлен явно, но контекст указывает на Ksenks"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Lavale не представлена в эпизоде, реплики ошибочны"
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Пётр Диденко не представлен в эпизоде, реплики ошибочны"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 383
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: "Явное представление: 'В гостях Александр Плющев'"
+
+  - type: rename
+    episode: 383
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Контекст: 'Мы с Ксюшей' + обращения. Требует voice verification."
+
+  - type: delete_or_reassign
+    episode: 383
+    from_speaker: "Gray"
+    confidence: high
+    reason: "Umputun явно сказал что Gray отсутствует ('вместо Грея')"
+
+  - type: review
+    episode: 383
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    confidence: medium
+    reason: "Отменённое ошибочное присвоение, нужна voice verification"
+
+  - type: review
+    episode: 383
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    confidence: low
+    reason: "Отменённое ошибочное присвоение, слишком мало данных"
+
+# Референсные сегменты для voice comparison
+voice_reference_segments:
+  SPEAKER_04_plushev:
+    description: "Длинный монолог Плющева о первом знакомстве с интернетом"
+    stime: 261.12
+    etime: 313.67
+    duration_sec: 52.55
+    text_preview: "Для меня это было какое-то чудо, что наши студенты у нас обучались..."
+
+  SPEAKER_00_possible_ksenks:
+    description: "Диалог после упоминания 'мы с Ксюшей'"
+    stime: 61.11
+    etime: 68.49
+    duration_sec: 7.38
+    text_preview: "Какой с прошлого? С поза прошлого. Да, все записываем в тетрадочку."

@@ -1,0 +1,238 @@
+episode: 346
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Ksenks, Marin_k_a]
+  total_duration_sec: 7815  # ~2h 10min
+  note: "В начале Umputun говорит 'в составе из троих гадов' - это Umputun, Bobuk, Ksenks. Marin_k_a также участвует активно."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 672
+    replies_count: 275
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Множество прямых доказательств:
+        1. В начале (10-28s) Umputun говорит "насколько заканчивается, Маруся?" - SPEAKER_01 отвечает
+        2. Umputun: "Маруся – это между Оксаной и Ксюшей по степени унижения" (18-22s)
+        3. SPEAKER_01: "Я же Оксаной должна быть по ГОСТу" (15-18s)
+        4. Umputun: "номер Оксаны Ксюша сказала" (28-32s)
+        5. Позже (5112s): Umputun: "Вот в этом стандарте, Ксюшенька, положено так"
+        6. В конце (7729s): "Ксюшенька, а ты про что будешь?" - SPEAKER_01 отвечает "Ох, я не знаю"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 537
+    replies_count: 103
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "existing_label"
+      confidence: high
+      evidence: "Уже корректно размечена как Marin_k_a. Это бывшая ведущая Марина, активно участвует в обсуждениях."
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Gray"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Gray не был объявлен участником выпуска. Umputun в начале говорит "в составе из троих гадов"
+        (Umputun, Bobuk, Ksenks). Единственная реплика "Умпутуновскую" (7664s) - короткое слово,
+        вероятно ошибка распознавания другого участника.
+      identified_as: null
+      confidence: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Ksenks активно участвует, короткая реплика могла быть её"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk также активен в этом сегменте"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7664.03
+          etime: 7665.33
+          text: "Умпутуновскую."
+          note: "Слишком короткий сегмент для надёжного сравнения"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две разрозненные реплики в разных частях выпуска:
+        1. "Какие еще самые такие частые?" (3445s) - уточняющий вопрос
+        2. "Пошел хорошо." (7806s) - реакция на коньяк в конце
+        Суммарно <5 сек, случайные моменты - типичный паттерн ошибок распознавания.
+      identified_as: null
+      confidence: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "SPEAKER_01 (Ksenks) активна, могла быть ошибочно сегментирована"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Marin_k_a также активна в выпуске"
+      voice_task:
+        needed: false
+        note: "Сегменты слишком короткие для voice comparison"
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 0.26
+    replies_count: 2
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две последовательные микро-реплики (<0.2 сек каждая):
+        - "А AMQP, Женя?" (5106.75-5106.93s)
+        - "AMQP, да?" (5106.95-5107.03s)
+        Обращение "Женя" к Umputun указывает на кого-то из ведущих/участников.
+        Сразу после Umputun отвечает Ksenks: "Ксюшенька, положено так".
+        Вероятно это была реплика Ksenks, ошибочно сегментированная.
+      identified_as: null
+      confidence: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Обращается к Umputun как 'Женя', сразу после этого Umputun отвечает Ksenks"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Также могла обратиться по имени"
+      voice_task:
+        needed: false
+        note: "Сегмент слишком короткий (0.26 сек)"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплика "Я про что-нибудь тоже могу рассказать" (7732s) идёт сразу после диалога:
+        - Umputun: "Ксюшенька, а ты про что будешь?"
+        - SPEAKER_01 (Ksenks): "Ох, я не знаю"
+        - [эта реплика]
+        Контекст указывает на продолжение разговора между ведущими. Lavale не упоминается в выпуске.
+        Уже помечено как MISATTRIBUTED, что правильно.
+      identified_as: null
+      confidence: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Продолжение диалога с Ksenks"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Могла включиться в разговор"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7732.79
+          etime: 7735.31
+          text: "Я про что-нибудь тоже могу рассказать."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики в разных частях выпуска:
+        1. "А зачем сразу выкладывать на YouTube?" (1870s) - в диалоге о Google Hangouts
+        2. "Что вы хотели сказать-то?" (4654s) - после Bobuk: "Евгений, давайте ближе к теме"
+        Eldar Murtazin не участвовал в выпуске 346. Уже помечено как MISATTRIBUTED.
+      identified_as: null
+      confidence: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "SPEAKER_01 активно обсуждает Google+ в этом сегменте"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Может быть реплика Bobuk"
+      voice_task:
+        needed: false
+        note: "Реплики слишком короткие"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплика "Короче, про группы ты меня нифига не убедил" (2277s) в споре о Google+.
+        Контекст: Umputun и Bobuk спорят про Google+, реплика похожа на стиль Bobuk.
+        Petr Didenko не участвовал в выпуске 346. Уже помечено как MISATTRIBUTED.
+      identified_as: null
+      confidence: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Стиль и контекст соответствуют Bobuk в споре про Google+"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Может быть реплика Umputun"
+      voice_task:
+        needed: false
+        note: "Реплика слишком короткая"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Gray не объявлен участником, но имеет 1 реплику. В начале Umputun говорит 'троих гадов' (без Gray)."
+    - speaker: "SPEAKER_01"
+      issue: "Должен быть переименован в Ksenks - есть прямые доказательства идентификации"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 346
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Множество прямых доказательств: обращения 'Маруся', 'Ксюша', 'Ксюшенька' от Umputun"
+
+  - type: investigate
+    episode: 346
+    speaker: "Gray"
+    confidence: medium
+    reason: "Gray не участвовал в выпуске по объявлению ведущего. Требуется voice comparison."
+
+  - type: merge_to_unknown
+    episode: 346
+    from_speakers: ["SPEAKER_00", "SPEAKER_04"]
+    reason: "Микро-сегменты (<5 сек), ошибки распознавания. Нужно определить кому принадлежат."

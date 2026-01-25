@@ -1,0 +1,272 @@
+episode: 361
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Контекст выпуска
+episode_context: |
+  Дата: 12 октября 2013
+  Umputun в начале говорит: "парный выпуск", "мы с Ксюшей вдвоем"
+  Бобук и Грей отсутствуют ("в пути")
+  В конце подтверждено: "Сегодня мы с Ксюшей вдвоем выступили, но с поддержкой дорогих гостей"
+
+  Гости:
+  - Антон (подключился около 443 сек, ушел около 2267 сек)
+  - Андрей (владелец музея Apple в Москве, с ~2577 сек до конца)
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  hosts_absent: [Bobuk, Gray]
+  total_duration_sec: 7200  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1332
+    replies_count: 410
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Umputun обращается к спикеру как "Ксюша", "Ксюшенька" многократно.
+        В начале выпуска: "Ксюша, хорошо, что ты пришла" (34 сек).
+        SPEAKER_00 реагирует: "Да, я сегодня отдаваюсь изо всех отсутствующих" (36 сек).
+        В конце: "Сегодня мы с Ксюшей вдвоем выступили".
+        Марина не упоминается ни разу.
+
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 621
+    replies_count: 105
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция. Марина не участвовала в выпуске 361.
+        Umputun явно говорит "парный выпуск" с Ксюшей, а не с Мариной.
+        Марина (Marin_k_a) не упоминается ни разу в течение всего эпизода.
+        Все обращения только к "Ксюша/Ксюшенька".
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Марина не упоминается, только Ксюша. Реплики Marin_k_a следуют за репликами к 'Ксюше'."
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1128
+    replies_count: 277
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # Требуется добавление в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun вызывает: "Андрей." (2576 сек) — SPEAKER_02: "Да, я здесь."
+        SPEAKER_02 представляется: "Есть музей техники Apple в Москве. Я являюсь его создателем, учредителем" (2693-2701 сек).
+        К нему приезжал Стив Возняк в музей.
+        В конце: "Андрей, спасибо, что зашел к нам в выпуск" (5685 сек).
+
+      possible_matches:
+        - person_id: "andrey_antonov"  # Нужно добавить в people.yaml
+          confidence: 0.9
+          reason: "Андрей, владелец музея Apple в Москве (museum.apple.ru или подобный)"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2883.88
+          etime: 2896.9
+          text: "97-98 год. Джобс возвращается в контору, закрывает все, что им не нравится, распродает все, что можно еще продать."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 131
+    replies_count: 35
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # Гость Антон, требуется идентификация
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        SPEAKER_00: "О, к нам подключился какой-то гость" (433 сек).
+        Umputun: "Кстати, гость, ты кто? Привет, я Антон." (442-443 сек).
+        Umputun: "Антон, спасибо, что пришел к нам" (2266 сек).
+        SPEAKER_01 активен с 459 до ~2260 сек.
+
+      possible_matches:
+        - person_id: "anton_guest_361"
+          confidence: 0.7
+          reason: "Гость Антон, обсуждал peer-to-peer технологии"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 464.63
+          etime: 470.15
+          text: "Причем есть даже подозрение, что можно будет всю историю свою всю жизнь наблюдать."
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 60
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "existing_attribution"
+      confidence: high
+      evidence: "Уже размечен корректно. Известный мобильный аналитик."
+
+      voice_task:
+        needed: false
+
+  - speaker: "Gray"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Gray был "в пути" весь выпуск по словам Umputun.
+        Единственная реплика (3143 сек): "Жень, я думаю, все это все-таки в голове, потому что телефон, в общем, для того, чтобы звонить."
+        Скорее всего это кто-то из гостей (Андрей или другой), ошибочно приписанный Gray.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3143.66
+          etime: 3148.68
+          text: "Жень, я думаю, все это все-таки в голове, потому что телефон, в общем, для того, чтобы звонить."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 31
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Отменённое ошибочное присвоение. Lavale не участвовала в этом выпуске."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 202.47
+          etime: 205.91
+          text: "Ну, то есть, еще без продукта написать. А ты думаешь, они уже альфа?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 8
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Отменённое ошибочное присвоение. Пётр Диденко не участвовал в этом выпуске."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1494.85
+          etime: 1497.83
+          text: "Или это кусок картинки."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Marin_k_a"
+      issue: "Марина размечена как спикер, но не упоминается ни разу. Это Ksenks."
+
+    - speaker: "SPEAKER_00"
+      issue: "Это Ksenks, требуется переименование."
+
+    - speaker: "Gray"
+      issue: "Gray отсутствовал ('в пути'), но имеет 1 реплику. Скорее всего ошибка."
+
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Отменённые атрибуции Lavale. Скорее всего это Ksenks."
+
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Отменённые атрибуции Petr. Скорее всего это Ksenks или гость."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 361
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Umputun многократно обращается 'Ксюша', 'Ксюшенька'. Марина не упоминается."
+
+  - type: rename
+    episode: 361
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Ошибочная атрибуция. Umputun говорит 'парный выпуск с Ксюшей', Марина не упоминается ни разу."
+
+  - type: rename
+    episode: 361
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Anton_Guest"
+    confidence: high
+    reason: "Гость представился 'Привет, я Антон'. Прощание: 'Антон, спасибо, что пришел к нам'."
+
+  - type: rename
+    episode: 361
+    from_speaker: "SPEAKER_02"
+    to_speaker: "AndreyAppleMuseum"
+    confidence: high
+    reason: "Андрей, владелец музея Apple в Москве. Явное представление: 'Есть музей техники Apple в Москве. Я являюсь его создателем'."
+
+  - type: rename
+    episode: 361
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_UNKNOWN"
+    confidence: medium
+    reason: "Gray был 'в пути'. Единственная реплика скорее принадлежит гостю. Требуется voice comparison."
+
+  - type: rename
+    episode: 361
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Lavale не участвовала. Короткие реплики похожи на Ksenks по контексту. Требуется voice comparison."
+
+  - type: rename
+    episode: 361
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Пётр Диденко не участвовал. Требуется voice comparison."
+
+# Задачи для ручной проверки
+manual_review_tasks:
+  - task: "voice_comparison"
+    description: "Сравнить голос Gray (3143-3148 сек) с голосами SPEAKER_02 и Ksenks"
+    priority: medium
+
+  - task: "add_to_people_yaml"
+    description: |
+      Добавить гостей в people.yaml:
+      - Андрей (владелец музея Apple в Москве)
+      - Антон (гость выпуска 361)
+    priority: high
+
+  - task: "verify_ksenks_attribution"
+    description: "Подтвердить что SPEAKER_00, Marin_k_a, SPEAKER_MISATTRIBUTED_* — это Ksenks"
+    priority: high

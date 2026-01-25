@@ -1,0 +1,82 @@
+episode: 331
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 5347  # примерно по статистике реплик
+  notes: "Umputun в начале явно говорит 'полный классический состав' - только он и Bobuk"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Одна короткая реплика (2.6 сек) в середине диалога между Umputun и Bobuk.
+        Эльдар НЕ представлялся в начале подкаста. Umputun явно говорит что выпуск
+        "в полном классическом составе" (только он и Bobuk). По контексту реплика
+        "То есть ура, товарищи" - ироничная реакция на сообщение Bobuk о приходе
+        Свана в чат, логически принадлежит Bobuk.
+
+      identified_as: "bobuk"
+      identification_method: "context"
+      confidence: medium
+      evidence: >
+        958.56s Bobuk: "Там, говорят, Сван в чатик пришел."
+        960.70s ???: "То есть ура, товарищи."
+        963.39s Umputun: "Да."
+        Фраза является логическим продолжением реплики Bobuk.
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.75
+          reason: "Непосредственно перед этим говорил Bobuk, фраза продолжает его мысль"
+        - person_id: "umputun"
+          confidence: 0.20
+          reason: "Теоретически мог вставить реплику, но менее вероятно по контексту"
+
+      voice_task:
+        needed: true
+        reason: "Требуется подтверждение голосом для medium confidence"
+        reference_segment:
+          stime: 960.7
+          etime: 963.33
+          text: "То есть ура, товарищи."
+        compare_with:
+          - speaker: "Bobuk"
+            reference_stime: 956.82
+            reference_etime: 960.66
+            reference_text: "То есть я не вижу другой причины. Там, говорят, Сван в чатик пришел."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: >
+        Ошибочная атрибуция - Эльдар не участвовал в этом выпуске.
+        Выпуск явно анонсирован как "классический состав" (Umputun + Bobuk).
+
+# Специальные спикеры (игнорируются)
+special_speakers:
+  - speaker: "SPEAKER_99"
+    replies_count: 2
+    note: "Аудио-артефакты: 'Multitasking of things' и 'SDN' - очень короткие, etime<=stime"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 331
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: >
+      По контексту диалога реплика логически продолжает предыдущую фразу Bobuk.
+      Требуется voice comparison для подтверждения.

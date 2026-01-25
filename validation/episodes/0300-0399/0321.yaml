@@ -1,0 +1,142 @@
+episode: 321
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  notes: |
+    Ksenks присутствует, но ошибочно размечена как Marin_k_a и SPEAKER_03.
+    Gray появился на 871s (подтверждено фразой Umputun: "к нам пришел Грей").
+  total_duration_sec: ~2840
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 107
+    replies_count: 21
+    pattern: consecutive
+    first_reply_sec: 90
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun в 83-89s говорит: "Вот Ксюша так себя не ведет. Она приличная
+           девушка и не стала выкаблучиваться перед тем, как прийти на этот выпуск."
+        2. Сразу после (90s) Marin_k_a отвечает: "Ну у меня просто не получается
+           выкаблучиваться так классно, как у Бабука."
+        3. Umputun в 865s говорит: "Дайте Ксюше слово, мужланы, говорят нам в чате"
+        4. Ksenks вообще отсутствует в разметке этого эпизода.
+        5. Marin_k_a в people.yaml — это Марина (бывшая ведущая), но здесь
+           контекст однозначно указывает на Ксению (Ksenks).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 95
+    replies_count: 49
+    pattern: scattered
+    first_reply_sec: 16
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. SPEAKER_03 появляется сразу после обращений к Ксюше:
+           - 174s: после "Ксюша нам доложит" (Umputun) → SPEAKER_03 отвечает
+           - 873s: сразу после появления Gray, когда Umputun просил дать слово Ксюше
+        2. SPEAKER_03 и Marin_k_a чередуются в одних диалогах (строки 5479-5518),
+           говоря как один собеседник — это разбиение одного голоса на два спикера.
+        3. Тематика реплик SPEAKER_03 (техническая: Chromebook, IP-адреса)
+           соответствует стилю Ksenks.
+        4. Реплики в начале (16s: "212-85-06-321", "Да, давай") — это короткие
+           подсказки/реакции в диалоге с Umputun, типичные для со-ведущего.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+    first_reply_sec: 1718
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика — короткое "Угу" длительностью <0.2 сек (1718.17-1718.31s).
+        Это типичная ошибка распознавания: слишком короткий сегмент, односложная
+        реакция, не принадлежит отдельному спикеру.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Реплика в контексте монолога Bobuk о Linux/играх"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Может быть реакция ведущего"
+
+      voice_task:
+        needed: false
+        reason: "Сегмент слишком короткий для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Ksenks"
+      issue: |
+        Ksenks отсутствует в разметке, хотя явно присутствует в эпизоде.
+        Все её реплики ошибочно размечены как Marin_k_a и SPEAKER_03.
+    - speaker: "Marin_k_a"
+      issue: |
+        Marin_k_a (Марина) не должна быть в этом эпизоде — это ошибка разметки.
+        Реальный спикер — Ksenks (Ксения).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 321
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun обращается к "Ксюша", и Marin_k_a отвечает. Контекст однозначно
+      указывает на Ksenks. Ksenks отсутствует в разметке этого эпизода.
+
+  - type: rename
+    episode: 321
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_03 появляется после обращений к Ксюше, чередуется с Marin_k_a
+      в диалогах как один собеседник. Это разбиение голоса Ksenks на два спикера.
+
+  - type: delete_or_merge
+    episode: 321
+    from_speaker: "SPEAKER_04"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Единственная реплика "Угу" (<0.2 сек) — артефакт распознавания.
+      Можно удалить или объединить с предыдущим спикером (Bobuk).

@@ -1,0 +1,295 @@
+episode: 341
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko]
+  total_duration_sec: 8400  # ~2h 20min based on speaker stats
+
+# Проблема: Ksenks упоминается в разговоре ("Ксюша"), но её реплики
+# помечены как Marin_k_a и SPEAKER_00. Требуется ручная проверка.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 627
+    replies_count: 197
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (11-14s): Umputun спрашивает "Кто из вас плюс один привел?",
+        Bobuk отвечает "Я. Плюс один, сегодня я просто."
+        Затем (18s): "А Петя тогда плюс еще один."
+        PetrDidenko (24-33s): "Я сам привелся, я шел сегодня по французскому парку..."
+        Также упоминается работа в Microsoft (111s): "В Microsoft, когда я работал..."
+        Это полностью соответствует Петру Диденко из справочника (148 выпусков).
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 168
+    replies_count: 28
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики помеченные как Marin_k_a на самом деле принадлежат Ksenks.
+        Доказательства:
+        1. В начале (56-62s) Umputun представляет состав: "есть Грей, есть Ксюша. Ксюша, скажи."
+           После этого SPEAKER_05 отвечает "Да."
+        2. По всему эпизоду обращения к "Ксюше" (строки 1081, 2197, 3016, 12052, 19369, 20827)
+           и реплики Marin_k_a/SPEAKER_00 следуют за ними.
+        3. На строке 2197 "Что за мероприятие было, Ксюшенька?" - отвечает SPEAKER_00
+           "Да, я даже смотрела" (женский род).
+        4. Никаких упоминаний "Марины" в эпизоде нет.
+        5. В финале (20791) "Спасибо, Катя" - но это скорее всего ошибка транскрипции
+           или относится к кому-то в чате.
+
+      identified_as: null  # Требует ручной верификации
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.95
+          reason: |
+            Все обращения к женщине в эпизоде - "Ксюша/Ксюшенька".
+            Марина (Marin_k_a) НЕ упоминается. Ksenks была ведущей в 2013.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3522.76
+          etime: 3544.5
+          text: |
+            Статистика очень удобная, и причем занятно, что на презентации говорили именно про русский язык.
+            То есть вышла такая прекрасная девушка и говорила, вот, вы смотрите в статистике,
+            ваше приложение скачивает больше всего из России, соответственно, вам нужно перевести это на русский язык.
+            И дальше они показывали свой трансляционный сервис, что тоже забавно.
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 188
+    replies_count: 75
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_00 - это тот же человек, что и Marin_k_a (система разметки
+        не смогла консистентно атрибутировать один голос).
+        Контекст показывает, что это Ksenks:
+        - 833-858s: отвечает на вопрос к "Ксюшеньке", говорит "смотрела" (ж.р.)
+        - 3501-3521s: технический контекст (Translation сервис, Android)
+        - Реплики чередуются с Marin_k_a как один разговор
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.95
+          reason: "Тот же голос что и Marin_k_a, контекст указывает на Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 851.42
+          etime: 858.88
+          text: |
+            Я думаю, их только успокаивало, что вот я сейчас выйду и продам этот пиксель.
+            И, по крайней мере, заработаю на этом ивенте.
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 0
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики:
+        1. 61.6s: "Да." - ответ на "Ксюша, скажи" -> это Ksenks
+        2. 7732.5s: "Он 48." - короткая вставка, неясный контекст
+        Слишком короткие сегменты для отдельного спикера.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Первая реплика точно ответ Ксюши, вторая неясна"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 30
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Спикер помечен как "MISATTRIBUTED" - ранее ошибочно атрибутирован EldarMurtazin.
+        Эльдар НЕ участвовал в эпизоде 341 (нет представления, нет упоминаний).
+        Реплики контекстуально принадлежат Gray:
+        - 4550s: "С точки зрения юзабилити..." -> следующая реплика Gray продолжает мысль
+        - 5338s: "...все то, что ты там поотмечал и разметил, это рекомендация" -> Gray продолжает тему сниппетов
+        - 8250s: "С тековым флоу подозреваемый..." -> рядом с Bobuk, технический контекст
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: |
+            Реплики тематически связаны с высказываниями Gray
+            (юзабилити, поисковая оптимизация). Gray много говорит в этих сегментах.
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Некоторые реплики могут быть Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4550.19
+          etime: 4555.2
+          text: "С точки зрения юзабилити делается очень простая вещь."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 7
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика, ранее ошибочно атрибутирована Lavale.
+        Lavale НЕ участвовала в эпизоде 341.
+        5785s: "Да-да-да, там про сообщения, которыми общаются."
+        Контекст: разговор о Skype и instant messaging.
+        Скорее всего это Ksenks (SPEAKER_00/Marin_k_a) или один из мужских голосов.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Короткое подтверждение, может быть женский голос"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Или мужской голос в диалоге"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5785.54
+          etime: 5792.92
+          text: "Да-да-да, там про сообщения, которыми общаются."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: |
+        Ksenks упоминается по имени 15+ раз как "Ксюша/Ксюшенька",
+        но в списке спикеров её нет. Её реплики размечены как Marin_k_a и SPEAKER_00.
+        Марина (Marin_k_a) вообще НЕ упоминается в эпизоде.
+
+    - speaker: "SPEAKER_MISATTRIBUTED_*"
+      issue: |
+        Спикеры EldarMurtazin и Lavale НЕ участвовали в эпизоде 341.
+        Их имена нигде не упоминаются. Эти реплики были ошибочно атрибутированы
+        и теперь помечены MISATTRIBUTED, но требуют правильной атрибуции.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 341
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Все обращения к женщине в эпизоде - "Ксюша". Марина не упоминается.
+      Ksenks была ведущей в 2013 году и присутствовала в "полном составе".
+
+  - type: rename
+    episode: 341
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_00 и Marin_k_a - один и тот же голос (Ksenks).
+      Реплики чередуются в одном контексте, отвечают на обращения к "Ксюше".
+
+  - type: rename
+    episode: 341
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Первая реплика (61.6s "Да") - точно ответ Ксюши на "Ксюша, скажи".
+      Вторая реплика неясна, но скорее всего тоже она.
+
+  - type: rename
+    episode: 341
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: |
+      Требует voice comparison. Контекст указывает на Gray
+      (юзабилити, поисковая оптимизация), но может быть и другой ведущий.
+
+  - type: rename
+    episode: 341
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: low
+    reason: |
+      Требует voice comparison. Короткая реплика,
+      может быть Ksenks или кто-то из ведущих.
+
+# Комментарий
+notes: |
+  Эпизод 341 (18 мая 2013) имеет серьёзные проблемы с атрибуцией женского голоса.
+
+  Официальный состав: Umputun, Bobuk, Gray, Ksenks + гость PetrDidenko.
+  В начале Umputun говорит "полный состав, плюс один" и "квинтет" (5 человек).
+
+  Главная проблема: реплики Ksenks размечены как Marin_k_a, хотя:
+  1. Марина НЕ упоминается в эпизоде ни разу
+  2. К "Ксюше" обращаются 15+ раз
+  3. Marin_k_a (Марина) - другой человек, бывшая ведущая
+
+  Рекомендация: переименовать Marin_k_a -> Ksenks для этого эпизода.
+  Также SPEAKER_00 и SPEAKER_05 - скорее всего тоже Ksenks.
+
+  SPEAKER_MISATTRIBUTED_ELDAR и SPEAKER_MISATTRIBUTED_LAVALE требуют
+  voice comparison для точной атрибуции.

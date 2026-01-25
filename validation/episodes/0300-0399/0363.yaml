@@ -1,0 +1,235 @@
+episode: 363
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  guests_present: [Plushev]
+  total_duration_sec: 6124  # примерно из статистики
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 2082
+    replies_count: 550
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "plushev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в 37-40s: 'Это я про Плющева Александра. Небезызвестного.' Сразу после этого SPEAKER_03 (40s): 'Добрый вечер. Да, я все видел. Я был в городе Лондоне.'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 235
+    replies_count: 88
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Bobuk спрашивает 'Ксюш, ты откуда сегодня вообще?' (710s), SPEAKER_04 отвечает 'Я с выезда, я тут не на врага территории, в Бесчере' (715s). Также Umputun говорит 'Ксюшенька' перед репликами SPEAKER_04."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 216
+    replies_count: 39
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Umputun говорит 'Ворвалась стремительным домкратом, Ксюша' (671s), сразу после Marin_k_a: 'Да, я не могла не сказать...' (674s). Marin_k_a и SPEAKER_04 чередуются, отвечая на обращения к Ксюше."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 54
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная атрибуция - реплики продолжают мысли SPEAKER_03 (Плющева) и идут с ним подряд. Например, на 3918s SPEAKER_03 говорит про маленькие планшеты, затем SPEAKER_MISATTRIBUTED_ELDAR продолжает ту же мысль 'И, в общем, как-то все поняли, что он ничем не хуже...', а потом снова SPEAKER_03 отвечает 'Он и стал огонь'."
+
+      identified_as: "plushev"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Реплики являются продолжением мыслей SPEAKER_03. Нет признаков присутствия Эльдара Муртазина в эпизоде."
+
+      possible_matches:
+        - person_id: "plushev"
+          confidence: 0.8
+          reason: "Реплики последовательно чередуются с SPEAKER_03 и продолжают те же темы"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 306.3
+          etime: 316.3
+          text: "Ну, ты знаешь, такие вещи, я тебе скажу, ты наверняка знаешь это или подозревал, или, по меньшей мере, на подсознательном уровне понимаешь, что некоторые вещи пишутся заранее."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 13
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная атрибуция - реплики идут подряд с Marin_k_a и SPEAKER_04, которые оба являются Ксюшей. Тематика та же (ретина, батарея, проблемы первых версий)."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: "На 1721s SPEAKER_MISATTRIBUTED_LAVALE говорит между SPEAKER_04 (1715s) и Marin_k_a (1730s) на ту же тему про проблемы с ретиной."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.75
+          reason: "Реплики чередуются с Marin_k_a и SPEAKER_04, которые идентифицированы как Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1721.2
+          etime: 1730.1
+          text: "Когда выходит какое-то новое устройство, первая пилотная, первая версия, всегда есть какие-то проблемы с ретиной. Очень было у многих битые пиксели."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1 сек суммарно) - 'Она самая любимая' и 'А?'. Скорее всего ошибка распознавания или перебивка одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Реплика следует за Bobuk (1156-1160s), может быть его перебивка"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Umputun отвечает сразу после (1164s) фразой 'Самая любимая диками фича', подхватывая тему"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Gray"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: single
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Gray - известный ведущий, но только 1 реплика подозрительно мало
+      identified_as: "gray"
+      identification_method: "attribution"
+      confidence: medium
+      evidence: "Единственная реплика Gray на 4178s: 'Вот, и ты просто листаешь, и все.' в контексте разговора о iPad в магазинах."
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4178.2
+          etime: 4181.8
+          text: "Вот, и ты просто листаешь, и все."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Только 1 реплика (4 сек) за весь эпизод. Umputun в начале говорит 'в мужском составе', но не называет конкретных участников. Возможно Gray действительно был мало, или это ошибка атрибуции."
+    - speaker: "Ksenks"
+      issue: "Не представлена в начале (Umputun говорит 'мужской состав'), но появляется на 670s. Umputun замечает 'Ворвалась стремительным домкратом, Ксюша' - т.е. она подключилась позже."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 363
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: "Явное представление: 'Это я про Плющева Александра' перед первой репликой SPEAKER_03"
+
+  - type: rename
+    episode: 363
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Прямые обращения к Ксюше перед и после реплик SPEAKER_04"
+
+  - type: rename
+    episode: 363
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Чередуется с SPEAKER_04, оба отвечают на обращения к Ксюше"
+
+  - type: rename
+    episode: 363
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Plushev"
+    confidence: medium
+    reason: "Реплики продолжают мысли SPEAKER_03 (Плющева), нет признаков присутствия Муртазина"
+
+  - type: rename
+    episode: 363
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Реплики чередуются с Marin_k_a/SPEAKER_04 на ту же тему"
+
+  - type: delete
+    episode: 363
+    from_speaker: "SPEAKER_00"
+    confidence: medium
+    reason: "Короткие артефакты (1 сек), не отдельный спикер"
+
+# Дополнительные заметки
+notes:
+  - "Эпизод от 26.10.2013, обсуждение презентации Apple (iPad mini с ретиной, Maverick)"
+  - "Плющев был 'корреспондентом' из Лондона"
+  - "Ксюша подключилась позже начала, Umputun отметил это ('Ворвалась стремительным домкратом')"
+  - "У Ксюши были проблемы с интернетом ('ты прерываешься', 'очень плохо')"
+  - "Gray почти не говорил - это требует отдельной проверки"
+
+audio_url: "https://cdn.radio-t.com/rt_podcast363.mp3"

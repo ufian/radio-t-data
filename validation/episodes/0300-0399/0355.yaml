@@ -1,0 +1,245 @@
+episode: 355
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 7492
+  notes: |
+    Ksenks участвует в выпуске, но размечена как Marin_k_a (ошибка).
+    Umputun обращается к ней "Ксюша" в 44s, Bobuk также называет её "Ксюша" в 80s.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 830
+    replies_count: 145
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция. В транскрипте помечена как Marin_k_a (Марина),
+        но по контексту это Ksenks (Ксюша):
+        - 44s: Umputun говорит "Ксюша, доложи нам..." — отвечает Marin_k_a
+        - 80s: Bobuk говорит "...почти что ничего мы не видели, Ксюша"
+        - Нигде в выпуске не упоминается имя "Марина"
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        44s: Umputun: "Ксюша, доложи нам, как мы до жизни такой дошли и вообще?"
+        48s: Marin_k_a отвечает (должна быть Ksenks)
+        80s: Bobuk: "Слушай, почти что ничего мы не видели, Ксюша."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 498
+    replies_count: 211
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Тот же человек что и Marin_k_a — реплики чередуются без пауз,
+        один и тот же голос продолжает ту же мысль.
+        73s: SPEAKER_01 говорит "И все видели меня почти что" про видео —
+        это продолжение рассказа Ksenks про случайное включение камеры.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        53s: SPEAKER_01: "То есть одно дело мы уже сделали" — сразу после Marin_k_a
+        73s: SPEAKER_01: "И все видели меня почти что" — про свою камеру
+        92s: SPEAKER_01: "Но второй раз у меня уже получилось..." — продолжение
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики в случайных местах — типичные ошибки распознавания:
+        - 1410s: "По-моему, да." (1.5s)
+        - 2540s: "Приложение." (0.6s)
+        - 4416s: "Буткэп ему нужен..." (3s) — возможно Ksenks
+        - 4419s: "Окей, окей, да." (1s)
+        - 7408s: "Про Vertex?" (0.2s)
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Контекст реплик похож на Ksenks, но слишком короткие для уверенной атрибуции"
+
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Уже помечен как misattributed. Две короткие реплики:
+        - 762s: "Я думаю, что вообще говоря, нет." — между Umputun и Bobuk
+        - 1023s: "По-моему, там только качество..." — между Bobuk и Bobuk
+        Скорее всего один из ведущих, возможно Ksenks или Gray.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Может быть Ksenks, но данных недостаточно"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Может быть Gray"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Уже помечен как misattributed. Две короткие реплики:
+        - 6068s: "Плюс, например, такого нет." — между Marin_k_a и Bobuk
+        - 6689s: "Крайне рекомендую." — между Umputun и Umputun
+        Скорее всего один из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Первая реплика сразу после Marin_k_a (=Ksenks)"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Вторая реплика между репликами Umputun"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Уже помечен как misattributed. Одна короткая реплика:
+        - 2381s: "Я сейчас активно читаю про него." — между SPEAKER_01 и Umputun
+        Скорее всего Ksenks (SPEAKER_01 = Ksenks).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Реплика сразу после SPEAKER_01 (=Ksenks), продолжение мысли"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткая реплика"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        Размечена как Марина, но в начале выпуска представлена как "Ксюша" (Ksenks).
+        Это серьёзная ошибка атрибуции — 145 реплик присвоены не тому человеку.
+
+    - speaker: "SPEAKER_01"
+      issue: |
+        211 реплик без идентификации, но это тот же человек что Marin_k_a = Ksenks.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 355
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun обращается "Ксюша" в 44s, Bobuk называет "Ксюша" в 80s.
+      Нигде в выпуске не упоминается имя "Марина".
+
+  - type: rename
+    episode: 355
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Реплики SPEAKER_01 чередуются с Marin_k_a без пауз,
+      продолжают ту же мысль. Говорит "у меня" про камеру — это та же Ксюша.
+
+  - type: rename
+    episode: 355
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Вероятно Ksenks, но реплики слишком короткие для уверенной атрибуции.
+      Рекомендуется voice verification.
+
+  - type: delete_or_merge
+    episode: 355
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Требуется ручная проверка — слишком короткие реплики.
+
+  - type: delete_or_merge
+    episode: 355
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Требуется ручная проверка — слишком короткие реплики.
+
+  - type: rename
+    episode: 355
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Реплика идёт сразу после SPEAKER_01 (=Ksenks), продолжает мысль.

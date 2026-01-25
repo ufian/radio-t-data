@@ -1,0 +1,264 @@
+episode: 389
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  # Примечание: Ksenks присутствует, но размечена как Marin_k_a и SPEAKER_05
+  total_duration_sec: 6922  # ~1.9 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1185
+    replies_count: 221
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная атрибуция. По контексту (обращения 'Ксюша', 'Ксюшенька' от Umputun и Bobuk) это Ksenks, а не Marin_k_a. В эпизодах 409+ та же участница размечена как Ksenks."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun (10.84s): "Ксюша пришла, как она приходит всегда"
+        2. Umputun (42.03s): "Ксюша, ты тоже молодец" -> отвечает Marin_k_a
+        3. Umputun (2762.9s): "Следующая тема, Ксюша, будет что?" -> отвечает Marin_k_a
+        4. Bobuk (4269.3s): "Ксюш, ты можешь быстро ответить..." -> отвечает SPEAKER_05
+        5. В эпизодах 388, 390, 408 также Marin_k_a при обращениях "Ксюша"
+        6. С эпизода 409 разметка меняется на Ksenks
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 523
+    replies_count: 245
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка автоматического распознавания. Тот же спикер что и Marin_k_a (т.е. Ksenks). Женский голос, говорит 'я вспомнила', 'я думала'. Отвечает на обращение 'Ксюш' от Bobuk."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. SPEAKER_05 (538.74s): "Вирчуал ПС, да, я вспомнила" - женский род
+        2. SPEAKER_05 (760.92s): "Да, я даже думала, что там разных заносит" - женский род
+        3. Bobuk (4269.3s): "Ксюш, ты можешь быстро ответить..." -> SPEAKER_05 (4285.58s): "Я вообще первый раз это слышу..."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 24
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+      # SPEAKER_MISATTRIBUTED_* - это уже отменённые ошибочные атрибуции,
+      # реплики требуют дальнейшего анализа для идентификации
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Короткие реплики, могут быть ошибками распознавания Bobuk"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Возможно ошибки распознавания Umputun"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 324.52
+          etime: 329.16
+          text: "Слушай, ну выглядит он как-то как Windows Phone, прям вот этот Nokia X, то есть там-то типа оболочка такая натянута."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие односложные реплики (0.5-1 сек). Скорее всего ошибки распознавания одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики: "Сразу." (0.5 сек), "Давно пора." (1 сек)
+        Слишком короткие для идентификации голоса
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Типичные короткие реакции в контексте диалога"
+
+      voice_task:
+        needed: false
+        # Слишком короткие реплики для voice comparison
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 11
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики разбросаны по эпизоду. Вероятно ошибки распознавания Ksenks или одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Примеры: "Да." (0.24 сек), "А 389 было сказано?" (3 сек), "А куда он уходит?" (0.7 сек)
+        Короткие вопросы и реакции
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Несколько реплик могут быть Ksenks (как и Marin_k_a/SPEAKER_05)"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Короткие реакции типа 'Да'"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 65.78
+          etime: 68.92
+          text: "А 389 было сказано?"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Только 2 очень коротких реплики за весь эпизод. Явная ошибка распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        3776.3s: "Все прекрасно." (3 сек)
+        6090.5s: "Для вас, дорогие слушатели." (1 сек)
+        Вторая фраза звучит как джингл или outro
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "'Для вас, дорогие слушатели' - типичная фраза ведущего"
+
+      voice_task:
+        needed: false
+        # Слишком короткие и разбросанные для voice comparison
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Только 3 очень коротких реплики (<1 сек каждая). Явная ошибка распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        718.2s: "Не знаю." (0.4 сек)
+        2221.2s: "Так, а зачем тебе три?" (1.5 сек)
+        5317.3s: "Через iCloud?" (0.2 сек)
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Вопросительные реплики могут быть Ksenks"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Короткие вопросы"
+
+      voice_task:
+        needed: false
+        # Слишком короткие для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        КРИТИЧЕСКАЯ ПРОБЛЕМА: Участница размечена как Marin_k_a, но по контексту это Ksenks (Ксюша).
+        Ведущие постоянно обращаются к ней "Ксюша", "Ксюшенька".
+        Это систематическая ошибка в эпизодах до 409 — в них Ksenks ошибочно называется Marin_k_a.
+        Требуется глобальное исправление в эпизодах 388-408 (и возможно раньше).
+    - speaker: "SPEAKER_05"
+      issue: |
+        Тот же человек что и Marin_k_a (Ksenks). Разные реплики одной участницы
+        попали в разные спикерские слоты из-за ошибок автоматического распознавания.
+    - speaker: "Gray"
+      issue: "Gray отсутствует в этом эпизоде (что нормально, он не был на всех выпусках)"
+    - speaker: "Alek.sys"
+      issue: "Alek.sys отсутствует в этом эпизоде (появился с выпуска 410)"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 389
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Ведущие обращаются к участнице как "Ксюша"/"Ксюшенька".
+      Ksenks = Ксения по справочнику people.yaml.
+      С эпизода 409 та же участница размечена как Ksenks.
+
+  - type: rename
+    episode: 389
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Женский голос (говорит "я вспомнила", "я думала").
+      Отвечает на обращение "Ксюш" от Bobuk.
+      Тот же человек что и Marin_k_a.
+
+  - type: rename
+    episode: 389
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: |
+      Очень короткие реплики ("Сразу", "Давно пора"),
+      типичные для быстрых реакций в диалоге.
+      Вероятно Bobuk, но требует voice verification.
+
+# Глобальные рекомендации (выходят за рамки этого эпизода)
+global_recommendations:
+  - issue: "Marin_k_a vs Ksenks confusion"
+    description: |
+      В эпизодах до 409 участница Ksenks (Ксюша) ошибочно размечена как Marin_k_a.
+      Это подтверждается контекстом (обращения "Ксюша") в эпизодах 388, 389, 390, 408.
+      С эпизода 409 разметка корректна (Ksenks).
+    affected_episodes: "предположительно 106-408"
+    recommendation: |
+      1. Проверить, есть ли в каких-либо эпизодах НАСТОЯЩАЯ Марина
+      2. Если нет — переименовать все Marin_k_a -> Ksenks в затронутых эпизодах
+      3. Обновить participants.md с корректным диапазоном эпизодов для Ksenks

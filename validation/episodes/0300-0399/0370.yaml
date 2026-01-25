@@ -1,0 +1,279 @@
+episode: 370
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  # Ksenks была на записи (обращения "Ксюша"), но размечена как Marin_k_a
+  # Gray НЕ был на записи (в начале говорят "сейчас придёт Грей")
+  total_duration_sec: 7014
+  notes: >
+    В начале подкаста Umputun говорит "сейчас придёт Грей" и "как мы, Ксюша, с тобой вдвоем" -
+    это означает что Gray НЕ участвовал, а Ksenks (Ксюша) была. Но Ksenks ошибочно
+    размечена как Marin_k_a.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 813
+    replies_count: 148
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Это НЕ Марина (Marin_k_a), а Ksenks. Доказательства:
+        1. Umputun многократно обращается "Ксюша" к этому спикеру (строки 91, 334, 541, 1099, и др.)
+        2. В начале подкаста: "как мы, Ксюша, с тобой вдвоем, это будет игра в одни ворота"
+        3. Женский род речи ("я привыкла", "я осилила")
+        4. Marin_k_a (Марина) - бывшая ведущая, не участвовала в эпизоде 370
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Прямые обращения: "Ксюша, ты эту первую тему смогла прочитать?" (145s),
+        "как мы, Ксюша, с тобой вдвоем" (23s), "Вот Ксюша не знает" (439s) и ещё ~20 обращений по имени
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 446
+    replies_count: 206
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Часть реплик Ksenks, разделённых из-за ошибки распознавания.
+        SPEAKER_01 и Marin_k_a (=Ksenks) чередуются в быстром диалоге,
+        продолжая мысли друг друга. Примеры:
+        - 134.0s SPEAKER_01: "Как же ты пропустил?" -> 134.8s Marin_k_a: "Ты не ходил на праздник?"
+        - 1681.6s Marin_k_a: "Я тоже привыкла..." -> 1693.2s SPEAKER_01: "Но окей, спасибо Гуглу"
+        Короткие подтверждающие реплики типа "Ну да", "Да, да, да" - типичные для перебивок одного человека
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        206 реплик распределены по всему подкасту (134s-7005s), чередуясь с Marin_k_a.
+        Контекст разговоров показывает что это один человек (Ksenks), разделённый на два тега.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 146
+    replies_count: 25
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "mark_shuttleworth_video"
+          confidence: 0.95
+          reason: >
+            Это НЕ живой гость, а переведённое видео-интервью с Марком Шаттлвортом.
+            Контекст: Bobuk говорит "Мы с Марком Шатубортом... на конференции в Париже" (2206s),
+            затем идут реплики SPEAKER_00 про Ubuntu Mobile с характерным "переводным" стилем
+            ("персональное компьютерное обучение" = personal computing).
+
+      voice_task:
+        needed: false
+        note: "Не требуется - это воспроизведение видеозаписи, не живой гость"
+
+  - speaker: "Gray"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Gray НЕ участвовал в этом эпизоде. В начале Umputun говорит "сейчас придёт Грей",
+        в конце спрашивают "Грей вернётся в семью?". Единственная реплика (2825s)
+        "Я большой специалист в этой области" - продолжение речи Bobuk:
+        "Так анонсировать можно всё что угодно... [Gray] Я большой специалист в этой области...
+        [Bobuk] я тебе могу честно об этом сказать"
+
+      identified_as: "bobuk"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Реплика между двумя репликами Bobuk, продолжает его мысль.
+        Gray отсутствовал на записи (подтверждено в начале и конце подкаста).
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 6
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие реплики-подтверждения ("Да, работы Java", "Верно", "Ну да", "Как оно?", "Да, конечно")
+        разбросанные по подкасту. Типичные короткие перебивки одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Короткие подтверждения, похожи на остальные реплики Ksenks в этом эпизоде"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Могут быть и репликами Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5707.07
+          etime: 5708.11
+          text: "Ну да. Как оно?"
+        note: "Слишком короткие реплики для надёжной идентификации"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Тег указывает на отменённое присвоение к Lavale. Lavale - бывшая ведущая,
+        не участвовала в эпизоде 370. Реплики скорее всего принадлежат Ksenks или одному из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Контекст реплик и время появления совпадает с активностью Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 788.16
+          etime: 792.0
+          text: "То есть раньше это были, ну, сейчас это люди, да, которые пишут на PL, SQL."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Тег указывает на отменённое присвоение к Eldar (Эльдар Муртазин).
+        Эльдар не участвовал в эпизоде 370. Короткие реплики скорее всего
+        принадлежат одному из присутствующих ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Реплики появляются в контексте технических обсуждений где активен Bobuk"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Могут быть частью разделённых реплик Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1756.08
+          etime: 1757.82
+          text: "Ну вот, собственно говоря, Google их купил."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Marin_k_a"
+      issue: >
+        Неверная атрибуция: Marin_k_a - это Марина (бывшая ведущая), но в этом эпизоде
+        это на самом деле Ksenks. Umputun ~20 раз обращается к этому спикеру как "Ксюша".
+
+    - speaker: "Gray"
+      issue: >
+        Gray не участвовал в эпизоде (явно сказано в начале и конце).
+        Единственная реплика - ошибка распознавания, принадлежит Bobuk.
+
+    - speaker: "SPEAKER_01"
+      issue: >
+        206 реплик без идентификации, но это тот же человек что Marin_k_a (=Ksenks).
+        Реплики нужно объединить.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 370
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Umputun многократно обращается к этому спикеру как "Ксюша".
+      Marin_k_a (Марина) не участвовала в записи.
+
+  - type: rename
+    episode: 370
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      SPEAKER_01 чередуется с Marin_k_a в быстрых диалогах, продолжая те же мысли.
+      Это часть реплик того же человека (Ksenks), разделённых ошибкой распознавания.
+
+  - type: rename
+    episode: 370
+    from_speaker: "Gray"
+    to_speaker: "Bobuk"
+    confidence: high
+    reason: >
+      Gray не участвовал в эпизоде. Единственная реплика (2825s) - продолжение
+      речи Bobuk между его двумя другими репликами.
+
+  - type: rename
+    episode: 370
+    from_speaker: "SPEAKER_00"
+    to_speaker: "_video_shuttleworth"
+    confidence: high
+    reason: >
+      Это не гость, а воспроизведение переведённого видео-интервью с Марком Шаттлвортом.
+      Контекст явно указывает на запись конференции.
+
+  - type: review_needed
+    episode: 370
+    speakers: ["SPEAKER_02", "SPEAKER_MISATTRIBUTED_LAVALE", "SPEAKER_MISATTRIBUTED_ELDAR"]
+    confidence: medium
+    reason: >
+      Короткие реплики (всего 19 сек суммарно), требуют voice comparison для точной атрибуции.
+      Вероятно принадлежат Ksenks или Bobuk.
+
+# Аудио для voice comparison
+audio_url: null  # Метаданные не найдены в data_clean/370/370_desc.json

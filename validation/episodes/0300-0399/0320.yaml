@@ -1,0 +1,167 @@
+episode: 320
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7094
+  note: "Ksenks присутствует (26 упоминаний по имени), но размечена как SPEAKER_00"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 499
+    replies_count: 199
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun обращается: "Ксюша, а ты как относишься к людям..." (239s) — сразу после отвечает SPEAKER_00
+        2. Bobuk говорит: "у нас еще где-то виртуально обитает Ксюша" (99s) — и SPEAKER_00 появляется в 253s
+        3. SPEAKER_00 говорит про CocoaPods и Objective-C (2053s), а позже: "Ксюша, если тебе Objective-C нравится"
+        4. Всего 26 упоминаний "Ксюша/Ксюш" в тексте, но нет спикера Ksenks
+        5. SPEAKER_00 ведет диалог с Marin_k_a (421s) — это разные люди
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 2053.1
+          etime: 2087.5
+          text: "Какоаподс — это некий репозиторий для Objective-C... Это как порты?"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Появляется после "Ксюша, у меня к тебе вопрос" (1788s) — отвечает "Инстаграм?" (1799s)
+        2. Вторая реплика "В Vimeo сам" (4107s) — короткая ремарка в обсуждении
+        3. Это та же Ксюша, что и SPEAKER_00 — просто другой ID от автоматической разметки
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна короткая реплика 'Пока' (7741s) в момент прощания. Скорее всего ошибка распознавания — кто-то из участников (вероятно Ksenks или Marin_k_a) сказал 'Пока' после Bobuk."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Ksenks присутствует в эфире, могла прощаться"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Marin_k_a тоже присутствует, её последняя реплика в 7714s"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 609
+    replies_count: 114
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Уже правильно идентифицирована в cleaning/people.yaml как Марина (бывшая ведущая).
+        Активно участвует в обсуждении с 347s до конца выпуска.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_99"
+    total_duration_sec: 0
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Специальный спикер для аудио-артефактов, джинглов. Игнорировать."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: "Ksenks размечена как SPEAKER_00, требуется переименование"
+    - speaker: "SPEAKER_04"
+      issue: "Ещё один ID для Ksenks, требуется переименование"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 320
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun и Bobuk многократно обращаются к "Ксюша" (26 раз),
+      после чего отвечает SPEAKER_00. Контекст про Objective-C и CocoaPods
+      совпадает с известной экспертизой Ksenks.
+
+  - type: rename
+    episode: 320
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Появляется на прямой вопрос к Ксюше ("Ксюша, у меня к тебе вопрос" → "Инстаграм?").
+      Это тот же человек, что SPEAKER_00, просто другой ID автоматической разметки.
+
+  - type: delete
+    episode: 320
+    from_speaker: "SPEAKER_03"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Одна реплика "Пока" в момент прощания. Слишком короткая для идентификации,
+      можно оставить или объединить с предыдущим спикером (Bobuk).

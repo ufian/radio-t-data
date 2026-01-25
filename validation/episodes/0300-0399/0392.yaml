@@ -1,0 +1,176 @@
+episode: 392
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: 2  # Алексей (SPEAKER_04) и Андрей (SPEAKER_01)
+  total_duration_sec: 6533  # ~109 минут (1162+769 реплик ведущих + гости)
+  notes: "Выпуск 392 в сокращённом составе — только Umputun и Bobuk + гости из чата"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 107
+    replies_count: 35
+    first_appearance_sec: 2810.52
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Не в people.yaml, просто "Алексей" из чата
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. При подключении представился: "Алексей" (2810.52s)
+        2. Umputun приветствует: "Алексей, здравствуй" (2815.96s)
+        3. Umputun обращается по имени: "Алексей, спасибо, что зовёшь нам гостей" (3635.96s)
+        4. Обсуждает Ruby, Redmine, Octopress — эксперт в Ruby
+
+      guest_name: "Алексей"
+      guest_context: "Гость из чата, эксперт по Ruby, приглашал других гостей (Олега)"
+
+      possible_matches: []  # Недостаточно информации для точной идентификации
+
+      voice_task:
+        needed: true
+        reason: "Требуется сопоставление голоса для точной идентификации"
+        reference_segment:
+          stime: 2946.81
+          etime: 2960.7
+          text: "Просто я понимаю, что в Ruby действительно там система зависимости очень своеобразная, и ситуация, когда кто-то ломает зависимость, это бывает. И если сравнивать с Java, там как бы не компилируется, нельзя сделать один пакет и закинуть, поэтому да, есть такая проблема."
+          duration_sec: 13.89
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 135
+    replies_count: 34
+    first_appearance_sec: 4389.53
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Не в people.yaml, "Андрей" из чата
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun представляет: "Я включил к нам Андрея в разговор" (4382.12s)
+        2. Обращения по имени: "Андрей, ты за или против?" (4382.12s)
+        3. "Вот это, если ты не потестируешь, ты будешь, Андрей, жить спокойно" (4788.29s)
+        4. "Короче, Андрей, ты что-то темнишь" (4887.69s)
+        5. "Андрей, спасибо, что пришёл" (4964.62s)
+        6. Обсуждает интеграционные vs юнит-тесты — разработчик
+
+      guest_name: "Андрей"
+      guest_context: "Гость из чата, разработчик, обсуждал тестирование"
+
+      possible_matches: []  # Недостаточно информации
+
+      voice_task:
+        needed: true
+        reason: "Требуется сопоставление голоса для точной идентификации"
+        reference_segment:
+          stime: 4899.21
+          etime: 4920.99
+          text: "Проблема во всех этих методологиях, что они говорят, ребята, тестируйте, и будет всем счастье. Но они не говорят, в каких случаях что тестировать. И это самое важное, мне кажется. Потому что тесты, применимость у них разная. И саппортабилити тоже там участвует."
+          duration_sec: 21.78
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 21
+    replies_count: 3
+    first_appearance_sec: 4509.92
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибочно созданный спикер. Реплики принадлежат SPEAKER_01 (Андрею)"
+
+      # Контекстуальное доказательство
+      evidence: |
+        1. Все 3 реплики находятся внутри блока обсуждения тестирования с Андреем
+        2. Первая реплика (4509.92s) продолжает мысль SPEAKER_01 о кусках системы (4506.40-4509.08s)
+        3. Реплики 2-3 (4644.35-4659.60s) — ответ на Umputun о юнит-тестах
+        4. Сразу после них SPEAKER_01 продолжает говорить (4662.09s)
+        5. Тема та же: тестирование, бизнес-логика, синхронизация
+        6. Эльдар Муртазин не участвовал в этом выпуске
+
+      voice_task:
+        needed: false
+        reason: "Очевидная ошибка атрибуции — реплики принадлежат Андрею"
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 0.22
+    replies_count: 1
+    first_appearance_sec: 2462.39
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Артефакт распознавания — односложное междометие 'Ох...' длительностью 0.22 сек"
+
+      evidence: |
+        1. Единственная реплика: "Ох..." (2462.39-2462.61s)
+        2. Длительность 0.22 секунды
+        3. Типичный паттерн ошибки: случайное междометие
+
+      voice_task:
+        needed: false
+        reason: "Очевидный артефакт, слишком короткий для анализа"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    - Umputun и Bobuk — основные ведущие, представлены в начале
+    - SPEAKER_04 (Алексей) — явно представлен при подключении (~2810s)
+    - SPEAKER_01 (Андрей) — явно представлен Umputun'ом (~4382s)
+    - Упоминается второй Алексей, которого не удалось подключить из-за Skype
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 392
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Guest_Alexey_392"
+    confidence: high
+    reason: "Гость представился как Алексей, подтверждено ведущим"
+
+  - type: rename
+    episode: 392
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Guest_Andrey_392"
+    confidence: high
+    reason: "Гость представлен Umputun'ом как Андрей"
+
+  - type: rename
+    episode: 392
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Guest_Andrey_392"
+    confidence: high
+    reason: "Ошибочная атрибуция — это тот же Андрей (SPEAKER_01), продолжение диалога о тестах"
+
+  - type: delete
+    episode: 392
+    speaker: "SPEAKER_05"
+    confidence: high
+    reason: "Артефакт — междометие 0.22 сек, не информативно"
+
+# Примечания
+notes: |
+  Эпизод 392 (17 мая 2014) — сокращённый состав: только Umputun и Bobuk.
+  Два гостя из чата:
+  1. Алексей (SPEAKER_04) — эксперт по Ruby, ~46 мин в эфире, обсуждал Redmine, Octopress, зависимости
+  2. Андрей (SPEAKER_01) — разработчик, ~9 мин в эфире, обсуждал интеграционные vs юнит-тесты
+
+  SPEAKER_MISATTRIBUTED_ELDAR — ошибочно созданный спикер, реплики принадлежат Андрею.
+  SPEAKER_05 — артефакт распознавания.
+
+  Для точной идентификации Алексея и Андрея требуется voice comparison или информация
+  из архивов чата того периода.

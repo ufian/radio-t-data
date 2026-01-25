@@ -1,0 +1,257 @@
+episode: 301
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Ksenks]
+  total_duration_sec: 6500
+  notes: |
+    Это первое появление Ksenks на подкасте (11 августа 2012).
+    Umputun представляет её как "девушку-ведущую" в начале выпуска.
+    Она представляется: "Меня зовут Ксения" (56.58s).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 383
+    replies_count: 70
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление на 56.58s: "Меня зовут Ксения, и добрый вечер всем."
+        Umputun на 32.89s спрашивает: "Кто ты прекрасно не знаком?"
+        Bobuk на 49.4s: "Вот мы сейчас узнаем, как качельку зовут."
+        Это первое появление Ksenks на подкасте.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 169
+    replies_count: 82
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплики SPEAKER_00 идут вперемешку с Marin_k_a (которая = Ksenks).
+        Примеры совместных реплик:
+        - 53.2s SPEAKER_00: "Не знаю, как зовут качельку..."
+        - 56.58s Marin_k_a: "Меня зовут Ксения..." (продолжение диалога)
+        - 283.88s Marin_k_a: "Да, страничка очень красиво выглядит."
+        - 286.88s SPEAKER_00: "Шикарная." (продолжение той же мысли)
+        Обе метки относятся к одному голосу - Ксении (Ksenks).
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 0
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две ультракороткие реплики ("Угу" на 375s, "Да" на 735s).
+        Длительность 0.08 и 0.06 секунд - артефакты распознавания.
+        Невозможно определить спикера, скорее всего Ksenks или один из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Короткие подтверждения в диалоге, может быть любой участник"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk активно ведёт обсуждение в этих моментах"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Реплика на 454.68s: "Через Y. Ну, который текстовый совсем."
+        Это ответ на вопрос Bobuk (452.27s): "Lynx в смысле через I или через Y?"
+        Контекст: Marin_k_a (444.31s) говорила про Lynx.
+        Lavale не упоминается в этом выпуске - это ошибочная атрибуция.
+        По контексту это скорее всего Ksenks (продолжает свою мысль про Lynx).
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Продолжение её же мысли про Lynx"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 454.68
+          etime: 457.4
+          text: "Через Y. Ну, который текстовый совсем."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплика на 1248.58s: "А Mac-пользователи говорят, что все, этот проект умер."
+        Контекст: Marin_k_a (1238.99s) говорит про Open Source и реакцию Linux-пользователей.
+        Следующая реплика Marin_k_a (1252.92s): "Как вот сейчас мы про TextMate."
+        Это продолжение одной мысли Ksenks, разбитой транскрипцией.
+        Petr Didenko не упоминается в этом выпуске.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.9
+          reason: "Продолжение фразы Marin_k_a про Open Source"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплика на 1495.17s: "Задняя память, хорошо, молодец."
+        Это комментарий-подколка к фразе Bobuk (1471s) про "заднюю память".
+        Тон ироничный, характерный для мужского ведущего.
+        Eldar Murtazin не присутствует в этом выпуске.
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Ироничный комментарий, характерный для Umputun"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Может быть самоирония Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1495.17
+          etime: 1497.47
+          text: "Задняя память, хорошо, молодец."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        Неправильная метка спикера. Должно быть Ksenks.
+        Вероятно "Marin_k_a" - артефакт транскрипции или ошибочная связь с другим человеком.
+    - speaker: "SPEAKER_00"
+      issue: |
+        Автоматическая метка, должна быть Ksenks.
+        82 реплики неправильно атрибутированы.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 301
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Явное представление: "Меня зовут Ксения" (56.58s).
+      Это первое появление Ksenks на подкасте (2012).
+
+  - type: rename
+    episode: 301
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Реплики перемежаются с Marin_k_a и являются частью того же диалога.
+      Контекст показывает, что это один и тот же голос.
+
+  - type: rename
+    episode: 301
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Продолжение фразы Marin_k_a про Open Source (1238-1254s).
+      Petr Didenko не участвует в этом выпуске.
+
+  - type: rename
+    episode: 301
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Ответ на вопрос про Lynx после реплики Marin_k_a.
+      Lavale не участвует в этом выпуске.
+
+  - type: delete
+    episode: 301
+    from_speaker: "SPEAKER_03"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Ультракороткие реплики (0.08s, 0.06s) без содержания.
+      Артефакты распознавания, можно удалить или оставить.
+
+# Примечания
+notes: |
+  Эпизод 301 - исторически важный: первое появление Ksenks (Ксении).
+
+  Главные проблемы:
+  1. Ksenks размечена как "Marin_k_a" (70 реплик) - требует исправления
+  2. Часть реплик Ksenks попала в SPEAKER_00 (82 реплики) - требует исправления
+  3. Одиночные реплики ошибочно атрибутированы Petr, Lavale, Eldar - требует исправления
+
+  После применения правил очистки все 152+ реплики гостя будут правильно
+  атрибутированы Ksenks.

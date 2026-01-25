@@ -1,0 +1,225 @@
+episode: 306
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Olyapka, Ksenks]  # Обе размечены как Marin_k_a - КРИТИЧЕСКАЯ ОШИБКА
+  total_duration_sec: 8170  # ~2h 16min
+
+# КРИТИЧЕСКАЯ ПРОБЛЕМА: Неверная разметка гостей
+critical_issue:
+  description: |
+    В эпизоде участвуют ДВЕ гостьи - Оля (Olyapka) и Ксения (Ksenks),
+    но ВСЕ их реплики размечены как Marin_k_a.
+    Это явная ошибка - Марина (Marin_k_a) НЕ участвовала в этом выпуске.
+  evidence:
+    - time: 48s
+      umputun_says: "Здравствуй, Оля."
+      marked_as: Marin_k_a
+    - time: 55s
+      umputun_says: "Это я про тебя, Ксюша, говорю."
+      marked_as: Marin_k_a
+    - time: 8082s
+      umputun_says: "Была с нами вновь Оля."
+    - time: 8091s
+      umputun_says: "И была с нами не вновь Ксения."
+  conclusion: |
+    Нужно voice comparison чтобы разделить реплики Olyapka и Ksenks.
+    Текущая разметка Marin_k_a полностью неверна.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 3737
+    replies_count: 868
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Марина (Marin_k_a) НЕ участвовала в этом выпуске.
+        Реальные участницы - Olyapka (Оля) и Ksenks (Ксения).
+        Это массовая ошибочная разметка ~868 реплик.
+
+      identified_as: null  # Требуется разделение на двух спикеров
+      identification_method: null
+      confidence: null
+      evidence: |
+        Umputun обращается к "Оле" (48s, 883s, 1144s, 3601s, 4105s, 7885s, 12853s)
+        и к "Ксении/Ксюше" (55s, 181s, 478s, 694s, 721s, 1018s, 1513s, 1936s).
+        В конце выпуска (8082s): "Была с нами вновь Оля" и "была с нами не вновь Ксения".
+
+      voice_task:
+        needed: true
+        note: |
+          Требуется полная переразметка. Нужно:
+          1. Установить референс голоса Olyapka и Ksenks из других эпизодов
+          2. Разделить ~868 реплик между ними
+        reference_episodes:
+          olyapka: [55, 56, 57, 58, 59]  # Проверить people.yaml для точных эпизодов
+          ksenks: [300, 301, 302, 303, 304, 305]  # Ksenks была регулярной участницей
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 59
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Вероятно Ksenks, но нужна проверка
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Технически грамотные реплики про iPhone/iPad (2598s: "iPad – это была ретина...").
+        Продолжает мысль предыдущего спикера (Marin_k_a, который на самом деле Ksenks или Olyapka).
+        Контекст указывает на опытного пользователя Apple-техники.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Технически грамотные реплики, знание Apple-экосистемы"
+        - person_id: "olyapka"
+          confidence: 0.3
+          reason: "Тоже возможно, но менее вероятно по стилю речи"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2598.66
+          etime: 2609.48
+          text: "То есть iPad – это была ретина, которая тоже на тот момент и сейчас, в общем, тоже планшетов с ретиной таких практически нет."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 12
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Вероятно одна из гостей
+      identification_method: "context"
+      confidence: low
+      evidence: |
+        Короткие реплики в разговоре о системах исчисления (391s: "Она почти так же важна, как двоичная").
+        Возможно Ksenks (техническая тема) или Olyapka.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Техническая тема (системы исчисления)"
+        - person_id: "olyapka"
+          confidence: 0.4
+          reason: "Также возможно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 391.4
+          etime: 395.42
+          text: "Она почти так же важна, как двоичная. Не так, но почти."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 24
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "context"
+      confidence: low
+      evidence: |
+        Короткие реплики-реакции: "Круче" (879s), "Да, это суперзолотой заголовок" (3791s).
+        Вероятно одна из гостей (Ksenks или Olyapka).
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Активная участница обсуждения"
+        - person_id: "olyapka"
+          confidence: 0.4
+          reason: "Также возможно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3791.18
+          etime: 3796.48
+          text: "Да, это суперзолотой заголовок. Я думаю, будет хороший трафик у выпуска."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика "Где секьюрити?" (939s) - вероятно эхо/перебивка.
+        Сразу перед этим Umputun говорит "Где?" и после продолжает "Где, собственно, охрана патентов?".
+        Скорее всего это часть речи Umputun, неправильно разделённая транскрибером.
+
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Контекст (937-943s):
+        - Umputun: "Где?"
+        - SPEAKER_00: "Где секьюрити?"
+        - Umputun: "Где, собственно, охрана патентов?"
+        Это явно один спикер, разбитый на части.
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        КРИТИЧЕСКАЯ ОШИБКА: Все 868 реплик размечены как Marin_k_a,
+        но реальные участницы - Olyapka и Ksenks.
+        Марина в этом выпуске не участвовала.
+    - speaker: "общая"
+      issue: |
+        Нужна полная переразметка эпизода с voice comparison,
+        чтобы разделить реплики между Olyapka и Ksenks.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Пока только SPEAKER_00, остальное требует voice comparison
+  - type: rename
+    episode: 306
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: |
+      Одна реплика "Где секьюрити?" между двумя репликами Umputun -
+      явно часть его речи, неправильно разделённая.
+
+# Задачи для следующего этапа
+next_steps:
+  - priority: critical
+    task: |
+      Получить референсные записи голосов Olyapka и Ksenks из других эпизодов.
+      Olyapka участвовала в выпусках ~55-59.
+      Ksenks - регулярная участница (468 выпусков).
+
+  - priority: critical
+    task: |
+      Выполнить voice comparison для разделения 868 реплик Marin_k_a
+      между реальными участницами Olyapka и Ksenks.
+
+  - priority: medium
+    task: |
+      После разделения основных реплик, определить принадлежность
+      SPEAKER_MISATTRIBUTED_LAVALE, SPEAKER_MISATTRIBUTED_PETR, SPEAKER_03.

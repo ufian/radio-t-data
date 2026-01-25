@@ -1,0 +1,218 @@
+episode: 386
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7621  # ~2 часа 7 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 878
+    replies_count: 174
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Нет person_id в people.yaml для этого Алексея
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 75s Umputun говорит: "И зашел на огонек Алексей, который к нам на гиковские выпуски."
+        В 95s: "Вам не интересно про телефончики, Алексей?"
+        В 113s: "Алексей, тебя обманули."
+
+        Гость активно участвует в технических дискуссиях о Python, IPython, моделировании,
+        базах данных. Говорит о "гиковских" темах, что соответствует представлению.
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Имя совпадает (Алексей), но Alek.sys - это постоянный ведущий, и контекст не указывает на него"
+
+      voice_task:
+        needed: true
+        reason: "Нужно создать person_id для этого гостя и подтвердить идентификацию"
+        reference_segment:
+          stime: 1153.48
+          etime: 1164.07
+          text: "Потому что я помню, в институте еще давно-давно всякие системы для моделирования, я даже не помню, как они назывались, назывался предмет такой математическое моделирование."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 173
+    replies_count: 42
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. В начале (38s) Umputun говорит: "у нас есть Ксюша, которая любую логику..."
+           Сразу после этого (45s) отвечает SPEAKER_00.
+
+        2. В реплике на 1098s SPEAKER_00 использует женский род:
+           "Ну просто я вот пыталась понять, чем IPython как-то лучше..."
+
+        3. В файле 386_cc.json НЕТ спикера "Ksenks", хотя она была представлена.
+           Значит её реплики размечены как SPEAKER_00.
+
+        4. Marin_k_a (также женщина) уже идентифицирована отдельно и чередуется
+           с SPEAKER_00 - это две разные женщины.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 51
+    replies_count: 11
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики содержат технические темы:
+        - MongoDB, "Монге" (2869s)
+        - Модели данных, джойны (2920s)
+        - PostgreSQL коммитфесты (4340s)
+
+        Метка SPEAKER_MISATTRIBUTED_ELDAR означает, что эти реплики ранее были
+        ошибочно приписаны Эльдару Муртазину, затем отменены.
+
+        Скорее всего это тот же гость Алексей (SPEAKER_06), т.к.:
+        - Темы пересекаются (базы данных, технические вопросы)
+        - Эльдар Муртазин - мобильный аналитик, а тут темы БД
+        - В этом выпуске был только один гость Алексей
+
+      possible_matches:
+        - person_id: null  # То же что SPEAKER_06 - гость Алексей
+          confidence: 0.7
+          reason: "Скорее всего тот же человек что SPEAKER_06 (гость Алексей), ошибочно разделённый распознаванием"
+
+      voice_task:
+        needed: true
+        reason: "Сравнить голос с SPEAKER_06 для подтверждения что это один человек"
+        reference_segment:
+          stime: 4340.01
+          etime: 4345.64
+          text: "Чтобы пройти через коммитфесты, нужно иметь очень много усидчивости и нервов."
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Обе реплики - эхо фраз Bobuk:
+        1. В 3530s SPEAKER_07: "Что вы делаете с этими письмами?"
+           За 3 секунды до этого (3527s) Bobuk: "А что вы делаете с этим писем?"
+           Это одна и та же фраза, дублирование распознавания.
+
+        2. В 7621s: "Ну, конечно." - односложная реакция, типичная ошибка.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика - эхо фразы Bobuk:
+        В 2527s Bobuk: "Скажите, какие слова-то?"
+        В 2528s SPEAKER_04: "Да, слова-то какие?"
+
+        Практически идентичная фраза, интервал <1 секунды.
+        Это артефакт распознавания, не отдельный спикер.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Ksenks"
+      issue: "Представлена как 'Ксюша' в начале, но все реплики размечены как SPEAKER_00"
+    - speaker: "SPEAKER_06"
+      issue: "Представлен как 'Алексей' в 75s, но нет соответствующего person_id в people.yaml для этого конкретного гостя"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 386
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_00 использует женский род ("я пыталась"), появляется сразу после
+      представления Ксюши, и Ksenks отсутствует в файле несмотря на представление в начале
+
+  - type: rename
+    episode: 386
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Обе реплики - эхо/дублирование фраз Bobuk, артефакт распознавания"
+
+  - type: rename
+    episode: 386
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Единственная реплика - эхо фразы Bobuk с интервалом <1 секунды"
+
+# Задачи для ручной проверки
+manual_review_tasks:
+  - task: "create_person"
+    description: |
+      Создать person_id для гостя Алексея из этого выпуска.
+      Нужно определить, кто этот Алексей - возможно он появлялся в других "гиковских" выпусках.
+      Umputun говорит: "зашел на огонек Алексей, который к нам на гиковские выпуски"
+      - это указывает что гость был и раньше.
+
+  - task: "voice_comparison"
+    description: |
+      Сравнить голоса SPEAKER_06 и SPEAKER_MISATTRIBUTED_ELDAR.
+      Если это один человек - объединить под одним именем (Алексей/guest_id).
+      Если разные - идентифицировать SPEAKER_MISATTRIBUTED_ELDAR отдельно.
+
+  - task: "verify_ksenks"
+    description: |
+      Прослушать сегменты SPEAKER_00 для подтверждения что это Ksenks.
+      Reference: 1094-1115s (разговор об IPython, женский род).

@@ -1,0 +1,269 @@
+episode: 332
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7564  # приблизительно, на основе последних таймкодов
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 303
+    replies_count: 139
+    pattern: consecutive
+    first_appearance_sec: 20
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun в начале эпизода (45-51 сек): "я просто пытаюсь понять, что вот в голове у Ксюши"
+        2. SPEAKER_01 говорит "Я поняла" (женский род) в 69-71 сек
+        3. Активное участие в диалоге с первых минут как ведущая
+        4. 139 реплик за выпуск - характерно для постоянного ведущего
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 38
+    replies_count: 23
+    pattern: scattered  # но есть блоки по 3-4 реплики подряд
+    first_appearance_sec: 57
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Не удалось однозначно идентифицировать
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики носят диалоговый характер, не артефакты:
+        - 5072-5078 сек: блок из 4 реплик, диалог с Bobuk о "звезде"
+        - 6701-6712 сек: блок из 3 реплик, диалог с Umputun
+        - Стиль речи женский ("Ну, фу, как неинтересно")
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: |
+            SPEAKER_01 уже идентифицирован как Ksenks (139 реплик).
+            SPEAKER_00 может быть тем же человеком с другим распознаванием голоса.
+            Похожий стиль речи, женский голос.
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: |
+            Marin_k_a присутствует в эпизоде (98 реплик).
+            Некоторые реплики SPEAKER_00 идут рядом с её репликами.
+            Но у Marin_k_a уже своя разметка.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5072.94
+          etime: 5078.46
+          text: "А, то есть ты ее знал, она была не звезда для тебя? Конечно, конечно. Что? Ну, фу, как неинтересно."
+        compare_with:
+          - speaker: "Ksenks"
+            note: "Сравнить с SPEAKER_01 репликами из этого же эпизода"
+          - speaker: "Marin_k_a"
+            note: "Сравнить с размеченными репликами Marin_k_a"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 3257
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 коротких реплики за весь выпуск:
+        - 3256.8 сек: "Ммм..." (0.06 сек)
+        - 5690.8 сек: "20 раз." (0.88 сек)
+        Это междометия и фрагменты, ошибочно выделенные как отдельный спикер.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 2023
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это не Lavale - уже помечено как MISATTRIBUTED
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики ранее были ошибочно присвоены Lavale:
+        - 2023.5 сек: "Они не хотят так много делать все-таки." (между Marin_k_a и SPEAKER_01)
+        - 3412.2 сек: "И в следующий раз он не покупает такой телефон." (между Marin_k_a)
+        Контекст указывает на Marin_k_a или Ksenks.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Обе реплики окружены репликами Marin_k_a, продолжают её мысль"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Первая реплика идёт перед SPEAKER_01 (Ksenks)"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2023.48
+          etime: 2026.68
+          text: "Они не хотят так много делать все-таки."
+        compare_with:
+          - speaker: "Marin_k_a"
+            note: "Сравнить с размеченными репликами Marin_k_a в этом эпизоде"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 6935
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это не Eldar - уже помечено как MISATTRIBUTED
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплика ранее была ошибочно присвоена Eldar:
+        - 6935.3 сек: "Сейчас объясню, почему." (между репликами Bobuk)
+        Контекст: Bobuk до и после, один человек вставляет короткую реплику.
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Реплика между двумя репликами Bobuk, может быть его же фраза"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Umputun активен в этом эпизоде, мог вставить комментарий"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6935.27
+          etime: 6939.13
+          text: "Сейчас объясню, почему."
+        compare_with:
+          - speaker: "Bobuk"
+            note: "Сравнить с репликами Bobuk до и после этой"
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 562
+    replies_count: 98
+    pattern: consecutive
+    first_appearance_sec: 60
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Marin_k_a (Марина) - бывшая ведущая, зарегистрирована в people.yaml.
+        В начале эпизода Umputun говорит "улучшатель/улучшалка" про женщину.
+        98 реплик указывают на полноценное участие как соведущей.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода Umputun представляет состав:
+    - Себя (ведущий)
+    - Bobuk ("Бобук, ты тоже с нами?")
+    - Ксюша/Ksenks ("что вот в голове у Ксюши")
+    - "Улучшалка" (женщина, скорее всего Marin_k_a как гость)
+
+    Все основные участники были упомянуты.
+
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "139 реплик помечены как SPEAKER_01, хотя это явно Ksenks"
+    - speaker: "SPEAKER_00"
+      issue: "23 реплики неидентифицированы, требуется voice comparison"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 332
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun явно упоминает Ксюшу в начале (45-51 сек).
+      SPEAKER_01 использует женский род ("Я поняла").
+      139 реплик - характерно для постоянного ведущего.
+
+  - type: delete
+    episode: 332
+    speaker: "SPEAKER_02"
+    confidence: high
+    reason: |
+      Только 2 реплики общей длительностью 1 сек.
+      "Ммм..." и "20 раз." - междометия, ошибки распознавания.
+      Следует удалить или переназначить соседним спикерам.
+
+# Задачи для ручной проверки
+manual_review_tasks:
+  - task: "voice_comparison"
+    speaker: "SPEAKER_00"
+    priority: medium
+    description: |
+      Определить, является ли SPEAKER_00 тем же человеком что SPEAKER_01 (Ksenks)
+      или это отдельный участник (возможно Marin_k_a).
+      Референс: 5072-5078 сек
+
+  - task: "voice_comparison"
+    speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    priority: low
+    description: |
+      Определить, кому принадлежат эти 2 реплики: Marin_k_a или Ksenks.
+      Референс: 2023-2027 сек
+
+  - task: "voice_comparison"
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    priority: low
+    description: |
+      Определить, кому принадлежит реплика "Сейчас объясню, почему."
+      Вероятно Bobuk или Umputun.
+      Референс: 6935-6939 сек

@@ -1,0 +1,256 @@
+episode: 345
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: 8117  # ~2h 15m
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # SPEAKER_06 - явно Ksenks (Ксюша)
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 365
+    replies_count: 150
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun прямо обращается "Ксюша, как? Почему?" (26-27s)
+        2. Говорит про "берег океана" в Сан-Франциско - была на WWDC
+        3. Bobuk: "осталась без мужа" - шутка про отсутствие Umputun
+        4. В конце: "Ксюша, вот просто она не даст соврать" (8040s)
+        5. Стиль речи и контекст соответствуют ведущей Ksenks
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # SPEAKER_01 - гость Алекс (Alexmak)
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 689
+    replies_count: 128
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alexmak"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun: "У меня жена спросила, а кто такой этот Алекс, который придет?" (68-71s)
+        2. Описание: "человек, который работает на работе, а в виде хобби ходит везде и рассказывает, какой Apple прекрасный" (72-79s)
+        3. В конце: "И один гость в лице Алекса, которого вы по голосу узнали на общественных началах Евангелиста" (8101-8108s)
+        4. SPEAKER_01: "мне на самом деле Тим Кук ежедневно перечисляет свежими айфонами" (84s) - ироничный ответ
+        5. Обращения "Алекс" по тексту: 1162s, 3052s, 4276s, 12610s, 18046s
+        6. Упоминание блога и работы не в Apple: "Это одна из причин, по которой я в Apple не работаю" (8075s)
+        7. Alexmak - известный русскоязычный блогер про Apple
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # SPEAKER_00 - вероятно ошибка распознавания ведущего
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 30
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики разбросаны по эпизоду (3174s, 3522s, 4005s, 4239s, 4405s, 4465s).
+        Стиль речи типичен для ведущих:
+        - "Это вот как ты, Женя..." - обращение по имени к Umputun
+        - "Слушай, это вам на конференции..." - фамильярный тон
+        - "Представляете..." - риторический вопрос
+        - "Всем мы, товарищи, Яндекса и поздравляем" - шутка про Яндекс (Bobuk/Gray работают там)
+        Вероятно это Bobuk или Gray с плохим распознаванием голоса.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Фамильярный стиль, шутки про Яндекс, обращение к Женя"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Тоже работает в Яндексе, мог быть неверно распознан"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3522.92
+          etime: 3531.01
+          text: "Слушай, это вам на конференции просто подкладывали в еду материалы соответствующие, вот оно подействовало."
+
+  # SPEAKER_07 - артефакт распознавания
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 2 реплики (<2 сек каждая):
+        - 2582s: "Очень девочка моя, Титя, да?" - бессмысленная фраза, вероятно артефакт
+        - 2909s: "Угу" - односложная реакция
+        Типичный паттерн ошибок распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # SPEAKER_05 - артефакт в конце
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика в самом конце эпизода (7461s):
+        "Рок-н-ролл и отличные" - обрезанная фраза, вероятно часть заставки или артефакт.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # SPEAKER_MISATTRIBUTED_PETR - ранее ошибочно приписано PetrDidenko
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики были ошибочно приписаны PetrDidenko, но он не участвовал в выпуске.
+        Короткие фразы (691s, 3911s, 5173s): "Что нужно сделать?", "Он уже год...", "Я просто не верил".
+        Вероятно это один из ведущих или гость Алекс.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alexmak"
+          confidence: 0.4
+          reason: "Может быть Алекс, учитывая тематику Apple"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Мог быть один из ведущих"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3911.17
+          etime: 3915.26
+          text: "Он уже год, почти год не в продаже находится."
+
+  # SPEAKER_MISATTRIBUTED_LAVALE - ранее ошибочно приписано Lavale
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 7
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика (3682s) о WebOS была ошибочно приписана Lavale.
+        Lavale не участвовала в этом выпуске.
+        По контексту (обсуждение WebOS и iOS 7) - вероятно это Marin_k_a или Alexmak.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Marin_k_a участвует в выпуске и говорит в соседних репликах"
+        - person_id: "alexmak"
+          confidence: 0.4
+          reason: "Алекс тоже обсуждает iOS активно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3682.03
+          etime: 3688.54
+          text: "Люди, например, которые у меня знакомые, которые раньше пользовались WebOS, им, например, в каких-то моментах действительно она напоминает."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: "8 реплик неизвестного спикера - вероятно ошибка распознавания ведущего"
+    - speaker: "SPEAKER_MISATTRIBUTED_*"
+      issue: "4 реплики ранее ошибочно атрибутированы PetrDidenko и Lavale"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 345
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Явное представление: Umputun обращается 'Ксюша', она была на WWDC"
+
+  - type: rename
+    episode: 345
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Alexmak"
+    confidence: high
+    reason: "Явное представление: 'гость Алекс', Apple евангелист с блогом"
+
+  - type: delete
+    episode: 345
+    from_speaker: "SPEAKER_07"
+    to_speaker: null
+    confidence: high
+    reason: "Артефакт распознавания - бессмысленные фразы"
+
+  - type: delete
+    episode: 345
+    from_speaker: "SPEAKER_05"
+    to_speaker: null
+    confidence: high
+    reason: "Артефакт - обрезанная фраза в конце эпизода"
+
+# Примечания для ручной проверки
+notes: |
+  1. SPEAKER_06 -> Ksenks - уверенность HIGH, можно применять автоматически
+  2. SPEAKER_01 -> Alexmak - уверенность HIGH, можно применять автоматически
+  3. SPEAKER_00 - требует voice comparison с Bobuk/Gray
+  4. SPEAKER_MISATTRIBUTED_* - требует voice comparison
+  5. В выпуске упоминается "Олег" (64s) - это тоже Alexmak (по контексту это то же лицо)
+
+  Дата выпуска: 22 июня 2013 (из транскрипта)
+  Тема: WWDC 2013, iOS 7, Mac Pro

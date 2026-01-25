@@ -1,0 +1,205 @@
+episode: 323
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  guests_present: []
+  total_duration_sec: 6495
+  notes: >
+    Ksenks ошибочно размечена как Marin_k_a. Это подтверждено множеством
+    обращений Umputun по имени "Ксюша" и "Оксана" к спикеру Marin_k_a.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 788
+    replies_count: 189
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Ошибочная атрибуция. Marin_k_a в этом эпизоде - это Ксения (Ksenks).
+        Доказательства:
+        1) В начале Umputun представляет: "Оксана, она же Ксения" (21-26s)
+        2) Umputun обращается "Спой, Оксана" (94s) - отвечает Marin_k_a (100s)
+        3) Umputun спрашивает "Помнишь, Ксюша?" (861s) - отвечает Marin_k_a (862s)
+        4) Umputun говорит "Про грузовики автомобилей, Оксана?" (869s) - отвечает Marin_k_a (874s)
+        5) Нет ни одной реплики Ksenks в эпизоде, хотя она объявлена в начале
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Umputun многократно обращается к Marin_k_a как "Ксюша" и "Оксана",
+        в начале явно объявляет Ксению участницей, при этом ни одной реплики
+        с автором Ksenks нет.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 26
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Это отменённые присвоения - кто-то ранее ошибочно пометил эти реплики
+        как Эльдара Муртазина, но затем отменил. Эти реплики принадлежат одному
+        из ведущих (скорее всего Bobuk или Gray) - требуется voice comparison.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: >
+        Реплики разрознены по всему эпизоду. Содержание типичное для обсуждения
+        ведущими (iPad mini, Basecamp, МСМ). Эльдар не был объявлен гостем.
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Контекст диалога - реплики между репликами Bobuk"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Альтернативный кандидат"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2821.66
+          etime: 2828.81
+          text: "Хотя, должен честно сказать, что Basecamp не очень клево работает с рассылкой. Ну, с почтой вообще."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная короткая реплика между двумя репликами Marin_k_a (которая
+        на самом деле Ksenks) и Bobuk. Скорее всего это продолжение мысли Ксении
+        (Marin_k_a/Ksenks).
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: >
+        Реплика на 6081s "Ну то есть очевидно, что Java была бы выше..." идёт
+        сразу после реплик Marin_k_a и логически продолжает её мысль об
+        open-source статистике языков программирования.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Продолжение диалога Marin_k_a (которая = Ksenks)"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткая реплика между Gray и Marin_k_a. Пётр Диденко не был объявлен
+        гостем этого выпуска.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: >
+        Реплика на 2569s "Да нет, это штука для общения по e-mail" - одиночная
+        в контексте обсуждения Basecamp Breeze.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Предшествующая и близкая по теме реплика Gray"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Следующая реплика от Marin_k_a/Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2569.15
+          etime: 2572.32
+          text: "Да нет, это штука для общения по e-mail."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная односложная реплика "скачанных пиратских" (1.4 сек) между
+        двумя репликами Gray. Явная ошибка распознавания - это часть фразы Gray.
+
+      identified_as: "gray"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Gray говорит "такого количества скачетных МПТишек" (2225-2229s),
+        затем SPEAKER_05 "скачанных пиратских" (2230s), затем снова Gray
+        "У меня тоже долго индексировалось" (2231s). Это продолжение одной
+        мысли, распознанное как отдельный спикер.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Marin_k_a"
+      issue: >
+        Спикер Marin_k_a (189 реплик, 788 сек) НЕ соответствует Марине из
+        справочника. По контексту это Ксения (Ksenks), которая была объявлена
+        ведущим в начале выпуска ("Оксана, она же Ксения").
+    - speaker: "Ksenks"
+      issue: >
+        Ксения объявлена в начале выпуска, но нет ни одной реплики с автором
+        Ksenks. Все её реплики ошибочно помечены как Marin_k_a.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 323
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Umputun многократно обращается по имени "Ксюша"/"Оксана" к спикеру
+      Marin_k_a. Ксения объявлена участницей в начале. Marin_k_a (Марина) -
+      отдельный человек, не участвовавший в выпуске 323.
+
+  - type: rename
+    episode: 323
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Gray"
+    confidence: high
+    reason: >
+      Единственная реплика (1.4 сек) между двумя репликами Gray, являющаяся
+      продолжением его мысли.
+
+  - type: rename
+    episode: 323
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: >
+      Единственная реплика продолжает мысль Marin_k_a (которая = Ksenks).
+      Lavale не была объявлена в этом выпуске.

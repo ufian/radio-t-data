@@ -1,0 +1,182 @@
+episode: 343
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, Lavale]
+  total_duration_sec: ~7200  # ~2 часа гиковский выпуск
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 325
+    replies_count: 103
+    pattern: scattered  # разбросаны по всему выпуску
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это Ksenks (Ксюша), неправильно размеченная
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. SPEAKER_00 говорит "Я запомнила мостик" (120.1s) - женский род
+        2. SPEAKER_00 обращается "Да, Бабок, продолжай" (122.5s) - знает ведущих
+        3. SPEAKER_00 чередуется с Marin_k_a при обсуждении темы Ubuntu (157-225s)
+        4. В контексте Umputun говорит "На тебя, Ксюша, намекаю" (95.3s) перед репликами SPEAKER_00
+        5. SPEAKER_00 и Marin_k_a обе являются Ксюшей - автоматическое распознавание
+           разделило одного спикера на два ID
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Идентификация высокой уверенности
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 299
+    replies_count: 48
+    pattern: consecutive  # реплики идут группами
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это тоже Ksenks (Ксюша), но размеченная под другим ником
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun говорит "А ты, Ксюша, как к ходупу?" (624.4s) - отвечает Marin_k_a (630.6s)
+        2. Umputun говорит "Ксюша, а ты как?" (3866.5s) - отвечает Marin_k_a (3875.8s)
+        3. Umputun говорит "после объяснения Ксюши" (6069.6s) после объяснений Marin_k_a
+        4. Marin_k_a рассказывает первую тему про Ubuntu bug #1, которую анонсировали
+           словами "Ксюша как самая близкая к этому племени [молодому]"
+        5. ВАЖНО: В people.yaml Marin_k_a указана как "Марина, бывшая ведущая" -
+           это ОШИБКА в справочнике для данного эпизода. В выпуске 343 Marin_k_a = Ksenks
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Lavale"
+    total_duration_sec: 129
+    replies_count: 18
+    pattern: scattered  # появляется периодически во второй половине
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Lavale - реальная гостья, уже есть в people.yaml
+      identified_as: "lavale"
+      identification_method: "existing_record"
+      confidence: high
+      evidence: |
+        1. Lavale есть в people.yaml как "бывшая ведущая"
+        2. Появляется с 2238s (37 мин) - присоединилась позже
+        3. Говорит о кроссплатформенной разработке "пищуки и маки" (3890s)
+        4. Отличается от Marin_k_a/SPEAKER_00 по времени появления и темам
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 0.06
+    replies_count: 1
+    pattern: isolated
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная реплика длиной 0.06 сек ('Ну,') - артефакт распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: "Должен быть переименован в Ksenks - это ошибка автоматического распознавания"
+    - speaker: "Marin_k_a"
+      issue: |
+        В данном эпизоде Marin_k_a = Ksenks (Ксюша), а НЕ Марина.
+        Возможно, автоматическое распознавание использовало профиль голоса Марины,
+        но в контексте эпизода все обращения к этому спикеру идут как "Ксюша".
+        Требует переименования в Ksenks.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 343
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_00 использует женский род ("запомнила"), знает ведущих ("Бабок, продолжай"),
+      чередуется с Marin_k_a при обсуждении общих тем. Контекст показывает, что это Ксюша.
+
+  - type: rename
+    episode: 343
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Все обращения к Marin_k_a в этом эпизоде идут как "Ксюша":
+      - "А ты, Ксюша, как к ходупу?" -> отвечает Marin_k_a
+      - "Ксюша, а ты как?" -> отвечает Marin_k_a
+      - "после объяснения Ксюши" -> после объяснений Marin_k_a
+      Это ошибка распознавания, спутавшего голос Ксюши с Мариной.
+
+  - type: delete
+    episode: 343
+    from_speaker: "SPEAKER_03"
+    to_speaker: null
+    confidence: high
+    reason: "Артефакт распознавания: реплика 0.06 сек с текстом 'Ну,'"
+
+# Примечания для ручной проверки
+notes: |
+  ## Главная проблема эпизода
+
+  В этом выпуске Ksenks (Ксюша) была размечена двумя разными спикерами:
+  - SPEAKER_00 (103 реплики)
+  - Marin_k_a (48 реплик)
+
+  Это произошло из-за ошибки автоматического распознавания голоса, которое
+  спутало голос Ксюши с профилем Марины (Marin_k_a).
+
+  ## Доказательства
+
+  1. В начале выпуска Umputun объявляет: "День защиты детей, поэтому Ксюша
+     как самая близкая к этому племени" - и дальше тему рассказывает Marin_k_a
+
+  2. Umputun многократно обращается к Ксюше, и каждый раз отвечает либо
+     SPEAKER_00, либо Marin_k_a:
+     - "Ксюша, как к ходупу?" -> Marin_k_a
+     - "Ксюшенька" -> SPEAKER_00 отвечает "Мы потерпим"
+
+  3. SPEAKER_00 говорит "Я запомнила" (женский род) и "Бабок, продолжай"
+
+  4. Фраза "Ксюша, которая оказалась Ксюшей, а не Оксаной" после объяснений
+     от Marin_k_a подтверждает, что это Ксюша
+
+  ## Рекомендация
+
+  Объединить SPEAKER_00 и Marin_k_a в Ksenks для этого эпизода.
+
+  ВАЖНО: Lavale - это отдельная реальная гостья, НЕ переименовывать.

@@ -1,0 +1,194 @@
+episode: 318
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: 7377  # ~2h 3m
+
+# Важное примечание
+notes: |
+  В начале эпизода (34.81s) Umputun говорит: "Бобука сегодня нет, но подкаст есть".
+  Однако в транскрипте есть 1 реплика от Bobuk (2269.7s).
+  Это явная ошибка разметки - Bobuk отсутствует в этом выпуске.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1354
+    replies_count: 303
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (1.14s) Umputun говорит: "...о чем мне не преминули одновременно
+        сообщить Грей и Ксюша, она же Оксана". Далее Marin_k_a активно участвует в диалоге
+        с первых секунд (15.55s). В справочнике people.yaml Marin_k_a - бывшая ведущая Марина.
+        Примечание: "Ксюша/Оксана" - это её альтернативные имена (не Ksenks).
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 151
+    replies_count: 26
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Umputun представляет его как "Игорь" (4067.19s): "Пришел к нам Игорь, говорит,
+        про вас знает все...". Также упоминается имя "Виталий" (4023.08s): "Я как раз
+        Виталию... Виталию звоним". Это слушатель, позвонивший по скайпу рассказать
+        про антивирус Avast. Все его реплики сконцентрированы в одном сегменте
+        (4074-4358s) и касаются технических деталей Avast.
+
+      possible_matches:
+        - person_id: "listener_igor"
+          confidence: 0.7
+          reason: "Umputun называет его 'Игорь' в 4067s"
+        - person_id: "listener_vitaliy"
+          confidence: 0.3
+          reason: "Ранее упоминался 'Виталий', но он не ответил на звонок"
+
+      voice_task:
+        needed: false
+        reason: "Это случайный слушатель-звонящий, не постоянный гость. Идентификация не критична."
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 101
+    replies_count: 18
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        EldarMurtazin - известный мобильный аналитик, регулярный гость подкаста.
+        Его реплики разбросаны по эпизоду (3992s-8037s), он активно участвует
+        в обсуждении технических тем. Характерный стиль комментариев подтверждает
+        идентификацию. В people.yaml есть запись eldar_murtazin.
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 11
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Название спикера указывает на "misattributed" (ошибочное присвоение).
+        Все 3 реплики идут сразу после реплик Marin_k_a и продолжают её мысль:
+        - 693.91s: "Но я не думаю, что так все будет." (после Marin_k_a о Google+)
+        - 1014.81s: "Все так делают, так что, ну, нормально, молодцы." (после Marin_k_a)
+        - 5159.34s: "И потом оказалось, что тот, который ушел, он важнее..." (продолжение мысли Marin_k_a об Apple)
+        Это явно реплики Marin_k_a, ошибочно размеченные.
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: "Все 3 реплики логически продолжают предшествующие реплики Marin_k_a"
+
+      voice_task:
+        needed: false
+
+  - speaker: "Bobuk"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        В начале эпизода (34.81s) Umputun явно говорит: "Бобука сегодня нет, но подкаст есть".
+        Однако в транскрипте есть 1 реплика Bobuk (2269.7s): "Вообще нет уже баров никаких".
+        Контекст: обсуждение Яндекс.Бара, до этого говорит Marin_k_a, после - Gray.
+        Реплика короткая (2 сек), по смыслу может быть сказана Gray или Marin_k_a.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Bobuk официально отсутствует в этом выпуске"
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Gray сразу после продолжает тему: 'Ну, то есть Яндекс.Бар прекращен'"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Marin_k_a говорит прямо перед этой репликой"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2269.7
+          etime: 2271.96
+          text: "Вообще нет уже баров никаких."
+        compare_with:
+          - speaker: "Gray"
+            segment:
+              stime: 2272.0
+              etime: 2278.2
+              text: "Ну, то есть Яндекс.Бар прекращен. Сейчас есть элементы."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk размечен с 1 репликой, но в начале выпуска явно сказано что его нет.
+        Требуется переразметка на Gray или Marin_k_a.
+
+    - speaker: "SPEAKER_00"
+      issue: |
+        Слушатель-звонящий (предположительно Игорь) не добавлен в people.yaml.
+        Можно оставить как есть (случайный звонок) или создать запись listener_ep318_igor.
+
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: |
+        3 реплики ошибочно размечены. Следует переименовать в Marin_k_a.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 318
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Все 3 реплики SPEAKER_MISATTRIBUTED_LAVALE логически продолжают
+      предшествующие реплики Marin_k_a. Контекстный анализ однозначен.
+
+  - type: rename
+    episode: 318
+    from_speaker: "Bobuk"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: |
+      Bobuk официально отсутствует в выпуске 318 (подтверждено в начале эпизода).
+      Реплика "Вообще нет уже баров никаких" по контексту скорее принадлежит Gray,
+      который сразу продолжает тему. Требуется voice comparison для подтверждения.
+
+  - type: rename
+    episode: 318
+    from_speaker: "SPEAKER_00"
+    to_speaker: "ListenerIgor"
+    confidence: medium
+    reason: |
+      Umputun называет позвонившего слушателя "Игорь". Можно оставить SPEAKER_00
+      или переименовать для читаемости. Это не регулярный гость.

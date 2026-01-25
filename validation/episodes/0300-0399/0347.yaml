@@ -1,0 +1,205 @@
+episode: 347
+status: needs_review
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]  # Марина, бывшая ведущая - уже идентифицирована в people.yaml
+  total_duration_sec: 7556  # примерная длительность по последним таймкодам
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 210
+    replies_count: 96
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 86.4s Umputun обращается: 'Ксюша, у тебя в паспорте не написано что-нибудь такого...', затем в 91.14s SPEAKER_01 отвечает: 'Укор не написано.'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 387
+    replies_count: 85
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: "Уже идентифицирована в people.yaml как Марина, бывшая ведущая. Активно участвует в диалоге с первых минут."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 48
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Это отменённая ошибочная атрибуция Эльдару Муртазину. Реплики разбросаны по эпизоду между репликами известных ведущих. Скорее всего это ошибки распознавания одного из ведущих (Bobuk или Gray)."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Технические темы (телевизоры, Rust), стиль речи похож"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Некоторые реплики в контексте его высказываний"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7259.75
+          etime: 7264.91
+          text: "Честно говоря, я не очень понимаю, как это зарелизился 0.7."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 15
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "6 коротких реплик (1-5 сек) разбросаны по эпизоду: 'А то все выпускают', 'Ага, понятно', 'Я не помню', 'По-моему, да...', 'А дальше?', 'Не знаю по какой'. Типичные ошибки распознавания коротких фраз ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Часть реплик может быть Ксенией, особенно короткие реакции"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Некоторые реплики в контексте диалогов Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5184.92
+          etime: 5192.87
+          text: "По-моему, да, мы решили, что нужно понизить градус гикивости. А дальше?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна реплика 'Контрол-зе, а потом делаешь... Я долго выходил из Вима, Бабук.' — обращение к Бобуку, значит это не Бобук и не Пётр Диденко. Ошибка атрибуции."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Обращается к Бабуку, сразу после него Umputun продолжает тему Vim"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Также мог участвовать в обсуждении Vim"
+
+      voice_task:
+        needed: false
+        reference_segment: null  # Слишком короткая реплика (2 сек) для voice comparison
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Реплика 'Продолжение следует...' в 3318s — это рекламный голос/джингл. Сразу после Bobuk комментирует: 'Господи, как я люблю эти рекламные голоса'. Должен быть SPEAKER_99 или _ad."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "Должен быть переименован в Ksenks. В начале эпизода Umputun обращается к 'Ксюше', и SPEAKER_01 отвечает."
+    - speaker: "SPEAKER_06"
+      issue: "Рекламный голос/джингл, должен быть SPEAKER_99 или _ad"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "10 реплик неизвестного происхождения. Требуется voice comparison или ручная проверка."
+    - speaker: "SPEAKER_00"
+      issue: "6 коротких реплик — вероятно ошибки распознавания разных ведущих"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 347
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Umputun обращается к 'Ксюше' в 86.4s, SPEAKER_01 отвечает в 91.14s. 96 реплик, 210 сек."
+
+  - type: rename
+    episode: 347
+    from_speaker: "SPEAKER_06"
+    to_speaker: "SPEAKER_99"
+    confidence: high
+    reason: "Рекламный голос 'Продолжение следует...' — Bobuk сразу комментирует 'как я люблю эти рекламные голоса'"
+
+  - type: review_needed
+    episode: 347
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: null
+    confidence: low
+    reason: "10 реплик, 48 сек. Требуется voice comparison — возможно Bobuk или Gray"
+
+  - type: review_needed
+    episode: 347
+    from_speaker: "SPEAKER_00"
+    to_speaker: null
+    confidence: low
+    reason: "6 коротких реплик (1-5 сек), разбросаны по эпизоду. Вероятно ошибки распознавания"
+
+  - type: review_needed
+    episode: 347
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: "Реплика про Vim с обращением к Бабуку. Umputun сразу продолжает тему."

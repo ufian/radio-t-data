@@ -1,0 +1,151 @@
+episode: 357
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_identified: [NikolayDobrovolskiy, AndreyMilinchuk]
+  total_duration_sec: 4941
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1248
+    replies_count: 238
+    pattern: consecutive
+    first_appearance_sec: 202
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "nikolay_dobrovolskiy"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk в 56-64s: "Одного зовут Николай Добровольский, он представляется как
+        вице-президент под десктоп-виртуализацией."
+        В 343.6s сам спикер говорит: "Я, Андрей, другие ребята сели, подумали..." -
+        упоминает Андрея как другого человека, значит это Николай.
+        Основной докладчик по продукту Parallels Access.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 383
+    replies_count: 62
+    pattern: consecutive
+    first_appearance_sec: 90
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "andrey_milinchuk"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk в 65-88s: "А еще у нас есть Андрей Милинчук... Он вообще называется
+        директор по разработке компании Parallels... А вот директор по разработке,
+        он чем занимается?"
+        Первая реплика SPEAKER_00 в 90s - прямой ответ на этот вопрос:
+        "Реально я достаточно долго занимался проект-менеджментом нашего основного
+        продукта Parallels Desktop for Mac, и последние, скажем, два года я как раз
+        занимаюсь нашим новым продуктом... Parallels XS."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 10
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 4600
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция. Эпизод 357 не содержит Эльдара Муртазина как гостя.
+        Гости от Parallels (SPEAKER_00/01) закончили говорить к 3447s.
+        Эти реплики появляются в 4600s в контексте обсуждения Apple между ведущими.
+        По содержанию и контексту это реплики Gray - он продолжает тему iPod/iOS.
+
+      identified_as: "gray"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Реплика 4600s: "Ты просто не помнишь, видимо, как апгрейдилось iOS, по-моему, 2 на iPod Touch"
+        Сразу после - реплика Gray (4607s): "Ты не помнишь, что для всех владельцев iPod это всегда были платные апгрейды?"
+        Одна тема, один стиль аргументации, продолжение мысли.
+        Реплика 4660s: "Критикует он причем не телефоны, а презентацию" - комментарий в
+        контексте диалога Bobuk-Umputun, может быть Gray или Bobuk.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.75
+          reason: "Та же тема (история iOS на iPod), продолжение собственной мысли"
+        - person_id: "bobuk"
+          confidence: 0.20
+          reason: "Вторая реплика может быть его комментарием"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4600.1
+          etime: 4606.9
+          text: "Ты просто не помнишь, видимо, как апгрейдилось iOS, по-моему, 2 на iPod Touch."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Ошибочная метка - должен быть Gray (или Bobuk). Эльдар не участвовал в эпизоде."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 357
+    from_speaker: "SPEAKER_01"
+    to_speaker: "NikolayDobrovolskiy"
+    confidence: high
+    reason: "Явное представление в начале эпизода, 238 реплик, вице-президент Parallels"
+
+  - type: rename
+    episode: 357
+    from_speaker: "SPEAKER_00"
+    to_speaker: "AndreyMilinchuk"
+    confidence: high
+    reason: "Явное представление в начале эпизода, 62 реплики, директор по разработке Parallels"
+
+  - type: rename
+    episode: 357
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: "По контексту - продолжение темы iPod/iOS, которую ведёт Gray. Требует voice verification."
+
+# Новые гости для people.yaml
+new_guests:
+  - id: "nikolay_dobrovolskiy"
+    canonical_name: "NikolayDobrovolskiy"
+    aliases: ["Николай Добровольский", "Николай"]
+    real_name: "Николай Добровольский"
+    info: "Вице-президент Parallels по десктоп-виртуализации, выпуск 357"
+
+  - id: "andrey_milinchuk"
+    canonical_name: "AndreyMilinchuk"
+    aliases: ["Андрей Милинчук", "Милинчук"]
+    real_name: "Андрей Милинчук"
+    info: "Директор по разработке Parallels, выпуск 357"
+
+# Аудио референс для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast357.mp3"

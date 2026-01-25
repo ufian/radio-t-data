@@ -1,0 +1,200 @@
+episode: 364
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [SPEAKER_01, SPEAKER_03, EldarMurtazin]
+  total_duration_sec: 8170  # ~2h 16m based on speaker stats
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 918
+    replies_count: 251
+    first_appearance_sec: 87
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "VictorGamov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 95.78s SPEAKER_01 говорит: "Ну да, если вы слышите эти дурацкие шуточки,
+        значит, вы слышите голоса Алексея Абашева и Виктора Гамова."
+        На 3339.22s SPEAKER_01 обращается к Лёше: "Ну, ты просто-напросто, Леша,
+        пытается сказать..." - значит SPEAKER_01 это НЕ Лёша, а Виктор Гамов.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 95.78
+          etime: 103.18
+          text: "Ну да, если вы слышите эти дурацкие шуточки, значит, вы слышите голоса Алексея Абашева и Виктора Гамова."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 978
+    replies_count: 182
+    first_appearance_sec: 241
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "AlexeyAbashev"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        На 3339.22s SPEAKER_01 обращается к "Леша" - это SPEAKER_03.
+        В начале выпуска представлены "Алексей Абашев и Виктор Гамов".
+        SPEAKER_03 активно обсуждает технические темы (Java, C++, websockets).
+        На 3345.88s отвечает на обращение "Леша".
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 244.08
+          etime: 256.39
+          text: "Я думаю, он готов и очень с альтернативным сознанием, и у него все это как живое. Все эти кони, трубы и андроиды, которые как-то дают свободу или как-то... С искусственным интеллектом."
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 264
+    replies_count: 42
+    first_appearance_sec: 137
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция. В эпизоде 364 участвуют Виктор Гамов и Алексей Абашев,
+        НЕ Эльдар Муртазин. Реплики "EldarMurtazin" содержат техническое обсуждение
+        (C++, websockets, MongoDB, SSH, Docker), что не соответствует профилю
+        Эльдара Муртазина (мобильный аналитик). Вероятно, это реплики одного из
+        гостей (Виктор или Алексей), ошибочно атрибутированные.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "VictorGamov"
+          confidence: 0.5
+          reason: "Техническое содержание реплик совпадает с тематикой выпуска"
+        - person_id: "AlexeyAbashev"
+          confidence: 0.5
+          reason: "Техническое содержание реплик совпадает с тематикой выпуска"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3463.66
+          etime: 3481.26
+          text: "Длинная техническая реплика для сравнения голоса"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 1
+    first_appearance_sec: 1409
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная короткая реплика "Как?" (0.68 сек) - типичная ошибка
+        автоматического распознавания. Скорее всего принадлежит одному из
+        присутствующих спикеров (вероятно Bobuk или один из гостей).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Короткая переспрашивающая реплика в стиле Бобука"
+        - person_id: "VictorGamov"
+          confidence: 0.3
+          reason: "Гость присутствовал в этот момент"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    - Umputun и Bobuk ведут с начала
+    - Gray присоединяется позже (с 1657s), без формального представления - это нормально для ведущего
+    - Гости Виктор Гамов и Алексей Абашев представлены на 95.78s
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: |
+        42 реплики ошибочно атрибутированы как EldarMurtazin.
+        Эльдар Муртазин НЕ участвовал в этом выпуске.
+        Требуется voice comparison для определения, кому принадлежат эти реплики.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 364
+    from_speaker: "SPEAKER_01"
+    to_speaker: "VictorGamov"
+    confidence: high
+    reason: |
+      Идентифицирован через представление на 95.78s и обращение к "Леша" на 3339s.
+
+  - type: rename
+    episode: 364
+    from_speaker: "SPEAKER_03"
+    to_speaker: "AlexeyAbashev"
+    confidence: high
+    reason: |
+      Идентифицирован как "Леша" через обращение SPEAKER_01 на 3339s.
+      Представлен в начале как "Алексей Абашев".
+
+  - type: review_required
+    episode: 364
+    from_speaker: "EldarMurtazin"
+    to_speaker: null
+    confidence: null
+    reason: |
+      Ошибочная атрибуция. Требуется voice comparison для определения,
+      это Виктор Гамов или Алексей Абашев.
+
+  - type: review_required
+    episode: 364
+    from_speaker: "SPEAKER_04"
+    to_speaker: null
+    confidence: null
+    reason: |
+      Единственная реплика "Как?" - вероятно ошибка распознавания.
+      Можно удалить или переатрибутировать после voice comparison.
+
+# Новые гости для people.yaml
+new_guests_for_registry:
+  - id: "victor_gamov"
+    canonical_name: "VictorGamov"
+    aliases: ["Витя", "Gamov"]
+    real_name: "Виктор Гамов"
+    info: "Автор книги по Java/Enterprise, выпуск 364"
+
+  - id: "alexey_abashev"
+    canonical_name: "AlexeyAbashev"
+    aliases: ["Леша", "Abashev", "Алексей"]
+    real_name: "Алексей Абашев"
+    info: "Автор книги по Java/Enterprise, выпуск 364"
+
+# Аудио для voice comparison
+audio_url: null  # Требуется получить из 364_desc.json в data/

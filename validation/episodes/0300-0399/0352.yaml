@@ -1,0 +1,190 @@
+episode: 352
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko, Marin_k_a]
+  total_duration_sec: 7497  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 922
+    replies_count: 241
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 87.81s Umputun говорит 'Петя, ты скажи что-нибудь на своем национальном языке', и PetrDidenko отвечает 'Калимера' (греческое приветствие). В 106.36s он говорит 'Да, здесь у нас в Греции, ну почти в Греции, на Кипре'. Это Пётр Диденко, известный гость."
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 543
+    replies_count: 142
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 19.83s Umputun обращается 'Оксана, почему опоздала, откуда ты и как до жизни такой дошла?' - и Marin_k_a отвечает про выезд и плохой звук. Это Марина, бывшая ведущая. Позже в 37.56s она говорит 'С нами еще есть Бобок' - ведёт перекличку как соведущая."
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка распознавания Gray. Контекст: обсуждение украинского языка. Umputun говорит 'парасолька', затем SPEAKER_05 говорит 'В этом языке. Парасолька.' - это продолжение реплики Gray, который только что говорил по-украински ('А че вот сегодня ржуть?', 'Це мабуть бобук ржет'). После SPEAKER_05 сразу Gray продолжает."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.9
+          reason: "Контекст украинского языка, Gray только что говорил по-украински"
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 16
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка распознавания Marin_k_a. Все реплики SPEAKER_06 по контексту принадлежат женщине: 'согласна' (212.4s), 'я тоже писала программу на бумажке' (775.8s), 'у вас весеннее у всех настроение' (6332.7s). В этом эпизоде единственная женщина - Marin_k_a (Марина). Bobuk обращается к ней 'ты' перед репликами SPEAKER_06."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.95
+          reason: "Женский голос, использует женский род ('согласна', 'писала'), единственная женщина в эпизоде"
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 15
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Реплики в разных контекстах: (1) 2707-2723s - рекламный блок (IT-событие в Таллинне), чередуется с _ad, это голос диктора рекламы. (2) 5625-5630s - осмысленные реплики про опрос, скорее всего один из ведущих (контекст диалога с Umputun)."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "_ad"
+          confidence: 0.9
+          reason: "Реплики 2707-2723s - часть рекламного блока"
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Реплики 5625-5630s могут быть Bobuk или другим ведущим"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5625.09
+          etime: 5630.02
+          text: "То есть даже те 21%, которые считают, что этого делать неправильно. Они просто не ответили."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная реплика 'Это нормальные пионеры' (3886.8s) между репликами Umputun. Короткая реплика-комментарий. Имя спикера указывает на отменённое присвоение Эльдару, но Эльдар не участвует в этом эпизоде. Скорее всего это реплика одного из ведущих (Bobuk, Gray или PetrDidenko)."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Короткий комментарий в стиле Bobuk"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможно Gray"
+        - person_id: "petr_didenko"
+          confidence: 0.2
+          reason: "Возможно Пётр"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3886.85
+          etime: 3890.59
+          text: "Это нормальные пионеры."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: "2 реплики (4 сек) скорее всего Gray - ошибка распознавания в контексте украинского языка"
+    - speaker: "SPEAKER_06"
+      issue: "6 реплик (16 сек) скорее всего Marin_k_a - женский голос, единственная женщина в эпизоде"
+    - speaker: "SPEAKER_00"
+      issue: "6 реплик в двух контекстах: реклама (4 реплики) и диалог (2 реплики) - требует разделения"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Одиночная реплика неясного происхождения, Эльдара нет в эпизоде"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 352
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Gray"
+    confidence: high
+    reason: "Контекст украинского языка, Gray только что говорил по-украински, продолжение той же темы"
+
+  - type: rename
+    episode: 352
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Женский род в речи ('согласна', 'писала'), единственная женщина в эпизоде - Marin_k_a"
+
+  - type: rename
+    episode: 352
+    from_speaker: "SPEAKER_00"
+    to_speaker: "_ad"
+    time_range: [2707, 2724]
+    confidence: high
+    reason: "Часть рекламного блока, чередуется с уже размеченной рекламой"
+
+# Примечания
+notes: |
+  Эпизод 352 от 10 августа 2013 года.
+  Состав: Umputun, Bobuk, Gray, Marin_k_a (Марина), PetrDidenko (Пётр Диденко с Кипра).
+
+  PetrDidenko и Marin_k_a корректно идентифицированы в транскрипте.
+
+  Основные проблемы:
+  1. SPEAKER_05 (2 реплики) - очевидно Gray по контексту
+  2. SPEAKER_06 (6 реплик) - очевидно Marin_k_a по женскому роду
+  3. SPEAKER_00 - смешаны реклама и возможно один из ведущих
+  4. SPEAKER_MISATTRIBUTED_ELDAR - одиночная неясная реплика

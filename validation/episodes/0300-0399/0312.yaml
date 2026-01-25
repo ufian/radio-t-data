@@ -1,0 +1,169 @@
+episode: 312
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [EldarMurtazin]
+  total_duration_sec: 7398
+  notes: |
+    Marin_k_a размечена как участник, но это ошибка — на самом деле это Ksenks.
+    Umputun многократно называет её "Ксюша" и даже оговаривается "я тебя опять чуть Марусей назвал" (5616s).
+
+# Детальный анализ спикеров
+speaker_analysis:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1175
+    replies_count: 244
+    first_appearance: 18
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это ошибочная разметка. На самом деле это Ksenks (Ксюша).
+        Доказательства:
+        1. Umputun в начале эпизода (15s): "Но мы, Ксюша, с тобой сдержимся"
+        2. Umputun в (5616s): "Ксюша, я тебя опять чуть Марусей назвал" — прямое признание оговорки
+        3. На протяжении всего эпизода Umputun обращается к ней "Ксюша" (15+ раз)
+        4. В контексте (8030-8031s) Umputun говорит "Маруся, Господи" и она отвечает "Ксюша, так я сказал" — поправляет его
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        - 15.4s: "Но мы, Ксюша, с тобой сдержимся"
+        - 5616.7s: "Ксюша, я тебя опять чуть Марусей назвал"
+        - 8030-8031s: Диалог где Umputun оговаривается "Маруся" и она поправляет на "Ксюша"
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 2030
+    replies_count: 464
+    first_appearance: 639
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        - 630.3s [Umputun]: "Да, а у нас подключается Эльдар, который известный аналитик по всяким глупостям"
+        - 637.4s [Umputun]: "Эльдар, с нами?"
+        - 638.8s [EldarMurtazin]: "Привет, с вами."
+
+  - speaker: "Bobuk"
+    total_duration_sec: 1317
+    replies_count: 374
+    first_appearance: 2486
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "bobuk"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        - 2523.8s [Umputun]: "Дорогие же наши, это к нам Бобук присоединился"
+        - 2525.8s: "Вы можете не узнать из-за дуже поганого звука, который у Бобука есть"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 10
+    replies_count: 3
+    first_appearance: 6326
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три коротких реплики от разных участников, неправильно размеченные:
+        1. 6326.4s "Естественно" — контекст: Umputun говорит "Ты же знаешь, я вашего брата за бездельника считаю",
+           ответ "Естественно" скорее всего от EldarMurtazin (к нему обращается Umputun)
+        2. 7711.2s и 7718.0s — две реплики подряд про "извращенцев с iPhone", в контексте диалога
+           между Bobuk и кем-то. Судя по содержанию ("Хотя мы не все такие") это скорее всего Ksenks
+      possible_matches:
+        - person_id: "eldar_murtazin"
+          confidence: 0.7
+          reason: "Реплика 6326.4s — ответ на обращение Umputun к Эльдару"
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплики 7711-7718s — женский голос в диалоге"
+      voice_task:
+        needed: true
+        reference_segments:
+          - stime: 6326.4
+            etime: 6327.4
+            text: "Естественно."
+            probable_speaker: "EldarMurtazin"
+          - stime: 7711.2
+            etime: 7719.4
+            text: "Ты знаешь, сейчас большинство тех, кто слушает, мне кажется, подумали, что все, кто пользуется айфонами, извращенцы. Хотя мы не все такие."
+            probable_speaker: "Ksenks"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 3
+    replies_count: 1
+    first_appearance: 2180
+    pattern: single
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна короткая реплика посреди речи Marin_k_a (которая на самом деле Ksenks).
+        Реплика "В общем, Apple не справляется с тем спросом, который существует" —
+        это продолжение мысли Ksenks о дефиците iPhone (см. контекст 2168-2190s).
+        Метка SPEAKER_MISATTRIBUTED_LAVALE указывает, что это была ошибочная атрибуция Lavale,
+        которую уже отменили, но не переразметили корректно.
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        - 2168.4s [Marin_k_a]: "Это свидетельствует о том, что Apple, наверное, не справляет..."
+        - 2180.0s [SPEAKER_MISATTRIBUTED_LAVALE]: "В общем, Apple не справляется с тем спросом, который существует"
+        - 2185.3s [Marin_k_a]: "Если бы этот дефицит создавался искусственно..."
+        Это одна непрерывная мысль от Ksenks, разбитая ошибкой транскрипции.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a"
+      issue: |
+        КРИТИЧЕСКАЯ ОШИБКА: Marin_k_a — это неправильная разметка.
+        Участница — Ksenks (Ксюша), что многократно подтверждается в тексте.
+        Вероятно, ошибка произошла при автоматической разметке или при слиянии данных.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 312
+    from_speaker: "Marin_k_a"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun многократно называет участницу "Ксюша" (15+ раз).
+      Прямое подтверждение в 5616s: "Ксюша, я тебя опять чуть Марусей назвал".
+      Поправка от неё самой в 8031s после оговорки "Маруся".
+
+  - type: rename
+    episode: 312
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Реплика является частью непрерывной речи Ksenks о дефиците iPhone.
+      Контекст до и после принадлежит тому же спикеру.
+
+  - type: rename
+    episode: 312
+    from_speaker: "SPEAKER_01"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Требуется voice comparison для точной атрибуции.
+      Вероятно: 6326s -> EldarMurtazin, 7711-7718s -> Ksenks.
+
+# Аудио для верификации
+audio_reference:
+  url: null  # Файл 312_desc.json не найден в data_clean
+  note: "Необходимо найти URL аудио в исходных данных для voice comparison"

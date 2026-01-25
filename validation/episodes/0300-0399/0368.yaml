@@ -1,0 +1,213 @@
+episode: 368
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: 6414  # Based on Bobuk's last reply at ~6407s
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 521
+    replies_count: 209
+    pattern: consecutive  # Часто говорит несколько реплик подряд
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun обращается к кому-то как "Ксюша" (многократно, ~40 раз в выпуске)
+        2. SPEAKER_01 и Marin_k_a чередуются в диалогах как два разных человека
+        3. Marin_k_a уже идентифицирована как Марина в people.yaml
+        4. SPEAKER_01 говорит от первого лица женского рода: "Я поняла уже", "Даже когда приходила раньше"
+        5. Значительное присутствие (209 реплик, 521 сек) соответствует роли ведущей
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Высокая уверенность в идентификации
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 566
+    replies_count: 110
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "registry"
+      confidence: high
+      evidence: "Уже присутствует в people.yaml как бывшая ведущая Марина"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 140
+    replies_count: 31
+    pattern: scattered  # Появляется в разных частях выпуска
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "registry"
+      confidence: high
+      evidence: "Уже присутствует в people.yaml как известный мобильный аналитик"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered  # 4 реплики в разные моменты: 1774s, 5693s, 6717s
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (1-2.5 сек), разбросаны по выпуску.
+        Содержание: "Левши-то и не русские", "Полно всяких разных", "Почему?", "Чемодан не там."
+        Скорее всего ошибка распознавания - короткие вставки от кого-то из присутствующих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Первые две реплики идут после вопроса Umputun о 'русских умельцах'"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Может быть Gray, плохо распознанный"
+
+      voice_task:
+        needed: false  # Слишком короткие сегменты для сравнения голосов
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 9
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Маркировка SPEAKER_MISATTRIBUTED_ указывает, что это уже было определено как ошибочная атрибуция.
+        Реплики: "К тому, что они объявили банкротами" (после вопроса к Ксюше) и "Лучше купить тогда Kindle"
+        По контексту это скорее всего Ksenks или Marin_k_a.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Umputun спрашивает 'А к чему все это, Ксюша?' и следом идёт этот ответ"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Также присутствует в диалоге"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2606.74
+          etime: 2613.68
+          text: "К тому, что они объявили, или точнее, их объявили банкротами."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Маркировка SPEAKER_MISATTRIBUTED_ указывает на ошибочную атрибуцию.
+        Единственная реплика "Вот так знали, что 4 части" (212.9s) - короткая ремарка в середине речи Umputun.
+        Скорее всего это ошибка распознавания голоса Umputun или одной из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Реплика идёт в середине монолога Umputun, может быть его же голос"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Короткая реакция, могла быть от кого-то из ведущих"
+
+      voice_task:
+        needed: false  # Слишком короткий сегмент (2 сек)
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: |
+        Не представлена явно, но идентифицирована как Ksenks по контексту обращений.
+        Рекомендуется переименовать SPEAKER_01 -> Ksenks.
+    - speaker: "Bobuk"
+      issue: |
+        Появляется только с 888 секунды (15 минут), всего 8 реплик за 37 сек.
+        Umputun в начале говорит "Бобука нет" - похоже, Bobuk подключился позже.
+        Низкая активность может указывать на ошибки атрибуции или на то, что он присоединился удалённо.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 368
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun многократно обращается к кому-то как "Ксюша", SPEAKER_01 отвечает.
+      Marin_k_a уже идентифицирована как Марина, это другой человек.
+      SPEAKER_01 говорит от женского лица и участвует активно (209 реплик).
+
+  - type: delete_or_merge
+    episode: 368
+    from_speaker: "SPEAKER_02"
+    to_speaker: null  # Требуется ручная проверка
+    confidence: low
+    reason: |
+      Только 4 коротких реплики (6 сек). Вероятно ошибки распознавания.
+      Рекомендуется ручная проверка аудио для определения реального спикера.
+
+  - type: review_needed
+    episode: 368
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"  # Предположительно
+    confidence: medium
+    reason: |
+      Первая реплика идёт прямо после обращения "Ксюша" от Umputun.
+      Требуется voice comparison для подтверждения.
+
+  - type: review_needed
+    episode: 368
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Единственная короткая реплика (2 сек). Слишком мало данных для идентификации.

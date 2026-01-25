@@ -1,0 +1,246 @@
+episode: 393
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7500  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1434
+    replies_count: 345
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале эпизода (74s) Umputun говорит 'Поэтому я тебя, Ксюша, не назвал Маринкой' - подтверждает что это Марина, бывшая ведущая"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 382
+    replies_count: 61
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun приветствует гостя по имени: 'Здравствуй, Максим' (3427s) и 'Так, Максим' (3439s). Гость представляется как пользователь из Курска, обсуждает поисковик 'Спутник'"
+      possible_matches:
+        - person_id: "guest_maxim_kursk"
+          confidence: 0.9
+          reason: "Явное представление по имени, из Курска, обсуждает Спутник"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3472.63
+          etime: 3489.78
+          text: "Безусловно, я не с точки зрения программирования скажу, а просто с точки зрения пользователя обычного. То есть понятно, что я сейчас, естественно, пользуюсь гуглом, например, и особо не возникает желания взять, открыть спутник, что-то поискать."
+      notes: "Нужно добавить в people.yaml как нового гостя Максим из Курска"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 168
+    replies_count: 34
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun приветствует: 'Вот, Дмитрий, здравствуй' (1390s) и говорит 'Ты у нас защитник поверхностей' (1395s). Гость обсуждает Microsoft Surface и технологии снижения лага тач-экранов"
+      possible_matches:
+        - person_id: "guest_dmitry_surface"
+          confidence: 0.9
+          reason: "Явное представление по имени, эксперт по Surface"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1497.14
+          etime: 1528.70
+          text: "Когда используете этот новый экран, технологию, то там линия, она как будто к пальцу привязана. Это видно вот именно в сравнении, когда... когда этим начинаешь пользоваться. И то, что они приделали к Surface перо с степенями чувствительности и таким отсутствием лага, это будет очень круто именно при использовании приевого ввода."
+      notes: "Нужно добавить в people.yaml как нового гостя Дмитрий. Вероятно, он же отмечен как EldarMurtazin и SPEAKER_MISATTRIBUTED_PETR"
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 83
+    replies_count: 13
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная атрибуция - это не Эльдар Муртазин. Реплики принадлежат гостю Дмитрию (SPEAKER_01), который обсуждает Surface. Эльдар Муртазин - известный мобильный аналитик с узнаваемым голосом и стилем, эти реплики не соответствуют его манере"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "guest_dmitry_surface"
+          confidence: 0.85
+          reason: "Реплики продолжают мысль SPEAKER_01 (Дмитрия) о Surface и тач-экранах"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1410.97
+          etime: 1432.81
+          text: "Вот, скажу, ну, начну с того, что около года назад от Microsoft Research было видео, в котором они рассказывали про то, что они... Они разработали некую технологию, которая помогает им сделать практически нулевой отклик при работе с тач-экраном."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 19
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Ранее ошибочно присвоено PetrDidenko и отменено (MISATTRIBUTED). Реплики являются частью диалога гостя Дмитрия о лаге тач-экранов"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "guest_dmitry_surface"
+          confidence: 0.85
+          reason: "Реплики о лаге iPad при рисовании - продолжение темы Дмитрия"
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики (1252s и 4062s) в разных частях эпизода - вероятно ошибки распознавания разных спикеров"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплика 'То есть, можно рядом пробовать' (1252s) между репликами Gray"
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Реплика 'Ну, это не ежедневный запрос' (4062s) может быть от любого ведущего"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 5
+    replies_count: 4
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "4 короткие реплики (<2 сек каждая) разбросаны по всему эпизоду: 'Ну, я не знаю', 'Да, понимаю', 'Мне кажется, да', 'Две минуты?' - типичные ошибки распознавания коротких фраз"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Могут быть репликами Марины, разбросанными из-за ошибок распознавания"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Одна реплика 'Я вот удивительно согласна' (961s) - женский род указывает на Marin_k_a"
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Грамматический род 'согласна' указывает на женщину, в эпизоде только одна женщина - Марина"
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.85
+          reason: "Единственная женщина в эпизоде, грамматический род совпадает"
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: "Ошибочная атрибуция - реплики принадлежат гостю Дмитрию, не Эльдару Муртазину"
+    - speaker: "SPEAKER_01"
+      issue: "Гость Дмитрий идентифицирован, но его реплики разбиты на несколько спикеров (SPEAKER_01, EldarMurtazin, SPEAKER_MISATTRIBUTED_PETR)"
+    - speaker: "SPEAKER_08"
+      issue: "Гость Максим из Курска идентифицирован, но отсутствует в people.yaml"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 393
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Грамматический род 'согласна' указывает на единственную женщину в эпизоде"
+
+  - type: rename
+    episode: 393
+    from_speaker: "EldarMurtazin"
+    to_speaker: "Guest_Dmitry"
+    confidence: high
+    reason: "Ошибочная атрибуция - это гость Дмитрий, представленный Umputun'ом в 1390s"
+
+  - type: rename
+    episode: 393
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Guest_Dmitry"
+    confidence: high
+    reason: "Гость представлен как Дмитрий, 'защитник поверхностей'"
+
+  - type: rename
+    episode: 393
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Guest_Dmitry"
+    confidence: high
+    reason: "Реплики продолжают тему Дмитрия о лаге тач-экранов"
+
+  - type: rename
+    episode: 393
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Guest_Maxim"
+    confidence: high
+    reason: "Гость представлен по имени Максим, из Курска"
+
+# Необходимые дополнения в people.yaml
+people_yaml_additions:
+  - id: "guest_dmitry_surface"
+    canonical_name: "Guest_Dmitry"
+    aliases: []
+    real_name: "Дмитрий"
+    info: "Гость в выпуске 393, эксперт по Microsoft Surface"
+
+  - id: "guest_maxim_kursk"
+    canonical_name: "Guest_Maxim"
+    aliases: []
+    real_name: "Максим"
+    info: "Гость в выпуске 393, из Курска, обсуждал поисковик Спутник"
+
+# Комментарии
+notes: |
+  Эпизод 393 от 24 мая 2013 года.
+
+  Ведущие: Umputun и Gray. Bobuk отсутствует (упоминается "где блуждает Бобук?").
+
+  Постоянный гость: Marin_k_a (Марина, бывшая ведущая) - 345 реплик.
+
+  Приглашённые гости:
+  1. Дмитрий - "защитник поверхностей" (Surface), появляется ~1390s.
+     Его реплики ошибочно разбиты на SPEAKER_01, EldarMurtazin и SPEAKER_MISATTRIBUTED_PETR.
+
+  2. Максим из Курска - появляется ~3427s для обсуждения поисковика "Спутник".
+     Отмечен как SPEAKER_08.
+
+  SPEAKER_03, SPEAKER_04, SPEAKER_06 - короткие ошибочные атрибуции, вероятно реплики ведущих или Марины.

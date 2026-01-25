@@ -1,0 +1,215 @@
+episode: 314
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a, SPEAKER_01]
+  total_duration_sec: 7900  # ~2:11:40 (оценка по таймстампам)
+  notes: "Выпуск 314 (число Пи) от 10 ноября 2012 года"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 824
+    replies_count: 242
+    pattern: consecutive
+    first_appearance_sec: 44.83
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "misha_chernomordikov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Бобук явно представляет гостя в 57-66 сек:
+        - "Это Миша Черномордиков."
+        - "Его знают почти все, кто занимается интернетом в России."
+        - "Он действительно называется руководитель евангелистов... в российском отделении компании Microsoft."
+
+        SPEAKER_01 отвечает на вопросы про Microsoft сразу после представления (71 сек):
+        - "Нет, у нас в Европе гораздо больше."
+
+        К нему обращаются по имени "Миша" 30+ раз на протяжении всего выпуска.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 402
+    replies_count: 117
+    pattern: consecutive
+    first_appearance_sec: 20.99
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация - уже в справочнике
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Сама представляется в 312.9 сек:
+        - "Меня Маринкой, а Мишу Пете, все правильно."
+
+        Umputun обращается к ней "Ксюш" в 18 сек (возможно оговорка или путаница),
+        но это Марина (бывшая ведущая), которая уже есть в people.yaml.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 15
+    replies_count: 4
+    pattern: scattered
+    first_appearance_sec: 1938.75
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это реплики, ранее ошибочно приписанные Петру Диденко.
+        Судя по контексту и содержанию (обсуждение Surface, Outlook, Windows RT),
+        эти реплики скорее всего принадлежат гостю Мише Черномордикову (SPEAKER_01),
+        так как он представитель Microsoft и обсуждает их продукты.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "misha_chernomordikov"
+          confidence: 0.8
+          reason: |
+            Контекст реплик связан с Microsoft продуктами:
+            - 1938.75: "Даже в Outlook... А где вы нашли Outlook на Surface, простите?"
+            - 2469.11: "Нет, именно VivaTab RT и Surface, это оба устройства на операционке одной, это Windows RT."
+            Миша как евангелист Microsoft мог бы так говорить.
+
+      voice_task:
+        needed: true
+        reason: "Требуется сравнение голоса с SPEAKER_01 для подтверждения"
+        reference_segment:
+          stime: 1938.75
+          etime: 1942.89
+          text: "Даже в Outlook, вот все-таки кому-то Outlook... А где вы нашли Outlook на Surface, простите?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 7467.22
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одиночная реплика, ранее ошибочно приписанная Эльдару Муртазину.
+        По контексту это продолжение рассказа Gray про планшеты в Эфиопии.
+        Gray говорит перед этой репликой, и сразу после.
+        Вероятнее всего это реплика одного из ведущих (Gray или Umputun).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: |
+            Контекст: Gray рассказывает про эксперимент с планшетами в Эфиопии,
+            эта реплика является логичным продолжением истории:
+            "Через пять месяцев дети, среди прочего, научились хакать Android."
+            Сразу после этого Gray продолжает: "Ну, что, хорошо."
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Umputun также участвует в обсуждении этой темы"
+
+      voice_task:
+        needed: true
+        reason: "Требуется определить принадлежность реплики"
+        reference_segment:
+          stime: 7467.22
+          etime: 7470.36
+          text: "Через пять месяцев дети, среди прочего, научились хакать Android."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "Идентифицирован как Миша Черномордиков, но ещё не добавлен в people.yaml"
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Требуется voice comparison для подтверждения принадлежности к SPEAKER_01"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Требуется voice comparison для определения спикера (вероятно Gray)"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 314
+    from_speaker: "SPEAKER_01"
+    to_speaker: "MishaChernomordikov"
+    confidence: high
+    reason: |
+      Явное представление Бобуком: "Это Миша Черномордиков."
+      Руководитель евангелистов в российском отделении Microsoft.
+      К нему обращаются по имени "Миша" 30+ раз.
+
+  - type: add_to_people_yaml
+    person:
+      id: "misha_chernomordikov"
+      canonical_name: "MishaChernomordikov"
+      aliases: ["Миша Черномордиков", "Черномордиков"]
+      real_name: "Михаил Черномордиков"
+      info: "Руководитель евангелистов Microsoft Russia, выпуск 314"
+    confidence: high
+    reason: "Новый гость, явно представленный в выпуске"
+
+  - type: rename
+    episode: 314
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "MishaChernomordikov"
+    confidence: medium
+    reason: |
+      Реплики про Microsoft продукты (Surface, Outlook, Windows RT).
+      Требуется voice comparison для подтверждения.
+      Если голос совпадает с SPEAKER_01, переименовать.
+
+  - type: rename
+    episode: 314
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: |
+      Одиночная реплика внутри рассказа Gray про планшеты в Эфиопии.
+      Требуется voice comparison для подтверждения.
+
+# Дополнительные заметки
+notes: |
+  Эпизод 314 ("число Пи") от 10 ноября 2012 года.
+
+  Участники:
+  - Ведущие: Umputun, Bobuk, Gray
+  - Гости: Марина (Marin_k_a), Миша Черномордиков (SPEAKER_01)
+
+  Особенности:
+  - Umputun в начале обращается к Марине как "Ксюш" (18 сек) - возможно оговорка
+  - Упоминается "Петя" (Пётр Диденко) - но он, похоже, не участвует в этом выпуске
+  - SPEAKER_MISATTRIBUTED метки указывают на ранее отменённые ошибочные присвоения
+
+  Требуется:
+  1. Добавить Мишу Черномордикова в people.yaml
+  2. Переименовать SPEAKER_01 -> MishaChernomordikov
+  3. Voice comparison для SPEAKER_MISATTRIBUTED_PETR и SPEAKER_MISATTRIBUTED_ELDAR

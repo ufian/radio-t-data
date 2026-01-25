@@ -1,0 +1,186 @@
+episode: 322
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6432  # ~1h47m эфира
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 239
+    replies_count: 104
+    pattern: consecutive  # появляется группами, участвует в диалогах
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. В начале выпуска (51-62s) Umputun обращается к "Ксюше",
+           SPEAKER_00 сразу отвечает "Хорошо, я прослежу"
+        2. Реплика в 1007s "Так что заберите свою Оксану и обратно" -
+           шутка про альтернативное имя (Umputun говорил "буду называть Оксаной")
+        3. В транскрипте 0 реплик Ksenks, хотя она явно участвует в выпуске
+        4. Характер реплик соответствует со-ведущей (вопросы, комментарии)
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 551
+    replies_count: 95
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Marin_k_a уже в справочнике people.yaml как бывшая ведущая Марина.
+        Umputun в начале (58-62s) говорит "Маринкой почти не буду [называть]" -
+        подтверждает присутствие Марины в выпуске.
+        Реплики осмысленные, участие в диалогах.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered  # разбросаны по выпуску
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие изолированные фразы (1-3 сек), разбросанные по выпуску.
+        Эльдар Муртазин не был гостем этого выпуска (не представлен, не упомянут).
+        Вероятно ошибки автоматического распознавания других ведущих.
+        Маркер MISATTRIBUTED указывает, что это уже было выявлено ранее.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Короткие реплики, стиль похож на Umputun"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Может быть ошибка распознавания голоса Bobuk"
+
+      voice_task:
+        needed: false  # уже помечено как misattributed
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 коротких междометия: "Черт" (750s) и "Угу" (4860s).
+        Суммарно 3 секунды. Типичные ошибки сегментации/распознавания.
+        Скорее всего реплики кого-то из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Междометия в стиле Bobuk"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Может быть Gray"
+
+      voice_task:
+        needed: false  # слишком короткие для идентификации
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика 2 сек: "То есть, в принципе, лет 10 назад" (482s).
+        Lavale не была гостем этого выпуска.
+        Маркер MISATTRIBUTED указывает, что это уже было выявлено ранее.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Женский голос, может быть Марина"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Или Ksenks"
+
+      voice_task:
+        needed: false  # уже помечено как misattributed
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: |
+        SPEAKER_00 должен быть переименован в Ksenks.
+        В начале выпуска Ksenks представлена, но все её реплики
+        записаны как SPEAKER_00.
+    - speaker: "Ksenks"
+      issue: |
+        В транскрипте 0 реплик Ksenks, хотя она участвует в выпуске.
+        Все реплики ошибочно размечены как SPEAKER_00.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 322
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_00 это Ksenks. Доказательства:
+      1. Umputun представляет Ксюшу в начале, SPEAKER_00 отвечает
+      2. Шутка про "Оксану" (альтернативное имя Ksenks)
+      3. 0 реплик Ksenks в транскрипте при явном участии
+
+  - type: delete_or_reassign
+    episode: 322
+    from_speaker: "SPEAKER_01"
+    to_speaker: null  # требует ручной проверки
+    confidence: low
+    reason: |
+      Только 2 междометия (3 сек). Недостаточно данных для
+      автоматического переименования. Рекомендуется ручная проверка
+      или удаление как шума.

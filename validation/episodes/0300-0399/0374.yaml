@@ -1,0 +1,232 @@
+episode: 374
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko, Marin_k_a]
+  total_duration_sec: ~7840
+
+# Важное замечание: Ksenks отсутствует как отдельный спикер (0 реплик),
+# но в начале эпизода упоминается "Ксюша" и SPEAKER_00 обращаются как к Ксюше.
+# Это указывает на то, что SPEAKER_00 - это Ksenks.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 361
+    replies_count: 135
+    pattern: consecutive
+    first_appearance_sec: 76.3
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        1) В начале (17.8s) Umputun: "Ксюша привела с собой мальчика"
+        2) После реплики SPEAKER_00 (172.4s) "Мне кажется, забавно" Umputun отвечает (173.9s): "Мне бы твой оптимизм, Ксюша"
+        3) Ksenks как отдельный спикер имеет 0 реплик в эпизоде, хотя упоминается как участник
+        4) Реплики типичные для активного участника дискуссии, а не случайные вставки
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 916
+    replies_count: 298
+    pattern: consecutive
+    first_appearance_sec: 23.3
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Представлен в начале эпизода:
+        - (17.8s) Umputun: "Ксюша привела с собой мальчика. Здравствуй, мальчик."
+        - (23.3s) PetrDidenko: "Здравствуйте, девочки."
+        - (39.1s) Umputun: "Петя, хорошо, что зашел. Давно тебя не было."
+        - (42.8s) PetrDidenko: "Да, я, насколько я понимаю, где-то с августа..."
+        Полностью соответствует Пётру Диденко из people.yaml
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 324
+    replies_count: 64
+    pattern: consecutive
+    first_appearance_sec: 168.0
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Marin_k_a - известный бывший ведущий (Марина) из people.yaml.
+        Активно участвует в дискуссиях на техническую тематику (iPhone, CentOS, Android).
+        Реплики осмысленные, длинные, встроены в диалог как полноценный участник.
+        Примеры: обсуждение iPhone (168s), CentOS сборки (3513s), Evernote (5343s).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 33
+    replies_count: 7
+    pattern: scattered
+    first_appearance_sec: 722.5
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Маркер отменённого ошибочного присвоения. Реплики были ошибочно приписаны Эльдару Муртазину,
+        но он не участвует в этом эпизоде. Эти реплики разбросаны по эпизоду и скорее всего
+        принадлежат одному из ведущих или гостей с похожим голосом.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Некоторые реплики тематически близки к обычным комментариям Bobuk"
+        - person_id: "petr_didenko"
+          confidence: 0.3
+          reason: "Голос мог быть спутан, Петя - также мужской голос"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1160.77
+          etime: 1165.72
+          text: "И BlackBerry вообще считает, что они сейчас вот с клавиатурами порвут всех."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 14
+    replies_count: 4
+    pattern: scattered
+    first_appearance_sec: 739.9
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Маркер отменённого ошибочного присвоения. Реплики были ошибочно приписаны Lavale,
+        но Lavale (бывшая ведущая) не участвует в этом эпизоде.
+        Короткие реплики разбросаны по эпизоду.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Женский голос, тематика реплик близка к Марине"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Женский голос, возможно ошибка распознавания Ксюши"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3408.96
+          etime: 3413.1
+          text: "Не как бы 'Интерпрайз', а просто 'Интерпрайз', где за 'Архел' платят?"
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 9
+    replies_count: 6
+    pattern: scattered
+    first_appearance_sec: 226.7
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Очень короткие реплики (1-3 секунды) разбросаны случайным образом по эпизоду.
+        Типичные вставки: "И тебе не положено было радоваться", "На тему айфона", "Хорошо".
+        Это классический паттерн ошибок автоматического распознавания спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Реплики встроены между репликами Gray и Bobuk, возможно Gray"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Похожи на короткие комментарии"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткие реплики для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Ksenks"
+      issue: >
+        Ksenks как отдельный спикер имеет 0 реплик, но SPEAKER_00 (135 реплик)
+        идентифицируется как Ksenks по контексту. Рекомендуется переименование.
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: >
+        7 реплик с маркером отменённого присвоения требуют переатрибуции.
+        Эльдар Муртазин не участвовал в этом эпизоде.
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: >
+        4 реплики с маркером отменённого присвоения требуют переатрибуции.
+        Lavale не участвовала в этом эпизоде.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 374
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Прямое обращение "Ксюша" после реплики SPEAKER_00,
+      отсутствие Ksenks как отдельного спикера при явном упоминании участия.
+
+# Задачи на ручную проверку
+manual_review_tasks:
+  - task: "voice_comparison"
+    speakers: ["SPEAKER_MISATTRIBUTED_ELDAR"]
+    audio_url: null  # Нужно получить из desc.json оригинального data/
+    description: "Определить реального автора 7 реплик, ошибочно приписанных Эльдару"
+
+  - task: "voice_comparison"
+    speakers: ["SPEAKER_MISATTRIBUTED_LAVALE"]
+    description: "Определить реального автора 4 реплик, ошибочно приписанных Lavale"
+
+  - task: "contextual_review"
+    speakers: ["SPEAKER_05"]
+    description: "Проверить контекст коротких реплик и переатрибутировать"

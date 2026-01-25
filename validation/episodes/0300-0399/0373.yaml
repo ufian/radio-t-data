@@ -1,0 +1,273 @@
+episode: 373
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  # Примечание: Ksenks НЕ присутствует как author в транскрипте,
+  # но ведущие обращаются к "Ксюше" - отвечают Marin_k_a и SPEAKER_00
+  total_duration_sec: 11000  # приблизительно ~3 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1963
+    replies_count: 379
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        В начале выпуска (строка 34-41, 118) Umputun говорит: "гость из дружественного подкаста".
+        В строке 550 Umputun обращается: "Алексей, пока мы не отошли далеко от этой темы...".
+        В строке 586 упоминается: "Скорее всего, Абашев".
+        Это указывает на гостя по имени Алексей, возможно связанного с Антоном Абашевым.
+
+        SPEAKER_01 активно участвует в технических дискуссиях:
+        - Облачные сервисы Amazon (Китай, CloudFront)
+        - Юнит-тестирование, CI/CD, проблемы с моками
+        - Безопасность и backdoors
+        - Stack Overflow
+
+        Суммарно говорит ~1963 сек (13% эпизода) - это полноценный гость.
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Имя Алексей, технические темы. Но Alek.sys - постоянный ведущий, не гость."
+        - person_id: null
+          confidence: 0.6
+          reason: |
+            Возможно это Алексей из подкаста AppleInsider.ru (связан с Антоном Абашевым).
+            Требуется добавить в people.yaml или уточнить по голосу.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1345
+          etime: 1371
+          text: "А вот тебя не пугает, что, опять же, да, я недавно ссылка прошла, что Амазон запустился в Китае, и там они предоставляют отдельный аккаунт, где надо указать, что это происходит, что этот юзер в Китае..."
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 564
+    replies_count: 99
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "known_speaker"
+      confidence: high
+      evidence: |
+        Marin_k_a присутствует в people.yaml как бывшая ведущая Марина.
+        Однако есть несоответствие: Umputun обращается к "Ксюше" (строка 154),
+        а отвечает Marin_k_a (строка 161). Это может означать:
+        1. Марина также известна как "Ксюша" (маловероятно)
+        2. Ошибка разметки - часть реплик Ksenks размечены как Marin_k_a
+        3. В этом выпуске действительно была Марина, а не Ксения
+
+        Вывод: Marin_k_a - корректная разметка, но требуется проверка
+        консистентности с обращениями "Ксюша".
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 339
+    replies_count: 136
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        В строке 8695-8704: Bobuk говорит "Ксюша замолчала", затем SPEAKER_00 отвечает "Да, да, знаю."
+        Это прямое указание, что SPEAKER_00 = Ksenks (Ксюша).
+
+        Также в начале выпуска (строка 178-181): Umputun спрашивает "Смотрела телевизор?",
+        SPEAKER_00 отвечает "У меня нет телевизора" - продолжение диалога с "Ксюшей".
+
+        Однако Ksenks отсутствует в списке авторов этого эпизода.
+        Видимо часть её реплик размечены как SPEAKER_00, часть как Marin_k_a.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.85
+          reason: "Прямое обращение по имени 'Ксюша' с ответом от SPEAKER_00"
+        - person_id: "marin_k_a"
+          confidence: 0.15
+          reason: "Возможно это та же женщина, что и Marin_k_a (ошибка сегментации)"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 82.6
+          etime: 97.93
+          text: "В смысле, то есть ты, если переезжаешь границу, то сразу президент меняется? У тебя так? Да? Интересно. [...] В общем, не видела президента."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 14
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (1-4 сек) в случайные моменты.
+        Маркер MISATTRIBUTED указывает на отменённое ошибочное присвоение Эльдару Муртазину.
+        Эти реплики скорее всего принадлежат SPEAKER_01 или другим участникам.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики ("А, можно, можно.", "Можно, можно.", "У меня прям противоположный опыт.")
+        Всего 4 секунды на 3 реплики. Скорее всего ошибка сегментации -
+        это фрагменты речи других участников.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 14
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика 14 секунд в 9196s. Маркер MISATTRIBUTED указывает
+        на отменённое ошибочное присвоение Петру Диденко.
+        Реплика про "жену айтишника" - скорее всего принадлежит одному из гостей.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна очень короткая реплика (2 сек). Маркер MISATTRIBUTED указывает
+        на отменённое ошибочное присвоение Лаваль.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: |
+        Гость представлен как "из дружественного подкаста", назван "Алексеем",
+        упомянут "Абашев". Но имя не указано явно в начале.
+        Требуется идентификация: возможно Алексей из AppleInsider.ru.
+
+    - speaker: "Marin_k_a / SPEAKER_00"
+      issue: |
+        Ведущие обращаются к "Ксюше", но в разметке нет Ksenks.
+        Ответы идут от Marin_k_a и SPEAKER_00.
+        Возможные объяснения:
+        1. SPEAKER_00 = Ksenks, Marin_k_a = Марина (две разные женщины)
+        2. Marin_k_a = Ksenks (ошибка в имени автора)
+        3. Ошибка сегментации - одна женщина, два спикера
+
+        Требуется voice comparison для разрешения.
+
+    - speaker: "Gray"
+      issue: |
+        Gray присутствует, первая реплика только в 271s.
+        Это нормально - его представляют позже в выпуске.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 373
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Прямой контекст: "Ксюша замолчала" -> SPEAKER_00 отвечает.
+      Требуется voice comparison для подтверждения.
+
+  - type: merge
+    episode: 373
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "SPEAKER_01"  # или другой участник
+    confidence: low
+    reason: |
+      Короткие реплики, скорее всего принадлежат соседним спикерам.
+      Требуется ручной просмотр контекста каждой реплики.
+
+# Дополнительные примечания
+notes: |
+  Эпизод 373 от 4 января 2014 года - первый выпуск 2014 года.
+
+  Основные проблемы:
+  1. SPEAKER_01 - неидентифицированный гость "Алексей" (1963 сек, 379 реплик)
+  2. Несоответствие Marin_k_a/SPEAKER_00 и обращений к "Ксюше"
+  3. Мелкие ошибки сегментации (SPEAKER_03, MISATTRIBUTED_*)
+
+  Приоритеты для следующих шагов:
+  1. Voice comparison для SPEAKER_01 - определить кто такой "Алексей"
+  2. Voice comparison для SPEAKER_00 vs Ksenks
+  3. Проверить консистентность Marin_k_a в других эпизодах

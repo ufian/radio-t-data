@@ -1,0 +1,311 @@
+episode: 329
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6887  # приблизительно, на основе последних таймстемпов
+
+# Важные замечания
+notes:
+  - "Gray в этом выпуске помечен ОШИБОЧНО - спикер представился как 'Александр, занимаюсь игровой журналистикой'"
+  - "Bobuk появляется только в конце выпуска (2 реплики, 12 сек) - возможно он присоединился позже"
+  - "Umputun обращается к 'Ксюше' в начале, но Ksenks нет в спикерах - вероятно это Marin_k_a или SPEAKER_01"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1121
+    replies_count: 180
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "people.yaml"
+      confidence: high
+      evidence: "Марина (бывшая ведущая) согласно people.yaml. Активно участвует с начала выпуска."
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 997
+    replies_count: 293
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Umputun в начале обращается к 'Ксюше' (19.25s). SPEAKER_01 активно участвует в диалоге с самого начала (92s), женский голос, обсуждает женские темы (подарки на 8 марта, мимоза). Однако Ksenks официально не указана в спикерах этого выпуска."
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Umputun обращается к Ксюше, женский голос, активное участие с начала"
+        - person_id: "marin_k_a"
+          confidence: 0.2
+          reason: "Может быть ошибочное разделение Марины на два спикера"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 152.29
+          etime: 180.75
+          text: "Да, я помню цитату, что «Чего вам, мужчины, вас еще поздравлять?... Да-да-да, я сегодня травлю анекдоты."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 680
+    replies_count: 122
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Звонящий Игорь из Украины. Представился сам: 'Добрый вечер, Игорь меня зовут из недалекой Украины' (1668s). Рассказывает о проблемах с Microsoft и переходе на другие ОС."
+      possible_matches:
+        - person_id: null
+          confidence: 0.95
+          reason: "Это звонящий слушатель, не постоянный гость. Имя: Игорь"
+      voice_task:
+        needed: false
+        note: "Идентифицирован как звонящий Игорь из Украины"
+
+  - speaker: "Gray"
+    total_duration_sec: 147
+    replies_count: 17
+    pattern: consecutive
+    analysis:
+      is_error: true
+      error_reason: "ОШИБОЧНАЯ АТРИБУЦИЯ. Спикер представляется: 'меня зовут Александр, и я как бы занимаюсь игровой журналистикой' (6146s). Это НЕ Gray (Сергей Петренко), а звонящий гость Александр."
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Прямое представление: 'меня зовут Александр'. Gray - это Сергей Петренко, не Александр."
+      voice_task:
+        needed: false
+        note: "Явное представление - это Александр, игровой журналист (звонящий)"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 117
+    replies_count: 22
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: "Обсуждает игровые консоли (PlayStation, Xbox, Nintendo) в том же сегменте, где 'Gray' представляется как Александр. Вероятно это тот же человек - Александр, игровой журналист."
+      possible_matches:
+        - person_id: null
+          confidence: 0.8
+          reason: "Тот же звонящий Александр, игровой журналист. Gray и SPEAKER_06 - один человек."
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6288.29
+          etime: 6311.2
+          text: "На самом деле, в последнее время, конечно, все обсуждают скорее облачный гейминг... И есть еще OnLive, но он, к сожалению, разве только в Америке хорошо работает."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 81
+    replies_count: 31
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Прямое представление: 'Ну, меня зовут Владимир' (6442s). Обсуждает презентацию Sony PlayStation и облачный гейминг."
+      possible_matches:
+        - person_id: null
+          confidence: 0.95
+          reason: "Звонящий Владимир, обсуждает консоли"
+      voice_task:
+        needed: false
+        note: "Идентифицирован как звонящий Владимир"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 54
+    replies_count: 9
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Пометка MISATTRIBUTED указывает на отменённое ошибочное присвоение к EldarMurtazin. Это реплики звонящих слушателей."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Разнородные реплики о Microsoft (1766s), драйверах (2195s), Amazon (2806s), звуке (2950s), Move/Sony (6692s). Последняя реплика (6692s) совпадает по теме со звонящим Александром."
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6692.61
+          etime: 6709.12
+          text: "Sony с проектом Move, который подразумевает под собой джойстик, это более похоже на Wii..."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 21
+    replies_count: 10
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики, разбросанные по выпуску. Вероятно ошибки распознавания голосов Umputun или женских ведущих."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплика 'Я стараюсь сегодня за всех и за бобок с Грэм чуть-чуть' (171s) похожа на Umputun. Но 'Да-да-да, мы молчим, да' (5675s) - может быть кто-то другой."
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Некоторые реплики похожи на стиль Umputun"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Некоторые короткие реплики могут быть женским голосом"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 171.73
+          etime: 175.31
+          text: "Я стараюсь сегодня за всех и за бобок с Грэм чуть-чуть."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 12
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Пометка MISATTRIBUTED указывает на отменённое ошибочное присвоение к Lavale. Две разрозненные реплики."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Одна реплика об ARC (4128s): 'Если функция не create, то она возвращает объект, прикрепленный уже к авторелиз-полу'. Вторая (5806s): 'Я когда спрашивала у них...' - женский голос."
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Женский голос ('спрашивала'), техническая тема"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Женский голос"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5806.76
+          etime: 5812.63
+          text: "Я когда спрашивала у них, а как вы вообще с этой проблемой живете, как вы ее обходите, меньше копипастите?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 7
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Пометка MISATTRIBUTED указывает на отменённое ошибочное присвоение к PetrDidenko. Одна реплика."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Одна реплика о драйверах (2165s): 'Я столкнулся с активным поиском драйверов под эту балалайку...'. Может быть часть разговора звонящего Игоря (SPEAKER_02)."
+      possible_matches:
+        - person_id: null
+          confidence: 0.6
+          reason: "Вероятно продолжение разговора Игоря (SPEAKER_02) о переходе с Windows"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2165.12
+          etime: 2171.74
+          text: "Я столкнулся с активным поиском драйверов под эту балалайку, поскольку облачной платформы в этом чудо-ксероксе нет."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Одно слово 'То есть...' - явная ошибка сегментации/распознавания"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Единственная реплика: 'То есть...' (6021s) длительностью 0.34 сек. Оборванная фраза."
+      voice_task:
+        needed: false
+        note: "Слишком короткий фрагмент для анализа"
+
+  - speaker: "Bobuk"
+    total_duration_sec: 12
+    replies_count: 2
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "bobuk"
+      identification_method: "people.yaml"
+      confidence: high
+      evidence: "Появляется в конце выпуска (6486s). Возможно присоединился к звонку позже или это ошибка распознавания."
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "КРИТИЧЕСКАЯ ОШИБКА: Помечен как Gray, но представляется как Александр (игровой журналист). Требуется переименование."
+    - speaker: "SPEAKER_01"
+      issue: "Не представлен явно, но активно участвует с начала. Вероятно Ksenks (Umputun обращается к Ксюше)."
+    - speaker: "SPEAKER_06"
+      issue: "Вероятно тот же Александр (игровой журналист), что и ошибочно помеченный Gray."
+    - speaker: "Bobuk"
+      issue: "Очень короткое участие (2 реплики), появляется только в конце. Нетипично для ведущего."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 329
+    from_speaker: "Gray"
+    to_speaker: "Guest_Aleksandr_GameJournalist"
+    confidence: high
+    reason: "Спикер представляется: 'меня зовут Александр, и я как бы занимаюсь игровой журналистикой'. Gray - это Сергей Петренко."
+
+  - type: rename
+    episode: 329
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Umputun обращается к Ксюше в начале выпуска, SPEAKER_01 активно участвует, женский голос. Требуется верификация голоса."
+
+  - type: merge
+    episode: 329
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Guest_Aleksandr_GameJournalist"
+    confidence: medium
+    reason: "SPEAKER_06 обсуждает ту же тему (консоли) в том же временном сегменте, что и ошибочно помеченный Gray. Вероятно один человек."
+
+  - type: merge
+    episode: 329
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Guest_Aleksandr_GameJournalist"
+    confidence: low
+    reason: "Последняя реплика (6692s о Sony Move) совпадает по теме и времени с Александром. Остальные реплики требуют проверки."
+
+# Идентифицированные звонящие слушатели
+identified_callers:
+  - name: "Игорь"
+    speaker_id: "SPEAKER_02"
+    location: "Украина"
+    first_appearance: 1668
+    topic: "Переход с Microsoft на альтернативные ОС"
+
+  - name: "Александр"
+    speaker_id: "Gray (ошибочно), SPEAKER_06"
+    profession: "Игровой журналист"
+    first_appearance: 6146
+    topic: "PlayStation 4, консоли нового поколения"
+
+  - name: "Владимир"
+    speaker_id: "SPEAKER_05"
+    first_appearance: 6442
+    topic: "Презентация Sony, облачный гейминг"

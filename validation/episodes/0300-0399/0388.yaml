@@ -1,0 +1,185 @@
+episode: 388
+status: needs_review
+analyzed_at: "2026-01-25T18:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7700  # приблизительно 2ч 8мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 688
+    replies_count: 258
+    pattern: consecutive  # распределены по всему выпуску
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun обращается "Ксюша, ты же не зря тут" (125s) -> SPEAKER_00 отвечает
+        2. SPEAKER_00 использует женский род: "я отказывалась", "я не поняла"
+        3. EldarMurtazin говорит "Обычно Ксюша кушать хочет" (8657s) -> SPEAKER_00 отвечает "Ну, я могу еще потерпеть" (8660s)
+        4. Многочисленные обращения к "Ксюша" по всему выпуску с ответами SPEAKER_00
+        5. Ksenks отсутствует в разметке, но очевидно присутствует в выпуске
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 659
+    replies_count: 123
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Marin_k_a (Марина) - известная бывшая ведущая подкаста.
+        123 реплики распределены по всему выпуску.
+        Участвует в обсуждениях на технические темы.
+        Корректная разметка.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 92
+    replies_count: 14
+    pattern: scattered  # разрозненные реплики по выпуску
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин - известный мобильный аналитик.
+        В этом выпуске НЕ был представлен как гость.
+        Реплики вклиниваются между репликами ведущих без контекста.
+        Пример: "Обычно Ксюша кушать хочет" (8657s) - это явно шутка одного из ведущих, не гостя.
+        Пример: "Любой способ включает, кстати говоря... Там про радиотип" (3551s) - между репликами Gray.
+        92 сек > threshold 60 сек, поэтому не был переименован в SPEAKER_MISATTRIBUTED_ELDAR.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Некоторые реплики по стилю похожи на Umputun"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Возможно ошибка voice recognition"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплики рядом с репликами Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7444.26
+          etime: 7463.45
+          text: "Нет, ну подожди, ты... Поэтому нельзя говорить, что что-то не летит... Потому что из того, что следит за глазами, потому что самое популярное из того, что следит за глазами, это всякие Samsung, по-моему, Galaxy S3, Galaxy S4 и S5, видимо, тоже."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика: "Я тоже не поняла" (7057s) - 1.5 сек.
+        Контекст: Gray говорит "Извините" -> SPEAKER_MISATTRIBUTED_LAVALE "Я тоже не поняла" -> Gray "Ты сказала «блок»"
+        Это явно женщина (одна из двух: Ksenks или Marin_k_a).
+        Lavale в этом выпуске не представлена.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Женский род, вписывается в контекст разговора. SPEAKER_00 (Ksenks) говорит рядом на 7045s"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Marin_k_a также присутствует в выпуске"
+
+      voice_task:
+        needed: false  # слишком короткая реплика для voice comparison
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: "Ведущая Ksenks очевидно присутствует (многочисленные обращения по имени), но размечена как SPEAKER_00"
+
+    - speaker: "EldarMurtazin"
+      issue: "Гость EldarMurtazin не был представлен, но имеет 14 реплик (92 сек). Вероятно ошибка voice recognition."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 388
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_00 = Ksenks на основе:
+      - Прямых обращений "Ксюша" с ответами SPEAKER_00
+      - Женского рода в речи SPEAKER_00
+      - Отсутствия Ksenks в разметке при явном присутствии в выпуске
+      - 258 реплик, 688 сек - типичный объём участия ведущей
+
+  - type: rename
+    episode: 388
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    confidence: medium
+    reason: |
+      EldarMurtazin не был представлен как гость.
+      14 реплик (92 сек) разбросаны между репликами ведущих.
+      Требуется voice comparison для определения реального спикера.
+      Threshold 60 сек не сработал, нужно ручное переименование.
+
+  - type: rename
+    episode: 388
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Единственная реплика "Я тоже не поняла" (7057s).
+      Контекст: Gray "Ты сказала «блок»" - обращение к женщине.
+      SPEAKER_00 (=Ksenks) говорит рядом на 7045s.
+      Скорее всего это Ksenks, но уверенность средняя.
+
+# Примечания
+notes: |
+  Эпизод 388 от 19.04.2014 - день рождения Bobuk.
+  Ведущие: Umputun, Bobuk, Gray, Ksenks (размечена как SPEAKER_00).
+  Гости: Marin_k_a (бывшая ведущая Марина).
+
+  Основная проблема: Ksenks размечена как SPEAKER_00.
+  Вторичная проблема: EldarMurtazin (14 реплик) - ложноположительный voice match.
+
+  Рекомендуется применить suggested_rules после voice verification для EldarMurtazin.

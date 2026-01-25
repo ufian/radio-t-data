@@ -1,0 +1,247 @@
+episode: 387
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7600  # ~2h 6min based on last timestamps
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 627
+    replies_count: 112
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "known_guest"
+      confidence: high
+      evidence: "Известная ведущая (Марина). Упоминается как 'Ксюша' в начале выпуска (44.91s). В people.yaml указана как бывшая ведущая."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 445
+    replies_count: 65
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Представился в 1863.81s: 'Меня зовут Николай, и я руководитель направления облачных услуг этой компании [WebZilla]'"
+
+      possible_matches:
+        - person_id: "nikolay_webzilla"
+          confidence: 0.95
+          reason: "Явное представление. Гость от компании WebZilla."
+
+      voice_task:
+        needed: false
+
+    suggested_name: "NikolayWebZilla"
+    suggested_real_name: "Николай"
+    suggested_info: "Руководитель направления облачных услуг WebZilla, выпуск 387"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 233
+    replies_count: 52
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Представился в 1856.3s: 'Добрый день, меня зовут Константин Безрученко, я CTO компании WebZilla'"
+
+      possible_matches:
+        - person_id: "konstantin_bezruchenko"
+          confidence: 0.95
+          reason: "Явное представление с полным именем и должностью."
+
+      voice_task:
+        needed: false
+
+    suggested_name: "KonstantinBezruchenko"
+    suggested_real_name: "Константин Безрученко"
+    suggested_info: "CTO WebZilla, выпуск 387"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 384
+    replies_count: 134
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка распознавания. Это реплики Marin_k_a (Ksenks). Реплики в 147-157s являются продолжением речи Marin_k_a о том, как она узнала о Heartbleed. Также SPEAKER_01 отвечает на вопросы, заданные Ксюше."
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        - 147.17s: 'Поэтому меня не будили' — продолжение фразы Marin_k_a (141.77s: 'Нет, у меня нет серверов...')
+        - 148.61s: 'Я узнала об этом...' — ответ на вопрос Umputun к Ксюше
+        - 789.26s: технический контекст в диалоге о Heartbleed
+        - 815.28s: 'Просто Финн медленный' — шутка в стиле Ксюши
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 42
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Маркер ошибочной атрибуции. Реплики были ранее ошибочно приписаны Lavale, но это не она. Судя по контексту (технические реплики о Cloudflare, конференциях), это скорее один из ведущих."
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Некоторые реплики похожи по стилю на Marin_k_a (разговор о конференциях, 5026.7s)"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Технические реплики о Cloudflare могут принадлежать Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5026.7
+          etime: 5035.28
+          text: "Но идея в том, что у тебя есть неделя, когда ты действительно, ну, то есть полностью погружен в это, и очень, ну, это действительно полезно."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 16
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Маркер ошибочной атрибуции. Реплики были ранее ошибочно приписаны Эльдару Муртазину, но он не участвовал в этом выпуске."
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Реплика 5428.07s 'Ты понимаешь, да, Ксюша...' — обращение к Ксюше, может быть кто-то из ведущих"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Некоторые реплики типичны для Gray (7122.96s: 'Давайте лучше про...')"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5428.07
+          etime: 5434.81
+          text: "Ты понимаешь, да, Ксюша, что в этот момент тебя возненавидели все разработчики, у которых запланировано более одной командировки на конференцию?"
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 7
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики: 'Пи, пи, пи' (звуковой эффект цензуры), 'Зачем?', 'Ну, маленькая, да', 'Ну да', 'Убежденность'. Скорее всего ошибки распознавания или реплики ведущих."
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Некоторые короткие реплики могут быть от Marin_k_a"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 0
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (<1 сек): 'Ха-ха-ха', 'Да', 'Зато?'. Это аудио-артефакты или ошибки распознавания смеха/коротких реакций."
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Marin_k_a"
+      issue: "Называется 'Ксюша' в начале выпуска (44.91s), но в справочнике это Марина. Возможно путаница имён или Ksenks отсутствует, а Марина выступает как соведущая."
+
+    - speaker: "SPEAKER_03, SPEAKER_04"
+      issue: "Гости от WebZilla (Николай и Константин Безрученко) представились в ~1856-1868s. Нужно добавить в people.yaml."
+
+    - speaker: "SPEAKER_01"
+      issue: "134 реплики неправильно отнесены к SPEAKER_01 вместо Marin_k_a. Требуется bulk rename."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 387
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Реплики являются продолжением речи Marin_k_a или ответами на вопросы к ней. Контекст однозначен."
+
+  - type: rename
+    episode: 387
+    from_speaker: "SPEAKER_03"
+    to_speaker: "NikolayWebZilla"
+    confidence: high
+    reason: "Явное представление: 'Меня зовут Николай, и я руководитель направления облачных услуг этой компании'"
+
+  - type: rename
+    episode: 387
+    from_speaker: "SPEAKER_04"
+    to_speaker: "KonstantinBezruchenko"
+    confidence: high
+    reason: "Явное представление: 'Добрый день, меня зовут Константин Безрученко, я CTO компании WebZilla'"
+
+  - type: rename
+    episode: 387
+    from_speaker: "SPEAKER_00"
+    to_speaker: "SPEAKER_99"
+    confidence: medium
+    reason: "Короткие артефактные реплики. Первая реплика 'Пи, пи, пи' — явно звук цензуры."
+
+  - type: rename
+    episode: 387
+    from_speaker: "SPEAKER_07"
+    to_speaker: "SPEAKER_99"
+    confidence: high
+    reason: "Реплики <1 сек — смех и односложные реакции, не являющиеся речью."
+
+# Требуемые дополнения в people.yaml
+new_guests_to_add:
+  - id: "nikolay_webzilla"
+    canonical_name: "NikolayWebZilla"
+    aliases: ["Николай"]
+    real_name: "Николай"
+    info: "Руководитель направления облачных услуг WebZilla, выпуск 387"
+
+  - id: "konstantin_bezruchenko"
+    canonical_name: "KonstantinBezruchenko"
+    aliases: ["Безрученко", "Константин Безрученко"]
+    real_name: "Константин Безрученко"
+    info: "CTO WebZilla, выпуск 387"
+
+# Примечания
+notes: |
+  Выпуск 387 от 12 апреля 2014 года. Основная тема — Heartbleed.
+
+  Участники:
+  - Ведущие: Umputun, Bobuk, Gray
+  - Соведущая: Marin_k_a (Марина, но называют "Ксюша" — возможно ник)
+  - Гости: Константин Безрученко (CTO WebZilla) и Николай (руководитель облачных услуг WebZilla)
+
+  Гости от WebZilla появляются с ~1852s (30:52) и участвуют в техническом обсуждении.
+
+  SPEAKER_MISATTRIBUTED_* — маркеры ранее исправленных ошибок атрибуции.
+  Требуется дополнительный voice comparison для определения правильного спикера.

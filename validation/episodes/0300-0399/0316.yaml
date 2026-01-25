@@ -1,0 +1,345 @@
+episode: 316
+status: needs_review
+analyzed_at: "2025-01-25"
+
+# Комментарий к эпизоду
+# Дата: 24 ноября 2012
+# Ведущие: Bobuk, Gray
+# Бывшая ведущая: Marin_k_a (Марина)
+# Ведущая: Ksenks (Ксюша) - размечена как SPEAKER_04
+# Umputun - только 2 реплики (359s и 5273s), возможно ошибка атрибуции или минимальное участие
+#
+# Bobuk ведёт выпуск из больницы (22-27s: "я просто в больнице сегодня")
+# Gray подсказывает дату и номер выпуска
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  other_present: [SPEAKER_04, SPEAKER_03, SPEAKER_02, SPEAKER_MISATTRIBUTED_ELDAR, SPEAKER_MISATTRIBUTED_LAVALE]
+  umputun_status: "minimal (2 реплики, 2 сек) - требует проверки"
+  total_duration_sec: 7700  # Приблизительно
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 396
+    replies_count: 161
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Прямое обращение в начале эпизода (27.57-29.85s):
+        Bobuk: "Ксюша, скажи, пожалуйста, тебя трогает число 24?"
+        SPEAKER_04 отвечает (32.63s): "Я даже не знаю."
+
+        Повторное обращение (2508.64-2511.17s):
+        Bobuk: "Слушай, Ксюша, скажи, пожалуйста, а у тебя как?"
+        SPEAKER_04 отвечает (2514.21s): "Еще нет, я не щеброт."
+
+        161 реплика, активное участие в обсуждениях - типичный паттерн Ksenks.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 687
+    replies_count: 119
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация - уже корректно размечена
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Марина уже присутствует в people.yaml как бывшая ведущая.
+        Эпизод 316 входит в её период участия (106-538 выпуски).
+        Первая реплика (114.57s): "ОС-10 сейчас так здорово и приятно, привычно звучит."
+        119 реплик, 687 сек - существенное участие, характерный стиль.
+        Говорит "вам с Греем надо поспорить" (2741s) - обращается к ведущим в третьем лице.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 42
+    replies_count: 15
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        15 коротких реплик, разбросанных по всему эпизоду.
+        SPEAKER_03 и SPEAKER_04 (Ksenks) говорят с разницей в 3-5 секунд:
+        - SPEAKER_03 @ 574s, SPEAKER_04 @ 579s (5s разница)
+        - SPEAKER_03 @ 3258s, SPEAKER_04 @ 3255s (3s разница)
+
+        Скорее всего это ошибка распознавания голоса Ksenks.
+        Система в некоторых моментах приняла её за другого спикера.
+
+        Однако есть странная реплика (7326.2s): "Алиса, ты меня не путай" -
+        обращение к Алисе не характерно для контекста.
+        Требуется voice comparison для окончательного решения.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: |
+            Реплики перемежаются с SPEAKER_04 (Ksenks) с минимальной задержкой.
+            На 5531s отвечает на вопрос "на Ксюшу не перевесить" - вероятно Ксюша.
+            Bobuk говорит "Как с вами, девочками, сложно" перед репликой SPEAKER_03.
+        - person_id: "marin_k_a"
+          confidence: 0.2
+          reason: |
+            В эпизоде две девушки (Ксюша и Марина).
+            Однако Marin_k_a уже размечена отдельно с 119 репликами.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5531.26
+          etime: 5537.58
+          text: "Ну а зачем мне такое перевешивать? У меня проблема питания еще остро стоит."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 2
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        4 очень короткие реплики (суммарно 2 сек).
+        Все реплики - междометия: "Угу." (3743s, 4208s) и "Ха-ха." (6873s x2).
+        Типичные артефакты распознавания или неправильная атрибуция реакций.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Короткие реакции могли быть от Gray"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Или от Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Лаваль не участвовала в этом эпизоде (она была ведущей в выпусках 109-462).
+        Только 2 реплики (1610s и 3336s) по 3-4 сек каждая.
+        Это ошибочная атрибуция - реплики должны принадлежать другому участнику.
+        Пометка MISATTRIBUTED уже указывает на отменённое присвоение.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Мог быть женский голос Ksenks"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Или Marin_k_a"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин не участвовал в этом эпизоде.
+        Только 3 короткие реплики (646s, 2134s, и ещё одна).
+        Пометка MISATTRIBUTED уже указывает на отменённое присвоение.
+
+        Реплика 2134s: "У меня карта Одессы русская, прямо сейчас" -
+        не характерна для Эльдара в контексте обсуждения.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Мог быть Gray"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Или Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Umputun"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false  # Неясно, требуется проверка
+      error_reason: null
+
+      # Анализ
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Только 2 реплики за весь эпизод:
+        1. 359.14-359.56s: "Конечно." (после реплики Bobuk "Это будет совершенно уникальный выпуск")
+        2. 5273.01-5274.13s: "Нет, смотри."
+
+        Это очень мало для Umputun (обычно сотни реплик).
+        Возможные объяснения:
+        - Umputun действительно минимально участвовал (был занят)
+        - Ошибка атрибуции (реплики другого ведущего)
+        - Bobuk вёл выпуск из больницы, Umputun мог отсутствовать
+
+        В начале Bobuk не упоминает Umputun среди участников.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплики могли быть неправильно атрибутированы от Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5273.01
+          etime: 5274.13
+          text: "Нет, смотри."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Umputun"
+      issue: |
+        Umputun не был представлен в начале эпизода.
+        Bobuk упоминает только Gray ("подсказал мне Грей") и обращается к Ксюше.
+        Всего 2 реплики Umputun - аномально мало.
+        Требуется проверка: участвовал ли Umputun или это ошибка атрибуции.
+
+    - speaker: "SPEAKER_04"
+      issue: |
+        SPEAKER_04 должен быть переименован в Ksenks.
+        Прямые обращения "Ксюша" от Bobuk подтверждают идентификацию.
+        161 реплика, 396 сек - существенное участие.
+
+    - speaker: "SPEAKER_03"
+      issue: |
+        15 коротких реплик, вероятно ошибка распознавания Ksenks.
+        Говорит почти одновременно с SPEAKER_04 (3-5 сек разница).
+        Требуется voice comparison для подтверждения.
+
+    - speaker: "Marin_k_a"
+      issue: |
+        Marin_k_a корректно размечена как бывшая ведущая Марина.
+        В этом эпизоде две девушки: Ксюша (Ksenks) и Марина.
+        Реплика (2741s): "вам с Греем надо поспорить" подтверждает, что это не Gray.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 316
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Прямые обращения от Bobuk: "Ксюша, скажи, пожалуйста" (27s, 2508s).
+      SPEAKER_04 отвечает на эти обращения.
+      161 реплика - активное участие в выпуске.
+
+  - type: rename
+    episode: 316
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Вероятно ошибка распознавания голоса Ksenks.
+      Говорит с минимальной задержкой относительно SPEAKER_04.
+      На 5531s отвечает на вопрос о Ксюше.
+      Требуется voice comparison для полной уверенности.
+
+  - type: merge
+    episode: 316
+    from_speaker: "SPEAKER_02"
+    to_speaker: "NEAREST"
+    confidence: medium
+    reason: |
+      4 очень короткие реплики ("Угу", "Ха-ха") - артефакты.
+      Можно объединить с ближайшим спикером по контексту.
+
+  - type: delete_or_reassign
+    episode: 316
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "SPEAKER_UNIDENTIFIED"
+    confidence: medium
+    reason: |
+      Лаваль точно не участвовала в этом эпизоде.
+      2 реплики требуют переатрибуции на основе voice comparison.
+
+  - type: delete_or_reassign
+    episode: 316
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "SPEAKER_UNIDENTIFIED"
+    confidence: medium
+    reason: |
+      Эльдар точно не участвовал в этом эпизоде.
+      3 реплики требуют переатрибуции на основе voice comparison.
+
+# Основные выводы
+summary: |
+  Эпизод 316 (24 ноября 2012) - выпуск с двумя девушками: Ксюша (Ksenks) и Марина (Marin_k_a).
+
+  Основные находки:
+  1. SPEAKER_04 = Ksenks (высокая уверенность, прямые обращения "Ксюша")
+  2. Marin_k_a - корректно размечена
+  3. SPEAKER_03 - вероятно ошибка распознавания Ksenks (говорит с ней почти одновременно)
+  4. Umputun - аномально мало реплик (2), требует проверки участия
+  5. SPEAKER_02, SPEAKER_MISATTRIBUTED_* - артефакты/ошибки, требуют переатрибуции
+
+  Статус: needs_review (требуется voice comparison для SPEAKER_03 и проверка участия Umputun)

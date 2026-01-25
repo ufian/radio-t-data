@@ -1,0 +1,248 @@
+episode: 308
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]  # Gray отсутствовал по словам Umputun в конце
+  total_duration_sec: 8200  # ~2.3 часа
+  notes: |
+    Эпизод 308 от 29 сентября 2012.
+    Грей "где-то на гулянке, обещался прийти, но не пришел" (слова Umputun в 8092-8095с).
+    Однако в транскрипте есть 7 реплик под именем Gray — требует проверки.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # SPEAKER_00 - идентифицирован как Ksenks
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 546
+    replies_count: 196
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun прямо обращается: "Ксения, ты тогда как раз пошла в детский сад" (238-246с).
+        В конце эпизода: "Ксюша, ты с нами сегодня была опять без микрофона" (8118-8127с).
+        Реплики SPEAKER_00 следуют после обращений к Ксении.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  # SPEAKER_01 - идентифицирован как гость Виктор
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 547
+    replies_count: 157
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Виктор не в people.yaml, нужно добавить
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun обращается напрямую: "Ты видел, Виктор, что было с американским футболом" (42-47с).
+        "Вот Виктор не даст соврать" (1599-1601с).
+        "Вот попробуй, Виктор, Навигон" (5561-5563с).
+        В конце: "Вместо него [Gray] был Виктор, который не первый раз с нами" (8096-8102с).
+        Виктор сам говорит: "Я уже постоянно приходящий ведущий... пятый раз" (8102-8109с).
+
+      possible_matches: []
+
+      voice_task:
+        needed: true  # Для добавления в people.yaml нужна голосовая выборка
+        reference_segment:
+          stime: 48.97
+          etime: 62.42
+          text: "Нет, я, к сожалению, не владею телевизором, поэтому я не могу следить за этим прекрасным шоу под названием «Американский футбол», в том числе и «Американский баскетбол» и другие шоу."
+
+  # Marin_k_a - уже в справочнике
+  - speaker: "Marin_k_a"
+    total_duration_sec: 204
+    replies_count: 34
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "existing_id"
+      confidence: high
+      evidence: "Уже идентифицирована в people.yaml как бывшая ведущая Марина"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  # SPEAKER_MISATTRIBUTED_LAVALE - требует идентификации
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 46
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        8 осмысленных реплик между SPEAKER_00 (Ksenks) и Marin_k_a.
+        Название SPEAKER_MISATTRIBUTED_LAVALE указывает, что раньше было ошибочно
+        атрибутировано как Lavale (бывшая ведущая), но потом отменено.
+        По голосу скорее всего это Ksenks или Marin_k_a.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Реплики появляются в контексте диалога SPEAKER_00 (Ksenks)"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Реплики появляются рядом с репликами Marin_k_a"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2042.29
+          etime: 2050.77
+          text: "Окей, давайте я тогда расскажу свои впечатления и потом тоже проверю, где были эти бетчмарки, может быть, какие-то другие у меня были."
+
+  # SPEAKER_MISATTRIBUTED_ELDAR - короткие реплики
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 короткие реплики (6 сек) в случайные моменты эпизода.
+        Название указывает на отменённую ошибочную атрибуцию к Eldar Murtazin.
+        Скорее всего ошибка распознавания одного из ведущих или гостей.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики:
+        - 5644с: "У нас, по-моему, в нашей области они запрещены, радары."
+        - 7803с: "А у кого просят-то?"
+        Обе реплики короткие и могут принадлежать любому участнику.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Может быть ошибкой распознавания голоса Ksenks"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Может быть ошибкой распознавания голоса Umputun"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5644.55
+          etime: 5648.5
+          text: "У нас, по-моему, в нашей области они запрещены, радары."
+
+  # SPEAKER_04 - ошибка распознавания
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 очень короткие реплики (суммарно ~1 сек).
+        "Угу" (5519с) и "Зачем же лица в камере?" (7315с).
+        Типичные ошибки автоматического распознавания спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        В транскрипте есть 7 реплик Gray (46 сек, начиная с 676с),
+        но Umputun в конце эпизода (8092с) говорит:
+        "Грей где-то на гулянке, обещался прийти, но не пришел."
+        Это серьёзное противоречие — либо Gray подключился и ушёл,
+        либо реплики Gray ошибочно атрибутированы другому спикеру.
+        ТРЕБУЕТ РУЧНОЙ ПРОВЕРКИ по голосу.
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: |
+        8 реплик помечены как "отменённая атрибуция Lavale".
+        Нужно определить, кому они реально принадлежат.
+    - speaker: "Виктор"
+      issue: |
+        Гость Виктор идентифицирован (SPEAKER_01), но его нет в people.yaml.
+        Нужно добавить после подтверждения фамилии (если известна).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 308
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Прямое обращение Umputun к Ксении, ответы SPEAKER_00 соответствуют контексту"
+
+  - type: rename
+    episode: 308
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Victor"  # или Victor_Guest, пока нет фамилии
+    confidence: high
+    reason: "Прямые обращения по имени Виктор от Umputun в нескольких местах эпизода"
+
+  - type: delete
+    episode: 308
+    from_speaker: "SPEAKER_04"
+    to_speaker: null
+    confidence: medium
+    reason: "Только 2 очень короткие реплики, вероятно ошибки распознавания"
+
+# Требуемые действия
+actions_required:
+  - priority: high
+    action: "voice_comparison"
+    description: |
+      Проверить реплики Gray (676-7832с) по голосу.
+      Если это не Gray, определить реального спикера.
+      Возможно это Виктор или один из ведущих.
+
+  - priority: medium
+    action: "voice_comparison"
+    description: |
+      Проверить SPEAKER_MISATTRIBUTED_LAVALE — определить,
+      это Ksenks или Marin_k_a.
+
+  - priority: low
+    action: "add_to_people_yaml"
+    description: |
+      Добавить гостя Виктора в people.yaml после определения фамилии.
+      Он участвовал минимум в 5 эпизодах по его словам.

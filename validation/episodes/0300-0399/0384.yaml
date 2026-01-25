@@ -1,0 +1,276 @@
+episode: 384
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Контекст эпизода
+# Дата: 22 марта 2014 года
+# Гость: Вячеслав (Слава) - работает в Amazon AWS, преподает Java на Hexlet, ранее работал в Samsung
+# Находится в Ирландии
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a, "Вячеслав (SPEAKER_02)"]
+  total_duration_sec: 7287  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 656
+    replies_count: 267
+    pattern: consecutive
+    first_appearance_sec: 29
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 21.86s: "Кроме Грея у нас есть Ксюша, которая всегда есть"
+        Сразу после этого SPEAKER_00 в 29.11s: "Да, я тут всегда не ухожу никуда"
+        Umputun обращается к Ксюше в 102.15s: "Ксюша, согласись..."
+        SPEAKER_00 отвечает в 106.05s
+        Marin_k_a говорит про Ксюшу в 3-м лице: "Ксюша пропала"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 491
+    replies_count: 131
+    pattern: consecutive
+    first_appearance_sec: 43
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Новый гость, не в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 42.64s гость представляется: "Да, всем привет"
+        В 43.52s: "Меня зовут Вячеслав"
+        В 45.24s: "Ну, есть коротенькое имя Слава"
+        В 47.12s: "Я, в общем, преподаю на университете Hexlet Java, а также работаю в Амазоне на AWS"
+        В 54.35s: "В прошлом из любимого в этом подкасте Самсунга"
+        Umputun обращается к нему по имени: "Вячеслав, ответь достойно..." (277.49s)
+
+      new_guest_info:
+        name: "Вячеслав"
+        short_name: "Слава"
+        info: "Работает в Amazon AWS, преподает Java на Hexlet, ранее работал в Samsung. Живёт в Ирландии."
+        suggested_id: "vyacheslav_aws"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1124
+    replies_count: 186
+    pattern: consecutive
+    first_appearance_sec: 110
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Marin_k_a уже есть в people.yaml как бывшая ведущая Марина.
+        Говорит про iOS разработку, GDC, пулы потоков.
+        Находится в Сиэтле (118.73s через SPEAKER_00, но контекст указывает что это её слова).
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 30
+    replies_count: 5
+    pattern: scattered
+    first_appearance_sec: 47
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это реплики гостя Вячеслава (SPEAKER_02), ошибочно помеченные как SPEAKER_MISATTRIBUTED_PETR.
+        Первая реплика (47.12s) идёт сразу после представления Вячеслава и является частью его вступления.
+        Остальные реплики также по контексту принадлежат гостю (технические комментарии про Java, AWS).
+
+      identified_as: null
+      should_be: "SPEAKER_02"
+      confidence: high
+      evidence: |
+        47.12s: "Я, в общем, преподаю на университете Hexlet Java..." - это часть представления Вячеслава,
+        который только что сказал "Меня зовут Вячеслав" (43.52s) и "есть коротенькое имя Слава" (45.24s).
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 10
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 589
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это реплики Marin_k_a, ошибочно помеченные как SPEAKER_MISATTRIBUTED_LAVALE.
+        Обе реплики появляются между репликами Marin_k_a и продолжают её мысль.
+
+      identified_as: null
+      should_be: "Marin_k_a"
+      confidence: high
+      evidence: |
+        588.9s: "Так, ну, странно, что не было в интерфейсе optional" - реплика между репликами Marin_k_a.
+        2692.55s: "То есть ты просто ему соментишь операции в очередь..." - продолжение речи Marin_k_a
+        про iOS GDC и пулы потоков (предыдущая реплика Marin_k_a в 2680.32s).
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 8
+    replies_count: 3
+    pattern: scattered
+    first_appearance_sec: 1182
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики в случайных местах, вклинивающиеся между ведущими.
+        Скорее всего ошибки распознавания речи.
+
+      identified_as: null
+      should_be: null  # Неясно кто именно, нужна проверка голоса
+      confidence: low
+      evidence: |
+        1182.22s: "Понимаешь?" - между репликами Umputun
+        3107.59s: "Попил кофе?" - между репликами Umputun
+        6207.21s: "И часто... Понятно." - между репликами Gray и Umputun
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Большинство реплик вклиниваются в речь Umputun"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Последняя реплика рядом с Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6207.21
+          etime: 6211.39
+          text: "И часто... Понятно."
+
+  - speaker: "Bobuk"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 3932
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Примечание: Bobuk появляется очень поздно и мало говорит
+      # Возможно он подключился позже или это ошибка разметки
+      note: |
+        Bobuk появляется только дважды, очень поздно (3932s и 5733s).
+        Это необычно для постоянного ведущего. Возможные объяснения:
+        1. Он подключился позже
+        2. Его реплики неправильно размечены как другие спикеры
+        Требуется дополнительная проверка.
+
+      possible_matches: []
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5733.79
+          etime: 5738.03
+          text: "Это ты съел какое-то количество рабочих мест в офисе."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: "Ксюша (Ksenks) не размечена, вместо неё SPEAKER_00"
+    - speaker: "Bobuk"
+      issue: "Появляется очень поздно (3932s) и всего 2 реплики - нетипично для ведущего"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 384
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun представляет Ксюшу и SPEAKER_00 отвечает.
+      Обращения к Ксюше получают ответы от SPEAKER_00.
+      Marin_k_a говорит о Ксюше в 3-м лице.
+
+  - type: rename
+    episode: 384
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "SPEAKER_02"
+    confidence: high
+    reason: |
+      Реплики являются частью непрерывной речи гостя Вячеслава при представлении.
+      SPEAKER_02 говорит имя → SPEAKER_MISATTRIBUTED_PETR про работу → SPEAKER_02 про Samsung.
+
+  - type: rename
+    episode: 384
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Реплики появляются между репликами Marin_k_a и продолжают её мысль
+      про iOS разработку и GDC.
+
+  - type: add_guest
+    suggested_entry:
+      id: "vyacheslav_aws"
+      canonical_name: "Vyacheslav"
+      aliases: ["Слава", "Вячеслав"]
+      real_name: "Вячеслав"
+      info: "Amazon AWS, преподаватель Hexlet (Java), ex-Samsung. Выпуск 384"
+
+  # После добавления гостя в people.yaml:
+  - type: rename
+    episode: 384
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Vyacheslav"
+    confidence: high
+    reason: "Гость представился как Вячеслав, работает в AWS, преподаёт на Hexlet"
+    depends_on: "add_guest vyacheslav_aws"
+
+# Задачи для ручной проверки
+manual_tasks:
+  - task: "Проверить голос SPEAKER_04"
+    description: "Короткие реплики - определить кому принадлежат"
+    priority: low
+
+  - task: "Проверить Bobuk"
+    description: "Всего 2 реплики, появляется поздно. Убедиться что это действительно Bobuk"
+    priority: medium
+
+  - task: "Добавить Вячеслава в people.yaml"
+    description: "Новый гость, работает в Amazon AWS, преподаёт Java на Hexlet"
+    priority: high

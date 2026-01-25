@@ -1,0 +1,165 @@
+episode: 303
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_duration_sec: 8200  # ~2h17m
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1283
+    replies_count: 306
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun на 38-41s: 'Пришел в гости Эльдар, который как-то давно за разу не захаживал'. EldarMurtazin отвечает на 42s: 'Ой, я зараза такая, вот мотаюсь... Я был в Антарктиде'"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 631
+    replies_count: 199
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "На 178s EldarMurtazin говорит 'даже Маринку привел удаленную'. На 186s 'Маринка, вернись'. Umputun на 1623s обращается 'Марусенька'. На 161s Umputun говорит 'Вот этим квинтетом мы выступим' (5 человек: 3 ведущих + Эльдар + Марина)"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 23
+    replies_count: 12
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (1-4 сек каждая) в случайные моменты. Типичные фразы-реакции: 'Мой мальчик', 'Самсунг', 'Молчу', 'Как золото', 'Эльдар', 'Негодяй'. Это ошибки распознавания кратких реплик одного из присутствующих ведущих/гостей."
+      identified_as: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Некоторые реплики (например 'Мой мальчик' на 1679s) идут сразу после обращения к сыну Umputun, могут быть репликой Марины. На 7189s 'Эльдар' - обращение к Эльдару, скорее Марина."
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray присутствует, но говорит меньше всех ведущих (193 реплики vs 803 у Umputun). Часть реплик может быть его."
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие (<2 сек) для надёжного сравнения голоса"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "5 коротких реплик, две группы: 1) на 2213-2219s три реплики 'Простая крестьянская смекалка', 'Что с ним делать?', 'Да' - идут между репликами Marin_k_a о 'копать картошку'; 2) на 8135-8138s две реплики 'И вообще уходи', 'Я вообще молчал' - идут после реплики Marin_k_a про слушателей. Вероятно ошибка атрибуции реплик Marin_k_a."
+      identified_as: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Обе группы реплик находятся в диалогах с Marin_k_a и стилистически похожи на её манеру речи"
+        - person_id: "eldar_murtazin"
+          confidence: 0.2
+          reason: "Эльдар также присутствует в диалогах, может быть его реакция"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2213.29
+          etime: 2217.88
+          text: "Ну, вот знаешь, есть у... Простая крестьянская смекалка."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 8
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+      note: "Это уже отмеченные как ошибочно атрибутированные реплики. Контекст показывает что это реплики Marin_k_a:"
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1) На 1628s 'Давай я расскажу это в виде истории' - сразу после обращения Umputun 'Марусенька, я хотел бы твое услышать', адресат очевиден
+        2) На 3921s 'Если бы у меня чат был, я бы с удовольствием' - ответ на просьбу Bobuk 'Марусечка, мне кажется, что ты должна объяснить чату...'
+        3) Третья реплика на 4186s 'Последнее время, да' - в том же диалоге
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика 'Как слышать' длиной 1.3 сек на 5921s. Слишком короткая и изолированная для идентификации. Скорее всего ошибка распознавания одного из участников."
+      identified_as: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Фраза 'Как слышать' может быть технической репликой ведущего про звук/связь"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Марина участвует удалённо, могут быть проблемы со связью"
+      voice_task:
+        needed: false
+        reason: "Реплика слишком короткая (1.3 сек) для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Umputun представил Эльдара на 38-41s"
+    - "Марина упомянута Эльдаром на 178s как 'Маринку удалённую'"
+    - "На 161s Umputun говорит 'квинтетом' - подтверждает 5 участников"
+    - "Bobuk и Gray не представлены явно, но это постоянные ведущие"
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Уже помечен как ошибка, но не исправлен. Нужно переименовать в Marin_k_a"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 303
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Все 3 реплики идут сразу после прямого обращения к Марине ('Марусенька', 'Марусечка')"
+
+  - type: rename
+    episode: 303
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Реплики находятся в контексте диалогов Марины, но требуется voice comparison для подтверждения"
+
+# Итоговые замечания
+notes: |
+  Эпизод 303 от 25 августа 2012 года.
+  Состав: Umputun, Bobuk, Gray + гости EldarMurtazin и Marin_k_a (удалённо).
+
+  Основные гости (EldarMurtazin, Marin_k_a) уже правильно идентифицированы в транскрипте.
+
+  Проблемные спикеры:
+  - SPEAKER_MISATTRIBUTED_LAVALE (3 реплики) - это Marin_k_a, можно переименовать с высокой уверенностью
+  - SPEAKER_04 (5 реплик) - вероятно Marin_k_a, нужна проверка
+  - SPEAKER_00 (12 реплик) и SPEAKER_06 (1 реплика) - слишком короткие для идентификации,
+    скорее всего ошибки распознавания разных участников
