@@ -1,0 +1,137 @@
+episode: 488
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  guest_present: [PetrDidenko]
+  total_duration_sec: 7499  # ~2 часа 5 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1003
+    replies_count: 269
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Umputun в начале эпизода (20-42s): "И в этом выпуске у нас сегодня 4 ведущих,
+        но на смену выбывшей Ксюши мы затянули себе гнусного журналюгу...
+        Здравствуй, дорогой журналюга... Это Петя такой, который вы, наверное,
+        помните по прошлым выпускам". Также PetrDidenko сам представляется (227-236s):
+        "Вот я уже скоро... три недели как официально главный редактор
+        интернет-издания Lifehacker".
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 27
+    replies_count: 11
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Это ошибочные присвоения реплик ведущих (вероятнее всего Bobuk).
+        Признаки: 1) Все реплики короткие (1-5 сек). 2) Находятся между
+        репликами Bobuk или контекстно связаны с его речью. 3) На 4319-4330s
+        видна разорванная фраза: SPEAKER_MISATTRIBUTED_ELDAR говорит "Я бы про
+        защищенные передачи... позвал бы", а сразу после Bobuk продолжает
+        "одного нашего бывшего коллегу" - это одна мысль. 4) На 3497s спикер
+        обращается "Жень" к Umputun, что характерно для Bobuk. 5) На 4506s
+        паттерн "Собственно, я к чему все?" -> Bobuk продолжает "Я к тому, что..."
+      identified_as: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.85
+          reason: >
+            Все реплики контекстно связаны с речью Bobuk, несколько раз
+            видны разорванные фразы между SPEAKER_MISATTRIBUTED_ELDAR и Bobuk.
+            Обращение "Жень" к Umputun характерно для Bobuk.
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6815.01
+          etime: 6820.35
+          text: "Слушай, у Slack и HipChat есть, но Slack и HipChat не для широкой публики."
+        audio_url: "https://cdn.radio-t.com/rt_podcast488.mp3"
+        note: "Самая длинная реплика (~5 сек), можно сравнить с голосом Bobuk"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная короткая реплика (~1.5 сек) в случайном месте эпизода.
+        Контекст: Umputun спрашивает "они делают ботов для чего, для Телеграма
+        или для всего?" -> SPEAKER_06 "Это телеграмма" -> Bobuk продолжает
+        развивать тему. Скорее всего это ошибочно присвоенная реплика кого-то
+        из ведущих (Bobuk или Gray).
+      identified_as: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Bobuk сразу после этого продолжает тему Telegram"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray также участвует в обсуждении ботов"
+      voice_task:
+        needed: false
+        note: "Слишком короткая реплика для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: >
+        11 реплик помечены как SPEAKER_MISATTRIBUTED_ELDAR, но в эпизоде
+        нет никакого Эльдара. Это ранее отменённые ошибочные присвоения,
+        которые нужно переатрибутировать (вероятно на Bobuk).
+    - speaker: "SPEAKER_06"
+      issue: >
+        Одна реплика автоматической разметки, требует переатрибуции.
+    - speaker: "Alek.sys"
+      issue: >
+        Alek.sys не был явно представлен в начале эпизода (Umputun упомянул
+        только "4 ведущих" и представил Петю), но имеет 10 реплик разбросанных
+        по эпизоду. Это нормально - постоянный ведущий, не требует представления.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 488
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: >
+      Все 11 реплик контекстно связаны с речью Bobuk. Однако для high confidence
+      нужно voice comparison. Рекомендуется прослушать сегмент 6815-6820s.
+
+  - type: rename
+    episode: 488
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Bobuk"
+    confidence: low
+    reason: >
+      Единственная реплика, после которой Bobuk продолжает тему.
+      Требует voice comparison, но реплика слишком короткая (~1.5 сек).
+
+# Общий вывод
+summary: >
+  Эпизод 488 от 19 марта 2016 года. В составе: Umputun (ведущий), Bobuk, Gray,
+  Alek.sys и гость Пётр Диденко (главред Lifehacker). PetrDidenko корректно
+  идентифицирован и представлен в начале. Обнаружены 12 реплик требующие
+  переатрибуции: 11 SPEAKER_MISATTRIBUTED_ELDAR (вероятно Bobuk) и 1 SPEAKER_06
+  (вероятно Bobuk или кто-то из ведущих). Рекомендуется voice comparison для
+  сегмента 6815-6820s для подтверждения.

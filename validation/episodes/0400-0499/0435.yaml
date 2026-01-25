@@ -1,0 +1,248 @@
+episode: 435
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Эпизод от 14 марта 2015 года
+# Umputun: "Состав полный" - все 5 ведущих заявлены
+
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6470  # примерная оценка
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 270
+    replies_count: 94
+    pattern: scattered  # распределён по всему эпизоду, с первой минуты
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Гипотеза: это Alek.sys
+      # Обоснование:
+      # 1. Umputun говорит "состав полный" в начале - все 5 ведущих
+      # 2. Alek.sys имеет только 5 реплик (12 сек) - аномально мало для "полного состава"
+      # 3. SPEAKER_03 появляется с 22.7s и активно участвует весь эпизод (94 реплики)
+      # 4. SPEAKER_03 обсуждает технические детали (цены MacBook, спецификации) - типично для ведущего
+      # 5. В 164s Gray говорит к Bobuk: "ты всего несколько дней в Техасе"
+      #    Bobuk отвечает в 175s: "Я тут со вчера, я тут пока поездил на мотоцикле"
+      #    SPEAKER_03 в 168s отвечает Грею: "Слушай, это ты еще мою шею не видишь"
+      #    Это показывает что SPEAKER_03 - отдельный участник, не Bobuk
+      identified_as: null  # требуется voice comparison для подтверждения
+      identification_method: null
+      confidence: null
+      evidence: |
+        - SPEAKER_03 в 22.7s: "Типа до этого их не было." (ответ на Umputun)
+        - SPEAKER_03 в 168s: "Слушай, это ты еще мою шею не видишь." (после Gray "ты в Техасе")
+        - SPEAKER_03 знает цены Apple: "1200, по-моему, и 1500" (1616s)
+        - SPEAKER_03: "Единственное, что в нем печальнее, это 8 гигабайт памяти" (1644s)
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: |
+            Ключевое доказательство на 168-170s:
+            - Gray (164s): "ты всего несколько дней в Техасе, а для тебя уже так тяжело доходит"
+            - SPEAKER_03 (168s): "Слушай, это ты еще мою шею не видишь"
+            - Ksenks (170s): "Ты все проснулся, ты говоришь, Бобок"
+            - Bobuk (175s): "Я тут со вчера... у меня шея красная"
+            Ksenks ПРЯМО называет "Бобок" того, кто говорил до неё - это SPEAKER_03.
+            Тема шеи продолжается от SPEAKER_03 к Bobuk.
+        - person_id: "gray"
+          confidence: 0.3
+          reason: |
+            Первая реплика (22s) "Типа до этого их не было" - логичный ответ на "гневные
+            комментарии в твой адрес" про Gray. Но Gray появляется корректно в 30s.
+        - person_id: "alek_sys"
+          confidence: 0.2
+          reason: |
+            Alek.sys имеет только 5 реплик при "полном составе", но на 168s контекст
+            явно указывает на Bobuk, а не Alek.sys. Возможно смесь ошибок разных ведущих.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1616.08
+          etime: 1623.65
+          text: |
+            "1200, по-моему, и 1500. По-моему, 1300. А, значит, там 1299 и 1599.
+            Да, 1599, которые... Там больше storage, да, кажется?
+            Ну, в общем, да, 1300 и 1600 и storage, да, 256 и 512 SSD."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 35
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция. Эльдар Муртазин не участвовал в этом выпуске.
+        Все реплики - короткие фразы, перемежающиеся с репликами ведущих.
+        Вероятно ошибки распознавания голоса одного из ведущих.
+
+        Доказательства:
+        - 182.9s "Все хорошо" - сразу после жалоб Bobuk на красную шею
+        - После этого Umputun говорит "Да, Грей говорит, что тебе плохо слышно" (186s)
+        - 1949.9s "Нефиг отдавать этот жирный кусок кому-то еще" - между Gray и Ksenks
+        - 5415s и 6155s - короткие реакции в разговоре ведущих
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Первая реплика (182.9s) следует за жалобами Bobuk на шею"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Umputun упоминает Gray сразу после реплики"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2375.34
+          etime: 2393.32
+          text: |
+            "Нет, проблема в том, что все эти часы, они, как правило, предлагают
+            достаточно ограниченные вещи, которые можно сделать на них самим.
+            Потому что даже, ну, хорошо, ну вот, ответить на звонок, отбить,
+            точнее, звонок, на самом деле, не ответить, это более часто.
+            Ну, это да, это вот фича."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибочная атрибуция. Марина (Marin_k_a) не участвовала в этом выпуске.
+        Обе реплики - очень короткие фразы в середине разговора других ведущих.
+
+        Реплики:
+        - 1228s "Ну, можно внешний какой-нибудь." - между Umputun и Ksenks
+        - 2506s "Я не знаю." - прямо перед репликой Ksenks на ту же тему
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: |
+            Обе реплики тематически связаны с последующими репликами Ksenks.
+            "Я не знаю" (2506s) - типичное начало мысли, которую продолжает Ksenks.
+            Вероятно ошибка распознавания женского голоса.
+
+      voice_task:
+        needed: false  # слишком короткие реплики для voice comparison
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Явная ошибка распознавания. Все три реплики - односложные междометия:
+        - 1936.6s: "Угу."
+        - 3618.6s: "Да."
+        - 5860.6s: "Окей."
+
+        Такие короткие реакции часто ошибочно распознаются как отдельный спикер.
+        При "полном составе" это не может быть дополнительный участник.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "1936.6s 'Угу' - между двумя репликами Gray"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Женские междометия иногда ошибочно выделяются"
+
+      voice_task:
+        needed: false  # слишком короткие для идентификации
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true  # "Состав полный" в начале
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: |
+        94 реплики (270 сек) неидентифицированной речи. Контекст на 168-170s
+        (Ksenks говорит "Бобок" сразу после SPEAKER_03) указывает на Bobuk.
+        Но первая реплика (22s) похожа на Gray. Возможно смесь ошибок.
+        Требуется voice comparison.
+
+    - speaker: "Alek.sys"
+      issue: |
+        Аномально мало реплик (5) при заявленном "полном составе".
+        Однако контекст SPEAKER_03 на 168s указывает на Bobuk, не Alek.sys.
+
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Эльдар Муртазин не был заявлен в выпуске.
+        Реплики выглядят как ошибки распознавания ведущих.
+
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: |
+        Марина не была заявлена в выпуске.
+        Две короткие реплики - вероятно ошибки распознавания Ksenks.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 435
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Обе реплики тематически связаны с последующими репликами Ksenks.
+      Марина не участвовала в выпуске.
+
+  - type: rename
+    episode: 435
+    from_speaker: "SPEAKER_05"
+    to_speaker: "NEEDS_INVESTIGATION"
+    confidence: low
+    reason: |
+      Слишком короткие реплики для определения.
+      Требуется ручной анализ контекста.
+
+# Задачи для дальнейшего анализа
+next_steps:
+  - task: "voice_comparison"
+    priority: high
+    description: |
+      Сравнить голос SPEAKER_03 с Bobuk и Gray.
+      Ключевой контекст: на 168s SPEAKER_03 говорит про шею, Ksenks в 170s обращается "Бобок".
+      Использовать сегменты:
+      - 168.1-170.14s: "Слушай, это ты еще мою шею не видишь" (контекст указывает на Bobuk)
+      - 1616-1623s: технические детали про Apple
+      - 5063-5120s: длинный монолог про Skype
+
+  - task: "voice_comparison"
+    priority: medium
+    description: |
+      Определить кому принадлежат реплики SPEAKER_MISATTRIBUTED_ELDAR.
+      Наиболее длинный сегмент: 2375-2393s.
+
+  - task: "manual_review"
+    priority: low
+    description: |
+      Ручной просмотр контекста вокруг SPEAKER_05.
+      Определить кто говорит "Угу", "Да", "Окей".

@@ -1,0 +1,91 @@
+episode: 436
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Bobuk, Alek.sys]
+  total_duration_sec: 5771  # примерно 1.5 часа
+  notes: >
+    В начале Umputun говорит, что "гости не пришли" -
+    это выпуск только с постоянными ведущими. Bobuk присоединяется позже (~1613s).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 21
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Название спикера указывает на отменённое ошибочное присвоение Эльдару.
+        Все 4 реплики - короткие фрагменты (3-8 сек) в середине диалогов,
+        являющиеся продолжением мыслей Gray или Umputun.
+        В начале выпуска явно сказано "гости не пришли" - Эльдара не было.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Реплики 1,2,4 логически продолжают речь Gray"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Реплика 3 следует за Ksenks, но тема обсуждается всеми"
+
+      voice_task:
+        needed: false
+        # Слишком короткие и разрозненные реплики для voice comparison.
+        # Контекст ясно указывает, что это ошибки распознавания, а не гость.
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Две очень короткие реплики: "С боткемпом" (1.5 сек) и "Угу" (0.1 сек).
+        Это междометия/подсказки в середине речи других ведущих.
+        Типичные ошибки автоматической разметки спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Первая реплика - подсказка термина во время речи Ksenks"
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Типичная реакция в диалоге"
+
+      voice_task:
+        needed: false
+        # Слишком короткие реплики (0.1 и 1.5 сек) - невозможно провести voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    В начале выпуска (4.99s) Umputun представляет состав:
+    "подкаст выходного дня радио с вами Бобук, Ксюша и Грей".
+    Также упоминает, что "гости не пришли" - ожидали, но не было.
+    Bobuk появляется позже (1613s) - возможно опоздал или подключился позднее.
+    Alek.sys появляется ещё позже (5371s).
+    Всё соответствует обычному формату без приглашённых гостей.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Реплики SPEAKER_MISATTRIBUTED_ELDAR и SPEAKER_02 - это ошибки распознавания,
+# но без voice comparison нельзя точно определить, кому их приписать.
+# Рекомендуется оставить как есть или вручную прослушать при необходимости.

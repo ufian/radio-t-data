@@ -1,0 +1,230 @@
+episode: 474
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  guests_present: [Plushev]
+  total_duration_sec: 7000  # примерно 2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1723
+    replies_count: 433
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "plushev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk явно представляет гостя в начале эпизода (63-71 сек):
+        "Я надеюсь, что у нас есть слушатели, которые не все знают Плющева.
+        Так вот, это был Александр Плющев, который уже неоднократно у нас бывал.
+        Мы его уже даже гостем не называем. По-моему, это у нас такой редкий соведущий."
+
+        Также ранее (28-31 сек) Bobuk обращается к гостю по имени "Саша, ты тут с нами?"
+        и SPEAKER_05 отвечает "Да, я тут."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 6
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие односложные реплики (0.2-2 сек) разбросаны по всему эпизоду.
+        Многие являются эхом/дубликатами предыдущих реплик:
+        - 422.7s: "Ты не гик?" — дубликат реплики Umputun в 420.8s
+        - 1012.7s: "Подожди, Google Plus?" — переспрос
+        - 6789.5s: "Детями." — короткая реакция
+        - 6794.5s: "Никак." — односложный ответ
+        - 7198.2s: "Игнать его." — обрезанная фраза
+
+        Это ошибки распознавания — голос одного из присутствующих ведущих
+        или Плющева, неправильно атрибутированный.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 15
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики явно принадлежат Ksenks:
+
+        1. На 3578s Umputun обращается: "Ксюшенька, Зайенька, ты когда Firefox последний раз запускала?"
+           Ответ (помечен как MISATTRIBUTED_MARIN): "Так я же вторая блондинка, я не главная блондинка."
+           Следующая реплика (3581s) уже от Ksenks — это один разговор.
+
+        2. Реплики типа "Так это Бобок у нас должен знать" (714s) и "Так, а мне интересно" (6974s)
+           по контексту соответствуют Ksenks.
+
+        Это ранее ошибочно атрибутированные реплики (метка MISATTRIBUTED_MARIN
+        указывает на отмену предыдущей неправильной атрибуции к Марине).
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Прямое обращение Umputun к Ксюше непосредственно перед репликой.
+        Упоминание "вторая блондинка" согласуется с Ksenks.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 16
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики скорее всего принадлежат Плющеву (SPEAKER_05):
+
+        1. На 1476s Umputun обращается: "Александр, тебе кажется нормальным, когда у телефона вытарчивает камера вот так?"
+           Ответ (1484s, помечен MISATTRIBUTED_ELDAR): "Я всегда ношу телефон в чехле..."
+           Следующие реплики (1491s) уже от SPEAKER_05 продолжают эту тему — это один разговор Плющева.
+
+        2. Остальные реплики — короткие реакции в диалогах, где Плющев активно участвует.
+
+        Метка MISATTRIBUTED_ELDAR указывает на отмену ошибочной атрибуции к Эльдару Муртазину,
+        которого нет в этом выпуске.
+
+      identified_as: "plushev"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Umputun обращается по имени "Александр" непосредственно перед репликой.
+        Единственный Александр в этом выпуске — Плющев.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная короткая реплика "И на Javis." (1.5 сек) на 2537s.
+        Находится между репликами Umputun и Bobuk.
+        Слишком коротка для идентификации, скорее всего один из ведущих или Плющев.
+
+        Метка MISATTRIBUTED_PETR указывает на отмену ошибочной атрибуции к Петру Диденко,
+        которого нет в этом выпуске.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "plushev"
+          confidence: 0.5
+          reason: "Плющев активно участвует в обсуждении"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Предшествует реплике Bobuk, может быть его голос"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: "Идентифицирован как Plushev, требуется переименование"
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Реплики принадлежат Ksenks, требуется переименование"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Реплики принадлежат Plushev, требуется переименование"
+    - speaker: "SPEAKER_02"
+      issue: "Ошибки распознавания, требуется ручной анализ каждой реплики"
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Одна короткая реплика, невозможно идентифицировать без аудио"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 474
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: "Явное представление Bobuk в начале эпизода (63-67 сек)"
+
+  - type: rename
+    episode: 474
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Прямое обращение Umputun к Ксюше перед репликой (3574-3577 сек)"
+
+  - type: rename
+    episode: 474
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: "Обращение Umputun 'Александр' перед репликой (1476-1480 сек)"
+
+  - type: manual_review
+    episode: 474
+    speaker: "SPEAKER_02"
+    confidence: medium
+    reason: "7 коротких реплик требуют индивидуального анализа аудио"
+
+  - type: manual_review
+    episode: 474
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    confidence: low
+    reason: "Одна короткая реплика (1.5 сек), невозможно идентифицировать без аудио"
+
+# Примечания
+notes: |
+  Эпизод 474 от 12 декабря 2015 года.
+  Гость выпуска — Александр Плющев (журналист Эхо Москвы).
+
+  Плющев бывал на подкасте ранее (выпуски 194, 211 согласно people.yaml),
+  поэтому его называют "редким соведущим".
+
+  Основная проблема: SPEAKER_05 (433 реплики, 28 минут) — это Плющев,
+  требуется массовое переименование.
+
+  Меньшая проблема: SPEAKER_MISATTRIBUTED_* реплики — результаты
+  предыдущих попыток очистки, которые были отменены. Теперь можно
+  корректно атрибутировать.

@@ -1,0 +1,113 @@
+episode: 492
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  hosts_questionable: [Alek.sys]  # Не представлен, только короткие реплики
+  total_duration_sec: 6524  # ~1ч49мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие реплики (1-3 сек) в контексте диалога Ksenks-Bobuk.
+        Реплики "Почему?", "Ничего подобного", "Я не знаю, куда ты попадал"
+        по смыслу продолжают защитную позицию Ksenks в разговоре о "большом мозге".
+        Ksenks говорит до и после этих реплик на ту же тему.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.85
+          reason: >
+            Контекст разговора: Ksenks защищается от подколов Bobuk про "большой мозг".
+            Реплики логически продолжают её линию ("Ничего подобного", "Я не знаю куда ты попадал").
+            До и после SPEAKER_01 говорит именно Ksenks.
+
+      voice_task:
+        needed: false
+        # Слишком короткие реплики для voice comparison
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Однословная реплика "Да нет, почему?" в контексте разговора Umputun-Gray.
+        Эльдара нет в этом выпуске (не представлен, не упоминается).
+        Реплика слишком короткая для идентификации.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: >
+            Umputun обращается к Gray ("Грей, нам-то с тобой, главное что?").
+            Gray отвечает сразу после этой реплики про спонсора.
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: >
+            Ksenks тоже участвует в этом разговоре, могла вставить реплику.
+
+      voice_task:
+        needed: false
+        # Слишком короткая реплика (0.74 сек) для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        НЕ представлен в начале выпуска. В начале упоминаются только
+        Umputun, Ksenks, Gray и Bobuk. Alek.sys имеет всего 8 реплик
+        общей длительностью 11 секунд - все очень короткие ("Ну, в смысле, хорошо" и подобные).
+        Вероятно, это ошибки распознавания голоса другого ведущего.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 492
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: >
+      Контекст и содержание реплик указывают на Ksenks.
+      Требуется voice comparison для подтверждения.
+
+  - type: rename
+    episode: 492
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: low
+    reason: >
+      Umputun обращается к Gray, Gray отвечает следом.
+      Но реплика слишком короткая для уверенной идентификации.
+
+  - type: investigate
+    episode: 492
+    speaker: "Alek.sys"
+    confidence: medium
+    reason: >
+      Alek.sys не представлен в начале выпуска, но имеет 8 коротких реплик.
+      Возможно, все его реплики - ошибки распознавания.
+      Требуется проверка voice comparison или ручной анализ.

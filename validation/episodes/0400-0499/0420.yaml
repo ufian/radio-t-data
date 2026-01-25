@@ -1,0 +1,134 @@
+episode: 420
+status: needs_review
+analyzed_at: "2026-01-25T14:30:00Z"
+
+# Метаданные эпизода
+episode_info:
+  date: "2014-11-29"
+  note: "Ksenks отсутствует (болеет) - упомянуто в начале выпуска"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  hosts_absent: [Ksenks]
+  total_duration_sec: 5086  # приблизительно: 2623 + 1419 + 993 + 30 + 14 + реклама
+
+  # Детализация по ведущим:
+  # Umputun: 858 реплик, 2623 сек, первая в 3s
+  # Bobuk: 459 реплик, 1419 сек, первая в 24s
+  # Gray: 248 реплик, 993 сек, первая в 42s
+  # Alek.sys: 13 реплик, 30 сек, первая в 185s
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 14
+    replies_count: 4
+    pattern: scattered  # реплики разбросаны: 3318s, 5331s, 5364s, 5608s
+
+    # Все 4 реплики:
+    replies:
+      - stime: 3318.01
+        etime: 3321.89
+        duration: 3.88
+        text: "А что они используют вместо?"
+        context: "После реплики Umputun о Debian без SystemD"
+      - stime: 5331.58
+        etime: 5337.73
+        duration: 6.15
+        text: "Агами за 10 лет написал операционную систему для общения с Богом."
+        context: "Обсуждение TempleOS, после 'послушаем' от Gray"
+      - stime: 5364.37
+        etime: 5366.73
+        duration: 2.36
+        text: "Это 3D принтер."
+        context: "Комментарий к фотографии на сайте TempleOS"
+      - stime: 5608.04
+        etime: 5609.84
+        duration: 1.8
+        text: "Так, ну а что еще дальше?"
+        context: "Конец выпуска, после 'Печалька' от Gray"
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Это ошибка распознавания голоса - реплики ранее были ошибочно присвоены
+        Эльдару Муртазину (EldarMurtazin), но затем маркировка была отменена.
+        4 коротких реплики (3-6 сек каждая) разбросаны по эпизоду, все они
+        являются комментариями в контексте обсуждения между ведущими, а не
+        самостоятельными высказываниями гостя.
+
+      # Попытка идентификации - скорее всего это один из ведущих
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Возможные совпадения
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.4
+          reason: >
+            Alek.sys имеет всего 13 реплик в эпизоде (30 сек), стиль реплик
+            SPEAKER_MISATTRIBUTED похож на его короткие комментарии. Реплика
+            "Это 3D принтер" (5364s) технического характера.
+        - person_id: "gray"
+          confidence: 0.3
+          reason: >
+            Gray активно участвует в обсуждении во всех сегментах, где
+            появляются эти реплики. Однако его голос обычно хорошо распознаётся.
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: >
+            Bobuk тоже может быть источником ошибки, хотя его голос обычно
+            хорошо распознаётся. Реплика про "Агами и ОС для общения с Богом"
+            (TempleOS) - типичный айтишный юмор.
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reference_segments:
+          - stime: 5331.58
+            etime: 5337.73
+            text: "Агами за 10 лет написал операционную систему для общения с Богом."
+            notes: "Самая длинная реплика (6 сек), про TempleOS Терри Дэвиса"
+          - stime: 3318.01
+            etime: 3321.89
+            text: "А что они используют вместо?"
+            notes: "Контекст: обсуждение Debian fork без SystemD"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    В начале эпизода Umputun упоминает что Ksenks отсутствует ("приболела").
+    Присутствуют 4 ведущих: Umputun, Bobuk, Gray, Alek.sys. Alek.sys появляется
+    с первой репликой на 185s без явного представления, но это обычная практика
+    для регулярных ведущих.
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: >
+        4 реплики не идентифицированы. Маркировка указывает на ранее
+        ошибочное присвоение Эльдару Муртазину. Требуется voice comparison
+        для определения реального спикера (вероятно один из ведущих).
+
+# Контекст эпизода
+episode_context:
+  date: "2014-11-29"
+  absent_hosts: [Ksenks]
+  guests: []
+  notes: >
+    Выпуск 420, дата 29 ноября 2014. Ksenks отсутствует по болезни.
+    Гостей нет. HTTP-код 420 не существует - это шутка в начале выпуска.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+  # Не предлагаем правила, пока не проведём voice comparison.
+  # После voice comparison можно будет добавить правило типа:
+  # - type: rename
+  #   episode: 420
+  #   from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+  #   to_speaker: "<определённый спикер>"
+  #   confidence: high
+  #   reason: "Voice comparison confirmed speaker identity"

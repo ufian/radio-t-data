@@ -1,0 +1,149 @@
+episode: 422
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  hosts_questionable: [Alek.sys]  # только 3 реплики, 6 сек - возможно ошибка
+  total_duration_sec: 7316  # ~2 часа по последней реплике
+
+# Проблема с Alek.sys
+alek_sys_analysis:
+  total_replies: 3
+  total_duration_sec: 6
+  first_appearance_sec: 183
+  issue: "Слишком мало реплик для ведущего. Возможно, Alek.sys не участвовал в этом выпуске."
+  samples:
+    - stime: 183.43
+      text: "Тут вот какое дело."
+    - stime: 3282.17
+      text: "То есть, ну, как... Сюрприз, да?"
+    - stime: 5074.38
+      text: "Что-то пахнуло даже как-то."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (3 и 1.5 сек) между репликами Ksenks. Марина не была представлена в начале выпуска. Контекст указывает на продолжение мысли Ksenks."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Обе реплики окружены репликами Ksenks и продолжают её тему разговора"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики для voice comparison"
+
+    suggested_action: "Переименовать в Ksenks"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-3 сек) разбросаны по всему эпизоду. Эльдар Муртазин не был представлен как гость в начале выпуска. Это обычный 'полный состав' без гостей."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Некоторые реплики граничат с Gray или находятся в контексте его темы"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Мужской голос, может быть неправильно распознанный Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1472.79
+          etime: 1474.75
+          text: "Понятное дело, это гораздо более законная часть."
+        reason: "Самая длинная реплика, но всё равно короткая. Нужно прослушать для определения реального спикера."
+
+    suggested_action: "Требуется ручная проверка аудио"
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 0.5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Односложная реакция 'Понятно' длительностью 0.5 сек — типичный артефакт распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Реплика в контексте разговора про магию, следующая реплика — Ksenks"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Может быть короткая реакция Gray"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткая реплика (0.5 сек) для voice comparison"
+
+    suggested_action: "Удалить или объединить с соседней репликой"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Не упомянут в представлении в начале ('полный состав'), но имеет 3 реплики. Требует проверки — возможно, это ошибки распознавания."
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар не был представлен как гость, но ему присвоены 4 реплики"
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Марина не была представлена как гость, но ей присвоены 2 реплики"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 422
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Обе реплики окружены репликами Ksenks и являются продолжением её мысли"
+
+  - type: rename
+    episode: 422
+    from_speaker: "SPEAKER_05"
+    to_speaker: "SPEAKER_99"
+    confidence: medium
+    reason: "Односложная реакция 'Понятно' (0.5 сек) — скорее всего артефакт или неразличимая реакция"
+
+# Комментарий
+notes: |
+  Эпизод 422 от 13 декабря 2014 года. В начале Umputun говорит о "полном составе" —
+  Bobuk, Ksenks ("комячка"), Gray ("язвительный одессит").
+
+  Alek.sys НЕ упоминается в представлении, но имеет 3 реплики. Это требует проверки:
+  либо он присоединился позже, либо это ошибки распознавания.
+
+  SPEAKER_MISATTRIBUTED_ELDAR и SPEAKER_MISATTRIBUTED_MARIN — результат предыдущих
+  попыток идентификации, которые были отменены (судя по префиксу MISATTRIBUTED).
+  Эти реплики требуют повторного анализа голоса или ручной проверки.

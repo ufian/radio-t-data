@@ -1,0 +1,170 @@
+episode: 472
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Bobuk, Alek.sys]
+  total_duration_sec: 6680
+  notes: |
+    В начале эпизода Umputun говорит: "Грей, Ксения и я. Но без Бобука, потому что Бобук опять не смог."
+    Однако Bobuk присутствует с 9 репликами (25 сек), а Alek.sys с 2 репликами (3 сек).
+    Это требует проверки - либо они подключились позже, либо это ошибка атрибуции.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 179
+    replies_count: 40
+    first_appearance_sec: 326
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Эльдар Муртазин - известный мобильный аналитик, частый гость подкаста.
+        В people.yaml указан как "Ведущий мобильный аналитик".
+        Его реплики содержат экспертный контент о мобильных устройствах, аккумуляторах,
+        Smart TV и технических характеристиках - типичные темы для Муртазина.
+        Примеры реплик:
+        - "Все-таки Apple научилась делать хорошие аккумуляторы" (493s)
+        - "У меня iPhone 6 Plus, 6S Plus, точнее, живет двое суток" (502s)
+        - "Когда Samsung по дефолту начнет включаться как Smart TV..." (4545s)
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Идентификация с высокой уверенностью по контексту"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 4
+    replies_count: 2
+    first_appearance_sec: 2651
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики (2 сек каждая) в разных частях эпизода.
+        Контекст указывает на ошибку распознавания:
+        1. "Он практически ненужный" (2651s) - реплика в диалоге Umputun и Ksenks о drag-and-drop
+        2. "Оно пока еще не пришло" (4734s) - ответ после вопроса Ksenks "Так оно работает?"
+        По контексту обе реплики скорее принадлежат Umputun (продолжение его мысли).
+        Нет признаков присутствия Петра Диденко в этом эпизоде.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.7
+          reason: "Короткие реплики в контексте диалога Umputun, логически продолжают его мысль"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2651.21
+          etime: 2653.55
+          text: "Он практически ненужный."
+        reason: "Проверить, не голос ли это Umputun"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 2
+    replies_count: 1
+    first_appearance_sec: 4223
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна короткая реплика "Они такие клевые, может, мне тоже купить?" (4223s).
+        Контекст диалога:
+        - Ksenks: "А у тебя уже один есть?" (4220s)
+        - Umputun: "У меня уже два есть." (4221s)
+        - [эта реплика]
+        - Umputun: "Конечно." (4225s)
+        По контексту и интонации (вопрос о покупке устройства) это скорее Ksenks,
+        продолжающая свою линию вопросов. Марина не была объявлена как участник эпизода.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Продолжение диалога Ksenks, женский голос, вопрос о покупке устройства"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4223.16
+          etime: 4225.24
+          text: "Они такие клевые, может, мне тоже купить?"
+        reason: "Проверить, не голос ли это Ksenks"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: |
+        Эльдар появляется с 326 сек, но НЕ был представлен в начале эпизода.
+        Umputun говорит только про "Грей, Ксения и я".
+        Однако Эльдар - известный постоянный гость, его присутствие очевидно по контенту.
+        Возможно, он подключился позже или представление вырезано.
+
+    - speaker: "Bobuk"
+      issue: |
+        В начале сказано "без Бобука, потому что Бобук опять не смог",
+        но Bobuk появляется в 254 сек (ДО представления гостей) с 9 репликами.
+        Требует проверки - возможно ошибка атрибуции или Bobuk подключился позже.
+
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys НЕ был упомянут в начале эпизода, но имеет 2 реплики (550s, 3473s).
+        Возможно ошибка атрибуции или Alek.sys подключился позже.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 472
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Одна короткая реплика в контексте диалога Ksenks.
+      Марина не была объявлена участником. Требуется voice comparison для подтверждения.
+
+  - type: rename
+    episode: 472
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: |
+      Две короткие реплики в контексте диалогов Umputun.
+      Пётр не был объявлен участником. Требуется voice comparison для подтверждения.
+
+# Дополнительные наблюдения
+notes: |
+  1. EldarMurtazin уже корректно идентифицирован в транскрипте - правил очистки не требуется.
+
+  2. Bobuk и Alek.sys требуют отдельной проверки:
+     - Либо они действительно участвовали (несмотря на слова в начале)
+     - Либо это ошибки атрибуции других спикеров
+
+  3. SPEAKER_MISATTRIBUTED_* - это маркеры отменённых ошибочных присвоений,
+     которые требуют ручной верификации для окончательного определения автора.
+
+# Аудио для voice comparison (если доступно)
+audio_reference:
+  note: "Файл 472_desc.json не найден в data_clean, URL аудио недоступен"

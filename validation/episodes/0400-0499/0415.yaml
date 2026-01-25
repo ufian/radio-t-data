@@ -1,0 +1,219 @@
+episode: 415
+status: needs_review
+analyzed_at: "2026-01-25T14:30:00Z"
+verified: true
+
+# Контекст выпуска
+episode_context:
+  date: "2014-10-25"
+  intro_statement: "Полный состав. Обычных гостей нет."
+  confirmed_no_guests: true
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7294
+  notes: "Alek.sys имеет минимальное участие (15 сек) - возможно ошибка"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 10
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        На 4320s: Umputun говорит "Ксюша, например, попал",
+        SPEAKER_06 отвечает "Конечно, попал", "Я попала" (женский род).
+        Это прямой ответ Ksenks на обращение к ней.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+    # Примечание: остальные реплики SPEAKER_06 (короткие реакции)
+    # могут быть ошибками распознавания других ведущих
+    additional_notes: |
+      Реплики "По-моему, да" (1434s), "С КПЛП?" (5991s), "В смысле?" (5991s),
+      "Да-да-да" (8053s), "А идиоты?" (8146s) - короткие реакции,
+      могут принадлежать разным ведущим. Для точного определения
+      требуется voice comparison.
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (смех и односложное слово) - ошибки распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        4052s: "Хе-хе-хе-хе" - смех между репликами Gray
+        4487s: "Метал" - слово, которое сразу повторяет Umputun ("Метал, да")
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Смех на 4052s идет между репликами Gray"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: '"Метал" - Umputun мог сам сказать и потом повторить'
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 11
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Все 4 реплики идут в контексте обсуждения, где участвует Ksenks:
+        - 4717s: "И зачем мне эта огромная красная кломпка в углу?" -
+          между репликами Ksenks, продолжение её мысли о почтовом приложении
+        - 7145s: "Да, попроси просто циферки" - после Bobuk, перед Ksenks
+        - 7607s: "Я не понимаю, как у них это как-то влазит" -
+          между Gray и Ksenks, продолжение темы iPhone 6 Plus в кармане
+        - 7619s: "Когда ты ходишь, он же большой, он болтается" -
+          сразу после Bobuk про iPhone в кармане
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики - вероятно ошибки распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        6803s: "Нет, почему?" - после длинной речи Umputun про USB Security Key
+        8060s: "Ну, я же говорю, там как-то все очень разбросано и довольно грустно"
+        Реплики разрозненные, нет явного контекста для идентификации.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "На 6803s Gray отвечает сразу после"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Женский голос возможен"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "На 8060s реплика между Bobuk и Umputun"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8060.62
+          etime: 8065.05
+          text: "Ну, я же говорю, там как-то все очень разбросано и довольно грустно."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 6
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Серия быстрых реплик 7522-7525s: "Ах, можно Base Image построить",
+        "Ах, можно Base Container", "Ах, можно Volume Share", "Читайте RTFM"
+        Идет сразу после реплики Umputun "Ерунду говорит всякую" (7520s).
+        Похоже на чтение/цитирование с экрана или ироничное перечисление.
+        Umputun часто так комментирует статьи.
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.7
+          reason: "Идет сразу после его реплики, тема Docker, его стиль"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray следующий говорит про Docker"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7522.65
+          etime: 7525.01
+          text: "Ах, можно Base Image построить. Ах, можно Base Container. Ах, можно Volume Share. Ах, ах, ах. Читайте RTFM. Господи."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Очень малое участие (7 реплик, 15 сек). Нетипично мало для ведущего. Возможно часть его реплик ушла в SPEAKER_* или была неправильно атрибутирована."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 415
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Все 4 реплики идут в контексте обсуждения Ksenks, продолжают её мысли"
+
+  - type: rename
+    episode: 415
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    stime_range: [4320, 4331]
+    confidence: high
+    reason: "Прямой ответ на обращение 'Ксюша, например, попал' с женским родом 'Я попала'"
+
+  - type: delete_or_merge
+    episode: 415
+    from_speaker: "SPEAKER_05"
+    confidence: medium
+    reason: "Ошибки распознавания - смех и односложная подсказка"
+
+# Резюме
+summary: |
+  Эпизод 415 - выпуск без гостей ("Полный состав. Обычных гостей нет.").
+  Присутствуют все 5 ведущих, но Alek.sys имеет минимальное участие.
+
+  Основные находки:
+  1. SPEAKER_MISATTRIBUTED_MARIN - это Ksenks (высокая уверенность)
+  2. SPEAKER_06 частично Ksenks (на 4320s), остальные реплики требуют проверки
+  3. SPEAKER_05 - ошибки распознавания (смех, короткие слова)
+  4. SPEAKER_MISATTRIBUTED_ELDAR - требует voice comparison
+  5. SPEAKER_01 - вероятно Umputun читает с экрана (средняя уверенность)
+
+  Рекомендация: применить правила для MARIN и SPEAKER_06 (4320s),
+  остальное требует дополнительной проверки голосов.

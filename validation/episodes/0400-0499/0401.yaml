@@ -1,0 +1,244 @@
+episode: 401
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  absent_hosts: [Gray]  # Umputun в начале: "Сегодня ГРА нет"
+  total_duration_sec: ~6800
+  notes: >
+    В начале Umputun говорит: "Сегодня ГРА нет, зато есть два других американских
+    соведущих, а именно Сюша и Бабок". "Сюша" - это Ksenks, но в разметке она не
+    присутствует как отдельный спикер. Вероятно, SPEAKER_01 - это Ksenks.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 387
+    replies_count: 183
+    pattern: consecutive
+    first_appearance_sec: 21
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        В начале выпуска (12.9s) Umputun говорит: "Сегодня ГРА нет, зато есть два
+        других американских соведущих, а именно Сюша и Бабок". SPEAKER_01 активно
+        участвует в диалоге с первых минут (21s), говорит осмысленные фразы,
+        участвует в обсуждении тем. Женский голос подтверждается контекстом
+        реплик (обращение "ухи закрывать", эмоциональные реакции). 183 реплики
+        и 387 сек общего времени - соответствует роли соведущей.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 711
+    replies_count: 136
+    pattern: consecutive
+    first_appearance_sec: 44
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Marin_k_a уже идентифицирована в people.yaml как бывшая ведущая Марина.
+        В начале выпуска (43.5s) она благодарит за участие в юбилее: "Да, я хотела
+        сказать большое всем спасибо за участие". Активное участие (136 реплик,
+        711 сек) соответствует роли бывшей ведущей на юбилейном выпуске.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 9
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 2074
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Две короткие реплики (9 сек суммарно), разбросанные по выпуску. Первая
+        реплика (2074s) содержит склейку нескольких голосов: "Ну, прикольно В кино
+        я бы на него не ходил Скачай, Ксюш Скачай Ты что, Бобок..." - это явно
+        несколько человек, ошибочно объединённых в одну реплику. Обращение к
+        "Ксюш" и "Бобок" указывает, что это слова одного из ведущих (вероятно
+        Umputun). Вторая реплика "Неважно." (3357s) - короткая вставка между
+        репликами Umputun, скорее всего это его же голос. Имя SPEAKER_MISATTRIBUTED_PETR
+        указывает на отменённое ошибочное присвоение - вероятно, система ошибочно
+        определила PetrDidenko, но затем отменила.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.7
+          reason: "Контекст реплик (обращение к Ksenks и Bobuk) и расположение между репликами Umputun"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Возможно часть реплик принадлежит Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        notes: "Слишком короткие и смешанные реплики для voice comparison"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3
+    replies_count: 5
+    pattern: scattered
+    first_appearance_sec: 2164
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Очень короткие реплики (3 сек на 5 реплик, менее 1 сек каждая): "Ага.",
+        "Ну, да.", "Ну.", "Ну, окей, да.", "Я понимаю." - типичные ошибки
+        распознавания, когда короткие поддакивания неверно атрибутируются.
+        Все реплики идут в контексте монолога Umputun или диалога с другими
+        спикерами.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Реплики идут в контексте его монолога"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Может быть SPEAKER_01, ошибочно размеченный как SPEAKER_04"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Возможный участник диалога"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        notes: "Слишком короткие реплики для voice comparison"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+    first_appearance_sec: 944
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Три очень короткие реплики (по ~1 сек): "Ха-ха." (944s), "Американцы
+        выдали." (2979s), "Что нет?" (6751s). Разбросаны по всему выпуску,
+        не образуют осмысленной последовательности. Первая реплика - смех,
+        третья - короткий вопрос. Похоже на ошибки атрибуции коротких реплик.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Может быть SPEAKER_01/Ksenks, ошибочно размеченный"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Реплики идут в контексте его диалогов"
+        - person_id: "marin_k_a"
+          confidence: 0.2
+          reason: "Возможно Марина"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        notes: "Слишком короткие реплики для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: >
+        SPEAKER_01 не переименован в Ksenks, хотя в начале выпуска Umputun явно
+        представляет "Сюшу" (Ksenks) как соведущую. SPEAKER_01 говорит активно
+        с самого начала (183 реплики), что соответствует роли соведущей.
+    - speaker: "Gray"
+      issue: >
+        Gray отсутствует в этом выпуске (Umputun: "Сегодня ГРА нет"), это корректно.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 401
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Umputun в начале (12.9s): "Сегодня ГРА нет, зато есть два других американских
+      соведущих, а именно Сюша и Бабок". SPEAKER_01 активно участвует с 21s,
+      183 реплики, 387 сек - соответствует роли Ksenks.
+
+  - type: merge_to_unknown
+    episode: 401
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "SPEAKER_UNKNOWN"
+    confidence: medium
+    reason: >
+      Реплики содержат склейку нескольких голосов, невозможно точно определить
+      спикера. Лучше пометить как неизвестного для последующей ручной проверки.
+
+  - type: delete_or_merge
+    episode: 401
+    from_speaker: "SPEAKER_04"
+    to_speaker: null
+    confidence: medium
+    reason: >
+      5 коротких реплик (<1 сек каждая) - ошибки распознавания. Можно удалить
+      или объединить с ближайшим спикером по контексту.
+
+  - type: delete_or_merge
+    episode: 401
+    from_speaker: "SPEAKER_06"
+    to_speaker: null
+    confidence: medium
+    reason: >
+      3 очень короткие реплики, разбросанные по выпуску - ошибки распознавания.
+      Можно удалить или объединить с ближайшим спикером по контексту.
+
+# Референсные сегменты для voice comparison (если понадобится)
+voice_reference_segments:
+  - speaker: "SPEAKER_01"
+    description: "Длинная реплика для сравнения голоса Ksenks"
+    stime: 74.78
+    etime: 83.22
+    text: "Когда первый раз включила себя в наушниках и радиот, я тоже подумала, где-то есть эти люди, с которыми у меня так о многом есть о чем поговорить."
+    notes: "Женский голос, говорит о личном опыте прослушивания подкаста"
+
+  - speaker: "Marin_k_a"
+    description: "Референсный сегмент Марины"
+    stime: 59.69
+    etime: 72.68
+    text: "Очень меня тронули некоторые письма, когда люди говорили, что когда я включаю наушники и радиот, я чувствую себя в кругу друзей, в кругу коллег, самых любимых, которых у меня никогда не было."
+    notes: "Женский голос, эмоциональный тон"

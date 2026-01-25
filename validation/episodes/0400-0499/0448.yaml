@@ -1,0 +1,245 @@
+episode: 448
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 7130
+  notes: |
+    В начале эпизода Umputun говорит, что он с Греем "на пару",
+    ожидают Бобука. Alek.sys присутствует с минимальным участием (7 реплик, 14 сек).
+    Bobuk появляется примерно на 125 секунде.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 11
+    replies_count: 4
+    pattern: scattered
+    timestamps:
+      - stime: 2412.18
+        etime: 2413.8
+        text: "Небольшая, маленькая плюшечка."
+      - stime: 3353.09
+        etime: 3356.21
+        text: "Снежный Капитан будет потом."
+      - stime: 6595.14
+        etime: 6596.94
+        text: "Они там не собираются общаться."
+      - stime: 7004.25
+        etime: 7008.83
+        text: "Мы обсуждали, что Твиттер снял ограничения на 140 символов в ДМах."
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это ошибочное присвоение Эльдару Муртазину, которое было отменено
+        (поэтому спикер называется SPEAKER_MISATTRIBUTED_ELDAR, а не EldarMurtazin).
+        Все реплики короткие, разбросаны по эпизоду, вклиниваются между репликами
+        известных ведущих. Контекст показывает типичные продолжения разговора
+        ведущих, а не отдельного гостя.
+        Реплика 1 (2412s): Gray говорит "это плюшечка", сразу после - "Небольшая, маленькая плюшечка" -
+        продолжение мысли Gray. Umputun сразу продолжает ту же тему.
+        Реплика 2 (3353s): Gray говорит "Это ещё рано", ответ "Снежный Капитан будет потом" -
+        продолжение диалога про macOS, Umputun подхватывает про Snow Yosemite.
+        Реплика 3 (6595s): вписывается в диалог про Apple Connect.
+        Реплика 4 (7004s): отвечает на вопрос Gray "А кто?", напоминает о предыдущей теме.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: |
+            Реплики часто продолжают мысль Gray. Первая реплика - буквально
+            продолжение фразы "это плюшечка" -> "Небольшая, маленькая плюшечка".
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: |
+            Некоторые реплики могут быть Umputun, особенно реплика про Твиттер
+            (напоминание о ранее обсуждённой теме).
+        - person_id: "bobuk"
+          confidence: 0.1
+          reason: |
+            Bobuk присутствует в эпизоде с 125 сек, технически мог быть автором.
+
+      voice_task:
+        needed: true
+        reference_segments:
+          - stime: 7004.25
+            etime: 7008.83
+            text: "Мы обсуждали, что Твиттер снял ограничения на 140 символов в ДМах."
+            reason: "Самая длинная реплика (4.6 сек), чистая речь"
+        compare_with:
+          - speaker: Gray
+            segments:
+              - stime: 2409.34
+                etime: 2412.14
+                text: "Ну, то есть, это плюшечка."
+                reason: "Непосредственно перед спорной репликой"
+          - speaker: Umputun
+            segments:
+              - stime: 2413.82
+                etime: 2420.48
+                text: "Это плюшечка. Но вот я жду..."
+                reason: "Сразу после спорной реплики"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 7
+    replies_count: 4
+    pattern: scattered
+    timestamps:
+      - stime: 4976.91
+        etime: 4977.79
+        text: "Параллельно кого?"
+      - stime: 5522.51
+        etime: 5522.57
+        text: "Ну,"
+      - stime: 5933.2
+        etime: 5938.12
+        text: "Это, по-моему, HTC One."
+      - stime: 7064.09
+        etime: 7065.31
+        text: "Преференции."
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все реплики - короткие вставки, типичные ошибки распознавания:
+        1. "Параллельно кого?" (0.9 сек) - уточняющий вопрос в диалоге Bobuk-Gray
+        2. "Ну," (0.06 сек!) - междометие, обрывок
+        3. "Это, по-моему, HTC One." (4.9 сек) - дополнение к реплике Gray "Это, по-моему, HTC."
+        4. "Преференции." (1.2 сек) - подсказка слова Bobuk, который сразу повторяет "Преференции. Отличное слово."
+        Паттерн: разбросаны по эпизоду, всегда между репликами известных ведущих,
+        суммарно всего 7 секунд. Нет гостей в этом эпизоде.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: |
+            Реплика "Это, по-моему, HTC One" - продолжение фразы Gray "Это, по-моему, HTC".
+            Это буквально одна разорванная фраза.
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: |
+            Bobuk активен в этих сегментах. "Параллельно кого?" может быть его вопросом.
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: |
+            "Преференции" - подсказка слова, стиль характерен для любого ведущего.
+
+      voice_task:
+        needed: true
+        reference_segments:
+          - stime: 5933.2
+            etime: 5938.12
+            text: "Это, по-моему, HTC One."
+            reason: "Самая длинная реплика, чистая речь"
+        compare_with:
+          - speaker: Gray
+            segments:
+              - stime: 5931.76
+                etime: 5933.14
+                text: "Это, по-моему, HTC."
+                reason: "Начало той же фразы - скорее всего это Gray"
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+    timestamps:
+      - stime: 7144.15
+        etime: 7144.21
+        text: "Нет."
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Односложный ответ "Нет" длительностью 0.06 секунды.
+        Контекст: Bobuk спрашивает "Жень, ты пробовал что-нибудь на неме писать?" (обращается к Umputun).
+        "Нет" - это ответ Umputun на вопрос Bobuk.
+        Затем Bobuk продолжает совет: "Ты попробуй, они довольно забавные..."
+        Очевидная ошибка распознавания спикера.
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Bobuk обращается по имени "Жень" - это Umputun (Евгений).
+        Ответ "Нет" идеально вписывается как ответ Umputun.
+        Bobuk продолжает разговор с ним ("Ты попробуй...").
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Реплика слишком короткая (0.06 сек), контекст однозначный"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода Umputun упоминает "мы тут с Греем пока на пару" и
+    ожидает Бобука. Alek.sys не представлен явно, но говорит в начале
+    (26 сек: "До пятисотого нам еще далеко"). Гостей в эпизоде нет.
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Спикер не представлен, потому что это не реальный участник,
+        а ошибочно атрибутированные реплики ведущих.
+    - speaker: "SPEAKER_02"
+      issue: |
+        Спикер не представлен, потому что это ошибки распознавания,
+        а не реальный гость.
+    - speaker: "SPEAKER_05"
+      issue: |
+        Однозначно ошибка - это Umputun отвечает на прямой вопрос.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 448
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: |
+      Bobuk обращается "Жень" к Umputun, ответ "Нет" - это ответ на вопрос.
+      Контекст однозначный.
+
+  - type: merge_into_previous
+    episode: 448
+    from_speaker: "SPEAKER_02"
+    segment:
+      stime: 5933.2
+      etime: 5938.12
+      text: "Это, по-моему, HTC One."
+    to_speaker: "Gray"
+    confidence: medium
+    reason: |
+      Это продолжение фразы Gray "Это, по-моему, HTC." -> "Это, по-моему, HTC One."
+      Одна разорванная фраза. Требует голосовой верификации.
+
+# Комментарий аналитика
+notes: |
+  Эпизод 448 не содержит реальных гостей. Все "неизвестные спикеры" - это
+  ошибки автоматического распознавания речи.
+
+  SPEAKER_MISATTRIBUTED_ELDAR - интересный случай: видимо, ранее эти реплики
+  были ошибочно приписаны Эльдару Муртазину, затем это было отменено
+  (отсюда название MISATTRIBUTED). Реплики разбросаны по эпизоду и не образуют
+  связного участия гостя.
+
+  SPEAKER_02 - типичные короткие вставки-ошибки. Особенно показательна
+  реплика про HTC One, которая буквально продолжает фразу Gray.
+
+  SPEAKER_05 - единственный случай с высокой уверенностью идентификации:
+  Bobuk спрашивает "Жень" (Umputun), получает ответ "Нет".
+
+  Рекомендация: применить правило для SPEAKER_05 автоматически,
+  остальные требуют голосовой верификации перед исправлением.

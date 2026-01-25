@@ -1,0 +1,197 @@
+episode: 432
+status: needs_review
+analyzed_at: "2026-01-25"
+audio_url: "https://cdn.radio-t.com/rt_podcast432.mp3"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  guests_present: [Alexmak]
+  total_duration_sec: 7811
+  host_stats:
+    - name: Bobuk
+      replies: 817
+      duration_sec: 2953
+      first_at: 17
+    - name: Umputun
+      replies: 813
+      duration_sec: 2777
+      first_at: 3
+    - name: Gray
+      replies: 171
+      duration_sec: 681
+      first_at: 47
+    - name: Ksenks
+      replies: 97
+      duration_sec: 396
+      first_at: 39
+    - name: Alek.sys
+      replies: 6
+      duration_sec: 10
+      first_at: 3156
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 814
+    replies_count: 170
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alexmak"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "62.37s: 'Да, мальчик, это Алекс Пацай, он же известен как Алекс Мак, то есть я, представитель, как и Ксюша, компании Параллелс.'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 53
+    replies_count: 14
+    pattern: consecutive
+    first_appearance_sec: 4280
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Слушатель, позвонивший во время эфира
+      # Umputun обращается к нему как "Александр" (4711s, 4814s)
+      # Не представлялся в начале выпуска, появился на ~71 минуте
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Umputun обращается к нему по имени 'Александр' в 4557s: '...которую ты рассказывал, Александр, это...'"
+
+      possible_matches:
+        - person_id: "listener_aleksandr"
+          confidence: 0.3
+          reason: "Слушатель позвонил в эфир для обсуждения микросервисов. Не постоянный гость, вероятно разовый звонок."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4322.38
+          etime: 4330.66
+          text: "Я скорее согласен с этим. Дело в том, что это маркетинговая штука, микросервисы."
+        additional_segments:
+          - stime: 4430.1
+            etime: 4440.64
+            text: "Если этого не понимать, то можно наломать дров и, соответственно, принять неправильные решения."
+          - stime: 4594.64
+            etime: 4620.14
+            text: "Сначала ее сделать в рамках одной системы... Безусловно. Но меняется сложность реализации всего этого. И сложность сопровождения."
+        context: "Слушатель обсуждает DDD (Domain-Driven Design) и bounded contexts в контексте микросервисов. Технически грамотен."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Три короткие реплики ('Да?', 'А, в этом смысле.', 'Да.') разбросанные по эпизоду (62s, 6003s, 8409s) - типичные ошибки распознавания коротких подтверждающих фраз"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Короткие реакции в диалоге, могут быть ошибочно выделены из речи ведущего"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Альтернативный вариант - мог быть Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: single
+
+    analysis:
+      is_error: true
+      error_reason: |
+        ВНИМАНИЕ: Этот спикер НЕ НАЙДЕН в текущем файле транскрипта (432_cc.json).
+        При grep поиске "SPEAKER_MISATTRIBUTED" — 0 результатов.
+        Возможно данные в задании устарели или спикер уже был исправлен в предыдущей итерации.
+        Оставляем запись для истории, но реальной работы не требуется.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Контекст из задания: реплика 'Я помню, были такие приятные.' (6487.3s)"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "По контексту (обсуждение клавиатур) вероятнее всего Ksenks"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        note: "Спикер не найден в файле — проверка невозможна"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: "Слушатель Александр не был представлен в начале, позвонил на 71-й минуте. Обсуждал микросервисы с ведущими."
+    - speaker: "Alek.sys"
+      issue: "Alek.sys появляется с 3156s (6 реплик, 10 сек) - очень мало для полноценного участника. Возможно фрагментарное участие или ошибка разметки."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 432
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Alexmak"
+    confidence: high
+    reason: "Явное представление в начале эпизода: 'это Алекс Пацай, он же известен как Алекс Мак'"
+
+  - type: rename
+    episode: 432
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Listener_Aleksandr"
+    confidence: medium
+    reason: "Слушатель позвонил в эфир, Umputun обращается к нему как 'Александр'"
+
+  - type: delete_or_merge
+    episode: 432
+    from_speaker: "SPEAKER_01"
+    to_speaker: null
+    confidence: medium
+    reason: "Ошибки распознавания коротких реплик, требуется voice comparison для определения реального спикера"
+
+  # SPEAKER_MISATTRIBUTED_MARIN не найден в файле — правило не применимо
+
+# Примечания
+notes:
+  - "Эпизод 432 от 21 февраля 2015 года"
+  - "Гость Alexmak (Алекс Пацай) из компании Parallels - участвовал весь выпуск"
+  - "Слушатель Александр позвонил для обсуждения микросервисов (~71-79 мин эфира)"
+  - "Alek.sys участвует минимально (6 реплик), возможно подключился удалённо ненадолго"
+  - "SPEAKER_MISATTRIBUTED_MARIN из задания не найден в файле — вероятно уже исправлен"
+
+# Верификация
+verification:
+  file_analyzed: "/Users/vasiliev/radio-t-data/data_clean/432/432_cc.json"
+  file_size_kb: 584
+  total_entries_in_file: "~2090 реплик"
+  grep_verification:
+    SPEAKER_04: 170  # найдено
+    SPEAKER_05: 14   # найдено
+    SPEAKER_01: 3    # найдено
+    SPEAKER_MISATTRIBUTED_MARIN: 0  # НЕ найдено

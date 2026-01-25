@@ -1,0 +1,137 @@
+episode: 438
+status: has_tasks
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  # Gray отсутствует - упомянуто в начале: "Грея нет, поэтому напомнить некому"
+  total_duration_sec: 7200  # ~2 часа (8284 сек последняя реплика)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 9
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Все три реплики появляются в непосредственной связи с репликами Ksenks:
+        1. 200.4s: "Дженерики и умный компилятор?" - следует за диалогом с Ксюшей о Go 2.0
+        2. 2211.1s: "Так, это 7 причин, почему фреймворки..." - продолжает реплику Ksenks (2203.9s: "У нас есть очередная тема про фреймворки")
+        3. 3395.4s: "Ну или на крайний случай Бобука" - сразу после реплики Ksenks (3393.2s: "Так это же твои любимые микросервисы")
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Все реплики - короткие ответы/реакции в контексте, где говорят с Ксюшей:
+        1. 169.6s: "Да." - ответ на вопрос Umputun "Ты с нами?" обращённый к Ксюше
+        2. 171.6s: "Отвалился?" - продолжение диалога о том, что Bobuk отвалился
+        3. 1835.3s: "Еще год." - реплика в разговоре о Rust между Alek.sys и Bobuk
+        4. 5907.0s: "Окей." - короткая реакция на объяснение Umputun
+        5. 8281.7s: "Спокойной ночи." - прощание в конце, после чего Bobuk обращается к Ксюше
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 3
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Три коротких реплики в самом конце (8279s), перед прощанием:
+        "Пойдем?", "Да.", "Конечно."
+        Сразу после этого Bobuk обращается к Ксюше с просьбой выложить фото.
+        Контекст указывает, что это Ksenks прощается перед уходом.
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8279.12
+          etime: 8280.7
+          text: "Пойдем? Да. Конечно."
+          reason: "Краткие реплики в конце, нужна верификация голоса"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys появляется с 775s (13 реплик, 27 сек) без явного представления.
+        Однако в начале Umputun говорит "Сообразим на троих" - значит был только
+        Umputun, Bobuk, Ksenks. Возможно Alek.sys подключился позже или это
+        ошибочная атрибуция.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 438
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Все 3 реплики появляются в прямом контексте реплик Ksenks.
+      Имя "MARIN" ошибочно - в эпизоде нет гостя Марина.
+
+  - type: rename
+    episode: 438
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Все 5 реплик - ответы на обращения к Ксюше или в контексте её участия.
+      Реплика "Да" в 169.6s - прямой ответ на "Ты с нами?" к Ксюше.
+
+  - type: rename
+    episode: 438
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Три реплики в самом конце перед прощанием с Ксюшей.
+      Нужна верификация голосом для повышения уверенности.
+
+# Дополнительные наблюдения
+notes: |
+  1. Gray отсутствует в этом выпуске - это явно указано в начале (11.6s).
+  2. В начале указано "сообразим на троих" - значит изначально 3 ведущих.
+  3. Появление Alek.sys (13 реплик с 775s) требует проверки - либо подключился
+     позже, либо это ошибка атрибуции.
+  4. Эпизод от 4 апреля 2015 года - первый выпуск после 1 апреля.

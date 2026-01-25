@@ -1,0 +1,272 @@
+episode: 452
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  total_duration_sec: 6093  # Umputun 3928 + Ksenks 2165
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 441
+    replies_count: 161
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "denis_podcaster"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "421s: Umputun говорит 'Как нам стремительно ворвался Денис. Здравствуй, Денис.' Затем SPEAKER_06 отвечает 'Нет, не был. У меня был свой подкастик, и я не лез в чужие.'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 410
+    replies_count: 68
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # PetrDidenko уже идентифицирован в системе, но проверим консистентность
+      identified_as: "petr_didenko"
+      identification_method: "pre-existing"
+      confidence: high
+      evidence: "Известный постоянный гость, 148 выпусков согласно people.yaml"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 72
+    replies_count: 14
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Некорректная атрибуция. В строке 10943 реплика 'Я Дима из Минска и опытный... Windows-юзер, и Mac-юзер' помечена как EldarMurtazin, но это явно другой человек (SPEAKER_04/Дима). Эльдар Муртазин - известный мобильный аналитик, а не 'Дима из Минска'. Вероятно все реплики EldarMurtazin в этом эпизоде ошибочны."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "denis_podcaster"
+          confidence: 0.6
+          reason: "Реплики EldarMurtazin (467-567s) находятся в том же временном сегменте, где активен SPEAKER_06/Денис. Возможно это ошибочное дублирование его реплик."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 467.83
+          etime: 484.30
+          text: "Это некоторое, хотя, наверное, в своем случае не такое уж лукавство, то есть программы бывают разные, бывают просто сложные, которые состоят из кучи частей, которые ты понимаешь по отдельности, а бывают то, что там тот же Лем в своей книге называл черным ящиком."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 188
+    replies_count: 29
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "kion"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "2126s: SPEAKER_02 говорит 'Звать меня Кион'. Из Украины, не настоящее имя."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 159
+    replies_count: 20
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "dima_minsk"
+      identification_method: "introduction"
+      confidence: medium
+      evidence: "5380s: SPEAKER_04 говорит 'Алло, алло', затем в 5384s (ошибочно помечено как EldarMurtazin) идёт представление 'Я Дима из Минска'. Контекст: звонящий слушатель, обсуждает Windows/Mac/iPad."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 13
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реакции (1-2 сек) в случайные моменты: 'Звучит очень смешно', 'А у подружки такое же', 'Она сломается уже на следующий день'. Типичные фразы-реакции, скорее всего ошибка распознавания Ksenks."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Короткие женские реакции в контексте диалога Umputun-Ksenks"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (менее 1 сек каждая): 'Наверное, да.' (1044s), 'В Канаде так все?' (1231s). Типичные ошибки распознавания - односложные реакции."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "denis_podcaster"
+          confidence: 0.5
+          reason: "Реплики в том же временном диапазоне, где активен SPEAKER_06/Денис"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Могут быть короткими реакциями ведущей"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 10
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Уже помечено как ошибочная атрибуция (MISATTRIBUTED). Реплики женского голоса: 'Не рассказывай, я еще не смотрела новый сезон' (1348s), 'Ну окей, расскажи, почему это' (2942s), 'Просто меня не было, и ты сейчас меня одуришь' (4261s). Это явно Ksenks, а не Марина."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.95
+          reason: "Женский голос, контекст диалога с Umputun, Марины в этом эпизоде нет (только Umputun и Ksenks из ведущих)"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: "Ошибочная атрибуция. Реплика 'Я Дима из Минска' (5384s) не может принадлежать Эльдару Муртазину. Вероятно все 14 реплик EldarMurtazin в этом эпизоде принадлежат другим спикерам."
+
+    - speaker: "SPEAKER_05"
+      issue: "Скорее всего ошибки распознавания Ksenks (5 коротких реакций)"
+
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Уже помечено как ошибка. Рекомендуется переименовать в Ksenks."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 452
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Denis"
+    confidence: high
+    reason: "Явное представление в 421s: 'Здравствуй, Денис'"
+
+  - type: rename
+    episode: 452
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Kion"
+    confidence: high
+    reason: "Самопредставление в 2126s: 'Звать меня Кион'"
+
+  - type: rename
+    episode: 452
+    from_speaker: "SPEAKER_04"
+    to_speaker: "DimaMinsk"
+    confidence: medium
+    reason: "Представление в 5384s (ошибочно помечено как EldarMurtazin): 'Я Дима из Минска'"
+
+  - type: rename
+    episode: 452
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Женский голос в эпизоде с двумя ведущими (Umputun, Ksenks). Марины нет."
+
+  - type: rename
+    episode: 452
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Короткие женские реакции в контексте диалога"
+
+  - type: review_manual
+    episode: 452
+    speaker: "EldarMurtazin"
+    confidence: high
+    reason: "ВСЕ 14 реплик EldarMurtazin требуют ручной проверки. Минимум одна реплика (5384s 'Я Дима из Минска') точно ошибочна. Реплики 467-567s могут принадлежать Denis/SPEAKER_06."
+
+  - type: merge_possible
+    episode: 452
+    from_speaker: "SPEAKER_07"
+    to_speaker: "SPEAKER_06"
+    confidence: low
+    reason: "Очень короткие реплики в том же временном диапазоне. Требует voice comparison."
+
+# Новые гости для добавления в people.yaml
+new_guests:
+  - id: "denis_podcaster"
+    canonical_name: "Denis"
+    aliases: []
+    real_name: "Денис"
+    info: "Подкастер (имел свой подкаст), выпуск 452"
+
+  - id: "kion"
+    canonical_name: "Kion"
+    aliases: []
+    real_name: null
+    info: "Слушатель из Украины, никнейм Кион, выпуск 452"
+
+  - id: "dima_minsk"
+    canonical_name: "DimaMinsk"
+    aliases: []
+    real_name: "Дмитрий"
+    info: "Слушатель из Минска, Windows/Mac/iPad пользователь, выпуск 452"

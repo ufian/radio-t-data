@@ -1,0 +1,256 @@
+episode: 425
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  guests_present: [Ruslan, Igor]
+  total_duration_sec: 7033
+  note: "Bobuk и Gray отсутствовали - прямое подтверждение в 6971s и 6859s"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 300
+    replies_count: 76
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "Ruslan"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Представлен в начале: "Руслана, который к нам пришел поддержать наш скромный состав" (32s)
+        2. Отвечает "Спасибо" (44s)
+        3. Подтверждает имя: "Никак, да, можно по имени" (87s)
+        4. В конце: "Руслана было слышно гораздо лучше" (7003s)
+        5. Работает в интернет-провайдере (7010s)
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 234
+    replies_count: 45
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      identified_as: "Igor"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. "И вдруг Игорь ворвался стремительно домократами" (49s)
+        2. "Игорь, у тебя есть звук?" - ответ "Добрый день" (51s)
+        3. "Мы тебя, Игорь, вообще не слышим" (187s)
+        4. Работает в СКБ Контур (где был Петя Диденко): "из той же компании, где когда-то был Петя" (107s)
+        5. В конце: "Пришел Игорь, которого было слышно примерно 20% времени" (6991s)
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 84
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин не участвовал в этом выпуске.
+        Реплики появляются между репликами SPEAKER_02/SPEAKER_03 без какого-либо
+        представления или переключения контекста.
+        Пример: в 646s SPEAKER_02 говорит о saltstack, затем "EldarMurtazin"
+        продолжает тему питона - это явно тот же спикер.
+        Участники выпуска: Umputun, Ksenks, Руслан, Игорь (подтверждено в конце).
+
+      identified_as: null
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 661.92
+          etime: 680.68
+          text: "Но вот на различных конфах, на каких бывали, люди часто жалуются на то, что им трудно выкатывать софт, когда на одну и ту же машину выкатывается несколько программных продуктов, и те имеют взаимоисключающие возможности."
+        candidates:
+          - "SPEAKER_02 (Ruslan)"
+          - "SPEAKER_03 (Igor)"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: single
+
+    analysis:
+      is_error: true
+      error_reason: "Уже помечена как ошибочная атрибуция. Одна короткая реплика 'Вы можете пока какую-нибудь другую тему?' в 6037s. Вероятно один из гостей."
+
+      identified_as: null
+      voice_task:
+        needed: false
+        note: "Слишком короткий фрагмент для идентификации"
+
+# Проблемы с ведущими (ложно присвоенные реплики)
+misattributed_hosts:
+  - speaker: "Bobuk"
+    total_duration_sec: 154
+    replies_count: 17
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Бобук НЕ участвовал в этом выпуске.
+        Прямое подтверждение от Umputun в конце выпуска (6971s):
+        "В нашем выпуске не было ни Бобука, который мог бы что-нибудь против Ксюши сказать."
+        Также в начале (7s): "Первый выпуск 2015 года в сжатом составе"
+        и (22s): "Бобука мы вообще Бобиком будем в следующий раз называть"
+
+      likely_actual_speaker: "SPEAKER_02 или SPEAKER_03"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 589.5
+          etime: 606.17
+          text: "Докер ценится, ну, в принципе, да, потому что при деплойменте на продакшн всегда возникают всякие издержки с версиями тех или иных зависимостей, не всегда это решается деп-пакетом, и приходится искать различные..."
+        candidates:
+          - "SPEAKER_02 (Ruslan)"
+          - "SPEAKER_03 (Igor)"
+
+  - speaker: "Gray"
+    total_duration_sec: 13
+    replies_count: 2
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Грей НЕ участвовал в этом выпуске.
+        Косвенное подтверждение (6859s): "Подождите, меня же Грей убьет" -
+        говорится о Грее в третьем лице, как об отсутствующем.
+        В начале: "а уж как Грея я даже и не знаю. Будем Гордым Укром называть" (27s) -
+        тоже говорится об отсутствующем Грее.
+
+      likely_actual_speaker: "SPEAKER_02 или SPEAKER_03"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 559.97
+          etime: 566.73
+          text: "Нумерация, когда докер ставится ниже того же ангулара, это несколько странно."
+        candidates:
+          - "SPEAKER_02 (Ruslan)"
+          - "SPEAKER_03 (Igor)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: "17 реплик присвоены Бобуку, но он не участвовал в выпуске (прямое подтверждение в 6971s)"
+    - speaker: "Gray"
+      issue: "2 реплики присвоены Грею, но он не участвовал в выпуске (косвенное подтверждение в 6859s)"
+    - speaker: "EldarMurtazin"
+      issue: "10 реплик присвоены Эльдару Муртазину, но он не участвовал и не упоминался"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 425
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ruslan"
+    confidence: high
+    reason: "Явное представление в начале выпуска и подтверждение в конце"
+
+  - type: rename
+    episode: 425
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Igor"
+    confidence: high
+    reason: "Явное представление в начале выпуска, работает в СКБ Контур"
+
+  - type: rename
+    episode: 425
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_NEEDS_VOICE_CHECK"
+    confidence: high
+    reason: "Бобук не участвовал в выпуске - прямое подтверждение ведущего в 6971s"
+
+  - type: rename
+    episode: 425
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_NEEDS_VOICE_CHECK"
+    confidence: high
+    reason: "Грей не участвовал в выпуске - косвенное подтверждение в 6859s"
+
+  - type: rename
+    episode: 425
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_NEEDS_VOICE_CHECK"
+    confidence: high
+    reason: "Эльдар Муртазин не упоминался и не участвовал в выпуске"
+
+  - type: rename
+    episode: 425
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "SPEAKER_NEEDS_VOICE_CHECK"
+    confidence: medium
+    reason: "Уже помечена как ошибочная атрибуция, слишком короткая для идентификации"
+
+# Информация о гостях для people.yaml
+new_guests:
+  - name: "Ruslan"
+    real_name: null
+    info: "Работает в интернет-провайдере, выпуск 425 (3 января 2015)"
+    note: "Нужно уточнить фамилию и никнейм"
+
+  - name: "Igor"
+    real_name: null
+    company: "СКБ Контур"
+    info: "Работает в СКБ Контур (где раньше был Петя Диденко), выпуск 425"
+    note: "Проблемы со связью - слышно ~20% времени. Нужно уточнить фамилию и никнейм"
+
+# Задачи для voice comparison
+voice_comparison_tasks:
+  - task_id: "425_bobuk_vs_guests"
+    description: "Определить, кому принадлежат 17 реплик, ошибочно размеченных как Bobuk"
+    segments:
+      - speaker: "Bobuk"
+        stime: 589.5
+        etime: 606.17
+    compare_with:
+      - speaker: "SPEAKER_02"
+        reference_stime: 639.25
+        reference_etime: 661.88
+      - speaker: "SPEAKER_03"
+        reference_stime: 67.64
+        reference_etime: 75.24
+
+  - task_id: "425_gray_vs_guests"
+    description: "Определить, кому принадлежат 2 реплики, ошибочно размеченных как Gray"
+    segments:
+      - speaker: "Gray"
+        stime: 559.97
+        etime: 566.73
+    compare_with:
+      - speaker: "SPEAKER_02"
+        reference_stime: 639.25
+        reference_etime: 661.88
+      - speaker: "SPEAKER_03"
+        reference_stime: 67.64
+        reference_etime: 75.24
+
+  - task_id: "425_eldar_vs_guests"
+    description: "Определить, кому принадлежат 10 реплик, ошибочно размеченных как EldarMurtazin"
+    segments:
+      - speaker: "EldarMurtazin"
+        stime: 661.92
+        etime: 680.68
+    compare_with:
+      - speaker: "SPEAKER_02"
+        reference_stime: 639.25
+        reference_etime: 661.88
+      - speaker: "SPEAKER_03"
+        reference_stime: 67.64
+        reference_etime: 75.24

@@ -1,0 +1,296 @@
+episode: 406
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: 9030  # ~2.5 часа (упомянуто в конце эпизода)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 604
+    replies_count: 239
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        SPEAKER_05 появляется в 3995s сразу после Marin_k_a (последняя реплика в 3992-3995s).
+        Контекст показывает непрерывный диалог той же женщины:
+        - Marin_k_a в 3992s: "Но я хочу принести позитив."
+        - SPEAKER_05 в 3995s: "Я очень соскучилась, правда."
+        - Umputun в 3996s называет её "Зайника" и спрашивает "ты теперь доступна?"
+        - SPEAKER_05 отвечает про "события личной жизни" и "муж пропил микрофон" - прямое продолжение разговора Marin_k_a.
+        Это явно одна и та же женщина - Марина. Система распознавания сменила идентификатор в середине разговора.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1070
+    replies_count: 197
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Марина - бывшая ведущая подкаста, известная участница.
+        Umputun приветствует её: "И Маруся влетела в стремительную домкратом" (3973s),
+        "Где ты ходила два по полчаса?" (3976s), называет "Зайника" (3996s).
+        Появляется около часа после начала эпизода (3968s), участвует активно до конца.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 105
+    replies_count: 24
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Эльдар Муртазин - известный мобильный аналитик, частый гость подкаста.
+        Первая реплика в 248s: "Я тут, может быть, тоже чего хотел" - в контексте тоста.
+        Обсуждает iOS-клиент (768s), почтовые клиенты, типичная для него техническая экспертиза.
+        В конце эпизода (9027s): "Ну да, а вообще сворачиваться пора, мы, по-моему, два с половиной часа уже."
+        Уже размечен корректно в транскрипте.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 12
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие реплики (1-2 сек каждая) разбросаны по эпизоду:
+        - 4085s: "Да-да-да, это точно." (в ответ на шутку Umputun про Firefox)
+        - 5899s: "Ну, круто."
+        - 6256s: "Почему?"
+        - 6661s: "Не расходитесь, да."
+        - 7889s: "PHP язык."
+        - 7896s: "А PHP хороший."
+        - 8148s: "Суббилеты тоже."
+        - 8996s: "И еще 30 крэйзи-код." / "Так."
+        Это типичные короткие подтверждения/реакции. Вероятно, это Marin_k_a или один из ведущих,
+        неправильно распознанный системой. Контекст указывает на женский голос (участие в обсуждении PHP).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Реплики появляются в тот же период, когда активна Марина. Контекст PHP-обсуждения соответствует."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8996.4
+          etime: 8999.11
+          text: "И еще 30 крэйзи-код. Так."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Всего 2 реплики по ~0.5 и ~2 секунды:
+        - 2804s: "Угу." (в контексте рассказа Umputun)
+        - 7346s: "Ну, стараюсь не редактировать." (в техническом обсуждении про модели с 300 полей)
+        Первая реплика - типичная ошибка распознавания (короткое "Угу" между репликами Umputun).
+        Вторая реплика - возможно Gray или Umputun, т.к. обсуждение идёт между ними и SPEAKER_05.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Первое 'Угу' идёт в середине рассказа Umputun. Возможно, его же подтверждение."
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Вторая реплика про редактирование может быть Gray в техническом обсуждении."
+
+      voice_task:
+        needed: false  # слишком короткие фрагменты для voice comparison
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика в 4337s: "То есть оно должно быть практически идеальным."
+        Появляется между двумя репликами Marin_k_a (4334-4337s и 4339-4347s) - явно часть того же диалога.
+        Имя "SPEAKER_MISATTRIBUTED_LAVALE" указывает на ранее отменённую ошибочную атрибуцию к Lavale.
+        Контекст: обсуждение user experience и дизайна на разных платформах - Марина ведёт этот разговор.
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Реплика вставлена прямо между двумя репликами Marin_k_a с интервалом <2 секунд.
+        Семантически продолжает мысль Марины: "user experience должен быть" -> "оно должно быть практически идеальным" -> "на других платформах достаточно, чтобы просто оно выполняло функции".
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика в 4445s: "Опять съехала."
+        Контекст: SPEAKER_05 (Марина) говорит "Поэтому давайте выбирайте вы" -> SPEAKER_01 "Опять съехала" -> SPEAKER_05 "Так потому что я правда знаю".
+        Это реакция на Марину - кто-то из ведущих комментирует, что она "опять съехала" с темы.
+        Мужской голос, вероятно Umputun или Gray.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Umputun часто шутливо комментирует реплики Марины. Следующая его реплика через ~2 секунды."
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray также участвует в обсуждении, но менее вероятен по контексту."
+
+      voice_task:
+        needed: false  # слишком короткая фраза
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: >
+        Bobuk появляется только в 350s (13 реплик, 66 сек) - нетипично мало для ведущего.
+        В начале эпизода (0-248s) только Umputun и Gray. Bobuk не представлен явно, просто
+        появляется в середине разговора с вопросом "И тебе вообще IPv6?"
+        Возможно, он присоединился позже или его реплики неверно атрибутированы.
+
+    - speaker: "EldarMurtazin"
+      issue: >
+        Эльдар появляется в 248s без явного представления. Первая реплика "Я тут, может быть, тоже чего хотел"
+        звучит как включение в беседу. Гость присутствовал с начала, но не был представлен формально.
+
+    - speaker: "Marin_k_a"
+      issue: >
+        Марина появляется только в 3968s (~1 час 6 мин). Umputun приветствует её "Где ты ходила два по полчаса?"
+        и она извиняется за опоздание - значит, её ожидали раньше. Атрибуция корректна.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 406
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: >
+      SPEAKER_05 (239 реплик, 604 сек) - это явно Марина. Появляется сразу после её реплик,
+      контекст полностью соответствует (обсуждение личной жизни, микрофона, муж).
+      Umputun обращается к ней "Зайника" сразу после смены идентификатора.
+
+  - type: rename
+    episode: 406
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: >
+      Единственная реплика вставлена между двумя репликами Marin_k_a - явно часть её монолога.
+
+  - type: rename
+    episode: 406
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: >
+      Короткие реплики в период активности Марины. Требует voice comparison для подтверждения.
+
+  - type: delete_or_merge
+    episode: 406
+    from_speaker: "SPEAKER_06"
+    confidence: low
+    reason: >
+      Всего 2 коротких реплики. Первая "Угу" - вероятно артефакт. Вторая может быть
+      Umputun или Gray. Слишком мало данных для уверенной атрибуции.
+
+  - type: delete_or_merge
+    episode: 406
+    from_speaker: "SPEAKER_01"
+    confidence: low
+    reason: >
+      Единственная реплика "Опять съехала" - вероятно Umputun комментирует Марину.
+      Слишком мало данных для уверенной атрибуции.
+
+# Аудио для voice comparison (если потребуется)
+audio_reference:
+  url: null  # файл 406_desc.json не найден
+  note: "Метаданные эпизода (406_desc.json) отсутствуют в data_clean/"
+
+# Итоговые рекомендации
+summary: >
+  Эпизод 406 от 23 августа 2014 года. Основной состав: Umputun + Gray, с середины присоединяется
+  Bobuk (мало реплик). Гости: EldarMurtazin (с начала) и Marin_k_a (с ~1 часа).
+
+  Главная проблема: SPEAKER_05 (239 реплик, 604 сек) - это Марина, система переключила ID в середине
+  её появления. Рекомендуется объединить с Marin_k_a.
+
+  SPEAKER_MISATTRIBUTED_LAVALE (1 реплика) - также Марина, между её репликами.
+
+  SPEAKER_04 (9 реплик) - предположительно Марина, требует проверки голоса.
+
+  SPEAKER_06 (2 реплики) и SPEAKER_01 (1 реплика) - артефакты распознавания, слишком короткие
+  для надёжной идентификации.

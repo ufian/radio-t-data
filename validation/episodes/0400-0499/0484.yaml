@@ -1,0 +1,204 @@
+episode: 484
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  # Gray отсутствует в этом выпуске - все 3 реплики Gray это ошибки распознавания
+  total_duration_sec: 8100  # ~2ч 15м
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 800
+    replies_count: 148
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "dmitry_zhemerov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "294.25s: 'Я Дмитрий Жемеров, принципал-инженер в компании JetBrains. Занимаюсь разработкой языка Kotlin.'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 10
+    replies_count: 7
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # SPEAKER_02 и SPEAKER_03 - один человек (Жемеров), разделённый из-за технических проблем
+      identified_as: "dmitry_zhemerov"
+      identification_method: "context"
+      confidence: high
+      evidence: "Реплики 198-253s - Жемеров пытается настроить звук ('Алло', 'Алло, ничего не слышно', 'Давайте попробуем перезагрузить скайп'). После чего SPEAKER_03 представляется как Жемеров в 294s."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие отрывочные реплики в случайные моменты времени (260s, 742s, 2062s, 2319s). По контексту это фрагменты речи Жемерова или ведущих. 'Да, привет' в 260s - Жемеров отвечает при подключении. 'Ну да, это уже правда' в 742s - продолжение разговора о Kotlin."
+
+      identified_as: "dmitry_zhemerov"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Все реплики в контексте разговора с Жемеровым о Kotlin/JetBrains"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 11
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единичные короткие реплики разбросаны по всему выпуску (2239s, 2973s, 5193s, 8847s). По контексту это ошибки распознавания ведущих - типичные комментарии в стиле Ksenks/Bobuk."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплики по стилю похожи на Ksenks - короткие ироничные комментарии"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Возможно ошибка распознавания Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5193.01
+          etime: 5194.65
+          text: "То есть сейчас очередь бабука."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика 'Ну что ты хочешь, транспаранты?' в контексте разговора Bobuk и Ksenks. Marin не участвует в выпуске 484 (2016 год). Вероятно ошибка распознавания одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Контекст - разговор с Bobuk, следующая реплика от Ksenks"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Возможно реплика ведущего"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Gray"
+    total_duration_sec: 25
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Gray НЕ участвует в выпуске 484! Все 3 реплики - ошибки распознавания. Реплика в 480s ('Мы, не знаю, 15 лет в бизнесе делаем продукты...') - это явно Жемеров (речь о JetBrains от первого лица 'мы'). Реплики в 1875s и 2123s - также в контексте разговора с Жемеровым о JetBrains/Kotlin."
+
+      identified_as: "dmitry_zhemerov"
+      identification_method: "context"
+      confidence: high
+      evidence: "480s: 'Мы, не знаю, 15 лет в бизнесе делаем продукты' - это речь Жемерова о JetBrains (предыдущая реплика SPEAKER_03 о JetBrains, следующий вопрос Umputun 'а ваш предыдущий язык был же MPS?')"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Gray размечен как спикер (3 реплики, 25 сек), но НЕ был представлен и НЕ упомянут в начале выпуска. Ведущие: Umputun, Bobuk, Ksenks + позже Alek.sys. Гость: Дмитрий Жемеров. Реплики Gray - это ошибочно распознанный Жемеров."
+    - speaker: "Alek.sys"
+      issue: "Alek.sys появляется с репликой в 178s 'Это же хорошо, я же пришел' - подключается позже, не представлен в начале. Это нормально для его стиля участия."
+
+# Добавляем Жемерова в справочник гостей
+new_guest_entry:
+  id: "dmitry_zhemerov"
+  canonical_name: "DmitryZhemerov"
+  aliases: ["Дмитрий Жемеров", "Дима Жемеров"]
+  real_name: "Дмитрий Жемеров"
+  info: "Principal Engineer в JetBrains, разработчик Kotlin. Выпуски 114, 133, 173, 484"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 484
+    from_speaker: "SPEAKER_03"
+    to_speaker: "DmitryZhemerov"
+    confidence: high
+    reason: "Гость явно представился: 'Я Дмитрий Жемеров, принципал-инженер в компании JetBrains'"
+
+  - type: rename
+    episode: 484
+    from_speaker: "SPEAKER_02"
+    to_speaker: "DmitryZhemerov"
+    confidence: high
+    reason: "Жемеров с техническими проблемами звука перед представлением (SPEAKER_02→SPEAKER_03 - один человек)"
+
+  - type: rename
+    episode: 484
+    from_speaker: "SPEAKER_01"
+    to_speaker: "DmitryZhemerov"
+    confidence: medium
+    reason: "Короткие реплики в контексте разговора с Жемеровым - вероятно его же фрагменты"
+
+  - type: rename
+    episode: 484
+    from_speaker: "Gray"
+    to_speaker: "DmitryZhemerov"
+    confidence: high
+    reason: "Gray не участвует в выпуске. Все 3 реплики - речь Жемерова о JetBrains от первого лица ('мы 15 лет делаем продукты')"
+
+  - type: rename
+    episode: 484
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Marin не участвует в 2016 году. Контекст и стиль реплики указывают на Ksenks"
+
+  - type: investigate
+    episode: 484
+    from_speaker: "SPEAKER_06"
+    to_speaker: null
+    confidence: low
+    reason: "Требуется voice comparison - 4 коротких реплики, вероятно ошибки распознавания ведущих"

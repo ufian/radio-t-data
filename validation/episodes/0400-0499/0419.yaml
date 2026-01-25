@@ -1,0 +1,186 @@
+episode: 419
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Gray, Bobuk, Alek.sys]
+  total_duration_sec: 7301  # ~2 часа
+  notes: |
+    Umputun ведёт выпуск, упоминает что "Бобука нет" в начале (21-27s),
+    но Bobuk всё равно появляется (первая реплика в 357s).
+    Это может означать что Bobuk подключился позже или была ошибка в начальном анонсе.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 38
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики разбросаны по всему эпизоду и представляют собой короткие комментарии,
+        которые по контексту принадлежат ведущим (Ksenks, Gray или Bobuk).
+        В выпуске НЕТ гостя Эльдара Муртазина - он не представлен, не упоминается.
+        Имя "ELDAR" в спикере - результат ошибочного присвоения из другого выпуска.
+
+        Примеры:
+        - 43.9s: "Какой-нибудь один телефончик..." - продолжение реплики Ksenks о телефонах
+        - 682.4s: "У меня в хроме не работает..." - контекст обсуждения голосования ведущими
+        - 6386s: "Самая популярная тема..." - ведущий объявляет тему (стиль Ksenks/Gray)
+        - 7645s: "...давайте вспомним что Firefox-то 10 лет" - типичная реплика ведущего
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Большинство реплик по контексту продолжают или дополняют речь Ksenks"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Некоторые реплики могут принадлежать Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6386.29
+          etime: 6392.51
+          text: "Самая популярная тема у нас сегодня это массовый побег разработчиков с Debian."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 12
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все реплики очень короткие (1-2 секунды), односложные комментарии типа:
+        - "Ну, во-первых, это батарея." (2.3 сек)
+        - "Непонятно." (1.2 сек)
+        - "Это только в других браузерах?" (1.8 сек)
+        - "Нет, ну подожди." (1.0 сек)
+
+        Гостья Марина НЕ участвует в этом выпуске - не представлена, не упоминается.
+        Имя "MARIN" в спикере - результат ошибочного присвоения из другого выпуска.
+        По контексту это короткие реплики ведущих (Ksenks или Gray) между основными фразами.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "По контексту большинство реплик продолжают обсуждение Ksenks"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Некоторые короткие комментарии могут быть от Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 333.6
+          etime: 335.88
+          text: "Ну, во-первых, это батарея."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три очень короткие реплики (менее 1 сек каждая):
+        - 2228.9s: "Это рабочее?" (0.5 сек)
+        - 2244.5s: "Зачем?" (0.5 сек)
+        - 4061.7s: "Идеальная ситуация." (1 сек)
+
+        Это типичные короткие вопросы/комментарии ведущих в диалоге.
+        По контексту (обсуждение бэкапов, работа) скорее всего это Ksenks или Gray.
+        Суммарная длительность всего 2 секунды - явно не отдельный гость.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "По контексту вопросы задаёт Ksenks"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Короткие реплики типичны для Gray"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале выпуска (27s) Umputun говорит "Бобука нет", но Bobuk появляется
+        с 357s и имеет 18 реплик. Возможно Bobuk подключился позже или это
+        была шутка/ошибка. Требуется прослушивание для подтверждения.
+
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys не представлен в начале, появляется внезапно в 1312s.
+        Имеет всего 5 реплик (17 сек). Может быть ошибкой распознавания
+        или реальным поздним подключением. Требуется voice comparison.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: investigate
+    episode: 419
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    action: "voice_comparison"
+    confidence: medium
+    reason: |
+      Необходимо сравнить голос с Ksenks и Gray для определения реального спикера.
+      Вероятнее всего это Ksenks (60%) или Gray (30%).
+
+  - type: investigate
+    episode: 419
+    speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    action: "voice_comparison"
+    confidence: medium
+    reason: |
+      Короткие реплики требуют сравнения с голосами ведущих.
+      Вероятнее всего Ksenks (70%) или Gray (20%).
+
+  - type: rename
+    episode: 419
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Три очень короткие реплики в контексте диалога с Umputun.
+      По характеру вопросов ("Это рабочее?", "Зачем?") похоже на Ksenks.
+      Требуется подтверждение через voice comparison.
+
+# Общий вывод
+summary: |
+  Эпизод 419 (22 ноября 2014) содержит три типа "неизвестных" спикеров,
+  все из которых являются ошибками распознавания, а не реальными гостями:
+
+  1. SPEAKER_MISATTRIBUTED_ELDAR - ошибочное присвоение, гостя Эльдара нет в выпуске
+  2. SPEAKER_MISATTRIBUTED_MARIN - ошибочное присвоение, гостьи Марины нет в выпуске
+  3. SPEAKER_01 - автоматическая разметка, слишком короткие реплики
+
+  В этом выпуске участвуют только ведущие: Umputun, Ksenks, Gray, Bobuk, Alek.sys.
+  Гостей НЕТ.
+
+  Рекомендация: провести voice comparison для точного определения, кому из ведущих
+  принадлежат неправильно размеченные реплики.

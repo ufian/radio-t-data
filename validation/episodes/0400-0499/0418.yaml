@@ -1,0 +1,157 @@
+episode: 418
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9010
+  notes: |
+    Выпуск от 15 ноября 2014 года. Обсуждение .NET, open source от Microsoft.
+    Были гости-эксперты по .NET: Антон и Михаил (звонки слушателей).
+    Alek.sys имеет очень мало реплик (7 шт, 11 сек) - возможна ошибочная атрибуция.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 378
+    replies_count: 57
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Уже идентифицирован в файле. Эльдар Муртазин - известный .NET эксперт.
+        Обращение Umputun "Женя" к Umputun и "дорогой гость" к EldarMurtazin (3725s).
+        Реплики технические, экспертные о .NET, C#, JetBrains, Visual Studio.
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 272
+    replies_count: 83
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun обращается "Антон, Антон, я тебя впустил?" (3609s).
+        Ответ: "Да-да, я здесь. Всем привет." (3612-3615s).
+        Это гость по имени Антон, эксперт по .NET/C#.
+        Говорит о ASP.NET, туллинге, HTTP-сервере на Libuv, JetBrains.
+      possible_matches:
+        - person_id: "unknown_anton_dotnet"
+          confidence: 0.9
+          reason: "Явное представление, но фамилия не названа"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3974.34
+          etime: 3997.08
+          text: |
+            Включая того, что там лежит и высокопроизводительный HTTP-сервер,
+            который на неблокирующих библиотеках на Libua сделан. То есть то же самое,
+            на чем сделан HTTP-сервер для ноды, например. И это уже как-то такая большая
+            заявка на победу, причем код. Я лично смотрел, написан очень неплохо,
+            он покрыт тестами, и он, в общем-то, поддерживаемый.
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 111
+    replies_count: 28
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Самопредставление: "Михаил. Доброе время суток, меня зовут Михаил." (4054-4057s)
+        "Разрабатываем на Mono и на .NET уже года 4." (4057-4061s)
+        Это звонок слушателя, .NET разработчик Михаил.
+      possible_matches:
+        - person_id: "unknown_mikhail_dotnet"
+          confidence: 0.9
+          reason: "Явное представление, но фамилия не названа"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4261.04
+          etime: 4285.29
+          text: |
+            Она живет, выпускает какую-то технологию, она живет, потом умирает.
+            Так вот было с Silverlight. Но Silverlight еще пользуется, и он еще живет.
+            WinForms еще живее всех живых, как дедушка Ленин. ВПФ еще также используется.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Крайне мало реплик для ведущего (7 реплик, 11 сек).
+        Все реплики короткие: "Вот и все", "Да, да, да", "Вот это круто".
+        Возможна ошибочная атрибуция коротких реакций других спикеров.
+        Требуется voice comparison для подтверждения.
+
+    - speaker: "SPEAKER_01"
+      issue: |
+        Идентифицирован как "Антон" по обращению ведущего.
+        Фамилия не названа. Нужно добавить в people.yaml после идентификации.
+
+    - speaker: "SPEAKER_02"
+      issue: |
+        Идентифицирован как "Михаил" по самопредставлению.
+        Фамилия не названа. Нужно добавить в people.yaml после идентификации.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 418
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Anton"
+    confidence: high
+    reason: |
+      Umputun обращается "Антон, Антон, я тебя впустил?" в 3609s.
+      Ответ "Да-да, я здесь" в 3612s.
+
+  - type: rename
+    episode: 418
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Mikhail"
+    confidence: high
+    reason: |
+      Самопредставление "Доброе время суток, меня зовут Михаил" в 4055s.
+
+  - type: review
+    episode: 418
+    speaker: "Alek.sys"
+    action: "voice_comparison"
+    confidence: medium
+    reason: |
+      Только 7 очень коротких реплик (11 сек) нетипично для ведущего.
+      Возможна ошибочная атрибуция чужих коротких реакций.
+      Нужна проверка голоса.
+
+# Дополнительные заметки
+notes: |
+  Эпизод посвящен обсуждению open source релиза .NET от Microsoft (ноябрь 2014).
+  Гости: EldarMurtazin (уже размечен), Антон (SPEAKER_01), Михаил (SPEAKER_02).
+
+  EldarMurtazin и SPEAKER_01 (Антон) говорят последовательно и чередуются,
+  оба эксперты по .NET. Возможно это один человек с разной атрибуцией,
+  но судя по контексту и обращению "Антон" - это разные люди.
+
+  SPEAKER_MISATTRIBUTED_* спикеры из предрассчитанной статистики
+  отсутствуют в актуальном файле data_clean/418/418_cc.json.

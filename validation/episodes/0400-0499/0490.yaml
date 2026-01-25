@@ -1,0 +1,213 @@
+episode: 490
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys]
+  guests_present: 2
+  total_duration_sec: 7916  # ~2:11:56
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1648
+    replies_count: 266
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # Нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: "50.1s: 'Как всегда, меня зовут Табаш Алексей, я из дружественного подкаста Разбор полётов'"
+
+      # Предлагаемый новый гость для добавления в people.yaml
+      new_guest:
+        id: "alexey_tabash"
+        canonical_name: "AlexeyTabash"
+        real_name: "Алексей Табаш"
+        info: "Подкаст 'Разбор полётов'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1146
+    replies_count: 257
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # Нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: "55.9s: 'Меня тоже зовут Алексей, я из подкаста Гуланг Шоу'"
+
+      # Предлагаемый новый гость для добавления в people.yaml
+      new_guest:
+        id: "alexey_palazhchenko"
+        canonical_name: "AlexeyPalazhchenko"
+        real_name: "Алексей"  # Фамилия не озвучена
+        info: "Подкаст 'Golang Show'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 7
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика между SPEAKER_03 (211s) и Umputun (222s). Пётр Диденко не участвовал в выпуске. Контекст: обсуждение Digital Ocean и Amazon."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "SPEAKER_03"  # Алексей Табаш
+          confidence: 0.6
+          reason: "Реплика следует сразу после реплики SPEAKER_03 (211s), тема продолжается"
+        - person_id: "SPEAKER_04"  # Алексей из Golang Show
+          confidence: 0.4
+          reason: "Второй гость в выпуске"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 215.48
+          etime: 221.99
+          text: "Мы сидим на Амазоне, поэтому Digital Ocean нам как-то не... Мы это означает кто?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика (5713s) между репликами Umputun и SPEAKER_04. Эльдар Муртазин не участвовал в выпуске. Тема: архитектура и передача сообщений через store."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "SPEAKER_04"  # Алексей из Golang Show
+          confidence: 0.6
+          reason: "Следующая реплика SPEAKER_04, техническая тема (Go, архитектура)"
+        - person_id: "SPEAKER_03"  # Алексей Табаш
+          confidence: 0.4
+          reason: "Второй гость в выпуске"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5713.74
+          etime: 5718.12
+          text: "И получается, что передача сообщений между различными клиентами будет через сторч."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Не представлен в начале выпуска, первая реплика только в 883.7s. Umputun упоминает 'трёх подкастов' и 'два гостя' — значит Alek.sys присутствует как ведущий, но молчит первые 14 минут."
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Ошибочная атрибуция — Пётр Диденко не участвовал в выпуске"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Ошибочная атрибуция — Эльдар Муртазин не участвовал в выпуске"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Новые гости для people.yaml
+  - type: add_guest
+    guest:
+      id: "alexey_tabash"
+      canonical_name: "AlexeyTabash"
+      aliases: ["Табаш"]
+      real_name: "Алексей Табаш"
+      info: "Подкаст 'Разбор полётов'"
+    confidence: high
+    reason: "Явное представление в 50.1s"
+
+  - type: add_guest
+    guest:
+      id: "alexey_golang"
+      canonical_name: "AlexeyGolang"
+      aliases: []
+      real_name: "Алексей"
+      info: "Подкаст 'Golang Show'"
+    confidence: high
+    reason: "Явное представление в 55.9s"
+
+  # Переименования спикеров
+  - type: rename
+    episode: 490
+    from_speaker: "SPEAKER_03"
+    to_speaker: "AlexeyTabash"
+    confidence: high
+    reason: "Явное представление: 'меня зовут Табаш Алексей, я из дружественного подкаста Разбор полётов'"
+
+  - type: rename
+    episode: 490
+    from_speaker: "SPEAKER_04"
+    to_speaker: "AlexeyGolang"
+    confidence: high
+    reason: "Явное представление: 'Меня тоже зовут Алексей, я из подкаста Гуланг Шоу'"
+
+  # Исправление ошибочных атрибуций — требует voice comparison
+  - type: rename
+    episode: 490
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "AlexeyTabash"  # Предположительно
+    confidence: medium
+    reason: "Пётр Диденко не участвовал. По контексту (реплика следует за SPEAKER_03) вероятнее всего это Алексей Табаш"
+
+  - type: rename
+    episode: 490
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "AlexeyGolang"  # Предположительно
+    confidence: medium
+    reason: "Эльдар Муртазин не участвовал. По контексту (технический разговор, следующая реплика SPEAKER_04) вероятнее всего это Алексей из Golang Show"
+
+# Референсные сегменты для голосового сравнения (если потребуется)
+voice_comparison_references:
+  - speaker: "SPEAKER_03"
+    segments:
+      - stime: 4538.7
+        etime: 4565.6
+        duration: 26.9
+        text: "Не, ну вообще это должна, этот подход должен польстить Алексею, потому что это, ну, считай, такая ко..."
+      - stime: 2365.3
+        etime: 2391.6
+        duration: 26.4
+        text: "Ну вот со стороны Go, я так понимаю, и была предпринята такая попытка, что давайте мы ограничим полн..."
+
+  - speaker: "SPEAKER_04"
+    segments:
+      - stime: 3389.7
+        etime: 3409.1
+        duration: 19.4
+        text: "Ну, вот я и говорю, то есть, по идее, ну, во-первых, если ты хочешь сделать так, это, наверное, все-..."
+      - stime: 1774.4
+        etime: 1793.2
+        duration: 18.8
+        text: "Они весьма и весьма большие, то есть они существенно больше, чем Мартини и вся остальная, они делают..."
+
+# Метаданные эпизода (из транскрипта)
+episode_metadata:
+  date: "2016-04-02"
+  note: "Гиговский выпуск (первая суббота месяца)"
+  description: "Смесь из трёх подкастов: Radio-T, Разбор полётов, Golang Show"

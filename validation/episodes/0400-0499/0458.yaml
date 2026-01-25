@@ -1,0 +1,190 @@
+episode: 458
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Episode info (from transcript)
+episode_date: "2015-08-22"
+episode_title: "Радио-Т 458"
+
+# Speaker statistics
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Gray, Bobuk, Alek.sys]
+  total_duration_sec: 6576
+
+# Host statistics
+hosts:
+  - speaker: Umputun
+    replies_count: 949
+    total_duration_sec: 3294
+    first_appearance_sec: 2.2
+  - speaker: Ksenks
+    replies_count: 356
+    total_duration_sec: 1538
+    first_appearance_sec: 33.4
+  - speaker: Gray
+    replies_count: 171
+    total_duration_sec: 645
+    first_appearance_sec: 15.7
+  - speaker: Bobuk
+    replies_count: 11
+    total_duration_sec: 66
+    first_appearance_sec: 439.6
+  - speaker: Alek.sys
+    replies_count: 9
+    total_duration_sec: 29
+    first_appearance_sec: 1580.2
+
+# Analysis of unknown speakers
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 919
+    replies_count: 220
+    first_appearance_sec: 1857.5
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Identification result
+      identified_as: null  # Not in people.yaml yet
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        At 1856s Umputun says "Здравствуй, дорогой гость", then SPEAKER_01 introduces himself:
+        - 1866.4s: "Меня зовут Иван"
+        - 1867.8s: "Я сейчас живу в Нью-Йорке"
+        - 1870.3s: "И это я автор того анонса про ГО" (referring to Go 1.5 Russian translation)
+        Guest came to discuss Go language, is an expert on Go.
+
+      # Guest details
+      guest_info:
+        name: "Иван"
+        location: "Нью-Йорк"
+        expertise: "Go programming language"
+        context: "Author of Russian translation of Go 1.5 announcement"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Already identified with high confidence
+        reference_segment:
+          stime: 3321.4
+          etime: 3402.7
+          text: "Long monologue about error handling in Go (81 seconds)"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 19
+    replies_count: 5
+    first_appearance_sec: 39.5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        These are Ksenks's lines incorrectly attributed to Marin.
+        Evidence:
+        - 39.5s: "Я пришла практически вовремя" - feminine verb form, fits Ksenks
+        - Surrounding context: 33.4s Ksenks speaks, 39.5s MISATTRIBUTED speaks, 45.4s Gray says "она" about same person, 53.2s Ksenks continues
+        - 134.3s: Umputun addresses Ksenks before and after this line
+        - All 5 entries occur in conversations with Ksenks
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Feminine verb forms ('пришла'), surrounded by Ksenks lines, same speaking style"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 10
+    replies_count: 3
+    first_appearance_sec: 1337.1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        These appear to be Gray's lines incorrectly attributed to Eldar Murtazin.
+        Evidence:
+        - 1337.1s: "Да, он типа приордер" - echoes Umputun's previous line, Gray style
+        - 1511.8s: Between two Gray lines about OnHub router
+        - 6093.1s: Between Gray lines about Bootstrap
+        Eldar Murtazin was not announced as guest in this episode.
+
+      identified_as: "gray"
+      identification_method: "context"
+      confidence: medium
+      evidence: "All 3 entries surrounded by Gray's lines, no guest introduction for Eldar"
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.75
+          reason: "Lines appear in middle of Gray's speech, same topic continuity"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1511.8
+          etime: 1514.5
+          text: "И решили они эту проблему очень интересно."
+
+# Special speakers (not humans)
+special_speakers:
+  - speaker: "_ad"
+    replies_count: 8
+    total_duration_sec: 58
+    note: "DigitalOcean advertisement"
+  - speaker: "SPEAKER_99"
+    replies_count: 7
+    total_duration_sec: -2  # Negative due to timestamp issues
+    note: "Audio artifacts, jingles"
+
+# Consistency check
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "5 lines incorrectly attributed to Marin, should be Ksenks"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "3 lines incorrectly attributed to Eldar, likely Gray"
+
+# Suggested cleaning rules
+suggested_rules:
+  - type: rename
+    episode: 458
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Feminine verb forms, context analysis shows these are Ksenks's lines"
+
+  - type: rename
+    episode: 458
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: "All 3 entries occur in middle of Gray's speech segments"
+
+  - type: add_guest
+    episode: 458
+    speaker: "SPEAKER_01"
+    guest_name: "Ivan"
+    canonical_name: "IvanGoExpert"
+    confidence: high
+    reason: "Self-introduction at 1866s: 'Меня зовут Иван', Go language expert from NYC"
+
+# Notes
+notes: |
+  Episode 458 (2015-08-22) features all 5 regular hosts and one guest.
+
+  Guest "Ivan" appears at ~31 minutes into the show to discuss Go 1.5.
+  He introduces himself as:
+  - Name: Иван
+  - Location: New York
+  - Context: Author of Russian translation of Go 1.5 release announcement
+
+  The SPEAKER_MISATTRIBUTED_* entries suggest previous cleaning attempts
+  that incorrectly attributed lines to Marin and Eldar Murtazin.
+  These should be corrected to Ksenks and Gray respectively.

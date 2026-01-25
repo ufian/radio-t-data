@@ -1,0 +1,139 @@
+episode: 482
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  total_duration_sec: 6664  # примерно 111 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 10
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Все реплики находятся в диалогах с Ksenks. Первая реплика (189.65s) следует сразу после обращения Umputun 'Ксюша, дорогая. Скажи что-нибудь.' - это явно Ksenks, а не Marin"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Umputun: 'Ксюша, дорогая. Скажи что-нибудь.' -> SPEAKER_MISATTRIBUTED_MARIN: 'Ты хочешь мне рассказать, как я люблю Грея?' -> Ksenks: 'Грей очень хороший'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики, вписывающиеся в диалоги основных ведущих. Эльдар Муртазин не упоминается как гость в этом выпуске"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Обе реплики - короткие фразы, похожие на реакции ведущих
+      # 6030.85s: "Это вообще про что?" - после вопроса Umputun, перед ответом Bobuk
+      # 7263.0s: "Ну, конечно, конечно." - после вопроса Umputun, перед ответом Bobuk
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Обе реплики следуют за вопросами Umputun и могут быть его продолжением"
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Обе реплики непосредственно перед ответами Bobuk, могут быть его началом ответа"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Реплики слишком короткие (2-3 сек) для качественного voice comparison"
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие односложные реплики, типичные ошибки распознавания речи"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # 4574.0s: "Зачем это надо?" - внутри диалога Ksenks с кем-то
+      # 6117.35s: "Окей." - между Bobuk и Ksenks
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Первая реплика внутри монолога Ksenks, может быть частью её речи"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Вторая реплика перед репликой Ksenks, после монолога Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Односложные реплики (<1 сек), невозможен voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Появляется только 1 раз с короткой репликой 'Понимаете?' (3339.49s). Это нехарактерно для ведущего, вероятно ошибка распознавания голоса Bobuk, между чьими репликами находится эта фраза"
+
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Marin (Марина) не была ведущей в 2016 году (выпуск 482). Все реплики этого спикера находятся в контексте диалогов Ksenks"
+
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар Муртазин не упоминается как гость. Короткие реплики между ведущими"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 482
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Первая реплика идёт сразу после прямого обращения к Ксюше. Все остальные реплики тоже в контексте диалогов Ksenks"
+
+  - type: rename
+    episode: 482
+    from_speaker: "Alek.sys"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Единственная реплика 'Понимаете?' (0.38 сек) находится между двумя репликами Bobuk. Alek.sys не мог быть ведущим с такой минимальной активностью"
+
+  - type: rename
+    episode: 482
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Обе реплики непосредственно перед развёрнутыми ответами Bobuk, вероятно начало его речи"
+
+  - type: rename
+    episode: 482
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: low
+    reason: "Предположительно часть реплик Ksenks, но уверенность низкая из-за краткости"
+
+# Примечания
+notes:
+  - "Выпуск 482 от 6 февраля 2016 года"
+  - "Основные ведущие: Umputun, Bobuk, Ksenks"
+  - "Alek.sys указан как присутствующий, но имеет только 1 реплику в 0.38 сек - это аномалия"
+  - "Нет явных гостей в этом выпуске на основе контекста транскрипта"

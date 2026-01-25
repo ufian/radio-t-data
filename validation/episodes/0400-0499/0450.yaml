@@ -1,0 +1,154 @@
+episode: 450
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  total_duration_sec: 7437  # ~2 часа (950+785+219+117+3 реплик)
+  notes: |
+    В начале эпизода Umputun явно говорит: "Состав полный. Представлять никого не надо.
+    Все на месте." - это означает, что гостей нет, только стандартные ведущие.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        1. Гости явно не заявлены в начале ("Представлять никого не надо")
+        2. Все 3 реплики - короткие фразы (1-3 сек) разбросаны по эпизоду
+        3. Первая реплика (1730.3s: "Ну, он, по крайней мере, работает.") сразу
+           дублируется Ksenks в следующей реплике: "В смысле, он, по крайней мере, работает."
+           Это типичный паттерн ошибки транскрипции.
+        4. Вторая реплика (6128.1s) - вопрос про ML, который логически вписывается
+           в разговор ведущих (вероятно Ksenks или Gray)
+        5. Третья реплика (6602.2s: "Климат и все такое прочее") - короткая вставка
+           между репликами Gray и Bobuk
+        6. Эльдар Муртазин - известный гость, его бы представили
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Первая реплика дублируется Ksenks; стиль речи похож"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Вторая и третья реплики окружены речью Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6128.14
+          etime: 6130.89
+          text: "Слушайте, а я вот не помню, как это работает, если работаешь через ML?"
+        notes: "Самая длинная реплика (2.75 сек), остальные слишком короткие"
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        1. Гости явно не заявлены в начале эпизода
+        2. Всего 2 реплики с разницей ~80 минут (2762s и 7606s)
+        3. Первая реплика (2761.9s: "На него можно и сесть в случае чего.") -
+           юмористическая реплика про Хаммер в разговоре между Bobuk и Umputun
+        4. Вторая реплика (7606.3s: "Окей.") - междометие между репликами Bobuk
+        5. Обе реплики короткие, типичный паттерн ошибки распознавания
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Первая реплика идёт сразу после Umputun'а, продолжает его мысль о Хаммере"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Вторая реплика 'Окей' - типичное междометие, стиль речи"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2761.94
+          etime: 2765.74
+          text: "На него можно и сесть в случае чего."
+        notes: "Более длинная реплика (3.8 сек) с осмысленным текстом"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys участвует в эпизоде (3 реплики, первая в 928s), но не упомянут
+        в приветствии отдельно. Однако "Состав полный, все на месте" покрывает всех
+        стандартных ведущих, так что это не проблема.
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Спикер помечен как MISATTRIBUTED_ELDAR, что указывает на предыдущую попытку
+        атрибуции к Эльдару Муртазину, которая была отменена. Требуется voice comparison
+        для точной идентификации реального говорящего.
+    - speaker: "SPEAKER_05"
+      issue: |
+        2 разрозненные короткие реплики - вероятно ошибки транскрипции, требуется
+        voice comparison для подтверждения.
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules: []
+# Нет явных правил - нужен voice comparison для определения кому переатрибутировать
+
+# Задание на voice comparison
+voice_comparison_tasks:
+  - task_id: "450_misattributed_eldar"
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    audio_url: "https://cdn.radio-t.com/rt_podcast450.mp3"  # Стандартный формат URL Radio-T
+    segments:
+      - stime: 1730.29
+        etime: 1731.55
+        text: "Ну, он, по крайней мере, работает."
+      - stime: 6128.14
+        etime: 6130.89
+        text: "Слушайте, а я вот не помню, как это работает, если работаешь через ML?"
+      - stime: 6602.17
+        etime: 6603.57
+        text: "Климат и все такое прочее."
+    compare_with: [Ksenks, Gray]
+    priority: medium
+
+  - task_id: "450_speaker_05"
+    speaker: "SPEAKER_05"
+    audio_url: "https://cdn.radio-t.com/rt_podcast450.mp3"
+    segments:
+      - stime: 2761.94
+        etime: 2765.74
+        text: "На него можно и сесть в случае чего."
+      - stime: 7606.32
+        etime: 7609.46
+        text: "Окей."
+    compare_with: [Umputun, Ksenks]
+    priority: low
+
+notes: |
+  Эпизод 450 от 27 июня 2015 года.
+
+  Ключевые находки:
+  1. SPEAKER_MISATTRIBUTED_ELDAR - ранее ошибочно атрибутирован Эльдару Муртазину,
+     атрибуция отменена. По контексту скорее всего это Ksenks (первая реплика дублируется).
+  2. SPEAKER_05 - 2 случайные короткие реплики, вероятно Umputun или Ksenks.
+  3. Файл метаданных (450_desc.json) не найден в data_clean - нужно проверить data/.
+
+  Рекомендация: провести voice comparison для подтверждения перед созданием правил переименования.

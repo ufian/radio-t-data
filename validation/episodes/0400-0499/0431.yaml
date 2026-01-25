@@ -1,0 +1,260 @@
+episode: 431
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Метаданные
+metadata:
+  date: "2015-02-14"  # По данным из начала выпуска ("14 февраля 2015 года")
+  audio_url: null  # desc.json отсутствует в data_clean
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  hosts_questionable: [Alek.sys]  # 2 реплики, не был представлен в начале
+  total_duration_sec: 6817  # последняя реплика около 6817s
+
+# Ключевые находки:
+# 1. В начале (43-47s) Umputun: "Бобок, Ксюша, Грей и вся честная компания" - Alek.sys НЕ упомянут
+# 2. Gray в 5850s: "жаль, что нет Пети" - ПРЯМОЕ подтверждение отсутствия Петра Диденко
+# 3. Alek.sys появляется с 2 репликами (3854s, 5879s) - требует проверки
+# 4. Гостей в этом выпуске не было
+
+# Статистика ведущих
+hosts_stats:
+  Umputun:
+    replies: 752
+    duration_sec: 2507
+    first_appearance: 6
+  Bobuk:
+    replies: 648
+    duration_sec: 2312
+    first_appearance: 63
+  Ksenks:
+    replies: 249
+    duration_sec: 918
+    first_appearance: 182
+  Gray:
+    replies: 175
+    duration_sec: 789
+    first_appearance: 18
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 10
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные реплики, разбросанные по эпизоду: 'Спасибо' (2178s), 'Что там произошло за эти пять дней?' (3581s), 'Да' (6535s), 'Подсадили' (6810s), 'Первые 150 выпусков были бесплатно' (6812s). Скорее всего это фрагменты речи одного из ведущих (вероятно Ksenks или Gray), неверно атрибутированные транскрибером."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплика в 3581s идёт сразу после Ksenks и продолжает её мысль про Docker"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплика в 6535s - ответ на вопрос Gray"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Маркер SPEAKER_MISATTRIBUTED указывает на ранее ошибочно приписанные Марине реплики. Марина не участвовала в выпуске 431 (2015 год) - она была ведущей в ранних выпусках. Реплики 'Xbox 360, да' (433s) и 'Там немножко по-другому' (1440s) - короткие вставки, скорее всего принадлежат Ksenks или другому ведущему."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Реплика в 1440s идёт между Bobuk и Ksenks, тематически относится к обсуждению Samsung TV"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Реплика в 433s идёт сразу после Bobuk, может быть его продолжением"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две односложные реплики: 'Такие наши?' (2302s) и 'Угу' (4485s). Типичные ошибки распознавания - короткие междометия или уточняющие вопросы, которые транскрибер не смог атрибутировать корректно."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Реплика 'Такие наши?' звучит как уточнение к словам Bobuk про Roku"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплика 'Угу' - типичное подтверждение"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Gray явно говорит в 5850s 'жаль, что нет Пети' - подтверждает, что Пётр Диденко не участвовал в этом выпуске. Реплика 'Не могу умолчать' (5440s) не может принадлежать Петру. Маркер SPEAKER_MISATTRIBUTED_PETR указывает на ранее отменённую ошибочную атрибуцию."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Gray в 5850s: "На самом деле, жаль, что нет Пети, а он осенью, по-моему,
+        участвовал в пробеге в полумарафон по маршруту Бажаля-Нуво."
+        Это ПРЯМОЕ подтверждение отсутствия Петра Диденко в выпуске.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Реплика идёт между Ksenks и Gray, стилистически похожа на реакцию Gray"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk часто вставляет короткие комментарии"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false  # Требует проверки - возможно ошибка
+      error_reason: null
+
+      identified_as: "alek_sys"
+      identification_method: "context"
+      confidence: low  # Понижено - не был представлен в начале
+      evidence: |
+        Две реплики:
+        - 3854s: "Хорошо?" - в контексте обсуждения poor boy/poor girl
+        - 5879s: "Причем и на финише тоже всем наливали бажале" - продолжение рассказа Gray про марафон
+
+        ПРОБЛЕМА: Alek.sys НЕ был представлен в начале выпуска.
+        Umputun (43-47s): "Бобок, Ксюша, Грей и вся честная компания" - только 3 ведущих.
+
+        Возможные объяснения:
+        1. Alek.sys присоединился позже удалённо (но тогда должно быть приветствие)
+        2. Ошибка распознавания - реплики принадлежат другому ведущему
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Вторая реплика про бажоле продолжает рассказ Gray о марафоне"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Первая реплика 'Хорошо?' может быть Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5879.86
+          etime: 5883.14
+          text: "Причем и на финише тоже всем наливали бажале."
+          reason: "Более длинная реплика (3.3 сек) для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        НЕ был представлен в начале выпуска.
+        Umputun (43-47s): "Бобок, Ксюша, Грей и вся честная компания" - только 3 ведущих.
+        Alek.sys появляется в 3854s и 5879s с короткими репликами.
+        Требуется voice comparison для подтверждения или опровержения.
+      severity: high
+      recommendation: "Voice comparison для сегмента 5879-5883s"
+
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: |
+        Gray прямо подтверждает отсутствие Пети в 5850s:
+        "На самом деле, жаль, что нет Пети..."
+        Реплика SPEAKER_MISATTRIBUTED_PETR (5440s) не может принадлежать Петру.
+      severity: low
+      recommendation: "Переименовать в Gray или UNIDENTIFIED"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Высокая уверенность - можно применить
+  - type: rename
+    episode: 431
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Gray"
+    confidence: high
+    reason: |
+      1) Gray прямо говорит "жаль, что нет Пети" - Пётр отсутствует
+      2) Реплика (5440s) идёт прямо перед репликой Gray (5441s)
+      3) "Не могу умолчать" - типичный зачин перед комментарием
+
+  # Средняя уверенность
+  - type: rename
+    episode: 431
+    from_speaker: "SPEAKER_02"
+    to_speaker: "UNIDENTIFIED"
+    confidence: medium
+    reason: "Невозможно точно определить спикера, но это точно один из ведущих"
+
+  - type: rename
+    episode: 431
+    from_speaker: "SPEAKER_06"
+    to_speaker: "UNIDENTIFIED"
+    confidence: medium
+    reason: "Односложные междометия, точная атрибуция невозможна"
+
+  # Требует проверки
+  - type: investigate
+    episode: 431
+    speaker: "Alek.sys"
+    confidence: low
+    reason: |
+      Не упомянут в начале, 2 коротких реплики.
+      Нужен voice comparison для сегмента 5879-5883s.
+
+# Задания на ручную проверку
+manual_tasks:
+  - task: "voice_comparison"
+    priority: high
+    speaker: "Alek.sys"
+    description: |
+      Проверить, действительно ли Alek.sys присутствовал в выпуске.
+      В начале он НЕ был представлен вместе с другими ведущими.
+    segments:
+      - stime: 5879.86
+        etime: 5883.14
+        text: "Причем и на финише тоже всем наливали бажале."
+        compare_with: [Gray, Umputun, Bobuk, Ksenks]

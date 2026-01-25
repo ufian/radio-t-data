@@ -1,0 +1,117 @@
+episode: 493
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  guests_present: [Marin_k_a]
+  suspicious_speakers: [Alek.sys]
+  total_duration_sec: 7400  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 261
+    replies_count: 44
+    first_appearance_sec: 28
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. В справочнике people.yaml указана как "бывшая ведущая" Марина
+        2. Появляется с самого начала выпуска (28 сек) наравне с другими ведущими
+        3. В реплике 5554 говорит "Упрощенная методика от Ксюши" - подтверждает,
+           что Marin_k_a и Ksenks разные люди
+        4. Участвует в полноценных обсуждениях, а не только короткие реплики
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 20
+    replies_count: 13
+    first_appearance_sec: 1573
+    pattern: scattered
+
+    analysis:
+      is_error: false  # Не можем утверждать, что ошибка, но подозрительно
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: |
+            Реплики Alek.sys очень короткие (1-2 сек), разбросаны между репликами Bobuk.
+            В строке 7138 Alek.sys спрашивает "Что произошло дальше?", а в 7165 Bobuk
+            повторяет "Что, собственно, произошло дальше?" - возможна путаница голосов.
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: |
+            Alek.sys - постоянный ведущий (526 выпусков), мог присоединиться позже
+            в выпуск (первая реплика 1573s = ~26 мин). Но нет представления и
+            упоминания его имени, что нетипично.
+
+      voice_task:
+        needed: true
+        reason: |
+          13 коротких реплик (20 сек суммарно) без представления в начале выпуска.
+          Нужна верификация голоса - это действительно Alek.sys или ошибка атрибуции?
+        reference_segments:
+          - stime: 3277.83
+            etime: 3281.33
+            text: "Я же тебе говорю, завтра... Это же опенсорс. Завтра будет сборка без этого."
+            duration_sec: 3.5
+            notes: "Две последовательные реплики, самый длинный кусок речи"
+          - stime: 7309.46
+            etime: 7312.66
+            text: "Я очень рад, что получилось. Пришлось это послушать, послушать."
+            duration_sec: 3.2
+            notes: "Две последовательные реплики в конце выпуска"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys не представлен в начале выпуска. В начале Umputun говорит:
+        "у нас сегодня есть полный бобок и половина Ксюши" - упоминает только
+        Bobuk и Ksenks. Marin_k_a говорит сразу после (28 сек) - она неявно
+        присутствует с начала. Но Alek.sys появляется только на 1573 сек (26 мин)
+        без какого-либо анонса или представления.
+
+# Дополнительные наблюдения
+notes: |
+  1. Выпуск 493 от 30 апреля 2016 года
+  2. Marin_k_a (Марина) - бывшая ведущая, в этом выпуске участвует как гость/co-host
+  3. Есть чередование реплик Marin_k_a и Ksenks (строки 786-811), но это нормальный
+     диалог, а не ошибка атрибуции
+  4. Реплики Alek.sys требуют voice comparison - слишком короткие и нет представления
+
+# Предлагаемые действия
+suggested_actions:
+  - action: "voice_comparison"
+    speaker: "Alek.sys"
+    priority: medium
+    reason: "Верифицировать, что это действительно Alek.sys, а не ошибка атрибуции Bobuk"
+    audio_url: "https://cdn.radio-t.com/rt_podcast493.mp3"  # типичный формат URL
+
+# Нет предлагаемых правил очистки - нужна voice verification
+suggested_rules: []

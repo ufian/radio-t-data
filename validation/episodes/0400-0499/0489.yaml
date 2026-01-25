@@ -1,0 +1,220 @@
+episode: 489
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Примечание: файл метаданных (489_desc.json) отсутствует
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Bobuk]
+  total_duration_sec: 6263
+  notes: |
+    В начале выпуска Umputun говорит "Бобука нет", однако 6 реплик приписаны Bobuk
+    (начиная с 1895s). Это требует проверки — возможно ошибка распознавания.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 9
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплика 1 (950.6s): "Кстати, еще интересно будет посмотреть, меня лично интересует
+        в этом новом iPhone камера." — в диалоге между Umputun, Gray и Ksenks об iPhone.
+        После реплики Gray отвечает про S+, затем Ksenks продолжает тему.
+
+        Реплика 2 (6629.6s): "О чем нам хочется поболтать" — незаконченная фраза,
+        которую сразу продолжает Ksenks: "Это суперпозиция того, о чем нам хочется."
+
+        Обе реплики логически являются частью речи Ksenks — либо начало её мысли,
+        либо фраза, которую она сама продолжает.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплика 1 (24.8s): "Я планировала ходить, но в итоге я заболела."
+        Контекст: Umputun говорит о Ксюше "блудная, где-то ходила", затем "Я болел"
+        (видимо оговорка), и эта реплика — ответ Ksenks о себе от первого лица.
+        После неё Ksenks продолжает (29.9s): "Нет, болезнь была не запланирована."
+
+        Реплика 2 (4221.5s): "Я думаю, не делали бы." — короткая реплика в диалоге,
+        скорее всего принадлежит одному из ведущих. Контекст не указывает явно на Ksenks,
+        но учитывая первую реплику и название MISATTRIBUTED_MARIN (Marin_k_a = бывшая
+        ведущая Марина, женский голос), это скорее всего Ksenks.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две очень короткие реплики ("Ага." и "Она умеет мужским голосом говорить.")
+        в разных частях подкаста. Скорее всего это фрагменты речи ведущих,
+        неправильно атрибутированные при автоматическом распознавании.
+
+        Реплика 1 (2057.1s): "Ага." — односложная реакция в техническом обсуждении.
+        Реплика 2 (3687.7s): "Она умеет мужским голосом говорить." — в контексте
+        разговора Ksenks о голосовых помощниках (Siri, Cortana).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Вторая реплика в контексте монолога Ksenks о Siri"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Первая реплика может быть репликой Gray в техническом обсуждении"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        notes: "Реплики слишком короткие для voice comparison"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная короткая реплика "Почему это было неожиданно?" (441.8s).
+        Контекст: Ksenks рассказывает о презентации Apple, где Тим Кук начал
+        с темы ФБР. Вопрос логичен от ведущего (Umputun или Gray), но не
+        от гостя, т.к. гостей в выпуске нет.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Umputun часто задаёт уточняющие вопросы рассказчику"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray мог задать вопрос, после чего сразу сам отвечает (444.2s)"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        notes: "Реплика слишком короткая для voice comparison"
+
+# Анализ Bobuk
+bobuk_analysis:
+  issue: |
+    В начале выпуска (13.8s) Umputun говорит: "Бобука нет, зато Ксюша вернулась."
+    Однако 6 реплик атрибутированы как Bobuk, начиная с 1895s (31.5 минута).
+
+    Возможные объяснения:
+    1. Bobuk подключился позже в эфире (не объявлено)
+    2. Ошибка автоматического распознавания голоса
+    3. Реплики принадлежат другому ведущему (Gray или Umputun)
+
+    Реплики Bobuk:
+    - 1895.2s: "Поэтому все работает." (в техническом контексте)
+    - 2144.4s: "Есть такой мессенджер, который..." (о Kik)
+    - 2359.0s: "Нет, подожди секунду." (перебивает)
+    - 3594.3s: "Ну и вот получилось."
+    - 3604.0s: "Может, в нем проблема какая-то."
+    - 5805.4s: "Тут есть дальше картинка."
+
+  verdict: needs_review
+  confidence: medium
+  notes: |
+    Требуется проверка: либо voice comparison, либо поиск момента,
+    когда Bobuk присоединился к эфиру.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Заявлено в начале, что Bobuk отсутствует, но 6 реплик ему приписаны.
+        Требует проверки — ошибка распознавания или поздний вход в эфир.
+
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Имя указывает на Эльдара Муртазина, но в выпуске нет гостей.
+        По контексту это реплики Ksenks.
+
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: |
+        Имя указывает на бывшую ведущую Марину, но она не упомянута.
+        По контексту это реплики Ksenks (женский голос, личные местоимения).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 489
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Обе реплики по контексту принадлежат Ksenks: первая — в её диалоге об iPhone,
+      вторая — незаконченная фраза, которую она же продолжает.
+
+  - type: rename
+    episode: 489
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Первая реплика — ответ от первого лица на вопрос о Ксюше ("Я планировала ходить").
+      Вторая — в общем диалоге, женский голос логично относится к Ksenks.
+
+  - type: rename
+    episode: 489
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Вторая реплика (о голосе Siri) в контексте монолога Ksenks.
+      Первая реплика ("Ага") неопределённа, но безопасно объединить.
+
+  - type: rename
+    episode: 489
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: |
+      Уточняющий вопрос к рассказу Ksenks. Umputun часто задаёт такие вопросы.
+      Альтернативно может быть Gray.

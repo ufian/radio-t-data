@@ -1,0 +1,339 @@
+episode: 423
+status: needs_review
+analyzed_at: "2026-01-25T12:30:00+03:00"
+analysis_version: 2
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Bobuk, "Alek.sys"]
+  guests_identified: [Gimlis]
+  guests_needs_verification: [EldarMurtazin]
+  guests_unidentified: ["SPEAKER_08 (Виктор)", "SPEAKER_06 (вероятно Антон Архипов)"]
+  total_duration_sec: 8403
+  participant_count: 7  # Упоминается Umputun в 626s
+
+# Контекст выпуска
+episode_context:
+  date: "2014-12-20"
+  intro_guests_mentioned:
+    - name: "Ксюша"
+      identified_as: Ksenks
+      time: 27s
+    - name: "Грей"
+      identified_as: Gray
+      time: 38s
+    - name: "Гимлис"
+      identified_as: Gimlis
+      speaker_id: SPEAKER_02
+      evidence: "42s: Umputun говорит 'у нас из гостей, помню, Гимлис пришел' -> SPEAKER_02 отвечает 'Ну да, я тут'"
+      time: 42s
+    - name: "Виктор"
+      speaker_id: SPEAKER_08
+      evidence: "71s: Umputun спрашивает 'Виктор?' -> SPEAKER_08 отвечает"
+      time: 71s
+    - name: "Антон Архипов"
+      mentioned_by: SPEAKER_08
+      evidence: "91s: SPEAKER_08 говорит 'Здесь еще с нами Антон Архипов из Солнечной Эстонии'"
+      time: 91s
+      note: "Антон не идентифицирован как отдельный спикер, возможно его реплики приписаны SPEAKER_06"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 1044
+    replies_count: 294
+    pattern: consecutive
+    first_appearance_sec: 72
+
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        - 71s: Umputun обращается 'Виктор?', SPEAKER_08 отвечает
+        - 91s: SPEAKER_08 представляет коллегу: 'Здесь еще с нами Антон Архипов из Солнечной Эстонии'
+        - 652s: Ksenks подтверждает: 'А вот пришел тот, с которым всегда Вик приходит' (Alek.sys приходит в 655s)
+        Вывод: SPEAKER_08 = Виктор (Вик), регулярный гость, часто ходит с Антоном Архиповым
+
+      possible_matches:
+        - person_id: "viktor_gamov"
+          confidence: 0.7
+          reason: "Имя Виктор, ходит с коллегой Антоном, связан с Эстонией (JetBrains?)"
+
+      # Нужен voice comparison для точной идентификации
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 85.75
+          etime: 95.05
+          text: "Да, у нас сегодня такой кроссовер получается. Я не один хожу, я хожу с коллегой. Здесь еще с нами Антон Архипов из Солнечной Эстонии, я надеюсь."
+
+      suggested_action: "Нужно идентифицировать Виктора - вероятно из JetBrains, часто ходит с Антоном Архиповым"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 448
+    replies_count: 126
+    pattern: consecutive
+    first_appearance_sec: 998
+
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Активный участник дискуссии с 998s. Говорит о Грее: 'Это, по-моему, Грей тоже такой пенсионер, он любит диски' - знает ведущих."
+
+      possible_matches:
+        - person_id: "anton_arkhipov"
+          confidence: 0.6
+          reason: "Антон Архипов представлен в 91s, но не идентифицирован как спикер. SPEAKER_06 появляется позже и активно участвует."
+        - person_id: "alek_sys_misattributed"
+          confidence: 0.3
+          reason: "Возможно ошибка распознавания Alek.sys, но маловероятно - Alek.sys присутствует с 654s"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1059.43
+          etime: 1070.64
+          text: "Это, по-моему, Грей тоже такой пенсионер, он любит диски. Сначала на VHS покупал, потом он покупал на CD, потом покупал на DVD, потом покупал на Blu-ray."
+
+      suggested_action: "Вероятно это Антон Архипов - сравнить голос с известными записями"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 37
+    replies_count: 18
+    pattern: scattered
+    first_appearance_sec: 43
+
+    analysis:
+      is_error: false
+      identified_as: "gimlis"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 42s Umputun: 'у нас из гостей, помню, Гимлис пришел' -> SPEAKER_02: 'Ну да, я тут'. Также в 146s про Рождество - типичный комментарий."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+      suggested_action: "Переименовать SPEAKER_02 в Gimlis"
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 135
+    replies_count: 28
+    pattern: scattered
+    first_appearance_sec: 365
+
+    analysis:
+      is_error: true
+      error_reason: "ВАЖНО: Эльдар Муртазин НЕ представлен в начале эпизода и его имя НЕ упоминается в транскрипте. В начале представлены: Ксюша, Грей, Гимлис, Виктор, Антон Архипов. Разметка EldarMurtazin вероятно ошибочна."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Поиск по 'Эльдар|Муртазин|Murtazin' не дал результатов. Реплики возможно принадлежат одному из неидентифицированных гостей."
+
+      possible_matches:
+        - person_id: "viktor"
+          confidence: 0.4
+          reason: "SPEAKER_08 (Виктор) активен в это время, возможно часть реплик ошибочно атрибутирована"
+        - person_id: "anton_arkhipov"
+          confidence: 0.4
+          reason: "Антон Архипов упомянут как гость, но не идентифицирован как спикер"
+        - person_id: "gimlis"
+          confidence: 0.2
+          reason: "Гимлис (SPEAKER_02) также присутствует"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 364.88
+          etime: 369.11
+          text: "Ну, мне кажется, что мы возвращаемся к старому телефону, советские такие, которые еще с диском были."
+
+      note: "ТРЕБУЕТСЯ ПРОВЕРКА: Разметка EldarMurtazin вероятно ошибочна - он не упоминается и не представлен в эпизоде. Нужна voice comparison для определения реального спикера."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 13
+    replies_count: 4
+    pattern: scattered
+    first_appearance_sec: 308
+
+    analysis:
+      is_error: true
+      error_reason: "Маркер 'MISATTRIBUTED' означает, что это была ошибочная атрибуция. 4 коротких реплики разбросаны по выпуску - вероятно ошибки распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "307s: 'Подожди, он был же кривой с крышки, не был кривой с экрана' - реплика в контексте обсуждения телефонов, может быть любой из участников."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Голос мог быть ошибочно принят за женский"
+        - person_id: "speaker_08_viktor"
+          confidence: 0.3
+          reason: "В этот момент Виктор активен"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 307.85
+          etime: 312.83
+          text: "Подожди, он был же кривой с крышки, не был кривой с экрана."
+
+      suggested_action: "Определить, кому принадлежат эти реплики, или оставить как ошибки"
+
+  - speaker: "SPEAKER_09"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+    first_appearance_sec: 592
+
+    analysis:
+      is_error: true
+      error_reason: "Всего 4 коротких реплики разбросаны по выпуску (592s, 595s, 7329s, 7330s). Вероятно ошибки распознавания спикера."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "592s: 'Ты знаешь, сколько там воды мимо проливается?' - короткая реплика в середине диалога"
+
+      possible_matches:
+        - person_id: "recognition_error"
+          confidence: 0.8
+          reason: "Слишком мало реплик, разбросаны - типичный паттерн ошибки ASR"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+      suggested_action: "Оставить как есть или пометить для ручной проверки"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 8241
+
+    analysis:
+      is_error: true
+      error_reason: "Одна реплика в 8241s 'Такая компрессия' (2 сек) в конце выпуска. Явная ошибка распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Одиночная короткая реплика в конце выпуска - типичная ошибка ASR"
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Gray отвечает сразу после: 'Ну так это же родинная запись'"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Umputun тоже рядом в диалоге"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+      suggested_action: "Оставить как ошибку распознавания"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: consecutive
+    first_appearance_sec: 8375
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики в самом конце выпуска (8375s, 8377s): 'То же самое сделаем', 'Все, пока' - прощальные фразы, вероятно ошибка распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Прощальные реплики в конце, идут сразу после Umputun: 'Окей, и мы тоже пойдем'"
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray часто прощается"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Ksenks тоже могла сказать"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+      suggested_action: "Оставить как ошибку распознавания"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_08"
+      issue: "Идентифицирован как 'Виктор' по обращению, но фамилия неизвестна. Нужно добавить в people.yaml после идентификации."
+    - speaker: "SPEAKER_06"
+      issue: "Не представлен явно, но вероятно это Антон Архипов (упомянут SPEAKER_08 в 91s)"
+    - speaker: "EldarMurtazin"
+      issue: "КРИТИЧНО: НЕ представлен и НЕ упоминается в эпизоде. Разметка вероятно ошибочна - требуется voice comparison."
+    - speaker: "Bobuk"
+      issue: "Всего 14 реплик, 81 сек - необычно мало для Bobuk. Возможно присоединился по ходу или были проблемы со связью."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 423
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Gimlis"
+    confidence: high
+    reason: "Явное представление в 42s: Umputun 'у нас из гостей Гимлис пришел' -> 'Ну да, я тут'"
+
+  - type: needs_investigation
+    episode: 423
+    speaker: "EldarMurtazin"
+    confidence: low
+    reason: "СОМНИТЕЛЬНАЯ РАЗМЕТКА: Эльдар Муртазин не представлен и не упомянут в эпизоде. Требуется voice comparison для определения реального спикера."
+
+# Задачи требующие ручной проверки
+manual_review_tasks:
+  - task: "Проверить разметку EldarMurtazin"
+    priority: critical
+    context: "Эльдар Муртазин НЕ представлен и НЕ упоминается в эпизоде. 28 реплик могут принадлежать Виктору, Антону Архипову или другому гостю. Требуется voice comparison."
+
+  - task: "Идентифицировать SPEAKER_08 (Виктор)"
+    priority: high
+    context: "Виктор, часто ходит с Антоном Архиповым, связан с Эстонией. Возможно JetBrains."
+
+  - task: "Идентифицировать SPEAKER_06"
+    priority: high
+    context: "Вероятно Антон Архипов - представлен в 91s, но не размечен как спикер"
+
+  - task: "Проверить реплики SPEAKER_MISATTRIBUTED_MARIN"
+    priority: low
+    context: "4 коротких реплики - определить, кому принадлежат, или удалить как ошибки"
+
+# Комментарии аналитика
+notes: |
+  Эпизод 423 от 20.12.2014 с необычно большим составом участников (7 человек):
+  - 5 ведущих: Umputun, Gray, Ksenks, Bobuk (мало реплик - 81 сек), Alek.sys
+  - Гости представленные в начале: Гимлис (SPEAKER_02), Виктор (SPEAKER_08), Антон Архипов (упомянут)
+
+  КРИТИЧЕСКАЯ ПРОБЛЕМА: EldarMurtazin
+  - Разметка EldarMurtazin (28 реплик, 135 сек) вероятно ОШИБОЧНА
+  - Эльдар Муртазин НЕ представлен в начале эпизода
+  - Его имя НЕ упоминается ни разу в транскрипте
+  - В начале представлены только: Ксюша, Грей, Гимлис, Виктор, Антон Архипов
+  - Требуется voice comparison для определения реального спикера
+
+  Идентифицированные спикеры:
+  - SPEAKER_02 = Gimlis (высокая уверенность, явное представление)
+  - SPEAKER_08 = Виктор (высокая уверенность, обращение по имени + самопредставление)
+  - SPEAKER_06 = вероятно Антон Архипов (средняя уверенность, упомянут как коллега Виктора)
+
+  Мелкие ошибки распознавания (SPEAKER_01, SPEAKER_03, SPEAKER_09) - единичные реплики, не критично.

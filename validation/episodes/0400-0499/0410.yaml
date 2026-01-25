@@ -1,0 +1,189 @@
+episode: 410
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Bobuk, Alek.sys]
+  total_duration_sec: 7094  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 151
+    replies_count: 37
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Множественные признаки ошибочной атрибуции:
+        1. Реплика на 2394s содержит "Я не уверена" (женский род) - Эльдар мужчина
+        2. Реплики часто идут сразу после/между репликами Ksenks или Gray
+        3. Нет представления гостя в начале эпизода
+        4. Контекст реплик продолжает мысли предыдущего спикера
+
+        Вероятно это ошибочная атрибуция реплик Gray или Ksenks.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        - 2394.06s: "Я не уверена, что... Телефону три года" - женский род, сразу после Ksenks
+        - 2595.56s: "Значит, во-первых, нет API для подключения к клавиатуру" - сразу после Gray говорит "Подожди, подожди, Ксюша"
+        - 2679.99s: "То есть на андроиде у них есть поддержка..." - продолжает мысль Gray про SwiftKey
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплики с женским родом, контекст обсуждения телефонов"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Некоторые реплики продолжают технические объяснения Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2679.99
+          etime: 2688.07
+          text: "То есть на андроиде у них есть поддержка многочисленного количества языков, и при этом они умеют... Они ведь что делают?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 16
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики, разбросанные по эпизоду. Контекст показывает, что это
+        продолжения речи Ksenks (реплики вставлены между её фразами).
+        Тег MISATTRIBUTED уже указывает на отменённую ошибочную атрибуцию.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        - 25.68s: "Всегда жду Бобука..." - сразу после вопроса к Ксюше
+        - 491.91s: "Ну, это у вас Джава там со спрингами" - между репликами других
+        - 2038.41s: "Ну, он очень похож на Android, да" - между репликами Ksenks
+        - 2099.78s: "Просто оно по столу" - между репликами Ksenks про телефон
+        - 2115.39s: "То ли оно как-то, я не знаю..." - продолжение мысли Ksenks
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 6
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только односложные реплики ("Ну и что?", "Да.", "Угу.").
+        Типичные ошибки распознавания коротких подтверждений.
+        Контекст показывает ответы на вопросы к Ksenks.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        - 1511.04s: "Ну и что?" - после обращения в диалоге
+        - 1652.51s: "Да." - ответ на "Ксюша, так ты... У тебя есть два, да?"
+        - 5011.37s: "Угу." - подтверждение в диалоге
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика на вопрос "Ксюша, пришла на сеновал?" -
+        это ответ Ksenks "Я, да, я всегда на сеновале."
+        Тег MISATTRIBUTED указывает на отменённую ошибочную атрибуцию Lavale.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        - 23.96s: "Я, да, я всегда на сеновале" - прямой ответ на вопрос Умпутуна "Ксюша, пришла на сеновал?"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: |
+        Нет представления в начале эпизода. В начале упоминается только отсутствие Бобука.
+        Первая реплика EldarMurtazin на 789s без контекстного представления.
+        При этом реплики содержат женский род - явная ошибка атрибуции.
+    - speaker: "Bobuk"
+      issue: |
+        Появился на 328s - это корректно, т.к. в начале эпизода сказали что он подойдёт позже.
+        "Ну что, я тоже хочу сказать" - подтверждает подключение к эфиру.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 410
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Ответ на прямой вопрос 'Ксюша, пришла на сеновал?'"
+
+  - type: rename
+    episode: 410
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Реплики вставлены между речью Ksenks, продолжают её мысли"
+
+  - type: rename
+    episode: 410
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Односложные ответы на вопросы, адресованные Ксюше"
+
+  - type: review_required
+    episode: 410
+    from_speaker: "EldarMurtazin"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Требует ручной проверки. 37 реплик атрибутированы EldarMurtazin, но:
+      - Женский род в некоторых репликах
+      - Нет представления гостя
+      - Вероятно смесь ошибок Ksenks и Gray
+      Рекомендуется voice comparison или ручной разбор каждой реплики.
+
+# Комментарий
+notes: |
+  Эпизод 410 (20 сентября 2014 года, HTTP код 410 = Gone).
+
+  Присутствуют все 5 ведущих: Umputun, Gray, Ksenks, Bobuk (подключился позже), Alek.sys.
+
+  Основная проблема: спикер "EldarMurtazin" вероятно является ошибочной атрибуцией.
+  Эльдар Муртазин - известный мобильный аналитик, но в этом эпизоде нет его представления,
+  а реплики содержат женский род и продолжают мысли других спикеров.
+
+  Рекомендация: перед применением правил очистки провести voice comparison
+  для EldarMurtazin или ручной разбор всех 37 реплик.

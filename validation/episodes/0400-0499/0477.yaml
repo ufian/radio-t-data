@@ -1,0 +1,137 @@
+episode: 477
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Gray, Bobuk, Alek.sys]
+  guests_present: ["Алексей (Разбор полётов)"]
+  total_duration_sec: 8081
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1560
+    replies_count: 306
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "alexey_razbor_poletov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        14.5s [Umputun]: "Вместо выбывшего Бобука в бывший Алексей из дружеского подкаста."
+        19.7s [Umputun]: "Разбор полетов."
+        182.7s [Umputun]: "Алексей, подожди."
+        205.0s [SPEAKER_05]: "Ну, если они обсуждали код-ревью в январе..."
+        Умпутун обращается к Алексею по имени, и сразу после этого следует реплика SPEAKER_05.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 16
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие разрозненные реплики (16 сек на 8 реплик = ~2 сек в среднем).
+        Первые две реплики (21s, 41s) - односложные "Правильно?" и "Что?" в начале выпуска.
+        Последние реплики (7848-7976s) идут в контексте диалога с Gray:
+        - Умпутун спрашивает Грея: "И ты хотел что-то по этому поводу сказать?"
+        - Следует SPEAKER_01: "Я просто подумал..."
+        - Затем Gray отвечает: "Поэтому и добавил."
+        Вероятно, это плохо распознанные реплики Gray (плохой звук, как упоминает Умпутун в начале).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Контекст диалога указывает на Gray; Умпутун упоминает плохой звук у Грея (46s)"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7967.85
+          etime: 7977.67
+          text: "Да нет. На самом деле, кажется, много чего, что у нас так или иначе. Есть. Есть. Давайте заканчивать."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная короткая реплика (1 сек) "Работа – это деньги." между репликами Ksenks.
+        Контекст: Ksenks говорит о приоритетах и работе, эта фраза логически продолжает её мысль.
+        Вероятно, ошибка распознавания - часть реплики Ksenks.
+        Тег MISATTRIBUTED указывает на отменённое ранее ошибочное присвоение.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Реплика между репликами Ksenks, тематически связана с её рассуждениями о работе"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: "Упомянут как присутствующий (46s), но плохой звук. Первая размеченная реплика только на 433s."
+    - speaker: "Bobuk"
+      issue: "Упомянут как отсутствующий ('выбывший Бобук'), но имеет 19 реплик начиная с 518s. Возможно, присоединился позже."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 477
+    from_speaker: "SPEAKER_05"
+    to_speaker: "AlexeyRazborPoletov"
+    confidence: high
+    reason: "Гость явно представлен в начале выпуска: 'Алексей из дружеского подкаста Разбор полетов'. Обращение по имени на 182.7s."
+
+  - type: rename
+    episode: 477
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Единственная реплика между репликами Ksenks, тематически связана. Требуется voice comparison для подтверждения."
+
+# Примечания
+notes:
+  - "Выпуск от 2 января 2016 года (новогодний)."
+  - "Гость Алексей из подкаста 'Разбор полетов' - нужно добавить в people.yaml."
+  - "Бобук упомянут как отсутствующий, но участвует с 518s - возможно, подключился позже."
+  - "Gray имел проблемы со звуком (упомянуто на 46s), что объясняет позднее появление размеченных реплик."
+
+# Требуется добавить в people.yaml
+new_guest:
+  id: "alexey_razbor_poletov"
+  canonical_name: "AlexeyRazborPoletov"
+  aliases: ["Алексей"]
+  real_name: "Алексей"
+  info: "Ведущий подкаста 'Разбор полётов', выпуск 477"

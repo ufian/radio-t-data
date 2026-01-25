@@ -1,0 +1,130 @@
+episode: 411
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6387  # ~1 час 46 минут (сумма по ведущим)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реакции (< 2 сек), вклинивающиеся между репликами ведущих. Первая реплика 'Страшное дело' идет сразу после реплики Bobuk, вторая 'О, боже мой, какие дебилы' — Bobuk сразу повторяет эту же фразу. Вероятно ошибка распознавания голоса Bobuk или Gray."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Обе реплики в контексте диалогов Bobuk, вторую реплику Bobuk буквально повторяет"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Технический контекст, мог быть Gray"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 10
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Все 4 реплики — короткие фразы, вклинивающиеся в диалоги Ksenks. Первая реплика содержит 'предложила' (женский род), что указывает на женщину. Поскольку в эпизоде участвует только одна женщина (Ksenks), это вероятно ошибка распознавания её голоса."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1) Женский род глагола 'предложила' (1857s) — в эпизоде только одна женщина.
+        2) Реплика 2328s "Слушай, а ты не ожидал?" — Ksenks сразу продолжает "То есть телефоны не должны гнуться?"
+        3) Реплика 2600s "6+, телефон..." — Ksenks сразу продолжает "Вот этот гигант. Как ты его в карман засунешь?"
+        4) Реплика 4082s "А что такое вообще этот каталог?" — Ksenks сразу продолжает "То есть, зачем он мне нужен сейчас?"
+        Все 4 реплики — это начало мысли Ksenks, которая продолжается в следующей её реплике.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        # Voice comparison не требуется — контекст однозначный
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 17
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Реплики рассыпаны по эпизоду (4089s-5452s), короткие технические комментарии. Контекст не указывает на присутствие гостя Эльдара Муртазина — нет представления, нет длинных экспертных высказываний. Скорее всего ошибка распознавания одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплика про git переводы (5306-5336s) вклинивается в диалог Gray, который обсуждает тему локализации git"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Технические комментарии, стиль похож на Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5306.94
+          etime: 5310.27
+          text: "Извлечь и получить, это где там чекаут, а где пуш?"
+        # Самый длинный непрерывный сегмент этого спикера (3.3 сек)
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Всего 9 реплик (16 сек) за весь эпизод. Первая реплика в 803s, участие эпизодическое. Не был явно представлен в начале, но упоминается как часть 'мужской три четверти'."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 411
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Женский род в речи ('предложила'), каждая из 4 реплик продолжается репликой Ksenks — это разрыв одной речи на два сегмента"
+
+  - type: rename
+    episode: 411
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Bobuk"
+    confidence: low
+    reason: "Вторая реплика дословно повторяется Bobuk-ом, обе реплики в его контексте. Требуется voice comparison для подтверждения"
+
+# Комментарии
+notes: |
+  Эпизод 411 от 27 сентября 2014 года.
+
+  В начале (50-58s) Umputun говорит: "А голосам вы уже угадали, что вся мужская три четверти здесь,
+  и вот появилась последняя четверть" — после чего говорит Ksenks. Это подтверждает состав:
+  Umputun, Bobuk, Gray + Ksenks.
+
+  Alek.sys участвует минимально (9 реплик), возможно подключался удалённо или присоединился позже.
+
+  Спикеры SPEAKER_MISATTRIBUTED_* — скорее всего результат предыдущей попытки идентификации,
+  которая была отменена. Имена Marin и Eldar указывают на гипотезы о Марине и Эльдаре Муртазине,
+  но контекст не подтверждает присутствие этих гостей.
+
+  Для финального решения по SPEAKER_MISATTRIBUTED_ELDAR рекомендуется voice comparison с Gray и Bobuk.

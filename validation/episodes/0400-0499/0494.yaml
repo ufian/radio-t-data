@@ -1,0 +1,87 @@
+episode: 494
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: []
+  total_duration_sec: 7377
+
+# Замечания по ведущим
+host_notes:
+  - speaker: Alek.sys
+    issue: "1 реплика (1 сек) в 5912s — не представлен в эпизоде, скорее всего ошибка атрибуции"
+    recommendation: "Требует проверки: вероятно это реплика Bobuk или Gray"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Анализ спикеров, помеченных как известные, но с подозрительной статистикой
+suspicious_attributions:
+  - speaker: Alek.sys
+    total_duration_sec: 1.2
+    replies_count: 1
+    first_appearance_sec: 5912
+    pattern: isolated
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "На JavaScript ты пишешь так." (5912.26-5913.46s)
+        появляется сразу после реплики Bobuk "как ты пишешь на JavaScript" и
+        выглядит как эхо или обрывок его фразы. Alek.sys не представлен в начале
+        эпизода, не упоминается, и не имеет других реплик. В контексте разговор
+        ведут только Bobuk и Umputun (обсуждение асинхронного программирования).
+
+      probable_speaker: Bobuk
+      confidence: medium
+      evidence: |
+        - Реплика идёт без паузы после Bobuk (разрыв 0.06 сек)
+        - Содержание является почти повтором части предыдущей фразы
+        - Bobuk продолжает говорить через 2.7 сек после этой реплики
+        - Alek.sys не участвует в эпизоде (не представлен, нет других реплик)
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5912.26
+          etime: 5913.46
+          text: "На JavaScript ты пишешь так."
+        compare_with:
+          - speaker: Bobuk
+            segment:
+              stime: 5908.5
+              etime: 5912.2
+              text: "Это правда совсем не то на фоне того, как ты пишешь на JavaScript."
+
+# Артефакты (игнорируются)
+artifacts:
+  - speaker: SPEAKER_99
+    count: 2
+    note: "Аудио-артефакты с некорректными таймстемпами (etime < stime): '25.', 'QAAS.'"
+  - speaker: _ad
+    count: 6
+    note: "Реклама Digital Ocean"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: Alek.sys
+      issue: |
+        Alek.sys не был представлен в начале эпизода и не упоминается.
+        Единственная его реплика — подозрительная атрибуция (1.2 сек).
+        В начале эпизода говорят только Umputun, Gray, Bobuk.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 494
+    from_speaker: Alek.sys
+    to_speaker: Bobuk
+    confidence: medium
+    reason: |
+      Реплика "На JavaScript ты пишешь так." является продолжением/эхом
+      фразы Bobuk. Alek.sys не присутствует в эпизоде. Требуется
+      voice comparison для подтверждения.

@@ -1,0 +1,236 @@
+episode: 456
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Информация о выпуске
+episode_info:
+  date: "2015-08-08"
+  title: "Радио-Т 456"
+  notes: "Выпуск в 'экстремально странном составе' - двое гостей: Артём Росновский и Пётр Диденко"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  guests_present: [Rosnovsky, PetrDidenko, EldarMurtazin]
+  total_duration_sec: 5636
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1019
+    replies_count: 339
+    first_appearance_sec: 23
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "artem_rosnovsky"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (20s) Umputun говорит: "Это я про тебя, Артем."
+        SPEAKER_02 отвечает (23s): "Да, всем привет. Сто лет я к вам не заходил в гости."
+        Далее многократные обращения "Артем" к этому спикеру на протяжении всего выпуска
+        (37s, 244s, 283s, 559s, 3439s, 4348s, 4753s и др.)
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 420
+    replies_count: 160
+    first_appearance_sec: 70
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "petr_didenko"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        SPEAKER_03 чередуется с уже идентифицированным PetrDidenko.
+        Пример: на 79s SPEAKER_03 говорит "Да, пришлось", а на 81s PetrDidenko
+        продолжает: "Меня продержали выпуск целый..."
+        Это явно один человек, разбитый на два спикера системой распознавания.
+        Обращение "Денис" (265s) скорее всего ошибка транскрипции.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 22
+    replies_count: 8
+    first_appearance_sec: 174
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие разрозненные реплики (174s, 450s, 2385s, 4040s, 4489s, 5672s).
+        Типичные фразы: "Почему?", "Давай.", фрагменты диалогов.
+        Похоже на ошибки распознавания голосов других участников.
+
+      identified_as: null
+      possible_matches:
+        - person_id: "petr_didenko"
+          confidence: 0.5
+          reason: "Некоторые реплики могут принадлежать Петру Диденко"
+        - person_id: "artem_rosnovsky"
+          confidence: 0.3
+          reason: "Или Артёму Росновскому"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4039.68
+          etime: 4043.77
+          text: "Кажется, это называется горе от ума."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 2
+    first_appearance_sec: 1341
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 реплики общей длительностью ~1 секунда.
+        "Давай." (1341s) и "Да..." (6273s) - междометия/артефакты.
+        Типичные ошибки автоматической разметки.
+
+      identified_as: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 87
+    replies_count: 11
+    first_appearance_sec: 580
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "pre-labeled"
+      confidence: high
+      evidence: |
+        Уже идентифицирован в файле транскрипта.
+        Реплики содержательные, экспертные комментарии о технологиях.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 208
+    replies_count: 38
+    first_appearance_sec: 81
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "petr_didenko"
+      identification_method: "pre-labeled"
+      confidence: high
+      evidence: |
+        Уже идентифицирован в файле транскрипта.
+        На 81s говорит "Меня продержали выпуск целый" - говорит о себе как о госте.
+        Umputun (627s) упоминает: "Мне ее сам Петя подарил в свое время."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: |
+        Должен быть объединён с PetrDidenko - это один человек.
+        Система распознавания разбила его голос на два спикера.
+
+    - speaker: "SPEAKER_02"
+      issue: |
+        Должен быть переименован в Rosnovsky (Артём Росновский).
+        Идентификация очевидна по обращениям в тексте.
+
+    - speaker: "обращение Денис"
+      issue: |
+        На 265s Umputun говорит "Денис, ты теряешь шанс сказать по-грейвски",
+        но в выпуске нет гостя по имени Денис. Возможные объяснения:
+        1. Ошибка транскрипции (распознало "Денис" вместо другого слова)
+        2. Шутливое/ироничное обращение
+        3. Обращение к слушателю в чате
+        Реальный гость - Пётр Диденко.
+
+# Анализ ведущих
+hosts_analysis:
+  - host: "Umputun"
+    replies_count: 939
+    duration_sec: 3430
+    status: "основной ведущий этого выпуска"
+
+  - host: "Bobuk"
+    replies_count: 65
+    duration_sec: 413
+    first_appearance_sec: 245
+    status: "полноценное участие"
+
+  - host: "Alek.sys"
+    replies_count: 8
+    duration_sec: 25
+    first_appearance_sec: 1027
+    status: "эпизодические реплики - возможно подключился позже или ошибка распознавания"
+
+  - host: "Ksenks"
+    replies_count: 3
+    duration_sec: 21
+    first_appearance_sec: 2633
+    status: "минимальное участие - возможно подключилась позже"
+
+  - host: "Gray"
+    replies_count: 1
+    duration_sec: 10
+    first_appearance_sec: 1127
+    status: "единственная реплика - возможно ошибка распознавания другого спикера"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 456
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Rosnovsky"
+    confidence: high
+    reason: |
+      Многократные обращения "Артём" к этому спикеру.
+      Артём Росновский - известный гость подкаста (выпуски 69, 101, 106 и др.)
+
+  - type: merge
+    episode: 456
+    from_speaker: "SPEAKER_03"
+    to_speaker: "PetrDidenko"
+    confidence: high
+    reason: |
+      SPEAKER_03 и PetrDidenko чередуются в диалогах без паузы между ними.
+      Это один человек - Пётр Диденко.
+
+  - type: review
+    episode: 456
+    speaker: "SPEAKER_04"
+    confidence: low
+    reason: |
+      Требуется voice comparison для определения, кому принадлежат эти реплики.
+      Скорее всего ошибки распознавания голосов основных участников.
+
+  - type: remove_or_merge
+    episode: 456
+    from_speaker: "SPEAKER_05"
+    confidence: medium
+    reason: |
+      2 односложные реплики - артефакты или фрагменты речи других участников.
+      Можно безопасно удалить или присвоить ближайшему спикеру.

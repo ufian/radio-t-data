@@ -1,0 +1,219 @@
+episode: 417
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Метаданные
+metadata:
+  date: "2014-11-08"  # из вступления Umputun: "8 ноября 2014 года"
+  total_duration_sec: 8196  # ~136 минут
+  desc_file_exists: false
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Gray, Bobuk, Alek.sys]
+  notes: |
+    Bobuk отсутствовал в начале ("Бобук не пришёл"), но позже появились его реплики (с 381s).
+    Alek.sys присутствует в начале, но говорит мало (4 реплики, 11 сек).
+    Олег из Mail.ru - гость, присоединился в 3573s.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 284
+    replies_count: 42
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: null  # Олег из Mail.ru - нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun прямо спрашивает 'Олег, ты к нам присоединился?' (3573s) перед первой репликой SPEAKER_02"
+
+      possible_matches: []
+
+      # Задание для voice_task не требуется - гость идентифицирован по имени
+      voice_task:
+        needed: false
+        reference_segment: null
+
+    # Информация для добавления в people.yaml
+    guest_info:
+      name: "Олег"
+      company: "Mail.ru"
+      context: "Работает в Mail.ru, обсуждает iOS Enterprise Profile, безопасность приложений"
+      suggested_id: "oleg_mailru"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "3 короткие реплики (<3 сек каждая), разбросанные по эпизоду - ошибка распознавания голоса Ksenks"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплика "Пошла чистить зубы" (322s) - непосредственно перед ней Umputun обращается:
+        "Если, например, идешь ты в ванну, Ксюша" (319s).
+        Это прямое обращение к Ksenks, и SPEAKER_03 отвечает в её стиле.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 12
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ранее отмеченные как misattributed реплики. По контексту все продолжают мысль Ksenks"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Все 4 реплики находятся рядом с репликами Ksenks и продолжают её мысль:
+        - 5317s: 'То есть гугловые, маленькие облака по-другому?' - вопрос в контексте обсуждения
+        - 6277s: 'Нет, вот раньше было для подписчиков' - Ksenks сразу после продолжает 'А сейчас ты на iPhone...'
+        - 6847s: 'Мне кажется, что вот он тут совершенно не говорит ничего нового' - Ksenks продолжает мысль
+        - 7073s: 'Да, но это двигатель экономики' - повторение фразы Umputun, Ksenks продолжает
+
+      possible_matches: []
+
+      voice_task:
+        needed: true  # Для подтверждения атрибуции Ksenks
+        reference_segment:
+          stime: 6846.53
+          etime: 6852.09
+          text: "Мне кажется, что вот он тут совершенно не говорит ничего нового, потому что множество компаний так делает."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная короткая реплика (<1 сек) между репликами Gray"
+
+      identified_as: "gray"
+      identification_method: "context"
+      confidence: high
+      evidence: "'Короче, непонятно' (7834s) - между репликами Gray об 'ультрадим SSD', Gray продолжает обсуждение после"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале эпизода (38s) Umputun говорит: 'Бобук не пришёл, это самый главный expectation fail'.
+        Однако в эпизоде есть 6 реплик от Bobuk (13 сек), первая в 381s.
+        Это КРИТИЧЕСКОЕ несоответствие - либо Бобук всё-таки присоединился позже (без объявления),
+        либо реплики ошибочно атрибуированы. Требуется ручная проверка.
+        Реплики Bobuk:
+        - 381s: 'Как их можно вставить не тем боком?'
+        - 392s: 'С теми, кто представляет, как это очень легко.'
+        - 3443s: 'Потому что так вообще можно сотни устройств в девелоперском Apple добавить.'
+        - 5154s: 'Может, козы?'
+        - 5190s: 'Который как хип-чат.'
+        - 7592s: 'В смысле, не весь сайтик, а весь дизайн сайтика.'
+
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys присутствует в начале (34s: 'никто так и не пришел к нам в гости'),
+        но имеет всего 4 реплики (11 сек) за весь эпизод.
+        Это нетипично мало для ведущего. Возможно часть его реплик атрибуирована другим.
+
+    - speaker: "SPEAKER_02 (Олег)"
+      issue: |
+        Гость Олег из Mail.ru идентифицирован, но НЕ добавлен в people.yaml.
+        Требуется добавить запись для нормализации.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # SPEAKER_02 -> Олег (гость)
+  - type: rename
+    episode: 417
+    from_speaker: "SPEAKER_02"
+    to_speaker: "OlegMailru"  # или другой id после добавления в people.yaml
+    confidence: high
+    reason: "Прямое представление гостя: 'Олег, ты к нам присоединился?'"
+
+  # SPEAKER_MISATTRIBUTED_ELDAR -> Gray
+  - type: rename
+    episode: 417
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: high
+    reason: "Одиночная реплика между репликами Gray в контексте его рассказа"
+
+  # SPEAKER_MISATTRIBUTED_MARIN -> Ksenks (требует подтверждения)
+  - type: rename
+    episode: 417
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Все реплики в контексте высказываний Ksenks, требуется voice comparison"
+
+  # SPEAKER_03 -> Ksenks
+  - type: rename
+    episode: 417
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Контекст однозначен: Umputun обращается 'Ксюша' перед репликой SPEAKER_03"
+
+# Задачи для ручной проверки
+manual_review_tasks:
+  - priority: high
+    task: "Проверить присутствие Бобука в эпизоде"
+    description: |
+      Критическое противоречие: заявлено, что Бобук не пришёл, но есть его реплики.
+      Варианты:
+      1. Бобук присоединился позже без объявления
+      2. Реплики Bobuk ошибочно атрибуированы (тогда кто это - Gray? Alek.sys?)
+    audio_check:
+      segments:
+        - stime: 381.34
+          etime: 383.24
+          text: "Как их можно вставить не тем боком?"
+        - stime: 3443.39
+          etime: 3446.25
+          text: "Потому что так вообще можно сотни устройств в девелоперском Apple добавить."
+
+  - priority: medium
+    task: "Voice comparison для SPEAKER_MISATTRIBUTED_MARIN"
+    description: "Подтвердить, что это реплики Ksenks"
+    audio_check:
+      segments:
+        - stime: 6846.53
+          etime: 6852.09
+          text: "Мне кажется, что вот он тут совершенно не говорит ничего нового, потому что множество компаний так делает."
+
+  - priority: low
+    task: "Добавить гостя Олега в people.yaml"
+    description: |
+      Информация для добавления:
+      - id: oleg_mailru
+      - canonical_name: OlegMailru
+      - aliases: ["Олег"]
+      - real_name: Олег
+      - info: "Разработчик из Mail.ru, выпуск 417"

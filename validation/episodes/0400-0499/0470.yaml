@@ -1,0 +1,186 @@
+episode: 470
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  hosts_questionable: [Alek.sys]  # Только 1 реплика, не представлен - вероятно ошибка
+  total_duration_sec: 7906  # сумма Umputun(4626) + Ksenks(2238) + SPEAKER_03(1030) + прочее(12)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1030
+    replies_count: 256
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "nader_google"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "30.6s: 'Меня зовут Надер.' 31.8s: 'Я работаю в Гугле'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 11
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие реплики (3-5 сек) разбросаны по эпизоду. Контекст показывает,
+        что это продолжение речи Umputun или реакция на Ksenks.
+        Пётр Диденко не был анонсирован в этом выпуске.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.7
+          reason: >
+            Реплика 3850.6s "Такое мнение." идёт сразу после Umputun "Не знаю, слух такой."
+            Реплика 5047.4s продолжает обсуждение о девопсах, которое ведёт Umputun.
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: >
+            Альтернативная версия - Ksenks задаёт вопросы и делает короткие реплики.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8075.21
+          etime: 8080.59
+          text: "Потому что в статье какие-то вещи… Когда ты пишешь статью, ты понимаешь, у тебя проще."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 7
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие реплики (2-3 сек) разбросаны по эпизоду. Марина (Marin_k_a)
+        не была анонсирована в этом выпуске, а реплики по контексту похожи
+        на речь Umputun или Ksenks.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: >
+            Реплика 6662.18s "А так ты довел свою платоническую любовь до настоящей?"
+            вписывается в диалог Umputun о GO.
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: >
+            Реплики 4120.6s и 6065.8s — вопросы, типичные для стиля Ksenks.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6662.18
+          etime: 6665.34
+          text: "А так ты довел свою платоническую любовь до настоящей?"
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика длиной 0.6 сек ("Вам же трудно.") в 7821.94s.
+        Alek.sys не был анонсирован в начале выпуска (Umputun сказал
+        "состав собрался неполный"). Реплика слишком короткая и изолированная.
+        Скорее всего это ошибка распознавания речи Ksenks или Umputun.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: >
+            Предыдущая реплика от Ksenks, и короткая вставка "Вам же трудно."
+            могла быть её продолжением.
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: >
+            Следующая реплика от Umputun, возможно реплика была его началом.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7821.94
+          etime: 7822.54
+          text: "Вам же трудно."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Не был представлен в начале. Umputun явно сказал "состав собрался
+        экстренный, неполный" и анонсировал только гостя Надера.
+        Единственная реплика 0.6 сек — вероятно ошибка распознавания.
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: >
+        Пётр Диденко не был анонсирован. Реплики выглядят как
+        ошибочно выделенные фрагменты речи ведущих.
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: >
+        Марина не была анонсирована. Реплики выглядят как
+        ошибочно выделенные фрагменты речи ведущих.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 470
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Nader"
+    confidence: high
+    reason: >
+      Явное самопредставление в 30.6s: "Меня зовут Надер. Я работаю в Гугле."
+      Гость уже идентифицирован в all_identified_guests.json.
+
+  - type: rename
+    episode: 470
+    from_speaker: "Alek.sys"
+    to_speaker: "Ksenks"  # или SPEAKER_MISATTRIBUTED_ALEX для дальнейшего анализа
+    confidence: medium
+    reason: >
+      Единственная реплика 0.6 сек, Alek.sys не был анонсирован.
+      Требуется voice comparison для подтверждения.
+
+# Новый гость для добавления в people.yaml
+new_guest:
+  id: "nader_google"
+  canonical_name: "Nader"
+  aliases: ["Надер"]
+  real_name: "Надер"
+  info: "Сотрудник Google, выпуск 470 (6 лет Go, ноябрь 2015)"
+
+# Аудио для voice comparison
+audio_url: null  # 470_desc.json не найден, URL недоступен

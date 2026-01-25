@@ -1,0 +1,240 @@
+episode: 414
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8380  # примерная сумма всех ведущих и гостей
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 244
+    replies_count: 74
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # нет в people.yaml, но это гость Иван
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 168s Umputun говорит 'Иван, здравствуй', SPEAKER_08 отвечает 'Здравствуйте'. В 174s SPEAKER_08 говорит 'На словах, что это будет не Эльдар, я чуть не подавился'. В 535s упоминается 'Иван не прав'. В 3533s Umputun говорит 'Иван, ты просто молодец, что собрал все эти глупости вместе'."
+
+      possible_matches:
+        - person_id: null
+          confidence: 0.95
+          reason: "Гость по имени Иван, который собирает информацию о мероприятиях Apple для подкаста. Нужно добавить в people.yaml"
+
+      voice_task:
+        needed: false  # идентификация уже высокой уверенности
+        reference_segment: null
+
+  - speaker: "SPEAKER_09"
+    total_duration_sec: 828
+    replies_count: 202
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # слушатель "хек"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 6169s слышим 'Алло, привет', в 6172s SPEAKER_09 говорит 'Это хек'. Bobuk отвечает 'Да, мы тебя все знаем'. Это слушатель, позвонивший в прямой эфир."
+
+      possible_matches:
+        - person_id: null
+          confidence: 0.9
+          reason: "Слушатель по никнейму 'хек', позвонивший в прямой эфир. Типичный формат звонков от слушателей."
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 146
+    replies_count: 34
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # слушатель Игорь из Севастополя
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 6223s 'Здравствуйте, ведущие', в 6229s 'Собственно, зовут меня Игорь', в 6232s 'С самого начала своей карьеры я программирую на PHP'. Это слушатель, позвонивший в прямой эфир, PHP-разработчик из Севастополя."
+
+      possible_matches:
+        - person_id: null
+          confidence: 0.9
+          reason: "Слушатель Игорь, PHP-программист из Севастополя, позвонивший в прямой эфир."
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 44
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Уже помечен как MISATTRIBUTED - это реплики, ошибочно приписанные Эльдару Муртазину. Содержание реплик (про Apple Pay, конспирологию) может принадлежать Ивану или одному из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "В 626s говорится о слухах про переговоры Apple с PayPal - это контекст обсуждения Apple, где участвует Иван как эксперт."
+
+      possible_matches:
+        - person_id: "SPEAKER_08"
+          confidence: 0.6
+          reason: "Контекст обсуждения Apple соответствует экспертизе Ивана"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Может быть ошибка распознавания Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 626.49
+          etime: 649.76
+          text: "Можно добавить чуть-чуть конспирологии, потому что ходили слухи во всяком случае, что Apple с PayPal активно общались..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 11
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Уже помечен как MISATTRIBUTED - это реплики, ошибочно приписанные Марине. Короткие фразы типа 'Java тоже прекрасно' (1677s) скорее всего принадлежат одному из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплика в 1677s 'Java тоже прекрасно' - короткая фраза в контексте обсуждения языков программирования с Ksenks."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Контекст обсуждения Java/Swift с Ksenks"
+        - person_id: "SPEAKER_08"
+          confidence: 0.3
+          reason: "Может быть реплика Ивана"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1677.53
+          etime: 1678.47
+          text: "Java тоже прекрасно."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 10
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (<2 сек каждая) в случайные моменты. Типичные фразы-ошибки распознавания: 'Зачем тебе шестая?' (1719s), 'Ты специалист во всем' (2949s)."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "5 коротких реплик разбросаны по эпизоду. Похоже на ошибки сегментации аудио."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Реплика 'Зачем тебе шестая?' в контексте диалога с Ksenks о версиях Java"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Может быть Bobuk"
+
+      voice_task:
+        needed: false  # слишком короткие для сравнения голоса
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (1-2 сек): 'Нет' (4684s), односложные ответы. Типичные ошибки распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "3 односложные реплики. Слишком короткие для идентификации."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # слишком короткие
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_08"
+      issue: "Идентифицирован как Иван (эксперт по Apple), но не добавлен в people.yaml. Нужно создать запись для него."
+    - speaker: "SPEAKER_09"
+      issue: "Слушатель 'хек' - позвонил в прямой эфир. Стандартный формат, не требует добавления в people.yaml."
+    - speaker: "SPEAKER_04"
+      issue: "Слушатель Игорь из Севастополя - позвонил в прямой эфир. Стандартный формат, не требует добавления."
+    - speaker: "Alek.sys"
+      issue: "Alek.sys имеет только 15 реплик (32 сек) - необычно мало для ведущего. Первая реплика в 250s. Возможно часть его реплик неправильно атрибутирована."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 414
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Ivan_Apple"
+    confidence: high
+    reason: "Гость Иван, эксперт по Apple, представлен в 168s как 'Иван, здравствуй'. Собирает информацию о мероприятиях Apple для подкаста."
+    action_needed: "Добавить Ivan_Apple в people.yaml"
+
+  - type: rename
+    episode: 414
+    from_speaker: "SPEAKER_09"
+    to_speaker: "Caller_Hek"
+    confidence: high
+    reason: "Слушатель по никнейму 'хек', позвонивший в прямой эфир в 6172s."
+    action_needed: "Можно оставить как Caller или переименовать в Caller_Hek"
+
+  - type: rename
+    episode: 414
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Caller_Igor"
+    confidence: high
+    reason: "Слушатель Игорь, PHP-разработчик из Севастополя, позвонивший в прямой эфир в 6229s."
+    action_needed: "Можно оставить как Caller или переименовать в Caller_Igor"
+
+# Комментарии
+notes: |
+  Эпизод 414 от 18 октября 2014 года.
+
+  Основные ведущие: Umputun, Bobuk, Gray, Ksenks, Alek.sys (мало реплик).
+  Отсутствует: "Марусенька" (упомянуто в начале как отсутствующая).
+
+  Гости:
+  1. Иван (SPEAKER_08) - эксперт по Apple, "собирает глупости по поводу мероприятий Apple" по словам Umputun.
+     Упоминается Василий в начале (61s) - возможно это тот же Иван или другой человек.
+
+  Звонки слушателей (в конце эпизода):
+  2. "хек" (SPEAKER_09) - позвонил в 6169s
+  3. Игорь (SPEAKER_04) - позвонил в 6223s, PHP-разработчик из Севастополя
+
+  MISATTRIBUTED спикеры - уже помечены как ошибочные присвоения, требуют voice comparison для точной атрибуции.

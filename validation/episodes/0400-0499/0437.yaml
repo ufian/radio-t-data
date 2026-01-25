@@ -1,0 +1,119 @@
+episode: 437
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  declared_hosts: 2  # "в составе двух болезненных организмов"
+  total_duration_sec: 6518.5
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 13.8
+    replies_count: 10
+    pattern: scattered  # разбросаны по всему эпизоду
+
+    analysis:
+      is_error: true
+      error_reason: >
+        В начале выпуска (1.03s) Umputun явно говорит: "подкаст выходного дня номер 437
+        в составе двух болезненных организмов" — указывая что их только двое (Umputun и Bobuk).
+        Alek.sys появляется через 2 минуты с короткими репликами типа "Когда двое всего
+        разговаривают, то это же получается диалог" — это явно ошибка распознавания.
+        Все 10 реплик очень короткие (1-4 сек), типичные для ошибок ASR.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.8
+          reason: >
+            Реплики вписываются в диалог Umputun-Bobuk, голос вероятно неверно распознан.
+            Например, 290.8s "А что такое кликать котиков?" — типичный вопрос в контексте
+            обсуждения интернета без котиков.
+
+      voice_task:
+        needed: false  # не нужно — это ошибка распознавания, не реальный гость
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 19.9
+    replies_count: 10
+    pattern: scattered  # разбросаны по второй половине эпизода (2429s-6263s)
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Название спикера уже указывает на ошибочную атрибуцию (MISATTRIBUTED).
+        Все 10 реплик очень короткие (1-4 сек): "А, понятно, понятно", "Нет, что это?",
+        "Ровно так", "Извиниться за что?". Это типичные реактивные фразы, которые
+        ASR мог неверно приписать отдельному спикеру. В выпуске только двое ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.7
+          reason: >
+            Большинство реплик следуют после реплик Umputun и продолжают его мысль,
+            как в диалоге. Например, 2429s "Обязательно попробуй или Rocket, или Clojure"
+            после обсуждения языков программирования.
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: >
+            Некоторые реплики могут быть неверно сегментированными фразами Umputun.
+
+      voice_task:
+        needed: false  # не нужно — это ошибка распознавания, не реальный гость
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Alek.sys НЕ упоминается в начале выпуска. Umputun явно говорит что их двое.
+        10 реплик Alek.sys — это ошибки распознавания голоса Bobuk.
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: >
+        Спикер уже помечен как MISATTRIBUTED. Это короткие реактивные фразы,
+        неверно выделенные ASR в отдельного спикера.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 437
+    from_speaker: "Alek.sys"
+    to_speaker: "Bobuk"
+    confidence: high
+    reason: >
+      В выпуске только 2 ведущих (подтверждено в начале). Alek.sys имеет всего
+      10 коротких реплик (14 сек), которые логически вписываются в диалог Umputun-Bobuk.
+      Голос вероятно похож на Bobuk и был неверно распознан.
+
+  - type: rename
+    episode: 437
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: >
+      Короткие реактивные реплики (20 сек), разбросанные по эпизоду.
+      Название уже указывает на ошибочную атрибуцию. Скорее всего это Bobuk,
+      но возможна voice comparison для подтверждения.
+
+# Примечания
+notes: >
+  Эпизод 437 (28 марта 2015) — выпуск с двумя ведущими (Umputun и Bobuk).
+  Оба "болеют" — Bobuk лицом, Umputun ногой. Обсуждались React Native,
+  языки программирования (Go, Scala, Clojure), и другие технические темы.
+
+  Ключевая цитата для валидации (1.03s): "подкаст выходного дня номер 437
+  в составе двух болезненных организмов" + (12.17s): "Бобу, который больной
+  на все... и я, который болен на всю ногу."

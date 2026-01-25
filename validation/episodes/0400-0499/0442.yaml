@@ -1,0 +1,279 @@
+episode: 442
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  guest_announced: "Степа Кольцов"
+  total_duration_sec: 7698  # ~2 часа 8 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1336
+    replies_count: 309
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "stepa_koltsov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (24 сек) Bobuk явно представляет гостя:
+        "Во-первых, это Степа Кольцов."
+        SPEAKER_02 начинает говорить с 150 сек и активно обсуждает Rust как эксперт.
+        Bobuk также упоминает: "он является одним из четырех русскоязычных контрибьюторов в Rust".
+        В 5554 сек обращаются: "Степ, когда ты первый раз в Яндекс пришел?"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие односложные реакции в случайных местах:
+        - 1950 сек: "Да." (1 слово)
+        - 6752 сек: "Смешно." (1 слово)
+        Типичный паттерн ошибки распознавания голоса.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Короткие реакции в контексте обсуждения, может быть любой из ведущих"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk часто реагирует короткими репликами"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткие реплики для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ранее ошибочно атрибуировано как Lavale.
+        Реплика (1088 сек): "Где он, интересно, становится очень популярным?"
+        Контекст: предыдущая реплика "Ксения, наверное, про него знает."
+        Следующая реплика от Ksenks.
+        Скорее всего это Ksenks - к ней обращаются и она продолжает разговор.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        SPEAKER_02 (Степа Кольцов) говорит: "Ксения, наверное, про него знает."
+        Сразу после идёт эта реплика: "Где он, интересно, становится очень популярным?"
+        Затем Ksenks продолжает: "В тех же кругах, в которых популярен, также широко популярен, раз?"
+        Контекст однозначен: к Ksenks обратились, она задаёт уточняющий вопрос, затем отвечает.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "К ней обращаются в предыдущей реплике"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1088.05
+          etime: 1091.31
+          text: "Где он, интересно, становится очень популярным?"
+        compare_with: "Ksenks"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ранее ошибочно атрибуировано как Marin (Marina).
+        Три реплики:
+        1. 4674 сек: "Так, я готовилась, да." - ответ на "Ты же готовилась?"
+        2. 5493 сек: "Компании просто разделились."
+        3. 7696 сек: "Ты сегодня вообще агрессивный и злой."
+
+        В контексте реплик упоминается Ksenks и она продолжает разговор.
+        Вероятнее всего это реплики Ksenks, неправильно распознанные.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        1. 4674 сек: Umputun спрашивает "Ты же готовилась?", ответ "Так, я готовилась, да.",
+           затем Ksenks продолжает "Что у нас такого интересного есть?"
+        2. 5493 сек: После реплики Ksenks спрашивает "Что значит, кто от кого вычленился?"
+        3. 7696 сек: После "Ты сегодня вообще агрессивный и злой" Ksenks добавляет
+           "Даже на Грея нападал" - похоже на продолжение темы теми же людьми.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Контекст разговора указывает на Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4674.17
+          etime: 4676.69
+          text: "Так, я готовилась, да."
+        compare_with: "Ksenks"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ранее ошибочно атрибуировано как Eldar (Эльдар Муртазин).
+        Реплика (7606 сек): "Вот тут я вынужден всех разочаровать."
+        Сразу после Gray продолжает: "Стоянки под ковворкер-центром нет."
+
+        Похоже на типичную реплику Gray, который продолжает мысль.
+        Может быть ошибка распознавания Gray или другого ведущего.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Gray продолжает тему в следующей реплике, похоже на начало его мысли"
+        - person_id: "stepa_koltsov"
+          confidence: 0.3
+          reason: "Гость мог вставить комментарий"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7606.75
+          etime: 7608.56
+          text: "Вот тут я вынужден всех разочаровать."
+        compare_with: "Gray"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_02"
+      issue: "Гость представлен как Степа Кольцов, но в транскрипте не переименован"
+    - speaker: "SPEAKER_MISATTRIBUTED_*"
+      issue: "Несколько реплик помечены как ошибочные атрибуции, требуется переименование"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 442
+    from_speaker: "SPEAKER_02"
+    to_speaker: "StepaKoltsov"
+    confidence: high
+    reason: |
+      Bobuk явно представляет гостя в начале эпизода (24 сек):
+      "Во-первых, это Степа Кольцов."
+      SPEAKER_02 активно обсуждает Rust как эксперт (контрибьютор Rust).
+      К нему обращаются по имени "Степа" в течение эпизода.
+
+  - type: rename
+    episode: 442
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Контекст однозначен: SPEAKER_02 обращается "Ксения, наверное, про него знает",
+      сразу идёт эта реплика-вопрос, затем Ksenks продолжает отвечать.
+      Voice comparison не требуется.
+
+  - type: rename
+    episode: 442
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Контекст всех трёх реплик указывает на Ksenks:
+      разговор о подготовке, продолжение её тем.
+      Требуется voice comparison для подтверждения.
+
+  - type: rename
+    episode: 442
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: low
+    reason: |
+      Gray продолжает тему в следующей реплике.
+      Низкая уверенность - требуется voice comparison.
+
+# Задания на voice comparison
+voice_comparison_tasks:
+  - task_id: "442_misattr_ksenks"
+    unknown_speaker: "SPEAKER_MISATTRIBUTED_LAVALE + SPEAKER_MISATTRIBUTED_MARIN"
+    hypothesis: "Ksenks"
+    segments:
+      - stime: 1088.05
+        etime: 1091.31
+        text: "Где он, интересно, становится очень популярным?"
+      - stime: 4674.17
+        etime: 4676.69
+        text: "Так, я готовилась, да."
+      - stime: 5493.94
+        etime: 5495.50
+        text: "Компании просто разделились."
+      - stime: 7696.51
+        etime: 7698.81
+        text: "Ты сегодня вообще агрессивный и злой."
+    reference_ksenks:
+      - stime: 192.58
+        etime: 197.19
+        text: "Забавное, кстати, там написано, что релиз Rasta будет в феврале."
+      - stime: 1091.37
+        etime: 1096.60
+        text: "В тех же кругах, в которых популярен, также широко популярен, раз?"
+
+  - task_id: "442_misattr_gray"
+    unknown_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    hypothesis: "Gray"
+    segments:
+      - stime: 7606.75
+        etime: 7608.56
+        text: "Вот тут я вынужден всех разочаровать."
+    reference_gray:
+      - stime: 7608.60
+        etime: 7610.10
+        text: "Стоянки под ковворкер-центром нет."
+      - stime: 7611.14
+        etime: 7613.10
+        text: "(следующая реплика Gray)"
+
+# Новый гость для people.yaml
+new_guest:
+  id: "stepa_koltsov"
+  canonical_name: "StepaKoltsov"
+  aliases: ["Степа", "Кольцов"]
+  real_name: "Степан Кольцов"
+  info: "Разработчик Яндекса, контрибьютор Rust, ранее работал в JetBrains. Эпизод 442."

@@ -1,0 +1,311 @@
+episode: 403
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, EldarMurtazin, PetrDidenko]
+  total_duration_sec: 8700  # примерно 2.4 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1891
+    replies_count: 430
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun представляет гостя в 73-80 сек: "И вот, собственно, Павел, который пришел к нам сегодня. Паша, здравствуй."
+        SPEAKER_05 отвечает "Привет" в 79.67 сек.
+        Гость - эксперт по контейнерам/OpenVZ/Parallels, работает в команде, которая делает OpenVZ/Virtuozzo.
+        Говорит "мы" о команде OpenVZ: "OpenVZ появился таким забавным образом в компании Parallels" (371.77 сек)
+
+      possible_matches:
+        - person_id: "pavel_emelyanov"
+          confidence: 0.9
+          reason: |
+            Павел Емельянов - разработчик ядра Linux в Parallels/OpenVZ,
+            известен работой над контейнерами и CRIU. Тематика беседы
+            (OpenVZ, CRIU, live migration) точно соответствует его экспертизе.
+            Кирилл Колышкин упоминается как коллега (460.26 сек), что подтверждает
+            принадлежность к команде OpenVZ.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 537.46
+          etime: 550.63
+          text: "А Крио как раз реализует возможность сохранить состояние контейнера в виде набора маленьких файликов и, взяв эти файлики, восстановить его обратно."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 306
+    replies_count: 139
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun обращается к "Ксюш" в самом начале (3.12 сек): "Второе месяц-то какой, Ксюш?"
+        2. SPEAKER_02 отвечает в 8.3 сек: "403 выпуск."
+        3. Реплика "Ждала его все время" (216.93 сек) - женский род
+        4. Ksenks НЕ размечена отдельно в эпизоде
+        5. SPEAKER_02 появляется параллельно с Marin_k_a (с 2347 сек), значит это разные люди
+        6. Umputun в 60 сек: "Коллеги Ксюши рассказали..." - подтверждает присутствие Ксюши
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 389
+    replies_count: 66
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "existing_markup"
+      confidence: high
+      evidence: |
+        Уже размечена корректно. Марина (бывшая ведущая) участвует как гость.
+        Упоминается как "Ксюша знакома с тобой" (3898.39 сек), что подтверждает
+        её присутствие отдельно от Ксении.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 153
+    replies_count: 20
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        ОШИБОЧНАЯ РАЗМЕТКА! Реплики EldarMurtazin содержат ту же техническую экспертизу
+        что и SPEAKER_05 (Павел из OpenVZ):
+        - "Взяли OpenVZ, точнее взяли продукт, который назывался Virtuoso..." (398.82 сек)
+        - "Mounting Space, пространство имен точек монтирования..." (1640.15 сек)
+        - Говорит "мы" о команде OpenVZ
+
+        Эльдар Муртазин - мобильный аналитик Mobile-Review, НЕ специалист по контейнерам Linux.
+        Его имя НЕ упоминается в тексте эпизода, только в поле author.
+
+        Вывод: это ошибочно присвоенные реплики, на самом деле принадлежат Павлу (SPEAKER_05).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "pavel_emelyanov"
+          confidence: 0.95
+          reason: "Содержание реплик идентично тематике SPEAKER_05 - контейнеры, OpenVZ, ядро Linux"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 398.82
+          etime: 422.38
+          text: "Взяли OpenVZ, точнее взяли продукт, который назывался Virtuoso, открыли его исходные тексты..."
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 69
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        ОШИБОЧНАЯ РАЗМЕТКА! Реплики PetrDidenko содержат ту же техническую экспертизу
+        что и SPEAKER_05 (Павел из OpenVZ):
+        - "пока там бурление утихлет и патчи возьмут, у нас появилась возможность снять состояние памяти" (839.97 сек)
+        - "Они взяли OpenVZ с его ядром..." (2441.11 сек)
+        - Говорит "мы" о команде OpenVZ
+
+        Петр Диденко - разработчик, но НЕ из команды OpenVZ/Parallels.
+        Его имя НЕ упоминается в тексте эпизода, только в поле author.
+
+        Вывод: это ошибочно присвоенные реплики, на самом деле принадлежат Павлу (SPEAKER_05).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "pavel_emelyanov"
+          confidence: 0.95
+          reason: "Содержание реплик идентично тематике SPEAKER_05 - контейнеры, OpenVZ"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2441.11
+          etime: 2450.33
+          text: "Они взяли OpenVZ с его ядром и с его утилитами и навертели сверху очень продвинутую систему по запаковке контейнеров."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (1-2 сек) в случайные моменты:
+        - "Это не все." (2938.88 сек, 0.9 сек)
+        - "Японцы, китайцы и русские." (5668.79 сек, 2.3 сек)
+        - "Мы тоже выпусков не ведем." (8128.61 сек, 2.2 сек)
+
+        Скорее всего ошибки распознавания - короткие фразы, вырванные из контекста других спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 2 очень короткие реплики подряд (5087-5092 сек):
+        - "А куда он вмещает?" (1.4 сек)
+        - "У него два таких зайца в натуральную величину?" (2.9 сек)
+
+        Контекст: обсуждение зайцев, SPEAKER_02 отвечает сразу после ("А, зайцы").
+        Скорее всего это реплики Ksenks (SPEAKER_02), ошибочно выделенные как отдельный спикер.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Реплики находятся в контексте диалога с SPEAKER_02, похожий стиль вопросов"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: |
+        Гость представлен как "Павел" и "Паша", но фамилия не названа.
+        По контексту (OpenVZ, CRIU, Parallels) это скорее всего Павел Емельянов -
+        разработчик ядра Linux, автор CRIU.
+
+    - speaker: "EldarMurtazin"
+      issue: |
+        Эльдар Муртазин НЕ представлен в эпизоде и его имя не упоминается в тексте.
+        Реплики с пометкой EldarMurtazin на самом деле принадлежат Павлу (SPEAKER_05).
+        Это ошибка автоматической или ручной разметки.
+
+    - speaker: "PetrDidenko"
+      issue: |
+        Петр Диденко НЕ представлен в эпизоде и его имя не упоминается в тексте.
+        Реплики с пометкой PetrDidenko на самом деле принадлежат Павлу (SPEAKER_05).
+        Это ошибка автоматической или ручной разметки.
+
+    - speaker: "Ksenks"
+      issue: |
+        Ксения (Ksenks) присутствует в эпизоде (обращение "Ксюш" в начале),
+        но размечена как SPEAKER_02 вместо своего имени.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 403
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      SPEAKER_02 - это Ксения. Umputun обращается к ней "Ксюш" в начале (3 сек),
+      она отвечает "403 выпуск" (8 сек). Женский род в репликах подтверждает.
+
+  - type: rename
+    episode: 403
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_05"
+    confidence: high
+    reason: |
+      Реплики ошибочно присвоены Эльдару. Содержание (OpenVZ, контейнеры, "мы в команде")
+      идентично SPEAKER_05 (Павел из OpenVZ). Нужно объединить с SPEAKER_05.
+
+  - type: rename
+    episode: 403
+    from_speaker: "PetrDidenko"
+    to_speaker: "SPEAKER_05"
+    confidence: high
+    reason: |
+      Реплики ошибочно присвоены Петру. Содержание (OpenVZ, патчи, "у нас")
+      идентично SPEAKER_05 (Павел из OpenVZ). Нужно объединить с SPEAKER_05.
+
+  - type: rename
+    episode: 403
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Всего 2 короткие реплики, находятся в контексте диалога с SPEAKER_02 (Ksenks).
+      Вероятно ошибка сегментации.
+
+  - type: delete
+    episode: 403
+    speaker: "SPEAKER_06"
+    confidence: medium
+    reason: |
+      3 очень короткие реплики (всего 5 сек) - скорее всего артефакты распознавания.
+      Можно либо удалить, либо присвоить ближайшему спикеру по контексту.
+
+# Дополнительные заметки
+notes: |
+  1. Главный гость эпизода - Павел (SPEAKER_05), эксперт по контейнерам из Parallels/OpenVZ.
+     По контексту это скорее всего Павел Емельянов - один из создателей CRIU.
+     Рекомендуется добавить его в people.yaml после подтверждения.
+
+  2. EldarMurtazin и PetrDidenko ошибочно размечены - их реплики принадлежат Павлу.
+     Эта ошибка могла возникнуть при автоматической разметке на основе голосового
+     сходства с другими эпизодами.
+
+  3. Marin_k_a (Марина) и Ksenks (SPEAKER_02) - две разные участницы,
+     обе женщины, что могло вызвать путаницу при разметке.
+
+  4. Эпизод требует ручной проверки для подтверждения идентификации Павла
+     и исправления ошибочных присвоений EldarMurtazin/PetrDidenko.

@@ -1,0 +1,154 @@
+episode: 468
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  hosts_absent: [Ksenks]  # Упомянуто в начале: "Ксюши почему-то нет"
+  total_duration_sec: 7141
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 4436
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Единичная короткая реплика (3 сек) между двумя репликами Umputun.
+        Контекст: обсуждение разработчиков Go и деплоймента.
+        Umputun: "Вот это меня удивляет." -> MISATTRIBUTED: "Для них это не проблема вообще." -> Umputun: "Для них вот такое качество..."
+        Реплика логически продолжает мысль Umputun и скорее всего принадлежит ему или Bobuk (который говорит сразу после).
+        Гость Petr Didenko не представлен и не упоминается в этом выпуске.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Реплика логически продолжает его предыдущую мысль, между двумя его репликами"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Участвует в диалоге, следующая реплика после Umputun"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4436.36
+          etime: 4439.16
+          text: "Для них это не проблема вообще."
+        compare_with:
+          - speaker: "Umputun"
+            segment:
+              stime: 4432.98
+              etime: 4436.32
+              text: "Они вообще этим проблемам не заморачиваются. Вот это меня удивляет."
+          - speaker: "Bobuk"
+            segment:
+              stime: 4444.53
+              etime: 4445.55
+              text: "Не-не-не, подожди, смотри."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 6043
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единичная очень короткая реплика (1.6 сек) между репликами Gray.
+        Контекст: обсуждение Rust.
+        Gray: "Что-то народ так активно про этот." -> MISATTRIBUTED: "Короче, раст 1.4." -> Gray: "И следом просят поругать консул."
+        Реплика похожа на чтение из чата или вставку модератора.
+        Гость Eldar Murtazin не представлен и не упоминается в этом выпуске.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Обрамлён репликами Gray, может быть частью его речи"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "После этой реплики Bobuk отвечает про Rust"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Ведущий, мог вставить комментарий"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6043.02
+          etime: 6044.64
+          text: "Короче, раст 1.4."
+        compare_with:
+          - speaker: "Gray"
+            segment:
+              stime: 6040.76
+              etime: 6048.26
+              text: "Что-то народ так активно про этот. ... И следом просят поругать консул."
+          - speaker: "Bobuk"
+            segment:
+              stime: 6053.16
+              etime: 6062.45
+              text: "Если честно, я не смотрел в ближайшее время на Раст..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Не представлен явно в начале выпуска. Первая реплика в 170с.
+        Umputun упомянул только Gray и Bobuk. Однако это нормально для постоянного ведущего,
+        который мог подключиться позже или просто не был упомянут.
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Отменённое ошибочное присвоение. Гость Petr Didenko отсутствует в этом выпуске."
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Отменённое ошибочное присвоение. Гость Eldar Murtazin отсутствует в этом выпуске."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: voice_comparison_needed
+    episode: 468
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    candidates: [Umputun, Bobuk]
+    confidence: medium
+    reason: >
+      Короткая единичная реплика между репликами Umputun.
+      Требуется сравнение голоса для определения автора.
+
+  - type: voice_comparison_needed
+    episode: 468
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    candidates: [Gray, Bobuk, Umputun]
+    confidence: medium
+    reason: >
+      Очень короткая единичная реплика между репликами Gray.
+      Требуется сравнение голоса для определения автора.
+
+# Метаданные анализа
+notes: |
+  Эпизод 468 от 31 октября 2015 года.
+  Ведущие: Umputun, Bobuk, Gray, Alek.sys.
+  Ksenks отсутствует (упомянуто Umputun в начале).
+
+  Обе MISATTRIBUTED реплики — это ранее ошибочно присвоенные имена известных гостей
+  (Petr Didenko и Eldar Murtazin), которые были отменены системой очистки.
+  Реплики слишком короткие (2-3 сек) и единичные, чтобы принадлежать реальным гостям.
+  Наиболее вероятно — это ошибки транскрипции, и реплики принадлежат одному из ведущих.
+
+  Рекомендация: провести voice comparison для точного определения авторов.

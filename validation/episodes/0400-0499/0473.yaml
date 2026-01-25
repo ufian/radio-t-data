@@ -1,0 +1,65 @@
+episode: 473
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys]
+  total_duration_sec: 6302
+  notes: |
+    В начале эпизода Umputun объявляет "выпуск 473, Гиковский, на двоих, Бобук" -
+    формально заявлен выпуск на двоих, но Alek.sys присутствует (97 реплик, 333 сек).
+    Alek.sys появляется с 280 секунд без явного представления.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 5
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все 4 реплики являются ошибками распознавания:
+
+        1-3. Реплики в 1844-1848 сек ("Цикаво получилось", "Цикаво", "Цикаво, да") -
+        это эхо речи Umputun, который за секунду до этого сказал "И прямо так цикаво получается".
+        Слово "цикаво" (украинское "интересно") - характерное для Umputun, автоматическое
+        распознавание неверно выделило повтор/эхо как отдельного спикера.
+
+        4. Реплика в 7047 сек ("Да.") - односложная реакция длиной 0.75 сек,
+        типичная ошибка распознавания коротких междометий.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Не представлен в начале эпизода. Umputun объявил "выпуск на двоих" с Бобуком,
+        но Alek.sys появляется с 280 секунд (97 реплик, 333 сек суммарно).
+        Возможно присоединился позже по ходу записи или это ошибка атрибуции.
+        Требуется проверка - действительно ли это Alek.sys или ошибка распознавания.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 473
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: |
+      Все реплики SPEAKER_03 являются ошибками распознавания речи Umputun:
+      первые три - эхо его же слова "цикаво", четвёртая - короткое "Да".

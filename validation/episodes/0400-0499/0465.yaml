@@ -1,0 +1,183 @@
+episode: 465
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk, Alek.sys]
+  guests_present: [Руслан]
+  total_duration_sec: 5666
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 167
+    replies_count: 43
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Руслан, но нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        В начале выпуска (46-59s) Umputun представляет гостя: "Сегодня пришел к нам гость,
+        который утверждает, что он уже и раньше был. Руслан, ты был раньше или опять обманываешь?"
+        Гость отвечает на это обращение и далее активно участвует в обсуждении AWS/Amazon.
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reason: "Нужно добавить Руслана в people.yaml и определить его полное имя"
+        reference_segment:
+          stime: 2708.1
+          etime: 2718.3
+          text: "То есть это в смысле уже где-то было анонсировано, то есть возможно что..."
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 89
+    replies_count: 17
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: >
+        EldarMurtazin (Эльдар Муртазин) - известный мобильный аналитик, но в этом выпуске
+        гость представлен как Руслан. Реплики EldarMurtazin чередуются с SPEAKER_03 в одних
+        диалогах, завершают друг друга (4606-4614s: один начинает про баг, другой продолжает).
+        Это явно один и тот же человек - Руслан, работающий с AWS/Amazon.
+
+      identified_as: null  # Должен быть Руслан, тот же что и SPEAKER_03
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        1. Гость представлен как Руслан, не Эльдар
+        2. Темы реплик: AWS, DigitalOcean, Python, технические вопросы - не типично для Муртазина
+        3. Реплики чередуются с SPEAKER_03 без логического разрыва
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "EldarMurtazin = SPEAKER_03 = Руслан, нужно объединить под одним именем"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 12
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        SPEAKER_04 - это неразмеченные реплики Gray в начале выпуска (17-35s).
+        Контекст: Umputun говорит о прогуле Gray, SPEAKER_04 отвечает "Стыдно? Да ладно.
+        Типа первый раз я прогулял". Позже говорит о переходе на Sublime (в контексте
+        обсуждения Eclipse). Первая размеченная реплика Gray - в 192s.
+
+      identified_as: "gray"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        17-22s: В ответ на реплику Umputun о прогуле Gray, SPEAKER_04 защищается:
+        "Стыдно? Да ладно. Типа первый раз я прогулял. Я не прогулял, я пойду поеду."
+        32-35s: "Действительно, давно на сублайм перешел" - в контексте шутки про Eclipse.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Высокая уверенность на основе контекста"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Две короткие реплики: "В общем, красавцы" (1395s) и "Да" (4850s).
+        Обе в контексте разговора ведущих, типичные подтверждения/реакции.
+        Скорее всего ошибка распознавания одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: "Слишком короткие реплики для надёжной идентификации"
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Обе реплики следуют за репликами Gray"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Первая реплика повторяет по смыслу реплику Umputun 'Ну, в общем, молодцы'"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие сегменты для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Alek.sys не представлен в начале выпуска (Umputun говорит только о Gray и госте Руслане),
+        но имеет 6 осмысленных реплик на протяжении выпуска. Первая реплика в 634s.
+        Нужно проверить: был ли он на выпуске или это ошибка атрибуции.
+    - speaker: "Bobuk"
+      issue: >
+        Umputun в начале говорит "Сегодня Бобука почему-то нет" (35-38s), но Bobuk
+        имеет 24 реплики начиная с 302s. Возможно, Bobuk присоединился позже по ходу выпуска.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 465
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Gray"
+    confidence: high
+    reason: "Контекст прямо указывает на Gray (обсуждение его прогула, ответы от первого лица)"
+
+  - type: rename
+    episode: 465
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_03"
+    confidence: high
+    reason: >
+      EldarMurtazin ошибочно атрибутирован - это тот же гость Руслан.
+      После объединения нужно переименовать в Ruslan (когда добавим в people.yaml).
+
+  - type: rename
+    episode: 465
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ruslan"
+    confidence: high
+    reason: "Гость явно представлен как Руслан в начале выпуска"
+    depends_on: "Добавить Ruslan в people.yaml"
+
+# Требуемые действия
+action_items:
+  - action: "add_to_people_yaml"
+    person:
+      id: "ruslan_465"
+      canonical_name: "Ruslan"
+      aliases: ["Руслан"]
+      real_name: null  # Нужно уточнить
+      info: "Гость, разработчик, работает с AWS. Выпуски: 465 и ранее (по его словам)"
+    priority: medium
+    reason: "Гость с 167 сек речи, нужно добавить для корректной атрибуции"
+
+  - action: "investigate"
+    description: "Проверить присутствие Alek.sys в выпуске 465"
+    priority: low
+    reason: "Не представлен, но говорит осмысленные технические реплики"
+
+  - action: "investigate"
+    description: "Проверить, когда Bobuk присоединился к выпуску"
+    priority: low
+    reason: "Umputun говорит что его нет, но он появляется с 302s"

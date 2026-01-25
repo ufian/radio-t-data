@@ -1,0 +1,110 @@
+episode: 497
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6900  # ~1:55:00 based on speaker stats sum
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered  # 60 секунд между репликами
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Две короткие разрозненные реплики (2-3 сек каждая) с интервалом 60 секунд.
+        Первая "Перла, перла ему хватает" (2321s) - реакция в середине разговора про git submodules.
+        Вторая "Да-да" (2381s) - типичная короткая реакция.
+        По паттерну это ошибка распознавания одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: >
+            Реплика про Perl идёт сразу после слов Bobuk о сабмодулях,
+            и Bobuk сразу подхватывает тему после неё
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: >
+            Ksenks активно участвует в разговоре в этом сегменте,
+            вступает сразу после SPEAKER_06
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2321.35
+          etime: 2324.01
+          text: "Перла, перла ему хватает."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная короткая реплика (3 сек) в контексте обсуждения Jawbone.
+        Название спикера указывает, что ранее было ошибочно приписано Эльдару Муртазину,
+        но затем отменено. Эльдара в этом выпуске нет (дата: 28 мая 2016, "полный состав" без гостей).
+        Скорее всего это реплика одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: >
+            Gray только что сказал "Не совсем" на вопрос о китайском происхождении.
+            Следующая реплика "У них голова где-то в Калифорнии" продолжает ту же мысль
+            (Jawbone - американская компания). Возможно одна фраза разбита на две реплики.
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: >
+            Bobuk мог вставить уточнение о местонахождении компании
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2833.22
+          etime: 2836.31
+          text: "У них, по-моему, голова где-то в Калифорнии."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Очень мало реплик (7 за весь выпуск, 16 сек суммарно).
+        При этом в начале объявлен "полный состав".
+        Возможно часть реплик Alek.sys ошибочно приписана другим спикерам,
+        или он просто мало говорил в этом выпуске.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет уверенных правил - оба случая требуют voice comparison для идентификации
+
+# Примечания для ручной проверки
+notes: |
+  1. Выпуск 497 от 28 мая 2016 года - "полный состав" ведущих, гостей нет
+  2. SPEAKER_06 и SPEAKER_MISATTRIBUTED_ELDAR - скорее всего ошибки распознавания ведущих
+  3. Для точной идентификации нужен voice comparison:
+     - SPEAKER_06 (2321-2324s) - сравнить с Bobuk, Ksenks
+     - SPEAKER_MISATTRIBUTED_ELDAR (2833-2836s) - сравнить с Gray, Bobuk
+  4. Alek.sys говорит очень мало - это может быть нормой или указывать на misattribution
+
+audio_url: null  # desc.json недоступен в data_clean

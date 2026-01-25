@@ -1,0 +1,189 @@
+episode: 444
+status: needs_review
+analyzed_at: "2026-01-25T13:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  hosts_introduced: [Umputun, Bobuk, Gray]  # явно упомянуты в intro
+  hosts_absent: [Ksenks]  # "Ксюша отпросилась" - упомянуто в начале выпуска
+  total_duration_sec: 6210  # ~1:43:30 выпуск (по статистике из задания)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: consecutive
+    first_appearance_sec: 1431.78
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Три короткие реплики подряд (1431-1436 сек): "79.", "Да, 79.", "Или 99 в канале."
+        Контекст: Umputun спрашивает "Сколько оно стоить-то будет?" про переходник.
+        После ответа Bobuk продолжает обсуждение переходников.
+        Скорее всего это ошибочно атрибутированная речь одного из ведущих
+        (вероятно Gray или Bobuk), отвечающего на вопрос о цене.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Обсуждение железа (переходники для MacBook) - тема Gray"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "После этих реплик Bobuk продолжает на ту же тему"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1431.78
+          etime: 1436.23
+          text: "79. Да, 79. Или 99 в канале."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 1732.84
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Одна односложная реплика "Нет." (менее 1 секунды) в ответ на вопрос Bobuk
+        "Ты когда-нибудь на Smalltalk писал что-нибудь?"
+        После ответа Bobuk продолжает объяснять идею Smalltalk.
+        Типичная ошибка распознавания - краткий ответ одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Вопрос задан в диалоге, скорее всего Gray или Umputun отвечают"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Umputun обычно участвует в обсуждении языков программирования"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткая реплика (0.69 сек) для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 4450.23
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Имя спикера указывает на ранее отменённую ошибочную атрибуцию Эльдару Муртазину.
+        Единственная реплика: "А как бы... А общего... А Product Owner не оказалось."
+        Контекст: обсуждение проблем разработки (Gray говорит о разработчиках и пиарщиках).
+        Bobuk сразу отвечает: "Нет-нет, Product Owner там есть."
+        Эльдар Муртазин не упоминается в начале выпуска как гость.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: >
+            Gray говорит прямо перед этой репликой: "У разработчиков была задача собрать картинки,
+            а у пиарщиков была задача рассказать" → SPEAKER продолжает "А Product Owner не оказалось".
+            Это логическое завершение той же мысли о разделении задач без Product Owner.
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Альтернативный вариант - может быть комментарий Umputun"
+        - person_id: "alek_sys"
+          confidence: 0.1
+          reason: "Alek.sys присутствует в выпуске, но менее вероятно по контексту"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4450.23
+          etime: 4455.37
+          text: "А как бы... А общего... А Product Owner не оказалось."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Alek.sys не представлен в начале выпуска (первые 10 минут), но появляется
+        на 3181 секунде (~53 мин) и далее участвует в обсуждении.
+        В начале Umputun говорит о "суровом мужском составе в полном",
+        но перечисляет только отсутствие Ксюши и упоминает Gray и Bobuk.
+        Alek.sys имеет всего 8 реплик за весь выпуск (16 сек), все короткие.
+        Это необычно мало для постоянного ведущего.
+        Рекомендуется voice comparison для подтверждения присутствия.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 444
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: >
+      Реплика является логическим продолжением предыдущей фразы Gray о разделении задач
+      между разработчиками и пиарщиками. Gray: "...у пиарщиков была задача рассказать" →
+      сразу → "А Product Owner не оказалось". Стилистика и контекст указывают на Gray.
+
+# Задачи на voice comparison
+voice_comparison_tasks:
+  - task_id: "444_speaker_01"
+    priority: low
+    description: "Определить автора реплик о цене переходника"
+    unknown_speaker: "SPEAKER_01"
+    reference_segment:
+      stime: 1431.78
+      etime: 1436.23
+      text: "79. Да, 79. Или 99 в канале."
+    compare_with: [gray, bobuk]
+    audio_url: "https://cdn.radio-t.com/rt_podcast444.mp3"
+
+  - task_id: "444_misattributed_eldar"
+    priority: medium
+    description: "Определить автора реплики про Product Owner"
+    unknown_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    reference_segment:
+      stime: 4450.23
+      etime: 4455.37
+      text: "А как бы... А общего... А Product Owner не оказалось."
+    compare_with: [gray, umputun]
+    audio_url: "https://cdn.radio-t.com/rt_podcast444.mp3"
+
+  - task_id: "444_alek_sys_verification"
+    priority: high
+    description: "Подтвердить присутствие Alek.sys в выпуске"
+    unknown_speaker: "Alek.sys"
+    reference_segment:
+      stime: 3180.79
+      etime: 3181.73
+      text: "А я, видишь, по-другому говорю."
+    compare_with: [alek_sys, gray]
+    audio_url: "https://cdn.radio-t.com/rt_podcast444.mp3"
+
+# Дополнительные наблюдения
+notes:
+  - "Выпуск 444 от 16 мая 2015 года"
+  - "В начале Umputun говорит: 'Сегодня в суровом мужском составе, но зато в полном'"
+  - "Явно упомянуты: Грей, Бобук; Ксюша отсутствует ('отпросилась')"
+  - "Alek.sys не упомянут явно, но появляется в транскрипте с 53-й минуты"
+  - "Все SPEAKER_* - короткие реплики (<5 сек), типичные ошибки распознавания"

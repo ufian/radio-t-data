@@ -1,0 +1,151 @@
+episode: 453
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  hosts_announced: [Umputun, Ksenks]  # "Ксюша да я, я да Ксюша. Ни Бубука, ничего хуже Грея с нами нет"
+  total_duration_sec: 7462  # ~2h 4min based on last entries
+  notes: |
+    Umputun явно объявил состав в начале: только он и Ksenks.
+    Alek.sys появляется только в рекламном ролике Vscale (1186-1224s) - это заранее записанная реклама, не живое участие.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 7
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это автоответчик телефона, не человек. Текст: "The person whom you're trying to reach is currently unavailable."
+        Контекст: Umputun пытается дозвониться Ksenks, телефон выдаёт автоматическое сообщение.
+        Должен быть помечен как SPEAKER_99 (аудио-артефакт).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткая реплика "Не рады" (4 сек) во время проблем со связью у Ksenks.
+        Контекст показывает, что это либо Umputun, либо Ksenks с плохим качеством связи.
+        Имя MISATTRIBUTED указывает, что это уже было исправлено с PetrDidenko.
+        Скорее всего это Umputun, т.к. он отвечает сразу после: "Не рады, это да. Слушатели не рады."
+
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        6597.4s [SPEAKER_MISATTRIBUTED_PETR]: Не рады.
+        6602.4s [Umputun]: Не рады, это да.
+        Umputun повторяет фразу, что типично при эхе или повторе своих слов.
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.7
+          reason: "Сразу после реплики Umputun подхватывает 'Не рады' как свою мысль"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Были проблемы со связью у Ksenks в этот момент"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6597.4
+          etime: 6601.4
+          text: "Не рады."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две очень короткие реплики (по 1 сек каждая) - это переспрашивания или эхо:
+        1. 832.5s: "Только без коробки." - после слов Umputun о товаре в пакетике
+        2. 2500.5s: "Грязь?" - после слов Umputun "и на них уже нарисована грязь"
+        Обе реплики - типичные переспрашивания/уточнения от Ksenks.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Обе реплики - короткие уточняющие вопросы в диалоге между Umputun и Ksenks.
+        832.5s: Umputun рассказывает про товар -> "Только без коробки." -> продолжает Umputun
+        2500.5s: Umputun про джинсы с грязью -> "Грязь?" -> Umputun подтверждает "Да"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Ksenks единственный собеседник, типичные уточняющие реплики"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Маловероятно - Umputun ведёт рассказ в обоих случаях"
+
+      voice_task:
+        needed: false
+        # Слишком короткие реплики для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys не был представлен как участник выпуска, но появляется с 7 репликами (1186-1224s).
+        Анализ показывает: это рекламный ролик Vscale, заранее записанный.
+        Текст: "Вискейл – это облачный хостинг для разработчиков..."
+        Это НЕ живое участие в выпуске.
+    - speaker: "SPEAKER_01"
+      issue: "Автоответчик телефона, должен быть SPEAKER_99"
+    - speaker: "SPEAKER_04"
+      issue: "Вероятно Ksenks, короткие уточняющие реплики"
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Вероятно Umputun или Ksenks"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 453
+    from_speaker: "SPEAKER_01"
+    to_speaker: "SPEAKER_99"
+    confidence: high
+    reason: "Автоответчик телефона - аудио-артефакт, не человек"
+
+  - type: rename
+    episode: 453
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Короткие уточняющие реплики в диалоге Umputun-Ksenks"
+
+  - type: rename
+    episode: 453
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: "Umputun подхватывает фразу как свою, контекст указывает на него"
+
+  - type: rename
+    episode: 453
+    from_speaker: "Alek.sys"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Рекламный ролик Vscale, не живое участие в выпуске"

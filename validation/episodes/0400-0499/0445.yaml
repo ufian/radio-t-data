@@ -1,0 +1,301 @@
+episode: 445
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Gray, Alek.sys]
+  hosts_absent: [Bobuk]  # Явно сказано в начале выпуска (39-47s)
+  guests_introduced:
+    - name: "Иван"
+      podcast: "DevZen"
+      intro_time: 75s
+      mapped_to: "SPEAKER_06"
+    - name: "Алексей"
+      intro_time: 1207s
+      topic: "React/Frontend"
+      mapped_to: "SPEAKER_02"
+  total_duration_sec: 7000  # ~1:56:40
+
+# Проблемы с атрибуцией ведущих
+host_attribution_issues:
+  - speaker: "Bobuk"
+    issue: "2 реплики приписаны Bobuk, хотя он отсутствует в выпуске (сказано в 39-47s)"
+    replies:
+      - stime: 3317.1
+        text: "Я так понимаю, у тебя много документов."
+        context: "Между SPEAKER_06 и Gray, скорее всего Gray"
+      - stime: 5424.9
+        text: "Это когда кладезь таких стереотипов"
+        context: "Между Ksenks и Gray"
+    recommendation: "Переатрибуция на Gray или SPEAKER_06"
+
+  - speaker: "Alek.sys"
+    issue: "Только 1 реплика (107.7s), хотя он присутствует в начале"
+    note: "Возможно некоторые реплики неправильно атрибуированы другим спикерам"
+    action_needed: false  # Сложно определить без voice comparison
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 439
+    replies_count: 135
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        75.1s Umputun: "Иван, ты из какого подкаста и почему он дружественный?"
+        83.4s SPEAKER_06: "Девзен, я успел сказать, пока вы не ответили."
+
+      guest_info:
+        name: "Иван"
+        podcast: "DevZen"
+        topics: ["Java", "фронтенд", "облачная инфраструктура"]
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Идентифицирован
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 529
+    replies_count: 78
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1207.6s Umputun: "Вот я пытаюсь Алексея ввести."
+        1208.9s Umputun: "Алексей, ты ввелся?"
+        1211.3s SPEAKER_02: "Да, я тут."
+
+      guest_info:
+        name: "Алексей"
+        expertise: "React, фронтенд-разработка, immutable данные"
+        joined_at: "~20 минут от начала"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Идентифицирован
+        reference_segment:
+          stime: 1860.1
+          etime: 1887.0
+          duration: 27.0
+          text: "потом сказать, что вот здесь вот, например, баг, да, там какой-то..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная короткая реплика (2 сек) между репликами Ksenks - скорее всего ошибка распознавания"
+
+      identified_as: null
+      context: |
+        1046.4s Ksenks: "Это практически решило проблему."
+        1048.9s SPEAKER_MISATTRIBUTED_LAVALE: "Но не garbage collector."
+        1050.9s Ksenks: "Поэтому Swift может быть проектом..."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Контекст разговора о Swift - тема Ksenks, реплика вставлена между её репликами"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 9
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "3 короткие разрозненные реплики (1956s, 3575s, 5492s), скорее всего ошибки распознавания"
+
+      identified_as: null
+      context: |
+        Реплики разбросаны по всему эпизоду, короткие, эмоциональные:
+        - "Я ничего не... Вы как издеваетесь?" (после SPEAKER_06)
+        - "Поэтому сейчас еще вкидывать... Не по наслышке."
+        - "Еще хуже, еще хуже."
+
+      possible_matches:
+        - person_id: null
+          confidence: 0.5
+          reason: "Вероятно Umputun или Ksenks - эмоциональные восклицания"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1956.7
+          etime: 1959.2
+          text: "Я ничего не... Вы как издеваетесь?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 11
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "3 разрозненные реплики (4285s, 4709s, 6105s), Эльдар не упоминается в выпуске"
+
+      identified_as: null
+      context: |
+        Реплики по техническим темам:
+        - "Так там же уже есть, они уже предлагают..." (про Amazon)
+        - "Я пока не очень понимаю."
+        - "Я с Эрой переходил с 11-го..." (про Mac)
+
+      possible_matches:
+        - person_id: "SPEAKER_06"
+          confidence: 0.6
+          reason: "Иван говорит много о техдеталях, реплики по контексту могут быть его"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Тема про Mac/Retina может быть от Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4285.5
+          etime: 4289.5
+          text: "Так там же уже есть, они уже предлагают, там чуть пониже в темах есть уже эта штука."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 10
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "5 очень коротких реплик (1-3 сек каждая) разбросаны по эпизоду - типичный паттерн ошибок распознавания"
+
+      identified_as: null
+      examples:
+        - "Расскажи." (3973s)
+        - "Это приятно, мне кажется." (5645s)
+        - "Лишь бы мосты и программы." (6663s)
+        - "Хороший программист." (6729s)
+        - "Жаль." (6962s)
+
+      possible_matches:
+        - person_id: null
+          confidence: 0.4
+          reason: "Короткие односложные реакции - могут быть от любого участника"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "2 очень короткие реплики (2 сек каждая) - ошибки распознавания"
+
+      identified_as: null
+      examples:
+        - "И коленями." (5318s) - реакция на шутку Umputun, Ksenks повторяет
+        - "К кто?" (6435s) - обрывок фразы
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Первая реплика - Ksenks сразу после повторяет 'Да, коленями'"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: "2 реплики приписаны отсутствующему ведущему - ошибка атрибуции"
+    - speaker: "Alek.sys"
+      issue: "Только 1 реплика, хотя присутствует - возможна недоатрибуция"
+    - speaker: "SPEAKER_MISATTRIBUTED_*"
+      issue: "3 спикера с 'MISATTRIBUTED' в имени требуют переатрибуции"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Идентифицированные гости
+  - type: rename
+    episode: 445
+    from_speaker: "SPEAKER_06"
+    to_speaker: "IvanDevZen"
+    confidence: high
+    reason: "Явно представлен как Иван из подкаста DevZen в 75-83s"
+
+  - type: rename
+    episode: 445
+    from_speaker: "SPEAKER_02"
+    to_speaker: "AlexeyFrontend"
+    confidence: high
+    reason: "Явно представлен как Алексей в 1207-1211s, эксперт по React/фронтенду"
+
+  # Ошибки атрибуции Bobuk (отсутствует)
+  - type: rename
+    episode: 445
+    from_speaker: "Bobuk"
+    to_speaker: "NEEDS_REATTRIBUTION"
+    confidence: high
+    reason: "Bobuk явно отсутствует в выпуске (сказано в 39-47s), 2 реплики ошибочны"
+
+  # Ошибки MISATTRIBUTED
+  - type: rename
+    episode: 445
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Одиночная реплика между репликами Ksenks в её теме (Swift)"
+
+  # Короткие ошибки - оставить для ручной проверки
+  - type: flag_for_review
+    episode: 445
+    speakers: ["SPEAKER_MISATTRIBUTED_PETR", "SPEAKER_MISATTRIBUTED_ELDAR", "SPEAKER_05", "SPEAKER_08"]
+    reason: "Короткие разрозненные реплики - требуют voice comparison или ручной проверки"
+
+# Примечания
+notes:
+  - "Выпуск 445 от 23 мая 2015 года"
+  - "Состав: Umputun, Gray, Ksenks, Alek.sys (мало говорил) + гости Иван (DevZen) и Алексей"
+  - "Bobuk отсутствует (летел в LA), но 2 его реплики - ошибки"
+  - "SPEAKER_MISATTRIBUTED_* - это ранее ошибочно атрибуированные реплики"
+  - "Основные темы: Qt 20 лет, React/Angular/фронтенд, Amazon спот-инстансы, iCloud"
+
+# Действия для добавления в people.yaml
+people_yaml_additions:
+  - id: "ivan_devzen"
+    canonical_name: "IvanDevZen"
+    aliases: ["Иван"]
+    real_name: "Иван"
+    info: "Ведущий подкаста DevZen, выпуск 445"
+
+  - id: "alexey_frontend"
+    canonical_name: "AlexeyFrontend"
+    aliases: []
+    real_name: "Алексей"
+    info: "Фронтенд-разработчик (React), выпуск 445"

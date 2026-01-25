@@ -1,0 +1,135 @@
+episode: 496
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Bobuk]
+  # Примечание: Umputun в начале говорит "Состав сокращенный. Выбыл один из отцов-основателей"
+  # Bobuk подключился позже (первая реплика в 959s)
+  # Alek.sys отмечен в транскрипте, но с минимальным участием (3 реплики)
+  total_duration_sec: 6736  # примерная длительность ~112 мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две односложные реакции ('Угу.', 'Ой, дай.') в разных частях эпизода - типичные ошибки ASR"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 22
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Реплики короткие (2-6 сек), разбросаны по эпизоду (3321s-7213s),
+        не содержат характерных для Эльдара Муртазина признаков (мобильная тематика,
+        специфическая манера речи). Эльдар обычно представляется в начале и говорит
+        много. Это ошибочно атрибутированные реплики - скорее всего Gray или другого ведущего.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплики вписываются в контекст обсуждения между ведущими без признаков гостя"
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Реплики идут в контексте тем, которые ведёт Gray (Slack, Pilot переводчик, Flash)"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk активно участвует в обсуждении в этих частях"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3580.54
+          etime: 3585.14
+          text: "И компания ее пытается планировать выпустить в сентябре."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная короткая реплика 'И ты понятно объяснил.' (1.5 сек) -
+        типичная ошибка распознавания. Пётр Диденко - активный участник,
+        который представляется и много говорит. Одна случайная реплика не соответствует
+        его паттерну участия.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Ksenks активна в этом эпизоде, реплика может быть её"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray часто комментирует объяснения"
+      voice_task:
+        needed: false
+        # Слишком короткая реплика для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        В эпизоде всего 3 реплики Alek.sys (44s, 1293s, 3420s),
+        при этом в начале Umputun говорит 'остальные три в ассортименте' -
+        вероятно имея в виду Gray, Ksenks и себя. Bobuk подключается позже (959s).
+        Возможно реплики Alek.sys - ошибки распознавания, нужна проверка.
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар Муртазин не представлен в начале и не участвует как гость - это ошибочная атрибуция"
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Пётр Диденко не представлен в начале и не участвует как гость - это ошибочная атрибуция"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # SPEAKER_00 слишком короткие для уверенной атрибуции - оставить как есть или удалить
+
+  # SPEAKER_MISATTRIBUTED_* нужно либо атрибутировать правильному ведущему,
+  # либо переименовать в нейтральный SPEAKER_XX
+  - type: rename
+    episode: 496
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "SPEAKER_UNKNOWN"
+    confidence: high
+    reason: "Это точно НЕ Эльдар Муртазин - он не участвует в эпизоде как гость"
+
+  - type: rename
+    episode: 496
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "SPEAKER_UNKNOWN"
+    confidence: high
+    reason: "Это точно НЕ Пётр Диденко - он не участвует в эпизоде как гость"
+
+# Дополнительные заметки
+notes: |
+  Эпизод 496 от 21 мая 2016 года.
+
+  Основной состав: Umputun, Gray, Ksenks, Bobuk (подключился позже).
+
+  Метки SPEAKER_MISATTRIBUTED_* были добавлены ранее при попытке идентификации,
+  но анализ показывает, что это ошибки - ни Эльдар, ни Пётр не участвовали
+  в этом эпизоде как гости. Реплики с этими метками - скорее всего
+  ошибочно распознанные реплики одного из ведущих.
+
+  Рекомендация: переименовать SPEAKER_MISATTRIBUTED_* в SPEAKER_UNKNOWN
+  и при возможности провести voice comparison для атрибуции правильному ведущему.
