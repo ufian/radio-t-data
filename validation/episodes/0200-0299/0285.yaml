@@ -1,0 +1,197 @@
+episode: 285
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, Natali, Lavale]
+  total_duration_sec: 7284  # примерно 2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 285
+    replies_count: 87
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "natali_yandex"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 59-61 сек Bobuk говорит "Гостью зовут Натали", после чего в 68 сек
+        SPEAKER_04 отвечает "Да, всем привет. Натой можно называть только Гришей..."
+        Bobuk также объясняет (156-169 сек): "она у нас главный человек в Яндексе
+        по всем нашим конференциям".
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Lavale"
+    total_duration_sec: 63
+    replies_count: 12
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "natali_yandex"
+          confidence: 0.7
+          reason: |
+            Реплики Lavale перемежаются с репликами SPEAKER_04 в одном контексте.
+            В 116 сек Lavale говорит "Я говорю, Гриш, я не слушаю радио ТВ",
+            а SPEAKER_04 сразу отвечает продолжая ту же мысль (120 сек).
+            Возможно это одна персона, разделённая системой распознавания.
+            НО: Lavale есть в people.yaml как отдельный гость ("бывшая ведущая").
+            Требуется ручная проверка голосов.
+        - person_id: "lavale"
+          confidence: 0.6
+          reason: |
+            Lavale уже зарегистрирована в people.yaml как бывшая ведущая.
+            Возможно, в этом выпуске было три женщины (Marin_k_a, Natali, Lavale).
+            Однако в представлении упомянуты только "две девушки".
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1738.59
+          etime: 1751.01
+          text: "Длинная реплика Lavale для сравнения голоса"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 19
+    replies_count: 13
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: |
+            Короткие реактивные реплики женским голосом.
+            В контексте 3940 сек Umputun говорит "ты там застучала чем-то",
+            SPEAKER_02 отвечает про "шуршание" и "КТ".
+            Marin_k_a в этом выпуске по гарнитурке из Днепропетровска —
+            возможны проблемы с распознаванием голоса.
+        - person_id: "natali_yandex"
+          confidence: 0.4
+          reason: |
+            Также может быть Натали — вторая женщина в студии.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3940.43
+          etime: 3946.42
+          text: "Да, опять. Нет, ни то, ни другое. Это шуршание. У меня КТ."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 7
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие изолированные фразы (1-2 сек каждая), разбросанные по выпуску:
+        153 сек "Конечно, нет", 447 сек "Замечательно", etc.
+        Типичная картина ошибок распознавания — короткие междометия и реакции.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Вероятно ошибочно отсечённые реплики одной из женщин"
+        - person_id: "natali_yandex"
+          confidence: 0.4
+          reason: "Вероятно ошибочно отсечённые реплики одной из женщин"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Lavale"
+      issue: |
+        В начале выпуска (2-46 сек) Umputun говорит "двое мальчиков против двух девочек",
+        Bobuk представляет Marin_k_a ("Марусечка") и Натали ("гостью зовут Натали").
+        Lavale НЕ представлена отдельно. Возможны варианты:
+        1) Lavale = Натали (ошибка разметки разделила одного спикера на двух)
+        2) В выпуске всё же было три женщины, но третью не представили
+        3) Lavale — это ошибка распознавания кого-то из ведущих
+    - speaker: "SPEAKER_04"
+      issue: |
+        SPEAKER_04 должна быть переименована в Natali (гость из Яндекса).
+        Нужно добавить в people.yaml и переименовать в этом эпизоде.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 285
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Natali"
+    confidence: high
+    reason: |
+      Явное представление в начале выпуска: Bobuk говорит "Гостью зовут Натали" (59-61 сек),
+      SPEAKER_04 сразу отвечает с самопредставлением (68-74 сек).
+
+  - type: add_to_people_yaml
+    person:
+      id: "natali_yandex"
+      canonical_name: "Natali"
+      aliases: ["Ната", "Наташа", "Наташечка"]
+      real_name: "Наталья"
+      info: "Организатор IT-конференций Яндекса, выпуск 285"
+    confidence: high
+    reason: "Новый гость, представленный в выпуске 285"
+
+  - type: manual_review_required
+    speakers: ["Lavale", "SPEAKER_02"]
+    reason: |
+      Требуется voice comparison для определения:
+      1) Lavale — это отдельный человек или Натали под другим тегом?
+      2) SPEAKER_02 — Marin_k_a или Натали?
+
+# Аудио для проверки
+audio_url: null  # Нет файла 285_desc.json в data_clean
+
+# Примечания
+notes: |
+  Эпизод от 21 апреля 2012 года.
+  Состав: Umputun, Bobuk + две женщины (Marin_k_a и Натали).
+
+  Ключевая неопределённость: статус Lavale.
+  В people.yaml Lavale указана как "бывшая ведущая", но в этом выпуске
+  её реплики перемежаются с SPEAKER_04 (Натали) и возникает вопрос,
+  не одна ли это персона.
+
+  Gray и Ksenks отсутствуют в этом выпуске.

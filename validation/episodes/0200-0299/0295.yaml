@@ -1,0 +1,217 @@
+episode: 295
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Контекст эпизода
+context: |
+  Выпуск 295 от 30 июня 2012 года.
+  Umputun отсутствует (отдыхает), эпизод ведут Bobuk, Gray и Marin_k_a (Марина).
+  Марина открывает эпизод фразой: "30 июня 2012 года, и сегодня я не Умпутун,
+  вернее, Умпутун не я, Умпутун отдыхает..."
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  hosts_absent: [Umputun, Ksenks, Alek.sys]
+  total_duration_sec: 7560  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 552
+    replies_count: 78
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Первая реплика эпизода (13.5s): "30 июня 2012 года, и сегодня я не Умпутун..."
+        Марина ведёт эпизод вместо Umputun. Также на 442 строке Bobuk обращается
+        к SPEAKER_01 как "Марусечка", что подтверждает присутствие Марины.
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 299
+    replies_count: 152
+    pattern: scattered
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        На строке 442 Bobuk говорит: "Марусечка, композитный — это состоящий из разных материалов."
+        Это обращение к SPEAKER_01, что однозначно указывает на Марину.
+        SPEAKER_01 активно участвует в диалогах наравне с ведущими.
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 20
+    replies_count: 5
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Метка MISATTRIBUTED указывает на отменённое ошибочное присвоение.
+        Эльдар Муртазин не упоминается как гость в этом эпизоде.
+        Реплики короткие и разрозненные — типичные ошибки распознавания.
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Женский голос, участница этого эпизода"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Возможная ошибка распознавания мужского голоса"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1353.71
+          etime: 1360.39
+          text: "Но все равно ощущение, что он большой и неудобный."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 15
+    replies_count: 3
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Метка MISATTRIBUTED указывает на отменённое ошибочное присвоение.
+        Lavale не упоминается в этом эпизоде.
+        Одна из реплик (6202s): "А, я поняла фишку этой картинки" — женский род,
+        сразу после реплики Marin_k_a — явно та же говорящая.
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплика в 6202s "А, я поняла фишку этой картинки" — женский род глагола.
+        Идёт сразу после реплики Marin_k_a (6198s: "Ну, это же айфончик, правильно?")
+        и перед следующей репликой Marin_k_a (6207s) — явно одна и та же говорящая.
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 18
+    replies_count: 16
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (в среднем 1.1 сек): "Кто поставил?", "Рили?", "Ого",
+        "Угу", "Чего?", "В смысле?", "А, хорошо", "Смешно", "Боринг" — типичные
+        междометия и короткие реакции, разбросанные по всему эпизоду.
+        Вероятно, ошибки распознавания голосов присутствующих участников.
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Присутствует в эпизоде, возможны ошибки распознавания её реплик"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Присутствует, короткие реакции характерны для диалога"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Присутствует, но большинство его реплик корректно размечены"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4546.84
+          etime: 4548.2
+          text: "Ну, и мобильными девайсами."
+
+  - speaker: "Umputun"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Umputun ОТСУТСТВУЕТ в этом эпизоде — это явно сказано в начале выпуска:
+        "Умпутун отдыхает". Единственная реплика (855s): "Вообще никто не может" —
+        короткое согласие между репликами Bobuk, явная ошибка распознавания.
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплика между Bobuk и Gray, мужской голос"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Продолжение мысли Bobuk, могла быть его реплика"
+        - person_id: "marin_k_a"
+          confidence: 0.1
+          reason: "Маловероятно, но присутствует в эпизоде"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 855.09
+          etime: 856.45
+          text: "Вообще никто не может."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Umputun"
+      issue: |
+        Umputun отмечен как спикер (1 реплика), но он отсутствует в этом эпизоде.
+        Марина явно говорит в начале: "Умпутун отдыхает". Это ошибка разметки.
+    - speaker: "SPEAKER_01"
+      issue: |
+        152 реплики SPEAKER_01 — это Марина (Marin_k_a). На строке 442 Bobuk
+        обращается к ней "Марусечка". Нужно объединить с Marin_k_a.
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: |
+        3 реплики с женским родом глаголов — это Marin_k_a, не Lavale.
+        Нужно переименовать в Marin_k_a.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 295
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Bobuk обращается к SPEAKER_01 как "Марусечка" (уменьшительное от Марина).
+      SPEAKER_01 активно участвует в диалоге как соведущая.
+
+  - type: rename
+    episode: 295
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Женский род глаголов ("поняла"), реплики между репликами Marin_k_a,
+      продолжение одного разговора. Lavale не участвует в этом эпизоде.
+
+  - type: rename
+    episode: 295
+    from_speaker: "Umputun"
+    to_speaker: "SPEAKER_UNIDENTIFIED"
+    confidence: medium
+    reason: |
+      Umputun отсутствует в эпизоде ("Умпутун отдыхает").
+      Нужна голосовая верификация для точной атрибуции (Gray или Bobuk).
+
+  - type: review_needed
+    episode: 295
+    speakers: ["SPEAKER_MISATTRIBUTED_ELDAR", "SPEAKER_02"]
+    reason: |
+      Короткие разрозненные реплики — ошибки распознавания.
+      Для точной атрибуции нужна голосовая верификация.
+
+# Итоговые рекомендации
+summary: |
+  Эпизод 295 — особый выпуск без Umputun. Ведут: Bobuk, Gray, Marin_k_a.
+
+  КРИТИЧЕСКИЕ ПРОБЛЕМЫ:
+  1. Umputun отмечен как спикер (1 реплика), но он отсутствует — ОШИБКА
+  2. SPEAKER_01 (152 реплики) — это Marin_k_a, требуется переименование
+  3. SPEAKER_MISATTRIBUTED_LAVALE — это Marin_k_a (женский род глаголов)
+
+  ТРЕБУЮТ ПРОВЕРКИ:
+  - SPEAKER_MISATTRIBUTED_ELDAR (5 реплик) — ошибки распознавания
+  - SPEAKER_02 (16 коротких реплик) — междометия, ошибки распознавания

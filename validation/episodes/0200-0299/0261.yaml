@@ -1,0 +1,174 @@
+episode: 261
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Marin_k_a]
+  total_duration_sec: 6377  # ~106 минут (2678+2283+1416)
+  notes: "Marin_k_a - бывшая ведущая, присутствовала в этом выпуске"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1416
+    replies_count: 361
+    pattern: consecutive
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Бобук называет её 'Марусечка' (строка 1108: 'Марусечка, я боюсь, что у тебя в 2001 году не могло быть мегастик'), Umputun обращается 'Маруся' (строка 298: 'Марусь, ты с нами еще?'). Это бывшая ведущая Марина (Marin_k_a)."
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 18
+    replies_count: 7
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная атрибуция реплик Marin_k_a. Все реплики содержат женский род ('дошла', 'глупый') и находятся в контексте диалога с Marin_k_a."
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        - 547s: "А у меня первый, знаешь, какой был?" - сразу после этого Marin_k_a продолжает рассказ про MSI мегастик
+        - 1383s: "Ну, голубые зубы, как известно..." - продолжение технического обсуждения
+        - 5343s: "Я еще не дошла до нового сезона" - женский род глагола явно указывает на Marin_k_a
+        - 5399s: "Старые, это типа сентябрь" - тоже Marin_k_a
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 14
+    replies_count: 10
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные реплики (<3 сек каждая), разбросанные по всему выпуску. Типичные ошибки распознавания коротких вставок."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Примеры коротких реплик:
+        - 586s: "400 баксов." (0.5 сек) - цена iPod, которую только что называла Marin_k_a
+        - 649s: "Ну, конечно." (2 сек)
+        - 1184s: "Ну, это значит, что плохо искали." (3 сек)
+        - 1194s: "Лёва, мы с тобой." (0.7 сек) - реакция на комментарий из чата
+        - 2691s: "Да, кстати." (1.5 сек)
+        - 2976s: "Не верю." (1 сек)
+        - 4178s: "Даже не повод бежать в Microsoft." (1.3 сек)
+        - 4487s: "Это проще, чем jailbreak." (0.8 сек)
+        - 4846s: "Это будет глупо." (1.2 сек)
+        - 5358s: "Расскажи, расскажи." (1 сек)
+        Все реплики слишком короткие для надёжной идентификации. Вероятно это Marin_k_a или один из ведущих.
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Большинство реплик в контексте диалогов с Marin_k_a"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть Bobuk"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1184.32
+          etime: 1187.34
+          text: "Ну, это значит, что плохо искали."
+          note: "Самая длинная реплика SPEAKER_01 (3 сек)"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (<2 сек каждая), разбросанные по выпуску."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        - 1237s: "Нет, пока нет." (1.2 сек) - ответ на вопрос Umputun "Маруся, я тебя знаешь, чем успокою?" - явно Marin_k_a
+        - 5980s: "Называется GFX Card штука." (2.4 сек) - техническая реплика
+        - 5984s: "Ищите." (0.4 сек)
+        - 7014s: "А где?" + "Я постараюсь." (1.2 сек суммарно)
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Реплика 1237s явно адресована Марусе, остальные в контексте технического обсуждения"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Технические реплики про GFX Card могут быть Bobuk"
+      voice_task:
+        needed: false
+        reference_segment: null
+        note: "Реплики слишком короткие для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика (1.4 сек). Явная ошибка распознавания."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        - 4484s: "Попробуй еще раз." (1.4 сек) - в контексте обсуждения апдейта. Umputun сразу после повторяет: "Ой, попробую еще раз."
+        Вероятно это Marin_k_a или Bobuk.
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "В контексте диалога"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk упоминает 'ляпка' (Olyapka) сразу после"
+      voice_task:
+        needed: false
+        reference_segment: null
+        note: "Реплика слишком короткая"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Marin_k_a"
+      issue: "Представлена неявно - ведущие называют её 'Маруся', 'Марусечка'. Это бывшая ведущая, известная аудитории."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 261
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Женский род в репликах ('дошла'), контекст диалогов с Marin_k_a, прямое продолжение её реплик"
+
+  - type: rename
+    episode: 261
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Реплика 1237s явно адресована Марусе (Umputun спрашивает 'Маруся, я тебя знаешь, чем успокою?'). Остальные реплики слишком короткие для уверенного определения."
+    note: "Требуется ручная проверка реплик 5980s, 5984s, 7014s"
+
+# Комментарий
+notes: |
+  Эпизод 261 от 29 октября 2011 года.
+
+  Основные ведущие: Umputun, Bobuk
+  Со-ведущая: Marin_k_a (Марина, бывшая ведущая) - присутствовала с небольшой задержкой из-за проблем с интернетом.
+
+  SPEAKER_MISATTRIBUTED_LAVALE - это ошибочно атрибутированные реплики Marin_k_a (высокая уверенность).
+  SPEAKER_01, SPEAKER_02, SPEAKER_MISATTRIBUTED_PETR - короткие реплики, вероятно также Marin_k_a или ведущие.
+
+  Рекомендуется объединить SPEAKER_MISATTRIBUTED_LAVALE с Marin_k_a.
+  Для SPEAKER_01 желательна голосовая верификация самой длинной реплики (1184s-1187s).

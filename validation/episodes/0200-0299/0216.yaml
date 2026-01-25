@@ -1,0 +1,56 @@
+episode: 216
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 6696  # ~1:51:36
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 0.06
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Очень короткая реплика (0.06 сек) с односложным междометием "Ну..."
+        вставлена между репликами Umputun и Bobuk. Это типичная ошибка
+        автоматического распознавания речи - фрагмент речи одного из ведущих
+        неправильно выделен в отдельного спикера.
+
+      # Не требуется идентификация - это ошибка
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    Выпуск 216 от 4 декабря 2010 года. В начале Umputun упоминает, что выпуск
+    "вдвоем с коллегой Бобуком" - Gray и Маринка отсутствуют. Это подтверждает,
+    что единственный неизвестный спикер SPEAKER_02 является ошибкой распознавания,
+    а не реальным третьим участником.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete
+    episode: 216
+    speaker: "SPEAKER_02"
+    confidence: high
+    reason: >
+      Односложное междометие длиной 0.06 сек между репликами двух ведущих.
+      Типичный артефакт распознавания речи. Можно безопасно удалить или
+      объединить с предыдущей/следующей репликой ведущего.

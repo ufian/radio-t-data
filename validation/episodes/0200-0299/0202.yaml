@@ -1,0 +1,297 @@
+episode: 202
+status: clean
+analyzed_at: "2026-01-25"
+
+# Контекст выпуска
+episode_context: |
+  Юбилейный выпуск - 4 года подкаста (28 августа 2010).
+  Формат: приём звонков от слушателей с поздравлениями.
+  Guest1-Guest12 - это дозвонившиеся слушатели, НЕ студийные гости.
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+  guests_present:
+    - Marin_k_a  # Марина - бывшая ведущая, приглашённый гость
+  absent_hosts:
+    - Gray  # упомянуто в 33-36s: "не пришел Грей, потому что мы знаем у него личная жизнь"
+  total_duration_sec: 7000  # ~1:56:40
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # ==================== ИДЕНТИФИЦИРОВАННЫЕ ГОСТИ ====================
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 969
+    replies_count: 281
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        17-21s: Umputun: "Маринка, мы рады, что ты сегодня нашла время и пришла к нам в гости."
+        Марина - бывшая ведущая подкаста, приглашённый гость на юбилейный выпуск.
+      voice_task:
+        needed: false
+
+  # ==================== ДОЗВОНИВШИЕСЯ СЛУШАТЕЛИ ====================
+  # Все Guest1-Guest12 - это слушатели, позвонившие в прямой эфир.
+  # Они НЕ требуют идентификации как постоянные гости подкаста.
+  # Это разовые звонки от аудитории на юбилейный выпуск.
+
+  - speaker: "Guest1"
+    total_duration_sec: 53
+    replies_count: 17
+    pattern: consecutive
+    first_appearance_sec: 1289
+    analysis:
+      is_error: false
+      identified_as: null  # слушатель-дозвонщик, не требует ID
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1289s: "Меня зовут Руслан."
+        Слушатель, дозвонившийся в эфир.
+      caller_info:
+        name: "Руслан"
+        location: null
+      voice_task:
+        needed: false
+
+  - speaker: "Guest2"
+    total_duration_sec: 27
+    replies_count: 9
+    pattern: consecutive
+    first_appearance_sec: 2038
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        2036s: Umputun: "Здравствуй, Лея."
+        2047s: Guest2: "Мне девятнадцать."
+        Слушательница по имени Лея, 19 лет.
+      caller_info:
+        name: "Лея"
+        age: 19
+      voice_task:
+        needed: false
+
+  - speaker: "Guest3"
+    total_duration_sec: 27
+    replies_count: 13
+    pattern: consecutive
+    first_appearance_sec: 2161
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        2160s: Bobuk: "А он у нас уже был."
+        2165s: Umputun: "Второй раз попал в эфир."
+        Слушатель, дозвонившийся второй раз. Рисует засечки.
+      caller_info:
+        name: null
+        note: "повторный дозвон"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest4"
+    total_duration_sec: 25
+    replies_count: 6
+    pattern: consecutive
+    first_appearance_sec: 2313
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        2313s: "Меня зовут Никитчук Антон, и я на самом деле как представитель юзер-группы SPB.net из Петербурга."
+        Представитель .NET-сообщества Санкт-Петербурга.
+      caller_info:
+        name: "Антон Никитчук"
+        location: "Санкт-Петербург"
+        affiliation: "SPB.net user group"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest5"
+    total_duration_sec: 77
+    replies_count: 22
+    pattern: consecutive
+    first_appearance_sec: 2886
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        2894s: "Я звоню из штата Висконсин, из Америки."
+        2902s: "У меня сейчас три часа дня."
+        Слушатель из США, тот же часовой пояс что и Umputun.
+      caller_info:
+        name: null
+        location: "Висконсин, США"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest6"
+    total_duration_sec: 41
+    replies_count: 10
+    pattern: consecutive
+    first_appearance_sec: 3070
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        3077s: "Я хочу поздравить свое любимое радиоте за то, что там участвует Маринка."
+        Слушатель из Иллинойса (предположительно).
+      caller_info:
+        name: null
+        location: "Иллинойс, США (предположительно)"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest7"
+    total_duration_sec: 16
+    replies_count: 6
+    pattern: consecutive
+    first_appearance_sec: 3743
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        3745s: Umputun: "У тебя голос прямо сразу шведский такой."
+        3751s: Guest7: "По-шведски я знаю только одно слово."
+        Слушатель из Швеции.
+      caller_info:
+        name: null
+        location: "Швеция"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest8"
+    total_duration_sec: 96
+    replies_count: 30
+    pattern: consecutive
+    first_appearance_sec: 3848
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        3848s: "Я, в принципе, сам из Молдовы."
+        3859s: "Нет, я из Молдовы, но живу прямо в Португалии."
+        Слушатель родом из Молдовы, учится в Португалии.
+      caller_info:
+        name: null
+        location: "Португалия (родом из Молдовы)"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest9"
+    total_duration_sec: 215
+    replies_count: 42
+    pattern: consecutive
+    first_appearance_sec: 4442
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        4444s: "Я из Санкт-Петербурга, из самого натурального."
+        4448s: Bobuk: "Слушай, вот сразу видно, что из Санкт-Петербурга. Хороший культурный звук."
+      caller_info:
+        name: null
+        location: "Санкт-Петербург"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest10"
+    total_duration_sec: 54
+    replies_count: 23
+    pattern: consecutive
+    first_appearance_sec: 5367
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        5419s: Umputun: "А скажи нам чего-нибудь по-чухонски."
+        5437s: Guest10: "Ну, если это перевести, то это будет «Я слушаю и люблю радио Ти.»"
+        Слушатель из Финляндии, говорит по-фински.
+      caller_info:
+        name: null
+        location: "Финляндия"
+        note: "говорит по-фински"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest11"
+    total_duration_sec: 40
+    replies_count: 15
+    pattern: consecutive
+    first_appearance_sec: 5789
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        5787s: Umputun: "У вас в Красноярске медведи ходят?"
+        5789s: Guest11: "Нет, не ходят."
+        5818s: "Ну, хочу вас поздравить, я вас начинал слушать где-то со 170-го, наверное, выпуска только."
+      caller_info:
+        name: null
+        location: "Красноярск"
+      voice_task:
+        needed: false
+
+  - speaker: "Guest12"
+    total_duration_sec: 48
+    replies_count: 19
+    pattern: consecutive
+    first_appearance_sec: 6425
+    analysis:
+      is_error: false
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        6442s: "Я из города Эспа, Финляндия."
+        Контекст обсуждения: рядом с Выборгом, на расстоянии прямой видимости от России.
+      caller_info:
+        name: null
+        location: "Эспо, Финляндия"
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  gray_absence_explained: true
+  marin_k_a_presence_explained: true
+  issues: []
+  notes:
+    - "Marin_k_a (Марина) - бывшая ведущая, приглашённый гость на юбилей"
+    - "Gray отсутствует - объяснено в начале ('личная жизнь')"
+    - "Guest1-Guest12 - дозвонившиеся слушатели, не требуют идентификации как постоянные гости"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не нужны - все спикеры корректно размечены.
+# Guest1-Guest12 - это стандартная разметка для слушателей-дозвонщиков.

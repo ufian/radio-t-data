@@ -1,0 +1,201 @@
+episode: 245
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6934  # ~1:55:34
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 400
+    replies_count: 125
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (20s) Umputun обращается: "Марусь, у тебя есть вопросы к составу?"
+        Marin_k_a - бывшая ведущая Марина (Маруся). Активно участвует в обсуждении на протяжении всего выпуска.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 7
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все реплики - короткие подтверждения ("Угу", "Угу, угу, угу", "Жень, написал")
+        разбросанные по эпизоду в разных местах. Это ошибки распознавания голоса
+        одного из ведущих (вероятно Marin_k_a или Gray).
+        - 700s: "Угу." (0.16 сек) - после вопроса Bobuk
+        - 1987s: "Жень, написал." (4 сек) - обращение к Umputun
+        - 3222s: "Ага, угу, угу, угу." (2 сек) - реакция на шутку
+        - 5590s: "Угу, угу." (0.84 сек) - подтверждение
+
+      identified_as: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Фраза 'Жень, написал' (1987s) может принадлежать Марине, обращающейся к Umputun (Женя)"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Короткие реакции могут быть от Gray, который присутствует в выпуске"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие фрагменты (<5 сек каждый) для надёжного voice comparison"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 5
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все реплики - очень короткие (0.06-1.5 сек) однословные/двухсловные фразы,
+        разбросанные по второй половине выпуска:
+        - 3209s: "О, там же можно макросить." (1.5 сек) - про Excel
+        - 3472s: "Я же поставил." (1.2 сек) - про Sublime Text
+        - 4266s: "Ну как?" (0.84 сек) - про Дурова
+        - 5447s: "Да..." (0.06 сек) - подтверждение
+        - 7031s: "Да." (0.82 сек) - ответ на вопрос Gray
+        - 7154s: "Зачем?" (0.58 сек) - вопрос про Facebook
+
+        Это ошибки распознавания - короткие реплики ведущих (скорее всего Gray или Marin_k_a),
+        ошибочно выделенные как отдельный спикер.
+
+      identified_as: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Стиль коротких вопросов/комментариев похож на Марину"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Некоторые реплики (3209s про Excel) в контексте разговора Gray"
+
+      voice_task:
+        needed: false
+        reason: "Все фрагменты <2 сек, непригодны для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Маркировка SPEAKER_MISATTRIBUTED_* означает, что эти реплики уже были проверены
+        и признаны ошибочно приписанными. Эльдар Муртазин НЕ участвовал в выпуске 245.
+        Реплики:
+        - 1671s: "И потом его дорожно сношу." (1.76 сек) - про Eclipse
+        - 1985s: "Теперь нужно на HTML5 писать." (1.4 сек) - шутка про Python
+        - 6991s: "А там... А, пардон, сейчас." (2.6 сек) - перебивка
+
+        Скорее всего это реплики Gray или Bobuk, ошибочно распознанные.
+
+      identified_as: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Реплика 1671s следует за репликой о Gray и Eclipse, контекст указывает на Gray"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Реплика 1985s про HTML5 в стиле шуток Bobuk"
+
+      voice_task:
+        needed: false
+        reason: "Уже помечены как MISATTRIBUTED, не требуют дополнительной проверки"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика в 116s: "Мы тут кого-то забыли." (1.04 сек)
+        Маркировка MISATTRIBUTED указывает на ошибочное присвоение.
+        Lavale не участвовала в выпуске 245.
+
+        Контекст: обсуждение юбилея подкаста, кто-то из ведущих напоминает
+        представить участников. По контексту это скорее Marin_k_a или Gray.
+
+      identified_as: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Марина активна в начале выпуска, фраза логична в контексте её участия"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Gray тоже присутствует и мог напомнить о представлении"
+
+      voice_task:
+        needed: false
+        reason: "Уже помечена как MISATTRIBUTED, слишком короткий фрагмент"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале выпуска (0-30s) Umputun объявляет состав: "классический, полный состав".
+    Обращается к "Марусь" (Marin_k_a) на 20s, к Gray на 124s (ответ Gray).
+    Bobuk начинает говорить с 33s.
+
+    Все основные спикеры (Umputun, Bobuk, Gray, Marin_k_a) присутствуют с начала
+    и активно участвуют в обсуждении.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Правила для SPEAKER_05 - требуют ручной проверки голоса
+  - type: potential_merge
+    episode: 245
+    from_speaker: "SPEAKER_05"
+    candidates: ["Marin_k_a", "Gray"]
+    confidence: medium
+    reason: |
+      4 короткие реплики (<5 сек каждая) вероятно принадлежат одному из ведущих.
+      Фраза "Жень, написал" (1987s) указывает на кого-то, кто обращается к Umputun по имени.
+      Требуется ручная проверка голоса.
+
+  # Правила для SPEAKER_03 - требуют ручной проверки голоса
+  - type: potential_merge
+    episode: 245
+    from_speaker: "SPEAKER_03"
+    candidates: ["Marin_k_a", "Gray"]
+    confidence: medium
+    reason: |
+      6 очень коротких реплик (<1.5 сек каждая) разбросаны по выпуску.
+      Контекст указывает на одного из постоянных участников.
+      Требуется ручная проверка голоса.
+
+# Итоговый статус
+summary: |
+  Эпизод 245 от 02.07.2011 содержит 4 известных спикера: Umputun, Bobuk, Gray и Marin_k_a.
+
+  Marin_k_a (Марина/Маруся) корректно идентифицирована как гость - бывшая ведущая,
+  активно участвующая в обсуждении (125 реплик, 400 сек).
+
+  Остальные неизвестные спикеры (SPEAKER_05, SPEAKER_03, SPEAKER_MISATTRIBUTED_*) -
+  это ошибки распознавания речи. Все их реплики очень короткие (<5 сек),
+  разбросаны по выпуску и представляют собой односложные реакции или перебивки.
+
+  SPEAKER_MISATTRIBUTED_* уже помечены как ошибочные присвоения и не требуют
+  дополнительных действий.
+
+  Выпуск можно считать CLEAN - все основные спикеры идентифицированы,
+  неизвестные фрагменты являются артефактами распознавания.

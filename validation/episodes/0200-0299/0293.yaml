@@ -1,0 +1,128 @@
+episode: 293
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 7629
+  notes: |
+    В начале подкаста представлены только три ведущих: Umputun, Bobuk и Gray.
+    Гостей не было заявлено. Эпизод от 16 июня 2012 года.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 11
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Метка MISATTRIBUTED указывает на ранее отменённое ошибочное присвоение.
+        Реплики короткие (1-4 сек), разбросаны по всему эпизоду.
+        По контексту это реакции одного из ведущих (Gray или Bobuk).
+        Примеры: "Мы же говорим про MacBook Pro" - уточнение в дискуссии,
+        "Ну, по гармоникам, да" - короткое согласие с Bobuk.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплика 1930s после Gray, реплика 7331s про QT C++ читает вопрос - это типично для ведущего"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Реплика 3011s в диалоге с Bobuk про звук вентилятора"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7331.9
+          etime: 7336.3
+          text: "Если дальше, то тут про вас хотят услышать ваше мнение про QT C++."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (1-2 сек), разбросаны по эпизоду.
+        Типичные фразы-реакции: "Он тебя делает", "Это не самый смешной", "Хорошая идея".
+        Скорее всего ошибки распознавания спикеров - реплики ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплика 8104s 'Хорошая идея' после предложения Bobuk - типичная реакция третьего ведущего"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Реплика 2276s 'Он тебя делает' в контексте разговора Umputun о маркетологе"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8110.3
+          etime: 8111.4
+          text: "Представь, инкрементальный выпуск."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 5
+    replies_count: 4
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три реплики подряд (7246-7251s) - последовательный блок.
+        Содержание типично для ведущего: "Хотел, хотел", "Не получилось, хотел", "Поехали дальше, что ли".
+        Ещё одна короткая "Окей" в 5947s.
+        Скорее всего Gray - фраза "Поехали дальше" характерна для ведущего.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Фраза 'Поехали дальше, что ли' типична для ведущего, управляющего ходом подкаста"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Диалог 7244s-7250s был с Bobuk про 'послорадствовать'"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7246.4
+          etime: 7251.0
+          text: "Хотел, хотел. Не получилось, хотел. Поехали дальше, что ли."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Остаточная разметка после отмены ошибочного присвоения Эльдару. Требуется voice comparison для определения реального спикера."
+    - speaker: "SPEAKER_01"
+      issue: "Ошибки распознавания спикера. Короткие реплики, скорее всего принадлежат Gray или Bobuk."
+    - speaker: "SPEAKER_02"
+      issue: "Ошибки распознавания спикера. Последовательный блок реплик в 7246-7251s требует проверки."
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules: []
+# Примечание: правила не предлагаются, так как уверенность в идентификации низкая.
+# Требуется voice comparison для точного определения спикеров.

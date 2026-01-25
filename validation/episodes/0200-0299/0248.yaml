@@ -1,0 +1,99 @@
+episode: 248
+status: needs_review
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: ["Володя Иванов (SPEAKER_03)"]
+  total_duration_sec: 7014
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1306
+    replies_count: 284
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: "volodya_ivanov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk в начале выпуска (47-68s):
+        "Это Володя Иванов. Володя Иванов у нас уже как-то был.
+        Он у нас работает в Яндексе самым главным специалистом по безопасности..."
+        SPEAKER_03 сразу отвечает на шутку про "широкие плечи" (68s).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 67
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Bobuk явно говорит "Эльдара, кстати, сегодня нет" (572s).
+        10 реплик с меткой EldarMurtazin разбросаны по всему выпуску (1980s-6893s),
+        но это не Эльдар Муртазин — он не участвовал в этом эпизоде.
+        Скорее всего это реплики Володи Иванова, неверно размеченные.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "volodya_ivanov"
+          confidence: 0.8
+          reason: "Единственный гость в этом выпуске. Реплики по контексту соответствуют техническим темам."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1117.35
+          etime: 1132.2
+          text: "Понимаешь, если ты делаешь код, который ты рассчитываешь будут потом поддерживать какие-то люди, то обеспечить себе job security, самый простой способ обеспечить себе job security, это как раз сделать перегрузку оператора."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: "Ошибочная разметка: Эльдар отсутствовал в этом выпуске (Bobuk: 'Эльдара сегодня нет')"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 248
+    from_speaker: "SPEAKER_03"
+    to_speaker: "VolodyaIvanov"
+    confidence: high
+    reason: "Явное представление в начале выпуска Бобуком"
+
+  - type: rename
+    episode: 248
+    from_speaker: "EldarMurtazin"
+    to_speaker: "VolodyaIvanov"
+    confidence: medium
+    reason: |
+      Эльдар отсутствовал (явное упоминание на 572s).
+      Единственный гость - Володя Иванов. Требуется voice comparison для подтверждения.
+
+# Примечание: нужно добавить в people.yaml
+new_guest_to_add:
+  id: "volodya_ivanov"
+  canonical_name: "VolodyaIvanov"
+  aliases: ["Володя Иванов", "Vladimir Ivanov"]
+  real_name: "Владимир Иванов"
+  info: "Специалист по безопасности Яндекса, выпуски 248, ..."

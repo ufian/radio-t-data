@@ -1,0 +1,216 @@
+episode: 231
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [PetrDidenko]
+  total_duration_sec: 7871  # приблизительно по последней реплике
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1818
+    replies_count: 525
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в 20.94s: 'У нас, кстати, Петя тут есть, вот я к нему.' Следующая реплика (28.58s) от PetrDidenko: 'Здравствуйте.'"
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 14
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Эльдар Муртазин не упоминается в выпуске. В эпизоде участвуют только Umputun, Gray и PetrDidenko.
+        Bobuk отсутствует (Umputun говорит в начале, что Бобук 'в Твери' без интернета).
+        Все 5 реплик SPEAKER_MISATTRIBUTED_ELDAR по контексту принадлежат либо Gray, либо PetrDidenko.
+        Реплики разбросаны (769s, 6367s, 6411s, 6976s, 7220s) и короткие (1-6 сек).
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: >
+            Реплика 6367s 'Ну что, поехали к новостям слушателей' - типичная фраза ведущего.
+            Реплика 7220s 'Слушай, ну я правда не знаю' - ответ на вопрос Gray про Яндекс.Деньги.
+        - person_id: "petr_didenko"
+          confidence: 0.4
+          reason: >
+            Реплика 6976s 'Нет, я могу рассказать, чего там было' - ответ на вопрос Umputun.
+            Umputun сразу после: 'А, давай, давай, мы поржем с Петей' - возможно, это Петя.
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6976.2
+          etime: 6978.1
+          text: "Нет, я могу рассказать, чего там было."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 10
+    replies_count: 2
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "_ad"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Обе реплики - рекламные:
+        2604s: 'Летайте только первым классом от ФастВПС.'
+        2631s: 'При оформлении заказа на сайте fastvps.ru укажите промокод RADIOT и получите скидку 10%.'
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Одна короткая реплика 'Занавес.' (1.5 сек) в 6888s.
+        Сразу после Gray говорит 'Именно что занавес.' - скорее всего это эхо или
+        ошибка сегментации: слово 'Занавес' произнёс кто-то из ведущих, и оно
+        попало в отдельный сегмент.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Gray сразу продолжает тему: 'Именно что занавес.'"
+        - person_id: "petr_didenko"
+          confidence: 0.4
+          reason: "Предыдущая реплика была от PetrDidenko"
+        - person_id: "umputun"
+          confidence: 0.1
+          reason: "Третий участник диалога"
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткий сегмент (1.5 сек) для голосового сравнения"
+
+  - speaker: "Bobuk"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Бобук отсутствует в этом выпуске. Umputun в начале (8.19s) говорит:
+        'Опять Бобук прогуливает, но, говорят, он в какой-то дыре, в которой интернет не дотянули.'
+        Две реплики с пометкой Bobuk (2365s и 6738s) - ошибки распознавания.
+        Реплика 2365s 'Конечно, если ты сможешь начать качать' - вклинивается между Gray и Umputun.
+        Реплика 6738s 'Ранее к чипу' - короткая реплика между двумя репликами Gray.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Обе реплики в контексте диалогов с участием Gray"
+        - person_id: "petr_didenko"
+          confidence: 0.3
+          reason: "Может быть Петя"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Третий участник"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2365.14
+          etime: 2367.22
+          text: "Конечно, если ты сможешь начать качать."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    В начале выпуска (20.94s) Umputun представляет Петю.
+    Gray начинает говорить с 55.74s без отдельного представления (постоянный ведущий).
+    Бобук официально отсутствует (объявлено в начале).
+  issues:
+    - speaker: "Bobuk"
+      issue: "Бобук отмечен отсутствующим, но есть 2 реплики с его именем - ошибка распознавания"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар Муртазин не участвует в выпуске, 5 реплик ошибочно атрибутированы"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 231
+    from_speaker: "SPEAKER_00"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Рекламные вставки FastVPS"
+
+  - type: rename
+    episode: 231
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_MISATTRIBUTED_BOBUK"
+    confidence: high
+    reason: "Бобук официально отсутствует в выпуске, реплики требуют ручной проверки"
+
+  - type: rename
+    episode: 231
+    from_speaker: "SPEAKER_04"
+    to_speaker: "SPEAKER_99"
+    confidence: medium
+    reason: "Одиночная короткая реплика, вероятно артефакт сегментации"
+
+# Задания для ручной проверки
+manual_review_tasks:
+  - task: "voice_comparison"
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    description: "Определить, кому принадлежат 5 реплик: Gray или PetrDidenko"
+    segments:
+      - stime: 769.07
+        etime: 770.99
+        text: "Нет, и к Мемори тоже, в общем, как-то так."
+      - stime: 6367.54
+        etime: 6370.76
+        text: "Ну что, поехали к новостям слушателей, наверное."
+      - stime: 6411.59
+        etime: 6417.21
+        text: "Наверное, по количеству просмотров, я не знаю."
+      - stime: 6976.2
+        etime: 6978.1
+        text: "Нет, я могу рассказать, чего там было."
+      - stime: 7220.79
+        etime: 7221.81
+        text: "Слушай, ну я правда не знаю."
+
+  - task: "voice_comparison"
+    speaker: "Bobuk"
+    description: "Определить, кому принадлежат 2 реплики, помеченные как Bobuk (который отсутствует)"
+    segments:
+      - stime: 2365.14
+        etime: 2367.22
+        text: "Конечно, если ты сможешь начать качать."
+      - stime: 6738.66
+        etime: 6740.02
+        text: "Ранее к чипу."

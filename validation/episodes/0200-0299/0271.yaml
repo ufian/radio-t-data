@@ -1,0 +1,114 @@
+episode: 271
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_announced: false
+  total_duration_sec: 6770
+  notes: >
+    В начале эпизода Umputun явно говорит: "Бобук, который ты тут со мной наедине,
+    ты да я, да мы с тобой" — эпизод вдвоём без гостей (7 января 2012, первый выпуск года).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 0.04
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика длительностью 0.04 секунды — односложное "Ну,".
+        Находится между двумя репликами Bobuk'а (2375-2379 сек и 2381-2389 сек).
+        Очевидная ошибка сегментации — часть фразы одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Bobuk"
+          confidence: 0.7
+          reason: "Реплика находится между двумя репликами Bobuk'а"
+        - person_id: "Umputun"
+          confidence: 0.3
+          reason: "Umputun мог вставить междометие"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Gray"
+    total_duration_sec: 1.56
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Gray не участвовал в этом эпизоде. В начале Umputun явно говорит что они
+        с Bobuk'ом вдвоём. Единственная реплика "Но вышло прикольно." (1.5 сек)
+        на отметке 6913 сек — это ошибка атрибуции, скорее всего это Bobuk.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Начало эпизода (17-22 сек): 'Бобук, который ты тут со мной наедине, ты да я, да мы с тобой'"
+
+      possible_matches:
+        - person_id: "Bobuk"
+          confidence: 0.8
+          reason: >
+            Реплика идёт сразу после фразы Bobuk'а "Я даже не знаю, что."
+            и продолжает тему — логическое продолжение его мысли.
+        - person_id: "Umputun"
+          confidence: 0.2
+          reason: "Теоретически мог быть Umputun"
+
+      voice_task:
+        needed: true
+        reason: "Требуется подтвердить что это Bobuk, а не Gray"
+        reference_segment:
+          stime: 6913.02
+          etime: 6914.58
+          text: "Но вышло прикольно."
+        audio_url_note: "Взять из data/271/271_desc.json"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    Umputun в начале чётко говорит что они вдвоём с Bobuk'ом.
+    Никакие другие ведущие или гости не должны присутствовать.
+  issues:
+    - speaker: "Gray"
+      issue: >
+        Gray помечен как спикер (1 реплика), но в начале эпизода явно сказано
+        что выпуск вдвоём — Umputun и Bobuk. Это ошибка атрибуции.
+    - speaker: "SPEAKER_02"
+      issue: "Артефакт распознавания — 0.04 сек односложная реплика"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 271
+    from_speaker: "Gray"
+    to_speaker: "Bobuk"
+    confidence: high
+    reason: >
+      Gray не участвовал в эпизоде (явно сказано в начале что вдвоём).
+      Реплика "Но вышло прикольно." идёт сразу после Bobuk'а и является
+      логическим продолжением его фразы.
+
+  - type: rename
+    episode: 271
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: >
+      Односложное "Ну," (0.04 сек) между репликами Bobuk'а —
+      часть его речи, ошибочно выделенная в отдельный сегмент.

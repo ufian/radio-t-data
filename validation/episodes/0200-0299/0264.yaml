@@ -1,0 +1,149 @@
+episode: 264
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, EldarMurtazin]
+  total_duration_sec: 7756  # примерная длительность эпизода
+
+# Информация об идентификации гостей в начале эпизода
+introduction_analysis:
+  umputun_intro: "Один гость и два наоборот. Гость Ильдар, который зашел внезапно, резко и без микрофона."
+  bobuk_intro: "У нас есть еще Марусечка, она по-прежнему у Киеве у себя там"
+  guests_introduced:
+    - name: "Эльдар/Ильдар"
+      mapped_to: "EldarMurtazin"
+      evidence: "Umputun в 23-28 сек: 'Гость Ильдар...'"
+    - name: "Марусечка"
+      mapped_to: "Marin_k_a"
+      evidence: "Bobuk в 48-53 сек: 'У нас есть еще Марусечка'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1070
+    replies_count: 326
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Представлена как 'Марусечка' в 48-53 сек, подтвердила что она 'у Киеве'"
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1000
+    replies_count: 301
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Представлен как 'гость Ильдар' в 23-28 сек, первая реплика 'Да, я в уголке' в 268 сек"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Фоновые звуки и разговор с домашним животным (котом Изей) у Марины. Реплики в 6412-6421 сек явно обращены к коту ('Изя ты покушала?', 'Иди домой, я замерз'). Реплика в 3080 сек также скорее всего ошибка распознавания."
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Реплики 6412-6421 сек — разговор с котом Изей, который принадлежит Марине (она отвечает 'Ну, Изя, да')"
+
+      voice_task:
+        needed: false
+        # Слишком короткие и фрагментарные реплики для voice comparison
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика 'Жень, ну ты что?' — скорее всего ошибка распознавания одного из ведущих (Bobuk или Marin_k_a)"
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Сразу после этой реплики Bobuk говорит 'Ну ты как маленький' — продолжение той же мысли"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Обращение 'Жень' характерно для Марины"
+
+      voice_task:
+        needed: false
+        # Слишком короткая реплика (3 сек)
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Все 4 реплики принадлежат Marin_k_a, а не Lavale. Ключевое доказательство: реплика в 7741 сек 'А еще Бобук был, который не гей' — прямая отсылка к шутке Марины из начала выпуска (58-66 сек)."
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Реплика в 7741 сек 'А еще Бобук был, который не гей' — это отсылка к шутке Марины в 58-66 сек
+        2. Сразу после этой реплики Марина говорит 'Не гей' — продолжение её же мысли
+        3. Lavale НЕ упоминается в представлении гостей в начале эпизода
+        4. По контексту все реплики вписываются в диалоги с участием Марины
+
+      voice_task:
+        needed: false
+        # Контекстуальный анализ даёт высокую уверенность
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Ошибочная маркировка. 4 реплики Марины помечены как SPEAKER_MISATTRIBUTED_LAVALE"
+    - speaker: "SPEAKER_04"
+      issue: "Фоновые звуки/разговор с котом, ошибочно распознанные как отдельный спикер"
+    - speaker: "SPEAKER_06"
+      issue: "1 короткая реплика, вероятно ошибка распознавания Bobuk или Marin_k_a"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 264
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Все 4 реплики по контексту принадлежат Марине. Последняя реплика — отсылка к её шутке из начала эпизода."
+
+  - type: rename
+    episode: 264
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Реплики 6412-6421 сек — разговор с котом Изей у Марины. Реплика 3080 сек требует дополнительной проверки."
+    note: "Возможно лучше удалить эти реплики как фоновый шум"
+
+  - type: rename
+    episode: 264
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Bobuk"
+    confidence: low
+    reason: "Предположение на основе продолжения диалога. Требует voice comparison для подтверждения."
+
+# Примечания
+notes:
+  - "Marin_k_a и EldarMurtazin корректно идентифицированы и представлены в начале эпизода"
+  - "Gray, Ksenks, Alek.sys в этом эпизоде НЕ присутствуют (не упоминаются в представлении)"
+  - "Lavale в этом эпизоде НЕ участвовала — маркировка SPEAKER_MISATTRIBUTED_LAVALE ошибочна"

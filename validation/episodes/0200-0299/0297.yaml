@@ -1,0 +1,150 @@
+episode: 297
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko]
+  total_duration_sec: 7598
+  audio_url: "https://cdn.radio-t.com/rt_podcast297.mp3"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1923
+    replies_count: 482
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Gray в 35.85s: 'Я имею в виду Петю Диденко.' Затем в 38.31s: 'Петя.' PetrDidenko отвечает в 39.43s: 'Привет, привет, добрый вечер.'"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 14
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Это ошибочно отменённая атрибуция EldarMurtazin, но Эльдар не участвовал в эпизоде 297. Реплики принадлежат одному из присутствующих (скорее всего Umputun, PetrDidenko или Gray)."
+
+      # 4 реплики в разных частях эпизода:
+      # 1) 222.36s: "Тема называется, вообще говоря, «Девизы Водигатри»." - между Umputun и Gray
+      # 2) 1812.2s: "Ну, радио ТИ, например." - ироничный ответ на вопрос Umputun к Петру
+      # 3) 3060.07s: "Все, у тебя эту функцию купили." - между Gray и Umputun
+      # 4) 8103.16s: "Либо очень обсуждаемые, либо те, что мы уже обсуждали." - между Gray и Bobuk
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Реплики часто следуют после речи Umputun или перед ней. Стилистика похожа."
+        - person_id: "petr_didenko"
+          confidence: 0.3
+          reason: "Реплика 2 (1812.2s) - ответ на вопрос, адресованный Петру"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплика 1 (222.36s) начинает тему, которую затем развивает Gray"
+
+      voice_task:
+        needed: true
+        reference_segments:
+          - stime: 222.36
+            etime: 227.42
+            text: "Тема называется, вообще говоря, «Девизы Водигатри»."
+            context: "Самая длинная реплика (5 сек), подходит для сравнения голоса"
+          - stime: 8103.16
+            etime: 8108.57
+            text: "Либо очень обсуждаемые, либо те, что мы уже обсуждали."
+            context: "Вторая длинная реплика (5.4 сек)"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 4
+    replies_count: 4
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Четыре короткие реплики подряд (7566-7573s): 'Вот.', 'Ладно.', 'Да.', 'Можно пока... Протокол смартфона на Firefox OS.' Все между Bobuk и Gray/PetrDidenko. Типичная ошибка распознавания - короткие междометия."
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Предыдущая реплика от Bobuk (7554-7564s), возможно продолжение его речи"
+        - person_id: "petr_didenko"
+          confidence: 0.3
+          reason: "Следующая реплика от PetrDidenko (7574s) начинается с 'Можно пока... Я уже нашел.' - похоже на продолжение диалога"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Gray спрашивает сразу после (7568s): 'Что у нас дальше?'"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики (<3 сек каждая) для надёжного сравнения голоса"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна короткая реплика 'Ура.' (6823.88-6825.08s, ~1.2 сек) между PetrDidenko и Gray. Типичная ошибка распознавания - односложная эмоциональная реакция."
+
+      possible_matches:
+        - person_id: "petr_didenko"
+          confidence: 0.5
+          reason: "Предыдущая реплика от PetrDidenko ('Ну, ладно.' в 6820s)"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Следующая реплика от Gray ('Понимаешь, в чем дело?' в 6825s)"
+        - person_id: "umputun"
+          confidence: 0.1
+          reason: "Менее вероятно, контекст не указывает на Umputun"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткая реплика (1.2 сек) для сравнения голоса"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  bobuk_late_join: true
+  notes:
+    - "Umputun начинает подкаст (2.05s)"
+    - "Gray представлен в первых словах Umputun (16.92s): 'Вот Грей, который тут в студии'"
+    - "PetrDidenko представлен Gray (35.85s): 'Я имею в виду Петю Диденко'"
+    - "Bobuk присоединяется позже (4444s): Umputun приветствует 'Попук, здравствуй'"
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Метка указывает на Эльдара Муртазина, но он не участвовал в этом эпизоде. Требуется переатрибуция на реального спикера."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # SPEAKER_01 и SPEAKER_03 слишком короткие для уверенной атрибуции
+  # SPEAKER_MISATTRIBUTED_ELDAR требует прослушивания для определения спикера
+
+  - type: voice_comparison_needed
+    episode: 297
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    segments:
+      - {stime: 222.36, etime: 227.42}
+      - {stime: 8103.16, etime: 8108.57}
+    candidates: ["umputun", "petr_didenko", "gray"]
+    reason: "Метка MISATTRIBUTED_ELDAR некорректна - Эльдар не участвовал в эпизоде 297. Нужно определить реального спикера по голосу."
+
+# Итоговый статус
+summary: |
+  Эпизод 297 (14 июля 2012): Umputun, Gray и гость PetrDidenko начинают,
+  Bobuk присоединяется в 4444s (~1:14:04).
+
+  PetrDidenko корректно идентифицирован (482 реплики, 1923 сек).
+
+  Проблемные спикеры:
+  - SPEAKER_MISATTRIBUTED_ELDAR (4 реплики, 14 сек) - требует переатрибуции,
+    вероятно Umputun или PetrDidenko
+  - SPEAKER_01 (4 реплики, 4 сек) - ошибки распознавания, вероятно Bobuk
+  - SPEAKER_03 (1 реплика, 1 сек) - ошибка распознавания, вероятно PetrDidenko или Gray

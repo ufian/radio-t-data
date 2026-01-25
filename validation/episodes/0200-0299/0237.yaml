@@ -1,0 +1,368 @@
+episode: 237
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a, Plushev]
+  total_duration_sec: 7818
+  notes: |
+    Выпуск от 30 апреля 2011 года. В начале Umputun упоминает гостя - "господин Плющев".
+    Также в выпуске участвует Marin_k_a (Марина) и ещё одна женщина (возможно Lavale).
+    Gray появляется только один раз (3004s) с репликой "Вернулся в струю" - возможно ошибка.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1220
+    replies_count: 317
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "plushev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В самом начале выпуска (8.85s) Umputun говорит: "Вот, просто как гость, который пришел к нам сегодня, господин Плющев".
+        Затем в 118s: "Господин Плющев, за кого мне поболеть, скажи?"
+        SPEAKER_02 отвечает на вопрос про баскетбол и рассказывает про программу "Вести.нет" на ВГТРК,
+        поездку в Силиконовую долину - всё это соответствует Александру Плющеву (журналист, ведущий "Вести.нет").
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 666
+    replies_count: 127
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале (38s) Umputun обращается: "Маруся, у тебя как с мышлениями с голосом?"
+        Marin_k_a отвечает про своё психоделическое мышление и голос.
+        Это Марина - бывшая ведущая подкаста, известный участник.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 242
+    replies_count: 131
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Вероятно это ошибочно размеченная Marin_k_a
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        SPEAKER_03 использует женский род ("Да, я поняла как раз, да" в 672s; "Я отстала" в 3007s - но это SPEAKER_06).
+        Реплики SPEAKER_03 перемежаются с репликами Marin_k_a в одних временных диапазонах.
+        Например: 93.1-93.8 (SPEAKER_03 "У меня есть вопрос") и сразу 93.8-96.2 (Marin_k_a).
+        В 921s Umputun отвечает на реплику SPEAKER_03: "Умница, смогла помочь" - женский род.
+        Скорее всего это ошибка распознавания - один голос (Марины) разделён на два спикера.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.75
+          reason: "Женский род, перемежается с репликами Marin_k_a, похожий паттерн коротких реплик"
+        - person_id: "lavale"
+          confidence: 0.20
+          reason: "Также женщина, могла быть ещё одна ведущая"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 672.83
+          etime: 674.83
+          text: "Да, я поняла как раз, да."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 31
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Метка MISATTRIBUTED указывает, что это было ошибочно приписано Эльдару Муртазину,
+        но затем отменено. Реплики связаны с рассказом Плющева о "Вести.нет".
+        В 463s - продолжение истории про уход программы в отпуск (контекст: Плющев рассказывает об этом).
+        Скорее всего это реплики самого Плющева (SPEAKER_02), ошибочно выделенные.
+
+      identified_as: "plushev"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Реплики в 463s и 499s - часть монолога Плющева о закрытии "Вести.нет".
+        Реплика в 1516s ("Ну, ты знаешь, на самом деле, ни хрена тебе не светит") -
+        идёт между репликами SPEAKER_02 в обсуждении о пробках.
+
+      possible_matches:
+        - person_id: "plushev"
+          confidence: 0.70
+          reason: "Контекст монолога, реплики вклиниваются между SPEAKER_02"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 463.57
+          etime: 470.41
+          text: "И они сказали нам, что наша программа уходит в бессрочный отпуск по их инициативе, по инициативе канала."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 19
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Может быть реально Lavale или другая женщина
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        Метка MISATTRIBUTED_LAVALE указывает, что было ошибочно приписано Лаваль.
+        Реплики женским голосом: "Ой, я 150 долларов за такое не заплатила" (3453s).
+        В 6631s Bobuk говорит "Дорогая..." в ответ на предыдущую реплику.
+        Это может быть Marin_k_a, Lavale, или даже SPEAKER_03 (если это разные женщины).
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.40
+          reason: "Марина участвует в выпуске, женский голос"
+        - person_id: "lavale"
+          confidence: 0.30
+          reason: "Метка содержит LAVALE, могла быть ещё одна ведущая"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3453.22
+          etime: 3455.96
+          text: "Ой, я 150 долларов за такое не заплатила."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 7
+    replies_count: 4
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие технические фразы ("Так.", "Наверное, тоже надо как-то реагировать",
+        "Я тебя сейчас попробую переместить") в ~2199-2205s.
+        Похоже на технические переговоры ведущего, скорее всего Umputun.
+
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Фразы похожи на технические действия ведущего в процессе эфира.
+        "Я тебя сейчас попробую переместить" - типичная фраза при управлении подключениями.
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.60
+          reason: "Технические фразы, типичные для ведущего"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        Короткие женские реплики: "Я отстала" (3007s), "Чем?" (4524s), "Не пишу" (5202s).
+        Появляется рядом с репликой Gray (3004s "Вернулся в струю" -> 3007s "Я отстала").
+        Может быть Marin_k_a, SPEAKER_03, или отдельная ошибка распознавания.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.50
+          reason: "Женский род, короткие реакции"
+        - person_id: "lavale"
+          confidence: 0.25
+          reason: "Могла быть другая женщина"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7687.97
+          etime: 7689.63
+          text: "Ну, я подумаю над этим."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три реплики подряд в ~1556-1563s про "обезличенные данные".
+        Контекст: обсуждение передачи данных. Возможно часть речи другого спикера.
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        "Но они обезличенные передали", "Они же не лично передали, а все обезличенные",
+        "Как хранили, так и сдали" - комментарии к обсуждению.
+
+      possible_matches:
+        - person_id: "plushev"
+          confidence: 0.40
+          reason: "Реплики в контексте обсуждения данных"
+        - person_id: "bobuk"
+          confidence: 0.30
+          reason: "Короткие комментарии, мужской голос"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1555.96
+          etime: 1559.80
+          text: "Но они обезличенные передали. Они же не лично передали, а все обезличенные."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна короткая реплика "Нет, не понял" (5985s).
+        Была ошибочно приписана Петру Диденко, затем отменена.
+        Скорее всего ошибка распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        Единственная реплика, слишком короткая для идентификации.
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.30
+          reason: "Типичная реакция"
+        - person_id: "bobuk"
+          confidence: 0.30
+          reason: "Типичная реакция"
+
+      voice_task:
+        needed: false
+
+  - speaker: "Gray"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "gray"
+      identification_method: "label"
+      confidence: low
+      evidence: |
+        Единственная реплика в 3004s: "Вернулся в струю".
+        Gray не представлен в начале выпуска (упомянуты только Плющев, Bobuk, Marin_k_a).
+        Может быть ошибкой распознавания или Gray действительно присоединился позже.
+        Следующая реплика SPEAKER_06 "Я отстала" (3007s) - женская, то есть не Gray.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.40
+          reason: "Помечен как Gray, но только одна реплика за весь выпуск - подозрительно"
+        - person_id: "bobuk"
+          confidence: 0.30
+          reason: "Мог быть ошибочно распознан"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3004.6
+          etime: 3007.8
+          text: "Вернулся в струю."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray не представлен в начале, но появляется с одной репликой в 3004s.
+        В начале (17-38s) Umputun опрашивает: "Саш, смотри, у тебя голос есть?" (кто это?),
+        "Богу, как у тебя с голосом?" (Bobuk), "Маруся, у тебя как?" (Marin_k_a).
+        "Саш" может быть обращением к кому-то другому или ошибкой распознавания.
+
+    - speaker: "SPEAKER_03"
+      issue: |
+        131 реплика, 242 секунды - слишком много для ошибки распознавания.
+        Перемежается с Marin_k_a, но отдельный спикер. Требует voice comparison.
+
+    - speaker: "Multiple female voices"
+      issue: |
+        В выпуске несколько источников женских голосов: Marin_k_a, SPEAKER_03,
+        SPEAKER_06, SPEAKER_MISATTRIBUTED_LAVALE. Возможно это 1-2 человека
+        с ошибками распознавания, или действительно несколько женщин.
+
+# Предлагаемые правила очистки (только уверенные)
+suggested_rules:
+  - type: rename
+    episode: 237
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Plushev"
+    confidence: high
+    reason: |
+      Прямое представление в начале: "гость, который пришел к нам сегодня, господин Плющев".
+      Обращение "Господин Плющев" перед ответом SPEAKER_02.
+      Контент реплик (программа "Вести.нет", поездка в Силиконовую долину) соответствует.
+
+# Аудио для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast237.mp3"
+# URL предполагаемый - нужно проверить актуальный
+
+# Резюме
+summary: |
+  Эпизод 237 требует дополнительной проверки.
+
+  УВЕРЕННЫЕ идентификации:
+  - SPEAKER_02 = Plushev (Александр Плющев) - представлен в начале, 317 реплик
+  - Marin_k_a уже правильно размечена
+
+  ТРЕБУЮТ ПРОВЕРКИ:
+  - SPEAKER_03 (131 реплика) - вероятно Marin_k_a или вторая женщина
+  - SPEAKER_MISATTRIBUTED_LAVALE - женский голос, возможно Marin_k_a или Lavale
+  - SPEAKER_MISATTRIBUTED_ELDAR - вероятно Plushev
+  - Gray - только 1 реплика, подозрительно
+  - SPEAKER_06 - короткие женские реплики
+
+  Основная проблема: много женских голосов (Marin_k_a, SPEAKER_03, SPEAKER_06,
+  SPEAKER_MISATTRIBUTED_LAVALE) - нужно понять, это одна Марина или несколько женщин.

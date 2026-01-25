@@ -1,0 +1,215 @@
+episode: 256
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Marin_k_a]
+  total_duration_sec: 6558
+  notes: |
+    Выпуск 256 (0x100) - юбилейный. Gray отсутствует, в записи участвуют
+    Umputun, Bobuk и Марина (Marin_k_a). Эльдар Муртазин НЕ участвует
+    в этом выпуске, несмотря на наличие SPEAKER_MISATTRIBUTED_ELDAR.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 788
+    replies_count: 213
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 28.68s Бобук говорит: "У нас еще Маринка здесь есть, она что-то молчит."
+        Марина сразу отвечает (31.2s) и активно участвует весь выпуск.
+        В people.yaml есть запись: marin_k_a с canonical_name "Marin_k_a".
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 19
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин НЕ участвует в эпизоде 256. Его не представляют в начале,
+        и все реплики SPEAKER_MISATTRIBUTED_ELDAR находятся в контексте диалогов
+        между Umputun, Bobuk и Marin_k_a. Это ошибки распознавания речи,
+        неправильно присвоенные "Эльдару" (вероятно из-за ошибки в конфигурации
+        очистки для других эпизодов).
+
+        Примеры контекста:
+        - 433s: обсуждение Израиля между Umputun и Bobuk, реплика вклинивается
+        - 4296s: технический разговор про UEFI, продолжает мысль Bobuk
+        - 4369s: вопрос про Gnome в диалоге Umputun-Bobuk
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: |
+            Большинство реплик находятся рядом с репликами Bobuk и продолжают
+            его мысли. Реплика про UEFI (4296s) особенно похожа на стиль Bobuk.
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: |
+            Некоторые реплики (например, 433s про Израиль) могут принадлежать
+            Umputun, учитывая контекст разговора.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4296.33
+          etime: 4303.39
+          text: "И, собственно говоря, все, что нужно от UEFI Apple, это то, чтобы он запустил их загрузчик."
+          notes: |
+            Это самая длинная реплика SPEAKER_MISATTRIBUTED_ELDAR (7 секунд).
+            Нужно сравнить голос с Bobuk и Umputun.
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики-подтверждения: "Это правда, да", "Это правда",
+        "Примерно так", "Ого!" - типичные ошибки распознавания. Появляются
+        изолированно среди реплик ведущих.
+
+        Контекст 3379s: После реплики Umputun про "Сладкую парочку",
+        SPEAKER_01 говорит "Это правда, да" - это может быть кто угодно из участников.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Короткие подтверждающие реплики характерны для Bobuk в диалоге"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Marin_k_a также часто даёт короткие подтверждения"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        notes: |
+          Реплики слишком короткие (2-3 сек) для надежного voice comparison.
+          Рекомендуется просто переименовать в одного из ведущих или удалить.
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Крайне короткие односложные реплики: "Так вот сейчас" (0.4s),
+        "Чай пью" (1.8s), "Угу" (0.2s), "Нет" (0.8s).
+        Это типичные артефакты распознавания речи.
+
+        Контекст 497s: Bobuk говорит "Мы с тобой договоримся",
+        SPEAKER_04: "Так вот сейчас", Bobuk: "Нет, хоть сейчас это плохо..."
+        Это вклинивание в диалог Bobuk, вероятно его же голос.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: |
+            Все 4 реплики появляются в контексте речи Bobuk.
+            "Чай пью" (2602s) - типичная фраза во время записи.
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Может быть Марина, но контекст больше указывает на Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        notes: "Реплики слишком короткие для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Имя спикера указывает на Эльдара Муртазина, но он НЕ присутствует
+        в этом эпизоде. Это системная ошибка - вероятно, правило очистки
+        для других эпизодов ошибочно применилось к этому выпуску.
+        Нужно исправить конфигурацию.
+    - speaker: "Gray"
+      issue: |
+        Gray упоминается в разговоре (129s: "передать свое место постоянного
+        ведущего Грею, который сейчас отсутствует"), подтверждая что его
+        нет в этом выпуске. Это НЕ ошибка - просто информация.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 256
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "SPEAKER_NEEDS_REVIEW"
+    confidence: high
+    reason: |
+      Эльдар Муртазин не участвует в эпизоде 256. Реплики нужно
+      перепроверить голосом и присвоить правильному ведущему (Bobuk или Umputun).
+      Временно переименовать в SPEAKER_NEEDS_REVIEW чтобы не путать с реальным Эльдаром.
+
+  - type: investigate
+    episode: 256
+    speaker: "SPEAKER_01"
+    action: "voice_comparison_or_delete"
+    confidence: medium
+    reason: |
+      4 коротких реплики, скорее всего Bobuk или Marin_k_a.
+      Можно либо провести voice comparison, либо просто удалить как шум.
+
+  - type: investigate
+    episode: 256
+    speaker: "SPEAKER_04"
+    action: "voice_comparison_or_delete"
+    confidence: medium
+    reason: |
+      4 очень коротких реплики (<1 сек каждая), вероятно Bobuk.
+      Рекомендуется удалить или переназначить Bobuk.
+
+# Дополнительные заметки
+notes: |
+  Эпизод 256 - юбилейный выпуск (0x100). Основная проблема - наличие
+  SPEAKER_MISATTRIBUTED_ELDAR, хотя Эльдар в этом выпуске не участвует.
+
+  Возможная причина: при очистке данных для эпизодов с участием Эльдара
+  было создано правило, которое ошибочно применилось и к этому выпуску.
+
+  Для полного исправления нужно:
+  1. Проверить конфигурацию очистки в cleaning/configs/
+  2. Провести voice comparison для 7 реплик SPEAKER_MISATTRIBUTED_ELDAR
+  3. Переназначить эти реплики правильному ведущему (вероятно Bobuk)
+
+  Audio URL для voice comparison: нужно получить из data/256/256_desc.json
+  (файл отсутствует в data_clean)

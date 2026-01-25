@@ -1,0 +1,183 @@
+episode: 255
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Контекст выпуска
+# Дата: 17 сентября 2011 (День программиста, выпуск #255 = 2^8-1)
+# Особенность: "альтернативный состав" - Bobuk, Gray, Marin_k_a отсутствовали в начале
+# Gray присоединился на ~656s (~11 минут), Bobuk на ~2467s (~41 минута)
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  # Bobuk не был с начала, присоединился позже
+  # Ksenks, Alek.sys отсутствовали
+  guests_present: [Василий, Алексей]
+  total_duration_sec: 8500  # ~2.3 часа
+
+# Идентифицированные гости в начале выпуска:
+# 1. "Вассисуалий" / "Василий" / "Летчик" / "в Ассесуале" - представлен в 62-87s
+# 2. "Алексей" из Microsoft ("корпорация зла") - представлен в 89-123s
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 274
+    replies_count: 90
+    first_appearance_sec: 69.57
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # Требует добавления в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 62-87s Umputun представляет: "Есть у нас в Ассесуале, так же известный,
+        как Василий, так же известный, как Летчик..."
+        SPEAKER_01 отвечает в 69.57s: "Как Василий, он на самом деле..."
+        В 71.93s: "когда меня Женя называет воссесуалем..."
+        Также обращается к "Алексу" (SPEAKER_00) - значит это не Алексей.
+
+      # Гость не в справочнике people.yaml
+      needs_people_yaml_entry:
+        suggested_id: "vassisualiy"
+        canonical_name: "Vassisualiy"
+        aliases: ["Василий", "Летчик", "Вассисуалий"]
+        real_name: "Василий"
+        info: "Выпуск 255, представлен как 'в Ассесуале'"
+
+      voice_task:
+        needed: true
+        reason: "Нужно создать референс голоса для будущей идентификации"
+        reference_segment:
+          stime: 71.93
+          etime: 86.46
+          text: "Потому что, Женя, пока ты там выходил в начале, я тут с Алексом разговаривал..."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 858
+    replies_count: 183
+    first_appearance_sec: 164.47
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # Требует добавления в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 89-123s Umputun представляет: "есть у нас еще один человек, который из
+        корпорации недобра... или зла... Алексей, Алексей, не ты ли на меня
+        наезжал в комментариях?"
+        К нему обращаются: "Алексей" (159s, 859s, 1350s, etc.), "Лёша" (287s, 610s, 5030s)
+        Первая реплика в 164.47s: ответ на "ты ласковый май-то еще застал?"
+        Работает в Microsoft (судя по "корпорация зла" и контексту).
+
+      needs_people_yaml_entry:
+        suggested_id: "alexey_microsoft_255"
+        canonical_name: "AlexeyMS"
+        aliases: ["Алексей", "Лёша"]
+        real_name: "Алексей"
+        info: "Выпуск 255, работал в Microsoft"
+
+      voice_task:
+        needed: true
+        reason: "Нужно создать референс голоса для будущей идентификации"
+        reference_segment:
+          stime: 301.1
+          etime: 314.66
+          text: "Конечно, мы же называемся Java Developer. Где-то я видел, что на всяких сайтах писали, мы нанимаем Java программистов. Мы все девелоперы и сеньор девелоперы."
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 198
+    replies_count: 31
+    first_appearance_sec: 261.58
+    pattern: scattered  # Перемешан с SPEAKER_01
+
+    analysis:
+      is_error: true
+      error_reason: |
+        ОШИБОЧНАЯ АТРИБУЦИЯ. EldarMurtazin (Эльдар Муртазин) НЕ был представлен
+        как гость в начале выпуска. В начале представлены только Василий и Алексей.
+
+        Реплики EldarMurtazin и SPEAKER_01 чередуются БЕЗ пауз (0.02-0.16 секунд),
+        что указывает на одного человека:
+        - 261.58-263.80: EldarMurtazin: "Нет, это ты абсолютно верное слово сказал."
+        - 263.96-265.04: SPEAKER_01: "Ну, какой же я программист?"
+        - 265.06-270.82: EldarMurtazin: "Так, чего-то там тыкаю пальчиками..."
+        - 270.84-275.41: SPEAKER_01: "Так же, как человек, который водит машину..."
+
+        Это один и тот же спикер - Василий (SPEAKER_01).
+
+      identified_as: null  # Ошибка, должен быть SPEAKER_01/Vassisualiy
+
+      voice_task:
+        needed: false
+        reason: "Это ошибочная атрибуция, реплики принадлежат SPEAKER_01"
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 7
+    replies_count: 3
+    first_appearance_sec: 7321.57
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три короткие реплики разбросаны по времени (7321s, 7322s, 8469s).
+        Скорее всего артефакты распознавания или ошибочная атрибуция коротких
+        реакций одного из участников.
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики для анализа голоса"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  gray_late_join: true  # Gray присоединился на ~656s, подтверждено репликой в 915s
+  bobuk_late_join: true  # Bobuk присоединился на ~2467s
+
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: "Ошибочная атрибуция - это на самом деле SPEAKER_01 (Василий)"
+      severity: high
+    - speaker: "SPEAKER_05"
+      issue: "Артефакты распознавания - 3 коротких реплики"
+      severity: low
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 255
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_01"  # Временно до добавления Vassisualiy в people.yaml
+    confidence: high
+    reason: |
+      Реплики EldarMurtazin и SPEAKER_01 чередуются без пауз (0.02-0.16 сек),
+      явно один человек. EldarMurtazin не был представлен как гость.
+      После добавления Vassisualiy в people.yaml - переименовать оба в Vassisualiy.
+
+  - type: delete_or_reassign
+    episode: 255
+    speaker: "SPEAKER_05"
+    confidence: medium
+    reason: "3 короткие реплики-артефакты, требуют ручной проверки"
+
+# Финальные действия
+action_items:
+  - priority: high
+    action: "Объединить EldarMurtazin и SPEAKER_01 под одним ID"
+    details: "Создать запись vassisualiy в people.yaml, переименовать обоих"
+
+  - priority: high
+    action: "Добавить гостя Алексея (Microsoft) в people.yaml"
+    details: "Переименовать SPEAKER_00 в AlexeyMS или подходящий ID"
+
+  - priority: low
+    action: "Проверить SPEAKER_05 вручную"
+    details: "Решить: удалить или переназначить другому спикеру"
+
+# Аудио для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast255.mp3"

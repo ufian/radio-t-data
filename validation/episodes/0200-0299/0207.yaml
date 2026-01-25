@@ -1,0 +1,76 @@
+episode: 207
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin, Marin_k_a]
+  total_duration_sec: 7238  # ~2 часа (675+495+246+519+128 реплик)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1783
+    replies_count: 519
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun на 17.3s: "Гость у нас званный Ильдар, который пришел привлеченный запахом телефонно-таблетовских тем"
+        Umputun на 25.88s: "Ильдар." (прямое обращение)
+        Umputun на 146.01s: "я думаю, Эльдар знает, у него там в нефтегазовой промышленности все концы схвачены"
+        Спикер уже корректно размечен в транскрипте как EldarMurtazin, что соответствует people.yaml
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 383
+    replies_count: 128
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Gray на 67.66s: "Я надеюсь, что Маринка, поскольку она углядела там у себя пыль на столе..."
+        Bobuk на 78.73s: "Маринка, что на тебя одето?" (прямое обращение)
+        Umputun на 300.58s: "Марусенька, ты сказать хотела умное" (ласковое обращение)
+        Bobuk на 352.37s: "Маринка такая милая сегодня..."
+        Спикер уже корректно размечен в транскрипте как Marin_k_a, что соответствует people.yaml
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Эпизод содержит корректную разметку всех спикеров:
+    - Три ведущих: Umputun, Bobuk, Gray
+    - Два гостя: EldarMurtazin (Эльдар Муртазин, мобильный аналитик), Marin_k_a (Марина, бывшая ведущая)
+    Все участники явно представлены в начале выпуска (первые 2 минуты).
+    Umputun в первой реплике (2.98s) говорит: "подкаст выходного дня о Радио Ти в полном составе, и даже один у нас гость"
+    (На самом деле гостей двое, но Marin_k_a видимо считалась частью "команды" как бывшая ведущая)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - все спикеры уже корректно идентифицированы

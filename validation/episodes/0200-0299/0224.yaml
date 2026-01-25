@@ -1,0 +1,70 @@
+episode: 224
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin]
+  total_duration_sec: 6475  # ~1ч 48мин (оценка по статистике)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1701
+    replies_count: 427
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в начале выпуска (27-33с): 'И Эльдар, который сидит тихо, как мышка, но он как скажет, так всем места мало будет.' Эльдар сразу отвечает: 'Я пью кефир вообще.'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна короткая реплика 'Да' (0.04 сек) между репликами Bobuk и Gray. Типичная ошибка автоматического распознавания — скорее всего это Gray, который сразу после (654с) продолжает говорить."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.8
+          reason: "Gray говорит сразу после (654с), логично что 'Да' — его подтверждающая реплика на вопрос Bobuk 'Тоже про это рассказывали?'"
+        - person_id: "bobuk"
+          confidence: 0.15
+          reason: "Маловероятно — Bobuk сам задавал вопрос"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 224
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Gray"
+    confidence: high
+    reason: "Единственная реплика SPEAKER_00 — короткое 'Да' (0.04с) в ответ на вопрос Bobuk. Gray продолжает говорить сразу после (654с). Контекстуально логично, что это подтверждающая реплика Gray."

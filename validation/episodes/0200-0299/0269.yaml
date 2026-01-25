@@ -1,0 +1,138 @@
+episode: 269
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_announced: false
+  total_hosts_stats:
+    Umputun:
+      replies: 932
+      duration_sec: 2909
+      first_at: 4
+    Bobuk:
+      replies: 793
+      duration_sec: 2759
+      first_at: 36
+    Gray:
+      replies: 485
+      duration_sec: 2069
+      first_at: 57
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 40
+    replies_count: 16
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие реплики (1-10 сек) раскиданы по всему выпуску.
+        В начале подкаста Umputun явно объявляет состав: "без девчонок, с одними
+        гнусными мужиками в лице Грея и в лице Бобука". Гостей не было.
+        Реплики по контексту принадлежат одному из ведущих - скорее всего Gray
+        (фраза про Париж: "я его действительно не смог купить в Apple Store,
+        потому что в Париже в обеих Apple Store был один экземпляр").
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: >
+            Большинство реплик похожи на манеру Gray. Фраза про Париж указывает
+            на человека из Европы (Gray живёт в Украине). После реплик
+            SPEAKER_MISATTRIBUTED_ELDAR часто продолжает говорить Gray.
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: >
+            Некоторые реплики могут принадлежать Bobuk (короткие комментарии).
+        - person_id: "umputun"
+          confidence: 0.1
+          reason: >
+            Менее вероятно, но возможно для отдельных реплик.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3153.59
+          etime: 3165.72
+          text: >
+            Ты знаешь, я его действительно не смог купить в Apple Store,
+            потому что в Париже в обеих Apple Store был один экземпляр
+            маленького размера. И не было больше никаких.
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика (1 сек) "Но мы переходим." сразу же продолжается
+        репликой Umputun "Мы переходим с GoDaddy." — явная ошибка разбиения речи
+        одного человека на два спикера.
+
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        442.4s: SPEAKER_MISATTRIBUTED_PETR: "Но мы переходим."
+        443.4s: Umputun: "Мы переходим с GoDaddy."
+        Это одна фраза, разбитая распознаванием.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: >
+        16 реплик ошибочно атрибутированы несуществующему в этом выпуске гостю.
+        Нужна верификация голоса для точного определения кому они принадлежат
+        (скорее всего Gray).
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: >
+        1 реплика ошибочно отделена от Umputun. Явная ошибка разбиения фразы.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 269
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: >
+      Реплика "Но мы переходим." — начало фразы Umputun "Мы переходим с GoDaddy."
+      Ошибка сегментации речи.
+
+  - type: rename
+    episode: 269
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: >
+      Вероятнее всего это Gray (фраза про Париж, манера речи), но нужна
+      верификация голоса. После voice comparison можно повысить confidence до high.
+
+# Примечания
+notes: >
+  Выпуск 269 от 24 декабря 2011 года. В начале выпуска Umputun явно объявляет
+  состав: трое ведущих (Umputun, Bobuk, Gray), без гостей ("без девчонок").
+
+  Все реплики SPEAKER_MISATTRIBUTED_* — ошибки автоматического распознавания,
+  а не реальные гости. MISATTRIBUTED_PETR — однозначно Umputun.
+  MISATTRIBUTED_ELDAR — скорее всего Gray, но рекомендуется voice comparison
+  для подтверждения.

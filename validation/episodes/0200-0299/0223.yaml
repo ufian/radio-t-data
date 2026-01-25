@@ -1,0 +1,193 @@
+episode: 223
+status: needs_review
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6829  # примерная длительность эпизода по последней реплике
+
+# Контекст эпизода
+episode_context:
+  date: "2011-01-22"
+  announced_guests:
+    - name: "Марина"
+      announced_at_sec: 40.56
+      quote: "мы очень ждем Мариночку, которая должна к нам присоединиться где-то посередине"
+      joined_at_sec: 1960.98
+      join_quote: "к нам присоединилась прекрасная Маруся"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 395
+    replies_count: 119
+    first_appearance_sec: 1960.98
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1954s Umputun: "А если я не ошибаюсь, к нам присоединилась прекрасная Маруся."
+        1960s Marin_k_a: "Привет всем. Я надеюсь, меня нормально слышно."
+        В начале (40s) Bobuk: "мы очень ждем Мариночку"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 16
+    replies_count: 16
+    first_appearance_sec: 2921.97
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        В контексте 4693-4710s Бобук обращается к Марине: "Мариночка, давай ты спросишь у меня, кто там."
+        Следующие реплики SPEAKER_01: "Можешь?", "Кто там?", "Хорошо, давай", "Тук-тук" - это явно продолжение диалога с Мариной.
+        Реплики SPEAKER_01 чередуются с реплики Marin_k_a в том же диалоге, что указывает на ошибку распознавания.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1
+    replies_count: 3
+    first_appearance_sec: 2426.66
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие односложные реплики в разных местах эпизода:
+        - 2426s: "Ты думаешь?" (после реплики Umputun)
+        - 3526s: "Угу" (после реплики Bobuk)
+        - 6609s: "Да-да-да" (после реплики Bobuk)
+        Это типичные ошибки распознавания - короткие междометия, которые система не смогла атрибутировать.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Марина присутствует в эпизоде, эти короткие реплики могут быть её"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Реплика 2426s идёт после слов Umputun, может быть его же продолжение"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        # Слишком короткие реплики для voice comparison
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 5
+    replies_count: 2
+    first_appearance_sec: 5818.59
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Название спикера указывает, что это уже помеченные как ошибочные присвоения Lavale.
+        Lavale - бывшая ведущая, но в этом эпизоде участвуют только Umputun, Bobuk, Gray и Marin_k_a.
+        Реплики:
+        - 5818s: "Не так, как у Путуна, конечно." (в контексте обсуждения фолловеров)
+        - 6134s: "Да-да-да, кстати, у нас никогда не было бабушек."
+        Обе реплики короткие и вставлены между репликами ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Марина присутствует в эпизоде, фраза про Путуна и бабушек могла быть её"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Может быть ошибочная атрибуция реплики Бобука"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5818.59
+          etime: 5821.41
+          text: "Не так, как у Путуна, конечно."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "16 реплик (16 сек) ошибочно размечены как SPEAKER_01 вместо Marin_k_a"
+    - speaker: "SPEAKER_00"
+      issue: "3 очень короткие реплики без атрибуции, скорее всего ошибки распознавания"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "2 реплики помечены как ошибочное присвоение Lavale, требуют voice comparison"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 223
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Контекстуальный анализ показывает, что все реплики SPEAKER_01 принадлежат Марине:
+      - Бобук обращается к Мариночке, следующая реплика от SPEAKER_01
+      - Реплики чередуются с Marin_k_a в одном диалоге
+      - Марина - единственный гость в этом эпизоде
+
+  - type: rename
+    episode: 223
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: |
+      Короткие междометия ("Ты думаешь?", "Угу", "Да-да-да") вероятно принадлежат Марине,
+      так как она единственный гость в эпизоде. Однако уверенность средняя из-за краткости реплик.
+
+  - type: rename
+    episode: 223
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: |
+      Lavale в этом эпизоде не участвует. Реплики скорее всего принадлежат Марине.
+      Рекомендуется voice comparison для подтверждения.
+
+# Примечания
+notes: |
+  Эпизод 223 от 22 января 2011 года.
+  Ведущие: Umputun, Bobuk, Gray.
+  Гость: Марина (Marin_k_a) - присоединилась на 32-й минуте (1961s).
+
+  Основная проблема: часть реплик Марины размечена как SPEAKER_01 (16 реплик).
+  Это типичная ошибка автоматического распознавания, когда система теряет
+  идентификацию спикера при изменении интонации или качества звука.
+
+  SPEAKER_00 и SPEAKER_MISATTRIBUTED_LAVALE - мелкие ошибки (5 реплик суммарно),
+  вероятно тоже принадлежат Марине.

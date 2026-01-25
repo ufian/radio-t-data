@@ -1,0 +1,115 @@
+episode: 208
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [PetrDidenko]
+  total_duration_sec: 6303  # Umputun 2378s + Bobuk 2385s + PetrDidenko 1538s + 2s
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "PetrDidenko"
+    total_duration_sec: 1538
+    replies_count: 459
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "petr_didenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun на 51.83s: "Петя, ты у нас?"
+        PetrDidenko на 53.13s: "Да, здравствуйте, это Петя."
+        PetrDidenko на 55.21s: "Тригада называется «Триумвират»."
+        Bobuk на 62.11s: "Как вы все, наверное, уже поняли, мы Петю перестали назвать гостем окончательно"
+        Bobuk на 67.92s: "Он приходит к нам примерно каждый четвертый выпуск"
+        Спикер уже корректно размечен в транскрипте как PetrDidenko, что соответствует people.yaml
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин не участвовал в эпизоде 208.
+        В эпизоде присутствуют только Umputun, Bobuk и PetrDidenko.
+        Реплика "ПКГ и CRC, да?" (2 сек на 368.98-370.64s) — это уточняющий вопрос в техническом диалоге о пакетных менеджерах MINIX.
+        Контекст: Bobuk объясняет про MINIX и NetBSD, Umputun говорит "Ты посмотри, что они выбрали за основу" (368.92s),
+        затем идёт эта реплика, и Umputun отвечает "Ну да, тут тоже, да" (370.70s).
+        Это ошибочная атрибуция — скорее всего это Bobuk или PetrDidenko.
+
+      identified_as: null  # Требуется voice comparison
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: |
+            Bobuk говорил непосредственно перед этой репликой (360.95-364.29s).
+            Технический характер вопроса соответствует его стилю.
+            Однако Umputun обращался к нему "ты посмотри", что предполагает,
+            что следующая реплика может быть ответом Bobuk.
+        - person_id: "petr_didenko"
+          confidence: 0.4
+          reason: |
+            PetrDidenko активный участник выпуска с техническим бэкграундом.
+            Уточняющий вопрос "ПКГ и CRC, да?" мог быть от гостя,
+            который следит за диалогом ведущих.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 368.98
+          etime: 370.64
+          text: "ПКГ и CRC, да?"
+        note: |
+          Сегмент очень короткий (1.66 сек), что усложняет voice comparison.
+          Рекомендуется сравнить с референсными сегментами:
+          - Bobuk: 360.95-364.29s "Собственно, они перешли на новую инфраструктуру управления пакетами."
+          - PetrDidenko: 100.43-103.93s "Я вас дал правду. Только правду. Всегда только правду."
+          Аудио-URL недоступен (файл desc.json не найден в data_clean и data).
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Ошибочная атрибуция спикера. Эльдар Муртазин не участвовал в этом эпизоде.
+        Требуется voice comparison для определения реального автора реплики (Bobuk или PetrDidenko).
+  notes: |
+    Эпизод 208 от 9 октября 2010 года.
+    Umputun анонсирует "тригаду" (три человека вместо обычных четырёх-пяти).
+    PetrDidenko явно представлен в начале эпизода и называется уже не гостем, а постоянным участником.
+    Gray, Ksenks, Alek.sys в этом выпуске отсутствуют.
+
+    Одна реплика помечена как SPEAKER_MISATTRIBUTED_ELDAR — это явная ошибка,
+    т.к. Эльдар Муртазин в эпизоде не участвовал. Вероятно, это результат
+    ошибочного автоматического переименования при предыдущей обработке данных.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 208
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: null  # Требует определения через voice comparison
+    confidence: null
+    reason: |
+      Реплика ошибочно помечена как Эльдар, которого нет в эпизоде.
+      Варианты: Bobuk (50%) или PetrDidenko (40%).
+      Рекомендуется voice comparison перед применением правила.

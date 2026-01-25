@@ -1,0 +1,271 @@
+episode: 286
+status: needs_review
+analyzed_at: "2026-01-25"
+date: "2012-04-28"
+notes: "Выпуск без Bobuk (он в дороге). Присутствуют Umputun, Gray, Marin_k_a и гость PetrDidenko."
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Marin_k_a]
+  guests_present: [PetrDidenko]
+  total_speakers: 10
+  bobuk_absent: true
+  bobuk_absent_reason: "В дороге через Украину/Беларусь"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 233
+    replies_count: 128
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Множественные признаки идентификации как Марина:
+        1. "А у нас еще Петя есть" (64.5s) и "Вот это Петя" (86.3s) - типичные фразы ведущей
+        2. "Развейте мне миф один" (421s) - сразу после этого Marin_k_a продолжает:
+           "Мне бабушка рассказывала, что если так подключать компьютер к телевизору..."
+        3. "А представляешь, это был мой личный телевизор" (532s) - личное воспоминание
+        4. Реплики чередуются с Marin_k_a без пауз - явно один спикер
+        5. Стиль: короткие реакции, вопросы, эмоциональные комментарии
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 192
+    replies_count: 63
+    pattern: consecutive
+    first_appearance_sec: 4861
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Появляется на 81-й минуте при обсуждении Ubuntu 12.04.
+        Первая реплика: "Ну, стесняюсь признаться, но периодически приходится." (4861s)
+        Обсуждает версии Ubuntu: "Это 1.10 было." (4886s)
+
+        Возможные варианты:
+        - Gray (плохо распознанный)
+        - PetrDidenko (плохо распознанный)
+        - Слушатель, дозвонившийся в эфир
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray присутствует в эпизоде, технический контекст"
+        - person_id: "petr_didenko"
+          confidence: 0.3
+          reason: "PetrDidenko много говорит, может быть его голос"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4861.35
+          etime: 4888.28
+          text: "Ну, стесняюсь признаться, но периодически приходится. ... Это 1.10 было."
+          duration_sec: 27
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 7
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (менее 2 сек каждая), разрозненные вопросы типа 'Почему?', 'Типа они круче?' - скорее всего ошибка распознавания одного из ведущих"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        4 реплики по ~1.7 сек каждая:
+        - "Почему?" (4070s)
+        - "Типа они круче?" (4071s)
+        Типичные короткие вопросы в диалоге - вероятно Marin_k_a или Gray
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Стиль похож на короткие реакции Марины"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray участвует в диалоге в этот момент"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 47
+    replies_count: 10
+    pattern: scattered
+    notes: "Помечен как misattributed - система ранее ошибочно присвоила Эльдару"
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики разбросаны по эпизоду (4700-7468 сек).
+        Примеры:
+        - "Там же главная фича, это вот этот вот HUD, да?" (4700s) - про Ubuntu
+        - "Ищет вполне неплохо, при условии, что этот софт был установлен из Ubuntu-центра." (5012s)
+
+        Технические вопросы про Ubuntu. Эльдар Муртазин не присутствует в этом эпизоде
+        (в начале представлены только Umputun, Gray, Marin_k_a и PetrDidenko).
+
+        Вероятнее всего это один из присутствующих ведущих (Gray или Marin_k_a).
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Технические вопросы про Ubuntu, Gray любит Linux"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Может быть Марина с вопросами"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5012.39
+          etime: 5019.04
+          text: "Ищет вполне неплохо, при условии, что этот софт был установлен из Ubuntu-центра."
+          duration_sec: 7
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 14
+    replies_count: 3
+    pattern: scattered
+    notes: "Помечен как misattributed - система ранее ошибочно присвоила Lavale"
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Всего 3 реплики, разбросанные:
+        - "А как у вас зарубежная аудитория выросла?" (4193s) - вопрос про подкаст
+        - "Ну, то есть не крышка, а то, в которой лежат крышки." (6717s)
+
+        Lavale (бывшая ведущая) не представлена в этом эпизоде.
+        Вопрос про аудиторию похож на стиль Marin_k_a.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Стиль вопросов похож на Марину"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Возможно Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6717.76
+          etime: 6721.64
+          text: "Ну, то есть не крышка, а то, в которой лежат крышки."
+          duration_sec: 4
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details: |
+    В начале эпизода (0-91 сек):
+    - Umputun открывает выпуск: "28 апреля 2012 года. Радио-Т без Бобука."
+    - Упоминает что Bobuk в дороге через Украину
+    - Обращается к Марине ("Марусь")
+    - Marin_k_a представляет Петю: "Петя – это не эксперт по тарелочкам.
+      Петя у нас славился как представитель компании Зла..."
+    - PetrDidenko отвечает: "Стараюсь." (91s)
+
+    Все основные спикеры представлены корректно.
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "128 реплик (233 сек) ошибочно отделены от Marin_k_a"
+      severity: medium
+      recommendation: "Объединить с Marin_k_a"
+    - speaker: "SPEAKER_03"
+      issue: "Неидентифицированный спикер с 63 репликами, появляется в середине выпуска"
+      severity: low
+      recommendation: "Voice comparison для определения"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "10 реплик помечены как misattributed Eldar, но Эльдар не участвует в эпизоде"
+      severity: low
+      recommendation: "Voice comparison, вероятно Gray или Marin_k_a"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "3 реплики помечены как misattributed Lavale, но Lavale не участвует в эпизоде"
+      severity: low
+      recommendation: "Voice comparison, вероятно Marin_k_a"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 286
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: |
+      Высокая уверенность на основе контекста:
+      1. Реплики чередуются с Marin_k_a как единый поток речи
+      2. "Развейте мне миф один" переходит в историю Marin_k_a про бабушку
+      3. Стиль: короткие эмоциональные реакции, типичные для Марины
+      4. Общий контекст разговора
+
+  - type: rename
+    episode: 286
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: |
+      4 очень короткие реплики (7 сек всего), вероятно ошибка распознавания.
+      Стиль похож на Marin_k_a, но нужна верификация голоса.
+
+# Задания на voice comparison
+voice_comparison_tasks:
+  - task_id: "286_speaker_03"
+    unknown_speaker: "SPEAKER_03"
+    priority: medium
+    reference_segment:
+      stime: 4861.35
+      etime: 4888.28
+      duration_sec: 27
+    candidates: [Gray, PetrDidenko]
+
+  - task_id: "286_misattr_eldar"
+    unknown_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    priority: low
+    reference_segment:
+      stime: 5012.39
+      etime: 5019.04
+      duration_sec: 7
+    candidates: [Gray, Marin_k_a]
+
+  - task_id: "286_misattr_lavale"
+    unknown_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    priority: low
+    reference_segment:
+      stime: 6717.76
+      etime: 6721.64
+      duration_sec: 4
+    candidates: [Marin_k_a, Gray]

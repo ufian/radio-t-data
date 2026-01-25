@@ -1,0 +1,256 @@
+episode: 238
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Marin_k_a, SPEAKER_03, SPEAKER_04]
+  total_duration_sec: 6500  # ~1ч 48мин (приблизительно)
+  notes: |
+    Bobuk болен, Gray болен, у Маринки проблемы с интернетом (по словам Umputun в начале).
+    Выпуск гиковский с тремя гостями.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 510
+    replies_count: 130
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в начале (59-67s): "Ты так себя зовешь для тех, кто тебя не слышал..."
+        Ответ (67s): "Да нет, я в общем не себя так назвала, я назвала блог, а потом это все перекинулось на меня."
+        "Ну а блог понятно, потому что я пишу в основном... много пишу про С++."
+        Это Марина (Marin_k_a / Алена СПП) - бывшая ведущая, программист C++.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1087
+    replies_count: 243
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "ivan_sagalaev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (91-99s): "Здравствуй, муж. Ты вообще кто? Говорят, ты человек известный.
+        Кроме того, что ты муж самой Алены СПП, у тебя какие-то еще другие достоинства есть?"
+        Ответ SPEAKER_04 (101-126s): "Здравствуйте все. Я на самом деле хочу сказать, что я давно-давно ждал момента,
+        когда меня будут представлять как мужа Елены Тагалаевой..."
+        "Я программист на Питоне, наверное, даже бывший уже, поэтому я такой менеджер программистов на Питоне."
+        Umputun (170-173s): "А у тебя есть погоняло какое-то? Или просто ты Иван?"
+        Ответ: "Да, в общем-то, да, Иван."
+        Это Иван Сагалаев - муж Марины (Marin_k_a), Python-разработчик.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1099
+    replies_count: 198
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "alexey_oracle"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (188-212s): "А еще у нас есть еще один человек... у него сегодня дебют... Здравствуй, Алексей."
+        Ответ SPEAKER_03 (212-233s): "Здравствуй, Евгений. Так как приглашали на неофициальную встречу, я пришел без жен.
+        Поэтому зовут меня Алексей, я тоже занимаюсь разработкой на языке Java и работаю в компании Зла."
+        Umputun (296-300s): "Оказалось, из Оракла. Ну, в общем, тоже еще те гады."
+        Это Алексей - Java-разработчик из Oracle, дебют на подкасте.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Да-да-да." (5212s, 2 сек) - типичная ошибка распознавания.
+        Короткое подтверждение посреди разговора, скорее всего принадлежит одному из активных участников.
+      identified_as: null
+      confidence: null
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Ведущий эпизода, короткое согласие могло быть его"
+        - person_id: "ivan_sagalaev"
+          confidence: 0.3
+          reason: "SPEAKER_04 активен в этот момент разговора"
+      voice_task:
+        needed: false
+        reason: "Слишком короткий сегмент (2 сек) для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 8
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_MISATTRIBUTED означает, что эти реплики были ошибочно приписаны Lavale,
+        которая НЕ присутствует в этом эпизоде. Реплики разбросаны по выпуску (827s, 3794s, 6087s).
+        Примеры: "В общем, нормальная, хорошая работа.", "Ну, в моем мире все просто XML."
+        Это короткие фразы, вероятно принадлежащие кому-то из присутствующих гостей.
+      identified_as: null
+      confidence: null
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Женский голос, Марина единственная женщина в эпизоде"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 827.16
+          etime: 829.27
+          text: "В общем, нормальная, хорошая работа."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 19
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_MISATTRIBUTED означает, что эти реплики были ошибочно приписаны Петру Диденко,
+        который НЕ присутствует в этом эпизоде. Реплики разбросаны (2164s, 4242s, 5733s).
+        Пример: "Он смотрит на эту проблему исключительно как на техническую."
+        "Я, как давний фанат ретерест-архитектуры..."
+        Судя по контексту (обсуждение программирования), вероятно принадлежит одному из гостей-программистов.
+      identified_as: null
+      confidence: null
+      possible_matches:
+        - person_id: "ivan_sagalaev"
+          confidence: 0.5
+          reason: "SPEAKER_04 (Иван) активен рядом с этими репликами"
+        - person_id: "alexey_oracle"
+          confidence: 0.4
+          reason: "SPEAKER_03 (Алексей) тоже участвует в дискуссии"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4242.72
+          etime: 4252.98
+          text: "Я, как давний фанат ретерест-архитектуры, вообще не очень понимаю, зачем для создания..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_MISATTRIBUTED означает, что эти реплики были ошибочно приписаны Эльдару Муртазину,
+        который НЕ присутствует в этом эпизоде. Две короткие реплики (2277s, 3352s):
+        "Чуть даже старше.", "В нашем мире профайлеры бывают?"
+        Короткие технические вопросы/комментарии, вероятно от одного из гостей.
+      identified_as: null
+      confidence: null
+      possible_matches:
+        - person_id: "ivan_sagalaev"
+          confidence: 0.4
+          reason: "Технический вопрос в стиле Python-разработчика"
+        - person_id: "alexey_oracle"
+          confidence: 0.4
+          reason: "Вопрос о профайлерах уместен для Java-разработчика"
+      voice_task:
+        needed: false
+        reason: "Слишком короткие сегменты для надежного voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все три гостя явно представлены в начале выпуска (первые 5 минут):
+    - Marin_k_a (Марина/Алена СПП) - представлена на 59-77s
+    - SPEAKER_04 (Иван Сагалаев, муж Марины) - представлен на 91-182s
+    - SPEAKER_03 (Алексей из Oracle) - представлен на 188-300s
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "Единственная короткая реплика, вероятно ошибка распознавания"
+    - speaker: "SPEAKER_MISATTRIBUTED_*"
+      issue: "Ошибочные атрибуции людям, не присутствующим в эпизоде - требуют переатрибуции"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Идентифицированные гости
+  - type: rename
+    episode: 238
+    from_speaker: "SPEAKER_04"
+    to_speaker: "IvanSagalaev"
+    confidence: high
+    reason: "Явно представлен как Иван, муж Марины (Алены СПП), Python-разработчик"
+
+  - type: rename
+    episode: 238
+    from_speaker: "SPEAKER_03"
+    to_speaker: "AlexeyOracle"
+    confidence: high
+    reason: "Представлен как Алексей, Java-разработчик из Oracle, дебют на подкасте"
+
+  # Ошибки распознавания - требуют voice comparison
+  - type: merge_or_delete
+    episode: 238
+    speaker: "SPEAKER_01"
+    action: "delete_or_merge_to_nearest"
+    confidence: medium
+    reason: "Единственная реплика 'Да-да-да' (2 сек) - ошибка распознавания"
+
+  # MISATTRIBUTED спикеры - требуют ручной проверки
+  - type: reassign
+    episode: 238
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "needs_voice_comparison"
+    confidence: medium
+    reason: "3 реплики ошибочно приписаны Lavale. Вероятно Marin_k_a (женский голос)"
+
+  - type: reassign
+    episode: 238
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "needs_voice_comparison"
+    confidence: medium
+    reason: "3 реплики ошибочно приписаны Петру. Контекст указывает на SPEAKER_04 или SPEAKER_03"
+
+  - type: reassign
+    episode: 238
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "needs_voice_comparison"
+    confidence: medium
+    reason: "2 короткие реплики ошибочно приписаны Эльдару. Недостаточно данных для идентификации"
+
+# Новые гости для добавления в people.yaml
+new_guests_to_add:
+  - id: "ivan_sagalaev"
+    canonical_name: "IvanSagalaev"
+    aliases: ["Иван"]
+    real_name: "Иван Сагалаев"
+    info: "Python-разработчик, муж Марины (Marin_k_a). Выпуск 238"
+
+  - id: "alexey_oracle"
+    canonical_name: "AlexeyOracle"
+    aliases: ["Алексей"]
+    real_name: "Алексей"
+    info: "Java-разработчик из Oracle, дебют. Выпуск 238"

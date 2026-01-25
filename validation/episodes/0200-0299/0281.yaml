@@ -1,0 +1,140 @@
+episode: 281
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  hosts_announced: [Umputun, Bobuk]  # "мы с тобой" в начале - только двое
+  total_duration_sec: 7756
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная короткая реплика 'Красота' (619s), которая дублируется Umputun сразу после (621s, то же слово). Вероятно эхо или ошибка сегментации."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.9
+          reason: "Umputun говорит то же слово 'Красота' через 2 секунды"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Уже помечена как misattributed. Короткая реплика 'Это крутецкая вещь' в контексте разговора Umputun и Bobuk про Google Voice. Bobuk сразу после говорит 'Да я с тобой согласен' - вероятно, это его реплика."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.8
+          reason: "Контекст диалога между Umputun и Bobuk, Bobuk сразу после соглашается"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Уже помечена как misattributed. Две короткие реплики разбросаны по выпуску. Первая (5047s) 'Ну, три-четыре года, где-то так' - ответ на вопрос Umputun про сервер, вероятно Bobuk. Вторая (7746s) 'Давай, хорошо, давай попробуем' - Bobuk тут же повторяет 'Давай попробуем'."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.85
+          reason: "Обе реплики в контексте диалога с Umputun, Bobuk повторяет/подтверждает после"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Gray"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Gray не участвует в этом выпуске. В начале (1s-40s) ясно слышно только Umputun и Bobuk, они говорят 'мы с тобой' - двое. Единственная реплика Gray (1956s) 'То есть Google, понимаешь?' вклинивается в монолог Bobuk про IBM и лицензии."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Начало выпуска: Umputun 'доброго времени суток... 281-й, да? Я прав?' Bobuk 'По-моему, да'. Потом 'мы с тобой уже на нашей страничке' - никакого третьего участника не представлено"
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.9
+          reason: "Реплика вклинивается в речь Bobuk, стилистически похожа на него, продолжает его мысль про IBM/Google"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Отмечен 1 раз в выпуске, но не представлен в начале. Выпуск идёт только с Umputun и Bobuk."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 281
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: "Дублирование слова 'Красота' - та же фраза что у Umputun через 2 сек"
+
+  - type: rename
+    episode: 281
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Контекст диалога Umputun-Bobuk, Bobuk соглашается сразу после"
+
+  - type: rename
+    episode: 281
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Обе реплики в контексте диалога с Umputun, характерные фразы Bobuk"
+
+  - type: rename
+    episode: 281
+    from_speaker: "Gray"
+    to_speaker: "Bobuk"
+    confidence: high
+    reason: "Gray не участвует в выпуске 281 (только Umputun и Bobuk). Реплика вклинивается в монолог Bobuk."

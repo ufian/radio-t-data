@@ -1,0 +1,219 @@
+episode: 262
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Примечание: Выпуск 262 от 5 ноября 2011 года - "гиковский выпуск" с Java-тематикой
+# Umputun в конце прямо говорит: "Не было Бобука и не было Маруси"
+
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  # Bobuk НЕ УЧАСТВОВАЛ в этом выпуске (подтверждено словами Umputun в конце: 7424s)
+  guests_present:
+    - name: "Вера"
+      speaker_id: SPEAKER_02
+      note: "Представлена Umputun в начале как 'девушка, красавица, комсомолка'"
+    - name: "Виктор (Гамуса)"
+      speaker_id: SPEAKER_03
+      note: "Представился сам: 'участвую в подкасте The Art of Programming'"
+    - name: "Алексей"
+      speaker_id: SPEAKER_00
+      note: "'Часто у нас бывает', 'со стороны корпорации Зла' (Java-разработчик)"
+  total_duration_sec: 7500
+
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1262
+    replies_count: 238
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null  # Нужно добавить в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 104s: "Есть у нас еще некий Алексей, который тоже не первый день в микрофон и часто у нас бывает"
+        Umputun в 7376s: "Был у нас Алексей, который не первый раз... пришел и сказал свое веское слово со стороны корпорации Зла"
+        Говорит о Java/программировании, знаком с подкастом
+      possible_matches:
+        - person_id: "alexmak"
+          confidence: 0.3
+          reason: "Alexmak был в выпусках 196, 203 - хронологически близко, но специализация не ясна"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 236.03
+          etime: 274.09
+          text: "Ну, я пользуюсь этим ресурсом невзначай, потому что сейчас это такой основной источник информации для программистов... И несмотря на то, что ему всего два года, он стал достаточно популярным."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 142
+    replies_count: 50
+    pattern: scattered
+    analysis:
+      is_error: false
+      identified_as: null  # Нужно добавить "Vera" в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 23s: "заглянул человек, не побоюсь этого слова, девушка, красавица, комсомолка... некая Вера"
+        Umputun в 7427s: "Не то, что ты, Вера, другая"
+      possible_matches: []
+      voice_task:
+        needed: false
+        # Идентификация уже 100% ясна из представления
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 507
+    replies_count: 142
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: null  # Нужно добавить "Gamusa" или "VictorGamusa" в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        SPEAKER_03 в 85s: "Я, Виктор, также известный как Гамуса в некоторых кругах, участвую в подкасте The Art of Programming"
+        Umputun в 7388s: "был у нас еще один новый гость, который Виктор"
+        SPEAKER_03 в 7400s: "Я со стороны правильных пацанов-джавистов"
+      possible_matches: []
+      voice_task:
+        needed: false
+        # Идентификация 100% ясна из самопредставления
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 97
+    replies_count: 15
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        КРИТИЧЕСКАЯ ОШИБКА: Эльдар Муртазин - мобильный аналитик, НЕ Java-разработчик.
+        Реплики помеченные как EldarMurtazin содержат технический Java-контент:
+        - "Java IEO является блокирующим API" (5589s)
+        - "NIO 2 есть отличная штука, которая позволяет zip-файлы читать" (6462s)
+        - "запустить какой-нибудь IntelliJ под 7-й JVM" (6637s)
+        - "Protocol Buffer файлы, перспектива в Eclipse" (7154s)
+        Это явно голос Java-разработчика (скорее всего Алексей = SPEAKER_00)
+      identified_as: null
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5589.1
+          etime: 5598.8
+          text: "То есть, соответственно, никакая операция не может происходить на определенном сокете или там что-то, если до конца все не прочиталось или до кольца все не записалось."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 43
+    replies_count: 7
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Это женский голос (использует женский род: "я нашла", "пользовалась по работе", "сталкивалась").
+        Это реплики гостьи Веры (SPEAKER_02), ошибочно размеченные.
+        Марина (Marin_k_a) - это другой человек, бывшая ведущая.
+      identified_as: null  # Это Вера, но формально не в people.yaml
+      voice_task:
+        needed: false
+        # Очевидно женский голос, скорее всего Вера
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика 'У меня даже есть' (1.3 сек) - ошибка распознавания, вклинилась между репликами других спикеров"
+      identified_as: null
+      voice_task:
+        needed: false
+
+  - speaker: "Bobuk"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        КРИТИЧЕСКАЯ ОШИБКА: Bobuk НЕ УЧАСТВОВАЛ в этом выпуске!
+        Umputun явно говорит в 7424s: "Не было Бобука и не было Маруси"
+        Две реплики размеченные как Bobuk:
+        1. 5574s: "Это просто обращение с операцией вот-вот" - технический Java-контент
+        2. 7449s: "И сейчас скажет про второй официальный кат"
+        Обе реплики - ошибка распознавания голоса другого участника
+      identified_as: null
+      voice_task:
+        needed: false
+
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: "Размечен как участник, но Umputun прямо говорит что его не было (7424s)"
+    - speaker: "EldarMurtazin"
+      issue: "Ошибочная атрибуция - реплики о Java не могут принадлежать мобильному аналитику"
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Женские реплики - это Вера, не Марина"
+
+suggested_rules:
+  - type: rename
+    episode: 262
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Vera"
+    confidence: high
+    reason: "Прямое представление Umputun в начале выпуска (23s) и обращение в конце (7427s)"
+
+  - type: rename
+    episode: 262
+    from_speaker: "SPEAKER_03"
+    to_speaker: "VictorGamusa"
+    confidence: high
+    reason: "Самопредставление: 'Виктор, также известный как Гамуса... участвую в подкасте The Art of Programming'"
+
+  - type: rename
+    episode: 262
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Vera"
+    confidence: high
+    reason: "Женский голос в выпуске только один - Вера. Реплики используют женский род."
+
+  - type: rename
+    episode: 262
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_00"
+    confidence: medium
+    reason: "Реплики о Java/Eclipse/NIO - это Java-разработчик, не мобильный аналитик. Требуется voice comparison для точной идентификации."
+
+  - type: delete
+    episode: 262
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_00"
+    confidence: high
+    reason: "Umputun явно говорит 'Не было Бобука' (7424s). Реплики технические (Java I/O)."
+
+  - type: delete
+    episode: 262
+    from_speaker: "SPEAKER_05"
+    to_speaker: null
+    confidence: medium
+    reason: "Единственная реплика 1.3 сек - вероятно артефакт или перебивка"
+
+# Новые гости для добавления в people.yaml
+new_guests_to_register:
+  - id: "vera"
+    canonical_name: "Vera"
+    aliases: ["Вера"]
+    real_name: "Вера"
+    info: "Гостья выпуска 262"
+
+  - id: "victor_gamusa"
+    canonical_name: "VictorGamusa"
+    aliases: ["Виктор", "Гамуса", "Gamusa"]
+    real_name: "Виктор"
+    info: "Подкастер The Art of Programming, Java-разработчик, выпуск 262"
+
+  - id: "alexey_java"
+    canonical_name: "AlexeyJava"
+    aliases: []
+    real_name: "Алексей"
+    info: "Java-разработчик, 'корпорация Зла', частый гость (требует уточнения идентичности)"

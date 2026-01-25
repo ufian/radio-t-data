@@ -1,0 +1,213 @@
+episode: 213
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, Svan]
+  total_duration_sec: 7079  # ~1:58:00
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 406
+    replies_count: 143
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "svan"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun в начале выпуска (13-17 сек): "Я его первым представлю, это Сван, который пришел гостем."
+        2. Первая реплика SPEAKER_04 (25 сек): "Угры заменить невозможно, поэтому я на его месте посижу"
+        3. Marin_k_a (1146 сек): "А каким ты поисковиком первым пользовался, Сван?" → SPEAKER_04 отвечает
+        4. Bobuk (3420 сек): "Сван, а ты можешь сказать свое коронное по поводу Джавы?" → SPEAKER_04 отвечает
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 863
+    replies_count: 247
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в начале (38-43 сек): "У нас второй выпуск подряд... Это же самая Маруся, также известная как Марин Ка."
+        Уже есть в справочнике people.yaml как бывшая ведущая.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 24
+    replies_count: 16
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Ключевое доказательство (строка 8353-8362):
+        - Bobuk говорит: "Мариночка забыла сказать, что именно тормозит."
+        - SPEAKER_00 сразу отвечает: "Я же сказала, инстант превью."
+        Также использует женский род: "Я не гуляла", "Я посылала", что соответствует женскому голосу Марины.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 9
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Использует женские формы: "Я далека, далека" (1896 сек)
+        Контекст соответствует участию в разговоре наравне с другими.
+        Реплика "Пока-пока" в конце (7077 сек) — типичное прощание участника.
+        Вероятно ошибка автоматического распознавания спикера.
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.75
+          reason: "Женский род в речи, активное участие в разговоре"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1801.9
+          etime: 1805.94
+          text: "Как думаете, ICQ умрет?"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 3 очень короткие реплики (всего 4 сек): "Поясни" (658 сек), "Вот черт" (2392 сек), "Угу, угу" (5483 сек).
+        Это типичные ошибки автоматического распознавания — короткие междометия,
+        которые могли быть произнесены любым из участников.
+        Особенно "Вот черт" после фразы Umputun "Светлана, сделай музыку тише" —
+        возможно реакция на обращение (Светлана — вероятно бот или слушатель в чате).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "svan"
+          confidence: 0.4
+          reason: "Возможно реакция Свана на просьбу Умпутуна про музыку"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Короткие реплики могут быть неправильно атрибутированы"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика помечена как MISATTRIBUTED — это означает, что ранее была
+        ошибочно присвоена Lavale, но затем присвоение отменено.
+        Реплика (2382 сек): "А что ж ты не рассказываешь-то хотя бы в радиоте-то?"
+        Контекст: обсуждение опенсорс-проектов Яндекса, обращение к Bobuk.
+        По контексту это скорее Marin_k_a или Сван.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Вопрос к Bobuk о его проектах, стиль похож на Марину"
+        - person_id: "svan"
+          confidence: 0.4
+          reason: "Активный участник, мог задать вопрос"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2382.54
+          etime: 2385.33
+          text: "А что ж ты не рассказываешь-то хотя бы в радиоте-то?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: "Ошибка распознавания — должна быть Marin_k_a (доказано контекстом)"
+    - speaker: "SPEAKER_01"
+      issue: "Вероятно Marin_k_a — требует voice comparison для подтверждения"
+    - speaker: "SPEAKER_03"
+      issue: "Короткие междометия — вероятно ошибки распознавания разных спикеров"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Отменённая атрибуция — требует повторной идентификации"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 213
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Svan"
+    confidence: high
+    reason: "Явное представление в начале выпуска + множественные обращения по имени"
+
+  - type: rename
+    episode: 213
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Bobuk обращается 'Мариночка', SPEAKER_00 отвечает от первого лица"
+
+  - type: rename
+    episode: 213
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Женский род в речи, нужна voice verification для подтверждения"
+
+# Требуется добавить в people.yaml
+new_guest_to_add:
+  id: "svan"
+  canonical_name: "Svan"
+  aliases: ["Сван"]
+  real_name: null  # Неизвестно
+  info: "Гость выпуска 213, Java-разработчик, хакинтошник"

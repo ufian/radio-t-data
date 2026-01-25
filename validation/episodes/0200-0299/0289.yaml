@@ -1,0 +1,97 @@
+episode: 289
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7073  # ~1:58 часов
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 837
+    replies_count: 258
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в начале эпизода (13-18s): 'Сегодня не Грей сказал этот номер, потому что Грея нет, зато есть Маруся. Маруся.' Marin_k_a отвечает: 'Маруся есть, и она из Днепропетровска'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "4 короткие односложные реплики (Да, Я же не делаю, Слушай красота, Позор да) разбросаны по эпизоду (1180s, 2815s, 6309s, 7689s). Типичный паттерн ошибки распознавания - короткие реакции без контекста. Вероятно Bobuk или Marin_k_a."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Bobuk присутствует в эпизоде, реплики появляются рядом с его речью"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Marin_k_a тоже присутствует"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Имя SPEAKER_MISATTRIBUTED_LAVALE указывает на отменённую ошибочную атрибуцию спикеру Lavale. Lavale не участвует в эпизоде 289 (присутствуют только Umputun, Bobuk, Marin_k_a). Реплики в контексте обсуждения соцсетей скорее всего принадлежат одному из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.7
+          reason: "Контекст обсуждения Google+/Яндекс, Bobuk работает в Яндексе. Реплика 'Я же не делаю' (SPEAKER_03) рядом указывает на того же спикера."
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарии
+notes: |
+  Эпизод 289 от 19 мая 2012 года. Ведущие: Umputun и Bobuk.
+  Гость: Marin_k_a (Маруся/Марина) - бывшая ведущая, явно представлена в начале.
+  Gray отсутствует (упомянуто Umputun: "Грея нет").
+
+  SPEAKER_03 и SPEAKER_MISATTRIBUTED_LAVALE - ошибки распознавания (суммарно 10 сек, 6 реплик).
+  Не требуют voice comparison из-за минимальной длительности и очевидности ошибки.
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,56 @@
+episode: 211
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [Plushev, Mika]
+  total_duration_sec: 6148
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Примечание: В этом эпизоде нет неизвестных спикеров (SPEAKER_*, Guest*).
+# Все спикеры уже идентифицированы: Plushev и Mika зарегистрированы в people.yaml
+
+# Анализ гостей (для полноты документации)
+identified_guests:
+  - speaker: "Plushev"
+    person_id: "plushev"
+    total_duration_sec: 2094
+    replies_count: 548
+    identification_method: "introduction"
+    confidence: high
+    evidence: |
+      Umputun в начале эпизода (28.96s): "И шанс этих троих стать звездами просто сведен Александром на нет. Александр, здравствуйте, дорогой."
+      Plushev отвечает (31.1s): "Добрый вечер."
+      Также в people.yaml указано: "Александр Плющев, журналист, выпуски 194, 211"
+
+  - speaker: "Mika"
+    person_id: "mika"
+    total_duration_sec: 159
+    replies_count: 44
+    identification_method: "introduction"
+    confidence: high
+    evidence: |
+      Umputun (53.88s): "У нас еще есть Мика, которая известна тем, что она девушка, приведенная Бобуком..."
+      Umputun (67.33s): "Здравствуй, Мика."
+      Mika (67.79s): "Всем привет."
+      В people.yaml указано: "Mika, выпуск 211"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все участники эпизода представлены в первые 2 минуты:
+    - Umputun открывает выпуск (1.62s)
+    - Plushev представлен как "Александр" (28.96s), отвечает (31.1s)
+    - Mika представлена (53.88s), отвечает (67.79s)
+    - Gray упомянут и отвечает (80.66s -> 86.63s)
+
+    Bobuk отсутствует (упоминается что "без одного из корневых" и "девушка, приведенная Бобуком, но... первый раз зазвучала... в подкасте без Бобука")
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: Очистка не требуется, все спикеры корректно размечены

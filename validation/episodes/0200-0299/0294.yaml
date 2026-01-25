@@ -1,0 +1,70 @@
+episode: 294
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray]
+  guests_present: [EldarMurtazin]
+  total_duration_sec: 7830
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 204
+    replies_count: 41
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: "Многократные упоминания по имени в подкасте: 'пиратский ресурс нашего дорогого Эльдара' (2051s), 'у Эльдара написано' (2116s), 'у Эльдара есть еще большая и длинная теория' (2153s), 'статью Эльдара в мобайл-ревью' (7637s). EldarMurtazin уже корректно размечен в транскрипте."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Три очень короткие реплики (0.5s каждая) с междометиями 'Ага', 'Угу', 'Ну да' в случайные моменты подкаста. В начале выпуска было заявлено, что в студии только Bobuk и Gray (без Umputun). Эти междометия скорее всего принадлежат одному из ведущих (вероятно Gray, судя по контексту первой реплики где он отвечает 'Таблетс?' и далее продолжает говорить)."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Первая реплика SPEAKER_01 (2427s 'Ага') появляется в контексте, где Gray задает вопрос 'Таблетс?' и сразу продолжает говорить. Остальные реплики также в контексте речи Gray/Bobuk."
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Вторая и третья реплики появляются в контексте речи Bobuk."
+
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие (0.5s) для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: "В начале выпуска Gray объясняет, что Umputun уехал отдыхать, в студии только Bobuk и Gray. EldarMurtazin не представлен явно в начале, но многократно упоминается по имени в течение выпуска как источник информации/эксперт."
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 294
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: "Короткие междометия в контексте речи ведущих. Первая реплика в прямом диалоге с Gray. Низкий риск, так как это всего 3 реплики по 0.5s с безобидным содержанием."

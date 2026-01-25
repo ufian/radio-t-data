@@ -1,0 +1,215 @@
+episode: 254
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_introduced:
+    - name: "Николай Добровольский"
+      role: "Вице-президент по desktop-виртуализации компании Parallels"
+      company: "Parallels"
+    - name: "Андрей Амельянчук"
+      role: "Project-менеджер Parallels Desktop for Mac"
+      company: "Parallels"
+  total_duration_sec: 6800  # ~1:53:20 по последним репликам
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 931
+    replies_count: 204
+    first_reply_sec: 64
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "nikolay_dobrovolsky"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (60-65s) Bobuk говорит: "Одного зовут Николай Добровольский. Где он там?"
+        Сразу отвечает SPEAKER_01: "Добрый вечер."
+        Далее Bobuk представляет его как "Вице-президент по десктоп-виртуализации компании Parallels"
+        и спрашивает, чем он занимается. SPEAKER_01 отвечает про разработку Parallels Desktop.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 289
+    replies_count: 57
+    first_reply_sec: 96
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "andrey_amelyanchuk"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (93-97s) Bobuk говорит: "Его зовут Андрей Амельянчук, да? Правильно?"
+        Отвечает SPEAKER_06: "Да, совершенно верно."
+        Представлен как "project-менеджер продукта Parallels Desktop for Mac".
+        На ~458s Bobuk обращается: "Андрей, что еще у нас было?" — отвечает SPEAKER_06.
+        На ~943s SPEAKER_06 говорит: "То, что сказал Николай..." — подтверждает, что это не Николай.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 89
+    replies_count: 15
+    first_reply_sec: 939
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это ОШИБОЧНАЯ РАЗМЕТКА. Реплики помечены как EldarMurtazin, но содержание
+        указывает на сотрудника Parallels:
+        - "Перформанс мы улучшаем, батарейку мы поддержали..." (965s)
+        - "Мы начали этот переезд там еще с PD6..." (978s)
+        - "В MВАРе, конечно, этот продукт очень хороший, и мы по многим параметрам с ними паритетны" (6108s)
+        Эльдар Муртазин — мобильный аналитик, не работает в Parallels.
+        Контекст показывает, что это один из гостей от Parallels.
+
+      identified_as: null  # Требуется voice comparison для точной идентификации
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "nikolay_dobrovolsky"
+          confidence: 0.6
+          reason: |
+            Реплики EldarMurtazin чередуются с SPEAKER_01 и SPEAKER_06.
+            SPEAKER_01 (Николай) более активен (204 реплики vs 57 у Андрея).
+            Технический характер реплик ("PD6", "64-битный engine") ближе к роли вице-президента.
+        - person_id: "andrey_amelyanchuk"
+          confidence: 0.4
+          reason: |
+            SPEAKER_06 (Андрей) — project-менеджер, тоже говорит про технические детали.
+            Некоторые реплики EldarMurtazin идут после реплик SPEAKER_06.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 978.99
+          etime: 990.77
+          text: "Мы начали этот переезд там еще с PD6, и там как бы весь энжин виртуальной машины мы сделали 64 бита, но GUI был по-прежнему 32 битный."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 2
+    replies_count: 2
+    first_reply_sec: 2813
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики (1 сек каждая) посреди диалога между Umputun и Bobuk.
+        Реплики: "Я думаю, вранье." и "Он разве был на Mac?"
+        Контекст: обсуждение Google Desktop. Вероятно, это ошибочно отделённые
+        реплики одного из ведущих или гостей.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: |
+            Gray присутствует в выпуске (198 реплик). Реплики звучат как реакция
+            на слова Umputun про Google Desktop. Могла быть ошибка сегментации.
+        - person_id: "nikolay_dobrovolsky"
+          confidence: 0.3
+          reason: |
+            SPEAKER_01 (Николай) активно участвует. Мог вставить комментарий.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2813.43
+          etime: 2815.64
+          text: "Я думаю, вранье. Он разве был на Mac?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: |
+        Эльдар Муртазин не был представлен в начале выпуска. Были представлены
+        только два гостя от Parallels: Николай Добровольский и Андрей Амельянчук.
+        Реплики помеченные как EldarMurtazin содержат контент от сотрудников Parallels.
+        Это явная ошибка разметки — требуется исправление.
+
+# Гости для добавления в people.yaml
+new_guests:
+  - id: "nikolay_dobrovolsky"
+    canonical_name: "NikolayDobrovolsky"
+    aliases: ["Николай", "Добровольский"]
+    real_name: "Николай Добровольский"
+    info: "Вице-президент по desktop-виртуализации компании Parallels, выпуск 254"
+
+  - id: "andrey_amelyanchuk"
+    canonical_name: "AndreyAmelyanchuk"
+    aliases: ["Андрей", "Амельянчук"]
+    real_name: "Андрей Амельянчук"
+    info: "Project-менеджер Parallels Desktop for Mac, выпуск 254"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 254
+    from_speaker: "SPEAKER_01"
+    to_speaker: "NikolayDobrovolsky"
+    confidence: high
+    reason: |
+      Явное представление в начале выпуска. Bobuk спрашивает "Одного зовут Николай Добровольский.
+      Где он там?" — SPEAKER_01 отвечает "Добрый вечер".
+
+  - type: rename
+    episode: 254
+    from_speaker: "SPEAKER_06"
+    to_speaker: "AndreyAmelyanchuk"
+    confidence: high
+    reason: |
+      Явное представление в начале выпуска. Bobuk спрашивает "Его зовут Андрей Амельянчук, да?"
+      — SPEAKER_06 отвечает "Да, совершенно верно". Также Bobuk позже обращается к нему по имени.
+
+  - type: rename
+    episode: 254
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_MISATTRIBUTED_EldarMurtazin"
+    confidence: high
+    reason: |
+      Ошибочная разметка. Реплики относятся к сотрудникам Parallels, а не к Эльдару Муртазину.
+      Переименование в SPEAKER_MISATTRIBUTED позволит отметить ошибку для последующего
+      voice comparison и корректной переатрибуции на NikolayDobrovolsky или AndreyAmelyanchuk.
+
+# Аудио для voice comparison
+audio_reference:
+  url: null  # Метаданные не найдены в data_clean/254/254_desc.json
+  note: "Файл метаданных отсутствует. Проверить data/254/254_desc.json"
+
+# Резюме
+summary: |
+  Выпуск 254 от 10 сентября 2011 года с двумя гостями из Parallels:
+  Николаем Добровольским (SPEAKER_01) и Андреем Амельянчуком (SPEAKER_06).
+
+  Основные проблемы:
+  1. EldarMurtazin (15 реплик) — ОШИБОЧНАЯ АТРИБУЦИЯ. Это реплики от сотрудников
+     Parallels, не от Эльдара Муртазина. Требуется voice comparison.
+  2. SPEAKER_00 (2 реплики) — короткие комментарии, вероятно ошибка сегментации.
+
+  Рекомендации:
+  - Переименовать SPEAKER_01 → NikolayDobrovolsky
+  - Переименовать SPEAKER_06 → AndreyAmelyanchuk
+  - Переименовать EldarMurtazin → SPEAKER_MISATTRIBUTED_EldarMurtazin
+  - Провести voice comparison для SPEAKER_MISATTRIBUTED и SPEAKER_00

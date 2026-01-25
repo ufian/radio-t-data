@@ -1,0 +1,153 @@
+episode: 221
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: ["Инна Кузнецова (вице-президент IBM, автор книги)"]
+  total_duration_sec: 6415
+  notes: |
+    Бобук отсутствовал в начале выпуска (ведущие говорят, что его "затопило"),
+    но подключился позже (~17 минут, первая реплика в 1066 сек).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1572
+    replies_count: 260
+    pattern: consecutive
+    first_appearance_sec: 107
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "inna_kuznetsova"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Грей в 92-94 сек: "...встречайте Инна Кузнецова."
+        Представлена как вице-президент IBM, автор книги (бестселлер деловой литературы на Ozon).
+        Блондинка, ведёт блог на LiveJournal.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 23
+    replies_count: 3
+    pattern: scattered
+    first_appearance_sec: 134
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "inna_kuznetsova"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Все 3 реплики являются продолжением речи SPEAKER_00 (Инны Кузнецовой):
+        - 134.28s: продолжение фразы о карьере и жизненном пути
+        - 414.29s: продолжение рассказа о книге ("Как уживаться с трудными коллегами")
+        - 3521.25s: благодарность за приглашение ("в первый раз у вас представитель IBM")
+        Метка MISATTRIBUTED_MARIN указывает на ранее ошибочно присвоенные реплики.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 2306
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "inna_kuznetsova"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Обе реплики - короткий ответ "Нет" на вопросы Умпутуна:
+        - 2306.29s: после вопроса "Ты с Бучем знакома?" - "Нет" (ответ Инны)
+        - 3711.85s: во время обсуждения тем - "Нет" (реакция на предложение)
+        Судя по контексту, это ответы гостьи на вопросы ведущих.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Теоретически мог быть Gray, но контекст указывает на гостью"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2306.29
+          etime: 2308.90
+          text: "Нет."
+          context: "Ответ на вопрос Умпутуна 'Ты с Бучем знакома?'"
+          note: "Сегмент короткий, сложно верифицировать. Рекомендуется сравнить с более длинными сегментами SPEAKER_00"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  bobuk_absence_explained: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Бобук объявлен как отсутствующий в начале выпуска (сказали "затопило"),
+        но 7 его реплик появляются начиная с 1066 сек (~17 мин).
+        Вероятно, подключился позже в процессе записи.
+        Требует проверки: это реально Бобук или ошибка распознавания?
+      severity: low
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 221
+    from_speaker: "SPEAKER_00"
+    to_speaker: "InnaKuznetsova"
+    confidence: high
+    reason: "Явное представление гостьи: 'встречайте Инна Кузнецова' (92-94 сек)"
+
+  - type: rename
+    episode: 221
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "InnaKuznetsova"
+    confidence: high
+    reason: "Продолжение речи той же гостьи, контекст однозначен"
+
+  - type: rename
+    episode: 221
+    from_speaker: "SPEAKER_03"
+    to_speaker: "InnaKuznetsova"
+    confidence: medium
+    reason: "Ответы на вопросы к гостье, но реплики короткие - требует верификации"
+
+# Новый гость для people.yaml
+new_guest:
+  id: "inna_kuznetsova"
+  canonical_name: "InnaKuznetsova"
+  aliases: ["Инна", "Инна Кузнецова"]
+  real_name: "Инна Кузнецова"
+  info: "Вице-президент IBM, автор книги (бестселлер на Ozon), блогер LiveJournal. Выпуск 221"
+
+# Метаданные анализа
+analysis_metadata:
+  data_source: "data_clean/221/221_cc.json"
+  desc_file_available: false
+  audio_url: null
+  date: "2011-01-08"
+  analyzer_notes: |
+    Выпуск без Бобука в начале (он подключился позже).
+    Гостья Инна Кузнецова - вице-президент IBM, автор книги.
+    Все неизвестные спикеры (SPEAKER_00, SPEAKER_MISATTRIBUTED_MARIN, SPEAKER_03)
+    с высокой вероятностью являются одним человеком - Инной Кузнецовой.

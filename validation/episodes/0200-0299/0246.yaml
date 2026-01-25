@@ -1,0 +1,288 @@
+episode: 246
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_present: [Lavale, EldarMurtazin, Marin_k_a, Olyapka]
+  total_duration_sec: ~7600  # ~2 hours estimated
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # ===== SPEAKER_02 — это Bobuk =====
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 321
+    replies_count: 101
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "bobuk"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        На 37 сек SPEAKER_02 говорит про "Симомания" и "пивное шоу" — это его подкасты.
+        На 127-152 сек SPEAKER_02 рассказывает про жену и Hotmail ("я свою жену уже 5 лет...
+        никак не могу отучить от этого хатмейла").
+        На 188 сек Bobuk продолжает ту же историю: "Жень, Сережа, вы представьте себе,
+        что у меня тут какие-то десятки доминов и собственные серверы... а она все равно
+        свою бизнес-переписку ведет вот именно через ходмейловский аккаунт."
+        Это явно один человек — SPEAKER_02 и Bobuk совпадают.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # ===== SPEAKER_06 — это Olyapka =====
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 219
+    replies_count: 101
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 50-51 сек Umputun представляет: "А зато у нас есть Аляпка. Аляпка."
+        Затем на 53-65 сек продолжает: "Которую мы еще помним вот такой... она пришла к нам
+        из далекой Перми... Мы из нее сделали человека."
+        На 66 сек SPEAKER_06 отвечает: "Да, просто изменили мою жизнь. И выгнали."
+        Это прямая реакция Аляпки на представление. Далее по выпуску Umputun несколько
+        раз обращается "Аляпка" при разговоре с SPEAKER_06.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # ===== Lavale — уже идентифицирована =====
+  - speaker: "Lavale"
+    total_duration_sec: 411
+    replies_count: 70
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "lavale"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Спикер уже размечен как Lavale в транскрипте. Это бывшая ведущая Radio-T.
+        На 87 сек говорит: "Я недавно, кстати, слышала... какой-то выпуск, и он там
+        меня как-то подколол" — упоминает себя в контексте прошлого участия в подкасте.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # ===== Marin_k_a — уже идентифицирована =====
+  - speaker: "Marin_k_a"
+    total_duration_sec: 246
+    replies_count: 45
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Спикер уже размечен как Marin_k_a в транскрипте. Это бывшая ведущая Марина.
+        На 69 сек говорит: "Причем Грей меня подсидел, можно сказать" — упоминает
+        свой уход из подкаста. Umputun подтверждает: "Подсидел, подсидел, засранец."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # ===== EldarMurtazin — уже идентифицирован =====
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 317
+    replies_count: 60
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Спикер уже размечен как EldarMurtazin в транскрипте. Эльдар Муртазин —
+        известный мобильный аналитик, частый гость подкаста.
+        Появляется с 845 сек, обсуждает технические темы, планшеты, iPad и т.д.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  # ===== SPEAKER_05 — короткие реплики, скорее всего ошибка =====
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (суммарно 8 сек за 5 реплик), разбросаны по выпуску.
+        Примеры: "Ну, это было сначала." (1256 сек), "О, Господи." (2756 сек),
+        "Да, кстати, это плюс." (4541 сек), "Я уже поставила." (5993 сек).
+        Скорее всего это misattribution коротких реплик от одной из участниц
+        (Lavale, Olyapka или Marin_k_a).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "olyapka"
+          confidence: 0.4
+          reason: "Женский голос, реплика 'Я уже поставила' звучит естественно для участницы"
+        - person_id: "lavale"
+          confidence: 0.3
+          reason: "Также женский голос, могла бы сказать такие реплики"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Третья участница-женщина в выпуске"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5993.46
+          etime: 5994.2
+          text: "Я уже поставила."
+        notes: |
+          Слишком короткие сегменты для надёжного сравнения голоса.
+          Рекомендуется прослушать в контексте и определить по голосу вручную.
+
+  # ===== SPEAKER_00 — короткие реплики, скорее всего ошибка =====
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (суммарно 6 сек за 3 реплики).
+        Примеры: "Я, знаете, что хотела сказать?" (4741 сек), "Ну, по сути,
+        в бумажных книжках есть одно устройство." (4742 сек), "Как-то долго." (7081 сек).
+        Женский голос ("хотела"), скорее всего это одна из участниц.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "olyapka"
+          confidence: 0.5
+          reason: "Женский голос, контекст обсуждения книг/ридеров подходит"
+        - person_id: "lavale"
+          confidence: 0.3
+          reason: "Также женский голос"
+        - person_id: "marin_k_a"
+          confidence: 0.2
+          reason: "Менее вероятно, но возможно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4741.85
+          etime: 4746.61
+          text: "Я, знаете, что хотела сказать? Ну, по сути, в бумажных книжках есть одно устройство."
+        notes: |
+          Две последовательные реплики дают ~5 сек для сравнения голоса.
+
+  # ===== SPEAKER_04 — минимальные реплики, ошибка распознавания =====
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Минимальные реплики (суммарно ~1 сек): "Или что?" (5058 сек), "Ура!" (6859 сек),
+        "Ну, конечно." (7508 сек). Типичные короткие восклицания/реакции.
+        Невозможно идентифицировать по таким коротким фрагментам.
+        Скорее всего это ошибки автоматической разметки.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        notes: "Слишком короткие реплики для анализа, можно игнорировать"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_02"
+      issue: "Является Bobuk, но часть реплик размечена как SPEAKER_02"
+    - speaker: "SPEAKER_06"
+      issue: "Является Olyapka, но размечена как SPEAKER_06"
+    - speaker: "SPEAKER_05"
+      issue: "Короткие разрозненные реплики, вероятно ошибки атрибуции"
+    - speaker: "SPEAKER_00"
+      issue: "Короткие женские реплики, нужна ручная проверка"
+    - speaker: "SPEAKER_04"
+      issue: "Минимальные реплики, ошибки распознавания"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 246
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Bobuk"
+    confidence: high
+    reason: |
+      SPEAKER_02 рассказывает про свои подкасты (Симомания, пивное шоу) и про жену с Hotmail.
+      Те же истории продолжает Bobuk. Это один человек.
+
+  - type: rename
+    episode: 246
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Olyapka"
+    confidence: high
+    reason: |
+      Umputun представляет "Аляпку", и сразу после этого SPEAKER_06 отвечает от первого лица.
+      В нескольких местах Umputun обращается "Аляпка" к этому спикеру.
+
+# Примечания
+notes: |
+  Выпуск 246 от 9 июля 2011 года. Особый выпуск с участием бывших ведущих.
+
+  Присутствуют:
+  - Umputun (ведущий)
+  - Gray (ведущий)
+  - Bobuk (ведущий, часть реплик как SPEAKER_02)
+  - Olyapka (бывшая ведущая, часть реплик как SPEAKER_06)
+  - Lavale (бывшая ведущая)
+  - Marin_k_a (бывшая ведущая, Марина)
+  - EldarMurtazin (гость)
+
+  SPEAKER_05, SPEAKER_00, SPEAKER_04 — короткие реплики, скорее всего ошибки
+  автоматического распознавания. По контексту это женские голоса (Olyapka, Lavale
+  или Marin_k_a), но точно определить без прослушивания невозможно.
+
+  Рекомендация: применить правила rename для SPEAKER_02→Bobuk и SPEAKER_06→Olyapka.
+  Для остальных SPEAKER_* требуется ручная проверка по аудио.

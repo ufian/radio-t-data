@@ -1,0 +1,194 @@
+episode: 243
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 6326  # примерно из предрассчитанной статистики
+  notes: "Классический мужской состав, выпуск от 18 июня 2011 года"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 148
+    replies_count: 34
+    first_appearance_sec: 4823.8
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # нет в справочнике people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Гость представлен как "Александр" в 4820s:
+        - Umputun: "Александр, здравствуйте."
+        - SPEAKER_03: "Здравствуйте."
+        - Umputun: "Александр, ты грозился, что у тебя есть вся правда по поводу того, как C++ теперь на GPU работает..."
+
+        Эксперт по C++, компиляторам (Visual Studio, Intel Compiler, Clang), GPU-программированию.
+        Говорит профессионально о параллельных вычислениях, OpenCL, CUDA.
+
+      possible_matches: []
+
+      # Требуется идентификация личности
+      action_required: "add_to_people_yaml"
+      suggested_person:
+        id: "alexander_cpp"
+        canonical_name: "Alexander"
+        real_name: "Александр"
+        info: "Эксперт по C++/GPU, выпуск 243"
+
+      voice_task:
+        needed: true
+        reason: "Для будущей идентификации в других выпусках"
+        reference_segment:
+          stime: 5226.9
+          etime: 5259.85
+          duration_sec: 33
+          text: |
+            Вот у меня есть такая своя теория, что они будут делать таким образом,
+            что вы вроде пишете, немножко распараллеливаете, а вот все остальное
+            для вас сделает эта чудесная Visual Studio, с которой очень сложно работать.
+            И она волшебным способом, наверное, при инсталляции будет задавать
+            каким-нибудь ификом вопрос, а какая у вас видеокарточка? И она будет говорить,
+            ой, у меня IT-видеокарточка, поэтому мы пойдем распараллелить процессы с помощью GPU.
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 10
+    replies_count: 5
+    first_appearance_sec: 2771.2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все 5 реплик - короткие фразы (1-4 сек), разбросанные по эпизоду.
+        Каждая реплика появляется непосредственно перед или между репликами Gray.
+        Название "MISATTRIBUTED_ELDAR" говорит о том, что это ранее ошибочно
+        приписанные Эльдару Муртазину реплики, но Эльдара в этом выпуске нет.
+
+        Примеры:
+        - 2771s: "Нет, это там все очень просто, Жень." (перед Gray)
+        - 2947s: "Зачем?" (перед Bobuk)
+        - 5644s: "Банально это можно объяснить очень простым." (перед Gray)
+        - 5943s: "На самом деле их не очень много." (перед Gray)
+        - 6110s: "Нет, там, ну, в общем, все понимаем, почему это происходит." (перед Umputun)
+
+        Скорее всего это фрагменты речи Gray, неверно выделенные при транскрипции.
+
+      identified_as: "gray"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        4 из 5 реплик появляются непосредственно перед репликами Gray,
+        обращение "Жень" (к Umputun) характерно для ведущих.
+        Содержание реплик соответствует стилю комментариев Gray.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Позиция реплик (перед Gray), обращение к Umputun по имени"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Альтернативная версия - фрагменты Bobuk"
+
+      voice_task:
+        needed: true
+        reason: "Подтвердить, что это Gray, а не отдельный спикер"
+        reference_segment:
+          stime: 5644.35
+          etime: 5647.29
+          duration_sec: 3
+          text: "Банально это можно объяснить очень простым."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 2
+    first_appearance_sec: 1987.2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 реплики за весь выпуск, обе - односложные междометия:
+        - 1987s: "Угу." (0.06 сек)
+        - 6685s: "Классно." (0.74 сек)
+
+        Суммарная длительность ~1 сек, реплики разнесены на 78 минут.
+        Это типичный паттерн ошибок распознавания - артефакты или
+        фрагменты голосов ведущих, неверно атрибутированные.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие фрагменты для анализа голоса"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: |
+        Гость Александр представлен только по имени без фамилии.
+        Нужно добавить в people.yaml после идентификации полного имени.
+
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Метка указывает на ранее ошибочную атрибуцию Эльдару.
+        Рекомендуется объединить с Gray после голосовой верификации.
+
+    - speaker: "SPEAKER_04"
+      issue: |
+        Артефакты распознавания, можно безопасно удалить или
+        переатрибутировать ближайшему говорящему.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 243
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Alexander"
+    confidence: high
+    reason: |
+      Гость явно представлен как "Александр" ведущим Umputun.
+      Временное имя до идентификации полного имени.
+
+  - type: rename
+    episode: 243
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: |
+      Все реплики появляются в контексте с Gray, одна содержит
+      обращение "Жень" к Umputun. Требует voice verification.
+
+  - type: delete_or_merge
+    episode: 243
+    from_speaker: "SPEAKER_04"
+    action: "merge_with_nearest"
+    confidence: high
+    reason: |
+      Односложные междометия (Угу, Классно) - артефакты распознавания.
+      Суммарно <1 сек на весь выпуск.
+
+# Метаданные анализа
+metadata:
+  episode_date: "2011-06-18"
+  episode_title_hint: "Выпуск 243"
+  audio_available: false  # desc.json отсутствует в data_clean
+  main_topics:
+    - "C++ AMP для GPU (Microsoft)"
+    - "Visual Studio и параллельные вычисления"
+    - "Clang vs GCC"
+    - "IPO Яндекса"

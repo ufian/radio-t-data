@@ -1,0 +1,81 @@
+episode: 291
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_announced: false
+  total_duration_sec: 7177  # ~2 часа
+
+# Ключевое наблюдение: в начале выпуска явно сказано "мы вдвоём"
+# Umputun (0:09): "Мы вдвоем, ты да я, Бог да мы с тобой, все остальные нас бросили"
+# Это означает, что Gray НЕ участвовал в этом выпуске
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проблемные спикеры (не unknown, но подозрительные)
+problematic_speakers:
+  - speaker: "Gray"
+    total_duration_sec: 5
+    replies_count: 1
+    first_appearance_sec: 3656.84
+
+    analysis:
+      is_error: true
+      error_reason: |
+        В начале эпизода ведущие явно заявили "мы вдвоём" (Umputun и Bobuk).
+        Gray появляется только один раз на 1:00:56 с единственной репликой.
+        Реплика находится между репликами Bobuk и логически вписывается в диалог.
+        Это явная ошибка распознавания спикера.
+
+      likely_actual_speaker: "Umputun"
+      confidence: medium
+      evidence: |
+        - Umputun сказал "Слишком сложно" на 3650 сек
+        - Через 6 секунд якобы Gray говорит "Нормальные люди не понимают концепцию двухфазной авторизации"
+        - Это логичное развитие мысли Umputun
+        - До и после этой реплики говорит Bobuk
+        - Тема: обсуждение 2FA/двухфакторной авторизации
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3656.84
+          etime: 3662.04
+          text: "Нормальные люди не понимают концепцию двухфазной авторизации."
+        compare_with:
+          - speaker: Umputun
+            segment:
+              stime: 3650.37
+              etime: 3651.07
+              text: "Слишком сложно."
+          - speaker: Bobuk
+            segment:
+              stime: 3654.6
+              etime: 3656.8
+              text: "То есть, я просто много раз проверял."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quote: |
+    Umputun (0:09-0:14): "Мы вдвоем, ты да я, Бог да мы с тобой, все остальные нас бросили."
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Помечен как участник эпизода (1 реплика, 5 сек), но в начале ясно сказано
+        что в выпуске только Umputun и Bobuk. Это ошибка распознавания.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 291
+    from_speaker: "Gray"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: |
+      Gray не участвовал в эпизоде (явно заявлено "мы вдвоём").
+      Реплика между фразами Bobuk, логически продолжает мысль Umputun.
+      Требуется voice comparison для подтверждения.

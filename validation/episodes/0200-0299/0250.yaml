@@ -1,0 +1,300 @@
+episode: 250
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray, Umputun]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7711  # приблизительно, по последней реплике
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # SPEAKER_05 - Алексей Абашев (специалист по Java из Google)
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1261
+    replies_count: 299
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alexey_abashev"  # НЕТ в people.yaml - нужно добавить
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Bobuk представляет гостя на 313-320 сек: "Я сейчас попробую подключить нашего
+        штатного специалиста по Джаве. Помните, у нас был такой Алексей, Алексей Абашев".
+        Umputun добавляет: "А он из корпорации Добра" (Google).
+        SPEAKER_05 первая реплика на 355 сек сразу после представления.
+        Содержание реплик подтверждает экспертизу в Java (обсуждение Oracle, развития языка).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  # SPEAKER_04 - Сван (постоянный гость)
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 400
+    replies_count: 121
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "svan"  # НЕТ в people.yaml - нужно добавить
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Bobuk обращается на 127-128 сек: "Сван, ты тут?"
+        SPEAKER_04 отвечает сразу: "Да, да, я тут."
+        Bobuk ранее сказал (120-127 сек): "А еще у нас сегодня есть специально
+        приглашенный гость. Он у нас уже был неоднократно. Мы его все горячо любим."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  # Marin_k_a - уже идентифицирована в people.yaml
+  - speaker: "Marin_k_a"
+    total_duration_sec: 484
+    replies_count: 125
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Bobuk представляет на 91-96 сек: "особенно это должно понравиться Марусечке
+        нашей, которая сегодня здесь". Marin_k_a отвечает сразу.
+        Уже есть в people.yaml как бывшая ведущая.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  # SPEAKER_07 - короткие ошибочные реплики
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 12
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Очень короткие реплики (1-3 сек) разбросаны по всему эпизоду.
+        Примеры: "И, кстати...", "Это?", "Ну?", "Джей.", "Как сказать?"
+        Скорее всего ошибки распознавания реплик ведущих или гостей.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Короткие вставки могут быть репликами ведущего"
+        - person_id: "svan"
+          confidence: 0.3
+          reason: "Может быть SPEAKER_04 (Сван) с ошибкой распознавания"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5125.03
+          etime: 5127.79
+          text: "Я программирую на HTML."
+
+  # SPEAKER_00 - короткие ошибочные реплики
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Очень короткие реплики (1-2 сек) разбросаны по эпизоду.
+        Примеры: "Ага.", "Стоя.", "Не, не сокрушаюсь."
+        Типичные ошибки автоматического распознавания спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Umputun был на плохой связи (с машины), возможны ошибки"
+
+      voice_task:
+        needed: false
+        reference_segment: null  # слишком короткие сегменты
+
+  # SPEAKER_03 - короткие ошибочные реплики
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Всего 3 коротких реплики. Примеры: "Ну, вот опять же плюс с дипломом за Монго.",
+        "Я как-то развернул-то, а?", "Ну, это да."
+        Ошибки распознавания спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alexey_abashev"
+          confidence: 0.5
+          reason: "Контекст MongoDB/техническая тема близка к SPEAKER_05"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  # SPEAKER_MISATTRIBUTED_LAVALE - отменённые присвоения
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 13
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Реплики ранее ошибочно приписаны Лаваль, но отменены (нет в этом эпизоде).
+        Короткие реплики (1-3 сек): "Ну да, ну да, всего лишь.",
+        "Он в продакшене, да, насколько я помню?"
+        Нужно переатрибутировать одному из присутствующих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alexey_abashev"
+          confidence: 0.5
+          reason: "Технический контекст (продакшен) близок к SPEAKER_05"
+        - person_id: "svan"
+          confidence: 0.3
+          reason: "Может быть SPEAKER_04"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4822.1
+          etime: 4824.5
+          text: "Он в продакшене, да, насколько я помню?"
+
+  # SPEAKER_MISATTRIBUTED_ELDAR - отменённые присвоения
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Реплики ранее ошибочно приписаны Эльдару Муртазину (которого нет в этом эпизоде).
+        Примеры: "Летают сообщения.", "А если тихо сидеть, то можно услышать, как он гниет."
+        Нужно переатрибутировать.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Шутка про 'гниёт' в стиле Bobuk"
+        - person_id: "alexey_abashev"
+          confidence: 0.3
+          reason: "Технический контекст"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7163.8
+          etime: 7167.0
+          text: "А если тихо сидеть, то можно услышать, как он гниет."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: "Идентифицирован как Алексей Абашев, но его нет в people.yaml"
+    - speaker: "SPEAKER_04"
+      issue: "Идентифицирован как Сван, но его нет в people.yaml"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 250
+    from_speaker: "SPEAKER_05"
+    to_speaker: "AlexeyAbashev"
+    confidence: high
+    reason: "Явное представление Bobuk'ом: 'Алексей, Алексей Абашев', специалист по Java из Google"
+
+  - type: rename
+    episode: 250
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Svan"
+    confidence: high
+    reason: "Явное обращение Bobuk'а: 'Сван, ты тут?' с немедленным ответом"
+
+  - type: add_to_people_yaml
+    person:
+      id: "alexey_abashev"
+      canonical_name: "AlexeyAbashev"
+      aliases: ["Алексей Абашев", "Abashev"]
+      real_name: "Алексей Абашев"
+      info: "Специалист по Java, работает в Google. Выпуск 250."
+
+  - type: add_to_people_yaml
+    person:
+      id: "svan"
+      canonical_name: "Svan"
+      aliases: ["Сван"]
+      real_name: null
+      info: "Постоянный гость (упоминается 'был неоднократно'). Выпуск 250."
+
+# Референсные сегменты для voice comparison (если потребуется)
+voice_references:
+  alexey_abashev:
+    audio_url: "https://cdn.radio-t.com/rt_podcast250.mp3"
+    segments:
+      - stime: 539.25
+        etime: 563.74
+        text: "улучшения на языке Java, да, все это есть, но, скажем так, это эволюционное развитие..."
+      - stime: 506.65
+        etime: 534.67
+        text: "длинный монолог о Java (несколько сегментов подряд)"
+
+  svan:
+    audio_url: "https://cdn.radio-t.com/rt_podcast250.mp3"
+    segments:
+      - stime: 1266.08
+        etime: 1275.83
+        text: "Я слышал версию, что наоборот, типа на американских военных кораблях всегда были пиктограммы..."

@@ -1,0 +1,196 @@
+episode: 218
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Umputun, Gray]
+  guests_present: [PetrDidenko, Marin_k_a]
+  total_duration_sec: 6756  # ~112 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  # PetrDidenko и Marin_k_a уже идентифицированы в транскрипте
+  # Ниже анализируем только реально неизвестных
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 16
+    replies_count: 10
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Реплики осмысленные, участвуют в диалоге
+      # Примеры: "Нет, Медведева не приглашали", "Человек 15 минут говорил по-русски"
+      # Контекст: реагирует на шутки, участвует в обсуждении
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Скорее всего один из ведущих, плохо распознанный
+      # Контекст реплик указывает на знание внутренних тем подкаста
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.6
+          reason: "Реплики разбросаны рядом с репликами Марины, возможно ошибка разметки"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray мог быть неправильно распознан"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2344.05
+          etime: 2364.05
+          text: "Нет, Медведева не приглашали... Не надо. Это не смешно было... Человек 15 минут говорил по-русски. Принципиально."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-2 сек), разбросаны по разным местам выпуска, типичные короткие реакции"
+
+      # Примеры: "Да-да-да, или ракета какая-то" (1 сек), "А в России есть?" (2 сек), "Ну, я..." (1 сек)
+      # Все реплики - короткие реакции, скорее всего ошибочно приписаны одному из ведущих
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Короткие реплики в диалоге, могли быть неправильно разделены"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray активен в этом выпуске"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна короткая реплика, уже помечена как MISATTRIBUTED"
+
+      # Реплика: "Ну да, простенькие и страшненькие" (700.45-702.41)
+      # Контекст: Обсуждение галерей, Umputun говорит до и после
+      # Lavale не участвовала в этом выпуске (ведущие: Umputun, Bobuk, Gray + гости PetrDidenko, Marin_k_a)
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Лаваль не была на этом выпуске, реплика скорее принадлежит одному из присутствующих"
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.7
+          reason: "Женский голос, Марина единственная женщина в этом выпуске"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Возможно Gray, но менее вероятно"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики, уже помечены как MISATTRIBUTED"
+
+      # Реплики:
+      # 1. "Короче, возьми TrueCrypt и дай мозг" (1022.27-1026.82)
+      #    Контекст: Обсуждение TrueCrypt, Umputun говорит до, PetrDidenko после
+      # 2. "Супер рекомендую" (7339.91-7340.95)
+      #    Контекст: Обсуждение катания с гор, Bobuk говорит до и после
+
+      # Эльдар Муртазин не участвовал в этом выпуске
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Эльдар Муртазин не был на этом выпуске, реплики принадлежат одному из присутствующих"
+
+      possible_matches:
+        - person_id: "petr_didenko"
+          confidence: 0.6
+          reason: "Первая реплика про TrueCrypt - технический совет, типично для Пети"
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Вторая реплика 'Супер рекомендую' могла быть от Бобука (его стиль)"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1022.27
+          etime: 1026.82
+          text: "Короче, возьми TrueCrypt и дай мозг."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале выпуска Марина представила всех участников:
+    - Umputun (Евген)
+    - Gray (Сергей Петренко)
+    - PetrDidenko (Петро Диденко)
+    - Bobuk (Григорий)
+    Все упомянутые ведущие подтверждены в транскрипте.
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "10 реплик без идентификации, требует voice comparison"
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Лаваль отсутствовала на выпуске, реплика вероятно принадлежит Marin_k_a"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар отсутствовал на выпуске, реплики вероятно принадлежат PetrDidenko или Bobuk"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 218
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: medium
+    reason: "Единственная женщина в выпуске - Марина, короткая реплика вписывается в диалог"
+
+  - type: rename
+    episode: 218
+    from_speaker: "SPEAKER_06"
+    to_speaker: "_review_needed"
+    confidence: low
+    reason: "Слишком короткие реплики для точной идентификации, но вероятно ошибки разметки"
+
+# Задания для ручной проверки
+manual_review_tasks:
+  - task: "voice_comparison"
+    speakers: ["SPEAKER_01"]
+    priority: medium
+    notes: |
+      10 реплик (16 сек), разбросаны по выпуску.
+      Нужно сравнить голос с известными участниками.
+      Основной сегмент для сравнения: 2344-2364 сек.
+
+  - task: "verify_attribution"
+    speakers: ["SPEAKER_MISATTRIBUTED_ELDAR"]
+    priority: low
+    notes: |
+      Две короткие реплики, скорее всего PetrDidenko или Bobuk.
+      Контекст указывает на PetrDidenko для первой реплики (TrueCrypt).

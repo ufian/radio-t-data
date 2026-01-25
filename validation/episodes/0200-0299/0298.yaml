@@ -1,0 +1,327 @@
+episode: 298
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  guests_mentioned: [Станислав, Виктор, Маруся]
+  total_duration_sec: 8169  # примерно 2ч 16мин
+
+# Представление гостей в начале эпизода:
+# - Станислав из Parallels (второй раз на подкасте) - обращение по имени в 22-25с и 117с
+# - Виктор (приходил "выпуск назад") - обращение в 46-53с
+# - Маруся (Marin_k_a) - уже идентифицирована, вернулась после "четырёхнедельного отсутствия"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2790
+    replies_count: 563
+    first_reply_at: 25.3
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Станислав из Parallels, но нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (22-25с):
+        - Umputun: "Я прав, Станислав? Во второй или в третий?"
+        - SPEAKER_05: "Во второй пока же."
+        Также в 117с: "Станислав, ты готов?"
+        Гость представлен как сотрудник Parallels (обсуждение виртуализации).
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reason: "Нужно добавить Станислава из Parallels в people.yaml"
+        reference_segment:
+          stime: 162.43
+          etime: 190.0
+          text: "Ну, причина-то она понятна, в общем-то, да, то есть программисты, они единожды поев, отказываются не продолжать это, и все равно приходят за зарплатой, и развитие продукта все равно требует денег. А единственный способ нам собирать деньги, это, в сущности, продавать. То есть тут не жадность, тут просто, ну, вот круговорот денег в природе такой получается."
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 809
+    replies_count: 198
+    first_reply_at: 53.5
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Виктор, IT-консультант, но нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (46-53с):
+        - Umputun: "Виктор, который приходил к нам буквально выпуск назад, ты какую корпорацию зла представляешь..."
+        - SPEAKER_00: "Я никакую большую корпорацию не представляю, я работаю в маленькой такой компании..."
+        Также упоминается как "Виктор" в 2881с, 2980с, 7120с, 7237с, 12313с, 14842с, 15247с.
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reason: "Нужно добавить Виктора в people.yaml"
+        reference_segment:
+          stime: 1595.86
+          etime: 1650.0
+          text: "Да, я вот как раз хотел об этом сейчас немножко рассказать, о своем жизненном опыте..."
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 555
+    replies_count: 147
+    first_reply_at: 80.1
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (75с):
+        - Umputun: "Маруся, ты с нами после четырёхнедельного отсутствия."
+        - Marin_k_a: "Да ладно, четырёхнедельного."
+        Уже корректно идентифицирована в транскрипте.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 527
+    replies_count: 57
+    first_reply_at: 136.3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Пётр Диденко НЕ представлен в этом эпизоде. Представлены только Станислав, Виктор и Маруся.
+        Реплики PetrDidenko продолжают мысли SPEAKER_05 (Станислава):
+        - PetrDidenko (214.29-228.62): "...постепенно весь софт спустится на идею подписки..."
+        - SPEAKER_05 (228.64-241.2): "Потому что потребителю ему проще платить..."
+        Это одна непрерывная мысль, разделённая ошибочно на два спикера.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "SPEAKER_05"
+          confidence: 0.85
+          reason: "Реплики продолжают мысли SPEAKER_05, говорит от имени Parallels ('мы', 'наши пользователи')"
+
+      voice_task:
+        needed: true
+        reason: "Сравнить голос PetrDidenko с SPEAKER_05 для подтверждения merge"
+        reference_segment:
+          stime: 214.29
+          etime: 228.62
+          text: "Если реально, то если смотреть, я думаю, что постепенно весь софт спустится на идею подписки, потому что эта идея хороша и для производителей софта, и для потребителей."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 42
+    replies_count: 9
+    first_reply_at: 1560.8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин не участвует в этом эпизоде.
+        Реплики говорят от имени пользователя Parallels или сотрудника:
+        - "Я попробовал переехать на 7-ку, стало еще лучше" (1711с)
+        - "они нас покупают как раз из-за нескольких причин" (1859с)
+        Контекст указывает на Виктора (SPEAKER_00) или Станислава (SPEAKER_05).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "SPEAKER_00"
+          confidence: 0.7
+          reason: "Реплики перемежаются с SPEAKER_00, контекст пользовательского опыта"
+        - person_id: "SPEAKER_05"
+          confidence: 0.3
+          reason: "Некоторые реплики говорят от имени Parallels ('они нас покупают')"
+
+      voice_task:
+        needed: true
+        reason: "Сравнить с SPEAKER_00 (Виктор) и SPEAKER_05 (Станислав)"
+        reference_segment:
+          stime: 1721.95
+          etime: 1749.97
+          text: "Я предпочитаю работать со своим ноутбуком, но мне нужно иногда работать с тулами, которые установлены у наших вот этих клиентов..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 4
+    replies_count: 2
+    first_reply_at: 2175.8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Лаваль не участвует в этом эпизоде.
+        Всего 2 короткие реплики (4 секунды) в случайных местах.
+        Типичные ошибки распознавания: "Да, это даже я скажу." и "Ну, как большая разница."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Marin_k_a"
+          confidence: 0.5
+          reason: "Женский голос, возможно Маруся"
+        - person_id: "SPEAKER_00"
+          confidence: 0.3
+          reason: "Возможно ошибка распознавания Виктора"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие сегменты для надёжного сравнения"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 9
+    replies_count: 4
+    first_reply_at: 4414.3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 4 очень короткие реплики (9 секунд суммарно):
+        - "Смешно." (4414с)
+        - "Следующая новость." (7735с)
+        - "Мне вот хочется возразить, но я понимаю, что вы все правы." (7736с)
+        - "Кат." (8169с)
+        Паттерн характерен для ведущего (переходы между темами).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Umputun"
+          confidence: 0.6
+          reason: "Фразы-переходы характерны для ведущего"
+        - person_id: "Marin_k_a"
+          confidence: 0.3
+          reason: "Возможно Маруся"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие сегменты"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 0
+    replies_count: 1
+    first_reply_at: 5257.6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Нет." (0.3 секунды).
+        Очевидная ошибка распознавания - односложная реакция.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Невозможно идентифицировать по односложной реплике"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "PetrDidenko"
+      issue: "Пётр Диденко не представлен в эпизоде, но размечен как спикер. Вероятно ошибочная идентификация SPEAKER_05 (Станислава)."
+
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар Муртазин не участвует в эпизоде. Реплики относятся к Виктору или Станиславу."
+
+    - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+      issue: "Лаваль не участвует в эпизоде. Ошибочная атрибуция коротких реплик."
+
+    - speaker: "Gray"
+      issue: "Gray имеет только 7 реплик (32 сек). Возможно часть его реплик ушла в SPEAKER_* или другие спикеры."
+
+    - speaker: "Bobuk"
+      issue: "Bobuk имеет только 2 реплики (6 сек). Очень мало для эпизода, где он присутствует."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 298
+    from_speaker: "PetrDidenko"
+    to_speaker: "SPEAKER_05"
+    confidence: high
+    reason: "Пётр Диденко не представлен в эпизоде. Реплики продолжают мысли SPEAKER_05 (Станислав). Требуется voice comparison для подтверждения."
+
+  - type: rename
+    episode: 298
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "SPEAKER_00"
+    confidence: medium
+    reason: "Большинство реплик перемежаются с SPEAKER_00 (Виктор) и относятся к пользовательскому опыту. Требуется voice comparison."
+
+  - type: rename
+    episode: 298
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Marin_k_a"
+    confidence: low
+    reason: "Возможно женский голос Маруси. Требуется проверка."
+
+# Задачи для people.yaml
+people_yaml_updates:
+  - action: add_guest
+    id: "stanislav_parallels"
+    canonical_name: "StanislavParallels"
+    aliases: ["Станислав", "Стас"]
+    real_name: "Станислав"
+    info: "Сотрудник Parallels, выпуски 298, ???"
+    note: "Требуется найти фамилию и другие выпуски"
+
+  - action: add_guest
+    id: "viktor_it_consultant"
+    canonical_name: "Viktor"
+    aliases: ["Виктор"]
+    real_name: "Виктор"
+    info: "IT-консультант, выпуски 297, 298"
+    note: "Упоминается как гость 'выпуск назад' в 298"
+
+# Примечания
+notes: |
+  Эпизод требует значительной ревизии атрибуции спикеров:
+
+  1. SPEAKER_05 = Станислав из Parallels (высокая уверенность, представлен в начале)
+  2. SPEAKER_00 = Виктор, IT-консультант (высокая уверенность, представлен в начале)
+  3. PetrDidenko - ошибочная атрибуция, на самом деле это Станислав (требует voice comparison)
+  4. SPEAKER_MISATTRIBUTED_ELDAR - ошибочная атрибуция (требует voice comparison)
+  5. SPEAKER_MISATTRIBUTED_LAVALE - ошибочная атрибуция коротких реплик
+
+  Интересно, что Bobuk и Gray имеют очень мало реплик для этого эпизода.
+  Возможно, часть их реплик ошибочно атрибутирована другим спикерам.

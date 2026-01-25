@@ -1,0 +1,137 @@
+episode: 253
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a]
+  total_duration_sec: 7196  # Примерно 2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 366
+    replies_count: 110
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале выпуска (24-53 сек) Umputun представляет: 'Еще у нас пришла... из неожиданного города Днепропетровска... совершенно ожидаемая Маруся'. Marin_k_a подтверждает: 'Да, я пришла. И я совершенно неожиданно сижу сейчас в данном офисе на работе в Днепропетровском офисе'"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 73
+    replies_count: 10
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это аудио-поздравление слушателя Михаила с 5-летием подкаста
+      identified_as: null
+      identification_method: "context"
+      confidence: high
+      evidence: "Аудио-поздравление слушателя: 'Меня зовут Михаил, и я с большим удовольствием хотел бы поздравить вас... с пятилетием такого замечательного аудиопроекта, как подкаст Радиотип'. Это вставленная запись поздравления, не живой гость в студии."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткая односложная реакция 'Угу, угу, угу' (0.6 сек) между репликами Bobuk и Umputun. Скорее всего ошибка распознавания одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Реплика идёт сразу после Bobuk ('Она такая светодиодненькая') и перед Umputun. Типичная междометная реакция."
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray также участвует в этом выпуске, мог вставить реакцию."
+
+      voice_task:
+        needed: false
+        # Слишком короткая реплика для voice comparison
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 8
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Имя указывает на отменённое ошибочное присвоение Эльдару Муртазину. Эльдар не участвовал в этом выпуске (в начале выпуска сказано 'безгостевой состав'). Обе реплики - короткие технические комментарии, вписывающиеся в контекст дискуссии ведущих."
+
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Реплика 1 (6768-6771 сек): "Начали потихоньку разбираться" - комментарий в контексте обсуждения DigiNotar между Gray и Bobuk.
+        Реплика 2 (7191-7197 сек): "Это нельзя назвать... Там у него начинает, по-моему, то ли сильно течь память, то ли он ее сильно начинает жрать" - технический комментарий об Apache между репликами Bobuk и Gray.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Обе реплики вписываются в темы, которые ведёт Gray. Первая реплика идёт между двумя репликами Gray о DigiNotar."
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Вторая реплика технически точная и в стиле Bobuk, идёт между его репликами об Apache."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7191.1
+          etime: 7196.93
+          text: "Это нельзя назвать... Там у него начинает, по-моему, то ли сильно течь память, то ли он ее сильно начинает жрать."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: "Одна короткая реплика (0.6 сек), скорее всего ошибка распознавания ведущего"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Две реплики, ранее ошибочно приписанные Эльдару. Вероятно принадлежат Gray или Bobuk."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 253
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Короткая междометная реакция между репликами Bobuk, вероятно его голос"
+
+  - type: rename
+    episode: 253
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: "Обе реплики в контексте тем Gray (DigiNotar, Apache). Требуется voice comparison для подтверждения."
+
+# Примечания
+notes: |
+  Выпуск 253 - юбилейный (5 лет подкаста), дата 3 сентября 2011 года.
+  Состав: Umputun, Bobuk, Gray + Marin_k_a (Маруся/Марина) из Днепропетровска.
+  SPEAKER_00 - это вставленное аудио-поздравление от слушателя Михаила, не требует атрибуции как гость.
+  SPEAKER_99 присутствует в файле (артефакты), корректно игнорируется.

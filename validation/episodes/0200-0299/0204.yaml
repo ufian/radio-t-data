@@ -1,0 +1,59 @@
+episode: 204
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [PetrDidenko, EldarMurtazin]
+  total_duration_sec: 6097  # sum of all speaker durations
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Все спикеры в этом эпизоде уже идентифицированы:
+# - Umputun (489 реплик) - ведущий
+# - Bobuk (489 реплик) - ведущий
+# - Gray (248 реплик) - ведущий
+# - PetrDidenko (275 реплик) - гость
+# - EldarMurtazin (190 реплик) - гость
+
+# Идентификация гостей
+identified_guests:
+  - speaker: "PetrDidenko"
+    person_id: "petr_didenko"
+    total_replies: 275
+    total_duration_sec: 946
+    identification_method: "introduction"
+    confidence: high
+    evidence: |
+      В 24.75s Umputun явно представляет: "Петя, прекрасен ли ты?"
+      PetrDidenko отвечает в 27.49s: "Чрезмерно."
+      Gray в 145.25s подтверждает: "Петя к нам вернулся"
+
+  - speaker: "EldarMurtazin"
+    person_id: "eldar_murtazin"
+    total_replies: 190
+    total_duration_sec: 817
+    identification_method: "introduction"
+    confidence: high
+    evidence: |
+      В 51.3s Umputun представляет: "Эльдар пришел, даже не пришел, а вышел"
+      В 54.02s: "Его не было настолько давно, что стали зарождаться сомнения"
+      EldarMurtazin первая реплика в 64.47s: "В местах."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  all_speakers_identified: true
+  issues: []
+  notes: |
+    Все участники явно представлены в первые 2 минуты выпуска:
+    - Umputun открывает выпуск (1.43s)
+    - PetrDidenko представлен как "Петя" (24.75s)
+    - EldarMurtazin представлен как "Эльдар" (51.3s)
+    - Bobuk представлен (73.47s)
+    - Gray представлен как "Сережа Петренко, Грей" (114.14s)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - эпизод полностью размечен

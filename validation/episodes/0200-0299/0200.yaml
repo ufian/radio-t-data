@@ -1,0 +1,88 @@
+episode: 200
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Marin_k_a, Guest]
+  total_duration_sec: 7843
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Marin_k_a"
+    total_duration_sec: 842
+    replies_count: 199
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun явно представляет и обращается:
+        - 114.91s: "Маринка, а ты..."
+        - 124.96s: "Маринка, ты с нами около года."
+        Marin_k_a отвечает сразу после обращения (130.01s).
+        Это Марина - бывшая ведущая подкаста, уже есть в people.yaml.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest"
+    total_duration_sec: 82
+    replies_count: 16
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anton_listener"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Umputun называет гостя по имени после разговора:
+        - 6849.67s: "Ну, спасибо Антону, который все это дело организовал."
+        Контекст: слушатель Антон организовал раздачу стикеров
+        к 200-му юбилейному выпуску. Звонил в прямой эфир.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Юбилейный выпуск 200. Все ведущие представлены в начале.
+    Marin_k_a (Марина) - бывшая ведущая, на момент выпуска
+    участвовала около года.
+    Guest (Антон) - слушатель, организатор акции со стикерами,
+    появляется ближе к концу эфира.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 200
+    from_speaker: "Guest"
+    to_speaker: "Anton"
+    confidence: high
+    reason: |
+      Umputun явно называет гостя "Антон" в 6849.67s:
+      "Ну, спасибо Антону, который все это дело организовал."
+      Это слушатель, который организовал раздачу стикеров
+      на юбилейный 200-й выпуск.
+
+# Новый участник для people.yaml
+new_participant:
+  id: "anton_stickers"
+  canonical_name: "Anton"
+  aliases: []
+  real_name: "Антон"
+  info: "Слушатель, организовал раздачу стикеров на выпуск 200"
