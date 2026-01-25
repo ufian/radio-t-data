@@ -1,0 +1,221 @@
+episode: 433
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  guests_confirmed: [Gimlis, Artem]
+  total_duration_sec: ~6800  # оценка
+
+# Ключевое наблюдение
+# В конце эпизода (timestamp ~5035s) Umputun говорит:
+# "К двум основным, Ксюше и мне, пришли два гостя, которые, Гимлис и Артем"
+# Это означает, что в эпизоде только ДВА гостя, а не три.
+# EldarMurtazin в эпизоде НЕ представлялся и НЕ упоминался.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 193
+    replies_count: 73
+    first_appearance_sec: 33
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "gimlis"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 32s Umputun обращается: "Гиммлес, как же так?"
+        SPEAKER_03 отвечает: "Работа обязывает. Но я не официальный голос Яндекса."
+        Упоминание работы в Яндексе соответствует профилю Gimlis.
+        В финале эпизода подтверждается: "Гимлис и Артем".
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 423
+    replies_count: 56
+    first_appearance_sec: 637
+    pattern: consecutive  # идёт вперемешку с SPEAKER_03
+
+    analysis:
+      is_error: true
+      error_reason: |
+        EldarMurtazin НЕ был представлен в эпизоде.
+        В финале Umputun явно перечисляет гостей: "Гимлис и Артем" — Эльдар не упоминается.
+        Реплики EldarMurtazin идут ПОДРЯД с SPEAKER_03 в одних диалогах (например, 780-784s),
+        что указывает на одного спикера, ошибочно разделённого транскрибером.
+        Эпизод датирован 28 февраля 2015 — нет данных об участии Эльдара Муртазина.
+
+      identified_as: "gimlis"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Реплики EldarMurtazin и SPEAKER_03 идут подряд как единый монолог (780-784s)
+        2. В начале эпизода представлен только Gimlis (работник Яндекса)
+        3. В конце перечислены гости: "Гимлис и Артем" — два человека, не три
+        4. Первая реплика EldarMurtazin (636s) начинается со слов о Pebble,
+           продолжая мысль о краудфандинге, которую обсуждает SPEAKER_03
+
+      possible_matches: []
+      voice_task:
+        needed: false  # идентификация high confidence
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1127
+    replies_count: 218
+    first_appearance_sec: 1288
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # гость Артём, но нет person_id в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 1297s SPEAKER_04 представляется: "Ну, я Артем, пишу на Go и занимаюсь аутсорсингом."
+        Далее по эпизоду его называют Артём (1207s, 5041s, 5055s и др.)
+        В финале: "Гимлис и Артем, которые нас поддержали"
+
+      possible_matches:
+        - person_id: "artem_rosnovsky"
+          confidence: 0.2
+          reason: "Имя совпадает, но Rosnovsky известен по другим эпизодам, этот Артём — Go-разработчик"
+
+      voice_task:
+        needed: false  # явное представление
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 2
+    first_appearance_sec: 806
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 реплики "Угу" (806s и 5006s) — типичная ошибка распознавания.
+        Короткие междометия посреди монолога Umputun.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+      voice_task:
+        needed: false  # явная ошибка распознавания
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 1
+    replies_count: 1
+    first_appearance_sec: 1970
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика "Это угрепа даже" (1969s) в середине технической дискуссии.
+        Марина не была гостем этого эпизода.
+        Скорее всего это ошибочно распознанная реплика Gimlis или другого спикера.
+
+      identified_as: null  # требует voice comparison
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gimlis"
+          confidence: 0.6
+          reason: "Gimlis активно участвовал в обсуждении в это время"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1969.58
+          etime: 1970.78
+          text: "Это угрепа даже."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys имеет только 10 реплик (44 сек), первая в 2286s.
+        Не был представлен в начале эпизода как участник.
+        Возможно ошибка распознавания или позднее подключение?
+        Требует voice comparison.
+
+    - speaker: "EldarMurtazin"
+      issue: |
+        КРИТИЧЕСКАЯ ОШИБКА: EldarMurtazin не был гостем эпизода 433.
+        Согласно финальным словам ведущего, гости — только "Гимлис и Артём".
+        Все реплики EldarMurtazin должны быть переатрибутированы на Gimlis.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 433
+    from_speaker: "EldarMurtazin"
+    to_speaker: "Gimlis"
+    confidence: high
+    reason: |
+      EldarMurtazin не был представлен как гость.
+      В финале эпизода перечислены только "Гимлис и Артём".
+      Реплики EldarMurtazin идут вперемешку с SPEAKER_03 (Gimlis) как единый диалог.
+
+  - type: rename
+    episode: 433
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Gimlis"
+    confidence: high
+    reason: |
+      SPEAKER_03 представлен как Gimlis в начале эпизода (32s).
+      Обращение "Гиммлес" и упоминание работы в Яндексе.
+
+  - type: rename
+    episode: 433
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Artem_Go"
+    confidence: high
+    reason: |
+      SPEAKER_04 представился: "Я Артем, пишу на Go и занимаюсь аутсорсингом" (1297s).
+      Нужно добавить в people.yaml как отдельного гостя.
+
+  - type: delete
+    episode: 433
+    from_speaker: "SPEAKER_05"
+    confidence: high
+    reason: |
+      Только короткие "Угу" — артефакты распознавания.
+      Удалить или слить с ближайшим спикером.
+
+# Задачи для follow-up
+follow_up_tasks:
+  - task: "Добавить Artem_Go в people.yaml"
+    priority: medium
+    details: |
+      id: "artem_go"
+      canonical_name: "Artem_Go"
+      real_name: "Артём"
+      info: "Go-разработчик, аутсорсинг, выпуск 433"
+
+  - task: "Voice comparison для Alek.sys"
+    priority: low
+    details: |
+      Проверить, действительно ли Alek.sys участвовал в эпизоде 433
+      или это ошибка распознавания.
+      Сегмент для проверки: 2286-2330s (первые реплики)
+
+  - task: "Проверить другие эпизоды с EldarMurtazin >60s"
+    priority: high
+    details: |
+      Если EldarMurtazin ошибочно размечен в 433, возможно есть и другие
+      эпизоды с аналогичной проблемой. Проверить эпизоды, где EldarMurtazin
+      имеет >60 сек речи, но не представлялся как гость.

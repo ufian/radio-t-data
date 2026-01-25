@@ -1,0 +1,101 @@
+episode: 480
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 5335  # ~89 минут (Umputun: 2241 + Bobuk: 1829 + Ksenks: 687 + Gray: 563 + Alek.sys: 15)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это осмысленная реплика про AWS WorkMail, не ошибка распознавания
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплика 'А, кстати, видели, что у них появился еще WorkMail?' в контексте обсуждения AWS (1209s). Имя спикера указывает на ранее отменённое присвоение Эльдару Муртазину."
+
+      possible_matches:
+        - person_id: "Gray"
+          confidence: 0.5
+          reason: "Gray отвечает сразу после этой реплики ('Запустился для всех'), возможно это его реплика, ошибочно отделённая"
+        - person_id: "Ksenks"
+          confidence: 0.3
+          reason: "Ksenks присутствует в выпуске, могла задать вопрос"
+        - person_id: "Alek.sys"
+          confidence: 0.2
+          reason: "Alek.sys тоже присутствует, но его первая размеченная реплика в 1456s"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1209.71
+          etime: 1212.45
+          text: "А, кстати, видели, что у них появился еще WorkMail?"
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Типичные короткие слова-реакции ('Да.', 'Да, да.') длительностью менее 1 секунды каждая. Разбросаны по разным частям эпизода (715s и 3148s). Скорее всего ошибка сегментации речи одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплика 1 (715s): "Да." — ответ на вопрос Umputun, сразу после которого идёт "советы от Ксюши" — вероятно это Ksenks.
+        Реплика 2 (3148s): "Да, да." — в контексте шутки про птичку, мог быть любой из ведущих.
+
+      possible_matches:
+        - person_id: "Ksenks"
+          confidence: 0.6
+          reason: "Первая реплика в контексте обсуждения 'советов от Ксюши про пароли'"
+        - person_id: "Gray"
+          confidence: 0.3
+          reason: "Мог подтверждать сказанное"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (15s) Umputun говорит: "Зато состав полный" и "Даже представлять не буду".
+    Bobuk добавляет (32s): "Сегодня у нас заняты все четыре дорожки" — подтверждает 4 ведущих.
+    Присутствуют: Umputun, Bobuk, Ksenks (первая реплика 48s), Gray (первая реплика 92s).
+    Alek.sys появляется поздно (1456s) с очень малым количеством реплик (8 штук, 15 сек).
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Всего 8 реплик (15 сек) за весь эпизод, первая в 1456s (24 минуты).
+        При этом в начале говорят о "полном составе" и "4 дорожках".
+        Возможно Alek.sys подключился позже или его реплики частично атрибутированы другим спикерам.
+        НО: это не критическая проблема, т.к. основные ведущие размечены корректно.
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Одна осмысленная реплика про AWS WorkMail. Имя указывает что ранее была попытка
+        приписать её Эльдару Муртазину (известный гость подкаста), но это было отменено.
+        Требуется voice comparison для определения кто это сказал.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 480
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Короткие реакции 'Да', контекст первой реплики указывает на Ksenks (обсуждение 'советов от Ксюши')"

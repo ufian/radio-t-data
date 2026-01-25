@@ -1,0 +1,175 @@
+episode: 463
+date: "2015-09-26"
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  total_duration_sec: 5994  # ~100 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered  # реплики разбросаны: 1139s, 1169s, 4635s
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие односложные реплики ("Это правда", "Миллиард", "Нет, я здесь")
+        разбросаны по эпизоду. Вероятнее всего это ошибки распознавания
+        голосов основных ведущих. Реплика в 4635s ("Нет, я здесь") скорее
+        всего принадлежит Ksenks - Gray спрашивает "Господи, я думал, она
+        куда-то ушла тоже", и сразу идёт этот ответ от "SPEAKER_05".
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: >
+            Реплика "Нет, я здесь" (4635s) явно ответ на вопрос Gray о том,
+            что "она" куда-то ушла. Женский род указывает на Ksenks.
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: >
+            Реплика "Миллиард" (1169s) следует за обсуждением Bobuk о
+            количестве людей, может быть его уточнение.
+
+      voice_task:
+        needed: false
+        # Слишком короткие реплики для voice comparison
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 7
+    replies_count: 3
+    pattern: scattered  # 2595s, 2878s, 3597s
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Это спикер, который ранее был ошибочно атрибутирован как Эльдар
+        Муртазин (SPEAKER_MISATTRIBUTED). В эпизоде 463 Эльдара нет -
+        в начале Umputun объявляет "полный состав, классический, канонический".
+        Реплики осмысленные технические вопросы, но короткие и разбросаны.
+        Скорее всего это ошибочно распознанные реплики одного из ведущих.
+
+      identified_as: null
+      identification_method: "context"
+      confidence: low
+      evidence: >
+        Реплики: "То есть только ошибки компилятора, да?" (2595s),
+        "То есть сейчас оно на Java написано, что ли?" (2878s),
+        "Вот, короче, из-за таких, как ты, все так и получилось." (3597s).
+        Все три - короткие вопросы/комментарии между репликами основных ведущих.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: >
+            Gray в этом эпизоде говорит меньше других (171 реплика vs 513 у Bobuk),
+            при этом технические вопросы характерны для него.
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: >
+            Вопросительный стиль похож на манеру Ksenks, которая часто
+            переспрашивает и уточняет.
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: >
+            Bobuk иногда задаёт уточняющие вопросы в таком стиле.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2877.71
+          etime: 2880.37
+          text: "То есть сейчас оно на Java написано, что ли?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: single  # одна реплика в 5497s
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика "В чатике написано «Боба купался шлипкой»" -
+        типичное чтение из чата, которое делают все ведущие. Марины (Marin_k_a)
+        в этом эпизоде нет - состав объявлен в начале. Ранее было ошибочно
+        атрибутировано как Марина и затем отменено (SPEAKER_MISATTRIBUTED).
+        Скорее всего это реплика Ksenks или Gray, которые часто зачитывают чат.
+
+      identified_as: null
+      identification_method: "context"
+      confidence: low
+      evidence: >
+        Реплика следует сразу за Gray ("Я, в общем, с ними согласен.")
+        и предшествует Umputun. Кто-то из ведущих читает чат.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: >
+            Ksenks часто читает сообщения из чата. Голос мог быть
+            неправильно распознан.
+        - person_id: "gray"
+          confidence: 0.3
+          reason: >
+            Gray только что говорил, возможно продолжил с чтением из чата.
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: >
+            Реплика о "Боба" - может быть самоироничное чтение Bobuk.
+
+      voice_task:
+        needed: false
+        # Слишком короткая реплика (2 сек) для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    Umputun в начале объявляет "полный состав, классический, канонический",
+    упоминает Ksenks ("Это была Ксюша мужским почему-то голосом") и Bobuk
+    (из Швейцарии). Gray появляется с первой репликой в 66s. Alek.sys
+    появляется поздно (1563s), но это нормально - у него всего 8 коротких
+    реплик, что типично для менее активного участия.
+
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Всего 8 реплик суммарной длительностью 15 сек - очень мало для
+        заявленного "полного состава". Возможно часть его реплик
+        атрибутирована как SPEAKER_MISATTRIBUTED_ELDAR или другие.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 463
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    stime: 4635.23
+    etime: 4636.35
+    confidence: medium
+    reason: >
+      Реплика "Нет, я здесь" - ответ на вопрос Gray "я думал, она куда-то
+      ушла тоже". Женский род "она" указывает на Ksenks.
+
+# Итоговые рекомендации
+recommendations:
+  - >
+    Требуется voice comparison для SPEAKER_MISATTRIBUTED_ELDAR (сегмент 2877-2880s)
+    для определения истинного спикера.
+  - >
+    Рекомендуется переименовать SPEAKER_05 реплику в 4635s в Ksenks
+    (высокая контекстуальная уверенность).
+  - >
+    Остальные SPEAKER_05 и SPEAKER_MISATTRIBUTED реплики слишком короткие
+    для надёжной идентификации - можно оставить как есть или объединить
+    в общего "Unknown".

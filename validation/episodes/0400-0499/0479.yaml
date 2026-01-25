@@ -1,0 +1,208 @@
+episode: 479
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 5892
+  notes: "Bobuk присоединился позже (первая реплика в 227s), Alek.sys минимальное участие (29 реплик, 73 сек)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 154
+    replies_count: 30
+    first_appearance_sec: 669
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "669.3s: 'Здравствуйте, меня зовут Артем.' Гость представился сам в начале своего звонка."
+
+      guest_name: "Артём"
+      context: "Слушатель позвонил, чтобы рассказать о бесплатных групповых видеозвонках в Skype для корпоративной связи"
+
+      possible_matches:
+        - person_id: "artem_rosnovsky"
+          confidence: 0.2
+          reason: "Имя совпадает, но контекст не указывает на Росновского (тот был гостем в ранних выпусках)"
+
+      voice_task:
+        needed: true
+        reason: "Имя Артём известно, но фамилия не указана. Нужно проверить, появлялся ли этот гость в других выпусках."
+        reference_segment:
+          stime: 713.03
+          etime: 721.62
+          text: "Нет, это у нас, скажем так, мы это проверяли на тех сотрудниках, у которых зарплаты жалко будет выделять на платную подписку Skype."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 103
+    replies_count: 16
+    first_appearance_sec: 2194
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "2184.8s (Umputun): 'к нам Иван присоединился, говорит, у меня есть что сказать на эту тему, Иван, что ты можешь сказать?'"
+
+      guest_name: "Иван"
+      context: "Аспирант из г. Обнинск (ИАТЭ), позвонил для обсуждения темы о лицензиях и копировании кода из Stack Overflow"
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reason: "Имя Иван известно, фамилия не указана. Гость упомянул, что он аспирант в ИАТЭ (Обнинск)."
+        reference_segment:
+          stime: 2213.47
+          etime: 2232.95
+          text: "И лабораторки по разным предметам, в том числе по функциональному программированию, где требуется написать хотя бы одну функцию, и приносят буквально скопированную полностью со стек-эверфлоу, не поменяв ни названия, ничего, никакой творческой переработки не сделав над этим."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 34
+    replies_count: 6
+    first_appearance_sec: 685
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Это не Эльдар Муртазин. Реплики находятся в контексте разговора между ведущими. Судя по контексту и стилю, это скорее всего Bobuk."
+
+      identified_as: "bobuk"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Все 6 реплик вписываются в контекст диалога между ведущими:
+        - 685s: продолжение темы Skype (после реплики SPEAKER_02/Артёма)
+        - 906s: комментарий про Ксюшу (после реплики Umputun про Ксюшу)
+        - 1876s: про гражданскую оборону (перед репликой Bobuk на ту же тему)
+        - 5151s: про спортивные залы (перед репликой Bobuk про тот же пример)
+        - 6408s: короткий комментарий в обсуждении
+        - 6635s: "Суперпоходный выпуск" - финальный комментарий
+
+      voice_task:
+        needed: true
+        reason: "Нужно подтвердить, что это Bobuk, а не другой ведущий"
+        reference_segment:
+          stime: 5151.01
+          etime: 5157.56
+          text: "Это похоже на схемы, которые используются при расчете стоимости спортивных залов."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 5
+    replies_count: 1
+    first_appearance_sec: 2407
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Это не Пётр Диденко. Одиночная реплика в середине диалога с Иваном (SPEAKER_06). По контексту это комментарий одного из ведущих."
+
+      identified_as: "bobuk"
+      identification_method: "context"
+      confidence: low
+      evidence: |
+        2406.7s: "То есть, ну, законы лицензии... Намерения твои прямо хороши."
+        Реплика звучит как реакция ведущего на рассказ Ивана о лицензиях.
+        Сразу после этого Umputun продолжает обсуждение.
+
+      voice_task:
+        needed: true
+        reason: "Короткая реплика, сложно определить спикера. Нужно сравнение голоса."
+        reference_segment:
+          stime: 2406.73
+          etime: 2411.61
+          text: "То есть, ну, законы лицензии... Намерения твои прямо хороши."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 0
+    replies_count: 1
+    first_appearance_sec: 5904
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Артефакт распознавания. Одиночная реплика длительностью 0.34 сек с текстом 'Полин.' - бессмысленный фрагмент."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "5903.5s-5903.9s: 'Полин.' - длительность 0.34 сек, текст не имеет смысла в контексте"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткий фрагмент для анализа"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Малое участие (29 реплик, 73 сек) без явного представления в начале выпуска. Возможно, присоединился позже."
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Ошибочная метка. Эльдар Муртазин не участвовал в этом выпуске. Реплики принадлежат одному из ведущих (вероятно Bobuk)."
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Ошибочная метка. Пётр Диденко не участвовал в этом выпуске."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 479
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Artem_479"
+    confidence: high
+    reason: "Гость представился: 'Здравствуйте, меня зовут Артем' (669s)"
+
+  - type: rename
+    episode: 479
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ivan_479"
+    confidence: high
+    reason: "Ведущий представил: 'к нам Иван присоединился' (2184s). Аспирант из Обнинска (ИАТЭ)."
+
+  - type: rename
+    episode: 479
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Все реплики вписываются в контекст разговора ведущих. Эльдар Муртазин не участвовал в выпуске. Требуется voice comparison для подтверждения."
+
+  - type: rename
+    episode: 479
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Bobuk"
+    confidence: low
+    reason: "Одиночная реплика в контексте диалога с гостем. Пётр Диденко не участвовал. Требуется voice comparison."
+
+  - type: delete
+    episode: 479
+    speaker: "SPEAKER_01"
+    confidence: high
+    reason: "Артефакт распознавания: 0.34 сек, бессмысленный текст 'Полин.'"
+
+# Примечания для ручной проверки
+notes: |
+  1. В эпизоде два идентифицированных гостя-звонящих:
+     - Артём (SPEAKER_02): звонил обсудить Skype, ~154 сек речи
+     - Иван (SPEAKER_06): аспирант из ИАТЭ (Обнинск), звонил про лицензии, ~103 сек речи
+
+  2. SPEAKER_MISATTRIBUTED_ELDAR и SPEAKER_MISATTRIBUTED_PETR - ошибочные метки.
+     Эти спикеры помечены как "misattributed", что означает, что система ранее
+     ошибочно присвоила им имена Эльдара и Петра. По контексту, это реплики
+     кого-то из ведущих (скорее всего Bobuk).
+
+  3. Bobuk упоминается как находящийся в аэропорту (Лос-Анджелес) в начале выпуска.
+     Это может объяснять проблемы с распознаванием его голоса из-за качества связи.
+
+  4. Метаданные эпизода (479_desc.json) отсутствуют в репозитории.

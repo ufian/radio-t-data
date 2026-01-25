@@ -1,0 +1,255 @@
+episode: 402
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk]
+  # Примечание: Ksenks отсутствует как отдельный спикер, но ведущие обращаются к "Ксюше"
+  # SPEAKER_05 вероятно Ksenks, Marin_k_a может быть ошибочной разметкой
+  total_duration_sec: 6428  # примерная оценка
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 512
+    replies_count: 163
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Gray (248s): "Ну, Ксюш, как ты можешь поздравить сисадминов?"
+        SPEAKER_05 (251s): "Я вот и не знаю."
+
+        Также SPEAKER_05 в начале эпизода (46s) говорит как ведущая:
+        "Все постоянные несменные, кроме, как обычно, гуляющего Бобука, сегодня с нами."
+
+        163 реплики, 512 сек - это типичный объём для соведущего.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 271
+    replies_count: 43
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # КРИТИЧЕСКИЙ ВОПРОС: В people.yaml Marin_k_a = Марина (бывшая ведущая)
+      # Но в этом эпизоде Umputun говорит про "Ксюшу", а Marin_k_a отвечает "меня"
+      # Возможны два объяснения:
+      # 1. В 2014 году Marin_k_a использовался как ник для Ксюши
+      # 2. Это ошибка разметки
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Umputun (12s): "Не знаю, можно ли Ксюшу вот так назвать костяком, это шовинистически."
+        Marin_k_a (17s): "Нет, это вообще просто оскорбительно, что меня нельзя назвать Костяком..."
+
+        Это указывает на то, что Marin_k_a может быть Ксюшей, НО:
+        - В диалоге 248-268s SPEAKER_05 отвечает на обращение "Ксюш"
+        - А Marin_k_a говорит отдельно (264s) про Свана
+
+        Нужна ручная верификация: Marin_k_a - это Ksenks или Марина?
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Отвечает на обращение к 'Ксюше' в начале, но SPEAKER_05 тоже отвечает на 'Ксюш'"
+        - person_id: "marin_k_a"
+          confidence: 0.4
+          reason: "Согласно people.yaml это Марина, возможно обе девушки в эпизоде"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 431.27
+          etime: 448.10
+          text: "А мне просто кажется, что ты сам, извини, я сейчас это скажу, сам выполняешь часть обязанностей с админа. То есть некоторые вещи... Вот представь, все, что ты делаешь, все, что ты рассказываешь, что ты делаешь по конфигурации всех этих систем, это работа программиста."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 229
+    replies_count: 64
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ruslan_guest"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        SPEAKER_01 (2199s): "Я Руслан, уже неоднократный ваш сторонний гость."
+        SPEAKER_01 (2208s): "Я работаю в компании, которая является телекомом."
+
+        Позже ведущие обращаются к нему по имени:
+        Umputun (2840s): "Руслан, а ты сам из тех, кто спрятался за дверь?"
+        Umputun (3083s): "Руслан, ты меня не убедил."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 188
+    replies_count: 33
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Уже идентифицирован в разметке как EldarMurtazin
+      # Проверка консистентности: говорит компетентно про финансы компаний
+      identified_as: "eldar_murtazin"
+      identification_method: "pre-identified"
+      confidence: high
+      evidence: |
+        Уже размечен как EldarMurtazin в транскрипте.
+        Эльдар Муртазин - известный мобильный аналитик, регулярный гость.
+        Контент соответствует его экспертизе:
+        EldarMurtazin (1957s): "Объявили убыток про 27 центов на акцию..."
+        EldarMurtazin (2067s): "Короче, вообще говоря, Amazon не суперприбыльная компания..."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три короткие реплики в разных местах эпизода:
+        1559s: "Кобыли хвост." (после обращения Umputun к Ксюше про поговорки)
+        1732s: "Да, это доход." (подтверждение слов Gray)
+        3754s: "Они же приложение предоставляют."
+
+        Скорее всего это ошибки атрибуции коротких фраз одного из ведущих.
+        Первая реплика - ответ на просьбу Umputun к Ксюше сказать поговорку,
+        поэтому вероятнее всего это реплика SPEAKER_05 (Ksenks).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Первая реплика - ответ на обращение Umputun к Ксюше"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Вторая реплика подтверждает слова Gray, могла быть его эхо"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        # Слишком короткие фразы для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: |
+        Не представлен явно, но идентифицируется по обращениям ведущих к "Ксюше".
+        Должен быть переименован в Ksenks.
+
+    - speaker: "Marin_k_a"
+      issue: |
+        КРИТИЧЕСКАЯ ПРОБЛЕМА: Umputun обращается к "Ксюше", но отвечает Marin_k_a.
+        Согласно people.yaml, Marin_k_a = Марина (не Ксюша).
+        Но в начале эпизода Marin_k_a говорит "меня нельзя назвать Костяком" в ответ на
+        реплику Umputun про Ксюшу.
+
+        Возможные объяснения:
+        1. В 2014 году (ep 402) Marin_k_a был никнеймом Ксюши
+        2. Обе девушки присутствуют (и Марина, и Ксюша = SPEAKER_05)
+        3. Ошибка в атрибуции
+
+        Требуется историческое исследование или voice comparison.
+
+    - speaker: "SPEAKER_01"
+      issue: |
+        Руслан представился сам, но в people.yaml его нет.
+        Нужно добавить в справочник как постоянного гостя.
+
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk появляется в 142s ("Ты сейчас Ксюше это сказал"), но Umputun в начале говорит
+        "Бобук сегодня пошел в аэропорт" и что его нет. Возможно:
+        1. Bobuk подключился позже
+        2. Ошибка атрибуции (только 15 реплик, 70 сек)
+        Требует проверки - Bobuk реально присутствовал или это ошибки распознавания.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 402
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Gray обращается к SPEAKER_05 как "Ксюш", SPEAKER_05 отвечает.
+      163 реплики, 512 сек - типичный объём для соведущего.
+
+  - type: rename
+    episode: 402
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ruslan"
+    confidence: high
+    reason: |
+      Самопредставление: "Я Руслан, уже неоднократный ваш сторонний гость"
+
+  - type: merge_into
+    episode: 402
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Первая реплика SPEAKER_04 - ответ на обращение Umputun к Ксюше.
+      Остальные реплики слишком короткие для надёжной атрибуции.
+
+# Требуется дополнительное исследование
+additional_research_needed:
+  - question: "Кто такая Marin_k_a в эпизоде 402?"
+    context: |
+      В people.yaml Marin_k_a = Марина (бывшая ведущая).
+      Но в ep 402 ведущие обращаются к "Ксюше", а Marin_k_a отвечает как будто это она.
+      Нужно проверить:
+      1. Историю участия Марины и Ксюши в 2014 году
+      2. Когда Ksenks впервые появилась в подкасте
+      3. Voice comparison между Marin_k_a (ep 402) и Ksenks (более поздние эпизоды)
+
+  - question: "Руслан - постоянный гость?"
+    context: |
+      Сам говорит "уже неоднократный ваш сторонний гость".
+      Нужно проверить его участие в других эпизодах и добавить в people.yaml.
+
+  - question: "Bobuk реально присутствовал?"
+    context: |
+      Umputun говорит что Бобука нет (в аэропорту).
+      Но есть 15 реплик Bobuk с 142s.
+      Возможно подключился позже или ошибки атрибуции.

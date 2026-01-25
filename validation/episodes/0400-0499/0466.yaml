@@ -1,0 +1,135 @@
+episode: 466
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  total_duration_sec: 7562
+  notes: "Gray отсутствует (упомянут как 'выбывший'). Выпуск в день рождения Ksenks."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 705
+    replies_count: 174
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "petr_didenko"
+          confidence: 0.3
+          reason: "Технический бэкграунд (DevOps, Red Hat, Ansible, Kubernetes), но нет прямого подтверждения"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4047.8
+          etime: 4070.3
+          text: "То есть ты хочешь сказать, что вот люди, которые сейчас во времена Gmail всяких аутлуков, они пойдут, отдадут всю свою почту вот этому Ниласу, который скачает, засинхронизирует и потом поставит себе еще какой-то клиент, который будет с их серваков качать эту почту."
+        alternative_segments:
+          - stime: 1786.2
+            etime: 1801.6
+            text: "Но, тем не менее, в наше интернет ворвалась на этой неделе новость о том, что Red Hat купил такую компанию, как Ansible..."
+          - stime: 2287.4
+            etime: 2302.5
+            text: "Кстати, не знаю, но, по крайней мере, из твоих подкастов сложилось впечатление, что ты прям был так доволен Red Hat..."
+        notes: "Говорит 'Я давно слушаю Радио-Т' (5198.5s) - скорее всего гость, не постоянный ведущий. Технический бэкграунд: DevOps, серверная инфраструктура, Red Hat, Ansible, Kubernetes, Chef, Puppet."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 15
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка атрибуции - реплики принадлежат Ksenks. Контекст: день рождения Ksenks, женский род ('Я сегодня выходная'), речь об иммунитете от ругания."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Реплики 61-70s: 'Я сегодня выходная', 'У меня вообще иммунитет' - в контексте поздравления Ksenks с днём рождения (Bobuk 71.1s: 'начинайте поздравлять Ксюшу')"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 12
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка атрибуции - реплики принадлежат Ksenks. Женский род ('вспомнила'), одна реплика (535.5s) идёт сразу после передачи слова Ксюше."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Реплика 535.5s об iMac'ах идёт сразу после 'Передам слово Ксюше' (528.2s). Реплика 2447.7s: 'я только сейчас вспомнила' - женский род."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткая реплика 'Ну, ты что?' (1 сек) между двумя репликами Bobuk. Скорее всего ошибка распознавания, не Эльдар Муртазин."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Контекст (3231-3238s): обсуждение Google Docs. Эльдар не участвовал в этом выпуске."
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Реплика между репликами Bobuk, может быть его"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Короткая реакция, мог быть любой из ведущих"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        notes: "Слишком короткая реплика для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_02"
+      issue: "Гость не представлен явно в начале подкаста. Говорит ~705 сек о технических темах. Нужна идентификация."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 466
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Реплики в контексте дня рождения Ksenks, женский род, подтверждено контекстом"
+
+  - type: rename
+    episode: 466
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Передача слова Ксюше предшествует реплике, женский род в речи"

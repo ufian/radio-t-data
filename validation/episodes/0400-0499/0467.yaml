@@ -1,0 +1,167 @@
+episode: 467
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  total_duration_sec: 7480
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 541
+    replies_count: 153
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Гость представился в начале
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        936s: "Всем привет. Меня зовут Сергей. Я из Харькова."
+        Umputun представил его как гостя: "Гость, представьте, ты кто?"
+        Гость написал письмо и был приглашён для дискуссии.
+
+      possible_matches:
+        - person_id: "sergey_kharkov_467"
+          confidence: 0.95
+          reason: "Явное представление: 'Меня зовут Сергей. Я из Харькова.' Экспертиза: облачные технологии, Docker, VPC, Amazon, Google Cloud."
+
+      # Задание на создание нового гостя в people.yaml
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 2529.27
+          etime: 2589.25
+          text: "Непрерывная речь про VPC, Docker, облачные технологии"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-2 сек каждая) в случайных местах между репликами ведущих. Типичные фразы-ошибки: 'Почему два раза в зиму?', 'Ты тоже джентльмен, что ли?', 'Сейчас попробую', 'В чате?', 'А, понятно'."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 12
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики, ошибочно приписанные Marin. Контекстный анализ показывает:
+        - 437s: "Хорошая новость, все рады" — между Ksenks и Umputun, вероятно Ksenks или другой ведущий
+        - 2794s: "Но не все знают, что это такое" — контекст про французский маникюр, обращение к Ksenks
+        - 3265s: "Конечно, я люблю пешком ходить" — ответ на вопрос Umputun к Ксюше
+        - 4311s: "Нет, я не пишу на Go" — контекст показывает, что это Ksenks (Umputun далее говорит "Ты ведь пропустила Java" — женский род)
+        - 6261s: "Скажите еще раз" — короткая реплика в дискуссии
+        - 6367s: "Больше ничего интересного" — короткая реплика
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Большинство реплик в контексте обращения к Ksenks или типичны для её манеры речи"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4311.44
+          etime: 4313.0
+          text: "Нет, я не пишу на Go."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 9
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики, ошибочно приписанные PetrDidenko:
+        - 1062s: "Ты имеешь в виду Амазон?" — короткий уточняющий вопрос
+        - 1121s: "Не-не-не, не эта компания" — между репликами SPEAKER_03 и Umputun
+        - 2033s: "Да почему получают?" — между Bobuk и Umputun
+        - 4689s: "Подожди, это определяет рекламодатель, а не канал?" — между Bobuk и Umputun
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Реплики часто следуют за репликами Bobuk, возможно неправильная сегментация его речи"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть фрагментами речи Umputun"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4689.31
+          etime: 4693.53
+          text: "Подожди, это определяет рекламодатель, а не канал?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: "Гость идентифицирован как 'Сергей из Харькова', но не найден в people.yaml. Требуется добавить нового гостя."
+    - speaker: "Alek.sys"
+      issue: "Очень мало реплик (7 за весь выпуск, ~10 сек), но это может быть нормально — он иногда молчалив."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: add_guest
+    episode: 467
+    new_entry:
+      id: "sergey_kharkov"
+      canonical_name: "SergeyKharkov"
+      real_name: "Сергей"
+      info: "Гость выпуска 467, из Харькова, специалист по облачным технологиям"
+    confidence: high
+    reason: "Явное представление в эфире: 'Меня зовут Сергей. Я из Харькова.'"
+
+  - type: rename
+    episode: 467
+    from_speaker: "SPEAKER_03"
+    to_speaker: "SergeyKharkov"
+    confidence: high
+    reason: "Гость представился: 'Меня зовут Сергей. Я из Харькова.' 153 реплики, 541 сек — реальный гость."
+
+  - type: investigate
+    episode: 467
+    speakers: ["SPEAKER_01", "SPEAKER_MISATTRIBUTED_MARIN", "SPEAKER_MISATTRIBUTED_PETR"]
+    confidence: medium
+    reason: |
+      Все три спикера — короткие ошибочные реплики (всего 15 реплик, 27 сек суммарно).
+      Рекомендуется voice comparison для точной атрибуции, но можно рассмотреть:
+      - SPEAKER_01: удалить или пометить как ошибки
+      - SPEAKER_MISATTRIBUTED_MARIN: вероятно Ksenks
+      - SPEAKER_MISATTRIBUTED_PETR: вероятно Bobuk или Umputun

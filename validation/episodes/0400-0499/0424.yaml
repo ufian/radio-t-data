@@ -1,0 +1,225 @@
+episode: 424
+status: needs_review
+analyzed_at: "2026-01-25"
+reanalyzed_at: "2026-01-25"
+validation_pass: 2  # второй проход с подтверждением доказательств
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  hosts_questionable: [Alek.sys]  # требует подтверждения
+  total_duration_sec: 9863  # приблизительно 2.7 часа
+  notes: |
+    Эпизод 424 от 27 декабря 2014 года - последний выпуск года.
+    В начале представлены: Umputun, Bobuk, Gray (упомянут как "Грэм"), Ksenks (Ксюша).
+    Alek.sys НЕ упомянут в начале, но есть 4 реплики - требует верификации.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 31
+    replies_count: 8
+    pattern: scattered  # реплики разбросаны: 1771s, 3750s, 4345s, 4901s, 6115s, 7045s, 8411s
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это ошибочно присвоенные реплики - скорее всего принадлежат одному из ведущих.
+        Имя "SPEAKER_MISATTRIBUTED_ELDAR" указывает на предыдущую неудачную попытку
+        идентифицировать спикера как Эльдара Муртазина, которая была отменена.
+
+        Анализ контекста:
+        - Реплики короткие (2-7 сек), разбросаны по всему эпизоду
+        - Нет представления гостя Эльдара в эпизоде
+        - В одной реплике (7045s) спикер упоминает "Алекс Мак" и просит "дать Ксюше сказать",
+          что характерно для ведущего (модератора разговора)
+        - Контекст реплик органично вписывается в диалоги ведущих о технологиях
+
+        Вероятнее всего это ошибки распознавания Bobuk или Gray.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: |
+            КЛЮЧЕВОЕ ДОКАЗАТЕЛЬСТВО: В 4353s Bobuk говорит "собственно говоря, Сережа"
+            сразу после реплики SPEAKER_MISATTRIBUTED_ELDAR в 4345s.
+            Gray = Сергей Петренко. Это прямое указание на спикера.
+            Реплики о технических темах (BlackBerry, NoSQL) также характерны для Gray.
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: |
+            Реплика в 7045s "Подожди, подожди, дай Ксюша сказать" -
+            типичное модерирование от Umputun. Возможно несколько реплик от разных спикеров.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1771.1
+          etime: 1776.88
+          text: "Сейчас уже сложно сказать, но, в общем, ну, когда-то у них 30% смартфонов было."
+        additional_segments:
+          - stime: 4345.31
+            etime: 4352.57
+            text: "На самом деле спонсор это хороший разработчик, кстати, тоже украинский."
+          - stime: 7044.78
+            etime: 7047.64
+            text: "Вот тут Алекс Мак написал... Подожди, подожди, дай Ксюша сказать."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered  # две реплики: 4867s и 9861s
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две очень короткие реплики (1.5 сек каждая), разбросанные по эпизоду.
+        Это типичные ошибки распознавания - реплики-отклики в разговоре.
+
+        Анализ контекста:
+        - 4867s: "Это, по-моему, не таргетировано Америкой." - продолжение диалога о продукте
+        - 9861s: "Я имею в виду, каникулы разрываются." - уточнение в контексте обсуждения праздников
+
+        Обе реплики звучат как комментарии ведущих, а не отдельного гостя.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: |
+            Вторая реплика (9861s) идёт между репликами Gray и продолжает его мысль.
+            Возможно это Gray, которого распознаватель неправильно отметил.
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: |
+            Первая реплика (4867s) вписывается в контекст обсуждения Ksenks о продукте.
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: null
+          etime: null
+          text: null
+        reason: "Реплики слишком короткие (по 1.5 сек) для надёжного voice comparison"
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered  # реплики: 5352s, 5713s, 8034s, 9853s
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alek_sys"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Alek.sys - известный ведущий, но его присутствие в этом эпизоде минимально.
+        Все 4 реплики очень короткие (0.5-4 сек), типичные комментарии-отклики:
+        - "Вот и все." (0.4 сек)
+        - "Ужас-ужас." (0.5 сек)
+        - "Ну, типа того." (0.7 сек)
+        - "А, нет, в России 10 дней, по-моему, каникул." (4 сек)
+
+        Это может быть как реальный Alek.sys, минимально участвующий в эпизоде,
+        так и ошибочная атрибуция коротких реплик других ведущих.
+
+        Статистика указывает 5352s как первую реплику - это поздно для ведущего.
+        Ведущий обычно представляется в начале.
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 9852.65
+          etime: 9856.65
+          text: "А, нет, в России 10 дней, по-моему, каникул."
+        reason: "Самая длинная реплика Alek.sys в эпизоде - нужно подтвердить идентификацию"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys не представлен явно в начале эпизода. В начале Umputun упоминает
+        "7 или 8 человек в эфирчике" и говорит "Ксюша еще пришла", но не упоминает Alek.sys.
+        При этом Alek.sys в статистике показан как присутствующий (4 реплики).
+        Это может быть:
+        1. Alek.sys действительно был, но не был представлен
+        2. Ошибки распознавания, неверно помеченные как Alek.sys
+
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Спикер помечен как "MISATTRIBUTED" (ошибочно присвоен), но реплики остались.
+        Необходимо определить кому они принадлежат и переназначить или удалить.
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules:
+  - type: rename
+    episode: 424
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: high
+    reason: |
+      В 4353s Bobuk напрямую обращается "Сережа" к спикеру предыдущей реплики (4345s).
+      Gray = Сергей Петренко. Это прямое текстовое доказательство.
+      Рекомендуется переименовать все 8 реплик в Gray.
+      Исключение: реплика в 7045s "дай Ксюша сказать" может быть Umputun (модерирование).
+
+  - type: delete_or_merge
+    episode: 424
+    speaker: "SPEAKER_05"
+    action: "manual_review"
+    confidence: low
+    reason: |
+      Две короткие реплики SPEAKER_05 - скорее всего ошибки распознавания.
+      Нужно прослушать и определить: удалить (если артефакт) или
+      объединить с правильным спикером (если реальная речь).
+
+  - type: verify
+    episode: 424
+    speaker: "Alek.sys"
+    action: "voice_comparison"
+    confidence: medium
+    reason: |
+      Присутствие Alek.sys в эпизоде под вопросом - он не представлен в начале,
+      а реплики очень короткие. Нужно подтвердить voice comparison.
+
+# Аудио для voice comparison
+audio_reference:
+  url_pattern: "https://cdn.radio-t.com/rt_podcast{episode}.mp3"
+  episode: 424
+  segments_to_check:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      likely_speaker: "Gray"
+      evidence: "Bobuk называет 'Сережа' в 4353s"
+      segments:
+        - {stime: 1771.1, etime: 1776.88, duration: 5.78}
+        - {stime: 4345.31, etime: 4352.57, duration: 7.26}
+        - {stime: 7044.78, etime: 7047.64, duration: 2.86, note: "может быть Umputun - модерирование"}
+    - speaker: "Alek.sys"
+      likely_speaker: "unknown"
+      evidence: "Не представлен в начале, требует верификации"
+      segments:
+        - {stime: 9852.65, etime: 9856.65, duration: 4.0}
+
+# Дополнительные заметки
+notes: |
+  Важное открытие при анализе: SPEAKER_MISATTRIBUTED_ELDAR с высокой вероятностью - Gray.
+  Доказательство: в 4353s Bobuk обращается "Сережа" сразу после реплики SPEAKER_MISATTRIBUTED_ELDAR.
+  Gray (Сергей Петренко) - это единственный "Сережа" среди ведущих.
+
+  Гостей в этом эпизоде нет - это обычный выпуск с основными ведущими.
+  Alek.sys под вопросом - очень мало реплик и не представлен в начале.

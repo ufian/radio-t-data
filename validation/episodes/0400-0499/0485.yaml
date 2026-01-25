@@ -1,0 +1,148 @@
+episode: 485
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  total_duration_sec: 6911
+  notes: >
+    Umputun объявил "состав полный" в начале выпуска.
+    Alek.sys говорил мало (14 реплик, 19 сек) — это его обычный стиль участия в этом периоде.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткая реплика (2 сек) "Ой, они, кстати, сейчас инвайты открыли" в контексте
+        обсуждения альфа-версии. Эльдара Муртазина в этом выпуске нет по статистике ведущих.
+        Имя "MISATTRIBUTED" указывает, что это ранее ошибочно приписанная реплика.
+        Вероятно, это реплика одного из ведущих (скорее всего Ksenks или Gray),
+        неправильно атрибутированная системой распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Интонация и стиль реплики могут соответствовать Ksenks"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray также мог так прокомментировать"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1392.94
+          etime: 1394.59
+          text: "Ой, они, кстати, сейчас инвайты открыли."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered  # 2 реплики подряд в конце, 1 отдельно
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: >
+        1. Марины (Marin_k_a) в этом выпуске нет — её нет среди ведущих.
+        2. Реплики в конце выпуска (7582-7586s): "Меня в следующий раз не будет" и
+           "Так что, Бобок, приходи обязательно" — типичное обращение Ksenks к Бобуку.
+        3. Ksenks — единственная женщина в этом выпуске.
+        4. Реплика "Почему тут iOS-разработчики?" (2610s) после комментария Umputun
+           про "штупую тетку" — Ksenks отвечает, защищая iOS-разработчиков.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Односложная реакция "Ого!" длительностью 0.5 сек между репликами Umputun и Bobuk.
+        Типичная ошибка распознавания — короткая реакция одного из ведущих
+        неправильно выделена как отдельный спикер. Контекст: Umputun спрашивает
+        "Можно я тебя просто буду теперь называть товарищ начальник?",
+        затем идёт это "Ого!", затем Bobuk отвечает.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Реакция может быть от Ksenks на шутку"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray также мог так отреагировать"
+        - person_id: "alek_sys"
+          confidence: 0.2
+          reason: "Alek.sys присутствует, хотя мало говорит"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткая реплика (0.5 сек) для надёжной идентификации"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Очень мало реплик (14) и времени (19 сек) для ведущего при "полном составе".
+        Однако это характерно для его стиля участия — короткие реплики-вставки.
+        Не является проблемой.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 485
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: >
+      Марины в выпуске нет. Ksenks — единственная женщина.
+      Контекст реплик соответствует её стилю: обращение к Бобуку,
+      защита iOS-разработчиков. Рекомендуется подтвердить голосом.
+
+  - type: rename
+    episode: 485
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    confidence: low
+    reason: >
+      Односложная реакция "Ого!" — скорее всего Ksenks, но слишком короткая
+      для уверенной идентификации. Можно объединить с SPEAKER_99 как артефакт
+      или оставить без изменений.
+
+  - type: needs_voice_verification
+    episode: 485
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    candidates: ["Ksenks", "Gray"]
+    reason: >
+      Короткая реплика, невозможно определить по контексту.
+      Требуется голосовое сравнение.

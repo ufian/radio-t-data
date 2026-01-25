@@ -1,0 +1,213 @@
+episode: 487
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6447
+  notes: "Umputun объявил 'состав полный' в начале, гостей не представляли"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 11
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Обе реплики окружены репликами Ksenks, вторая содержит женский род ('сказала'). Это ошибочно размеченные реплики Ksenks."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. 959s: "Хотя он говорит, что он с сарказмом танцует" - между двумя репликами Ksenks (958s и 963s), продолжает её мысль
+        2. 6196s: "я бы так сказала, слабости в кавычках" - женский род глагола, после Umputun, перед Ksenks
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика с женским родом ('вспомнила'), между репликами Ksenks и Umputun. Это Ksenks."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "6213s: 'Маккейна вспомнила' - глагол в женском роде, продолжает разговор Ksenks о выборах"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика между двумя репликами Umputun. Umputun обращался к Gray про NFS, ответ 'Я не думаю, что оно вообще нужно' скорее всего от Gray."
+
+      identified_as: null
+      identification_method: null
+      confidence: medium
+      evidence: "499s: Umputun говорит 'вот как тебе хочется, Грей', затем эта реплика, затем Umputun спрашивает 'NFS-сервер?'"
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Umputun обращался к Gray непосредственно перед репликой"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Bobuk также мог вставить комментарий"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 499.26
+          etime: 503.34
+          text: "Я не думаю, что оно вообще нужно."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "4 коротких реплики разбросаны по всему выпуску между репликами разных ведущих. Типичные короткие вставки/реакции."
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        - 250s: "Вот она первая" - между Bobuk и Bobuk
+        - 1022s: "Я думаю, что Amazon еще может и приплачивать, знаешь" - между Ksenks и Ksenks
+        - 4100s: "Это очень важно" - саркастический комментарий на слова Umputun о ремешках
+        - 6619s: "Прелестно, прелестно" - между Bobuk и Gray
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Стиль реплик похож на Bobuk (сарказм, короткие комментарии)"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Реплика 1022s между двумя репликами Ksenks"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Возможно некоторые реплики от Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1022.42
+          etime: 1025.54
+          text: "Я думаю, что Amazon еще может и приплачивать, знаешь."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 5
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "4 очень коротких реплики (одна всего 0.08 сек). Типичные междометия и короткие реакции - ошибки распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        - 653s: "Да ладно" (0.7 сек) - между Umputun и Umputun
+        - 1244s: "Это какая-то очень неплохая" - между Bobuk и Gray
+        - 4688s: "Миллион, миллион, миллион" - между Umputun и Ksenks
+        - 5530s: "Да" (0.08 сек!) - между Umputun и Umputun
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Реплика 1244s продолжает мысль Bobuk"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Реплика 4688s перед репликой Ksenks"
+
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие для voice comparison"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "3 коротких реплики разбросаны между репликами разных ведущих. Ошибки распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        - 2397s: "Покажи, есть UMAX" - между Ksenks и Ksenks
+        - 3335s: "Как ты ее призываешь" - между Bobuk и Bobuk
+        - 6019s: "Но оно серьезно снизилось" - между Bobuk и Umputun
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Реплика 2397s между репликами Ksenks, продолжает разговор о VIM/UMAX"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Реплики 3335s и 6019s около реплик Bobuk"
+
+      voice_task:
+        needed: false
+        reason: "Реплики слишком короткие (1-2 сек каждая)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Появляется внезапно на 715s с репликой 'Все в PHD' без представления. Всего 13 реплик, 20 сек - возможно это ошибка распознавания другого ведущего."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 487
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Обе реплики окружены Ksenks, вторая содержит женский род глагола"
+
+  - type: rename
+    episode: 487
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Реплика с женским родом глагола ('вспомнила'), контекст разговора Ksenks"
+
+# Комментарий аналитика
+notes: |
+  Эпизод 487 (12 марта 2016) - полный состав ведущих: Umputun, Bobuk, Gray, Ksenks, Alek.sys.
+  Гостей не было (Umputun объявил "состав полный" в начале).
+
+  Все неизвестные спикеры - это ошибки автоматического распознавания:
+  - SPEAKER_MISATTRIBUTED_MARIN и SPEAKER_MISATTRIBUTED_PETR - явно Ksenks (женский род)
+  - SPEAKER_MISATTRIBUTED_ELDAR - вероятно Gray (контекст обращения)
+  - SPEAKER_03/04/05 - короткие реплики, разбросанные между ведущими
+
+  Рекомендуется voice comparison для SPEAKER_MISATTRIBUTED_ELDAR и SPEAKER_04.
+  SPEAKER_03/05 слишком короткие для анализа голоса.
+
+  Отдельно стоит проверить Alek.sys - его появление внезапное, мало реплик.

@@ -1,0 +1,216 @@
+episode: 443
+status: needs_review
+analyzed_at: "2026-01-25"
+date: "2015-05-09"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray]
+  hosts_with_issues: [Alek.sys]  # вероятно НЕ участвовал
+  total_duration_sec: 5668  # сумма: 2347+1838+917+566 = 5668 (без Alek.sys)
+  notes: |
+    В начале выпуска Umputun говорит "Состав полный" и упоминает конкретно:
+    - Bobuk ("Хотя Бобок всех задержал")
+    - Ksenks ("Почти так же далеко, как и мы с Ксюшей")
+    Gray говорит на 52 секунде — явно присутствует.
+    Alek.sys НЕ упоминается и имеет всего 2 реплики (~1 сек) — скорее всего
+    не участвовал. В 2015 году "полный состав" мог означать 4 человека.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 0.46
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Односложная реакция 'Нет?' (0.46 сек) между репликами Bobuk. Типичная ошибка распознавания."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 3.14
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплика "Стучалка" — ответ на вопрос Bobuk "как он называется?" (про встроенный трекер).
+        Контекст указывает на одного из ведущих. Спикер уже помечен как MISATTRIBUTED_PETR,
+        т.е. ранее была попытка атрибуции к Петру Диденко, но она была отменена.
+        В начале выпуска сказано "Состав полный" — гостей не было.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "1322.97s: Bobuk спрашивает 'как он называется?', ответ 'Стучалка'"
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray часто даёт короткие технические комментарии"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Umputun мог ответить, зная контекст"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1322.97
+          etime: 1326.11
+          text: "Стучалка."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2.85
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие разбросанные реплики в разных частях выпуска:
+        - "Это не альтернатива" (1 сек) — в контексте обсуждения клипса
+        - "Да" (1.85 сек) — простое подтверждение на вопрос Bobuk
+        Типичный паттерн ошибок автоматического распознавания.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray присутствует, мог быть неправильно распознан"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Ksenks присутствует, голос мог быть не распознан"
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 12.58
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Две реплики требуют разного подхода:
+
+        1. (2687.19s) "Хироко они тут за шум ели, да?" — это АРТЕФАКТ ЭХА!
+           На 2682.29s Umputun говорит: "Хироко тут на этой неделе шуму надела."
+           Реплика SPEAKER_MISATTRIBUTED_ELDAR — искаженное повторение этой же фразы.
+           Это НЕ реальный спикер, а ошибка распознавания эха/отражения.
+
+        2. (5594.93s) "Ну, а у них вот на вот этой маленькой плате с подключениями..." —
+           осмысленная реплика про CHIP computer за $9 в контексте обсуждения Bobuk и Gray.
+           Вероятно это один из ведущих (Bobuk или Gray).
+
+        Спикер помечен как MISATTRIBUTED_ELDAR, т.е. ранее была попытка атрибуции
+        к Эльдару Муртазину, но она была отменена. В начале выпуска "Состав полный",
+        гостей не представляли. Первая реплика — артефакт, вторая — ошибка атрибуции.
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Gray участвует реже других, мог быть неправильно распознан"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Темы (Docker, hardware) близки интересам Bobuk"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5594.93
+          etime: 5604.48
+          text: "Ну, а у них вот на вот этой маленькой плате с подключениями и так далее, они вроде показывают, что получается практически полноценный Linux-компьютер."
+
+# Дополнительные наблюдения по ведущим
+hosts_analysis:
+  - speaker: "Alek.sys"
+    observation: |
+      Всего 2 реплики суммарной длительностью ~1 сек: "Ну и так далее" (2108s) и "Понимаешь?" (3790s)
+      Это типичные междометия/ошибки распознавания.
+
+      ВАЖНО: В начале выпуска Alek.sys НЕ упоминается:
+      - Umputun называет Bobuk, Ksenks по имени
+      - Gray говорит на 52s
+      - Alek.sys нигде не упоминается и не представлен
+
+      Вывод: Alek.sys скорее всего НЕ участвовал в выпуске 443.
+      Эти 2 реплики — ошибки распознавания другого ведущего.
+    needs_verification: true
+    action_required: "Переименовать в SPEAKER_MISATTRIBUTED_ALEK или удалить"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  notes: |
+    Umputun в начале говорит "Состав полный" и упоминает:
+    - Bobuk: "Хотя Бобок всех задержал"
+    - Ksenks: "Почти так же далеко, как и мы с Ксюшей"
+    - Gray: говорит на 52s без представления (он часть основного состава)
+
+    Alek.sys НЕ упоминается — вероятно не участвовал в выпуске.
+    Гостей не представляли — все SPEAKER_* это ошибки распознавания ведущих.
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        НЕ УЧАСТВОВАЛ в выпуске. Не упоминается в начале. 2 реплики (1 сек) — ошибки распознавания.
+        Требуется: переименовать в SPEAKER_MISATTRIBUTED_ALEK
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Осмысленные технические комментарии, но гостей не было. Вероятно Gray или Bobuk."
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Ответ 'Стучалка' принадлежит одному из ведущих (вероятно Gray)."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 443
+    from_speaker: "Alek.sys"
+    to_speaker: "SPEAKER_MISATTRIBUTED_ALEK"
+    confidence: high
+    reason: |
+      Alek.sys НЕ участвовал в выпуске 443:
+      - Не упоминается в начале (только Bobuk и Ksenks названы по имени)
+      - Всего 2 реплики по 0.5 сек ("Ну и так далее", "Понимаешь?") — типичные ошибки распознавания
+      - В 2015 году "полный состав" означал 4 человека: Umputun, Bobuk, Gray, Ksenks
+
+  - type: delete_or_merge
+    episode: 443
+    speaker: "SPEAKER_06"
+    confidence: high
+    reason: "Односложная реакция 'Нет?' — явная ошибка распознавания, можно удалить или слить с соседней репликой Bobuk"
+
+  - type: delete
+    episode: 443
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    stime_filter: 2687.19
+    confidence: high
+    reason: |
+      Первая реплика (2687.19s) — артефакт эха.
+      На 2682.29s Umputun говорит "Хироко тут на этой неделе шуму надела."
+      Эта реплика — искаженное повторение той же фразы. Удалить как артефакт.
+
+  - type: needs_voice_comparison
+    episode: 443
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    stime_filter: 5594.93
+    confidence: medium
+    reason: |
+      Вторая реплика (5594.93s) про Linux-компьютер — осмысленная, но неизвестно чья.
+      Наиболее вероятные кандидаты: Bobuk (продолжает тему CHIP), Gray.
+      Референсный сегмент: 5594.93-5604.48s
+
+  - type: needs_voice_comparison
+    episode: 443
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    confidence: medium
+    reason: "Необходимо определить, кто из ведущих ответил 'Стучалка'. Вероятно Gray."

@@ -1,0 +1,128 @@
+episode: 481
+status: has_tasks
+analyzed_at: "2026-01-25T19:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6851
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 22
+    replies_count: 13
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. В 1446.5s говорит "А я как бы до сих пор не согласна" - женский род, сразу после этого говорит Ksenks
+        2. В 3381s Umputun спрашивает "Что смотрит на Ксюшу?" и SPEAKER_02 отвечает
+        3. В 5164s после SPEAKER_02 Bobuk отвечает "Нет, вы-то имитируете", далее Ksenks реагирует
+        4. В 7357s Umputun обращается к "Ксюша" и в 7365s SPEAKER_02 отвечает "Умпутун, скажи, передал"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 14
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики разбросаны, короткие (1-7 сек), часто находятся рядом с репликами Gray.
+        В эпизоде 481 гостя Эльдара Муртазина нет - состав "полный, классический" (00:09s).
+        Это ошибочные атрибуции, вероятно реплики принадлежат одному из ведущих (Gray или Ksenks).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Большинство реплик рядом с Gray, могут быть продолжением его мыслей"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Некоторые реплики могут принадлежать Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5522.3
+          etime: 5529.7
+          text: "Там на самом деле же просто рынок у этих камер, он довольно такой тесный, не очень большой."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 7
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все три реплики находятся рядом с репликами Ksenks.
+        В эпизоде 481 гостьи Марины нет - состав "полный, классический".
+        Это ошибочные атрибуции, скорее всего реплики принадлежат Ksenks.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Все реплики непосредственно рядом с Ksenks, вопросительные интонации характерны для её стиля"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2570.9
+          etime: 2572.3
+          text: "А почему у них не может быть .com?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Ksenks"
+      issue: "Первая реплика Ksenks в 537s, но SPEAKER_02 (= Ksenks) появляется раньше в 148s"
+    - speaker: "Alek.sys"
+      issue: "Очень мало реплик (10), всего 10 сек - возможно часть его реплик ошибочно атрибутирована другим"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 481
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Контекстный анализ показывает, что все реплики принадлежат Ksenks (женский род, прямые обращения)"
+
+  - type: rename
+    episode: 481
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Все реплики рядом с Ksenks, характерный вопросительный стиль"
+
+# Примечания
+notes: |
+  Эпизод 481 от 30 января 2016 года.
+  Umputun объявляет "состав полный, классический" (00:09s).
+  Присутствуют все 5 ведущих: Umputun, Bobuk, Gray, Ksenks, Alek.sys.
+
+  SPEAKER_MISATTRIBUTED_ELDAR требует voice comparison для точной идентификации,
+  но скорее всего это Gray или Ksenks.

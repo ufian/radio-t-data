@@ -1,0 +1,167 @@
+episode: 412
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7335  # ~2h 2min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Две короткие реплики (0.7s и 1.3s) в разных частях выпуска, разбросанные среди
+        реплик других ведущих. Первая "Да ладно?" в 3911s - между репликами Ksenks.
+        Вторая "Может, тебя научили уже?" в 5896s - также между репликами Ksenks.
+        Типичный паттерн ошибки распознавания - короткие реакции, вероятно принадлежащие
+        одному из ведущих (скорее всего Bobuk или Umputun, перебивающие Ksenks).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Активно участвует в диалогах, часто реагирует короткими фразами"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Также может вставлять короткие комментарии"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 11
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Метка MISATTRIBUTED указывает, что это уже было ошибочно приписано Петру Диденко
+        и отменено. Реплика в 4452s длиной 11 сек появляется в диалоге между Umputun и
+        Ksenks о микросервисах. Текст: "То есть если у тебя есть какая-то структура данных,
+        касаемая, например, юзера..." - технический вопрос о расшаривании данных.
+        Контекст: сразу после реплики Ksenks и перед её же ответом "Расшаренная, да."
+        Вероятно это реплика одного из ведущих (Ksenks продолжает тему или Umputun вставляет уточнение).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: >
+            Контекст диалога - обсуждение микросервисов, Ksenks активно участвует.
+            Реплика между её высказываниями, возможно ошибка нарезки.
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Участвует в том же диалоге, мог задать уточняющий вопрос"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4452.51
+          etime: 4463.54
+          text: >
+            То есть если у тебя есть какая-то структура данных, касаемая, например,
+            юзера, то как-то у тебя это... То есть мы договорились, структура данных
+            должна быть расшаренная, правильно?
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 12
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Метка MISATTRIBUTED указывает, что это было ошибочно приписано Эльдару Муртазину
+        и отменено. Две реплики:
+        1) 6573s (9 сек): "Жень, фишка в том, что у российских провайдеров часть
+           связанности построена через западные сети." - обращение к Umputun (Жень=Евгений).
+           Umputun сразу отвечает "Да это не про связанность".
+        2) 7420s (3 сек): "Конечно, у нас есть еще темы." - ответ на вопрос Bobuk
+           "А что, у нас есть еще темы?"
+        Обе реплики вписываются в диалог ведущих. Первая звучит как комментарий
+        технически подкованного участника (Gray или Bobuk). Вторая - типичная
+        модераторская фраза.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: >
+            Первая реплика о связанности провайдеров - техническая тема. Gray сразу
+            после (6588s) развивает эту мысль: "Нет, сидишь ты себе в каком-нибудь
+            Воронеже... и часть России видишь через Европу." Возможно это его реплика.
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: >
+            Вторая реплика "Конечно, у нас есть еще темы" - ответ на его же вопрос,
+            может быть его же подтверждение или чья-то реплика в эфире.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6573.78
+          etime: 6582.87
+          text: >
+            Жень, фишка в том, что у российских провайдеров часть связанности
+            построена через западные сети.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Alek.sys появляется с 1130s (реплика "Посмотрите внимательно на App Inventor")
+        без явного представления в начале выпуска. Однако в начале Umputun говорит
+        "сегодня все, все, даже сам Грей... и тот пришел", что подразумевает полный
+        состав. Всего 32 реплики, 64 сек - минимальное участие, что объясняет
+        отсутствие отдельного представления.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 412
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Bobuk"
+    confidence: low
+    reason: >
+      Две короткие реплики-реакции. Требуется voice comparison для подтверждения.
+      Не применять без проверки голоса.
+
+# Примечания
+notes: |
+  Эпизод 412 от 4 октября 2014 года. Все 5 ведущих присутствуют.
+
+  Три неизвестных спикера - все помечены как ошибки распознавания или
+  отменённые атрибуции (MISATTRIBUTED). Суммарно 25 сек речи из ~2 часов.
+
+  SPEAKER_04 - скорее всего ошибка ASR, короткие реакции.
+
+  MISATTRIBUTED спикеры - ранее были ошибочно приписаны гостям (Eldar, Petr),
+  но атрибуция отменена. Нужна проверка голоса для определения реального
+  спикера среди ведущих.
+
+  Для полной очистки рекомендуется voice comparison для:
+  - SPEAKER_MISATTRIBUTED_PETR (4452-4463s)
+  - SPEAKER_MISATTRIBUTED_ELDAR (6573-6582s)

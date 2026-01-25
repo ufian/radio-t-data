@@ -1,0 +1,115 @@
+episode: 464
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  hosts_announced: "два монстра и мастодонта русского подкастинга"
+  total_duration_sec: 7800  # ~2h 10min estimated
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 7
+    replies_count: 11
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (<1 сек каждая) разбросаны по всему эпизоду: 'Мог бы', 'Да', 'Томбл?', 'Нет'. Первая реплика 'Мог бы' (197s) - точное эхо предыдущей реплики Umputun 'Ну, мог бы' (196s). Типичный паттерн ошибки распознавания."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.8
+          reason: "Первая реплика - эхо фразы Umputun, остальные - короткие подтверждения в диалоге с Bobuk"
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика 'Ну,' (1955s) длиной 0.04 сек - обрывок в середине речи Umputun. Явный артефакт распознавания."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.95
+          reason: "Реплика находится между двумя репликами Umputun, является обрывком его речи"
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 18
+    replies_count: 11
+    pattern: scattered
+
+    analysis:
+      is_error: false  # Требует проверки
+      error_reason: null
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "В начале эпизода объявлено 'два монстра' (Umputun + Bobuk), Alek.sys не упомянут. Но реплики имеют осмысленный контент."
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Реплики короткие, характер шуточный. Может быть ошибкой распознавания голоса Umputun."
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Реплика про 'свеженалитую машину' (5976s) может быть Bobuk, который обсуждал настройку машины."
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5976.85
+          etime: 5980.31
+          text: "Я просто прямо сейчас со свеженалитой машины и у меня тут ничего нет."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "В начале эпизода (14-26s) Umputun объявляет 'два монстра и мастодонта' - только он и Bobuk. Alek.sys не представлен, но имеет 11 реплик начиная с 1284s. Требуется voice comparison для определения: это реальный Alek.sys (подключился позже) или ошибка распознавания."
+    - speaker: "SPEAKER_02"
+      issue: "11 коротких реплик без представления. Скорее всего ошибочно распознанный Umputun."
+    - speaker: "SPEAKER_04"
+      issue: "Артефакт распознавания внутри реплики Umputun."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 464
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: "Единственная реплика 'Ну,' - обрывок речи Umputun (предыдущая и следующая реплики - Umputun)"
+
+  - type: rename
+    episode: 464
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: "Все 11 реплик - короткие подтверждения/эхо. Первая реплика 'Мог бы' - эхо Umputun. Требует voice verification для подтверждения."
+
+# Примечания для ручной проверки
+notes:
+  - "Эпизод 464 от 3 октября 2015 года"
+  - "В начале чётко объявлен состав: Umputun + Bobuk ('два монстра')"
+  - "Bobuk упоминает 'Вот Ксюши нет' (218s) - подтверждает отсутствие Ksenks"
+  - "Alek.sys требует отдельной проверки: либо подключился позже без объявления, либо ошибка распознавания"
+  - "SPEAKER_MISATTRIBUTED_PETR и SPEAKER_MISATTRIBUTED_ELDAR из статистики НЕ найдены в файле - возможно ошибка в предрасчёте"

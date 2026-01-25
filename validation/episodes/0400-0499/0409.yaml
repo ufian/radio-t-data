@@ -1,0 +1,341 @@
+episode: 409
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  guests_present: [Wylsacom]
+  hosts_NOT_present: [Gray]  # ВАЖНО: Gray НЕ участвовал!
+  total_duration_sec: 7800  # ~2 часа 10 минут
+  notes: |
+    ВАЖНО: Gray НЕ участвовал в этом выпуске!
+    В финале (7782-7798с) Umputun перечисляет участников:
+    "Напомню, что был Бобок, приходил Вилса... Была Ксюша"
+    Gray НЕ упомянут ни в начале, ни в конце.
+    7 реплик под тегом Gray — ошибка распознавания.
+
+    Дата выпуска: 13 сентября 2014 (обсуждение презентации Apple iPhone 6, Watch, Pay).
+    Bobuk вещал из аэропорта LAX.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1708
+    replies_count: 400
+    first_appearance_sec: 815.6
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "wylsacom"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (847-848с): "Ворвался гость."
+        Bobuk (861-871с): "Это автор одного из самых известных русскоязычных YouTube-каналов,
+        одного из самых больших и одновременно один из самых главных и самых популярных фанатов Apple в России.
+        Я бы так сказал, чуть ли не шеф-евангелист такой."
+        Bobuk (882-892с): "Человека зовут Вилса, у него есть канал, который называется Vilsa.com и аналогичный твиттер.
+        Мне кажется, срочно надо пойти и подписаться и туда, и сюда."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 179
+    replies_count: 28
+    first_appearance_sec: 2398.4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        КРИТИЧЕСКАЯ ОШИБКА АТРИБУЦИИ: Эльдар Муртазин НЕ был гостем в этом выпуске.
+
+        Доказательства:
+        1. Единственный гость, представленный в выпуске — Wylsacom (Вилса)
+        2. Имя "Эльдар Муртазин" НЕ упоминается ни разу в тексте реплик
+        3. Реплики EldarMurtazin перемежаются с SPEAKER_03 в одном разговоре,
+           что невозможно, если это разные люди
+        4. Контент реплик EldarMurtazin идентичен по стилю SPEAKER_03 — обсуждение
+           Apple устройств от лица техноблогера
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "wylsacom"
+          confidence: 0.95
+          reason: |
+            Реплики EldarMurtazin являются частью того же разговора, что и SPEAKER_03.
+            Все 28 реплик должны быть переатрибутированы на Wylsacom.
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 4
+    replies_count: 3
+    first_appearance_sec: 3483.4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 3 односложные реплики в разных частях выпуска:
+        - "Угу." (3483с)
+        - "Угу." (5149с)
+        - "Окей." (6832с)
+
+        Это типичные ошибки автоматического распознавания — короткие подтверждения,
+        которые невозможно атрибутировать. Недостаточно данных для идентификации.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Невозможно идентифицировать по "Угу" и "Окей"
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 20
+    replies_count: 6
+    first_appearance_sec: 800.7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        6 коротких реплик разбросаны по всему выпуску:
+        - "Так его в белый закрыли." (800с)
+        - "У меня вот нету наличных." (2150с)
+        - "Ну, это если профессиональное видео..." (3078с, 7 сек)
+        - "Ты, то есть, вообще не кушаешь?" (3825с)
+        - "Все такое прям ух." (7762с)
+
+        Марина (Marin_k_a) НЕ была гостем в этом выпуске. Ошибочная атрибуция.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Женский голос — вероятно ошибка распознавания Ksenks"
+        - person_id: "wylsacom"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть гостем"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3078.74
+          etime: 3085.5
+          text: "Ну, это если профессиональное видео, а зачем тебе... Нет, нет, много FPS не бывает."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 6
+    replies_count: 2
+    first_appearance_sec: 618.6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 реплики:
+        - "Там про разное было." (618с, 2 сек)
+        - "Ну, там не чип, а именно в процессоре какая-то эта самая история занимается." (4136с, 4 сек)
+
+        Пётр Диденко НЕ был гостем в этом выпуске. Ошибочная атрибуция.
+        Вторая реплика технического характера — вероятно Wylsacom или один из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "wylsacom"
+          confidence: 0.6
+          reason: "Техническое обсуждение Apple — контекст подходит для гостя"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Может быть ведущий"
+
+      voice_task:
+        needed: false  # Слишком короткие реплики
+        reference_segment: null
+
+  - speaker: "Gray"
+    total_duration_sec: 21
+    replies_count: 7
+    first_appearance_sec: 2211.62
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        КРИТИЧЕСКАЯ ОШИБКА: Gray НЕ участвовал в эпизоде 409!
+
+        Доказательства:
+        1. В финале (7782-7798с) Umputun перечисляет участников:
+           "Напомню, что был Бобок, приходил Вилса... Была Ксюша"
+        2. Gray НЕ упомянут в этом перечислении
+        3. В начале выпуска представлены только Umputun, Bobuk, Ksenks
+
+        Реплики Gray:
+        - "А у них как бы без ограничений, да?" (2211с)
+        - "По-моему, ты не прав." (2943с)
+        - "Нужно понимать, что рубленые края, как у 5S..." (2961с, 6 сек)
+        - "Вот тоже обидно, кстати." (3013с)
+        - "Но планшеты-то были, и смартфоны были, и все это до них." (4334с)
+        - "То есть каждый в голове уже имел образ идеальных Apple часов..." (4634с)
+        - "Тот, кто таскает Bluetooth-гарнитуру, ему не нужно думать о второй зарядке." (5731с)
+
+        Все 7 реплик — ошибки автоматического распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "wylsacom"
+          confidence: 0.7
+          reason: |
+            Реплики рядом с SPEAKER_03 (Wylsacom), контент об Apple,
+            первая реплика Gray (2211с) сразу перед SPEAKER_03 (2213с)
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Возможно некоторые короткие реплики"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2961.1
+          etime: 2966.77
+          text: "Нужно понимать, что рубленые края, как у 5S, вот такие с шлифованными замечательными"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        КРИТИЧЕСКАЯ ОШИБКА: Gray НЕ участвовал в этом выпуске!
+
+        Доказательства:
+        1. В финале (7782-7798с) Umputun перечисляет ВСЕХ участников:
+           "Напомню, что был Бобок, приходил Вилса... Была Ксюша"
+        2. Gray НЕ упомянут в этом перечислении
+        3. Gray НЕ представлен в начале выпуска
+
+        7 реплик под тегом Gray (21 сек) — ошибка автоматического распознавания.
+        Вероятно это фрагменты речи Wylsacom или Ksenks.
+
+    - speaker: "EldarMurtazin"
+      issue: |
+        КРИТИЧЕСКАЯ ОШИБКА: 28 реплик Эльдара Муртазина — ложная атрибуция.
+        В этом выпуске единственный гость — Wylsacom. Все реплики EldarMurtazin
+        должны быть переатрибутированы на Wylsacom.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 409
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Wylsacom"
+    confidence: high
+    reason: |
+      Явное представление гостя Bobuk: "Человека зовут Вилса, у него есть канал Vilsa.com"
+      Wylsacom (Валентин Петухов) — известный российский техноблогер.
+
+  - type: rename
+    episode: 409
+    from_speaker: "EldarMurtazin"
+    to_speaker: "Wylsacom"
+    confidence: high
+    reason: |
+      Эльдар Муртазин НЕ был гостем этого выпуска. Его имя не упоминается в транскрипте.
+      Реплики EldarMurtazin перемежаются с SPEAKER_03 и являются частью того же разговора.
+      Это ошибка атрибуции — все 28 реплик принадлежат Wylsacom.
+
+  - type: delete_or_merge
+    episode: 409
+    from_speaker: "SPEAKER_07"
+    to_speaker: null
+    confidence: high
+    reason: |
+      3 односложные реплики ("Угу", "Окей") — ошибки распознавания.
+      Рекомендуется удалить или объединить с ближайшим спикером.
+
+  - type: review_needed
+    episode: 409
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: null
+    confidence: low
+    reason: |
+      6 коротких реплик. Марина не была в выпуске. Требуется voice comparison
+      для определения — это Ksenks или Wylsacom.
+
+  - type: review_needed
+    episode: 409
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: null
+    confidence: low
+    reason: |
+      2 реплики. Пётр не был в выпуске. Вероятно реплики Wylsacom или ведущих.
+
+  - type: rename
+    episode: 409
+    from_speaker: "Gray"
+    to_speaker: "NEEDS_REVIEW"
+    confidence: high
+    reason: |
+      Gray НЕ участвовал в этом выпуске (не упомянут в финальном перечислении).
+      7 коротких реплик (21 сек) — ошибки распознавания.
+      Требуется voice comparison для определения реального спикера.
+
+# Требуется добавить в people.yaml
+new_guest_entry:
+  id: "wylsacom"
+  canonical_name: "Wylsacom"
+  aliases: ["Вилса", "Wylsa", "Vilsa", "Vilsa.com"]
+  real_name: "Валентин Петухов"
+  info: "YouTube-техноблогер, выпуск 409"
+
+# Дополнительные заметки
+notes:
+  - "Выпуск 409 от 13 сентября 2014 — обсуждение презентации Apple (iPhone 6, Apple Watch, Apple Pay)"
+  - "Bobuk вещал из аэропорта LAX, проходя паспортный контроль в прямом эфире"
+  - "Гость Wylsacom — один из крупнейших российских YouTube-блогеров об Apple"
+  - "ВАЖНО: Gray НЕ участвовал! Реплики Gray — ошибка распознавания"
+
+# Аудио для voice comparison
+audio_reference:
+  url: "https://cdn.radio-t.com/rt_podcast409.mp3"
+  segments_for_review:
+    - speaker: "Gray"
+      segments:
+        - stime: 2211.62
+          etime: 2213.02
+          text: "А у них как бы без ограничений, да?"
+        - stime: 2961.1
+          etime: 2966.77
+          text: "Нужно понимать, что рубленые края, как у 5S, вот такие с шлифованными замечательными"
+      compare_with: ["Wylsacom", "Ksenks"]

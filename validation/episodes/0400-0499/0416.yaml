@@ -1,0 +1,270 @@
+episode: 416
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  # Gray отсутствует согласно объявлению в начале (65s), но имеет 4 реплики
+  hosts_announced_absent: [Gray]
+  total_duration_sec: 6961  # приблизительно
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 337
+    replies_count: 110
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 111.6s представляется: "А я из менее родственного подкаста «Девзен подкаст» Александр."
+        Umputun подтверждает обращением "Александр" (116.85s).
+        Это Александр из DevZen Podcast. Подкаст DevZen — известный русскоязычный подкаст о разработке.
+
+      possible_matches:
+        - person_id: "devzen_alexandr"
+          confidence: 0.95
+          reason: "Явное представление в начале эпизода: 'из подкаста DevZen Podcast Александр'"
+
+      voice_task:
+        needed: true
+        reason: "Гость не в справочнике people.yaml, нужно добавить и подтвердить голос"
+        reference_segment:
+          stime: 308.68
+          etime: 318.05
+          text: "То есть, например, у нас на работе мы постоянно используем какие-то синглтоны, потому что, ну, сейчас я пишу на скале, и там без синглтонов, ну, никак. Они там в язык встроены."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 490
+    replies_count: 115
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На ~100s после слов Umputun "Алексей, начните вы" SPEAKER_04 отвечает "Ну, можно по алфавиту".
+        Затем Alek.sys (ведущий) представляет первого гостя: "Из родственного подкаста «Разбор полетов» Алексей" (104.59s).
+        Путаница: реплика Alek.sys содержит представление гостя Алексея из "Разбор полётов",
+        но атрибуция стоит на Alek.sys. Вероятно, это гость Алексей, не ведущий.
+
+        Это Алексей из подкаста "Разбор полётов" (razbor-poletov) — известный русскоязычный Java/JVM подкаст.
+
+      possible_matches:
+        - person_id: "razbor_poletov_alexey"
+          confidence: 0.9
+          reason: "Umputun обращается 'Алексей', затем идёт представление 'Из родственного подкаста Разбор полетов Алексей'"
+
+      voice_task:
+        needed: true
+        reason: "Гость не в справочнике people.yaml, нужно добавить"
+        reference_segment:
+          stime: 2207.24
+          etime: 2215.67
+          text: "Что, например, если у вас запускается приложение в каком-то контейнере, то ему надо знать, где находится база данных."
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 97
+    replies_count: 16
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Пётр Диденко — известный гость Радио-Т (148 выпусков), но в этом эпизоде
+        он НЕ БЫЛ представлен. В начале Umputun сказал "целых два гостя" (92.87s)
+        и оба представились: Алексей (Разбор полётов) и Александр (DevZen).
+
+        Реплики PetrDidenko скорее всего — ошибочная атрибуция.
+        Это могут быть реплики одного из двух гостей (Алексей или Александр)
+        или одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "razbor_poletov_alexey"
+          confidence: 0.4
+          reason: "Мог быть ошибочно атрибутирован гость Алексей"
+        - person_id: "devzen_alexandr"
+          confidence: 0.4
+          reason: "Мог быть ошибочно атрибутирован гость Александр"
+
+      voice_task:
+        needed: true
+        reason: "Нужно проверить чей это голос — скорее всего один из двух гостей"
+        reference_segment:
+          stime: 563.8
+          etime: 575.0
+          text: "Например, ну, ты приходишь, ну, как бы он сказал, ты приходишь на собеседование,"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 14
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (1-4 сек) разбросаны по эпизоду: 371s, 1236s, 1478s, 1351s, 1363s.
+        Примеры: "Как так можно?" (1 сек), "Нет, просто у каждого свои проблемы..." (4 сек).
+        Марина (Marin_k_a) — бывшая ведущая, но она не участвовала в этом выпуске.
+        Это ошибки автоматического распознавания — реплики скорее всего принадлежат
+        Ksenks или одному из гостей.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Женский голос, короткие реплики между репликами Ksenks"
+        - person_id: "devzen_alexandr"
+          confidence: 0.3
+          reason: "Возможно гость"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие сегменты для надёжного сравнения голосов"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 7
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика на 2084.4s: "А в случае генерации файлов, генерация файлов это процесс, который как инициируется?"
+        Эльдар Муртазин не участвовал в этом выпуске (не представлен).
+        Реплика длиной 7 сек — скорее всего один из гостей (Алексей или Александр)
+        или ведущий (Alek.sys, Bobuk).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "razbor_poletov_alexey"
+          confidence: 0.5
+          reason: "Технический вопрос о генерации файлов, характерно для разработчика"
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Alek.sys активен в этом эпизоде"
+
+      voice_task:
+        needed: true
+        reason: "Достаточно длинный сегмент для проверки"
+        reference_segment:
+          stime: 2084.42
+          etime: 2091.67
+          text: "А в случае генерации файлов, генерация файлов это процесс, который как инициируется?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Umputun объявил на 65.13s: "Сегодня из основных отсутствует Грей."
+        Однако Gray имеет 4 реплики в эпизоде (1775s, 3074s, 3348s, 6136s).
+        Возможные объяснения:
+        1. Gray присоединился позже (первая реплика на 1775s = ~30 мин)
+        2. Ошибка атрибуции — эти реплики принадлежат другому спикеру
+        ТРЕБУЕТ ПРОВЕРКИ: сверить голос Gray в этих репликах.
+
+    - speaker: "PetrDidenko"
+      issue: |
+        Пётр Диденко не был представлен. В начале объявлено 2 гостя:
+        Алексей (Разбор полётов) и Александр (DevZen).
+        16 реплик PetrDidenko — скорее всего ошибка атрибуции.
+
+    - speaker: "Alek.sys attribution confusion"
+      issue: |
+        На 104.59s реплика "Из родственного подкаста «Разбор полетов» Алексей"
+        атрибутирована Alek.sys. Но Alek.sys — ведущий (real_name: Алексей).
+        Вероятно, это представление ГОСТЯ Алексея, но атрибуция пошла на ведущего
+        из-за совпадения имени. Нужна ручная проверка.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 416
+    from_speaker: "SPEAKER_03"
+    to_speaker: "DevZenAlexandr"
+    confidence: high
+    reason: "Явное представление: 'из подкаста DevZen Podcast Александр'"
+
+  - type: rename
+    episode: 416
+    from_speaker: "SPEAKER_04"
+    to_speaker: "RazborPoletovAlexey"
+    confidence: high
+    reason: "Представление: 'из подкаста Разбор полетов Алексей'"
+
+  - type: investigate
+    episode: 416
+    speaker: "PetrDidenko"
+    action: "voice_comparison"
+    reason: "Пётр не представлен, 16 реплик могут принадлежать одному из гостей"
+
+  - type: investigate
+    episode: 416
+    speaker: "Gray"
+    action: "voice_comparison"
+    reason: "Объявлен отсутствующим, но есть 4 реплики — проверить, присоединился ли позже"
+
+  - type: delete_or_reassign
+    episode: 416
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: null
+    confidence: medium
+    reason: "Марина не участвовала, короткие реплики — ошибка распознавания"
+
+  - type: delete_or_reassign
+    episode: 416
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: null
+    confidence: medium
+    reason: "Эльдар не участвовал, 1 реплика — ошибка распознавания"
+
+# Аудио для голосового сравнения
+audio_reference:
+  url: "https://cdn.radio-t.com/rt_podcast416.mp3"
+  source: "radio-t.com official"
+
+# Дополнительные заметки
+notes: |
+  Эпизод 416 от 1 ноября 2014 года.
+
+  Основные ведущие: Umputun (961 реплик), Bobuk (489), Alek.sys (109), Ksenks (82).
+  Объявленный отсутствующим: Gray (но 4 реплики присутствуют).
+
+  Два объявленных гостя:
+  1. Алексей из подкаста "Разбор полётов" (Java/JVM подкаст, razbor-poletov.com) = SPEAKER_04
+     Ведущие подкаста: Viktor Gamov (@gamussa), Alexey Abashev (@a_abashev)
+  2. Александр из подкаста "DevZen Podcast" (devzen.ru) = SPEAKER_03
+     Ведущие: Александр Алексеев, Иван Глушков, Светлана Божко, Валерий Мелешкин
+
+  Проблемы:
+  1. PetrDidenko появляется без представления — скорее всего ошибка атрибуции
+  2. Gray объявлен отсутствующим, но имеет 4 реплики — возможно присоединился позже
+  3. SPEAKER_MISATTRIBUTED_MARIN и SPEAKER_MISATTRIBUTED_ELDAR — очевидные ошибки
+
+  Рекомендация: требуется voice comparison для уточнения PetrDidenko и Gray.

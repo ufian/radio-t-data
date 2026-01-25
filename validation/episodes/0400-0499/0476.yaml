@@ -1,0 +1,89 @@
+episode: 476
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk, Alek.sys]
+  total_duration_sec: 6407
+  notes: |
+    В начале эпизода Umputun говорит "нас всего двое" и "Остались мы с тобой, Грей, вдвоем".
+    Bobuk появляется с 833s (16 реплик, 49 сек), Alek.sys с 1600s (5 реплик, 7 сек) -
+    вероятно эпизодические включения по связи или ошибки атрибуции.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        В начале эпизода Umputun явно говорит "нас всего двое" и обращается к Gray.
+        Эльдар Муртазин не был представлен и не упоминается в эпизоде.
+        Все 3 реплики короткие (0.66-3.01 сек) и разбросаны по эпизоду (386s, 4967s, 5531s).
+        Это типичный паттерн ошибки распознавания голоса.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: |
+            Реплика 1 (386.26s "Обычно нет.") идёт как ответ на вопрос Umputun,
+            следующая реплика Gray (386.96s) продолжает эту мысль про Access Point.
+            Реплика 2 (4967.61s) в середине рассказа Gray.
+            Реплика 3 (5531.95s) между репликами Umputun и Gray.
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: |
+            Некоторые реплики могут быть Umputun, особенно реплика 3
+            "Ну, вообще штука, конечно, наверное, хорошая" по стилю.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5531.95
+          etime: 5534.96
+          text: "Ну, вообще штука, конечно, наверное, хорошая."
+        notes: |
+          Самая длинная реплика из трёх (3 сек).
+          Для сравнения с голосом Gray рекомендую сегменты:
+          - Gray 386.96-390.58: "То есть, если это маленькая коробочка..."
+          - Gray 4965.55-4966.43: "Он говорит, а я в тенечек."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале эпизода заявлено "нас всего двое", но Bobuk появляется с 833s.
+        Возможно подключился по связи позже или это ошибка атрибуции.
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys появляется с 1600s (5 реплик, 7 сек) без представления.
+        При такой малой активности это может быть ошибка распознавания.
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Эльдар Муртазин не был в этом эпизоде - это остаточная ошибочная
+        атрибуция от автоматического распознавания голоса.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 476
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: |
+      По контексту все 3 реплики вероятнее всего принадлежат Gray:
+      1) 386.26s - ответ на вопрос Umputun перед развёрнутым ответом Gray
+      2) 4967.61s - в середине рассказа Gray
+      3) 5531.95s - между репликами в диалоге
+      Требуется подтверждение через voice comparison.

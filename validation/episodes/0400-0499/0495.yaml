@@ -1,0 +1,71 @@
+episode: 495
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 5945  # ~99 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Реплика "Я просто не знала, стоит ли мне отвечать" (35.2s-36.98s) следует
+        сразу после приветствия Umputun'а "Ксюша, здравствуй, дорогая" (31.2s-35.12s)
+        и предшествует реплике Ksenks "Да, я готова к вопросам" (37.02s).
+        Контекст однозначно указывает, что это ответ Ксюши на приветствие.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Umputun обращается "Ксюша, здравствуй" -> следует эта реплика ->
+        затем Ksenks продолжает "Да, я готова к вопросам". Логический контекст
+        диалога не оставляет сомнений.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Всего 4 реплики за весь выпуск (~4 сек суммарно), что крайне мало
+        для ведущего. В начале выпуска Umputun говорит "состав полный",
+        но явно представляет только Ксюшу и обращается к Грею. Alek.sys
+        не упоминается в первых минутах. Возможно, эти 4 реплики - ошибки
+        распознавания (кто-то из других ведущих ошибочно размечен как Alek.sys),
+        либо он действительно участвовал минимально.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 495
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Контекст диалога однозначен: реплика является ответом на приветствие
+      "Ксюша, здравствуй, дорогая" и предшествует продолжению речи Ksenks.
+
+# Дополнительные наблюдения
+notes:
+  - >
+    Метка SPEAKER_MISATTRIBUTED_MARIN предполагает, что ранее эта реплика
+    была ошибочно атрибутирована как Марина (Marin_k_a), но была отменена.
+    Теперь нужно присвоить корректного спикера - Ksenks.
+  - >
+    Малое количество реплик Alek.sys требует дополнительной проверки.
+    Рекомендуется voice comparison для подтверждения атрибуции.

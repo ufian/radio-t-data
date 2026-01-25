@@ -1,0 +1,191 @@
+episode: 483
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  hosts_mentioned_absent: [Bobuk, Gray]
+  # Alek.sys помечен как присутствующий, но это вероятная ошибка (см. consistency_check)
+  total_duration_sec: 6530  # ~109 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 974
+    replies_count: 204
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: null  # Требуется добавление в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска Umputun представляет: "Дорогой гость, Артем, ты помнишь, как они называются?" (21.95s)
+        Далее несколько раз обращается: "Артем, ты это помнишь?" (221.27s)
+        Гость говорит о своём проекте peer-to-peer VPN на Go (867-958s):
+        "недавно с ребятами сделал опенсорсный проект... позволяет из одного облака строить
+        виртуальную приватную сеть в другое облако... peer-to-peer соединение... по DHT сети"
+
+      # Это НЕ Артём Росновский из people.yaml (тот был в выпусках 69, 101, 106)
+      # Это другой Артём — Go-разработчик, автор P2P VPN проекта
+      possible_matches:
+        - person_id: "artem_unknown_go_dev"
+          confidence: 0.95
+          reason: "Явное представление по имени 'Артём', тематика Go, peer-to-peer VPN проект"
+
+      voice_task:
+        needed: true
+        reason: "Для будущей идентификации и добавления в people.yaml"
+        reference_segment:
+          stime: 867.39
+          etime: 914.31
+          text: "И более того, я недавно с ребятами сделал опенсорсный проект... не нужно знать заранее адреса других точек, их поиск происходит заранее по DHT сети."
+
+      suggested_canonical_name: "ArtemGoDev"
+      suggested_real_name: "Артём"
+      suggested_info: "Go-разработчик, автор P2P VPN проекта, выпуск 483"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Отмененное ошибочное присвоение спикера Marin.
+        Марина не участвовала в выпуске — в начале представлены только Umputun, Ksenks и гость Артём.
+        Реплики короткие (2-4 сек), разбросаны по эпизоду.
+        Вероятно это реплики одного из присутствующих участников (Ksenks или SPEAKER_05/Артём).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплика 'Я спросила...' (5865s) в контексте рассказа Ksenks про Siri"
+        - person_id: "speaker_05_artem"
+          confidence: 0.3
+          reason: "Реплика 'Скажи спасибо, что у них вообще есть Go API' (3748s) соответствует тематике гостя"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие фрагменты для сравнения голосов"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Отмененное ошибочное присвоение спикера Petr Didenko.
+        Пётр не участвовал в выпуске — в начале представлены только Umputun, Ksenks и гость Артём.
+        Реплики очень короткие (2-4 сек), разбросаны по эпизоду.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "speaker_05_artem"
+          confidence: 0.5
+          reason: "Обе реплики по смыслу могут быть от гостя Артёма"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Возможная ошибка распознавания голоса Umputun"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткие фрагменты"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Да." длительностью ~2 сек в 6034s.
+        Односложная реакция, типичная ошибка распознавания.
+        Сразу после реплики SPEAKER_MISATTRIBUTED_PETR — вероятно тот же источник ошибки.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Односложная реплика не подходит для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys помечен в данных как присутствующий (3 реплики, 9 сек),
+        но Umputun в начале выпуска (55s) явно говорит:
+        "Бобука нету, Грея нету, но зато... у нас есть... Ксюша".
+        Гость представлен как Артём. Alek.sys НЕ упомянут.
+        Вероятно 3 реплики Alek.sys — это ошибки распознавания голоса гостя Артёма
+        или Ksenks (короткие фразы в 707s, 986s, 3968s).
+
+    - speaker: "SPEAKER_05"
+      issue: |
+        Гость идентифицирован как "Артём" (Go-разработчик), но его нет в people.yaml.
+        Это НЕ тот Артём Росновский, который был в ранних выпусках (69, 101, 106).
+        Требуется добавление нового участника в справочник.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Главное правило — переименовать SPEAKER_05 в гостя Артёма
+  - type: rename
+    episode: 483
+    from_speaker: "SPEAKER_05"
+    to_speaker: "ArtemGoDev"  # Временное имя до полной идентификации
+    confidence: high
+    reason: "Явное представление: 'Дорогой гость, Артем' в 21.95s"
+
+  # Удалить/переатрибутировать ошибочные Alek.sys
+  - type: rename
+    episode: 483
+    from_speaker: "Alek.sys"
+    to_speaker: "ArtemGoDev"  # Предположительно реплики гостя
+    confidence: medium
+    reason: |
+      Alek.sys не упомянут в представлении.
+      Реплики (707s, 986s, 3968s) по контексту могут быть от гостя.
+      Требуется voice comparison для подтверждения.
+
+  # MISATTRIBUTED спикеры уже помечены как отменённые
+  # Их можно оставить как есть или переатрибутировать после voice comparison
+
+# Дополнительные примечания
+notes: |
+  Эпизод 483 от 13.02.2016.
+  Участники: Umputun, Ksenks, гость Артём (Go-разработчик).
+  Bobuk и Gray отсутствовали (явно сказано в начале).
+
+  Гость Артём — автор опенсорсного P2P VPN проекта на Go.
+  Говорит о peer-to-peer соединениях, DHT сетях, сравнивает с OpenVPN и IPsec.
+  Это не Артём Росновский из people.yaml (тот был в выпусках 69, 101, 106).
+
+  Требуется:
+  1. Добавить нового гостя "Артём (Go-dev)" в people.yaml
+  2. Voice comparison для подтверждения переатрибуции Alek.sys → ArtemGoDev
+  3. Решить судьбу SPEAKER_MISATTRIBUTED_* реплик (оставить или переатрибутировать)

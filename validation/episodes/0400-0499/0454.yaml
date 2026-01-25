@@ -1,0 +1,171 @@
+episode: 454
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray, Alek.sys]
+  # Umputun упомянут, но только 2 короткие реплики (вероятно ошибка распознавания)
+  total_duration_sec: 7073  # ~1:58:00 на основе статистики ведущих
+
+# Заметки по составу
+notes:
+  introduction: |
+    В начале подкаста (6-27 сек) Gray объявляет:
+    "Umputun по-прежнему в отпуске, куда делась Ксюша уже вообще никто не знает,
+    поэтому мы с Бобуком отдуваемся по полной."
+  anomalies:
+    - Umputun отмечен как отсутствующий, но в транскрипте 2 короткие реплики от его имени
+    - Alek.sys появляется с 1463 сек (15 реплик) без представления в начале
+    - Ksenks не упоминается и не присутствует (подтверждено)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 0.08
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 790.5
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одиночная реплика "Угу" длительностью 0.08 секунды (790.54-790.62)
+        вставлена между репликами Bobuk'а. Типичная ошибка распознавания -
+        короткое междометие, которое система не смогла правильно атрибутировать.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Bobuk"
+          confidence: 0.7
+          reason: "Реплика вставлена посреди монолога Bobuk'а о колонке Echo"
+        - person_id: "Gray"
+          confidence: 0.3
+          reason: "Второй ведущий в студии, мог подать реакцию"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткий сегмент (0.08 сек) для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2.06
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 7692.31
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это реальная реплика, но не Эльдара Муртазина
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплика в конце подкаста (7692 сек = 2:08:12):
+        Bobuk: "Ну, вроде бы, больше вроде бы никаких интересных тем у нас нет."
+        ???: "Да, все вроде изучили."
+        Gray: "Ну, тогда будем прощаться."
+
+        Контекст указывает на участника передачи, отвечающего на вопрос о темах.
+        Эльдар Муртазин - гость, который иногда участвует, но маловероятен здесь,
+        так как в начале объявлено только два ведущих (Gray + Bobuk).
+
+      possible_matches:
+        - person_id: "Alek.sys"
+          confidence: 0.5
+          reason: |
+            Alek.sys присутствует в эпизоде (15 реплик), последняя его реплика
+            в 7707 сек, то есть через 15 секунд после этой. Мог быть он.
+        - person_id: "Gray"
+          confidence: 0.3
+          reason: |
+            Следующая реплика от Gray. Могла быть ошибка сегментации -
+            начало фразы Gray попало в отдельный сегмент.
+        - person_id: "Bobuk"
+          confidence: 0.2
+          reason: |
+            Предыдущая реплика от Bobuk. Менее вероятно - не типично
+            отвечать самому себе.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7692.31
+          etime: 7694.37
+          text: "Да, все вроде изучили."
+        candidates_for_comparison:
+          - speaker: "Alek.sys"
+            reference_stime: 7707.3
+            reference_etime: 7708.12
+            reference_text: "В смысле?"
+          - speaker: "Gray"
+            reference_stime: 7694.43
+            reference_etime: 7695.59
+            reference_text: "Ну, тогда будем прощаться."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Umputun"
+      issue: |
+        Объявлен как отсутствующий ("в отпуске"), но имеет 2 реплики в транскрипте:
+        1. 1318 сек: "Это, конечно, вообще есть." (1.78 сек)
+        2. 4434 сек: "Просто гениально." (1.26 сек)
+        Обе реплики короткие и вставлены между репликами Bobuk'а.
+        Вероятно, это ошибки распознавания голоса - Bobuk или Gray.
+
+    - speaker: "Alek.sys"
+      issue: |
+        Не упомянут в начале среди ведущих, но появляется с 1463 сек (24:23).
+        15 реплик суммарно 54 секунды. Либо присоединился позже, либо
+        ошибка распознавания (голос похож на одного из ведущих).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 454
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: |
+      Одиночное "Угу" внутри монолога Bobuk'а.
+      Скорее всего его реакция, которую система выделила в отдельного спикера.
+
+  - type: rename
+    episode: 454
+    from_speaker: "Umputun"
+    to_speaker: "_needs_review"
+    confidence: high
+    reason: |
+      Umputun объявлен отсутствующим в начале подкаста.
+      2 короткие реплики (суммарно 3 сек) - вероятно ошибки распознавания.
+      Требуется voice comparison для определения реального спикера.
+
+# Задачи для ручной проверки
+manual_review_tasks:
+  - task: "voice_comparison_umputun"
+    priority: high
+    description: |
+      Проверить 2 реплики, помеченные как Umputun:
+      1. 1318.31-1320.09: "Это, конечно, вообще есть."
+      2. 4434.12-4435.38: "Просто гениально."
+      Сравнить с голосами Bobuk и Gray в этом же эпизоде.
+
+  - task: "voice_comparison_misattributed_eldar"
+    priority: medium
+    description: |
+      Определить спикера реплики 7692.31-7694.37: "Да, все вроде изучили."
+      Кандидаты: Alek.sys, Gray, Bobuk.
+
+  - task: "verify_aleksys_presence"
+    priority: low
+    description: |
+      Уточнить, действительно ли Alek.sys присутствовал в этом эпизоде.
+      Он появляется с 24:23 без представления.
+      Возможно, его реплики - это на самом деле Gray или Bobuk.

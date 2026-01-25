@@ -1,0 +1,280 @@
+episode: 446
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Метаданные
+metadata_note: "Файл 446_desc.json отсутствует в data_clean/"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys, Gray]
+  guests_identified:
+    - name: "Виктор Гамов"
+      podcast: "Разбор полётов"
+    - name: "Алексей Абашев"
+      podcast: "Разбор полётов"
+  total_duration_sec: 8608  # последняя реплика ~8608s
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 981
+    replies_count: 272
+    first_appearance_sec: 24
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "VictorGamov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        24.14s: "Всем привет, филиал разборов полетов в Радио Ти, Виктор Гамов и Абашев Алексей."
+        Умпутун обращается к Алексею (SPEAKER_05), значит SPEAKER_04 = Виктор.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1345
+    replies_count: 234
+    first_appearance_sec: 262
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "AlexeyAbashev"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        3838.66s Umputun: "Алексей, ты понимаешь, что он несет поргу?"
+        3842.78s SPEAKER_05: "Я понимаю, что если кто-то выпадает, я привык, я с ним уже давно сижу."
+        Прямое обращение по имени с ответом от SPEAKER_05.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 70
+    replies_count: 11
+    first_appearance_sec: 770
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин не был представлен в начале выпуска. Гостями были только
+        Виктор Гамов и Алексей Абашев из подкаста "Разбор полётов".
+        На 8430s "EldarMurtazin" говорит: "В этом подкасте еще не звучала коронная фраза,
+        которая уже звучит в нашем подкасте не первый раз" - это явно относится к
+        "Разбору полётов", а не к Эльдару Муртазину.
+        Скорее всего это ошибочная атрибуция реплик одного из гостей (Гамов или Абашев).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "VictorGamov"
+          confidence: 0.5
+          reason: "Один из двух гостей, ошибочно атрибутирован"
+        - person_id: "AlexeyAbashev"
+          confidence: 0.5
+          reason: "Один из двух гостей, ошибочно атрибутирован"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8430.8
+          etime: 8438.29
+          text: "В этом подкасте еще не звучала коронная фраза, которая уже звучит в нашем подкасте не первый раз, это то, что технология идеальна."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 9
+    replies_count: 5
+    first_appearance_sec: 1076
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Марина (Marin_k_a) — бывшая ведущая, но в выпуске 446 не участвовала.
+        Это пометка об отмененной ошибочной атрибуции. Реплики разбросаны случайно
+        (1076s, 1884s, 3411s) — типичная ошибка распознавания или артефакт предыдущей
+        чистки данных.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Короткие реплики, скорее всего ошибочно атрибутированные от Ksenks"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 4
+    replies_count: 4
+    first_appearance_sec: 86
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (0.3-2 сек) разбросаны по всему эпизоду:
+        86.33s: "И как?" (0.36 сек)
+        5055.85s: "Смотри." (0.26 сек)
+        8545.95s: "Спонсор." (1.06 сек)
+        8606.43s: "Почищаются." (1.9 сек)
+        Это типичная ошибка распознавания — односложные реакции от других спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Gray"
+    total_duration_sec: 44
+    replies_count: 7
+    first_appearance_sec: 1478
+    pattern: scattered
+
+    analysis:
+      is_error: false  # Требует дополнительной проверки
+      error_reason: null
+
+      identified_as: "gray"
+      identification_method: null
+      confidence: low
+      evidence: |
+        Gray появляется неожиданно на 1478s без представления. В начале эпизода
+        Умпутун говорит "ровно половина базового состава, Ксюша да я", что указывает
+        на отсутствие Gray и Bobuk. Однако Gray может быть присоединился позже.
+        Всего 7 реплик за весь эпизод — очень мало для ведущего.
+        ТРЕБУЕТ ПРОВЕРКИ: мог ли Gray присоединиться в середине эпизода,
+        или это ошибочная атрибуция.
+
+      possible_matches:
+        - person_id: "VictorGamov"
+          confidence: 0.3
+          reason: "Возможно ошибочная атрибуция гостя"
+        - person_id: "AlexeyAbashev"
+          confidence: 0.3
+          reason: "Возможно ошибочная атрибуция гостя"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3389.1
+          etime: 3394.22
+          text: "Ну да, нет, здесь еще пишут e.printstacktrace."
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 146
+    replies_count: 25
+    first_appearance_sec: 115
+    pattern: scattered
+
+    analysis:
+      is_error: false  # Требует проверки
+      error_reason: null
+
+      identified_as: "alek_sys"
+      identification_method: null
+      confidence: medium
+      evidence: |
+        Alek.sys появляется на 115s, но Умпутун в начале говорит "ровно половина
+        базового состава, Ксюша да я". Возможно Alek.sys присоединился позже,
+        или он был с начала но Умпутун забыл его упомянуть.
+        Реплики разбросаны по всему эпизоду (25 штук) — это более реалистично
+        для ведущего, чем для ошибки распознавания.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: "Не был представлен. В выпуске участвовали только Гамов и Абашев. Это ошибочная атрибуция."
+    - speaker: "Gray"
+      issue: "Не был представлен в начале. Умпутун сказал 'половина базового состава, Ксюша да я'. Требует voice verification."
+    - speaker: "Alek.sys"
+      issue: "Не был явно представлен в начале, но упоминается косвенно. 25 реплик — правдоподобно для ведущего."
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Марина не участвовала в выпуске. Это артефакт предыдущей чистки данных."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 446
+    from_speaker: "SPEAKER_04"
+    to_speaker: "VictorGamov"
+    confidence: high
+    reason: "Представился в начале выпуска как 'Виктор Гамов'. Умпутун обращается к Алексею (SPEAKER_05)."
+
+  - type: rename
+    episode: 446
+    from_speaker: "SPEAKER_05"
+    to_speaker: "AlexeyAbashev"
+    confidence: high
+    reason: "Умпутун обращается к нему по имени 'Алексей' на 3838s, он отвечает."
+
+  - type: rename
+    episode: 446
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_UNKNOWN_RAZBOR"
+    confidence: high
+    reason: "Эльдар Муртазин не участвовал в выпуске. Это реплики одного из гостей (Гамов или Абашев). Требует voice comparison для точной идентификации."
+
+  - type: rename
+    episode: 446
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "SPEAKER_UNKNOWN"
+    confidence: medium
+    reason: "Марина не участвовала. Короткие реплики — вероятно ошибки распознавания от других спикеров."
+
+  - type: delete
+    episode: 446
+    speaker: "SPEAKER_01"
+    confidence: high
+    reason: "Односложные реплики (0.3-2 сек), разбросанные случайно — явные ошибки распознавания."
+
+# Дополнительные заметки
+notes: |
+  1. Гости выпуска — ведущие подкаста "Разбор полётов" Виктор Гамов и Алексей Абашев.
+     Их нужно добавить в people.yaml.
+
+  2. EldarMurtazin — ложная атрибуция. Эльдар Муртазин — известный мобильный аналитик,
+     но в этом выпуске не участвовал. Реплики принадлежат одному из гостей.
+
+  3. Gray и Alek.sys присутствуют, хотя Умпутун в начале сказал "половина состава".
+     Возможно они присоединились позже или это ошибки распознавания. Требует проверки.
+
+  4. Для полной идентификации EldarMurtazin -> Гамов/Абашев требуется voice comparison.

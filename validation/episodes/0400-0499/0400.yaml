@@ -1,0 +1,316 @@
+episode: 400
+status: needs_review
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  # Ksenks присутствует, но размечена как SPEAKER_02
+  guests_present: [Marin_k_a]
+  total_duration_sec: 6300  # примерно 1:45:00
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1049
+    replies_count: 431
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Множественные доказательства:
+        1. В 5942s SPEAKER_03 кричит "Ксюша, пой!", а SPEAKER_02 отвечает (5945s):
+           "Я поздравляю Маринку" и "Петь, я не в голосе сегодня"
+        2. В 548s Bobuk говорит "Я вспомнил, Ксюш. Ты тогда была приличной, холостой девушкой",
+           а SPEAKER_02 отвечает (553s): "Откуда ты знаешь, когда я первый раз слышала радио Т..."
+        3. В 5948s Umputun спрашивает SPEAKER_02: "Ты с ней пересекалась в этом подкасте?"
+           (про Маринку) - обращается к женщине на "ты"
+        4. В 88s Bobuk говорит "Ксюша у нас еще есть", но реплик Ksenks в файле нет -
+           вместо них SPEAKER_02 с 431 репликой
+        5. SPEAKER_02 говорит от женского лица: "какой я была девушкой", "я пришла"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # идентификация достаточно уверенная
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 658
+    replies_count: 123
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Марина - бывшая ведущая, указана в people.yaml.
+        В 5958s говорит: "Она ушла, а я в следующий пришла" и "То есть я не подсидела" -
+        от первого лица женского рода о своём участии в подкасте.
+        SPEAKER_02 (Ksenks) в 5945s говорит "Я поздравляю Маринку" - третье лицо.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 126
+    replies_count: 68
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (в среднем 1.8 сек), разбросанные по эпизоду.
+        Типичные фразы: "Ну, что же делать?", "Не все вспомнил", "Конечно".
+        Появляются рядом с репликами Bobuk и часто повторяют/дополняют его слова.
+        Вероятно - ошибка распознавания голоса Bobuk или эхо-эффект.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Реплики появляются рядом с Bobuk, похожи на продолжение его мыслей"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 194.91
+          etime: 199.31
+          text: "Нет, они ставят себе цель. 55 секунд они делают доплет."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 39
+    replies_count: 21
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (в среднем 1.8 сек), разбросаны по эпизоду.
+        Типичные фразы: "Ты давно уже была?", "Это было хорошо", "Ну да", "Всех пересидел".
+        Односложные подтверждения и вопросы без контекста.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Некоторые реплики похожи на стиль Umputun"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Другие реплики похожи на стиль Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 519.58
+          etime: 522.94
+          text: "Ты давно уже была?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 26
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Маркировка SPEAKER_MISATTRIBUTED указывает на ранее отменённую ошибочную атрибуцию.
+        Реплики разбросаны по эпизоду, короткие.
+        Эльдар Муртазин - известный гость, но его присутствие в этом эпизоде не подтверждено.
+        Примеры: "А 406-й будет доступен только частично" (467s) - шутка про HTTP коды.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Gray любит шутки, реплика про 406 похожа на его стиль"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Некоторые реплики технического характера"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3199.86
+          etime: 3205.02
+          text: "Мы Степана Пачкова упомянули."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 3 реплики общей длительностью 5 секунд - слишком мало для реального спикера.
+        Реплики в конце эпизода: "Ксюша, пой!" (5942s), "У нас еще есть странный, да?" (6150s).
+        Обращение к Ксюше указывает, что это кто-то из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Стиль обращения к Ксюше похож на Bobuk"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray тоже часто подначивает коллег"
+
+      voice_task:
+        needed: false  # слишком короткие сегменты
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика в 631s: "Если человек где-то неправ, это только повод для того,
+        чтобы что-то еще почитать." Лаваль - бывшая ведущая, но её участие в эпизоде 400
+        маловероятно. Маркировка MISATTRIBUTED подтверждает ошибку.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплика в контексте разговора с/о Ксюше, может быть её"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Марина тоже присутствует, могла сказать"
+
+      voice_task:
+        needed: false  # одна короткая реплика
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика "Конечно" в 328s длительностью 2 секунды.
+        Типичная ошибка распознавания - односложная реакция.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Реплика идёт после слов Umputun, возможно его голос"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: |
+        Ведущая Ksenks отсутствует в разметке, хотя упоминается в разговоре
+        ("Ксюша у нас еще есть" в 88s) и активно участвует.
+        Вероятно, все её реплики размечены как SPEAKER_02.
+
+    - speaker: "SPEAKER_02"
+      issue: |
+        431 реплика (1049 сек) от неидентифицированного спикера -
+        по объёму сопоставимо с Bobuk (700 реплик, 1944 сек).
+        Анализ контекста показывает, что это Ksenks.
+
+    - speaker: "SPEAKER_04"
+      issue: |
+        68 реплик с характерным паттерном коротких фраз рядом с репликами Bobuk.
+        Возможно - артефакт распознавания или эхо.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 400
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Множественные контекстуальные доказательства:
+      - Отвечает на обращения "Ксюш" от Bobuk
+      - Говорит от женского лица
+      - SPEAKER_03 кричит "Ксюша, пой!", а SPEAKER_02 отвечает "Петь, я не в голосе"
+      - Ksenks упоминается как участница, но отсутствует в разметке
+
+  - type: review_merge
+    episode: 400
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: |
+      Короткие реплики рядом с Bobuk, возможно ошибки распознавания его голоса.
+      Требует voice comparison для подтверждения.
+
+  - type: review_merge
+    episode: 400
+    from_speaker: "SPEAKER_MISATTRIBUTED_LAVALE"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Одна реплика в контексте разговора о Ксюше.
+      Лаваль вряд ли была в эпизоде 400 (2014 год).
+
+# Метаданные анализа
+analysis_notes: |
+  Эпизод 400 - юбилейный выпуск от 12 июля 2014 года.
+
+  Основные находки:
+  1. SPEAKER_02 (431 реплика, 1049 сек) с высокой вероятностью = Ksenks
+     Доказательства: контекстные обращения, ответы на "Ксюш", женский род
+
+  2. Marin_k_a (123 реплики) - корректно идентифицирована как Марина, бывшая ведущая
+
+  3. SPEAKER_04 (68 реплик) - вероятно артефакты распознавания Bobuk
+
+  4. Остальные SPEAKER_* - разрозненные короткие реплики,
+     скорее всего ошибки распознавания
+
+  5. SPEAKER_MISATTRIBUTED_* - ранее ошибочно атрибутированные реплики,
+     требуют повторной проверки
+
+  Рекомендация: применить правило переименования SPEAKER_02 → Ksenks,
+  остальные спикеры требуют voice comparison или ручной проверки.

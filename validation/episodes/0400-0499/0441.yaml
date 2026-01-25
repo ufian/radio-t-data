@@ -1,0 +1,294 @@
+episode: 441
+status: needs_review
+analyzed_at: "2026-01-25T15:30:00Z"
+revalidated_at: "2026-01-25T18:00:00Z"  # Повторная валидация подтвердила анализ
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  guests_confirmed: [Budam, Dmitry]
+  # Umputun в финале: "Пришел Будам и пришел Дмитрий"
+  total_duration_sec: 6700
+
+# Примечание: Alek.sys указан в статистике с 1 репликой, но в этом выпуске
+# только Umputun и Ksenks из ведущих. Alek.sys (1 реплика) - ошибка атрибуции.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1467
+    replies_count: 403
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "Budam"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в начале (17-21s): "Будам, ты к нам второй раз приходишь, как минимум?"
+        SPEAKER_03 отвечает (21s): "Я думаю, да. Скорее всего, да."
+        Umputun в финале (6673s): "Пришел Будам и пришел Дмитрий"
+        Ksenks (6681s): "Да, было очень интересно послушать Будама."
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 191.14
+          etime: 202.83
+          text: "Если бы, скажем, Жень, ты купил вот этот индекс, то ты бы двигался вровень с NASDAQ. А если ты будешь покупать отдельно взятые стоки, то идет наверх, наверх, вниз."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 381
+    replies_count: 91
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "Dmitry"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (58-65s): "Дмитрий, ты у нас был как-то в гостях и показал себя, как ты сам говоришь, хорошо. Было?"
+        SPEAKER_06 отвечает (65s): "Было такое. Всем привет. Надеюсь, что сегодня тоже не подведу."
+        Umputun в финале: "Пришел Будам и пришел Дмитрий"
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 797.88
+          etime: 815.74
+          text: "Насколько я знаю, у IBM самый крупный облачный сервис, который они сейчас пытаются всем продавать, это их Watson. Они хотят, чтобы все покупали у них там от маркетинга до медиков."
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 118
+    replies_count: 17
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин только УПОМИНАЕТСЯ в начале выпуска как пример "старой гвардии",
+        но физически не присутствует. Реплики EldarMurtazin идут вперемежку с SPEAKER_06
+        (Дмитрий) - например, в 3769s EldarMurtazin говорит сразу после SPEAKER_06 в 3766s.
+        Это ошибка автоматической атрибуции - реплики принадлежат Дмитрию.
+      identified_as: null
+      possible_matches:
+        - person_id: "Dmitry"
+          confidence: 0.9
+          reason: "Реплики перемежаются с SPEAKER_06, который точно Дмитрий"
+      voice_task:
+        needed: true
+        reason: "Нужно подтвердить, что EldarMurtazin = Дмитрий (SPEAKER_06)"
+        reference_segment:
+          stime: 4310.68
+          etime: 4334.02
+          text: "Насколько я понял, они теперь параллельно будут выпускать все эти версии..."
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 19
+    replies_count: 7
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Umputun спрашивает (4617s): "Будам, а у тебя чего используется для коммуникации?"
+        Отвечает SPEAKER_05 (4624s): "У нас наоборот. Мы работаем исключительно в скайпе"
+        Это значит SPEAKER_05 = Будам, но Будам уже помечен как SPEAKER_03.
+        Возможно сегментация голоса разделила одного человека на два ID.
+      identified_as: null
+      possible_matches:
+        - person_id: "Budam"
+          confidence: 0.85
+          reason: "Umputun обращается к Будаму, отвечает SPEAKER_05"
+      voice_task:
+        needed: true
+        reason: "Подтвердить что SPEAKER_05 = Будам (SPEAKER_03)"
+        reference_segment:
+          stime: 4624.19
+          etime: 4628.08
+          text: "У нас наоборот. Мы работаем исключительно в скайпе в этом плане."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 11
+    replies_count: 5
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_04 говорит в контексте, когда Umputun спрашивает гостей о коммуникации.
+        Реплики (4635s): "Нам есть чего скрывать, но, кстати, до чата пока никто не доходил."
+        В 5435s SPEAKER_04 говорит сразу после SPEAKER_03 на ту же тему.
+        Скорее всего это тот же Будам или Дмитрий, ошибочно сегментированный.
+      identified_as: null
+      possible_matches:
+        - person_id: "Dmitry"
+          confidence: 0.6
+          reason: "Говорит о корпоративных чатах, возможно из той же компании"
+        - person_id: "Budam"
+          confidence: 0.4
+          reason: "Контекст близок к SPEAKER_03"
+      voice_task:
+        needed: true
+        reason: "Определить кто это - Будам или Дмитрий"
+        reference_segment:
+          stime: 4635.74
+          etime: 4641.81
+          text: "Нам есть чего скрывать, но, кстати, до чата пока никто не доходил. Существуют всякие регуляции, но"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткая реплика "Да, всем, не только." (979s) между Ksenks и Umputun.
+        Маркер MISATTRIBUTED указывает что это не Петр Диденко.
+        Скорее всего один из гостей (Будам или Дмитрий).
+      identified_as: null
+      possible_matches:
+        - person_id: "Budam"
+          confidence: 0.6
+          reason: "Контекст рядом с SPEAKER_03"
+        - person_id: "Dmitry"
+          confidence: 0.4
+          reason: "Возможный альтернативный вариант"
+      voice_task:
+        needed: false
+        reason: "Слишком короткая реплика для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики: "Так они же виртуальные." (1771s) и "проносимую электронику." (5281s)
+        Маркер MISATTRIBUTED указывает что это не Марина.
+        Скорее всего один из гостей.
+      identified_as: null
+      possible_matches:
+        - person_id: "Budam"
+          confidence: 0.5
+          reason: "Реплика в 1771s идет сразу после SPEAKER_03"
+        - person_id: "Dmitry"
+          confidence: 0.5
+          reason: "Альтернативный вариант"
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики для voice comparison"
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "И что я буду делать?" (2809s) среди реплик Umputun.
+        Alek.sys - постоянный ведущий, но в этом выпуске только Umputun и Ksenks.
+        Umputun в финале явно говорит только о двух гостях (Будам и Дмитрий).
+        Это ошибка распознавания - реплика скорее всего от одного из гостей или Umputun.
+      identified_as: null
+      possible_matches:
+        - person_id: "Budam"
+          confidence: 0.5
+          reason: "Реплика перед речью SPEAKER_03"
+        - person_id: "Umputun"
+          confidence: 0.3
+          reason: "Может быть продолжение его речи"
+      voice_task:
+        needed: false
+        reason: "Слишком короткая реплика (0.8 сек)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  # Umputun чётко представляет обоих гостей в начале и упоминает их в конце
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: |
+        EldarMurtazin НЕ присутствует в выпуске, только упоминается.
+        17 реплик ошибочно атрибутированы ему, они принадлежат Дмитрию.
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys не участвует в этом выпуске (только Umputun+Ksenks).
+        1 реплика ошибочно атрибутирована.
+    - speaker: "SPEAKER_05"
+      issue: |
+        SPEAKER_05 скорее всего = Будам (SPEAKER_03), ошибка сегментации голоса.
+    - speaker: "SPEAKER_04"
+      issue: |
+        SPEAKER_04 вероятно один из двух гостей, требует voice comparison.
+
+# Гости для добавления в people.yaml
+new_guests_to_add:
+  - id: "budam"
+    canonical_name: "Budam"
+    aliases: ["Будам"]
+    real_name: null
+    info: "Гость выпуска 441. Второй раз в подкасте по словам Umputun."
+
+  - id: "dmitry_441"
+    canonical_name: "Dmitry441"
+    aliases: ["Дмитрий"]
+    real_name: "Дмитрий"
+    info: "Гость выпуска 441. Был в подкасте ранее."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 441
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Budam"
+    confidence: high
+    reason: "Явное представление в начале выпуска"
+
+  - type: rename
+    episode: 441
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Dmitry441"
+    confidence: high
+    reason: "Явное представление в начале выпуска"
+
+  - type: rename
+    episode: 441
+    from_speaker: "EldarMurtazin"
+    to_speaker: "Dmitry441"
+    confidence: medium
+    reason: |
+      Реплики перемежаются с SPEAKER_06 (Дмитрий).
+      Требует voice comparison для подтверждения.
+
+  - type: rename
+    episode: 441
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Budam"
+    confidence: medium
+    reason: |
+      Umputun обращается к Будаму, отвечает SPEAKER_05.
+      Требует voice comparison для подтверждения.
+
+  - type: delete_or_merge
+    episode: 441
+    from_speaker: "Alek.sys"
+    confidence: medium
+    reason: |
+      Alek.sys не участвует в этом выпуске.
+      Одна короткая реплика - ошибка распознавания.
+
+# Аудио для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast441.mp3"  # Стандартный формат URL Radio-T
+
+# Итоговая оценка
+summary: |
+  Выпуск 441 от 25 апреля 2015 года.
+  Ведущие: Umputun, Ksenks
+  Гости: Будам (403 реплики как SPEAKER_03), Дмитрий (91 реплика как SPEAKER_06)
+
+  КРИТИЧЕСКИЕ ПРОБЛЕМЫ:
+  1. EldarMurtazin (17 реплик) - ошибочная атрибуция, Эльдар только упоминается но не присутствует
+  2. Alek.sys (1 реплика) - ошибка, он не участвует в этом выпуске
+  3. SPEAKER_05 (7 реплик) - скорее всего тот же Будам
+  4. SPEAKER_04 (5 реплик) - один из гостей, требует идентификации
+
+  Статус: needs_review - требуется voice comparison для подтверждения EldarMurtazin→Dmitry и SPEAKER_05→Budam

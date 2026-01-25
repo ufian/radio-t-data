@@ -1,0 +1,219 @@
+episode: 413
+status: has_tasks
+analyzed_at: "2026-01-25"
+updated_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7149
+  notes: >
+    Umputun в начале: "в полном обычном составе, даже не буду представлять".
+    Гостей в выпуске нет. Все MISATTRIBUTED спикеры — ошибки распознавания ведущих.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 17
+    replies_count: 7
+    pattern: scattered
+    timestamps:
+      - stime: 534.96
+        etime: 537.9
+        text: "Ты написал свой Монит на Джаве?"
+      - stime: 583.42
+        etime: 588.86
+        text: "То есть у них вообще нет такой системы, где люди могут субъединить свои плагины или еще что-нибудь?"
+      - stime: 1621.33
+        etime: 1623.29
+        text: "Больше никогда не покупай никакие другие."
+      - stime: 2287.57
+        etime: 2290.27
+        text: "Я бы радовалась, если бы вам потом дали домашнее задание."
+      - stime: 2894.91
+        etime: 2896.09
+        text: "Ну, подожди, не много где."
+      - stime: 3275.15
+        etime: 3276.23
+        text: "Нет, вообще..."
+      - stime: 6792.93
+        etime: 6794.39
+        text: "И какую-то возможность..."
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Все 7 реплик — короткие фразы (1-5 сек), разбросанные по выпуску.
+        Контекстный анализ показывает, что это ошибки распознавания Ksenks:
+        - 5 из 7 реплик идут непосредственно до или после реплик Ksenks
+        - Реплика на 2287с "Я бы радовалась..." — женский голос, продолжение мысли Ksenks
+        - Реплика на 2894с "Ну, подожди, не много где" — сразу перед репликой Ksenks о Silverlight
+        - Реплика на 1621с "Больше никогда не покупай..." — между репликами Ksenks
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Реплика 2287с: "Я бы радовалась, если бы вам потом дали домашнее задание" —
+        женский род ("радовалась") и идёт сразу после Ksenks "По-моему, это было бы прекрасно".
+        Остальные реплики также в контексте разговора Ksenks.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 11
+    replies_count: 6
+    pattern: scattered
+    timestamps:
+      - stime: 1147.39
+        etime: 1148.89
+        text: "Там история очень простая."
+      - stime: 1415.92
+        etime: 1417.38
+        text: "Где-то у меня что-то такое было."
+      - stime: 3663.22
+        etime: 3664.88
+        text: "В общем, речь идет о продукте..."
+      - stime: 4843.27
+        etime: 4844.97
+        text: "Ты еще скажи, что это портит карму."
+      - stime: 6451.69
+        etime: 6453.99
+        text: "Ничего не знаю, и гости обещали тоже."
+      - stime: 7906.98
+        etime: 7909.41
+        text: "Хороший такой, правильно подобный пайк."
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Все 6 реплик — очень короткие (1-3 сек), разбросанные по выпуску.
+        В эпизоде 413 нет гостей, Эльдар Муртазин не участвует.
+        Контекст показывает, что это ошибки распознавания одного из ведущих:
+        - 1147с "Там история очень простая" — между репликами Gray о роутерах Belkin
+        - 1415с "Где-то у меня что-то такое было" — ответ на вопрос Umputun о Netgear
+        - 6451с "Ничего не знаю, и гости обещали тоже" — в контексте общего разговора
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: >
+            Реплика на 1147с идёт между репликами Gray и продолжает его мысль.
+            Но уверенность низкая из-за коротких фраз.
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: >
+            Реплика на 1415с похожа по стилю на ответ Bobuk
+            ("И у меня тоже в багажнике что-то такое лежит")
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3663.22
+          etime: 3664.88
+          text: "В общем, речь идет о продукте..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+    timestamps:
+      - stime: 2476.3
+        etime: 2479.22
+        text: "Но в плане скайпа в этом плане, по-моему, тоже очень хорошее."
+      - stime: 6322.92
+        etime: 6325.64
+        text: "Это был прекрасный пример."
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Всего 2 реплики (3 сек каждая) на протяжении 4000 секунд эпизода.
+        Пётр Диденко не участвует в выпуске 413 (в начале сказано "полный обычный состав").
+        Обе реплики — ошибки распознавания одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: >
+            Реплика на 2476с "Но в плане скайпа..." идёт сразу после Ksenks
+            о FaceTime Audio (2469с). Возможно, это её продолжение.
+        - person_id: "umputun"
+          confidence: 0.7
+          reason: >
+            Реплика на 6322с "Это был прекрасный пример" — Umputun СРАЗУ ПОСЛЕ (6325с)
+            продолжает: "Прекрасный пример того тезиса, который Бобук на Хабре высказал".
+            Это явно его же фраза, которую он развивает.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2476.3
+          etime: 2479.22
+          text: "Но в плане скайпа в этом плане, по-моему, тоже очень хорошее."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    Umputun явно сказал "в полном обычном составе" (0:01-0:14).
+    Все 5 ведущих присутствуют: Umputun, Bobuk, Gray, Ksenks, Alek.sys.
+    Гостей в выпуске нет.
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Только 5 реплик (8 сек) за весь выпуск. Возможно, часть его реплик
+        попала в MISATTRIBUTED категории, но это требует voice comparison.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 413
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Все 7 реплик в контексте Ksenks. Реплика "Я бы радовалась" (женский род)
+      однозначно указывает на женщину. В эпизоде только одна женщина — Ksenks.
+
+  - type: rename
+    episode: 413
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "NEEDS_VOICE_COMPARISON"
+    confidence: low
+    reason: >
+      Вероятно Gray или Bobuk, но для точной атрибуции нужен voice comparison.
+      Не переименовывать до сравнения голосов.
+
+  - type: split_rename
+    episode: 413
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    rules:
+      - stime: 2476.3
+        to_speaker: "NEEDS_VOICE_COMPARISON"
+        confidence: medium
+        reason: "Возможно Ksenks (продолжает мысль про FaceTime)"
+      - stime: 6322.92
+        to_speaker: "Umputun"
+        confidence: high
+        reason: >
+          Umputun сразу после этой реплики продолжает: "Прекрасный пример того тезиса,
+          который Бобук на Хабре высказал". Это явно его фраза.
+
+# Аудио для voice comparison
+audio_reference:
+  url: "https://cdn.radio-t.com/rt_podcast413.mp3"
+  note: "URL по стандартному паттерну Radio-T. Файл 413_desc.json отсутствует в репозитории."

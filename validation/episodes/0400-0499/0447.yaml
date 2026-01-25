@@ -1,0 +1,211 @@
+episode: 447
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7756  # ~2ч 9мин (2883+2560+1339+950+14+10)
+  notes: |
+    Umputun в начале говорит "полный состав" и "никого не представлять" -
+    гостей не было, только ведущие. Alek.sys минимальное участие (14 сек).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 10
+    replies_count: 6
+    pattern: scattered  # реплики разбросаны по эпизоду
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Это Ksenks, ошибочно размеченная системой распознавания.
+        Доказательства:
+        1. Реплика "Вот это я согласна" (7094s) - женский род
+        2. Реплика "А чем тебе не нравится рест?" (5360s) - Umputun отвечает
+           "О, Бобок, вдари, потому что я женщин не бью" - явное указание на женщину
+        3. Все реплики вписываются в контекст диалога, где рядом говорит Ksenks
+        4. В эпизоде только одна женщина-ведущая - Ksenks
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        "Вот это я согласна" (7094s) - женский род
+        "А чем тебе не нравится рест?" (5360s) → Umputun: "женщин не бью"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: consecutive  # две реплики подряд
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (по ~0.7 сек), идут подряд.
+        "А как он учился-то?" и "Нет, подожди, ты..." - типичные перебивки.
+        Контекст - обсуждение обучения программированию, рядом говорят Umputun и Bobuk.
+        Скорее всего это один из ведущих (вероятнее всего Gray или Ksenks).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Короткая перебивка в диалоге, Gray часто так делает"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Тоже возможно, рядом обсуждают образование"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1297.27
+          etime: 1298.85
+          text: "А как он учился-то? Нет, подожди, ты..."
+        note: "Слишком короткий сегмент для надёжного сравнения"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 7
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Метка SPEAKER_MISATTRIBUTED_* означает, что это ранее ошибочно
+        присвоенный спикер, который уже был отменён. В эпизоде 447 нет гостей,
+        а Марина не является ведущей. Это ошибки распознавания одного из
+        ведущих (вероятно Ksenks - другая женщина).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики типа "Почему нет?" (923s), "Что странно" (6075s) - короткие
+        интерполяции женским голосом, но не Марина (её нет в эпизоде).
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Единственная женщина-ведущая в эпизоде, короткие реплики похожи на её стиль"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3487.3
+          etime: 3488.94
+          text: "Я думаю, что Бобук сейчас статью не читал."
+        note: "Самая длинная реплика из набора"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Метка SPEAKER_MISATTRIBUTED_* означает отменённое ошибочное присвоение.
+        Пётр Диденко не упоминается в этом эпизоде, гостей нет.
+        Реплики "Почему?" и "Ну, пусть нам в чате тебе подскажут" - короткие,
+        скорее всего это один из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Короткие реплики-вопросы типичны для Gray"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Также возможно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2864.55
+          etime: 2866.97
+          text: "Ну, пусть нам в чате тебе подскажут."
+        note: "Более длинная из двух реплик"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Метка SPEAKER_MISATTRIBUTED_* означает отменённое ошибочное присвоение.
+        Эльдар Муртазин не упоминается в этом эпизоде, гостей нет.
+        Одна короткая реплика "Ну, хорошо, что в небо" - явная ошибка
+        распознавания одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Стиль реплики похож"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Также возможно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8197.93
+          etime: 8199.63
+          text: "Ну, хорошо, что в небо."
+        note: "Единственная реплика"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Минимальное участие (8 реплик, 14 сек). Возможно часть его реплик
+        неверно атрибутирована другим спикерам, но это требует voice comparison.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 447
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Женский род в репликах ("согласна"), контекст "женщин не бью",
+      единственная женщина в эпизоде - Ksenks.
+
+# Заметки для дальнейшей работы
+notes: |
+  1. SPEAKER_07 → Ksenks можно применить автоматически (high confidence)
+
+  2. SPEAKER_MISATTRIBUTED_* спикеры требуют либо:
+     - voice comparison для точной идентификации
+     - или консервативное переименование в "Unknown" с пометкой "likely host"
+
+  3. SPEAKER_06 слишком короткий для надёжной идентификации
+
+  4. Все неизвестные спикеры - это ошибки распознавания ведущих,
+     а не реальные гости (подтверждено началом эпизода: "полный состав").
+
+audio_url: null  # Метаданные не найдены в data_clean, нужно проверить data/447/

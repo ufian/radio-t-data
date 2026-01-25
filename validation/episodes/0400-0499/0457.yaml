@@ -1,0 +1,200 @@
+episode: 457
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Gray, Bobuk, Alek.sys]
+  total_duration_sec: 6923  # примерная сумма из статистики
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 20
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все 6 реплик являются продолжением речи Gray - они вклиниваются между его
+        репликами и продолжают его мысль:
+        - 2085s: "Если... Я не знаю просто, с чем это сравнить" - продолжает мысль Gray о бизнесе Google
+        - 3703s: "еще более прямоугольные, потом там вообще какой-то параллелепипед" - продолжает описание эволюции часов Samsung, которое начал Gray
+        - 4083s: "Вот очень похожее устройство получается" - продолжает обсуждение устройства
+        - 4133s: "Ссылка говорит, что page not found" - короткая реплика в контексте
+        - 7039s: "Не-не-не, по-моему, это просто для хранения паролей" - уточнение в диалоге
+        - 7493s: "Как-то там печальненько все уже" - короткое замечание
+
+        Имя SPEAKER_MISATTRIBUTED_ELDAR указывает, что это была ранее ошибочная атрибуция
+        реплик Эльдару Муртазину, которая затем была отменена. По контексту это скорее всего Gray.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.85
+          reason: |
+            Реплики органично продолжают речь Gray и появляются в середине его монологов.
+            Стиль речи и тематика соответствуют Gray.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2084.98
+          etime: 2090.8
+          text: "Если... Я не знаю просто, с чем это сравнить, так, чтобы это было совсем досконально понятно."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все 5 реплик - очень короткие (1-3 сек) разрозненные фразы:
+        - 432s: "И оно бы само все стало." (2.6 сек) - после реплики Gray
+        - 435s: "Понятно." (1 сек)
+        - 436s: "Интересно." (0.7 сек)
+        - 2334s: "Да." (0.04 сек!)
+        - 3347s: "Ну, 181." (0.5 сек)
+
+        Это типичные ошибки распознавания - короткие междометия и реакции,
+        которые не удалось правильно атрибутировать. Скорее всего это один из
+        ведущих (Umputun, Gray или Ksenks).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Первая реплика идет сразу после Gray и продолжает его мысль"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Может быть короткая реакция ведущего"
+
+      voice_task:
+        needed: false
+        # Реплики слишком короткие для voice comparison
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика в 4354s: "Ну, ты уверен, что эта проблема... Доступна индийским инженерам?"
+
+        Имя указывает на отмененную атрибуцию Петру Диденко. Контекст: идет диалог об Индии,
+        Umputun спрашивает про время ("У них как раз самый белый день?"), затем эта реплика,
+        затем отвечает Ksenks. По контексту это скорее всего Gray или Umputun - реплика
+        содержит технический скептицизм, характерный для обоих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Технический скептицизм и саркастический тон характерны для Gray"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Может быть продолжение вопроса Umputun"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4354.24
+          etime: 4359.11
+          text: "Ну, ты уверен, что эта проблема... Доступна индийским инженерам?"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две очень короткие реплики:
+        - 784s: "Ну," (0.06 сек!) - между Gray и Bobuk
+        - 4891s: "Конечно." (1.4 сек) - после обращения Umputun к Ксюше
+
+        Первая реплика - артефакт (0.06 сек), вторая - ответ на обращение к Ksenks
+        ("Ксюша, ты все поняла."), значит это скорее всего Ksenks.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Umputun спрашивает: "Ксюша, ты все поняла." (4889-4890s)
+        SPEAKER_04 отвечает: "Конечно." (4891s)
+        Это явный ответ Ksenks на прямое обращение к ней.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        # Вторая реплика однозначно Ksenks по контексту
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk имеет всего 9 реплик (27 сек), первая в 785s. В начале выпуска
+        Umputun объявляет, что Bobuk уходит из подкаста из-за свадьбы,
+        но тем не менее Bobuk появляется. Это может быть шуткой или
+        он присоединился позже.
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys имеет всего 1 реплику (1 сек) в 7584s - это очень мало.
+        Возможно ошибка атрибуции или он действительно сказал только
+        одно слово за весь выпуск.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 457
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Реплика в 4891s ("Конечно.") - прямой ответ на обращение Umputun к Ксюше.
+      Первая реплика (784s, "Ну,") - артефакт длиной 0.06 сек, можно удалить или
+      присвоить предыдущему спикеру (Gray).
+
+  - type: rename
+    episode: 457
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: |
+      Все реплики продолжают речь Gray и встроены в его монологи.
+      Требуется voice comparison для подтверждения.
+
+# Примечания
+notes: |
+  Эпизод 457 от 15 августа 2015 года.
+
+  Особенности выпуска:
+  - В начале объявлено, что Bobuk женится и уходит из подкаста (шутка?)
+  - Упоминается новый потенциальный ведущий ("известный радиоведущий")
+  - Bobuk всё же присутствует (9 реплик)
+  - Alek.sys почти не участвует (1 реплика)
+
+  SPEAKER_MISATTRIBUTED_* - это спикеры, которые ранее были ошибочно
+  атрибутированы (EldarMurtazin, PetrDidenko), но затем атрибуция
+  была отменена. Они требуют повторной идентификации.

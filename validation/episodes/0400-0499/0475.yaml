@@ -1,0 +1,271 @@
+episode: 475
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk]  # Явно сказано в начале "вместо выбывшего Бобука"
+  guest_announced: "Алексей из дружеского подкаста"
+  total_duration_sec: 7400  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 580
+    replies_count: 124
+    pattern: consecutive
+    first_appearance_sec: 30
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # Не в people.yaml, но это реальный гость
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (20-29 сек) Umputun представляет гостя:
+        "За них двоих сегодня будет отдуваться Алексей из дружеского подкаста."
+        "За часть Грея и за целого Бобука."
+
+        SPEAKER_01 сразу отвечает (30 сек): "Ну, надеюсь, я буду самая лучшая часть."
+
+        Дальше по эпизоду к нему обращаются по имени:
+        - "Подозревай Алексея" (59 сек)
+        - "Если у тебя есть, Алексей, какой-то приватный черный ящик"
+        - "Алексей, я тебе вопрос передам"
+        - "Алексей отвалился"
+
+      guest_info:
+        name: "Алексей"
+        source: "дружеский подкаст"
+        needs_registry_entry: true
+        suggested_id: "alexey_friend_podcast"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Идентификация высокой уверенности
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 5741
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная короткая реплика "Первая помощь." (1.5 сек) в середине
+        монолога Umputun о школьных предметах. Скорее всего ошибка распознавания -
+        это часть речи одного из ведущих (вероятно Gray или Ksenks),
+        кто подсказывает предмет для списка.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray активно участвует в этом разговоре"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Ksenks также участвует в обсуждении"
+
+      voice_task:
+        needed: false  # Слишком короткий сегмент для анализа
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 16
+    replies_count: 5
+    pattern: scattered
+    first_appearance_sec: 1910
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Марина (Marin_k_a) не упоминается как участник этого эпизода.
+        Реплики разбросаны по эпизоду и по контексту являются частью
+        диалогов ведущих. Примеры:
+        - "Слушай, а почему ты, Женя, Монгу не ругаешь?" - обращение к Umputun по имени
+        - "У тебя вообще нет понимания, какие есть страны, континенты."
+
+        Это скорее всего реплики Ksenks или Gray, неправильно атрибутированные
+        системой распознавания голосов (возможно из-за похожего тембра).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Контекст реплик соответствует стилю Ksenks, обращение 'Женя' к Umputun"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможно Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5149.53
+          etime: 5154.55
+          text: "У тебя вообще нет понимания, какие есть страны, континенты."
+          duration_sec: 5
+          quality: "short_but_clear"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 11
+    replies_count: 5
+    pattern: scattered
+    first_appearance_sec: 1047
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин не упоминается как участник этого эпизода.
+        Реплики короткие и вкраплены в диалоги ведущих:
+        - "Что-то ты гонишь." (1047 сек) - реакция после реплики Umputun, Ksenks отвечает
+        - "Но вот про фонд я, честно говоря..." (6059 сек) - между Gray и Umputun
+        - "Так, что еще там из тем пользователей?" (7333 сек) - ведущая фраза
+
+        Это ошибочная атрибуция - скорее всего реплики одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплика про фонд идёт сразу после Gray"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "'Так, что еще там из тем' - типичная ведущая фраза Umputun"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "'Что-то ты гонишь' - реакция перед репликой Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6979.57
+          etime: 6986.02
+          text: "Ну, а сейчас, насколько я понимаю, решили использовать. + Да, ну вот, в общем."
+          duration_sec: 6.5
+          quality: "two_consecutive_segments"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале эпизода Umputun говорит "вместо выбывшего Бобука",
+        однако 4 реплики (17 сек) атрибутированы Бобуку начиная с 2767 сек.
+        Это явная ошибка - Бобук НЕ участвовал в этом эпизоде.
+        Реплики:
+        - 2767s: "Ты знаешь про эту специфику?"
+        - 3318s: "По тексту внутри картинки."
+        - 4636s: "Тот же самый базовый курс школьный..."
+        - 6040s: "То, что у них уже был список расширений для Slack."
+
+        Нужно переатрибутировать на одного из реальных участников.
+
+    - speaker: "SPEAKER_01"
+      issue: |
+        Гость представлен как "Алексей из дружеского подкаста", но его нет в people.yaml.
+        Рекомендуется добавить в справочник и переименовать SPEAKER_01.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Гость Алексей - высокая уверенность
+  - type: rename
+    episode: 475
+    from_speaker: "SPEAKER_01"
+    to_speaker: "AlexeyFriendPodcast"  # Временное имя до выяснения точного ID
+    confidence: high
+    reason: "Явное представление в начале: 'Алексей из дружеского подкаста'"
+
+  # Бобук ошибочно атрибутирован - требуется voice comparison
+  - type: review_needed
+    episode: 475
+    speaker: "Bobuk"
+    issue: "4 реплики атрибутированы отсутствующему ведущему"
+    confidence: high
+    reason: "Umputun в начале явно говорит 'вместо выбывшего Бобука'"
+    action: "Нужно определить, кому принадлежат эти 4 реплики (Gray/Ksenks/Alek.sys/гость)"
+
+  # SPEAKER_02 - явная ошибка
+  - type: merge_or_delete
+    episode: 475
+    from_speaker: "SPEAKER_02"
+    confidence: medium
+    reason: "Единственная реплика 1.5 сек - ошибка распознавания"
+
+  # MISATTRIBUTED спикеры - требуется voice comparison
+  - type: review_needed
+    episode: 475
+    speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    issue: "5 реплик неправильно атрибутированы Марине"
+    confidence: high
+    reason: "Марина не участвовала в эпизоде, контекст указывает на Ksenks или Gray"
+
+  - type: review_needed
+    episode: 475
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    issue: "5 реплик неправильно атрибутированы Эльдару"
+    confidence: high
+    reason: "Эльдар не участвовал в эпизоде"
+
+# Задания на voice comparison (для будущей обработки)
+voice_comparison_tasks:
+  - task_id: "475_bobuk_misattributed"
+    description: "Определить реального автора 4 реплик, ошибочно приписанных Bobuk"
+    segments:
+      - stime: 2767.35
+        etime: 2768.85
+        text: "Ты знаешь про эту специфику?"
+      - stime: 3318.07
+        etime: 3319.23
+        text: "По тексту внутри картинки."
+      - stime: 4636.11
+        etime: 4645.52
+        text: "Тот же самый базовый курс школьный, он не сделает тебя программистом..."
+      - stime: 6040.27
+        etime: 6044.71
+        text: "То, что у них уже был список расширений для Slack."
+    candidates: [Gray, Ksenks, Alek.sys, AlexeyFriendPodcast]
+
+  - task_id: "475_marin_misattributed"
+    description: "Определить реального автора реплик SPEAKER_MISATTRIBUTED_MARIN"
+    segments:
+      - stime: 1910.38
+        etime: 1913.09
+        text: "Слушай, а почему ты, Женя, Монгу не ругаешь?"
+      - stime: 5149.53
+        etime: 5154.55
+        text: "У тебя вообще нет понимания, какие есть страны, континенты."
+    candidates: [Ksenks, Gray]
+
+notes: |
+  Эпизод 475 от 19 декабря 2015 года.
+
+  Основные проблемы:
+  1. SPEAKER_01 - это реальный гость "Алексей из дружеского подкаста" (высокая уверенность)
+  2. Bobuk отсутствовал, но 4 реплики ошибочно ему атрибутированы
+  3. SPEAKER_MISATTRIBUTED_MARIN и SPEAKER_MISATTRIBUTED_ELDAR - ошибки прошлых
+     попыток атрибуции, эти люди не участвовали в эпизоде
+  4. SPEAKER_02 - артефакт распознавания (1 реплика 1.5 сек)
+
+  Рекомендации:
+  - Переименовать SPEAKER_01 -> AlexeyFriendPodcast (или найти точный ID)
+  - Провести voice comparison для Bobuk реплик
+  - Удалить/переатрибутировать MISATTRIBUTED спикеров
+  - Удалить или объединить SPEAKER_02 с соседними репликами

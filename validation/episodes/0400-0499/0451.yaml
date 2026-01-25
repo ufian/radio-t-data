@@ -1,0 +1,119 @@
+episode: 451
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7674  # ~2h 8min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun спрашивает 'Ксюша, ты здесь?' (1418.89s), сразу следует ответ 'Да.' (1421.85s) от SPEAKER_05"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Короткие уточняющие реплики типичны для ведущих. Первая реплика (4066s) — вопрос 'Так она точно феминистка?' в диалоге о Reddit. Вторая реплика (8311s) — 'Ну, посмотрим' — реакция на предложение Umputun. Не Ksenks (она отвечает сразу после)."
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Также возможный вариант — короткие реактивные фразы."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4066.19
+          etime: 4067.97
+          text: "Так она точно феминистка?"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Gray только что говорил о проектах хакатона (7604-7614s), эта реплика (7614.45s) выглядит как продолжение его мысли: 'Соответственно, завтра вечером покажут работающий прототип.' Тематика и контекст указывают на Gray."
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk отвечает сразу после (7619s), но реплика могла быть и его."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7614.45
+          etime: 7619.48
+          text: "Соответственно, завтра вечером покажут работающий прототип."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Ksenks"
+      issue: "Пришла позже начала выпуска (651s), что объясняется в начале: 'Маруся не пришла' — но Ksenks появилась позже"
+    - speaker: "Alek.sys"
+      issue: "Очень мало реплик (17 реплик, 25 сек) — возможно часть его реплик неправильно атрибутирована другим спикерам"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 451
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Прямое обращение Umputun 'Ксюша, ты здесь?' и немедленный ответ 'Да.' однозначно идентифицируют Ksenks"
+
+# Примечания для ручной проверки
+notes: |
+  1. SPEAKER_05 → Ksenks: высокая уверенность, можно применить автоматически
+
+  2. SPEAKER_MISATTRIBUTED_MARIN и SPEAKER_MISATTRIBUTED_ELDAR требуют voice comparison:
+     - Оба помечены как "misattributed" — значит ранее были ошибочно присвоены другим людям
+     - Marin — бывшая ведущая, но её нет в этом эпизоде (начало подтверждает)
+     - Eldar (Муртазин) — постоянный гость, но в этом эпизоде не упоминается
+     - Скорее всего это реплики Gray или Bobuk, неправильно распознанные
+
+  3. Audio URL для voice comparison: нужно получить из data/451/451_desc.json
+     (файл отсутствует в data_clean, проверить в data/)

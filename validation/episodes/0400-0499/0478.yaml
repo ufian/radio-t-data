@@ -1,0 +1,132 @@
+episode: 478
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  total_duration_sec: 7391  # ~2h 3min (Umputun 4016s + Ksenks 3375s)
+  note: "Выпуск вдвоём — Umputun и Ksenks, без других ведущих"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткая реплика (1 сек) "Что нужно программисту?" в 78s находится между
+        репликами Ksenks. Контекст: Ksenks говорит о том, что Umputun доволен
+        от фикса багов (78.27s), затем эта реплика (78.31s), затем снова Ksenks
+        продолжает мысль (79.37s). Это явно часть речи Ksenks, ошибочно
+        выделенная в отдельного спикера.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Реплика идёт сразу после реплики Ksenks и перед её же репликой.
+        Семантически продолжает её мысль о том, что программисту нужно для счастья.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика (3.4 сек) "А вот как человек, который производит
+        продукт... Почему как начальник любишь?" в 4737s. В эпизоде участвуют
+        только Umputun и Ksenks. Реплика содержит вопрос к Umputun, что
+        характерно для Ksenks как соведущей.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Эпизод 478 — вдвоём с Ksenks (упомянуто в начале: "Мы с Ксюшей вдвоем").
+        Реплика — вопрос к Umputun в контексте обсуждения работы начальника.
+        Других участников в эпизоде нет.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Три очень коротких реплики-междометия в разных частях эпизода:
+        - 7136.79s: "Угу." (0.06 сек)
+        - 7416.77s: "Какую?" (0.18 сек)
+        - 7815.42s: "Да, есть такая." (1.3 сек)
+        Все реплики — это короткие реакции на речь Umputun. В эпизоде
+        участвуют только Umputun и Ksenks, поэтому это ошибочная разметка
+        реплик Ksenks.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Эпизод вдвоём. Реплики — типичные подтверждающие междометия и
+        уточняющие вопросы в диалоге. После реплики в 7815s сразу идёт
+        реплика Ksenks (7823s), что подтверждает, что это один спикер.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Ошибочная разметка — это реплика Ksenks"
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Ошибочная разметка — это реплика Ksenks"
+    - speaker: "SPEAKER_03"
+      issue: "Ошибочная разметка — это реплики Ksenks (3 коротких междометия)"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 478
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Короткая реплика между репликами Ksenks, семантически продолжает её мысль.
+      Эпизод вдвоём — других участников нет.
+
+  - type: rename
+    episode: 478
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Единственная реплика — вопрос к Umputun. Эпизод вдвоём с Ksenks,
+      других участников нет.
+
+  - type: rename
+    episode: 478
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Три коротких междометия в разных частях эпизода. Эпизод вдвоём,
+      после последней реплики SPEAKER_03 сразу идёт реплика Ksenks.

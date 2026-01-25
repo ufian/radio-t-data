@@ -1,0 +1,178 @@
+episode: 405
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_announced: ["Владимир Иванов (Владимир Иванов Другой)", "Антон Голодный"]
+  total_hosts_duration_sec: 4770  # Umputun 2541 + Bobuk 1756 + Gray 473
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1872
+    replies_count: 346
+    first_appearance_sec: 94
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "VladimirIvanov"  # Нужно добавить в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (61-69s) Bobuk представляет гостя:
+        "Его зовут Владимир Иванов. В Яндексе его все называют Владимир Иванов Другой по историческим причинам."
+        SPEAKER_04 первая реплика (94s): "Ты знаешь, я на самом деле когда-то думал, что мне надо сделать клуб Владимиров Ивановых."
+        Тема безопасности сетей соответствует представлению ("комментарии по поводу безопасности устройства сети").
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 124
+    replies_count: 30
+    first_appearance_sec: 140
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      identified_as: "golodniy"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        В начале эпизода (137s) Umputun обращается: "да, Антон?"
+        SPEAKER_02 отвечает (139s): "Он же не сытый, он же голодный."
+        SPEAKER_02 здоровается (141s): "Всем добрый вечер."
+        Позже Umputun обращается напрямую (3018s): "Голодный, ты как к микросервисам?"
+        SPEAKER_02 отвечает (3021s): "Я хорошо отношусь."
+        Прозвище "Голодный" соответствует записи golodniy в people.yaml.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 7
+    replies_count: 3
+    first_appearance_sec: 81
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 3 короткие реплики. Первая (81s): "Да, когда меня не зовут Владимир Иванов Другой, меня зовут Иванов..."
+        Это явно продолжение представления Владимира Иванова (SPEAKER_04).
+        Вторая реплика (125s): "Да, уверен." - короткий ответ.
+        Скорее всего ошибка распознавания голоса SPEAKER_04.
+
+      identified_as: "VladimirIvanov"
+      identification_method: "context"
+      confidence: high
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 172
+    replies_count: 24
+    first_appearance_sec: 1693
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        КРИТИЧЕСКАЯ ОШИБКА: Эльдар Муртазин НЕ был представлен в начале эпизода.
+        В эпизоде 405 представлены только два гостя: Владимир Иванов и Антон Голодный.
+        Все реплики EldarMurtazin появляются МЕЖДУ репликами SPEAKER_04 (Владимира Иванова)
+        и являются продолжением его речи. Пример:
+        - 1686s SPEAKER_04: "Плюс он покупает интернет у какого-нибудь..."
+        - 1693s EldarMurtazin: "И, соответственно, у него есть 10 тысяч вот этих маршрутов..."
+        - 1700s SPEAKER_04: "Так он и живет."
+        Это явно одна речь одного человека (Владимира Иванова), неправильно разбитая.
+
+      identified_as: "VladimirIvanov"
+      identification_method: "context"
+      confidence: high
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 44
+    replies_count: 5
+    first_appearance_sec: 2115
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибка сегментации голоса - это тот же Владимир Иванов (SPEAKER_04).
+        Все реплики идут в техническом контексте о сетях, VPN, микросервисах - экспертизе Владимира.
+        Реплики чередуются со SPEAKER_04 без логических пауз, продолжая ту же мысль:
+        - 6194s SPEAKER_04: "...по тем же самым коммутаторам..."
+        - 6208s SPEAKER_MISATTRIBUTED_PETR: "...вот эта виртуальная приватная сеть..."
+        - 6219s SPEAKER_04: "Подожди, мне кажется, корни..."
+        Это единый монолог Владимира Иванова, разбитый системой распознавания.
+
+      identified_as: "VladimirIvanov"
+      identification_method: "context"
+      confidence: high
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: "Эльдар Муртазин ошибочно размечен в эпизоде 405. Он не был в числе гостей. Все его реплики принадлежат Владимиру Иванову (SPEAKER_04)."
+    - speaker: "SPEAKER_03"
+      issue: "Ошибка распознавания - это Владимир Иванов (SPEAKER_04)"
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Ошибка сегментации - это Владимир Иванов (SPEAKER_04), все реплики о сетях и VPN"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 405
+    from_speaker: "SPEAKER_04"
+    to_speaker: "VladimirIvanov"
+    confidence: high
+    reason: "Явное представление в начале эпизода: 'Его зовут Владимир Иванов'"
+
+  - type: rename
+    episode: 405
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Golodniy"
+    confidence: high
+    reason: "Обращение по имени: 'Голодный, ты как к микросервисам?' + ответ на это обращение"
+
+  - type: rename
+    episode: 405
+    from_speaker: "SPEAKER_03"
+    to_speaker: "VladimirIvanov"
+    confidence: medium
+    reason: "Контекст показывает, что это Владимир Иванов продолжает представление себя"
+
+  - type: rename
+    episode: 405
+    from_speaker: "EldarMurtazin"
+    to_speaker: "VladimirIvanov"
+    confidence: high
+    reason: "Эльдар Муртазин отсутствовал в эпизоде. Все реплики - продолжение речи Владимира Иванова."
+
+  - type: rename
+    episode: 405
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "VladimirIvanov"
+    confidence: high
+    reason: "Все реплики о сетях, VPN, микросервисах - это продолжение речи Владимира Иванова (SPEAKER_04)"
+
+# Необходимые изменения в people.yaml
+new_person_required:
+  id: "vladimir_ivanov"
+  canonical_name: "VladimirIvanov"
+  aliases: ["Владимир Иванов", "Владимир Иванов Другой", "Ivanov"]
+  real_name: "Владимир Иванов"
+  info: "Специалист по безопасности из Яндекса, выпуск 405"

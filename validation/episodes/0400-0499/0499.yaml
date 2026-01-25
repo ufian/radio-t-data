@@ -1,0 +1,203 @@
+episode: 499
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Bobuk]
+  total_duration_sec: 7701
+  notes: |
+    Эпизод 499 от 11 июня 2016 года. Присутствуют все 4 ведущих (Bobuk минимально — 6 реплик).
+    В начале упоминается отсутствующий "звезда фотоискусства" — вероятно Alek.sys.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Разрозненные короткие реплики (1-2 сек каждая) в разных частях эпизода.
+        Примеры: "Мы с тобой обсудим" (106s), "Дай дитёвку" (2234s), "Печаль" (6974s).
+        Контекст указывает на перебивки ведущих — вероятнее всего Ksenks или Umputun,
+        которые говорили рядом. "Дай дитёвку" — явно домашняя обстановка, фоновый голос.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Контекст диалогов и женский голосовой паттерн ('дитёвку')"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 8
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три короткие реплики в разных частях эпизода:
+        - 6645s: "Как почти все из них" (2.4 сек) — в контексте обсуждения телефонов
+        - 8133s: "И они теперь будут пытаться его снять" (3.4 сек) — о сценарии
+        - 8512s: "Вот молодцы" (2 сек) — в конце, перед рекламой
+        Все реплики вписываются в разговор ведущих, похожи на распознанные не тому спикеру.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплики в контексте обсуждений Gray, может быть его голос"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Короткие комментарии характерны для Ksenks"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ранее ошибочно атрибутировано как PetrDidenko, отменено.
+        Две короткие реплики:
+        - 1436s: "Капитан, короче" (1.7 сек) — после реплики Gray "Капитан"
+        - 2007s: "Почему просто не выпустить 4К?" (2 сек) — в обсуждении дисплеев
+        Реплики слишком короткие для гостя, вписываются в диалог ведущих.
+        Petя Диденко участвовал в 148 выпусках, но эти реплики не соответствуют его стилю.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Первая реплика идёт сразу после Gray, может быть его продолжение"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Вторая реплика в контексте вопроса Umputun про 4K"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ранее ошибочно атрибутировано как Marin_k_a (Марина), отменено.
+        Одна реплика:
+        - 2232s: "Так а зачем, если тебе не нужны, ты не носишь?" (2.2 сек)
+        Контекст: обсуждение часов/наушников. После этого SPEAKER_01 говорит "Дай дитёвку".
+        Вероятно это Ksenks — женский голос, логичный контекст в разговоре с Umputun.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Женский голос, вопрос к Umputun в домашнем контексте"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 17
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ранее ошибочно атрибутировано как EldarMurtazin, отменено.
+        Четыре реплики:
+        - 5840s: "Ну, вообще есть другая практика обычная" (2.7 сек) — о реферальных ссылках
+        - 7778s: "Я так понимаю, что там какая-то... А!" (5.3 сек) — о MongoDB
+        - 7949s: "А там на самом деле Клинтон с Трампом поругались..." (5.6 сек) — политика
+        - 7986s: "Ну, там, короче, 300 с чем-то тысяч ретвитов" (3.7 сек) — о твите
+
+        Эльдар Муртазин — известный гость, но в этом эпизоде его не представляли.
+        Реплики разрозненные, в разных темах. Контекст указывает на ведущих (Gray/Umputun).
+        Особенно подозрительно: после 5840s сразу Gray продолжает мысль как свою.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Большинство реплик в контексте обсуждений Gray, он продолжает темы"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть Umputun"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7949
+          etime: 7954.5
+          text: "А там на самом деле Клинтон с Трампом поругались в очередной раз в Твиттере."
+        comparison_candidates:
+          - person_id: gray
+            reason: "Наиболее вероятный кандидат — сразу после этого Gray продолжает тему"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Очень мало реплик (6 штук, 15 сек) для ведущего.
+        В начале Umputun говорит о 500-м выпуске с Ksenks и Gray.
+        Возможно Bobuk подключился позже или был молчалив в этот раз.
+    - speaker: "SPEAKER_MISATTRIBUTED_*"
+      issue: |
+        Три спикера с prefix MISATTRIBUTED — ранее ошибочно идентифицированные.
+        Все короткие реплики (<5 сек каждая), разрозненные по эпизоду.
+        Вероятно ошибки voice recognition, а не реальные гости.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет уверенных атрибуций для автоматической очистки.
+# Все неизвестные спикеры имеют слишком короткие и разрозненные реплики,
+# чтобы с уверенностью определить их личность без voice comparison.
+
+# Итоговый вердикт
+summary: |
+  Эпизод 499 содержит 15 реплик от 5 неизвестных спикеров (суммарно ~36 сек из ~2.1 часа).
+  Все неизвестные спикеры имеют характеристики ошибок voice recognition:
+  - Короткие реплики (1-5 сек)
+  - Разрозненное распределение по эпизоду
+  - Контекст указывает на продолжение речи ведущих
+
+  SPEAKER_MISATTRIBUTED_ELDAR требует voice comparison с Gray (17 сек, самый длинный).
+  Остальные скорее всего артефакты распознавания ведущих.
+
+  Реальных гостей в эпизоде не обнаружено — только 4 постоянных ведущих.

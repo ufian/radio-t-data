@@ -1,0 +1,279 @@
+episode: 408
+status: needs_review
+analyzed_at: "2026-01-25"
+review_updated: "2026-01-25T12:00:00Z"
+
+# КРИТИЧЕСКАЯ ПРОБЛЕМА ОБНАРУЖЕНА:
+# SPEAKER_03 содержит реплики от ДВУХ РАЗНЫХ ЛЮДЕЙ (мужской и женский голоса)
+# Требуется ручное разделение!
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a]
+  missing_hosts: [Ksenks]  # Ksenks присутствует, но размечена как SPEAKER_03
+  possible_additional: [Gray]  # Мужские реплики в SPEAKER_03 могут быть от Gray
+  total_duration_sec: 9051
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 993
+    replies_count: 373
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # КРИТИЧЕСКОЕ ОБНОВЛЕНИЕ: SPEAKER_03 - ЭТО ДВА РАЗНЫХ ЧЕЛОВЕКА!
+      identified_as: null  # Невозможно назначить одного человека
+      identification_method: null
+      confidence: null
+
+      # ДОКАЗАТЕЛЬСТВА СМЕШЕНИЯ ДВУХ ГОЛОСОВ:
+      mixed_speakers: true
+      evidence: |
+        КРИТИЧЕСКАЯ ПРОБЛЕМА: SPEAKER_03 содержит реплики от ДВУХ РАЗНЫХ ЛЮДЕЙ!
+
+        Доказательства по грамматическому роду глаголов:
+
+        ЖЕНСКИЙ ГОЛОС (скорее всего Ksenks):
+        - 1222s: "Я просто видела его, он выступал." (видеЛА - женский род)
+        - 7625s: "Ну, в смысле... Я поняла." (понялА - женский род)
+        - 8190s: "Я не видела." (видеЛА - женский род)
+
+        МУЖСКОЙ ГОЛОС (Gray или неизвестный гость):
+        - 3687s: "То есть я вообще участвовал в больших проектах на C++." (участвоваЛ - мужской род)
+        - 3690s: "В частности, мы там использовали Qt, и эти проекты были достаточно большие."
+
+        Контекст:
+        - К Ксюше обращаются напрямую: "Дай, Ксюша, вопрос" (2553s), "Ксюша, ты понимаешь" и др.
+        - Ksenks отсутствует как отдельный спикер в транскрипте
+        - Мужские технические реплики о C++/Qt могут принадлежать Gray
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.85
+          applies_to: "Реплики с женским родом глаголов (~70% от общего числа)"
+          reason: "Прямые обращения к Ксюше с ответами от SPEAKER_03, женский род"
+        - person_id: "gray"
+          confidence: 0.5
+          applies_to: "Реплики с мужским родом глаголов (~30% от общего числа)"
+          reason: "Технические реплики о C++/Qt, мужской род 'участвовал'"
+
+      voice_task:
+        needed: true
+        priority: high
+        description: "Разделить SPEAKER_03 на два голоса"
+        segments:
+          # Женский голос для идентификации как Ksenks
+          - label: "speaker_03_FEMALE"
+            stime: 1219.45
+            etime: 1231.37
+            text: "Но он эмоциональный очень. Я просто видела его, он выступал... Он прикольный."
+            expected_speaker: "Ksenks"
+          # Мужской голос для идентификации
+          - label: "speaker_03_MALE"
+            stime: 3687.54
+            etime: 3694.44
+            text: "То есть я вообще участвовал в больших проектах на C++. В частности, мы там использовали Qt..."
+            expected_speaker: "Gray или неизвестный"
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 972
+    replies_count: 178
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Уже идентифицирована в people.yaml
+      identified_as: "marin_k_a"
+      identification_method: "existing_id"
+      confidence: high
+      evidence: |
+        Marin_k_a уже записана в people.yaml как бывшая ведущая Марина.
+        Появляется с 1187s, участвует в обсуждениях технических тем.
+        Говорит о своей любви к Objective-C (7627s): "Надо просто мне любить .NET,
+        тогда вы будете его более с жаром ругать... Про Objective-C так и получилось
+        так клево, потому что я его так с жаром любила"
+        Это характерно для Марины - известная любительница Apple-технологий.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Также Ksenks (ошибка сегментации)
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Umputun напрямую обращается к Ксюше, и SPEAKER_04 отвечает:
+        - 2557s: "Ксюша, а не кажется тебе, что мы с Бабуком ерунду несем?"
+        - 2560s: SPEAKER_04: "Да."
+        Редкие короткие реплики - ошибка сегментации, когда система не объединила
+        с SPEAKER_03.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 12
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # ОБНОВЛЕНО: Это часть МУЖСКИХ реплик SPEAKER_03, НЕ Ksenks!
+      identified_as: null  # Требует voice verification
+      identification_method: null
+      confidence: null
+      evidence: |
+        Контекст диалога (3687-3708s) - ВСЕ МУЖСКИЕ реплики:
+        - SPEAKER_03: "То есть я вообще УЧАСТВОВАЛ в больших проектах на C++." (мужской род!)
+        - SPEAKER_03: "В частности, мы там использовали Qt, и эти проекты были достаточно большие."
+        - SPEAKER_MISATTRIBUTED_PETR: "Я не могу сказать, что... То есть я не вижу, наверное, языка..."
+        - SPEAKER_03: "Почему? Это C++?"
+
+        ВАЖНО: Реплика 3695s находится между МУЖСКИМИ репликами SPEAKER_03 ("участвовал").
+        Это НЕ Ksenks, а тот же мужской голос (предположительно Gray).
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Продолжение мужских реплик о Qt/C++ от SPEAKER_03"
+        - person_id: "speaker_03_male"
+          confidence: 0.8
+          reason: "Контекстуально очевидно тот же мужской голос"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3695.66
+          etime: 3707.49
+          text: "Я не могу сказать, что... То есть я не вижу, наверное, языка..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: |
+        Ksenks отсутствует как спикер в транскрипте, хотя присутствует в выпуске.
+        Её реплики размечены как часть SPEAKER_03, SPEAKER_04 и возможно SPEAKER_MISATTRIBUTED_PETR.
+    - speaker: "SPEAKER_03"
+      severity: critical
+      issue: |
+        КРИТИЧЕСКАЯ ПРОБЛЕМА: SPEAKER_03 содержит реплики от ДВУХ РАЗНЫХ ЛЮДЕЙ!
+        - Женский голос (вероятно Ksenks): "видела", "поняла"
+        - Мужской голос (вероятно Gray): "участвовал"
+        Требуется ручное разделение перед применением правил переименования.
+    - speaker: "Gray"
+      issue: |
+        Gray не указан как участник, но мужские реплики в SPEAKER_03 могут принадлежать ему.
+        Необходима voice verification.
+
+# Предлагаемые правила очистки
+# ВНИМАНИЕ: НЕ ПРИМЕНЯТЬ АВТОМАТИЧЕСКИ до voice verification!
+suggested_rules:
+  - type: split_then_rename
+    episode: 408
+    from_speaker: "SPEAKER_03"
+    action: "ТРЕБУЕТСЯ РУЧНОЕ РАЗДЕЛЕНИЕ"
+    confidence: blocked
+    reason: |
+      SPEAKER_03 содержит реплики от ДВУХ РАЗНЫХ ЛЮДЕЙ.
+      Перед переименованием необходимо:
+      1. Voice comparison для разделения мужского/женского голоса
+      2. Ручное присвоение реплик соответствующим спикерам
+      3. Только после этого - переименование в Ksenks/Gray
+
+      Грамматический анализ:
+      - ~70% реплик с женским родом -> Ksenks
+      - ~30% реплик с мужским родом -> Gray или другой
+
+  - type: rename
+    episode: 408
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Прямой ответ на обращение к Ксюше (2560s).
+      Короткие реплики, все женские контексты.
+
+  - type: needs_verification
+    episode: 408
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    candidates: ["Ksenks", "Gray"]
+    confidence: medium
+    reason: |
+      Реплика 3695s о Qt/C++ - в контексте мужских реплик SPEAKER_03.
+      Может быть продолжением речи мужского голоса (не Ksenks).
+      Требуется voice comparison.
+
+# Задачи на voice comparison
+voice_comparison_tasks:
+  - task_id: "408_critical_split_speaker_03"
+    priority: critical
+    description: "Разделить SPEAKER_03 на два голоса (мужской/женский) и идентифицировать"
+    audio_url: "https://cdn.radio-t.com/rt_podcast408.mp3"
+    segments_to_compare:
+      - label: "FEMALE_sample"
+        stime: 1219.45
+        etime: 1231.37
+        grammar_indicator: "видела"
+      - label: "MALE_sample"
+        stime: 3687.54
+        etime: 3694.44
+        grammar_indicator: "участвовал"
+    expected_result:
+      female_speaker: "Ksenks"
+      male_speaker: "Gray (предположительно)"
+
+# Дополнительные замечания
+notes: |
+  Выпуск 408 (6 сентября 2014) - обычный технический выпуск.
+
+  КРИТИЧЕСКОЕ ОБНОВЛЕНИЕ АНАЛИЗА:
+
+  Предыдущий анализ ошибочно идентифицировал SPEAKER_03 как только Ksenks.
+  Однако грамматический анализ глаголов показывает, что SPEAKER_03 - это
+  ДВА РАЗНЫХ ЧЕЛОВЕКА:
+
+  1. Женский голос (Ksenks):
+     - "Я просто видела его" (1222s)
+     - "Я поняла" (7625s)
+     - "Я не видела" (8190s)
+
+  2. Мужской голос (Gray?):
+     - "я вообще участвовал в больших проектах" (3687s)
+
+  Это типичная проблема автоматической диаризации, когда два голоса
+  объединяются в один спикер.
+
+  Участники выпуска:
+  - Umputun - основной ведущий (953 реплики)
+  - Bobuk - соведущий (772 реплики)
+  - Marin_k_a - Марина, бывшая ведущая (178 реплик) - идентифицирована корректно
+  - Ksenks - часть реплик SPEAKER_03 (женские)
+  - Gray? - часть реплик SPEAKER_03 (мужские) - требует подтверждения
+
+  СТАТУС: needs_review - требуется voice comparison перед очисткой.

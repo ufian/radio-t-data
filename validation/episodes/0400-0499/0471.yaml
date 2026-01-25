@@ -1,0 +1,160 @@
+episode: 471
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Gray, Alek.sys, Bobuk]
+  total_duration_sec: 9400  # ~2.5 hours
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1639
+    replies_count: 284
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        В начале выпуска (24s) Umputun говорит: "Леша, хорошо, что ты зашел. В прошлый раз нам тебя не хватало."
+        Затем (186s) Ksenks: "Просто каждый раз, когда Алексей приходит, мы говорим про Гоу".
+        SPEAKER_04 появляется с 167s, обсуждает Go, Java, технические темы.
+
+        ВАЖНО: В этом выпуске также присутствует Alek.sys (15 реплик с 852s).
+        SPEAKER_04 и Alek.sys чередуются по времени, реплики идут друг за другом.
+        Возможны два варианта:
+        1. SPEAKER_04 = Alek.sys (нестабильное распознавание одного человека)
+        2. SPEAKER_04 = другой Алексей (гость), и Alek.sys присутствует отдельно
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.6
+          reason: "Обоих зовут Алексей, оба обсуждают технические темы. Реплики чередуются - возможно нестабильное распознавание"
+        - person_id: null
+          confidence: 0.4
+          reason: "Может быть другой гость по имени Алексей - ведущие говорят 'привел мальчика', что подразумевает внешнего гостя"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8405.0
+          etime: 8483.1
+          text: "Нет, это как раз самое правильное, как я считаю. Потому что то, что происходит на собеседовании, ты пытаешься понять, как с человеком будет работать и пытаешься понять, как человек мыслит..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 10
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (2-5 сек) разбросаны по эпизоду. Marin не участвовала в этом выпуске. Это ошибочное распознавание других спикеров."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики:
+        - 346.9s: "Какая самая большая технологическая новинка 2015 года?" -> следом Ksenks отвечает
+        - 1552.1s: "Конечно, ты не будешь слушать рекламу." -> между репликами Ksenks
+        - 4896.99s, 5391.2s: аналогичные короткие вставки
+
+        Все реплики окружены репликами Ksenks или других ведущих. Скорее всего это Ksenks.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Большинство реплик окружены репликами Ksenks, похоже на её голос по контексту"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (2 сек каждая). Eldar не участвовал в этом выпуске. Ошибочное распознавание."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики:
+        - 1697.3s: "Там же выглядит очень просто." -> следом Gray продолжает тему
+        - 2679.1s: "Видимо, последнюю милю интернета оптоволоконного."
+
+        Обе реплики очень короткие и вписываются в контекст разговора других ведущих.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Первая реплика перед ответом Gray, возможно это он"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Может быть короткая вставка Umputun"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: |
+        Гость представлен как "Лёша/Алексей" в начале выпуска, но SPEAKER_04 не переименован.
+        При этом Alek.sys (тоже Алексей) присутствует в том же выпуске.
+        Нужно определить: это один человек (нестабильное распознавание) или два разных Алексея.
+    - speaker: "Bobuk"
+      issue: |
+        Umputun говорит "Бобук в аэропорту, будет появляться время от времени".
+        Bobuk имеет только 9 реплик (34 сек) - соответствует контексту.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 471
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Реплики окружены репликами Ksenks, Marin не участвовала в выпуске"
+
+  - type: rename
+    episode: 471
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"
+    confidence: low
+    reason: "Реплики рядом с Gray, Eldar не участвовал в выпуске. Требует voice verification."
+
+  # SPEAKER_04 -> Alek.sys требует voice comparison
+  # Оставляем как needs_review до подтверждения
+
+# Примечания для ручной проверки
+notes: |
+  Ключевой вопрос: является ли SPEAKER_04 тем же человеком, что Alek.sys?
+
+  Аргументы ЗА (один человек):
+  - Оба названы Алексеем
+  - Реплики чередуются (не перекрываются)
+  - Обсуждают схожие технические темы
+
+  Аргументы ПРОТИВ (разные люди):
+  - Umputun говорит "привел мальчика" - подразумевает внешнего гостя
+  - Alek.sys - постоянный ведущий, зачем его "приводить"?
+  - Система распознавания идентифицирует Alek.sys, но не SPEAKER_04
+
+  Рекомендация: Сравнить голоса SPEAKER_04 и Alek.sys в этом же выпуске.
+  Если голоса совпадают - объединить в Alek.sys.
+  Если разные - SPEAKER_04 это отдельный гость (нужно искать его имя).

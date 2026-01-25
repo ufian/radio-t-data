@@ -1,0 +1,212 @@
+episode: 404
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  guests_present: [Marin_k_a, Ruslan]
+  total_duration_sec: 6800  # примерно 1:53:20
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 310
+    replies_count: 122
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Множественные прямые обращения с ответами SPEAKER_06:
+        - 699с: Bobuk: "Ксюша, ну ты-то, блин..." -> 703с SPEAKER_06: "Да."
+        - 719с: Umputun: "Ксюша, ну вот ты забоялась..." -> 729с SPEAKER_06 про пароли
+        - 3021с: "Ксюша, ты самый человек близкий к хипстерам" -> 3029с SPEAKER_06: "Согласна?"
+        - 4763с: "Ксюша, любишь ли ты мои отхождения..." -> 4770с SPEAKER_06: "Если не злые, то да, люблю."
+        - 5833с: "А если я задам этот вопрос Ксюше..." -> 5837с SPEAKER_06: "Понимает."
+        Ksenks (Ксюша) - известная ведущая, присутствует в people.yaml.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 307
+    replies_count: 71
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ruslan_wifi_provider"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun прямо обращается по имени (3275с): "Руслан, расскажи нам технически, почему этот закон такой прекрасный."
+        SPEAKER_01 отвечает (3281с): "Всем привет. Я хотел бы рассказать о том, что закон на самом деле и не прекрасный..."
+        Руслан сам говорит (3301с): "мы оператор связи в девяти городах в России, и это не Москва"
+        И далее (3313с): "у нас несколько сотен Wi-Fi точек в этих городах"
+        Тема: обсуждение нового закона о Wi-Fi (постановление правительства об идентификации).
+        Руслан - представитель провайдера, рассказывает о реакции бизнеса на закон.
+
+      possible_matches:
+        - person_id: "ruslan_wifi_provider"
+          confidence: 1.0
+          reason: "Прямое обращение по имени, представитель интернет-провайдера"
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 3283.77
+          etime: 3375.64
+          text: "Рассказ Руслана о провайдере и реакции на закон о Wi-Fi - самый длинный непрерывный сегмент"
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 78
+    replies_count: 22
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Marin_k_a (Марина) - известная бывшая ведущая, есть в people.yaml.
+        Ведет диалог отдельно от SPEAKER_06 (Ksenks):
+        - 861с: Marin_k_a: "Мне вообще классно, да, кибервор" -> SPEAKER_06: "По-моему, очень такое"
+        - 868с: Marin_k_a: "То есть киберфиф должно быть" -> SPEAKER_06: "Или как-нибудь так"
+        Это два разных человека (женские голоса), участвующие в подкасте одновременно.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Да-да-да" (177.4-180.1с) длиной 3 секунды.
+        Контекст: Bobuk говорит о реакции чата на "дроплиты", затем Gray продолжает.
+        Типичная короткая реакция-согласие, скорее всего неверно атрибутированная.
+        Вероятно это Gray или Ksenks.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Gray говорит сразу после этой реплики (180с)"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Ksenks (SPEAKER_06) активно участвует в этом эпизоде"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 177.4
+          etime: 180.11
+          text: "Да-да-да."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 54
+    replies_count: 8
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Это отменённые ошибочные присвоения Эльдару Муртазину.
+        Реплики разнородны:
+        - 2983с: про Wi-Fi в Европе (между репликами Gray)
+        - 3292с: "Вот рабочий день в пятницу начался" (контекст истории Руслана)
+        - 4395с: "Чем это плохо?" (короткая реакция)
+        - 6413с: "Первая тема про процессор нового поколения..." (зачитывание темы)
+        Требуется voice comparison для корректной атрибуции.
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Часть реплик между высказываниями Gray"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Может быть женский голос Ksenks"
+        - person_id: "ruslan_wifi_provider"
+          confidence: 0.2
+          reason: "Реплика 3292с близка к контексту истории Руслана"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2983.19
+          etime: 2994.79
+          text: "что количество открытого Wi-Fi, не требующего каких-то дополнительных подписок и так далее, за последние несколько лет в Европе стало гораздо больше."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Marin_k_a"
+      issue: "Марина не была явно представлена в начале - просто участвует с 340с"
+    - speaker: "SPEAKER_01"
+      issue: "Руслан представлен только по имени, без фамилии/компании (3275с). Позже сам говорит что провайдер в 9 городах, название не упоминает"
+    - speaker: "SPEAKER_07"
+      issue: "Единственная реплика, скорее всего ошибка распознавания"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "8 реплик отменённых присвоений Эльдару - требуют корректной атрибуции"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 404
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Множественные обращения по имени 'Ксюша' с ответами SPEAKER_06"
+
+  - type: rename
+    episode: 404
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ruslan"
+    confidence: high
+    reason: "Прямое обращение по имени Umputun: 'Руслан, расскажи нам...'"
+
+  - type: add_to_people
+    person_id: "ruslan_wifi_provider"
+    canonical_name: "Ruslan"
+    real_name: "Руслан"
+    info: "Представитель интернет-провайдера в 9 городах России (не Москва), выпуск 404"
+    confidence: medium
+    reason: "Гость, идентифицированный по имени. Нужно больше информации для полной идентификации"
+
+# Примечания
+notes:
+  - "Эпизод 404 от 9 августа 2014 года"
+  - "Присутствуют 4 ведущих: Umputun, Bobuk, Gray, Ksenks"
+  - "2 гостя: Марина (Marin_k_a) и Руслан (SPEAKER_01)"
+  - "Тема с Русланом: обсуждение нового закона о Wi-Fi и идентификации пользователей"
+  - "SPEAKER_MISATTRIBUTED_ELDAR требует voice comparison для корректной атрибуции"

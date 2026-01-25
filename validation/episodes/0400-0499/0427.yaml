@@ -1,0 +1,367 @@
+episode: 427
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  hosts_announced_absent: [Gray, Bobuk, Alek.sys]
+  # Umputun в начале: "в основном составе ровно половина" + "один проверенный товарищ"
+  # Значит 2 из 4 основных (Umputun, Ksenks) + 1 гость (Александр Афискон)
+  total_duration_sec: 7323
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 491
+    replies_count: 147
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "devzen_afiskon"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление в начале эпизода (24.7s-39.0s):
+        - "Всем привет." (24.7s)
+        - "Меня зовут Александр." (25.4s) - ошибочно атрибутировано PetrDidenko
+        - "Вы меня можете знать под ником «Афискон»." (26.7s)
+        - "Подкаст devzen.ru." (36.7s) - ошибочно атрибутировано PetrDidenko
+        - "И у меня есть бложик iax.me." (39.0s)
+
+        Это Александр Алексеев (afiskon) - ведущий подкаста DevZen (devzen.ru),
+        автор блога iax.me. Тот же гость, что был в эпизоде 416.
+
+      possible_matches:
+        - person_id: "devzen_afiskon"
+          confidence: 0.95
+          reason: "Явное представление: 'Меня зовут Александр', 'ник Афискон', 'devzen.ru', 'iax.me'"
+
+      voice_task:
+        needed: false
+        reason: "Идентификация однозначная по представлению"
+
+  - speaker: "PetrDidenko"
+    total_duration_sec: 380
+    replies_count: 51
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: |
+        ОШИБКА АТРИБУЦИИ. Пётр Диденко НЕ БЫЛ в этом эпизоде.
+
+        Реплики PetrDidenko принадлежат гостю Александру Афискону (devzen_afiskon).
+        Доказательства:
+        1. На 25.4s реплика "Меня зовут Александр." атрибутирована PetrDidenko -
+           но это продолжение представления Афискона
+        2. На 36.7s реплика "Подкаст devzen.ru." атрибутирована PetrDidenko -
+           но это Афискон рекламирует свой подкаст DevZen
+        3. Реплики PetrDidenko и SPEAKER_00 чередуются в одном диалоге -
+           это один человек (Афискон), голос которого по-разному распознался
+
+        Пётр Диденко - это другой человек (Пётр, не Александр).
+        В people.yaml: PetrDidenko = "Пётр Диденко", 148 выпусков.
+        Афискон представился как Александр, не Пётр.
+
+      identified_as: "devzen_afiskon"
+      identification_method: "context"
+      confidence: high
+      evidence: "Реплики чередуются с SPEAKER_00 в одном диалоге, явно один человек"
+
+      possible_matches:
+        - person_id: "devzen_afiskon"
+          confidence: 0.95
+          reason: "Все реплики PetrDidenko идут в контексте речи Афискона"
+
+      voice_task:
+        needed: false
+        reason: "Очевидная ошибка атрибуции, исправление однозначное"
+
+  - speaker: "Gray"
+    total_duration_sec: 40
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        ОШИБКА АТРИБУЦИИ. Gray (Сергей Петренко) скорее всего НЕ БЫЛ в этом эпизоде,
+        или его реплики ошибочно атрибутированы.
+
+        Umputun в начале: "в основном составе ровно половина" (2 из 4 основных).
+        Присутствуют: Umputun (956 реплик) и Ksenks (594 реплики).
+        Отсутствуют: Gray, Bobuk, Alek.sys.
+
+        Проблемы с репликами Gray:
+        1. Первая реплика только на 1441s (24 минуты от начала) - очень поздно
+        2. Реплики Gray идут прямо после реплик SPEAKER_00 (Афискона):
+           - 1440.9s [Gray] сразу после контекста с SPEAKER_00/Ksenks
+           - 2434.9s [Gray] продолжает мысль SPEAKER_00 о сканировании
+           - 4241.9s [Gray] продолжает мысль SPEAKER_00 о программистах
+           - 5515.8s [Gray] в середине диалога SPEAKER_00
+           - 6338.2s [Gray] продолжает тему SPEAKER_00/PetrDidenko о телефонах
+           - 6406.4s [Gray] продолжает мысль SPEAKER_00 о Lenovo
+
+        Паттерн: реплики Gray всегда появляются как продолжение речи Афискона.
+        Это указывает на ошибку распознавания голоса.
+
+      identified_as: "devzen_afiskon"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Все 6 реплик Gray семантически продолжают речь SPEAKER_00 (Афискона).
+        Например:
+        - 2431.2s [SPEAKER_00]: "И вот я понял, что получил фоточку..."
+        - 2434.9s [Gray]: "Вот в этот момент у меня прям мир перевернулся..."
+        Это ОДИН человек продолжает СВОЮ мысль.
+
+      possible_matches:
+        - person_id: "devzen_afiskon"
+          confidence: 0.8
+          reason: "Реплики Gray продолжают речь SPEAKER_00 в том же контексте"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Маловероятно - не объявлен, появляется поздно, паттерн странный"
+
+      voice_task:
+        needed: true
+        reason: "Нужно подтвердить, что это голос Афискона, а не Gray"
+        reference_segment:
+          stime: 2434.9
+          etime: 2441.9
+          text: "Вот в этот момент у меня прям мир перевернулся, я понял, что вот все, теперь мне не нужен фотоаппарат, не нужен сканер, у меня все в телефоне."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 22
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики SPEAKER_01 - вопросы/комментарии из чата (слушатели).
+        Umputun на 2387.1s говорит: "Да, дорогой Гусь, какой вопрос?"
+        Сразу после этого SPEAKER_01 задаёт вопрос (2389.4s).
+
+        "Гусь" - это, вероятно, никнейм слушателя из чата, которого озвучивают.
+        Остальные реплики SPEAKER_01 тоже выглядят как вопросы из чата:
+        - 973.0s: "Ашан для программистов."
+        - 2673.9s: "А так ты не понимаешь, что я где-то почислил?"
+        - 2718.8s: "И постить в Твиттер."
+
+      possible_matches:
+        - person_id: "chat_listener"
+          confidence: 0.7
+          reason: "Umputun обращается 'Гусь', вопросы из чата"
+
+      voice_task:
+        needed: false
+        reason: "Слушатель из чата, не требует идентификации"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна очень короткая реплика (1 сек): "Почему?" на 1148.1s.
+        Контекст: Umputun говорит о проблемах с ARM процессорами.
+        Скорее всего это реплика одного из участников (Ksenks, Афискон),
+        неправильно распознанная как отдельный спикер.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Короткий уточняющий вопрос между репликами Umputun"
+        - person_id: "devzen_afiskon"
+          confidence: 0.4
+          reason: "Технический вопрос, мог задать гость"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткий сегмент (1 сек) для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 11
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин НЕ участвовал в этом эпизоде (не представлен).
+        Три короткие реплики (2-5 сек) разбросаны по эпизоду:
+        - 790.6s: "Стоит эта штука там почти 300 баксов." (рядом с SPEAKER_00)
+        - 2972.0s: "А уже придумали умные каблуки?" (вопрос в диалоге)
+        - 3180.8s: "Например, у меня есть фитнес-трекер..."
+
+        Все три реплики по контексту принадлежат гостю Афискону:
+        790.6s идёт сразу перед 793.0s [SPEAKER_00], 797.7s [PetrDidenko] -
+        это часть диалога Афискона о дешёвых компьютерах.
+
+      identified_as: "devzen_afiskon"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Реплики в контексте речи SPEAKER_00/PetrDidenko (Афискона)"
+
+      possible_matches:
+        - person_id: "devzen_afiskon"
+          confidence: 0.7
+          reason: "Контекст указывает на гостя"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Короткие вопросы могли принадлежать Ksenks"
+
+      voice_task:
+        needed: false
+        reason: "Короткие сегменты, очевидная ошибка атрибуции"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray НЕ БЫЛ объявлен как участник. Umputun сказал "в основном составе
+        ровно половина" (15.5s) - это 2 из 4 (Umputun + Ksenks).
+        Однако Gray имеет 6 реплик. По анализу контекста, эти реплики
+        принадлежат гостю Афискону (продолжают его речь).
+        ТРЕБУЕТ VOICE COMPARISON для подтверждения.
+
+    - speaker: "PetrDidenko"
+      issue: |
+        Пётр Диденко НЕ БЫЛ представлен. Гость представился как АЛЕКСАНДР
+        (не Пётр) с ником Афискон. 51 реплика PetrDidenko - ошибка атрибуции,
+        это речь Афискона. ТРЕБУЕТСЯ ПЕРЕИМЕНОВАНИЕ.
+
+    - speaker: "SPEAKER_00 vs PetrDidenko split"
+      issue: |
+        Речь одного человека (Афискона) разбита между SPEAKER_00 (147 реплик)
+        и PetrDidenko (51 реплика). Нужно объединить под одним именем.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 427
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Afiskon"
+    confidence: high
+    reason: "Явное представление: 'Меня зовут Александр', 'ник Афискон', 'devzen.ru'"
+
+  - type: rename
+    episode: 427
+    from_speaker: "PetrDidenko"
+    to_speaker: "Afiskon"
+    confidence: high
+    reason: "Ошибка атрибуции - это тот же Александр Афискон, не Пётр Диденко"
+
+  - type: investigate
+    episode: 427
+    speaker: "Gray"
+    action: "voice_comparison"
+    reason: |
+      6 реплик Gray (40 сек) предположительно принадлежат Афискону.
+      Нужно сравнить голос с эталоном Gray и с Афисконом.
+
+  - type: rename_if_confirmed
+    episode: 427
+    from_speaker: "Gray"
+    to_speaker: "Afiskon"
+    confidence: medium
+    reason: "После voice comparison - если подтвердится, что это не Gray"
+
+  - type: rename
+    episode: 427
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Afiskon"
+    confidence: medium
+    reason: "Короткие реплики в контексте речи Афискона"
+
+  - type: delete_or_reassign
+    episode: 427
+    from_speaker: "SPEAKER_01"
+    to_speaker: null
+    confidence: low
+    reason: "Вопросы из чата (слушатель 'Гусь'), можно оставить или удалить"
+
+  - type: delete_or_reassign
+    episode: 427
+    from_speaker: "SPEAKER_02"
+    to_speaker: null
+    confidence: low
+    reason: "1 секунда, слишком короткая реплика, скорее всего артефакт"
+
+# Новый гость для people.yaml
+new_guest_to_add:
+  id: "afiskon"
+  canonical_name: "Afiskon"
+  aliases: ["Афискон", "afiskon", "SPEAKER_00 (ep427)", "SPEAKER_03 (ep416)"]
+  real_name: "Александр Алексеев"
+  info: |
+    Ведущий подкаста DevZen (devzen.ru), автор блога iax.me.
+    Выпуски: 416, 427 (и возможно другие с DevZen).
+    Представляется: "Меня зовут Александр, ник Афискон".
+
+# Аудио для голосового сравнения
+audio_reference:
+  url: null  # URL нужно взять из data/427/427_desc.json если он существует
+  source: "radio-t.com"
+  note: "Файл 427_desc.json не найден в data/ и data_clean/"
+
+# Референсные сегменты для voice comparison
+voice_comparison_segments:
+  afiskon_long_segment:
+    speaker: "SPEAKER_00"
+    stime: 1888.3
+    etime: 1906.5
+    duration_sec: 18.2
+    text: "То есть, например, мы работаем с DynamoDB и с S3, и вместо того, чтобы самому поднимать что-то такое..."
+    note: "Самый длинный непрерывный сегмент Афискона"
+
+  gray_suspect_segment:
+    speaker: "Gray"
+    stime: 2434.9
+    etime: 2441.9
+    duration_sec: 7.0
+    text: "Вот в этот момент у меня прям мир перевернулся, я понял, что вот все, теперь мне не нужен фотоаппарат..."
+    note: "Для сравнения - подозрение что это Афискон, не Gray"
+
+# Дополнительные заметки
+notes: |
+  Эпизод 427 от 17 января 2015 года.
+
+  Ведущие: Umputun (956 реплик, 3240 сек), Ksenks (594 реплики, 2589 сек).
+  Объявлено: "в основном составе половина" (2 из 4) + "один проверенный товарищ" (1 гость).
+
+  Гость: Александр Алексеев (afiskon) из подкаста DevZen (devzen.ru).
+  Представился в начале: "Меня зовут Александр, ник Афискон, блог iax.me, подкаст devzen.ru".
+
+  ОСНОВНЫЕ ПРОБЛЕМЫ:
+  1. Гость разбит между SPEAKER_00 (147 реплик) и PetrDidenko (51 реплика) -
+     нужно объединить как "Afiskon"
+  2. PetrDidenko - ОШИБКА: это не Пётр Диденко, а Александр Афискон
+  3. Gray (6 реплик) - подозрение на ошибку: реплики продолжают речь Афискона
+  4. SPEAKER_MISATTRIBUTED_ELDAR (3 реплики) - ошибка, скорее всего Афискон
+
+  СВЯЗЬ С ЭПИЗОДОМ 416:
+  Тот же гость Александр из DevZen был в эпизоде 416 как SPEAKER_03.
+  В 416 тоже была путаница с PetrDidenko (16 реплик без представления).
+
+  Рекомендация: создать правило очистки для переименования SPEAKER_00 и
+  PetrDidenko в Afiskon, провести voice comparison для реплик Gray.

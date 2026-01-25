@@ -1,0 +1,268 @@
+episode: 407
+status: has_tasks
+analyzed_at: "2026-01-25"
+revision: 2
+revision_note: "Исправлена идентификация SPEAKER_05 - это Ksenks, а не Marin_k_a"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Marin_k_a, Ksenks]  # Ksenks присутствует как SPEAKER_05
+  total_duration_sec: 7500  # ~2 часа эпизода
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 803
+    replies_count: 326
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        КРИТИЧЕСКИ ВАЖНО: SPEAKER_05 - это Ksenks (Ксюша), НЕ Marin_k_a!
+
+        Доказательства:
+        1. На 22.96s-26.84s Umputun говорит: "Но Ксюша-то знает, что мы собрались праздновать"
+           - Это ДО первой реплики Marin_k_a (64.74s)
+           - Сразу после этого (27.34s) SPEAKER_05 отвечает "8 лет"
+
+        2. На 313.87s Umputun обращается "Ну, Ксюшенька" к SPEAKER_05
+           - Следующая реплика SPEAKER_05 (321.09s): "Да, мне тоже кажется, что стало как должно"
+
+        3. На 7453.99s SPEAKER_03 говорит "70% Ксюша" - обращение к SPEAKER_05
+           - SPEAKER_05 тут же отвечает (7460.4s): "Подожди, включает младенцев и бабулек?"
+
+        4. SPEAKER_05 говорит "Я тоже удивилась" (258.81s) - женский род, как у Ksenks
+
+        5. SPEAKER_05 и Marin_k_a - ДВА РАЗНЫХ человека, участвующих в разговоре одновременно:
+           - Marin_k_a (323.43s): "Мне вообще даже, если честно, казалось, что так уже было"
+           - SPEAKER_05 (332.64s): "Шаренные линки, наверное"
+           - Marin_k_a (338.88s): "То есть, нет такого линки, которыми можно делиться?"
+           - SPEAKER_05 (341.72s): "Нет."
+           - Они ведут диалог друг с другом!
+
+        Вывод: В эпизоде ТРИ женщины: Ksenks (как SPEAKER_05), Marin_k_a, и они общаются друг с другом.
+        Ksenks - соведущая, поэтому 326 реплик за 803 сек - нормальный объём участия.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Marin_k_a"
+    total_duration_sec: 1533
+    replies_count: 244
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Уже размечена корректно как Marin_k_a
+        2. Говорит о своём участии в подкасте (93.9s): "А у меня, кстати, сейчас два года прошло"
+        3. Активно участвует в технических дискуссиях (Dropbox, Azure и др.)
+        4. В people.yaml: marin_k_a - Марина, бывшая ведущая, info: "Бывшая ведущая"
+        5. Ведёт диалог с Ksenks (SPEAKER_05) как два разных человека
+
+        ВАЖНО: Umputun НЕ называет Marin_k_a "Ксюшей". На 22.96s он говорит о Ксюше
+        (SPEAKER_05/Ksenks), которая появляется с 27.34s. Marin_k_a появляется позже (64.74s).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 14
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Отменённое ошибочное присвоение Петру Диденко.
+        Реплики разрозненные (4062.93s и 6990.58s).
+        Содержимое не характерно для отдельного гостя - вероятно ошибки ASR.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Реплика в 6990s идёт сразу после Bobuk (6988s), контекст диалога продолжается"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Философский тон: 'Там, понимаешь, не только теория, там и практика была'"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6990.58
+          etime: 6998.94
+          text: "Там, понимаешь, не только теория, там, по-моему, и практика была такая очень, как сказать-то... Но мы же не знаем ничего."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 10
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие разрозненные реплики - ошибки распознавания.
+        Реплики вклиниваются в диалог между известными ведущими.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики:
+        - "А, точно, да" (1618.78s) - после Umputun про followers
+        - "Да нет, это не по времени" (3377.85s)
+        - "Да, Бобук любит часы" (3412.35s) - комментарий о Бобуке в 3-м лице
+        - "Так, но он огромный" (3864.51s) - о Galaxy Note
+        - "Так а почему Айенгу не ищут? Ее же и телевизор смотрят" (7285-7290s) - две реплики подряд
+
+        Последние две реплики (7285-7290s) подряд - возможно один человек.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплики похожи на стиль Ксюши, могут быть ошибками разделения с SPEAKER_05"
+        - person_id: "marin_k_a"
+          confidence: 0.3
+          reason: "Реплика 'Да, Бобук любит часы' - женский комментарий о ведущем"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7285.85
+          etime: 7290.15
+          text: "Так а почему Айенгу не ищут? Ее же и телевизор смотрят."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 3
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Крайне короткие разрозненные реплики - типичные ошибки ASR.
+        Однословные реакции: "А, понятно", "В телефон", "Как?", "70% Ксюша".
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики (все <2 сек):
+        - "А, понятно." (3075.31s)
+        - "В телефон." (4986.28s)
+        - "Как?" (6666.64s)
+        - "70% Ксюша." (7453.99s) - обращение к Ксюше (SPEAKER_05/Ksenks)
+
+      possible_matches:
+        - person_id: "marin_k_a"
+          confidence: 0.5
+          reason: "Реплика '70% Ксюша' обращена к Ksenks - возможно это Марина"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Короткие интерджекции характерны для ведущих"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Начало собственной фразы, неправильно отделённой"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        note: "Слишком короткие реплики для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: "326 реплик (803 сек) - это Ksenks, требуется переименование"
+    - speaker: "SPEAKER_04"
+      issue: "6 коротких реплик - вероятно ошибки ASR, требуется voice comparison"
+    - speaker: "SPEAKER_03"
+      issue: "4 минимальных реплики - ошибки ASR, можно объединить с ведущими"
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Отменённое присвоение, 2 реплики требуют voice comparison"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 407
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Umputun обращается к спикеру "Ксюшенька" (313.87s) и "Ксюша" (22.96s).
+      SPEAKER_05 появляется с 27.34s и активно участвует (326 реплик, 803 сек).
+      В people.yaml: ksenks = Ksenks, real_name "Ксения", role "Ведущая".
+      SPEAKER_05 и Marin_k_a - два разных человека, ведущих диалог друг с другом.
+
+  - type: merge_to_host
+    episode: 407
+    from_speaker: "SPEAKER_03"
+    to_speaker: "needs_manual_review"
+    confidence: low
+    reason: |
+      Слишком короткие реплики для автоматического определения.
+      Рекомендуется: объединить с Marin_k_a или удалить как артефакты.
+
+  - type: merge_to_host
+    episode: 407
+    from_speaker: "SPEAKER_04"
+    to_speaker: "needs_voice_analysis"
+    confidence: medium
+    reason: |
+      Короткие реплики, вклинивающиеся в диалог.
+      Voice comparison поможет определить: Ksenks или Marin_k_a.
+
+  - type: investigate
+    episode: 407
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Ранее ошибочно присвоено PetrDidenko и отменено.
+      Реплики требуют voice comparison для определения реального спикера (Bobuk или Umputun).
+
+# Заметки
+notes: |
+  Эпизод 407 от 30 августа 2014 года - празднование 8-летия подкаста.
+
+  СОСТАВ УЧАСТНИКОВ (исправленный анализ):
+  - Umputun (ведущий) - 784 реплики, 2485 сек
+  - Bobuk (соведущий) - 655 реплик, 2125 сек
+  - Ksenks (соведущая, размечена как SPEAKER_05) - 326 реплик, 803 сек
+  - Marin_k_a (Марина, бывшая ведущая, гость) - 244 реплики, 1533 сек
+
+  ВАЖНОЕ ИСПРАВЛЕНИЕ:
+  Предыдущий анализ ошибочно идентифицировал SPEAKER_05 как Marin_k_a.
+  На самом деле SPEAKER_05 = Ksenks (Ксюша), потому что:
+  1. Umputun упоминает Ксюшу ДО первой реплики Marin_k_a
+  2. SPEAKER_05 и Marin_k_a ведут диалог друг с другом как два разных человека
+  3. К SPEAKER_05 обращаются "Ксюша", "Ксюшенька"
+
+  ГЛАВНАЯ ЗАДАЧА: переименовать SPEAKER_05 → Ksenks
+
+  ДОПОЛНИТЕЛЬНО: SPEAKER_03, SPEAKER_04, SPEAKER_MISATTRIBUTED_PETR - ошибки ASR,
+  требуют voice comparison или удаления как артефакты.

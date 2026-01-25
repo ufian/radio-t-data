@@ -1,0 +1,213 @@
+episode: 428
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  hosts_questionable: [Alek.sys]  # только 1 реплика, нужна проверка
+  total_duration_sec: 6770  # примерная сумма по статистике
+
+# Комментарий по составу
+notes: |
+  Umputun в начале сказал "Состав полный, даже представлять не буду".
+  Упомянуты: Бобук (вернулся), Ксюша (опоздала).
+  Alek.sys НЕ упомянут явно, но имеет 1 реплику в 7085s.
+  Это подозрительно - нужна проверка, присутствовал ли он.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Обе реплики - короткие фразы, следующие сразу за репликами Ksenks.
+        1) 24.4s "Меня никто не ждал" - логическое продолжение после "Можно считать, я не опоздала"
+        2) 604.3s "Ну, посмотрим, поживем, увидим" - после комментария Ksenks о Windows
+        Контекст и расположение указывают на неправильную атрибуцию голоса Ksenks.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплика "Меня никто не ждал" (24.4s) идёт сразу после слов Ksenks
+        "Можно считать, я не опоздала" и является логическим продолжением её мысли.
+        Обе реплики короткие и вставлены между репликами Ksenks.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 9
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики рассеяны по выпуску (134s, 2770s, 5022s) - не характерно для гостя.
+        Контекст показывает участие в общем разговоре без представления.
+        Реплика в 5022s ("Ты правда считаешь...") обращена к Umputun - типично для ведущих.
+        Эльдар Муртазин в этом выпуске не упоминается как гость.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: |
+            Реплика 2770.8s "Я дошел до второй, дальше читать не хочу" -
+            мужской голос, комментарий к статье, типичный для Bobuk.
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: |
+            Реплика 5022.2s "Ты правда считаешь, что абсолютно одинаковые
+            девочки и мальчики" - вопрос в контексте дискуссии о равноправии,
+            может быть Ksenks (женский голос более вероятен в этом контексте).
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5022.19
+          etime: 5026.73
+          text: "Ты правда считаешь, что абсолютно одинаковые девочки и мальчики сейчас в отрасли?"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        5 коротких реплик (1-2 сек каждая) рассеяны по всему выпуску.
+        Типичные ошибки распознавания - короткие комментарии, перебивания.
+        Некоторые реплики дублируют слова других ведущих (447.6s повторяет Gray).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: |
+            Реплика 4864.8s "А откуда у тебя 40% девочек?" - вопрос к Umputun
+            о наборе кадров. Сразу после (4866.3s) Ksenks спрашивает похожее.
+            Возможно это её голос, неправильно атрибутированный.
+        - person_id: "gray"
+          confidence: 0.3
+          reason: |
+            Реплики 447-449s почти дублируют слова Gray о Windows upgrade.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4864.79
+          etime: 4866.25
+          text: "А откуда у тебя 40% девочек?"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        3 коротких реплики: "Я не слышала" (1899s), "Да" (7348s), "Угу" (7368s).
+        Фраза "Я не слышала" - женский род, указывает на Ksenks.
+        Остальные - типичные односложные реакции, ошибки распознавания.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Фраза "Я не слышала" (1899.4s) грамматически женского рода.
+        В выпуске единственная женщина - Ksenks.
+        Реплика следует после рассказа Bobuk о Mobile World Congress.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка Alek.sys
+questionable_hosts:
+  - speaker: "Alek.sys"
+    total_duration_sec: 1
+    replies_count: 1
+    first_reply_at: 7084.86
+
+    analysis:
+      issue: |
+        Единственная реплика за весь выпуск (7084.9s).
+        Umputun в начале сказал "состав полный", но НЕ упомянул Alek.sys явно.
+        Были упомянуты: Бобук, Ксюша.
+        Одна реплика посреди диалога Gray - подозрительно.
+
+      possible_outcomes:
+        - outcome: "Alek.sys действительно присутствовал"
+          confidence: 0.3
+          reason: |
+            "Состав полный" мог включать Alek.sys. Но тогда странно, что
+            он сказал всего 1 фразу за 2+ часа.
+        - outcome: "Ошибка распознавания (это Gray или другой)"
+          confidence: 0.7
+          reason: |
+            Реплика "Опять-таки, не очень понятно" посреди монолога Gray.
+            Голос мог быть неправильно атрибутирован.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7084.86
+          etime: 7086.15
+          text: "Опять-таки, не очень понятно."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Не был явно представлен в начале. Umputun сказал "состав полный",
+        но упомянул только Бобука и Ксюшу. При этом у Alek.sys только 1 реплика,
+        что нетипично для ведущего за 2+ часа подкаста.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 428
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Обе реплики следуют за репликами Ksenks и являются их логическим продолжением.
+      "Меня никто не ждал" - после её слов об опоздании.
+      "Ну, посмотрим, поживем, увидим" - после её комментария о Windows.
+
+  - type: rename
+    episode: 428
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Фраза "Я не слышала" грамматически женского рода.
+      Единственная женщина в выпуске - Ksenks.
+
+  - type: needs_voice_comparison
+    episode: 428
+    speakers: ["SPEAKER_MISATTRIBUTED_ELDAR", "SPEAKER_02", "Alek.sys"]
+    reason: |
+      Требуется сравнение голосов для точной идентификации.
+      SPEAKER_MISATTRIBUTED_ELDAR и SPEAKER_02 могут быть разными ведущими.
+      Alek.sys - под вопросом, присутствовал ли он вообще.

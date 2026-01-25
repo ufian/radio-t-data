@@ -1,0 +1,147 @@
+episode: 426
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 5799  # ~96.5 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 8
+    replies_count: 2
+    pattern: scattered  # реплики в 1174s и 5811s - разбросаны по эпизоду
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Имя SPEAKER_MISATTRIBUTED_ELDAR указывает на отменённое ошибочное присвоение
+        Эльдару Муртазину. Эльдара в этом выпуске нет (январь 2015, тема CES).
+        Реплики короткие и разбросаны по эпизоду — типичный паттерн ошибки ASR.
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Возможные кандидаты
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: |
+            Вторая реплика (5811s) "Первая тема прямо для Гаиши, потому что это про Rust"
+            непосредственно предшествует Gray: "Первая версия Rust 1.0 Alpha."
+            Выглядит как начало его фразы, ошибочно выделенное в отдельную реплику.
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Первая реплика (1174s) идёт сразу после Bobuk, могла быть продолжением его речи"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Umputun часто модерирует и направляет разговор"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5811.15
+          etime: 5816.99
+          text: "Первая тема прямо для Гаиши, потому что это про Rust."
+        notes: |
+          Более длинный сегмент (5.84 сек) для анализа голоса.
+          Контекст: переход к темам слушателей, упоминается "Гаиша" (возможно, внутренний термин).
+          Проверить: совпадает ли голос с Gray (он говорит до и после) или с Bobuk.
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 0  # фактически ~0.26 сек суммарно
+    replies_count: 2
+    pattern: scattered  # реплики в 2800s и 6281s
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Обе реплики - односложные междометия длительностью <0.2 сек:
+        - "Нет." (0.1 сек) - между Bobuk и Umputun
+        - "Угу." (0.16 сек) - между репликами Gray
+        Типичные артефакты автоматического распознавания речи.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: |
+        Спикер не представлен в эпизоде. Имя "ELDAR" в идентификаторе указывает,
+        что раньше этот спикер был ошибочно атрибутирован как Эльдар Муртазин,
+        но затем атрибуция была отменена (prefix MISATTRIBUTED).
+        В эпизоде 426 нет гостей - только ведущие.
+        Реплики скорее всего принадлежат одному из основных ведущих.
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys имеет только 2 короткие реплики (4 сек суммарно):
+        - 768.6s: "Понимаешь, да?"
+        - 4174.8s: "Всю правду сказал."
+        Обе фразы - короткие реакции. Возможно, это ошибки распознавания,
+        или Alek.sys действительно был на выпуске, но почти не говорил.
+        Требует дополнительной проверки.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # SPEAKER_01 - явные ошибки распознавания, можно удалить
+  - type: delete
+    episode: 426
+    speaker: "SPEAKER_01"
+    confidence: high
+    reason: |
+      Односложные междометия (<0.2 сек), типичные артефакты ASR.
+      "Нет." и "Угу." не несут смысловой нагрузки и прерывают речь ведущих.
+
+  # SPEAKER_MISATTRIBUTED_ELDAR - предположительно Gray
+  - type: rename
+    episode: 426
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Gray"  # требует подтверждения voice comparison
+    confidence: medium
+    reason: |
+      Реплика про Rust/Гаишу (5811s) непосредственно предшествует речи Gray
+      о "Rust 1.0 Alpha". Контекстуально выглядит как начало его высказывания.
+      Требуется voice comparison для окончательного подтверждения.
+
+# Дополнительные заметки
+notes: |
+  Эпизод 426 от 10 января 2015 года.
+  Тема: обсуждение CES 2015, Bobuk был там лично.
+
+  Представление в начале (0-45s):
+  - Umputun: "Выпуск 426 в полном составе"
+  - Umputun: "Бобук, хорошо, что ты зашел"
+  - Umputun: "Пошли по меру с Ксюшей. А Грей нас тоже бросил"
+  Явно указаны 4 ведущих: Umputun, Bobuk, Ksenks, Gray.
+
+  Состав: 4 основных ведущих + Alek.sys (минимальное участие - 2 реплики, 4 сек).
+  Гостей в этом выпуске нет.
+
+  "Гаиша" (5811s) - возможно прозвище или искажённое имя кого-то из ведущих.
+  В контексте Rust тема сразу продолжается Gray: "Первая версия Rust 1.0 Alpha."
+  "Гриша" (5866s) - это Bobuk (Григорий Бакунов), Gray к нему обращается.
+
+  SPEAKER_MISATTRIBUTED_ELDAR - название указывает, что ранее эти реплики
+  были ошибочно приписаны Эльдару Муртазину (частый гость подкаста),
+  но атрибуция была отменена. Эльдар действительно был экспертом по CES,
+  но в этом выпуске его не было - Bobuk был на выставке сам.
+
+  Рекомендация: провести voice comparison для SPEAKER_MISATTRIBUTED_ELDAR
+  с голосами Gray и Bobuk.

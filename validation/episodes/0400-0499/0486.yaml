@@ -1,0 +1,241 @@
+episode: 486
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Метаданные эпизода
+episode_info:
+  date: "2016-03-05"
+  title_context: "Выпуск 486, обсуждение функционального программирования"
+  audio_url: null  # Файл метаданных отсутствует
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 9195
+  notes: |
+    Umputun представил выпуск: "Грея и Бобука тут, наша молодёжь отвалилась".
+    Однако Alek.sys присутствует (26 реплик), хотя с минимальным участием.
+
+# Гости эпизода (идентифицированные по именам в транскрипте)
+identified_guests:
+  - name: "Иван"
+    speaker_id: "SPEAKER_00"
+    evidence: |
+      Umputun (901s): "Иван, ты с нами?"
+      SPEAKER_00 (903s): "Да, я здесь."
+      Gray (2661s): "Можно я тоже поддержу немножко мысли Ивана."
+      Umputun (958s): "Вот я перешел в сторону против Бобука и Ивана."
+    confidence: high
+    total_duration_sec: 443
+    replies_count: 95
+    first_appearance_sec: 903
+    context: "Участвует в обсуждении функционального программирования"
+
+  - name: "Андрей"
+    speaker_ids: ["EldarMurtazin", "SPEAKER_05"]
+    evidence: |
+      Umputun (1272s): "Андрей?" ... "Энджи?" ... "Эндрю?" (пробует разные варианты имени)
+      Umputun (1378s): "Андрей, ты смог к нам зайти со своими настройками безопасности?"
+      EldarMurtazin (1382s): "Да, вроде как получилось, если меня слышно, то это здорово."
+      SPEAKER_00 (1437s): "Я хочу согласиться с Андреем..." (подтверждает имя)
+    confidence: high
+    total_duration_sec: 186  # EldarMurtazin (111s) + SPEAKER_05 (74s)
+    replies_count: 38  # 16 + 22
+    first_appearance_sec: 1382
+    context: "Гость, участвует в дискуссии о программировании"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 443
+    replies_count: 95
+    pattern: consecutive
+    analysis:
+      is_error: false
+      identified_as: "Ivan"  # Гость по имени Иван
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun явно обращается 'Иван, ты с нами?' и получает ответ"
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 111
+    replies_count: 16
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        КРИТИЧЕСКАЯ ОШИБКА РАЗМЕТКИ: Спикер назван "EldarMurtazin", но в транскрипте
+        его называют "Андрей" (см. evidence). Эльдар Муртазин - известный мобильный
+        аналитик, но в этом эпизоде нет никаких упоминаний имени "Эльдар".
+        Umputun пробует разные варианты: "Андрей?", "Энджи?", "Эндрю?" -
+        все указывают на имя Андрей/Andrew.
+      identified_as: "Andrey"  # Гость по имени Андрей (НЕ Эльдар Муртазин!)
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (1272s): "Андрей?"
+        Umputun (1378s): "Андрей, ты смог к нам зайти со своими настройками безопасности?"
+        EldarMurtazin отвечает: "Да, вроде как получилось..."
+      possible_matches:
+        - person_id: null
+          confidence: 0.0
+          reason: "Это НЕ Эльдар Муртазин, это гость по имени Андрей"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 74
+    replies_count: 22
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        SPEAKER_05 и EldarMurtazin - один и тот же человек (Андрей).
+        Они появляются в одном контексте, говорят о схожих темах,
+        чередуются в диалоге. Это результат нестабильной диаризации.
+      identified_as: "Andrey"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        SPEAKER_05 появляется сразу после обращения к Андрею (1393s).
+        EldarMurtazin и SPEAKER_05 чередуются в одном обсуждении.
+        Оба говорят о функциональном vs императивном программировании.
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие односложные реплики в случайных местах.
+        На 6586s две реплики подряд "Я нет" и "А я абсолютно да" -
+        это явно два разных человека отвечают на вопрос "Хотели бы вы стать лучшим кодером?"
+        Скорее всего это Иван и Андрей (ошибка диаризации).
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        1996s: "Вообще нет." - после Umputun "Ну да, повод."
+        6586s: "Я нет." + "А я абсолютно да." - ответы на вопрос о кодерах
+      possible_matches:
+        - person_id: "Ivan"
+          confidence: 0.5
+          reason: "Может быть Иваном (SPEAKER_00)"
+        - person_id: "Andrey"
+          confidence: 0.5
+          reason: "Может быть Андреем (EldarMurtazin/SPEAKER_05)"
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+    analysis:
+      is_error: true
+      error_reason: |
+        Метка указывает на Петра Диденко, но это ошибка.
+        Реплики короткие и разрозненные - скорее всего ошибки диаризации.
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        5016s: "Я вполне готов принять и понять их проблемы." - между репликами Umputun
+        8699s: "Типа хакер-ньюс." - Bobuk отвечает "Ты знаешь, это не хакер-ньюс."
+      possible_matches:
+        - person_id: "Ivan"
+          confidence: 0.4
+          reason: "Может быть Иваном"
+        - person_id: "Andrey"
+          confidence: 0.4
+          reason: "Может быть Андреем"
+      voice_task:
+        needed: false
+        reason: "Слишком короткие реплики"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: |
+        КРИТИЧЕСКАЯ ОШИБКА: Метка "EldarMurtazin" неверна.
+        В транскрипте спикера называют "Андрей", не "Эльдар".
+        Нужно переименовать в нового гостя.
+    - speaker: "SPEAKER_05"
+      issue: |
+        Дубликат спикера Андрей (EldarMurtazin).
+        Нужно объединить с исправленной меткой.
+    - speaker: "Alek.sys"
+      issue: |
+        Umputun говорит "молодёжь отвалилась", но Alek.sys присутствует.
+        Возможно имелась в виду только Ksenks (которой действительно нет).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 486
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ivan"
+    confidence: high
+    reason: "Umputun явно представляет: 'Иван, ты с нами?' - 'Да, я здесь.'"
+
+  - type: rename
+    episode: 486
+    from_speaker: "EldarMurtazin"
+    to_speaker: "Andrey"
+    confidence: high
+    reason: |
+      КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Спикера зовут Андрей, не Эльдар.
+      Umputun несколько раз обращается по имени: "Андрей?", "Андрей, ты смог зайти?"
+
+  - type: rename
+    episode: 486
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Andrey"
+    confidence: high
+    reason: "Тот же человек, что EldarMurtazin (Андрей). Объединить."
+
+  - type: merge_speakers
+    episode: 486
+    speakers_to_merge: ["EldarMurtazin", "SPEAKER_05"]
+    target_speaker: "Andrey"
+    confidence: high
+    reason: "Оба спикера - один человек по имени Андрей"
+
+# Задачи на ручную проверку
+manual_review_tasks:
+  - task: "Определить фамилию гостя Ивана"
+    priority: medium
+    context: "95 реплик, 443 сек - значимое участие в эпизоде"
+
+  - task: "Определить фамилию гостя Андрея"
+    priority: medium
+    context: "38 реплик, 186 сек - значимое участие в эпизоде"
+
+  - task: "Добавить Ивана и Андрея в people.yaml"
+    priority: high
+    context: "После идентификации фамилий добавить в справочник гостей"
+
+# Примечания
+notes: |
+  Эпизод 486 от 5 марта 2016 года.
+
+  Ведущие: Umputun, Bobuk, Gray, Alek.sys (минимально).
+  Ksenks отсутствует.
+
+  Гости:
+  1. Иван (SPEAKER_00) - 95 реплик, активный участник дискуссии
+  2. Андрей (ошибочно помечен как EldarMurtazin и SPEAKER_05) - 38 реплик
+
+  ГЛАВНАЯ ПРОБЛЕМА: Метка "EldarMurtazin" неверна! Это другой человек по имени Андрей.
+  Эльдар Муртазин - известный мобильный аналитик, и его имя нигде не упоминается.
+  Ведущий явно несколько раз обращается к гостю "Андрей".

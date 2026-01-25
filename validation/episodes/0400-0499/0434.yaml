@@ -1,0 +1,290 @@
+episode: 434
+status: needs_review
+analyzed_at: "2026-01-25T12:30:00Z"
+revision: 2
+revision_notes: |
+  Уточнён анализ EldarMurtazin: обнаружено упоминание "Эльдар" на 5313s,
+  что может указывать на присутствие Эльдара в выпуске.
+  Изменён suggested_rule с rename на review_and_split.
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7714  # ~2 часа 8 минут
+  guest_confirmed: AlexeyBragin
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 344
+    replies_count: 122
+    pattern: consecutive
+    first_appearance_sec: 212
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Успешная идентификация
+      identified_as: "alexey_bragin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 210 сек Umputun: "Алексей, ты появился?"
+        На 212 сек SPEAKER_01: "Да, привет"
+        На 243-247 сек представился: "Брагин Алексей. Ну, Fireball, в принципе"
+        Umputun на 248 сек: "Мы пригласили Брагина Алексея..."
+        На 336-341 сек: "В честь праздника к нам пришел человек из проекта ReactOS"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 96
+    replies_count: 19
+    pattern: scattered
+    first_appearance_sec: 220
+
+    analysis:
+      is_error: true
+      error_reason: |
+        ВЕРОЯТНАЯ ОШИБКА РАЗМЕТКИ. Реплики EldarMurtazin требуют ручной проверки.
+
+        ПРОТИВ присутствия Эльдара:
+        - Официально представлен только Алексей Брагин (ReactOS)
+        - Реплики EldarMurtazin (219-1750 сек) находятся в контексте обсуждения ReactOS
+        - Примеры реплик явно от разработчика ReactOS:
+          * 445s: "когда мы это реально сделали" (речь от 1 лица множ. числа о ReactOS)
+          * 1372s: "наши библиотеки, типа Common Controls" (наши = ReactOS)
+
+        ЗА присутствие Эльдара:
+        - На 5313s Umputun говорит: "Это куда Эльдар ездит, что ли?" - может означать
+          присутствие Эльдара в разговоре (обращение к присутствующему)
+        - Реплики после 2998s уже не связаны с ReactOS, могут быть Эльдара
+
+        ВЫВОД: Требуется voice comparison. Вероятно реплики 219-1750s = Алексей Брагин,
+        а поздние реплики (после 2998s) возможно Эльдар Муртазин.
+
+      identified_as: null  # требуется ручной разбор
+      identification_method: null
+      confidence: null
+      evidence: |
+        Упоминание "Эльдар" на 5313s: "Это куда Эльдар ездит, что ли?" (Umputun)
+        Последняя реплика EldarMurtazin (6868s): "Ну, вот, короче, я теперь не очень понимаю"
+        Реплики про ReactOS явно от разработчика проекта, а не мобильного аналитика.
+
+      possible_matches:
+        - person_id: "alexey_bragin"
+          confidence: 0.8
+          reason: "Реплики 219-1750s в контексте ReactOS, речь от 1 лица разработчика"
+        - person_id: "eldar_murtazin"
+          confidence: 0.2
+          reason: "Поздние реплики после 2998s, упоминание на 5313s"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 445.0
+          etime: 457.69
+          text: "Но когда мы это реально сделали, и когда оно реально начало работать..."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 4
+    replies_count: 4
+    pattern: scattered
+    first_appearance_sec: 1166
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие односложные реплики-реакции, разбросанные по эпизоду.
+        Типичные фразы: "Ну, это да", "Ты злой", "Да вообще, жесть", "Злые вы".
+        Скорее всего ошибка распознавания одного из ведущих (вероятно Ksenks).
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Женский голос, реакции на 'злость' ведущих"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Короткие комментарии характерны для Gray"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткие реплики (<2 сек), невозможно верифицировать"
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 345
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Алексей" (345 сек) - кто-то называет гостя по имени.
+        Контекст: Umputun говорит "Я правильно понимаю, дорогой гость?" - "Правильно."
+        Скорее всего это сам гость подтверждает своё имя.
+
+      identified_as: "alexey_bragin"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Гость подтверждает своё имя после представления"
+
+      possible_matches:
+        - person_id: "alexey_bragin"
+          confidence: 0.7
+          reason: "Гость подтверждает своё имя"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Ведущий обращается к гостю"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткая реплика (1 сек)"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 1620
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Маркер MISATTRIBUTED означает ранее отменённое ошибочное присвоение.
+        Реплика "А вот реализовать по-своему, ну что, здорово" (1620 сек).
+        Контекст: обсуждение реверс-инжиниринга Windows API.
+        Скорее всего один из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Стиль комментария"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Технический комментарий"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1620.38
+          etime: 1623.18
+          text: "А вот реализовать по-своему, ну что, здорово."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 7712
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Маркер MISATTRIBUTED означает ранее отменённое ошибочное присвоение.
+        Реплика "Ну, можно сегодня, так поздно уже" (7712 сек).
+        Контекст: обсуждение поздравлений с 8 марта в конце выпуска.
+        Bobuk спрашивает "А что, сегодня нельзя?", затем Ksenks отвечает
+        "Цветочный магазин закрытый".
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Женский голос, контекст про цветы, 8 марта"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Комментарий о позднем времени"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7712.34
+          etime: 7714.98
+          text: "Ну, можно сегодня, так поздно уже."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "EldarMurtazin"
+      issue: |
+        ВЕРОЯТНАЯ ОШИБКА РАЗМЕТКИ: большинство реплик EldarMurtazin (219-1750s)
+        относятся к обсуждению ReactOS и скорее принадлежат Алексею Брагину.
+        Однако Эльдар упоминается на 5313s, что может указывать на его присутствие.
+        Требуется voice comparison для разделения реплик двух гостей.
+
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys появляется с 1802 сек (8 реплик, 20 сек) - очень мало для ведущего.
+        Возможно, часть его реплик ошибочно атрибутирована другим спикерам,
+        или он подключился позже и участвовал минимально.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: review_and_split
+    episode: 434
+    speaker: "EldarMurtazin"
+    confidence: medium
+    reason: |
+      Требуется ручной разбор: реплики 219-1750s вероятно принадлежат Алексею Брагину
+      (контекст ReactOS), а поздние реплики после 2998s возможно Эльдару Муртазину.
+      Нужен voice comparison для разделения.
+
+  - type: rename
+    episode: 434
+    from_speaker: "SPEAKER_01"
+    to_speaker: "AlexeyBragin"
+    confidence: high
+    reason: |
+      SPEAKER_01 представился как "Брагин Алексей" / "Fireball" на 243-247 сек.
+
+  - type: rename
+    episode: 434
+    from_speaker: "SPEAKER_07"
+    to_speaker: "AlexeyBragin"
+    confidence: medium
+    reason: |
+      Вероятно гость подтверждает своё имя "Алексей" в контексте представления.
+
+# Новый гость для добавления в people.yaml
+new_guest:
+  id: "alexey_bragin"
+  canonical_name: "AlexeyBragin"
+  aliases: ["Алексей Брагин", "Fireball"]
+  real_name: "Алексей Брагин"
+  info: "Разработчик ReactOS, выпуск 434"
+
+# Аудио для верификации
+audio_url: "https://cdn.radio-t.com/rt_podcast434.mp3"
+
+# Референсные сегменты для voice comparison гостя
+reference_segments:
+  alexey_bragin:
+    - description: "Представление гостя"
+      stime: 243.99
+      etime: 247.08
+      text: "Брагин Алексей. Ну, Fireball, в принципе, конечно, но..."
+    - description: "Длинная реплика о проекте"
+      stime: 274.38
+      etime: 287.8
+      text: "Я услышал про ваше шоу. Я даже его послушал в прошлый раз..."
