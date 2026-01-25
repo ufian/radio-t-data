@@ -1,0 +1,68 @@
+episode: 609
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks, Gray]
+  total_duration_sec: 9360  # ~2:36:00
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика (2 сек) между Gray и Bobuk. Контекст: Gray говорит 'Хорошо, договорились.' (8398-8400s), затем SPEAKER_06 'Вторая, не самая интересная новость.' (8400-8402s), затем Bobuk продолжает тему про Firebase. Это явно переход к новой теме от Bobuk."
+
+      identified_as: "bobuk"
+      identification_method: "context"
+      confidence: high
+      evidence: "Реплика является анонсом следующей темы. Сразу после неё Bobuk продолжает рассказывать про Firebase и Венесуэлу. Типичный стиль ведения Bobuk."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Gray появляется только в 7525s (2:05:25 от начала) с 3 короткими репликами (5 сек суммарно). Не был представлен в начале выпуска. Ведущие в начале: Umputun, Alek.sys, позже Bobuk и Ksenks. Возможно, это ошибочное распознавание голоса Alek.sys - реплики Gray вклиниваются между репликами Alek.sys."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 609
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Bobuk"
+    confidence: high
+    reason: "Единственная реплика - анонс темы про Firebase. Bobuk сразу продолжает развивать эту тему."
+
+# Дополнительные наблюдения для ручной проверки
+notes:
+  gray_analysis: |
+    Gray имеет всего 3 реплики общей длительностью 5 секунд:
+    1. 7525s: "Вот прям гордость за них." (1.5 сек) - между репликами Alek.sys
+    2. 7635s: "Да нет, ну, просто форм-энкодит." (1.5 сек) - в диалоге с Alek.sys
+    3. 8398s: "Хорошо, договорились." (1.6 сек) - перед SPEAKER_06
+
+    Все три реплики короткие и появляются после 2 часов выпуска.
+    Gray НЕ был представлен в начале выпуска (представлены Umputun, Alek.sys, Bobuk, Ksenks).
+
+    Рекомендация: voice comparison для определения - это Gray или ошибка распознавания Alek.sys.
+
+  voice_comparison_task:
+    speaker: "Gray"
+    reason: "Подозрение на ошибку распознавания"
+    segments:
+      - stime: 7635.15
+        etime: 7636.59
+        text: "Да нет, ну, просто форм-энкодит."
+    compare_with: "Alek.sys"
+    reference_audio: "https://cdn.radio-t.com/rt_podcast609.mp3"

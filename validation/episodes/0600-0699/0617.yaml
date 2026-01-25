@@ -1,0 +1,162 @@
+episode: 617
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  hosts_absent: [Gray]
+  total_duration_sec: 6793
+  announced_composition: "состав на четверых - Umputun, Bobuk, Alek.sys, Ksenks (Gray отсутствует)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 12
+    replies_count: 8
+    pattern: scattered
+
+    # Все реплики для контекста:
+    # 178.5s: "Все правильно?" (сразу после Ksenks)
+    # 293.7s: "А что у тебя не работает опять?" (после вопроса Bobuk)
+    # 421.3s: "То есть ты смог ее поставить на один лаптоп?" (вопрос к Umputun про macOS)
+    # 481.4s: "Все." (короткая реплика)
+    # 483.7s: "Ты в сейф-моде загрузился или что?" (технический вопрос)
+    # 491.3s: "А, ты не загружался в сейф-моде." (продолжение диалога)
+    # 726.5s: "Да, да, и PFS." (подтверждение про файловую систему)
+    # 6564.9s: "Делают?" (короткий уточняющий вопрос)
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все реплики SPEAKER_01 - это короткие вставки (0.5-3 сек), разбросанные по всему эпизоду.
+        Контекст указывает, что это ошибки распознавания одного из ведущих:
+        - Реплики технического характера про macOS, сейф-мод, PFS - типичны для ведущих
+        - Нет представления гостя в начале выпуска (объявлен состав на 4х ведущих)
+        - Реплики вклиниваются в диалоги ведущих как уточняющие вопросы
+        Наиболее вероятно - это ошибочно атрибутированные реплики Ksenks или Alek.sys.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: |
+            Первая реплика (178.5s "Все правильно?") идет сразу после Ksenks (175.9-178.5s).
+            Похоже на продолжение её мысли. Несколько реплик рядом с репликами Ksenks.
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: |
+            Технические вопросы про macOS/сейф-мод могли быть от Alek.sys,
+            который как раз вернулся в этот выпуск.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 421.26
+          etime: 423.26
+          text: "То есть ты смог ее поставить на один лаптоп?"
+        comparison_candidates:
+          - speaker: "Ksenks"
+            reference_stime: 481.76
+            reference_etime: 483.64
+            text: "Ты как бы сбрасывал с моды, с моды."
+          - speaker: "Alek.sys"
+            reference_stime: 179.47
+            reference_etime: 180.71
+            text: "А, вот почему."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    # Все реплики для контекста:
+    # 5827.4s: "Ну, это же первая релиз." (защита программы после критики Umputun)
+    # 6397.7s: "Ха-ха-ха." (смех)
+    # 6884.4s: "Ага, ага." (согласие после Ksenks)
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три очень короткие реплики (0.5-2 сек), разбросанные в конце эпизода.
+        Типичные ошибки распознавания:
+        - "Ха-ха-ха" - смех, часто неверно атрибутируется
+        - "Ага, ага" - короткое согласие
+        - "Ну, это же первая релиз" - единственная осмысленная реплика, но тоже короткая
+        Нет представления гостя, состав объявлен на 4х ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: |
+            Реплика "Ага, ага" идет сразу после Ksenks.
+            Общая тональность реплик похожа на Ksenks.
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: |
+            Реплика про "первая релиз" может быть защитной позицией,
+            характерной для Bobuk (работает в Яндексе).
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5827.42
+          etime: 5829.62
+          text: "Ну, это же первая релиз."
+        comparison_candidates:
+          - speaker: "Ksenks"
+            reference_stime: 5829.82
+            reference_etime: 5833.24
+            text: "Настолько плохая программа?"
+          - speaker: "Bobuk"
+            reference_stime: 6887.48
+            reference_etime: 6891.8
+            text: "Ну, я даже не знаю, я могу сейчас едко ответить автору этого коммента."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале выпуска Umputun четко объявляет состав: "на четверых сегодня",
+    упоминает отсутствие Gray и возвращение Alek.sys ("Леша").
+    Ведущие: Umputun, Bobuk, Ksenks, Alek.sys - все присутствуют в разметке.
+    Гостей не объявлено.
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "8 реплик неизвестного спикера при объявленном составе на 4х ведущих без гостей"
+    - speaker: "SPEAKER_06"
+      issue: "3 короткие реплики неизвестного спикера, вероятно ошибки распознавания"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не предлагаются, т.к. требуется voice comparison для точной идентификации.
+# После сравнения голосов можно будет создать правила вида:
+# - type: rename
+#   episode: 617
+#   from_speaker: "SPEAKER_01"
+#   to_speaker: "<идентифицированный ведущий>"
+#   confidence: high
+#   reason: "voice comparison подтвердил идентичность голоса"
+
+# Метаданные эпизода
+episode_metadata:
+  date: "2018-09-29"
+  audio_url: "https://cdn.radio-t.com/rt_podcast617.mp3"
+  topics:
+    - "macOS Mojave"
+    - "Facebook утечки"
+    - "Cloudflare Registrar"
+    - "Microsoft Ignite"
+    - "Apple/Shazam"
+    - "Google Chrome скандалы"
+    - "Язык Skip"
+    - "Tor мобильный браузер"

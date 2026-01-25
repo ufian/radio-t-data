@@ -1,0 +1,246 @@
+episode: 603
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks, Bobuk]
+  total_duration_sec: 8900
+  notes: |
+    В начале эпизода Umputun говорит что Bobuk отсутствует (задержан в Европе),
+    но "Леша и Аня вместе попытаются его заменить". Однако Bobuk появляется
+    в эпизоде с ~937s (5 реплик, 21 сек) - возможно подключился позже по скайпу
+    или это ошибка атрибуции.
+
+    Гость Антон подключается для обсуждения TeamCity (~3008s-4927s).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 624
+    replies_count: 136
+    pattern: consecutive
+    first_appearance_sec: 3008
+    last_appearance_sec: 4927
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Контекст представления (2916-2996s):
+        - "человек Антон написал, говорит, захотите поболтать вот на эту тему, зовите меня"
+        - "Давай, пока ты добавишь Антона..."
+        - "Антон, ты к нам зашел?" (2995s)
+        - "Ты пришел дать ответ, правильно?" - "Я могу попытаться, да." (первая реплика SPEAKER_01)
+        - "Согласись, Антон" -> "И разочаровался."
+        - "Спасибо, Антон. Отключайся..." -> "Ну, пока-пока. Пока." (4920-4927s)
+
+        Это гость Антон, специалист по TeamCity/JetBrains. Не найден в people.yaml.
+        Требуется добавление в справочник или идентификация полного имени.
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reason: "Идентифицировать полное имя гостя Антона (специалист по TeamCity)"
+        reference_segment:
+          stime: 4412.5
+          etime: 4435.5
+          text: "Поскольку для более сложного случая, когда у тебя несколько конфигураций..."
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 432
+    replies_count: 129
+    pattern: consecutive
+    first_appearance_sec: 70
+    last_appearance_sec: 6888
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Контекст представления в начале эпизода (20-46s):
+        - "Нет побока с нами. Хотя Леша и Аня вместе попытаются его заменить."
+
+        Подтверждающие признаки:
+        - Женский голос ("Я когда приехала сюда...")
+        - Обращения к ней по имени в эпизоде: "Аня, отвечаю на твой вопрос",
+          "Аня, скажи от женской четвертины...", "Аня, пришло твое время держать за все ответ"
+        - Участвует с самого начала (70s) и на протяжении всего эпизода
+        - В people.yaml есть: id="anya", canonical_name="Anya", info="13 выпусков"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+    first_appearance_sec: 1229
+    last_appearance_sec: 2972
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (4 штуки, 6 сек суммарно) разбросаны по эпизоду.
+        Реплики: "Ну, так не сейчас." (1229s), "Не сейчас так торренты." (1230s),
+        "По-моему, это тоже не новое." (2964s), "На рубях." (2971s)
+
+        Эти реплики идут сразу после реплик Alek.sys и Ksenks - скорее всего
+        это ошибочная атрибуция фрагментов речи одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.6
+          reason: "Реплики следуют сразу после Alek.sys, похожи по контексту (технические ответы)"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Одна реплика следует после вопроса Ksenks"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+    first_appearance_sec: 4759
+    last_appearance_sec: 7850
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (3 штуки, 6 сек) разбросаны по эпизоду.
+        Реплики: "То есть мы согласны." (4758s), "Ну да, говорю." (6880s),
+        "Ключ-то вернулось, что ли?" (7849s)
+
+        Слишком мало данных и разбросаны по времени - ошибка распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Короткие подтверждающие фразы типичны для модератора"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможна ошибка распознавания Gray"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_09"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 755
+    last_appearance_sec: 8821
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Минимальные реплики (2 штуки, 2 сек суммарно).
+        Реплики: "Ну..." (755s), "Не-не-не, ты не понял." (8821s)
+
+        Односложные междометия разнесены на 2+ часа - явная ошибка распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Первая реплика следует сразу после Ksenks"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Вторая реплика перед репликой Gray"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале эпизода сказано что Bobuk отсутствует (задержан в Европе),
+        но он появляется с 937s. Возможно подключился позже по скайпу,
+        или это ошибка атрибуции голоса.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 603
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Anya"
+    confidence: high
+    reason: |
+      Представлена в начале как "Аня" вместе с Alek.sys для замены Bobuk.
+      Многократно обращаются по имени ("Аня, скажи...", "Аня, отвечаю...").
+      Женский голос, говорит о переезде в США. В people.yaml id="anya".
+
+  - type: rename
+    episode: 603
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Guest_Anton_TeamCity"
+    confidence: high
+    reason: |
+      Гость Антон, подключился для обсуждения TeamCity.
+      Явно представлен и обращаются по имени. Не найден в people.yaml -
+      требуется определить полное имя и добавить в справочник.
+
+  - type: merge_or_delete
+    episode: 603
+    from_speaker: "SPEAKER_04"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      4 короткие реплики (6 сек), скорее всего ошибка распознавания Alek.sys.
+      Требуется ручная проверка голоса для подтверждения.
+
+  - type: merge_or_delete
+    episode: 603
+    from_speaker: "SPEAKER_03"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      3 короткие реплики (6 сек), разбросаны по эпизоду.
+      Скорее всего ошибка распознавания одного из ведущих.
+
+  - type: merge_or_delete
+    episode: 603
+    from_speaker: "SPEAKER_09"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      2 минимальные реплики (2 сек), разнесены на 2+ часа.
+      Явная ошибка распознавания, требуется ручная проверка.
+
+# Дополнительные заметки
+notes: |
+  1. SPEAKER_08 = Anya (высокая уверенность) - готово к переименованию
+  2. SPEAKER_01 = гость Антон (высокая уверенность) - требуется определить полное имя
+  3. SPEAKER_04, SPEAKER_03, SPEAKER_09 - скорее всего ошибки распознавания,
+     требуется ручная проверка для подтверждения
+  4. Bobuk появляется несмотря на заявление об отсутствии - требует проверки

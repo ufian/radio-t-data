@@ -1,0 +1,95 @@
+episode: 616
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 9054
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1466
+    replies_count: 318
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alek_sys"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (10.66s) Umputun говорит: "Вместо выбывшей Ксюши пришел Алексей,
+        но не тот Алексей, о котором вы думали, а вот тот Алексей, о котором вы уже и
+        думать перестали." Затем обращается к нему "Где ты был, Леша" (18.99s), и
+        SPEAKER_01 отвечает (23.35s). Bobuk также обращается к нему "Леша" (27.35s).
+        Alek.sys известен как "Алексей" или "Лёша".
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Ну, да." длительностью менее 1 секунды на 8425.84s.
+        Сразу после реплики Gray говорит то же самое "Ну, да." (8426.82s).
+        Вероятно, ошибка автоматического распознавания голоса Gray.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Реплика идентична следующей реплике Gray, возможно распознавание ошибочно разделило одну реплику"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        В файле есть 10 коротких реплик под именем Alek.sys (28 сек суммарно),
+        которые появляются начиная с 1961s, в то время как SPEAKER_01 (идентифицирован
+        как Alek.sys) говорит с 23s и имеет 318 реплик (1466 сек).
+        Возможно, 10 реплик Alek.sys — это артефакты системы распознавания,
+        которая иногда правильно распознаёт голос, но чаще помечает как SPEAKER_01.
+        Рекомендуется voice comparison для подтверждения, что это один человек.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 616
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Alek.sys"
+    confidence: high
+    reason: |
+      SPEAKER_01 представлен как "Алексей" ("Лёша") в начале эпизода.
+      К нему обращаются по имени ведущие. Umputun говорит "состав из четырёх"
+      и упоминает, что Алексей пришёл вместо Ксюши. Это соответствует Alek.sys.
+
+  - type: rename
+    episode: 616
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: |
+      Единственная реплика SPEAKER_05 ("Ну, да.") идентична следующей реплике Gray.
+      Вероятно, ошибка распознавания разделила одну реплику на две.

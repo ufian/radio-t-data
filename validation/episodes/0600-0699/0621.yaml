@@ -1,0 +1,181 @@
+episode: 621
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk, Gray]
+  guests_mentioned: ["два Лёши (один - Alek.sys, второй - гость)", "две Ани (одна - Ksenks?, вторая - гость)"]
+  total_duration_sec: 10054
+
+# Примечание: в начале эпизода (9s) Umputun говорит "Ни Бобука, ни Грея нет"
+# Однако позже появляются 4 реплики с атрибуцией "Bobuk" - это ошибка разметки
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1865
+    replies_count: 351
+    first_appearance_sec: 41
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        В начале эпизода (50s) Umputun представляет участников: "один Лёша, второй Лёша, первая Аня"
+        Ksenks добавляет (59s): "И вторая Аня"
+        На 158s Ksenks говорит: "одного будем называть Лёша, который наехал на темы, а другого просто Лёша"
+        К SPEAKER_06 обращаются как "Лёша" на: 5746s, 6023s, 6346s, 8123s
+        На 8123s Alek.sys спрашивает SPEAKER_06: "Лёша, а где ты работаешь?"
+        Это "второй Лёша" - гость, разработчик (бэкенд), обсуждает протобаф, API, работу в компании
+
+      possible_matches:
+        # Нет точного совпадения в people.yaml, это новый гость
+        - person_id: null
+          confidence: 0.0
+          reason: "Не найден в справочнике гостей. Требуется идентификация по голосу или контексту"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7722.6
+          etime: 7747.2
+          text: "смотри мы разогнали серваке у нас средний варинж response time но где-то 100 миллисекунд мы как бы можем делать этих запросов больше, но тут клиентская сторона у нас говорит нет мы не хотим"
+        alternative_segments:
+          - stime: 5029.7
+            etime: 5048.6
+            text: "Два выпуска назад некто по имени Умпутун кидал в меня какашками и говорил, что это просто тупые хипстеры..."
+          - stime: 8428.2
+            etime: 8445.8
+            text: "Ань, ну вот представь себе, да, прихожу, ну, допустим, да, собирается там какой-то стендап..."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 470
+    replies_count: 138
+    first_appearance_sec: 1335
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале (50s-65s) упоминаются "две Ани" среди гостей
+        На 1320s Ksenks говорит: "Извини, Ань, давай" - и сразу отвечает SPEAKER_02
+        На 8288s и 8428s SPEAKER_06 обращается к ней как "Ань"
+        Женский голос, технически грамотная (обсуждает SPA, API, батарейку)
+        На 3990s говорит "я недавно съездила в Россию" - живёт за границей
+
+      possible_matches:
+        - person_id: "anya"
+          confidence: 0.7
+          reason: "Возможно Anya из people.yaml (13 выпусков), но требует подтверждения голосом"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3232.3
+          etime: 3248.1
+          text: "Кто одевает чехол на компьютер, вызывает у меня чувство опасения. Ну вот смотрите, у меня нет ни рюкзака, ни сумки, куда он помещается. И я ношу в чехле, потому что постоянно что-нибудь проливается и так далее"
+        alternative_segments:
+          - stime: 7535.7
+            etime: 7547.7
+            text: "Разве не так, что если все презагружено на клиент, то изменение стейта в EU будет быстрее..."
+          - stime: 3984.1
+            etime: 4008.9
+            text: "А можно еще от меня попросить увеличить срок жизни батарейки в iPhone? Вот я недавно в тему Apple..."
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 5
+    replies_count: 3
+    first_appearance_sec: 3889
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 3 короткие реплики разбросаны по эпизоду (3889s, 8108s, 8657s)
+        Суммарная длительность ~5 секунд - слишком мало для реального участника
+        Реплики вклиниваются в речь других спикеров
+        Вероятно ошибка автоматической атрибуции
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале эпизода (9s) Umputun явно говорит "Ни Бобука, ни Грея нет. Бобук болеет."
+        Однако в транскрипте есть 4 реплики с атрибуцией "Bobuk" начиная с 5200s.
+        Это явная ошибка разметки - вероятно реплики принадлежат SPEAKER_06 или другому участнику.
+
+    - speaker: "Gray"
+      issue: "Gray упомянут как отсутствующий (9s), и действительно не появляется - корректно"
+
+    - speaker: "SPEAKER_06"
+      issue: |
+        Не представлен по имени в начале эпизода, но упоминается как "второй Лёша".
+        Очень активный участник (1865s речи) - явно не ошибка распознавания.
+        Требуется идентификация для справочника.
+
+    - speaker: "SPEAKER_02"
+      issue: |
+        Упомянута как "Аня" в начале. К ней обращаются по имени в течение эпизода.
+        Возможно это Anya из справочника, требуется подтверждение.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 621
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_MISATTRIBUTED_BOBUK"
+    confidence: high
+    reason: |
+      Bobuk явно отсутствует (болеет) по словам Umputun в начале эпизода.
+      4 реплики ошибочно атрибутированы как Bobuk.
+      Нужно переназначить на правильного спикера (вероятно SPEAKER_06).
+
+  - type: rename
+    episode: 621
+    from_speaker: "SPEAKER_07"
+    to_speaker: "SPEAKER_99"
+    confidence: medium
+    reason: |
+      3 короткие разбросанные реплики - вероятно артефакты или ошибки сегментации.
+      Альтернативно: могут быть короткими вставками от одного из присутствующих спикеров.
+
+# Аудио для проверки
+audio_url: "https://cdn.radio-t.com/rt_podcast621.mp3"
+
+# Комментарии для ручной проверки
+notes: |
+  Эпизод 621 от 2018-10-27.
+  Состав: Umputun + Ksenks + Alek.sys + два гостя (Лёша и Аня).
+
+  Главные задачи:
+  1. Исправить ошибочную атрибуцию Bobuk -> определить правильного спикера
+  2. Идентифицировать SPEAKER_06 ("второй Лёша") - backend разработчик
+  3. Подтвердить что SPEAKER_02 это Anya из справочника
+  4. Решить судьбу SPEAKER_07 (артефакт или реальные реплики)

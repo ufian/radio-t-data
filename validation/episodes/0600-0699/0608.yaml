@@ -1,0 +1,155 @@
+episode: 608
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8010  # ~2h 13min episode
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 381
+    replies_count: 92
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Нет в people.yaml, нужно добавить
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В 433s Bobuk говорит: "зовут тебя Алена, на самом деле".
+        Алёна подтверждает: "Да, и зовут меня Алена" (437s).
+        В 345s: "Я пришла и очень рада" - ответ на представление.
+        Bobuk называет её "прошлая ведущая с голосом" (333-343s).
+        Алёна была гостьей в предыдущем эпизоде 607 (подтверждено в data/607).
+        Работает в Германии (Кёльн), консультант по CRM/ERP.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Идентификация сделана по имени в эпизоде
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики в 244-249s идут сразу после вопроса Bobuk к Ksenks "Ты же здесь, Ксюш?".
+        Ответы: "Да, а Упутун отсутствует", "Заметьте, я здесь, а Упутун отсутствует",
+        "У меня есть шансы" - это явно реплики Ksenks, так как она отвечает на вопрос к ней.
+        Реплика в 281s "Сколько подкастов, 11? 11." - тоже в контексте разговора о стаже Ksenks.
+        Последняя реплика в 8002s "Пока" - односложное прощание в конце эпизода.
+
+      identified_as: "ksenks"  # Ошибочно размеченные реплики Ksenks
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Реплики идут в ответ на прямое обращение к Ksenks.
+        Контекст: обсуждение стажа Ksenks в подкасте.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три изолированных коротких реплики в разные моменты:
+        - 306s: "Больше, да." (в контексте обсуждения выпусков)
+        - 2812s: "Я думаю, что видео правильное." (короткая реакция)
+        - 5228s: "Не та страна, знаешь." (короткий комментарий)
+        Все реплики <2 сек, типичные ошибки распознавания коротких фраз ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Реплика в 306s идёт после обсуждения Ksenks"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Возможно Gray, короткие реакции типичны для него"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Возможно Bobuk, он ведёт обсуждение"
+
+      voice_task:
+        needed: false  # Слишком короткие реплики для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys имеет только 6 реплик (9 сек) начиная с 244s.
+        В представлении ведущих (223-243s) Bobuk упоминает только Сережу (Gray) и Ксюшу (Ksenks).
+        Alek.sys не был представлен отдельно. Его первая реплика "Все в порядке?" (243s)
+        выглядит как случайная фраза, возможно это ошибка распознавания.
+    - speaker: "SPEAKER_04"
+      issue: |
+        Гостья Алёна (SPEAKER_04) должна быть добавлена в people.yaml.
+        Известно: работает в Германии (Кёльн), консультант по CRM/ERP, была в эпизоде 607.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 608
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Alena"
+    confidence: high
+    reason: |
+      Явное именование в эпизоде: "зовут тебя Алена" (433s).
+      Также была гостьей в эпизоде 607.
+
+  - type: rename
+    episode: 608
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Реплики в 244-249s - ответы на прямое обращение к Ksenks.
+      Контекст однозначно указывает на Ksenks.
+
+  - type: ignore_or_review
+    episode: 608
+    from_speaker: "SPEAKER_03"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      Три изолированных коротких реплики (<2 сек каждая).
+      Типичные ошибки распознавания, требуют ручной проверки голоса.
+      Возможно Ksenks, Gray или Bobuk.
+
+# Дополнительные замечания
+notes:
+  - |
+    Umputun отсутствует в этом эпизоде (упоминается несколько раз: "Упутун отсутствует").
+  - |
+    Алёна - новая гостья, нужно добавить в people.yaml:
+    id: "alena_cologne"
+    canonical_name: "Alena"
+    aliases: ["Алёна", "Алена"]
+    real_name: "Алёна"
+    info: "Консультант по CRM/ERP из Кёльна, Германия. Выпуски 607, 608"
+  - |
+    Alek.sys с очень малым количеством реплик (6 штук, 9 сек) - возможно частично
+    ошибки распознавания, но нет достаточно данных для уверенного вывода.

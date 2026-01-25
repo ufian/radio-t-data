@@ -1,0 +1,133 @@
+episode: 607
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Ksenks]
+  guests_present: [Alena]
+  hosts_absent: [Umputun, Gray]
+  total_duration_sec: 6238  # примерно 1:44
+
+# Важное примечание к эпизоду
+episode_notes: |
+  Bobuk в начале явно говорит: "из основных ведущих собралось всего двое" (он и Ksenks).
+  Umputun отсутствует ("на Чикагщине"). Приглашена гостья Алена - проект-менеджер из Германии.
+  Alek.sys НЕ был представлен и НЕ должен присутствовать в этом выпуске.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 1070
+    replies_count: 215
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alena"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk в 56-72s: "мы пригласили специальную гостью. У нас есть специальная гостья,
+        которая зовут Алена. Она тоже из наших. И буквально в пре-шоу я тут выяснял,
+        кем она сейчас в основном работает. И выяснил, что это первый у нас в шоу человек,
+        который уверенно работает проект-менеджером."
+
+        SPEAKER_00 в 80-102s: "Алена, поздоровайся хоть." (обращение Bobuk) ->
+        "И да, мне уже приходится целых три года работать проект-менеджером...
+        интересненькая, о том, как происходит project management в Германии"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три короткие реплики-реакции (<1 сек каждая) разбросаны по эпизоду:
+        - 725.7s: "Так не меняй." (между репликами Ksenks)
+        - 4029.2s: "Ну да, точно." (между SPEAKER_00 и SPEAKER_00)
+        - 5817.7s: "Конечно, в смысле?" (между репликами Ksenks)
+        Типичный паттерн ошибки распознавания - односложные реакции,
+        которые принадлежат одному из присутствующих участников.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Короткие реакции в диалоге, типичный стиль"
+        - person_id: "alena"
+          confidence: 0.3
+          reason: "Одна реплика между её фразами (SPEAKER_00)"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткие сегменты для голосового сравнения"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys НЕ был представлен в начале выпуска. Bobuk явно сказал, что
+        "из основных ведущих собралось всего двое" (он и Ksenks).
+        Однако в транскрипте есть 5 реплик Alek.sys (6 сек суммарно):
+        - 2382s: "А кто дефолт?"
+        - 2498s: "Ну, как же так-то?"
+        - 4525s: "Ну, типа, а зачем?"
+        - 6127s: "Это правда."
+        - 6237s: "Да-да, конечно, конечно."
+        Все реплики короткие и похожи на реакции. Вероятно, это ошибки распознавания,
+        которые следует переатрибутировать на другого спикера (Bobuk, Ksenks или Алена).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 607
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Alena"
+    confidence: high
+    reason: |
+      Явное представление гостьи в начале выпуска. Bobuk: "специальная гостья, которая
+      зовут Алена". SPEAKER_00 подтверждает: "мне уже три года работать проект-менеджером".
+
+  - type: review_required
+    episode: 607
+    speaker: "Alek.sys"
+    confidence: medium
+    reason: |
+      Alek.sys не был представлен в начале. Bobuk сказал что ведущих двое.
+      5 коротких реплик Alek.sys могут быть ошибками распознавания.
+      Требуется voice comparison для определения реального спикера.
+      Возможные кандидаты: Bobuk, Ksenks, Alena.
+
+  - type: remove_or_reassign
+    episode: 607
+    speaker: "SPEAKER_04"
+    confidence: medium
+    reason: |
+      3 коротких реплики (<1 сек) - типичные ошибки распознавания.
+      Нужно переатрибутировать на ближайшего по контексту спикера.
+
+# Гость для добавления в people.yaml
+new_guest:
+  id: "alena_pm"
+  canonical_name: "Alena"
+  aliases: ["Алена"]
+  real_name: "Алена"
+  info: "Проект-менеджер из Германии, выпуск 607"

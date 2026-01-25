@@ -1,0 +1,135 @@
+episode: 611
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8016  # ~2h 13m based on last timestamp around 8257s
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-2 сек каждая) разбросаны по эпизоду. Первая реплика в 25.9s 'Я сказала привет' - это явно Ksenks, отвечающая на реплику Umputun (23.6s: 'Я не слышал, что Ксюша сказала здравствуйте'). Вторая и третья реплики (486.9s и 499.8s) - короткие фразы в середине разговора, скорее всего ошибка распознавания одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.9
+          reason: "Реплика 25.9s 'Я сказала привет' - прямой ответ на вопрос Umputun про приветствие Ксюши"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-2 сек каждая) разбросаны по всему эпизоду в случайные моменты. Все реплики - короткие односложные фразы ('А посмотри', 'Как-то еще хуже', 'Ну ладно давай', 'Ну суров суров', 'В рекламу'). Это типичный паттерн ошибок распознавания - система не смогла правильно атрибутировать голос и создала отдельного спикера для отдельных коротких фраз."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Реплики часто идут рядом с репликами Bobuk и продолжают его мысль (например, 'В рекламу' перед 'В рекламу тебя')"
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Реплики 4355-4359s идут перед ответом Ksenks 'Комплиментов ты мне наделал', возможно это её речь"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Только 2 очень короткие реплики (<1 сек каждая) на расстоянии ~30 минут друг от друга. Обе реплики - короткие вопросительные/пояснительные фразы ('Так тебе понятно?' и 'Потому что он пурровер'). Это типичный паттерн ошибок автоматического распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Вторая реплика про пурровер (2119s) идёт в контексте обсуждения кофе, сразу после отвечает Gray"
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Первая реплика (210.5s) идёт в разговоре, после неё сразу отвечает Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода (8-19s) Umputun представляет "обычный классический состав":
+    - Umputun (ведущий)
+    - Bobuk (15.7s: "Бобок здрасте")
+    - Gray (17.9s: "Грэй скажет здрасте")
+    - Ksenks (18.8s: "Ксюша скажет здравствуйте")
+
+    Alek.sys появляется позже в эпизоде без явного представления (первая реплика в 2360s),
+    но это нормально для регулярного ведущего - он мог подключиться позже.
+
+    Гостей в этом выпуске нет - это подтверждается словами "обычный классический состав".
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 611
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    segments: [25.91]
+    confidence: high
+    reason: "Реплика 'Я сказала привет' - прямой ответ Ксюши на замечание Umputun о том, что она не поздоровалась"
+
+  - type: rename
+    episode: 611
+    from_speaker: "SPEAKER_00"
+    to_speaker: "_unclear"
+    segments: [486.95, 499.8]
+    confidence: low
+    reason: "Короткие реплики без достаточного контекста для идентификации, предположительно один из ведущих"
+
+  - type: rename
+    episode: 611
+    from_speaker: "SPEAKER_01"
+    to_speaker: "_unclear"
+    segments: [1610.64, 4355.04, 4357.36, 7604.26, 8256.02]
+    confidence: low
+    reason: "Все реплики слишком короткие для идентификации, это ошибки распознавания"
+
+  - type: rename
+    episode: 611
+    from_speaker: "SPEAKER_05"
+    to_speaker: "_unclear"
+    segments: [210.54, 2119.02]
+    confidence: low
+    reason: "Обе реплики слишком короткие для идентификации, это ошибки распознавания"

@@ -1,0 +1,107 @@
+episode: 610
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 8179  # Bobuk 3266 + Umputun 3216 + Gray 1004 + Ksenks 683 + Alek.sys 10
+
+# Детальный анализ проблемных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys не представлен в начале эпизода. В начале упоминаются только
+        Umputun, Gray, Ksenks и Bobuk. Alek.sys имеет всего 5 реплик (10 сек),
+        все очень короткие (1-4 сек), разбросаны по эпизоду.
+        Вероятная ошибка разметки - реплики принадлежат одному из ведущих.
+
+# Подозрительные спикеры (не unknown, но требуют проверки)
+suspicious_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 10
+    replies_count: 5
+    pattern: scattered
+    first_appearance_sec: 1815
+
+    # Детали реплик
+    replies:
+      - stime: 1815.44
+        etime: 1817.84
+        text: "Это очень часто случается."
+        context_before: "Gray: Да, да, да."
+        context_after: "Gray: По их описанию картина выглядит так."
+
+      - stime: 4003.93
+        etime: 4004.39
+        text: "Интересно, нет?"
+        context_before: "Bobuk: Понятнее кому-то стало?"
+        context_after: "Bobuk: От этого объяснения."
+
+      - stime: 7539.95
+        etime: 7543.59
+        text: "Да-да-да, и там у них сказано, что это какая-то бета."
+        context_before: "Bobuk: ...я-то его взял из репозитория самого MongoDB."
+        context_after: "Bobuk: Мне кажется, что там предупреждения про бету нигде написано не было..."
+
+      - stime: 8190.33
+        etime: 8192.41
+        text: "За упоминание Open Source?"
+        context_before: "Bobuk: ...разработчики Dusk Keyword банят пользователей..."
+        context_after: "Bobuk: За упоминание Open Source."
+
+      - stime: 8495.97
+        etime: 8497.08
+        text: "В смысле, что значит «был»?"
+        context_before: "Bobuk: Расскажи нам, что это за сайт со всеми программистами Украины?"
+        context_after: "Bobuk: Ну, в смысле, на нем больше ничего нет."
+
+    analysis:
+      is_error: true
+      error_reason: |
+        1. Alek.sys не представлен и не упомянут в начале эпизода
+        2. Всего 5 реплик (10 сек) - слишком мало для реального участника
+        3. Все реплики короткие (1-4 сек) и выглядят как вставки между репликами других ведущих
+        4. Pattern: scattered - реплики разбросаны по эпизоду (1815, 4004, 7540, 8190, 8496 сек)
+        5. Реплики выглядят как типичные комментарии/уточнения, которые мог сказать любой ведущий
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Gray"
+          confidence: 0.4
+          reason: "Первая реплика вставлена между двумя репликами Gray"
+        - person_id: "Bobuk"
+          confidence: 0.4
+          reason: "Реплики 2-5 идут в диалоге с Bobuk, выглядят как его комментарии"
+        - person_id: "Ksenks"
+          confidence: 0.2
+          reason: "Присутствует в эпизоде, могла комментировать"
+
+      voice_task:
+        needed: true
+        reference_segments:
+          - stime: 7539.95
+            etime: 7543.59
+            text: "Да-да-да, и там у них сказано, что это какая-то бета."
+            note: "Самая длинная реплика Alek.sys (3.6 сек)"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: review_and_reassign
+    episode: 610
+    speaker: "Alek.sys"
+    action: "voice_comparison_needed"
+    confidence: medium
+    reason: |
+      Все 5 реплик Alek.sys требуют проверки по голосу.
+      Высокая вероятность, что это ошибки разметки.
+      После voice comparison нужно переприсвоить реплики корректному ведущему.

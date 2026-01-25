@@ -1,0 +1,149 @@
+episode: 620
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  # Bobuk отсутствовал (сказано в начале "Сегодня без Бобука")
+  hosts_absent: [Bobuk]
+  total_duration_sec: 7988.6
+  guest_announced: "Аня"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 281
+    replies_count: 64
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (93.4s) Umputun говорит: "Кроме Леши, который двулик, как мы выяснили,
+        у нас есть Аня, которая одна и уникальная."
+        Первая реплика SPEAKER_05 (111.5s): "Я поняла намек." - прямой ответ на предыдущую реплику
+        Umputun (108.4s): "Ты что, давно из Советского Союза, что ли?"
+        Содержание реплик соответствует женскому голосу, участвует в техническом обсуждении CI/CD.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 13
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Ошибка распознавания Ksenks. Признаки:
+        1. На 3816.5s: контекст про Palm - Umputun говорит "Ксюшу даже и спрашивать не буду",
+           SPEAKER_06 отвечает "Я помню Palm", потом Ksenks продолжает разговор.
+        2. На 7814.8s: SPEAKER_05 (Аня) спрашивает "А сколько лет?", Alek.sys отвечает,
+           SPEAKER_06 реагирует "А, понятно. Нифига себе, 10 лет?",
+           потом Ksenks продолжает ту же тему: "То есть у тебя в 19 лет появился мальчик?"
+        3. Все реплики короткие, реактивные - типично для ошибок распознавания ведущих.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Контекстуальный анализ диалогов показывает, что SPEAKER_06 появляется в разговорах, где логически должна отвечать Ksenks"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.75
+          reason: "Контекст диалогов и характер реплик"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3816.5
+          etime: 3820.4
+          text: "Я помню Palm. Как ты можешь помнить?"
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика (3620.5s): "Почему вы решили заинтересоваться?"
+        Это вопрос в контексте обсуждения Winamp. Непосредственно перед этим Ksenks говорит
+        о сайте ("вот то, что написано на сайте"), а после SPEAKER_04 Umputun отвечает
+        "Откуда вы взяли, что никому не надо?"
+        Скорее всего это ошибка распознавания Ksenks или Anya (SPEAKER_05).
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: "Единственная короткая реплика, недостаточно данных для идентификации"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Предшествующие реплики принадлежат Ksenks"
+        - person_id: "anya"
+          confidence: 0.4
+          reason: "SPEAKER_05 (Аня) отвечает сразу после (3637.1s)"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3620.5
+          etime: 3623.1
+          text: "Почему вы решили заинтересоваться?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале выпуска Umputun говорит "Сегодня без Бобука", но есть одна реплика
+        Bobuk на 5490.4s: "Даже пусть в конфиге или в чем-то еще."
+        Это явная ошибка распознавания - скорее всего это Gray или Alek.sys,
+        так как контекст - техническое обсуждение токенов для устройства.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 620
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Явное представление в начале выпуска, характерные реплики"
+
+  - type: rename
+    episode: 620
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Контекстуальный анализ показывает, что это ошибки распознавания Ksenks"
+
+  - type: rename
+    episode: 620
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Bobuk"
+    confidence: high
+    reason: "Бобук отсутствовал в этом выпуске (явно сказано в начале), единственная реплика - ошибка распознавания"
+
+# Дополнительные заметки
+notes: |
+  1. Гостья Аня (id: anya в people.yaml) - хорошо идентифицирована по представлению.
+  2. Бобук отсутствовал - его единственная реплика это ошибка распознавания.
+  3. SPEAKER_06 с высокой вероятностью это Ksenks (нужна voice verification).
+  4. SPEAKER_04 - слишком мало данных, одна короткая реплика.
+
+# Аудио для верификации
+audio_url: "https://cdn.radio-t.com/rt_podcast620.mp3"

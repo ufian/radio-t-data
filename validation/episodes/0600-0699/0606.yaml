@@ -1,0 +1,51 @@
+episode: 606
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 7909  # 3820 + 2641 + 961 + 487
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Две короткие односложные реплики ('Конечно.', 'Возможно.'), разбросанные по эпизоду (35 мин и 2ч15мин). Типичный паттерн ошибки распознавания речи. Первая реплика сразу дублируется Bobuk'ом ('Ну, конечно.'), вероятно это его же голос."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.7
+          reason: "Первая реплика 'Конечно.' (2124s) сразу повторяется Bobuk'ом ('Ну, конечно.' в 2125s), контекст обсуждения с Alek.sys"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Также возможен как источник короткой реакции"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Umputun в начале объявляет "состав типа полный" и упоминает Лёшу (Alek.sys).
+    Присутствуют все 4 основных ведущих (кроме Ksenks, которая упоминается, но не участвует).
+    SPEAKER_02 - явная ошибка распознавания, не гость.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Не предлагаем правило, т.к. нет уверенности кому именно принадлежат реплики.
+# При 2 секундах суммарной речи это не критично.

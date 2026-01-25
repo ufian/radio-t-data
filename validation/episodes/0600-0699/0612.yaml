@@ -1,0 +1,110 @@
+episode: 612
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray, Ksenks]
+  hosts_absent: [Umputun]
+  total_duration_sec: 6501
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 352.1
+    replies_count: 87
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Bobuk: 'А еще с нами Аленка, которая вам всем очень понравилась' (52s). SPEAKER_04 отвечает 'Привет' (68.5s). Женская грамматика: 'я говорила', 'у меня была'. Также была в выпуске 607 как SPEAKER_00."
+
+      # Предлагаемое имя для нового гостя
+      suggested_guest:
+        name: "Alena"
+        canonical_name: "Alena"
+        real_name: "Алена"
+        info: "Проект-менеджер из Германии. Выпуски 607, 612."
+        aliases: ["Аленка"]
+
+      possible_matches: []
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reason: "Подтвердить что это та же Алена из выпуска 607 (SPEAKER_00)"
+        reference_segment:
+          stime: 536.5
+          etime: 572.3
+          text: "Ну, потому что это немецкоязычное, так сказать, рубежье, а если там американцы обычно, они же все равно используют всякие другие какие-то..."
+        compare_with:
+          - episode: 607
+            speaker: "SPEAKER_00"
+            suggested_segment:
+              stime: 80.9
+              etime: 102.5
+
+# Проверка ошибочных атрибуций
+misattributed_speakers:
+  - speaker: "Umputun"
+    replies_count: 2
+    total_duration_sec: 7.7
+    analysis:
+      is_error: true
+      error_reason: "Bobuk явно говорит 'Женя сегодня отсутствует' (78.6s). Umputun не был на выпуске."
+      likely_actual_speaker: "unknown"
+      evidence: "Bobuk: 'Что-то Женя сегодня, как вы можете заметить, отсутствует. Сегодня у Бутуна нет.'"
+
+  - speaker: "Alek.sys"
+    replies_count: 3
+    total_duration_sec: 2.3
+    analysis:
+      is_error: true
+      error_reason: "Alek.sys не упоминается среди участников. Очень короткие реплики (2.3 сек суммарно) - типичная ошибка распознавания."
+      likely_actual_speaker: "unknown"
+      evidence: "Реплики: 'В смысле, что...' (2064s), 'Довольно нишевая.' (3505s), 'Да-да.' (6499s)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Umputun"
+      issue: "Помечен как присутствующий (2 реплики), но явно отсутствует по словам Bobuk"
+    - speaker: "Alek.sys"
+      issue: "Помечен как присутствующий (3 реплики), но не упоминается в представлении"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 612
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Alena"
+    confidence: high
+    reason: "Представлена как 'Аленка' в начале выпуска (52s)"
+
+  - type: rename
+    episode: 612
+    from_speaker: "Umputun"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Umputun"
+    confidence: high
+    reason: "Bobuk говорит 'Женя сегодня отсутствует'. Это ошибка распознавания голоса."
+
+  - type: rename
+    episode: 612
+    from_speaker: "Alek.sys"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Alek.sys"
+    confidence: high
+    reason: "Не упоминается среди участников, очень короткие реплики - ошибка распознавания"
+
+# Дополнительные заметки
+notes:
+  - "Выпуск без Umputun, Bobuk ведёт"
+  - "Алена - проект-менеджер в Германии (по данным выпуска 607)"
+  - "Нужно добавить Alena в people.yaml после подтверждения"
+  - "Нужно проверить выпуск 607 и создать там аналогичное правило для SPEAKER_00 -> Alena"

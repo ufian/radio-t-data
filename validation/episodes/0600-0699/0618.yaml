@@ -1,0 +1,146 @@
+episode: 618
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  hosts_absent: [Gray]
+  total_duration_sec: 7681  # приблизительно, на основе последних таймстемпов
+
+# Важное примечание: Gray отсутствует в выпуске
+# Umputun прямо говорит (716s): "Я, поскольку представляю, что бы Грей сказал на вашем месте..."
+# Это явно указывает, что Gray не участвовал в записи.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 1
+    first_appearance_sec: 4814
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одно короткое слово 'Утверждение' (перевод 'statement') в контексте обсуждения Go. Umputun сразу подхватывает: 'Утверждение, которое выглядит как селект'. Это явно реплика одного из ведущих, неправильно распознанная."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "4814s: 'Утверждение.' - односложный ответ на вопрос 'как стейтмент по-русски'"
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Umputun сразу продолжает эту мысль"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk также активно участвует в дискуссии"
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Alek.sys также присутствует"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткий фрагмент (менее 1 секунды) для voice comparison"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 5
+    replies_count: 5
+    first_appearance_sec: 5247
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-2 сек каждая) разбросаны по разным моментам. Все реплики — типичные междометия и короткие реакции ведущих: 'Ничего себе', 'Конечно', 'Ждем 11-й версии', 'Давай, Ксюша, к следующей теме'. Последняя реплика обращена к Ksenks, что указывает на одного из ведущих."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        5247s: "Ничего себе." - реакция
+        5248s: "Приемтив конкуренции." - Bobuk подтверждает "Да, да, да. Он приемтив"
+        7864s: "Давай, Ксюша, к следующей теме." - обращение к ведущей
+        7913s: "Ждем 11-й версии." - Bobuk подтверждает
+        8050s: "Конечно." - ответ на вопрос
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Реплика 'Давай, Ксюша, к следующей теме' — типичная фраза ведущего. Umputun — основной ведущий."
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk часто подхватывает реплики собеседников"
+        - person_id: "alek_sys"
+          confidence: 0.2
+          reason: "Менее вероятно, но возможно"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7864.31
+          etime: 7865.53
+          text: "Давай, Ксюша, к следующей теме."
+        audio_url: "https://cdn.radio-t.com/rt_podcast618.mp3"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Gray отмечен как присутствующий (2 реплики), но Umputun явно говорит о его отсутствии: 'Я, поскольку представляю, что бы Грей сказал на вашем месте...' (716s). Обе реплики Gray короткие и должны быть переатрибутированы другому ведущему."
+      details:
+        - time: 2226s
+          text: "Ты попробуй."
+          context: "После Bobuk, до Umputun"
+        - time: 7621s
+          text: "И вот сидишь ты как дурак."
+          context: "После Bobuk о джуниорах, до Umputun"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 618
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_MISATTRIBUTED_GRAY"
+    confidence: high
+    reason: "Gray отсутствовал в выпуске (подтверждено словами Umputun в 716s). Реплики нужно переатрибутировать, вероятно одному из ведущих."
+
+  - type: rename
+    episode: 618
+    from_speaker: "SPEAKER_06"
+    to_speaker: "SPEAKER_MISATTRIBUTED_06"
+    confidence: medium
+    reason: "Односложная реплика 'Утверждение' — ошибка распознавания, вероятно принадлежит Umputun или Bobuk"
+
+  # SPEAKER_01 требует voice comparison перед переатрибуцией
+  # Пока не предлагаем правило переименования
+
+# Задания на дополнительный анализ
+additional_tasks:
+  - task: "voice_comparison"
+    speaker: "SPEAKER_01"
+    priority: medium
+    segments:
+      - stime: 7864.31
+        etime: 7865.53
+        text: "Давай, Ксюша, к следующей теме."
+    compare_with: ["umputun", "bobuk", "alek_sys"]
+
+  - task: "voice_comparison"
+    speaker: "Gray_at_2226"
+    priority: high
+    segments:
+      - stime: 2226.12
+        etime: 2227.17
+        text: "Ты попробуй."
+    compare_with: ["umputun", "bobuk", "alek_sys", "ksenks"]
+    note: "Gray отсутствовал, нужно определить реального спикера"
+
+  - task: "voice_comparison"
+    speaker: "Gray_at_7621"
+    priority: high
+    segments:
+      - stime: 7621.14
+        etime: 7622.28
+        text: "И вот сидишь ты как дурак."
+    compare_with: ["umputun", "bobuk", "alek_sys", "ksenks"]
+    note: "Gray отсутствовал, нужно определить реального спикера"

@@ -1,0 +1,171 @@
+episode: 614
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks]
+  hosts_absent: [Bobuk]  # явно упомянут как отсутствующий в начале эпизода
+  guests_present: [Anya]  # упомянута в начале: "мы с Ксюшей и Аней вдарим"
+  total_duration_sec: 8897
+
+# Контекст эпизода
+episode_context:
+  introduction: |
+    В начале эпизода (0:14-0:38) Umputun говорит:
+    - "Первый выпуск в этом месяце без Бобука"
+    - "мы с Ксюшей и Аней вдарим"
+    - "И тебе, Аня, достанется"
+    Это подтверждает: Bobuk отсутствует, гостья Аня присутствует.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 928
+    replies_count: 226
+    pattern: consecutive
+    first_appearance_sec: 297.4
+
+    analysis:
+      is_error: false
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На таймкоде 1104s Umputun обращается: "Аня, ты в курсе, какая разухабистая штука у вас там в ВПС?"
+        Сразу после этого (1106s) SPEAKER_05 отвечает: "Ну, мы пользуемся."
+        Также в начале эпизода (33s) упомянута: "мы с Ксюшей и Аней вдарим"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 57
+    replies_count: 14
+    pattern: scattered
+    first_appearance_sec: 1330.1
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Реплики разбросаны по эпизоду, могут быть ошибкой распознавания Ksenks"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Некоторые реплики похожи на стиль Gray (технические вопросы)"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6640.67
+          etime: 6660.34
+          text: |
+            А где в этой статье написано, что именно собираются улучшить?
+            Я вижу, что написано, что за последнее время многие люди стали недовольны тем-то и тем-то,
+            но я не вижу, чтобы Microsoft заявил, что улучшит какую-то конкретную функцию.
+        audio_url: "https://cdn.radio-t.com/rt_podcast614.mp3"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 2183.2
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика (2 сек) между репликами Gray - вероятно ошибка сегментации"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Реплика: 'Ну, это уже перечислили.' - находится между репликами Gray, скорее всего это его реплика"
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.8
+          reason: "Реплика вклинивается между репликами Gray на тему перечисления сервисов Яндекса"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале эпизода явно сказано "без Бобука", но в транскрипте есть 6 реплик от Bobuk.
+        Это явная ошибка атрибуции. Реплики Bobuk нужно переназначить.
+        Первая реплика Bobuk в 668s: "Потому что там везде у Яндекса есть свои каналы и есть свои площадки."
+
+    - speaker: "Alek.sys"
+      issue: |
+        Единственная реплика Alek.sys в 5337s: "Ну, например."
+        Alek.sys не упомянут в начале эпизода как участник.
+        Скорее всего ошибка распознавания - 1 реплика в 1 секунду.
+
+    - speaker: "SPEAKER_04"
+      issue: |
+        14 реплик (57 сек) разбросаны по эпизоду.
+        Спикер не представлен, но активно участвует в обсуждении.
+        Требуется voice comparison для идентификации.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 614
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Явное обращение Umputun к Ане на 1104s с ответом SPEAKER_05"
+
+  - type: rename
+    episode: 614
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: "Единственная реплика между репликами Gray, вероятно его реплика"
+
+  - type: investigate
+    episode: 614
+    speaker: "Bobuk"
+    confidence: high
+    reason: |
+      Bobuk явно отсутствует в этом эпизоде (сказано в начале).
+      Все 6 реплик Bobuk нужно переназначить другим спикерам.
+      Требуется voice comparison.
+
+  - type: investigate
+    episode: 614
+    speaker: "Alek.sys"
+    confidence: high
+    reason: |
+      Единственная реплика (1 сек), Alek.sys не упомянут как участник.
+      Вероятно ошибка распознавания.
+
+  - type: investigate
+    episode: 614
+    speaker: "SPEAKER_04"
+    confidence: medium
+    reason: "Неидентифицированный активный участник, требуется voice comparison"
+
+# Дополнительные заметки
+notes: |
+  Эпизод от 8 сентября 2018 года (в транскрипте ошибочно сказано "8 августа").
+
+  Ведущие: Umputun, Gray, Ksenks
+  Гость: Аня (SPEAKER_05) - 226 реплик, 928 сек - активный участник
+
+  Проблемы:
+  1. Реплики Bobuk (6 шт) и Alek.sys (1 шт) - явные ошибки, эти ведущие отсутствуют
+  2. SPEAKER_04 (14 реплик, 57 сек) - требует идентификации
+  3. SPEAKER_06 (1 реплика) - вероятно Gray

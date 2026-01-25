@@ -1,0 +1,144 @@
+episode: 619
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  hosts_absent: []
+  total_duration_sec: 8665  # приблизительно, на основе последних таймстемпов
+  guest_announced: "Леша (тот самый Леша, который не тот Леша, а другой Леша)"
+
+# Важное примечание: В начале выпуска Umputun представляет гостя:
+# "состав полный плюс один, пришел тот самый Леша, который не тот Леша, а другой Леша,
+# ну как он начнет гундить в микрофон, вы сразу по исключительно погнусным голосу его определите"
+# Это явно НЕ Alek.sys, а другой человек по имени Алексей.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 871
+    replies_count: 194
+    first_appearance_sec: 21
+    pattern: consecutive  # 79 групп, часто по несколько реплик подряд
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Гость был явно представлен в начале выпуска
+      identified_as: null  # Требуется добавить в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 1.47s: "пришел тот самый Леша, который не тот Леша, а другой Леша,
+        ну как он начнет гундить в микрофон, вы сразу по исключительно погнусным голосу его определите,
+        Леша, погнуси что-нибудь."
+        SPEAKER_03 в 21.33s: "Всем привет, надеюсь, вы скучали."
+        Umputun в 23.41s: "Во, погнусил."
+
+        На протяжении выпуска к нему обращаются как "Леша":
+        - 5011s (Bobuk): "У меня есть другой пункт, кстати, Леша."
+        - 5055s: "Вот практика, по-моему, спринга была, Леша."
+        - 5460s (Bobuk): "Что, Леша?"
+        - 6948s (Bobuk): "...я тут с Лешей соглашусь..."
+
+      possible_matches:
+        - person_id: "another_alex"
+          confidence: 0.3
+          reason: "В people.yaml есть AnotherAlex (выпуски 857, 858), но это 2018 год (619), а 857-858 это позже. Может быть тот же человек."
+
+      voice_task:
+        needed: true
+        reason: "Требуется идентификация гостя по голосу и добавление в people.yaml"
+        reference_segment:
+          stime: 7810.56
+          etime: 7828.53
+          text: "И типа по поводу того, что они начали его там мутузить, потом начали рубить этими топорами, да, а пр..."
+        additional_segments:
+          - stime: 4194.48
+            etime: 4211.26
+            text: "Ты знаешь, это мы обсуждали, по-моему, вчера, что ли, по поводу того, что на собеседование приходит ..."
+          - stime: 4623.29
+            etime: 4639.6
+            text: "А в том, что мы расскажем о том, что надо писать в Help, и что Help должен быть большой и длинный, и..."
+        audio_url: "https://cdn.radio-t.com/rt_podcast619.mp3"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 3
+    replies_count: 1
+    first_appearance_sec: 8460
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика 'Ну да.' (3 секунды) в конце обсуждения про Boring Company Илона Маска. Контекст: Umputun говорит 'У него же есть это The Boring Company.', затем SPEAKER_06: 'Ну да.', затем Gray: 'Класс.' — явно ошибка распознавания, реплика принадлежит одному из ведущих."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "8459.91s: 'Ну да.' — односложное согласие в диалоге ведущих"
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray говорит сразу после ('Класс'), мог начать раньше"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk активно участвует в обсуждении"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Ksenks присутствует в эпизоде"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткий фрагмент (3 секунды, одно слово) для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Alek.sys имеет всего 5 реплик (5 секунд) при полном составе. Возможно, часть его реплик ошибочно атрибутирована SPEAKER_03. Однако SPEAKER_03 явно представлен как другой человек ('не тот Леша'), поэтому это не ошибка."
+      resolved: true
+      resolution: "Alek.sys и гость 'Леша' — разные люди. Умпутун явно говорит 'не тот Леша, а другой Леша'."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 619
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Lesha619"  # Временное имя до идентификации
+    confidence: high
+    reason: "Гость явно представлен как 'Леша' в начале выпуска. Требуется определить полное имя для добавления в people.yaml."
+
+  - type: rename
+    episode: 619
+    from_speaker: "SPEAKER_06"
+    to_speaker: "SPEAKER_MISATTRIBUTED_06"
+    confidence: medium
+    reason: "Односложная реплика 'Ну да' — ошибка распознавания, вероятно принадлежит Gray или Bobuk"
+
+# Задания на дополнительный анализ
+additional_tasks:
+  - task: "guest_identification"
+    speaker: "SPEAKER_03"
+    priority: high
+    description: |
+      Требуется определить, кто такой "тот самый Леша, который не тот Леша".
+      Возможные подходы:
+      1. Проверить анонс выпуска 619 (комментарии, social media)
+      2. Voice comparison с AnotherAlex из выпусков 857-858
+      3. Поиск упоминаний в чате (619_chat.json)
+    segments:
+      - stime: 7810.56
+        etime: 7828.53
+        text: "И типа по поводу того, что они начали его там мутузить..."
+      - stime: 4194.48
+        etime: 4211.26
+        text: "Ты знаешь, это мы обсуждали, по-моему, вчера, что ли..."
+    audio_url: "https://cdn.radio-t.com/rt_podcast619.mp3"
+
+  - task: "chat_analysis"
+    priority: medium
+    description: "Проверить 619_chat.json на упоминания гостя Леши для идентификации"
+    file: "data/619/619_chat.json"

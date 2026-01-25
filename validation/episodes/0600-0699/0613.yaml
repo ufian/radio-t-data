@@ -1,0 +1,119 @@
+episode: 613
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys, Gray]
+  total_duration_sec: 7576
+  notes: |
+    В начале выпуска Umputun говорит "Грей сегодня не будет" и "запасного Алексея тоже нет",
+    но Ksenks появляется с 149s, Alek.sys с 1170s, Gray с 8119s (1 реплика).
+    Гость (SPEAKER_07) приходил "неоднократно" по теме Vigo (Go modules).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 776
+    replies_count: 157
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Umputun обращается к гостю по имени "Алексей" в нескольких местах:
+        - 1172s: "...на что ты к нам приходил, по-моему, Алексей, да?"
+        - 1295s: "Алексей, добавь, я прав..."
+        - 1603s: "...примерно так же, да, Алексей?"
+        Гость подтверждает что приходил "неоднократно" по теме Vigo (Go modules).
+        Это Go-разработчик, эксперт по модулям, был на GopherCon Russia в марте.
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.1
+          reason: "Имя совпадает, но Alek.sys - ведущий, присутствует отдельно в этом выпуске"
+        - person_id: "another_alex"
+          confidence: 0.2
+          reason: "Алексей, но another_alex указан для выпусков 857-858"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3245.87
+          etime: 3266.07
+          text: "Идея в том, что, по сути, у них главное сейчас — сделать этот прокси, чтобы он был федеративным, чтобы, во-первых, им не надо было отвечать за это, и, во-вторых, потому что Microsoft за этим стоит."
+        audio_url: "https://cdn.radio-t.com/rt_podcast613.mp3"
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 0
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 2 реплики по 0.04 и 0.4 секунды: "Да." (1183.87-1183.91s) и "Хорошо." (1762.16-1762.56s).
+        Это явно тот же человек что SPEAKER_07 (гость Алексей), транскриптор ошибочно выделил в отдельный спикер.
+        Первая реплика идет сразу после вопроса Umputun "...по-моему, Алексей, да?"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_07"
+      issue: |
+        Гость назван по имени (Алексей), упоминается что приходил раньше по теме Vigo,
+        но полное представление с фамилией отсутствует. Нужна voice comparison
+        для идентификации личности.
+    - speaker: "Gray"
+      issue: |
+        В начале выпуска (14s) Umputun говорит "Грей сегодня не будет",
+        однако Gray имеет 1 реплику в 8119s ("Будет видео.").
+        Возможно Gray присоединился в конце ненадолго, либо это ошибка распознавания.
+    - speaker: "Alek.sys"
+      issue: |
+        В начале (34s) сказано "запасного Алексея тоже нет",
+        но Alek.sys появляется с 1170s. Вероятно присоединился позже.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 613
+    from_speaker: "SPEAKER_03"
+    to_speaker: "SPEAKER_07"
+    confidence: high
+    reason: |
+      SPEAKER_03 имеет только 2 очень короткие реплики ("Да.", "Хорошо."),
+      расположенные в том же временном контексте что и SPEAKER_07.
+      Первая реплика следует сразу после обращения к "Алексею".
+      Это явно ошибка сегментации транскриптора.
+
+# Комментарии для дальнейшей идентификации
+notes: |
+  Гость Алексей — Go-разработчик, эксперт по модулям:
+  - Приходил раньше по теме Vigo (система управления зависимостями Go)
+  - Был на GopherCon Russia в марте 2018
+  - Хорошо знает внутреннее устройство Go modules, MVS алгоритм
+  - Упоминает что был на GopherCon в Америке (август 2018)
+  - Знаком с Брайаном Кэтлсоном (создателем Athens/goproxy)
+
+  Для точной идентификации рекомендуется:
+  1. Проверить выпуски где обсуждался Vigo (до 613)
+  2. Voice comparison с известными гостями-Go-разработчиками
+  3. Поиск в истории GopherCon Russia 2018 докладчиков по модулям
