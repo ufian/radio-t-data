@@ -1,0 +1,157 @@
+episode: 541
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7436  # ~2h 4min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 311
+    replies_count: 81
+    pattern: consecutive
+    first_appearance_sec: 4610.83
+    last_appearance_sec: 6051.28
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Требует добавления в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun обращается к гостю как "Алексей" (4575.59s): "Алексей."
+        Umputun спрашивает "А ты скажи, Алексей..." (4646.92s)
+        Гость рассказывает про Java-конференцию JPoint, которую он организовывал.
+        В эпизоде 616 упоминается "Алексей Федоров" в контексте JPoint.
+        Гость говорит "мы провели большую конференцию в Москве" и обсуждает
+        видео-трансляции докладов, маркетинг конференции, рейтинги докладов.
+        Контекст однозначно указывает на организатора JPoint/JUG.ru.
+
+      # Предлагаемая идентификация
+      proposed_identity:
+        name: "Алексей Федоров"
+        person_id: "alexey_fedorov"
+        role: "Организатор JPoint/JUG.ru"
+        confidence: high
+        cross_reference: "Episode 616 mentions 'Алексей Федоров' with JPoint context"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 7044.86
+    last_appearance_sec: 7045.56
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (менее 1 сек суммарно).
+        Реплики "Раз в неделю?" и "А я за ним не ем." - это ошибка распознавания,
+        скорее всего принадлежат Ksenks, которая сразу после (7045.58s) говорит
+        "Я не ем за ним." - это продолжение той же мысли. Контекст: обсуждение
+        клавиатуры MacBook, Umputun говорит про продувку клавиатуры раз в неделю.
+
+      identified_as: "Ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Сразу после SPEAKER_07 (7045.16-7045.56s) идёт реплика Ksenks (7045.58s)
+        "Я не ем за ним." - это продолжение мысли SPEAKER_07 "А я за ним не ем."
+        Реплики логически связаны и принадлежат одному человеку.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Следующая реплика Ksenks продолжает мысль SPEAKER_07"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проблемы с разметкой _ad
+ad_misattribution:
+  description: |
+    В эпизоде обнаружены реплики, помеченные как "_ad", которые на самом деле
+    принадлежат гостю SPEAKER_03 (Алексей Федоров). Это происходит в диапазоне
+    4621-6000 секунд. Всего около 15 реплик _ad, которые должны быть SPEAKER_03.
+  affected_segments:
+    - stime: 4621.67
+      etime: 4634.58
+      text: "Я тут Грею кинул ссылочку..."
+    - stime: 4726.99
+      etime: 4733.6
+      text: "Ну, в частности, самый победивший доклад..."
+    - stime: 4780.34
+      etime: 4790.87
+      text: "И хорошо бы понимать, что ты не всегда это можешь увидеть..."
+    - stime: 4797.09
+      etime: 4804.56
+      text: "И вот, в частности, доклад про сравнительный анализ ГЦ..."
+    # и другие в том же временном диапазоне
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: |
+        Гость (Алексей Федоров) не был формально представлен в начале подкаста.
+        Он был "пингнут" через чат и добавился к звонку около 4536s (~1:15:36).
+        Umputun говорит "появился Алексей сам по себе" (4565.22s).
+    - speaker: "_ad"
+      issue: |
+        Часть реплик гостя ошибочно помечена как "_ad" вместо реального спикера.
+        Требуется переразметка реплик _ad в диапазоне 4621-6000s.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 541
+    from_speaker: "SPEAKER_03"
+    to_speaker: "AlexeyFedorov"
+    confidence: high
+    reason: |
+      Гость идентифицирован как Алексей Федоров - организатор JPoint/JUG.ru.
+      Прямое обращение "Алексей" (4575.59s), обсуждение Java-конференции.
+      Кросс-референс с эпизодом 616.
+
+  - type: rename
+    episode: 541
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: |
+      Короткие реплики (0.7 сек) являются ошибкой распознавания.
+      Контекст и следующая реплика указывают на Ksenks.
+
+  - type: rename
+    episode: 541
+    from_speaker: "_ad"
+    to_speaker: "AlexeyFedorov"
+    time_range:
+      start: 4621
+      end: 6000
+    confidence: medium
+    reason: |
+      Реплики _ad в этом диапазоне - продолжение речи гостя,
+      ошибочно размеченные как реклама.
+
+# Требуется добавить в people.yaml
+new_guest_for_registry:
+  id: "alexey_fedorov"
+  canonical_name: "AlexeyFedorov"
+  aliases: ["Алексей Федоров", "Федоров"]
+  real_name: "Алексей Федоров"
+  info: "Организатор JPoint/JUG.ru conferences"

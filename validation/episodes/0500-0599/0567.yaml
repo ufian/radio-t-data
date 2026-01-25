@@ -1,0 +1,115 @@
+episode: 567
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  guests_present: []
+  # Bobuk упоминается как отсутствующий (в самолёте), но имеет 6 реплик - требует проверки
+  bobuk_status: "mentioned_as_absent_but_has_replies"
+  total_duration_sec: 7480
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 10
+    replies_count: 7
+    pattern: consecutive
+    time_range: "5560s-5709s (во время темы PornHub AI / феминистки)"
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Все 7 реплик сконцентрированы в узком временном промежутке (~150 сек).
+        Содержание реплик (шутки про феминисток, ироничные комментарии типа
+        "Джава 9 феминистки, да?") характерно для стиля ведущих.
+        Контекст: разговор между Umputun (Женя), Ksenks и Gray.
+        Скорее всего это ошибочно распознанный голос одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Gray активно участвует в этом сегменте, похожий стиль юмора"
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Alek.sys также присутствует, мог быть неправильно распознан"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5702.42
+          etime: 5709.52
+          text: "Феминистки и новости. Ты проверяешь, что феминистки сказали по поводу новости. Джава 9 феминистки, да? Да нет, это..."
+        audio_url: "https://cdn.radio-t.com/rt_podcast567.mp3"
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 7
+    replies_count: 3
+    pattern: scattered
+    timestamps: "249s, 1789s, 7477s"
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие разрозненные реплики (<3 сек каждая) в случайные моменты:
+        - 249.7s "Я поняла." - после обращения к Ксюше, вероятно Ksenks
+        - 1789.6s "Я понял." - мужской род, вероятно Gray или Alek.sys
+        - 7477.7s "Ну, на этой веселой ноте." - традиционная закрывающая фраза
+        Типичные короткие реакции, неправильно выделенные в отдельного спикера.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Первая реплика 'Я поняла' идёт после обращения Umputun к Ксюше"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплика 'Я понял' с мужским родом, Gray активен в эпизоде"
+
+      voice_task:
+        needed: false
+        # Слишком короткие реплики для надёжного сравнения голосов
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: >
+        В начале эпизода явно сказано что Bobuk отсутствует (в самолёте),
+        но у него 6 реплик в транскрипте. Возможные объяснения:
+        1. Bobuk дозвонился по телефону во время эпизода
+        2. Ошибка распознавания - реплики принадлежат другому ведущему
+        Требуется проверка аудио на ~940s, ~2755s, ~6012s
+    - speaker: "SPEAKER_07"
+      issue: "Неидентифицированный спикер - вероятно ошибка распознавания"
+    - speaker: "SPEAKER_02"
+      issue: "Неидентифицированный спикер - вероятно ошибка распознавания"
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules: []
+# Нет правил с высокой уверенностью - требуется voice comparison
+
+# Дополнительные задачи для проверки
+manual_review_tasks:
+  - task: "verify_bobuk_presence"
+    description: "Проверить реплики Bobuk на ~940s - действительно ли это его голос или ошибка"
+    priority: high
+
+  - task: "identify_speaker_07"
+    description: "Voice comparison для SPEAKER_07 с Gray и Alek.sys на сегменте 5702-5709s"
+    priority: medium
+
+  - task: "verify_speaker_02_first"
+    description: "Проверить является ли реплика 'Я поняла' на 249s голосом Ksenks"
+    priority: low

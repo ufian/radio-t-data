@@ -1,0 +1,222 @@
+episode: 524
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  total_duration_sec: 8363  # ~2ч 19мин
+  notes: |
+    Bobuk присоединился на ~52 минуте (3127s).
+    Alek.sys помечен как ведущий, но имеет только 7 коротких реплик (9 сек) -
+    возможно ошибки атрибуции.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 180
+    replies_count: 34
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        На 2378s Umputun говорит: "К нам, кстати, человек пришел."
+        На 2383s: "И говорит, что сейчас он тебе выдаст, или мне выдаст по первое число..."
+        На 2389s: "Александр." и "Привет."
+        На 2394s: "Ты с темной стороны, с этих UI-щиков, фронтенщиков."
+        Гость представлен как Александр, занимается фронтендом/UI.
+        Активно участвует в технической дискуссии про MVC и state management.
+
+      possible_matches:
+        - person_id: "alexander_frontend"
+          confidence: 0.9
+          reason: "Явное представление как 'Александр', фронтенд-разработчик"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3197.19
+          etime: 3260.36
+          text: |
+            Понятно, в простом случае можно обойтись тремя запросами на страницу, и все счастливы.
+            Перешел на другую страницу, новых три запроса, и все счастливы.
+            Но когда все больше и больше добавляется вещей, когда у тебя какой-то есть стрим данных...
+            [длинный сегмент непрерывной речи про state management]
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        3 коротких реплики (<2 сек каждая), разбросаны по подкасту:
+        - 335s: "Так, сейчас." (1 сек)
+        - 1156s: "Так что ответь." (2 сек)
+        - 6039s: "Про какой грузовик?" (2 сек)
+        Типичный паттерн ошибок распознавания - короткие фразы в случайные моменты.
+        Первые две реплики могут быть от Umputun или Ksenks.
+        Третья реплика "Про какой грузовик?" - возможно от Bobuk (он уже в эфире).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 6
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        2 реплики, явно ошибки атрибуции:
+        - 687s: "Они плохо работают?" - вопрос после реплики Ksenks "Почему некоторые боты убиты?",
+          скорее всего это продолжение реплики Ksenks или Umputun.
+        - 1023s: "файл этого товарища." - явно продолжение реплики Umputun, который сказал
+          "Я как полезу..." (1021s), а потом должно быть "...файл этого товарища."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика 7755s: "Я проснулась, я просто пыталась на кнопку нажать истерически,
+        и она куда-то не туда нажималась."
+        Контекст: Umputun говорит "Все, проснись, проснись, пробуди боток."
+        Сразу после этой реплики отвечает Ksenks.
+        Женский голос ("Я проснулась") + контекст обращения к Ksenks = это реплика Ksenks.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Женский род глагола 'проснулась', контекст обращения, следующая реплика Ksenks"
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Женский голос, контекст будения, реплика перед её словами"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Дополнительные замечания по ведущим
+hosts_notes:
+  - speaker: "Alek.sys"
+    issue: |
+      7 реплик (9 сек суммарно), все очень короткие:
+      - 3866s: "Понимаешь?" (1 сек) - после реплики Bobuk
+      - 4420s: "Ты же видел, да, Жень?" (1.5 сек)
+      - 7062s: "Это гораздо ближе к правде." (2 сек)
+      - 8287s: "Ну, что за вопрос?" (1.5 сек)
+      - 8431s: "Они уже сократили." (1 сек)
+      - 8711s: "Ну, типа того, понимаешь?" (1 сек)
+      - 9221s: "Закругляешь, да?" (1 сек)
+
+      Паттерн очень похож на ошибки атрибуции - только короткие фразы-вставки.
+      Возможно Alek.sys реально был в эфире, но эти конкретные реплики могут
+      принадлежать другим ведущим (Bobuk, Ksenks).
+    recommendation: "needs_manual_review"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: |
+        Гость представлен как "Александр" (2389s), но в транскрипте помечен как SPEAKER_04.
+        Нужно либо переименовать в Alexander/Александр, либо добавить в people.yaml
+        как нового гостя-фронтендщика.
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys в описании эпизода или начале не представлен.
+        7 коротких реплик могут быть ошибками атрибуции.
+
+# Проблемы с разметкой (не спикеры)
+markup_issues:
+  - issue: "Реплики гостя Александра частично помечены как _ad"
+    examples:
+      - stime: 2426.55
+        etime: 2431.94
+        current_author: "_ad"
+        correct_author: "SPEAKER_04"
+        text: "Если, скажем, просто нужно отрисовать какие-то чуть-чуть данные или формочку, да."
+      - stime: 2505.1
+        etime: 2508.99
+        current_author: "_ad"
+        correct_author: "SPEAKER_04"
+        text: "Но если, скажем, вот возьмем большое приложение типа Фейсбука,"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 524
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Alexander"
+    confidence: high
+    reason: "Явное представление гостя как 'Александр' на 2389s"
+
+  - type: rename
+    episode: 524
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Женский голос, контекст обращения к Ksenks, реплика между её репликами"
+
+  - type: delete_or_merge
+    episode: 524
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    action: "merge_with_previous"
+    confidence: high
+    reason: |
+      Обе реплики - оборванные фрагменты предыдущих реплик.
+      1023s 'файл этого товарища' - продолжение Umputun 'Я как полезу...'
+
+  - type: delete_or_merge
+    episode: 524
+    speaker: "SPEAKER_07"
+    action: "needs_manual_review"
+    confidence: low
+    reason: "Короткие реплики, но без достаточного контекста для автоматической атрибуции"
+
+  - type: fix_ad_markup
+    episode: 524
+    segments:
+      - stime: 2426.55
+        etime: 2431.94
+        from: "_ad"
+        to: "SPEAKER_04"
+      - stime: 2505.1
+        etime: 2508.99
+        from: "_ad"
+        to: "SPEAKER_04"
+    reason: "Реплики гостя ошибочно помечены как реклама"

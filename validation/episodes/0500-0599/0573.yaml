@@ -1,0 +1,67 @@
+episode: 573
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8919  # ~2.5 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered  # реплики в 8789s и 9603s, разброс ~814 сек
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Две короткие односложные реплики ("Окей." и "Так бывает, да.") разбросаны
+        по эпизоду с интервалом ~14 минут. Обе реплики — типичные
+        фразы-реакции, которые могли быть неправильно атрибутированы
+        при автоматической транскрипции. Контекст указывает на ошибку
+        распознавания одного из ведущих:
+        - Первая реплика (8788.6s): после Bobuk про DPI, перед Umputun —
+          скорее всего это Umputun или Bobuk
+        - Вторая реплика (9603.1s): в середине монолога Gray про шрифты —
+          скорее всего это Gray или кто-то из слушающих ведущих
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Первая реплика перед репликой Umputun, возможно его голос"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Вторая реплика в контексте монолога Gray"
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Первая реплика после реплики Bobuk"
+
+      voice_task:
+        needed: false
+        # Реплики слишком короткие (<2 сек) для voice comparison
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    В начале эпизода (0-30s) Umputun упоминает "Грей, и все остальные" и
+    отдельно обращается к Ксюше. Bobuk также присутствует с начала.
+    Alek.sys появляется только в 1574s (~26 мин) без явного представления,
+    но это типично для этого ведущего — он часто присоединяется позже
+    или говорит реже. Его реплики в основном в рекламных блоках (4982-5007s)
+    и короткие комментарии.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Реплики SPEAKER_06 слишком короткие и разрозненные для уверенной атрибуции.
+# Рекомендуется оставить как есть или удалить как шум, но не переименовывать
+# в конкретного ведущего без voice comparison.

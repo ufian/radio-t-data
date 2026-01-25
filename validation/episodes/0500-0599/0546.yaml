@@ -1,0 +1,153 @@
+episode: 546
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  guests_present: [Gimlis]
+  partial_hosts: [Bobuk, Gray]  # Единичные реплики, возможно ошибки
+  total_duration_sec: 7144
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 436
+    replies_count: 112
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Это тот же человек, что и Alek.sys. Реплики чередуются без одновременной речи. В начале эпизода представляется как 'Алексей' - это ведущий Alek.sys."
+
+      identified_as: "alek_sys"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "30-36s: представляется 'меня зовут Алексей', далее реплики от Alek.sys. На 3052s обращается к SPEAKER_07 по имени 'Гиммельс', подтверждая что это ведущий."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 384
+    replies_count: 85
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "gimlis"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "2978s: 'Я Димлес, несколько раз уже участвовал в подкасте'. На 3052s Alek.sys обращается 'Гиммельс'. Gimlis из people.yaml."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "4 короткие реплики в случайных местах. Одна реплика (6478s) 'Я согласна' - женский род, это Ksenks. Остальные реплики (4627s 'Да') идут после обращения 'Ксюша' от Umputun."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "4626s Umputun говорит 'Ксюша', 4627s SPEAKER_02 отвечает 'Да'. 6478s 'Я согласна' - женский род."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Всего 2 односложные реплики ('Бывает, бывает.' на 2034s и 'Да?' на 6596s) - типичные ошибки атрибуции коротких фраз-реакций."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Одна реплика идёт сразу после реплики Ksenks, может быть её же голос"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Обе реплики рядом с репликами Umputun, может быть эхо или переброс"
+
+      voice_task:
+        needed: false
+        # Слишком короткие сегменты для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Всего 1 реплика на 1533s (6 сек) посреди диалога. Gray не присутствовал в выпуске по контексту (Umputun говорит 'Бобок опоздун', но не упоминает Gray). Вероятно ошибка атрибуции."
+    - speaker: "Bobuk"
+      issue: "Только 2 реплики (2702s и 3327s, 18 сек суммарно). В начале эпизода Umputun говорит 'Бобок опоздун' и 'задерживается'. Реплики могут быть как реальным присоединением, так и ошибкой."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 546
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Alek.sys"
+    confidence: high
+    reason: "SPEAKER_08 и Alek.sys - один человек. Представился 'Алексей', реплики чередуются без перекрытий."
+
+  - type: rename
+    episode: 546
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Gimlis"
+    confidence: high
+    reason: "Представился как 'Димлес', к нему обращаются 'Гиммельс'. Гость Gimlis из people.yaml."
+
+  - type: rename
+    episode: 546
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Отвечает на обращение 'Ксюша', использует женский род ('Я согласна')."
+
+  - type: investigate
+    episode: 546
+    speaker: "Gray"
+    confidence: medium
+    reason: "Только 1 реплика (1533s). Возможно ошибка атрибуции - проверить audio. Если ошибка, переименовать в Alek.sys или SPEAKER_08."
+
+  - type: investigate
+    episode: 546
+    speaker: "Bobuk"
+    confidence: medium
+    reason: "Только 2 реплики после долгого отсутствия. Возможно присоединился позже или ошибка. Проверить audio на 2702s и 3327s."
+
+  - type: delete_or_merge
+    episode: 546
+    speaker: "SPEAKER_03"
+    confidence: medium
+    reason: "2 односложные реплики, вероятно ошибки атрибуции. Проверить audio и объединить с соседними спикерами."
+
+# Дополнительные заметки
+notes:
+  - "Эпизод от 2017-05-20, тема Google I/O"
+  - "В эпизоде участвует гость Gimlis (SPEAKER_07), известный по выпускам 62, 79, 844"
+  - "SPEAKER_08 - это ошибочно размеченный Alek.sys, требует массового переименования"
+  - "Gray и Bobuk показаны в статистике, но их реальное присутствие под вопросом"
+  - "Audio URL: https://cdn.radio-t.com/rt_podcast546.mp3"

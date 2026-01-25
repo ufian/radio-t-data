@@ -1,0 +1,333 @@
+episode: 536
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 10600
+  notes: |
+    Umputun объявил "Состав полный. Плюс один. Плюс один." в начале (10-12s).
+    Это означает присутствие всех 5 ведущих и 2 гостей.
+    Гости: "Леша" (упомянут в 22s), и позже Андрей (представился в 2866s) + Руслан (представился в 6285s).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1099
+    replies_count: 196
+    pattern: consecutive
+    first_appearance_sec: 549.82
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Umputun говорит "Леша, тебе рады" в 22s — это обращение к гостю.
+        В 4176s Umputun говорит "как правильно Леша сказал" после реплики SPEAKER_05 в 4164s.
+        Это подтверждает, что SPEAKER_05 = "Леша".
+        SPEAKER_05 активно участвует в обсуждении AWS (550s) и TDD (4113s+).
+        На "ты" с Bobuk, знает его конфигурацию — близкий знакомый.
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Имя Леша, но Alek.sys уже присутствует как отдельный спикер с 1562s"
+        - person_id: null
+          confidence: 0.7
+          reason: "Скорее всего отдельный гость по имени Алексей/Леша, не из справочника"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1278.19
+          etime: 1333.98
+          text: "Рассуждение о надежности AWS S3 и опыте работы с Amazon"
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 267
+    replies_count: 85
+    pattern: consecutive
+    first_appearance_sec: 2865.23
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Представился сам: "Меня зовут Андрей, мне 29 лет. Я зарабатываю на жизнь разработкой ПО и я люблю ТДТ." (2866-2874s)
+        Umputun прощается: "Андрей, ну, спасибо, что зашел" (4671s), "Ладно, Андрей, спасибо" (4813s).
+        Гость пришел для обсуждения TDD как его защитник.
+
+      possible_matches:
+        - person_id: null
+          confidence: 1.0
+          reason: "Имя Андрей, 29 лет в 2017 году, разработчик, энтузиаст TDD. Не идентифицирован в справочнике."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3006.43
+          etime: 3015.66
+          text: "мы получаем дисциплину, которая позволяет нам садиться и делать то, что перед тобой, не отвлекаться и повышать, как говорится, флоу."
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 353
+    replies_count: 58
+    pattern: consecutive
+    first_appearance_sec: 3041.39
+
+    analysis:
+      is_error: true
+      error_reason: |
+        КРИТИЧЕСКАЯ ОШИБКА АТРИБУЦИИ!
+        EldarMurtazin (Эльдар Муртазин) — известный мобильный аналитик, не имеющий отношения к TDD или Kotlin.
+        В этом выпуске "EldarMurtazin" говорит о TDD (3041-4447s) и Kotlin (6302-8064s).
+
+        Реальные спикеры:
+        1. TDD-часть (3041-4447s): скорее всего тот же Андрей (SPEAKER_07), продолжающий обсуждение TDD.
+        2. Kotlin-часть (6302-8064s): это РУСЛАН — Umputun прямо спрашивает "Ты Руслан, правильно?" (6285s)
+           и получает ответ "Да, я Руслан" (6286s). Руслан был в подкасте ранее как защитник Kotlin.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: null
+          confidence: 0.0
+          reason: "Это НЕ Эльдар Муртазин. Это два разных человека: Андрей (TDD) и Руслан (Kotlin)."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6372.92
+          etime: 6396.05
+          text: "Руслан объясняет корутины в Kotlin — длинный монолог для voice comparison"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 224
+    replies_count: 92
+    pattern: consecutive
+    first_appearance_sec: 6413.28
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        SPEAKER_01 появляется в 6413s, сразу после EldarMurtazin (6410s), в обсуждении Kotlin.
+        Говорит технически грамотно о suspend функциях, async/await в Kotlin.
+        Чередуется с EldarMurtazin — возможно это тот же Руслан (ошибка сегментации),
+        либо другой эксперт по Kotlin.
+
+      possible_matches:
+        - person_id: null
+          confidence: 0.6
+          reason: "Возможно Руслан — тот же человек что EldarMurtazin в Kotlin-части"
+        - person_id: null
+          confidence: 0.4
+          reason: "Отдельный участник, знающий Kotlin"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6468.1
+          etime: 6476.02
+          text: "Объяснение async/await в Kotlin: Но есть в библиотеке Kotlin и XKRoutine функция async и await..."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 6461.75
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Метка "MISATTRIBUTED_PETR" указывает на ранее отменённую ошибочную атрибуцию.
+        Реплика в 6461s продолжает мысль о функции "go" в Kotlin — это часть обсуждения с Русланом.
+        Реплика в 9211s "Всех в свою команду?" — краткая реакция, не идентифицируема.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+    first_appearance_sec: 2115.21
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики: "Ну, нельзя так." (2115s), "Ну, нельзя." (2116s), "Почему?" (2119s).
+        Всего 5 секунд. Скорее всего ошибка распознавания одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 8220.66
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна реплика: "Я вот не понимаю, почему... Нет, ну, Insertion Sort, мне кажется, вполне себе очевидный."
+        Метка "MISATTRIBUTED_MARIN" указывает на отменённую атрибуцию к Марине.
+        Контекст: обсуждение сортировки. Скорее всего кто-то из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_09"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+    first_appearance_sec: 1837.72
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики: "Посмотрите на дашборды, да." (1837s) и "Очень на объектно-ориентированном." (5250s).
+        Всего 3 секунды в разных частях подкаста. Ошибка распознавания.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: |
+        "Леша" упомянут в 22s, но не представлен формально.
+        Говорит на "ты" с Bobuk — явно близкий знакомый.
+        Требуется voice comparison для идентификации.
+
+    - speaker: "EldarMurtazin"
+      issue: |
+        КРИТИЧЕСКАЯ ОШИБКА! Это не Эльдар Муртазин.
+        Реплики 3041-4447s — скорее всего Андрей (SPEAKER_07).
+        Реплики 6302-8064s — это Руслан (представился в 6285s).
+        Требуется разделение на двух спикеров.
+
+    - speaker: "Bobuk at 2899s"
+      issue: |
+        В 2899s Bobuk отвечает на вопрос Ksenks "А как долго у тебя, Андрей, это увлечение?"
+        Ответ: "Ну, такое хардкорное TDD по Red Green Refactor, как дядюшка Вов нас учит..."
+        Это должен быть ответ Андрея (SPEAKER_07), а не Bobuk. Возможная ошибка атрибуции.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 536
+    from_speaker: "EldarMurtazin"
+    to_speaker: "SPEAKER_TDD_ANDREY"
+    time_range: [3041, 4500]
+    confidence: medium
+    reason: |
+      Реплики EldarMurtazin в диапазоне 3041-4447s относятся к обсуждению TDD.
+      Скорее всего это Андрей (SPEAKER_07). Требуется voice comparison.
+      Временное переименование до подтверждения.
+
+  - type: rename
+    episode: 536
+    from_speaker: "EldarMurtazin"
+    to_speaker: "Ruslan"
+    time_range: [6300, 8100]
+    confidence: high
+    reason: |
+      Umputun прямо спрашивает "Ты Руслан, правильно?" (6285s).
+      Ответ: "Да, я Руслан" (6286s).
+      Руслан — эксперт по Kotlin, был в подкасте ранее.
+
+  - type: merge_candidate
+    episode: 536
+    speakers: ["SPEAKER_07", "EldarMurtazin (3041-4447s)"]
+    to_speaker: "Andrey_TDD"
+    confidence: medium
+    reason: |
+      Оба обсуждают TDD в одном временном диапазоне.
+      SPEAKER_07 представился как Андрей, защитник TDD.
+      EldarMurtazin в TDD-части может быть тем же Андреем.
+
+  - type: verify
+    episode: 536
+    speaker: "Bobuk"
+    stime: 2899.1
+    etime: 2909.79
+    confidence: medium
+    reason: |
+      Реплика "Ну, такое хардкорное TDD по Red Green Refactor..." — это ответ на вопрос к Андрею.
+      Возможно должен быть SPEAKER_07 (Андрей), не Bobuk.
+
+# Аудио для верификации
+audio_url: "https://cdn.radio-t.com/rt_podcast536.mp3"
+
+# Резюме
+summary: |
+  Эпизод 536 (4 марта 2017) содержит серьёзные проблемы атрибуции:
+
+  1. SPEAKER_05 = "Леша" — неидентифицированный гость, активен с начала.
+
+  2. SPEAKER_07 = Андрей — гость-энтузиаст TDD, представился в 2866s.
+
+  3. EldarMurtazin — ОШИБКА! Это НЕ Эльдар Муртазин (мобильный аналитик).
+     - Часть TDD (3041-4447s): вероятно Андрей.
+     - Часть Kotlin (6302-8064s): это Руслан (представился в 6285s).
+
+  4. SPEAKER_01 — участник обсуждения Kotlin, возможно тот же Руслан.
+
+  5. SPEAKER_03, SPEAKER_09, SPEAKER_MISATTRIBUTED_* — артефакты/ошибки распознавания.
+
+  Рекомендуется:
+  - Разделить EldarMurtazin на двух спикеров (Andrey_TDD и Ruslan).
+  - Провести voice comparison для SPEAKER_05 и SPEAKER_07.
+  - Добавить Руслана в справочник people.yaml как эксперта по Kotlin.

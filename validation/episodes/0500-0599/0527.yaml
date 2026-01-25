@@ -1,0 +1,53 @@
+episode: 527
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8086  # ~2:14:46 (сумма всех ведущих)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered  # реплики в 3670s и 5498s (~30 минут разницы)
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две очень короткие реплики (2-3 сек каждая), разбросанные по эпизоду.
+        Обе реплики находятся в середине диалогов между известными ведущими
+        и являются типичными короткими ответами/реакциями.
+
+        Первая реплика (3670s): "Происходит, просто очень медленно." —
+        прямой ответ на вопрос Ksenks, скорее всего это Bobuk (он вёл тему).
+
+        Вторая реплика (5498s): "Я не думаю, что Apple... Даже не это не самое хорошо." —
+        между репликами Ksenks и Umputun, типичная вставка в дискуссию.
+
+        В эпизоде не было представления гостей, все 5 постоянных ведущих присутствуют.
+        Имя спикера указывает на предыдущую ошибочную атрибуцию к Петру Диденко,
+        которая была отменена (MISATTRIBUTED).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Реплики слишком короткие для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []  # Все спикеры — известные ведущие, гостей нет
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: SPEAKER_MISATTRIBUTED_PETR уже помечен как ошибочная атрибуция.
+# Реплики слишком короткие для надёжного определения спикера.
+# Можно оставить как есть или удалить эти 2 реплики как артефакты распознавания.

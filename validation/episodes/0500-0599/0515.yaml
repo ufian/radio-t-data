@@ -1,0 +1,28 @@
+episode: 515
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+    - Gray
+  total_duration_sec: 8451
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    Все 4 ведущих присутствуют в эпизоде с самого начала.
+    Umputun открывает выпуск, Bobuk, Gray и Ksenks вступают в диалог
+    в первые 2 минуты. Формального представления ведущих нет, так как
+    это стандартный состав. Гостей в эпизоде нет.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

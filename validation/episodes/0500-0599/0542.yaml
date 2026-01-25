@@ -1,0 +1,51 @@
+episode: 542
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8128
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Две короткие односложные реплики ('Окей.' и 'Класс.') разбросаны по выпуску (7021s и 7854s). Это типичные фразы-ошибки распознавания, которые могли быть неправильно выделены из речи основных спикеров (Bobuk и Ksenks соответственно)."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Не представлен явно в начале. Появляется с 1913s (32 мин). Имеет всего 8 реплик (33 сек). Реплики носят характер реплик ведущего, включая рекламу Vultr (7287-7314s). Это нормально для ведущего, который мог подключиться позже."
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  SPEAKER_06 - явная ошибка распознавания:
+  - 7021.28s: "Окей." - между репликами Bobuk (7014-7021s и 7023-7031s)
+  - 7853.92s: "Класс." - между репликами Ksenks (7851-7853s и 7854-7861s)
+
+  Обе реплики слишком короткие (<1 сек каждая) и представляют типичные
+  междометия, которые могли быть неправильно выделены из общего потока речи.
+  Не требуют исправления, т.к. не влияют на качество транскрипта.

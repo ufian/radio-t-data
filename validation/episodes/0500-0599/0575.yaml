@@ -1,0 +1,119 @@
+episode: 575
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7704
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 356
+    replies_count: 113
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Umputun в начале эпизода (21.99s): "Олечка, спасибо, что зашла. У тебя 10 лет юбилея с нами."
+        SPEAKER_01 отвечает (42.29s): "Наверное, год прошел, как была последний раз на юбилее...
+        недавно, ну, неделю назад было 10 лет, как я впервые пришла в Radio T."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие односложные реплики ("И это не шутка", "Ну, окей", "Нет", "Легко, тоже пойдет")
+        разбросаны по всему эпизоду (3182s, 6314s, 6842s, 7699s, 7702s).
+        Каждая реплика <3 сек. Типичный паттерн ошибок распознавания - перебивки или реакции,
+        неправильно атрибутированные как отдельный спикер.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Большинство реплик в контексте речи Bobuk (до и после)"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Одна реплика (6314s) после Gray"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Ksenks обращается (5400s): "Оля, ты не созрела выбрать тему?"
+        SPEAKER_08 отвечает (5403s): "Ну чего созрела?"
+        Прямое обращение к Оле и ответ от SPEAKER_08 подтверждают идентификацию.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 575
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Olyapka"
+    confidence: high
+    reason: >
+      Umputun представляет гостя в начале эпизода: "Олечка, спасибо, что зашла. У тебя 10 лет юбилея с нами."
+      Гость подтверждает свою идентичность, упоминая 10-летний юбилей участия в Radio-T.
+      Olyapka - бывшая ведущая подкаста (см. people.yaml).
+
+  - type: rename
+    episode: 575
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Olyapka"
+    confidence: high
+    reason: >
+      Ksenks обращается к Оле по имени, и SPEAKER_08 отвечает на это обращение.
+      Обе реплики SPEAKER_08 являются репликами Оли.
+
+  - type: rename
+    episode: 575
+    from_speaker: "SPEAKER_05"
+    to_speaker: "NEEDS_REVIEW"
+    confidence: low
+    reason: >
+      5 коротких реплик (всего 8 сек) разбросаны по эпизоду. Вероятно ошибки распознавания,
+      но без voice comparison невозможно точно определить кто говорит.
+      Рекомендуется ручная проверка или voice comparison с Bobuk/Gray.

@@ -1,0 +1,156 @@
+episode: 561
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  hosts_mentioned_absent: [Gray]
+  guests: ["Григорий Орлов (SPEAKER_03)"]
+  total_duration_sec: 8658
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 246
+    replies_count: 40
+    first_appearance_sec: 1374
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Представился сам: 'Меня зовут Орло Григорий. Я работаю в компании Brain4Net. Тим-лид команды разработки OpenFlow SDN-контроллера. Пишу на Java уже 7 лет.' (1374-1388s). Umputun обращается к нему 'Григорий, который гость' (1640s)."
+
+      guest_info:
+        name: "Григорий Орлов"
+        company: "Brain4Net"
+        role: "Тим-лид разработки OpenFlow SDN-контроллера"
+        expertise: "Java, SDN, SPA/JavaScript"
+        note: "Имя транскрибировано как 'Орло Григорий' (вероятно ошибка распознавания 'Орлов Григорий')"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Гость четко представился, идентификация не требуется"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 1
+    first_appearance_sec: 22
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Звуковой эффект. Реплика 'Щелк, щелк' (22s) - имитация звука фотоаппарата. Контекст: Umputun только что назвал Bobuk 'главный по фотоаппаратам'. Это не речь, а аудио-артефакт или SFX."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reason: "Не является речью человека"
+
+  - speaker: "Gray"
+    total_duration_sec: 2
+    replies_count: 1
+    first_appearance_sec: 8347
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Gray официально отсутствует в этом выпуске. В начале Umputun говорит: 'Главного по номерам у нас нет сегодня' (14.76s). Единственная реплика Gray в 8347s ('Наши-то голоса, они, конечно, ого-го') - это продолжение фразы Umputun или реплика Bobuk/Ksenks, ошибочно атрибутированная Gray."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Bobuk говорит сразу после этой реплики, возможно это его фраза"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Продолжение его же фразы, ошибка сегментации"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8347.44
+          etime: 8349.76
+          text: "Наши-то голоса, они, конечно, ого-го."
+        note: "Сравнить с голосами Bobuk и Umputun для переатрибуции"
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 51
+    replies_count: 14
+    first_appearance_sec: 3317
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+      note: "Alek.sys не был представлен в начале выпуска, но имеет 14 реплик (51 сек). Требуется проверка: возможно это ошибка атрибуции или Alek.sys подключился позже без объявления."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3317
+          etime: 3350
+          text: "Первые реплики Alek.sys"
+        note: "Проверить, действительно ли это голос Alek.sys"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Объявлен отсутствующим в начале выпуска, но имеет 1 реплику в конце (8347s). Явная ошибка атрибуции."
+    - speaker: "Alek.sys"
+      issue: "Не представлен в начале, но имеет 14 реплик. Требует проверки - возможно подключился позже или ошибка распознавания."
+    - speaker: "SPEAKER_06"
+      issue: "Звуковой эффект, не человеческая речь. Следует переатрибутировать на SPEAKER_99."
+
+# Информация о госте для добавления в people.yaml
+new_guest_suggestion:
+  id: "grigory_orlov"
+  canonical_name: "GrigoryOrlov"
+  aliases: ["Григорий Орлов", "Орлов Григорий", "Орло Григорий"]
+  real_name: "Григорий Орлов"
+  info: "Brain4Net, тим-лид OpenFlow SDN-контроллера, Java-разработчик. Выпуск 561."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 561
+    from_speaker: "SPEAKER_03"
+    to_speaker: "GrigoryOrlov"
+    confidence: high
+    reason: "Гость представился: 'Меня зовут Орло Григорий [Орлов Григорий]. Я работаю в компании Brain4Net.'"
+
+  - type: rename
+    episode: 561
+    from_speaker: "SPEAKER_06"
+    to_speaker: "SPEAKER_99"
+    confidence: high
+    reason: "Звуковой эффект 'Щелк, щелк', не речь человека"
+
+  - type: rename
+    episode: 561
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Gray"
+    confidence: high
+    reason: "Gray отсутствует в этом выпуске (объявлено в начале). Требуется voice comparison для определения реального спикера."
+
+# Аудио для проверки
+audio_url: "https://cdn.radio-t.com/rt_podcast561.mp3"

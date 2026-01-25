@@ -1,0 +1,202 @@
+episode: 586
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Ksenks]
+  guests_present: [Olyapka, Marin_k_a, Anya]
+  total_duration_sec: ~8900
+  notes: |
+    Специальный женский выпуск от 24 февраля 2018 года.
+    Ksenks ведёт эпизод с тремя гостьями-бывшими ведущими.
+    Alek.sys появляется только в рекламном блоке DigitalOcean.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1234
+    replies_count: 247
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (28-30s) Ksenks представляет: "С нами сегодня тут Аляпка. Привет, Оль."
+        SPEAKER_03 (110-145s) рассказывает о себе: "я была самой первой девушкой, которую в
+        этот подкаст пригласили, это было уже больше десяти лет назад, участвовала я в нем
+        около полугода". SPEAKER_06 обращается к ней "Оль" (146s, 217s).
+        Контекст: журналист, специализируется на технике и гаджетах, пользуется Android.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2492
+    replies_count: 471
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "marin_k_a"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (34-36s) Ksenks представляет: "Марина."
+        SPEAKER_03 (Olyapka) в 144s говорит: "когда я ушла, меня заменила Марина...
+        так что передаю слово Марине".
+        SPEAKER_06 (146-175s) рассказывает: "три года я была тоже постоянной ведущей Радио-Т".
+        Контекст: master в биомедицинской инженерии, работала программистом на C и Java,
+        потом перешла в маркетинг, работает в украинской компании Poster.
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1189
+    replies_count: 258
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (38-40s) Ksenks представляет: "И Анна. - Всем привет."
+        SPEAKER_04 (325-420s) рассказывает о себе: "Да, я тут самая новенькая...
+        единственная, кто сама напросилась в подкаст", "закончила прикладную информатику",
+        "поучилась в Америке, получила мастерс в Computer Science", "сейчас работаю в Амазоне".
+
+      possible_matches: []
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 17
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (1-4 секунды) разбросаны по эпизоду.
+        Примеры: "Пять лет уже в подкасте, да?" (654s), "Да-да-да" (2257s),
+        "Ипотезу подтверждаем" (7697s), "Два с половиной часа уже говорим" (8915s).
+        Это ошибки распознавания речи - реплики принадлежат одной из участниц
+        (скорее всего Ksenks или одной из гостей), неверно атрибутированные.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Контекстно реплики часто следуют после реплик Ksenks"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Появляется только в рекламном блоке около 4241-4255s рядом с Alek.sys.
+        Шуточные реплики: "Мы любим опишечки, знаете ли" (4241s),
+        "Ведь у нас почасовая оплата" (4250s).
+        Также одиночное "Да" в 7968s.
+        Это ошибка распознавания - вероятно, это Alek.sys или аудио-артефакт.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.7
+          reason: "Появляется в рекламном блоке рядом с репликами Alek.sys"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Особые случаи
+special_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 15
+    replies_count: 2
+    analysis:
+      role: "advertisement"
+      notes: |
+        Появляется только в рекламном блоке DigitalOcean (4233-4255s).
+        Не участвует в основной дискуссии женского выпуска.
+        Реплики: информация о DO и промокод RADIOT250.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все три гостьи представлены в начале эпизода (28-40s):
+    - "С нами сегодня тут Аляпка. Привет, Оль." (SPEAKER_03)
+    - "Марина. - Привет-привет." (SPEAKER_06)
+    - "И Анна. - Всем привет." (SPEAKER_04)
+    Порядок представления: Olyapka, Marin_k_a, Anya.
+    Все участницы подробно рассказывают о себе в первые 10 минут.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 586
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Olyapka"
+    confidence: high
+    reason: "Явное представление в начале: 'С нами сегодня тут Аляпка. Привет, Оль.'"
+
+  - type: rename
+    episode: 586
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Marin_k_a"
+    confidence: high
+    reason: "Явное представление: 'Марина' + самоидентификация как бывшая ведущая 3 года"
+
+  - type: rename
+    episode: 586
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Явное представление: 'И Анна' + самоидентификация как новенькая, работает в Amazon"
+
+  - type: delete_or_merge
+    episode: 586
+    speaker: "SPEAKER_02"
+    confidence: medium
+    reason: "Ошибки распознавания - короткие реплики, требуется ручная проверка для определения реального спикера"
+
+  - type: delete_or_merge
+    episode: 586
+    speaker: "SPEAKER_00"
+    confidence: medium
+    reason: "Ошибки распознавания в рекламном блоке, вероятно Alek.sys"

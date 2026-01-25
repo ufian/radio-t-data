@@ -1,0 +1,61 @@
+episode: 574
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 7272
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика (1.66 сек) с шутливым содержанием 'Ой, какие вопросы задаешь?' между репликами основных ведущих. Появляется за 50 секунд до первой реплики Alek.sys (1188s). Скорее всего ошибочная атрибуция одного из ведущих."
+
+      # Если не ошибка - попытка идентификации
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Если не удалось идентифицировать
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Bobuk уже активно участвует в разговоре (первая реплика в 144s). Реплика звучит как его стиль шутливых комментариев."
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Alek.sys появляется первый раз через 50 секунд (в 1188s). Возможно он уже присутствовал, но был неправильно атрибутирован."
+
+      # Задание на voice comparison (если нужно)
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1137.33
+          etime: 1138.99
+          text: "Ой, какие вопросы задаешь?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Первая реплика только в 1188s (~20 минут от начала). Нет явного представления в начале выпуска. Участники упомянуты как 'бобук игры' (Bobuk) и Gray говорит первым в 35s, но Alek.sys не представлен."
+    - speaker: "SPEAKER_06"
+      issue: "Неидентифицированный спикер с единственной репликой. Требуется voice comparison для определения."
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules:
+  - type: rename
+    episode: 574
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Единственная короткая шутливая реплика в контексте разговора. Bobuk наиболее вероятный кандидат, так как он активный участник диалога. Требуется voice comparison для подтверждения."

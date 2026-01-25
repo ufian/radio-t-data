@@ -1,0 +1,115 @@
+episode: 591
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks]
+  guests_present: [Anya]
+  hosts_in_ads_only: [Alek.sys]
+  total_duration_sec: 7750  # approximate
+
+# Примечание: Umputun в начале эпизода говорит "Состав без Бобука"
+# Gray представляет гостя: "Аня, подай голос, пожалуйста" (65.15s)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 339
+    replies_count: 114
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Gray представляет в начале: "Аня, подай голос, пожалуйста" (65.15s)
+        2. Umputun обращается к Ане перед репликами SPEAKER_04:
+           - "Аня, ну скажи, а у тебя какой зверь рисуется в промте?" (1607s) -> SPEAKER_04 отвечает (1619s)
+           - "Аня, скажи мне, дорогая, а ты как к этому ко всему относишься?" (3154s) -> SPEAKER_04 отвечает (3162s)
+           - "Аня, скажи, доколе это будет продолжаться?" (4155s) -> SPEAKER_04 отвечает (4162s)
+        3. SPEAKER_04 использует женский род: "хотела" (4395s), "зашла" (3183s), "купила" (3192s)
+        4. Контекст разговора совпадает с обращениями к Ане
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        1. Реплика "Ждите, пожалуйста" (4379.92s) -> сразу после Umputun говорит "не перебивай, дорогой Аню" (4381.82s)
+        2. Очень короткие реплики ("Угу", "Ждите, пожалуйста") - вероятно Аня, ошибочно размечена другим спикером
+        3. Возможно артефакт распознавания речи
+
+      possible_matches:
+        - person_id: "anya"
+          confidence: 0.7
+          reason: "Контекст указывает на Аню, Umputun говорит 'не перебивай Аню' сразу после реплики"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Umputun в начале говорит "Состав без Бобука" (11.73s), но в транскрипте есть 4 реплики Bobuk.
+        Реплики короткие ("Ну?", "Да, на сайте есть, конечно.") - вероятно ошибки атрибуции голоса.
+        Требует проверки голоса.
+    - speaker: "Alek.sys"
+      issue: |
+        8 реплик Alek.sys - все в рекламном блоке V-Scale (5384-5424s).
+        Это записанная реклама, не живое участие.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 591
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Anya"
+    confidence: high
+    reason: |
+      Явное представление гостя Gray в начале выпуска + многократные обращения Umputun к Ане
+      перед репликами SPEAKER_04 + использование женского рода в речи SPEAKER_04.
+
+  - type: rename
+    episode: 591
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Anya"
+    confidence: medium
+    reason: |
+      Контекст указывает на Аню: Umputun говорит "не перебивай Аню" сразу после реплики SPEAKER_06.
+      Всего 2 короткие реплики, вероятно артефакт распознавания.
+
+# Задания на дополнительную проверку
+additional_review_tasks:
+  - task: "voice_comparison"
+    speaker: "Bobuk"
+    reason: "4 реплики Bobuk при заявленном отсутствии - требует проверки голоса"
+    segments:
+      - stime: 2630.41
+        etime: 2631.16
+        text: "Ну?"
+      - stime: 3084.86
+        etime: 3088.44
+        text: "Да, на сайте есть, конечно."

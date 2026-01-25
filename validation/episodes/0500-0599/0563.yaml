@@ -1,0 +1,114 @@
+episode: 563
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys, Bobuk]
+  total_duration_sec: 7633
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Все реплики очень короткие и разбросаны по выпуску.
+        Первая реплика (42.9s "Гав.") - это ответ Gray на просьбу Umputun "Грей, скажи, ты тоже гав?".
+        Остальные три реплики (5811-5847s) находятся в рекламном блоке Vultr (читается Alek.sys)
+        и являются короткими вставками типа "Мы сами им пользуемся, уж поверьте",
+        "Мы любим опишечки, знаете ли", "Ведь у нас почасовая оплата" -
+        это часть записанной рекламы, скорее всего тот же Alek.sys или другой голос из рекламы.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Все три реплики очень короткие (<3 сек каждая) и являются односложными реакциями.
+        Реплики на 5670-5677s: "Ну, да, там, я не знаю, месяц." и "О, один за дней, вау." -
+        это в контексте разговора о сроках доставки (iPhone?), между репликами Ksenks и Gray.
+        Реплика на 8053s: "Понятно, да." - короткое подтверждение после реплики Umputun.
+        Вероятно это ошибочно распознанные реплики одного из ведущих (Gray или Ksenks).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Первые две реплики идут рядом с репликами Gray, могли быть неправильно атрибутированы"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Реплики вклиниваются между Ksenks и другими ведущими"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: >
+        В начале выпуска (25s) Umputun говорит "Бобука нет", но Bobuk имеет 3 реплики
+        в выпуске (3274s, 4820s, 7649s). Возможно Bobuk присоединился позже или
+        это ошибки атрибуции других спикеров под его имя.
+    - speaker: "Alek.sys"
+      issue: >
+        Alek.sys не представлен в начале выпуска, но имеет 5 реплик (первая в 577s).
+        Основные реплики - рекламный блок Vultr (5807-5845s).
+        Первая реплика "Это вообще где?" (577s) может быть ошибочной атрибуцией.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 563
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Gray"
+    stime: 42.89
+    etime: 43.69
+    confidence: high
+    reason: >
+      Umputun спрашивает "Грей, скажи, ты тоже гав?" и сразу следует ответ "Гав." от SPEAKER_01.
+      Очевидно это Gray.
+
+  - type: rename
+    episode: 563
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Alek.sys"
+    stime: 5811.69
+    etime: 5847.62
+    confidence: medium
+    reason: >
+      Реплики в рекламном блоке Vultr, который читает Alek.sys.
+      SPEAKER_01 вставляет короткие комментарии между репликами Alek.sys.
+      Вероятно это тоже Alek.sys (разные интонации в рекламе).
+
+  - type: rename
+    episode: 563
+    from_speaker: "SPEAKER_04"
+    to_speaker: "SPEAKER_MISATTRIBUTED_04"
+    confidence: low
+    reason: >
+      Не удалось точно определить чьи это реплики. Пометить для дальнейшего
+      анализа голоса или удаления как шум.

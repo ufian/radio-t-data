@@ -1,0 +1,58 @@
+episode: 556
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys]
+  hosts_absent: [Gray, Ksenks]
+  absence_reason: "В начале выпуска (53-60 сек) Umputun говорит: 'Ксюши не будет... Вместо нее и частично вместо Грея у нас наш постоянный запасной Алексей'"
+  total_duration_sec: 7378
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 11
+    replies_count: 5
+    time_range: "3078-3101 сек"
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это рекламный голос, не гость
+      identified_as: "_ad"
+      identification_method: "context"
+      confidence: high
+      evidence: "Реплики SPEAKER_02 чередуются с репликами _ad и формируют единый рекламный блок Тинькофф: 'Спонсор этого выпуска – банк Тинькофф', 'До 5% в выбранных категориях', 'Никаких баллов или фантиков', 'Кэшбэк с живыми деньгами каждый месяц', 'Тинькофф Блэк'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: "Gray отсутствует в этом выпуске (явно сказано в начале), но есть 1 реплика на 3101 сек ('Пожалуй, лучшая карта с кэшбэком') - это часть рекламы Тинькофф, а не настоящий Gray"
+    - speaker: "SPEAKER_02"
+      issue: "Рекламный голос в блоке Тинькофф (3078-3101 сек), должен быть переименован в _ad"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 556
+    from_speaker: "SPEAKER_02"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Рекламный голос в блоке Тинькофф, чередуется с другими репликами _ad"
+
+  - type: rename
+    episode: 556
+    from_speaker: "Gray"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Gray отсутствует в этом выпуске (явно сказано в начале на 53-60 сек), единственная реплика 'Пожалуй, лучшая карта с кэшбэком' на 3101 сек - часть рекламы Тинькофф"

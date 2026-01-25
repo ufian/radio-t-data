@@ -1,0 +1,92 @@
+episode: 548
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  guests_present: [Егор Бугаенко]
+  total_duration_sec: 7356
+  notes: "Gray отсутствует (объявлено в начале)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 474
+    replies_count: 108
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "yegor_bugayenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (90.24s) Umputun представляет гостя: "И еще у нас есть новый гость... А как ты к нам попал, Егор?"
+        Первая реплика SPEAKER_04 (98.71s): "Нет, я написал вам e-mail и сказал, что я очень к вам хочу..."
+        Контекст: Umputun называет его "антиподом" (124.28s), что соответствует публичному образу Егора Бугаенко.
+        Подтверждение: В выпусках 536 и 538 Егор Бугаенко упоминается по полному имени.
+        Гость говорит про выступление на Riga Dev Days (452.49s).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика 'Да.' длительностью 0.04 сек (5610.81-5610.85s) между репликами Umputun и Alek.sys. Явная ошибка автоматической разметки."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 548
+    from_speaker: "SPEAKER_04"
+    to_speaker: "YegorBugayenko"
+    confidence: high
+    reason: |
+      Гость явно представлен как Егор в начале выпуска (90.24s).
+      Контекст подтверждает: "антипод" Umputun (известная позиция Бугаенко по ООП/Java практикам).
+      Упоминание выступления на Riga Dev Days.
+      Подтверждено упоминаниями "Егор Бугаенко" в других выпусках (536, 538).
+
+  - type: delete
+    episode: 548
+    from_speaker: "SPEAKER_08"
+    to_speaker: null
+    confidence: high
+    reason: "Ошибка распознавания: односложное 'Да.' (0.04 сек), скорее всего артефакт или часть реплики соседнего спикера"
+
+# Дополнительная информация для people.yaml
+new_guest_entry:
+  id: "yegor_bugayenko"
+  canonical_name: "YegorBugayenko"
+  aliases: ["Егор", "yegor256"]
+  real_name: "Егор Бугаенко"
+  info: "Java-разработчик, блогер, автор книг об ООП. Известен нетрадиционными взглядами на ООП-практики."
+  episodes: [536, 538, 548, 628, 648, 683, 735, 747, 765, 807, 904, 963]

@@ -1,0 +1,117 @@
+episode: 528
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  hosts_announced: [Umputun, Bobuk, Ksenks]  # В начале представлены только эти
+  total_duration_sec: 6546  # ~1h 49m (7024s конец - ~4s начало)
+  note: "Umputun в начале (43s) говорит: 'Сегодня Ксюша, Бобук' и что 'Грэй отпадает'. Alek.sys не объявлен, но появляется в 1180s."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 5
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные реплики разбросаны по выпуску: 'И не всегда это эффективно.' (1141s), 'Зачем?' (1143s), 'Что?' (5039s), 'А что она курит?' (5044s), 'Интересно.' (6193s). Типичные ошибки ASR-разметки - вклинивание в речь других спикеров."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Имя спикера содержит 'MISATTRIBUTED' - это уже отменённое ошибочное присвоение. Две короткие вопросительные реплики: 'Что они рассказывают про себя?' (204s) и 'Как ты ему продал?' (4806s). Скорее всего это реплики одного из ведущих (Bobuk или Ksenks)."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Вопросительные реплики в контексте обсуждения - характерно для Bobuk"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Ksenks отвечает сразу после обеих реплик"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 204.36
+          etime: 205.7
+          text: "Что они рассказывают про себя?"
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна односложная реплика 'Ну, наверное.' (7024s) в конце выпуска. Типичная ошибка ASR - вклинивание реакции."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Не объявлен в начале выпуска (Umputun назвал только Ксюшу и Бобука), но появляется с 1180s и активно участвует (31 реплика). Возможно присоединился позже или это частично неверная разметка."
+
+    - speaker: "Gray"
+      issue: "В начале сказано что 'Грэй отпадает', но есть 1 реплика в 3879s: 'Для Монге же есть бесконечное количество готовых решений...'. Вероятно ошибка разметки - это реплика кого-то из присутствующих (Bobuk или Alek.sys)."
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules:
+  - type: rename
+    episode: 528
+    from_speaker: "SPEAKER_02"
+    to_speaker: "SPEAKER_99"
+    confidence: high
+    reason: "Короткие ошибочные реплики ASR, не являющиеся реальным спикером"
+
+  - type: rename
+    episode: 528
+    from_speaker: "SPEAKER_06"
+    to_speaker: "SPEAKER_99"
+    confidence: high
+    reason: "Одна односложная ошибочная реплика ASR"
+
+  - type: investigate
+    episode: 528
+    speaker: "Gray"
+    confidence: medium
+    reason: "Единственная реплика Gray (3879s) при том, что в начале сказано, что его нет. Требуется voice comparison для определения реального спикера."
+
+  - type: investigate
+    episode: 528
+    speaker: "Alek.sys"
+    confidence: medium
+    reason: "Не объявлен в начале, но активно участвует. Нужно проверить - либо присоединился по ходу, либо частично неверная разметка других спикеров как Alek.sys."

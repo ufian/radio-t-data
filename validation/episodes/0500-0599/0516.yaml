@@ -1,0 +1,30 @@
+episode: 516
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+  hosts_absent:
+    - Gray
+    - Alek.sys
+  total_duration_sec: 7265  # сумма: 1814 + 3874 + 1577
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (stime: 9.4) Umputun объявляет "Все минус Грей",
+    что подтверждает состав: Umputun, Bobuk, Ksenks.
+    Также упоминается (stime: 14.14), что планировали пригласить гостей
+    вместо отсутствующей Ksenks, но она вернулась.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

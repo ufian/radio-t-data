@@ -1,0 +1,81 @@
+episode: 530
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  total_duration_sec: 7509  # ~2h 5min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные реакции (1-3 сек каждая), разбросанные по эпизоду: 'Ну?', 'Запутанная.', 'Да, да-да-да.', 'Понимаешь, да?', 'Ну, наверное, да.' - типичные ошибки распознавания голоса одного из ведущих"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Префикс MISATTRIBUTED означает уже отменённую ошибочную атрибуцию. Реплика 'А, импостер-синдром.' в контексте диалога Umputun→Ksenks - вероятно принадлежит одному из присутствующих ведущих (Bobuk или Gray)"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Контекст диалога между Umputun и Ksenks, короткая реплика-подсказка"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Также присутствует в эпизоде, мог вставить комментарий"
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Префикс MISATTRIBUTED означает уже отменённую ошибочную атрибуцию. Реплика 'Нет, последняя тема.' между Gray и Bobuk - явно один из них возражает. Эльдар Муртазин не участвовал в этом выпуске"
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Gray предлагает последнюю тему, Bobuk говорит 'хватит' - кто-то (вероятно Umputun как ведущий) настаивает на продолжении"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Мог повторить свою мысль"
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: "Umputun в начале говорит 'состав полный и прекрасный' - подразумевает всех пятерых постоянных ведущих"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: SPEAKER_MISATTRIBUTED_* уже помечены как отменённые атрибуции,
+# SPEAKER_03 - мелкие ошибки распознавания, не требующие очистки

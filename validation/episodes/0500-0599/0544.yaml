@@ -1,0 +1,95 @@
+episode: 544
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Bobuk, Alek.sys]
+  total_duration_sec: 7844
+  notes: >
+    Bobuk отсутствовал в начале (явно упомянуто: "с четвертой стороны нет Бобука").
+    Bobuk появляется в 2452s (~40:52) без объявления.
+    Alek.sys появляется в 2462s (~41:02), также без явного представления.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Две очень короткие односложные реплики ("Ну, так." и "Да."),
+        разбросанные по эпизоду (1534s и 1677s). Обе реплики находятся
+        в контексте диалога между ведущими и представляют типичные
+        междометия/подтверждения. Первая реплика накладывается на речь Gray
+        (1534.1-1536.08 vs Gray 1534.22-1534.92). Вторая следует сразу за
+        Ksenks (1670-1677s) и перед Umputun (1678s). Типичные ошибки
+        распознавания голосов ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика "А, то есть даже нет Enum?" (7372.59-7373.87s)
+        в контексте обсуждения Go. Непосредственно перед этим Ksenks спрашивала
+        "Слушай, так инамы там есть." (7363-7365s), затем Umputun объяснял
+        отсутствие enum в Go. SPEAKER_04 задает уточняющий вопрос по той же
+        теме, что и Ksenks. Вероятнее всего это ошибочная атрибуция голоса
+        Ksenks (очень похожий вопрос, продолжение той же линии разговора).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: >
+            Ksenks за 8 секунд до этого спрашивала про enum, вопрос
+            SPEAKER_04 является логическим продолжением её интереса.
+            Короткая реплика, типичная для ошибки распознавания.
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: >
+        Объявлен отсутствующим в начале ("нет Бобука" в 24-27s),
+        но появляется в 2452s без объявления. Имеет только 2 реплики
+        (8 сек суммарно). Вероятно присоединился по телефону/чату
+        для короткого комментария про вес клавиатуры.
+    - speaker: "Alek.sys"
+      issue: >
+        Появляется в 2462s (~41:02) без явного представления в начале.
+        Говорит активно (262 реплики, 1479 сек). Возможно был упомянут
+        или представлен позже, требует проверки.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# SPEAKER_02 и SPEAKER_04 — это ошибки распознавания, но слишком короткие
+# для уверенного переименования. Можно оставить как есть или удалить
+# эти реплики как шум. Не рекомендуется переименовывать без voice comparison.

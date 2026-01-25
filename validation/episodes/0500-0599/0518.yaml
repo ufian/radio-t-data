@@ -1,0 +1,25 @@
+episode: 518
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray]
+  total_duration_sec: 7110  # сумма: 2662 + 3044 + 792 + 612
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале выпуска Umputun представляет "классический, канонический, полный состав"
+    с упоминанием Ксении (Ksenks). Все четыре ведущих (Umputun, Bobuk, Ksenks, Gray)
+    появляются в первые 3 минуты и активно участвуют в диалоге на протяжении всего выпуска.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет необходимости в правилах очистки

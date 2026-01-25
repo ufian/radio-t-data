@@ -1,0 +1,24 @@
+episode: 553
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys, Gray]
+  total_duration_sec: 7727
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun упоминает Gray в 10s ('Грэй, вступай')"
+    - "Alek.sys представлен в 27-37s ('на замену Бобука пришел наш Алексей')"
+    - "Ksenks упомянута в 49-57s ('у нас и Ксюша пришла')"
+    - "SPEAKER_99 (1 реплика) — джингл с номером выпуска '553', корректно помечен"
+
+# Предлагаемые правила очистки
+suggested_rules: []

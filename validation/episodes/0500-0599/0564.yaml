@@ -1,0 +1,143 @@
+episode: 564
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  guests_present: []
+  total_duration_sec: 8649
+  notes: |
+    Gray имеет только 2 реплики и не был представлен в начале.
+    Скорее всего это ошибка распознавания.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 311
+    replies_count: 91
+    first_appearance_sec: 7351.5
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        Umputun в 7362s: "Леша, а ты что, прям реально читал?"
+        В 7355s: "Ты как раз на эту статью возбудился и сказал, что позвать."
+        Это слушатель по имени Леша, который позвонил обсудить статью про Kotlin.
+        Он Android-разработчик, пишет на Kotlin.
+
+      possible_matches:
+        - person_id: null
+          confidence: 0.0
+          reason: "Неизвестный слушатель, звонивший обсудить статью про Kotlin"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7619.9
+          etime: 7643.1
+          duration_sec: 23.2
+          text: "Нет, у нас просто, скажем так, главным аргументом, который просто вот побил всю команду, что, ребята..."
+        audio_url: "https://cdn.radio-t.com/rt_podcast564.mp3"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 15
+    replies_count: 8
+    first_appearance_sec: 3871.2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие разрозненные реплики в разных частях подкаста.
+        Типичные фразы: "Фигня полная", "Да", "Именно", "Запомните этот выпуск".
+        Появляется в моменты между репликами ведущих - скорее всего
+        ошибки распознавания голоса одного из ведущих (вероятно Alek.sys или Ksenks).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1
+    replies_count: 2
+    first_appearance_sec: 8402.7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 односложных реплики "Угу" и "Да" около 8402-8404s.
+        Появляются рядом с репликами SPEAKER_06.
+        Типичная ошибка распознавания - короткие подтверждающие звуки.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray не был представлен в начале выпуска и имеет только 2 реплики
+        (4221s и 8599s). При этом в начале подкаста представлены только
+        Umputun, Ksenks и Alek.sys. Вероятно это ошибка распознавания.
+        Требуется voice comparison для подтверждения.
+
+    - speaker: "SPEAKER_06"
+      issue: |
+        Слушатель, позвонивший в эфир. Представлен как "Леша" без фамилии.
+        Не удалось идентифицировать по справочнику guests.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: investigate
+    episode: 564
+    speaker: "Gray"
+    action: "Проверить voice comparison - возможно это Alek.sys или Ksenks"
+    confidence: medium
+    reason: "Только 2 реплики, не представлен, подозрительно малое участие для ведущего"
+
+  - type: rename
+    episode: 564
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Listener_Lesha"
+    confidence: medium
+    reason: "Слушатель Леша, позвонивший обсудить статью про Kotlin"
+
+  - type: delete_or_merge
+    episode: 564
+    speaker: "SPEAKER_01"
+    action: "Удалить или слить с ближайшим ведущим"
+    confidence: low
+    reason: "Разрозненные короткие реплики - ошибки распознавания"
+
+  - type: delete_or_merge
+    episode: 564
+    speaker: "SPEAKER_03"
+    action: "Удалить или слить с SPEAKER_06"
+    confidence: medium
+    reason: "Две односложных реплики рядом с SPEAKER_06"

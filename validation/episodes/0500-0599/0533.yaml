@@ -1,0 +1,89 @@
+episode: 533
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8293  # ~2h 18min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered  # реплики в 503s и 7516s - разбросаны на 2+ часа
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики (4s и 2s), разбросанные на 2 часа - типичный паттерн ошибки распознавания. Эпизод 533 не содержит Эльдара Муртазина как гостя (нет представления в начале). Скорее всего это ошибочно атрибутированные реплики одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Первая реплика (503s) окружена репликами Umputun, может быть его продолжение"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Вторая реплика (7516s) окружена репликами Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 503.15
+          etime: 507.31
+          text: "То есть мне нужно знать... Ты нажимаешь на кнопку, и у тебя через 5 минут все обновлено."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика (<1 сек). Марина (Marin_k_a) - бывшая ведущая, но в эпизоде 533 не участвовала (не представлена в начале). Реплика 'Нет, я пропустила' - типичная для женского голоса, скорее всего это Ksenks."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Ksenks - единственная женщина в эпизоде (из представления: 'Ксюша пришла тоже с задержкой'). Реплика 'Нет, я пропустила' грамматически женского рода."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Единственная женщина в эпизоде, реплика в женском роде"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Минимальное участие (6 реплик, 7 сек), первая реплика в 3810s - не представлен явно в начале, но это известный ведущий"
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Эльдар Муртазин не участвовал в эпизоде 533 - ошибочная атрибуция"
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Марина не участвовала в эпизоде 533 - скорее всего это Ksenks"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 533
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Единственная женщина в эпизоде - Ksenks. Реплика 'Нет, я пропустила' в женском роде."
+
+  - type: voice_comparison_needed
+    episode: 533
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: null
+    confidence: low
+    reason: "Требуется voice comparison для определения, кому из ведущих принадлежат реплики. Наиболее вероятно - Umputun или Bobuk."

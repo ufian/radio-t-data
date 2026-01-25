@@ -1,0 +1,98 @@
+episode: 522
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Gray, Bobuk, Alek.sys]
+  total_duration_sec: 6861  # ~114 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 4
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (0.2-1.6 сек каждая), разбросанные по подкасту. Все появляются между репликами известных ведущих, часто непосредственно после Gray. Паттерн указывает на ошибку распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Три из пяти реплик SPEAKER_01 идут сразу после реплик Gray (4473s→4479s, 4929s→4929s). Реплика в 4929.56s 'Это известная идея' следует через 0.04с после 'Почему?' от Gray - явное продолжение речи."
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Первые две реплики (3428s) идут в контексте, где Gray, Ksenks и Umputun обсуждают GitHub утечку. Могут быть репликами Ksenks."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4479.46
+          etime: 4481.04
+          text: "Я имею в виду веб-сайт, чем это тебе не приложение. Я не спорю."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна реплика длительностью 1 сек, незавершённая фраза 'Тут нет такого, что...'. Находится между репликами Ksenks. Marina (Marin_k_a) - бывшая ведущая, не участвовала в этом выпуске."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Реплика (2902.55-2903.53s) идёт сразу после Ksenks (2897-2902s) и перед Ksenks (2904-2910s). Контекст диалога - обсуждение приватности в Facebook, которое ведёт Ksenks."
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: "В начале подкаста Umputun говорит 'Бобук не пришел'. Bobuk появляется только в 3764s (62 минута). Всего 4 реплики, 7 сек - минимальное участие, возможно подключился позже."
+    - speaker: "Alek.sys"
+      issue: "Не упомянут в начале. Всего 4 реплики по 1-2 сек, разбросанные: 2229s, 5000s, 6364s, 7400s. Паттерн похож на ошибки распознавания, но может быть реальным минимальным участием."
+    - speaker: "SPEAKER_01"
+      issue: "Не представлен. 5 коротких реплик - вероятно ошибка атрибуции Gray."
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Метка указывает на отменённую ошибочную атрибуцию к Marina. Скорее всего это Ksenks."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 522
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Реплика находится в середине диалога Ksenks. Контекст и позиция однозначно указывают на Ksenks."
+
+  - type: rename
+    episode: 522
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: "Требуется voice comparison. Большинство реплик идут сразу после Gray, особенно в 4929s где пауза между репликами 0.04с. Но уверенность средняя - нужна проверка голоса."
+
+# Дополнительные наблюдения
+notes:
+  - "Эпизод 522 от 2016-11-19 - состав: Umputun, Gray, Ksenks присутствуют с начала."
+  - "Bobuk присоединяется примерно на 62 минуте (3764s), участвует минимально."
+  - "Alek.sys имеет только 4 очень короткие реплики - возможно ошибки распознавания или минимальное фоновое участие."
+  - "SPEAKER_01 - высокая вероятность что это Gray, но рекомендуется voice comparison для подтверждения."

@@ -1,0 +1,143 @@
+episode: 554
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: []
+  total_duration_sec: 5651
+  notes: >
+    В начале выпуска Umputun явно говорит: "Суровые программистки сегодня нас покинули
+    и совсем не суровые, наоборот, веселые маркетологи с анекдотами и прочими шуточками
+    тоже не с нами... Тогда мы вдвоем с Бобуком зажигали". Это подтверждает, что
+    в эпизоде только два ведущих: Umputun и Bobuk.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 14
+    replies_count: 6
+    first_appearance_sec: 4283.6
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это рекламный диктор банка Тинькофф
+      identified_as: "_ad"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Все 6 реплик SPEAKER_01 идут подряд в рекламном блоке Тинькофф (4283-4306 сек)
+        сразу после слов Umputun "Вот вам реклама от еще одного нашего спонсора".
+        Текст: "Спонсор этого выпуска – Банк Тинькофф", "1% с каждой покупки",
+        "До 5% в выбранных категориях", "Никаких баллов или фантиков",
+        "Кэшбэк живыми деньгами каждый месяц", "Тинькофф Блэк".
+        Это профессиональный рекламный ролик, чередующийся с репликами уже помеченными как _ad.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1
+    replies_count: 1
+    first_appearance_sec: 5382.8
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная короткая реплика "Я уже это выучил" (1.5 сек) в контексте диалога
+        между Umputun и Bobuk о VS Code. По смыслу это ответ на реплику Umputun
+        "Они ломают совместимость в тот момент, когда ты трогаешь то, что они называют
+        экспериментальным". Скорее всего это Bobuk, поскольку он рассказывал о VS Code
+        непосредственно перед этим и сразу после продолжает говорить о редакторе.
+
+      identified_as: "bobuk"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Контекст: Bobuk (5366-5376): говорит о том, как VS Code обновляется без эксцессов.
+        Umputun (5376-5381): "Они ломают совместимость... экспериментальным".
+        SPEAKER_05 (5382-5384): "Я уже это выучил".
+        Umputun (5384-5389): "Все, оно ломается прямо без всякого предупреждения. Но это ожидаемо".
+        Bobuk (5389-5391): "Конечно, конечно" - продолжает разговор.
+        Фраза "Я уже это выучил" - реакция Bobuk на предупреждение Umputun об экспериментальных фичах.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 49
+    replies_count: 13
+    first_appearance_sec: 2325
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: >
+        В начале выпуска Umputun явно говорит, что "Суровые программистки сегодня нас покинули
+        и веселые маркетологи тоже не с нами" и "мы вдвоем с Бобуком зажигали".
+        Однако реплики Alek.sys присутствуют только в рекламных блоках (V-Scale и др.).
+        Это записанная заранее реклама, а не участие в живом эфире.
+
+      identified_as: "_ad"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Первое появление Alek.sys (2325 сек): "V-Scale – это облачный хостинг для разработчиков
+        от разработчиков. Мы сами им пользуемся..." - это типичный рекламный текст.
+        Все остальные реплики Alek.sys в этом эпизоде тоже являются рекламными вставками.
+        Поскольку Umputun в начале явно сказал, что они вдвоем с Bobuk, присутствие
+        Alek.sys в рекламных блоках - это предзаписанная реклама.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    Umputun в начале (38-67 сек) явно сказал: "Суровые программистки сегодня нас покинули
+    и совсем не суровые, наоборот, веселые маркетологи... тоже не с нами...
+    Тогда мы вдвоем с Бобуком зажигали". Это означает:
+    - Ksenks (программистка) отсутствует
+    - Gray (маркетолог) отсутствует
+    - Только Umputun и Bobuk в эфире
+    Все реплики Alek.sys - это рекламные вставки, не живое участие.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 554
+    from_speaker: "SPEAKER_01"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Рекламный ролик банка Тинькофф, все 6 реплик в рекламном блоке"
+
+  - type: rename
+    episode: 554
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Bobuk"
+    confidence: high
+    reason: >
+      Короткая реплика в диалоге о VS Code. По контексту это ответ Bobuk
+      на реплику Umputun об экспериментальных фичах. Bobuk говорит до и после.
+
+  - type: rename
+    episode: 554
+    from_speaker: "Alek.sys"
+    to_speaker: "_ad"
+    confidence: high
+    reason: >
+      В начале выпуска явно сказано, что только Umputun и Bobuk в эфире.
+      Все реплики Alek.sys - это предзаписанная реклама V-Scale и других спонсоров.

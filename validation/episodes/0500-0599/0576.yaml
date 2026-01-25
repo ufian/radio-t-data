@@ -1,0 +1,81 @@
+episode: 576
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 8038
+
+# Примечание: Alek.sys указан в статистике (8 реплик, 40 сек), но фактически
+# НЕ участвует как ведущий — только читает рекламу V-Scale (7 реплик)
+# и имеет 1 короткую реплику-ошибку атрибуции.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Две очень короткие односложные реплики ("Конечно" в 5825s, "Понятно" в 7960s),
+        разбросанные по эпизоду. Типичные фразы-реакции, которые часто ошибочно
+        выделяются как отдельный спикер при автоматическом распознавании.
+        Первая реплика — в контексте речи Ksenks, вторая — между Umputun и Bobuk.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        В начале эпизода Umputun говорит "в классическом составе, все на месте".
+        Однако Alek.sys появляется только на 3617s и читает рекламу V-Scale (7 реплик).
+        Одна реплика на 7505s ("Особенно для британцев") — короткая вставка в разговор
+        Bobuk/Umputun, скорее всего ошибка атрибуции (возможно, Gray или Ksenks).
+        Фактически Alek.sys не участвует как ведущий в этом выпуске.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 576
+    from_speaker: "SPEAKER_06"
+    to_speaker: "SPEAKER_MISATTRIBUTED_06"
+    confidence: high
+    reason: >
+      Короткие односложные реакции, типичные ошибки автоматического распознавания.
+      Нет оснований считать это реальным гостем.
+
+  - type: rename
+    episode: 576
+    from_speaker: "Alek.sys"
+    to_speaker: "_ad"
+    stime_range: [3617, 3660]
+    confidence: high
+    reason: >
+      7 реплик в диапазоне 3617-3655s — это рекламный блок V-Scale,
+      должны быть помечены как _ad, а не Alek.sys.
+
+  - type: investigate
+    episode: 576
+    speaker: "Alek.sys"
+    stime: 7505.87
+    text: "Особенно для британцев."
+    confidence: medium
+    reason: >
+      Одиночная короткая реплика в разговоре Bobuk/Umputun.
+      Возможно ошибка атрибуции — может быть Gray или Ksenks.
+      Требуется voice comparison или ручная проверка.

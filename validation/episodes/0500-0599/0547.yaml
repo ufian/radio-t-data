@@ -1,0 +1,123 @@
+episode: 547
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Gray, Alek.sys, Bobuk]
+  total_duration_sec: 8211
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 2.3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одна короткая реплика (2.3 сек) - скорее всего ошибка распознавания ведущего"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Фраза 'Мне кажется, да, там где-то напоминается' - типичный оборот Ksenks. Umputun отвечает на эту реплику как будто продолжает разговор с кем-то из ведущих"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray говорил про голосовалку незадолго до этого, мог вставить комментарий"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2.2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (0.3-1.2 сек) в разных местах эпизода - ошибка распознавания"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Реплики 'Нет, ну да, для casual' и 'Для casual можно' (3857-3859s) - продолжение разговора о скорости дрона с Ksenks, которая сразу после отвечает 'Ну, классно, классно'. Первая реплика 'Да' (2241s) вставлена между репликами Umputun и может быть любым ведущим"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 3.2
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (0.6-1.3 сек) в двух разных местах эпизода - ошибка распознавания Ksenks"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        1. Реплики 'Хорошо, хорошо' и 'Я тебе верю' (5267-5269s) - ответ на объяснение Umputun про код голосовалки. Ksenks только что спрашивала 'Слушайте, у нас голосовалка сломана'.
+        2. Реплика 'Ну, это вообще интересно' (7868s) - после слов Ksenks 'Нифига себе, интересно' и 'Прямо при смерти чувака открыть конверт'. Тема та же, стиль тот же.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Появляется только для чтения рекламы (5391s). Не представлен как участник обсуждения, что корректно для рекламного блока"
+    - speaker: "Bobuk"
+      issue: "Появляется в середине эпизода (5809s) без представления. Всего 3 реплики за 16 сек. Возможно, подключился позже или ошибка распознавания"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 547
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Контекст разговора о дроне и скорости указывает на Ksenks. Реплики стилистически совпадают"
+
+  - type: rename
+    episode: 547
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Обе группы реплик в контексте разговоров с Ksenks, стилистически совпадают с её манерой речи"
+
+  - type: rename
+    episode: 547
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: low
+    reason: "Предположительно Ksenks по стилю речи, но уверенность низкая из-за единственной реплики"
+
+# Примечания
+notes: |
+  Эпизод 547 от 2017-05-27. В начале Umputun говорит "состав неполный" и упоминает только Ksenks и Gray.
+
+  Alek.sys появляется только для чтения рекламы V-Scale (5391-5430s) - это стандартная практика.
+
+  Bobuk появляется на 5809s (после 1.5 часов) с репликой "Я не могу придумать, зачем она нужна" про треды в Slack.
+  Всего 3 короткие реплики. Возможно подключился позже, возможно ошибка распознавания Gray или Umputun.
+  Требуется голосовая верификация для подтверждения.
+
+  Все SPEAKER_* реплики - короткие фразы (менее 3 сек), рассеянные по эпизоду.
+  По контексту все они похожи на ошибочно распознанные реплики Ksenks.

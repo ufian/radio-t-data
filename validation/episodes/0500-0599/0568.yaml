@@ -1,0 +1,118 @@
+episode: 568
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  hosts_mentioned_absent: [Bobuk]  # В начале выпуска упоминается, что "Бобук еще не пришел"
+  total_duration_sec: 8456
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 7
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (1-2 сек), разбросанные по всему эпизоду. Первые две реплики (278-280s) находятся между репликами Ksenks и явно являются фрагментами её речи. Остальные — односложные комментарии, скорее всего неправильно атрибутированные."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Первые реплики идут сразу после и перед Ksenks ('Я прочитала эту статью' -> SPEAKER_07 -> 'В общем, я прочитала эту статью')"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 9
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Три короткие реплики разбросаны по эпизоду (1756s, 2329s, 8418s). Каждая реплика связана с контекстом обсуждения и выглядит как фрагмент речи одного из ведущих, неправильно атрибутированный."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Первая реплика про 'replica set' (технический термин MongoDB) — Gray активно участвует в технических обсуждениях"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Третья реплика про новостные агрегаторы — тема, которую часто обсуждает Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2329.84
+          etime: 2333.76
+          text: "Мне кажется, это опасный терминатор."
+
+  - speaker: "Bobuk"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "В начале выпуска (66s) Gray говорит 'Бобук еще не пришел, поэтому еще не спасибо'. Однако в транскрипте есть 2 реплики Bobuk. Первая (680s) 'Ревенью составляет 101 процент' — не характерна для манеры речи Bobuk, скорее похожа на Gray. Вторая (6305s) 'А шо ж ты?' — короткая односложная реплика."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Gray в 66s: 'Нет, подожди, Бобук еще не пришел, поэтому еще не спасибо.'"
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Первая реплика (680s) идет в техническом обсуждении MongoDB, сразу после неё говорит Gray ('101 миллион')"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 680.82
+          etime: 682.38
+          text: "Ревенью составляет 101 процент."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: "В начале выпуска упоминается, что Bobuk отсутствует ('Бобук еще не пришел'), но в транскрипте есть 2 реплики с его атрибуцией. Вероятно, ошибки распознавания."
+    - speaker: "SPEAKER_07"
+      issue: "Неидентифицированный спикер с 5 репликами. Контекст указывает на ошибки атрибуции Ksenks."
+    - speaker: "SPEAKER_04"
+      issue: "Неидентифицированный спикер с 3 репликами. Вероятно, ошибки атрибуции ведущих."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 568
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Первые две реплики SPEAKER_07 явно являются фрагментами речи Ksenks, остальные требуют voice comparison"
+
+  - type: rename
+    episode: 568
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Bobuk"
+    confidence: medium
+    reason: "В начале выпуска явно сказано, что Бобук отсутствует. Реплики требуют переатрибуции."
+
+# Аудио для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast568.mp3"

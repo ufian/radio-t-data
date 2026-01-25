@@ -1,0 +1,23 @@
+episode: 513
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  total_duration_sec: 7075  # 3285 + 2104 + 1686
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Gray отсутствует в выпуске, что явно упоминается в начале ('суженый на одного Грея')"
+    - "Bobuk подключается удаленно из Екатеринбурга (конференция Front Talk)"
+    - "Ksenks опоздала на 2-3 минуты, что обсуждается в начале"
+
+# Предлагаемые правила очистки
+suggested_rules: []

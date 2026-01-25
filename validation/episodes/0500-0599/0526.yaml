@@ -1,0 +1,75 @@
+episode: 526
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  total_duration_sec: 7282
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 0.06
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Односложная реакция 'Угу' (0.06 сек) между репликами Umputun. Типичная ошибка распознавания короткого подтверждения от Ksenks."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.9
+          reason: "Единственный другой ведущий в выпуске, короткое подтверждение в диалоге"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Три короткие реплики (по ~2 сек) разбросаны по всему выпуску (299s, 6282s, 7488s). Все являются вставками в диалог двух ведущих. Третья реплика (7488s) повторяет слово 'Процесс', которое только что сказала Ksenks, что указывает на ошибку сегментации речи."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.85
+          reason: "Единственный другой участник выпуска. Реплики вставлены между речью ведущих, характерно для ошибок распознавания."
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 526
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Односложная реакция 'Угу' в диалоге с Umputun, Ksenks единственный второй участник"
+
+  - type: rename
+    episode: 526
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Три короткие реплики разбросаны по выпуску, вставлены в диалог ведущих. Третья реплика дублирует слово Ksenks ('Процесс'). В выпуске только Umputun и Ksenks."

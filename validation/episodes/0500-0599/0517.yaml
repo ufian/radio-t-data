@@ -1,0 +1,74 @@
+episode: 517
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [Guest]
+  total_duration_sec: 8302  # Based on final timestamp
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 456
+    replies_count: 75
+    pattern: consecutive  # Actively participates throughout the episode
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Not in people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Guest introduces himself at 35.89s: "Всем привет, меня зовут Дима"
+        2. Umputun confirms at 8233.43s: "Вместо Ксюши был Дмитрий, который молчал примерно, как Ксюша молчит в свои худшие дни"
+        3. Active participation in technical discussions (Python typing, VMware, Siri)
+
+      # Гость идентифицирован как Дмитрий, но его нет в people.yaml
+      guest_name: "Дмитрий"
+      guest_nickname: "Дима"
+
+      possible_matches: []
+
+      # Задание на voice comparison (для добавления в people.yaml)
+      voice_task:
+        needed: true
+        reason: "Guest identified as Dmitry but not in people.yaml. Need to verify identity for future episodes."
+        reference_segment:
+          stime: 3820.42
+          etime: 3847.02
+          text: "Я попробую защитить это, потому что мне сама идея очень нравится, я активно ее навязываю окружающим меня людям, потому что юнит-тесты прекрасны, но юнит-тесты в сочетании с явным указанием типов спасают от еще большего количества ошибок..."
+        alternative_segment:
+          stime: 3847.77
+          etime: 3870.63
+          text: "И это такой способ держать себя и окружающих в тонусе, особенно если это какая-то библиотека, API, которую ты даешь другим людям..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Guest introduced himself as Дима at the beginning"
+    - "Umputun confirmed guest name as Дмитрий at the end"
+  issues:
+    - speaker: "Guest"
+      issue: "At 112.78s Umputun addresses guest as 'Костя' but guest introduced as 'Дима' - likely a slip of tongue or transcription error"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 517
+    from_speaker: "Guest"
+    to_speaker: "Dmitry"  # Temporary ID until full identity confirmed
+    confidence: high
+    reason: "Guest explicitly introduced as Дима, confirmed as Дмитрий at episode end"
+
+# Дополнительные заметки
+notes:
+  - "This episode had a guest replacing Ksenks"
+  - "Guest is technically knowledgeable (discusses Python typing, VMware, ML at Microsoft)"
+  - "Need to add Дмитрий to people.yaml if he appears in other episodes"
+  - "Audio URL for verification: https://cdn.radio-t.com/rt_podcast517.mp3"

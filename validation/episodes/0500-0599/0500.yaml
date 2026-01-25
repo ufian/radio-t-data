@@ -1,0 +1,130 @@
+episode: 500
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6979  # примерно 2h
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная короткая реплика (1.5 сек) между репликами Umputun и Bobuk. Фраза 'Он молчит просто.' — типичная ошибка распознавания голоса одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Реплика следует сразу после реплик Umputun, контекст обсуждения Бобука"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Может быть комментарий Ksenks"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Две коротких последовательных реплики (~4 сек) вставлены после речи Ksenks. Фразы 'Я помню этот момент, да.' и 'Подкаст меняет людей.' — контекстуально продолжают мысль Ksenks о том, как подкаст меняет людей."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Реплики следуют сразу после Ksenks и продолжают её мысль о подкасте"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Следующая реплика принадлежит Gray, возможно ошибка атрибуции"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 16
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "6 коротких реплик разбросаны по эпизоду (4315s-7204s), каждая 1-4 сек. Все вставлены между репликами ведущих. Типичные фразы-перебивки: 'Народ начал покупать из расчета', 'Майкрософт упал сразу', 'Я, честно, не смотрел' — это ошибки распознавания голосов ведущих, не реальный гость Эльдар Муртазин."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Несколько реплик вставлены рядом с репликами Bobuk, тематика обсуждения акций/Microsoft"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть неправильно распознанным голосом Umputun"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Реплика про LG Search следует после Gray"
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Очень мало реплик (7) и времени (12 сек) для ведущего. Возможно, технические проблемы или поздний приход на эфир."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 500
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: "Короткая реплика между репликами Umputun, контекстуально продолжает его мысль о Бобуке"
+
+  - type: rename
+    episode: 500
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Две реплики следуют за Ksenks и продолжают её мысль о подкасте"
+
+  - type: rename
+    episode: 500
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "NEEDS_MANUAL_REVIEW"
+    confidence: low
+    reason: "6 разрозненных реплик между разными ведущими. Требуется ручная проверка каждой реплики для определения правильного спикера. Скорее всего это смесь Bobuk/Umputun/Gray."
+
+# Примечания
+notes: |
+  Эпизод 500 - юбилейный выпуск от 2016-06-18.
+  Все 5 ведущих присутствуют (Umputun, Bobuk, Gray, Ksenks, Alek.sys).
+
+  SPEAKER_MISATTRIBUTED_* спикеры появились в результате ошибочного присвоения
+  реплик в процессе очистки. Это НЕ реальные гости (Petr Didenko, Marin, Eldar Murtazin),
+  а ошибки распознавания голосов основных ведущих.
+
+  Alek.sys имеет подозрительно мало реплик (7 штук, 12 сек) - возможно, был
+  технический сбой или он присоединился позже и мало говорил.

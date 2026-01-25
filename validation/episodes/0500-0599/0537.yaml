@@ -1,0 +1,64 @@
+episode: 537
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8519  # ~2.36 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (1-2 сек каждая), разбросаны по эпизоду в случайных местах. Все реплики - обычные фразы ведущих в контексте диалога: 'С енотами бобук?', 'Просто журнал Мурзилка был для взрослых', 'Слушай, начинай', 'Тем более...'. Явные ошибки атрибуции ASR."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики (2-4 сек), разбросаны по эпизоду: 'Они сказали, мы с вами свяжемся' (2749s) и 'Вот вопрос' (8024s). Контекстно вписываются в диалог ведущих, ошибки ASR."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Umputun в начале эпизода (9-20s) говорит: "состав полный, все-все пришли".
+    Присутствуют все 5 основных ведущих: Umputun, Bobuk, Gray, Ksenks, Alek.sys.
+    Alek.sys появляется с ~2170s, что нормально - он может подключиться позже.
+    Никаких гостей в этом эпизоде не анонсировано.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Не предлагаем правила, так как SPEAKER_01 и SPEAKER_02 - это случайные ошибки ASR,
+# а не систематически неправильно распознанный ведущий.
+# Их можно было бы удалить, но это не критично (всего 6 реплик, 13 сек).

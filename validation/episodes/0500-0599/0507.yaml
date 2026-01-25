@@ -1,0 +1,95 @@
+episode: 507
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks]
+  total_duration_sec: 6744  # Umputun 4071 + Ksenks 1744 + Guest 929
+  notes: |
+    Выпуск вдвоём - Umputun и Ksenks. В начале Umputun говорит: "Состав половины, но качественный.
+    Во-первых, лучшая четвертина с нами. Во-вторых, один из отсутствующих отцов вернулся."
+    Гость Руслан приглашён обсудить Kotlin 1.1.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 929
+    replies_count: 198
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ruslan_unknown"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun прямо называет гостя по имени:
+        - 147.92s: "Руслан?"
+        - 150.18s: "Руслан, не молчи."
+        - 294.04s: "Руслан, давай, с твоей точки зрения, что за Kotlin такой"
+
+        Гость подтверждает, что был на подкасте раньше:
+        - 173.31s: "Уже был один раз."
+        - 175.06s: "Уже опытный подкастер."
+
+        Это тот же Руслан что в эпизодах 505 и 506 - "проповедник Котлина" из Беларуси.
+        В эпизоде 506 он представлялся как "маркетолог Котлина" (1417s).
+        Активно обсуждает Kotlin, coroutines, async/await, Ceylon, Spring.
+
+      possible_matches:
+        - person_id: "ruslan_unknown"
+          confidence: 0.95
+          reason: |
+            Явное обращение по имени от Umputun. Тот же человек что в 505/506.
+            Специализация: Kotlin, JVM языки. Из Беларуси.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 964.25
+          etime: 984.38
+          text: "То есть изначально были зарезервированы async await, ну то есть да, надо сказать, что коррутины это в том числе тут async await, такой набор функций, такой набор кейвордов, скажем, в данном случае это просто две функции, которые подсказывают компилятору в данном случае, где надо приостановить программу,"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Guest"
+      issue: |
+        Гость идентифицирован как Руслан по имени, но фамилия неизвестна.
+        Это тот же человек из эпизодов 505 и 506. Нужен voice comparison для
+        подтверждения и поиск фамилии через митапы Kotlin в YouTube.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 507
+    from_speaker: "Guest"
+    to_speaker: "Ruslan"
+    confidence: high
+    reason: |
+      Umputun прямо обращается к гостю по имени "Руслан" трижды (147s, 150s, 294s).
+      Гость говорит что "уже был один раз" - соответствует присутствию в 505/506.
+
+# Примечания для дальнейшей работы
+notes: |
+  1. Guest - это Руслан, тот же человек что в эпизодах 505 и 506.
+     В 506 он называл себя "проповедником Котлина" и "маркетологом Котлина".
+
+  2. Руслан из Беларуси (в 506 упоминал "В Беларуси, например, нормальная практика").
+
+  3. Специализируется на Kotlin, хорошо знает Java/JVM экосистему.
+     Обсуждает Ceylon, Spring, coroutines, async/await.
+
+  4. Для полной идентификации (нахождения фамилии) рекомендуется:
+     - Поиск Kotlin митапов в Беларуси 2015-2016 на YouTube
+     - Voice comparison с эпизодами 505 и 506
+
+  5. Первая тема выпуска - "Беглый взгляд на Kotlin 1.1" (00:01:47),
+     Руслан приглашён как эксперт по Kotlin.
+
+# Аудио для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast507.mp3"

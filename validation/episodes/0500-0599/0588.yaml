@@ -1,0 +1,112 @@
+episode: 588
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  hosts_absent: [Gray]
+  total_duration_sec: 8310
+  notes: "В начале выпуска Umputun говорит: 'Бобук с Ксюшей и Лехой прямо сейчас зажгут' - Gray отсутствует"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 10
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Все 4 реплики являются ошибками распознавания спикера - короткие фразы, разбросанные по эпизоду"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+    # Детальный анализ каждой реплики
+    detailed_analysis:
+      - stime: 4199.57
+        etime: 4199.59
+        text: "И Request."
+        duration_sec: 0.02
+        verdict: "error"
+        reason: "Микро-реплика (0.02 сек) в контексте обсуждения Segregation/Request, артефакт распознавания"
+        likely_speaker: "Umputun"
+        context: "Umputun обсуждает Segregation, затем идёт SPEAKER_99 с 'Common Query Request'"
+
+      - stime: 6504.02
+        etime: 6506.08
+        text: "Мы любим опишечки, знаете ли."
+        duration_sec: 2.06
+        verdict: "error"
+        reason: "Часть рекламной вставки V-Scale, которую читает Alek.sys"
+        likely_speaker: "Alek.sys"
+        context: "Между двумя репликами Alek.sys в рекламном блоке"
+
+      - stime: 6513.48
+        etime: 6519.11
+        text: "Ведь у нас почасовая оплата."
+        duration_sec: 5.63
+        verdict: "error"
+        reason: "Продолжение рекламной вставки V-Scale, тот же блок"
+        likely_speaker: "Alek.sys"
+        context: "Сразу после реплики Alek.sys о промокоде RADIOT250"
+
+      - stime: 7952.48
+        etime: 7954.72
+        text: "В одном лямбду."
+        duration_sec: 2.24
+        verdict: "error"
+        reason: "Короткая реплика в диалоге о лямбда-функциях, Bobuk сразу подтверждает"
+        likely_speaker: "Bobuk"
+        context: "Umputun: 'Куда дальше копать?' -> 'В одном лямбду' -> Bobuk: 'Да, да'"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: "Все участники представлены в начале выпуска. Gray отсутствует, что подтверждено вступлением Umputun."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 588
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Alek.sys"
+    stime: 6504.02
+    etime: 6506.08
+    confidence: high
+    reason: "Часть рекламного блока V-Scale, который читает Alek.sys"
+
+  - type: rename
+    episode: 588
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Alek.sys"
+    stime: 6513.48
+    etime: 6519.11
+    confidence: high
+    reason: "Продолжение рекламного блока V-Scale"
+
+  - type: rename
+    episode: 588
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Bobuk"
+    stime: 7952.48
+    etime: 7954.72
+    confidence: medium
+    reason: "Контекст диалога о лямбдах, Bobuk продолжает мысль сразу после"
+
+  - type: delete_or_merge
+    episode: 588
+    from_speaker: "SPEAKER_00"
+    stime: 4199.57
+    etime: 4199.59
+    confidence: high
+    reason: "Микро-артефакт длительностью 0.02 сек, можно удалить или слить с соседней репликой Umputun"

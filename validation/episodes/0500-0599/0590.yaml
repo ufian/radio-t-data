@@ -1,0 +1,139 @@
+episode: 590
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8673  # ~2.4 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1514
+    replies_count: 287
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        В начале эпизода (16-29s) Umputun представляет: "Состав полный плюс один. В виде плюс один Леша зашел. Не тот Леша, а тот Леша."
+        Bobuk уточняет: "Это Зе Леша. Да Леша."
+        На 156-177s: "мы тут давно не собирались поговорить с Лешей на любимые темы... ему гость нужен. Гость пришел, новая Java здесь, Java 10."
+        Гость называется "Леша" (не Alek.sys, т.к. Alek.sys присутствует отдельно).
+        На 1700s SPEAKER_03 упоминает "Леша Шепелев крутится в своей кровати" - говорит о третьем лице.
+        Гость - Java-эксперт, обсуждает LTS, JDK, Graal, var в Java 10.
+
+      possible_matches:
+        - person_id: "new_guest_lesha_java"
+          confidence: 0.8
+          reason: "Явно представлен как 'Леша' - гость по теме Java. Не Alek.sys (тот участвует отдельно). Не Леша Шепелев (о нём говорит в третьем лице). Требует добавления в people.yaml."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1700.41
+          etime: 1742.72
+          text: "Сейчас, конечно, Леша Шепелев крутится в своей кровати под одеялом, но чисто технически вот этот хатспот, который был реализован, он был реализован на C++ с различными оптимизациями для различных платформ. То есть что-то такое генерится на SME для каких-то там ARM, для x86 и тому подобное. Агроаль — это как раз реализация на языке более высокого уровня, чтобы на Java вот этот garbage collector без всяких таких вставок машинного кода, чтобы его можно быстро переносить между платформами."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 7
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        4 короткие реплики разбросаны по эпизоду:
+        - 627.8s: "Синтексисно как выглядит." (вопрос в контексте обсуждения var)
+        - 681.6s: "Да, да, да."
+        - 2317.7s: "Речь идет о 40 миллионах долларов, если я правильно помню, да?" (про Lytro)
+        - 9571.5s: "Окей."
+        Это ошибка автоматической разметки - реплики принадлежат разным спикерам (скорее всего SPEAKER_03 или кому-то из ведущих).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика на 2194.8s: "Не-не-не, ну ГЦ понятно." - короткая реакция на SPEAKER_03.
+        Вероятно ошибочная атрибуция одного из ведущих или SPEAKER_03.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика на 5172.4s: "Молодцы, молодцы." - короткая реакция сразу после Ksenks.
+        Ошибка разметки, вероятно принадлежит одному из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: "Гость представлен как 'Леша' в начале, но полное имя/фамилия не названы. Нужна идентификация по голосу или внешним источникам."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 590
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Guest_Lesha_Java"
+    confidence: medium
+    reason: "Гость явно представлен как 'Леша', эксперт по Java. Требуется voice comparison для точной идентификации личности. Временное имя до идентификации."
+
+# Метаданные эпизода
+episode_metadata:
+  date: "2018-03-24"
+  audio_url: "https://cdn.radio-t.com/rt_podcast590.mp3"
+  main_topics:
+    - "Java 10"
+    - "Graal и Truffle"
+    - "Google покупает Lytro"
+    - "Facebook скандал"

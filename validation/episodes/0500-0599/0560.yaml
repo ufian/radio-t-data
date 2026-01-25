@@ -1,0 +1,63 @@
+episode: 560
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  total_duration_sec: 6953  # ~1h56m (Umputun 2670 + Bobuk 2676 + Ksenks 1562 + Alek.sys 45)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 4
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие односложные реплики ('Как?', 'Так прикольно', 'Ну,') разбросанные по эпизоду. Типичная ошибка распознавания коротких реакций ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две очень короткие реплики ('Код-ревью!' в 3293s, 'Я не уверен.' в 7663s) вставленные в монолог Umputun. Ошибка распознавания коротких вставок."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Не представлен в начале эпизода. Первое появление в 1594s (26 мин) внезапно среди диалога других ведущих. Очень малое участие (11 реплик, 45 сек) может указывать на ошибку распознавания или позднее подключение."
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: SPEAKER_03 и SPEAKER_07 — ошибки распознавания, но их реплики слишком короткие
+# и разбросанные, чтобы надежно определить кому они принадлежат. Рекомендуется оставить как есть
+# или удалить при финальной чистке.

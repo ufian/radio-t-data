@@ -1,0 +1,170 @@
+episode: 532
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 10617
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1563
+    replies_count: 245
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        Umputun представляет гостя в начале: "И даже на огонек зашел Леха. Леха, здравствуй." (19.6s-22.7s)
+        SPEAKER_06 отвечает: "Всем привет." (23.6s)
+        Обращения к нему: "Я Леху спрашиваю" (158s), "Гиковский выпуск, Алексей" (159.9s)
+        В конце: "Алексей, спасибо, что зашел, помог мне Ксюшу ставить на место" (11412.4s)
+        Гость упоминает домашку по физике: "мы домашку делаем, и у нас как раз сейчас физика проходит" (170.9s)
+
+      # Это явно гость "Леха/Алексей", но кто именно - неизвестно
+      possible_matches:
+        - person_id: "unknown_leha_532"
+          confidence: 0.9
+          reason: "Явное представление как 'Леха', активное участие в дискуссии о микросервисах и архитектуре"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7323.1
+          etime: 7347.8
+          text: "И в результате это спускалось разработчикам, которые смотрели на это и понимали, что это такая шиза..."
+        audio_url: "https://cdn.radio-t.com/rt_podcast532.mp3"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие реплики (4.2s и 0.5s) в контексте где говорят другие ведущие.
+        Реплика "Подожди, на мобильном это какая-то библиотека" (8218.8s) следует за Ksenks.
+        Реплика "Что?" (8288.9s) - после того как Ksenks говорит "Алексей, я еще раз повторяю".
+        Вероятно, это SPEAKER_06 (Леха), ошибочно размеченный как PETR.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "SPEAKER_06"
+          confidence: 0.8
+          reason: "Ksenks обращается 'Алексей' перед репликой, а SPEAKER_06 - это Леха/Алексей"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики (0.8s и 2.6s) в разных частях эпизода.
+        "Ну, я не знаю." (4564.8s) - в контексте диалога Bobuk/Umputun о книге.
+        "А, это хакеры, что ли?" (10800.1s) - реакция на разговор о микродозинге ЛСД.
+        Скорее всего это один из ведущих (Bobuk или Umputun), ошибочно размеченный.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Первая реплика идет сразу после Bobuk, может быть его продолжение"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Вторая реплика - характерная реакция"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна короткая реплика (2.5s) "Давай, примеры жизни." (6771.7s)
+        Следует за репликой Ksenks о библиотеках.
+        Скорее всего это SPEAKER_06 (Леха) - сразу после него идет реплика SPEAKER_06.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "SPEAKER_06"
+          confidence: 0.7
+          reason: "Сразу после этой реплики идет SPEAKER_06 с шуткой о мобильных разработчиках"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_06"
+      issue: |
+        Гость представлен только как "Леха", без полного имени или фамилии.
+        Невозможно определить кто это без дополнительного контекста.
+        Нужно сравнение голоса с известными гостями или поиск информации в других источниках.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 532
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "SPEAKER_06"
+    confidence: medium
+    reason: "Ksenks обращается 'Алексей' перед репликой, SPEAKER_06 = Леха/Алексей"
+
+  - type: rename
+    episode: 532
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "SPEAKER_06"
+    confidence: medium
+    reason: "Контекст указывает на того же спикера - сразу следует реплика SPEAKER_06"
+
+  - type: rename
+    episode: 532
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: low
+    reason: "Предположение на основе контекста, требует voice comparison"
+
+# Дополнительные заметки
+notes: |
+  1. SPEAKER_06 - это гость "Леха/Алексей", активно участвовал в дискуссии.
+     Это НЕ Alek.sys (который также присутствует с 21 репликой).
+  2. Гость технически подкован, обсуждает микросервисы, архитектуру, ReactJS.
+  3. Упоминает что делает домашку по физике - возможно контекст о его детях.
+  4. Для идентификации нужен voice comparison с базой известных гостей.
+  5. Возможно стоит проверить соседние выпуски (531, 533) на наличие того же гостя.

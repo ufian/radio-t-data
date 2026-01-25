@@ -1,0 +1,56 @@
+episode: 552
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7070
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Две очень короткие реплики (0.06 и 0.5 сек) в случайные моменты эпизода.
+        Первая реплика "Зум." (6802.58s) - эхо реплики Umputun "Зум?" (6802.32s).
+        Вторая реплика "Угу." (7030.0s) - междометие между репликами Bobuk.
+        Типичные ошибки автоматического распознавания спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Не представлен в начале эпизода. Его реплики начинаются с 538 сек
+        (12 реплик, 47 сек). Однако это известный ведущий, его присутствие
+        подтверждается контекстом: читает рекламу Вискейл (5195-5227 сек),
+        участвует в обсуждении технических тем. Вероятно, присоединился позже
+        или просто не был явно представлен.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: >
+  Эпизод 552 от 2017-07-01, посвящён 10-летию iPhone.
+  Полный состав ведущих (5 человек). SPEAKER_06 - явные ошибки распознавания,
+  не требуют voice comparison. Эпизод чистый.

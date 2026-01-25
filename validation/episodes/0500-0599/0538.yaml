@@ -1,0 +1,124 @@
+episode: 538
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6737
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 146
+    replies_count: 20
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Гость по имени Антон - слушатель, который позвонил в эфир обсудить Swagger.
+        Представлен в начале: "На огонек обещал зайти гость... расскажет впечатление от живого человека, который использует свагер в жизни" (16-25s).
+        Прямые обращения по имени:
+        - "Антон, это не ты ли тот вот этот злодей..." (3029s)
+        - "Антон, когда же он на самом деле нужен?" (3782s)
+        - "Как у Антона работает" (4171s)
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reason: "Гость идентифицирован как 'Антон', но полного имени нет. Нужен voice comparison для связи с people.yaml если это повторяющийся гость."
+        reference_segment:
+          stime: 4210.06
+          etime: 4231.18
+          text: "Ну, я же говорил, флагер нужен для введения документации, причем действительно кто-то там в чате писал, что она еще интерактивная, можно попробовать прямо эти API-методы повзывать, ну и плюс удобная библиотека, которая генерируется автоматически для Swift, для Android, для .NET и для Unity."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткая реплика (1.5 сек) между Umputun и Ksenks. Контекст: обсуждение GitLab. Фраза 'Нет, прям как-то страшно' - типичная реакция ведущего на обсуждаемую тему. Вероятно ошибочно приписана Марине вместо одного из присутствующих ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Следующая реплика принадлежит Ksenks, возможно это её реакция"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray присутствует в эпизоде, может быть его репликой"
+
+      voice_task:
+        needed: false
+        reason: "Слишком короткий сегмент (1.5 сек) для voice comparison"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Реплика 'Давайте посмотрим на тему наших слушателей' (6375s) сразу после реплики Bobuk 'Давайте посмотрим' (6374s). Это продолжение мысли - вероятно один спикер. Эльдар Муртазин не был представлен в этом выпуске."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.7
+          reason: "Предыдущая реплика Bobuk 'Давайте посмотрим' - это начало той же фразы"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Umputun часто ведет секцию 'темы слушателей'"
+
+      voice_task:
+        needed: false
+        reason: "Короткий сегмент (3 сек), контекст явно указывает на ошибку атрибуции"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Очень мало реплик (7 реплик, 13 сек) - возможно частично ошибочная атрибуция или минимальное участие"
+    - speaker: "SPEAKER_01"
+      issue: "Гость представлен как 'Антон', но фамилия неизвестна. Нужно добавить в people.yaml если определится полное имя"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 538
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Anton_Swagger_Guest"
+    confidence: high
+    reason: "Гость явно идентифицирован как Антон - слушатель, обсуждающий Swagger. Временное имя до выяснения фамилии."
+
+  - type: rename
+    episode: 538
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Продолжение фразы Bobuk 'Давайте посмотрим' -> 'на тему наших слушателей'. Одна фраза разбита на две реплики."
+
+  - type: rename
+    episode: 538
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: low
+    reason: "Вероятно реплика Ksenks (следующий спикер), но уверенность низкая - требует voice comparison или ручной проверки."

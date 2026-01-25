@@ -1,0 +1,46 @@
+episode: 509
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+  total_duration_sec: 9146
+
+# Детальная статистика по ведущим
+hosts_stats:
+  - speaker: Bobuk
+    replies_count: 832
+    total_duration_sec: 3280
+    first_appearance_sec: 34
+  - speaker: Umputun
+    replies_count: 983
+    total_duration_sec: 3104
+    first_appearance_sec: 3
+  - speaker: Gray
+    replies_count: 313
+    total_duration_sec: 1306
+    first_appearance_sec: 27
+  - speaker: Ksenks
+    replies_count: 124
+    total_duration_sec: 483
+    first_appearance_sec: 1324
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun в начале упоминает 'состав полон, дополнен бобуком' - Bobuk, Gray присутствуют с начала"
+    - "Ksenks появляется позже (22 мин) - Umputun обращается к ней 'Ксюша, ты вернулась?' и она отвечает"
+    - "Все спикеры являются известными ведущими, гостей в этом выпуске нет"
+
+# Предлагаемые правила очистки
+suggested_rules: []

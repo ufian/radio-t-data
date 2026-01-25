@@ -1,0 +1,64 @@
+episode: 572
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  total_duration_sec: 7650
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная короткая реактивная фраза 'Красота.' (1 сек) между репликами Umputun. Типичная ошибка распознавания - вероятно это реплика одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 11
+    replies_count: 4
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Все 4 реплики находятся внутри рекламного блока VScale (3826-3868s), чередуясь с репликами Alek.sys. Содержание - продолжение рекламного текста ('Мы сами им пользуемся', 'для автоматизации управления', 'Мы любим опишечки', 'Ведь у нас почасовая оплата'). Это ошибка сегментации - реклама читается одним человеком (Alek.sys)."
+
+      identified_as: "alek_sys"
+      identification_method: "context"
+      confidence: high
+      evidence: "Реплики SPEAKER_02 являются частью единого рекламного текста VScale, который начинает читать Alek.sys в 3826s. Фразы логически продолжают друг друга и составляют стандартную рекламную интеграцию."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 572
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Alek.sys"
+    confidence: high
+    reason: "Реплики являются частью рекламного блока VScale, который читает Alek.sys"

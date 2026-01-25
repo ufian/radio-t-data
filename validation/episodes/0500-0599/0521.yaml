@@ -1,0 +1,178 @@
+episode: 521
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9991
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1621
+    replies_count: 344
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Гость был явно представлен в начале подкаста
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале подкаста (32-44s) Umputun говорит: 'Вместо выбывшего Бобукова пришел Алексей из Дружественного. Ты все еще из Дружественного подкаста или ты прогнал?' SPEAKER_02 отвечает: 'Я стараюсь. Там уже от нас отпочковываются уже другие подкасты.'"
+
+      # Не удалось найти этого гостя в справочнике
+      possible_matches:
+        - person_id: "devzen_alexey"
+          confidence: 0.3
+          reason: "Упоминает 'Дружественный подкаст', возможно связь с DevZen или другим русскоязычным IT-подкастом 2016 года"
+
+      # Нужно добавить в справочник
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 87.89
+          etime: 96.76
+          text: "Ну, ты же тоже учился в советской школе, там проходили по биологии всякие гидры, размножаются пачкованием туда-сюда."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная короткая реплика (2 сек) в середине разговора Umputun о пул-реквестах. Скорее всего ошибка распознавания - кто-то из ведущих вставил комментарий."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Контекст разговора - Umputun говорит о пиарах/пул-реквестах, кто-то поправляет 'Пул реквесты'"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Типичная поправка от ведущего"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Три коротких реплики в разных местах подкаста: 'Поздравляю ГОУ!' (1 сек), 'Где я храню все это дерево?' (2 сек), 'Пока.' (0.2 сек). Все похожи на ошибки распознавания ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Первая реплика 'Поздравляю ГОУ!' идет сразу после слов Umputun 'Я думаю, у Ксюши есть что по этому поводу сказать'. Вторая про дерево - продолжение разговора Ksenks о persistent деревьях. Третья 'Пока' - прощание."
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная короткая реплика (1.5 сек) в середине разговора Ksenks про ленивость. Контекст показывает продолжение мысли Ksenks ('Но он же, может быть, не скалиброван'). Это ошибка распознавания."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Ksenks говорит: 'То есть, может быть, Умпутун уже скалибровал свой уровень ленивости...' затем SPEAKER_MISATTRIBUTED_MARIN: 'Но он же, может быть, не скалиброван.' - это явное продолжение той же мысли тем же спикером."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики: 'Со вторника, если я не ошибаюсь' (1.7 сек) и 'Женя, ты успел починить ролик?' (2.2 сек). Обе реплики типичны для ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Первая реплика о блокировке LinkedIn вставлена между репликами Gray. Вторая реплика идет после слов Bobuk 'Ну что, заканчиваем?' и обращается к Жене (Umputun) - типичная речь ведущего."
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Обе реплики близки к контексту Gray, возможно ошибка разметки"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_02"
+      issue: "Гость представлен как 'Алексей из Дружественного подкаста', но не найден в справочнике people.yaml. Требуется идентификация и добавление в справочник."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 521
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Контекст однозначно указывает на продолжение мысли Ksenks про скалиброванность ленивости"
+
+  - type: rename
+    episode: 521
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Две из трех реплик явно принадлежат Ksenks по контексту (про ГОУ после прямого обращения к ней, про дерево в её разговоре). Третья 'Пока' - прощание."
+
+  - type: rename
+    episode: 521
+    from_speaker: "SPEAKER_02"
+    to_speaker: "AlexeyDruzhestvennyPodcast"
+    confidence: high
+    reason: "Гость явно представлен как 'Алексей из Дружественного подкаста'. Требуется добавление в people.yaml."
+
+  - type: delete_or_merge
+    episode: 521
+    from_speaker: "SPEAKER_06"
+    to_speaker: null
+    confidence: low
+    reason: "Одиночная короткая реплика 'Пул реквесты' - скорее всего ошибка распознавания. Требуется прослушивание для определения реального спикера."
+
+  - type: investigate
+    episode: 521
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: null
+    confidence: low
+    reason: "Две реплики требуют прослушивания. Возможно Bobuk или Gray. Не рекомендуется автоматическое переименование."

@@ -1,0 +1,23 @@
+episode: 580
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray]
+  total_duration_sec: 8833.7
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Umputun в начале эпизода (4s): "состав полный, все как обычно" -
+    подтверждает присутствие всех четырёх ведущих без гостей.
+    Все четыре ведущих (Umputun, Bobuk, Ksenks, Gray) присутствуют в транскрипте.
+
+# Предлагаемые правила очистки
+suggested_rules: []

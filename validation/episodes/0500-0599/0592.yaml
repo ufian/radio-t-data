@@ -1,0 +1,39 @@
+episode: 592
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+    - Ksenks
+  total_duration_sec: 8630
+  episode_duration_sec: 9558
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Примечание: SPEAKER_99 (5 реплик) - артефакты транскрипции, игнорируются по инструкции
+# Содержимое SPEAKER_99: "77.88.8.8", "Да", "ARIENDB", "5005", "98%" - технические/числовые данные
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - speaker: Ksenks
+      note: "Объявлено в начале эпизода что задерживается из-за проблем с машиной. Появляется на ~3651 сек (~1:00:51)"
+    - speaker: Umputun
+      note: "Ведущий, первая реплика на 2 сек"
+    - speaker: Gray
+      note: "Первая реплика на 22 сек"
+    - speaker: Bobuk
+      note: "Первая реплика на 52 сек, упомянут по имени ведущим"
+    - speaker: Alek.sys
+      note: "Первая реплика на 72 сек"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Эпизод чистый, все спикеры идентифицированы корректно

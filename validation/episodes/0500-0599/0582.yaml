@@ -1,0 +1,52 @@
+episode: 582
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys]
+  guests_present: [Anya]
+  total_duration_sec: 8285  # 3402 + 3439 + 936 + 508
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Anya"
+    total_duration_sec: 508
+    replies_count: 139
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Явное представление в начале эпизода (38.71s): "И Аня, которая второй раз"
+        2. Прямое обращение по имени (327.27s): "Аня никогда про Хетцнера этот не слышала"
+        3. Ответ гостя (331.03s): "Ой, конечно, слышала"
+        4. В справочнике people.yaml есть запись id="anya" с info="13 выпусков"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод чистый. Единственный неизвестный спикер "Anya" - это известный гость из справочника.
+  Представлен в начале эпизода как "Аня, которая второй раз".
+  Участники эпизода: Umputun, Bobuk, Alek.sys (ведущие) + Anya (гость).
+  Отсутствуют: Gray, Ksenks.

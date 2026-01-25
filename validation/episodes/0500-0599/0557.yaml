@@ -1,0 +1,93 @@
+episode: 557
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  guests_present: [Valentin]
+  total_duration_sec: 8872
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1026
+    replies_count: 242
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "2867.9s: 'Зовут меня Валентин... Я уже 8 лет пишу на Руби на рельсах и являюсь лидером минского Руби-сообщества нашего'"
+
+      # Гость представился только по имени, фамилия не упоминалась
+      possible_matches: []
+
+      # Задание на voice comparison не нужно - гость идентифицирован по имени
+      voice_task:
+        needed: true
+        reason: "Фамилия гостя неизвестна, нужно найти в архивах минского Ruby-сообщества"
+        reference_segment:
+          stime: 4371.1
+          etime: 4389.7
+          text: "Я скорее говорю про то, что если ты учишься в университете на первом курсе и ты выбираешь технологию, то для того, чтобы найти работу, тебе будет гораздо легче выучить какой-нибудь Node.js экспресс, чем учить Ruby в рельсе, потому что последние гораздо сложнее в изучении, чем первая технология."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 12
+    replies_count: 5
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Рекламный блок Тинькофф, чередуется с _ad. Должен быть размечен как _ad"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "5930.5s: 'Спонсор этого выпуска - Банк Тинькофф' - начало рекламного блока"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка Alek.sys (не в unknown_speakers, т.к. это известный ведущий)
+alek_sys_note:
+  description: "Alek.sys присутствует только в записанной рекламе VScale (6574-6615s)"
+  is_live_participation: false
+  action: "Корректно - это записанная реклама голосом ведущего"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Присутствует только в записанной рекламе VScale, не участвовал в живом обсуждении"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 557
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Valentin"
+    confidence: high
+    reason: "Гость представился: 'Зовут меня Валентин... лидер минского Руби-сообщества'"
+
+  - type: rename
+    episode: 557
+    from_speaker: "SPEAKER_04"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Рекламный блок Тинькофф, чередуется с другими _ad сегментами"
+
+# Информация о госте для добавления в people.yaml
+new_guest:
+  id: "valentin_minsk_ruby"
+  canonical_name: "Valentin"
+  aliases: []
+  real_name: "Валентин"  # фамилия неизвестна
+  info: "Лидер минского Ruby-сообщества, 8 лет опыта Ruby/Rails. Выпуск 557."

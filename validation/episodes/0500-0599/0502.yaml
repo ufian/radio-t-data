@@ -1,0 +1,146 @@
+episode: 502
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  hosts_mentioned_but_absent: [Ksenks]
+  total_duration_sec: 6500  # примерно 1:48:20
+
+# Примечание из начала эпизода
+episode_intro_note: |
+  "В суровом мужском составе наша прекрасная четвертина отсутствует.
+  Зато два менее прекрасных, но тоже пойдут на безрыбье.
+  Бубука и Грея тут вместе с нами."
+  - Ksenks явно отсутствует
+  - Alek.sys НЕ упоминается в начале
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 10
+    replies_count: 4
+    pattern: scattered
+    timestamps:
+      - stime: 2692.4
+        etime: 2693.02
+        text: "Ну, почему нет?"
+      - stime: 5024.43
+        etime: 5029.77
+        text: "В темах слушателей есть в самом начале очень неплохая такая темка."
+      - stime: 5914.5
+        etime: 5915.9
+        text: "Слушай, а кто-то ещё, по-моему, был, нет?"
+      - stime: 6062.13
+        etime: 6064.69
+        text: "У меня то же самое было."
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Спикер уже помечен как MISATTRIBUTED_ELDAR - это означает, что ранее
+        его ошибочно атрибутировали Эльдару Муртазину, но это было отменено.
+        4 коротких разрозненных реплики (10 сек суммарно) по всему эпизоду.
+        Эльдар НЕ упоминается в начале эпизода как гость.
+        Скорее всего это ошибки распознавания одного из ведущих (Umputun, Bobuk или Gray).
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Контекст реплик похож на стиль Bobuk. Первая реплика в диалоге с Umputun про докерхаб."
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray участвует в эпизоде, мог быть неправильно распознан"
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5024.43
+          etime: 5029.77
+          text: "В темах слушателей есть в самом начале очень неплохая такая темка."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+    timestamps:
+      - stime: 5074.35
+        etime: 5076.25
+        text: "Прикольно."
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная односложная реплика "Прикольно" длительностью 2 секунды.
+        Типичная ошибка распознавания - короткая реакция могла быть сказана
+        любым из присутствующих ведущих.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk часто использует такие реакции"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Umputun тоже мог так среагировать"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray участвует в разговоре в этом сегменте"
+      voice_task:
+        needed: false
+        reason: "Слишком короткая реплика (2 сек) для voice comparison"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys появляется в эпизоде (7 реплик, 8 сек, первая в 1593s),
+        но НЕ представлен в начале. В начале явно сказано "суровый мужской
+        состав" с перечислением только Bobuk и Gray. Ksenks отсутствует.
+        Вероятно, реплики Alek.sys - ошибки распознавания другого ведущего.
+        Требуется проверка.
+    - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+      issue: "Разрозненные короткие реплики, требуют переатрибуции к одному из ведущих"
+    - speaker: "SPEAKER_03"
+      issue: "Одиночная короткая реплика, требует переатрибуции"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 502
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Bobuk"
+    confidence: low
+    reason: |
+      Единственная реплика "Прикольно" (5074-5076 сек). Контекст: обсуждение
+      Let's Encrypt и сертификатов. Gray говорит про Google.com, далее реакция.
+      Невозможно определить точно без голосовой проверки, предположительно Bobuk.
+
+  # НЕ добавляем правило для SPEAKER_MISATTRIBUTED_ELDAR - требуется voice comparison
+  # НЕ добавляем правило для Alek.sys - требуется дополнительная проверка
+
+# Дополнительные задачи для ручной проверки
+manual_review_tasks:
+  - task: "Проверить реплики Alek.sys"
+    description: |
+      7 коротких реплик (8 сек суммарно) начиная с 1593s.
+      Alek.sys не упомянут в начале эпизода.
+      Возможно это ошибка распознавания Gray или Bobuk.
+    priority: medium
+
+  - task: "Voice comparison для SPEAKER_MISATTRIBUTED_ELDAR"
+    description: |
+      Сравнить голос с сегмента 5024-5030 сек с голосами Bobuk и Gray.
+      Определить правильную атрибуцию.
+    audio_url: "https://cdn.radio-t.com/rt_podcast502.mp3"
+    reference_segment:
+      stime: 5024.43
+      etime: 5029.77
+    priority: high

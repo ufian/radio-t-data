@@ -1,0 +1,224 @@
+episode: 505
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Контекст эпизода
+episode_context: |
+  Gray объявляет в начале: "Женя уехал в отпуск, Бобук куда-то тоже уехал"
+  (но Bobuk всё же появляется в эпизоде позже).
+  Два гостя: "Александр" (первый пришёл) и "MaverickRainGrey" (Алексей).
+  EldarMurtazin уже идентифицирован в разметке.
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Gray, Ksenks, Alek.sys, Bobuk]
+  guests_identified: [EldarMurtazin]
+  total_duration_sec: 7800  # ~2h 10min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 477
+    replies_count: 123
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        Gray в начале: "Давайте начнём с Александра. Он первый пришёл."
+        SPEAKER_06 (47.5s): "Здравствуй." - первая реплика гостя.
+        Далее SPEAKER_06 рассказывает, что "руководил людьми, которые переписывали
+        это на ПХП, с ПХП на питомник" - это программист/руководитель.
+        Имя: Александр. Нужна дополнительная идентификация.
+
+      possible_matches:
+        - person_id: "aleksandr_unknown"
+          confidence: 0.7
+          reason: "Представлен как Александр, программист с опытом руководства"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 289.22
+          etime: 309.96
+          text: "А я у них... У нас проблема, у нас три человека ходят реально в обед и ловят покемонов. Вокруг офиса и не только. И пришла ведь долгая воспитательная беседа по поводу того, что не надо так делать."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 450
+    replies_count: 153
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        Gray в начале: "Мне понравилось, что у него созвучный ник просто со моим"
+        Bobuk: "MaverickRainGrey, хорошо, можно тоже назвать Алексеем"
+        SPEAKER_03 говорит о себе: "enterprise-программист",
+        "работаю в небольшой белорусской компании", "нахожусь сейчас в Силиконовой долине"
+        Ник: MaverickRainGrey, имя: Алексей
+
+      possible_matches:
+        - person_id: "maverick_rain_grey"
+          confidence: 0.8
+          reason: "Алексей (MaverickRainGrey), enterprise-программист из белорусской аутсорс-компании в Долине"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6691.58
+          etime: 6730.30
+          text: "Они пытаются скрыть, решить проблему как-то тихо-втихаря... И вот идея того, что нужно сделать посмортами нормальной ситуации и описывать, кто что сделал..."
+
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 363
+    replies_count: 52
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Уже идентифицирован в разметке. Эльдар Муртазин - известный мобильный аналитик.
+        Первая реплика (58.6s): "Наверное, о себе сложно что-то рассказывать,
+        когда последние 6-7 лет пишешь по переменам на крестах и бетоне"
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Реплики из чата/вопросы слушателей, читаемые вслух.
+        634.2s: "Вопрос от меня."
+        635.0s: "Здравствуйте, пожалуйста, Клыр."
+        Это скорее всего голос одного из ведущих, читающего вопрос.
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие изолированные реплики:
+        2762.7s: "Ну, с одной стороны, да, да."
+        7732.6s: "Да тут не важно, человек поймёт."
+        Скорее всего ошибки атрибуции одного из ведущих или гостей.
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Уже помечен как ошибочная атрибуция (MISATTRIBUTED).
+        1422.8s: "Ровно неделю назад это было, да."
+        Контекст: обсуждение падения серверов Pokemon Go неделю назад.
+        Скорее всего это Ksenks (продолжение её реплики).
+
+      voice_task:
+        needed: false
+
+  - speaker: "Umputun"
+    total_duration_sec: 7
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Gray в начале явно говорит: "Женя уехал в отпуск" - Umputun не должен
+        быть в этом эпизоде.
+        Реплика 2883.5s: "Это маленькие вычислительные или мы говорим про ксионы новые?"
+        идёт сразу после SPEAKER_06 и продолжает его мысль.
+        Реплика 4678.2s: "Но вообще это очень сложная задача."
+        тоже идёт после SPEAKER_06.
+        Вероятно это ошибочная атрибуция реплик SPEAKER_06 или EldarMurtazin.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2883.5
+          etime: 2888.44
+          text: "Это маленькие вычислительные или мы говорим про ксионы новые?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Umputun"
+      issue: "Отмечен как отсутствующий в начале, но есть 2 реплики - требуется проверка, кому они принадлежат"
+    - speaker: "SPEAKER_06"
+      issue: "Идентифицирован как Александр, но нет полного имени/ника для people.yaml"
+    - speaker: "SPEAKER_03"
+      issue: "Идентифицирован как Алексей (MaverickRainGrey), enterprise-разработчик"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 505
+    from_speaker: "Umputun"
+    to_speaker: "SPEAKER_06"
+    confidence: medium
+    reason: "Umputun отсутствует в этом эпизоде (отпуск). Реплики идут сразу после SPEAKER_06 и продолжают его мысль."
+
+  - type: rename
+    episode: 505
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Реплика является продолжением обсуждения Ksenks о падении серверов Pokemon Go"
+
+  - type: delete_or_merge
+    episode: 505
+    from_speaker: "SPEAKER_05"
+    to_speaker: null
+    confidence: low
+    reason: "Вопросы из чата - возможно стоит удалить или переатрибутировать тому, кто их читает"
+
+  - type: delete_or_merge
+    episode: 505
+    from_speaker: "SPEAKER_02"
+    to_speaker: null
+    confidence: low
+    reason: "Очень короткие изолированные реплики - требуется ручная проверка контекста"
+
+# Дополнительные задачи
+additional_tasks:
+  - task: "Идентифицировать полное имя/ник Александра (SPEAKER_06)"
+    priority: medium
+
+  - task: "Добавить MaverickRainGrey (Алексей) в people.yaml после подтверждения"
+    priority: medium
+
+  - task: "Voice comparison для Umputun реплик - определить реального спикера"
+    priority: high

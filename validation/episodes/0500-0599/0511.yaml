@@ -1,0 +1,116 @@
+episode: 511
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Guest1, Guest2]
+  total_duration_sec: 8344
+  notes: "Gray и Ksenks отсутствуют (упомянуто в начале эпизода). Guest1 - регулярный участник Alek.sys. Guest2 - гость из GitLab."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 1528
+    replies_count: 333
+    first_appearance_sec: 61
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "alek_sys"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска (60.57s) Umputun представляет: "Зато вместо выбывшей двойки пришел еще один новый, новый старый хоккеист. Леха."
+        Guest1 отвечает "Привет, старый." (61.45s)
+        Далее (63.72s): "Хоккеист и голкипер в одном лице."
+        Также (121.98s): "нельзя назвать гостем, потому что тебя, Алексей, нельзя гостем назвать, ты почти свой, так часто тут сидишь."
+
+        Alek.sys - известный ведущий подкаста, 526 эпизодов согласно CLAUDE.md.
+        "Хоккеист" - характерное прозвище для Alek.sys в контексте подкаста.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Guest2"
+    total_duration_sec: 552
+    replies_count: 119
+    first_appearance_sec: 186
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "ivan_nemytchenko"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Представление гостя (139.18s - 186.45s):
+        Umputun: "А вот Иван, Иван, Иван, здравствуй."
+        Umputun: "Вот, Иван появился у нас."
+        Umputun: "Ты кто, расскажи, и почему к нам в гости зашел?"
+
+        Guest2 представляется (186.45s-218.88s):
+        - "Привет."
+        - "Ну, так получилось, что я полгода как девелопер-адвокат в GitLab'е"
+        - "Вообще я родом из Омска."
+        - "14 лет в IT."
+        - "В основном программировал на Ruby, фрилансил."
+        - "Побывал с учредителем пары аутсорсинговых компаний омских."
+        - "Сорганизовал парочку айтишных конференций под названием «Хэппи Дев» тоже в Омске."
+        - "Последние два года живу в Сербии."
+
+        Веб-поиск подтверждает: Ivan Nemytchenko был Developer Advocate в GitLab в 2016 году,
+        Ruby-разработчик, организатор конференций, переехал в Сербию из России.
+        Тема выпуска "GitLab 8.11 и гость" соответствует.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 511
+    from_speaker: "Guest1"
+    to_speaker: "Alek.sys"
+    confidence: high
+    reason: |
+      Guest1 представлен как "Леха", "Алексей", "хоккеист и голкипер".
+      Umputun прямо говорит "ты почти свой, так часто тут сидишь".
+      Alek.sys - ведущий подкаста с 526 эпизодами, известен как хоккеист.
+
+  - type: rename
+    episode: 511
+    from_speaker: "Guest2"
+    to_speaker: "IvanNemytchenko"
+    confidence: high
+    reason: |
+      Гость представлен по имени "Иван", девелопер-адвокат GitLab из Омска.
+      Самопредставление полностью совпадает с профилем Ivan Nemytchenko:
+      Ruby-разработчик, организатор Happy Dev в Омске, живет в Сербии.
+
+# Новый гость для добавления в people.yaml
+new_guest:
+  id: "ivan_nemytchenko"
+  canonical_name: "IvanNemytchenko"
+  aliases: ["Иван"]
+  real_name: "Иван Немытченко"
+  info: "Developer Advocate в GitLab (2016), Ruby-разработчик из Омска, организатор Happy Dev, выпуск 511"

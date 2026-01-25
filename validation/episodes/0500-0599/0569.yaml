@@ -1,0 +1,68 @@
+episode: 569
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  hosts_absent: [Gray]
+  total_duration_sec: 7476
+  notes: "В начале эпизода явно сказано 'Нас четверо вместо выбывшего Грея'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика (2.5 сек) между репликами Bobuk. Вопрос в контексте обсуждения Алисы, где активно участвует Ksenks."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: "Ksenks активно участвует в обсуждении темы Алисы (реплики в 5136s, 5147s, 5156s, 5173s, 5176s, 5296s). Вопрос 'А зачем вообще нужна Алиса?' соответствует её стилю и участию в дискуссии."
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Umputun также участвует в разговоре, но его следующая реплика (5254.9s) содержит шутку про Алису, что может указывать на продолжение диалога после ответа Bobuk."
+
+      voice_task:
+        needed: true
+        audio_url: "https://cdn.radio-t.com/rt_podcast569.mp3"
+        reference_segment:
+          stime: 5225.07
+          etime: 5227.6
+          text: "А зачем вообще нужна Алиса?"
+        compare_with:
+          - speaker: "Ksenks"
+            segment:
+              stime: 5173.21
+              etime: 5181.48
+              text: "Кстати, ты про индексовую такую не рассказал. У нас там прям про индексовую говорилку так много чего было, а тебя так и не было."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: "Единственная реплика Gray в 553.97s, хотя в начале эпизода явно сказано 'вместо выбывшего Грея'. Реплика находится между репликами Alek.sys - явная ошибка разметки."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 569
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Gray"
+    confidence: high
+    reason: "В начале эпизода (16.72s) Umputun говорит 'Нас четверо вместо выбывшего Грея'. Единственная реплика Gray (553.97s) находится между репликами Alek.sys и является ошибкой распознавания. Требуется voice comparison для определения реального спикера (вероятно Alek.sys или Ksenks)."
+    context:
+      introduction_quote: "Нас четверо вместо выбывшего Грея"
+      introduction_time: 16.72
+      surrounding_speakers: ["Alek.sys", "Umputun"]

@@ -1,0 +1,78 @@
+episode: 555
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6431  # сумма 2490+2145+525+1209+45+12+2 ~ примерно 2ч
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 12
+    replies_count: 5
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Это реклама Тинькофф Банка. Реплики чередуются с уже размеченной рекламой (_ad). SPEAKER_03 - часть того же рекламного блока. Голос диктора рекламы."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика 'И больше ничего.' идет сразу после реплики Umputun 'Apple News конкретно умеет мне правильно про баскетбол новости показывать.' и перед его же 'Больше никуда он не попадает.' - это явно продолжение речи Umputun, которое было неверно распознано как отдельный спикер."
+
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: high
+      evidence: "Контекст разговора - Umputun рассказывает про Apple News и баскетбол. Фраза 'И больше ничего' логически продолжает его мысль перед 'Больше никуда он не попадает'."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Заметка по Alek.sys
+notes:
+  - speaker: "Alek.sys"
+    observation: "Alek.sys появляется в эпизоде только в 2766s (первые 7 реплик - чтение рекламы V-Scale), затем в 5548s и 6386s (всего 2 реплики в основном контенте). В начале эпизода он НЕ представлен вместе с Umputun, Bobuk, Gray, Ksenks. Возможно, Alek.sys присоединился позже или это ошибка разметки. Требует проверки."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Не представлен в начале подкаста. Umputun говорит 'состав необычно полный' и обращается к Ksenks и Gray, но не упоминает Alek.sys. Первое появление - чтение рекламы V-Scale (2766s). Возможно это ошибка разметки или Alek.sys присоединился позже."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 555
+    from_speaker: "SPEAKER_03"
+    to_speaker: "_ad"
+    confidence: high
+    reason: "Это часть рекламного блока Тинькофф. Реплики чередуются с _ad и содержат рекламный текст ('Спонсор этого выпуска', 'кэшбэк', 'Тинькофф Блэк')."
+
+  - type: rename
+    episode: 555
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Umputun"
+    confidence: high
+    reason: "Единственная реплика 'И больше ничего' - очевидное продолжение речи Umputun в контексте обсуждения Apple News."

@@ -1,0 +1,216 @@
+episode: 506
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Gray, Ksenks, Alek.sys, Bobuk, Umputun]
+  total_duration_sec: 7483  # сумма всех спикеров по статистике
+  notes: |
+    Gray ведёт выпуск. Umputun и Bobuk присоединяются позже (Umputun в 5796s, Bobuk в 1106s).
+    В начале Gray говорит: "двух ведущих нет, еще один совсем не на месте".
+    Представлены гости: Алексей, Александр, Руслан (те же что в 505).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 514
+    replies_count: 78
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: "eldar_murtazin"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        EldarMurtazin уже идентифицирован в транскрипте. Это Эльдар Муртазин,
+        известный мобильный аналитик. Реплики содержательные, участвует в дискуссии.
+        Упоминает DevZen (661s: "По крайней мере, в DevZen приходили").
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 1035
+    replies_count: 257
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "unknown_alexey"
+          confidence: 0.6
+          reason: |
+            Gray представляет "Алексей, Александр" в начале (25s). SPEAKER_04 -
+            активный участник, много говорит о языках программирования, C/C++,
+            упоминает DevZen (656s: "Потому что я не помню, это была открытая или не
+            открытая информация... когда в DevZen приходила девушка и рассказывала
+            про продукт C-line от JetBrains"). Вероятно один из Алексеев.
+        - person_id: "unknown_aleksandr"
+          confidence: 0.3
+          reason: "Второй представленный гость - Александр"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 545.73
+          etime: 559.14
+          text: "Я видел недалее, чем пару недель назад такую маленькую систему, растянутую, кажется, на пять машин, где они гордо заявляли, что это распределенная система, написанная на C. Поэтому это не только Embedded."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 383
+    replies_count: 122
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "unknown_alexey_or_aleksandr"
+          confidence: 0.5
+          reason: |
+            Активный участник дискуссии о языках программирования.
+            Говорит о Java (1289s: "Здравствуйте, джавист", 1323s: "интерпрайз яма").
+            Обсуждает C (1370s: "раньше, например, 30 лет назад это был Кабул").
+            Вероятно второй из представленных гостей (Алексей или Александр).
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1292.72
+          etime: 1311.64
+          text: "Я на самом деле не считаю, что это какая-то большая проблема... Так что никаких проблем с этим нет."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 145
+    replies_count: 29
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+      identified_as: "ruslan_unknown"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Gray спрашивает "Подождите, а где наш Руслан?" (51s), SPEAKER_03 отвечает
+        "Я тут, привет." (53s). Явная идентификация как Руслан.
+        Активно обсуждает Kotlin (1417s: "Я как проповедник Котлина, меня там друзья
+        называют маркетологом Котлина"). Также упоминает Беларусь (6623s: "В Беларуси,
+        например, нормальная практика").
+      possible_matches:
+        - person_id: "ruslan_unknown"
+          confidence: 0.9
+          reason: "Явное представление Gray + самоидентификация"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1389.93
+          etime: 1410.61
+          text: "Хочется надеяться, что, например, Джава теряет свои места, не потому что он такая хорошая или там си-хорошая, а потому что есть другие языки, как Коклин или там Скалла, Груви, и они все-таки отъедают какую-то часть ее. Как более современные и прикольные языки с хорошим набором фич."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 3
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Очень короткие реплики (все < 1 сек), разбросанные случайным образом.
+        Примеры: "Не могут они гени..." (обрезанная фраза), "Хорошо бы.",
+        "Так, Ксюша.", "Убили Ксюшу?", "Нет.", "Не убил пока.", "Сейчас попробуем."
+        Скорее всего ошибка распознавания - реплики звучат как часть диалога других спикеров.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Привет." (46s) длиной 0.26 сек во время переклички.
+        Скорее всего ошибка распознавания - один из других спикеров.
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: "Не идентифицирован точно как Алексей или Александр. Нужен voice comparison."
+    - speaker: "SPEAKER_06"
+      issue: "Не идентифицирован точно как Алексей или Александр. Нужен voice comparison."
+    - speaker: "SPEAKER_03"
+      issue: "Идентифицирован как Руслан, но фамилия неизвестна."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 506
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ruslan"
+    confidence: high
+    reason: "Gray спрашивает 'где наш Руслан?', SPEAKER_03 отвечает 'Я тут, привет.'"
+
+  - type: delete
+    episode: 506
+    from_speaker: "SPEAKER_01"
+    to_speaker: null
+    confidence: medium
+    reason: "Ошибка распознавания - очень короткие обрезанные реплики"
+
+  - type: delete
+    episode: 506
+    from_speaker: "SPEAKER_07"
+    to_speaker: null
+    confidence: medium
+    reason: "Единственная реплика 'Привет' во время переклички - ошибка распознавания"
+
+# Примечания для дальнейшей работы
+notes: |
+  1. EldarMurtazin уже корректно идентифицирован в транскрипте.
+
+  2. SPEAKER_03 - это Руслан, "проповедник Котлина" из Беларуси. Нужно найти
+     его полное имя через поиск упоминаний митапов Kotlin в YouTube.
+
+  3. SPEAKER_04 и SPEAKER_06 - это Алексей и Александр (в каком-то порядке).
+     Оба активные участники, обсуждают языки программирования и JetBrains/DevZen.
+     Для точной идентификации нужен voice comparison с выпуском 505.
+
+  4. Gray упоминает что гости "были в прошлом выпуске" (505), что подтверждается
+     наличием SPEAKER_03 и SPEAKER_06 в том выпуске.
+
+  5. Umputun появляется только в 5796s (почти 1.5 часа от начала), Bobuk в 1106s.
+     Это необычно мало для основных ведущих - подтверждает слова Gray о том,
+     что "двух ведущих нет".
+
+# Аудио для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast506.mp3"

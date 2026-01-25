@@ -1,0 +1,253 @@
+episode: 525
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7564  # примерная сумма по ведущим
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 1
+    replies_count: 3
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Очень короткие реплики (31-35 сек) в начале подкаста, сразу после вопроса
+        Umputun к Ксюше "Ты не скажешь привет?". Контекст показывает, что это
+        продолжение приветствия Ksenks. Реплики: "Здрасте", "Запускай DigitalOcean",
+        "Окей, поехали" - явно реплики Ksenks, ошибочно разделённые.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Umputun спрашивает "Ксюша, ты не скажешь привет?" (30.72s), затем SPEAKER_08
+        отвечает "Здрасте" (31.88s), а сразу после Ksenks говорит "Здрасте, здрасте,
+        здрасте" (33.28s). Это единый диалог.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_09"
+    total_duration_sec: 7
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Односложные и короткие реплики, разбросанные по подкасту:
+        - 398.2s: "Да." (ответ на вопрос Umputun к Ksenks)
+        - 3088.7s: "Один." (повтор ответа Bobuk)
+        - 5069.6s: "Свободное от работы время могла бы выучить." (продолжение мысли Bobuk)
+        Все реплики по контексту являются продолжением речи соседних спикеров.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплика в 398s - ответ на прямой вопрос к Ksenks от Umputun"
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Реплики в 3088s и 5069s - продолжение мыслей Bobuk"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 7
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Короткие реплики (1-2 сек), часть из которых явно относятся к Ksenks по контексту:
+        - 1270.6s: "За любой путь?" - вопрос в диалоге о Netflix
+        - 1271.7s: "Сколько вы едете?" - продолжение вопроса
+        - 1545.1s: "А это очень интересный ответ" - реакция
+        - 3256.5s: "А что там в моей переписке?" - ответ на вопрос Umputun к Ksenks
+        - 3266.5s: "Зачем мне кому-то интимные фоточки?" - продолжение темы про Ksenks
+        Контекст диалога показывает, что реплики 3256s и 3266s точно принадлежат Ksenks
+        (Umputun спрашивает "А переписку твою посмотреть?" обращаясь к Ksenks).
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: >
+        Реплики в 3256s-3268s - часть диалога о приватности Ksenks. Umputun спрашивает
+        "А переписку твою посмотреть?" (3254s), и SPEAKER_07 отвечает "А что там в моей
+        переписке?" - это явно Ksenks отвечает на вопрос о себе.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.8
+          reason: "Прямой контекст диалога о переписке Ksenks"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 5
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Маркер MISATTRIBUTED указывает на отменённую ошибочную атрибуцию к Marin.
+        Все реплики короткие и являются частью речи Ksenks по контексту:
+        - 32.6s: "Да, я скажу." - между репликами Ksenks про приветствие
+        - 212.4s: "Очень много уже можно сделать." - между репликами Ksenks
+        - 3253.0s: "Так что, пожалуйста, слушайте." - между репликами Ksenks
+        - 8038.8s: "И мы понимаем, как это может быть." - между репликами Ksenks
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Все 4 реплики расположены между репликами Ksenks и являются логическим
+        продолжением её речи. Например, в 212s Ksenks говорит "Здорово идет" (211s),
+        затем SPEAKER_MISATTRIBUTED_MARIN: "Очень много уже можно сделать" (212s),
+        затем снова Ksenks продолжает (214s).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Маркер MISATTRIBUTED указывает на отменённую ошибочную атрибуцию к Petr.
+        Единственная реплика "Конечно, быстро." (861s) - реакция на рассказ Umputun
+        об обработке 3 миллиардов записей. По контексту это мог быть любой из
+        ведущих (Bobuk, Gray, Ksenks).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Ироничная реплика в стиле Bobuk"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Короткий комментарий, возможно Gray"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Следующая реплика от Ksenks, возможно продолжение"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 861.37
+          etime: 864.01
+          text: "Конечно, быстро."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 22
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Маркер MISATTRIBUTED указывает на отменённую ошибочную атрибуцию к Eldar
+        Murtazin. Реплики разбросаны по подкасту:
+        - 234.2s: "Ну, крепко, да, хорошо сплю." - ответ на вопрос Umputun к Gray
+        - 2542.5s: О структуре компенсации - продолжение темы зарплат
+        - 4133.2s: "Там еще одна ошибка на самом деле." - комментарий о кофемашинах
+        - 4136.8s: "Хорошая кофемашина не может стоить тысячу долларов."
+        - 7304.2s: "И что, их понят потом 24 года, что ли?" - про Amazon
+        - 8209.0s: "Ребята, вам не кажется, что Ксюша как-то ускорилась?"
+
+        Большинство реплик по контексту и стилю похожи на Gray или Bobuk.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: >
+            Реплика в 234s - прямой ответ на вопрос Umputun к Gray "Хорошо ли ты
+            спишь, дорогой?" Следующая реплика уже от Gray, но возможно это начало.
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: >
+            Реплики про кофемашины и ускорение Ksenks похожи на стиль Bobuk.
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2542.5
+          etime: 2551.32
+          text: "То есть, вообще говоря, структура компенсации, зарплаты и всего прочего в других местах, это тоже довольно интимный вопрос в любом месте."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Alek.sys имеет всего 8 реплик (15 сек), первая появляется только в 1835s
+        (30 минут от начала). Не упомянут в представлении ("Состав полный" в начале).
+        Возможно, подключился позже или реплики неправильно атрибутированы.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 525
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Контекст диалога приветствия, реплики между репликами Ksenks"
+
+  - type: rename
+    episode: 525
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Все реплики расположены между репликами Ksenks и логически продолжают её речь"
+
+  - type: rename
+    episode: 525
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Реплики в контексте диалога о приватности Ksenks, но требует проверки для ранних реплик"
+
+# Примечания
+notes: |
+  1. Эпизод 525 от 10 декабря 2016 года.
+  2. Состав объявлен как "полный" в начале, но Alek.sys появляется значительно позже.
+  3. Все неизвестные спикеры - это ошибки сегментации/распознавания, а не реальные гости.
+  4. SPEAKER_MISATTRIBUTED_* маркеры указывают на ранее отменённые ошибочные атрибуции.
+  5. SPEAKER_07 и SPEAKER_09 требуют дополнительной проверки для полной уверенности.
+  6. Реплика SPEAKER_MISATTRIBUTED_ELDAR в 234s вероятно принадлежит Gray (ответ на прямой вопрос).
+  7. Audio URL: https://cdn.radio-t.com/rt_podcast525.mp3

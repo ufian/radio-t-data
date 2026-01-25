@@ -1,0 +1,124 @@
+episode: 566
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  guests_present: 2
+  total_duration_sec: 10800  # ~3 часа (эпизод до 10800 сек)
+  notes: |
+    Umputun в начале: "между двумя Лешами сижу" и "Алексей, вы первый раз вдвоем на одном гектаре у нас оказались?"
+    Bobuk и Gray отсутствуют в этом выпуске.
+    Два гостя Алексея: один - SPEAKER_06 (Алексей Первый), второй - Alek.sys (Алексей Второй, ведущий).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 1958
+    replies_count: 343
+    first_appearance_sec: 69.75
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        В начале выпуска Umputun говорит: "между двумя Лешами сижу" и "Алексей, вы первый раз вдвоем на одном гектаре".
+        Это означает, что в выпуске два Алексея: один - ведущий Alek.sys, второй - гость.
+        SPEAKER_06 = "Алексей Первый" (Umputun: "Ты Алексей Первый" @ 572s).
+        Alek.sys = "Алексей Второй" (Umputun: "Вот этот, который сейчас говорил, это был Алексей Второй" @ 567s).
+
+        Гость активно участвует в технических дискуссиях о PostgreSQL, AWS, лямбдах.
+        Имеет опыт работы с AWS Lambda, говорит о прогреве лямбд.
+        Возможно, регулярный гость подкаста (Umputun: "Обычно вы были как Mutex").
+
+      possible_matches:
+        - person_id: "alexmak"
+          confidence: 0.2
+          reason: "Имя Алексей совпадает, но выпуски 196, 203 не пересекаются"
+        - person_id: "another_alex"
+          confidence: 0.2
+          reason: "Имя Алексей совпадает, но выпуски 857, 858 позже"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4389.61
+          etime: 4418.87
+          duration_sec: 29.26
+          text: |
+            "Лямбды надо прогревать. То есть там есть возможность, но, опять же, это нигде в документации не указано,
+            но у них есть такое время, по-моему, 10 минут. То есть если у тебя лямбда активна в течение 10 минут,
+            хотя бы один запрос на нее пришел, то она не выгружается из памяти активно. Но, опять же, вот это время,
+            10 минут, оно не гарантировано и может изменяться самим Амазоном. Если ты хочешь, например, тебе надо
+            прогревать эту лямбду."
+        alternative_segments:
+          - stime: 1305.17
+            etime: 1358.21
+            duration_sec: 53.04
+            text: "Обсуждение DSL и чекеров (несколько последовательных реплик)"
+
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 546
+    replies_count: 112
+    first_appearance_sec: 7634.66
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "Артур"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun: "Ты кто, Артур?" @ 7632.89s
+        SPEAKER_05: "Да, системизирует, Артур." @ 7634.66s
+        Umputun: "Ой, как тебя плохо слышно, Артур." @ 7636.66s
+        Umputun: "Я добавлю к твоей речи, Артур, вот из моего опыта." @ 7726.57s
+
+        Это дозвонившийся слушатель в сегменте "Темы наших слушателей".
+        Занимается системами хранения данных (~7 лет), подбирает железо для программистов.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_06"
+      issue: |
+        Гость не представлен по полному имени/фамилии.
+        Известно только имя "Алексей" (называется "Алексей Первый" или "Леша Первый").
+        Umputun говорит "вы первый раз вдвоем" - значит, оба гостя были раньше, но не вместе.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 566
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Артур"
+    confidence: high
+    reason: |
+      Явное представление: Umputun спрашивает "Ты кто, Артур?" и гость подтверждает.
+      Уже идентифицирован в all_identified_guests.json.
+
+# Дополнительные заметки
+notes: |
+  SPEAKER_06 требует voice comparison с предыдущими выпусками, где участвовал Алексей.
+  Вероятные кандидаты для сравнения: выпуски с alexmak (196, 203), another_alex (857, 858).
+  Также стоит проверить выпуски до 566, где был только один "Алексей" помимо Alek.sys.
+
+  Audio URL: https://cdn.radio-t.com/rt_podcast566.mp3
+  Дата эпизода: 2017-10-07

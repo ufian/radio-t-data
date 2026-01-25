@@ -1,0 +1,96 @@
+episode: 545
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk, Alek.sys]
+  total_duration_sec: 7268  # ~2h 1m
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1211
+    replies_count: 229
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alek_sys"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале эпизода (9-28 сек) Umputun говорит: "вместо прекрасной Ксюши совершенно менее прекрасный Леша зашел" и "Леша, тебе тяжелая задача предстоит".
+        SPEAKER_02 (40 сек) отвечает: "Вам пора ввести новую должность официально-дежурный Алексей".
+        Также на 963-967 сек реплики SPEAKER_02 и Alek.sys идут подряд без паузы (965.8→965.82), что подтверждает - это один человек.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 0
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 очень короткие реплики:
+        1. "Угу." (7219.29-7219.35, 0.06 сек) - междометие
+        2. "Хе-хе-хе." (7987.96-7988.4, 0.44 сек) - смех, Gray комментирует: "Это был демонический смех"
+        Вероятно ошибка распознавания - это реакции одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray комментирует смех сразу после"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk говорит перед смехом"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_02"
+      issue: "229 реплик (1211 сек) размечены как SPEAKER_02 вместо Alek.sys"
+    - speaker: "Alek.sys"
+      issue: "Только 13 реплик (67 сек) правильно атрибутированы как Alek.sys"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 545
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Alek.sys"
+    confidence: high
+    reason: |
+      SPEAKER_02 - это Alek.sys (Леша). Доказательства:
+      1. Представлен в начале как "Леша" (9-28 сек)
+      2. Первая реплика SPEAKER_02 отвечает на обращение к Леше
+      3. Реплики SPEAKER_02 и Alek.sys идут без пауз (965.8→965.82 сек)
+      4. В эпизоде должен быть только один "Леша" - Alek.sys
+
+  - type: delete
+    episode: 545
+    from_speaker: "SPEAKER_06"
+    to_speaker: null
+    confidence: medium
+    reason: |
+      2 очень короткие реплики (суммарно <1 сек): междометие "Угу" и смех "Хе-хе-хе".
+      Это аудио-артефакты или неправильно атрибутированные реакции ведущих.
+      Можно удалить или переатрибутировать (но слишком короткие для надёжной идентификации).

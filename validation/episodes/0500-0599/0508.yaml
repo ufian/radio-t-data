@@ -1,0 +1,114 @@
+episode: 508
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks]
+  guests_present: [Guest]
+  total_duration_sec: 7870
+  notes: "Bobuk отсутствует (упомянуто в начале эпизода)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 703
+    replies_count: 169
+    first_appearance_sec: 3912
+    last_appearance_sec: 7680
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Характеристики гостя
+      guest_profile:
+        expertise: "Kubernetes, контейнеры, облачные технологии, Docker, Borg, Mesos"
+        mentioned_by_host_as: "Критик"
+        mentioned_traits:
+          - "Не первый раз на подкасте (Umputun: 'Ты нас не первый раз')"
+          - "Работает с контейнерами и Kubernetes"
+          - "Не работает напрямую с облачными сервисами, интересуется"
+          - "Ходит на митапы по ECS"
+          - "Знает историю Kubernetes, Borg, Brendan Burns"
+
+      # Ключевые реплики для идентификации голоса
+      key_quotes:
+        - time: 4070
+          text: "И, может быть, у меня взгляд немножко наклоненный, отклоненный, но то, что мне интересно, это интересно мне, как работать с контейнерами, как их оркестрировать"
+        - time: 4063
+          text: "Я не работаю с облачными сервисами. Я только так интересуюсь"
+        - time: 4740
+          text: "Ну, как бы, они это везде говорят, как бы там об этом рассказывают. То есть то, что Брэндон Бернс, который, кстати, сейчас в Амазоне, ой, в Амазоне, в Ажуре работает"
+        - time: 4785
+          text: "Мезос — это практически опенсорсная копия Борга"
+        - time: 4848
+          text: "Кубернетус появился тогда, когда выстрелил именно докер"
+
+      # Возможные совпадения
+      possible_matches:
+        - person_id: null
+          confidence: 0.0
+          reason: "Нет совпадений в people.yaml по описанным характеристикам"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reference_segments:
+          - stime: 4070.82
+            etime: 4086.97
+            text: "И, может быть, у меня взгляд немножко наклоненный, отклоненный, но то, что мне интересно, это интересно мне, как работать с контейнерами, как их оркестрировать, и то, что есть, например, какие возможности у Кубернетуса сейчас."
+            duration_sec: 16
+          - stime: 4785.92
+            etime: 4820.73
+            text: "Мезос — это практически опенсорсная копия Борга... А Кубернетус появился тогда, когда выстрелил именно докер... Когда ребята в Гугле поняли, что..."
+            duration_sec: 35
+          - stime: 4962.21
+            etime: 4990.25
+            text: "И постепенно они сдвигаются, да, то есть Swarm идет выше... и Kubernetes как бы пытается, наоборот, ниже опуститься, то есть они сделали там мини-кьюб..."
+            duration_sec: 28
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Guest"
+      issue: "Гость не был формально представлен. Umputun просто сказал 'Дорогой гость, ты к нам зашел' (3894 сек). Позже называет его 'Критик' (5249 сек)."
+    - speaker: "Guest"
+      issue: "Гость участвует практически до конца подкаста (до 7680 сек), имеет глубокие знания в области контейнеризации."
+  notes:
+    - "В конце эпизода Umputun говорит 'Ты нас не первый раз. Я уже узнаю тебя. Не первый раз выручаешь' - гость регулярный участник"
+    - "Bobuk отсутствует в этом эпизоде"
+
+# Контекст появления гостя
+guest_appearance_context:
+  introduction_time_sec: 3894
+  introduction_text: "Дорогой гость, ты к нам зашел. Объяснить, что мы тут все... Как ты назвал нас всех?"
+  first_speech_time_sec: 3912
+  topics_discussed:
+    - "Google Cloud vs Amazon AWS"
+    - "Kubernetes, Borg, Mesos"
+    - "Docker Swarm vs Kubernetes"
+    - "Serverless/Lambda"
+    - "Контейнерная оркестрация"
+
+# Предлагаемые действия
+suggested_actions:
+  - action: "voice_comparison"
+    description: "Сравнить голос Guest с записями постоянных участников подкаста для исключения ошибки разметки"
+  - action: "search_previous_episodes"
+    description: "Поискать гостей с похожим профилем (эксперт по Kubernetes) в соседних эпизодах 505-510"
+  - action: "manual_identification"
+    description: "Прослушать аудио 1:05:12 (3912 сек) для определения личности по голосу"
+
+# Аудио файл для прослушивания
+audio_url: "https://cdn.radio-t.com/rt_podcast508.mp3"
+audio_reference_time: "1:05:12"

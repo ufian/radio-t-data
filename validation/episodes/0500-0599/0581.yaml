@@ -1,0 +1,54 @@
+episode: 581
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Alek.sys
+    - Ksenks
+  hosts_absent:
+    - Gray
+  total_duration_sec: 7056
+
+# Детальный анализ спикеров
+host_statistics:
+  - speaker: Umputun
+    replies_count: 937
+    total_duration_sec: 3347
+    first_appearance_sec: 2
+  - speaker: Bobuk
+    replies_count: 304
+    total_duration_sec: 1144
+    first_appearance_sec: 30
+  - speaker: Alek.sys
+    replies_count: 239
+    total_duration_sec: 1085
+    first_appearance_sec: 21
+  - speaker: Ksenks
+    replies_count: 200
+    total_duration_sec: 803
+    first_appearance_sec: 44
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_notes: |
+    В начале выпуска (8-12 сек) Umputun говорит: "Нас четверо, но четвертый вместо Грея будешь, Леша."
+    Это подтверждает состав: Umputun, Bobuk, Alek.sys, Ksenks (без Gray).
+    Все ведущие появляются в первую минуту и участвуют в диалоге.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Эпизод чистый - содержит только известных ведущих и рекламу (_ad).
+  Gray отсутствует, что явно объявлено в начале выпуска.
+  Никаких неизвестных спикеров (SPEAKER_*, Guest*) не обнаружено.

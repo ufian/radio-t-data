@@ -1,0 +1,103 @@
+episode: 531
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 5816  # ~1h37m (2206+2112+783+707+4+4)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (2-3 сек каждая) в случайных местах выпуска. Обе реплики находятся в контексте, где говорит Ksenks - перед первой репликой Umputun упоминает Ксюшу, сразу после обеих реплик говорит Ksenks. Скорее всего это ошибочная атрибуция её реплик."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: "148.9s: Umputun говорит 'Вот если Ксюша зайдет, она скажет', затем реплика MISATTRIBUTED, затем сразу Ksenks продолжает. 4657s: После Bobuk про Mac Pro, затем реплика 'Ну, он еще прекрасная железка', затем Ksenks: 'Я вот его вчера открывала...' - явное продолжение мысли."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.75
+          reason: "Контекст указывает на Ksenks в обоих случаях"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика (3.5 сек) - типичная переходная фраза 'Ну, посмотрим, в общем, что будет'. Такие фразы часто ошибочно атрибутируются системой распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Фраза похожа на стиль Gray - короткий резюмирующий комментарий"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Также может быть Bobuk - переходная фраза в обсуждении"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Менее вероятно - Umputun сразу после этого продолжает говорить"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5127.22
+          etime: 5130.78
+          text: "Ну, посмотрим, в общем, что будет, как это будет развиваться дальше."
+
+# Примечание по Alek.sys
+alek_sys_note: |
+  Alek.sys имеет всего 4 коротких реплики (1-2 сек каждая) в выпуске,
+  хотя был заявлен как часть 'полного состава'. Это может указывать на:
+  1. Он действительно мало говорил в этом выпуске
+  2. Некоторые его реплики могли быть ошибочно атрибутированы другим спикерам
+  Требует дополнительной проверки голосом.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Заявлен в 'полном составе', но имеет всего 4 коротких реплики (~4 сек суммарно). Необычно мало для ведущего."
+    - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+      issue: "Имя указывает на Marin_k_a (Марина), но она не была ведущей в 2017 году. Реплики по контексту принадлежат Ksenks."
+    - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+      issue: "Имя указывает на PetrDidenko, но контекст не подтверждает его участие. Скорее всего ошибка распознавания одного из основных ведущих."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 531
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Обе реплики находятся в контексте разговора Ksenks. Первая - сразу после упоминания её имени, вторая - продолжается её же репликами о Mac Pro."
+
+  - type: rename
+    episode: 531
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Gray"
+    confidence: low
+    reason: "Предположительно Gray - короткая резюмирующая фраза типична для его стиля. Требуется voice comparison для подтверждения."
+
+# Аудио для проверки
+audio_url: "https://cdn.radio-t.com/rt_podcast531.mp3"

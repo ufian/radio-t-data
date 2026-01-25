@@ -1,0 +1,177 @@
+episode: 501
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  guests_mentioned: []
+  total_duration_sec: 8438
+
+# Примечание об Alek.sys
+# В начале выпуска Umputun говорит "Состав полный и блистательный" и упоминает только Ксюшу.
+# Alek.sys появляется на 2266 сек с репликой "Да, пятнашка" - всего 9 реплик, 11 сек.
+# Это похоже на ошибку распознавания, но требует проверки голосом.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 8
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >-
+        Короткие реактивные реплики (1-4 сек каждая), разбросанные по всему выпуску.
+        Реплики: "Вот у меня что-то такое ощущение" (2099s), "Почти наверняка" (2124s),
+        "Базовый вариант" (3489s), "И нужно будет какие-то вопросы... Там будет, скорее, другая проблема" (7702s).
+        Все реплики находятся между репликами основных ведущих и по контексту являются их продолжением.
+        Эльдар Муртазин не был представлен в этом выпуске.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Первые две реплики (2099s, 2124s) находятся в разговоре Gray о мониторах"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Реплика на 7702s идет сразу после Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7702.71
+          etime: 7706.78
+          text: "И нужно будет какие-то вопросы... Там будет, скорее, другая проблема."
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >-
+        Две короткие реплики (по 2 сек), разбросанные по выпуску.
+        Реплики: "По-моему, уже рассказали, о чем речь" (3330s), "Это изменило мою жизнь" (5011s).
+        Обе реплики - реактивные комментарии между репликами ведущих.
+        Марина (Marin_k_a) не была представлена в этом выпуске.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.7
+          reason: >-
+            Реплика на 3330s идет между Umputun и Ksenks в теме HP Spectre,
+            где Ksenks ведет обсуждение. Реплика на 5011s идет после Ksenks "Да, это было так полезно"
+            и перед её же "Теперь я буду жить по-другому" - явно часть её саркастичного комментария.
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >-
+        Одна короткая реплика (2 сек) "Тут другого характера задача" (5914s).
+        Находится между репликами Umputun и Ksenks в дискуссии о мобильной разработке.
+        Пётр Диденко не был представлен в этом выпуске.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Короткая реактивная реплика в стиле Bobuk"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Gray активно участвует в техническом обсуждении"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 11
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: >-
+            Формально размечен как Alek.sys, но очень мало реплик (9 шт, 11 сек)
+            для полноценного участия. В начале выпуска не представлен.
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: >-
+            Первая реплика "Да, пятнашка" (2265s) идет сразу после Bobuk "Тринажка" -
+            может быть его голосом
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Некоторые реплики могут принадлежать Gray"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2265.62
+          etime: 2266.48
+          text: "Да, пятнашка."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: >-
+        Не представлен в начале выпуска (Umputun говорит "Состав полный и блистательный",
+        упоминает только Ксюшу). Очень мало реплик (9 шт, 11 сек) для полноценного участия.
+        Требует проверки - возможно ошибка распознавания.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 501
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: >-
+      Обе реплики с высокой вероятностью принадлежат Ksenks:
+      - Реплика на 5011s ("Это изменило мою жизнь") явно продолжение её саркастичного комментария
+        (перед: "Да, это было так полезно", после: "Теперь я буду жить по-другому")
+      - Реплика на 3330s в контексте её обсуждения HP Spectre
+
+  - type: rename
+    episode: 501
+    from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    to_speaker: "Bobuk"
+    confidence: low
+    reason: >-
+      Короткая реактивная реплика, требует voice comparison для точной идентификации.
+      Bobuk наиболее вероятен по стилю, но без аудио-проверки уверенность низкая.

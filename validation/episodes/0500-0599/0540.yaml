@@ -1,0 +1,133 @@
+episode: 540
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  hosts_announced: [Umputun, Bobuk, Ksenks]  # "у нас тут есть Ксюша и Бобук" (21s)
+  total_duration_sec: 8436  # примерная длительность по последним таймкодам
+  notes: |
+    В начале подкаста Umputun представляет только Ксюшу и Bobuk.
+    Gray отсутствует - упоминается в третьем лице ("Грэй бы, конечно, спросил").
+    Alek.sys не представлен как участник.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 5
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие разрозненные реплики:
+        1) "Ха-ха-ха." (8009s) - смех после шутки Bobuk про grep
+        2) "В связи с этим." (8515s) - обрывок между репликами Ksenks
+        Обе реплики слишком короткие и разбросаны по времени,
+        нет признаков реального гостя.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика "Мне кажется, ты зря попалился." (8071s)
+        идет сразу после реплики Umputun про утилиту RIG.
+        Реплика является реакцией одного из ведущих на шутку.
+        Спикер уже помечен как MISATTRIBUTED (ранее ошибочно присвоен PetrDidenko).
+        По контексту и позиции скорее всего это Ksenks или Bobuk.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Контекст: Umputun рассказывает про утилиту для fake identity,
+        кто-то реагирует "ты зря попалился", потом Umputun продолжает.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Ksenks задавала вопросы про утилиту непосредственно до этого"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk также участвует в диалоге"
+
+      voice_task:
+        needed: false
+        # Слишком короткая реплика для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray имеет 1 реплику в 2009s ("Ты знаешь этот же голос, да?"),
+        но в начале подкаста НЕ представлен. Umputun говорит "у нас тут есть
+        Ксюша и Бобук" и несколько раз упоминает Gray в третьем лице
+        ("Грэй бы, конечно, спросил", "Вот, и ты вместо Грэя").
+        Эта реплика скорее всего ошибочно атрибутирована.
+
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys имеет 12 реплик, но не представлен в начале.
+        Большинство реплик (8 из 12) - рекламная вставка Vscale (1950-1993s).
+        Остальные 4 реплики - короткие вставки в разных местах:
+        - "Так что так." (1645s) - между репликами Umputun
+        - "В HTTP же по умолчанию ESC кодировка." (3903s)
+        - "Ну, конечно, конечно." (4440s)
+        - "Скрытые команды под Z80." (4811s)
+        - "Так что вы." (9353s)
+        Похоже что это голос озвучки рекламы, и некоторые реплики
+        ошибочно атрибутированы этому спикеру.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 540
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_MISATTRIBUTED_GRAY"
+    confidence: high
+    reason: |
+      Gray отсутствует в этом выпуске (не представлен, упоминается в третьем лице).
+      Единственная реплика скорее всего принадлежит одному из присутствующих.
+
+  - type: rename
+    episode: 540
+    from_speaker: "SPEAKER_06"
+    to_speaker: "SPEAKER_99"
+    confidence: high
+    reason: |
+      Короткие фрагменты, не являющиеся речью реального спикера.
+      "Ха-ха-ха" - смех, "В связи с этим" - обрывок фразы.
+
+# Задачи на дополнительный анализ
+additional_tasks:
+  - task: "voice_comparison"
+    description: |
+      Проверить реплики Alek.sys вне рекламных блоков.
+      Возможно некоторые из них принадлежат другим спикерам.
+    segments:
+      - stime: 1645.4
+        etime: 1646.36
+        text: "Так что так."
+        current_speaker: "Alek.sys"
+      - stime: 3903.47
+        etime: 3904.55
+        text: "В HTTP же по умолчанию ESC кодировка."
+        current_speaker: "Alek.sys"

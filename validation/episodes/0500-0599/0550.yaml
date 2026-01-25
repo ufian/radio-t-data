@@ -1,0 +1,26 @@
+episode: 550
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys, Gray]
+  total_duration_sec: 6632.8
+
+# Примечания по составу
+notes:
+  - "Umputun объявил 'Состав обычный полный' в начале"
+  - "Alek.sys присоединился позже (~408s) - Umputun: 'Алексей к нам зашел'"
+  - "Gray появляется с 720.9s без формального представления, но это ожидаемо для постоянного ведущего"
+  - "SPEAKER_99 (2 реплики) - аудио-артефакты: '16.' и '95%' - игнорируются"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

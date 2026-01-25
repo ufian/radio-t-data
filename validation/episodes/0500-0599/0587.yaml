@@ -1,0 +1,95 @@
+episode: 587
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  total_duration_sec: 8551  # ~2ч 22мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 282
+    replies_count: 62
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null  # В people.yaml нет записи, но известно кто это
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Самопредставление (2484s): 'Я Алексей из соседнего подкаста. Я к вам приходил уже несколько раз.' Обсуждает vgo/Go modules, упоминает Russ Cox и Rob Pike - эксперт по Go."
+
+      possible_matches:
+        - person_id: "alexey_abashov"
+          confidence: 0.9
+          reason: "Алексей Абашов из подкаста 'Разбор полетов' (о Go). Уже идентифицирован в эпизодах 353 и 381 как гость из 'дружественного подкаста'. Контекст обсуждения (vgo, Go modules) совпадает."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2841.43
+          etime: 2875.74
+          text: "То есть основная причина, которую он видит... В общем, все становится проще, да, и странно, что все остальные до этого не додумались."
+          duration_sec: 34
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 8
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика (8 сек) посреди диалога Bobuk/Ksenks. Содержит 'Ну, я понимаю' и 'Да-да, меньше шанса на ошибку' - типичная вставка-реакция, вероятно неправильно атрибутирована."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Реплика между Bobuk (2311s) и Ksenks (2340s). Содержание ('проще сделать', 'меньше шанса на ошибку') вписывается в обсуждение WebKit/веб-технологий."
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Продолжает тему предыдущей реплики Bobuk о веб-технологиях."
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: "Гость представился сам ('Алексей из соседнего подкаста'), но его имя не нормализовано. Требуется добавить в people.yaml и переименовать."
+    - speaker: "SPEAKER_00"
+      issue: "Вероятная ошибка транскрипции - единичная короткая реплика без контекста."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 587
+    from_speaker: "SPEAKER_03"
+    to_speaker: "AlexeyAbashov"  # После добавления в people.yaml
+    confidence: high
+    reason: "Явное самопредставление: 'Я Алексей из соседнего подкаста'. Контекст (Go/vgo эксперт) и история (эпизоды 353, 381) указывают на Алексея Абашова из 'Разбор полетов'."
+
+  - type: rename
+    episode: 587
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Единичная реплика между Bobuk и Ksenks в контексте обсуждения WebKit. Требует voice verification."
+
+# Примечания
+notes:
+  - "Эпизод посвящен техническим темам: DDoS на GitHub, vgo (Go modules), KV-сторы."
+  - "SPEAKER_03 появляется с 2479s (~41мин) и активно участвует до конца выпуска."
+  - "Гость явно эксперт по Go - детально обсуждает proposal от Russ Cox по управлению зависимостями."
+  - "Рекомендуется добавить Алексея Абашова в people.yaml перед применением правил очистки."

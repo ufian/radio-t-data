@@ -1,0 +1,24 @@
+episode: 583
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 7954
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале выпуска (19-33 сек) Umputun представляет всех участников:
+    "Состав полный, даже Грей пришел... Ксюша вернулась, Бобок с нами. Все, в общем, в комплекте."
+    Все четыре ведущих (Umputun, Bobuk, Gray, Ksenks) присутствуют и представлены.
+    Гостей в этом выпуске нет.
+
+# Предлагаемые правила очистки
+suggested_rules: []

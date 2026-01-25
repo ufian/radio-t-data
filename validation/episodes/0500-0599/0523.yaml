@@ -1,0 +1,142 @@
+episode: 523
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys]
+  total_duration_sec: 8537
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 204
+    replies_count: 46
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Гость был представлен как "Серега" / "Сергей"
+      # Работает Go-разработчиком в Ostrovok.ru (бронирование отелей)
+      # Тема участия: CI/CD и тесты для чат-ботов Radio-T
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        - В начале подкаста (~127с) Umputun обращается: "Серега, ну, сними трубку"
+        - В ~517с первая реплика SPEAKER_01: "Да, всем привет."
+        - В ~536с говорит: "Я работаю поэтом-заботчиком. Сейчас хожу на гоу в Острову Гру" (Ostrovok.ru)
+        - В ~1673с Umputun прощается: "Ладно, все, спасибо, Серега, что зашел."
+        - Umputun называет его "экстремистом, повернутым на тестах"
+
+      possible_matches:
+        - person_id: null
+          confidence: 0.0
+          reason: "Имя Сергей, работает в Ostrovok.ru, Go-разработчик. Не найден в people.yaml"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1339.37
+          etime: 1355.30
+          text: "У меня на прошлой работе я тоже там ввел, в принципе, проводительную проверку всяких линтеров и, ну, обычные там JS-линты, HP-линты, Tone-линты, просто через GitLab, стандартный там ProjectStab."
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Одиночная короткая реплика 'Ждем.' (4 сек) посреди диалога Umputun и Bobuk об Alexa. Скорее всего ошибка распознавания - это реплика одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.7
+          reason: "Bobuk спрашивает про время в Москве, 'Ждем' - логичная реакция от него же"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 3
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики ('Зачем мучиться так?' в 810с и 'Что за проблема?' в 7621с) среди диалога ведущих. Эльдар Муртазин не участвовал в этом выпуске. Вероятно ошибочное присвоение уже исправлено переименованием в MISATTRIBUTED."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Контекст показывает диалог между Umputun и Bobuk. Обе фразы - короткие вставки, похожие на реплики ведущих."
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "В 810с идёт диалог про YAML vs XML - Bobuk активно участвует, фраза 'Зачем мучиться так?' логично вписывается в его аргументацию"
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Обе реплики могут быть короткими вставками от Umputun"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Появляется в 3675с (61 мин) с репликой 'Пришла вида, открывай ворота' без формального представления. Всего 6 реплик за весь подкаст - возможно подключился позже или это ошибки атрибуции."
+
+    - speaker: "SPEAKER_01"
+      issue: "Гость Сергей - идентифицирован по имени и месту работы (Ostrovok.ru), но полные ФИО не озвучены. Требуется добавление в people.yaml после уточнения."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 523
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Одиночная реплика 'Ждем.' в контексте вопроса Bobuk про Alexa. Высока вероятность, что это его реплика."
+
+  - type: rename
+    episode: 523
+    from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Обе реплики вписываются в контекст диалога с участием Bobuk. Эльдар Муртазин не участвовал в выпуске."
+
+  - type: rename
+    episode: 523
+    from_speaker: "SPEAKER_01"
+    to_speaker: "SergeyOstrovok"
+    confidence: high
+    reason: "Гость представлен как Сергей, Go-разработчик из Ostrovok.ru. Временное имя до уточнения полных ФИО."
+
+# Примечания
+notes: |
+  Эпизод 523 от 2016-11-26. Основной состав: Umputun, Bobuk.
+  Alek.sys появляется эпизодически во второй половине.
+
+  Гость Сергей:
+  - Подключился в ~517с, ушёл в ~1675с (участие ~19 минут)
+  - Работает Go-разработчиком в Ostrovok.ru
+  - Обсуждали CI/CD для чат-ботов Radio-T, тестирование
+  - Umputun называет его "экстремистом, повернутым на тестах"
+
+  SPEAKER_MISATTRIBUTED_ELDAR уже помечен как ошибочное присвоение.
+  Требуется voice comparison для подтверждения переименований SPEAKER_04.
+
+  Аудио: https://cdn.radio-t.com/rt_podcast523.mp3

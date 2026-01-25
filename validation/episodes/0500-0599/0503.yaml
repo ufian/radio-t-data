@@ -1,0 +1,75 @@
+episode: 503
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Gray, Alek.sys]
+  total_duration_sec: 7000
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две очень короткие реплики (1-2 сек) в разных частях выпуска. Первая 'На комсомолку.' - односложная шутка в ответ на вопрос Umputun. Вторая 'Ну...' - междометие. Типичные ошибки распознавания голоса одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Анализ контекста: Umputun говорит про Ксюшу, что она обещала рассказать, но отмалчивалась.
+      # После фразы SPEAKER_MISATTRIBUTED_MARIN идёт реплика Ksenks "Это же редкий гость."
+      # Фраза "Я задавала правильные вопросы" - это оправдание Ксении в ответ на упрёк.
+      # Это явно Ksenks, но ошибочно отмечена как MISATTRIBUTED_MARIN.
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Umputun упрекает Ксюшу за молчание (6920-6926s), следом идёт фраза 'Я задавала правильные вопросы' - это ответ-оправдание Ksenks. Следующие реплики (6930s+) тоже от Ksenks, продолжающей диалог."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Очень мало реплик (5 штук, 7 сек). Возможно, частично ошибки распознавания или он был на связи, но почти не участвовал. В начале выпуска не представлен явно, но это типично для постоянных ведущих."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 503
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Контекст однозначно указывает на Ksenks - это её ответ на упрёк Umputun о молчании. Следующие реплики тоже от Ksenks."
+
+  - type: rename
+    episode: 503
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Первая реплика (2981s) 'На комсомолку' - шутка в контексте разговора о браузинге. По контексту следом отвечает Bobuk, вероятно это его голос. Вторая реплика слишком короткая для определения."

@@ -1,0 +1,27 @@
+episode: 579
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  hosts_absent: [Gray]
+  total_duration_sec: 7100
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (00:09-01:07) Umputun представляет участников:
+    - "Ксюша и Бот" (Ksenks и Bobuk)
+    - "Грей решил самоустраниться" (Gray отсутствует, это гиковский выпуск)
+    - "Кстати, девушка Ксюша тут с нами тоже есть"
+    - "И Алексей пришел" (Alek.sys)
+    Все присутствующие спикеры упомянуты во вступлении.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

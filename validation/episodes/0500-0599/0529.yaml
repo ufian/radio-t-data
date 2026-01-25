@@ -1,0 +1,54 @@
+episode: 529
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  hosts_absent: [Gray]
+  total_duration_sec: 7170  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Две очень короткие реплики (<1 сек каждая): 'Да, было дело.' и 'Ага.' - типичные фразы-подтверждения, появляющиеся в диалоге между ведущими. Скорее всего ошибка распознавания одного из ведущих (Bobuk или Ksenks)."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Первая реплика (3507s) идёт сразу после вопроса Bobuk 'Мы упоминали АПНЕТ когда-нибудь?' и ответа Ksenks. 'Да, было дело.' - подходит как подтверждение от Bobuk."
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "Вторая реплика (7692s) - просто 'Ага.' между репликами Bobuk и Ksenks. Может быть ошибочно выделенная часть речи Ksenks."
+
+      voice_task:
+        needed: false
+        # Слишком короткие реплики для voice comparison (< 1 секунды)
+
+# Примечание об Alek.sys
+notes:
+  - "Alek.sys имеет всего 3 реплики за весь эпизод (7 сек) - возможно частичное участие или ошибки атрибуции"
+  - "Gray отсутствует в эпизоде"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  # В начале эпизода Umputun упоминает Ксюшу и Бобука, что соответствует присутствующим ведущим
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# SPEAKER_01 слишком короткий и неоднозначный для уверенного переименования
+# Рекомендуется оставить как есть или удалить эти 2 реплики как шум

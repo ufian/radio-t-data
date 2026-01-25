@@ -1,0 +1,69 @@
+episode: 584
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8307
+  notes: |
+    В начале эпизода Umputun говорит: "Радиочист состав полный плюс один,
+    в виде плюс один пришел Леша, который давно с заразой не приходил".
+    Это подтверждает присутствие Alek.sys.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 881
+    replies_count: 186
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alek_sys"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. В начале эпизода (9-19s) Umputun представляет "Лёшу" как гостя.
+        2. SPEAKER_02 обращается к Umputun по имени "Жень" (654.96s, 1176.11s, 1700.91s) -
+           так обращаются только постоянные участники.
+        3. В реплике 655.5s SPEAKER_02 говорит "Да, Леша" - это скорее всего
+           распознанная как отдельная реплика часть фразы "Жень. Да, Лёша..."
+        4. Содержание реплик: много про Go, Spring, Java, базы данных -
+           технические темы характерные для Alek.sys.
+        5. Упоминает "у нас на работе" (5551s), даже с даче спутниковый интернет (2344s),
+           детей ("у нас уже четыре" 9151s) - личные детали.
+        6. Официально Alek.sys имеет только 22 реплики (113 сек), что нереально мало
+           для заявленного "полного состава". SPEAKER_02 имеет 186 реплик (881 сек).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys представлен в начале как "Лёша", но большинство его реплик
+        неправильно размечены как SPEAKER_02. Официально у Alek.sys только
+        22 реплики (в основном рекламные блоки V-Scale), тогда как реально
+        он должен иметь ~186 дополнительных реплик от SPEAKER_02.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 584
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Alek.sys"
+    confidence: high
+    reason: |
+      SPEAKER_02 обращается к ведущим по именам (Жень), участвует в технических
+      дискуссиях о Go, Spring, Java. В начале эпизода представлен "Лёша" (Alek.sys).
+      Статистика подтверждает: официальные 22 реплики Alek.sys нереально малы
+      для "полного состава", а SPEAKER_02 с 186 репликами идеально заполняет этот пробел.

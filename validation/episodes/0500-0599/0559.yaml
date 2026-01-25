@@ -1,0 +1,113 @@
+episode: 559
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7075
+  notes: >
+    В начале эпизода Umputun объявляет "обычный, негиковский состав, полный",
+    что обычно означает без Alek.sys. Однако Alek.sys присутствует: одна реплика
+    в обсуждении (3868s) и 8 реплик рекламы V-Scale (4538-4578s).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 8
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибочная атрибуция реплик Ksenks"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: >
+        Bobuk обращается "Смотри, какие разные версии, Ксюш" (482s),
+        сразу SPEAKER_08 отвечает "Это я поняла" и "Женя все не может
+        слезть с этой темой" (Женя = Umputun). Реплика "А Руби?" (3610s)
+        продолжает тему Ksenks про языки программирования (Перл, PHP).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (<3 сек каждая) разбросаны по эпизоду, вероятно ошибки распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Реплика 'Я ее поставил себе даже' (3189s) идет сразу после Gray 'А что странного?', возможно это его же продолжение"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Реплика 'Окей' (4286s) - типичная для Bobuk"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3189.2
+          etime: 3191.49
+          text: "Я ее поставил себе даже."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 4
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика 'Угу' - типичный артефакт распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Следует после реплики Umputun, Gray отвечает далее"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: >
+        Umputun в начале объявил 'негиковский состав' (без Alek.sys),
+        но Alek.sys присутствует с репликой в обсуждении (3868s)
+        и читает рекламу V-Scale. Возможно, присоединился позже
+        или реплика 'Нет, это же удобно' ошибочно атрибутирована.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 559
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: >
+      Все 5 реплик SPEAKER_08 принадлежат Ksenks:
+      контекст обращения Bobuk к Ксюше, упоминание Жени (Umputun),
+      продолжение темы про языки программирования.

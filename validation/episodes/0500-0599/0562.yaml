@@ -1,0 +1,102 @@
+episode: 562
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7300  # ~2 часа
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1197
+    replies_count: 209
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Гость идентифицирован как "Леша" - но конкретный person_id неизвестен
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        В начале выпуска Umputun представляет гостя:
+        - 30.75s: "Здравствуй, Леша."
+        - 31.55s: "Давно тебя не было."
+        - 32.85s: "Вместо тебя уже тут другой Алексей появился." (имеется в виду Alek.sys)
+        - 38.94s: "Тебе надо бороться за вот это гордое звание дефолта."
+        SPEAKER_05 отвечает (43.43s): "Ну, дежурного Алексея. Сегодня я буду дежурным."
+
+        Это явно гость по имени Леша/Алексей, который раньше участвовал в подкасте.
+        Отличается от ведущего Alek.sys (который тоже присутствует в выпуске с 18 репликами).
+        Упоминается контекст с Java/Spring - гость обсуждает технические темы.
+
+      possible_matches:
+        - person_id: "alexmak"
+          confidence: 0.3
+          reason: "Известный гость-Алексей (выпуски 196, 203), но нет прямых подтверждений"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 227.88
+          etime: 239.66
+          text: "Вообще во времена моей молодости были такие заведения, назывались «стекляшка». Вот почему-то навевает ощущение не о театре, а о какой-то такой стекляшке."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна короткая реплика (1 сек) в середине разговора - типичная ошибка распознавания.
+        Вероятно это Ksenks или Gray - контекст обсуждения оплаты в метро/магазине.
+        Реплика: "У вас в Чехаго метро нету?" - вопрос к Umputun (живет в Чикаго).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Реплика сразу после речи Umputun, перед ответом Ksenks (606s)"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Также возможен, но менее вероятно по контексту"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: "Гость представлен как 'Леша', но конкретная личность не идентифицирована. Требуется voice comparison или ручной анализ."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 562
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Одиночная реплика, вероятная ошибка распознавания. Ksenks отвечает сразу после."
+
+# Примечания
+notes: |
+  SPEAKER_05 - это гость "Леша", который раньше участвовал в подкасте.
+  Umputun упоминает что "другой Леша" работает в Spring - значит этот гость НЕ из Spring.
+  Гость активно обсуждает технические темы (Java, Docker, Oracle/Solaris).
+  Для точной идентификации нужен voice comparison с известными гостями-Алексеями
+  или поиск по архиву выпусков, где участвовал этот гость.
+
+  Аудио для проверки: https://cdn.radio-t.com/rt_podcast562.mp3

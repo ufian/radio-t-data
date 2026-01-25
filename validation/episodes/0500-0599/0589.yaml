@@ -1,0 +1,227 @@
+episode: 589
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  guests_present: [Vladik, Anya]
+  total_duration_sec: 8200  # approx. 2h17m based on last timestamps
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 571
+    replies_count: 127
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале эпизода (20-28s) Umputun представляет: 'Из дополнительных, ну, вы их узнаете по голосам Лешу и Ани'. На 1352s Umputun обращается: 'Аня, ты ведь бэкэнд-программист, да?' - и SPEAKER_05 отвечает. Также использует женский род: 'я забыла' (85s), 'я расстроилась'."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 344
+    replies_count: 87
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "vladik_khononov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "На 6116-6124s явное представление: Umputun говорит 'В скайпе зовут Владик', спрашивает 'Как тебя называть?', SPEAKER_04 отвечает 'Владика называется'. Затем Umputun подтверждает 'К нам пришел, дорогие мальчики и девочки, Владик'. В метаданных тема 'Гость про CQRS' со ссылкой vladikk.com"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (5 штук, ~6 сек суммарно) разбросаны по эпизоду. На 4262-4266s реплики комментируют возраст Umputun'а ('Стал мальчик еще', 'Теперь все знают сколько ему лет', 'Респект', 'Старый мальчик'). На 5887s реплика 'Я расстроилась, что ты один' (женский род). Скорее всего ошибочное распознавание Ksenks или SPEAKER_05 (Anya)."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.6
+          reason: "Женский род, активное комментирование, характерный юмор"
+        - person_id: "anya"
+          confidence: 0.4
+          reason: "Женский род, также присутствует в эпизоде"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткие сегменты для voice comparison"
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная реплика 'Вот смотри, Леша' (2586s) длительностью ~0.7 сек. Обращение к Лёше (Alek.sys). Скорее всего ошибка распознавания Ksenks или Umputun."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Предшествующий контекст - длинная реплика Ksenks про фронтенд/бэкенд"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Может быть продолжение реплики Umputun"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Слишком короткий сегмент (<1 сек)"
+
+  - speaker: "Gray"
+    total_duration_sec: 3
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Gray НЕ был представлен в начале эпизода. Umputun явно говорит 'Состав половинный' и называет только себя, Ксюшу, Лёшу и Аню. Единственная реплика Gray 'Поднял свою ноду на ББС' (4424s) скорее всего ошибка распознавания - вероятно Alek.sys или Umputun."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.6
+          reason: "Технический жаргон (BBS, нода), Alek.sys активно участвует в дискуссии"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Контекст разговора о возрасте и опыте"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4424.28
+          etime: 4427.6
+          text: "Поднял свою ноду на ББС."
+
+  - speaker: "Bobuk"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Bobuk НЕ был представлен в начале эпизода. Umputun явно называет только 4 участников. Единственная реплика Bobuk 'На интернете не было в то время, Ксюша' (4414s) скорее всего ошибка распознавания - вероятно Umputun или Alek.sys."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.7
+          reason: "Обращение к Ксюше по имени, стиль комментария характерен для Umputun"
+        - person_id: "alek_sys"
+          confidence: 0.2
+          reason: "Также присутствует в разговоре"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4414.42
+          etime: 4416.66
+          text: "На интернете не было в то время, Ксюша."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "НЕ представлен в начале, но имеет 1 реплику. Umputun явно говорит 'Состав половинный' и называет только Umputun, Ksenks, Alek.sys, Anya"
+    - speaker: "Bobuk"
+      issue: "НЕ представлен в начале, но имеет 1 реплику. Скорее всего ошибка распознавания"
+    - speaker: "SPEAKER_06"
+      issue: "Не идентифицирован - вероятно ошибочные атрибуции Ksenks или Anya"
+    - speaker: "SPEAKER_08"
+      issue: "Не идентифицирован - единственная короткая реплика, вероятно ошибка"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 589
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Явное представление в начале эпизода и прямое обращение Umputun'а 'Аня, ты ведь бэкэнд-программист?'"
+
+  - type: rename
+    episode: 589
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Vladik"
+    confidence: high
+    reason: "Явное представление: 'В скайпе зовут Владик', 'Владика называется', тема про CQRS с ссылкой vladikk.com"
+
+  - type: rename
+    episode: 589
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Bobuk"
+    confidence: medium
+    reason: "Bobuk не представлен в начале эпизода, всего 1 реплика - вероятно ошибка распознавания"
+
+  - type: rename
+    episode: 589
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Gray"
+    confidence: medium
+    reason: "Gray не представлен в начале эпизода, всего 1 реплика - вероятно ошибка распознавания"
+
+# Новые записи для people.yaml (если нужно добавить)
+new_guests_to_add:
+  - id: "vladik_khononov"
+    canonical_name: "Vladik"
+    aliases: ["Владик"]
+    real_name: "Владик Хононов"
+    info: "Эксперт по CQRS и Event Sourcing, автор vladikk.com. Выпуск 589"
+
+# Примечания
+notes: |
+  Эпизод 589 от 2018-03-17.
+  Состав: Umputun, Ksenks, Alek.sys, Anya (гость-соведущая), Vladik (гость про CQRS).
+
+  SPEAKER_05 уверенно идентифицирован как Anya - явное представление и обращение по имени.
+  SPEAKER_04 уверенно идентифицирован как Vladik - явное представление в ~6116s.
+
+  Gray и Bobuk отмечены с 1 репликой каждый, но НЕ были представлены.
+  Это явные ошибки распознавания - рекомендуется переименовать в SPEAKER_MISATTRIBUTED_*.
+
+  SPEAKER_06 и SPEAKER_08 - короткие ошибочные атрибуции, скорее всего Ksenks или других участников.

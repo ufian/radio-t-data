@@ -1,0 +1,216 @@
+episode: 504
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Bobuk, Alek.sys]
+  total_duration_sec: 7627
+  notes: |
+    Bobuk изначально отсутствовал ("Бобука нет" - в начале эпизода),
+    но присоединился позже примерно на 67-й минуте (4036s).
+    Alek.sys появляется минимально (2 реплики, 4 сек) - возможно ошибка распознавания.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    total_duration_sec: 9
+    replies_count: 3
+    pattern: scattered
+    timestamps:
+      - stime: 1785.44
+        etime: 1789.51
+        text: "Вот ты говоришь, все кастомизации, которые вы сделали, записываете отдельно."
+      - stime: 4616.04
+        etime: 4618.49
+        text: "Нет, так вообще я на работе кушаю."
+      - stime: 6060.64
+        etime: 6062.99
+        text: "Интересно, может быть, вам понравится."
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Все три реплики - это явные ошибки распознавания голоса Ksenks.
+        1) Реплика 1785s: контекст обсуждения кастомизаций - непосредственно до и после говорит Ksenks
+        2) Реплика 4616s: ответ на вопрос Gray "Ксюша, сколько ты тратишь в день на еду?" -
+           Umputun даже комментирует "Она тебе не скажет" - явно речь Ksenks
+        3) Реплика 6060s: продолжение речи Ksenks о side-projects
+
+        Марина (Marin_k_a) - бывшая ведущая, но в данном эпизоде 2016 года не участвовала.
+        Реплики по контексту и содержанию принадлежат Ksenks.
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Все реплики являются логическим продолжением речи Ksenks или ответами на вопросы, адресованные ей"
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    timestamps:
+      - stime: 3357.55
+        etime: 3358.87
+        text: "Вот она и упадет."
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Одна короткая реплика (1.3 сек) в середине диалога между Umputun и Ksenks о fail-fast.
+        Umputun говорит "на ошибки" (3356-3357s), затем сразу Ksenks продолжает о fail fast (3358-3366s).
+        Эта фраза "Вот она и упадет" - логическое продолжение разговора об ошибках программ.
+        Контекст: обсуждение падения программ на ошибках.
+        Пётр Диденко - гость, но не участвовал в этом эпизоде.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Umputun говорил непосредственно до этой реплики, тематика совпадает"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray также участвовал в обсуждении fail-fast"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3357.55
+          etime: 3358.87
+          text: "Вот она и упадет."
+        note: "Слишком короткий сегмент для надежного сравнения"
+
+  - speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    total_duration_sec: 11
+    replies_count: 4
+    pattern: scattered
+    timestamps:
+      - stime: 3460.15
+        etime: 3462.39
+        text: "Если программа падает, ну, ничего страшного."
+      - stime: 4055.46
+        etime: 4057.74
+        text: "Слушайте, тут есть такая классная штука про Atlassian."
+      - stime: 7321.67
+        etime: 7323.79
+        text: "Ежели я не ошибаюсь."
+      - stime: 7422.37
+        etime: 7426.79
+        text: "Тем более, что там в общем как-то ну такое все."
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Эльдар Муртазин - известный гость, но не участвовал в данном эпизоде.
+        В начале эпизода упоминаются только Umputun, Ksenks, Gray. Bobuk присоединился позже.
+        Никаких гостей в эпизоде не анонсировано и не представлено.
+
+        Анализ реплик:
+        1) 3460s "Если программа падает..." - продолжение дискуссии о fail-fast,
+           после этого Gray (3462s) иронично предлагает "написать функцию проверки"
+        2) 4055s "про Atlassian" - следует сразу после реплики Bobuk (4053s) "давайте двинемся",
+           тема Atlassian была в списке тем эпизода
+        3) 7321s "Ежели я не ошибаюсь" - вставка между репликами Gray о покемонах
+        4) 7422s "такое все" - после предложения Gray закончить, Umputun продолжает
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.5
+          reason: "Реплики 1 и 2 следуют после или перед репликами Gray, стилистически похожи"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Реплика 2 про Atlassian следует сразу за репликой Bobuk, возможно его голос"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Реплики 3 и 4 могут быть Umputun - он модерирует обсуждение"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4055.46
+          etime: 4057.74
+          text: "Слушайте, тут есть такая классная штука про Atlassian."
+        note: "Наиболее чёткая реплика для сравнения голоса"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        В начале эпизода Umputun говорит "Бобука нет", но Bobuk появляется
+        с 4036 секунды (67 минута). Это не ошибка - он присоединился позже.
+
+    - speaker: "Alek.sys"
+      issue: |
+        Только 2 реплики (4 сек) - нетипично мало для ведущего.
+        Возможна ошибка распознавания или он действительно сказал очень мало.
+        Рекомендуется проверить эти реплики.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 504
+    from_speaker: "SPEAKER_MISATTRIBUTED_MARIN"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Все 3 реплики по контексту явно принадлежат Ksenks:
+      - Реплика про кастомизации - продолжение её вопросов
+      - "На работе кушаю" - ответ на вопрос Gray, адресованный Ксюше
+      - "Может понравится" - завершение её монолога о side-projects
+
+  # Следующие правила требуют voice comparison для подтверждения
+  # - type: rename
+  #   episode: 504
+  #   from_speaker: "SPEAKER_MISATTRIBUTED_PETR"
+  #   to_speaker: "???"
+  #   confidence: low
+  #   reason: "Требуется voice comparison, слишком короткая реплика"
+
+  # - type: rename
+  #   episode: 504
+  #   from_speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+  #   to_speaker: "???"
+  #   confidence: low
+  #   reason: "Требуется voice comparison для определения спикера"
+
+# Задачи для дальнейшей проверки
+tasks:
+  - type: voice_comparison
+    priority: low
+    speaker: "SPEAKER_MISATTRIBUTED_PETR"
+    segments:
+      - stime: 3357.55
+        etime: 3358.87
+    candidates: [Umputun, Gray]
+    audio_url: "https://cdn.radio-t.com/rt_podcast504.mp3"
+    note: "Очень короткая реплика, сложно идентифицировать"
+
+  - type: voice_comparison
+    priority: medium
+    speaker: "SPEAKER_MISATTRIBUTED_ELDAR"
+    segments:
+      - stime: 4055.46
+        etime: 4057.74
+    candidates: [Gray, Bobuk, Umputun]
+    audio_url: "https://cdn.radio-t.com/rt_podcast504.mp3"
+    note: "4 разрозненные реплики, вероятно разные спикеры неправильно атрибутированы"
+
+  - type: verify_speaker
+    priority: low
+    speaker: "Alek.sys"
+    reason: "Только 2 реплики (4 сек) - нетипично мало, проверить корректность"
