@@ -1,0 +1,34 @@
+episode: 56
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+  total_duration_sec: 4333.8
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - speaker: Umputun
+      introduced_at_sec: 22.15
+      evidence: "Упоминает Бобука: 'одного из двух основнейших ведущих Бобука из Москвы'"
+    - speaker: Bobuk
+      introduced_at_sec: 28.87
+      evidence: "Упоминает Умпутуна: 'И Умпутуна из Чикаго, который сегодня подготовил нам довольно интересные темы'"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Метаданные эпизода
+episode_metadata:
+  date: "2007-10-14"
+  audio_url: "https://cdn.radio-t.com/rt_podcast56.mp3"
+  topics_count: 10

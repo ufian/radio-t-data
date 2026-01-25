@@ -1,0 +1,26 @@
+episode: 54
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+  total_duration_sec: 4377
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода (21-28 сек) ведущие представляют друг друга:
+    - Umputun: "С вами постояннейшие ведущие в лице Бубука из Москвы"
+    - Bobuk: "И Умпутуна из Чикаго"
+    Гостей в этом выпуске нет.
+
+# Предлагаемые правила очистки
+suggested_rules: []

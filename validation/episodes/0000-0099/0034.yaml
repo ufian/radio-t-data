@@ -1,0 +1,122 @@
+episode: 34
+status: needs_review
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 4544  # ~75 мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 105
+    replies_count: 13
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: "Bobuk в 1539-1543s: 'Валера, мы тебя слушаем' - гость представлен как Валера"
+
+      possible_matches:
+        - person_id: "valera_unknown"
+          confidence: 0.7
+          reason: "Имя 'Валера' прямо называется ведущим, но полных данных о госте нет в справочнике"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1619.1
+          etime: 1635.59
+          text: "То есть можно туда компилировать различные языки, причем компиляция языков упрощается тем, что там есть общий язык для виртуальной машины."
+
+  - speaker: "Guest2"
+    total_duration_sec: 39
+    replies_count: 10
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: "Гость не представлен по имени, дозвонился около 3360s, говорит про превью картинок в Windows vs MacOS"
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3376.97
+          etime: 3398.79
+          text: "Человек, собственно, пытался сказать о том, что у него в винде есть в проводнике такая возможность, как превью. И он может сразу все свои картинки посмотреть по одной в большом каком-то виде. А чтобы это сделать в МакОсе, ему приходится открыть имидж-браузер, там открыть ящик и накидать в ящик картинок, и только потом смотреть."
+
+  - speaker: "Guest3"
+    total_duration_sec: 67
+    replies_count: 20
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: "Bobuk в 3489-3491s: 'Сергей, мы тебя слушаем' - гость представлен как Сергей"
+
+      possible_matches:
+        - person_id: "sergey_unknown"
+          confidence: 0.7
+          reason: "Имя 'Сергей' прямо называется ведущим, но полных данных о госте нет в справочнике"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3614.21
+          etime: 3651.49
+          text: "И люди борются с тем, что покупают и меняют в ноутбуке карты для того, чтобы это все работало. Практической ценности, к сожалению, никакой для меня не оказалось, потому что у меня ни одна сетевая карта не работает. Я не могу их поменять, потому что у меня ноутбук."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Guest2"
+      issue: "Гость не был представлен по имени. Дозвонился и сразу начал говорить про превью картинок."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 34
+    from_speaker: "Guest1"
+    to_speaker: "Valera"
+    confidence: medium
+    reason: "Bobuk называет гостя 'Валера' в момент подключения к звонку (1539-1543s)"
+
+  - type: rename
+    episode: 34
+    from_speaker: "Guest3"
+    to_speaker: "Sergey"
+    confidence: medium
+    reason: "Bobuk называет гостя 'Сергей' в момент подключения к звонку (3489-3491s)"
+
+# Дополнительные заметки
+notes: |
+  Эпизод 34 - один из первых прямых эфиров Radio-T (5 мая 2007).
+  В выпуске участвуют только два ведущих: Umputun и Bobuk.
+  Три гостя - это слушатели, которые дозвонились по Skype во время эфира:
+  - Guest1 (Валера) - говорит про Parrot VM как альтернативу CLR
+  - Guest2 (не представлен) - комментирует про превью фоток
+  - Guest3 (Сергей) - рассказывает про установку Hackintosh на PC
+
+  Все три гостя - реальные участники, не ошибки распознавания.
+  Guest2 требует дополнительного исследования для идентификации.
+
+audio_url: "https://cdn.radio-t.com/rt_podcast34.mp3"

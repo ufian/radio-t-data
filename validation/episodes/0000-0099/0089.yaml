@@ -1,0 +1,52 @@
+episode: 89
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 5513  # 685*~3.8 + 475*~4.7 + 153*~4.6 (приблизительно)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 700
+    replies_count: 153
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале эпизода (23.1-28.28s) Umputun говорит: 'Со мной полный состав на сегодня ведущих. В лице незаменимой Оли из Москвы и Бобука из той же самой, что у меня есть, Москвы.'"
+
+      # Не требуется
+      possible_matches: []
+
+      # Не требуется — идентификация успешна
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 89 от 2008-06-09. В эпизоде участвуют три спикера:
+  - Umputun (685 реплик) — ведущий
+  - Bobuk (475 реплик) — ведущий
+  - Olyapka (153 реплики) — бывшая ведущая, явно представлена в начале как "Оля из Москвы"
+
+  Все спикеры идентифицированы, неизвестных спикеров (SPEAKER_*, Guest*) нет.
+  Olyapka уже зарегистрирована в people.yaml с id: "olyapka".

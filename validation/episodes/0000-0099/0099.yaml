@@ -1,0 +1,27 @@
+episode: 99
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_duration_sec: 7067
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все три ведущих представлены в начале эпизода (00:40-01:50):
+    - Umputun представляет Gray и Bobuk (44-52s)
+    - Bobuk представляет Umputun (56-64s)
+    - Gray впервые говорит в 103s после представления
+
+# Предлагаемые правила очистки
+suggested_rules: []

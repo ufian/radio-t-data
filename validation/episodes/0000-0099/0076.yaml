@@ -1,0 +1,32 @@
+episode: 76
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Olyapka]
+  total_duration_sec: 5713
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Примечание: В этом эпизоде нет неизвестных спикеров (SPEAKER_*, Guest*).
+# Все три участника идентифицированы корректно.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - speaker: Olyapka
+      introduced_at: 23.65s
+      introduction: "одна из наших постоянных ведущих, а именно Оля из Перми"
+    - speaker: Bobuk
+      introduced_at: 87.27s
+      introduction: "постояннейший ведущий, корневой... наш ведущий... Бобок из Москвы"
+    - speaker: Umputun
+      introduced_at: 8.46s
+      introduction: Ведёт выпуск с самого начала (self-introduction)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: Правила не требуются - все спикеры корректно идентифицированы.

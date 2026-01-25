@@ -1,0 +1,41 @@
+episode: 73
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Olyapka]
+  total_duration_sec: 6685
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Примечание: Olyapka указана в предрассчитанной статистике как неизвестный спикер,
+# однако она является известной ведущей (id: olyapka в people.yaml) и была
+# явно представлена в начале выпуска (см. analysis ниже).
+
+# Анализ спикера Olyapka (для справки, т.к. она была в списке неизвестных)
+olyapka_analysis:
+  speaker: "Olyapka"
+  total_duration_sec: 845.5
+  replies_count: 189
+  pattern: consecutive
+
+  analysis:
+    is_error: false
+    identified_as: "olyapka"
+    identification_method: "introduction"
+    confidence: high
+    evidence: |
+      Bobuk представляет Олю в начале выпуска (49-57 сек):
+      "Напоминаю всем, что у нас есть еще один ведущий из Перми, а правильнее сказать, ведущая.
+      Это Оля, которую мы все очень любим и уважаем..."
+      После этого сразу следует реплика Olyapka (60.7s): "Да, всем привет."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Все спикеры уже корректно идентифицированы, изменения не требуются.

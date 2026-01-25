@@ -1,0 +1,28 @@
+episode: 96
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_duration_sec: 6661
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все три ведущих представлены в начале выпуска:
+    - Umputun представляется в 38-42 сек: "Бобук из Москвы и Грей из города Одесса"
+    - Bobuk отвечает в 43 сек, упоминая Umputun из Чикаго
+    - Gray впервые говорит в 60 сек
+    Гостей в этом выпуске нет.
+
+# Предлагаемые правила очистки
+suggested_rules: []

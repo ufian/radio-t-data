@@ -1,0 +1,25 @@
+episode: 22
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 4071
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Эпизод описан как "Два больных ведущих в виртуальной студии".
+    В транскрипте присутствуют только Umputun и Bobuk.
+    Оба представлены в начале: Umputun упоминает "бобуки из Москвы" (16-21s),
+    Bobuk отвечает "И умпутун из Чикаго" (21s).
+    Специальный спикер _ad (реклама, 5 реплик) игнорируется.
+
+# Предлагаемые правила очистки
+suggested_rules: []

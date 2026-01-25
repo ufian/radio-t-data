@@ -1,0 +1,77 @@
+episode: 63
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 5346
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров - Olyapka уже идентифицирована в транскрипте
+
+# Анализ гостей
+guest_analysis:
+  - speaker: "Olyapka"
+    total_duration_sec: 623
+    replies_count: 135
+    first_appearance_sec: 83.7
+
+    identification:
+      person_id: "olyapka"
+      canonical_name: "Olyapka"
+      real_name: "Ольга"
+      confidence: high
+      method: "introduction"
+      evidence: |
+        1. Umputun представляет гостью в начале (67-82 сек): "представлю участницу,
+           у нас сегодня в эфире экспериментально-гостевой участница"
+        2. Прямое упоминание имени "Оляпка" (104-106 сек): "Но там у нас Оляпка сидит"
+        3. Многократные обращения "Оля" по ходу подкаста (982s, 1216s, 5473s, 7921s, 8902s, 10288s, 10954s)
+        4. Гостья из Перми (83-90 сек): "Я из Перми. Город такой. Заснеженный уральский город Пермь."
+
+    reference_segments:
+      - description: "Рассказ о первой коммерческой поисковой системе ИГДЕ"
+        stime: 1743.0
+        etime: 1816.4
+        total_duration: 70.8
+        text_preview: "В России открылась первая, как ее называют, создатель коммерческой поисковой системы..."
+
+      - description: "Рассказ о телефоне LG и взрыве"
+        stime: 579.9
+        etime: 644.2
+        total_duration: 61.8
+        text_preview: "Последнюю неделю была такая достаточно обсуждаемая тема о том, что человек якобы..."
+
+      - description: "История про потерянный тамагочи"
+        stime: 3803.0
+        etime: 3850.4
+        total_duration: 46.1
+        text_preview: "Сначала, да, у меня, вы знаете, есть такая очень печальная история..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - speaker: "Umputun"
+      introduced_at_sec: 31.2
+      context: "Бобук представляет: 'страшно популярный Умпутун из Чикаго'"
+    - speaker: "Bobuk"
+      introduced_at_sec: 31.2
+      context: "Umputun представляет: 'известнейший и популярнейший бобук из Москвы'"
+    - speaker: "Olyapka"
+      introduced_at_sec: 67.0
+      context: "Umputun: 'представлю участницу, у нас сегодня в эфире экспериментально-гостевой участница'"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не нужны - все спикеры корректно идентифицированы
+
+# Метаданные эпизода
+episode_metadata:
+  date: "2007-12-02"
+  audio_url: "https://cdn.radio-t.com/rt_podcast63.mp3"
+  duration_min: 89.1

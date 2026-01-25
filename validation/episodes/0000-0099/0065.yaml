@@ -1,0 +1,36 @@
+episode: 65
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 5088
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Известные гости (не ведущие)
+known_guests:
+  - speaker: "Olyapka"
+    person_id: "olyapka"
+    total_duration_sec: 669
+    replies_count: 138
+    identification_method: "introduction"
+    confidence: high
+    evidence: "23.2-30.3s Umputun: 'С той стороны у меня Бобук из Москвы и еще Аляпка из дальнего предуральского города Пермь.'"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод полностью чистый. Все три спикера (Umputun, Bobuk, Olyapka) явно представлены
+  в начале выпуска. Olyapka — бывшая ведущая из Перми, известна в справочнике people.yaml.
+  Нет неизвестных спикеров (SPEAKER_*, Guest*, _ad) в данных.

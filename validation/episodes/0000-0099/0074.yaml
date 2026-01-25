@@ -1,0 +1,53 @@
+episode: 74
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Olyapka]
+  total_duration_sec: 4833
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 557
+    replies_count: 137
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в начале эпизода (23-42s): 'Оля нас поправит, у нас там есть не сбоку, а с центра страны, почти географический, так сказать, центр на Уральском хребте, город Пермь. И там у нас ведущая постоянно этого шоу, которую мы в прошлый раз забыли совершенно нагло поздравить с ее десятым выпуском Радио Ти. Оля, мы тебя поздравляем с задержкой, но тем не менее.'"
+
+      possible_matches: []
+
+      # Задание на voice comparison не требуется
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарии
+notes: |
+  Эпизод 74 от 2008-02-24. В выпуске участвуют три спикера:
+  - Umputun (567 реплик, 2143s) - основной ведущий
+  - Bobuk (508 реплик, 2132s) - со-ведущий, представлен Olyapka на 63-66s
+  - Olyapka (137 реплик, 557s) - со-ведущая из Перми, представлена Umputun на 23-42s
+
+  Olyapka уже есть в справочнике people.yaml как бывшая ведущая (Ольга из Перми).
+  Это её 10-й (или 11-й с учётом задержки поздравления) выпуск.
+
+  Все спикеры явно представлены в начале эпизода. Ошибок распознавания не обнаружено.
+
+# Предлагаемые правила очистки
+suggested_rules: []

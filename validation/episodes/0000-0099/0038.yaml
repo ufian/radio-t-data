@@ -1,0 +1,43 @@
+episode: 38
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+  total_duration_sec: 3192.3
+
+# Детали по ведущим
+hosts_details:
+  - speaker: Umputun
+    replies_count: 330
+    total_duration_sec: 1743.9
+    first_appearance_sec: 5.2
+  - speaker: Bobuk
+    replies_count: 302
+    total_duration_sec: 1448.4
+    first_appearance_sec: 24.1
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода (5-24s) Umputun говорит: "сегодня в эфире масса народу,
+    два основных ведущих, начиная с Бобука из Москвы". Bobuk отвечает, упоминая
+    "Умпутуна из Чикаго". Оба ведущих явно представлены, что соответствует
+    данным транскрипта.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Метаинформация об эпизоде
+episode_metadata:
+  date: "2007-06-02"
+  audio_url: "https://cdn.radio-t.com/rt_podcast38.mp3"
+  topics_count: 9

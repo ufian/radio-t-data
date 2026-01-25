@@ -1,0 +1,64 @@
+episode: 35
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 5628
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 218
+    replies_count: 31
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk называет гостя по имени при подключении: "Да, Вячеслав" (2895.8s)
+        и при прощании: "Спасибо, Вячеслав, спасибо вам за звонок" (3361.0s).
+        Гость представляется сам: "я из Караганды звоню, это Казахстан" (2915.9s).
+        Это звонок слушателя в прямой эфир, рассказывающего о проекте
+        "электронная деревня" (Wi-Fi сеть в поселке Упекты/Кукпикты, Казахстан).
+
+      # Дополнительная информация о госте
+      guest_info:
+        name: "Вячеслав"
+        location: "Караганда, Казахстан"
+        type: "listener_call"
+        topic: "Проект электронной деревни в Казахстане - беспроводная Wi-Fi сеть в поселке"
+
+      possible_matches: []
+
+      # Задание на voice comparison не нужно - гость идентифицирован
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 35 (12 мая 2007) - прямой эфир с техническими проблемами качества звука.
+  Ведущие: Umputun и Bobuk.
+  Единственный гость - звонок слушателя Вячеслава из Караганды (Казахстан),
+  рассказавшего о проекте создания Wi-Fi сети в сельском поселке.
+  Звонок длился с 2915s до 3361s (~7.5 минут).
+
+  Гость не является постоянным участником подкаста - это разовый звонок
+  слушателя в прямой эфир, поэтому добавление в people.yaml не требуется.

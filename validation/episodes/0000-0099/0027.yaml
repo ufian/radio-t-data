@@ -1,0 +1,81 @@
+episode: 27
+status: needs_review
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 3695  # ~1 час (Umputun: 1744s + Bobuk: 1785s + Guest: 166s)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 166
+    replies_count: 46
+    pattern: scattered  # реплики распределены по всему эпизоду
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Результат идентификации
+      identified_as: null  # нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Bobuk представляет гостя в начале эпизода (39-53 сек):
+        - "Его зовут Александр" (39.06-39.92s)
+        - "Саша, если что, подключайся по теме в процессе" (50.33-53.15s)
+        - "Александр, понятно, что дело мой коллега, занимается он в основном управлением,
+           разработкой всяческих довольно интересных десктопных приложений, в частности,
+           и под Windows тоже" (70.34-81.12s)
+
+      # Требуется добавить в people.yaml
+      new_person:
+        suggested_id: "alexander_bobuk_colleague"
+        canonical_name: "Alexander"
+        aliases: ["Саша", "Александр"]
+        real_name: "Александр"
+        info: "Коллега Бобука, разработчик десктопных приложений (Windows). Выпуск 27"
+
+      possible_matches: []
+
+      # Задание на voice comparison не требуется - гость чётко представлен
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: add_person
+    person:
+      id: "alexander_bobuk_colleague"
+      canonical_name: "Alexander"
+      aliases: ["Саша", "Александр"]
+      real_name: "Александр"
+      info: "Коллега Бобука, разработчик десктопных приложений (Windows). Выпуск 27"
+    confidence: high
+    reason: "Явное представление в начале выпуска Бобуком"
+
+  - type: rename
+    episode: 27
+    from_speaker: "Guest"
+    to_speaker: "Alexander"
+    confidence: high
+    reason: "Гость представлен как Александр/Саша, коллега Бобука"
+
+# Примечания
+notes: |
+  Эпизод 27 от 2007-03-19. В студии у Бобука находится его коллега Александр,
+  специализирующийся на разработке десктопных приложений под Windows.
+
+  Гость активно участвует в обсуждении технических тем на протяжении всего выпуска.
+  46 реплик общей длительностью ~166 секунд - это полноценный участник, не ошибка распознавания.
+
+  В people.yaml нет подходящего "Александра", требуется добавление нового человека.
+  Возможно, это был одноразовый гость, так как он не появляется в других выпусках.

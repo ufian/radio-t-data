@@ -1,0 +1,24 @@
+episode: 83
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 5274
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода Umputun представляется и передает слово Bobuk.
+    Bobuk объясняет, что обычная соведущая Olyapka (Олечка из Перми)
+    сегодня отсутствует из-за поездки в деревню.
+    Эпизод записан только двумя ведущими без гостей.
+
+# Предлагаемые правила очистки
+suggested_rules: []

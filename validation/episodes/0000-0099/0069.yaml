@@ -1,0 +1,64 @@
+episode: 69
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka, ArtemRosnovskiy]
+  total_duration_sec: 4797
+
+# Детали спикеров
+speakers:
+  - name: Umputun
+    role: host
+    replies_count: 505
+    total_duration_sec: 2049
+    first_appearance_sec: 8
+    introduced: true
+    introduction_context: "Ведущий, представляет выпуск в начале"
+
+  - name: Bobuk
+    role: host
+    replies_count: 342
+    total_duration_sec: 1577
+    first_appearance_sec: 74
+    introduced: true
+    introduction_context: "Umputun представляет его как 'Бобук из города Москва, непременно и незаменимый ведущий'"
+
+  - name: Olyapka
+    role: guest
+    replies_count: 147
+    total_duration_sec: 633
+    first_appearance_sec: 20
+    introduced: true
+    introduction_context: "Umputun представляет её: 'вдали зазвучала Оля, самый противоречивый персонаж нашего шоу'"
+    person_id: olyapka
+    identification_confidence: high
+
+  - name: ArtemRosnovskiy
+    role: guest
+    replies_count: 145
+    total_duration_sec: 538
+    first_appearance_sec: 114
+    introduced: true
+    introduction_context: "Bobuk представляет его: 'в скайпе находится еще и Артем Росновский... потрясающий радиожурналист'"
+    person_id: artem_rosnovsky
+    identification_confidence: high
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии
+notes: |
+  Эпизод полностью размечен. Все четыре участника явно представлены в начале выпуска (первые 2 минуты).
+  Olyapka и ArtemRosnovskiy - известные гости из справочника people.yaml.
+  Артём Росновский участвовал также в выпусках 101 и 106.

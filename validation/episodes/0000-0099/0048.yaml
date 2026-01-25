@@ -1,0 +1,25 @@
+episode: 48
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 4261
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Umputun открывает эпизод в 6.5s и представляет Bobuk в 28.3s:
+    "В составе неприменимого и незаменимого... бобука из Москвы"
+    Bobuk отвечает в 35.4s и упоминает Umputun:
+    "И Умпутуна из Чикаго, который сегодня будет работать..."
+    Оба ведущих явно представлены в начале эпизода.
+
+# Предлагаемые правила очистки
+suggested_rules: []

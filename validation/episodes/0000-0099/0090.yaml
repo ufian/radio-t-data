@@ -1,0 +1,35 @@
+episode: 90
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_duration_sec: 5014
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - speaker: Gray
+      introduced_at_sec: 24
+      introduced_by: Umputun
+      quote: "из страны Украина у нас сегодня Сергей, он же Грей"
+    - speaker: Bobuk
+      introduced_at_sec: 24
+      introduced_by: Umputun
+      quote: "из страны Россия представляет ее честь Бобук из ее столицы города Москва"
+    - speaker: Umputun
+      introduced_at_sec: 40
+      introduced_by: Bobuk
+      quote: "с немножко северо-востока США, Умпутун из Чикаго"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

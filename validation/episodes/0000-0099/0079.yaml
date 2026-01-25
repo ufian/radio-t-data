@@ -1,0 +1,41 @@
+episode: 79
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 5389.8
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Примечание: В этом эпизоде нет неизвестных спикеров.
+# Olyapka уже идентифицирована в транскрипте и подтверждается представлением.
+
+# Анализ известного гостя
+identified_guests:
+  - speaker: "Olyapka"
+    total_duration_sec: 736.6
+    replies_count: 166
+    first_appearance_sec: 83.3
+
+    analysis:
+      is_error: false
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 23.36s Umputun явно представляет: 'коллега Аляпка из не менее славного и даже местами более славного города Пермь'. В 75.47s обращается к ней по имени: 'Оля, у тебя часто падает...'"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все три участника (Umputun, Bobuk, Olyapka) представлены в начале эпизода"
+    - "Olyapka - бывшая ведущая подкаста, записана в people.yaml"
+    - "Эпизод датирован 2008-03-30, что соответствует периоду активного участия Olyapka"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: Правила не требуются - все спикеры корректно идентифицированы.

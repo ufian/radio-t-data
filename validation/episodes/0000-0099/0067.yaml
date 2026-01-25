@@ -1,0 +1,57 @@
+episode: 67
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_speakers: 3
+  total_duration_sec: 5976  # ~1h 39m based on transcript
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Все спикеры в этом эпизоде идентифицированы:
+# - Umputun: 817 реплик, основной ведущий
+# - Bobuk: 618 реплик, со-ведущий
+# - Olyapka: 88 реплик, ~303 сек — известный гость из people.yaml
+
+# Анализ гостей (не являются "неизвестными", т.к. уже идентифицированы)
+identified_guests:
+  - speaker: "Olyapka"
+    total_duration_sec: 303
+    replies_count: 88
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"  # person_id из people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Umputun в начале выпуска (27-35 сек): "Я с той стороны океана просто
+        наблюдаю зорким орлиным глазом Олю из уральского города Пермь и Бобука
+        из... центрального, центрового, даже бы сказал, города Москва."
+        Также в 152-161 сек: "У нас там Оля, и у нее новогодний подарочек."
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Дополнительные заметки
+notes: >
+  Эпизод 67 от 2007-12-30. Состав: Umputun (США/Чикаго), Bobuk (Москва),
+  Olyapka (Пермь). Olyapka — бывшая ведущая, в этом выпуске обсуждала
+  свой новый микрофон и другие технические темы (iPhone локализация, HDTV).
+  Были технические проблемы с её подключением (~200 сек).
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Никаких исправлений не требуется — все спикеры корректно идентифицированы

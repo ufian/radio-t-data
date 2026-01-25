@@ -1,0 +1,88 @@
+episode: 32
+status: has_tasks
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Guest1, Guest2]
+  total_duration_sec: 4813
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 477
+    replies_count: 123
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "artem_rosnovsky"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в 52-69 сек: 'еще представить практически частично постоянного, потому что он уже второй раз в нашей виртуальной студии присутствует, Артема Росновского из почти одноименного подкаста'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Guest2"
+    total_duration_sec: 260
+    replies_count: 81
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Bobuk в 71-76 сек: 'собственно, это Александр Быков, он у нас тоже один раз уже был'"
+
+      # Гость идентифицирован как Александр Быков, но его нет в people.yaml
+      # Требуется добавление в справочник
+      possible_matches:
+        - person_id: "alexander_bykov_new"
+          confidence: 1.0
+          reason: "Явное представление Bobuk'ом. Гость участвовал минимум в 2 выпусках (текущий + предыдущий)"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 32
+    from_speaker: "Guest1"
+    to_speaker: "Rosnovsky"
+    confidence: high
+    reason: "Явное представление Umputun'ом: 'Артема Росновского из почти одноименного подкаста'. Гость уже есть в people.yaml (id: artem_rosnovsky)"
+
+  - type: rename
+    episode: 32
+    from_speaker: "Guest2"
+    to_speaker: "AlexanderBykov"
+    confidence: high
+    reason: "Явное представление Bobuk'ом: 'Александр Быков, он у нас тоже один раз уже был'. Требуется добавить гостя в people.yaml"
+
+# Дополнительные задачи
+additional_tasks:
+  - type: add_to_registry
+    person:
+      id: "alexander_bykov"
+      canonical_name: "AlexanderBykov"
+      aliases: ["Саша", "Александр"]
+      real_name: "Александр Быков"
+      info: "Гость выпусков 32 и ранее (нужно найти первый выпуск)"
+    reason: "Гость явно представлен, участвует активно (81 реплика, 260 сек), упоминается что был раньше"

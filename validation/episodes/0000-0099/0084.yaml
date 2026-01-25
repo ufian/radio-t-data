@@ -1,0 +1,59 @@
+episode: 84
+status: clean
+analyzed_at: "2026-01-24"
+
+# Метаданные эпизода
+episode_metadata:
+  date: "2008-05-04"
+  audio_url: "https://cdn.radio-t.com/rt_podcast84.mp3"
+  total_duration_sec: 4849
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+  total_duration_sec: 4396.3
+  note: "Сокращённый состав (малый совнарком) - только два ведущих"
+
+# Статистика по ведущим
+host_stats:
+  - speaker: Umputun
+    replies_count: 621
+    total_duration_sec: 2136.8
+    first_appearance_sec: 7.1
+  - speaker: Bobuk
+    replies_count: 490
+    total_duration_sec: 2259.5
+    first_appearance_sec: 31.1
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - time_sec: 24.7
+      speaker: Umputun
+      quote: "С вами малый совнарком, а именно сокращенный состав, лицея Бобука из Москвы"
+    - time_sec: 31.1
+      speaker: Bobuk
+      quote: "И Умпутуна из Чикаго, который только что обозвал нас всех какими-то наркомами"
+    - time_sec: 4831.1
+      speaker: Umputun
+      quote: "С вами были те же там же, немножко в сокращенном составе, а именно Бобок из центрального столичного..."
+    - time_sec: 4839.1
+      speaker: Bobuk
+      quote: "И Умпутун из Чикаго..."
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+notes: |
+  Эпизод 84 - чистый, содержит только два ведущих (Umputun и Bobuk).
+  Оба ведущих явно представлены в начале и в конце выпуска.
+  Umputun называет состав "малый совнарком" / "сокращённый состав".
+  Неизвестных спикеров, гостей и артефактов не обнаружено.

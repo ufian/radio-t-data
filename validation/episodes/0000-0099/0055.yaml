@@ -1,0 +1,23 @@
+episode: 55
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 4138.3
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun представлен Bobuk-ом в начале выпуска (72.2s): "А на другой стороне Умпутун из Чикаго".
+    Bobuk упоминается косвенно в контексте диалога, типичный формат для ранних выпусков.
+    Выпуск начинается с технического примечания от Umputun о проблемах с записью.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

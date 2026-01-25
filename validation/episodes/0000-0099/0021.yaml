@@ -1,0 +1,24 @@
+episode: 21
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 4091
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода (6-18 сек) ведущие представляют друг друга:
+    - Umputun: "В студии, как обычно, но сегодня не совсем здоровый Бобук из Москвы."
+    - Bobuk: "И, я так понимаю, тоже не совсем здоровый Умпутун из Чикаго."
+    Гостей в этом эпизоде нет.
+
+# Предлагаемые правила очистки (если есть явные ошибки)
+suggested_rules: []

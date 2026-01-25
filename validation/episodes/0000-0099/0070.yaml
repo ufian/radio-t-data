@@ -1,0 +1,52 @@
+episode: 70
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 6472
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Примечание: Olyapka изначально помечен как "неизвестный" в задаче,
+# но на самом деле это известный гость, присутствующий в people.yaml
+
+# Анализ гостей (не ведущих)
+guest_analysis:
+  - speaker: "Olyapka"
+    total_duration_sec: 902
+    replies_count: 203
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Umputun в начале эпизода (59.81s): "Оля из города Пермь и Бобук из города Москва."
+        Bobuk подтверждает (121.56s): "Оля с интересом всем расскажет по поводу своего нового блога"
+        Olyapka также есть в справочнике people.yaml как бывшая ведущая.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все три спикера представлены в начале эпизода"
+    - "Olyapka - постоянная ведущая того периода (2008 год)"
+    - "Диалоги консистентны, перебивки естественные"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: Правила не требуются, все спикеры корректно размечены

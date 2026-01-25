@@ -1,0 +1,47 @@
+episode: 85
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 6900
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 670
+    replies_count: 173
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В 27-36s Umputun: 'Во-первых, у нас вернулась Оля Долгожданная. Из города Пермь обычно, но теперь она из Москвы'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Примечания
+notes:
+  - "Olyapka (Ольга) - бывшая ведущая подкаста, зарегистрирована в people.yaml"
+  - "Явно представлена в начале выпуска Umputun'ом"
+  - "Активно участвует в обсуждении на протяжении всего эпизода"
+  - "Характерные темы: мобильные устройства, iPhone, игры, оптимизация сайтов"
+
+# Предлагаемые правила очистки
+suggested_rules: []

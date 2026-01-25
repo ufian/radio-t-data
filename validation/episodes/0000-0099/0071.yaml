@@ -1,0 +1,42 @@
+episode: 71
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 4178
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров - все участники идентифицированы
+
+# Идентифицированные гости
+identified_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 682
+    replies_count: 141
+    analysis:
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление в начале эпизода (25.37-36.61s):
+        "Вот с той стороны вы как раз услышали нашу соведущую Олю,
+        известную также как «Аляпка» из центра России, город Пермь,
+        который на вершине, как я уже не раз говорил, Уральского хребта."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все три участника эпизода представлены в первые 2 минуты:
+    - Umputun представлен Бобуком (49.62-62.42s)
+    - Bobuk представлен Umputun'ом (37.33-43.72s)
+    - Olyapka представлена Umputun'ом (25.37-36.61s)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - эпизод полностью размечен

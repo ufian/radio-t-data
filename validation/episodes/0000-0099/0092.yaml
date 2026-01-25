@@ -1,0 +1,35 @@
+episode: 92
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Bobuk
+  total_duration_sec: 6125
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - speaker: Gray
+      note: "Представлен Umputun в начале как 'Грей, известный по подкасту IT-мысли' (stime: 39-46 сек)"
+    - speaker: Bobuk
+      note: "Отсутствует в начале выпуска из-за аварии. Umputun объясняет в 65-88 сек, что Бобук 'по непроверенным данным без интернета'. Bobuk присоединяется в 2768 сек и объясняет, что попал в аварию"
+    - speaker: Olyapka
+      note: "Упоминается как отсутствующая (на концерте), не появляется в выпуске"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+episode_notes:
+  date: "2008-06-29"
+  audio_url: "https://cdn.radio-t.com/rt_podcast92.mp3"
+  context: "Выпуск с неполным составом - Bobuk присоединился позже из-за аварии, Olyapka отсутствует"

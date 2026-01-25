@@ -1,0 +1,51 @@
+episode: 64
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 4392
+
+# Детали по спикерам
+speakers_detail:
+  - speaker: Umputun
+    role: host
+    replies_count: 461
+    total_duration_sec: 1909
+    first_appearance_sec: 0.23
+
+  - speaker: Bobuk
+    role: host
+    replies_count: 432
+    total_duration_sec: 1865
+    first_appearance_sec: 14.25
+
+  - speaker: Olyapka
+    role: guest
+    replies_count: 130
+    total_duration_sec: 618
+    first_appearance_sec: 62.31
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - speaker: Olyapka
+      introduced_at_sec: 38.01
+      introduced_by: Umputun
+      quote: "а третий участник практически тот, который два раза уже, это можно считать не гостем, а частично хозяевом, я думаю, это Оляпка из далекого приуральско-зауральского города"
+  issues: []
+
+# Примечания
+notes:
+  - "Olyapka уже идентифицирована в транскрипте и есть в people.yaml как 'Бывшая ведущая'"
+  - "Эпизод чист - все спикеры корректно размечены и представлены"
+  - "Дата выпуска: 2007-12-09"
+
+# Предлагаемые правила очистки
+suggested_rules: []

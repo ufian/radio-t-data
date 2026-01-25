@@ -1,0 +1,27 @@
+episode: 95
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 5045.4
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 95 от 2008-07-20 содержит только трёх известных ведущих.
+  Все спикеры представлены в начале эпизода (22-44 сек):
+  - Umputun представляет Gray и Bobuk
+  - Bobuk представляет Umputun
+  Неизвестных спикеров или гостей в эпизоде нет.

@@ -1,0 +1,23 @@
+episode: 39
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 3601
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале выпуска (15-26s) оба ведущих представлены:
+    - Umputun представляет Bobuk: "радио Ти в составе обычных ведущих, в набор которых входит Бобок из Москвы"
+    - Bobuk представляет Umputun: "И Умпутун из Чикаго"
+
+# Предлагаемые правила очистки
+suggested_rules: []

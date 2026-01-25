@@ -1,0 +1,47 @@
+episode: 94
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  guests_present: [EldarMurtazin]
+  total_duration_sec: 6532  # примерная общая длительность
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "EldarMurtazin"
+    total_duration_sec: 1381
+    replies_count: 277
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "eldar_murtazin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Самопредставление в 203-216s: 'Меня зовут Эльдар Муртазин, я главный редактор Mobile Review, но и по совместительству занимаюсь еще и аналитикой в России, посвященной, безусловно, телефонам, мобильным телефонам.'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun представляет гостя как 'нестандартного и нетипичного' в 155-166s"
+    - "Гость представляется сам в 203-216s"
+    - "Описание эпизода подтверждает: 'Разговор со специальным гостем о мобильных хай-теках'"
+    - "EldarMurtazin уже есть в people.yaml с id 'eldar_murtazin'"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - спикер уже правильно идентифицирован как EldarMurtazin

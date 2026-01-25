@@ -1,0 +1,28 @@
+episode: 46
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 4664
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quote: "пропавший ненадолго Болбук из Москвы и никуда не пропадавший Умпутун из Чикаго"
+  introduction_time_sec: 25
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии
+notes: |
+  Эпизод 46 содержит только двух ведущих (Umputun и Bobuk).
+  Гостей в этом выпуске не было.
+  Оба ведущих представлены в начале выпуска (~25 сек).
+  Никаких проблем с атрибуцией спикеров не обнаружено.

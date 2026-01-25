@@ -1,0 +1,27 @@
+episode: 98
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_duration_sec: 6042  # ~100 min (742*3.3 + 540*4.3 + 249*5.0 approx)
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (7-56 сек) Umputun представляет всех ведущих:
+    - "со мной в студии... расширенный состав ведущих в лице Бобука из славного города-героя Москва"
+    - "И Грея из... города-героя Одессы" (Gray уточняет - из Киева)
+    - Bobuk также упоминает, что Umputun "из Напервилля" (около Чикаго)
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

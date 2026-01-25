@@ -1,0 +1,39 @@
+episode: 29
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+  total_duration_sec: 3537.02
+
+# Детальный анализ спикеров
+speakers_details:
+  - speaker: "Umputun"
+    replies_count: 314
+    total_duration_sec: 1848.96
+    first_appearance_sec: 7.74
+    role: host
+
+  - speaker: "Bobuk"
+    replies_count: 255
+    total_duration_sec: 1450.42
+    first_appearance_sec: 22.51
+    role: host
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: >
+    Ранний выпуск подкаста (29-й, апрель 2007). Только два ведущих - Umputun и Bobuk.
+    Гости отсутствуют. Разметка спикеров полностью корректна.
+    В начале выпуска ведущие обсуждают спонсорство Microsoft и планы развития подкаста.
+
+# Предлагаемые правила очистки
+suggested_rules: []

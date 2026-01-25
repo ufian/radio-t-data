@@ -1,0 +1,24 @@
+episode: 60
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 5161.2
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Эпизод 60 от 2007-11-11 содержит только двух ведущих: Umputun и Bobuk.
+    В начале подкаста (0:24) Bobuk представляет Umputun: "С той стороны океана у нас сидит Умпутун из Чикаго".
+    Ранее (0:11) Umputun упоминает "моего коллеги Бобука".
+    Гостей в этом выпуске нет.
+
+# Предлагаемые правила очистки
+suggested_rules: []

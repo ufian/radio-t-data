@@ -1,0 +1,68 @@
+episode: 18
+status: has_tasks
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Guest]
+  total_duration_sec: 6324.8
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 620.5
+    replies_count: 86
+    first_appearance_sec: 2134.6
+    last_appearance_sec: 6751.5
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "alex"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun в 2126s: "у нас подключился третий гость, званный гость... у нас в студии Алекс"
+        Umputun в 2133s: "Алекс, привет!"
+        Guest упоминает Германию: "по морозным немецким улицам"
+        Umputun в 2561s: "единственный более-менее виндозовский пользователь это Алекс"
+
+      # Связь с people.yaml
+      possible_matches:
+        - person_id: "alex"
+          confidence: 0.95
+          reason: |
+            В people.yaml Alex отмечен как участник выпусков 5, 6, 17.
+            Выпуск 18 следует непосредственно за 17, тот же гость.
+            Гость представлен как "Алекс", находится в Германии (европейский гость).
+
+      # Задание на voice comparison (не требуется - идентифицирован)
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    - Umputun и Bobuk представлены в начале эпизода (11-17s)
+    - В начале (24-33s) Umputun упоминает ожидаемого "европейского гостя"
+    - Guest (Алекс) представлен в 2126s при подключении
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 18
+    from_speaker: "Guest"
+    to_speaker: "Alex"
+    confidence: high
+    reason: |
+      Гость явно представлен как "Алекс" ведущим Umputun.
+      Это тот же Alex из выпусков 5, 6, 17 (согласно people.yaml).
+      Единственный гость в эпизоде, все 86 реплик Guest принадлежат ему.

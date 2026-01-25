@@ -1,0 +1,23 @@
+episode: 41
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Umputun]
+  total_duration_sec: 3832.2
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода (22-27 сек) оба ведущих представлены:
+    - Umputun: "В студии ведущая постоянная Боба из Москвы"
+    - Bobuk: "И Юмпутун из Чикаго"
+
+# Предлагаемые правила очистки
+suggested_rules: []

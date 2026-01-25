@@ -1,0 +1,107 @@
+episode: 72
+status: needs_review
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Olyapka]
+  total_duration_sec: 3689.8
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 464.0
+    replies_count: 120
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        В начале выпуска (44s): "И у нас сегодня новый гость, званный гость... Леша, как тебя называют в этом великом и могучем интернете?"
+        Ответ гостя: "Так и называют, в принципе."
+        В конце выпуска (3931s): "Но зато с нами был Алексей из города Москва, который сегодня дебютно выступил очень, по-моему, достойно."
+        На протяжении выпуска обращаются как "Леша", "Алексей".
+        Гость упоминает, что использует Mac, iPhone, FreeBSD, занимается программированием.
+        Это дебютное выступление гостя в подкасте.
+
+      # Возможные совпадения
+      possible_matches:
+        - person_id: "alex"
+          confidence: 0.2
+          reason: "В people.yaml есть 'Alex' (выпуски 5, 6, 17), но это маловероятно - разные временные периоды"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1708.80
+          etime: 1734.30
+          text: "Евгений, ты знаешь, я-то как пеший человек, мне в принципе GPS особо и не нужен. Но в случае с Garmin..."
+        alternative_segments:
+          - stime: 2498.03
+            etime: 2522.68
+            text: "И это в том числе, но дело в том, что для того, чтобы даже если у вас был старый iPhone..."
+          - stime: 1296.79
+            etime: 1321.12
+            text: "Дело в том, что злонамеренные люди что делают? Они регистрируют домен, за него не платят ни копейки..."
+
+  - speaker: "Olyapka"
+    total_duration_sec: 931.5
+    replies_count: 196
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "olyapka"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        В people.yaml Olyapka указана как бывшая ведущая (Ольга).
+        В начале выпуска Umputun говорит (33s): "По голосу вы слышите Олю, которую гнобят-гнобят в чате, но не догнобят."
+        В конце выпуска (3948s): "Ну и, конечно, постоянный ведущий этого подкаста Оля Ис."
+        Активно участвует как соведущая на протяжении всего выпуска.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Bobuk отсутствует в этом выпуске (упомянуто в начале - не было интернета в Екатеринбурге)"
+    - "Olyapka уже идентифицирована в системе, спикер корректен"
+    - "Guest (Алексей/Леша из Москвы) - дебютный гость, требует добавления в people.yaml если появится в других выпусках"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+metadata:
+  date: "2008-02-03"
+  audio_url: "https://cdn.radio-t.com/rt_podcast72.mp3"
+  topics:
+    - "Yahoo за недорого (покупка Microsoft)"
+    - "Trolltech и Audible"
+    - "Тесты MacBook Air"
+    - "Garmin nuvifone"
+    - "Google против доменных мудрецов"
+    - "Противопиратские подвижки недели"
+    - "Motorola удивила всех"
+  guest_info:
+    name: "Алексей (Леша)"
+    location: "Москва"
+    interests: ["Apple", "Mac", "iPhone", "FreeBSD", "программирование"]
+    first_appearance: true

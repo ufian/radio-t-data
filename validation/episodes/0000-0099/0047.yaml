@@ -1,0 +1,27 @@
+episode: 47
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 3868.41
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 47 от 2007-08-12 содержит только двух ведущих: Umputun и Bobuk.
+  Оба представлены в начале подкаста:
+  - Umputun представляет Bobuk: "В подкасте принимают участие постоянные ведущие в составе Бобука из Москвы."
+  - Bobuk представляет Umputun: "И Умпутун из Чикаго."
+  Гостей в этом выпуске нет. Разметка спикеров корректна.

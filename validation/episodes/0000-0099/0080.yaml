@@ -1,0 +1,113 @@
+episode: 80
+status: needs_review
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka, Guest]
+  total_duration_sec: 5464
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 470
+    replies_count: 94
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun представляет в начале эпизода (39.86s): 'у нас еще и Оля там сидит в стороночке'. Olyapka - известная бывшая ведущая, записана в people.yaml"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Guest"
+    total_duration_sec: 204
+    replies_count: 45
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: "Гость представляется (1024.12s, ошибочно атрибутировано Umputun): 'Меня зовут Илья, я из ближайшего Замкадия'. Umputun неоднократно обращается к нему 'Илья' (1096.11s, 1120.75s, 1190.48s). Рассказывает о РИФ (Российский интернет-форум) 2008."
+
+      possible_matches:
+        - person_id: "unknown_ilya_rif_2008"
+          confidence: 0.7
+          reason: "Имя Илья, был на РИФ-2008, из 'Замкадья' (не Москва). Нет точного соответствия в people.yaml"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1670.0
+          etime: 1690.3
+          text: "Ну, в общем, я так понимаю, что главный вывод из всей вот этой секции можно именно..."
+          note: "Самый длинный непрерывный сегмент речи Guest (20.3 сек)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Guest"
+      issue: "Реплика представления (1024.12s: 'Меня зовут Илья...') ошибочно атрибутирована Umputun вместо Guest"
+    - speaker: "Guest"
+      issue: "Некоторые короткие реплики Guest могут быть ошибочно атрибутированы (например, 1012.92s: 'Говори.' - это скорее реплика ведущего)"
+    - speaker: "Umputun"
+      issue: "Реплика 1147.74-1152.68s ('помимо самого Медведева порадовала барышня из Гугла') возможно принадлежит Guest (продолжает рассказ гостя об открытии РИФ)"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 80
+    from_speaker: "Guest"
+    to_speaker: "Ilya"
+    confidence: high
+    reason: "Гость представляется как Илья. Нет полного имени, но имя подтверждено многократными обращениями ведущих."
+
+  - type: reattribute
+    episode: 80
+    stime: 1024.12
+    etime: 1030.48
+    from_speaker: "Umputun"
+    to_speaker: "Ilya"
+    confidence: high
+    reason: "Фраза 'Меня зовут Илья, я из Замкадия' - это явно гость представляется, не Umputun говорит о себе"
+
+  - type: reattribute
+    episode: 80
+    stime: 1030.56
+    etime: 1033.02
+    from_speaker: "Umputun"
+    to_speaker: "Ilya"
+    confidence: high
+    reason: "Продолжение представления гостя: 'Тоже не местный, тоже иностранец'"
+
+  - type: reattribute
+    episode: 80
+    stime: 1012.92
+    etime: 1013.58
+    from_speaker: "Guest"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: "Короткая реплика 'Говори.' скорее принадлежит ведущему, который приглашает гостя говорить"
+
+# Метаданные эпизода
+metadata:
+  date: "2008-04-06"
+  audio_url: "https://cdn.radio-t.com/rt_podcast80.mp3"
+  topics:
+    - "РИФ глазами очевидца"
+  notes: "Юбилейный 80-й выпуск (0x50 в hex). Гость Илья рассказывает о РИФ-2008 и приезде Медведева."

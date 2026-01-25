@@ -1,0 +1,25 @@
+episode: 42
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+  total_duration_sec: 4436
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Оба ведущих представлены в начале выпуска:
+    - Umputun представляет Bobuk в реплике на 21-30 сек: "с той стороны у нас... Бобук из Москвы"
+    - Bobuk представляет Umputun в реплике на 31-43 сек: "Евгений Путун из Чикаго"
+
+# Предлагаемые правила очистки
+suggested_rules: []

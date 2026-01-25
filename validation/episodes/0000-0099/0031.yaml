@@ -1,0 +1,24 @@
+episode: 31
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 3745
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода (12-26 сек) Umputun представляет выпуск и Bobuk:
+    "И с вами постоянный ведущий этого самого выходного дня Бобук из Москвы."
+    Bobuk отвечает: "И Умпутун из Чикаго."
+    Оба ведущих корректно представлены.
+
+# Предлагаемые правила очистки
+suggested_rules: []

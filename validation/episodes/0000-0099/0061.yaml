@@ -1,0 +1,25 @@
+episode: 61
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+  total_duration_sec: 5110.5
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале выпуска Umputun представляет Bobuk ("Бобук из далекого, но славного города Москва"),
+    затем Bobuk представляет Umputun ("Умпутун из маленького-маленького города Чикаго").
+    Гостей в этом выпуске нет.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

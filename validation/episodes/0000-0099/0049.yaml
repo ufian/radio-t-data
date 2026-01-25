@@ -1,0 +1,145 @@
+episode: 49
+status: needs_review
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 3791
+  note: "Юбилейный 50-й выпуск (по счёту), годовщина подкаста. Много аудиофидбэков от слушателей."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 38
+    replies_count: 6
+    first_appearance_sec: 724.25
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "artem_rosnovsky"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Bobuk представляет: 'Артем отличился, он записал его в формате m4a' (712s). Гость говорит: 'пару раз мне даже выпала честь принять участие в подкасте Радио Ти'. Artem Rosnovsky участвовал в выпусках 69, 101, 106."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Guest2"
+    total_duration_sec: 150
+    replies_count: 29
+    first_appearance_sec: 2281.01
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        note: "Слушатель не представился в аудиофидбэке. Обсуждает GNOME vs KDE. Bobuk просто говорит 'Запускаю' перед воспроизведением."
+        reference_segment:
+          stime: 2310.47
+          etime: 2330.71
+          text: "с такой точки зрения, что Gnome окончательно победил и в пример приводил то, что там все намного... Для тех пользователей, которые впервые садятся за компьютер, то есть не с Windows, а впервые, то для них все намного понятнее и удобнее."
+
+  - speaker: "Guest3"
+    total_duration_sec: 35
+    replies_count: 5
+    first_appearance_sec: 2559.56
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "magic_lantern"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Представился в аудиозаписи: 'Приветствую, вот и от меня фидбэк на радио Ти, это Magic Lantern' (2559s)"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+      note: "Ник 'Magic Lantern' не найден в people.yaml. Нужно добавить как нового слушателя."
+
+  - speaker: "Guest4"
+    total_duration_sec: 74
+    replies_count: 13
+    first_appearance_sec: 2675.36
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "evil_penguin"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Bobuk представляет: 'давайте послушаем аудиофидбэк от Эвил Пингвин' (2669s). Сам гость: 'это аудиофидбэк от слушателя Радио Ти Эвил Пингвина' (2675s)"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+      note: "Ник 'Evil Penguin' не найден в people.yaml. Нужно добавить как нового слушателя."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все Guest* спикеры - это аудиофидбэки от слушателей к юбилейному выпуску"
+    - "Это не живые гости в студии, а воспроизводимые аудиозаписи"
+    - "Gray и другие ведущие отсутствуют в этом выпуске - только Umputun и Bobuk"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 49
+    from_speaker: "Guest1"
+    to_speaker: "Rosnovsky"
+    confidence: high
+    reason: "Bobuk представляет как 'Артём'. Artem Rosnovsky - известный участник из people.yaml"
+
+  - type: add_to_registry
+    person_id: "magic_lantern"
+    canonical_name: "MagicLantern"
+    info: "Слушатель, аудиофидбэк в выпуске 49"
+    then_rename:
+      episode: 49
+      from_speaker: "Guest3"
+      to_speaker: "MagicLantern"
+
+  - type: add_to_registry
+    person_id: "evil_penguin"
+    canonical_name: "EvilPenguin"
+    info: "Слушатель, аудиофидбэк в выпуске 49"
+    then_rename:
+      episode: 49
+      from_speaker: "Guest4"
+      to_speaker: "EvilPenguin"
+
+# Дополнительные заметки
+notes:
+  - "Guest2 требует идентификации - слушатель не представился в своём фидбэке"
+  - "Все аудиофидбэки - это юбилейные поздравления к годовщине подкаста"
+  - "Дата выпуска: 26 августа 2007 года"

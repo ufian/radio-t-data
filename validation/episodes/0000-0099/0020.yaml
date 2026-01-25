@@ -1,0 +1,94 @@
+episode: 20
+status: needs_review
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Guest]
+  total_speakers: 3
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 759
+    replies_count: 157
+    first_appearance_sec: 1522.55
+    last_appearance_sec: 2977.22
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        Гость представляется сам в 1522.55s: "Меня зовут Николай, не могу сказать,
+        что я прям такой уж суперспрофессионал, но, видимо, больше никто не откликнулся."
+
+        Контекст появления (Umputun в 1506.36s): "А необычно набором участников к нам
+        подбрел третий, наконец-то, профессионал, о чем нас давно просили в смысле
+        обсуждения профессиональных тем звать профессионалов."
+
+        В метаданных эпизода есть тема: "Работа над ошибками. Фотограф в студии"
+
+        Гость обсуждает фототехнику: DSLR камеры, объективы, Sony Alpha 100,
+        Konica Minolta, стабилизацию, ISO и т.д.
+
+      # Возможные соответствия в people.yaml
+      possible_matches: []  # Нет подходящих кандидатов
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reason: |
+          Имя "Николай" слишком распространённое для однозначной идентификации.
+          Необходимо подтверждение через голос или дополнительный контекст.
+          Гость — фотограф/эксперт по фототехнике.
+        reference_segments:
+          - stime: 1522.55
+            etime: 1529.42
+            text: "Меня зовут Николай, не могу сказать, что я прям такой уж суперспрофессионал, но, видимо, больше никто не откликнулся."
+          - stime: 2255.3
+            etime: 2282.5
+            text: "В современных астрокамерах применяются довольно большие по физическим размерам матрицы..."
+            duration_sec: 27.3
+            reason: "Длинный монолог без перебивок, хороший референс для голоса"
+        audio_url: "https://cdn.radio-t.com/rt_podcast20.mp3"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Умпутун явно представляет "профессионала" в 1506-1519s.
+    Гость сам называет себя Николаем в 1522s.
+    Дата эпизода: 2007-01-28 (очень ранний выпуск).
+
+# Предлагаемые действия
+suggested_actions:
+  - action: add_person_to_registry
+    person:
+      id: "nikolay_photographer"
+      canonical_name: "NikolayPhotographer"
+      real_name: "Николай"
+      info: "Фотограф, эксперт по фототехнике, выпуск 20 (2007)"
+    confidence: medium
+    reason: |
+      Единственный гость в выпуске 20. Явно представлен и назван по имени.
+      Специализация — фототехника (DSLR, объективы).
+      Нужно подтверждение через голос для связи с другими выпусками.
+
+  - action: rename_speaker
+    type: rename
+    episode: 20
+    from_speaker: "Guest"
+    to_speaker: "NikolayPhotographer"
+    confidence: medium
+    reason: |
+      Гость явно представляется как Николай и является фотографом.
+      Переименование возможно после добавления в people.yaml.

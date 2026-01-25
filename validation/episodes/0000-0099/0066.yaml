@@ -1,0 +1,56 @@
+episode: 66
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 5203
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 752
+    replies_count: 185
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun представляет в начале (24.6s): 'Прежде всего, это Оля из приуральского города Пермь и Бобук из далекого от Урала'"
+
+      # Дополнительные возможные совпадения не требуются
+      possible_matches: []
+
+      # Voice task не нужен - спикер идентифицирован
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 66 от 2007-12-23 содержит трёх участников:
+  - Umputun (ведущий): 595 реплик, 2318 сек
+  - Bobuk (ведущий): 514 реплик, 2133 сек
+  - Olyapka (гость/бывшая ведущая): 185 реплик, 752 сек
+
+  Olyapka (Ольга) - известная участница подкаста, указана в people.yaml как бывшая ведущая.
+  Явно представлена Umputun в начале выпуска как "Оля из приуральского города Пермь".
+
+  Никаких неизвестных спикеров (SPEAKER_*, Guest*) в эпизоде не обнаружено.
+  Разметка спикеров полностью корректна.

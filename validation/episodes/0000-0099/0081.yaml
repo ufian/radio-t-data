@@ -1,0 +1,48 @@
+episode: 81
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 5743
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 780
+    replies_count: 154
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "В начале эпизода (17.35s) Umputun говорит: 'В этот день с нами, как и во все остальные дни и выходные, Бобук из Москвы, Ляпка из Перми.'"
+
+      # Задание на voice comparison не нужно
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Olyapka (Ляпка) - бывшая ведущая подкаста из Перми.
+  В этом эпизоде она уже числится в справочнике people.yaml с canonical_name "Olyapka".
+  Спикер был корректно идентифицирован, никаких изменений не требуется.
+
+  Эпизод 81 от 2008-04-13 (День космонавтики) - чистый, все спикеры корректно атрибутированы.

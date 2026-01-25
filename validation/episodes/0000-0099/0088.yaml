@@ -1,0 +1,50 @@
+episode: 88
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 4191
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 529
+    replies_count: 127
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun (7s): "вот Оля наверняка должна знать, потому что она в математике сильна"
+        Bobuk (36s): "Этот замечательный сексуальный голос, который вы слышали на заднем плане, это была Олечка из Москвы, которая недавно переехала в Москву"
+        Olyapka (95s): "Типа, вот, Алябка, ты переехала из Перми" (self-reference)
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Выпуск 88 от 2008-06-01 содержит только три спикера: Umputun, Bobuk и Olyapka.
+  Все спикеры были явно представлены в начале выпуска (первые 60 секунд).
+  Olyapka (Ольга) - бывшая ведущая, переехала из Перми в Москву.
+  Спикер уже корректно размечен в people.yaml (id: olyapka).

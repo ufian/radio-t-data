@@ -1,0 +1,68 @@
+episode: 75
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 4274.3
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Olyapka"
+    total_duration_sec: 482.2
+    replies_count: 87
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Bobuk обращается к ней по имени в начале: 'Оль, у вас там в Перми как?' (34.88s). Olyapka - известный гость из people.yaml (бывшая ведущая Ольга)."
+
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "Guest"
+    total_duration_sec: 53.8
+    replies_count: 12
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это слушатель, приславший аудио-ролик, не постоянный гость
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun представляет ролик: 'хочу представить вашему вниманию первый пример вот такого коротенького ролика, присланного одними слушателями' (929-936s). Гость представляется сам: 'С вами был Антон из Израиля' (990-997s)."
+
+      possible_matches:
+        - person_id: "anton_israel"
+          confidence: 1.0
+          reason: "Гость явно представляется: 'С вами был Антон из Израиля'. Это слушатель, приславший аудио-ролик, а не постоянный гость подкаста."
+
+      voice_task:
+        needed: false
+        # Voice comparison не нужен - гость представился явно
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes:
+  - "Olyapka уже корректно размечена в транскрипте - это бывшая ведущая Ольга из Перми"
+  - "Guest - это Антон из Израиля, слушатель, приславший аудио-ролик. Это разовое появление, а не постоянный гость."
+  - "Ролик был экспериментом - первый пример аудио-вставки от слушателей в подкасте"
+  - "Дата в ролике (20 февраля) не совпадает с датой выпуска (2 марта 2008) - ролик был записан заранее"

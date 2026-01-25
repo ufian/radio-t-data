@@ -1,0 +1,23 @@
+episode: 23
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 3759.8
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Umputun представляет Бобука в 17-21 сек: "С вами в студии исключительно постоянный ведущий Бобук из Москвы"
+    Бобук представляет Umputun в 22-34 сек: "И исключительно не постоянный ведущий, он путал нас в Чикаго"
+    В эпизоде только два ведущих, без гостей.
+
+# Предлагаемые правила очистки
+suggested_rules: []

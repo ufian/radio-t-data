@@ -1,0 +1,53 @@
+episode: 68
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Olyapka]
+  total_duration_sec: 5412.9
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Примечание: Olyapka указана в предрассчитанной статистике как "неизвестный спикер",
+# но она является известной бывшей ведущей (id: olyapka в people.yaml).
+# Она была явно представлена в начале эпизода (22.7s - "Оля с центрового...")
+# и активно участвовала в обсуждении (129 реплик, 662 сек).
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - speaker: Umputun
+      introduced_at: 22.7
+      context: "Представлен Olyapka: 'уважаемый и незабываемый Умпутун из Чикаго'"
+    - speaker: Bobuk
+      introduced_at: 34.4
+      context: "Umputun: 'Бобук, соответственно, из мелкого городишка Москва'"
+    - speaker: Olyapka
+      introduced_at: 22.7
+      context: "Umputun: 'Оля с центрового... из Пермь на Уральском хребте'"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+metadata:
+  date: "2008-01-06"
+  audio_url: "https://cdn.radio-t.com/rt_podcast68.mp3"
+  topics_count: 11
+  total_replies: 1316
+  speaker_stats:
+    - speaker: Umputun
+      replies: 677
+      duration_sec: 2664.4
+      first_appearance_sec: 8.2
+    - speaker: Bobuk
+      replies: 510
+      duration_sec: 2087.0
+      first_appearance_sec: 38.5
+    - speaker: Olyapka
+      replies: 129
+      duration_sec: 661.5
+      first_appearance_sec: 45.2

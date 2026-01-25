@@ -1,0 +1,23 @@
+episode: 53
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 4266.4
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun представляет выпуск в 6.7s и называет Bobuk ('Бобука из Москвы')"
+    - "Bobuk в ответ представляет Umputun ('Умпутуна из Чикаго') в 22.2s"
+    - "Выпуск 53 от 22 сентября 2007 года - ранний формат с двумя ведущими"
+
+# Предлагаемые правила очистки
+suggested_rules: []

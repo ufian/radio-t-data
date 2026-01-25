@@ -1,0 +1,40 @@
+episode: 17
+status: clean
+analyzed_at: "2026-01-24"
+
+speakers_summary:
+  hosts_present: [Umputun]
+  guests_present: [Alex]
+  total_duration_sec: 3401
+
+unknown_speakers:
+  - speaker: "Alex"
+    total_duration_sec: 1190
+    replies_count: 140
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "alex"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun явно представляет в 41-55s: 'И у нас новый, хотя и старый, с другой стороны проверенный гость в студии, Алекс, который был известен вам в прошлых подкастах как Алекс с Силиконовой долины'. Alex также упоминает свой подкаст 'Дольче Вилли'. В people.yaml указано: 'Выпуски 5, 6, 17'."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+suggested_rules: []
+
+notes: |
+  Эпизод 17 - первый выпуск 2007 года. Bobuk отсутствует (праздники в России).
+  Alex - постоянный гость ранних выпусков, ведущий подкаста "Дольче Вилли" (Dolce Vita),
+  живёт в Силиконовой Долине. Уже корректно размечен в транскрипте.

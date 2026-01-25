@@ -1,0 +1,73 @@
+episode: 78
+status: clean
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  guests_present: [Olyapka]
+  total_duration_sec: 7040.2
+
+# Детальный анализ спикеров
+speakers:
+  - speaker: "Umputun"
+    role: host
+    total_duration_sec: 3046.2
+    replies_count: 792
+    first_appearance_sec: 7.4
+
+  - speaker: "Bobuk"
+    role: host
+    total_duration_sec: 2502.3
+    replies_count: 551
+    first_appearance_sec: 37.5
+
+  - speaker: "Olyapka"
+    role: guest
+    total_duration_sec: 904.7
+    replies_count: 127
+    first_appearance_sec: 60.9
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "olyapka"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление в начале эпизода:
+        - Umputun (23.26s): "Я горд представить вам с той стороны океана двух незаменимейших
+          и крутейших и просто столбовых таких камня нашего подкаста «Бобука из Москвы»
+          и «Олю из Перми»."
+        - Bobuk (45.8s): "...где-то по шоссе энтузиастов за МКАДом находится Аляпка из Перми,
+          вот она наконец-то, наконец-то к нам вернулась после долгого-долгого отсутствия."
+        - Bobuk (60.04s): "Оля, ты где шлялась?"
+        Olyapka подтвердила своё присутствие, рассказав о поездке в Чехию.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод 78 от 2008-03-24. Чистый эпизод с тремя спикерами:
+  - Umputun и Bobuk — постоянные ведущие
+  - Olyapka (Оля из Перми) — бывшая ведущая, вернулась после поездки в Чехию
+
+  Все спикеры явно представлены в первые 60 секунд эпизода.
+  Olyapka зарегистрирована в people.yaml как известный участник.
+  Никаких проблем с атрибуцией не обнаружено.

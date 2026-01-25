@@ -1,0 +1,51 @@
+episode: 30
+status: has_tasks
+analyzed_at: "2026-01-24"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk]
+  total_duration_sec: 3654.4
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 587.3
+    replies_count: 112
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "artem_rosnovsky"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Бобук явно представляет гостя в начале выпуска (73.85-81.76s): 'Да, и сейчас по голосу многие узнали, что это Артем Росновский, который, собственно, пользователь Росновский на всех этих сервисах.' Контекст также указывает на радиоведущего и участника news2.ru/Хабрахабр."
+
+      # Не нужны возможные совпадения - идентификация точная
+      possible_matches: []
+
+      # Задание на voice comparison не требуется - идентификация уверенная
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 1250.8
+          etime: 1276.9
+          text: "Особенно если учитывать, что я-то на самом деле вас совершенно ни в чем не заподозрил..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 30
+    from_speaker: "Guest"
+    to_speaker: "Rosnovsky"
+    confidence: high
+    reason: "Гость явно представлен как Артём Росновский в начале выпуска (73.85-81.76s). Он известен в справочнике people.yaml как artem_rosnovsky с canonical_name 'Rosnovsky'. Эпизод 30 следует добавить к списку его выпусков (текущий список: 69, 101, 106)."
