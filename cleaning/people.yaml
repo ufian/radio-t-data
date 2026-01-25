@@ -18,7 +18,7 @@ hosts:
   - id: "gray"
     canonical_name: "Gray"
     aliases: ["Grey", " Gray", "gray"]
-    real_name: "Евгений"
+    real_name: "Сергей Петренко"
     role: "Ведущий"
 
   - id: "ksenks"
