@@ -1,7 +1,7 @@
 batch_id: review_0700_0799
 description: Manual review tasks for episodes 700-799
 status: pending
-total_tasks: 12
+total_tasks: 3
 tasks:
 - episode: 703
   speaker: SPEAKER_04
@@ -11,23 +11,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 709
-  speaker: SPEAKER_05
-  total_duration_sec: 5.9
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 709
-  from_speaker: SPEAKER_05
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Реплика "Не спрашивают" (7002.5s) сразу повторяется Bobuk (7003.4s) — типичный
-    паттерн ошибки распознавания. Остальные реплики короткие комментарии, характерные
-    для стиля Bobuk. Требуется подтверждени
-  time_range: null
-  action: confirm_or_reject
 - episode: 713
   from_speaker: Alek.sys
   to_speaker: SPEAKER_MISATTRIBUTED
@@ -35,51 +18,6 @@ tasks:
   reason: 'Alek.sys отсутствовал в этом выпуске. 3 короткие реплики (5 сек) -
 
     скорее всего ошибки распознавания SPEAKER_05 или Gray.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 713
-  from_speaker: Bobuk
-  to_speaker: SPEAKER_MISATTRIBUTED
-  confidence: medium
-  reason: 'Bobuk отсутствовал в этом выпуске. 1 реплика (3 сек) между репликами Gray
-    -
-
-    скорее всего ошибка распознавания SPEAKER_05 или Gray.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 735
-  from_speaker: Bobuk
-  to_speaker: Gray
-  confidence: medium
-  reason: 'Реплика обрывается, Gray сразу продолжает ту же мысль о V8.
-
-    Bobuk не участвовал в выпуске.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 735
-  from_speaker: Bobuk
-  to_speaker: SPEAKER_MISATTRIBUTED_Bobuk
-  confidence: low
-  reason: 'Не удаётся точно определить кто это сказал (Umputun или Gray).
-
-    Помечаем как требующее дополнительной проверки.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 746
-  from_speaker: Bobuk
-  to_speaker: Gray
-  confidence: medium
-  reason: 'Bobuk отсутствовал в этом эпизоде (упомянуто в начале). 2 реплики (383s,
-    1178s) находятся в контексте речи Gray и могут быть ошибками распознавания. Требует
-    ручной верификации голоса.
 
     '
   time_range: null
@@ -92,35 +30,3 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 778
-  from_speaker: Gray
-  to_speaker: Bobuk
-  confidence: medium
-  reason: 'Gray официально отсутствует в выпуске (объявлено в начале).
-
-    Реплика находится в диалоге между Umputun и Bobuk.
-
-    Bobuk сразу продолжает говорить после этой реплики.
-
-    Требуется voice comparison для подтве'
-  time_range: null
-  action: confirm_or_reject
-- episode: 791
-  from_speaker: Gray
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Gray отсутствует в выпуске (подтверждено Umputun в начале). Контекст и последующая
-    реплика Bobuk ("Просто реально отказался") указывают на него как вероятного автора.
-    Требуется voice comparison для по
-  time_range: null
-  action: confirm_or_reject
-- episode: 793
-  from_speaker: Gray
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Gray отсутствует в эпизоде (подтверждено Umputun в начале). Короткая реплика
-    'Ну да' в диалоге, вероятно Bobuk
-  time_range:
-    start: 5950
-    end: 5955
-  action: confirm_or_reject

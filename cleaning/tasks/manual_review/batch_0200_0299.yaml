@@ -1,7 +1,7 @@
 batch_id: review_0200_0299
 description: Manual review tasks for episodes 200-299
 status: pending
-total_tasks: 86
+total_tasks: 41
 tasks:
 - episode: 202
   speaker: Guest1
@@ -99,49 +99,11 @@ tasks:
   identified_as: null
   confidence: high
   action: investigate
-- episode: 213
-  speaker: SPEAKER_01
-  identified_as: Marin_k_a
-  confidence: medium
-  total_duration_sec: 9
-  evidence: 'Использует женские формы: "Я далека, далека" (1896 сек)
-
-    Контекст соответствует участию в разговоре наравне с другими.
-
-    Реплика "Пока-пока" в конце (7077 сек) — типичное прощание участника.
-
-    Вероятно ошибка автоматического распознавания спикера.
-
-    '
-  action: confirm_or_reject
-- episode: 213
-  from_speaker: SPEAKER_01
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Женский род в речи, нужна voice verification для подтверждения
-  time_range: null
-  action: confirm_or_reject
-- episode: 214
-  speaker: SPEAKER_06
-  total_duration_sec: 7
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 215
   speaker: SPEAKER_00
   total_duration_sec: 8
   replies_count: 3
   is_error: false
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 215
-  speaker: SPEAKER_01
-  total_duration_sec: 5
-  replies_count: 5
-  is_error: true
   identified_as: null
   confidence: null
   action: investigate
@@ -154,102 +116,12 @@ tasks:
   confidence: null
   action: investigate
 - episode: 217
-  speaker: SPEAKER_01
-  total_duration_sec: 7
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 217
   from_speaker: SPEAKER_05
   to_speaker: KirillGotovtsev
   confidence: medium
   reason: Вероятно тот же гость, контекст и паттерн разговора совпадают
   time_range: null
   action: confirm_or_reject
-- episode: 221
-  speaker: SPEAKER_03
-  identified_as: inna_kuznetsova
-  confidence: medium
-  total_duration_sec: 3
-  evidence: 'Обе реплики - короткий ответ "Нет" на вопросы Умпутуна:
-
-    - 2306.29s: после вопроса "Ты с Бучем знакома?" - "Нет" (ответ Инны)
-
-    - 3711.85s: во время обсуждения тем - "Нет" (реакция на предложение)
-
-    Судя по контексту, это ответы гостьи на вопросы ведущих.
-
-    '
-  action: confirm_or_reject
-- episode: 221
-  from_speaker: SPEAKER_03
-  to_speaker: InnaKuznetsova
-  confidence: medium
-  reason: Ответы на вопросы к гостье, но реплики короткие - требует верификации
-  time_range: null
-  action: confirm_or_reject
-- episode: 222
-  speaker: SPEAKER_00
-  total_duration_sec: 7
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 222
-  speaker: SPEAKER_07
-  total_duration_sec: 6
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 222
-  speaker: SPEAKER_02
-  total_duration_sec: 5
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 222
-  from_speaker: SPEAKER_00
-  to_speaker: AlenaCPP
-  confidence: medium
-  reason: Контекст разговора о Сиэтле указывает на гостью из США
-  time_range: null
-  action: confirm_or_reject
-- episode: 225
-  speaker: SPEAKER_04
-  total_duration_sec: 9
-  replies_count: 7
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 225
-  from_speaker: SPEAKER_04
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: 'Большинство реплик SPEAKER_04 по контексту принадлежат Marin_k_a.
-
-    Однако уверенность medium из-за возможности принадлежности части реплик Gray.
-
-    Рекомендуется voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 227
-  speaker: SPEAKER_02
-  total_duration_sec: 5
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: medium
-  action: investigate
 - episode: 228
   speaker: SPEAKER_01
   total_duration_sec: 8
@@ -258,19 +130,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 229
-  from_speaker: Gray
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: 'Gray не участвовал в выпуске (подтверждено репликой в 6719s).
-
-    Короткая реакция "Ужас" (6139s) - скорее всего Marin_k_a или Bobuk.
-
-    Требует voice comparison для точного определения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
 - episode: 230
   speaker: Gray
   identified_as: Plushev
@@ -290,14 +149,6 @@ tasks:
   time_range: null
   action: confirm_or_reject
 - episode: 232
-  speaker: SPEAKER_02
-  total_duration_sec: 5
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 232
   from_speaker: SPEAKER_03
   to_speaker: NevyIvan
   confidence: medium
@@ -308,22 +159,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 234
-  speaker: SPEAKER_04
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 235
-  speaker: SPEAKER_04
-  total_duration_sec: 5
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 237
   speaker: SPEAKER_00
   identified_as: Umputun
@@ -335,22 +170,6 @@ tasks:
 
     '
   action: confirm_or_reject
-- episode: 237
-  speaker: SPEAKER_06
-  total_duration_sec: 6
-  replies_count: 5
-  is_error: false
-  identified_as: null
-  confidence: low
-  action: investigate
-- episode: 237
-  speaker: SPEAKER_01
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: low
-  action: investigate
 - episode: 238
   from_speaker: SPEAKER_MISATTRIBUTED_PETR
   to_speaker: needs_voice_comparison
@@ -359,14 +178,6 @@ tasks:
     SPEAKER_03
   time_range: null
   action: confirm_or_reject
-- episode: 239
-  speaker: SPEAKER_01
-  total_duration_sec: 8
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 241
   from_speaker: SPEAKER_00
   to_speaker: Marin_k_a
@@ -385,46 +196,6 @@ tasks:
   reason: Контекстный анализ показывает, что реплики появляются в диалогах Эльдара
   time_range: null
   action: confirm_or_reject
-- episode: 245
-  speaker: SPEAKER_05
-  total_duration_sec: 7
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 245
-  speaker: SPEAKER_03
-  total_duration_sec: 5
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 246
-  speaker: SPEAKER_05
-  total_duration_sec: 8
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 246
-  speaker: SPEAKER_00
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 247
-  speaker: SPEAKER_06
-  total_duration_sec: 6
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 248
   from_speaker: EldarMurtazin
   to_speaker: VolodyaIvanov
@@ -436,33 +207,10 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 249
-  speaker: SPEAKER_01
-  total_duration_sec: 8
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: low
-  action: investigate
-- episode: 249
-  from_speaker: SPEAKER_01
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Появляется в контексте речи Marin_k_a, короткие уточняющие вопросы
-  time_range: null
-  action: confirm_or_reject
 - episode: 250
   speaker: SPEAKER_00
   total_duration_sec: 5
   replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 250
-  speaker: SPEAKER_03
-  total_duration_sec: 5
-  replies_count: 3
   is_error: true
   identified_as: null
   confidence: null
@@ -482,30 +230,6 @@ tasks:
   is_error: false
   identified_as: null
   confidence: high
-  action: investigate
-- episode: 255
-  speaker: SPEAKER_05
-  total_duration_sec: 7
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 256
-  speaker: SPEAKER_01
-  total_duration_sec: 8
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 259
-  speaker: SPEAKER_01
-  total_duration_sec: 7
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: low
   action: investigate
 - episode: 259
   speaker: SPEAKER_04
@@ -530,54 +254,12 @@ tasks:
   reason: Контекст показывает что это гость (обращение к Мариночке)
   time_range: null
   action: confirm_or_reject
-- episode: 261
-  speaker: SPEAKER_02
-  total_duration_sec: 5
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 261
-  from_speaker: SPEAKER_02
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Реплика 1237s явно адресована Марусе (Umputun спрашивает 'Маруся, я тебя
-    знаешь, чем успокою?'). Остальные реплики слишком короткие для уверенного определения.
-  time_range: null
-  action: confirm_or_reject
 - episode: 262
   from_speaker: EldarMurtazin
   to_speaker: SPEAKER_00
   confidence: medium
   reason: Реплики о Java/Eclipse/NIO - это Java-разработчик, не мобильный аналитик.
     Требуется voice comparison для точной идентификации.
-  time_range: null
-  action: confirm_or_reject
-- episode: 263
-  speaker: Gray
-  identified_as: Gray
-  confidence: medium
-  total_duration_sec: 1
-  evidence: 'Единственная реплика Gray (4953s): ''LG, да'' - подтверждение слов Umputun
-    ''Gold Star это LG''. В начале выпуска (10s) Umputun говорит ''Грея Паразита нет
-    в компании'', но Gray мог присоединиться позже по ходу записи. Одна короткая реплика
-    за весь выпуск - возможно ошибка распознавания, но нельзя исключи'
-  action: confirm_or_reject
-- episode: 264
-  speaker: SPEAKER_04
-  total_duration_sec: 8
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 264
-  from_speaker: SPEAKER_04
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Реплики 6412-6421 сек — разговор с котом Изей у Марины. Реплика 3080 сек
-    требует дополнительной проверки.
   time_range: null
   action: confirm_or_reject
 - episode: 267
@@ -591,33 +273,12 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 270
-  speaker: SPEAKER_06
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 275
   from_speaker: PetrDidenko
   to_speaker: AndreyBreslav
   confidence: medium
   reason: Пётр Диденко не представлен в эпизоде. Единственный гость - Андрей Бреслав.
     Требует подтверждения через voice comparison.
-  time_range: null
-  action: confirm_or_reject
-- episode: 279
-  from_speaker: Gray
-  to_speaker: SPEAKER_NEEDS_REVIEW
-  confidence: medium
-  reason: 'Gray не был представлен в начале выпуска.
-
-    Единственная реплика за весь выпуск - нетипично для ведущего.
-
-    Требуется voice comparison для определения реального спикера.
-
-    '
   time_range: null
   action: confirm_or_reject
 - episode: 282
@@ -632,30 +293,6 @@ tasks:
   speaker: SPEAKER_03
   total_duration_sec: 9
   replies_count: 8
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 283
-  speaker: SPEAKER_04
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 284
-  speaker: SPEAKER_00
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 285
-  speaker: SPEAKER_05
-  total_duration_sec: 7
-  replies_count: 7
   is_error: true
   identified_as: null
   confidence: null
@@ -679,14 +316,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 289
-  speaker: SPEAKER_03
-  total_duration_sec: 6
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 290
   from_speaker: SPEAKER_01
   to_speaker: Marin_k_a
@@ -708,14 +337,6 @@ tasks:
   time_range: null
   action: confirm_or_reject
 - episode: 293
-  speaker: SPEAKER_01
-  total_duration_sec: 8
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 293
   speaker: SPEAKER_02
   total_duration_sec: 5
   replies_count: 4
@@ -735,14 +356,6 @@ tasks:
   speaker: SPEAKER_02
   total_duration_sec: 9
   replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 299
-  speaker: SPEAKER_03
-  total_duration_sec: 7
-  replies_count: 6
   is_error: true
   identified_as: null
   confidence: null

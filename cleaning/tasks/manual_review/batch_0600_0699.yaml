@@ -1,16 +1,8 @@
 batch_id: review_0600_0699
 description: Manual review tasks for episodes 600-699
 status: pending
-total_tasks: 54
+total_tasks: 24
 tasks:
-- episode: 601
-  speaker: SPEAKER_07
-  total_duration_sec: 5
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: low
-  action: investigate
 - episode: 602
   speaker: SPEAKER_00
   total_duration_sec: 8
@@ -33,14 +25,6 @@ tasks:
   time_range: null
   action: confirm_or_reject
 - episode: 603
-  speaker: SPEAKER_04
-  total_duration_sec: 6
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 603
   speaker: SPEAKER_03
   total_duration_sec: 6
   replies_count: 3
@@ -59,21 +43,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 611
-  speaker: SPEAKER_01
-  total_duration_sec: 8
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 611
-  from_speaker: SPEAKER_01
-  to_speaker: _unclear
-  confidence: low
-  reason: Все реплики слишком короткие для идентификации, это ошибки распознавания
-  time_range: null
-  action: confirm_or_reject
 - episode: 618
   speaker: SPEAKER_01
   total_duration_sec: 5
@@ -82,49 +51,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 621
-  speaker: SPEAKER_07
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 621
-  from_speaker: SPEAKER_07
-  to_speaker: SPEAKER_99
-  confidence: medium
-  reason: '3 короткие разбросанные реплики - вероятно артефакты или ошибки сегментации.
-
-    Альтернативно: могут быть короткими вставками от одного из присутствующих спикеров.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 623
-  speaker: SPEAKER_04
-  total_duration_sec: 7
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 623
-  speaker: SPEAKER_08
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 625
-  speaker: SPEAKER_05
-  total_duration_sec: 9
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 626
   speaker: SPEAKER_01
   total_duration_sec: 6
@@ -141,75 +67,9 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 626
-  speaker: SPEAKER_09
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 628
-  speaker: SPEAKER_01
-  total_duration_sec: 6
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 628
-  from_speaker: SPEAKER_01
-  to_speaker: SPEAKER_MISATTRIBUTED_01
-  confidence: medium
-  reason: 'Вероятно ошибки распознавания Ksenks/Anya.
-
-    Требует ручной проверки каждой реплики.
-
-    '
-  time_range: null
-  action: confirm_or_reject
 - episode: 629
   speaker: SPEAKER_03
   total_duration_sec: 5
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 633
-  speaker: SPEAKER_07
-  total_duration_sec: 8
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 634
-  speaker: SPEAKER_01
-  total_duration_sec: 6
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 635
-  speaker: SPEAKER_01
-  total_duration_sec: 8
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 635
-  from_speaker: SPEAKER_01
-  to_speaker: Umputun
-  confidence: medium
-  reason: Вторая реплика - явный дубль Umputun, первая вероятно тоже
-  time_range: null
-  action: confirm_or_reject
-- episode: 639
-  speaker: SPEAKER_01
-  total_duration_sec: 6
   replies_count: 5
   is_error: true
   identified_as: null
@@ -223,22 +83,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 642
-  speaker: SPEAKER_04
-  total_duration_sec: 6
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 646
-  from_speaker: Alek.sys
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Единственная реплика ~1 сек в диалоге Umputun-Gray-Bobuk. Alek.sys не представлен
-    и не упоминается в эпизоде. Требуется voice comparison для подтверждения.
-  time_range: null
-  action: confirm_or_reject
 - episode: 647
   from_speaker: SPEAKER_02
   to_speaker: SPEAKER_MISATTRIBUTED_02
@@ -269,90 +113,6 @@ tasks:
   confidence: medium
   reason: Контекст обсуждения Java/Spring, обращения 'Леша' от Umputun, реплики следуют
     за/перед Alek.sys
-  time_range: null
-  action: confirm_or_reject
-- episode: 648
-  from_speaker: Bobuk
-  to_speaker: Alek.sys
-  confidence: low
-  reason: 'Bobuk отсутствует в выпуске (упомянуто в начале).
-
-    Единственная его реплика на 5496s следует сразу после Alek.sys и продолжает его
-    мысль.
-
-    Требует voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 650
-  from_speaker: Gray
-  to_speaker: Bobuk
-  confidence: medium
-  reason: 'Единственная реплика продолжает мысль Bobuk о облачных инцидентах.
-
-    Gray не представлен и не упомянут в выпуске. В начале сказано "нас двое".
-
-    Требуется voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 650
-  from_speaker: Alek.sys
-  to_speaker: Bobuk
-  confidence: low
-  reason: 'Короткая реплика "Да, нет, не тот, другой" после Umputun.
-
-    Alek.sys не представлен в выпуске. Требуется voice comparison.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 650
-  from_speaker: Alek.sys
-  to_speaker: Bobuk
-  confidence: low
-  reason: 'Реплика "Она просто эти кабели отрезала" продолжает шутку Bobuk о подводной
-    лодке с ножницами.
-
-    Контекст предполагает это Bobuk или Umputun. Требуется voice comparison.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 661
-  from_speaker: Gray
-  to_speaker: Bobuk
-  confidence: medium
-  reason: 'Gray отсутствует в эпизоде (объявлено в начале). Единственная реплика Gray
-    - короткое перебивание ''Нет, он ползут'' в дискуссии о фреймворках. Bobuk активно
-    участвовал в этом разговоре непосредственно '
-  time_range: null
-  action: confirm_or_reject
-- episode: 662
-  speaker: SPEAKER_00
-  identified_as: Anya
-  confidence: medium
-  total_duration_sec: 1
-  evidence: 'Единственная реплика "Треть чего?" (123s) в контексте разговора о "третине"
-    -
-
-    двух женщинах (Ксюша и Аня) как трети состава.
-
-    Реплика звучит после фраз о "третине" и перед ответом Gray: "Их вдвоем, с Ксюшей"
-    (124s).
-
-    Ksenks отвечает: "Да все правильно, два Леши, Грей и Умпутун, и мы с тобой" (126s).
-
-    Л'
-  action: confirm_or_reject
-- episode: 662
-  from_speaker: SPEAKER_00
-  to_speaker: Anya
-  confidence: medium
-  reason: Контекстная идентификация - единственная реплика в разговоре о 'третине'
-    (двух женщинах)
   time_range: null
   action: confirm_or_reject
 - episode: 669
@@ -407,22 +167,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 681
-  speaker: SPEAKER_04
-  total_duration_sec: 5
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 682
-  speaker: SPEAKER_06
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 686
   speaker: SPEAKER_06
   total_duration_sec: 6
@@ -434,14 +178,6 @@ tasks:
 - episode: 686
   speaker: SPEAKER_03
   total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 686
-  speaker: SPEAKER_07
-  total_duration_sec: 8
   replies_count: 3
   is_error: true
   identified_as: null
@@ -460,19 +196,6 @@ tasks:
   to_speaker: SPEAKER_MISATTRIBUTED_02
   confidence: medium
   reason: Короткие scattered реплики - скорее всего ошибки распознавания
-  time_range: null
-  action: confirm_or_reject
-- episode: 692
-  from_speaker: Gray
-  to_speaker: Alek.sys
-  confidence: medium
-  reason: 'Gray отсутствует в выпуске (подтверждено словами Umputun в начале).
-
-    Реплика находится между репликами Alek.sys и Umputun.
-
-    По контексту ("Фишка в том, что если ты стройно передаешь свое решение...")
-
-    эт'
   time_range: null
   action: confirm_or_reject
 - episode: 698

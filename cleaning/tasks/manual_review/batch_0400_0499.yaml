@@ -1,16 +1,8 @@
 batch_id: review_0400_0499
 description: Manual review tasks for episodes 400-499
 status: pending
-total_tasks: 38
+total_tasks: 17
 tasks:
-- episode: 400
-  speaker: SPEAKER_03
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 400
   from_speaker: SPEAKER_04
   to_speaker: Bobuk
@@ -22,14 +14,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 403
-  speaker: SPEAKER_06
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 406
   from_speaker: SPEAKER_04
   to_speaker: Marin_k_a
@@ -47,32 +31,6 @@ tasks:
   reason: 'Короткие реплики, вклинивающиеся в диалог.
 
     Voice comparison поможет определить: Ksenks или Marin_k_a.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 415
-  speaker: SPEAKER_01
-  identified_as: Umputun
-  confidence: medium
-  total_duration_sec: 2
-  evidence: 'Серия быстрых реплик 7522-7525s: "Ах, можно Base Image построить",
-
-    "Ах, можно Base Container", "Ах, можно Volume Share", "Читайте RTFM"
-
-    Идет сразу после реплики Umputun "Ерунду говорит всякую" (7520s).
-
-    Похоже на чтение/цитирование с экрана или ироничное перечисление.
-
-    Umputun часто так комментирует с'
-  action: confirm_or_reject
-- episode: 421
-  from_speaker: Alek.sys
-  to_speaker: Bobuk
-  confidence: medium
-  reason: 'Alek.sys не был упомянут в начале среди присутствующих.
-
-    Единственная реплика встроена в монолог Bobuk про блокировки URL.
 
     '
   time_range: null
@@ -172,34 +130,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 448
-  speaker: SPEAKER_02
-  total_duration_sec: 7
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 448
-  from_speaker: SPEAKER_02
-  to_speaker: Gray
-  confidence: medium
-  reason: 'Это продолжение фразы Gray "Это, по-моему, HTC." -> "Это, по-моему, HTC
-    One."
-
-    Одна разорванная фраза. Требует голосовой верификации.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 450
-  speaker: SPEAKER_05
-  total_duration_sec: 7
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 452
   from_speaker: SPEAKER_04
   to_speaker: DimaMinsk
@@ -208,14 +138,6 @@ tasks:
     Минска'''
   time_range: null
   action: confirm_or_reject
-- episode: 457
-  speaker: SPEAKER_01
-  total_duration_sec: 5
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 458
   speaker: SPEAKER_01
   total_duration_sec: 919
@@ -224,54 +146,6 @@ tasks:
   identified_as: null
   confidence: high
   action: investigate
-- episode: 462
-  speaker: SPEAKER_08
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 464
-  speaker: SPEAKER_02
-  total_duration_sec: 7
-  replies_count: 11
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 464
-  from_speaker: SPEAKER_02
-  to_speaker: Umputun
-  confidence: medium
-  reason: Все 11 реплик - короткие подтверждения/эхо. Первая реплика 'Мог бы' - эхо
-    Umputun. Требует voice verification для подтверждения.
-  time_range: null
-  action: confirm_or_reject
-- episode: 467
-  speaker: SPEAKER_01
-  total_duration_sec: 6
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 474
-  speaker: SPEAKER_02
-  total_duration_sec: 6
-  replies_count: 7
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 482
-  from_speaker: Alek.sys
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Единственная реплика 'Понимаете?' (0.38 сек) находится между двумя репликами
-    Bobuk. Alek.sys не мог быть ведущим с такой минимальной активностью
-  time_range: null
-  action: confirm_or_reject
 - episode: 483
   from_speaker: Alek.sys
   to_speaker: ArtemGoDev
@@ -285,28 +159,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 484
-  speaker: SPEAKER_01
-  identified_as: dmitry_zhemerov
-  confidence: medium
-  total_duration_sec: 5
-  evidence: Все реплики в контексте разговора с Жемеровым о Kotlin/JetBrains
-  action: confirm_or_reject
-- episode: 484
-  from_speaker: SPEAKER_01
-  to_speaker: DmitryZhemerov
-  confidence: medium
-  reason: Короткие реплики в контексте разговора с Жемеровым - вероятно его же фрагменты
-  time_range: null
-  action: confirm_or_reject
-- episode: 486
-  speaker: SPEAKER_01
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: low
-  action: investigate
 - episode: 487
   speaker: SPEAKER_04
   total_duration_sec: 8
@@ -314,41 +166,4 @@ tasks:
   is_error: true
   identified_as: null
   confidence: low
-  action: investigate
-- episode: 487
-  speaker: SPEAKER_05
-  total_duration_sec: 5
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: low
-  action: investigate
-- episode: 494
-  from_speaker: Alek.sys
-  to_speaker: Bobuk
-  confidence: medium
-  reason: 'Реплика "На JavaScript ты пишешь так." является продолжением/эхом
-
-    фразы Bobuk. Alek.sys не присутствует в эпизоде. Требуется
-
-    voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 499
-  speaker: SPEAKER_01
-  total_duration_sec: 5
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 499
-  speaker: SPEAKER_05
-  total_duration_sec: 8
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
   action: investigate

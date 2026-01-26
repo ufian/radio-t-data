@@ -1,81 +1,61 @@
 # Remaining Work Statistics
 
-Generated: 2025-01-25
+Generated: 2025-01-25 (updated)
 
 ## Summary
 
 | Category | Tasks | Notes |
 |----------|-------|-------|
-| Manual Review | 192 | Investigate unknown speakers |
+| Manual Review | 139 | Investigate unknown speakers |
 | Voice Matching | 268 | Requires audio comparison |
-| **Total Tasks** | **460** | |
+| **Total Tasks** | **407** | |
 
 ### Data in data_clean/
 
 | Speaker Type | Replies | Episodes | Duration |
 |--------------|---------|----------|----------|
 | SPEAKER_MISATTRIBUTED_* | 135 | 22 | 12 min |
-| SPEAKER_XX (00-08) | 14,658 | 208 | 979 min (~16 hours) |
-| **Total unresolved** | **14,793** | | |
+| SPEAKER_XX (00-09) | 14,205 | 154 | 968 min (~16 hours) |
+| **Total unresolved** | **14,340** | | |
 
-## Manual Review Tasks by Batch
+## Session Progress
 
-| Batch | Tasks |
-|-------|-------|
-| batch_0000_0099.yaml | 2 |
-| batch_0100_0199.yaml | 2 |
-| batch_0200_0299.yaml | 63 |
-| batch_0300_0399.yaml | 38 |
-| batch_0400_0499.yaml | 22 |
-| batch_0500_0599.yaml | 24 |
-| batch_0600_0699.yaml | 34 |
-| batch_0700_0799.yaml | 3 |
-| batch_0800_0899.yaml | 3 |
-| batch_0900_0999.yaml | 1 |
+### This Session Applied
 
-## Voice Matching Tasks by Batch
+| Rule | Replies |
+|------|---------|
+| SPEAKER_0X → Umputun | 248 |
+| SPEAKER_0X → Bobuk | 86 |
+| SPEAKER_0X → Gray | 60 |
+| SPEAKER_0X → Marin_k_a | 9 |
+| SPEAKER_0X → Ksenks | 6 |
+| SPEAKER_0X → Alek.sys | 7 |
+| Short artifacts → _artifact | 37 |
+| **Subtotal (context)** | **453** |
 
-| Batch | Tasks | Types |
-|-------|-------|-------|
-| batch_0000_0099.yaml | 6 | Other:6 |
-| batch_0100_0199.yaml | 36 | Other:36 |
-| batch_0200_0299.yaml | 50 | SPEAKER_XX:32, MISATTRIBUTED:13, Other:5 |
-| batch_0300_0399.yaml | 70 | SPEAKER_XX:40, MISATTRIBUTED:19, Other:11 |
-| batch_0400_0499.yaml | 51 | SPEAKER_XX:26, MISATTRIBUTED:13, Other:12 |
-| batch_0500_0599.yaml | 18 | SPEAKER_XX:15, Other:3 |
-| batch_0600_0699.yaml | 26 | SPEAKER_XX:26 |
-| batch_0700_0799.yaml | 1 | Other:1 |
-| batch_0800_0899.yaml | 8 | SPEAKER_XX:3, Other:5 |
-| batch_0900_0999.yaml | 2 | Other:2 |
+### Previous Session Applied
 
-## Completed Work (this session)
-
-Moved to `cleaning/tasks/completed/`:
-- 466 manual_review tasks resolved
-- 207 voice_matching tasks resolved
-
-### Applied Changes
-
-| Rule | Replies Changed |
-|------|-----------------|
-| ELDAR → Gray | 152 |
-| ELDAR → Umputun | 74 |
-| ELDAR → Bobuk | 57 |
-| LAVALE → Ksenks | 67 |
-| LAVALE → Marin_k_a | 46 |
-| LAVALE → Umputun | 30 |
-| LAVALE → Bobuk | 10 |
-| PETR → Umputun | 18 |
-| PETR → Ksenks | 7 |
-| PETR → Bobuk | 8 |
-| PETR → Marin_k_a | 6 |
-| PETR → Gray | 1 |
-| MARIN → Ksenks | 41 |
+| Rule | Replies |
+|------|---------|
+| MISATTRIBUTED_ELDAR → hosts | 283 |
+| MISATTRIBUTED_LAVALE → hosts | 153 |
+| MISATTRIBUTED_PETR → hosts | 40 |
+| MISATTRIBUTED_MARIN → Ksenks | 41 |
 | Small MISATTRIBUTED → _artifact | 59 |
-| **Total** | **576** |
+| **Subtotal** | **576** |
+
+**Total this session: 1,029 replies fixed**
+
+## Remaining Manual Review by Type
+
+| Type | Tasks | Description |
+|------|-------|-------------|
+| SPEAKER_0X | ~55 | Need voice matching (low context confidence) |
+| Guest | 19 | Old episodes (ep34-202) - identify guests |
+| confirm_or_reject | ~65 | Short replies - verify or artifact |
 
 ## Next Steps
 
-1. **Voice Matching Priority**: SPEAKER_XX with largest speech blocks
-2. **MISATTRIBUTED**: 135 replies in voice_matching batches
-3. **Manual Review**: Guest identification for older episodes
+1. **Voice Matching**: SPEAKER_XX with substantial speech blocks
+2. **Guest Identification**: ep202 has 12 unidentified guests
+3. **MISATTRIBUTED**: 135 replies still in voice_matching batches

@@ -1,7 +1,7 @@
 batch_id: review_0500_0599
 description: Manual review tasks for episodes 500-599
 status: pending
-total_tasks: 32
+total_tasks: 10
 tasks:
 - episode: 505
   speaker: SPEAKER_05
@@ -35,73 +35,10 @@ tasks:
     и продолжают его мысль.
   time_range: null
   action: confirm_or_reject
-- episode: 520
-  speaker: SPEAKER_01
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 520
-  from_speaker: SPEAKER_01
-  to_speaker: Umputun
-  confidence: medium
-  reason: Реплики в 7609-7614s дублируют/продолжают речь Umputun
-  time_range: null
-  action: confirm_or_reject
-- episode: 524
-  speaker: SPEAKER_07
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 525
-  speaker: SPEAKER_09
-  total_duration_sec: 7
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 530
-  speaker: SPEAKER_03
-  total_duration_sec: 8
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 536
   speaker: SPEAKER_03
   total_duration_sec: 5
   replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 537
-  speaker: SPEAKER_02
-  total_duration_sec: 6
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 537
-  speaker: SPEAKER_01
-  total_duration_sec: 7
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 539
-  speaker: SPEAKER_02
-  total_duration_sec: 8
-  replies_count: 8
   is_error: true
   identified_as: null
   confidence: null
@@ -119,32 +56,6 @@ tasks:
     start: 4621
     end: 6000
   action: confirm_or_reject
-- episode: 559
-  speaker: SPEAKER_04
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 563
-  speaker: SPEAKER_04
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 563
-  from_speaker: SPEAKER_04
-  to_speaker: SPEAKER_MISATTRIBUTED_04
-  confidence: low
-  reason: 'Не удалось точно определить чьи это реплики. Пометить для дальнейшего анализа
-    голоса или удаления как шум.
-
-    '
-  time_range: null
-  action: confirm_or_reject
 - episode: 564
   from_speaker: SPEAKER_06
   to_speaker: Listener_Lesha
@@ -152,55 +63,6 @@ tasks:
   reason: Слушатель Леша, позвонивший обсудить статью про Kotlin
   time_range: null
   action: confirm_or_reject
-- episode: 567
-  speaker: SPEAKER_02
-  total_duration_sec: 7
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 568
-  speaker: SPEAKER_04
-  total_duration_sec: 9
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 575
-  speaker: SPEAKER_05
-  total_duration_sec: 8
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 575
-  from_speaker: SPEAKER_05
-  to_speaker: NEEDS_REVIEW
-  confidence: low
-  reason: 5 коротких реплик (всего 8 сек) разбросаны по эпизоду. Вероятно ошибки распознавания,
-    но без voice comparison невозможно точно определить кто говорит. Рекомендуется
-    ручная проверка или voice compariso
-  time_range: null
-  action: confirm_or_reject
-- episode: 586
-  speaker: SPEAKER_00
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 589
-  speaker: SPEAKER_06
-  total_duration_sec: 6
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 590
   speaker: SPEAKER_04
   total_duration_sec: 7
@@ -217,57 +79,6 @@ tasks:
     для точной идентификации личности. Временное имя до идентификации.
   time_range: null
   action: confirm_or_reject
-- episode: 591
-  speaker: SPEAKER_06
-  identified_as: Anya
-  confidence: medium
-  total_duration_sec: 2
-  evidence: '1. Реплика "Ждите, пожалуйста" (4379.92s) -> сразу после Umputun говорит
-    "не перебивай, дорогой Аню" (4381.82s)
-
-    2. Очень короткие реплики ("Угу", "Ждите, пожалуйста") - вероятно Аня, ошибочно
-    размечена другим спикером
-
-    3. Возможно артефакт распознавания речи
-
-    '
-  action: confirm_or_reject
-- episode: 591
-  from_speaker: SPEAKER_06
-  to_speaker: Anya
-  confidence: medium
-  reason: 'Контекст указывает на Аню: Umputun говорит "не перебивай Аню" сразу после
-    реплики SPEAKER_06.
-
-    Всего 2 короткие реплики, вероятно артефакт распознавания.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 594
-  speaker: SPEAKER_02
-  total_duration_sec: 7
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 597
-  speaker: SPEAKER_09
-  total_duration_sec: 6
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 597
-  speaker: SPEAKER_07
-  total_duration_sec: 8
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 597
   speaker: SPEAKER_05
   total_duration_sec: 6

@@ -1,72 +1,8 @@
 batch_id: review_0300_0399
 description: Manual review tasks for episodes 300-399
 status: pending
-total_tasks: 56
+total_tasks: 31
 tasks:
-- episode: 303
-  speaker: SPEAKER_04
-  total_duration_sec: 8
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 303
-  from_speaker: SPEAKER_04
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Реплики находятся в контексте диалогов Марины, но требуется voice comparison
-    для подтверждения
-  time_range: null
-  action: confirm_or_reject
-- episode: 305
-  speaker: SPEAKER_03
-  total_duration_sec: 9
-  replies_count: 9
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 305
-  from_speaker: SPEAKER_03
-  to_speaker: Alexmak
-  confidence: medium
-  reason: 'Обращение "Алик" (уменьшительное от Алекс), короткие реплики в контексте
-
-    диалогов с участием Alexmak. Требует voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 315
-  speaker: SPEAKER_04
-  total_duration_sec: 8
-  replies_count: 7
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 316
-  speaker: Umputun
-  identified_as: Umputun
-  confidence: medium
-  total_duration_sec: 2
-  evidence: 'Только 2 реплики за весь эпизод:
-
-    1. 359.14-359.56s: "Конечно." (после реплики Bobuk "Это будет совершенно уникальный
-    выпуск")
-
-    2. 5273.01-5274.13s: "Нет, смотри."
-
-
-    Это очень мало для Umputun (обычно сотни реплик).
-
-    Возможные объяснения:
-
-    - Umputun действительно минимально участвовал (был занят)
-
-    - Ошибк'
-  action: confirm_or_reject
 - episode: 318
   from_speaker: SPEAKER_00
   to_speaker: ListenerIgor
@@ -173,14 +109,6 @@ tasks:
     и ошибочно помеченный Gray. Вероятно один человек.
   time_range: null
   action: confirm_or_reject
-- episode: 334
-  speaker: SPEAKER_01
-  total_duration_sec: 5
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 336
   from_speaker: SPEAKER_00
   to_speaker: SPEAKER_99
@@ -188,46 +116,6 @@ tasks:
   reason: Короткие эхо-реплики, типичные артефакты распознавания, можно игнорировать
   time_range: null
   action: confirm_or_reject
-- episode: 342
-  speaker: SPEAKER_03
-  total_duration_sec: 5
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 346
-  speaker: SPEAKER_04
-  total_duration_sec: 5
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 354
-  speaker: SPEAKER_06
-  total_duration_sec: 9
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 354
-  speaker: SPEAKER_04
-  total_duration_sec: 9
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 354
-  speaker: SPEAKER_03
-  total_duration_sec: 7
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 359
   from_speaker: EldarMurtazin
   to_speaker: Gray
@@ -277,30 +165,6 @@ tasks:
     voice comparison.
   time_range: null
   action: confirm_or_reject
-- episode: 363
-  speaker: Gray
-  identified_as: Gray
-  confidence: medium
-  total_duration_sec: 4
-  evidence: 'Единственная реплика Gray на 4178s: ''Вот, и ты просто листаешь, и все.''
-    в контексте разговора о iPad в магазинах.'
-  action: confirm_or_reject
-- episode: 365
-  speaker: SPEAKER_02
-  total_duration_sec: 9
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 368
-  speaker: SPEAKER_02
-  total_duration_sec: 6
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 369
   speaker: SPEAKER_02
   total_duration_sec: 701
@@ -320,14 +184,6 @@ tasks:
 - episode: 370
   speaker: SPEAKER_02
   total_duration_sec: 6
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 374
-  speaker: SPEAKER_05
-  total_duration_sec: 9
   replies_count: 6
   is_error: true
   identified_as: null
@@ -361,14 +217,6 @@ tasks:
   confidence: null
   action: investigate
 - episode: 384
-  speaker: SPEAKER_04
-  total_duration_sec: 8
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: low
-  action: investigate
-- episode: 384
   speaker: Bobuk
   total_duration_sec: 5
   replies_count: 2
@@ -384,38 +232,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 385
-  speaker: Bobuk
-  identified_as: Bobuk
-  confidence: medium
-  total_duration_sec: 2
-  evidence: 'Единственная реплика в 4867s: "Нет, что значит против?"
-
-    Контекст: Umputun говорит о Яндексе и брендинге, возможно Bobuk
-
-    кратко подключился к обсуждению или это ошибка распознавания.
-
-    Bobuk отсутствует в начале (передаёт приветы через Umputun),
-
-    но мог подключиться позже.
-
-    '
-  action: confirm_or_reject
-- episode: 387
-  speaker: SPEAKER_00
-  total_duration_sec: 7
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 387
-  from_speaker: SPEAKER_00
-  to_speaker: SPEAKER_99
-  confidence: medium
-  reason: Короткие артефактные реплики. Первая реплика 'Пи, пи, пи' — явно звук цензуры.
-  time_range: null
-  action: confirm_or_reject
 - episode: 388
   from_speaker: EldarMurtazin
   to_speaker: SPEAKER_MISATTRIBUTED_ELDAR
@@ -429,38 +245,6 @@ tasks:
     Threshold 60 сек не сработал, нужно руч'
   time_range: null
   action: confirm_or_reject
-- episode: 393
-  speaker: SPEAKER_04
-  total_duration_sec: 5
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 393
-  speaker: SPEAKER_03
-  total_duration_sec: 5
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 395
-  speaker: SPEAKER_02
-  total_duration_sec: 9
-  replies_count: 7
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 395
-  speaker: SPEAKER_05
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 395
   speaker: Umputun
   total_duration_sec: 7
@@ -495,12 +279,4 @@ tasks:
   is_error: false
   identified_as: null
   confidence: high
-  action: investigate
-- episode: 399
-  speaker: SPEAKER_05
-  total_duration_sec: 5
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
   action: investigate
