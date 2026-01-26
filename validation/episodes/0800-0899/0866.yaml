@@ -1,0 +1,52 @@
+episode: 866
+status: clean
+analyzed_at: "2026-01-25T13:37:39.129764"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  total_duration_sec: 7433.4
+  notes: |
+    В эпизоде только три ведущих, гостей нет.
+    Состав был упомянут как "немножко сжатый" в начале эпизода (7.2s).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    - Umputun начал эпизод и упомянул, что "состав сегодня немножко сжатый" (7.2s)
+    - Bobuk присоединился в начале (23.8s)
+    - Ksenks присоединилась чуть позже (124.2s), что типично для формата подкаста
+    - Все участники - известные ведущие
+    - Никаких упоминаний гостей не обнаружено
+  issues: []
+
+# Статистика распределения реплик
+speaker_statistics:
+  - speaker: Umputun
+    replies_count: 776
+    total_duration_sec: 2716.9
+    first_appearance_sec: 0.3
+    
+  - speaker: Ksenks
+    replies_count: 609
+    total_duration_sec: 2309.3
+    first_appearance_sec: 124.2
+    
+  - speaker: Bobuk
+    replies_count: 500
+    total_duration_sec: 1977.0
+    first_appearance_sec: 23.8
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Общее заключение
+conclusion: |
+  Эпизод 866 имеет чистую разметку спикеров.
+  Все три участника - известные ведущие подкаста.
+  Неизвестных спикеров не обнаружено.
+  Никаких правил очистки не требуется.

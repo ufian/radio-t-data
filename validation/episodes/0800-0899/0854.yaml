@@ -1,0 +1,69 @@
+episode: 854
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Bobuk, Gray, Umputun, Ksenks]
+  total_duration_sec: 7542
+  episode_duration_min: 125
+
+# Детали появления ведущих
+hosts_details:
+  - speaker: Bobuk
+    replies_count: 891
+    total_duration_sec: 2854
+    first_appearance_sec: 1
+    role: "Основной ведущий с начала эпизода"
+
+  - speaker: Gray
+    replies_count: 607
+    total_duration_sec: 2116
+    first_appearance_sec: 11
+    role: "Со-ведущий с начала эпизода"
+
+  - speaker: Umputun
+    replies_count: 321
+    total_duration_sec: 996
+    first_appearance_sec: 1583
+    late_join_reason: "Болел (температура), присоединился через ~26 минут"
+    introduction_quote: "Я не могу не ворваться стремительным демократом в ваше обсуждение."
+    announced_at_start: true
+
+  - speaker: Ksenks
+    replies_count: 286
+    total_duration_sec: 790
+    first_appearance_sec: 2313
+    late_join_reason: "Ехала, присоединилась через ~38 минут"
+    introduction_quote: "А вот к нам Ксения присоединилась."
+    announced_at_start: true
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  all_speakers_are_known_hosts: true
+  issues: []
+  notes:
+    - "Эпизод начался без Umputun (болел) и Ksenks (ожидалась)"
+    - "Оба отсутствующих ведущих были объявлены в начале эпизода"
+    - "Umputun присоединился на 26-й минуте с явным объявлением"
+    - "Ksenks присоединилась на 38-й минуте с явным объявлением от Umputun"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+validation_notes: |
+  Эпизод 854 имеет чистую разметку спикеров. Все участники - известные ведущие
+  подкаста (Bobuk, Gray, Umputun, Ksenks). Неизвестных спикеров, SPEAKER_* или
+  Guest* меток не обнаружено.
+
+  Эпизод начался с двух ведущих (Bobuk и Gray), так как Umputun болел, а Ksenks
+  ожидалась. Оба отсутствующих ведущих были явно упомянуты в начале эпизода.
+  Оба присоединились позже с чёткими объявлениями их появления.
+
+  Никаких проблем с атрибуцией спикеров не выявлено. Эпизод не требует очистки
+  или дополнительной валидации.

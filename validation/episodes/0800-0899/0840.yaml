@@ -1,0 +1,69 @@
+episode: 840
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+    - Ksenks
+  total_duration_sec: 8104.8
+  total_speakers: 5
+  unknown_speakers_count: 0
+
+# Детальная статистика по ведущим
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 791
+    total_duration_sec: 2516.9
+    first_appearance_sec: 1.0
+
+  - speaker: Bobuk
+    replies_count: 539
+    total_duration_sec: 1542.4
+    first_appearance_sec: 17.4
+
+  - speaker: Gray
+    replies_count: 325
+    total_duration_sec: 1288.6
+    first_appearance_sec: 35.6
+
+  - speaker: Alek.sys
+    replies_count: 353
+    total_duration_sec: 1100.1
+    first_appearance_sec: 29.9
+
+  - speaker: Ksenks
+    replies_count: 334
+    total_duration_sec: 1095.4
+    first_appearance_sec: 261.4
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Все 5 ведущих начинают говорить в первых 5 минутах эпизода"
+    - "Umputun открывает эпизод в 00:01 традиционным приветствием"
+    - "Bobuk, Gray и Alek.sys появляются в первой минуте"
+    - "Ksenks присоединяется позже (в 04:21), что типично для этого формата"
+    - "Нет неопознанных спикеров или артефактов распознавания"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные наблюдения
+notes:
+  - episode_quality: excellent
+  - transcription_quality: high
+  - speaker_attribution_quality: perfect
+  - comments: |
+      Эпизод 840 имеет идеальную разметку спикеров. Все 5 регулярных ведущих
+      правильно идентифицированы, нет неопознанных гостей или артефактов.
+      Эпизод не требует никаких исправлений или дополнительной валидации.

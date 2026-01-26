@@ -1,0 +1,53 @@
+episode: 874
+status: clean
+analyzed_at: "2026-01-25T11:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys]
+  total_duration_sec: 7546
+  episode_date: "2023-09-02"
+
+# Статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 917
+    total_duration_sec: 3187
+    first_appearance_sec: 0.5
+    last_appearance_sec: ~7500
+
+  - speaker: Bobuk
+    replies_count: 896
+    total_duration_sec: 3079
+    first_appearance_sec: 25.2
+    last_appearance_sec: ~7500
+
+  - speaker: Alek.sys
+    replies_count: 353
+    total_duration_sec: 1280
+    first_appearance_sec: 20.3
+    last_appearance_sec: ~7500
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  all_speakers_are_known_hosts: true
+  no_unidentified_guests: true
+  issues: []
+
+# Комментарии
+notes: |
+  Эпизод 874 от 2 сентября 2023 года.
+  В эпизоде участвуют только три регулярных ведущих: Umputun, Bobuk и Alek.sys.
+  Все спикеры корректно идентифицированы.
+  Неизвестных спикеров (SPEAKER_*, Guest*) в транскрипте не обнаружено.
+  Разметка чистая и не требует дополнительной обработки.
+
+  Эпизод начинается с приветствия Umputun (0.5s), затем присоединяются
+  Alek.sys (20.3s) и Bobuk (25.2s).
+
+# Предлагаемые правила очистки
+suggested_rules: []

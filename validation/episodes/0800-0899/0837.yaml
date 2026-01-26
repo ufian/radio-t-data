@@ -1,0 +1,63 @@
+episode: 837
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 7213.1
+  host_stats:
+    - speaker: Umputun
+      replies: 971
+      duration_sec: 2887.7
+      first_appearance_sec: 0.3
+    - speaker: Bobuk
+      replies: 633
+      duration_sec: 2131.9
+      first_appearance_sec: 116.7
+    - speaker: Gray
+      replies: 385
+      duration_sec: 1422.8
+      first_appearance_sec: 124.6
+    - speaker: Alek.sys
+      replies: 244
+      duration_sec: 770.8
+      first_appearance_sec: 1073.1
+  special_speakers:
+    - speaker: _ad
+      replies: 17
+      duration_sec: 130.3
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Эпизод полностью чист. Все спикеры - известные ведущие.
+    Состав эпизода:
+    - Umputun представляет выпуск в начале (0.3s)
+    - Bobuk присоединяется на 117s
+    - Gray присоединяется на 125s
+    - Alek.sys присоединяется позже на 1073s (~18 минут)
+
+    Umputun в начале упоминает, что состав "три классических гада"
+    и "остальные гады подбредут". Alek.sys действительно присоединился
+    позже, что соответствует описанию.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии по анализу
+analysis_notes: |
+  Эпизод 837 является примером идеальной разметки:
+  - Нет неизвестных спикеров (SPEAKER_XX, Guest, и т.п.)
+  - Все ведущие корректно атрибутированы
+  - Реклама помечена как _ad
+  - Момент присоединения Alek.sys логически соответствует вступлению Umputun
+
+  Дополнительная проверка на наличие упоминаний гостей в первых 10 минутах
+  не выявила никаких фраз о приглашённых участниках, что подтверждает,
+  что в этом эпизоде были только постоянные ведущие.

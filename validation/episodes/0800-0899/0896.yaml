@@ -1,0 +1,132 @@
+episode: 896
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  total_duration_sec: 9727
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 996
+    replies_count: 261
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null  # Алекс, но не найден в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        163.1s [Umputun]: "Один проверенный товарищ, Алекс, ты проверенный, ведь ты уже был один раз и рассказал, как нет жизни в этом шлеме."
+
+        Это тот же Алекс, который был Guest2 в эпизоде 895 и рассказывал про Apple Vision Pro.
+        В том выпуске его представили:
+        471.1s [Umputun]: "гость номер два, который Алекс"
+
+      possible_matches:
+        - person_id: "alex_vision_pro"
+          confidence: 0.95
+          reason: "Явное представление по имени Алекс, второе участие (был в 895), тема VR/Vision Pro"
+
+      # Voice comparison не нужен - есть явное представление
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Guest2"
+    total_duration_sec: 308
+    replies_count: 79
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null  # Дэн, но не найден в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        216.2s [Umputun]: "Дэн, я тебя на Го подцепил."
+        1268.9s [Umputun]: "Я думаю, Дэн, который у нас в ГО пишет... Дэн, ты для денег пишешь что-то в ГО?"
+
+        Имя: Дэн (Dan)
+        Специализация: Go разработчик
+        Характерные реплики:
+        - 250.2s: "Да нет, это надпись «Я пишу на РАСТ»." (шутка про Rust)
+        - 1275.6s: "Для денег у нас на смолтолке написано."
+        - Обсуждает техническую тему про Go 1.22: routing patterns в стандартном mux (3886s-3997s)
+
+      possible_matches:
+        - person_id: "dan_go_developer"
+          confidence: 0.90
+          reason: "Явное представление по имени Дэн, Go-разработчик, обсуждает технические детали Go 1.22"
+
+      # Voice comparison может быть полезен для будущей идентификации
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4924.9
+          etime: 4939.1
+          text: "Если просто взять S-Log, сделать дефолт, ну, дефолтный взять, и сделать новый инстанс с текст-хендлером, текст-хендлер, форматирование у него LogFrame 10, в общем, отличается в форматировании."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Guest1"
+      issue: "Идентифицирован как Алекс (повторное участие из эпизода 895), но отсутствует в people.yaml"
+    - speaker: "Guest2"
+      issue: "Идентифицирован как Дэн (Go-разработчик), но отсутствует в people.yaml"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: add_to_registry
+    person_id: "alex_vision_pro"
+    canonical_name: "AlexVisionPro"
+    real_name: "Алекс"
+    info: "Гость, владелец Apple Vision Pro, выпуски 895, 896"
+    confidence: high
+    reason: "Явное представление в двух эпизодах, характерная тема (VR/Vision Pro)"
+
+  - type: add_to_registry
+    person_id: "dan_go_dev"
+    canonical_name: "DanGoDev"
+    real_name: "Дэн"
+    info: "Go-разработчик, выпуск 896, обсуждал Go 1.22"
+    confidence: high
+    reason: "Явное представление, профессиональная экспертиза в Go"
+
+  - type: rename
+    episode: 896
+    from_speaker: "Guest1"
+    to_speaker: "AlexVisionPro"
+    confidence: high
+    reason: "Идентифицирован по представлению и связи с эпизодом 895"
+
+  - type: rename
+    episode: 896
+    from_speaker: "Guest2"
+    to_speaker: "DanGoDev"
+    confidence: high
+    reason: "Идентифицирован по представлению в эпизоде"
+
+# Дополнительные замечания
+notes: |
+  - Эпизод прошёл в сокращённом составе: только Umputun и Gray из ведущих
+  - Отсутствовали: Bobuk, Ksenks, Alek.sys
+  - Забавный момент: Umputun в начале сказал "нету Грея" (134.3s), но сразу исправился:
+    137.3s [Gray]: "Как нету Грея?"
+    142.4s [Umputun]: "А я думал Бобука."
+    145.0s [Umputun]: "Нету Бобука, нету Ксюши."
+  - Оба гостя активно участвовали в обсуждении технических тем
+  - Алекс - повторный гость (был в предыдущем выпуске 895)
+  - Дэн - новый гость, специалист по Go

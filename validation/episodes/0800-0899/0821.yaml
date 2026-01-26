@@ -1,0 +1,98 @@
+episode: 821
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9029.3
+
+# Детальный анализ спикеров
+speakers_analysis:
+  Umputun:
+    replies_count: 796
+    total_duration_sec: 2649.5
+    first_appearance_sec: 0.6
+    role: main_host
+    introduced: true
+    introduction_method: opening
+    notes: "Opens the episode, mentions all other hosts"
+
+  Bobuk:
+    replies_count: 626
+    total_duration_sec: 2791.1
+    first_appearance_sec: 11.8
+    role: host
+    introduced: true
+    introduction_method: opening
+    notes: "Mentioned by Umputun in opening: 'Бобок частично с нами'"
+
+  Alek.sys:
+    replies_count: 137
+    total_duration_sec: 587.8
+    first_appearance_sec: 28.6
+    role: host
+    introduced: true
+    introduction_method: opening
+    notes: "Mentioned by Umputun in opening: 'про Леху надо будет говорить', discussion about his location"
+
+  Gray:
+    replies_count: 238
+    total_duration_sec: 1054.6
+    first_appearance_sec: 179.2
+    role: host
+    introduced: false
+    introduction_method: implicit
+    notes: "Not explicitly introduced, joins conversation at 3 minutes without announcement - typical for regular hosts"
+
+  Ksenks:
+    replies_count: 273
+    total_duration_sec: 1055.3
+    first_appearance_sec: 2110.5
+    role: host
+    introduced: true
+    introduction_method: opening
+    notes: "Mentioned in opening: 'пока без Ксюши, но подойдет' - joins at 35 minutes as announced"
+
+  _ad:
+    replies_count: 22
+    total_duration_sec: 121.2
+    first_appearance_sec: 50.3
+    role: advertisement
+    notes: "Standard advertisement segments"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: "Not explicitly introduced in opening, joins at 3 minutes - but this is normal for regular hosts"
+      severity: low
+      action_required: false
+
+  notes: |
+    Episode shows typical Radio-T pattern:
+    - Main hosts (Umputun, Bobuk, Alek.sys) present from start
+    - Gray joins early (3 min) without formal introduction - standard practice
+    - Ksenks joins later (35 min) as announced in opening
+    - No unknown speakers detected
+    - No misattributions detected
+    - Clean speaker attribution throughout
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Общая оценка качества
+quality_assessment:
+  speaker_attribution: excellent
+  consistency: excellent
+  needs_manual_review: false
+  confidence: high
+
+  summary: |
+    Episode 821 has clean speaker attribution with no unknown speakers.
+    All 5 main hosts are correctly identified. No SPEAKER_XX or Guest markers found.
+    Speaker patterns are consistent and natural. No cleaning rules required.

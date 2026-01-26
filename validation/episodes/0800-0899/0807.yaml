@@ -1,0 +1,56 @@
+episode: 807
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 8663
+  hosts_details:
+    - name: Umputun
+      replies_count: 959
+      total_duration_sec: 2778
+      first_appearance_sec: 1
+    - name: Bobuk
+      replies_count: 744
+      total_duration_sec: 2505
+      first_appearance_sec: 90
+    - name: Gray
+      replies_count: 414
+      total_duration_sec: 1559
+      first_appearance_sec: 108
+    - name: Alek.sys
+      replies_count: 241
+      total_duration_sec: 730
+      first_appearance_sec: 201
+    - name: _ad
+      replies_count: 20
+      total_duration_sec: 121
+      first_appearance_sec: 19
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Все ведущие появляются естественно в начале эпизода без формальных представлений"
+    - "Umputun начинает эпизод (1s)"
+    - "Bobuk присоединяется после рекламы (90s)"
+    - "Gray присоединяется через 18 секунд после Bobuk (108s)"
+    - "Alek.sys присоединяется последним (201s), через ~3 минуты от начала"
+    - "Никаких упоминаний о гостях в эпизоде не обнаружено"
+    - "Все спикеры идентифицированы корректно"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные замечания
+analysis_notes:
+  - "Эпизод содержит только 4 регулярных ведущих и рекламные блоки"
+  - "Продолжительность эпизода: 144.4 минуты (8663 сек)"
+  - "Распределение времени говорения: Umputun (32%), Bobuk (29%), Gray (18%), Alek.sys (8%), реклама (1%)"
+  - "Порядок появления естественный для Radio-T: Umputun открывает, затем подключаются остальные"
+  - "Метаданные эпизода отсутствуют (файл 807_desc.json не найден)"

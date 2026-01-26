@@ -1,0 +1,74 @@
+episode: 833
+status: clean
+analyzed_at: "2026-01-25T12:34:35+03:00"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 10450
+  total_replies: 2757
+
+  detailed_stats:
+    Umputun:
+      replies: 1451
+      duration_sec: 4824
+      first_appearance_sec: 1
+      percentage: 46.2
+
+    Gray:
+      replies: 533
+      duration_sec: 1963
+      first_appearance_sec: 33
+      percentage: 18.8
+
+    Ksenks:
+      replies: 436
+      duration_sec: 1552
+      first_appearance_sec: 1974
+      percentage: 14.9
+      notes: "Присоединилась к эфиру через 33 минуты со словами 'А я пропустила'"
+
+    Alek.sys:
+      replies: 319
+      duration_sec: 1110
+      first_appearance_sec: 26
+      percentage: 10.6
+
+    _ad:
+      replies: 18
+      duration_sec: 120
+      percentage: 1.1
+      type: advertisement
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    - Все ведущие присутствуют и корректно размечены
+    - В начале эпизода есть упоминания "Ксюша" и "Женя"
+    - Ksenks присоединилась к эфиру позже (1974s) с явным указанием "А я пропустила"
+    - Нет неидентифицированных SPEAKER_XX меток
+    - Нет гостей в этом эпизоде
+    - Реклама корректно размечена как _ad (120 сек)
+
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+conclusion: |
+  Эпизод 833 имеет чистую и корректную разметку спикеров.
+
+  Состав эфира:
+  - Umputun (главный ведущий, ~80 мин речи)
+  - Gray (с начала эфира, ~33 мин речи)
+  - Alek.sys (с начала эфира, ~18 мин речи)
+  - Ksenks (присоединилась через 33 минуты, ~26 мин речи)
+
+  Гостей в эпизоде не было.
+  Все спикеры корректно идентифицированы.
+  Никаких ошибок разметки или неидентифицированных спикеров не обнаружено.

@@ -1,0 +1,72 @@
+episode: 830
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8815.6
+  episode_duration_min: 146.9
+
+  speaker_stats:
+    Umputun:
+      replies_count: 1105
+      duration_sec: 3177.2
+      first_appear_sec: 0.6
+      role: host
+
+    Bobuk:
+      replies_count: 531
+      duration_sec: 1735.8
+      first_appear_sec: 67.0
+      role: host
+
+    Gray:
+      replies_count: 285
+      duration_sec: 1039.8
+      first_appear_sec: 17.1
+      role: host
+
+    Ksenks:
+      replies_count: 387
+      duration_sec: 1148.6
+      first_appear_sec: 15.8
+      role: host
+
+    Alek.sys:
+      replies_count: 220
+      duration_sec: 814.6
+      first_appear_sec: 377.6
+      role: host
+
+    _ad:
+      replies_count: 19
+      duration_sec: 120.7
+      first_appear_sec: 72.4
+      role: advertisement
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+  notes:
+    - "Все 5 ведущих четко представлены в начале эпизода"
+    - "Umputun открывает выпуск представлением: '29 октября 2022 года, подкаст выходного дня Радио Ти, выпуск 830'"
+    - "Все ведущие вступают в разговор в первые 10 минут"
+    - "Alek.sys появляется позже всех (377.6s, ~6.3 мин), но это нормально для этого ведущего"
+    - "Рекламные блоки (_ad) корректно размечены и не смешаны с речью ведущих"
+    - "Нет неидентифицированных гостей или SPEAKER_XX маркеров"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+conclusion: |
+  Эпизод 830 имеет чистую и корректную разметку спикеров. Присутствуют только
+  известные ведущие и рекламные блоки. Все участники представлены, нет признаков
+  ошибок распознавания или неидентифицированных гостей. Дополнительная обработка
+  не требуется.

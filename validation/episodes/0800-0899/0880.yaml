@@ -1,0 +1,42 @@
+episode: 880
+status: clean
+analyzed_at: "2026-01-25T23:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: ["Umputun", "Alek.sys"]
+  total_duration_sec: 6263.89
+
+  # Детальная статистика
+  speaker_stats:
+    - speaker: "Umputun"
+      replies_count: 1000
+      total_duration_sec: 3303.84
+      first_appearance_sec: 0.43
+
+    - speaker: "Alek.sys"
+      replies_count: 620
+      total_duration_sec: 2475.83
+      first_appearance_sec: 35.93
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Umputun представляет состав в начале эпизода (9.63-35.93s)"
+    - "Упоминает 'Леха' (Alek.sys) и шутит про Gray ('будет продолжать дышать'), но Gray не присутствует в записи"
+    - "Alek.sys первая реплика в 35.93s: 'Нет, нас не двое. Подожди. Нас как минимум, если я за себя, за Ксюшу и за Бобука, то нас как минимум четверо' - шутит что представляет отсутствующих ведущих"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные наблюдения
+observations:
+  - "Эпизод записан только двумя ведущими: Umputun и Alek.sys"
+  - "В начале есть шуточное обсуждение отсутствующих ведущих (Gray, Bobuk, Ksenks)"
+  - "Нет неизвестных спикеров, SPEAKER_*, Guest* или других проблемных меток"
+  - "Транскрипт чистый и не требует исправлений"

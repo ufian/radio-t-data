@@ -1,0 +1,80 @@
+episode: 889
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Bobuk, Ksenks]
+  total_duration_sec: 7808.4
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+  # Нет неизвестных спикеров - все 5 участников являются известными ведущими
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - speaker: Ksenks
+      note: "Появляется на 46-й минуте (2754s). Gray упоминает её ожидаемый приход в начале выпуска (18s): 'Ксюша обещала подойти'. Ksenks говорит 'Я пришла' при входе, что подтверждает намеренное позднее появление."
+    - speaker: Umputun
+      note: "Основной ведущий, открывает выпуск с 1-й секунды"
+    - speaker: Gray
+      note: "Присутствует с начала (18s)"
+    - speaker: Alek.sys
+      note: "Присутствует с начала (166s)"
+    - speaker: Bobuk
+      note: "Присутствует с начала (681s)"
+
+  speaker_statistics:
+    - speaker: Umputun
+      replies: 789
+      duration_sec: 2557.8
+      first_appearance_sec: 0.7
+      role: main_host
+
+    - speaker: Gray
+      replies: 309
+      duration_sec: 1390.7
+      first_appearance_sec: 18.1
+      role: co-host
+
+    - speaker: Ksenks
+      replies: 311
+      duration_sec: 1222.2
+      first_appearance_sec: 2753.9
+      role: co-host
+      note: "Joined mid-episode as planned"
+
+    - speaker: Alek.sys
+      replies: 345
+      duration_sec: 1162.8
+      first_appearance_sec: 165.7
+      role: co-host
+
+    - speaker: Bobuk
+      replies: 192
+      duration_sec: 800.0
+      first_appearance_sec: 681.0
+      role: co-host
+
+# Предлагаемые правила очистки
+suggested_rules: []
+  # Нет необходимости в правилах очистки - разметка чистая
+
+# Общий вывод
+summary: |
+  Эпизод 889 имеет идеально чистую разметку спикеров. Все 5 участников являются
+  известными ведущими подкаста. Нет ни одного неидентифицированного спикера
+  (SPEAKER_*, Guest*), артефактов (SPEAKER_99) или рекламных блоков (_ad).
+
+  Позднее появление Ksenks (на 46-й минуте) является намеренным и было анонсировано
+  в начале выпуска ведущим Gray. Это подтверждается фразой Ksenks "Я пришла" при
+  входе и последующим обсуждением её планов на праздники.
+
+  Статистика участия соответствует типичному распределению:
+  - Umputun как основной ведущий имеет наибольшее время эфира (2558 сек)
+  - Остальные ведущие равномерно распределены (800-1390 сек каждый)
+  - Все участники активны на протяжении выпуска
+
+  Рекомендация: эпизод не требует дополнительной валидации или очистки.

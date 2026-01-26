@@ -1,0 +1,60 @@
+episode: 848
+status: clean
+analyzed_at: "2026-01-25T11:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 7265.9
+  total_segments: 1841
+
+# Детальная статистика по ведущим
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 786
+    total_duration_sec: 2667.6
+    first_appearance_sec: 0.3
+
+  - speaker: Bobuk
+    replies_count: 463
+    total_duration_sec: 1573.6
+    first_appearance_sec: 24.2
+
+  - speaker: Alek.sys
+    replies_count: 367
+    total_duration_sec: 1432.1
+    first_appearance_sec: 28.1
+
+  - speaker: Gray
+    replies_count: 225
+    total_duration_sec: 1072.0
+    first_appearance_sec: 37.1
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Episode 848 has clean speaker attribution"
+    - "Only 4 regular hosts present: Umputun, Bobuk, Gray, Alek.sys"
+    - "No unknown speakers (SPEAKER_*, Guest*, etc.) detected"
+    - "Ksenks mentioned as absent at 17.9s by Umputun"
+    - "All hosts appear within first minute of episode"
+    - "No attribution errors or misidentified speakers found"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+metadata:
+  episode_date: "2023-03-04"
+  episode_duration_minutes: 121.1
+  average_reply_duration_sec: 3.9
+  speaker_distribution:
+    Umputun: "36.7% (time), 42.7% (replies)"
+    Bobuk: "21.7% (time), 25.2% (replies)"
+    Alek.sys: "19.7% (time), 19.9% (replies)"
+    Gray: "14.8% (time), 12.2% (replies)"

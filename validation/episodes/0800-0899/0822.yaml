@@ -1,0 +1,67 @@
+episode: 822
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: ["Umputun", "Bobuk", "Alek.sys"]
+  total_duration_sec: 6938.1
+  episode_date: "2022-09-03"
+  total_segments: 1829
+
+# Детальная статистика ведущих
+hosts_stats:
+  - speaker: "Umputun"
+    replies_count: 930
+    total_duration_sec: 2794.4
+    first_at_sec: 1.2
+    last_at_sec: 6872.1
+    role: "main_host"
+
+  - speaker: "Bobuk"
+    replies_count: 489
+    total_duration_sec: 1985.2
+    first_at_sec: 14.4
+    last_at_sec: 6863.5
+    role: "co-host"
+
+  - speaker: "Alek.sys"
+    replies_count: 392
+    total_duration_sec: 1416.2
+    first_at_sec: 16.4
+    last_at_sec: 6855.3
+    role: "co-host"
+
+# Специальные спикеры
+special_speakers:
+  - speaker: "_ad"
+    replies_count: 18
+    total_duration_sec: 120.6
+    type: "advertisement"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_segment:
+    time_sec: 1.2
+    text: "Доброго времени суток, 3 сентября 2022 года, подкаст выходного дня. Радиотейп выпуск 1922."
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии аналитика
+notes: |
+  Эпизод 822 имеет чистую разметку спикеров:
+  - Присутствуют только три постоянных ведущих: Umputun, Bobuk, Alek.sys
+  - Нет неопознанных гостей (SPEAKER_XX)
+  - Нет неидентифицированных участников (Guest, Guest1, и т.д.)
+  - Эпизод начинается с типичного вступления от Umputun
+  - Реклама корректно размечена как _ad (18 сегментов)
+  - Общая длительность: ~115.6 минут (1 час 55 минут)
+  - Дата выпуска: 3 сентября 2022 года (выпуск #822)
+
+  Разметка не требует исправлений.

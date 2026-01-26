@@ -1,0 +1,79 @@
+episode: 809
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  hosts_mentioned_absent: [Ksenks, Alek.sys]
+  total_duration_sec: 8899
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Пустая реплика с пустым текстом в конце рекламного блока (8896.8s). Явная ошибка парсинга/транскрипции."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        В начале эпизода явно сказано "без Леху" (Alek.sys), "классический состав 2010 года" (Umputun, Bobuk, Gray).
+        Однако Alek.sys появляется дважды с короткими репликами по 2.2 сек:
+        - 1289.0s: "Так он рассказывал." (в контексте обсуждения винтореза)
+        - 7207.0s: "Не бывает уже больше?" (в контексте обсуждения Java/Spring)
+
+        Возможные варианты:
+        1. Ошибка распознавания - одна из троих ведущих была неправильно атрибутирована как Alek.sys
+        2. Alek.sys присутствовал удалённо и вставил пару комментариев, хотя официально не был заявлен
+        3. Артефакт транскрипции
+
+        Обе реплики очень короткие и односложные, что характерно для ошибок распознавания.
+        Рекомендуется voice comparison для определения, кто из троих (Umputun/Bobuk/Gray) на самом деле
+        произнёс эти фразы.
+
+    - speaker: "_ad"
+      issue: |
+        Пустой спикер "" появляется сразу после рекламного блока _ad с пустым текстом.
+        Это техническая ошибка, требуется удаление.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete
+    episode: 809
+    from_speaker: ""
+    confidence: high
+    reason: "Пустая реплика с пустым текстом - явная ошибка парсинга"
+
+  - type: investigate_voice
+    episode: 809
+    from_speaker: "Alek.sys"
+    potential_targets: [Umputun, Bobuk, Gray]
+    confidence: medium
+    reason: |
+      Alek.sys явно заявлен отсутствующим в начале эпизода, но появляется дважды
+      с короткими репликами. Вероятна ошибка распознавания одного из трёх ведущих.
+    segments_for_comparison:
+      - stime: 1289.0
+        etime: 1291.2
+        text: "Так он рассказывал."
+      - stime: 7207.0
+        etime: 7209.2
+        text: "Не бывает уже больше?"

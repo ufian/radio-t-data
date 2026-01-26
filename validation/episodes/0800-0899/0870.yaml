@@ -1,0 +1,69 @@
+episode: 870
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk, Gray]
+  total_duration_sec: 7332
+  total_replies: 1809
+
+# Детальная статистика по присутствующим
+speaker_stats:
+  - speaker: Umputun
+    replies_count: 982
+    total_duration_sec: 3410
+    first_appearance_sec: 1
+    role: main_host
+
+  - speaker: Ksenks
+    replies_count: 478
+    total_duration_sec: 1997
+    first_appearance_sec: 392
+    role: co_host
+    note: "Опоздала, появилась на 392 секунде"
+
+  - speaker: Alek.sys
+    replies_count: 349
+    total_duration_sec: 1420
+    first_appearance_sec: 34
+    role: co_host
+    note: "Также опоздал, но присоединился раньше Ксюши"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - timestamp_sec: 5
+      speaker: Umputun
+      text: "Упомянул отсутствие Бобука с уважительной причиной"
+    - timestamp_sec: 17
+      speaker: Umputun
+      text: "Упомянул опоздание Ксюши"
+    - timestamp_sec: 19
+      speaker: Umputun
+      text: "Упомянул опоздание Лёхи (Alek.sys) и назначил шуточное наказание"
+
+  timeline_consistency: true
+  timeline_notes:
+    - "Alek.sys появился на 34 секунде, что соответствует упоминанию об опоздании"
+    - "Ksenks появилась на 392 секунде (6.5 минут), что также соответствует упоминанию"
+    - "Bobuk не появлялся в эпизоде, что соответствует объяснению в начале"
+    - "Gray не упоминался и не появлялся"
+
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+conclusion: |
+  Эпизод 870 имеет чистую разметку спикеров. Все три участника (Umputun, Ksenks, Alek.sys)
+  были правильно идентифицированы. Состав был представлен в начале эпизода с объяснением
+  отсутствия Бобука и опоздания Ксюши и Алексея. Временная шкала появления спикеров
+  соответствует озвученной информации. Неизвестных или ошибочно размеченных спикеров не
+  обнаружено. Правила очистки не требуются.

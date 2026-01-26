@@ -1,0 +1,76 @@
+episode: 881
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk]
+  total_duration_sec: 8434.0
+
+  # Детальная статистика по ведущим
+  hosts_stats:
+    - speaker: Umputun
+      replies_count: 836
+      total_duration_sec: 2797.4
+      first_appearance_sec: 0.7
+
+    - speaker: Gray
+      replies_count: 444
+      total_duration_sec: 2290.8
+      first_appearance_sec: 51.4
+
+    - speaker: Ksenks
+      replies_count: 474
+      total_duration_sec: 1752.4
+      first_appearance_sec: 53.5
+
+    - speaker: Alek.sys
+      replies_count: 258
+      total_duration_sec: 1053.6
+      first_appearance_sec: 21.3
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_details:
+    - speaker: Umputun
+      introduced_at_sec: 0.7
+      method: "Opens the podcast"
+
+    - speaker: Alek.sys
+      introduced_at_sec: 21.3
+      method: "Joins conversation naturally"
+
+    - speaker: Gray
+      introduced_at_sec: 51.4
+      method: "Joins conversation naturally"
+
+    - speaker: Ksenks
+      introduced_at_sec: 43.2
+      method: "Mentioned by Umputun: 'Зато Ксюша пришла', appears at 53.5s"
+
+  bobuk_absence_mentioned: true
+  bobuk_absence_context: "Umputun mentions at 8.5s: 'Опять без Бобука' and discusses his excuse"
+
+  participation_patterns:
+    - All hosts participate actively throughout the episode
+    - Umputun has the most consistent presence (max gap 2.8 min)
+    - Gray, Ksenks, and Alek.sys have normal participation gaps (10-17 min)
+    - No anomalous patterns detected
+
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+notes: |
+  Эпизод 881 имеет чистую разметку спикеров. Все реплики корректно атрибутированы
+  четырем ведущим (Umputun, Gray, Ksenks, Alek.sys). Bobuk отсутствует, что было
+  явно упомянуто в начале подкаста. Неизвестных или ошибочно размеченных спикеров
+  не обнаружено. Все участники представлены или упомянуты в первые 60 секунд
+  подкаста. Паттерны участия нормальные для 4-х ведущих формата.

@@ -1,0 +1,41 @@
+episode: 871
+status: clean
+analyzed_at: "2026-01-25T11:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys]
+  total_duration_sec: 8635.84
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "В начале эпизода (9.46-15.96s) Umputun упоминает, что 'Бобук вернулся' и заменил Ксюшу"
+    - "Все три ведущих (Umputun, Bobuk, Alek.sys) четко идентифицированы"
+    - "Неизвестных спикеров не обнаружено"
+    - "Эпизод не содержит SPEAKER_* или Guest* меток"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+additional_info:
+  episode_date: "2023-08-12"
+  host_statistics:
+    - speaker: "Bobuk"
+      replies_count: 1027
+      total_duration_sec: 4096
+      first_reply_at: 16
+    - speaker: "Alek.sys"
+      replies_count: 644
+      total_duration_sec: 2441
+      first_reply_at: 51
+    - speaker: "Umputun"
+      replies_count: 387
+      total_duration_sec: 1496
+      first_reply_at: 0

@@ -1,0 +1,71 @@
+episode: 806
+status: clean
+analyzed_at: "2026-01-25T11:25:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 10148.9
+  total_duration_min: 169.1
+
+  # Детальная статистика по каждому ведущему
+  hosts_stats:
+    - name: Umputun
+      replies_count: 637
+      duration_sec: 1834.1
+      first_appearance_sec: 0.8
+
+    - name: Bobuk
+      replies_count: 952
+      duration_sec: 3479.2
+      first_appearance_sec: 22.5
+
+    - name: Gray
+      replies_count: 359
+      duration_sec: 1269.3
+      first_appearance_sec: 18.7
+
+    - name: Ksenks
+      replies_count: 396
+      duration_sec: 1310.7
+      first_appearance_sec: 2365.3
+
+    - name: Alek.sys
+      replies_count: 390
+      duration_sec: 1178.5
+      first_appearance_sec: 136.2
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: "Не была явно представлена в начале выпуска, присоединилась на 39-й минуте (2365s). Первое упоминание - обращение Bobuk 'Кстати, Ксюш' на 2403.9s, что подтверждает её корректную идентификацию."
+      severity: low
+      comment: "Позднее присоединение к эфиру - нормальная практика. Спикер корректно идентифицирован через обращение по имени."
+
+    - speaker: "Alek.sys"
+      issue: "Не был явно представлен в начале, но Umputun упоминает 'самого тихого участника нашего подкаста' (119.5s), что косвенно указывает на Alek.sys. Первая реплика на 136.2s."
+      severity: low
+      comment: "Косвенное представление через характеристику. Спикер корректно идентифицирован."
+
+  notes:
+    - "В начале выпуска присутствуют только Umputun, Gray и Bobuk (первые 2 минуты)"
+    - "Alek.sys присоединяется на 2-й минуте (136s)"
+    - "Ksenks присоединяется значительно позже - на 39-й минуте (2365s)"
+    - "Все ведущие активно участвуют в разговоре"
+    - "Нет неидентифицированных спикеров (SPEAKER_XX, Guest и т.п.)"
+    - "Специальный спикер _ad корректно размечен (реклама Digital Ocean)"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+conclusion: |
+  Эпизод 806 имеет чистую разметку спикеров. Все 5 ведущих корректно идентифицированы.
+  Отсутствие явного представления некоторых ведущих не является ошибкой - это обычная
+  практика для постоянных участников подкаста. Контекстные обращения (по именам)
+  подтверждают корректность атрибуции. Дополнительных действий не требуется.

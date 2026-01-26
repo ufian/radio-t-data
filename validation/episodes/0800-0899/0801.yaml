@@ -1,0 +1,70 @@
+episode: 801
+status: clean
+analyzed_at: "2026-01-25T12:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8221.1
+  total_replies: 2428
+
+# Детальная статистика по ведущим
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 986
+    total_duration_sec: 2885.2
+    first_appearance_sec: 0.8
+
+  - speaker: Bobuk
+    replies_count: 657
+    total_duration_sec: 1885.5
+    first_appearance_sec: 20.8
+
+  - speaker: Ksenks
+    replies_count: 288
+    total_duration_sec: 950.0
+    first_appearance_sec: 676.9
+
+  - speaker: Alek.sys
+    replies_count: 247
+    total_duration_sec: 787.2
+    first_appearance_sec: 103.3
+
+  - speaker: Gray
+    replies_count: 235
+    total_duration_sec: 761.3
+    first_appearance_sec: 130.8
+
+# Специальные спикеры
+special_speakers:
+  - speaker: _ad
+    replies_count: 15
+    total_duration_sec: 105.4
+    first_appearance_sec: 40.5
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: all_hosts
+      issue: "Ведущие не были формально представлены в начале выпуска, но это нормальная практика для Radio-T. Все участники - известные постоянные ведущие, их голоса узнаваемы для регулярных слушателей."
+      severity: info
+
+  notes:
+    - "Все 5 постоянных ведущих участвуют в эпизоде"
+    - "Нет гостей в этом выпуске"
+    - "Все спикеры корректно идентифицированы"
+    - "Реклама (_ad) правильно размечена"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Общий вывод
+conclusion: |
+  Эпизод 801 находится в отличном состоянии. Все спикеры корректно идентифицированы.
+  В эпизоде участвуют все 5 постоянных ведущих без гостей.
+  Нет неизвестных спикеров (SPEAKER_XX, Guest и т.д.).
+  Никаких правил очистки не требуется.

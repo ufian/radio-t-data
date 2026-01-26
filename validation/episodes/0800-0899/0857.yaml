@@ -1,0 +1,162 @@
+episode: 857
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  total_duration_sec: 8819.6
+  guests_present: [AnotherAlex, SPEAKER_00]
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "AnotherAlex"
+    total_duration_sec: 730
+    replies_count: 155
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "another_alex"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Явное представление в начале эпизода. Umputun (47.9s): 'На замену одного Лехи подошел другой Леха.' Umputun (59.8s): 'Как тебя, дружище, называть?' AnotherAlex (60.8s): 'Ну, справедливости ради, я второй. Текущий ведущий пришел позже меня.' Участвовал в нескольких выпусках ранее."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_00"
+    total_duration_sec: 491
+    replies_count: 77
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Представлен как 'Егор' в 2796.2s. Umputun: 'Егор, ты кто вообще?' SPEAKER_00 (2799.2s): 'Ну, я инженер, но вообще я работаю в Амазоне. Могу с вами поговорить по этому поводу.' Обсуждал тему микросервисов и AWS Lambda. Не найден в people.yaml."
+
+      possible_matches:
+        - person_id: "egor_amazon"
+          confidence: 0.95
+          reason: "Егор, инженер из Amazon. Обсуждал архитектуру микросервисов и AWS (темы 2769-3500s). В конце эпизода упомянут в прощании (8742.4s)."
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 3290.3
+          etime: 3310.2
+          text: "Ты изначально шел с точки зрения контейнеров, и тебе, мне кажется, написать серверлесс-фреймворк проще, потому что ты понимаешь, как оно работает изнутри."
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 38
+    replies_count: 19
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (19 реплик, всего 38 сек) на протяжении всего эпизода (33.6s - 8732.4s). Типичные односложные реакции и вставки. Bobuk появляется в 97.3s и присутствует весь эпизод. Высокая вероятность, что SPEAKER_02 это ошибочно распознанный Bobuk."
+
+      identified_as: "bobuk"
+      identification_method: "context"
+      confidence: medium
+      evidence: "SPEAKER_02 появляется раньше первой реплики Bobuk (33.6s vs 97.3s), но паттерн соответствует стилю Bobuk - короткие вставки. Примеры: 'Лёха уплыл' (33.6s), 'Говорят, мы будем Google Cloud Foundation Model' (418.4s). В начале эпизода обсуждают отсутствие Алексея (Alek.sys), что объясняет ранние реплики."
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 418.4
+          etime: 424.3
+          text: "Говорят, мы будем Google Cloud Foundation Model. Foundation Models. Что такое Google Foundation Models?"
+
+  - speaker: "Unknown"
+    total_duration_sec: 9
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (6 реплик, всего 9 сек) в случайные моменты. Односложные фразы без контекста: 'Тут комментарии есть' (3981.4s), 'Что-то знакомое' (4517.5s), 'Согласись, логично, да?' (6185.1s). Типичные ошибки распознавания."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Реплики в стиле Bobuk - короткие реакции в диалоге. Может быть фрагменты речи Bobuk, ошибочно выделенные в отдельного спикера."
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть от Gray, но менее вероятно."
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 6185.1
+          etime: 6187.3
+          text: "Согласись, логично, да? Мы бы тоже ожидали."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_00"
+      issue: "Идентифицирован как Егор (инженер Amazon), но отсутствует в people.yaml. Нужно добавить в справочник."
+
+    - speaker: "SPEAKER_02"
+      issue: "Вероятно ошибочно распознанный Bobuk. Появляется до первой 'правильной' реплики Bobuk (33.6s vs 97.3s). Требуется voice comparison для подтверждения."
+
+    - speaker: "Unknown"
+      issue: "Короткие ошибки распознавания. Скорее всего фрагменты речи Bobuk или Gray, ошибочно выделенные в отдельного спикера."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 857
+    from_speaker: "SPEAKER_00"
+    to_speaker: "Egor"
+    confidence: high
+    reason: "Явно представлен как 'Егор, инженер из Amazon' в 2796.2s. Активный участник дискуссии о микросервисах (491 сек речи, 77 реплик). Упомянут в прощании."
+
+  - type: rename
+    episode: 857
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: "Короткие реплики в стиле Bobuk на протяжении всего эпизода. Появляется до первой 'правильной' реплики Bobuk. Требуется voice comparison для окончательного подтверждения."
+
+  - type: merge
+    episode: 857
+    from_speaker: "Unknown"
+    to_speaker: "Bobuk"
+    confidence: low
+    reason: "Короткие односложные реакции, вероятно ошибки распознавания. Стиль соответствует Bobuk, но требуется voice comparison."
+
+# Дополнительные действия
+actions_needed:
+  - action: "add_to_people_yaml"
+    person_id: "egor_amazon"
+    canonical_name: "Egor"
+    real_name: "Егор"
+    info: "Инженер Amazon, выпуск 857"
+
+  - action: "voice_comparison"
+    segments:
+      - speaker: "SPEAKER_02"
+        reference: {stime: 418.4, etime: 424.3}
+        compare_with: "Bobuk"
+      - speaker: "Unknown"
+        reference: {stime: 6185.1, etime: 6187.3}
+        compare_with: ["Bobuk", "Gray"]

@@ -1,0 +1,61 @@
+episode: 842
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7796.63
+
+  # Детальная статистика по каждому ведущему
+  speakers:
+    - name: Umputun
+      replies_count: 869
+      total_duration_sec: 2855
+      first_appearance_sec: 0.64
+
+    - name: Gray
+      replies_count: 296
+      total_duration_sec: 1405
+      first_appearance_sec: 71.73
+
+    - name: Ksenks
+      replies_count: 389
+      total_duration_sec: 1378
+      first_appearance_sec: 94.11
+
+    - name: Bobuk
+      replies_count: 310
+      total_duration_sec: 1061
+      first_appearance_sec: 5.82
+
+    - name: Alek.sys
+      replies_count: 166
+      total_duration_sec: 634
+      first_appearance_sec: 54.17
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  notes: |
+    Все 5 ведущих появляются в первые 2 минуты эпизода.
+    Формального представления участников нет - эпизод начинается с обычного диалога.
+    Это нормально для регулярных ведущих подкаста.
+
+    Все ведущие активно участвуют в обсуждении на протяжении эпизода.
+    Статистика по длительности реплик и количеству выступлений соответствует
+    типичным паттернам для этих ведущих.
+
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+conclusion: |
+  Эпизод 842 не содержит неизвестных спикеров или ошибок разметки.
+  Все участники - это 5 известных ведущих подкаста Радио-Т.
+  Атрибуция спикеров корректна, дополнительная обработка не требуется.

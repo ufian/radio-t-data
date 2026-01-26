@@ -1,0 +1,161 @@
+episode: 819
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Gray, Bobuk, Ksenks, Alek.sys]
+  hosts_absent: [Umputun]
+  total_duration_sec: 8280
+  episode_duration_min: 138.0
+
+  detailed_stats:
+    - speaker: Gray
+      replies: 368
+      duration_sec: 1870
+      percentage: 22.6
+      first_appearance_sec: 1
+
+    - speaker: Bobuk
+      replies: 636
+      duration_sec: 2756
+      percentage: 33.3
+      first_appearance_sec: 24
+
+    - speaker: Ksenks
+      replies: 369
+      duration_sec: 1718
+      percentage: 20.7
+      first_appearance_sec: 441
+      notes: "Присоединилась через 7 минут после начала"
+
+    - speaker: Alek.sys
+      replies: 310
+      duration_sec: 1134
+      percentage: 13.7
+      first_appearance_sec: 16
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Umputun"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: single
+    first_appearance_sec: 5272
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        В начале эпизода Gray явно заявляет "И мы, как положено, раз в год без Умпотуна"
+        (11.75s-16.11s) и далее подтверждает "А тут его вообще не будет" (21.09s-23.96s).
+
+        Единственная реплика "Ну это же цитата была" длительностью 0.92 сек появляется
+        через 87.9 минут от начала (5272s) в середине разговора между другими ведущими.
+
+        Контекст:
+        - ДО: Ksenks говорит "Название, конечно, вообще кликбейтовое."
+        - СПОРНАЯ РЕПЛИКА: "Ну это же цитата была" (приписана Umputun)
+        - ПОСЛЕ: Ksenks продолжает "Ну да, я во-первых сразу скажу..."
+
+        Это явная ошибка распознавания голоса. Реплика принадлежит одному из
+        присутствующих ведущих (Gray, Bobuk или Alek.sys).
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Кандидаты
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk активен в этом сегменте (4 реплики в контексте до спорной реплики), часто делает короткие комментарии"
+
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray также склонен к коротким репликам-комментариям (например, 'Чуть-чуть меньше' за 0.8s в 5234s)"
+
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Alek.sys присутствует в контексте, имеет короткие реплики (например, 'Не hbase, а hdb' за 0.2s)"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5272.0
+          etime: 5272.9
+          duration_sec: 0.92
+          text: "Ну это же цитата была."
+
+        context_before:
+          - speaker: Ksenks
+            stime: 5268.9
+            etime: 5272.0
+            text: "Название, конечно, вообще кликбейтовое."
+
+        context_after:
+          - speaker: Ksenks
+            stime: 5273.8
+            etime: 5291.7
+            text: "Ну да, я во-первых сразу скажу, там много всего про то, что сказал руководитель компании «Метод»..."
+
+        candidates_for_comparison: [Gray, Bobuk, Alek.sys]
+
+        comparison_samples:
+          - speaker: Bobuk
+            sample_stime: 5248.5
+            sample_etime: 5250.1
+            sample_text: "Давайте, конечно."
+
+          - speaker: Gray
+            sample_stime: 5234.3
+            sample_etime: 5235.1
+            sample_text: "Чуть-чуть меньше."
+
+          - speaker: Alek.sys
+            sample_stime: 5217.7
+            sample_etime: 5220.7
+            sample_text: "Не hbase, а hdb."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+
+  issues:
+    - speaker: "Umputun"
+      issue: |
+        Umputun явно отсутствует в эпизоде согласно заявлению в начале ("без Умпотуна"),
+        но имеет одну ошибочно приписанную реплику в 5272s. Требует исправления.
+
+    - speaker: "Ksenks"
+      issue: |
+        Ksenks присоединилась через ~7 минут после начала (441s). Это нормальная ситуация,
+        явно обсуждается в начале эпизода. Не требует исправления.
+
+  notes: |
+    Эпизод записан в составе: Gray (ведущий), Bobuk, Alek.sys, Ksenks (присоединилась позже).
+    Umputun отсутствовал, что было заявлено в начале и является особенностью этого выпуска.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 819
+    from_speaker: "Umputun"
+    to_speaker: "SPEAKER_MISATTRIBUTED_UMPUTUN_819"
+    confidence: high
+    reason: |
+      Umputun явно отсутствует в эпизоде. Единственная реплика длительностью 0.92 сек
+      в 5272s является ошибкой распознавания. До определения точного спикера через
+      voice comparison, переименовываем в SPEAKER_MISATTRIBUTED для последующей обработки.
+
+    action_required: "voice_comparison"
+    final_candidates: [Gray, Bobuk, Alek.sys]
+
+  - type: note
+    episode: 819
+    note: |
+      После voice comparison необходимо создать финальное правило переименования
+      SPEAKER_MISATTRIBUTED_UMPUTUN_819 → [правильный спикер]

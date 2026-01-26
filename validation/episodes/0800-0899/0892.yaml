@@ -1,0 +1,59 @@
+episode: 892
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9579
+
+  # Детальная статистика по ведущим
+  hosts_stats:
+    - speaker: Umputun
+      replies_count: 937
+      total_duration_sec: 3050
+      first_appearance_sec: 1
+
+    - speaker: Bobuk
+      replies_count: 705
+      total_duration_sec: 2329
+      first_appearance_sec: 90
+
+    - speaker: Gray
+      replies_count: 399
+      total_duration_sec: 1730
+      first_appearance_sec: 40
+
+    - speaker: Ksenks
+      replies_count: 278
+      total_duration_sec: 1025
+      first_appearance_sec: 507
+      note: "Присоединилась к эфиру через ~8.5 минут, что было предсказано Умпутуном в начале ('А как Ксюша подойдет...')"
+
+    - speaker: Alek.sys
+      replies_count: 131
+      total_duration_sec: 498
+      first_appearance_sec: 27
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "В начале эпизода (32-38 сек) Умпутун говорит: 'У нас состав пока суровый мужской, но зато полный', что указывает на полный состав без формального представления"
+    - "Ksenks упоминается в начале (14-19 сек): 'А как Ксюша подойдет, сразу ужасов добавит', объясняя её позднее присоединение к эфиру"
+    - "Все 5 ведущих присутствуют, неизвестных спикеров не обнаружено"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Общий вывод
+summary: |
+  Эпизод 892 имеет чистую разметку спикеров. Присутствуют все 5 известных ведущих:
+  Umputun, Bobuk, Gray, Ksenks, Alek.sys. Неизвестных спикеров (SPEAKER_*, Guest*)
+  не обнаружено. Все ведущие были упомянуты или представлены в начале эпизода.
+  Позднее появление Ksenks (~8.5 минут) было объяснено в начале эпизода.
+  Никаких правил очистки не требуется.

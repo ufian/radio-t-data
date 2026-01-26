@@ -1,0 +1,66 @@
+episode: 835
+status: clean
+analyzed_at: "2026-01-25T21:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Gray, Ksenks]
+  total_duration_sec: 7658
+  episode_duration_min: 127.6
+
+# Детальная статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 815
+    total_duration_sec: 2435
+    first_appearance_sec: 0
+  - speaker: Bobuk
+    replies_count: 593
+    total_duration_sec: 2040
+    first_appearance_sec: 25
+  - speaker: Alek.sys
+    replies_count: 342
+    total_duration_sec: 1158
+    first_appearance_sec: 15
+  - speaker: Gray
+    replies_count: 302
+    total_duration_sec: 1045
+    first_appearance_sec: 51
+  - speaker: Ksenks
+    replies_count: 247
+    total_duration_sec: 862
+    first_appearance_sec: 1879
+
+# Специальные спикеры
+special_speakers:
+  - speaker: _ad
+    replies_count: 17
+    total_duration_sec: 119
+    note: "Рекламные вставки"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: Ksenks
+      issue: "Появилась через 31 минуту (1879 сек) без формального представления, хотя в начале (0:52) Umputun сказал 'а Ксюшу ждем прибытия'. Её появление было неявным - она просто влилась в разговор. Это нормально для формата подкаста, не является ошибкой разметки."
+      severity: info
+      requires_action: false
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Итоговое заключение
+notes: |
+  Эпизод 835 имеет чистую разметку спикеров:
+  - Все 5 ведущих корректно идентифицированы
+  - Нет неизвестных спикеров (SPEAKER_*, Guest*)
+  - Нет ошибок распознавания
+  - Состав был представлен в начале эпизода (0:52): Umputun упомянул что "значатся Гиковский и Digital Ocean, а Ксюшу ждем прибытия"
+  - Ksenks появилась позже (31:18) без формального представления, что является нормальной практикой для подкаста
+  - Рекламные вставки (_ad) корректно размечены
+
+  Статус: clean - не требует правил очистки или дополнительной валидации.

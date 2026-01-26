@@ -1,0 +1,103 @@
+episode: 885
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Gray]
+  guest_hosts: [Guest1, Guest2]
+  total_duration_sec: 10578.4
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 417.0
+    replies_count: 91
+    pattern: consecutive
+    first_reply: 35.3
+    last_reply: 10470.9
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "Sergey (listener, temp guest host)"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "27.1s [Umputun]: Сергей, который также известен как Guest1, скажи «да», «слышу», «принимаю». Clear introduction by Umputun stating this is Sergey (listener who came to replace one of the regular hosts)."
+
+      # Дополнительный контекст
+      notes: |
+        This episode is unusual - two regular hosts were absent and were replaced by
+        listeners. Guest1 is Sergey (first name only), who participated for ~7 minutes
+        of speaking time throughout the 2h 56m episode. He was actively participating
+        in discussions, not just brief reactions.
+
+      possible_matches: []
+
+      # Voice comparison не требуется
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Guest2"
+    total_duration_sec: 445.2
+    replies_count: 113
+    pattern: consecutive
+    first_reply: 54.1
+    last_reply: 10577.9
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "Misha (listener, temp guest host)"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "41.4s [Umputun]: И Михаил, у которого нет никакого ника, как-то он просто Миша. 55.6s: Вот видишь, Миша здесь, который вместо Бобука, он чувствуется, что под Бобука пытается косить. Clear introduction stating this is Mikhail/Misha who replaced Bobuk."
+
+      # Дополнительный контекст
+      notes: |
+        Guest2 is Mikhail/Misha (first name only), a listener who came to replace
+        Bobuk in this episode. He participated for ~7.4 minutes of speaking time.
+        Umputun joked that he's "trying to impersonate Bobuk" (breathing heavily).
+        Both guests were active participants throughout the full episode.
+
+      possible_matches: []
+
+      # Voice comparison не требуется
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    All speakers were properly introduced at the beginning of the episode.
+    Episode context: This was an unusual episode where two regular hosts (Bobuk
+    and Ksenks) were absent and were replaced by two listeners - Sergey (Guest1)
+    and Misha (Guest2). Both guest hosts participated actively throughout the
+    entire ~3 hour episode with substantial speaking time.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные замечания
+additional_notes: |
+  This episode is correctly labeled. Guest1 and Guest2 are temporary guest hosts
+  from the audience, not misattributed regular hosts or transcription errors.
+
+  They were explicitly introduced:
+  - Guest1 = Sergey (Сергей) - replaced one of the regular hosts
+  - Guest2 = Misha/Mikhail (Миша/Михаил) - replaced Bobuk
+
+  Both had substantial participation (6.9 and 7.4 minutes respectively) and were
+  engaged throughout the full episode. No cleanup needed.
+
+  Regular hosts present: Umputun (77.7 min), Alek.sys (37.5 min), Gray (29.4 min)

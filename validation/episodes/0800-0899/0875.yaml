@@ -1,0 +1,54 @@
+episode: 875
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 8940.1
+  total_replies: 2304
+
+# Детальная статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 839
+    total_duration_sec: 2542.9
+    first_appearance_sec: 0.9
+
+  - speaker: Bobuk
+    replies_count: 610
+    total_duration_sec: 2198.1
+    first_appearance_sec: 13.9
+
+  - speaker: Gray
+    replies_count: 560
+    total_duration_sec: 2423.6
+    first_appearance_sec: 92.9
+
+  - speaker: Alek.sys
+    replies_count: 295
+    total_duration_sec: 1090.5
+    first_appearance_sec: 27.2
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все четыре регулярных ведущих присутствуют"
+    - "Нет неизвестных или неидентифицированных спикеров"
+    - "Все ведущие начали участие в первые 2 минуты эпизода"
+    - "Длительное участие каждого ведущего (от 1090 до 2543 секунд)"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Выводы
+conclusions:
+  - "Эпизод 875 полностью чистый и корректно размечен"
+  - "Присутствуют только известные регулярные ведущие"
+  - "Гостей в эпизоде не было"
+  - "Дополнительных действий не требуется"

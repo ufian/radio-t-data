@@ -1,0 +1,129 @@
+episode: 858
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 7648.75
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "AnotherAlex"
+    total_duration_sec: 405
+    replies_count: 93
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "another_alex"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Гость был представлен Umputun в начале эпизода (16s): "И вот даже Егор зашёл второй раз подряд".
+        В people.yaml уже есть запись: another_alex (Алексей), выпуски 857, 858.
+        Это второе появление гостя по имени Егор/Алексей, активно участвует в обсуждениях.
+        Говорит из Мюнхена (1047s): "если я смотрю там, где я сейчас живу, в Мюнхене".
+
+      possible_matches: []
+
+      # Voice task не требуется - гость четко идентифицирован
+      voice_task:
+        needed: false
+
+  - speaker: "Unknown"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        Три очень короткие реплики (2-5 сек каждая) в случайные моменты:
+        - 3980s: "У тебя тоже такая, да, теория?" (1.98 сек)
+        - 6312s: "А, транслятор." (0.82 сек)
+        - 6407s: "Будет интересно, я думаю." (1.82 сек)
+
+        Все реплики - короткие односложные фразы или переспросы, типичные для ошибок распознавания.
+        Контекст предполагает, что это могут быть неправильно атрибутированные реплики AnotherAlex или других ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Возможные совпадения
+      possible_matches:
+        - person_id: "another_alex"
+          confidence: 0.6
+          reason: |
+            Первая реплика (3980s) "У тебя тоже такая, да, теория?" похожа на вопрос к Umputun,
+            что характерно для участия гостя в диалоге. AnotherAlex активно участвовал в этом эпизоде.
+
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: |
+            Вторая реплика (6312s) "А, транслятор" - короткая реакция в контексте обсуждения скрипта,
+            что может быть реакцией Bobuk.
+
+      # Voice task для проверки
+      voice_task:
+        needed: true
+        reference_segments:
+          - speaker: "Unknown"
+            stime: 3980.77
+            etime: 3982.75
+            text: "У тебя тоже такая, да, теория?"
+
+          - speaker: "Unknown"
+            stime: 6312.82
+            etime: 6313.64
+            text: "А, транслятор."
+
+          - speaker: "Unknown"
+            stime: 6407.01
+            etime: 6408.83
+            text: "Будет интересно, я думаю."
+
+          # Референсные сегменты AnotherAlex для сравнения
+          - speaker: "AnotherAlex"
+            stime: 3860.49
+            etime: 3872.92
+            text: "То есть они сначала Solar использовали, потом на Elasticsearch переехали, а вот сейчас взяли Blackbird Commons, компанию, которая, скорее всего, это будет под Microsoft пилить."
+
+          - speaker: "AnotherAlex"
+            stime: 5718.76
+            etime: 5731.8
+            text: "Но мне он понравился больше именно Flutter, то есть Dart под капотом он плюс-минус такой же, как JavaScript, а в целом Flutter мне понравился больше, чем React Native."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Unknown"
+      issue: |
+        Три короткие реплики без явной атрибуции, похожие на ошибки распознавания.
+        Требуется ручная проверка по голосу или контекстный анализ для переназначения.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: manual_review
+    episode: 858
+    speaker: "Unknown"
+    confidence: medium
+    reason: |
+      Короткие реплики требуют voice comparison для правильной атрибуции.
+      Вероятнее всего это AnotherAlex (60%) или один из ведущих (Bobuk 30%, другие 10%).
+      Рекомендуется прослушать аудио в указанных таймстемпах для точной идентификации.
+
+notes: |
+  Эпизод 858 достаточно чистый:
+  - AnotherAlex (Егор/Алексей) четко идентифицирован как повторный гость
+  - Только 3 короткие реплики Unknown требуют ручной проверки
+  - Все ведущие представлены и активно участвуют
+  - Общая длительность ~2 часа 7 минут (7648 сек)

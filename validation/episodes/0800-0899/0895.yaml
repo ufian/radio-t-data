@@ -1,0 +1,141 @@
+episode: 895
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 10143
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 983
+    replies_count: 171
+    pattern: consecutive
+    first_reply_at: 422.9
+    last_reply_at: 9426.8
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Не найден в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        - 419.3s [Umputun]: "Андрей, а ты как?"
+        - 2468.7s [Bobuk]: "Мне кажется, это... Андрей Алексеевич, ты просто не врубился."
+        - 3666.0s [Bobuk]: "Наконец-то к нам пришел кто-то из Амазона, который там реально пишет какие-то продакшн-системы"
+        - 3659.6s [Guest1]: "Продукт называется Amazon Code Catalyst."
+
+        Гость представлен как Андрей (отчество: Алексеевич). Работает в Amazon/AWS над продуктом CodeCatalyst.
+        Активно участвует в обсуждении технических тем (AWS, CI/CD, деплоймент).
+
+      possible_matches:
+        - person_id: "new_guest_andrey_aws"
+          confidence: 0.95
+          reason: "Новый гость, ранее не участвовал. Имя: Андрей, работает в Amazon/AWS, специализация: CodeCatalyst"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: false  # Гость чётко идентифицирован
+        reference_segment:
+          stime: 3975.7
+          etime: 3999.4
+          text: "То есть тебе нужно положить туда код, тебе нужно написать pipeline, который будет..."
+
+  - speaker: "Guest2"
+    total_duration_sec: 662
+    replies_count: 166
+    pattern: consecutive
+    first_reply_at: 487.2
+    last_reply_at: 9837.6
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null  # Не найден в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        - 471.1s [Umputun]: "Ну, в отличие от всех вас, гость номер два, который Алекс, он как раз зато и пришел..."
+        - 919.7s [Umputun]: "Давай я к тебе обратно вернусь, Алекс."
+        - 1614.5s [Umputun]: "Мне кажется, Алекс, что вот это недоработка скорее, чем осознанное какое-то решение."
+        - 3588.3s [Umputun]: "Кстати, Алекс, хочешь с нами оставаться?"
+
+        Гость представлен как Алекс. Купил Apple Vision Pro за ~$4000, энтузиаст VR технологий.
+        Обсуждает опыт использования Vision Pro, сравнивает с другими VR-шлемами.
+        Упоминает программирование на iPad, клавиатуры.
+
+      possible_matches:
+        - person_id: "alex"
+          confidence: 0.1
+          reason: "В people.yaml есть Alex, но он участвовал в эпизодах 5, 6, 17 - слишком давно, скорее другой человек"
+        - person_id: "new_guest_alex_vr"
+          confidence: 0.9
+          reason: "Новый гость, ранее не участвовал. Имя: Алекс, интересы: VR/AR технологии, Apple Vision Pro"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: false  # Гость чётко идентифицирован
+        reference_segment:
+          stime: 668.8
+          etime: 684.3
+          text: "Надеваешь на жену шлем, и там в целом все понятно. Ну, наверное, чуть-чуть бэкграунда в том смысле, что я в целом интересовался всей этой VR-историей..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Оба гостя были представлены в начале эпизода (420s и 471s).
+    Guest1 (Андрей) - эксперт по AWS CodeCatalyst из Amazon
+    Guest2 (Алекс) - владелец Vision Pro, энтузиаст VR
+
+    Оба гостя активно участвовали в обсуждении до конца эпизода.
+    Разметка выглядит корректной, ошибок распознавания не обнаружено.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 895
+    from_speaker: "Guest1"
+    to_speaker: "AndreyAWS"  # Временное имя до выяснения фамилии
+    confidence: high
+    reason: "Гость представлен как Андрей Алексеевич из Amazon, работает над CodeCatalyst. Требуется выяснить фамилию для добавления в people.yaml"
+
+  - type: rename
+    episode: 895
+    from_speaker: "Guest2"
+    to_speaker: "AlexVR"  # Временное имя до выяснения фамилии/полного имени
+    confidence: high
+    reason: "Гость представлен как Алекс, владелец Vision Pro. Требуется выяснить полное имя для добавления в people.yaml"
+
+# Дополнительные заметки
+notes: |
+  Эпизод 895 содержит двух хорошо идентифицированных гостей:
+
+  1. Андрей (Guest1):
+     - Работает в Amazon/AWS
+     - Продукт: CodeCatalyst (CI/CD платформа)
+     - Отчество: Алексеевич
+     - Фамилия не упоминается в эпизоде
+     - ДЕЙСТВИЕ: Поискать в LinkedIn/других источниках сотрудника Amazon с именем Andrey/Андрей, работающего над CodeCatalyst
+
+  2. Алекс (Guest2):
+     - Владелец Apple Vision Pro
+     - Энтузиаст VR технологий (владел/пробовал все значимые VR-шлемы)
+     - Программист (упоминает программирование на iPad)
+     - Фамилия не упоминается в эпизоде
+     - ДЕЙСТВИЕ: Возможно, стоит проверить участников сообщества Radio-T или чат подкаста
+
+  Рекомендуется:
+  - Проверить чат эпизода 895 на наличие упоминаний фамилий гостей
+  - Поискать в социальных сетях Radio-T анонс эпизода 895
+  - Добавить обоих гостей в people.yaml после выяснения фамилий

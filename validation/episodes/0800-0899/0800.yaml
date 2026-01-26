@@ -1,0 +1,69 @@
+episode: 800
+status: clean
+analyzed_at: "2026-01-25T11:45:00+00:00"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9130
+  episode_date: "2022-04-02"
+
+  # Детальная статистика по ведущим
+  hosts_stats:
+    - speaker: Umputun
+      replies_count: 920
+      total_duration_sec: 3062
+      first_appearance_sec: 0
+
+    - speaker: Bobuk
+      replies_count: 479
+      total_duration_sec: 1853
+      first_appearance_sec: 204
+
+    - speaker: Ksenks
+      replies_count: 384
+      total_duration_sec: 1328
+      first_appearance_sec: 18
+
+    - speaker: Alek.sys
+      replies_count: 269
+      total_duration_sec: 1111
+      first_appearance_sec: 16
+
+    - speaker: Gray
+      replies_count: 187
+      total_duration_sec: 861
+      first_appearance_sec: 224
+
+  # Специальные спикеры
+  special_speakers:
+    - speaker: _ad
+      replies_count: 18
+      total_duration_sec: 121
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+  notes:
+    - "Эпизод начинается с чёткого представления: 'Доброго времени суток, 2 апреля 2022 года, подкаст выходного дня Радио Ти, выпуск 800'"
+    - "Все 5 ведущих присутствуют и начинают говорить в первые 4 минуты"
+    - "Это юбилейный 800-й выпуск, что упоминается в начале"
+    - "Нет неопознанных спикеров (SPEAKER_*, Guest*)"
+    - "Реклама (_ad) корректно размечена как специальный спикер"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Итоговое заключение
+conclusion: |
+  Эпизод 800 имеет безупречную разметку спикеров:
+  - Все 5 ведущих чётко идентифицированы
+  - Нет неопознанных или ошибочно размеченных спикеров
+  - Эпизод представлен корректно в начале
+  - Юбилейный выпуск (800-й)
+  - Не требуется никаких корректировок

@@ -1,0 +1,77 @@
+episode: 846
+status: clean
+analyzed_at: "2026-01-25T17:30:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 7462
+  episode_duration_min: 124.4
+
+# Статистика по каждому ведущему
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 654
+    total_duration_sec: 2276
+    first_appearance_sec: 0.59
+    role: main_host
+
+  - speaker: Bobuk
+    replies_count: 698
+    total_duration_sec: 2399
+    first_appearance_sec: 35.96
+    role: co_host
+
+  - speaker: Gray
+    replies_count: 302
+    total_duration_sec: 1318
+    first_appearance_sec: 123.2
+    role: co_host
+
+  - speaker: Ksenks
+    replies_count: 306
+    total_duration_sec: 959
+    first_appearance_sec: 102.6
+    role: co_host
+
+  - speaker: Alek.sys
+    replies_count: 127
+    total_duration_sec: 510
+    first_appearance_sec: 86.0
+    role: co_host
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_evidence: |
+    В начале эпизода (0.59s) Umputun явно упоминает что "сегодня у нас удивительно
+    синхронно все зашли, даже Ксюша пришла вовремя" - подтверждение присутствия
+    всех ведущих. Все 5 ведущих начинают говорить в первые 2 минуты выпуска,
+    что соответствует обычному формату открытия эпизода.
+
+  issues: []
+
+  notes: |
+    - Эпизод от 18 февраля 2023 года
+    - Все ведущие присутствуют с самого начала
+    - Нет гостей в этом выпуске
+    - Разметка спикеров полностью корректна
+    - Особенность: обсуждение донатов из-за потери спонсора
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные наблюдения
+observations:
+  - note: "Эпизод не содержит гостей, только 5 постоянных ведущих"
+  - note: "Отличное качество разметки - все спикеры корректно идентифицированы"
+  - note: "Umputun традиционно открывает эпизод (первая реплика в 0.59s)"
+  - note: "Все ведущие активно участвуют в дискуссии на протяжении выпуска"

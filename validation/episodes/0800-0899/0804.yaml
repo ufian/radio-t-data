@@ -1,0 +1,66 @@
+episode: 804
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 8731
+
+# Детальная статистика по ведущим
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 896
+    total_duration_sec: 2729
+    first_appearance_sec: 1
+    role: main_host
+
+  - speaker: Bobuk
+    replies_count: 886
+    total_duration_sec: 2985
+    first_appearance_sec: 48
+    role: co_host
+
+  - speaker: Alek.sys
+    replies_count: 362
+    total_duration_sec: 1375
+    first_appearance_sec: 291
+    role: co_host
+    introduced_at: "04:48 - Умпутун обращается 'Алексей, в виде подарка тебе тема'"
+
+  - speaker: Gray
+    replies_count: 208
+    total_duration_sec: 744
+    first_appearance_sec: 35
+    role: co_host
+
+# Специальные сегменты
+special_segments:
+  - speaker: _ad
+    replies_count: 18
+    total_duration_sec: 115
+    first_appearance_sec: 61
+    type: advertisement
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все четыре ведущих четко идентифицированы"
+    - "Alek.sys упоминается по имени в 4:48"
+    - "Нет неопознанных SPEAKER_XX или Guest спикеров"
+    - "Реклама (_ad) корректно размечена"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+conclusion: |
+  Эпизод 804 имеет чистую разметку спикеров. Все реплики корректно
+  атрибутированы четырем ведущим (Umputun, Bobuk, Gray, Alek.sys) и
+  рекламным сегментам. Неизвестных или неопознанных спикеров не обнаружено.
+  Никаких исправлений не требуется.

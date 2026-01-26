@@ -1,0 +1,50 @@
+episode: 849
+status: clean
+analyzed_at: "2026-01-25T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: ["Umputun", "Gray", "Alek.sys"]
+  total_duration_sec: 7472
+
+  # Детальная статистика по ведущим
+  hosts_stats:
+    - name: "Umputun"
+      replies_count: 885
+      total_duration_sec: 2914
+      first_appearance_sec: 1
+
+    - name: "Gray"
+      replies_count: 620
+      total_duration_sec: 2925
+      first_appearance_sec: 23
+
+    - name: "Alek.sys"
+      replies_count: 255
+      total_duration_sec: 1090
+      first_appearance_sec: 38
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Umputun открывает эпизод, упоминает 'скромный состав'"
+    - "Упоминает отсутствие 'скромницы и локомотива подкаста' (вероятно, Ksenks и Bobuk)"
+    - "Явно называет присутствующих: 'Грей ворвался, а Лёха... перебил' (data_clean/849/849_cc.json:82)"
+    - "Упоминает 'Ксюшу' в строке 43.8s, но она не участвует в эпизоде"
+    - "Все три ведущих представлены в первой минуте эпизода"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительная информация
+notes:
+  - "Эпизод содержит только трёх ведущих, без гостей"
+  - "Все спикеры корректно идентифицированы"
+  - "Нет неизвестных спикеров типа SPEAKER_XX или Guest"
+  - "Состав эпизода явно обозначен в начале"
+  - "Bobuk и Ksenks отсутствуют, о чём упоминается в начале"

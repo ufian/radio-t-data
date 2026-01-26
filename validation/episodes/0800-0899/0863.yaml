@@ -1,0 +1,61 @@
+episode: 863
+status: clean
+analyzed_at: "2026-01-25T12:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Gray]
+  total_duration_sec: 9305
+  total_speech_sec: 8682
+
+# Детальный анализ спикеров
+speakers_detail:
+  - speaker: "Bobuk"
+    total_duration_sec: 3152
+    replies_count: 837
+    first_appearance_sec: 23
+    status: confirmed_host
+
+  - speaker: "Umputun"
+    total_duration_sec: 2883
+    replies_count: 798
+    first_appearance_sec: 0
+    status: confirmed_host
+
+  - speaker: "Alek.sys"
+    total_duration_sec: 1633
+    replies_count: 479
+    first_appearance_sec: 39
+    status: confirmed_host
+
+  - speaker: "Gray"
+    total_duration_sec: 1014
+    replies_count: 235
+    first_appearance_sec: 147
+    status: confirmed_host
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Все четыре ведущих активно участвуют в эпизоде"
+    - "Umputun открывает подкаст в 0 секунд с представлением выпуска"
+    - "Упоминается ожидание Ksenks, но в транскрипте её нет - возможно опоздала или не пришла"
+    - "Gray присоединяется позже (147s) после переподключения к эфиру"
+    - "Нет неизвестных или неидентифицированных спикеров"
+    - "Разметка полностью корректна"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Заключение
+conclusion: |
+  Эпизод 863 имеет чистую и корректную разметку спикеров. Присутствуют только четыре
+  известных ведущих: Umputun, Bobuk, Alek.sys и Gray. Все участники были естественно
+  представлены или упомянуты в начале эпизода. Нет SPEAKER_* маркеров, неизвестных
+  гостей или других артефактов требующих очистки. Эпизод не требует дополнительной
+  валидации или корректировки.
