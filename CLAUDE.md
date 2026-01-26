@@ -10,7 +10,11 @@ This is a data repository containing transcripts and metadata for the Radio-T po
 
 ### Episode Data (`data/{N}/`)
 
-Each episode is stored in `data/{N}/` where N is the episode number, containing four files:
+Each episode is stored in `data/{N}/` where N is the episode number, containing four files.
+
+**Note:** `data_clean/{N}/` contains cleaned versions with corrected speaker attributions. Always use `data_clean/` for analysis; `data/` contains original unmodified transcripts.
+
+Files in each episode directory:
 
 - **`{N}_cc.json`** - Closed captions/transcription with speaker attribution
   - Array of `subs` with `id`, `issue`, `author`, `stime`/`etime` (seconds), `text`
@@ -47,6 +51,8 @@ Each episode is stored in `data/{N}/` where N is the episode number, containing 
 - `people.yaml` - Registry of hosts and guests with aliases
 - `configs/` - YAML configs with cleaning rules
 - `batches/` - Batches for manual review by community
+- `tasks/manual_review/` - Tasks requiring human decision (confirm/reject/investigate)
+- `tasks/voice_matching/` - Tasks requiring audio comparison to identify speaker
 
 ## Running Python Scripts
 
@@ -74,26 +80,72 @@ Intermediate data from Claude Haiku-based name extraction:
 ## Speaker Attribution
 
 ### Known Regular Hosts
-| Name | Episodes | Role |
-|------|----------|------|
-| Umputun | 984 | Main host |
-| Bobuk | 853 | Co-host |
-| Gray | 739 | Co-host |
-| Ksenks | 468 | Co-host |
-| Alek.sys | 526 | Co-host |
+| Name | Episodes | Role | Active Period |
+|------|----------|------|---------------|
+| Umputun | 984 | Main host | All episodes |
+| Bobuk | 853 | Co-host | All episodes |
+| Gray | 739 | Co-host | All episodes |
+| Marin_k_a | ~200 | Co-host (female) | ~ep200-400 |
+| Ksenks | 468 | Co-host (female) | ep300+ (main female host after ~ep400) |
+| Alek.sys | 526 | Co-host | ep400+ |
+
+**Note:** Marin_k_a and Ksenks overlap in episodes ~300-400. After ep400, Ksenks is the primary female host.
 
 ### Speaker ID Conventions
 - Named speakers (Umputun, Bobuk, etc.) - identified hosts/guests
 - `Guest`, `Guest1`-`Guest29` - unidentified guests from older episodes
 - `SPEAKER_00`-`SPEAKER_08` - auto-transcribed speakers (may be guests or misattributed hosts)
 - `SPEAKER_99` - typically audio artifacts, jingles, or sound effects
+- `SPEAKER_MISATTRIBUTED_X` - speaker incorrectly assigned to person X who didn't participate in episode
 - `_ad` - advertisement segments
+- `_artifact` - audio noise, jingles, short unidentifiable fragments
 
 ### Identification Statistics
 - Total guest entries analyzed: 1,303
 - Identified: 292 (66% of real guests)
 - Unidentified real guests: 151 (34%)
 - Filtered noise/artifacts: 860
+
+## Speaker Attribution Resolution
+
+### Decision Logic for SPEAKER_MISATTRIBUTED_X
+
+When a speaker is marked as `SPEAKER_MISATTRIBUTED_X`, it means X was incorrectly assigned (X didn't participate in that episode). Resolution steps:
+
+1. **Check episode participation** - verify X is not in the episode's host list
+2. **Analyze context** - who speaks immediately before/after the misattributed replies
+3. **If same host before AND after** (confidence ≥40%) → assign to that host
+4. **If different hosts or unclear** → send to voice_matching
+
+### Decision Logic for SPEAKER_XX
+
+1. **If SPEAKER_XX has few replies + known host has many** → likely segmentation error, merge with host
+2. **If SPEAKER_XX has many replies + female host = 0** → likely unrecognized Ksenks/Marin_k_a
+3. **If SPEAKER_XX has substantial speech and unclear** → send to voice_matching
+4. **Short replies < 10 sec without context** → mark as `_artifact`
+
+### Female Host Attribution (Marin_k_a vs Ksenks)
+
+- Episodes 200-300: Marin_k_a is primary female host
+- Episodes 300-400: Both may appear, check episode introduction (first 60-90 sec)
+- Episodes 400+: Ksenks is primary; if Marin_k_a appears with 0 speech, it's likely misrecognized Ksenks
+- Verify by searching for name mentions ("Ксюш", "Марин") in episode text
+
+### Context Analysis Method
+
+To determine who a misattributed speaker really is:
+```python
+# Count who speaks before/after misattributed replies
+for each misattributed_reply:
+    before = previous_reply.author
+    after = next_reply.author
+    if before in hosts: context[before] += 1
+    if after in hosts: context[after] += 1
+
+# If one host dominates context (≥40%), assign to them
+likely_speaker = max(context, key=context.get)
+confidence = context[likely_speaker] / (total_replies * 2)
+```
 
 ## Data Characteristics
 
