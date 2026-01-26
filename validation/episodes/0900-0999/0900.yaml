@@ -1,0 +1,27 @@
+episode: 900
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+  total_duration_sec: 7466
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале выпуска Umputun говорит "с вами пока два гада" (50.78s)
+    и "Но подойдет к нам Ксюша в процессе" (52.8s).
+    Ksenks присоединяется на 233s, что соответствует анонсу.
+    Юбилейный 900-й выпуск обсуждается в самом начале.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

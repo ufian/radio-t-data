@@ -1,0 +1,58 @@
+episode: 913
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+    - Gray
+    - Alek.sys
+  total_duration_sec: 8768
+
+# Статистика по каждому ведущему
+hosts_stats:
+  - name: Umputun
+    replies_count: 884
+    duration_sec: 2711
+    first_appearance_sec: 0
+  - name: Bobuk
+    replies_count: 617
+    duration_sec: 2043
+    first_appearance_sec: 178
+  - name: Ksenks
+    replies_count: 369
+    duration_sec: 1427
+    first_appearance_sec: 53
+  - name: Gray
+    replies_count: 297
+    duration_sec: 1353
+    first_appearance_sec: 286
+  - name: Alek.sys
+    replies_count: 161
+    duration_sec: 505
+    first_appearance_sec: 89
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все пять ведущих присутствуют в выпуске.
+    Umputun открывает выпуск и упоминает Ксюшу (45-49s) и Грея (68-74s).
+    Все ведущие вступают в разговор в первые 5 минут, кроме Gray (286s),
+    но его присутствие ожидается благодаря упоминанию в начале.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Эпизод 913 от 8 июня 2024 года.
+  Полный состав ведущих, гостей нет.
+  Все спикеры корректно идентифицированы, ошибок разметки не обнаружено.

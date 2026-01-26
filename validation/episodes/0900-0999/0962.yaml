@@ -1,0 +1,32 @@
+episode: 962
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Bobuk
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 10006
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Полный состав ведущих. Umputun в начале упоминает "полный состав все все пришли".
+    Все ведущие представлены в первые 2.5 минуты:
+    - Umputun: 0s (ведущий)
+    - Ksenks: 23s (Umputun начинает "пытку" с неё)
+    - Alek.sys: 52s
+    - Gray: 70s (Umputun спрашивает "Грей, как ты?")
+    - Bobuk: 140s
+
+# Предлагаемые правила очистки
+suggested_rules: []

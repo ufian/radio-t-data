@@ -1,0 +1,91 @@
+episode: 989
+status: clean
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 10328  # ~2ч 52мин (Umputun: 3650 + Gray: 2527 + Ksenks: 2143 + Alek.sys: 2008)
+  notes: "Bobuk отсутствует в этом эпизоде"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""  # пустой автор
+    total_duration_sec: 0.54  # 0.24 + 0.06 + 0.08 + 0.16
+    replies_count: 4
+    pattern: scattered  # разбросаны по эпизоду: 5276s, 5961s, 7618s, 8220s
+
+    analysis:
+      is_error: true
+      error_reason: "Все 4 реплики - очень короткие междометия (<0.25 сек каждая): 'Нет, слушай,' (0.24с), 'Да.' (0.06с), 'Угу.' (0.08с), 'Понятно.' (0.16с). Типичные ошибки распознавания - система не смогла атрибутировать короткие реакции конкретному спикеру."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Реплики в контексте диалогов с Umputun, возможно его реакции"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплика 'Угу' (7618s) идёт перед репликой Gray"
+        - person_id: "alek_sys"
+          confidence: 0.2
+          reason: "Реплика 'Понятно' (8220s) идёт перед репликой Alek.sys"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Реплика 'Нет, слушай' (5276s) идёт после Ksenks"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+        reason: "Все реплики слишком короткие (<0.25 сек) для voice comparison"
+
+# Детали каждой пустой реплики
+empty_speaker_details:
+  - stime: 5276.54
+    etime: 5276.78
+    duration: 0.24
+    text: "Нет, слушай,"
+    context_before: "Ksenks: 'Еще можно как-то разгребсти, как бы, где начало было.'"
+    context_after: "Alek.sys: 'Ну, типа, я посыл-то твой понимаю...'"
+    likely_speaker: "Ksenks или Alek.sys"
+
+  - stime: 5961.17
+    etime: 5961.23
+    duration: 0.06
+    text: "Да."
+    context_before: "Ksenks: 'Отдельно Java и отдельно native, правильно?'"
+    context_after: "следующая реплика"
+    likely_speaker: "подтверждение в ответ на вопрос Ksenks"
+
+  - stime: 7618.44
+    etime: 7618.52
+    duration: 0.08
+    text: "Угу."
+    context_before: "Umputun: 'Я уже смог до браузера добраться.'"
+    context_after: "Gray: 'Так. Ну, атака на NPM.'"
+    likely_speaker: "реакция на Umputun, вероятно Gray"
+
+  - stime: 8220.21
+    etime: 8220.37
+    duration: 0.16
+    text: "Понятно."
+    context_before: "Gray: 'Кто пробовал вообще? Никто, да.'"
+    context_after: "Alek.sys: 'Я пробовал... Ты же Каги-пользователь, наверняка.'"
+    likely_speaker: "реакция, вероятно Alek.sys или Umputun"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: "Все четыре ведущих (Umputun, Gray, Ksenks, Alek.sys) присутствуют с начала эпизода. Гостей нет. Пустые реплики - технические артефакты распознавания."
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: правила для пустых спикеров не предлагаются, т.к.:
+# 1. Все реплики слишком короткие для надёжной идентификации
+# 2. Суммарная длительность <1 сек - незначительное влияние на качество
+# 3. Лучше оставить пустыми, чем ошибочно приписать

@@ -1,0 +1,53 @@
+episode: 903
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 10769
+  total_replies: 2780
+
+# Статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 1112
+    duration_sec: 3612
+    first_appearance_sec: 1
+  - speaker: Bobuk
+    replies_count: 545
+    duration_sec: 1879
+    first_appearance_sec: 111
+  - speaker: Gray
+    replies_count: 421
+    duration_sec: 1765
+    first_appearance_sec: 22
+  - speaker: Ksenks
+    replies_count: 429
+    duration_sec: 1583
+    first_appearance_sec: 25
+  - speaker: Alek.sys
+    replies_count: 273
+    duration_sec: 884
+    first_appearance_sec: 44
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все 5 ведущих присутствуют в выпуске и упоминаются в первые минуты.
+    Umputun открывает выпуск (1s), объявляя "полный состав".
+    Gray вступает в разговор на 22s, Ksenks на 25s, Alek.sys на 44s, Bobuk на 111s.
+    Никаких неизвестных спикеров (SPEAKER_*, Guest*) в эпизоде не обнаружено.
+
+# Предлагаемые правила очистки
+suggested_rules: []

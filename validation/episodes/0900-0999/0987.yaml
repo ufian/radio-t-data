@@ -1,0 +1,75 @@
+episode: 987
+status: clean
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Alek.sys
+    - Ksenks
+  hosts_absent:
+    - Bobuk  # Подтверждено в начале: "в отсутствие Бобука"
+  total_duration_sec: 8245
+  notes: "Традиционный состав без Бобука, подтверждено в 8.5s"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 0
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие междометия (<0.5 сек) без атрибуции: 'И...', 'Угу.', 'Угу.' — артефакты распознавания речи между репликами ведущих"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+    # Детали каждой реплики
+    replies_detail:
+      - stime: 2928.5
+        etime: 2928.5
+        text: "И..."
+        context: "Между репликами Umputun о балалайке"
+        likely_speaker: "Umputun или артефакт"
+
+      - stime: 4587.1
+        etime: 4587.2
+        text: "Угу."
+        context: "В монологе Umputun о OpenAI 5.1"
+        likely_speaker: "Кто-то из ведущих (подтверждение)"
+
+      - stime: 8229.7
+        etime: 8229.8
+        text: "Угу."
+        context: "Между репликами Gray и Ksenks"
+        likely_speaker: "Gray, Ksenks или Umputun (подтверждение)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quote: "Состав традиционный, в отсутствие Бобука, но зато все практически вовремя."
+  introduction_time: 8.5
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete
+    episode: 987
+    target_speaker: ""
+    confidence: high
+    reason: "3 реплики с пустым author — короткие междометия (<0.5 сек), артефакты распознавания. Не несут смысловой нагрузки, можно удалить."
+    affected_times:
+      - 2928.5
+      - 4587.1
+      - 8229.7

@@ -1,0 +1,46 @@
+episode: 959
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Alek.sys
+    - Ksenks
+  total_duration_sec: 9181
+
+# Детальная статистика ведущих
+hosts_stats:
+  - name: Umputun
+    replies_count: 1166
+    total_duration_sec: 3992
+    first_appearance_sec: 1
+  - name: Alek.sys
+    replies_count: 466
+    total_duration_sec: 1631
+    first_appearance_sec: 17
+  - name: Gray
+    replies_count: 419
+    total_duration_sec: 1764
+    first_appearance_sec: 20
+  - name: Ksenks
+    replies_count: 293
+    total_duration_sec: 1380
+    first_appearance_sec: 35
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры - известные ведущие подкаста.
+    Bobuk отсутствует в этом выпуске (упоминается Ksenks в контексте прошлого выпуска).
+    Никаких гостей или неизвестных спикеров не обнаружено.
+
+# Предлагаемые правила очистки
+suggested_rules: []

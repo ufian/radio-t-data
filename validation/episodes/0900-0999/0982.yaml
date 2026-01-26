@@ -1,0 +1,93 @@
+episode: 982
+status: has_tasks
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks]
+  # Alek.sys отсутствует - Umputun в начале говорит "Леха сегодня мы его отпустили"
+  total_duration_sec: 9413
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 674
+    replies_count: 126
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "andrey_dotnet"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        Ведущие многократно обращаются к спикеру по имени "Андрей":
+        - 2568s: "Кстати, Андрей, нет, ты не прав"
+        - 3563s: "Андрей, а в твоем мире ты пишешь вообще библиотеки какие-то?"
+        - 4298s: "как Андрей говорит, с камерой"
+        - 4605s: "Андрей, ты понимаешь, что он говорит?"
+        - 4981s: "Андрей, слушай, она от тебя перекидывает стрелки"
+        - 5325s: "Андрей, мы пытались на тебя перекинуть стрелки"
+        - 5824s: "Окей, возвращаясь, Андрей, к твоим опен-яям"
+        Также в 718s: "Я хочу гостя дорогого спросить" - после чего идёт диалог с Guest1.
+        Это тот же AndreyDotnet, который участвовал в выпусках 972, 976, 977, 979.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: ""
+    total_duration_sec: 0
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три очень коротких реплики (0.06-0.08 сек) с односложными словами "Угу", "Угу", "Да".
+        Это артефакты распознавания речи, а не реальный спикер.
+        Реплики разбросаны по эпизоду: 5952s, 7646s, 7775s.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Guest1"
+      issue: |
+        Гость не представлен формально в начале, но к нему обращаются по имени "Андрей"
+        на протяжении всего выпуска. Это AndreyDotnet - постоянный гость подкаста.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 982
+    from_speaker: "Guest1"
+    to_speaker: "AndreyDotnet"
+    confidence: high
+    reason: |
+      Ведущие обращаются к спикеру по имени "Андрей" минимум 7 раз в эпизоде.
+      AndreyDotnet - известный гость, участвовал в выпусках 972, 976, 977, 979.
+
+  - type: delete
+    episode: 982
+    from_speaker: ""
+    to_speaker: null
+    confidence: high
+    reason: |
+      Пустой спикер - 3 артефакта распознавания: односложные "Угу"/"Да"
+      длительностью 0.06-0.08 сек. Следует удалить или пометить как SPEAKER_99.

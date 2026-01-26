@@ -1,0 +1,28 @@
+episode: 942
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 9065
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Полный состав ведущих. В начале эпизода (0:10) Umputun явно говорит "Полный состав"
+    и упоминает всех участников. Ksenks представлена (пришла "почти вовремя").
+    Все пять ведущих активно участвуют в разговоре с первых минут.
+
+# Предлагаемые правила очистки
+suggested_rules: []

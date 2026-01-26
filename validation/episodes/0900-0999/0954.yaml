@@ -1,0 +1,26 @@
+episode: 954
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8356
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun в начале эпизода (0-14s) объявил "Состав, на удивление, полный"
+    и "Давно мы не собирались в каноническом составе", затем обратился к каждому ведущему:
+    - Bobuk представлен в 14s (обращение "Бобук")
+    - Gray вступает в 20s (реплика в диалоге)
+    - Alek.sys вступает в 127s (вопрос про библиотеки)
+    - Ksenks вступает в 237s (обращение "Ксюша" от Umputun в 224s)
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

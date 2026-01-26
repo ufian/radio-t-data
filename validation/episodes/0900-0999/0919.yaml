@@ -1,0 +1,48 @@
+episode: 919
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7746  # сумма: 2645+1169+1398+1553+976 + 5
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 5
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Пустой автор — ошибка разметки. Реплика является перебиванием в диалоге между Gray и Alek.sys"
+
+      # Идентификация
+      identified_as: "gray"
+      identification_method: "context"
+      confidence: high
+      evidence: "Gray вёл диалог непосредственно перед этой репликой (3075-3094 сек), а затем кто-то перебивает Alek.sys фразой 'Нет, ты не выбираешь между двумя кандидатами...' — это типичная манера Gray возражать. Alek.sys продолжает свою мысль сразу после."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: ""
+      issue: "Пустой автор на 3101 сек — явная ошибка разметки"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 919
+    from_speaker: ""
+    to_speaker: "Gray"
+    confidence: high
+    reason: "Реплика в 3101 сек — перебивание Gray в диалоге с Alek.sys. Gray говорил непосредственно перед этим и возражает в характерной манере."

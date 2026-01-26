@@ -1,0 +1,29 @@
+episode: 920
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+  total_duration_sec: 6703
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарии
+notes: |
+  Эпизод содержит только трёх известных ведущих (Umputun, Bobuk, Gray).
+  Неизвестных спикеров (SPEAKER_*, Guest*) не обнаружено.
+  Все спикеры упомянуты в начале выпуска: Umputun начинает с приветствия,
+  упоминает "исторический состав", далее диалог между всеми тремя.
+
+# Предлагаемые правила очистки
+suggested_rules: []

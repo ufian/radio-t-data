@@ -1,0 +1,27 @@
+episode: 958
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+    - Gray
+  hosts_absent:
+    - Alek.sys
+  total_duration_sec: 10190
+  note: "Umputun в начале объявляет: 'сегодня без Лехи, но зато с Ксюшей'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quote: "Доброго времени суток, 26 апреля 2025 года, подкаст выходного дня Радио-Т, 958 выпуск, сегодня без Лехи, но зато с Ксюшей."
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

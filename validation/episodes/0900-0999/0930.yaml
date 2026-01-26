@@ -1,0 +1,58 @@
+episode: 930
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Bobuk]
+  hosts_absent: [Alek.sys]
+  total_duration_sec: 7347
+  total_replies: 1953
+
+# Статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 796
+    total_duration_sec: 2526
+    first_appearance_sec: 1
+  - speaker: Gray
+    replies_count: 376
+    total_duration_sec: 1938
+    first_appearance_sec: 87
+  - speaker: Ksenks
+    replies_count: 386
+    total_duration_sec: 1425
+    first_appearance_sec: 16
+  - speaker: Bobuk
+    replies_count: 383
+    total_duration_sec: 1396
+    first_appearance_sec: 262
+
+# Специальные спикеры (игнорируются)
+special_speakers:
+  - speaker: _ad
+    replies_count: 12
+    total_duration_sec: 61
+    first_appearance_sec: 1311
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_evidence: |
+    Umputun в начале (8-15s): "Все, кроме Лехи, на месте, Маринка вовремя пришла"
+    - Явно указано отсутствие Alek.sys (Леха)
+    - Упомянута Ksenks (Маринка)
+    - Подразумеваются Gray и Bobuk как присутствующие
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Примечания
+notes: |
+  Эпизод чистый: все спикеры - известные ведущие, неизвестных нет.
+  Alek.sys отсутствует в этом выпуске (подтверждено в начале эпизода).
+  Bobuk начинает говорить на 262s, что нормально для ведущего.

@@ -1,0 +1,59 @@
+episode: 921
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+  hosts_absent:
+    - Ksenks
+  total_replies: 2158
+  # Общая длительность из предрассчитанной статистики
+  total_duration_sec: 7496
+
+# Статистика по ведущим
+hosts_stats:
+  - speaker: Umputun
+    replies_count: 861
+    duration_sec: 2693
+    first_appearance_sec: 1
+  - speaker: Bobuk
+    replies_count: 706
+    duration_sec: 2554
+    first_appearance_sec: 42
+  - speaker: Alek.sys
+    replies_count: 309
+    duration_sec: 1129
+    first_appearance_sec: 16
+  - speaker: Gray
+    replies_count: 282
+    duration_sec: 1120
+    first_appearance_sec: 30
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun в начале эпизода (7-14 сек) явно объявил отсутствие Ksenks:
+    "Пока без Ксении. И следующую неделю, по-моему, и потом следующую неделю без нее.
+    Как-то надолго она в палатку ушла."
+    Затем отметил возвращение Alek.sys: "Тогда Леха вернулся."
+    Все 4 присутствующих ведущих (Umputun, Bobuk, Gray, Alek.sys) появляются
+    в первые 42 секунды выпуска.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Эпизод полностью чистый - все реплики атрибутированы известным ведущим.
+  Нет SPEAKER_*, Guest*, или других неизвестных спикеров.
+  Дата выпуска: 3 августа 2024 года (упомянуто в начале).

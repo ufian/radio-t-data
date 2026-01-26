@@ -1,0 +1,32 @@
+episode: 923
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 4814
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun в начале выпуска (8.9-11.2 сек) говорит "полный состав с самого начала".
+    Все 5 ведущих упомянуты и говорят в первые 70 секунд:
+    - Umputun: ведет с 0 сек
+    - Bobuk: говорит с 20 сек, упомянут на 22.9 сек
+    - Gray: говорит с 21 сек, упомянут на 15 сек
+    - Ksenks: говорит с 50 сек, упомянута на 28.3 сек
+    - Alek.sys: говорит с 47 сек
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

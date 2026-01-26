@@ -1,0 +1,87 @@
+episode: 904
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Alek.sys
+    - Gray
+    - Ksenks
+  total_duration_sec: 8189
+  notes: "Полный состав ведущих. Эпизод от 6 апреля 2024 года."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun в начале (9s) объявляет "в полном составе" и упоминает всех ведущих:
+    - Gray: "зачем Грэй пришел" (9s), "как ты свой эклипс-то настроил" (24s)
+    - Ksenks: "Ксюша, я хотел начать с наезда на тебя" (34s)
+    - Bobuk: участвует в разговоре с 69s, обращение "Бобук" (424s)
+    - Alek.sys: "статью, которая Лехе понравится" (91s), начинает говорить с 108s
+  issues: []
+
+# Наблюдения (не требуют действий)
+observations:
+  - speaker: Gray
+    observation: "Большая пауза 44.6 мин (259s-2935s) в начале эпизода"
+    impact: none
+    note: "После паузы активно участвует до конца. Вероятно, слушал или отошёл."
+
+  - speaker: Ksenks
+    observation: "Последняя реплика в 5046s (84 мин), не участвует в последних 52 минутах"
+    impact: none
+    note: "Возможно, ушла раньше. Последние реплики естественные (обсуждение DSL/Python)."
+
+  - speaker: Alek.sys
+    observation: "Последняя реплика в 7984s, не участвует в финальном прощании"
+    impact: none
+    note: "Umputun, Bobuk и Gray завершают эпизод."
+
+# Статистика ведущих
+host_statistics:
+  - name: Umputun
+    replies: 860
+    duration_sec: 2905
+    percentage: 35.5
+    first_at: 1
+    last_at: 8188
+
+  - name: Bobuk
+    replies: 443
+    duration_sec: 1633
+    percentage: 19.9
+    first_at: 69
+    last_at: 8183
+
+  - name: Alek.sys
+    replies: 327
+    duration_sec: 1283
+    percentage: 15.7
+    first_at: 108
+    last_at: 7984
+
+  - name: Gray
+    replies: 184
+    duration_sec: 818
+    percentage: 10.0
+    first_at: 14
+    last_at: 8189
+
+  - name: Ksenks
+    replies: 186
+    duration_sec: 789
+    percentage: 9.6
+    first_at: 47
+    last_at: 5046
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет ошибок, очистка не требуется

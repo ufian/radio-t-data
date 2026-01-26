@@ -1,0 +1,30 @@
+episode: 931
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys]
+  hosts_absent: [Bobuk, Ksenks]
+  total_duration_sec: 8148.6
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (17-39 сек) Gray спрашивает про состав, Umputun отвечает
+    что Bobuk и Ksenks ("двух гадов") сегодня нет, "велели кланяться".
+    Все присутствующие спикеры (Umputun, Gray, Alek.sys) участвуют с первых минут.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные комментарии
+comments: |
+  Чистый эпизод без неизвестных спикеров.
+  Присутствуют только три ведущих: Umputun, Gray, Alek.sys.
+  Bobuk и Ksenks отсутствуют, что явно упоминается в начале выпуска.

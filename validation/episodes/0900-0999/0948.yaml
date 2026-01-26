@@ -1,0 +1,23 @@
+episode: 948
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 12292
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Не представлен формально в начале, но Umputun обращается к нему 'Леха' на 1384с перед первой репликой"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Нет необходимости в правилах очистки - эпизод чистый

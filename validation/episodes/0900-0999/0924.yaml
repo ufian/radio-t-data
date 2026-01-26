@@ -1,0 +1,89 @@
+episode: 924
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  hosts_absent: [Alek.sys]
+  total_duration_sec: 6874
+  note: "Umputun явно говорит в начале (29-35 сек): 'У нас сегодня Лехи не будет. Зато Ксюша пришла временно его заместить.'"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проблемы с известными спикерами
+host_attribution_issues:
+  - speaker: "Alek.sys"
+    total_duration_sec: 6
+    replies_count: 4
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Umputun явно объявил в начале эпизода (29-35 сек), что 'Лехи сегодня не будет'. Все 4 реплики - короткие (0.5-2 сек), разбросанные по эпизоду."
+
+      # Реплики приписанные Alek.sys
+      misattributed_replies:
+        - stime: 3360.28
+          etime: 3361.24
+          duration_sec: 1
+          text: "В общем, короче, это длинная история."
+          likely_speaker: null
+          context: "Обсуждение Elasticsearch и Amazon"
+
+        - stime: 3764.25
+          etime: 3766.15
+          duration_sec: 2
+          text: "Ты просто забыл."
+          likely_speaker: null
+          context: "Реплика после 'Не вытанцовывается'"
+
+        - stime: 5023.5
+          etime: 5025.86
+          duration_sec: 2
+          text: "Вне зависимости от того, кого он сейчас поддерживает."
+          likely_speaker: null
+          context: "Обсуждение BigTech, после реплики о Маске"
+
+        - stime: 5314.42
+          etime: 5314.98
+          duration_sec: 0.5
+          text: "Мы так делаем?"
+          likely_speaker: null
+          context: "Вопрос про русский язык в Телеграме"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Приписаны 4 реплики (6 сек), хотя ведущий явно объявил его отсутствие в начале эпизода"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: remove_speaker_from_episode
+    episode: 924
+    speaker: "Alek.sys"
+    confidence: high
+    reason: "Umputun явно объявил отсутствие Alek.sys в начале эпизода. Все 4 реплики - ошибки распознавания."
+
+  # Альтернативные правила для ручного ревью - определить реального спикера
+  - type: manual_review_needed
+    episode: 924
+    description: "Определить кому принадлежат 4 реплики ошибочно приписанные Alek.sys"
+    timestamps:
+      - {stime: 3360.28, text: "В общем, короче, это длинная история."}
+      - {stime: 3764.25, text: "Ты просто забыл."}
+      - {stime: 5023.5, text: "Вне зависимости от того, кого он сейчас поддерживает."}
+      - {stime: 5314.42, text: "Мы так делаем?"}
+    possible_speakers: [Umputun, Bobuk, Gray, Ksenks]
+
+# Voice comparison задания (не требуются - это ошибки распознавания, не реальные гости)
+voice_tasks: []
+
+# Дополнительные заметки
+notes:
+  - "Эпизод чистый по части неизвестных спикеров - нет SPEAKER_*, Guest* или других"
+  - "Единственная проблема - 4 реплики ошибочно приписаны отсутствующему ведущему Alek.sys"
+  - "Рекомендуется voice comparison для переатрибуции этих реплик одному из присутствующих ведущих"

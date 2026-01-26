@@ -1,0 +1,88 @@
+episode: 990
+status: needs_review
+analyzed_at: "2026-01-26"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys]
+  total_duration_sec: 9584.4
+  notes: |
+    Bobuk и Ksenks отсутствуют (это упоминается в начале выпуска).
+    Состав: Umputun, Alek.sys, Gray.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 0.3
+    replies_count: 2
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие реплики "Да." (по ~0.15 сек каждая) без атрибуции.
+        Первая (85.5s) — между репликами Umputun и Gray в диалоге о начале выпуска.
+        Вторая (6155.7s) — между репликами Alek.sys и Umputun в обсуждении деплоя.
+        Это типичные артефакты распознавания — короткие междометия, которые ASR не смог
+        корректно атрибутировать говорящему.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Первая реплика (85.5s) находится в контексте диалога Umputun->Gray, логично что это ответ Gray"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Вторая реплика (6155.7s) предшествует речи Umputun, может быть его междометие"
+
+      voice_task:
+        needed: false
+        # Реплики слишком короткие (0.15 сек) для voice comparison
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: ""
+      issue: |
+        2 реплики с пустым автором — технический артефакт ASR.
+        Не влияет на качество транскрипта, но требует очистки для консистентности данных.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete_or_merge
+    episode: 990
+    description: |
+      Реплики с пустым автором следует либо удалить (если это шум),
+      либо объединить с соседними репликами того же смысла.
+
+      Реплика 1 (85.5s "Да."):
+        - Контекст: Umputun говорит "Поэтому давай, вовлечись." -> [пустой: "Да."] -> Gray: "Ну, давай, расскажу."
+        - Рекомендация: атрибутировать Gray (это его ответ на приглашение)
+
+      Реплика 2 (6155.7s "Да."):
+        - Контекст: Alek.sys говорит о деплое -> [пустой: "Да."] -> Umputun продолжает тему
+        - Рекомендация: атрибутировать Umputun (подтверждение перед его следующей репликой)
+    confidence: medium
+    reason: "Контекстный анализ показывает вероятную атрибуцию, но без voice comparison это предположение"
+
+  - type: rename
+    episode: 990
+    from_speaker: ""
+    to_speaker: "Gray"
+    stime: 85.5
+    confidence: medium
+    reason: "Ответ на обращение Umputun к Gray"
+
+  - type: rename
+    episode: 990
+    from_speaker: ""
+    to_speaker: "Umputun"
+    stime: 6155.7
+    confidence: medium
+    reason: "Междометие перед продолжением речи Umputun"

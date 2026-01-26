@@ -1,0 +1,90 @@
+episode: 946
+status: needs_review
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9125.9
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 496.6
+    replies_count: 122
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: >
+        В 89.6s Umputun обращается: "Дорогой Стив, ты можешь отмютить себя".
+        В 656.2s Alek.sys говорит: "ты, по-моему, Стивом представился".
+        В 2350.3s Umputun прощается: "Стив, спасибо, дружище, что зашел".
+        Гость - автор статьи о написании кода без багов, постил на Hacker News (120 апвоутов).
+        Работал в JetBrains и Telegram. 17 лет опыта предпринимательства и программирования.
+        Создавал несколько компаний.
+
+      # Кандидаты для идентификации
+      possible_matches:
+        - person_id: "steve_unknown"
+          confidence: 0.8
+          reason: >
+            Имя "Стив" известно из обращений ведущих.
+            Фамилия не называлась в эпизоде.
+            Профиль: разработчик с опытом в JetBrains, Telegram, предприниматель.
+
+      # Задание на voice comparison или дополнительный поиск
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 777.8
+          etime: 796.8
+          text: "Я знаю всего лишь несколько каких-то кейсов в разных компаниях, конкретно в Телеграме, поскольку соз..."
+        notes: >
+          Нужно найти статью гостя на Hacker News для определения полного имени.
+          Ключевые слова для поиска: "writing code without bugs", "no bugs", 2025 январь.
+          Гость написал статью после прочтения блога Sam Altman.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Guest1"
+      issue: >
+        Гость представлен только по имени (Стив), фамилия не упоминалась.
+        Нужен дополнительный поиск для полной идентификации.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 946
+    from_speaker: "Guest1"
+    to_speaker: "Steve"
+    confidence: high
+    reason: >
+      Гостя многократно называют Стивом: 89.6s, 656.2s, 1180.1s, 1339.8s, 1673.5s, 2350.3s.
+      Имя однозначно установлено из контекста.
+
+# Дополнительная информация для идентификации
+identification_notes:
+  guest_context:
+    - "Автор статьи о написании кода без багов"
+    - "Постил статью на Hacker News - 120 апвоутов, 50-60 комментариев"
+    - "Читал блог Sam Altman перед написанием статьи"
+    - "Работал в JetBrains"
+    - "Работал в Telegram (конкретно упоминает шутки в Telegram)"
+    - "17 лет опыта предпринимательства и программирования"
+    - "Создал много компаний"
+    - "Никогда не работал в команде больше 10 человек"
+    - "Пишет на Kotlin"
+  search_suggestions:
+    - "Поиск статьи на HN: site:news.ycombinator.com 'writing without bugs' OR 'code without bugs' 2025"
+    - "Поиск автора в LinkedIn: Steve JetBrains Telegram developer"
+    - "Проверить предыдущий выпуск 945 - там обсуждали его статью"

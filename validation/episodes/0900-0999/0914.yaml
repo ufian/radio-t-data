@@ -1,0 +1,27 @@
+episode: 914
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Ksenks
+    - Gray
+  total_duration_sec: 8009.6
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все три ведущих идентифицированы в начале выпуска:
+    - Umputun начинает в 0.1s с приветствием
+    - Ksenks первая реплика в 32s, упомянута по имени ("Правильно, Ксюша?") в 25s
+    - Gray первая реплика в 35s, упомянут ("С Грею, конечно, как с гуся вода") в 17s
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

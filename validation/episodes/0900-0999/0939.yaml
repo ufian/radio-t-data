@@ -1,0 +1,28 @@
+episode: 939
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 10591.36
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (9s) Umputun говорит: "Все, кроме Бобука, в ассортименте. Но Бобук тоже подтянется."
+    Bobuk присоединяется позже в 1017s, что соответствует анонсу.
+    Все пять ведущих представлены/упомянуты корректно.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

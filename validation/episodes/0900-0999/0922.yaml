@@ -1,0 +1,29 @@
+episode: 922
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Ksenks
+    - Gray
+    - Alek.sys
+    - Bobuk
+  total_duration_sec: 6009
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun начинает эпизод, представляя 'мальчиковый состав' (4 ведущих)"
+    - "Alek.sys, Bobuk, Gray говорят в первые 2 минуты"
+    - "Ksenks присоединяется на 509s, что анонсировано Umputun ('Ксюша будет')"
+    - "Приход Ksenks подтверждён диалогом: 'Ксюша, дорогая, ты к нам пришла?'"
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,89 @@
+episode: 972
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Gray]
+  guests_present: [Guest1]
+  absent_hosts: [Bobuk, Ksenks]
+  total_duration_sec: 7992
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 1254
+    replies_count: 246
+    pattern: consecutive
+    first_appearance_sec: 59
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Это реальный гость, представился как Андрей
+      identified_as: null  # Нет в people.yaml
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        61.9s [Guest1]: "Меня зовут Андрей."
+        Umputun обращается к нему по имени в 32.9s и 76.7s.
+        Программист на C# (.NET), обсуждает .NET Aspire, MongoDB, DDD.
+        Участвует в дискуссии на протяжении всего выпуска (1254 сек = ~21 мин).
+
+      # Информация о госте
+      guest_info:
+        name: "Андрей"
+        expertise: ["C#", ".NET", ".NET Aspire", "MongoDB", "микросервисы"]
+        context: "Заменяет Ксюшу в этом выпуске, разработчик на C#"
+
+      possible_matches: []  # Нет совпадений в people.yaml
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reason: "Гость представился только по имени. Для идентификации нужна дополнительная информация или сравнение голоса с другими выпусками."
+        reference_segment:
+          stime: 4750.0
+          etime: 4837.5
+          duration_sec: 87.5
+          text: "Значит, я вот пытался на проекте применить .NET Aspire. Суть в чем, что они рекламируют это как такой типа инструментарий для помощи разработчику при локальной отладке проектов..."
+        alternative_segments:
+          - stime: 4990.1
+            etime: 5066.7
+            duration_sec: 76.6
+            text: "Я пока что не понял этого до конца. То есть там есть, например, технические трудности..."
+          - stime: 1945.8
+            etime: 2003.4
+            duration_sec: 57.5
+            text: "Вот у нас на основном проекте, например, используется Mongo..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun в начале (32.9s) объясняет, что гость заменяет Ксюшу, которая на отпуске"
+    - "Bobuk также отсутствует ('на картошке')"
+    - "Guest1 представляется в 61.9s как Андрей"
+    - "Все ведущие (Umputun, Gray, Alek.sys) корректно размечены"
+
+# Предлагаемые действия
+suggested_actions:
+  - action: "add_to_people_yaml"
+    description: "Добавить нового гостя Андрея в people.yaml после идентификации"
+    details: |
+      Известные факты:
+      - Имя: Андрей
+      - Язык: C#/.NET
+      - Обсуждал: .NET Aspire, MongoDB, микросервисы, DDD value types
+      - Выпуск: 972 (2 августа 2025)
+
+# Метаданные эпизода
+episode_info:
+  date: "2025-08-02"
+  duration_total_sec: 8375
+  notes:
+    - "Отсутствуют Bobuk и Ksenks"
+    - "Гость Андрей заменяет Ksenks"

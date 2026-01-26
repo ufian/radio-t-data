@@ -1,0 +1,26 @@
+episode: 938
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 10174
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun в начале выпуска (0:08) объявляет "полный состав".
+    Все ведущие упомянуты или обращаются друг к другу в первые 2 минуты:
+    - Gray упомянут по имени (0:10): "Грей тут всю аппаратуру сломал"
+    - Bobuk обращён напрямую (0:17): "Побукс, скажи..."
+    - Ksenks обращена напрямую (1:29): "Ксения, ты себя замьютила"
+    - Alek.sys включается в диалог с 1:01
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

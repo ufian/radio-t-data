@@ -1,0 +1,32 @@
+episode: 915
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 8445
+  # Umputun: 3217s, Bobuk: 2542s, Alek.sys: 1391s, Gray: 954s, Ksenks: 341s
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все 5 постоянных ведущих присутствуют в выпуске.
+    Umputun открывает эпизод стандартным приветствием (0.51s).
+    Gray, Alek.sys, Bobuk и Ksenks появляются в первые 2 минуты.
+    Гостей в этом выпуске нет.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются - эпизод полностью размечен корректно

@@ -1,0 +1,96 @@
+episode: 981
+status: needs_review
+analyzed_at: "2026-01-26T00:00:00Z"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 10352.61
+  total_subs: 2782
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 0.12
+    replies_count: 2
+    pattern: scattered
+
+    # Обе реплики - односложные "Да." длительностью 0.06 сек
+    occurrences:
+      - stime: 3463.43
+        etime: 3463.49
+        text: "Да."
+        context_before: "Ksenks: Модель для кода?"
+        context_after: "Umputun: Ну, я поставил, кстати, кодекс новый."
+      - stime: 8738.83
+        etime: 8738.89
+        text: "Да."
+        context_before: "Umputun: Правильно, Лёх? Спидометр должен быть спидометром."
+        context_after: "Alek.sys: Все приборы, от которых зависит управление автомобилем..."
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Обе реплики - односложные "Да." продолжительностью 0.06 сек каждая.
+        Это типичные ошибки распознавания (очень короткие реактивные фразы).
+        Первая реплика - вероятно ответ одного из ведущих на вопрос Ksenks.
+        Вторая реплика - явно Alek.sys (Umputun обращается "Лёх", и сразу после
+        Alek.sys продолжает развёрнутым ответом с перекрытием по времени 8738.83-8738.89
+        накладывается на 8738.87-8745.86).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.85
+          reason: >
+            Вторая реплика точно Alek.sys - Umputun обращается к нему "Лёх",
+            и Alek.sys сразу отвечает развёрнуто (время начала 8738.87 перекрывается
+            с окончанием "Да." в 8738.89).
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: >
+            Первая реплика может быть Umputun (он отвечает на вопрос Ksenks
+            и продолжает развёрнуто через 0.76 сек).
+
+      voice_task:
+        needed: false
+        reason: >
+          Реплики слишком короткие (0.06 сек) для голосового сравнения.
+          Контекст достаточен для идентификации.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: ""
+      issue: >
+        Две реплики с пустым спикером - ошибки распознавания.
+        Рекомендуется присвоить первую реплику Umputun (отвечает на вопрос
+        и продолжает), вторую - Alek.sys (явное обращение "Лёх").
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: assign_by_id
+    episode: 981
+    sub_id: "6926af8eb11e70c24aed57fe"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: >
+      Реплика "Да." в ответ на вопрос Ksenks "Модель для кода?",
+      после чего Umputun продолжает "Ну, я поставил, кстати, кодекс новый."
+      Логически это ответ Umputun перед его развёрнутой репликой.
+
+  - type: assign_by_id
+    episode: 981
+    sub_id: "6926af8eb11e70c24aed5d80"
+    to_speaker: "Alek.sys"
+    confidence: high
+    reason: >
+      Umputun обращается "Правильно, Лёх?" (Лёх = Alek.sys).
+      Реплика "Да." начинается в 8738.83, а Alek.sys продолжает в 8738.87 -
+      это одно высказывание, разбитое на две записи.
