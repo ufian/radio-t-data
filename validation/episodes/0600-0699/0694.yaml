@@ -1,0 +1,85 @@
+episode: 694
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 7308
+  notes: >
+    Ksenks присоединилась позже (1429s). В начале Umputun сказал:
+    "Все мужики здесь, все дамы отсутствуют." Это нормальное поведение.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 484
+    replies_count: 118
+    first_appearance_sec: 2666
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: "denis_isaev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        Гость представился сам в реплике на 3646-3652s:
+        "Меня зовут Денис Исаев, я работаю в Яндексе, в Яндекс.Акси, руковожу службой."
+        Также Umputun подтвердил его имя в реплике на 3658-3668s:
+        "Так вот, у Дениса, отвечая на твой вопрос, Леша..."
+        Это создатель GolangCI и golangci-lint, о закрытии сервиса golangci.com
+        обсуждали в предыдущем выпуске 693.
+
+      # Дополнительный контекст
+      context: >
+        Гость был приглашен обсудить закрытие сервиса golangci.com.
+        В выпуске 693 (предыдущий) была тема "Полезный GolangCI закрывается".
+        Umputun в начале разговора (2671s) говорит: "я рассказывал про... Как твои баллаки называются?"
+        и "Голангсиай и чего?" - имея в виду golangci-lint.
+
+      possible_matches: []
+
+      # Voice comparison не нужен - гость идентифицирован
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_07"
+      issue: >
+        В реплике 6229 (2691-2695s) Umputun говорит "Да, Коля, и почему..."
+        но гость представился как Денис Исаев. Вероятно, это ошибка транскрипции
+        (возможно "Ну ладно" или "Ну, вот" было распознано как "Коля").
+        Требует проверки аудио для подтверждения.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 694
+    from_speaker: "SPEAKER_07"
+    to_speaker: "DenisIsaev"
+    confidence: high
+    reason: >
+      Гость явно представился: "Меня зовут Денис Исаев".
+      Это создатель golangci-lint, пришел обсудить закрытие сервиса golangci.com.
+
+# Дополнительная информация о госте для people.yaml
+new_guest_info:
+  id: "denis_isaev"
+  canonical_name: "DenisIsaev"
+  aliases: ["Денис", "Исаев"]
+  real_name: "Денис Исаев"
+  info: >
+    Создатель golangci-lint и golangci.com. Работает в Яндекс.Такси,
+    руководит службой. Выпуск 694.
+  links:
+    - "https://github.com/golangci"
+    - "https://medium.com/golangci/golangci-com-is-closing-d1fc1bd30e0e"

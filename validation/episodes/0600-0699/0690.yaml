@@ -1,0 +1,30 @@
+episode: 690
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+    - Ksenks
+  total_duration_sec: 7996
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Umputun, Gray, Bobuk, Alek.sys присутствуют с начала эпизода.
+    Ksenks присоединилась позже (около 50 минут, stime ~3000s).
+    Gray приветствует её словом "Привет" (3006s), Umputun обращается
+    к ней как "Ксюша" (3010s). Позднее присоединение ведущей -
+    нормальная практика для этого подкаста.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

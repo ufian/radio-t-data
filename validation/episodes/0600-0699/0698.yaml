@@ -1,0 +1,82 @@
+episode: 698
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6098  # 922*~3.15 + 384*~2.93 + 218*~3.23 + 194*~3.61 + 170*~3.87
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 252
+    replies_count: 89
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun в начале эпизода (15-20s): 'На смену пришла Аня, которой не было давно, а тут она пришла и попросилась'. Сразу после этого SPEAKER_01 (25s): 'Да, так и было.'"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 7
+    replies_count: 9
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (0.3-1.7 сек), разбросаны по двум временным точкам (~4726s и ~6996s). Типичные фразы реакции: 'Backblaze, да, вроде бы?', 'Черт', 'Вот гады', 'Ну, ладно'. Это ошибки распознавания речи одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Реплики идут сразу после реплик Umputun, возможно продолжение его речи"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "После SPEAKER_06 на 4732s сразу идет Bobuk: 'Мне кажется, я раньше сказал' - может быть его реплики были неверно разделены"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4726.7
+          etime: 4735.15
+          text: "Backblaze, да, вроде бы? Backblaze, да. Вот нам подсказали. А подсказали? Черт. Подсказали. Вот гады. Ну, ладно."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Ksenks"
+      issue: "В начале эпизода Umputun говорит что Ksenks 'внезапно выбыла', но она появляется на 495s. Это соответствует его словам 'я надеюсь, ворвется в наш эфир' - она действительно присоединилась позже."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 698
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Прямое представление в начале эпизода: 'На смену пришла Аня'. SPEAKER_01 сразу после этого подтверждает и участвует в диалоге. 89 реплик, 252 сек - полноценное участие в подкасте."
+
+# Примечания
+notes:
+  - "Эпизод 698 от 2020-04-18 - в нем участвуют все 5 основных ведущих плюс гостья Anya"
+  - "Ksenks изначально отсутствовала, но присоединилась позже (~8 минут от начала)"
+  - "Anya заменяла Ksenks в начале выпуска, но обе присутствуют одновременно после 495s"
+  - "SPEAKER_06 требует voice comparison для точной идентификации, но скорее всего это ошибки распознавания Umputun или Bobuk"

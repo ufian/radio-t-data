@@ -1,0 +1,193 @@
+episode: 681
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  guests_present: [SPEAKER_08, SPEAKER_11]
+  total_duration_sec: 10765
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 813
+    replies_count: 168
+    first_appearance_sec: 203
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация: Александр, врач клинической лабораторной диагностики
+      # Umputun прямо обращается к нему: "Александр, здравствуй, дорогой" (200.31s)
+      # Гость представляется: "Всю свою жизнь я занимался медициной и стыком с наукой... сам являюсь врачом клиниковой братской диагностики" (223-231s)
+      identified_as: null  # Нет в people.yaml, новый гость
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Umputun обращается 'Александр, здравствуй, дорогой' (200.31s). Гость представляется как врач клинической лабораторной диагностики, занимающийся медициной и наукой (223-231s). Gray его привел ('мальчика, которого привел Грей')."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 922.03
+          etime: 1032.32
+          text: "Да, геном — это, понятно, расшифровка от и до всего генарника... [110 секунд непрерывной речи о генетике]"
+
+  - speaker: "SPEAKER_11"
+    total_duration_sec: 674
+    replies_count: 210
+    first_appearance_sec: 2239
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация: Аня
+      # Множественные обращения от Umputun: "Надо сказать, Аня, что с вашей стороны это гораздо лучше" (2271.87s)
+      # "Аня, да?" (4582), "Аня, ты следила?" (5104), "Аня, ты в курсе этого позора?" (5149)
+      # "Аня, продолжай" (5392), "Слушай, Ань, это прям молодец ты" (6544), "Хорошо, Аня, скажи про токсичность" (7894)
+      identified_as: "anya"
+      identification_method: "context"
+      confidence: high
+      evidence: "Umputun многократно обращается к спикеру как 'Аня' в контексте диалога (2271.87s, 4582s, 5104s, 5149s, 5392s, 6544s, 7894s и др.). Это Anya из people.yaml (13 выпусков)."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 6376.65
+          etime: 6423.19
+          text: "А давайте я встану на другую сторону. Вы действительно считаете, что вообще никаких претензий не может быть к Nginx?..."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 13
+    replies_count: 7
+    first_appearance_sec: 3432
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (<3 сек каждая) в разбросанные моменты: 'Да-да-да' (3431.8s), 'Кто-кто-кто-кто без провода?' (7206.2s), 'Dyson, но не Dyson' (7228s). Скорее всего ошибочное распознавание одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "SPEAKER_01 появляется после присоединения Ksenks (3291s). Короткие реплики могут быть её."
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть ошибочно распознанным Alek.sys"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 9
+    replies_count: 6
+    first_appearance_sec: 2095
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (<2 сек каждая): 'Все-таки, да' (2095s), 'А, да?' (2797s), 'Я согласна' (4260s), 'Давайте начнем с этого' (6450s). Вероятно ошибочное распознавание ведущих или гостьи Ани."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "anya"
+          confidence: 0.6
+          reason: "Реплика 'Я согласна' (4260s) указывает на женский голос, может быть Аня"
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: "После присоединения Ksenks короткие реплики могут быть её"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 5
+    replies_count: 5
+    first_appearance_sec: 1457
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (<2 сек каждая): 'Ты говорил, что есть' (1457s), 'Да' (4756s), 'Юбики?' (7239s), 'Да' (7240s), 'Юбики, да' (7241s). Вероятно ошибочное распознавание одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Контекст первой реплики (1457s) — диалог между ведущими о ДНК"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплики про 'Юбики' могут быть от Gray"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_08"
+      issue: "Гость представлен как Александр, но не добавлен в people.yaml. Нужно добавить."
+    - speaker: "SPEAKER_01"
+      issue: "Скорее всего ошибка распознавания, не реальный гость"
+    - speaker: "SPEAKER_03"
+      issue: "Скорее всего ошибка распознавания, не реальный гость"
+    - speaker: "SPEAKER_04"
+      issue: "Скорее всего ошибка распознавания, не реальный гость"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 681
+    from_speaker: "SPEAKER_08"
+    to_speaker: "Aleksandr"
+    confidence: high
+    reason: "Umputun прямо обращается 'Александр, здравствуй, дорогой'. Гость - врач клинической лабораторной диагностики, приглашён Gray."
+
+  - type: rename
+    episode: 681
+    from_speaker: "SPEAKER_11"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Множественные обращения от ведущих как 'Аня' (2271s, 4582s, 5104s, 5149s, 5392s, 6544s, 7894s). Это известная гостья из people.yaml."
+
+# Заметки
+notes:
+  - "В начале выпуска Umputun говорит: 'Состав расширенный аж целыми двумя гостями. В процессе перейдет третий.'"
+  - "Два идентифицированных гостя: Александр (SPEAKER_08, врач, пришёл с Gray) и Аня (SPEAKER_11)"
+  - "Третий 'гость' — это Ksenks, которая присоединилась позже (3291s)"
+  - "SPEAKER_01, SPEAKER_03, SPEAKER_04 — короткие ошибочные распознавания, вероятно фрагменты речи ведущих"
+  - "SPEAKER_99 (2 реплики, -1.5s) — артефакты, игнорируются"
+  - "Аудио: https://cdn.radio-t.com/rt_podcast681.mp3"
+
+# Информация для добавления в people.yaml
+new_guest:
+  id: "aleksandr_doctor"
+  canonical_name: "Aleksandr"
+  aliases: ["Александр"]
+  real_name: "Александр"
+  info: "Врач клинической лабораторной диагностики, занимается медициной и наукой. Выпуск 681."

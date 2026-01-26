@@ -1,0 +1,64 @@
+episode: 682
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8195
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие единичные реплики (2-3 сек каждая), разбросанные по эпизоду. Фразы типичны для ведущих ('Вы такое не тестируете, да?', 'Firecracker, по-моему.'). Вероятно, ошибка распознавания голоса одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.4
+          reason: "Первая реплика (614s) идёт сразу после реплик Alek.sys (601-604s), возможно неверно атрибутирован его голос"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Ksenks присутствует в эпизоде, могла быть ошибка распознавания"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8420.79
+          etime: 8427.03
+          text: "Firecracker, по-моему. / Firecracker, да."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Ksenks"
+      issue: "Появляется только с 2269s без явного представления в начале"
+    - speaker: "_ad"
+      issue: "Реплики 79-90s размечены как _ad, но содержат речь ведущих ('Ну что у нас, с чего начнем?', 'Есть у нас вот эта странная тема...')"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии
+notes: |
+  SPEAKER_06 имеет всего 3 короткие реплики (~6 сек суммарно), разбросанные по эпизоду.
+  Это типичный паттерн ошибки распознавания, когда система временно путает голоса ведущих.
+
+  Первая реплика (614.58s) идёт в контексте диалога Alek.sys и Bobuk о Яндексе/Рамблере.
+  Две другие реплики (8420-8427s) — технические комментарии про Firecracker в разговоре с Umputun.
+
+  Для финального решения рекомендуется voice comparison с голосами Alek.sys и других ведущих.
+
+  Также обнаружена проблема с разметкой _ad: часть реплик после рекламного блока (79-90s)
+  ошибочно помечены как реклама, хотя содержат речь ведущих.

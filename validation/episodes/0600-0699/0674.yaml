@@ -1,0 +1,226 @@
+episode: 674
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8301
+  notes: |
+    В начале Umputun шутит "Сегодня мы без Грея" - это шутка, Gray участвует.
+    Упомянут гость "Лёха" (30-62 сек) - "оригинальный Лёха", "Лёха который добрый".
+    Ксюша подключилась позже (первая реплика ~1118 сек).
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 1034
+    replies_count: 219
+    first_appearance_sec: 615
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: medium
+      evidence: |
+        В начале эпизода (30-62 сек) Umputun представляет гостя:
+        - "Кроме этого фейка мы пригласили еще оригинального Леху" (30.14s)
+        - "Леха, который добрый" (34.14s)
+        - "Леха плохой пришел" (60.17s)
+        Шутка о том, что Alek.sys - "фейковый", а пришедший "Лёха" - "оригинальный".
+        SPEAKER_05 начинает говорить с 615 сек и активно участвует в дискуссии.
+        Это технически грамотный гость, обсуждает GitLab, Docker, инфраструктуру.
+
+      possible_matches:
+        - person_id: "unknown_lyoha_674"
+          confidence: 0.7
+          reason: "Гость 'Лёха' представлен в начале, но не идентифицирован в people.yaml"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 751.3
+          etime: 757.75
+          text: "Но там же смысл того же самого GitLab не просто в том, что у тебя один какой-то кусок со всеми сервисами."
+        additional_segments:
+          - stime: 856.85
+            etime: 867.1
+            text: "Ну, хорошо, вот, допустим, самая простая настройка. У тебя есть докеровский репозиторий, тебе надо его наружу показать через HTTPS."
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1128
+    replies_count: 212
+    first_appearance_sec: 1613
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Гость явно представился:
+        - Umputun: "Степа, здравствуй. Степан." (1610.61s)
+        - SPEAKER_03: "Добрый день." (1612.78s)
+        - SPEAKER_03: "Меня зовут Степан." (1633.29s)
+        - "Я работаю, не могу сказать где, потому что это очень смешная история"
+        - "в нашей компании я работаю над системами сборки, инфраструктуры сборки"
+        - Пришел обсудить релиз Bazel 1.0/1.1, эксперт по системам сборки
+        Гость не найден в people.yaml, нужно добавить.
+
+      possible_matches:
+        - person_id: "stepan_674"
+          confidence: 0.9
+          reason: "Представился как Степан, эксперт по системам сборки (Bazel), работает в крупной компании"
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 1651.75
+          etime: 1661.15
+          text: "В общем, но в нашей компании я работаю над системами сборки, инфраструктуры сборки, репозиториями, всеми такими штуками."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 4
+    replies_count: 2
+    first_appearance_sec: 2163
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Всего 2 короткие реплики (4 сек):
+        - "Говори просто... Спокойно, размеренно." (2162.55s)
+        - "Тебе не помогло, Ксюша." (2165.15s)
+        Обращение "Ксюша" указывает на одного из ведущих. Контекст - обсуждение
+        проблем со Скайпом. Вероятно, это Umputun или Bobuk.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Стилистика фразы похожа на Umputun, обращение к Ksenks"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk также мог обратиться к Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2162.55
+          etime: 2166.92
+          text: "Говори просто... Спокойно, размеренно. Тебе не помогло, Ксюша."
+
+  - speaker: "SPEAKER_09"
+    total_duration_sec: 1
+    replies_count: 1
+    first_appearance_sec: 4476
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика (1.5 сек) "В Java она неповторимая" (4475.94s).
+        Контекст: Alek.sys спрашивает "где неповторяемые сборки, кроме Мэйка?",
+        сразу после SPEAKER_09 отвечает SPEAKER_03 (Степан) с длинным объяснением.
+        Скорее всего это ошибка атрибуции - реплика принадлежит SPEAKER_03 (Степан)
+        или одному из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "stepan_674"
+          confidence: 0.7
+          reason: "Степан - эксперт по системам сборки, обсуждает тему, сразу после этого говорит"
+        - person_id: "alek_sys"
+          confidence: 0.2
+          reason: "Мог ответить сам на свой вопрос"
+
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 4475.94
+          etime: 4477.4
+          text: "В Java она неповторимая."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: |
+        Гость "Лёха" представлен в начале (30-62 сек), но его реальное имя/фамилия
+        не упомянуты. Не найден в people.yaml. Требуется идентификация.
+    - speaker: "SPEAKER_03"
+      issue: |
+        Степан представился полностью (имя, место работы скрыто по NDA).
+        Эксперт по Bazel/системам сборки. Требуется добавление в people.yaml.
+    - speaker: "SPEAKER_01"
+      issue: |
+        Ошибка распознавания - 2 реплики скорее всего от одного из ведущих.
+    - speaker: "SPEAKER_09"
+      issue: |
+        Ошибка распознавания - 1 реплика, скорее всего от SPEAKER_03 (Степан).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 674
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Stepan"
+    confidence: high
+    reason: "Гость представился как Степан (1633.29s), эксперт по системам сборки"
+
+  - type: rename
+    episode: 674
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Lyoha"
+    confidence: medium
+    reason: "Umputun представил как 'оригинальный Лёха' в начале эпизода"
+
+  - type: rename
+    episode: 674
+    from_speaker: "SPEAKER_09"
+    to_speaker: "Stepan"
+    confidence: medium
+    reason: "Единственная реплика про Java/сборки, контекстуально относится к Степану"
+
+# Требуемые действия
+actions_required:
+  - action: "add_to_people_yaml"
+    person:
+      id: "stepan_674"
+      canonical_name: "Stepan"
+      real_name: "Степан"
+      info: "Эксперт по системам сборки (Bazel), выпуск 674"
+
+  - action: "add_to_people_yaml"
+    person:
+      id: "lyoha_674"
+      canonical_name: "Lyoha"
+      real_name: "Алексей (Лёха)"
+      info: "Гость выпуска 674, представлен как 'оригинальный Лёха'"
+
+  - action: "voice_comparison"
+    speaker: "SPEAKER_01"
+    candidates: ["Umputun", "Bobuk"]
+    audio_url: "https://cdn.radio-t.com/rt_podcast674.mp3"
+    segment: "2162.55-2166.92"
+
+  - action: "verify_rename"
+    speaker: "SPEAKER_05"
+    to: "Lyoha"
+    note: "Подтвердить, что это тот же Лёха из представления в начале"

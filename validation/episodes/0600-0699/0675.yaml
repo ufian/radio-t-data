@@ -1,0 +1,129 @@
+episode: 675
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Ksenks, Bobuk]
+  total_duration_sec: 9545
+  notes: |
+    Выпуск с двумя Алексеями - Alek.sys (ведущий) и гость-Леша (SPEAKER_05).
+    В конце Umputun говорит: "А второй Леша, который хороший Леша" - о Alek.sys.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2543
+    replies_count: 485
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        В начале Umputun обращается: "Ты, Леша, добавляешь той самой концентрации".
+        SPEAKER_05 отвечает и активно участвует весь выпуск (485 реплик, 2543 сек).
+        На 1150 сек Alek.sys обращается к нему: "И, кстати, я не думаю, Леша".
+        В конце (9477 сек) Umputun: "А второй Леша, который хороший Леша" - о Alek.sys.
+        SPEAKER_05 говорит "по эту сторону океана" (326 сек) - вероятно, в США.
+        Это гость по имени Алексей/Леша, но фамилия не названа.
+
+      possible_matches:
+        - person_id: "another_alex"
+          confidence: 0.3
+          reason: "Гость по имени Алексей, но another_alex из выпусков 857-858"
+        - person_id: "alexmak"
+          confidence: 0.2
+          reason: "Alexmak из выпусков 196, 203 - другой период"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 326.52
+          etime: 343.66
+          text: "И, честно говоря, скажем так, Гитлаб здесь, по крайней мере, с моей стороны, по эту сторону океана, дураки не в том смысле, что они вот это делают."
+        additional_segments:
+          - stime: 373.33
+            etime: 391.21
+            text: "Ну, эти люди неудачники, их резюме, например, к нам не пришло. А GitLab здесь почему-то поступил, они решили, что они такие открытые и публичные..."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная реплика на 6348 сек: "Хочешь свое видео обсудить?"
+        Находится между репликами Ksenks (6346-6348 и 6350+).
+        Контекст: обсуждение тем, Ksenks отвечает "Нет, нет. Я видео не хочу."
+        Скорее всего это реплика Umputun (он ведет выпуск и предлагает темы).
+
+      identified_as: "umputun"
+      identification_method: "context"
+      confidence: medium
+      evidence: |
+        Umputun говорит до этого (6343 сек): "Я могу и открутить."
+        Ksenks (6346 сек): "Да нет, ну пойдем уж."
+        SPEAKER_06 (6348 сек): "Хочешь свое видео обсудить?"
+        Ksenks (6350 сек): "Нет, нет."
+        Это типичный диалог ведущего (Umputun) с участником (Ksenks).
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_05"
+      issue: |
+        Гость-Леша (SPEAKER_05) не был официально представлен.
+        Umputun сразу обращается к нему по имени с первых секунд.
+        Это обычный ведущий подкаста, который участвует как гость.
+        Нужно идентифицировать по голосу или проверить историю выпусков.
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys назван "вторым Лешей" в конце выпуска (9477 сек).
+        Болел ("со шмонявым носом"), говорит меньше обычного (147 реплик vs 485 у SPEAKER_05).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 675
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Umputun"
+    confidence: medium
+    reason: |
+      Единственная реплика SPEAKER_06 ("Хочешь свое видео обсудить?")
+      находится в диалоге Umputun-Ksenks, по контексту это вопрос ведущего.
+
+# Примечания для ручной проверки
+notes: |
+  1. SPEAKER_05 - главный вопрос этого выпуска. Это гость по имени Леша/Алексей,
+     который активно участвует (485 реплик, 2543 сек - больше всех кроме Umputun).
+     Возможно, это постоянный участник, который обычно размечен как известный ведущий.
+
+  2. В файле all_identified_guests.json SPEAKER_05 уже идентифицирован как
+     "Алексей / Леша" с пометкой "это явное обращение к Леше (Алексей / Alek.sys)".
+     Но это НЕВЕРНО - в выпуске два Алексея: SPEAKER_05 и Alek.sys (отдельно).
+
+  3. Нужно проверить:
+     - Кто этот гость-Леша? Возможно, он участвовал в других выпусках.
+     - Проверить голос по референсному сегменту (326-343 сек).
+
+  4. SPEAKER_06 - скорее всего ошибка распознавания Umputun (1 реплика, 2 сек).
+
+  5. Дата эпизода: 2019-11-09
+     Темы: GitLab, Go 10 лет, GitHub Octoverse, Visual Studio в облаке, UniFi Dream Machine
+
+  Audio URL: https://cdn.radio-t.com/rt_podcast675.mp3

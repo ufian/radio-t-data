@@ -1,0 +1,56 @@
+episode: 688
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 8684
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Две очень короткие реплики (1.26s и 0.46s) в самом конце выпуска (8602s). Типичные короткие подтверждения 'Ага, да.' и 'Пора.' в момент, когда Umputun предлагает завершить ('Ну что, на этой оптимистической ноте?'). Это ошибка распознавания одного из присутствующих ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Говорил непосредственно перед этим сегментом (8580-8596s), активно участвовал в финальном обсуждении"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Присутствовал в выпуске, мог кратко подтвердить завершение"
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Присутствовал в выпуске ('мы тут с Лешей вдвоем' в начале)"
+
+      voice_task:
+        needed: false
+        # Сегменты слишком короткие для голосовой идентификации (<2 сек)
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun начинает выпуск и ведёт его"
+    - "Bobuk появляется с 29s, упомянут косвенно"
+    - "Gray появляется с 23s, упомянут Умпутуном ('Грей у нас сегодня в ассортименте')"
+    - "Alek.sys появляется с 95s, упомянут как 'Лёша' ('мы тут с Лёшей вдвоём')"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Реплики SPEAKER_05 слишком короткие и не влияют на качество транскрипта.
+# Можно оставить как есть или удалить при желании, но идентификация невозможна.

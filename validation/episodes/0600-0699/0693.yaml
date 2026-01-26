@@ -1,0 +1,108 @@
+episode: 693
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 7034
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 13
+    replies_count: 9
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка распознавания Ksenks при смене микрофонов/настроек. Появляется сразу после приветствия 'Здравствуй, Ксюша' (592s), реплики чередуются с Ksenks, тематика - её AirPods и настройки."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "598s: 'Я хотела спросить' (женский род), 674s: 'Я сейчас в Airpods заговорю' - продолжение разговора про её переключение наушников"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реактивные реплики, вероятно Ksenks. Появляются рядом с репликами Ksenks (2938s, 5993s), тематически связаны с ней."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: "2936s: вопрос про офис сразу после реплики Umputun, на который отвечает Ksenks. 5993s: 'Ну, надо его...' - обрывается, сразу после реплики Ksenks про чайник"
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.2
+          reason: "Теоретически мог быть Bobuk, но контекст указывает на Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 2936.85
+          etime: 2938.81
+          text: "Так подожди, раз в неделю вы в офис ездите?"
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Односложная реплика 'Неа' в ответ на вопрос Umputun. Слишком короткая для идентификации, скорее всего ошибка распознавания одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk часто реагирует на вопросы Umputun"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray тоже мог ответить"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Ksenks присутствует в эпизоде"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Ksenks"
+      issue: "Распознана как 3 разных спикера (Ksenks, SPEAKER_04, SPEAKER_02) из-за смены микрофонов во время эпизода"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 693
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Явный контекст: появляется после приветствия Ксюши, чередуется с Ksenks, разговор про её AirPods и смену микрофона"
+
+  - type: rename
+    episode: 693
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Контекст указывает на Ksenks: реплики появляются рядом с её репликами и тематически связаны с ней. Требуется voice comparison для подтверждения."

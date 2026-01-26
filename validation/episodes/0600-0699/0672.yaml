@@ -1,0 +1,44 @@
+episode: 672
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9889
+  notes: "Полный состав ведущих. Umputun объявил 'классический полный состав' в начале (10s). Alek.sys говорит очень мало (9 реплик, 12 сек) - минимальное участие."
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+    timestamps: [6772.2]
+    sample_texts:
+      - "Да."
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная односложная реплика (<1 сек) между репликами Ksenks. Контекст: обсуждение параметров в языках программирования. Ksenks спрашивает 'Окей, параметры и именованные, и неименованные?', затем SPEAKER_08 отвечает 'Да.', и Ksenks продолжает 'Ну, это трэш.' - типичная ошибка распознавания короткого подтверждения от одного из ведущих (скорее всего Bobuk или Umputun, которые только что обсуждали эту тему)."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_found: "Umputun в начале (10-17s): '672-й выпуск подкаста Radio T. Состав у нас обычно классический полный.'"
+  issues:
+    - speaker: "Alek.sys"
+      issue: "Очень малое участие (9 реплик, 12 сек) для 'полного состава'. Первая реплика только на 3965s (~1ч 6мин). Возможно, присоединился позже или был пассивен."
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# SPEAKER_08 - единственная ошибка распознавания.
+# Автоматическое переименование не рекомендуется без voice comparison,
+# так как невозможно определить, кому именно из ведущих принадлежит реплика.

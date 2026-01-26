@@ -1,0 +1,136 @@
+episode: 687
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  guests_present: [Anya]
+  total_duration_sec: 9438  # ~2h 37min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 670
+    replies_count: 150
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале выпуска Umputun говорит: "Аня зашла к нам на огонек вместо выбывшего Грея".
+        Далее ведущие многократно обращаются к Ане по имени в контексте реплик SPEAKER_04:
+        - "Аня, ты меня поправь, если я ошибаюсь" (строка 1405)
+        - "Бобок и Аня, я уверен, что Леша это прочитал" (строка 3169)
+        - "При этом вовсе не обязательно вот эти все проблемы, Аня, о которых ты упоминаешь" (строка 3889)
+        - "Аня, то, что ты говоришь, называется inspections" (строка 15643)
+        SPEAKER_04 ведет техническую дискуссию о монолитах vs микросервисах - это согласуется
+        с тем, что гость технически подкован.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Три короткие реплики (по ~2 сек каждая) в разных частях эпизода.
+        Реплики выглядят как ошибки распознавания голоса ведущих:
+        - 4117s: "А это голос у тебя в голове?" - контекст диалога Bobuk
+        - 7311s: "Нормальные компиляторы это делают." - в споре с Alek.sys
+        - 8553s: "Про тайм-формат." - повтор слов Bobuk
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.6
+          reason: "Реплики в контексте диалогов Bobuk, похоже на ошибку распознавания"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Может быть голос Ksenks, которая присутствует в эпизоде"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "Gray"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        В начале выпуска Umputun явно говорит: "выпуск гиковский, то есть Грея отсутствует".
+        Две короткие реплики Gray (247s и 1377s) - это ошибки распознавания.
+        Вероятно, реплики принадлежат Alek.sys или Anya (SPEAKER_04).
+        - 247s: "Звучит очень сложно." - в контексте обсуждения Azure
+        - 1377s: "Share the petition, так." - при обсуждении Windows 7
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.5
+          reason: "Реплики в контексте технического обсуждения, Alek.sys активен рядом"
+        - person_id: "anya"
+          confidence: 0.4
+          reason: "Может быть голос Anya (SPEAKER_04), которая участвует в эпизоде"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 247.87
+          etime: 249.26
+          text: "Звучит очень сложно."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: "Gray отсутствует по заявлению ведущего, но имеет 2 реплики - ошибка распознавания"
+    - speaker: "SPEAKER_02"
+      issue: "3 короткие scattered реплики - вероятно ошибки распознавания ведущих"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 687
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Явное представление в начале эпизода + множественные обращения по имени"
+
+  - type: rename
+    episode: 687
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Gray"
+    confidence: medium
+    reason: "Ведущий объявил отсутствие Gray в начале выпуска, реплики ошибочны"
+
+  - type: rename
+    episode: 687
+    from_speaker: "SPEAKER_02"
+    to_speaker: "SPEAKER_MISATTRIBUTED_02"
+    confidence: medium
+    reason: "Короткие scattered реплики - скорее всего ошибки распознавания"

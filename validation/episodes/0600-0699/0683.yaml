@@ -1,0 +1,123 @@
+episode: 683
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks]
+  total_duration_sec: 8741  # ~2h26m
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 752
+    replies_count: 196
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: medium
+      evidence: "Использует женский род глаголов ('слышала' на 629-637с), активно участвует в дискуссиях, не пересекается по времени с Ksenks. Ksenks появляется только с 3044с, а SPEAKER_03 говорит с 133с."
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.75
+          reason: "Женский род речи, характер участия, отсутствие пересечений с размеченной Ksenks"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1505.15
+          etime: 1520.0
+          text: "Но это решение должна принимать компания, что окей, мы знаем, что та, которая использовала Python 2, какую-то версию, что все это говно мамонта, мы переходим, мы инвестируем в то, чтобы все переписывать на Python 3-й."
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 18
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (2-7 сек), рассеянные по выпуску в разных контекстах. Типичные фразы ведущих: 'Потому что места не было', 'Очищенный от всяких конструкций', 'Я не понимаю, зачем они это делают'."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Контекст технических обсуждений"
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Контекст технических обсуждений"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 16
+    replies_count: 12
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (0.3-5 сек), односложные реакции: 'Кого.', 'И пока.', 'Так делают, да.', 'Да, да, да.', 'Эйк?'. Типичные ошибки распознавания при перебивках."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 10
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (0.7-4 сек): 'Правильно.', 'Если', 'Турбопитону то еще круче.', 'Давай, конкретика.'. Ошибки распознавания при перебивках и коротких вставках."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "SPEAKER_03"
+      issue: "752 секунды речи без атрибуции. Высокая вероятность что это Ksenks, которая официально появляется только с 3044с, хотя упоминается в начале выпуска ('Ксюша говорила, что отошла' на 126-130с)."
+    - speaker: "_ad"
+      issue: "Часть диалога ведущих (60-68с) ошибочно помечена как реклама: 'Пока тебя, Бубук, не было, у нас тут произошло несколько судьбоносных явлений'"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 683
+    from_speaker: "SPEAKER_03"
+    to_speaker: "Ksenks"
+    confidence: medium
+    reason: "Женский род речи, отсутствие пересечений с Ksenks, типичное участие ведущей в дискуссиях. Требуется voice comparison для подтверждения."
+
+# Аудио для voice comparison
+audio_url: "https://cdn.radio-t.com/rt_podcast683.mp3"

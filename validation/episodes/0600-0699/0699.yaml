@@ -1,0 +1,58 @@
+episode: 699
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 6948
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Три короткие реплики (2-3 сек), разбросанные по всему выпуску.
+        Последняя реплика "Пока-пока" (7708s) — типичное прощание ведущего в конце.
+        Вторая реплика — вопрос к Ksenks на "ты" (4955s).
+        Первая — технический вопрос про хостовую ОС (1158s).
+        Гости не были представлены в начале выпуска (Umputun: "У нас все, кроме Ксюш, уже подошли").
+        Все признаки указывают на ошибку распознавания голоса одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Bobuk говорит следующую реплику после SPEAKER_07 в первом случае, вопросительный тон характерен"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray также участвует в обсуждении, возможна ошибка распознавания"
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Alek.sys говорит прямо перед первым появлением SPEAKER_07"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Примечание: Без voice comparison невозможно определить, кто из ведущих
+# был ошибочно распознан. Реплики слишком короткие (2-3 сек) для надёжной
+# идентификации по контексту. Рекомендуется оставить как есть или провести
+# ручную проверку аудио.

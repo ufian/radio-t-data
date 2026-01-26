@@ -1,0 +1,133 @@
+episode: 671
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8636
+  notes: "Полный состав ведущих, объявлен в начале выпуска"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_10"
+    total_duration_sec: 13
+    replies_count: 6
+    pattern: scattered
+    timestamps: [427.6, 4244.0, 8123.6, 8124.4, 9209.6, 9211.9]
+    sample_texts:
+      - "Жень, вот ты прям нашел такого человека."
+      - "Легко, вроде бы."
+      - "Он бы так и писал."
+      - "Приходите в штанов."
+      - "Она тоже не джентльмен."
+      - "Она не материлась, она, значит, джентльмен."
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (<3 сек каждая), разбросаны по всему эпизоду (427s-9211s). Обращение 'Жень' указывает на Umputun - вероятно, ошибка распознавания одного из ведущих. Контекст показывает участие в общей дискуссии без представления."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 8
+    replies_count: 7
+    pattern: scattered
+    timestamps: [498.8, 1660.7, 1929.4, 6835.7, 6836.1, 6836.9, 7502.8]
+    sample_texts:
+      - "А он такой длинный?"
+      - "И не развивается."
+      - "Да, это тоже вспомнил."
+      - "Не слабо."
+      - "Прирост есть."
+      - "Следующая тема есть."
+
+    analysis:
+      is_error: true
+      error_reason: "Крайне короткие реплики (1-2 сек), типичные междометия и реакции. Разбросаны по эпизоду (498s-7502s). Ответы на реплики других спикеров без самостоятельного контента - характерный паттерн ошибок распознавания."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_09"
+    total_duration_sec: 6
+    replies_count: 3
+    pattern: consecutive
+    timestamps: [9469.4, 9471.1, 9472.9]
+    sample_texts:
+      - "Наоборот, надо пожалеть обоих."
+      - "Надо пожалеть Яндекс."
+      - "Надо пожалеть эту девочку."
+
+    analysis:
+      is_error: true
+      error_reason: "Три последовательные короткие реплики (2 сек каждая) в конце эпизода. Контекст - обсуждение Яндекса и девочки из предыдущего пункта. Несмотря на последовательность, суммарная длительность слишком мала (6 сек) для реального гостя."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 4
+    replies_count: 3
+    pattern: scattered
+    timestamps: [490.6, 1478.4, 7244.6]
+    sample_texts:
+      - "Что неудобно?"
+      - "Место занимает на экране."
+      - "Это же шутка."
+
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (<2 сек), разбросаны по эпизоду. Типичные вопросы-уточнения и комментарии - характерный паттерн неверно распознанных реплик ведущих."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: scattered
+    timestamps: [1171.4, 8507.4]
+    sample_texts:
+      - "Нет, лучше с нажатым."
+      - "Ты не знаешь, как там было."
+
+    analysis:
+      is_error: true
+      error_reason: "Всего 2 короткие реплики на разных концах эпизода (1171s и 8507s). Контекст показывает, что это реакции на слова других ведущих - типичная ошибка распознавания."
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_found: "Umputun в начале эпизода (10s): 'Абсолютно полный состав'"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Все неизвестные спикеры - ошибки распознавания с очень короткими репликами.
+# Автоматическое переименование не рекомендуется без voice comparison,
+# так как невозможно определить, кому именно из ведущих принадлежит каждая реплика.

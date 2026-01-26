@@ -1,0 +1,32 @@
+episode: 680
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7304
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде.
+# Все SPEAKER_* и Guest* отсутствуют.
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  # Все ведущие либо присутствовали с начала (Umputun, Bobuk, Gray, Alek.sys),
+  # либо их опоздание было анонсировано (Ksenks - "Ксюша задерживается по старому времени").
+  # Ksenks присоединилась в ~3587s и была встречена фразой "Ксюша, пока тебя не было..."
+
+# Примечания
+notes:
+  - "Эпизод от 2019-12-14"
+  - "Полный состав ведущих: Umputun, Bobuk, Gray, Alek.sys с начала, Ksenks присоединилась в 59:47"
+  - "SPEAKER_99 содержит только артефакты - короткие названия продуктов (iPhone 11, Samsung Galaxy Bud и т.п.)"
+  - "Главная тема выпуска - обыск в офисе Nginx"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила очистки не требуются - эпизод чистый.

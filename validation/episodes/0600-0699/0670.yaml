@@ -1,0 +1,72 @@
+episode: 670
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8209  # ~2h 17min
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 2
+    replies_count: 3
+    pattern: consecutive  # все 3 реплики в пределах 1 секунды (5363-5365s)
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Три очень короткие реплики ("Apple.", "Понятно.", "Понятно.") в пределах 1 секунды,
+        совпадающие по времени с репликой SPEAKER_99 ("Apple."). Это дубликаты/артефакты
+        автоматического распознавания. Контекст: Gray говорит "У него же на iPhone оно появилось",
+        затем идут эти артефакты, затем сразу Gray продолжает "Я же говорю, вопрос тут может
+        звучать только так". Никакого реального спикера между репликами Gray нет.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 0
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная реплика "Да." длительностью 0.06 секунды (8743.4-8743.46s).
+        Контекст: Bobuk рассказывает анекдот ("...у него в голове это было пол шестого.
+        Но все помнят, что пол."), затем это "Да." на 0.06 сек, затем Umputun спрашивает
+        "Ну что, у нас вроде как больше ничего интересного там и нету, да?".
+        Это либо артефакт распознавания, либо короткая реакция одного из ведущих,
+        ошибочно выделенная как отдельный спикер.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    В начале эпизода Umputun отмечает, что Ksenks опаздывает ("Ксюша почему-то нет с нами...
+    Мы очень надеемся, что она подъедет"). Ksenks появляется позже (первая реплика в 503s).
+    Все основные ведущие присутствуют. Alek.sys имеет всего 6 коротких реплик (7 сек) -
+    это нормально для эпизода, где он мог быть менее активен или подключился на часть выпуска.
+
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Оба SPEAKER_* являются артефактами и могут быть удалены или помечены как SPEAKER_99,
+# но поскольку это минимальные фрагменты (2 сек и 0.06 сек), они не влияют на качество
+# транскрипта и не требуют обязательных правил очистки.

@@ -1,0 +1,79 @@
+episode: 697
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7706
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие односложные реплики в разных частях подкаста: подсказка слова 'Отбеливатель' (1.7 сек) и прощание 'Пока' (0.24 сек). Скорее всего ошибка распознавания одного из ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Первая реплика - подсказка слова после фразы Bobuk, возможно его же голос распознан как другой спикер"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Вторая реплика - прощание после Umputun, может быть его голос"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 1
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие односложные реплики: 'Лежи' (0.58 сек) и 'Нет' (0.28 сек). Типичные фразы-ошибки распознавания, слишком короткие для идентификации."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Первая реплика следует за фразой Bobuk 'И там в ней лежишь ты' - может быть его продолжение"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Вторая реплика между репликами Ksenks, возможно её голос"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Примечания по ведущим:
+# - Umputun: ведущий, представляется в начале (0s)
+# - Bobuk: первая реплика в 18s, активный участник
+# - Gray: первая реплика в 78s, упоминается в контексте ролика
+# - Ksenks: упоминается Umputun'ом в 97s ("У Ксюши только что развернулись") и 212s, первая реплика в 229s
+# - Alek.sys: упоминается как "Леша" в 256s, первая реплика в 260s
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Не предлагаем правила, так как все неизвестные спикеры имеют слишком короткие реплики
+# для надежной идентификации. Рекомендуется оставить как есть или пометить как SPEAKER_99 (артефакты).

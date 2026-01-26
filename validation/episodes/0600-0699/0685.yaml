@@ -1,0 +1,84 @@
+episode: 685
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  hosts_with_issues: [Alek.sys]  # Не представлен, 4 коротких реплики - вероятно ошибка
+  total_duration_sec: 9557
+
+# Детальный анализ проблемных спикеров
+unknown_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 3
+    replies_count: 4
+    pattern: scattered  # Разбросаны по эпизоду в разных местах
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        Alek.sys не упоминается и не представлен в начале эпизода.
+        В начале Umputun говорит о Ксюше (Ksenks) и упоминает Gray и Bobuk.
+        Все 4 реплики Alek.sys очень короткие (0.5-1 сек), односложные реакции:
+        1. "Понимаешь?" (5465.98-5466.68) - между репликами Bobuk
+        2. "В том смысле, что..." (7806.14-7806.9) - между репликами Bobuk
+        3. "Да, наверное." (8017.25-8017.77) - между Gray и Bobuk
+        4. "Цифра же всегда лучше." (8796.84-8797.78) - между Bobuk и Umputun
+        Это типичные ошибки распознавания голоса.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.5
+          reason: "Реплики 1-2 находятся между репликами Bobuk"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплика 3 следует за репликой Gray"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Реплика 4 предшествует реплике Umputun"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys не упоминается ни в начале эпизода, ни в середине.
+        В эпизоде участвуют Umputun, Bobuk, Gray, а позже присоединяется Ksenks (около 4922 сек).
+        Реплики Alek.sys - короткие междометия, разбросанные по эпизоду.
+        Скорее всего это ошибка распознавания голоса одного из присутствующих ведущих.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete_or_reassign
+    episode: 685
+    from_speaker: "Alek.sys"
+    to_speaker: null  # Требуется voice comparison для точного определения
+    confidence: high
+    reason: |
+      4 коротких реплики (<1 сек каждая) в случайных местах эпизода.
+      Alek.sys не представлен и не упомянут. Вероятно ошибка распознавания.
+      Рекомендуется voice comparison для определения реального спикера
+      или удаление атрибуции (слияние с соседними репликами).
+
+# Примечания
+notes: |
+  Эпизод 685 от 18 января 2020 года.
+  Участники: Umputun (ведущий), Bobuk, Gray, Ksenks (присоединяется позже).
+  Ksenks присоединяется около 82 минуты (4922 сек), что подтверждается
+  фразой Umputun "Я уже не надеялся тебя, Ксюша, в нашем обществе увидеть."
+
+  Alek.sys формально присутствует в статистике (4 реплики, 3 сек),
+  но все реплики - короткие междометия, разбросанные по эпизоду.
+  Это типичный паттерн ошибки распознавания голоса.

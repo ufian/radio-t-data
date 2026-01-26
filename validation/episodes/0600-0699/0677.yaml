@@ -1,0 +1,100 @@
+episode: 677
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks, Bobuk]
+  total_duration_sec: 7200  # ~2 часа
+  notes: |
+    Bobuk имеет только 1 реплику (3 сек) в 7770s - это явная ошибка разметки.
+    Все ведущие упоминаются в начале: Umputun представляет Ксюшу (1s),
+    Alek.sys появляется в 32s, Gray в 35s.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 12
+    replies_count: 3
+    pattern: scattered
+    timestamps:
+      - stime: 3176.19
+        etime: 3178.28
+        text: "Да, но все ездят на пикапе."
+      - stime: 3373.88
+        etime: 3379.75
+        text: "Если зимой, на лыжах, то там цепи нужны."
+      - stime: 5447.21
+        etime: 5449.64
+        text: "Подожди, Android Police?"
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Короткие разрозненные реплики (<6 сек каждая) в разных частях подкаста.
+        Реплики вписываются в контекст диалога между ведущими.
+        Первая реплика (3176s) - почти дословный повтор предыдущей реплики Alek.sys
+        ("Там не все живут на ферме, но 80% ездят на пикапе" -> "Да, но все ездят на пикапе").
+        Вторая реплика (3373s) - в контексте обсуждения машин с Alek.sys.
+        Третья реплика (5447s) - вопрос в контексте разговора Gray и Alek.sys.
+        Вероятно ошибка распознавания одного из ведущих.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.6
+          reason: "Первые две реплики в контексте обсуждения с Alek.sys о машинах/пикапах"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Могла быть Ksenks с короткими комментариями"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 3373.88
+          etime: 3379.75
+          text: "Если зимой, на лыжах, то там цепи нужны."
+        audio_url: "https://cdn.radio-t.com/rt_podcast677.mp3"
+        note: "Самая длинная реплика SPEAKER_03 (6 сек)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Единственная реплика Bobuk (7770.1-7773.3s) - ошибка разметки.
+        Контекст: Gray рассказывает про Apple Class Action Suit.
+        Gray (7758-7770): "Когда-то у Apple был какой-то Class Action Suite..."
+        Bobuk (7770): "В общем, мне там начислили какое-то количество денег."
+        Gray (7773): "Так что я, в принципе, даже доволен остался."
+        Реплика Bobuk является логическим продолжением речи Gray о том же Class Action.
+        Это точно говорит Gray, не Bobuk.
+    - speaker: "SPEAKER_03"
+      issue: "3 разрозненные короткие реплики - вероятно ошибки распознавания ведущих"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 677
+    from_speaker: "Bobuk"
+    to_speaker: "Gray"
+    confidence: high
+    reason: |
+      Единственная реплика Bobuk в эпизоде является продолжением истории Gray
+      о Class Action Suit против Apple. Реплики до и после принадлежат Gray
+      и составляют единое повествование. Bobuk не участвует в этом эпизоде.
+
+  - type: rename
+    episode: 677
+    from_speaker: "SPEAKER_03"
+    to_speaker: "SPEAKER_MISATTRIBUTED_03"
+    confidence: medium
+    reason: |
+      Короткие разрозненные реплики, скорее всего ошибки распознавания.
+      Требуется voice comparison для точной идентификации.
+      Переименование в SPEAKER_MISATTRIBUTED_03 пока не проведено voice comparison.

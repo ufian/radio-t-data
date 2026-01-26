@@ -1,0 +1,96 @@
+episode: 696
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 8220
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 10
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (1-3 сек каждая) в разных частях подкаста. Контекст показывает, что это комментарии в общей дискуссии ведущих, скорее всего ошибочно распознанный голос одного из хостов."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Реплики в 1198-1205s идут сразу после речи Bobuk и продолжают его мысль о GitLab ('Выглядит любопытно', 'Да, ставим', 'Даунлот, ну, пошло')"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Реплика в 1841s ('Это для любителей экстрима') идёт сразу после Gray и до его следующей реплики"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 1198.68
+          etime: 1205.56
+          text: "Выглядит любопытно. Да, ставим. Даунлот, ну, пошло."
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Единственная короткая реплика (2 сек) - типичный паттерн ошибки распознавания. Реплика является ответом на вопрос Ksenks в диалоге между ведущими."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Короткий уточняющий ответ 'Это через неделю, да' на вопрос Ksenks - типичный стиль модерирования Umputun"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk также часто даёт короткие уточняющие реплики"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_02"
+      issue: "5 реплик разбросаны по эпизоду (1198s, 1841s, 8443s) - вероятно ошибка распознавания одного из хостов"
+    - speaker: "SPEAKER_08"
+      issue: "Единственная реплика в 7539s - вероятно ошибка распознавания"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарий
+notes: |
+  Эпизод 696 от 4 апреля 2020 года. В начале Umputun упоминает "полный состав" -
+  присутствуют все 5 основных ведущих. Гостей в этом выпуске нет.
+
+  SPEAKER_02 и SPEAKER_08 - это ошибки автоматического распознавания голосов.
+  Все их реплики являются короткими комментариями в контексте общей дискуссии ведущих.
+
+  Для точной идентификации рекомендуется voice comparison для SPEAKER_02
+  (имеет 3 последовательных реплики в 1198-1205s).
+
+  SPEAKER_08 имеет только одну 2-секундную реплику - недостаточно для voice comparison,
+  но контекст явно указывает, что это один из ведущих.

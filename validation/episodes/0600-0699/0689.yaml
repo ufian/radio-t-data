@@ -1,0 +1,23 @@
+episode: 689
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 7061
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода Umputun упоминает "прекрасная четвертина отсутствует" (Ksenks),
+    но Gray поправляет "У нас четверо". Все четыре ведущих (Umputun, Bobuk, Gray, Alek.sys)
+    представлены в первые 40 секунд через диалог.
+
+# Предлагаемые правила очистки
+suggested_rules: []

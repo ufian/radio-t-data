@@ -1,0 +1,79 @@
+episode: 692
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk, Gray]
+  total_duration_sec: 8877
+  notes: |
+    В начале выпуска (42-57s) Umputun явно говорит:
+    "Сегодня нет Бобука, сегодня нет Грея... зато есть Ксюша и Леша"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_02"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Односложное прощание 'Пока.' в самом конце подкаста (8876s) после 'Пока, услышимся' от Umputun. Это один из присутствующих ведущих (Ksenks или Alek.sys)."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Присутствует в выпуске, прощается в конце"
+        - person_id: "alek_sys"
+          confidence: 0.5
+          reason: "Присутствует в выпуске, прощается в конце"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 8876.33
+          etime: 8877.11
+          text: "Пока."
+        notes: "Сегмент слишком короткий (0.78 сек) для надежного voice comparison. Рекомендуется ручная проверка или игнорирование этой реплики."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: |
+        Gray имеет 1 реплику (3787s): "Фишка в том, что если ты стройно передаешь свое решение..."
+        Однако в начале выпуска Umputun явно говорит "Сегодня нет Грея".
+        Это ошибка распознавания — реплика должна принадлежать Alek.sys (предыдущий спикер) или Umputun (следующий спикер).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 692
+    from_speaker: "Gray"
+    to_speaker: "Alek.sys"
+    confidence: medium
+    reason: |
+      Gray отсутствует в выпуске (подтверждено словами Umputun в начале).
+      Реплика находится между репликами Alek.sys и Umputun.
+      По контексту ("Фишка в том, что если ты стройно передаешь свое решение...")
+      это продолжение диалога о Kubernetes, который вел Alek.sys.
+      Alek.sys непосредственно перед этим говорил о vendor lock.
+
+  - type: rename
+    episode: 692
+    from_speaker: "SPEAKER_02"
+    to_speaker: "Ksenks"
+    confidence: low
+    reason: |
+      Односложное прощание в конце выпуска. Невозможно точно определить
+      кто из двух присутствующих ведущих (Ksenks или Alek.sys) это сказал.
+      Выбрана Ksenks как более вероятный вариант, но confidence низкий.
+      Альтернатива: удалить эту реплику как несущественную.

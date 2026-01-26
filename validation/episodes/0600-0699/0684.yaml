@@ -1,0 +1,72 @@
+episode: 684
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  total_duration_sec: 9948
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 12
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка распознавания Ksenks. Все реплики SPEAKER_01 находятся в контексте появления Ksenks в подкасте (около 1988-2215s). Реплика 'Я тоже рада, я скучаю, да' (2027s) - прямой ответ на слова Umputun 'Мы рады, что ты решила к нам зайти', обращённые к Ksenks. Следующая реплика Ksenks начинается сразу после (2002s). Женский род в речи ('рада') подтверждает."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Umputun: 'Мы, кстати, рады, что ты решила к нам зайти' (2018s) -> SPEAKER_01: 'Я тоже рада, я скучаю, да' (2027s). Ksenks появляется в подкасте именно в этот момент (~2003s). Реплика 'Там, по-моему, 17 миллионов пользователей' (1988s) предшествует первой распознанной реплике Ksenks (2002s)."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка распознавания Ksenks. Единственная реплика 'Закрыла?' (8194s) - прямой ответ на слова Umputun 'Сюша, закрой уши' (8193s). 'Сюша' - уменьшительное от 'Ксюша' (Ksenks). Женский род глагола подтверждает."
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: "Umputun: 'Сюша, закрой уши' (8189-8193s) -> SPEAKER_06: 'Закрыла?' (8193-8195s). Обращение 'Сюша' однозначно указывает на Ksenks."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: "В начале выпуска Umputun упоминает состав: 'Бобук, Лёха здесь есть. И есть надежда, что подойдёт наша... четвертина' (о Ksenks). Gray отсутствует в этом выпуске (упомянут как 'картавящий', кто отсутствует). Ksenks присоединилась позже (~33 минута)."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 684
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Все 5 реплик SPEAKER_01 принадлежат Ksenks. Контекст диалога, женский род, время появления совпадает с присоединением Ksenks к подкасту."
+
+  - type: rename
+    episode: 684
+    from_speaker: "SPEAKER_06"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: "Единственная реплика 'Закрыла?' - ответ на обращение 'Сюша' (уменьшительное от Ксюша/Ksenks)."

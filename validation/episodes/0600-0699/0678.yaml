@@ -1,0 +1,77 @@
+episode: 678
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 8013
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 4
+    replies_count: 2
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики (2.4s + 1.7s) между Umputun и следующим спикером. Фразы 'Нет, это регулятор отдельный для Европы.' и 'То есть в Азии другой.' — технические уточнения в контексте обсуждения RIPE/IPv4. По контексту (Gray говорил до этого о том же, Bobuk говорит сразу после) это скорее всего неправильно распознанный Gray или Bobuk."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.6
+          reason: "Gray говорил о RIPE/Европе непосредственно перед этим (5378s: 'Это же только про Европу, кстати'), реплики SPEAKER_03 являются уточнением этой же темы"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk говорит сразу после (5416s), мог быть распознан как другой спикер"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Односложная реплика 'Конечно.' (1.5s) между Alek.sys и Ksenks. Gray говорит то же самое 'Конечно.' через 5 секунд. Типичная ошибка распознавания короткой реакции."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "gray"
+          confidence: 0.7
+          reason: "Gray говорит 'Конечно.' через 5 секунд (8635s), вероятно система ошибочно выделила начало его реплики как отдельного спикера"
+        - person_id: "alek_sys"
+          confidence: 0.2
+          reason: "Alek.sys говорил непосредственно перед этим"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun в начале подкаста (21-37s) объясняет, что все ведущие на месте кроме Ksenks, которая присоединится позже"
+    - "Ksenks присоединяется в 4362s (~1:12:42), Umputun объявляет: 'Ксюша к нам пришла'"
+    - "Bobuk, Gray, Alek.sys участвуют с начала эпизода"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Оба спикера с очень короткими репликами (1-2 реплики, <5 сек суммарно)
+# Без голосового сравнения невозможно точно определить кто это
+# Рекомендация: пометить как ошибки распознавания, не создавать правила переименования

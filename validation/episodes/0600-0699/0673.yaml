@@ -1,0 +1,105 @@
+episode: 673
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  hosts_absent: [Gray]
+  total_duration_sec: 7844
+  notes: "Gray отсутствует (упомянуто в начале: 'Грей выбыл')"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 14
+    replies_count: 9
+    pattern: scattered
+    time_range: "7105s - 8573s"
+
+    analysis:
+      is_error: true
+      error_reason: "Ошибка распознавания Ksenks"
+
+      identified_as: "ksenks"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        На 7791s SPEAKER_04 говорит "Ну, тебе виднее, как надо бежать",
+        сразу после этого Umputun отвечает "Так, я вижу, Ксюша поэзии не знает" -
+        прямое указание, что предыдущая реплика принадлежит Ксении.
+        Все остальные реплики SPEAKER_04 - короткие реакции в диалогах,
+        что соответствует паттерну участия Ksenks.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+    time_range: "7249s - 7333s"
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие разрозненные реплики (<1 сек каждая), типичные фразы-ошибки распознавания"
+
+      identified_as: null
+      identification_method: null
+      confidence: low
+      evidence: |
+        Две очень короткие реплики:
+        - 7249.26s: "По-моему, я отлично пошутил." (0.9 сек)
+        - 7332.78s: "Конечно, тут" (0.6 сек, обрывается)
+        Слишком короткие для надежной идентификации.
+        "По-моему, я отлично пошутил" - типичная шутка ведущего после паузы.
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Реплика на 7249s следует за контекстом о React Native, где активен Bobuk"
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Вторая реплика следует после вопроса Bobuk 'Программируете ли вы во сне?'"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7249.26
+          etime: 7250.16
+          text: "По-моему, я отлично пошутил."
+        audio_url: "https://cdn.radio-t.com/rt_podcast673.mp3"
+        notes: "Сегмент очень короткий (0.9 сек), идентификация затруднена"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  gray_absence_mentioned: true
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: "Должен быть переименован в Ksenks (высокая уверенность)"
+    - speaker: "SPEAKER_06"
+      issue: "Требуется voice comparison для определения спикера (низкая уверенность в идентификации)"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 673
+    from_speaker: "SPEAKER_04"
+    to_speaker: "Ksenks"
+    confidence: high
+    reason: |
+      Контекст на 7791s однозначно указывает на Ksenks:
+      после реплики SPEAKER_04 Umputun говорит "Так, я вижу, Ксюша поэзии не знает"
+
+  - type: rename
+    episode: 673
+    from_speaker: "SPEAKER_06"
+    to_speaker: null
+    confidence: low
+    reason: |
+      Требуется voice comparison. Возможные кандидаты: Bobuk или Alek.sys.
+      Реплики слишком короткие для уверенной идентификации по контексту.

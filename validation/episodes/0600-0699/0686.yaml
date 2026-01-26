@@ -1,0 +1,107 @@
+episode: 686
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys, Ksenks, Bobuk]
+  total_duration_sec: 8000  # приблизительно 2:13:20
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 6
+    replies_count: 5
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики (<3 сек каждая), разбросаны по эпизоду. Первая реплика 'Ну, не знаю.' между Alek.sys и Ksenks — типичная ошибка распознавания. Остальные реплики (7035-7042s) про DevOps/Unikernel идут между репликами Alek.sys и контекстуально являются его словами."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.7
+          reason: "Реплики 7035-7042s технические (Unikernel, serverless lock-in), идут между репликами Alek.sys, контекст DevOps"
+        - person_id: "ksenks"
+          confidence: 0.2
+          reason: "Первая реплика 'Ну, не знаю' между Alek.sys и Ksenks"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 5
+    replies_count: 3
+    pattern: consecutive
+
+    analysis:
+      is_error: true
+      error_reason: "Три коротких реплики подряд (4318-4324s) в середине диалога про Инстаграм. Фразы бессвязные: 'Ну, если голову... Где, где?', 'Мне не повезло.', 'Есть, есть.' — типичная ошибка сегментации речи."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.5
+          reason: "Контекст: Umputun спрашивает 'У тебя есть Инстаграм?' и далее Gray отвечает — возможно часть реплик Umputun или Gray"
+        - person_id: "gray"
+          confidence: 0.4
+          reason: "Сразу после SPEAKER_03 говорит Gray 'Тоже где-то на второй странице'"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 8
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Короткие реплики-реакции в двух местах эпизода. Первая (7266s) 'Ох, тебе в комментариях все выскажу' — реакция на слова Gray про Ubuntu. Вторые (8678s) 'JFK, да' и 'Flight control и mission control' — технические уточнения в разговоре про control plane. Все реплики короткие (<4 сек), являются репликами-реакциями ведущих."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.5
+          reason: "Технические реплики про control plane характерны для Alek.sys"
+        - person_id: "ksenks"
+          confidence: 0.3
+          reason: "Реплика 'Ох, тебе в комментариях все выскажу' может быть Ksenks"
+        - person_id: "umputun"
+          confidence: 0.2
+          reason: "Umputun задавал вопрос про control plane перед репликами"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "В начале (9.56s) Umputun упоминает 'Ксюша обратно' — Ksenks представлена"
+    - "Gray, Bobuk, Alek.sys начинают говорить без формального представления (обычно для постоянных ведущих)"
+    - "Ksenks появляется в 3856s, но это нормально — она была упомянута в начале"
+    - "Bobuk говорит мало (29 реплик, 111 сек) — возможно был занят или подключился частично"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Все неизвестные спикеры определены как ошибки распознавания с малой общей длительностью (19 сек из ~8000 сек).
+# Без voice comparison невозможно точно определить кому принадлежат реплики.
+# Рекомендуется оставить как есть или пометить для ручной проверки.
