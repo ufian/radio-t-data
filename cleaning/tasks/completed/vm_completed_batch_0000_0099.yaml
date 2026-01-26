@@ -1,0 +1,24 @@
+batch_id: voice_0000_0099
+description: Voice matching tasks for episodes 0-99
+status: completed
+total_tasks: 1
+tasks:
+- episode: 80
+  speaker: Guest
+  total_duration_sec: 204
+  replies_count: 45
+  reference_segment:
+    stime: 1670.0
+    etime: 1690.3
+    text: Ну, в общем, я так понимаю, что главный вывод из всей вот этой секции можно
+      именно...
+    note: Самый длинный непрерывный сегмент речи Guest (20.3 сек)
+  reason: 'Гость представляется (1024.12s, ошибочно атрибутировано Umputun): ''Меня
+    зовут Илья, я из ближайшего Замкадия''. Umputun неоднократно обращается к нему
+    ''Илья'' (1096.11s, 1120.75s, 1190.48s). Рассказывает о РИФ (Российский интернет-форум)
+    2008.'
+  possible_matches:
+  - person_id: unknown_ilya_rif_2008
+    confidence: 0.7
+    reason: Имя Илья, был на РИФ-2008, из 'Замкадья' (не Москва). Нет точного соответствия
+      в people.yaml

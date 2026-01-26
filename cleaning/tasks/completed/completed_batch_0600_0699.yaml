@@ -1,0 +1,330 @@
+batch_id: review_0600_0699
+description: Manual review tasks for episodes 600-699
+status: completed
+total_tasks: 38
+tasks:
+- episode: 602
+  from_speaker: SPEAKER_06
+  to_speaker: Ksenks
+  confidence: medium
+  reason: 'Реплика "Вот" (216s) идёт сразу после реплики Ksenks и является
+
+    логическим продолжением её мысли.
+
+    '
+  time_range: null
+  action: confirm_or_reject
+- episode: 608
+  speaker: SPEAKER_04
+  total_duration_sec: 381
+  replies_count: 92
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 611
+  from_speaker: SPEAKER_00
+  to_speaker: _unclear
+  confidence: low
+  reason: Короткие реплики без достаточного контекста для идентификации, предположительно
+    один из ведущих
+  time_range: null
+  action: confirm_or_reject
+- episode: 611
+  from_speaker: SPEAKER_05
+  to_speaker: _unclear
+  confidence: low
+  reason: Обе реплики слишком короткие для идентификации, это ошибки распознавания
+  time_range: null
+  action: confirm_or_reject
+- episode: 614
+  from_speaker: SPEAKER_06
+  to_speaker: Gray
+  confidence: medium
+  reason: Единственная реплика между репликами Gray, вероятно его реплика
+  time_range: null
+  action: confirm_or_reject
+- episode: 616
+  from_speaker: SPEAKER_05
+  to_speaker: Gray
+  confidence: medium
+  reason: 'Единственная реплика SPEAKER_05 ("Ну, да.") идентична следующей реплике
+    Gray.
+
+    Вероятно, ошибка распознавания разделила одну реплику на две.
+
+    '
+  time_range: null
+  action: confirm_or_reject
+- episode: 618
+  from_speaker: SPEAKER_06
+  to_speaker: SPEAKER_MISATTRIBUTED_06
+  confidence: medium
+  reason: Односложная реплика 'Утверждение' — ошибка распознавания, вероятно принадлежит
+    Umputun или Bobuk
+  time_range: null
+  action: confirm_or_reject
+- episode: 619
+  from_speaker: SPEAKER_06
+  to_speaker: SPEAKER_MISATTRIBUTED_06
+  confidence: medium
+  reason: Односложная реплика 'Ну да' — ошибка распознавания, вероятно принадлежит
+    Gray или Bobuk
+  time_range: null
+  action: confirm_or_reject
+- episode: 620
+  from_speaker: SPEAKER_06
+  to_speaker: Ksenks
+  confidence: medium
+  reason: Контекстуальный анализ показывает, что это ошибки распознавания Ksenks
+  time_range: null
+  action: confirm_or_reject
+- episode: 622
+  from_speaker: SPEAKER_07
+  to_speaker: Ksenks
+  confidence: medium
+  reason: Единственная короткая реплика в контексте обращения к Ксюше. Вероятная ошибка
+    распознавания.
+  time_range: null
+  action: confirm_or_reject
+- episode: 627
+  from_speaker: SPEAKER_01
+  to_speaker: Bobuk
+  confidence: medium
+  reason: Единственная реплика 'Ага' между репликами Bobuk, вероятно его голос неверно
+    распознан
+  time_range: null
+  action: confirm_or_reject
+- episode: 631
+  from_speaker: SPEAKER_08
+  to_speaker: Umputun
+  confidence: medium
+  reason: Односложная реплика 'Конечно.' перед продолжением Umputun 'Ну, да, можно.'
+    Требует voice comparison для подтверждения.
+  time_range: null
+  action: confirm_or_reject
+- episode: 643
+  from_speaker: SPEAKER_08
+  to_speaker: Gray
+  confidence: medium
+  reason: Реплика 'Нет, бумажные' (1225s) логически продолжает разговор Gray о журналах
+  time_range:
+  - 1225
+  - 1226
+  action: confirm_or_reject
+- episode: 643
+  from_speaker: SPEAKER_08
+  to_speaker: SPEAKER_02
+  confidence: medium
+  reason: Реплика 'Не все' (5277s) в контексте обсуждения WASM с гостем Алексеем
+  time_range:
+  - 5277
+  - 5279
+  action: confirm_or_reject
+- episode: 648
+  from_speaker: SPEAKER_01
+  to_speaker: Umputun
+  confidence: low
+  reason: Односложная реплика между двумя репликами Umputun, вероятно его голос не
+    распознан
+  time_range: null
+  action: confirm_or_reject
+- episode: 649
+  from_speaker: SPEAKER_01
+  to_speaker: Umputun
+  confidence: medium
+  reason: Единственная обрезанная реплика между двумя репликами Umputun
+  time_range: null
+  action: confirm_or_reject
+- episode: 649
+  from_speaker: SPEAKER_02
+  to_speaker: Umputun
+  confidence: low
+  reason: Короткая реплика-реакция, вероятно неправильно атрибутирована. Требуется
+    проверка.
+  time_range: null
+  action: confirm_or_reject
+- episode: 653
+  from_speaker: SPEAKER_06
+  to_speaker: Ksenks
+  confidence: medium
+  reason: 'Высокая корреляция с репликами Ksenks: похожий стиль вопросов, реплики
+    идут непосредственно перед/после реплик Ksenks. Рекомендуется voice comparison
+    для подтверждения.'
+  time_range: null
+  action: confirm_or_reject
+- episode: 655
+  from_speaker: SPEAKER_01
+  to_speaker: Alek.sys
+  confidence: medium
+  reason: 'Единственная короткая реплика между двумя репликами Alek.sys,
+
+    продолжает его мысль о 27 компаниях-партнерах Libra.
+
+    '
+  time_range: null
+  action: confirm_or_reject
+- episode: 656
+  from_speaker: SPEAKER_02
+  to_speaker: Ksenks
+  confidence: medium
+  reason: 'Все 3 реплики SPEAKER_02 по контексту принадлежат Ksenks:
+
+    короткие реакции в диалоге, где Ksenks - активный участник.
+
+    '
+  time_range: null
+  action: confirm_or_reject
+- episode: 657
+  from_speaker: SPEAKER_08
+  to_speaker: Ksenks
+  confidence: medium
+  reason: Единственная реплика между Gray и Ksenks в контексте обсуждения UI, похоже
+    на перебивку Ksenks
+  time_range: null
+  action: confirm_or_reject
+- episode: 657
+  from_speaker: SPEAKER_07
+  to_speaker: Ksenks
+  confidence: medium
+  reason: 'Три короткие реплики: первая - ответ на вопрос адресованный Ksenks об Амазоне,
+    остальные две - в контексте разговора Ksenks'
+  time_range: null
+  action: confirm_or_reject
+- episode: 658
+  from_speaker: SPEAKER_07
+  to_speaker: Bobuk
+  confidence: medium
+  reason: Реплика 'Ну да.' в контексте диалога Bobuk скорее всего его же согласие/подтверждение.
+    Расположена между двумя его репликами (4995-4998 и 5000-5006 сек)
+  time_range: null
+  action: confirm_or_reject
+- episode: 661
+  from_speaker: SPEAKER_04
+  to_speaker: Bobuk
+  confidence: low
+  reason: Короткие реакции, скорее всего один из ведущих. Возможно Bobuk или Alek.sys.
+  time_range: null
+  action: confirm_or_reject
+- episode: 665
+  speaker: SPEAKER_01
+  total_duration_sec: 6
+  replies_count: 3
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+- episode: 665
+  speaker: Bobuk
+  total_duration_sec: 5
+  replies_count: 2
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+- episode: 665
+  from_speaker: SPEAKER_01
+  to_speaker: Ksenks
+  confidence: medium
+  reason: 'Все 3 реплики SPEAKER_01 находятся в контексте речи Ksenks и по смыслу
+
+    продолжают её высказывания. Вероятная ошибка сегментации.
+
+    Требует voice comparison для подтверждения.
+
+    '
+  time_range: null
+  action: confirm_or_reject
+- episode: 669
+  speaker: SPEAKER_06
+  total_duration_sec: 218
+  replies_count: 81
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 674
+  speaker: SPEAKER_03
+  total_duration_sec: 1128
+  replies_count: 212
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 674
+  from_speaker: SPEAKER_09
+  to_speaker: Stepan
+  confidence: medium
+  reason: Единственная реплика про Java/сборки, контекстуально относится к Степану
+  time_range: null
+  action: confirm_or_reject
+- episode: 675
+  from_speaker: SPEAKER_06
+  to_speaker: Umputun
+  confidence: medium
+  reason: 'Единственная реплика SPEAKER_06 ("Хочешь свое видео обсудить?")
+
+    находится в диалоге Umputun-Ksenks, по контексту это вопрос ведущего.
+
+    '
+  time_range: null
+  action: confirm_or_reject
+- episode: 679
+  speaker: SPEAKER_07
+  total_duration_sec: 664
+  replies_count: 161
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 681
+  speaker: SPEAKER_08
+  total_duration_sec: 813
+  replies_count: 168
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 683
+  from_speaker: SPEAKER_03
+  to_speaker: Ksenks
+  confidence: medium
+  reason: Женский род речи, отсутствие пересечений с Ksenks, типичное участие ведущей
+    в дискуссиях. Требуется voice comparison для подтверждения.
+  time_range: null
+  action: confirm_or_reject
+- episode: 687
+  from_speaker: Gray
+  to_speaker: SPEAKER_MISATTRIBUTED_Gray
+  confidence: medium
+  reason: Ведущий объявил отсутствие Gray в начале выпуска, реплики ошибочны
+  time_range: null
+  action: confirm_or_reject
+- episode: 692
+  from_speaker: SPEAKER_02
+  to_speaker: Ksenks
+  confidence: low
+  reason: 'Односложное прощание в конце выпуска. Невозможно точно определить
+
+    кто из двух присутствующих ведущих (Ksenks или Alek.sys) это сказал.
+
+    Выбрана Ksenks как более вероятный вариант, но confidence низкий.'
+  time_range: null
+  action: confirm_or_reject
+- episode: 693
+  speaker: SPEAKER_02
+  identified_as: Ksenks
+  confidence: medium
+  total_duration_sec: 6
+  evidence: '2936s: вопрос про офис сразу после реплики Umputun, на который отвечает
+    Ksenks. 5993s: ''Ну, надо его...'' - обрывается, сразу после реплики Ksenks про
+    чайник'
+  action: confirm_or_reject
+- episode: 693
+  from_speaker: SPEAKER_02
+  to_speaker: Ksenks
+  confidence: medium
+  reason: 'Контекст указывает на Ksenks: реплики появляются рядом с её репликами и
+    тематически связаны с ней. Требуется voice comparison для подтверждения.'
+  time_range: null
+  action: confirm_or_reject

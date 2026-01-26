@@ -1,0 +1,29 @@
+batch_id: review_0100_0199
+description: Manual review tasks for episodes 100-199
+status: completed
+total_tasks: 3
+tasks:
+- episode: 109
+  speaker: Umputun
+  total_duration_sec: 6.4
+  replies_count: 4
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+- episode: 196
+  speaker: Guest2
+  total_duration_sec: 86
+  replies_count: 18
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 196
+  speaker: Guest1
+  total_duration_sec: 82
+  replies_count: 14
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate

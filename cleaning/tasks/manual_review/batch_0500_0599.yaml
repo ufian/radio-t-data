@@ -1,68 +1,8 @@
 batch_id: review_0500_0599
 description: Manual review tasks for episodes 500-599
 status: pending
-total_tasks: 89
+total_tasks: 32
 tasks:
-- episode: 500
-  from_speaker: SPEAKER_MISATTRIBUTED_PETR
-  to_speaker: Umputun
-  confidence: medium
-  reason: Короткая реплика между репликами Umputun, контекстуально продолжает его
-    мысль о Бобуке
-  time_range: null
-  action: confirm_or_reject
-- episode: 500
-  from_speaker: SPEAKER_MISATTRIBUTED_MARIN
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Две реплики следуют за Ksenks и продолжают её мысль о подкасте
-  time_range: null
-  action: confirm_or_reject
-- episode: 500
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: NEEDS_MANUAL_REVIEW
-  confidence: low
-  reason: 6 разрозненных реплик между разными ведущими. Требуется ручная проверка
-    каждой реплики для определения правильного спикера. Скорее всего это смесь Bobuk/Umputun/Gray.
-  time_range: null
-  action: confirm_or_reject
-- episode: 501
-  from_speaker: SPEAKER_MISATTRIBUTED_MARIN
-  to_speaker: Ksenks
-  confidence: medium
-  reason: "Обе реплики с высокой вероятностью принадлежат Ksenks: - Реплика на 5011s\
-    \ (\"Это изменило мою жизнь\") явно продолжение её саркастичного комментария\n\
-    \  (перед: \"Да, это было так полезно\", после: \"Теперь "
-  time_range: null
-  action: confirm_or_reject
-- episode: 501
-  from_speaker: SPEAKER_MISATTRIBUTED_PETR
-  to_speaker: Bobuk
-  confidence: low
-  reason: Короткая реактивная реплика, требует voice comparison для точной идентификации.
-    Bobuk наиболее вероятен по стилю, но без аудио-проверки уверенность низкая.
-  time_range: null
-  action: confirm_or_reject
-- episode: 502
-  from_speaker: SPEAKER_03
-  to_speaker: Bobuk
-  confidence: low
-  reason: 'Единственная реплика "Прикольно" (5074-5076 сек). Контекст: обсуждение
-
-    Let''s Encrypt и сертификатов. Gray говорит про Google.com, далее реакция.
-
-    Невозможно определить точно без голосовой проверки, пре'
-  time_range: null
-  action: confirm_or_reject
-- episode: 503
-  from_speaker: SPEAKER_05
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Первая реплика (2981s) 'На комсомолку' - шутка в контексте разговора о браузинге.
-    По контексту следом отвечает Bobuk, вероятно это его голос. Вторая реплика слишком
-    короткая для определения.
-  time_range: null
-  action: confirm_or_reject
 - episode: 505
   speaker: SPEAKER_05
   total_duration_sec: 6
@@ -95,14 +35,6 @@ tasks:
     и продолжают его мысль.
   time_range: null
   action: confirm_or_reject
-- episode: 505
-  from_speaker: SPEAKER_MISATTRIBUTED_MARIN
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Реплика является продолжением обсуждения Ksenks о падении серверов Pokemon
-    Go
-  time_range: null
-  action: confirm_or_reject
 - episode: 520
   speaker: SPEAKER_01
   total_duration_sec: 6
@@ -112,60 +44,12 @@ tasks:
   confidence: null
   action: investigate
 - episode: 520
-  from_speaker: SPEAKER_MISATTRIBUTED_MARIN
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Большинство реплик идут после/между репликами Ksenks, похожи на продолжение
-    её речи
-  time_range: null
-  action: confirm_or_reject
-- episode: 520
   from_speaker: SPEAKER_01
   to_speaker: Umputun
   confidence: medium
   reason: Реплики в 7609-7614s дублируют/продолжают речь Umputun
   time_range: null
   action: confirm_or_reject
-- episode: 520
-  from_speaker: SPEAKER_05
-  to_speaker: Alek.sys
-  confidence: low
-  reason: Идёт после реплики Alek.sys, но уверенность низкая
-  time_range: null
-  action: confirm_or_reject
-- episode: 521
-  from_speaker: SPEAKER_00
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Две из трех реплик явно принадлежат Ksenks по контексту (про ГОУ после прямого
-    обращения к ней, про дерево в её разговоре). Третья 'Пока' - прощание.
-  time_range: null
-  action: confirm_or_reject
-- episode: 522
-  from_speaker: SPEAKER_01
-  to_speaker: Gray
-  confidence: medium
-  reason: Требуется voice comparison. Большинство реплик идут сразу после Gray, особенно
-    в 4929s где пауза между репликами 0.04с. Но уверенность средняя - нужна проверка
-    голоса.
-  time_range: null
-  action: confirm_or_reject
-- episode: 523
-  from_speaker: SPEAKER_04
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Одиночная реплика 'Ждем.' в контексте вопроса Bobuk про Alexa. Высока вероятность,
-    что это его реплика.
-  time_range: null
-  action: confirm_or_reject
-- episode: 523
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Обе реплики вписываются в контекст диалога с участием Bobuk. Эльдар Муртазин
-    не участвовал в выпуске.
-  time_range: null
-  action: confirm_or_reject
 - episode: 524
   speaker: SPEAKER_07
   total_duration_sec: 5
@@ -174,61 +58,10 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 524
-  from_speaker: SPEAKER_MISATTRIBUTED_MARIN
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Женский голос, контекст обращения к Ksenks, реплика между её репликами
-  time_range: null
-  action: confirm_or_reject
 - episode: 525
   speaker: SPEAKER_09
   total_duration_sec: 7
   replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 525
-  speaker: SPEAKER_07
-  identified_as: Ksenks
-  confidence: medium
-  total_duration_sec: 7
-  evidence: 'Реплики в 3256s-3268s - часть диалога о приватности Ksenks. Umputun спрашивает
-    "А переписку твою посмотреть?" (3254s), и SPEAKER_07 отвечает "А что там в моей
-    переписке?" - это явно Ksenks отвечает на вопрос о себе.
-
-    '
-  action: confirm_or_reject
-- episode: 525
-  from_speaker: SPEAKER_07
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Реплики в контексте диалога о приватности Ksenks, но требует проверки для
-    ранних реплик
-  time_range: null
-  action: confirm_or_reject
-- episode: 526
-  speaker: SPEAKER_03
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 526
-  from_speaker: SPEAKER_03
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Три короткие реплики разбросаны по выпуску, вставлены в диалог ведущих.
-    Третья реплика дублирует слово Ksenks ('Процесс'). В выпуске только Umputun и
-    Ksenks.
-  time_range: null
-  action: confirm_or_reject
-- episode: 528
-  speaker: SPEAKER_02
-  total_duration_sec: 5
-  replies_count: 5
   is_error: true
   identified_as: null
   confidence: null
@@ -241,51 +74,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 531
-  from_speaker: SPEAKER_MISATTRIBUTED_MARIN
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Обе реплики находятся в контексте разговора Ksenks. Первая - сразу после
-    упоминания её имени, вторая - продолжается её же репликами о Mac Pro.
-  time_range: null
-  action: confirm_or_reject
-- episode: 531
-  from_speaker: SPEAKER_MISATTRIBUTED_PETR
-  to_speaker: Gray
-  confidence: low
-  reason: Предположительно Gray - короткая резюмирующая фраза типична для его стиля.
-    Требуется voice comparison для подтверждения.
-  time_range: null
-  action: confirm_or_reject
-- episode: 532
-  from_speaker: SPEAKER_MISATTRIBUTED_PETR
-  to_speaker: SPEAKER_06
-  confidence: medium
-  reason: Ksenks обращается 'Алексей' перед репликой, SPEAKER_06 = Леха/Алексей
-  time_range: null
-  action: confirm_or_reject
-- episode: 532
-  from_speaker: SPEAKER_MISATTRIBUTED_MARIN
-  to_speaker: SPEAKER_06
-  confidence: medium
-  reason: Контекст указывает на того же спикера - сразу следует реплика SPEAKER_06
-  time_range: null
-  action: confirm_or_reject
-- episode: 532
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Bobuk
-  confidence: low
-  reason: Предположение на основе контекста, требует voice comparison
-  time_range: null
-  action: confirm_or_reject
-- episode: 533
-  from_speaker: SPEAKER_MISATTRIBUTED_MARIN
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Единственная женщина в эпизоде - Ksenks. Реплика 'Нет, я пропустила' в женском
-    роде.
-  time_range: null
-  action: confirm_or_reject
 - episode: 536
   speaker: SPEAKER_03
   total_duration_sec: 5
@@ -294,21 +82,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 536
-  from_speaker: EldarMurtazin
-  to_speaker: SPEAKER_TDD_ANDREY
-  confidence: medium
-  reason: 'Реплики EldarMurtazin в диапазоне 3041-4447s относятся к обсуждению TDD.
-
-    Скорее всего это Андрей (SPEAKER_07). Требуется voice comparison.
-
-    Временное переименование до подтверждения.
-
-    '
-  time_range:
-  - 3041
-  - 4500
-  action: confirm_or_reject
 - episode: 537
   speaker: SPEAKER_02
   total_duration_sec: 6
@@ -325,22 +98,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 538
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Продолжение фразы Bobuk 'Давайте посмотрим' -> 'на тему наших слушателей'.
-    Одна фраза разбита на две реплики.
-  time_range: null
-  action: confirm_or_reject
-- episode: 538
-  from_speaker: SPEAKER_MISATTRIBUTED_MARIN
-  to_speaker: Ksenks
-  confidence: low
-  reason: Вероятно реплика Ksenks (следующий спикер), но уверенность низкая - требует
-    voice comparison или ручной проверки.
-  time_range: null
-  action: confirm_or_reject
 - episode: 539
   speaker: SPEAKER_02
   total_duration_sec: 8
@@ -349,33 +106,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 540
-  speaker: SPEAKER_06
-  total_duration_sec: 5
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 541
-  speaker: SPEAKER_03
-  total_duration_sec: 311
-  replies_count: 81
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
-- episode: 541
-  from_speaker: SPEAKER_07
-  to_speaker: Ksenks
-  confidence: medium
-  reason: 'Короткие реплики (0.7 сек) являются ошибкой распознавания.
-
-    Контекст и следующая реплика указывают на Ksenks.
-
-    '
-  time_range: null
-  action: confirm_or_reject
 - episode: 541
   from_speaker: _ad
   to_speaker: AlexeyFedorov
@@ -389,79 +119,10 @@ tasks:
     start: 4621
     end: 6000
   action: confirm_or_reject
-- episode: 543
-  speaker: SPEAKER_01
-  total_duration_sec: 7
-  replies_count: 1
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 543
-  from_speaker: SPEAKER_04
-  to_speaker: Ksenks
-  confidence: medium
-  reason: 'Ksenks - единственный другой участник выпуска помимо Umputun.
-
-    Короткие реплики-переспросы типичны для неё.
-
-    Требуется voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 547
-  from_speaker: SPEAKER_05
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Контекст разговора о дроне и скорости указывает на Ksenks. Реплики стилистически
-    совпадают
-  time_range: null
-  action: confirm_or_reject
-- episode: 547
-  from_speaker: SPEAKER_06
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Обе группы реплик в контексте разговоров с Ksenks, стилистически совпадают
-    с её манерой речи
-  time_range: null
-  action: confirm_or_reject
-- episode: 547
-  from_speaker: SPEAKER_03
-  to_speaker: Ksenks
-  confidence: low
-  reason: Предположительно Ksenks по стилю речи, но уверенность низкая из-за единственной
-    реплики
-  time_range: null
-  action: confirm_or_reject
 - episode: 559
   speaker: SPEAKER_04
   total_duration_sec: 6
   replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 561
-  speaker: SPEAKER_03
-  total_duration_sec: 246
-  replies_count: 40
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
-- episode: 562
-  from_speaker: SPEAKER_02
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Одиночная реплика, вероятная ошибка распознавания. Ksenks отвечает сразу
-    после.
-  time_range: null
-  action: confirm_or_reject
-- episode: 563
-  speaker: SPEAKER_01
-  total_duration_sec: 8
-  replies_count: 4
   is_error: true
   identified_as: null
   confidence: null
@@ -474,17 +135,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 563
-  from_speaker: SPEAKER_01
-  to_speaker: Alek.sys
-  confidence: medium
-  reason: 'Реплики в рекламном блоке Vultr, который читает Alek.sys. SPEAKER_01 вставляет
-    короткие комментарии между репликами Alek.sys. Вероятно это тоже Alek.sys (разные
-    интонации в рекламе).
-
-    '
-  time_range: null
-  action: confirm_or_reject
 - episode: 563
   from_speaker: SPEAKER_04
   to_speaker: SPEAKER_MISATTRIBUTED_04
@@ -511,14 +161,6 @@ tasks:
   confidence: null
   action: investigate
 - episode: 568
-  speaker: SPEAKER_07
-  total_duration_sec: 7
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 568
   speaker: SPEAKER_04
   total_duration_sec: 9
   replies_count: 3
@@ -526,38 +168,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 568
-  from_speaker: SPEAKER_07
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Первые две реплики SPEAKER_07 явно являются фрагментами речи Ksenks, остальные
-    требуют voice comparison
-  time_range: null
-  action: confirm_or_reject
-- episode: 568
-  from_speaker: Bobuk
-  to_speaker: SPEAKER_MISATTRIBUTED_Bobuk
-  confidence: medium
-  reason: В начале выпуска явно сказано, что Бобук отсутствует. Реплики требуют переатрибуции.
-  time_range: null
-  action: confirm_or_reject
-- episode: 571
-  from_speaker: SPEAKER_06
-  to_speaker: Umputun
-  confidence: medium
-  reason: Односложная реакция 'точно говорю.' перед репликой Umputun, скорее всего
-    его же речь
-  time_range: 5184-5185
-  action: confirm_or_reject
-- episode: 574
-  from_speaker: SPEAKER_06
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Единственная короткая шутливая реплика в контексте разговора. Bobuk наиболее
-    вероятный кандидат, так как он активный участник диалога. Требуется voice comparison
-    для подтверждения.
-  time_range: null
-  action: confirm_or_reject
 - episode: 575
   speaker: SPEAKER_05
   total_duration_sec: 8
@@ -575,14 +185,6 @@ tasks:
     ручная проверка или voice compariso
   time_range: null
   action: confirm_or_reject
-- episode: 576
-  speaker: SPEAKER_06
-  total_duration_sec: 5
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 586
   speaker: SPEAKER_00
   total_duration_sec: 6
@@ -591,29 +193,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 587
-  speaker: SPEAKER_00
-  total_duration_sec: 8
-  replies_count: 1
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 587
-  from_speaker: SPEAKER_00
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Единичная реплика между Bobuk и Ksenks в контексте обсуждения WebKit. Требует
-    voice verification.
-  time_range: null
-  action: confirm_or_reject
-- episode: 588
-  from_speaker: SPEAKER_00
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Контекст диалога о лямбдах, Bobuk продолжает мысль сразу после
-  time_range: null
-  action: confirm_or_reject
 - episode: 589
   speaker: SPEAKER_06
   total_duration_sec: 6
@@ -622,22 +201,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 589
-  from_speaker: Bobuk
-  to_speaker: SPEAKER_MISATTRIBUTED_Bobuk
-  confidence: medium
-  reason: Bobuk не представлен в начале эпизода, всего 1 реплика - вероятно ошибка
-    распознавания
-  time_range: null
-  action: confirm_or_reject
-- episode: 589
-  from_speaker: Gray
-  to_speaker: SPEAKER_MISATTRIBUTED_Gray
-  confidence: medium
-  reason: Gray не представлен в начале эпизода, всего 1 реплика - вероятно ошибка
-    распознавания
-  time_range: null
-  action: confirm_or_reject
 - episode: 590
   speaker: SPEAKER_04
   total_duration_sec: 7
@@ -682,14 +245,6 @@ tasks:
   time_range: null
   action: confirm_or_reject
 - episode: 594
-  speaker: SPEAKER_04
-  total_duration_sec: 293
-  replies_count: 114
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
-- episode: 594
   speaker: SPEAKER_02
   total_duration_sec: 7
   replies_count: 3
@@ -697,15 +252,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 596
-  from_speaker: Alek.sys
-  to_speaker: Ksenks
-  confidence: medium
-  reason: Alek.sys не был представлен в эпизоде (явно упомянуто 'Грея с нами нет'
-    в начале, только Bobuk и Ksenks). Реплики короткие, характерные для женского голоса.
-    Требуется voice comparison для подтверждени
-  time_range: null
-  action: confirm_or_reject
 - episode: 597
   speaker: SPEAKER_09
   total_duration_sec: 6
@@ -730,30 +276,3 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 598
-  speaker: SPEAKER_01
-  total_duration_sec: 6
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 598
-  from_speaker: SPEAKER_01
-  to_speaker: Ksenks
-  confidence: medium
-  reason: 'Контекст указывает на Ksenks: Umputun обращается к Ксюше, затем идёт SPEAKER_01.
-    Требует voice comparison для подтверждения.'
-  time_range: null
-  action: confirm_or_reject
-- episode: 599
-  from_speaker: SPEAKER_05
-  to_speaker: Ksenks
-  confidence: medium
-  reason: 'Реплики по контексту и расположению похожи на Ksenks.
-
-    Требуется voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject

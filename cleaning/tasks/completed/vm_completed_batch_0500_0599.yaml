@@ -1,0 +1,319 @@
+batch_id: voice_0500_0599
+description: Voice matching tasks for episodes 500-599
+status: completed
+total_tasks: 16
+tasks:
+- episode: 500
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 16
+  replies_count: 6
+  reference_segment: null
+  reason: '6 коротких реплик разбросаны по эпизоду (4315s-7204s), каждая 1-4 сек.
+    Все вставлены между репликами ведущих. Типичные фразы-перебивки: ''Народ начал
+    покупать из расчета'', ''Майкрософт упал сразу'', ''Я, честно, не смотрел'' —
+    это ошибки распознавания голосов ведущих, не реальный гость Эльдар Муртазин.'
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.5
+    reason: Несколько реплик вставлены рядом с репликами Bobuk, тематика обсуждения
+      акций/Microsoft
+  - person_id: umputun
+    confidence: 0.3
+    reason: Некоторые реплики могут быть неправильно распознанным голосом Umputun
+  - person_id: gray
+    confidence: 0.2
+    reason: Реплика про LG Search следует после Gray
+- episode: 502
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 10
+  replies_count: 4
+  reference_segment:
+    stime: 5024.43
+    etime: 5029.77
+    text: В темах слушателей есть в самом начале очень неплохая такая темка.
+  reason: 'Спикер уже помечен как MISATTRIBUTED_ELDAR - это означает, что ранее
+
+    его ошибочно атрибутировали Эльдару Муртазину, но это было отменено.
+
+    4 коротких разрозненных реплики (10 сек суммарно) по всему эпизоду.
+
+    Эльдар НЕ упоминается в начале эпизода как гость.
+
+    Скорее всего это ошибки распознавания одного'
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.5
+    reason: Контекст реплик похож на стиль Bobuk. Первая реплика в диалоге с Umputun
+      про докерхаб.
+  - person_id: gray
+    confidence: 0.3
+    reason: Gray участвует в эпизоде, мог быть неправильно распознан
+- episode: 504
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 11
+  replies_count: 4
+  reference_segment:
+    stime: 4055.46
+    etime: 4057.74
+    text: Слушайте, тут есть такая классная штука про Atlassian.
+  reason: 'Эльдар Муртазин - известный гость, но не участвовал в данном эпизоде.
+
+    В начале эпизода упоминаются только Umputun, Ksenks, Gray. Bobuk присоединился
+    позже.
+
+    Никаких гостей в эпизоде не анонсировано и не представлено.
+
+
+    Анализ реплик:
+
+    1) 3460s "Если программа падает..." - продолжение дискуссии о fail-f'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: Реплики 1 и 2 следуют после или перед репликами Gray, стилистически похожи
+  - person_id: bobuk
+    confidence: 0.4
+    reason: Реплика 2 про Atlassian следует сразу за репликой Bobuk, возможно его
+      голос
+  - person_id: umputun
+    confidence: 0.3
+    reason: Реплики 3 и 4 могут быть Umputun - он модерирует обсуждение
+- episode: 517
+  speaker: Guest
+  total_duration_sec: 456
+  replies_count: 75
+  reference_segment:
+    stime: 3820.42
+    etime: 3847.02
+    text: Я попробую защитить это, потому что мне сама идея очень нравится, я активно
+      ее навязываю окружающим меня людям, потому что юнит-тесты прекрасны, но юнит-тесты
+      в сочетании с явным указанием типов спасают от еще большего количества ошибок...
+  reason: '1. Guest introduces himself at 35.89s: "Всем привет, меня зовут Дима"
+
+    2. Umputun confirms at 8233.43s: "Вместо Ксюши был Дмитрий, который молчал примерно,
+    как Ксюша молчит в свои худшие дни"
+
+    3. Active participation in technical discussions (Python typing, VMware, Siri)
+
+    '
+  possible_matches: []
+- episode: 521
+  speaker: SPEAKER_02
+  total_duration_sec: 1621
+  replies_count: 344
+  reference_segment:
+    stime: 87.89
+    etime: 96.76
+    text: Ну, ты же тоже учился в советской школе, там проходили по биологии всякие
+      гидры, размножаются пачкованием туда-сюда.
+  reason: 'В начале подкаста (32-44s) Umputun говорит: ''Вместо выбывшего Бобукова
+    пришел Алексей из Дружественного. Ты все еще из Дружественного подкаста или ты
+    прогнал?'' SPEAKER_02 отвечает: ''Я стараюсь. Там уже от нас отпочковываются уже
+    другие подкасты.'''
+  possible_matches:
+  - person_id: devzen_alexey
+    confidence: 0.3
+    reason: Упоминает 'Дружественный подкаст', возможно связь с DevZen или другим
+      русскоязычным IT-подкастом 2016 года
+- episode: 523
+  speaker: SPEAKER_01
+  total_duration_sec: 204
+  replies_count: 46
+  reference_segment:
+    stime: 1339.37
+    etime: 1355.3
+    text: У меня на прошлой работе я тоже там ввел, в принципе, проводительную проверку
+      всяких линтеров и, ну, обычные там JS-линты, HP-линты, Tone-линты, просто через
+      GitLab, стандартный там ProjectStab.
+  reason: '- В начале подкаста (~127с) Umputun обращается: "Серега, ну, сними трубку"
+
+    - В ~517с первая реплика SPEAKER_01: "Да, всем привет."
+
+    - В ~536с говорит: "Я работаю поэтом-заботчиком. Сейчас хожу на гоу в Острову
+    Гру" (Ostrovok.ru)
+
+    - В ~1673с Umputun прощается: "Ладно, все, спасибо, Серега, что зашел."
+
+    '
+  possible_matches:
+  - person_id: null
+    confidence: 0.0
+    reason: Имя Сергей, работает в Ostrovok.ru, Go-разработчик. Не найден в people.yaml
+- episode: 524
+  speaker: SPEAKER_04
+  total_duration_sec: 180
+  replies_count: 34
+  reference_segment:
+    stime: 3197.19
+    etime: 3260.36
+    text: 'Понятно, в простом случае можно обойтись тремя запросами на страницу, и
+      все счастливы.
+
+      Перешел на другую страницу, новых три запроса, и все счастливы.
+
+      Но когда все больше и больше добавляется вещей, когда у тебя какой-то есть стрим
+      данных...
+
+      [длинный сегмент непрерывной речи про state management]
+
+      '
+  reason: 'На 2378s Umputun говорит: "К нам, кстати, человек пришел."
+
+    На 2383s: "И говорит, что сейчас он тебе выдаст, или мне выдаст по первое число..."
+
+    На 2389s: "Александр." и "Привет."
+
+    На 2394s: "Ты с темной стороны, с этих UI-щиков, фронтенщиков."
+
+    Гость представлен как Александр, занимается фронтендом/UI.'
+  possible_matches:
+  - person_id: alexander_frontend
+    confidence: 0.9
+    reason: Явное представление как 'Александр', фронтенд-разработчик
+- episode: 525
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 22
+  replies_count: 6
+  reference_segment:
+    stime: 2542.5
+    etime: 2551.32
+    text: То есть, вообще говоря, структура компенсации, зарплаты и всего прочего
+      в других местах, это тоже довольно интимный вопрос в любом месте.
+  reason: 'Маркер MISATTRIBUTED указывает на отменённую ошибочную атрибуцию к Eldar
+    Murtazin. Реплики разбросаны по подкасту: - 234.2s: "Ну, крепко, да, хорошо сплю."
+    - ответ на вопрос Umputun к Gray - 2542.5s: О структуре компенсации - продолжение
+    темы зарплат - 4133.2s: "Там еще одна ошибка на самом деле." -'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: 'Реплика в 234s - прямой ответ на вопрос Umputun к Gray "Хорошо ли ты
+      спишь, дорогой?" Следующая реплика уже от Gray, но возможно это начало.
+
+      '
+  - person_id: bobuk
+    confidence: 0.4
+    reason: 'Реплики про кофемашины и ускорение Ksenks похожи на стиль Bobuk.
+
+      '
+- episode: 536
+  speaker: EldarMurtazin
+  total_duration_sec: 353
+  replies_count: 58
+  reference_segment:
+    stime: 6372.92
+    etime: 6396.05
+    text: Руслан объясняет корутины в Kotlin — длинный монолог для voice comparison
+  reason: 'КРИТИЧЕСКАЯ ОШИБКА АТРИБУЦИИ!
+
+    EldarMurtazin (Эльдар Муртазин) — известный мобильный аналитик, не имеющий отношения
+    к TDD или Kotlin.
+
+    В этом выпуске "EldarMurtazin" говорит о TDD (3041-4447s) и Kotlin (6302-8064s).
+
+
+    Реальные спикеры:
+
+    1. TDD-часть (3041-4447s): скорее всего тот же Андрей (SPEAKER_07),'
+  possible_matches:
+  - person_id: null
+    confidence: 0.0
+    reason: 'Это НЕ Эльдар Муртазин. Это два разных человека: Андрей (TDD) и Руслан
+      (Kotlin).'
+- episode: 538
+  speaker: SPEAKER_01
+  total_duration_sec: 146
+  replies_count: 20
+  reference_segment:
+    stime: 4210.06
+    etime: 4231.18
+    text: Ну, я же говорил, флагер нужен для введения документации, причем действительно
+      кто-то там в чате писал, что она еще интерактивная, можно попробовать прямо
+      эти API-методы повзывать, ну и плюс удобная библиотека, которая генерируется
+      автоматически для Swift, для Android, для .NET и для Unity.
+  reason: 'Гость по имени Антон - слушатель, который позвонил в эфир обсудить Swagger.
+
+    Представлен в начале: "На огонек обещал зайти гость... расскажет впечатление от
+    живого человека, который использует свагер в жизни" (16-25s).
+
+    Прямые обращения по имени:
+
+    - "Антон, это не ты ли тот вот этот злодей..." (3029s)
+
+    '
+  possible_matches: []
+- episode: 539
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 51
+  replies_count: 9
+  reference_segment:
+    stime: 952.95
+    etime: 998.72
+    text: Длинный сегмент о стримах и обработке данных - можно сравнить с голосом
+      SPEAKER_07 (Виктор Гамов) или SPEAKER_04 (Барух Садогурский)
+  reason: Реплики относятся к обсуждению Java/стримов, что не соответствует экспертизе
+    Эльдара Муртазина (мобильный аналитик). Это скорее всего ошибочно атрибутированные
+    реплики одного из гостей (Виктор Гамов или Барух Садогурский).
+  possible_matches:
+  - person_id: ViktorGamov
+    confidence: 0.6
+    reason: Тематика реплик связана с Java стримами и pipeline обработки данных
+  - person_id: BaruchSadogursky
+    confidence: 0.4
+    reason: Также Java эксперт, мог говорить о стримах
+- episode: 555
+  speaker: SPEAKER_03
+  total_duration_sec: 12
+  replies_count: 5
+  reference_segment: null
+  reason: Это реклама Тинькофф Банка. Реплики чередуются с уже размеченной рекламой
+    (_ad). SPEAKER_03 - часть того же рекламного блока. Голос диктора рекламы.
+  possible_matches: []
+- episode: 557
+  speaker: SPEAKER_05
+  total_duration_sec: 1026
+  replies_count: 242
+  reference_segment:
+    stime: 4371.1
+    etime: 4389.7
+    text: Я скорее говорю про то, что если ты учишься в университете на первом курсе
+      и ты выбираешь технологию, то для того, чтобы найти работу, тебе будет гораздо
+      легче выучить какой-нибудь Node.js экспресс, чем учить Ruby в рельсе, потому
+      что последние гораздо сложнее в изучении, чем первая технология.
+  reason: '2867.9s: ''Зовут меня Валентин... Я уже 8 лет пишу на Руби на рельсах и
+    являюсь лидером минского Руби-сообщества нашего'''
+  possible_matches: []
+- episode: 557
+  speaker: SPEAKER_04
+  total_duration_sec: 12
+  replies_count: 5
+  reference_segment: null
+  reason: '5930.5s: ''Спонсор этого выпуска - Банк Тинькофф'' - начало рекламного
+    блока'
+  possible_matches: []
+- episode: 587
+  speaker: SPEAKER_03
+  total_duration_sec: 282
+  replies_count: 62
+  reference_segment:
+    stime: 2841.43
+    etime: 2875.74
+    text: То есть основная причина, которую он видит... В общем, все становится проще,
+      да, и странно, что все остальные до этого не додумались.
+    duration_sec: 34
+  reason: 'Самопредставление (2484s): ''Я Алексей из соседнего подкаста. Я к вам приходил
+    уже несколько раз.'' Обсуждает vgo/Go modules, упоминает Russ Cox и Rob Pike -
+    эксперт по Go.'
+  possible_matches:
+  - person_id: alexey_abashov
+    confidence: 0.9
+    reason: Алексей Абашов из подкаста 'Разбор полетов' (о Go). Уже идентифицирован
+      в эпизодах 353 и 381 как гость из 'дружественного подкаста'. Контекст обсуждения
+      (vgo, Go modules) совпадает.
+- episode: 588
+  speaker: SPEAKER_00
+  total_duration_sec: 10
+  replies_count: 4
+  reference_segment: null
+  reason: Все 4 реплики являются ошибками распознавания спикера - короткие фразы,
+    разбросанные по эпизоду
+  possible_matches: []

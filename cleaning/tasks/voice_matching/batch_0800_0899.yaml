@@ -1,7 +1,7 @@
 batch_id: voice_0800_0899
 description: Voice matching tasks for episodes 800-899
 status: pending
-total_tasks: 10
+total_tasks: 8
 tasks:
 - episode: 802
   speaker: Alek.sys
@@ -30,22 +30,6 @@ tasks:
   - person_id: noise
     confidence: 0.3
     reason: Могут быть артефактами распознавания или фоновым шумом
-- episode: 813
-  speaker: Bobuk
-  total_duration_sec: 10.4
-  replies_count: 4
-  reference_segment: null
-  reason: 'Bobuk НЕ был представлен в начале эпизода (упоминаются "три унылых гада",
-    а не четыре).
-
-    Все 4 реплики Bobuk появляются только в первые 25 минут, после чего он полностью
-    исчезает из эпизода длиной 137 минут.
-
-    Каждая реплика имеет логические несоответствия с контекстом:
-
-
-    1. 154s "Конечно" - Umputun ска'
-  possible_matches: []
 - episode: 815
   speaker: Alek.sys
   total_duration_sec: 10
@@ -198,33 +182,3 @@ tasks:
 
     '
   possible_matches: []
-- episode: 896
-  speaker: Guest2
-  total_duration_sec: 308
-  replies_count: 79
-  reference_segment:
-    stime: 4924.9
-    etime: 4939.1
-    text: Если просто взять S-Log, сделать дефолт, ну, дефолтный взять, и сделать
-      новый инстанс с текст-хендлером, текст-хендлер, форматирование у него LogFrame
-      10, в общем, отличается в форматировании.
-  reason: '216.2s [Umputun]: "Дэн, я тебя на Го подцепил."
-
-    1268.9s [Umputun]: "Я думаю, Дэн, который у нас в ГО пишет... Дэн, ты для денег
-    пишешь что-то в ГО?"
-
-
-    Имя: Дэн (Dan)
-
-    Специализация: Go разработчик
-
-    Характерные реплики:
-
-    - 250.2s: "Да нет, это надпись «Я пишу на РАСТ»." (шутка про Rust)
-
-    - 1275.6s: "Для д'
-  possible_matches:
-  - person_id: dan_go_developer
-    confidence: 0.9
-    reason: Явное представление по имени Дэн, Go-разработчик, обсуждает технические
-      детали Go 1.22

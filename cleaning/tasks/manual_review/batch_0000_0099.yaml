@@ -1,24 +1,8 @@
 batch_id: review_0000_0099
 description: Manual review tasks for episodes 0-99
 status: pending
-total_tasks: 7
+total_tasks: 4
 tasks:
-- episode: 27
-  speaker: Guest
-  total_duration_sec: 166
-  replies_count: 46
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
-- episode: 32
-  speaker: Guest2
-  total_duration_sec: 260
-  replies_count: 81
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
 - episode: 34
   from_speaker: Guest1
   to_speaker: Valera
@@ -49,11 +33,3 @@ tasks:
   identified_as: null
   confidence: high
   action: investigate
-- episode: 80
-  from_speaker: Guest
-  to_speaker: Umputun
-  confidence: medium
-  reason: Короткая реплика 'Говори.' скорее принадлежит ведущему, который приглашает
-    гостя говорить
-  time_range: null
-  action: confirm_or_reject

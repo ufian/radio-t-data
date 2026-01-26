@@ -1,7 +1,7 @@
 batch_id: voice_0100_0199
 description: Voice matching tasks for episodes 100-199
 status: pending
-total_tasks: 38
+total_tasks: 36
 tasks:
 - episode: 100
   speaker: Guest6
@@ -13,13 +13,6 @@ tasks:
     text: Ну, если не учитывая то, что я сейчас второй раз в Радио Т попадаю, до этого
       я был еще парочку раз после шоу, которое называется Авторпати...
   reason: needs voice comparison
-  possible_matches: []
-- episode: 100
-  speaker: Guest4
-  total_duration_sec: 52
-  replies_count: 14
-  reference_segment: null
-  reason: 'В 7079s: ''Здравствуйте, меня зовут Айрат'''
   possible_matches: []
 - episode: 100
   speaker: Guest1
@@ -316,40 +309,6 @@ tasks:
   reference_segment: null
   reason: 'Звонок: ''Здравствуйте. Спасибо, Гриша, большое'' (7024s)'
   possible_matches: []
-- episode: 179
-  speaker: Guest
-  total_duration_sec: 166
-  replies_count: 56
-  reference_segment:
-    stime: 4343.57
-    etime: 4357.84
-    text: '"Слушайте, ну, хочется, конечно, верить, что вот все эти стартаперы,
-
-      которые болтаются по всяким вечерним кафешкам, там, не знаю, грубо говоря,
-
-      подворотням, теперь получат место, где они смогут концентрироваться."
-
-      '
-  reason: 'Эльдар представляет её в начале выпуска (28.92-38.46s):
-
-    "Я двулик, наверное, и сегодня я привел коллегу по подкасту
-
-    DJ Steve, Сашу, и она вот скажет сейчас привет, наверное."
-
-
-    Дополнительный контекст:
-
-    - Женщина (использует женский род в речи)
-
-    - Занимается журналистикой в сфере гаджетов/технологий (1'
-  possible_matches:
-  - person_id: dj_steve
-    confidence: 0.85
-    reason: 'Прямое представление Эльдаром как "коллега по подкасту DJ Steve, Саша".
-
-      Нужно добавить в people.yaml как нового гостя.
-
-      '
 - episode: 188
   speaker: Guest
   total_duration_sec: 151

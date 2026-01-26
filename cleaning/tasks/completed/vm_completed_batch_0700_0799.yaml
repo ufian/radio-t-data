@@ -1,0 +1,65 @@
+batch_id: voice_0700_0799
+description: Voice matching tasks for episodes 700-799
+status: completed
+total_tasks: 3
+tasks:
+- episode: 717
+  speaker: Alek.sys
+  total_duration_sec: 21.6
+  replies_count: 11
+  reference_segment: null
+  reason: 'Alek.sys явно отсутствует в эпизоде. Прямые подтверждения:
+
+    1. Ksenks [4941.9s]: "Мне прям очень грустно обсуждать это без Леши"
+
+    2. Umputun [5533.5s]: "Был бы Леша, он бы подтвердил"
+
+    Все 11 реплик - ошибки автоматического распознавания спикеров.
+
+    '
+  possible_matches:
+  - person_id: Ksenks
+    confidence: 0.4
+    reason: Некоторые реплики могут принадлежать Ksenks (женский голос)
+  - person_id: Umputun
+    confidence: 0.3
+    reason: 'Реплики #4 и #6 контекстуально связаны с речью Umputun'
+  - person_id: Gray
+    confidence: 0.2
+    reason: 'Реплики #7-8 обращены к Сереже (Gray), могут быть его же'
+  - person_id: Bobuk
+    confidence: 0.1
+    reason: Маловероятно, но возможно для некоторых коротких реплик
+- episode: 766
+  speaker: Alek.sys
+  total_duration_sec: 13.1
+  replies_count: 6
+  reference_segment: null
+  reason: 'Alek.sys НЕ был упомянут в начале эпизода. Umputun явно сказал:
+
+    "состав чисто мальчиковый пока, ну типа мы с Бобуком, ну и Грей".
+
+    В прощании также участвуют только Umputun, Bobuk и Gray.
+
+    6 коротких реплик (13 сек) разбросаны по эпизоду - типичный паттерн
+
+    ошибки автоматического распознавания голоса.
+
+    '
+  possible_matches:
+  - person_id: Bobuk
+    confidence: 0.6
+    reason: Большинство реплик окружены репликами Bobuk, продолжают его мысль
+  - person_id: Gray
+    confidence: 0.3
+    reason: Менее вероятно, но тоже возможно как ошибка распознавания
+- episode: 792
+  speaker: Bobuk
+  total_duration_sec: 118
+  replies_count: 28
+  reference_segment: null
+  reason: "КРИТИЧЕСКАЯ ОШИБКА АТРИБУЦИИ.\nUmputun в начале подкаста (7-18s) явно говорит:\n\
+    \"не будет Бобука, который, ну, не будет\"\n\nОднако 28 реплик атрибутированы\
+    \ Bobuk. Анализ показывает:\n\n1. Большинство реплик Bobuk (610s-2013s) содержат\
+    \ технические объяснения\n   работы FSNotes от ПЕРВОГО ЛИЦА:\n   - \"я вылож"
+  possible_matches: []

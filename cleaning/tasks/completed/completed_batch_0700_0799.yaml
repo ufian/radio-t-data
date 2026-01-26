@@ -1,0 +1,159 @@
+batch_id: review_0700_0799
+description: Manual review tasks for episodes 700-799
+status: completed
+total_tasks: 18
+tasks:
+- episode: 704
+  speaker: SPEAKER_01
+  total_duration_sec: 6
+  replies_count: 7
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+- episode: 704
+  from_speaker: SPEAKER_01
+  to_speaker: Ksenks
+  confidence: medium
+  reason: Контекст про микрофон, продолжение диалога с Ksenks
+  time_range: null
+  action: confirm_or_reject
+- episode: 704
+  from_speaker: SPEAKER_01
+  to_speaker: NEEDS_VOICE_COMPARISON
+  confidence: low
+  reason: Спор с Alek.sys, мужской род. Bobuk или Umputun - нужна проверка голоса
+  time_range: null
+  action: confirm_or_reject
+- episode: 712
+  from_speaker: SPEAKER_02
+  to_speaker: SPEAKER_MISATTRIBUTED_02
+  confidence: medium
+  reason: 'Короткие реплики (1-3 сек) в случайных местах - типичный паттерн ошибки
+
+    распознавания. Недостаточно данных для точной идентификации.
+
+    Рекомендуется пометить как ошибку для исключения из анализа.
+
+    '
+  time_range: null
+  action: confirm_or_reject
+- episode: 713
+  from_speaker: SPEAKER_03
+  to_speaker: SPEAKER_MISATTRIBUTED
+  confidence: medium
+  reason: 'Ошибки распознавания - 2 обрывочные реплики по ~0.5 сек каждая.
+
+    Требуется дополнительный анализ для определения реального спикера.
+
+    '
+  time_range: null
+  action: confirm_or_reject
+- episode: 714
+  from_speaker: SPEAKER_07
+  to_speaker: Bobuk
+  confidence: medium
+  reason: 'Единственная короткая реплика-перебивание между Umputun и Bobuk.
+
+    Следующая реплика продолжается от Bobuk, что указывает на него как автора.
+
+    Однако без voice comparison нельзя быть полностью уверенным.'
+  time_range: null
+  action: confirm_or_reject
+- episode: 717
+  from_speaker: Alek.sys
+  to_speaker: Umputun
+  confidence: medium
+  reason: Продолжает речь о duck typing, следующая реплика Umputun 'Сплошные даки'
+  time_range: 5870.7-5871.7
+  action: confirm_or_reject
+- episode: 717
+  from_speaker: Alek.sys
+  to_speaker: Ksenks
+  confidence: medium
+  reason: 'Две последовательные реплики: ''Слушай, Сереж, с кем мы вообще разговариваем?''
+
+    и ''Ох уж мне эти программисты'' - стилистически похоже на ироничный комментарий
+    Ksenks
+
+    к техническому спору мужчин о витой '
+  time_range: 7153.3-7159.7
+  action: confirm_or_reject
+- episode: 717
+  from_speaker: Alek.sys
+  to_speaker: Ksenks
+  confidence: low
+  reason: Продолжение ироничного комментирования технического спора
+  time_range: 7200.6-7205.3
+  action: confirm_or_reject
+- episode: 732
+  speaker: Guest
+  total_duration_sec: 586
+  replies_count: 121
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 734
+  speaker: Guest
+  total_duration_sec: 1144
+  replies_count: 191
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 767
+  from_speaker: Alek.sys
+  to_speaker: Bobuk
+  confidence: medium
+  reason: Короткое подтверждение после реплики Bobuk, вероятно его голос
+  time_range: null
+  action: confirm_or_reject
+- episode: 767
+  from_speaker: Alek.sys
+  to_speaker: Bobuk
+  confidence: medium
+  reason: Комментарий к обсуждению ZeroVer, вероятно Bobuk
+  time_range: null
+  action: confirm_or_reject
+- episode: 767
+  from_speaker: Alek.sys
+  to_speaker: Bobuk
+  confidence: medium
+  reason: Короткий комментарий между репликами Umputun
+  time_range: null
+  action: confirm_or_reject
+- episode: 767
+  from_speaker: Alek.sys
+  to_speaker: Umputun
+  confidence: medium
+  reason: 'Umputun сразу после повторяет "Что еще надо?" - вероятно это
+
+    одна и та же фраза, разделённая ошибочно
+
+    '
+  time_range: null
+  action: confirm_or_reject
+- episode: 767
+  from_speaker: Alek.sys
+  to_speaker: Bobuk
+  confidence: medium
+  reason: Переходная фраза между Umputun и Bobuk, вероятно Bobuk
+  time_range: null
+  action: confirm_or_reject
+- episode: 792
+  speaker: Guest1
+  total_duration_sec: 558
+  replies_count: 177
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 792
+  speaker: Guest2
+  total_duration_sec: 441
+  replies_count: 86
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate

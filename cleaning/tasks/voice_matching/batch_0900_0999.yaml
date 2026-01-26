@@ -1,28 +1,8 @@
 batch_id: voice_0900_0999
 description: Voice matching tasks for episodes 900-999
 status: pending
-total_tasks: 3
+total_tasks: 2
 tasks:
-- episode: 946
-  speaker: Guest1
-  total_duration_sec: 496.6
-  replies_count: 122
-  reference_segment:
-    stime: 777.8
-    etime: 796.8
-    text: Я знаю всего лишь несколько каких-то кейсов в разных компаниях, конкретно
-      в Телеграме, поскольку соз...
-  reason: 'В 89.6s Umputun обращается: "Дорогой Стив, ты можешь отмютить себя". В
-    656.2s Alek.sys говорит: "ты, по-моему, Стивом представился". В 2350.3s Umputun
-    прощается: "Стив, спасибо, дружище, что зашел". Гость - автор статьи о написании
-    кода без багов, постил на Hacker News (120 апвоутов). Работал в JetB'
-  possible_matches:
-  - person_id: steve_unknown
-    confidence: 0.8
-    reason: 'Имя "Стив" известно из обращений ведущих. Фамилия не называлась в эпизоде.
-      Профиль: разработчик с опытом в JetBrains, Telegram, предприниматель.
-
-      '
 - episode: 972
   speaker: Guest1
   total_duration_sec: 1254

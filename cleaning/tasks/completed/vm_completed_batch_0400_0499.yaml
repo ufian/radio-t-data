@@ -1,0 +1,1229 @@
+batch_id: voice_0400_0499
+description: Voice matching tasks for episodes 400-499
+status: completed
+total_tasks: 55
+tasks:
+- episode: 403
+  speaker: EldarMurtazin
+  total_duration_sec: 153
+  replies_count: 20
+  reference_segment:
+    stime: 398.82
+    etime: 422.38
+    text: Взяли OpenVZ, точнее взяли продукт, который назывался Virtuoso, открыли
+      его исходные тексты...
+  reason: 'ОШИБОЧНАЯ РАЗМЕТКА! Реплики EldarMurtazin содержат ту же техническую экспертизу
+
+    что и SPEAKER_05 (Павел из OpenVZ):
+
+    - "Взяли OpenVZ, точнее взяли продукт, который назывался Virtuoso..." (398.82
+    сек)
+
+    - "Mounting Space, пространство имен точек монтирования..." (1640.15 сек)
+
+    - Говорит "мы" о команде Op'
+  possible_matches:
+  - person_id: pavel_emelyanov
+    confidence: 0.95
+    reason: Содержание реплик идентично тематике SPEAKER_05 - контейнеры, OpenVZ,
+      ядро Linux
+- episode: 403
+  speaker: PetrDidenko
+  total_duration_sec: 69
+  replies_count: 8
+  reference_segment:
+    stime: 2441.11
+    etime: 2450.33
+    text: Они взяли OpenVZ с его ядром и с его утилитами и навертели сверху очень
+      продвинутую систему по запаковке контейнеров.
+  reason: 'ОШИБОЧНАЯ РАЗМЕТКА! Реплики PetrDidenko содержат ту же техническую экспертизу
+
+    что и SPEAKER_05 (Павел из OpenVZ):
+
+    - "пока там бурление утихлет и патчи возьмут, у нас появилась возможность снять
+    состояние памяти" (839.97 сек)
+
+    - "Они взяли OpenVZ с его ядром..." (2441.11 сек)
+
+    - Говорит "мы" о команде '
+  possible_matches:
+  - person_id: pavel_emelyanov
+    confidence: 0.95
+    reason: Содержание реплик идентично тематике SPEAKER_05 - контейнеры, OpenVZ
+- episode: 409
+  speaker: EldarMurtazin
+  total_duration_sec: 179
+  replies_count: 28
+  reference_segment: null
+  reason: "КРИТИЧЕСКАЯ ОШИБКА АТРИБУЦИИ: Эльдар Муртазин НЕ был гостем в этом выпуске.\n\
+    \nДоказательства:\n1. Единственный гость, представленный в выпуске — Wylsacom\
+    \ (Вилса)\n2. Имя \"Эльдар Муртазин\" НЕ упоминается ни разу в тексте реплик\n\
+    3. Реплики EldarMurtazin перемежаются с SPEAKER_03 в одном разговоре,\n   что"
+  possible_matches:
+  - person_id: wylsacom
+    confidence: 0.95
+    reason: 'Реплики EldarMurtazin являются частью того же разговора, что и SPEAKER_03.
+
+      Все 28 реплик должны быть переатрибутированы на Wylsacom.
+
+      '
+- episode: 409
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 20
+  replies_count: 6
+  reference_segment:
+    stime: 3078.74
+    etime: 3085.5
+    text: Ну, это если профессиональное видео, а зачем тебе... Нет, нет, много FPS
+      не бывает.
+  reason: '6 коротких реплик разбросаны по всему выпуску:
+
+    - "Так его в белый закрыли." (800с)
+
+    - "У меня вот нету наличных." (2150с)
+
+    - "Ну, это если профессиональное видео..." (3078с, 7 сек)
+
+    - "Ты, то есть, вообще не кушаешь?" (3825с)
+
+    - "Все такое прям ух." (7762с)
+
+
+    Марина (Marin_k_a) НЕ была гостем в этом выпу'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.6
+    reason: Женский голос — вероятно ошибка распознавания Ksenks
+  - person_id: wylsacom
+    confidence: 0.3
+    reason: Некоторые реплики могут быть гостем
+- episode: 409
+  speaker: Gray
+  total_duration_sec: 21
+  replies_count: 7
+  reference_segment:
+    stime: 2961.1
+    etime: 2966.77
+    text: Нужно понимать, что рубленые края, как у 5S, вот такие с шлифованными замечательными
+  reason: "КРИТИЧЕСКАЯ ОШИБКА: Gray НЕ участвовал в эпизоде 409!\n\nДоказательства:\n\
+    1. В финале (7782-7798с) Umputun перечисляет участников:\n   \"Напомню, что был\
+    \ Бобок, приходил Вилса... Была Ксюша\"\n2. Gray НЕ упомянут в этом перечислении\n\
+    3. В начале выпуска представлены только Umputun, Bobuk, Ksenks\n\nРеплики Gr"
+  possible_matches:
+  - person_id: wylsacom
+    confidence: 0.7
+    reason: 'Реплики рядом с SPEAKER_03 (Wylsacom), контент об Apple,
+
+      первая реплика Gray (2211с) сразу перед SPEAKER_03 (2213с)
+
+      '
+  - person_id: ksenks
+    confidence: 0.2
+    reason: Возможно некоторые короткие реплики
+- episode: 410
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 16
+  replies_count: 8
+  reference_segment: null
+  reason: '- 25.68s: "Всегда жду Бобука..." - сразу после вопроса к Ксюше
+
+    - 491.91s: "Ну, это у вас Джава там со спрингами" - между репликами других
+
+    - 2038.41s: "Ну, он очень похож на Android, да" - между репликами Ksenks
+
+    - 2099.78s: "Просто оно по столу" - между репликами Ksenks про телефон
+
+    - 2115.39s: "То ли'
+  possible_matches: []
+- episode: 411
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 17
+  replies_count: 5
+  reference_segment:
+    stime: 5306.94
+    etime: 5310.27
+    text: Извлечь и получить, это где там чекаут, а где пуш?
+  reason: Реплики рассыпаны по эпизоду (4089s-5452s), короткие технические комментарии.
+    Контекст не указывает на присутствие гостя Эльдара Муртазина — нет представления,
+    нет длинных экспертных высказываний. Скорее всего ошибка распознавания одного
+    из ведущих.
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: Реплика про git переводы (5306-5336s) вклинивается в диалог Gray, который
+      обсуждает тему локализации git
+  - person_id: bobuk
+    confidence: 0.4
+    reason: Технические комментарии, стиль похож на Bobuk
+- episode: 412
+  speaker: SPEAKER_MISATTRIBUTED_PETR
+  total_duration_sec: 11
+  replies_count: 1
+  reference_segment:
+    stime: 4452.51
+    etime: 4463.54
+    text: 'То есть если у тебя есть какая-то структура данных, касаемая, например,
+      юзера, то как-то у тебя это... То есть мы договорились, структура данных должна
+      быть расшаренная, правильно?
+
+      '
+  reason: 'Метка MISATTRIBUTED указывает, что это уже было ошибочно приписано Петру
+    Диденко и отменено. Реплика в 4452s длиной 11 сек появляется в диалоге между Umputun
+    и Ksenks о микросервисах. Текст: "То есть если у тебя есть какая-то структура
+    данных, касаемая, например, юзера..." - технический вопрос о рас'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.6
+    reason: 'Контекст диалога - обсуждение микросервисов, Ksenks активно участвует.
+      Реплика между её высказываниями, возможно ошибка нарезки.
+
+      '
+  - person_id: umputun
+    confidence: 0.3
+    reason: Участвует в том же диалоге, мог задать уточняющий вопрос
+- episode: 412
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 12
+  replies_count: 2
+  reference_segment:
+    stime: 6573.78
+    etime: 6582.87
+    text: 'Жень, фишка в том, что у российских провайдеров часть связанности построена
+      через западные сети.
+
+      '
+  reason: "Метка MISATTRIBUTED указывает, что это было ошибочно приписано Эльдару\
+    \ Муртазину и отменено. Две реплики: 1) 6573s (9 сек): \"Жень, фишка в том, что\
+    \ у российских провайдеров часть\n   связанности построена через западные сети.\"\
+    \ - обращение к Umputun (Жень=Евгений).\n   Umputun сразу отвечает \"Да это не"
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: 'Первая реплика о связанности провайдеров - техническая тема. Gray сразу
+      после (6588s) развивает эту мысль: "Нет, сидишь ты себе в каком-нибудь Воронеже...
+      и часть России видишь через Европу." Возможно это его реплика.
+
+      '
+  - person_id: bobuk
+    confidence: 0.4
+    reason: 'Вторая реплика "Конечно, у нас есть еще темы" - ответ на его же вопрос,
+      может быть его же подтверждение или чья-то реплика в эфире.
+
+      '
+- episode: 413
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 11
+  replies_count: 6
+  reference_segment:
+    stime: 3663.22
+    etime: 3664.88
+    text: В общем, речь идет о продукте...
+  reason: 'Все 6 реплик — очень короткие (1-3 сек), разбросанные по выпуску. В эпизоде
+    413 нет гостей, Эльдар Муртазин не участвует. Контекст показывает, что это ошибки
+    распознавания одного из ведущих: - 1147с "Там история очень простая" — между репликами
+    Gray о роутерах Belkin - 1415с "Где-то у меня что-то та'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: 'Реплика на 1147с идёт между репликами Gray и продолжает его мысль. Но
+      уверенность низкая из-за коротких фраз.
+
+      '
+  - person_id: bobuk
+    confidence: 0.3
+    reason: 'Реплика на 1415с похожа по стилю на ответ Bobuk ("И у меня тоже в багажнике
+      что-то такое лежит")
+
+      '
+- episode: 414
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 44
+  replies_count: 6
+  reference_segment:
+    stime: 626.49
+    etime: 649.76
+    text: Можно добавить чуть-чуть конспирологии, потому что ходили слухи во всяком
+      случае, что Apple с PayPal активно общались...
+  reason: В 626s говорится о слухах про переговоры Apple с PayPal - это контекст обсуждения
+    Apple, где участвует Иван как эксперт.
+  possible_matches:
+  - person_id: SPEAKER_08
+    confidence: 0.6
+    reason: Контекст обсуждения Apple соответствует экспертизе Ивана
+  - person_id: bobuk
+    confidence: 0.3
+    reason: Может быть ошибка распознавания Bobuk
+- episode: 414
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 11
+  replies_count: 5
+  reference_segment:
+    stime: 1677.53
+    etime: 1678.47
+    text: Java тоже прекрасно.
+  reason: Реплика в 1677s 'Java тоже прекрасно' - короткая фраза в контексте обсуждения
+    языков программирования с Ksenks.
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.5
+    reason: Контекст обсуждения Java/Swift с Ksenks
+  - person_id: SPEAKER_08
+    confidence: 0.3
+    reason: Может быть реплика Ивана
+- episode: 416
+  speaker: SPEAKER_03
+  total_duration_sec: 337
+  replies_count: 110
+  reference_segment:
+    stime: 308.68
+    etime: 318.05
+    text: То есть, например, у нас на работе мы постоянно используем какие-то синглтоны,
+      потому что, ну, сейчас я пишу на скале, и там без синглтонов, ну, никак. Они
+      там в язык встроены.
+  reason: 'На 111.6s представляется: "А я из менее родственного подкаста «Девзен подкаст»
+    Александр."
+
+    Umputun подтверждает обращением "Александр" (116.85s).
+
+    Это Александр из DevZen Podcast. Подкаст DevZen — известный русскоязычный подкаст
+    о разработке.
+
+    '
+  possible_matches:
+  - person_id: devzen_alexandr
+    confidence: 0.95
+    reason: 'Явное представление в начале эпизода: ''из подкаста DevZen Podcast Александр'''
+- episode: 416
+  speaker: SPEAKER_04
+  total_duration_sec: 490
+  replies_count: 115
+  reference_segment:
+    stime: 2207.24
+    etime: 2215.67
+    text: Что, например, если у вас запускается приложение в каком-то контейнере,
+      то ему надо знать, где находится база данных.
+  reason: 'На ~100s после слов Umputun "Алексей, начните вы" SPEAKER_04 отвечает "Ну,
+    можно по алфавиту".
+
+    Затем Alek.sys (ведущий) представляет первого гостя: "Из родственного подкаста
+    «Разбор полетов» Алексей" (104.59s).
+
+    Путаница: реплика Alek.sys содержит представление гостя Алексея из "Разбор полётов",
+
+    но а'
+  possible_matches:
+  - person_id: razbor_poletov_alexey
+    confidence: 0.9
+    reason: Umputun обращается 'Алексей', затем идёт представление 'Из родственного
+      подкаста Разбор полетов Алексей'
+- episode: 416
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 14
+  replies_count: 5
+  reference_segment: null
+  reason: 'Короткие реплики (1-4 сек) разбросаны по эпизоду: 371s, 1236s, 1478s, 1351s,
+    1363s.
+
+    Примеры: "Как так можно?" (1 сек), "Нет, просто у каждого свои проблемы..." (4
+    сек).
+
+    Марина (Marin_k_a) — бывшая ведущая, но она не участвовала в этом выпуске.
+
+    Это ошибки автоматического распознавания — реплики скоре'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.6
+    reason: Женский голос, короткие реплики между репликами Ksenks
+  - person_id: devzen_alexandr
+    confidence: 0.3
+    reason: Возможно гость
+- episode: 417
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 12
+  replies_count: 4
+  reference_segment:
+    stime: 6846.53
+    etime: 6852.09
+    text: Мне кажется, что вот он тут совершенно не говорит ничего нового, потому
+      что множество компаний так делает.
+  reason: 'Все 4 реплики находятся рядом с репликами Ksenks и продолжают её мысль:
+
+    - 5317s: ''То есть гугловые, маленькие облака по-другому?'' - вопрос в контексте
+    обсуждения
+
+    - 6277s: ''Нет, вот раньше было для подписчиков'' - Ksenks сразу после продолжает
+    ''А сейчас ты на iPhone...''
+
+    - 6847s: ''Мне кажется, что вот '
+  possible_matches: []
+- episode: 418
+  speaker: SPEAKER_01
+  total_duration_sec: 272
+  replies_count: 83
+  reference_segment:
+    stime: 3974.34
+    etime: 3997.08
+    text: 'Включая того, что там лежит и высокопроизводительный HTTP-сервер,
+
+      который на неблокирующих библиотеках на Libua сделан. То есть то же самое,
+
+      на чем сделан HTTP-сервер для ноды, например. И это уже как-то такая большая
+
+      заявка на победу, причем код. Я лично смотрел, написан очень неплохо,
+
+      он покрыт тестами, и он, в общем-то, поддерживаемый.
+
+      '
+  reason: 'Umputun обращается "Антон, Антон, я тебя впустил?" (3609s).
+
+    Ответ: "Да-да, я здесь. Всем привет." (3612-3615s).
+
+    Это гость по имени Антон, эксперт по .NET/C#.
+
+    Говорит о ASP.NET, туллинге, HTTP-сервере на Libuv, JetBrains.
+
+    '
+  possible_matches:
+  - person_id: unknown_anton_dotnet
+    confidence: 0.9
+    reason: Явное представление, но фамилия не названа
+- episode: 418
+  speaker: SPEAKER_02
+  total_duration_sec: 111
+  replies_count: 28
+  reference_segment:
+    stime: 4261.04
+    etime: 4285.29
+    text: 'Она живет, выпускает какую-то технологию, она живет, потом умирает.
+
+      Так вот было с Silverlight. Но Silverlight еще пользуется, и он еще живет.
+
+      WinForms еще живее всех живых, как дедушка Ленин. ВПФ еще также используется.
+
+      '
+  reason: 'Самопредставление: "Михаил. Доброе время суток, меня зовут Михаил." (4054-4057s)
+
+    "Разрабатываем на Mono и на .NET уже года 4." (4057-4061s)
+
+    Это звонок слушателя, .NET разработчик Михаил.
+
+    '
+  possible_matches:
+  - person_id: unknown_mikhail_dotnet
+    confidence: 0.9
+    reason: Явное представление, но фамилия не названа
+- episode: 419
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 38
+  replies_count: 9
+  reference_segment:
+    stime: 6386.29
+    etime: 6392.51
+    text: Самая популярная тема у нас сегодня это массовый побег разработчиков с Debian.
+  reason: 'Реплики разбросаны по всему эпизоду и представляют собой короткие комментарии,
+
+    которые по контексту принадлежат ведущим (Ksenks, Gray или Bobuk).
+
+    В выпуске НЕТ гостя Эльдара Муртазина - он не представлен, не упоминается.
+
+    Имя "ELDAR" в спикере - результат ошибочного присвоения из другого выпуска.
+
+
+    Пр'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.6
+    reason: Большинство реплик по контексту продолжают или дополняют речь Ksenks
+  - person_id: gray
+    confidence: 0.3
+    reason: Некоторые реплики могут принадлежать Gray
+- episode: 419
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 12
+  replies_count: 8
+  reference_segment:
+    stime: 333.6
+    etime: 335.88
+    text: Ну, во-первых, это батарея.
+  reason: 'Все реплики очень короткие (1-2 секунды), односложные комментарии типа:
+
+    - "Ну, во-первых, это батарея." (2.3 сек)
+
+    - "Непонятно." (1.2 сек)
+
+    - "Это только в других браузерах?" (1.8 сек)
+
+    - "Нет, ну подожди." (1.0 сек)
+
+
+    Гостья Марина НЕ участвует в этом выпуске - не представлена, не упоминается.
+
+    Имя "MA'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.7
+    reason: По контексту большинство реплик продолжают обсуждение Ksenks
+  - person_id: gray
+    confidence: 0.2
+    reason: Некоторые короткие комментарии могут быть от Gray
+- episode: 420
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 14
+  replies_count: 4
+  reference_segment: null
+  reason: Это ошибка распознавания голоса - реплики ранее были ошибочно присвоены
+    Эльдару Муртазину (EldarMurtazin), но затем маркировка была отменена. 4 коротких
+    реплики (3-6 сек каждая) разбросаны по эпизоду, все они являются комментариями
+    в контексте обсуждения между ведущими, а не самостоятельными высказы
+  possible_matches:
+  - person_id: alek_sys
+    confidence: 0.4
+    reason: 'Alek.sys имеет всего 13 реплик в эпизоде (30 сек), стиль реплик SPEAKER_MISATTRIBUTED
+      похож на его короткие комментарии. Реплика "Это 3D принтер" (5364s) технического
+      характера.
+
+      '
+  - person_id: gray
+    confidence: 0.3
+    reason: 'Gray активно участвует в обсуждении во всех сегментах, где появляются
+      эти реплики. Однако его голос обычно хорошо распознаётся.
+
+      '
+  - person_id: bobuk
+    confidence: 0.2
+    reason: 'Bobuk тоже может быть источником ошибки, хотя его голос обычно хорошо
+      распознаётся. Реплика про "Агами и ОС для общения с Богом" (TempleOS) - типичный
+      айтишный юмор.
+
+      '
+- episode: 423
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 13
+  replies_count: 4
+  reference_segment:
+    stime: 307.85
+    etime: 312.83
+    text: Подожди, он был же кривой с крышки, не был кривой с экрана.
+  reason: '307s: ''Подожди, он был же кривой с крышки, не был кривой с экрана'' -
+    реплика в контексте обсуждения телефонов, может быть любой из участников.'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.4
+    reason: Голос мог быть ошибочно принят за женский
+  - person_id: speaker_08_viktor
+    confidence: 0.3
+    reason: В этот момент Виктор активен
+- episode: 424
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 31
+  replies_count: 8
+  reference_segment:
+    stime: 1771.1
+    etime: 1776.88
+    text: Сейчас уже сложно сказать, но, в общем, ну, когда-то у них 30% смартфонов
+      было.
+  reason: 'Это ошибочно присвоенные реплики - скорее всего принадлежат одному из ведущих.
+
+    Имя "SPEAKER_MISATTRIBUTED_ELDAR" указывает на предыдущую неудачную попытку
+
+    идентифицировать спикера как Эльдара Муртазина, которая была отменена.
+
+
+    Анализ контекста:
+
+    - Реплики короткие (2-7 сек), разбросаны по всему эпизо'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.7
+    reason: 'КЛЮЧЕВОЕ ДОКАЗАТЕЛЬСТВО: В 4353s Bobuk говорит "собственно говоря, Сережа"
+
+      сразу после реплики SPEAKER_MISATTRIBUTED_ELDAR в 4345s.
+
+      Gray = Сергей Петренко. Это прямое указание на спикера.
+
+      Реплики о технических темах (BlackBerry, NoSQL) также характерны для Gray.
+
+      '
+  - person_id: umputun
+    confidence: 0.2
+    reason: 'Реплика в 7045s "Подожди, подожди, дай Ксюша сказать" -
+
+      типичное модерирование от Umputun. Возможно несколько реплик от разных спикеров.
+
+      '
+- episode: 425
+  speaker: EldarMurtazin
+  total_duration_sec: 84
+  replies_count: 10
+  reference_segment:
+    stime: 661.92
+    etime: 680.68
+    text: Но вот на различных конфах, на каких бывали, люди часто жалуются на то,
+      что им трудно выкатывать софт, когда на одну и ту же машину выкатывается несколько
+      программных продуктов, и те имеют взаимоисключающие возможности.
+  reason: 'Эльдар Муртазин не участвовал в этом выпуске.
+
+    Реплики появляются между репликами SPEAKER_02/SPEAKER_03 без какого-либо
+
+    представления или переключения контекста.
+
+    Пример: в 646s SPEAKER_02 говорит о saltstack, затем "EldarMurtazin"
+
+    продолжает тему питона - это явно тот же спикер.
+
+    Участники выпуска: Um'
+  possible_matches: []
+- episode: 427
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 11
+  replies_count: 3
+  reference_segment: null
+  reason: Реплики в контексте речи SPEAKER_00/PetrDidenko (Афискона)
+  possible_matches:
+  - person_id: devzen_afiskon
+    confidence: 0.7
+    reason: Контекст указывает на гостя
+  - person_id: ksenks
+    confidence: 0.2
+    reason: Короткие вопросы могли принадлежать Ksenks
+- episode: 430
+  speaker: EldarMurtazin
+  total_duration_sec: 117
+  replies_count: 16
+  reference_segment: null
+  reason: 'Эльдар Муртазин НЕ был представлен в этом эпизоде.
+
+    В начале Bobuk представляет только Владимира Иванова.
+
+    Реплики EldarMurtazin появляются в середине речи SPEAKER_04
+
+    и продолжают ту же техническую мысль о безопасности.
+
+    Например, на 830-837s и 942-951s реплики EldarMurtazin
+
+    бесшовно вписываются между '
+  possible_matches:
+  - person_id: vladimir_ivanov
+    confidence: 0.9
+    reason: Продолжает мысль SPEAKER_04, та же тема безопасности
+- episode: 436
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 21
+  replies_count: 4
+  reference_segment: null
+  reason: 'Название спикера указывает на отменённое ошибочное присвоение Эльдару.
+    Все 4 реплики - короткие фрагменты (3-8 сек) в середине диалогов, являющиеся продолжением
+    мыслей Gray или Umputun. В начале выпуска явно сказано "гости не пришли" - Эльдара
+    не было.
+
+    '
+  possible_matches:
+  - person_id: gray
+    confidence: 0.6
+    reason: Реплики 1,2,4 логически продолжают речь Gray
+  - person_id: umputun
+    confidence: 0.4
+    reason: Реплика 3 следует за Ksenks, но тема обсуждается всеми
+- episode: 437
+  speaker: Alek.sys
+  total_duration_sec: 13.8
+  replies_count: 10
+  reference_segment: null
+  reason: 'В начале выпуска (1.03s) Umputun явно говорит: "подкаст выходного дня номер
+    437 в составе двух болезненных организмов" — указывая что их только двое (Umputun
+    и Bobuk). Alek.sys появляется через 2 минуты с короткими репликами типа "Когда
+    двое всего разговаривают, то это же получается диалог" — это яв'
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.8
+    reason: 'Реплики вписываются в диалог Umputun-Bobuk, голос вероятно неверно распознан.
+      Например, 290.8s "А что такое кликать котиков?" — типичный вопрос в контексте
+      обсуждения интернета без котиков.
+
+      '
+- episode: 437
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 19.9
+  replies_count: 10
+  reference_segment: null
+  reason: 'Название спикера уже указывает на ошибочную атрибуцию (MISATTRIBUTED).
+    Все 10 реплик очень короткие (1-4 сек): "А, понятно, понятно", "Нет, что это?",
+    "Ровно так", "Извиниться за что?". Это типичные реактивные фразы, которые ASR
+    мог неверно приписать отдельному спикеру. В выпуске только двое ведущих'
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.7
+    reason: 'Большинство реплик следуют после реплик Umputun и продолжают его мысль,
+      как в диалоге. Например, 2429s "Обязательно попробуй или Rocket, или Clojure"
+      после обсуждения языков программирования.
+
+      '
+  - person_id: umputun
+    confidence: 0.3
+    reason: 'Некоторые реплики могут быть неверно сегментированными фразами Umputun.
+
+      '
+- episode: 440
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 16
+  replies_count: 4
+  reference_segment:
+    stime: 5299.88
+    etime: 5306.71
+    text: Там на самом деле речь в основном про сервисы типа офиса.
+  reason: "Реплики разбросаны по выпуску:\n1. 4836s (3.6 сек): \"Это не то, что хамство,\
+    \ но это, в общем, вряд ли позитивный шаг.\"\n   Контекст: Gray (4834s): \"Это\
+    \ хамство.\" → ELDAR дополняет мысль\n2. 5157s (3.3 сек): \"Это не про рутование\
+    \ телефона, на самом деле.\"\n   Контекст: Gray (5156s): \"Нет.\" → ELDAR поясня"
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: 3 из 4 реплик следуют сразу за репликами Gray, дополняя его мысли. Возможно
+      эхо или продолжение его же речи.
+  - person_id: bobuk
+    confidence: 0.3
+    reason: Реплика в 5299s дополняет техническое объяснение Bobuk про Microsoft.
+  - person_id: umputun
+    confidence: 0.2
+    reason: Альтернативная гипотеза для реплик общего характера.
+- episode: 440
+  speaker: SPEAKER_MISATTRIBUTED_PETR
+  total_duration_sec: 25
+  replies_count: 1
+  reference_segment:
+    stime: 5675.56
+    etime: 5700.6
+    text: Смотрю по людям, все-таки большинство выбирают хотя бы, например, три стора.
+      То есть это Google, Google Play, Amazon и самый большой китайский. Или когда
+      идет дело про игрушки, то там несколько самых больших китайских. Потому что
+      дешевые игрушки в Китае очень хорошо покупаются. Ты просто в основном с большими
+      компаниями, видимо, общаешься.
+  reason: 'Одна длинная реплика (5675-5700s, 25 сек) - экспертный комментарий про
+    app stores:
+
+    "Смотрю по людям, все-таки большинство выбирают хотя бы три стора.
+
+    То есть это Google, Google Play, Amazon и самый большой китайский.
+
+    Или когда идет дело про игрушки, то там несколько самых больших китайских.
+
+    Потому ч'
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.5
+    reason: Bobuk - эксперт по мобильному рынку (Яндекс). Мог прервать Ksenks и развить
+      мысль. Фраза 'ты общаешься' может быть обращена к Umputun.
+  - person_id: gray
+    confidence: 0.3
+    reason: Gray также имеет бизнес-экспертизу, иногда делает развёрнутые комментарии.
+  - person_id: unknown_guest
+    confidence: 0.2
+    reason: Теоретически мог быть неанонсированный гость с экспертизой в мобильном
+      бизнесе, но маловероятно при наличии 5 ведущих.
+- episode: 443
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 12.58
+  replies_count: 2
+  reference_segment:
+    stime: 5594.93
+    etime: 5604.48
+    text: Ну, а у них вот на вот этой маленькой плате с подключениями и так далее,
+      они вроде показывают, что получается практически полноценный Linux-компьютер.
+  reason: "Две реплики требуют разного подхода:\n\n1. (2687.19s) \"Хироко они тут\
+    \ за шум ели, да?\" — это АРТЕФАКТ ЭХА!\n   На 2682.29s Umputun говорит: \"Хироко\
+    \ тут на этой неделе шуму надела.\"\n   Реплика SPEAKER_MISATTRIBUTED_ELDAR —\
+    \ искаженное повторение этой же фразы.\n   Это НЕ реальный спикер, а ошибка распозна"
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: Gray участвует реже других, мог быть неправильно распознан
+  - person_id: bobuk
+    confidence: 0.3
+    reason: Темы (Docker, hardware) близки интересам Bobuk
+- episode: 446
+  speaker: EldarMurtazin
+  total_duration_sec: 70
+  replies_count: 11
+  reference_segment:
+    stime: 8430.8
+    etime: 8438.29
+    text: В этом подкасте еще не звучала коронная фраза, которая уже звучит в нашем
+      подкасте не первый раз, это то, что технология идеальна.
+  reason: 'Эльдар Муртазин не был представлен в начале выпуска. Гостями были только
+
+    Виктор Гамов и Алексей Абашев из подкаста "Разбор полётов".
+
+    На 8430s "EldarMurtazin" говорит: "В этом подкасте еще не звучала коронная фраза,
+
+    которая уже звучит в нашем подкасте не первый раз" - это явно относится к
+
+    "Разбору по'
+  possible_matches:
+  - person_id: VictorGamov
+    confidence: 0.5
+    reason: Один из двух гостей, ошибочно атрибутирован
+  - person_id: AlexeyAbashev
+    confidence: 0.5
+    reason: Один из двух гостей, ошибочно атрибутирован
+- episode: 448
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 11
+  replies_count: 4
+  reference_segment: null
+  reason: 'Это ошибочное присвоение Эльдару Муртазину, которое было отменено
+
+    (поэтому спикер называется SPEAKER_MISATTRIBUTED_ELDAR, а не EldarMurtazin).
+
+    Все реплики короткие, разбросаны по эпизоду, вклиниваются между репликами
+
+    известных ведущих. Контекст показывает типичные продолжения разговора
+
+    ведущих, а не'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.6
+    reason: 'Реплики часто продолжают мысль Gray. Первая реплика - буквально
+
+      продолжение фразы "это плюшечка" -> "Небольшая, маленькая плюшечка".
+
+      '
+  - person_id: umputun
+    confidence: 0.3
+    reason: 'Некоторые реплики могут быть Umputun, особенно реплика про Твиттер
+
+      (напоминание о ранее обсуждённой теме).
+
+      '
+  - person_id: bobuk
+    confidence: 0.1
+    reason: 'Bobuk присутствует в эпизоде с 125 сек, технически мог быть автором.
+
+      '
+- episode: 452
+  speaker: SPEAKER_05
+  total_duration_sec: 13
+  replies_count: 5
+  reference_segment: null
+  reason: 'Короткие реакции (1-2 сек) в случайные моменты: ''Звучит очень смешно'',
+    ''А у подружки такое же'', ''Она сломается уже на следующий день''. Типичные фразы-реакции,
+    скорее всего ошибка распознавания Ksenks.'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.8
+    reason: Короткие женские реакции в контексте диалога Umputun-Ksenks
+- episode: 452
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 10
+  replies_count: 4
+  reference_segment: null
+  reason: 'Уже помечено как ошибочная атрибуция (MISATTRIBUTED). Реплики женского
+    голоса: ''Не рассказывай, я еще не смотрела новый сезон'' (1348s), ''Ну окей,
+    расскажи, почему это'' (2942s), ''Просто меня не было, и ты сейчас меня одуришь''
+    (4261s). Это явно Ksenks, а не Марина.'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.95
+    reason: Женский голос, контекст диалога с Umputun, Марины в этом эпизоде нет (только
+      Umputun и Ksenks из ведущих)
+- episode: 457
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 20
+  replies_count: 6
+  reference_segment:
+    stime: 2084.98
+    etime: 2090.8
+    text: Если... Я не знаю просто, с чем это сравнить, так, чтобы это было совсем
+      досконально понятно.
+  reason: 'Все 6 реплик являются продолжением речи Gray - они вклиниваются между его
+
+    репликами и продолжают его мысль:
+
+    - 2085s: "Если... Я не знаю просто, с чем это сравнить" - продолжает мысль Gray
+    о бизнесе Google
+
+    - 3703s: "еще более прямоугольные, потом там вообще какой-то параллелепипед" -
+    продолжает описа'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.85
+    reason: 'Реплики органично продолжают речь Gray и появляются в середине его монологов.
+
+      Стиль речи и тематика соответствуют Gray.
+
+      '
+- episode: 458
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 10
+  replies_count: 3
+  reference_segment:
+    stime: 1511.8
+    etime: 1514.5
+    text: И решили они эту проблему очень интересно.
+  reason: All 3 entries surrounded by Gray's lines, no guest introduction for Eldar
+  possible_matches:
+  - person_id: gray
+    confidence: 0.75
+    reason: Lines appear in middle of Gray's speech, same topic continuity
+- episode: 461
+  speaker: EldarMurtazin
+  total_duration_sec: 600
+  replies_count: 138
+  reference_segment:
+    stime: 5180.3
+    etime: 5206.2
+    duration_sec: 25.9
+    text: Ну, как, это когда тебе заставляют купить за 700 долларов, ну не за 700,
+      за 499...
+  reason: 'Bobuk в 18-27 сек: "Его зовут Илья. Я напомню, что это человек из компании...
+    По-моему, он называется MTX Connect. Илья сам про себя расскажет."
+
+    Позже в 6093 сек: "Спасибо, Илья, только ты меня понимаешь"
+
+    Web search подтвердил: Ilya Balashov - Co-Founder MTX Connect (Tracxn)
+
+    '
+  possible_matches: []
+- episode: 462
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 52
+  replies_count: 7
+  reference_segment:
+    stime: 426.96
+    etime: 433.61
+    text: Одну дома, одну на работе, одну жене, одну кошечке, одну жене на работу.
+  reason: 'Это реплики, которые ранее были ошибочно присвоены EldarMurtazin.
+
+    Эльдар Муртазин НЕ участвует в этом выпуске (не упомянут в начале).
+
+    Реплики скорее всего принадлежат гостю Дмитрию (SPEAKER_05).
+
+    '
+  possible_matches:
+  - person_id: dmitry_guest_462
+    confidence: 0.8
+    reason: 'Распределены по выпуску, содержат активные комментарии:
+
+      427s: "Одну дома, одну на работе..." — комментарий про покупку устройств
+
+      1995s: "А вот мы такие, которые Adblock''ом пользуемся..." — вопрос к Бобуку
+
+      '
+- episode: 462
+  speaker: SPEAKER_MISATTRIBUTED_PETR
+  total_duration_sec: 23
+  replies_count: 5
+  reference_segment:
+    stime: 3115.88
+    etime: 3121.5
+    text: Но мы, вообще говоря, постарались исправить эту ситуацию, даже поправили
+      информацию на сайте.
+  reason: 'Реплики в сегменте Selectel (~3116-3566s), ранее ошибочно присвоены PetrDidenko.
+
+    Пётр Диденко НЕ участвует в этом выпуске.
+
+    '
+  possible_matches:
+  - person_id: sergey_selectel_462
+    confidence: 0.6
+    reason: Реплики в сегменте Selectel, могут принадлежать Сергею (VPC)
+  - person_id: viktor_selectel_462
+    confidence: 0.6
+    reason: Или Виктору (Vscale)
+- episode: 465
+  speaker: SPEAKER_03
+  total_duration_sec: 167
+  replies_count: 43
+  reference_segment:
+    stime: 2708.1
+    etime: 2718.3
+    text: То есть это в смысле уже где-то было анонсировано, то есть возможно что...
+  reason: 'В начале выпуска (46-59s) Umputun представляет гостя: "Сегодня пришел к
+    нам гость, который утверждает, что он уже и раньше был. Руслан, ты был раньше
+    или опять обманываешь?" Гость отвечает на это обращение и далее активно участвует
+    в обсуждении AWS/Amazon.
+
+    '
+  possible_matches: []
+- episode: 467
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 12
+  replies_count: 6
+  reference_segment:
+    stime: 4311.44
+    etime: 4313.0
+    text: Нет, я не пишу на Go.
+  reason: 'Короткие реплики, ошибочно приписанные Marin. Контекстный анализ показывает:
+
+    - 437s: "Хорошая новость, все рады" — между Ksenks и Umputun, вероятно Ksenks
+    или другой ведущий
+
+    - 2794s: "Но не все знают, что это такое" — контекст про французский маникюр,
+    обращение к Ksenks
+
+    - 3265s: "Конечно, я люблю пе'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.7
+    reason: Большинство реплик в контексте обращения к Ksenks или типичны для её манеры
+      речи
+- episode: 470
+  speaker: SPEAKER_MISATTRIBUTED_PETR
+  total_duration_sec: 11
+  replies_count: 3
+  reference_segment:
+    stime: 8075.21
+    etime: 8080.59
+    text: Потому что в статье какие-то вещи… Когда ты пишешь статью, ты понимаешь,
+      у тебя проще.
+  reason: 'Короткие реплики (3-5 сек) разбросаны по эпизоду. Контекст показывает,
+    что это продолжение речи Umputun или реакция на Ksenks. Пётр Диденко не был анонсирован
+    в этом выпуске.
+
+    '
+  possible_matches:
+  - person_id: umputun
+    confidence: 0.7
+    reason: 'Реплика 3850.6s "Такое мнение." идёт сразу после Umputun "Не знаю, слух
+      такой." Реплика 5047.4s продолжает обсуждение о девопсах, которое ведёт Umputun.
+
+      '
+  - person_id: ksenks
+    confidence: 0.3
+    reason: 'Альтернативная версия - Ksenks задаёт вопросы и делает короткие реплики.
+
+      '
+- episode: 471
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 10
+  replies_count: 4
+  reference_segment: null
+  reason: 'Реплики:
+
+    - 346.9s: "Какая самая большая технологическая новинка 2015 года?" -> следом Ksenks
+    отвечает
+
+    - 1552.1s: "Конечно, ты не будешь слушать рекламу." -> между репликами Ksenks
+
+    - 4896.99s, 5391.2s: аналогичные короткие вставки
+
+
+    Все реплики окружены репликами Ksenks или других ведущих. Скорее всег'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.7
+    reason: Большинство реплик окружены репликами Ksenks, похоже на её голос по контексту
+- episode: 475
+  speaker: SPEAKER_MISATTRIBUTED_MARIN
+  total_duration_sec: 16
+  replies_count: 5
+  reference_segment:
+    stime: 5149.53
+    etime: 5154.55
+    text: У тебя вообще нет понимания, какие есть страны, континенты.
+    duration_sec: 5
+    quality: short_but_clear
+  reason: 'Марина (Marin_k_a) не упоминается как участник этого эпизода.
+
+    Реплики разбросаны по эпизоду и по контексту являются частью
+
+    диалогов ведущих. Примеры:
+
+    - "Слушай, а почему ты, Женя, Монгу не ругаешь?" - обращение к Umputun по имени
+
+    - "У тебя вообще нет понимания, какие есть страны, континенты."
+
+
+    Это с'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.6
+    reason: Контекст реплик соответствует стилю Ksenks, обращение 'Женя' к Umputun
+  - person_id: gray
+    confidence: 0.3
+    reason: Возможно Gray
+- episode: 475
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 11
+  replies_count: 5
+  reference_segment:
+    stime: 6979.57
+    etime: 6986.02
+    text: Ну, а сейчас, насколько я понимаю, решили использовать. + Да, ну вот, в
+      общем.
+    duration_sec: 6.5
+    quality: two_consecutive_segments
+  reason: 'Эльдар Муртазин не упоминается как участник этого эпизода.
+
+    Реплики короткие и вкраплены в диалоги ведущих:
+
+    - "Что-то ты гонишь." (1047 сек) - реакция после реплики Umputun, Ksenks отвечает
+
+    - "Но вот про фонд я, честно говоря..." (6059 сек) - между Gray и Umputun
+
+    - "Так, что еще там из тем пользовате'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: Реплика про фонд идёт сразу после Gray
+  - person_id: umputun
+    confidence: 0.3
+    reason: '''Так, что еще там из тем'' - типичная ведущая фраза Umputun'
+  - person_id: ksenks
+    confidence: 0.2
+    reason: '''Что-то ты гонишь'' - реакция перед репликой Ksenks'
+- episode: 479
+  speaker: SPEAKER_02
+  total_duration_sec: 154
+  replies_count: 30
+  reference_segment:
+    stime: 713.03
+    etime: 721.62
+    text: Нет, это у нас, скажем так, мы это проверяли на тех сотрудниках, у которых
+      зарплаты жалко будет выделять на платную подписку Skype.
+  reason: '669.3s: ''Здравствуйте, меня зовут Артем.'' Гость представился сам в начале
+    своего звонка.'
+  possible_matches:
+  - person_id: artem_rosnovsky
+    confidence: 0.2
+    reason: Имя совпадает, но контекст не указывает на Росновского (тот был гостем
+      в ранних выпусках)
+- episode: 479
+  speaker: SPEAKER_06
+  total_duration_sec: 103
+  replies_count: 16
+  reference_segment:
+    stime: 2213.47
+    etime: 2232.95
+    text: И лабораторки по разным предметам, в том числе по функциональному программированию,
+      где требуется написать хотя бы одну функцию, и приносят буквально скопированную
+      полностью со стек-эверфлоу, не поменяв ни названия, ничего, никакой творческой
+      переработки не сделав над этим.
+  reason: '2184.8s (Umputun): ''к нам Иван присоединился, говорит, у меня есть что
+    сказать на эту тему, Иван, что ты можешь сказать?'''
+  possible_matches: []
+- episode: 479
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 34
+  replies_count: 6
+  reference_segment:
+    stime: 5151.01
+    etime: 5157.56
+    text: Это похоже на схемы, которые используются при расчете стоимости спортивных
+      залов.
+  reason: 'Все 6 реплик вписываются в контекст диалога между ведущими:
+
+    - 685s: продолжение темы Skype (после реплики SPEAKER_02/Артёма)
+
+    - 906s: комментарий про Ксюшу (после реплики Umputun про Ксюшу)
+
+    - 1876s: про гражданскую оборону (перед репликой Bobuk на ту же тему)
+
+    - 5151s: про спортивные залы (перед репли'
+  possible_matches: []
+- episode: 481
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 14
+  replies_count: 5
+  reference_segment:
+    stime: 5522.3
+    etime: 5529.7
+    text: Там на самом деле же просто рынок у этих камер, он довольно такой тесный,
+      не очень большой.
+  reason: 'Реплики разбросаны, короткие (1-7 сек), часто находятся рядом с репликами
+    Gray.
+
+    В эпизоде 481 гостя Эльдара Муртазина нет - состав "полный, классический" (00:09s).
+
+    Это ошибочные атрибуции, вероятно реплики принадлежат одному из ведущих (Gray
+    или Ksenks).
+
+    '
+  possible_matches:
+  - person_id: gray
+    confidence: 0.6
+    reason: Большинство реплик рядом с Gray, могут быть продолжением его мыслей
+  - person_id: ksenks
+    confidence: 0.3
+    reason: Некоторые реплики могут принадлежать Ksenks
+- episode: 483
+  speaker: SPEAKER_05
+  total_duration_sec: 974
+  replies_count: 204
+  reference_segment:
+    stime: 867.39
+    etime: 914.31
+    text: И более того, я недавно с ребятами сделал опенсорсный проект... не нужно
+      знать заранее адреса других точек, их поиск происходит заранее по DHT сети.
+  reason: 'В начале выпуска Umputun представляет: "Дорогой гость, Артем, ты помнишь,
+    как они называются?" (21.95s)
+
+    Далее несколько раз обращается: "Артем, ты это помнишь?" (221.27s)
+
+    Гость говорит о своём проекте peer-to-peer VPN на Go (867-958s):
+
+    "недавно с ребятами сделал опенсорсный проект... позволяет из од'
+  possible_matches:
+  - person_id: artem_unknown_go_dev
+    confidence: 0.95
+    reason: Явное представление по имени 'Артём', тематика Go, peer-to-peer VPN проект
+- episode: 488
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 27
+  replies_count: 11
+  reference_segment:
+    stime: 6815.01
+    etime: 6820.35
+    text: Слушай, у Slack и HipChat есть, но Slack и HipChat не для широкой публики.
+  reason: 'Это ошибочные присвоения реплик ведущих (вероятнее всего Bobuk). Признаки:
+    1) Все реплики короткие (1-5 сек). 2) Находятся между репликами Bobuk или контекстно
+    связаны с его речью. 3) На 4319-4330s видна разорванная фраза: SPEAKER_MISATTRIBUTED_ELDAR
+    говорит "Я бы про защищенные передачи... позвал б'
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.85
+    reason: 'Все реплики контекстно связаны с речью Bobuk, несколько раз видны разорванные
+      фразы между SPEAKER_MISATTRIBUTED_ELDAR и Bobuk. Обращение "Жень" к Umputun
+      характерно для Bobuk.
+
+      '
+- episode: 496
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 22
+  replies_count: 6
+  reference_segment:
+    stime: 3580.54
+    etime: 3585.14
+    text: И компания ее пытается планировать выпустить в сентябре.
+  reason: Реплики вписываются в контекст обсуждения между ведущими без признаков гостя
+  possible_matches:
+  - person_id: gray
+    confidence: 0.6
+    reason: Реплики идут в контексте тем, которые ведёт Gray (Slack, Pilot переводчик,
+      Flash)
+  - person_id: bobuk
+    confidence: 0.3
+    reason: Bobuk активно участвует в обсуждении в этих частях
+- episode: 499
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 17
+  replies_count: 4
+  reference_segment:
+    stime: 7949
+    etime: 7954.5
+    text: А там на самом деле Клинтон с Трампом поругались в очередной раз в Твиттере.
+  reason: 'Ранее ошибочно атрибутировано как EldarMurtazin, отменено.
+
+    Четыре реплики:
+
+    - 5840s: "Ну, вообще есть другая практика обычная" (2.7 сек) — о реферальных ссылках
+
+    - 7778s: "Я так понимаю, что там какая-то... А!" (5.3 сек) — о MongoDB
+
+    - 7949s: "А там на самом деле Клинтон с Трампом поругались..." (5.6 с'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.6
+    reason: Большинство реплик в контексте обсуждений Gray, он продолжает темы
+  - person_id: umputun
+    confidence: 0.3
+    reason: Некоторые реплики могут быть Umputun

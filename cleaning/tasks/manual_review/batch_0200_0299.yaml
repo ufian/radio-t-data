@@ -1,7 +1,7 @@
 batch_id: review_0200_0299
 description: Manual review tasks for episodes 200-299
 status: pending
-total_tasks: 147
+total_tasks: 86
 tasks:
 - episode: 202
   speaker: Guest1
@@ -99,14 +99,6 @@ tasks:
   identified_as: null
   confidence: high
   action: investigate
-- episode: 209
-  speaker: Guest1
-  total_duration_sec: 380
-  replies_count: 134
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
 - episode: 213
   speaker: SPEAKER_01
   identified_as: Marin_k_a
@@ -176,30 +168,6 @@ tasks:
   reason: Вероятно тот же гость, контекст и паттерн разговора совпадают
   time_range: null
   action: confirm_or_reject
-- episode: 218
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Единственная женщина в выпуске - Марина, короткая реплика вписывается в
-    диалог
-  time_range: null
-  action: confirm_or_reject
-- episode: 218
-  from_speaker: SPEAKER_06
-  to_speaker: _review_needed
-  confidence: low
-  reason: Слишком короткие реплики для точной идентификации, но вероятно ошибки разметки
-  time_range: null
-  action: confirm_or_reject
-- episode: 219
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Umputun
-  confidence: medium
-  reason: 'Первая реплика (1081.4s "В общем, была очень интересная штука.") следует
-    сразу после Umputun (1074-1080s) и по содержанию является продолжением его рассказа.
-    Вторая реплика (1119.5s "Какое-то большое '
-  time_range: null
-  action: confirm_or_reject
 - episode: 221
   speaker: SPEAKER_03
   identified_as: inna_kuznetsova
@@ -222,14 +190,6 @@ tasks:
   reason: Ответы на вопросы к гостье, но реплики короткие - требует верификации
   time_range: null
   action: confirm_or_reject
-- episode: 222
-  speaker: SPEAKER_01
-  total_duration_sec: 389
-  replies_count: 150
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
 - episode: 222
   speaker: SPEAKER_00
   total_duration_sec: 7
@@ -261,30 +221,6 @@ tasks:
   reason: Контекст разговора о Сиэтле указывает на гостью из США
   time_range: null
   action: confirm_or_reject
-- episode: 223
-  from_speaker: SPEAKER_00
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: 'Короткие междометия ("Ты думаешь?", "Угу", "Да-да-да") вероятно принадлежат
-    Марине,
-
-    так как она единственный гость в эпизоде. Однако уверенность средняя из-за краткости
-    реплик.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 223
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: 'Lavale в этом эпизоде не участвует. Реплики скорее всего принадлежат Марине.
-
-    Рекомендуется voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
 - episode: 225
   speaker: SPEAKER_04
   total_duration_sec: 9
@@ -306,25 +242,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 225
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: 'По контексту диалога и активному участию Marin_k_a в выпуске.
-
-    Спикер уже помечен как MISATTRIBUTED, требуется переатрибуция.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 227
-  speaker: SPEAKER_06
-  total_duration_sec: 466
-  replies_count: 130
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
 - episode: 227
   speaker: SPEAKER_02
   total_duration_sec: 5
@@ -341,13 +258,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 229
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Lavale не участвовала, единственная женщина в выпуске - Marin_k_a
-  time_range: null
-  action: confirm_or_reject
 - episode: 229
   from_speaker: Gray
   to_speaker: Marin_k_a
@@ -379,28 +289,6 @@ tasks:
   reason: Gray не представлен, реплики вклиниваются в речь SPEAKER_04 (Плющева)
   time_range: null
   action: confirm_or_reject
-- episode: 230
-  from_speaker: SPEAKER_03
-  to_speaker: Plushev
-  confidence: medium
-  reason: Короткие поддакивания в контексте диалога Плющева и Umputun
-  time_range: null
-  action: confirm_or_reject
-- episode: 231
-  from_speaker: SPEAKER_04
-  to_speaker: SPEAKER_99
-  confidence: medium
-  reason: Одиночная короткая реплика, вероятно артефакт сегментации
-  time_range: null
-  action: confirm_or_reject
-- episode: 232
-  speaker: SPEAKER_04
-  total_duration_sec: 217
-  replies_count: 59
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
 - episode: 232
   speaker: SPEAKER_02
   total_duration_sec: 5
@@ -421,14 +309,6 @@ tasks:
   time_range: null
   action: confirm_or_reject
 - episode: 234
-  speaker: SPEAKER_03
-  total_duration_sec: 1783
-  replies_count: 387
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
-- episode: 234
   speaker: SPEAKER_04
   total_duration_sec: 5
   replies_count: 3
@@ -444,22 +324,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 235
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Lavale не участвовала. По контексту реплики принадлежат Marin_k_a (обращение
-    к 'Сереже', темы Яндекса/Bing)
-  time_range: null
-  action: confirm_or_reject
-- episode: 235
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: PetrDidenko
-  confidence: medium
-  reason: 'Eldar не участвовал (Umputun: ''Эльдара нет''). Короткие реплики в контексте
-    диалога с Петей'
-  time_range: null
-  action: confirm_or_reject
 - episode: 237
   speaker: SPEAKER_00
   identified_as: Umputun
@@ -488,25 +352,11 @@ tasks:
   confidence: low
   action: investigate
 - episode: 238
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: needs_voice_comparison
-  confidence: medium
-  reason: 3 реплики ошибочно приписаны Lavale. Вероятно Marin_k_a (женский голос)
-  time_range: null
-  action: confirm_or_reject
-- episode: 238
   from_speaker: SPEAKER_MISATTRIBUTED_PETR
   to_speaker: needs_voice_comparison
   confidence: medium
   reason: 3 реплики ошибочно приписаны Петру. Контекст указывает на SPEAKER_04 или
     SPEAKER_03
-  time_range: null
-  action: confirm_or_reject
-- episode: 238
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: needs_voice_comparison
-  confidence: medium
-  reason: 2 короткие реплики ошибочно приписаны Эльдару. Недостаточно данных для идентификации
   time_range: null
   action: confirm_or_reject
 - episode: 239
@@ -517,43 +367,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 239
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Контекст реплик указывает на Маринку, но нужна верификация
-  time_range: null
-  action: confirm_or_reject
-- episode: 240
-  speaker: PetrDidenko
-  total_duration_sec: 771.8
-  replies_count: 136
-  is_error: true
-  identified_as: null
-  confidence: high
-  action: investigate
-- episode: 240
-  speaker: SPEAKER_00
-  total_duration_sec: 449.9
-  replies_count: 192
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
-- episode: 240
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: SPEAKER_UNIDENTIFIED
-  confidence: medium
-  reason: Эльдар не участвовал, требуется ручная проверка
-  time_range: null
-  action: confirm_or_reject
-- episode: 240
-  from_speaker: SPEAKER_04
-  to_speaker: SPEAKER_UNIDENTIFIED
-  confidence: medium
-  reason: Слишком короткие реплики, вероятно Марина или артефакт
-  time_range: null
-  action: confirm_or_reject
 - episode: 241
   from_speaker: SPEAKER_00
   to_speaker: Marin_k_a
@@ -561,25 +374,6 @@ tasks:
   reason: 'Реплики в женском роде, Маруся — единственная женщина в выпуске.
 
     Требуется voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 242
-  from_speaker: Bobuk
-  to_speaker: Alexmak
-  confidence: medium
-  reason: Bobuk отсутствовал. Реплика про iMessage — скорее всего Alexmak (эксперт
-    по Apple)
-  time_range: null
-  action: confirm_or_reject
-- episode: 243
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Gray
-  confidence: medium
-  reason: 'Все реплики появляются в контексте с Gray, одна содержит
-
-    обращение "Жень" к Umputun. Требует voice verification.
 
     '
   time_range: null
@@ -657,14 +451,6 @@ tasks:
   reason: Появляется в контексте речи Marin_k_a, короткие уточняющие вопросы
   time_range: null
   action: confirm_or_reject
-- episode: 249
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Реплика про сисадминов в контексте обсуждения, которое вела Марина. Требует
-    voice verification для подтверждения
-  time_range: null
-  action: confirm_or_reject
 - episode: 250
   speaker: SPEAKER_00
   total_duration_sec: 5
@@ -689,13 +475,6 @@ tasks:
   identified_as: null
   confidence: high
   action: investigate
-- episode: 252
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Lavale не была гостем. Женский голос, единственная женщина в эпизоде - Marin_k_a
-  time_range: null
-  action: confirm_or_reject
 - episode: 253
   speaker: SPEAKER_00
   total_duration_sec: 73
@@ -704,21 +483,6 @@ tasks:
   identified_as: null
   confidence: high
   action: investigate
-- episode: 253
-  from_speaker: SPEAKER_05
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Короткая междометная реакция между репликами Bobuk, вероятно его голос
-  time_range: null
-  action: confirm_or_reject
-- episode: 253
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Gray
-  confidence: medium
-  reason: Обе реплики в контексте тем Gray (DigiNotar, Apache). Требуется voice comparison
-    для подтверждения.
-  time_range: null
-  action: confirm_or_reject
 - episode: 255
   speaker: SPEAKER_05
   total_duration_sec: 7
@@ -735,19 +499,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 257
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Bobuk
-  confidence: medium
-  reason: 'Эльдар Муртазин не участвует в выпуске 257. Обе реплики — короткие
-
-    технические комментарии (<1 сек), вклинивающиеся между репликами
-
-    Bobuk''а в контексте его технических объяснений.
-
-    '
-  time_range: null
-  action: confirm_or_reject
 - episode: 259
   speaker: SPEAKER_01
   total_duration_sec: 7
@@ -779,15 +530,6 @@ tasks:
   reason: Контекст показывает что это гость (обращение к Мариночке)
   time_range: null
   action: confirm_or_reject
-- episode: 260
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Единственная реплика в эпизоде с двумя ведущими. По контексту диалога это
-    скорее Bobuk (продолжение его саркастических вопросов о "ненужности" свежего софта).
-    Короткая фраза-подхват, типичная для пере
-  time_range: null
-  action: confirm_or_reject
 - episode: 261
   speaker: SPEAKER_02
   total_duration_sec: 5
@@ -804,30 +546,6 @@ tasks:
     знаешь, чем успокою?'). Остальные реплики слишком короткие для уверенного определения.
   time_range: null
   action: confirm_or_reject
-- episode: 262
-  speaker: SPEAKER_02
-  total_duration_sec: 142
-  replies_count: 50
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
-- episode: 262
-  speaker: SPEAKER_03
-  total_duration_sec: 507
-  replies_count: 142
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
-- episode: 262
-  speaker: Bobuk
-  total_duration_sec: 6
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 262
   from_speaker: EldarMurtazin
   to_speaker: SPEAKER_00
@@ -846,14 +564,6 @@ tasks:
     в компании'', но Gray мог присоединиться позже по ходу записи. Одна короткая реплика
     за весь выпуск - возможно ошибка распознавания, но нельзя исключи'
   action: confirm_or_reject
-- episode: 263
-  from_speaker: SPEAKER_03
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Короткие реакции в разговоре, вероятно от Marin_k_a, но уверенность ниже
-    из-за краткости реплик
-  time_range: null
-  action: confirm_or_reject
 - episode: 264
   speaker: SPEAKER_04
   total_duration_sec: 8
@@ -870,45 +580,6 @@ tasks:
     требует дополнительной проверки.
   time_range: null
   action: confirm_or_reject
-- episode: 264
-  from_speaker: SPEAKER_06
-  to_speaker: Bobuk
-  confidence: low
-  reason: Предположение на основе продолжения диалога. Требует voice comparison для
-    подтверждения.
-  time_range: null
-  action: confirm_or_reject
-- episode: 265
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: 'Эльдар не участвует в выпуске.
-
-    После реплики на 1834s сразу говорит Marin_k_a.
-
-    Требует дополнительной проверки голоса.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 265
-  from_speaker: SPEAKER_04
-  to_speaker: Bobuk
-  confidence: medium
-  reason: 'Реплика про Arch семантически связана с последующей фразой Bobuk.
-
-    Короткое "Ага" не позволяет надёжно идентифицировать.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 266
-  from_speaker: SPEAKER_05
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Единственная реплика 'Возможно' в контексте обращения к Марине
-  time_range: null
-  action: confirm_or_reject
 - episode: 267
   from_speaker: SPEAKER_03
   to_speaker: Marin_k_a
@@ -916,16 +587,6 @@ tasks:
   reason: 'Вероятно ошибки атрибуции коротких реакций Марины. Требует voice comparison
     для подтверждения, но реплики слишком короткие. Альтернатива: оставить как есть
     или удалить как артефакты.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 269
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Gray
-  confidence: medium
-  reason: 'Вероятнее всего это Gray (фраза про Париж, манера речи), но нужна верификация
-    голоса. После voice comparison можно повысить confidence до high.
 
     '
   time_range: null
@@ -938,73 +599,12 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 271
-  from_speaker: SPEAKER_02
-  to_speaker: Bobuk
-  confidence: medium
-  reason: 'Односложное "Ну," (0.04 сек) между репликами Bobuk''а — часть его речи,
-    ошибочно выделенная в отдельный сегмент.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 272
-  from_speaker: SPEAKER_03
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Короткий переспрос от недавно подключившейся Marin_k_a
-  time_range: null
-  action: confirm_or_reject
-- episode: 272
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Marin_k_a
-  confidence: low
-  reason: 'Реплики слишком короткие для уверенной идентификации.
-
-    Рекомендуется voice comparison или ручная проверка.
-
-    Альтернативы: 7195s может быть Umputun, 7690s может быть Bobuk.
-
-    '
-  time_range: null
-  action: confirm_or_reject
 - episode: 275
   from_speaker: PetrDidenko
   to_speaker: AndreyBreslav
   confidence: medium
   reason: Пётр Диденко не представлен в эпизоде. Единственный гость - Андрей Бреслав.
     Требует подтверждения через voice comparison.
-  time_range: null
-  action: confirm_or_reject
-- episode: 276
-  from_speaker: Bobuk
-  to_speaker: Gray
-  confidence: medium
-  reason: Bobuk отсутствовал на записи (едет из Ярославля). Реплика в контексте диалога
-    Gray-PetrDidenko о Chrome/Native Client.
-  time_range: null
-  action: confirm_or_reject
-- episode: 276
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Gray
-  confidence: medium
-  reason: Одиночная реплика, Eldar не упоминается. Контекст указывает на Gray (говорит
-    до и после).
-  time_range: null
-  action: confirm_or_reject
-- episode: 276
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: low
-  reason: Короткая женская реплика, Lavale не упоминается. Marin_k_a — единственная
-    женщина в эпизоде.
-  time_range: null
-  action: confirm_or_reject
-- episode: 277
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Женский род в речи, единственная женщина в выпуске — Марина
   time_range: null
   action: confirm_or_reject
 - episode: 279
@@ -1020,46 +620,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 279
-  from_speaker: SPEAKER_MISATTRIBUTED_PETR
-  to_speaker: SPEAKER_NEEDS_REVIEW
-  confidence: medium
-  reason: 'Единственная реплика, контекст указывает на возможную принадлежность Umputun.
-
-    Требуется voice comparison.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 280
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Gray
-  confidence: medium
-  reason: 'Фраза "Очень хочется там попробовать, я туда попаду" произнесена
-
-    после реплики Gray про Apple Store в Амстердаме. Umputun отвечает
-
-    "А тебе до Польши не ближе?" — типичное обращение к Gray (в России).
-
-    '
-  time_range:
-  - 6487.0
-  - 6490.0
-  action: confirm_or_reject
-- episode: 281
-  from_speaker: SPEAKER_MISATTRIBUTED_PETR
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Контекст диалога Umputun-Bobuk, Bobuk соглашается сразу после
-  time_range: null
-  action: confirm_or_reject
-- episode: 281
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Обе реплики в контексте диалога с Umputun, характерные фразы Bobuk
-  time_range: null
-  action: confirm_or_reject
 - episode: 282
   speaker: SPEAKER_02
   total_duration_sec: 6
@@ -1068,14 +628,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 282
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Реплика 'я вот дизайнер не помню' указывает на Марину (она дизайнер). Требует
-    voice comparison для подтверждения.
-  time_range: null
-  action: confirm_or_reject
 - episode: 283
   speaker: SPEAKER_03
   total_duration_sec: 9
@@ -1092,21 +644,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 283
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Единственная женщина-гость в эпизоде, активно участвует. Требуется voice
-    comparison для подтверждения.
-  time_range: null
-  action: confirm_or_reject
-- episode: 283
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: Bobuk
-  confidence: medium
-  reason: Реплики являются продолжениями/эхо речи Bobuk. Эльдар не участвует в эпизоде.
-  time_range: null
-  action: confirm_or_reject
 - episode: 284
   speaker: SPEAKER_00
   total_duration_sec: 5
@@ -1142,22 +679,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 288
-  from_speaker: SPEAKER_MISATTRIBUTED_PETR
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Реплика 'А Google дал плющево' идёт сразу после реплики Marin_k_a 'А Google
-    дал джуйк' — похоже на продолжение той же фразы, возможно ошибка сегментации
-  time_range: null
-  action: confirm_or_reject
-- episode: 288
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Реплика 'Говорят, у него 13 дюймов' предшествует обращению Бобука 'Марушечка,
-    13 дюймов это не мало?' — скорее всего это была реплика Марины
-  time_range: null
-  action: confirm_or_reject
 - episode: 289
   speaker: SPEAKER_03
   total_duration_sec: 6
@@ -1186,13 +707,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 292
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: Контекст указывает на Marin_k_a, реплики тематически связаны с её речью
-  time_range: null
-  action: confirm_or_reject
 - episode: 293
   speaker: SPEAKER_01
   total_duration_sec: 8
@@ -1209,25 +723,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 294
-  from_speaker: SPEAKER_01
-  to_speaker: Gray
-  confidence: medium
-  reason: Короткие междометия в контексте речи ведущих. Первая реплика в прямом диалоге
-    с Gray. Низкий риск, так как это всего 3 реплики по 0.5s с безобидным содержанием.
-  time_range: null
-  action: confirm_or_reject
-- episode: 295
-  from_speaker: Umputun
-  to_speaker: SPEAKER_UNIDENTIFIED
-  confidence: medium
-  reason: 'Umputun отсутствует в эпизоде ("Умпутун отдыхает").
-
-    Нужна голосовая верификация для точной атрибуции (Gray или Bobuk).
-
-    '
-  time_range: null
-  action: confirm_or_reject
 - episode: 296
   speaker: SPEAKER_05
   total_duration_sec: 5
@@ -1244,21 +739,6 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
-- episode: 298
-  from_speaker: SPEAKER_MISATTRIBUTED_ELDAR
-  to_speaker: SPEAKER_00
-  confidence: medium
-  reason: Большинство реплик перемежаются с SPEAKER_00 (Виктор) и относятся к пользовательскому
-    опыту. Требуется voice comparison.
-  time_range: null
-  action: confirm_or_reject
-- episode: 298
-  from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
-  to_speaker: Marin_k_a
-  confidence: low
-  reason: Возможно женский голос Маруси. Требуется проверка.
-  time_range: null
-  action: confirm_or_reject
 - episode: 299
   speaker: SPEAKER_03
   total_duration_sec: 7
