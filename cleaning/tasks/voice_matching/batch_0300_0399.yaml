@@ -2915,3 +2915,163 @@ tasks:
   - person_id: new_guest_alexey_ruby
     confidence: 0.9
     reason: Представился как Алексей, говорит что второй раз защищал Ruby
+- episode: 327
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 54
+  replies_count: 6
+  reference_segment:
+    stime: 477.46
+    etime: 480.28
+    text: "Как же ее держать?"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.1
+    reason: Контекст (1 раз рядом)
+
+- episode: 347
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 48
+  replies_count: 10
+  reference_segment:
+    stime: 101.36
+    etime: 104.9
+    text: "У нас вообще-то эта графа, если я не ошибаюсь, отсутствует."
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: gray
+    confidence: 0.3
+    reason: Контекст (7 раз рядом)
+  - person_id: bobuk
+    confidence: 0.2
+    reason: Контекст (5 раз рядом)
+
+- episode: 353
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 56
+  replies_count: 8
+  reference_segment:
+    stime: 479.43
+    etime: 485.75
+    text: "Это только потому, что там не было... Загадка, как говоришь."
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: umputun
+    confidence: 0.1
+    reason: Контекст (2 раз рядом)
+
+- episode: 374
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 33
+  replies_count: 7
+  reference_segment:
+    stime: 722.5
+    etime: 728.3
+    text: "И насколько я вижу, всякие заправки и так далее, я их еще там увижу через пару д"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: gray
+    confidence: 0.4
+    reason: Контекст (5 раз рядом)
+  - person_id: umputun
+    confidence: 0.3
+    reason: Контекст (4 раз рядом)
+
+- episode: 379
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 10
+  replies_count: 4
+  reference_segment:
+    stime: 1263.14
+    etime: 1265.66
+    text: "А что, не пустите?"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: marin_k_a
+    confidence: 0.4
+    reason: Контекст (3 раз рядом)
+  - person_id: bobuk
+    confidence: 0.2
+    reason: Контекст (2 раз рядом)
+
+- episode: 309
+  speaker: SPEAKER_MISATTRIBUTED_LAVALE
+  total_duration_sec: 20
+  replies_count: 2
+  reference_segment:
+    stime: 422.22
+    etime: 426.23
+    text: "Ну, со всеми остальными системами, которые тоже пытаются запоминать свое состоян"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.2
+    reason: Контекст (1 раз рядом)
+  - person_id: marin_k_a
+    confidence: 0.2
+    reason: Контекст (1 раз рядом)
+
+- episode: 329
+  speaker: SPEAKER_MISATTRIBUTED_LAVALE
+  total_duration_sec: 12
+  replies_count: 2
+  reference_segment:
+    stime: 4128.57
+    etime: 4135.15
+    text: "Если функция не create, то она возвращает объект, прикрепленный уже к авторелиз-"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: umputun
+    confidence: 0.2
+    reason: Контекст (1 раз рядом)
+
+- episode: 374
+  speaker: SPEAKER_MISATTRIBUTED_LAVALE
+  total_duration_sec: 14
+  replies_count: 4
+  reference_segment:
+    stime: 739.89
+    etime: 741.77
+    text: "Мне кажется, их все меньше и меньше становится."
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.4
+    reason: Контекст (3 раз рядом)
+  - person_id: marin_k_a
+    confidence: 0.2
+    reason: Контекст (2 раз рядом)
+
+- episode: 385
+  speaker: SPEAKER_MISATTRIBUTED_LAVALE
+  total_duration_sec: 16
+  replies_count: 4
+  reference_segment:
+    stime: 170.12
+    etime: 173.72
+    text: "Может быть, по этому описанию не понятно, что он что-то там выкатил."
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: umputun
+    confidence: 0.4
+    reason: Контекст (3 раз рядом)
+  - person_id: ksenks
+    confidence: 0.4
+    reason: Контекст (3 раз рядом)
+
+- episode: 360
+  speaker: SPEAKER_MISATTRIBUTED_PETR
+  total_duration_sec: 32
+  replies_count: 5
+  reference_segment:
+    stime: 192.57
+    etime: 198.44
+    text: "Мне кажется, любое направление можно превратить в карго-культ, только если поста"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: umputun
+    confidence: 0.1
+    reason: Контекст (1 раз рядом)
+  - person_id: bobuk
+    confidence: 0.1
+    reason: Контекст (1 раз рядом)

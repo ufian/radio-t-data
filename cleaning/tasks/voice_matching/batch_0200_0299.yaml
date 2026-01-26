@@ -1803,3 +1803,109 @@ tasks:
   - person_id: alexmak
     confidence: 0.5
     reason: Технический комментарий о Mac, стилистически похож на Alexmak
+- episode: 254
+  speaker: SPEAKER_MISATTRIBUTED_EldarMurtazin
+  total_duration_sec: 89
+  replies_count: 15
+  reference_segment:
+    stime: 939.45
+    etime: 943.46
+    text: "Он может выключаться, когда коннектируешься с айпада, например."
+  reason: Ошибочно присвоено EldarMurtazin. Эльдар не участвовал в ep254. Гости - Николай Добровольский и Андрей Амелянчук из Parallels. Текст про виртуализацию (PD6, перформанс).
+  possible_matches:
+  - person_id: andrey_amelyanchuk
+    confidence: 0.6
+    reason: Технический контент, меньше реплик в эпизоде (57 vs 204)
+  - person_id: nikolay_dobrovolsky
+    confidence: 0.4
+    reason: Альтернативный вариант - второй гость из Parallels
+- episode: 227
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 10
+  replies_count: 3
+  reference_segment:
+    stime: 3819.18
+    etime: 3824.02
+    text: "Например, как одна из... Ну, не знаю, у меня вот примерно такие ощущения были."
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+
+
+- episode: 237
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 31
+  replies_count: 7
+  reference_segment:
+    stime: 463.57
+    etime: 470.41
+    text: "И они сказали нам, что наша программа уходит в бессрочный отпуск по их инициатив"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.4
+    reason: Контекст (5 раз рядом)
+
+- episode: 277
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 17
+  replies_count: 6
+  reference_segment:
+    stime: 380.94
+    etime: 383.26
+    text: "Например iMessage?"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.3
+    reason: Контекст (4 раз рядом)
+  - person_id: gray
+    confidence: 0.3
+    reason: Контекст (4 раз рядом)
+
+- episode: 296
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 31
+  replies_count: 8
+  reference_segment:
+    stime: 785.99
+    etime: 788.67
+    text: "PHP прям под Джавой."
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: gray
+    confidence: 0.2
+    reason: Контекст (3 раз рядом)
+  - person_id: umputun
+    confidence: 0.1
+    reason: Контекст (2 раз рядом)
+
+- episode: 227
+  speaker: SPEAKER_MISATTRIBUTED_LAVALE
+  total_duration_sec: 55
+  replies_count: 8
+  reference_segment:
+    stime: 2197.41
+    etime: 2211.12
+    text: "Ясно, что 7 они сами признают, что ну как-то... Были люди, которые говорили, что"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: gray
+    confidence: 0.2
+    reason: Контекст (3 раз рядом)
+  - person_id: umputun
+    confidence: 0.1
+    reason: Контекст (1 раз рядом)
+
+- episode: 238
+  speaker: SPEAKER_MISATTRIBUTED_PETR
+  total_duration_sec: 19
+  replies_count: 3
+  reference_segment:
+    stime: 2164.11
+    etime: 2167.68
+    text: "Он смотрит на эту проблему исключительно как на техническую."
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: umputun
+    confidence: 0.2
+    reason: Контекст (1 раз рядом)

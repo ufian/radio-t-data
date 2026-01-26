@@ -2229,3 +2229,116 @@ tasks:
   - person_id: umputun
     confidence: 0.3
     reason: Некоторые реплики могут быть Umputun
+- episode: 400
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 26
+  replies_count: 8
+  reference_segment:
+    stime: 467.26
+    etime: 469.32
+    text: "А 406-й будет доступен только частично."
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.3
+    reason: Контекст (5 раз рядом)
+  - person_id: gray
+    confidence: 0.2
+    reason: Контекст (4 раз рядом)
+
+- episode: 404
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 54
+  replies_count: 8
+  reference_segment:
+    stime: 2983.19
+    etime: 2994.79
+    text: "что количество открытого Wi-Fi, не требующего каких-то дополнительных подписок и"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: gray
+    confidence: 0.3
+    reason: Контекст (5 раз рядом)
+  - person_id: umputun
+    confidence: 0.2
+    reason: Контекст (4 раз рядом)
+
+- episode: 435
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 35
+  replies_count: 9
+  reference_segment:
+    stime: 182.87
+    etime: 184.79
+    text: "Все хорошо."
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.3
+    reason: Контекст (5 раз рядом)
+  - person_id: ksenks
+    confidence: 0.2
+    reason: Контекст (4 раз рядом)
+
+- episode: 445
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 11
+  replies_count: 3
+  reference_segment:
+    stime: 4285.48
+    etime: 4289.46
+    text: "Так там же уже есть, они уже предлагают, там чуть пониже в темах есть уже эта шт"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: umputun
+    confidence: 0.3
+    reason: Контекст (2 раз рядом)
+  - person_id: ksenks
+    confidence: 0.2
+    reason: Контекст (1 раз рядом)
+
+- episode: 407
+  speaker: SPEAKER_MISATTRIBUTED_PETR
+  total_duration_sec: 14
+  replies_count: 2
+  reference_segment:
+    stime: 4062.93
+    etime: 4068.74
+    text: "И вот думалось, что этого всем не хватает, что всем хочется... Почему вам кажетс"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.2
+    reason: Контекст (1 раз рядом)
+  - person_id: umputun
+    confidence: 0.2
+    reason: Контекст (1 раз рядом)
+
+- episode: 408
+  speaker: SPEAKER_MISATTRIBUTED_PETR
+  total_duration_sec: 12
+  replies_count: 1
+  reference_segment:
+    stime: 3695.66
+    etime: 3707.49
+    text: "Я не могу сказать, что... То есть я не вижу, наверное, языка, на котором это был"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+
+
+- episode: 430
+  speaker: SPEAKER_MISATTRIBUTED_PETR
+  total_duration_sec: 14
+  replies_count: 2
+  reference_segment:
+    stime: 1437.34
+    etime: 1447.85
+    text: "Во-первых, мы не смогли найти ни одного андроида, в котором бы технологии... Ест"
+  reason: Неопределённый контекст, требуется голосовое сравнение
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.2
+    reason: Контекст (1 раз рядом)
+  - person_id: umputun
+    confidence: 0.2
+    reason: Контекст (1 раз рядом)
