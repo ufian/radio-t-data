@@ -178,6 +178,97 @@ class RuleEngine:
 
         return subs
 
+    def apply_rename_episode_rule(self, subs: list[dict], rule: dict, stats: CleaningStats, episode: int) -> list[dict]:
+        """Применяет правило rename_episode (переименование спикера в конкретном эпизоде)"""
+        rule_episode = rule.get('episode')
+        if rule_episode != episode:
+            return subs  # Правило не для этого эпизода
+
+        from_name = rule['from']
+        to_name = rule['to']
+        rule_id = rule['id']
+        time_range = rule.get('time_range')
+
+        for sub in subs:
+            if sub.get('author') != from_name:
+                continue
+
+            # Проверяем time_range если указан
+            if time_range:
+                sub_stime = sub.get('stime', 0)
+                # Поддерживаем оба формата: список [start, end] и словарь {start, end}
+                if isinstance(time_range, list) and len(time_range) >= 2:
+                    start, end = time_range[0], time_range[1]
+                elif isinstance(time_range, dict):
+                    start = time_range.get('start', 0)
+                    end = time_range.get('end', float('inf'))
+                else:
+                    continue  # Неизвестный формат
+                if not (start <= sub_stime <= end):
+                    continue
+
+            old_author = sub['author']
+            stats.changes.append(ChangeRecord(
+                episode=episode,
+                sub_id=sub.get('id', ''),
+                old_author=old_author,
+                new_author=to_name,
+                rule_id=rule_id,
+                text=sub.get('text', '')[:50]
+            ))
+            stats.changes_by_rule[rule_id] += 1
+            stats.subs_changed += 1
+            sub['author'] = to_name
+
+        return subs
+
+    def apply_ad_time_range_rule(self, subs: list[dict], rule: dict, stats: CleaningStats, episode: int) -> list[dict]:
+        """Применяет правило ad_time_range (любой спикер в диапазоне → _ad)"""
+        rule_episode = rule.get('episode')
+        if rule_episode != episode:
+            return subs
+
+        rule_id = rule['id']
+        time_range = rule.get('time_range')
+        if not time_range:
+            return subs
+
+        # Парсим time_range
+        if isinstance(time_range, list) and len(time_range) >= 2:
+            start, end = time_range[0], time_range[1]
+        elif isinstance(time_range, dict):
+            start = time_range.get('start', 0)
+            end = time_range.get('end', float('inf'))
+        else:
+            return subs
+
+        # Исключаем спикеров которых не нужно переименовывать (уже _ad или _artifact)
+        exclude_speakers = rule.get('exclude', ['_ad', '_artifact', 'SPEAKER_99'])
+
+        for sub in subs:
+            sub_stime = sub.get('stime', 0)
+            old_author = sub.get('author', '')
+
+            # Пропускаем если вне диапазона или уже исключён
+            if not (start <= sub_stime <= end):
+                continue
+            if old_author in exclude_speakers:
+                continue
+
+            stats.changes.append(ChangeRecord(
+                episode=episode,
+                sub_id=sub.get('id', ''),
+                old_author=old_author,
+                new_author='_ad',
+                rule_id=rule_id,
+                text=sub.get('text', '')[:50]
+            ))
+            stats.changes_by_rule[rule_id] += 1
+            stats.subs_changed += 1
+            sub['author'] = '_ad'
+
+        return subs
+
     def apply_batch_decisions(self, subs: list[dict], entries: list[dict], stats: CleaningStats, episode: int) -> list[dict]:
         """Применяет решения из батча"""
         # Создаём индекс по тексту и времени для быстрого поиска
@@ -353,6 +444,10 @@ class CleaningSystem:
                     subs = self.engine.apply_duration_threshold(subs, rule, self.stats, episode)
                 elif rule_type == 'normalize':
                     subs = self.engine.apply_normalize_rule(subs, rule, self.stats, episode)
+                elif rule_type == 'rename_episode':
+                    subs = self.engine.apply_rename_episode_rule(subs, rule, self.stats, episode)
+                elif rule_type == 'ad_time_range':
+                    subs = self.engine.apply_ad_time_range_rule(subs, rule, self.stats, episode)
 
         # Применяем батчи
         for batch in batches:

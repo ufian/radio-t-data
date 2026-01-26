@@ -2641,7 +2641,7 @@
       "id": "65c9cc839f28b80e638f0335",
       "issue": 637,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 1253.76,
       "etime": 1255.42,
       "text": "И как ему сказать, что нет, это про дно?"
@@ -2956,7 +2956,7 @@
       "id": "65c9cc839f28b80e638f0358",
       "issue": 637,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 1411.17,
       "etime": 1411.87,
       "text": "И что, получилось?"
@@ -2974,7 +2974,7 @@
       "id": "65c9cc839f28b80e638f035a",
       "issue": 637,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 1415.4,
       "etime": 1416.76,
       "text": "И получилось, да?"
@@ -4846,7 +4846,7 @@
       "id": "65c9cc839f28b80e638f042a",
       "issue": 637,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 2274.15,
       "etime": 2275.53,
       "text": "У нас же техническое шоу."
@@ -9535,7 +9535,7 @@
       "id": "65c9cc839f28b80e638f0633",
       "issue": 637,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 4532.57,
       "etime": 4533.53,
       "text": "Трансмиссион."
@@ -9913,7 +9913,7 @@
       "id": "65c9cc839f28b80e638f065d",
       "issue": 637,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 4648.09,
       "etime": 4651.93,
       "text": "Реально, это просто следующий поколение Kafka, как бы, да?"
@@ -9922,7 +9922,7 @@
       "id": "65c9cc839f28b80e638f065e",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 4652.87,
       "etime": 4659.48,
       "text": "Это просто облачный офферинг Kafka, плюс вот этот ksql как провайдер, чтобы красиво писать SQL поверх Kafka."
@@ -9931,7 +9931,7 @@
       "id": "65c9cc839f28b80e638f065f",
       "issue": 637,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 4659.68,
       "etime": 4661.9,
       "text": "Куча оболочек разных вокруг Kafka."
@@ -9940,7 +9940,7 @@
       "id": "65c9cc839f28b80e638f0660",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 4661.94,
       "etime": 4663.76,
       "text": "Понятно."
@@ -9949,7 +9949,7 @@
       "id": "65c9cc839f28b80e638f0661",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 4663.78,
       "etime": 4668.17,
       "text": "То есть ksql как сервис мы теперь не ой."
@@ -12874,7 +12874,7 @@
       "id": "65c9cc839f28b80e638f07a6",
       "issue": 637,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 5993.51,
       "etime": 5995.19,
       "text": "Это к чему?"
@@ -13162,7 +13162,7 @@
       "id": "65c9cc839f28b80e638f07c6",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 6123.03,
       "etime": 6124.59,
       "text": "Это нормально."
@@ -13171,7 +13171,7 @@
       "id": "65c9cc839f28b80e638f07c7",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 6124.65,
       "etime": 6125.15,
       "text": "Так у всех."
@@ -13180,7 +13180,7 @@
       "id": "65c9cc839f28b80e638f07c8",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6127.36,
       "etime": 6134.52,
       "text": "Кстати, если сравнивать с AWS, с тем же RDS, то там цены тоже конские на вот эти Managed Instances и баз данных."
@@ -13189,7 +13189,7 @@
       "id": "65c9cc839f28b80e638f07c9",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6134.58,
       "etime": 6143,
       "text": "Например, опять же, у них, конечно, сложно понять, что это туда включено, но DBT-T3 Medium у них стоит 400 долларов."
@@ -13198,7 +13198,7 @@
       "id": "65c9cc839f28b80e638f07ca",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6143.1,
       "etime": 6148.9,
       "text": "Что бы это ни значило, конечно, что такое DBT-T3 Medium, но я к тому, что цены там далеко не в 10%."
@@ -13207,7 +13207,7 @@
       "id": "65c9cc839f28b80e638f07cb",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6152.6,
       "etime": 6154.47,
       "text": "с этим, с RDS."
@@ -13216,7 +13216,7 @@
       "id": "65c9cc839f28b80e638f07cc",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6154.51,
       "etime": 6158.3,
       "text": "И тогда цена в 200 долларов, она даже не выглядит большой."
@@ -13225,7 +13225,7 @@
       "id": "65c9cc839f28b80e638f07cd",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 6158.4,
       "etime": 6160.64,
       "text": "ТИТ, ТИТ ремедиум, ТИТ, буква Т, да?"
@@ -13234,7 +13234,7 @@
       "id": "65c9cc839f28b80e638f07ce",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6161.61,
       "etime": 6164.17,
       "text": "Да, называется db.t3-medium."
@@ -13243,7 +13243,7 @@
       "id": "65c9cc839f28b80e638f07cf",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 6165.13,
       "etime": 6171.49,
       "text": "Ну, это вот эти инстанции, которые раскручиваются, пока ты не съел все кредиты."
@@ -13252,7 +13252,7 @@
       "id": "65c9cc839f28b80e638f07d0",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 6171.55,
       "etime": 6174.99,
       "text": "И t-medium, по-моему, это с двумя ядрами."
@@ -13261,7 +13261,7 @@
       "id": "65c9cc839f28b80e638f07d1",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 6175.07,
       "etime": 6178.8,
       "text": "И, по-моему, с двумя гигабайтами или четырьмя гигабайтами."
@@ -13270,7 +13270,7 @@
       "id": "65c9cc839f28b80e638f07d2",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 6178.88,
       "etime": 6181.44,
       "text": "Маленькая какая-то штучка такая."
@@ -13279,7 +13279,7 @@
       "id": "65c9cc839f28b80e638f07d3",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 6181.5,
       "etime": 6182.72,
       "text": "Для кредитов там не очень много."
@@ -13288,7 +13288,7 @@
       "id": "65c9cc839f28b80e638f07d4",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6184.17,
       "etime": 6192.84,
       "text": "Ну, то есть она попадает где-то как раз в 100 долларовую балл этот список от DigitalOcean."
@@ -13297,7 +13297,7 @@
       "id": "65c9cc839f28b80e638f07d5",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6192.88,
       "etime": 6197.24,
       "text": "Поэтому, в принципе говоря, по сути DigitalOcean стоит в 2-3 раза дешевле, чем RDS."
@@ -13306,7 +13306,7 @@
       "id": "65c9cc839f28b80e638f07d6",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6198.83,
       "etime": 6202.83,
       "text": "Так что уже, я говорю, если сравнивать с конкурентами, то выглядит так и плохо."
@@ -13315,7 +13315,7 @@
       "id": "65c9cc839f28b80e638f07d7",
       "issue": 637,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6202.93,
       "etime": 6207.25,
       "text": "Но, конечно, для маленьких прототипчиков 100 долларов ты удавишься платить за это."
@@ -13324,7 +13324,7 @@
       "id": "65c9cc839f28b80e638f07d8",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 6207.35,
       "etime": 6208.15,
       "text": "Да, обидно."
@@ -13333,7 +13333,7 @@
       "id": "65c9cc839f28b80e638f07d9",
       "issue": 637,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 6208.21,
       "etime": 6215.96,
       "text": "Особенно, когда ты понимаешь, что поднять ты это можешь в худшем случае в два раза дешевле, а, наверное, в практике в четыре раза дешевле."
@@ -17590,7 +17590,7 @@
       "id": "65c9cc839f28b80e638f09b2",
       "issue": 637,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 8223.38,
       "etime": 8224.38,
       "text": "Я про него где-то читал."
@@ -17608,7 +17608,7 @@
       "id": "65c9cc839f28b80e638f09b4",
       "issue": 637,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 8225.68,
       "etime": 8226.56,
       "text": "Да, у меня, наверное."
@@ -18913,7 +18913,7 @@
       "id": "65c9cc839f28b80e638f0a45",
       "issue": 637,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 8818.22,
       "etime": 8818.8,
       "text": "Как?"

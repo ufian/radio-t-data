@@ -319,7 +319,7 @@
       "id": "65c9a579c9c275d1d464bcbe",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 150.75,
       "etime": 155.08,
       "text": "Евгений, ты, наверное, просто ходишь за новостями на неправильный сайт."
@@ -328,7 +328,7 @@
       "id": "65c9a579c9c275d1d464bcbf",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 155.12,
       "etime": 158.76,
       "text": "Есть такой главный сайт, который все читают, ты, конечно же, его знаешь."
@@ -337,7 +337,7 @@
       "id": "65c9a579c9c275d1d464bcc0",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 158.78,
       "etime": 162.62,
       "text": "Это сайт называется «Ньюс Игорь Комбинатор»."
@@ -346,7 +346,7 @@
       "id": "65c9a579c9c275d1d464bcc1",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 162.68,
       "etime": 165.32,
       "text": "Вот там про раз пишут каждый день, а иногда даже по два раза."
@@ -499,7 +499,7 @@
       "id": "65c9a579c9c275d1d464bcd2",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 226.08,
       "etime": 230.42,
       "text": "Вот, я сразу скажу, что я не согласен с мнением Григория по этому поводу."
@@ -508,7 +508,7 @@
       "id": "65c9a579c9c275d1d464bcd3",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 230.78,
       "etime": 233.24,
       "text": "Rust это не замена Go и не конкурент Go."
@@ -535,7 +535,7 @@
       "id": "65c9a579c9c275d1d464bcd6",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 240.81,
       "etime": 244.41,
       "text": "Rust это замена C++, это такой новый C++."
@@ -544,7 +544,7 @@
       "id": "65c9a579c9c275d1d464bcd7",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 244.49,
       "etime": 247.53,
       "text": "Есть очень большое количество проблем, которые..."
@@ -553,7 +553,7 @@
       "id": "65c9a579c9c275d1d464bcd8",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 248.25,
       "etime": 251.04,
       "text": "надо решать на достаточно низкоуровневых языках программирования."
@@ -562,7 +562,7 @@
       "id": "65c9a579c9c275d1d464bcd9",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 251.1,
       "etime": 253.26,
       "text": "Сейчас они решают только на C++."
@@ -571,7 +571,7 @@
       "id": "65c9a579c9c275d1d464bcda",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 253.32,
       "etime": 255.94,
       "text": "Ну, местами еще на D. Вот для этого есть RAST."
@@ -616,7 +616,7 @@
       "id": "65c9a579c9c275d1d464bcdf",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 267,
       "etime": 268.24,
       "text": "Нет, даже близко."
@@ -634,7 +634,7 @@
       "id": "65c9a579c9c275d1d464bce1",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 271.27,
       "etime": 274.13,
       "text": "Это common misconception."
@@ -670,7 +670,7 @@
       "id": "65c9a579c9c275d1d464bce5",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 283.47,
       "etime": 284.39,
       "text": "Нет."
@@ -679,7 +679,7 @@
       "id": "65c9a579c9c275d1d464bce6",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 284.45,
       "etime": 290.51,
       "text": "У Go есть одно очень принципиальное свойство, которое просто сразу исключает его из этой ниши."
@@ -688,7 +688,7 @@
       "id": "65c9a579c9c275d1d464bce7",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 290.55,
       "etime": 292.49,
       "text": "А именно наличие сборщика мусора."
@@ -697,7 +697,7 @@
       "id": "65c9a579c9c275d1d464bce8",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 292.55,
       "etime": 296.4,
       "text": "Я исключаю его сборщик мусора, без которого описать вообще невозможно."
@@ -706,7 +706,7 @@
       "id": "65c9a579c9c275d1d464bce9",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 296.42,
       "etime": 305.7,
       "text": "Поэтому если в твоей программе будет кип размером 50 гигабайт, и там будут в этом кипе хранить сложные данные, то на Go это нельзя будет написать."
@@ -715,7 +715,7 @@
       "id": "65c9a579c9c275d1d464bcea",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 305.72,
       "etime": 307.56,
       "text": "Потому что будет очень тормозить сборщик мусора."
@@ -796,7 +796,7 @@
       "id": "65c9a579c9c275d1d464bcf3",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 327.27,
       "etime": 328.97,
       "text": "Мне кажется, это миф."
@@ -805,7 +805,7 @@
       "id": "65c9a579c9c275d1d464bcf4",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 329.01,
       "etime": 332.06,
       "text": "Потому что я сейчас на работе большую часть времени пишу на «Джаве»."
@@ -814,7 +814,7 @@
       "id": "65c9a579c9c275d1d464bcf5",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 332.92,
       "etime": 345.55,
       "text": "И вот в Java сборщик мусора вроде как самый продвинутый вообще из всего, что придумало человечество, и развивают они и развивают, уже много чего придумали, а все никак не придумали, как делать так, чтобы программы хорошо работали, если хип очень большой."
@@ -841,7 +841,7 @@
       "id": "65c9a579c9c275d1d464bcf8",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 356.11,
       "etime": 367.41,
       "text": "Вот, ну, то есть у меня хип действительно где-то размера гигабайт 15, и уже приходится использовать всякие офф-хип решения как раз потому, что паузы и пользователи страдают."
@@ -850,7 +850,7 @@
       "id": "65c9a579c9c275d1d464bcf9",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 367.47,
       "etime": 372.6,
       "text": "А на низкору низках программирования без сборочек мусора, типа C++, никаких проблем нет."
@@ -886,7 +886,7 @@
       "id": "65c9a579c9c275d1d464bcfd",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 393.04,
       "etime": 393.79,
       "text": "Это неправда."
@@ -895,7 +895,7 @@
       "id": "65c9a579c9c275d1d464bcfe",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 393.81,
       "etime": 394.91,
       "text": "Это не ограниченная ниша."
@@ -904,7 +904,7 @@
       "id": "65c9a579c9c275d1d464bcff",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 394.93,
       "etime": 397.01,
       "text": "Это вообще суперогромная ниша."
@@ -913,7 +913,7 @@
       "id": "65c9a579c9c275d1d464bd00",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 397.05,
       "etime": 404.03,
       "text": "Потому что, во-первых, очень большое количество программ, которые пишут в интернете, очень требовательны к ресурсам."
@@ -940,7 +940,7 @@
       "id": "65c9a579c9c275d1d464bd03",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 411.38,
       "etime": 416.06,
       "text": "Это, конечно, чатик пусть написан будет хоть на питоне, это не важно."
@@ -949,7 +949,7 @@
       "id": "65c9a579c9c275d1d464bd04",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 416.1,
       "etime": 427.17,
       "text": "Но как только в программе начинается очень много данных, ну там, не знаю, гигабайты в памяти хранятся, и как только нужно вот именно экономить время процессора, это, мне кажется, бывает, например, во всех больших компаниях."
@@ -958,7 +958,7 @@
       "id": "65c9a579c9c275d1d464bd05",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 427.19,
       "etime": 430.93,
       "text": "Там вот, просто даже и на джаве, может, не всегда попишешь."
@@ -967,7 +967,7 @@
       "id": "65c9a579c9c275d1d464bd06",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 430.99,
       "etime": 432.21,
       "text": "Хочется что-то быстрое."
@@ -976,7 +976,7 @@
       "id": "65c9a579c9c275d1d464bd07",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 433.22,
       "etime": 441.59,
       "text": "эффективная во первых во вторых на самом деле сейчас они про это не говорят потому что им до этого далеко в расти всегда есть всякие маленькие устройства у которых"
@@ -985,7 +985,7 @@
       "id": "65c9a579c9c275d1d464bd08",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 443.45,
       "etime": 446.03,
       "text": "очень медленные процессоры, мало памяти."
@@ -994,7 +994,7 @@
       "id": "65c9a579c9c275d1d464bd09",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 446.09,
       "etime": 447.97,
       "text": "Ну, типа часов, например."
@@ -1003,7 +1003,7 @@
       "id": "65c9a579c9c275d1d464bd0a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 447.99,
       "etime": 456.12,
       "text": "И вот никогда Java не будет такой, чтобы... Или там любой выскоренный язык программера никогда не будет таким, что можно будет на нем писать вот такие устройства."
@@ -1012,7 +1012,7 @@
       "id": "65c9a579c9c275d1d464bd0b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 456.18,
       "etime": 462.18,
       "text": "Ну, потому что всегда хочется устройства сделать еще меньше, еще более энергоэффективным и так далее."
@@ -1129,7 +1129,7 @@
       "id": "65c9a579c9c275d1d464bd18",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 515.47,
       "etime": 523.31,
       "text": "Скажем так, часы могут запускать Java, но они могут запускать Rust, и при этом есть батарейка, условно говоря, в два раза меньше."
@@ -1138,7 +1138,7 @@
       "id": "65c9a579c9c275d1d464bd19",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 523.33,
       "etime": 526.98,
       "text": "Соответственно, можно будет сделать, чтобы они работали в полтора раза дольше."
@@ -1165,7 +1165,7 @@
       "id": "65c9a579c9c275d1d464bd1c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 534.28,
       "etime": 535.74,
       "text": "Вот, хороший вопрос."
@@ -1174,7 +1174,7 @@
       "id": "65c9a579c9c275d1d464bd1d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 535.76,
       "etime": 539.16,
       "text": "Потому что на C++ очень легко сделать так, что программа будет падать."
@@ -1183,7 +1183,7 @@
       "id": "65c9a579c9c275d1d464bd1e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 539.2,
       "etime": 551.85,
       "text": "И причем, как это обычно бывает, программа не падает, пока ты ее разрабатываешь, а когда вот ты ее выкатил на кластер, или там, не знаю, на часы, и уехал на выходные отдыхать, она начала падать."
@@ -1192,7 +1192,7 @@
       "id": "65c9a579c9c275d1d464bd1f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 551.87,
       "etime": 553.25,
       "text": "Это очень неприятно."
@@ -1255,7 +1255,7 @@
       "id": "65c9a579c9c275d1d464bd26",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 575.35,
       "etime": 583.48,
       "text": "Так, если мы говорим про кластер, это в первую очередь не про процессор, потому что действительно в процессор современные программы обычно не очень упираются."
@@ -1264,7 +1264,7 @@
       "id": "65c9a579c9c275d1d464bd27",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 583.52,
       "etime": 585.76,
       "text": "Обычно все-таки упираются в большие хипы."
@@ -1318,7 +1318,7 @@
       "id": "65c9a579c9c275d1d464bd2d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 602.1,
       "etime": 605.16,
       "text": "Вот есть облако современное, где ты платишь за время."
@@ -1327,7 +1327,7 @@
       "id": "65c9a579c9c275d1d464bd2e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 605.18,
       "etime": 606.66,
       "text": "Я пытаюсь тебе сказать, что пока на этом ноде было..."
@@ -1372,7 +1372,7 @@
       "id": "65c9a579c9c275d1d464bd33",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 640.93,
       "etime": 644.57,
       "text": "Слушай, я не знаю, потому что я работаю в организации, в которой..."
@@ -1381,7 +1381,7 @@
       "id": "65c9a579c9c275d1d464bd34",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 645.69,
       "etime": 661.44,
       "text": "Когда тебе нужно еще несколько серверов, нужно все время тщательно обосновывать, зачем тебе нужно действительно так много серверов, и еще разные люди говорят, сколько это на самом деле стоит, и нужно думать, стоят программисты их серверов или не стоят."
@@ -1390,7 +1390,7 @@
       "id": "65c9a579c9c275d1d464bd35",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 661.46,
       "etime": 664.61,
       "text": "В общем, зачастую бывает так, что памяти действительно не хватает."
@@ -1516,7 +1516,7 @@
       "id": "65c9a579c9c275d1d464bd43",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 695.22,
       "etime": 696.62,
       "text": "Да, я так расстроен."
@@ -1525,7 +1525,7 @@
       "id": "65c9a579c9c275d1d464bd44",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 696.66,
       "etime": 702.03,
       "text": "Потому что сейчас уже даже самые маленькие организации сразу все ставят много серверов и начинают что-то на них считать."
@@ -1534,7 +1534,7 @@
       "id": "65c9a579c9c275d1d464bd45",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 702.13,
       "etime": 704.77,
       "text": "Мапредюсы какие-то запускать."
@@ -1660,7 +1660,7 @@
       "id": "65c9a579c9c275d1d464bd53",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 750.54,
       "etime": 758.2,
       "text": "Смотри, Евгений, просто ты, наверное, программист такого, или, как сказать, управляющий программистом такого достаточно высокого уровня, который пишет в основном"
@@ -1669,7 +1669,7 @@
       "id": "65c9a579c9c275d1d464bd54",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 759.17,
       "etime": 760.89,
       "text": "Ну, бизнес-логику, скажем так."
@@ -1678,7 +1678,7 @@
       "id": "65c9a579c9c275d1d464bd55",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 760.93,
       "etime": 770.7,
       "text": "Нет, не бизнес-логика, это такой общий термин, такой вот, не знаю, как сказать, бизнес-лапшу, вот есть такой термин, я надеюсь, тебя это не, так сказать, не расстраивает."
@@ -1696,7 +1696,7 @@
       "id": "65c9a579c9c275d1d464bd57",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 777.9,
       "etime": 783.69,
       "text": "Я хочу сказать, что Женя, когда пишет эти программы, у него есть другие программы, которые он ставит просто и использует."
@@ -1705,7 +1705,7 @@
       "id": "65c9a579c9c275d1d464bd58",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 783.71,
       "etime": 791.11,
       "text": "Например, программу Mongo, или программу MySQL, или программу Ядро Линукса, или много других подобных программ."
@@ -1768,7 +1768,7 @@
       "id": "65c9a579c9c275d1d464bd5f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 825.01,
       "etime": 830.4,
       "text": "Смотри, Евгений, давай начнем с того, что, так сказать, вот эти сами программы, они написаны все-таки не на Java."
@@ -1777,7 +1777,7 @@
       "id": "65c9a579c9c275d1d464bd60",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 830.44,
       "etime": 833.18,
       "text": "Они написаны скорее на C или на C++."
@@ -1786,7 +1786,7 @@
       "id": "65c9a579c9c275d1d464bd61",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 833.24,
       "etime": 837.43,
       "text": "Типа Mongo, типа Hydra Linux, типа MySQL или я не знаю какие, типа Nginx."
@@ -1849,7 +1849,7 @@
       "id": "65c9a579c9c275d1d464bd68",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 852.3,
       "etime": 859.63,
       "text": "Много становится, потому что если посмотреть на рейтинг языков программирования на разных сайтах, там вот язык программирования C, например, очень популярный."
@@ -1867,7 +1867,7 @@
       "id": "65c9a579c9c275d1d464bd6a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 862.69,
       "etime": 863.87,
       "text": "Нет, я думаю, не только ядро."
@@ -1876,7 +1876,7 @@
       "id": "65c9a579c9c275d1d464bd6b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 863.91,
       "etime": 868.69,
       "text": "Ну, типа, не знаю, какой-то Монге, там есть всякие программы на CPU."
@@ -1993,7 +1993,7 @@
       "id": "65c9a579c9c275d1d464bd78",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 910.55,
       "etime": 911.11,
       "text": "Системный язык."
@@ -2002,7 +2002,7 @@
       "id": "65c9a579c9c275d1d464bd79",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 911.13,
       "etime": 918.1,
       "text": "Давай я скажу сейчас некоторую мысль, которую, может быть, несколько в другую сторону."
@@ -2011,7 +2011,7 @@
       "id": "65c9a579c9c275d1d464bd7a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 918.14,
       "etime": 923.8,
       "text": "Мне кажется, Rust никогда не станет языком программирования, на котором будут писать все."
@@ -2020,7 +2020,7 @@
       "id": "65c9a579c9c275d1d464bd7b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 923.82,
       "etime": 925.78,
       "text": "Словом говоря, Rust не заменит никогда Java."
@@ -2029,7 +2029,7 @@
       "id": "65c9a579c9c275d1d464bd7c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 927.03,
       "etime": 930.19,
       "text": "Потому что когда у тебя есть сборщик мусора, это очень удобно."
@@ -2038,7 +2038,7 @@
       "id": "65c9a579c9c275d1d464bd7d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 930.25,
       "etime": 934.17,
       "text": "И раз на расте писать тяжело, если так прямо говорить."
@@ -2047,7 +2047,7 @@
       "id": "65c9a579c9c275d1d464bd7e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 934.21,
       "etime": 941.86,
       "text": "И если надо писать много-много кода, чтобы оно раз быстро-быстро поехало в продакшн, а программисты дорогие, и надо, чтобы они быстро-быстро все писали, то раз, наверное, действительно может быть не для этого."
@@ -2074,7 +2074,7 @@
       "id": "65c9a579c9c275d1d464bd81",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 949.91,
       "etime": 951.89,
       "text": "Почему Go и Java?"
@@ -2083,7 +2083,7 @@
       "id": "65c9a579c9c275d1d464bd82",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 952.19,
       "etime": 953.5,
       "text": "Go может заменить Java."
@@ -2092,7 +2092,7 @@
       "id": "65c9a579c9c275d1d464bd83",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 953.72,
       "etime": 958.26,
       "text": "Java будет из одной области, SQL Plus и Rust из другой области."
@@ -2155,7 +2155,7 @@
       "id": "65c9a579c9c275d1d464bd8a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 979.38,
       "etime": 979.8,
       "text": "Это не тот."
@@ -2164,7 +2164,7 @@
       "id": "65c9a579c9c275d1d464bd8b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 979.9,
       "etime": 981.72,
       "text": "Это такой системный, который питон."
@@ -2173,7 +2173,7 @@
       "id": "65c9a579c9c275d1d464bd8c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 982.46,
       "etime": 988.69,
       "text": "Он такой же не системный, как Python, просто статическая типизация быстрее работает."
@@ -2236,7 +2236,7 @@
       "id": "65c9a579c9c275d1d464bd93",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1013.4,
       "etime": 1017.38,
       "text": "Я не видел программ на C++, которые не падают."
@@ -2245,7 +2245,7 @@
       "id": "65c9a579c9c275d1d464bd94",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1017.46,
       "etime": 1023.27,
       "text": "Если программу писали год и писал больше одного человека, у нее есть баги, которые иногда выстреливают."
@@ -2254,7 +2254,7 @@
       "id": "65c9a579c9c275d1d464bd95",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1023.31,
       "etime": 1029.93,
       "text": "Программы просто перезапускаются, никто их даже не пытается ловить, если там это случается не очень часто."
@@ -2281,7 +2281,7 @@
       "id": "65c9a579c9c275d1d464bd98",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1035.1,
       "etime": 1038.3,
       "text": "Скажем так, программу на расте уронить гораздо сложнее."
@@ -2290,7 +2290,7 @@
       "id": "65c9a579c9c275d1d464bd99",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1038.34,
       "etime": 1046.94,
       "text": "То есть там по умолчанию, если ты пишешь, как бы, там есть слово «unsave», если ты пишешь слово «unsave», ты можешь делать так, чтобы программа упадет."
@@ -2299,7 +2299,7 @@
       "id": "65c9a579c9c275d1d464bd9a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1047,
       "etime": 1054.37,
       "text": "Если ты не используешь «unsave», это чтобы уронить программу, нужно вызвать какой-то код, который внутри себя делает что-то такое «unsave», чтобы она упала."
@@ -2308,7 +2308,7 @@
       "id": "65c9a579c9c275d1d464bd9b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1056.44,
       "etime": 1063.56,
       "text": "Раз это, по сути, точно такой же C++, просто он там на этапе компиляции проверяет в некоторых местах, что ты не делаешь что-то плохое."
@@ -2335,7 +2335,7 @@
       "id": "65c9a579c9c275d1d464bd9e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1070.08,
       "etime": 1071.85,
       "text": "Это огромное подмножество."
@@ -2362,7 +2362,7 @@
       "id": "65c9a579c9c275d1d464bda1",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1080.49,
       "etime": 1084.73,
       "text": "Смотри, есть такой язык программирования, популярный в последнее время становится, язык программирования Swift."
@@ -2371,7 +2371,7 @@
       "id": "65c9a579c9c275d1d464bda2",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1086.21,
       "etime": 1087.97,
       "text": "Ксения, наверное, про него знает."
@@ -2380,7 +2380,7 @@
       "id": "65c9a579c9c275d1d464bda3",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_LAVALE",
+      "author": "Ksenks",
       "stime": 1088.05,
       "etime": 1091.31,
       "text": "Где он, интересно, становится очень популярным?"
@@ -2398,7 +2398,7 @@
       "id": "65c9a579c9c275d1d464bda5",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1096.64,
       "etime": 1100.24,
       "text": "Он, очевидно, становится популярен на Apple, на iPhone'ах."
@@ -2416,7 +2416,7 @@
       "id": "65c9a579c9c275d1d464bda7",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1106.69,
       "etime": 1110.29,
       "text": "Скажем так, очевидно, через три года все будут писать только на нем."
@@ -2587,7 +2587,7 @@
       "id": "65c9a579c9c275d1d464bdba",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1179.54,
       "etime": 1180.38,
       "text": "Нет, не может быть."
@@ -2596,7 +2596,7 @@
       "id": "65c9a579c9c275d1d464bdbb",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1180.4,
       "etime": 1182.76,
       "text": "Потому что в моем понимании Swift это просто..."
@@ -2605,7 +2605,7 @@
       "id": "65c9a579c9c275d1d464bdbc",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1183.64,
       "etime": 1185.53,
       "text": "Синтактический сахар для Objective-C."
@@ -2614,7 +2614,7 @@
       "id": "65c9a579c9c275d1d464bdbd",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1185.57,
       "etime": 1188.53,
       "text": "Просто это более правильный Objective-C."
@@ -2623,7 +2623,7 @@
       "id": "65c9a579c9c275d1d464bdbe",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1188.59,
       "etime": 1196.93,
       "text": "И просто Swift станет популярным тогда, когда перестанет продаваться последний телефон, на котором работает, я не знаю, какой там, iOS 7, наверное, да?"
@@ -2632,7 +2632,7 @@
       "id": "65c9a579c9c275d1d464bdbf",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1196.95,
       "etime": 1198.73,
       "text": "Swift же только в iOS 8 работает."
@@ -2722,7 +2722,7 @@
       "id": "65c9a579c9c275d1d464bdc9",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1238.57,
       "etime": 1244.31,
       "text": "У RAST, очевидно, очень много... Это один из аргументов, такой маленький аргументик."
@@ -2731,7 +2731,7 @@
       "id": "65c9a579c9c275d1d464bdca",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1244.33,
       "etime": 1245.45,
       "text": "Ну, подумаешь, не падают."
@@ -2740,7 +2740,7 @@
       "id": "65c9a579c9c275d1d464bdcb",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1245.49,
       "etime": 1247.17,
       "text": "Нет-нет-нет, вопрос в том, что у RAST..."
@@ -2758,7 +2758,7 @@
       "id": "65c9a579c9c275d1d464bdcd",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1255.24,
       "etime": 1264.61,
       "text": "Я читал недавно, что Струс Трупп писал, что он собирается сделать в сторону C++ 17, и там даже ничего и близко даже нет на тему безопасности работы с памятью."
@@ -2902,7 +2902,7 @@
       "id": "65c9a579c9c275d1d464bddd",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1321.25,
       "etime": 1322.87,
       "text": "Два вопроса не успевают."
@@ -2911,7 +2911,7 @@
       "id": "65c9a579c9c275d1d464bdde",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1322.93,
       "etime": 1325.59,
       "text": "Две темы не успевают возразить."
@@ -2947,7 +2947,7 @@
       "id": "65c9a579c9c275d1d464bde2",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1329.36,
       "etime": 1334.28,
       "text": "Я хочу сказать, что я не предлагаю писать на расте послезавтра."
@@ -2956,7 +2956,7 @@
       "id": "65c9a579c9c275d1d464bde3",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1334.68,
       "etime": 1350.47,
       "text": "Но мой прогноз такой, что, условно говоря, не знаю, через 5-10 лет, ну, понятно, сложно сказать точно, весь низкоуровневый код будет писаться либо на RAS, либо на каком-то конкуренте RAS, который сейчас не появился, который обладает примерно теми же свойствами – безопасностью работы с памятью и низкоуровневостью."
@@ -3064,7 +3064,7 @@
       "id": "65c9a579c9c275d1d464bdef",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1391.45,
       "etime": 1396.63,
       "text": "Я не знаю, как это правильно сказать."
@@ -3073,7 +3073,7 @@
       "id": "65c9a579c9c275d1d464bdf0",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1396.65,
       "etime": 1409.18,
       "text": "Мне кажется, многие вещи сделаны в Расте гораздо более правильно, в смысле именно самого языка, потому что у Раста, в отличие от Scala, не было необходимости поддерживать совместимость с виртуальной машиной Java."
@@ -3082,7 +3082,7 @@
       "id": "65c9a579c9c275d1d464bdf1",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1409.86,
       "etime": 1412.73,
       "text": "Есть такая популярная концепция, называется Type Class, как в Haskell есть."
@@ -3091,7 +3091,7 @@
       "id": "65c9a579c9c275d1d464bdf2",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1416.52,
       "etime": 1423.16,
       "text": "как вот есть язык программирования Scala, и в нем какой-то аналог Type Placer сделан через implicit параметры."
@@ -3100,7 +3100,7 @@
       "id": "65c9a579c9c275d1d464bdf3",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1423.26,
       "etime": 1427.49,
       "text": "То есть как этим можно пользоваться, но это как-то вообще адски, ужасно, некрасиво и неудобно."
@@ -3109,7 +3109,7 @@
       "id": "65c9a579c9c275d1d464bdf4",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1427.55,
       "etime": 1429.79,
       "text": "А в Rust это сделано естественным образом, как вот в Haskell."
@@ -3127,7 +3127,7 @@
       "id": "65c9a579c9c275d1d464bdf6",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1435.06,
       "etime": 1441.36,
       "text": "Тайп-класс это что-то типа интерфейса, но у него там, например, может быть статический метод, типа 0, например."
@@ -3163,7 +3163,7 @@
       "id": "65c9a579c9c275d1d464bdfa",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1453.29,
       "etime": 1454.19,
       "text": "Да, именно так."
@@ -3262,7 +3262,7 @@
       "id": "65c9a579c9c275d1d464be05",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1493.34,
       "etime": 1495.74,
       "text": "Он выходит 15 мая."
@@ -3307,7 +3307,7 @@
       "id": "65c9a579c9c275d1d464be0a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1511.26,
       "etime": 1526.38,
       "text": "Ну вот, я бы сказал, скорее, очень потихонечку, потому что, ну, во-первых, сам язык еще не готов, во-вторых, ну как не готов, в смысле, там они будут его дальше развивать, хотя они обещают, что больше меняться не будет, или будет обратно совместимым, но, очевидно, там они однажды захотят что-то поменять."
@@ -3316,7 +3316,7 @@
       "id": "65c9a579c9c275d1d464be0b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1526.4,
       "etime": 1531.88,
       "text": "Ну как, был, например, язык D, они сделали язык 1.0, пописали, потом решили сделать язык 2.0, который там другой."
@@ -3325,7 +3325,7 @@
       "id": "65c9a579c9c275d1d464be0c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1533.56,
       "etime": 1535.9,
       "text": "Сейчас, я сбился."
@@ -3334,7 +3334,7 @@
       "id": "65c9a579c9c275d1d464be0d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1535.94,
       "etime": 1541.36,
       "text": "Во-вторых, у Rasta не хватает сейчас, как это сказать, инфраструктуры."
@@ -3343,7 +3343,7 @@
       "id": "65c9a579c9c275d1d464be0e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1541.4,
       "etime": 1545.18,
       "text": "Например, у Rasta до сих пор никто не делает нормальную большую IDE."
@@ -3352,7 +3352,7 @@
       "id": "65c9a579c9c275d1d464be0f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1545.88,
       "etime": 1550.08,
       "text": "А без IDE, мне кажется, в нашем современном тяжелом мире программировать тяжело."
@@ -3388,7 +3388,7 @@
       "id": "65c9a579c9c275d1d464be13",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1560.03,
       "etime": 1561.05,
       "text": "Ну, я не знаю."
@@ -3397,7 +3397,7 @@
       "id": "65c9a579c9c275d1d464be14",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1561.11,
       "etime": 1564.37,
       "text": "На Go, мне кажется, на Go не пишут большие программы."
@@ -3415,7 +3415,7 @@
       "id": "65c9a579c9c275d1d464be16",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1568.2,
       "etime": 1569.84,
       "text": "Ну, не знаю."
@@ -3424,7 +3424,7 @@
       "id": "65c9a579c9c275d1d464be17",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1569.86,
       "etime": 1574.94,
       "text": "Смотри, я на Rust пишу в Vim и мне тяжеловато."
@@ -3433,7 +3433,7 @@
       "id": "65c9a579c9c275d1d464be18",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1575,
       "etime": 1576.56,
       "text": "На Java я пишу гораздо быстрее, чем на Rust."
@@ -3442,7 +3442,7 @@
       "id": "65c9a579c9c275d1d464be19",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1576.62,
       "etime": 1578.84,
       "text": "Раз в 10 примерно."
@@ -3478,7 +3478,7 @@
       "id": "65c9a579c9c275d1d464be1d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1594.69,
       "etime": 1603.17,
       "text": "В этом смысле в Rasta вообще все прекрасно, и даже там сделать IDE для Rasta гораздо проще, чем для многих языков программирования, даже, например, чем для Scala."
@@ -3487,7 +3487,7 @@
       "id": "65c9a579c9c275d1d464be1e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1604.01,
       "etime": 1608.95,
       "text": "Потому что в Rust они сделали более ограничивающий язык."
@@ -3496,7 +3496,7 @@
       "id": "65c9a579c9c275d1d464be1f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1608.97,
       "etime": 1612.42,
       "text": "Например, у них сигнатура функции, надо обязательно писать возвращаемое значение."
@@ -3505,7 +3505,7 @@
       "id": "65c9a579c9c275d1d464be20",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1612.44,
       "etime": 1613.42,
       "text": "Тип возвращаемого значения."
@@ -3514,7 +3514,7 @@
       "id": "65c9a579c9c275d1d464be21",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1613.44,
       "etime": 1614.94,
       "text": "То есть там нет вывода типов."
@@ -3523,7 +3523,7 @@
       "id": "65c9a579c9c275d1d464be22",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1614.98,
       "etime": 1618.08,
       "text": "За счет этого, например, IDE программировать проще для него."
@@ -3532,7 +3532,7 @@
       "id": "65c9a579c9c275d1d464be23",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1618.12,
       "etime": 1624.24,
       "text": "Плюс, например, в отличие от C++, там нет шаблонов, там они по-другому сделаны."
@@ -3541,7 +3541,7 @@
       "id": "65c9a579c9c275d1d464be24",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1624.28,
       "etime": 1625.36,
       "text": "Больше как на Java похоже."
@@ -3550,7 +3550,7 @@
       "id": "65c9a579c9c275d1d464be25",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1625.4,
       "etime": 1627.52,
       "text": "Поэтому там type checking проще делать."
@@ -3559,7 +3559,7 @@
       "id": "65c9a579c9c275d1d464be26",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1627.54,
       "etime": 1629.52,
       "text": "В общем, в этом смысле он там очень хороший, да."
@@ -3577,7 +3577,7 @@
       "id": "65c9a579c9c275d1d464be28",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1636.31,
       "etime": 1651.52,
       "text": "Там есть несколько людей, которые в свободное время от работы пытаются делать разные DE, и даже есть такой проект, который называется Racer, который делает completion, но от completion до полноценной DE это очень далеко."
@@ -3586,7 +3586,7 @@
       "id": "65c9a579c9c275d1d464be29",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1651.54,
       "etime": 1656.16,
       "text": "В смысле профессиональных команд, которые за зарплату пишут DE, таких нет."
@@ -3685,7 +3685,7 @@
       "id": "65c9a579c9c275d1d464be34",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1690.62,
       "etime": 1692.16,
       "text": "Сейчас, можно я на SolidDoc отвечу?"
@@ -3694,7 +3694,7 @@
       "id": "65c9a579c9c275d1d464be35",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1692.2,
       "etime": 1695.41,
       "text": "Вот у него написано, что это на самом деле просто интерфейс к программе Racer."
@@ -3703,7 +3703,7 @@
       "id": "65c9a579c9c275d1d464be36",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1695.57,
       "etime": 1696.99,
       "text": "Это ровно так."
@@ -3721,7 +3721,7 @@
       "id": "65c9a579c9c275d1d464be38",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1701.92,
       "etime": 1703.84,
       "text": "Да, но просто IDE это гораздо больше."
@@ -3730,7 +3730,7 @@
       "id": "65c9a579c9c275d1d464be39",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1703.86,
       "etime": 1709.46,
       "text": "IDE это встроенный отладчик, это показ колы и рарки, там какая-то мощная навигация."
@@ -3793,7 +3793,7 @@
       "id": "65c9a579c9c275d1d464be40",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1723.85,
       "etime": 1730.09,
       "text": "Да, более того, на самом деле там все еще... Или мне надо защищать траст, или ругать не надо."
@@ -3802,7 +3802,7 @@
       "id": "65c9a579c9c275d1d464be41",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1730.11,
       "etime": 1730.19,
       "text": "Угу."
@@ -3820,7 +3820,7 @@
       "id": "65c9a579c9c275d1d464be43",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1734.47,
       "etime": 1738.63,
       "text": "Ну вот объективно, например, там очень много чего надо доделать."
@@ -3829,7 +3829,7 @@
       "id": "65c9a579c9c275d1d464be44",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1738.65,
       "etime": 1743.39,
       "text": "Например, у них сейчас первый приоритет на этот год стоит сделать инкрементальную компиляцию."
@@ -3838,7 +3838,7 @@
       "id": "65c9a579c9c275d1d464be45",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1743.41,
       "etime": 1746.71,
       "text": "У них сейчас есть как бы модуль, ну короче, как в Java."
@@ -3847,7 +3847,7 @@
       "id": "65c9a579c9c275d1d464be46",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1746.77,
       "etime": 1749.89,
       "text": "Типа делаешь папку с исходниками и компилируешь ее в один джарник."
@@ -3856,7 +3856,7 @@
       "id": "65c9a579c9c275d1d464be47",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1749.91,
       "etime": 1756.94,
       "text": "Вот у них сейчас так же сделано, но люди хотят, чтобы внутри как бы одного модуля можно было бы делать инкрементальную компиляцию, потому что он не очень быстро компилируется."
@@ -3874,7 +3874,7 @@
       "id": "65c9a579c9c275d1d464be49",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1763.76,
       "etime": 1765.95,
       "text": "Сейчас, я не понимаю, про что ты говоришь."
@@ -3928,7 +3928,7 @@
       "id": "65c9a579c9c275d1d464be4f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1784.02,
       "etime": 1788.7,
       "text": "Да, ну, скажем, в C++ нет очень большой проблемы с компиляцией."
@@ -3946,7 +3946,7 @@
       "id": "65c9a579c9c275d1d464be51",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1797.11,
       "etime": 1804.61,
       "text": "В C++ там очень удобно в том, потому что там ты сам вынужден программу разбивать на независимые модули и явно прописывать все инклюзии."
@@ -3955,7 +3955,7 @@
       "id": "65c9a579c9c275d1d464be52",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1805.07,
       "etime": 1809.46,
       "text": "За счет этого у тебя компиляция распараллеливается и перекомпилируется обычно в один-два файла."
@@ -3964,7 +3964,7 @@
       "id": "65c9a579c9c275d1d464be53",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1809.5,
       "etime": 1817,
       "text": "Но если ты не правишь, самый главный файл, который называется, условно говоря, Basic Definitions Arch, что-нибудь такое, тогда, конечно, всю программу придется перекомпилировать."
@@ -4198,7 +4198,7 @@
       "id": "65c9a579c9c275d1d464be6d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1893.41,
       "etime": 1895.11,
       "text": "И такой же быстрый."
@@ -4243,7 +4243,7 @@
       "id": "65c9a579c9c275d1d464be72",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1905.25,
       "etime": 1911.08,
       "text": "На самом деле, мне кажется, это самые главные фичи, а все остальное уже менее важно."
@@ -4252,7 +4252,7 @@
       "id": "65c9a579c9c275d1d464be73",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1911.1,
       "etime": 1920.34,
       "text": "Это на самом деле просто современный качественный язык программирования, который просто взял все предыдущие наработки от всех языков программирования, хорошие фичи взял, а плохие не стал брать."
@@ -4279,7 +4279,7 @@
       "id": "65c9a579c9c275d1d464be76",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1935.48,
       "etime": 1938.82,
       "text": "Сейчас я не очень... Сейчас не понял, что ты говоришь."
@@ -4288,7 +4288,7 @@
       "id": "65c9a579c9c275d1d464be77",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1938.88,
       "etime": 1942.43,
       "text": "Если ты пишешь на C++, там есть несколько основных проблем."
@@ -4297,7 +4297,7 @@
       "id": "65c9a579c9c275d1d464be78",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1942.47,
       "etime": 1948.03,
       "text": "Типа проезд по памяти и use after free, double free и все вот это вот."
@@ -4306,7 +4306,7 @@
       "id": "65c9a579c9c275d1d464be79",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1948.07,
       "etime": 1949.51,
       "text": "И от всего этого RAD спасает."
@@ -4315,7 +4315,7 @@
       "id": "65c9a579c9c275d1d464be7a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_00",
+      "author": "_artifact",
       "stime": 1950.11,
       "etime": 1950.57,
       "text": "Да."
@@ -4324,7 +4324,7 @@
       "id": "65c9a579c9c275d1d464be7b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1951.11,
       "etime": 1955.1,
       "text": "А, и, кстати, Rust еще, если так уж говорить, он на самом деле еще и помогает писать безопасно многопоточные программы."
@@ -4333,7 +4333,7 @@
       "id": "65c9a579c9c275d1d464be7c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1956.02,
       "etime": 1963.52,
       "text": "Например, когда пишешь на Java или когда пишешь на SwiftBuse, частая проблема была такая, например, что переменную читаешь, а мьютов поставить забыл."
@@ -4342,7 +4342,7 @@
       "id": "65c9a579c9c275d1d464be7d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1963.56,
       "etime": 1969.04,
       "text": "Или, например, рефактор рефакторил, как в процессе рефакторинга у тебя мьютус куда-то уехал в другое место."
@@ -4351,7 +4351,7 @@
       "id": "65c9a579c9c275d1d464be7e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1969.1,
       "etime": 1970.56,
       "text": "Вот Rust от этого тоже спасает."
@@ -4360,7 +4360,7 @@
       "id": "65c9a579c9c275d1d464be7f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1970.58,
       "etime": 1970.68,
       "text": "Rust, если..."
@@ -4369,7 +4369,7 @@
       "id": "65c9a579c9c275d1d464be80",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1972.2,
       "etime": 1979.29,
       "text": "использовать правильные примитивы, а других стандартных библиотек нет, то невозможно прочитать шарик-переменную, не захватив Mewtux."
@@ -4378,7 +4378,7 @@
       "id": "65c9a579c9c275d1d464be81",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 1979.35,
       "etime": 1979.91,
       "text": "Очень удобно."
@@ -4423,7 +4423,7 @@
       "id": "65c9a579c9c275d1d464be86",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2006.92,
       "etime": 2009.42,
       "text": "Они нормальные мьютабл переменные."
@@ -4432,7 +4432,7 @@
       "id": "65c9a579c9c275d1d464be87",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2009.46,
       "etime": 2012.38,
       "text": "То есть у него низкая уровня, как C++."
@@ -4441,7 +4441,7 @@
       "id": "65c9a579c9c275d1d464be88",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2012.42,
       "etime": 2017.27,
       "text": "Можно взять программу на расте, транслировать ее в программу на C++ и получится один в один."
@@ -4468,7 +4468,7 @@
       "id": "65c9a579c9c275d1d464be8b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2026.23,
       "etime": 2026.91,
       "text": "которая называется GoRoutine."
@@ -4477,7 +4477,7 @@
       "id": "65c9a579c9c275d1d464be8c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2026.97,
       "etime": 2028.21,
       "text": "Про это говоришь?"
@@ -4486,7 +4486,7 @@
       "id": "65c9a579c9c275d1d464be8d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2028.29,
       "etime": 2029.07,
       "text": "Я про это говорю."
@@ -4495,7 +4495,7 @@
       "id": "65c9a579c9c275d1d464be8e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2029.17,
       "etime": 2031.92,
       "text": "Они по рутине вратик, к сожалению, не сделали."
@@ -4504,7 +4504,7 @@
       "id": "65c9a579c9c275d1d464be8f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2031.96,
       "etime": 2033.74,
       "text": "Это очень дорогая разработка."
@@ -4513,7 +4513,7 @@
       "id": "65c9a579c9c275d1d464be90",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2033.78,
       "etime": 2041.22,
       "text": "Они хотели сделать, и у них даже была реализация сегментированных стэков, которые они взяли из Go."
@@ -4522,7 +4522,7 @@
       "id": "65c9a579c9c275d1d464be91",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2042.14,
       "etime": 2046.67,
       "text": "Потом выяснили, что эти сегментированные стэки слишком сильно замедляют программу."
@@ -4531,7 +4531,7 @@
       "id": "65c9a579c9c275d1d464be92",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2046.73,
       "etime": 2053.55,
       "text": "Потом в Go они от сегментированных стэков перешли к каким-то, я забыл, к каким-то ресайзам, как сказать, изменяемым размер стэкам."
@@ -4540,7 +4540,7 @@
       "id": "65c9a579c9c275d1d464be93",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2054.31,
       "etime": 2058.71,
       "text": "Может быть, в Rust они тоже пойдут в это время, но они решили, что это как бы на потом."
@@ -4549,7 +4549,7 @@
       "id": "65c9a579c9c275d1d464be94",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2058.73,
       "etime": 2061.91,
       "text": "Ну, в общем, сделать крутины – это очень тяжелая задача."
@@ -4558,7 +4558,7 @@
       "id": "65c9a579c9c275d1d464be95",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2061.97,
       "etime": 2072.68,
       "text": "И в Go они это сделали, во-первых, адским количеством усилий, которые вложили в разработку Go, во-вторых, они это сделали, как это сказать, замедлив программу."
@@ -4576,7 +4576,7 @@
       "id": "65c9a579c9c275d1d464be97",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2077.68,
       "etime": 2079.88,
       "text": "Ну, можно сказать так, да."
@@ -4585,7 +4585,7 @@
       "id": "65c9a579c9c275d1d464be98",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2079.94,
       "etime": 2082.18,
       "text": "Проблема карутин вот в чем."
@@ -4594,7 +4594,7 @@
       "id": "65c9a579c9c275d1d464be99",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2082.24,
       "etime": 2087.53,
       "text": "Если ты делаешь карутины, ты обычно хочешь, чтобы их было миллион, например, или сто миллионов."
@@ -4603,7 +4603,7 @@
       "id": "65c9a579c9c275d1d464be9a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2087.57,
       "etime": 2089.13,
       "text": "И на каждую карутину тебе нужен стэк."
@@ -4612,7 +4612,7 @@
       "id": "65c9a579c9c275d1d464be9b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2089.83,
       "etime": 2091.93,
       "text": "И у тебя есть такая дилемма."
@@ -4621,7 +4621,7 @@
       "id": "65c9a579c9c275d1d464be9c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2091.99,
       "etime": 2096.99,
       "text": "Если делаешь стэк маленький, у тебя программа будет падать, потому что ты заезжаешь закрывать стэк."
@@ -4630,7 +4630,7 @@
       "id": "65c9a579c9c275d1d464be9d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2097.01,
       "etime": 2100.95,
       "text": "А если у тебя стэк очень большой, у тебя просто не хватит памяти на все стэки этих крутин."
@@ -4639,7 +4639,7 @@
       "id": "65c9a579c9c275d1d464be9e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2100.99,
       "etime": 2105.35,
       "text": "Вот эти проблемы можно как-то решать, типа того, как ее в голову решали."
@@ -4648,7 +4648,7 @@
       "id": "65c9a579c9c275d1d464be9f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2105.39,
       "etime": 2106.29,
       "text": "Но это все тяжелое."
@@ -4693,7 +4693,7 @@
       "id": "65c9a579c9c275d1d464bea4",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2120.12,
       "etime": 2124.62,
       "text": "Если ты, как бы сказать, крути, но это удобно, с этим никто не спорит."
@@ -4702,7 +4702,7 @@
       "id": "65c9a579c9c275d1d464bea5",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2124.68,
       "etime": 2127.1,
       "text": "Есть большое количество задач, которые можно делать с помощью карутина."
@@ -4711,7 +4711,7 @@
       "id": "65c9a579c9c275d1d464bea6",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2127.14,
       "etime": 2129.46,
       "text": "Но, в принципе, без карутина можно программировать."
@@ -4738,7 +4738,7 @@
       "id": "65c9a579c9c275d1d464bea9",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2140.5,
       "etime": 2143.23,
       "text": "Нет, это стримы, это всего лишь навсего библиотечное..."
@@ -4747,7 +4747,7 @@
       "id": "65c9a579c9c275d1d464beaa",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2145.15,
       "etime": 2146.87,
       "text": "библиотечная утилита."
@@ -4756,7 +4756,7 @@
       "id": "65c9a579c9c275d1d464beab",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2146.91,
       "etime": 2152.15,
       "text": "Точно такая же может быть и в РАСТе, и они там, по-моему, даже есть в какой-то сторонней библиотеке."
@@ -4765,7 +4765,7 @@
       "id": "65c9a579c9c275d1d464beac",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2152.17,
       "etime": 2153.33,
       "text": "Это вообще не проблема."
@@ -4837,7 +4837,7 @@
       "id": "65c9a579c9c275d1d464beb4",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2183.5,
       "etime": 2189.57,
       "text": "Если ты знаешь, как устроены в C++... Там нет такого объекта mutex."
@@ -4846,7 +4846,7 @@
       "id": "65c9a579c9c275d1d464beb5",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2189.77,
       "etime": 2192.62,
       "text": "Там есть такой объект mutex с параметром t."
@@ -4855,7 +4855,7 @@
       "id": "65c9a579c9c275d1d464beb6",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2199.69,
       "etime": 2208.69,
       "text": "И в нем хранится как бы и сам mutex, и вот эта переменная t. И ты не можешь просто получить эту переменную t, тебе нужно сначала сказать mutex.log."
@@ -4864,7 +4864,7 @@
       "id": "65c9a579c9c275d1d464beb7",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2208.75,
       "etime": 2213.8,
       "text": "Эта операция log вернет тебе что-то типа смарт-пойнтера, через который ты можешь уже обратиться к этой переменной t."
@@ -4873,7 +4873,7 @@
       "id": "65c9a579c9c275d1d464beb8",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2215.31,
       "etime": 2222.72,
       "text": "И, соответственно, ну, как сказать, ты не можешь просто не обратиться, потому что тебе надо получить этот смарт-пойнтер, а он тебя делает через операцию лок."
@@ -4882,7 +4882,7 @@
       "id": "65c9a579c9c275d1d464beb9",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2222.76,
       "etime": 2225.29,
       "text": "И там, как в Секлюзии, через RAI делается."
@@ -4891,7 +4891,7 @@
       "id": "65c9a579c9c275d1d464beba",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2225.31,
       "etime": 2229.75,
       "text": "Типа, когда этот смарт-пойнтер убивается там в деструкторе, лок освобождается сразу там, все так."
@@ -4927,7 +4927,7 @@
       "id": "65c9a579c9c275d1d464bebe",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2255.78,
       "etime": 2256.3,
       "text": "Кстати, там..."
@@ -4936,7 +4936,7 @@
       "id": "65c9a579c9c275d1d464bebf",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2260.14,
       "etime": 2265.14,
       "text": "Скажем так, во-первых, функциональное программирование это про стиль программирования."
@@ -4945,7 +4945,7 @@
       "id": "65c9a579c9c275d1d464bec0",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2265.16,
       "etime": 2268.2,
       "text": "В смысле, ты можешь на любом языке программирования написать в любом стиле."
@@ -4963,7 +4963,7 @@
       "id": "65c9a579c9c275d1d464bec2",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2278.27,
       "etime": 2282.57,
       "text": "Вопрос в том, удобно ли писать в функциональном программировании на каком-то языке или неудобно."
@@ -4972,7 +4972,7 @@
       "id": "65c9a579c9c275d1d464bec3",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2282.61,
       "etime": 2284.91,
       "text": "Вот в Rust это сделано удобно."
@@ -4981,7 +4981,7 @@
       "id": "65c9a579c9c275d1d464bec4",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2284.97,
       "etime": 2288.85,
       "text": "В Rust есть одна фича, которая сделана очень круто, а в SQL она сделана плохо."
@@ -4990,7 +4990,7 @@
       "id": "65c9a579c9c275d1d464bec5",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2289.79,
       "etime": 2296.62,
       "text": "а именно, как сказать, move semantic, в C++ они сделали rvalue reference для того, чтобы быть переменной."
@@ -4999,7 +4999,7 @@
       "id": "65c9a579c9c275d1d464bec6",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2296.66,
       "etime": 2298.6,
       "text": "И там проблема в том, что все сделано не по дефолту."
@@ -5008,7 +5008,7 @@
       "id": "65c9a579c9c275d1d464bec7",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2298.62,
       "etime": 2302.65,
       "text": "То есть по дефолту у тебя все копируется, а в расте по дефолту все мулится."
@@ -5017,7 +5017,7 @@
       "id": "65c9a579c9c275d1d464bec8",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2302.69,
       "etime": 2314.9,
       "text": "И поэтому, когда ты просто обычно не делаешь этого shared state, ты просто обычно возвращаешь эти объекты, и они у тебя как бы mutable, но ты их как бы все время новые отдаешь, и поэтому они у тебя такие вот, как бы..."
@@ -5026,7 +5026,7 @@
       "id": "65c9a579c9c275d1d464bec9",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2315.86,
       "etime": 2322.54,
       "text": "То есть, их, конечно, можно менять, но просто больше им никто не владеет, кроме тебя."
@@ -5053,7 +5053,7 @@
       "id": "65c9a579c9c275d1d464becc",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2330.82,
       "etime": 2332.3,
       "text": "Там все гораздо проще, чем в C++."
@@ -5062,7 +5062,7 @@
       "id": "65c9a579c9c275d1d464becd",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2332.34,
       "etime": 2334.68,
       "text": "Это просто после C++ там все это кажется несколько необычно."
@@ -5071,7 +5071,7 @@
       "id": "65c9a579c9c275d1d464bece",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2334.7,
       "etime": 2341.03,
       "text": "Хотя, на самом деле, у них сделано все проще, чем в C++, чем в новом C++ с R-value references."
@@ -5080,7 +5080,7 @@
       "id": "65c9a579c9c275d1d464becf",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2341.13,
       "etime": 2343.75,
       "text": "И, на самом деле, так и должно было бы сделано быть изначально."
@@ -5161,7 +5161,7 @@
       "id": "65c9a579c9c275d1d464bed8",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2372.05,
       "etime": 2375.67,
       "text": "Мне кажется, раз ближе к функциональным языкам программирования."
@@ -5170,7 +5170,7 @@
       "id": "65c9a579c9c275d1d464bed9",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2375.69,
       "etime": 2387.96,
       "text": "В частности, например, вся стандартная библиотека, ну, очень большая часть стандартной библиотеки и вся работа с коллекциями там сделана через функциональные операторы, через фундаментальные операции, ну, например, через..."
@@ -5179,7 +5179,7 @@
       "id": "65c9a579c9c275d1d464beda",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2389,
       "etime": 2391.76,
       "text": "Ты не внутри коллекцию модифицируешь как-то."
@@ -5188,7 +5188,7 @@
       "id": "65c9a579c9c275d1d464bedb",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2391.8,
       "etime": 2395.89,
       "text": "Ты, например, когда что-то делаешь, операция мапа-фильтрная, стандартный пример."
@@ -5197,7 +5197,7 @@
       "id": "65c9a579c9c275d1d464bedc",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2395.93,
       "etime": 2397.01,
       "text": "Как сделано в Rust."
@@ -5206,7 +5206,7 @@
       "id": "65c9a579c9c275d1d464bedd",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2397.09,
       "etime": 2401.41,
       "text": "Я просто вращаю этот итератор, и на этом итераторе ты можешь делать мап, фильтр, еще что-то."
@@ -5215,7 +5215,7 @@
       "id": "65c9a579c9c275d1d464bede",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2401.45,
       "etime": 2405.37,
       "text": "И каждый раз у тебя получается новый объект, с которым ты что-то дальше делаешь."
@@ -5224,7 +5224,7 @@
       "id": "65c9a579c9c275d1d464bedf",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2405.41,
       "etime": 2406.83,
       "text": "Типа ничего не модифицируешь."
@@ -5233,7 +5233,7 @@
       "id": "65c9a579c9c275d1d464bee0",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2406.85,
       "etime": 2408.81,
       "text": "В этом смысле стиль функциональный."
@@ -5242,7 +5242,7 @@
       "id": "65c9a579c9c275d1d464bee1",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2408.83,
       "etime": 2411.33,
       "text": "Плюс там в языке функции есть."
@@ -5251,7 +5251,7 @@
       "id": "65c9a579c9c275d1d464bee2",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2411.35,
       "etime": 2413.95,
       "text": "Ну, понятно, во всех современных лямах замыкание."
@@ -5260,7 +5260,7 @@
       "id": "65c9a579c9c275d1d464bee3",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2414.01,
       "etime": 2416.19,
       "text": "И за счет этого очень удобно все это тоже писать."
@@ -5386,7 +5386,7 @@
       "id": "65c9a579c9c275d1d464bef1",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2467.89,
       "etime": 2478.93,
       "text": "Я в самом расте, я отправил в него порядка десяти патчей, и на самом деле я сделал это больше, как бы сказать, в старые времена, когда мне патчи принимали просто так."
@@ -5395,7 +5395,7 @@
       "id": "65c9a579c9c275d1d464bef2",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2478.95,
       "etime": 2491.7,
       "text": "Сейчас они помешались на своем релизе, и сейчас, чтобы что-то там, какой-то патч к ним протолкнуть, который что-то меняет, они отправляют какой-то баг, там сейчас нужно написать целый документ на несколько страниц и обосновать там что-то."
@@ -5404,7 +5404,7 @@
       "id": "65c9a579c9c275d1d464bef3",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2491.72,
       "etime": 2493.78,
       "text": "Вот сейчас очень тяжело стало."
@@ -5422,7 +5422,7 @@
       "id": "65c9a579c9c275d1d464bef5",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2497.83,
       "etime": 2499.73,
       "text": "Ну, там какой-то мелкий баг, наверное, исправил."
@@ -5431,7 +5431,7 @@
       "id": "65c9a579c9c275d1d464bef6",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2499.75,
       "etime": 2503.51,
       "text": "Там же у них это... Ченжлог у них автоматически скриптононируется."
@@ -5476,7 +5476,7 @@
       "id": "65c9a579c9c275d1d464befb",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2518.97,
       "etime": 2522.41,
       "text": "Потому что я случайно с рабочего сервера все это делал."
@@ -5485,7 +5485,7 @@
       "id": "65c9a579c9c275d1d464befc",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2522.47,
       "etime": 2526.76,
       "text": "Это, наверное, нарушение трудового, не знаю, чего-нибудь."
@@ -5557,7 +5557,7 @@
       "id": "65c9a579c9c275d1d464bf04",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2543.62,
       "etime": 2546.64,
       "text": "Первый раз в Яндекс я пришел, по-моему, то ли в 2004, то ли в 2006 году."
@@ -5611,7 +5611,7 @@
       "id": "65c9a579c9c275d1d464bf0a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2564.66,
       "etime": 2572.14,
       "text": "Ну, нет, D это просто такой более хороший CP+, но на самом деле он не сильно продвинулся в сторону безопасности."
@@ -5620,7 +5620,7 @@
       "id": "65c9a579c9c275d1d464bf0b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2572.18,
       "etime": 2590.3,
       "text": "Кстати, D недавно там Александр Эсков или кто-то еще почитал про RAST, не разобрался и написал какой-то маленький пропозал, типа давайте мы сделаем тоже что-то типа безопасности в D. Оно немножко похоже на RAST, но покрывает там примерно, не знаю, половину случаев и все равно ничего не гарантирует, но хорошо, может..."
@@ -5629,7 +5629,7 @@
       "id": "65c9a579c9c275d1d464bf0c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2592.04,
       "etime": 2593.2,
       "text": "Может, поймут."
@@ -5638,7 +5638,7 @@
       "id": "65c9a579c9c275d1d464bf0d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2593.24,
       "etime": 2596.12,
       "text": "На самом деле, можно еще одно сказать."
@@ -5647,7 +5647,7 @@
       "id": "65c9a579c9c275d1d464bf0e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2596.2,
       "etime": 2616.25,
       "text": "Мне кажется, самое лучшее, что может произойти вообще в мире, это если вдруг авторы C++, которые сейчас, мне кажется, несколько оторваны от реальности, я имею в виду не те, кто пишет на C++, а те, кто пишут сам язык C++, если они поймут вообще, как все это сделано в Rust, и доапгрейдят C++ до уровня Rust, тогда, мне кажется, будет хорошо."
@@ -5656,7 +5656,7 @@
       "id": "65c9a579c9c275d1d464bf0f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2616.29,
       "etime": 2619.91,
       "text": "Можно будет Rust закопать и писать дальше на C++ все эти программы."
@@ -5674,7 +5674,7 @@
       "id": "65c9a579c9c275d1d464bf11",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2623.62,
       "etime": 2625.11,
       "text": "Да, именно так."
@@ -5764,7 +5764,7 @@
       "id": "65c9a579c9c275d1d464bf1b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2671.91,
       "etime": 2674.11,
       "text": "Можно еще один комментарий?"
@@ -5773,7 +5773,7 @@
       "id": "65c9a579c9c275d1d464bf1c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2674.13,
       "etime": 2675.99,
       "text": "Просто про Swift мы не договорили."
@@ -5782,7 +5782,7 @@
       "id": "65c9a579c9c275d1d464bf1d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2676.03,
       "etime": 2680.46,
       "text": "Просто Swift это тоже один из немногих современных языков, в которых нет сборщика мусора."
@@ -5791,7 +5791,7 @@
       "id": "65c9a579c9c275d1d464bf1e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2680.5,
       "etime": 2682.18,
       "text": "Поэтому может работать на телефоне хорошо."
@@ -5800,7 +5800,7 @@
       "id": "65c9a579c9c275d1d464bf1f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2683.39,
       "etime": 2690.76,
       "text": "Вот, и в некотором смысле, раз может быть конкурентно Swift, то в смысле, что у Swift нет проблем со сборочкой мусора."
@@ -5809,7 +5809,7 @@
       "id": "65c9a579c9c275d1d464bf20",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2690.8,
       "etime": 2696.39,
       "text": "Там есть некоторый overhead, например, там все сделано через референс-каунтер, дорогие, а в Rust этого нет."
@@ -5818,7 +5818,7 @@
       "id": "65c9a579c9c275d1d464bf21",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2696.41,
       "etime": 2697.63,
       "text": "Вот, такой у меня."
@@ -5836,7 +5836,7 @@
       "id": "65c9a579c9c275d1d464bf23",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2702.56,
       "etime": 2707.47,
       "text": "Да, а еще у них есть требования, чтобы людям было не очень сложно программировать."
@@ -5845,7 +5845,7 @@
       "id": "65c9a579c9c275d1d464bf24",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2707.49,
       "etime": 2711.75,
       "text": "Они не хотят думать ни про какие там скопы, какие-то лайфтаймы, вот как они сделали в Rust."
@@ -5854,7 +5854,7 @@
       "id": "65c9a579c9c275d1d464bf25",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2711.81,
       "etime": 2714.07,
       "text": "Они хотят просто писать и писать, как на Java."
@@ -5872,7 +5872,7 @@
       "id": "65c9a579c9c275d1d464bf27",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2728.15,
       "etime": 2729.55,
       "text": "Я не ругаю Swift, я защищаю Swift."
@@ -5881,7 +5881,7 @@
       "id": "65c9a579c9c275d1d464bf28",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2729.83,
       "etime": 2731.29,
       "text": "Мне Swift очень нравится."
@@ -6214,7 +6214,7 @@
       "id": "65c9a579c9c275d1d464bf4d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2847.25,
       "etime": 2850.07,
       "text": "Восклицательный знак там используется в двух местах."
@@ -6223,7 +6223,7 @@
       "id": "65c9a579c9c275d1d464bf4e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2850.17,
       "etime": 2854.99,
       "text": "В одном месте он используется как признак того, что это макрос."
@@ -6241,7 +6241,7 @@
       "id": "65c9a579c9c275d1d464bf50",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2857.45,
       "etime": 2859.77,
       "text": "Мне кажется, это не самое худшее решение."
@@ -6250,7 +6250,7 @@
       "id": "65c9a579c9c275d1d464bf51",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 2860.07,
       "etime": 2863.72,
       "text": "Читаешь, понимаешь, что там не просто вызов, а что-то сложное."
@@ -10498,7 +10498,7 @@
       "id": "65c9a579c9c275d1d464c129",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 4610.93,
       "etime": 4614.7,
       "text": "Я, кстати, про парное программирование вспомнил."
@@ -10507,7 +10507,7 @@
       "id": "65c9a579c9c275d1d464c12a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 4614.78,
       "etime": 4619.48,
       "text": "Я однажды устраивал с товарищем парное программирование, когда мне нужно было, чтобы он мне помог код написать."
@@ -10516,7 +10516,7 @@
       "id": "65c9a579c9c275d1d464c12b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 4619.5,
       "etime": 4622.76,
       "text": "Это очень удобно делать через скриншаринг."
@@ -10525,7 +10525,7 @@
       "id": "65c9a579c9c275d1d464c12c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 4622.78,
       "etime": 4624.64,
       "text": "По-моему, Apple мы использовали."
@@ -10543,7 +10543,7 @@
       "id": "65c9a579c9c275d1d464c12e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 4629.21,
       "etime": 4632.29,
       "text": "Прямо через макосы."
@@ -10561,7 +10561,7 @@
       "id": "65c9a579c9c275d1d464c130",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 4636.83,
       "etime": 4638.13,
       "text": "Очень удобно."
@@ -10606,7 +10606,7 @@
       "id": "65c9a579c9c275d1d464c135",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 4652.36,
       "etime": 4653.44,
       "text": "А на Джаве так нельзя уже."
@@ -10687,7 +10687,7 @@
       "id": "65c9a579c9c275d1d464c13e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_MARIN",
+      "author": "_artifact",
       "stime": 4674.17,
       "etime": 4676.69,
       "text": "Так, я готовилась, да."
@@ -11299,7 +11299,7 @@
       "id": "65c9a579c9c275d1d464c182",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 5032.47,
       "etime": 5036.91,
       "text": "У нас на самом деле по-разному есть, но админы есть, кажется, почти везде."
@@ -11308,7 +11308,7 @@
       "id": "65c9a579c9c275d1d464c183",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 5036.95,
       "etime": 5043.97,
       "text": "Просто где-то больше фашизма, где-то меньше фашизма, но есть, да."
@@ -11506,7 +11506,7 @@
       "id": "65c9a579c9c275d1d464c199",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 5138.5,
       "etime": 5147.05,
       "text": "О, слушай, я вспомнил, есть такое слово, как его сказать, то же самое DevOps, только называется красиво и считается, что это очень круто, называется SRE."
@@ -11524,7 +11524,7 @@
       "id": "65c9a579c9c275d1d464c19b",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 5151.98,
       "etime": 5159.02,
       "text": "Это не те люди, которые учатся стать программистами, это просто у них такая работа, и кажется, очень хорошая работа."
@@ -11542,7 +11542,7 @@
       "id": "65c9a579c9c275d1d464c19d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 5168.4,
       "etime": 5170.56,
       "text": "А СРГ – это люди, которые любят заниматься админством."
@@ -11560,7 +11560,7 @@
       "id": "65c9a579c9c275d1d464c19f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 5172.73,
       "etime": 5174.93,
       "text": "И которых все уважают и любят."
@@ -12505,7 +12505,7 @@
       "id": "65c9a579c9c275d1d464c208",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_MARIN",
+      "author": "_artifact",
       "stime": 5493.94,
       "etime": 5495.5,
       "text": "Компании просто разделились."
@@ -13225,7 +13225,7 @@
       "id": "65c9a579c9c275d1d464c258",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 5776.78,
       "etime": 5782.09,
       "text": "Не, может быть, ты просто скачал где-то образ докера откуда-нибудь там из интернета и хочешь его запустить?"
@@ -13477,7 +13477,7 @@
       "id": "65c9a579c9c275d1d464c274",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 5925.54,
       "etime": 5933.84,
       "text": "А мне кажется, это все надо рассматривать так, что как бы есть докер, они сделали стандарт, и этот стандарт разные люди реализовывают, в том числе виртуоза."
@@ -13900,7 +13900,7 @@
       "id": "65c9a579c9c275d1d464c2a3",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6104.07,
       "etime": 6108.03,
       "text": "Virtuoso – это же просто продукт, который продается за деньги."
@@ -13909,7 +13909,7 @@
       "id": "65c9a579c9c275d1d464c2a4",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6108.05,
       "etime": 6110.91,
       "text": "А внутри него, если я не ошибаюсь, работают Xen и OpenVZ."
@@ -13918,7 +13918,7 @@
       "id": "65c9a579c9c275d1d464c2a5",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6111.27,
       "etime": 6118.8,
       "text": "То есть можно просто взять Xen и OpenVZ, зачем Amazon брать какой-то готовый продукт без исходников, когда можно смену себе написать."
@@ -13981,7 +13981,7 @@
       "id": "65c9a579c9c275d1d464c2ac",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6142.52,
       "etime": 6148.76,
       "text": "Проблема OpenWZ в том, что им не повезло, и cgroups в ядре получились раньше."
@@ -13990,7 +13990,7 @@
       "id": "65c9a579c9c275d1d464c2ad",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6148.82,
       "etime": 6151.86,
       "text": "А две системы, которые делают одно и то же, в ядре не нужно."
@@ -13999,7 +13999,7 @@
       "id": "65c9a579c9c275d1d464c2ae",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6152.18,
       "etime": 6155.76,
       "text": "И поэтому OpenWZ не повезло им."
@@ -14989,7 +14989,7 @@
       "id": "65c9a579c9c275d1d464c31c",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6577.51,
       "etime": 6585.3,
       "text": "Что говоря, гидроэлектростанции, они не очень умиротворные, потому что там можно, например, как бы сказать... Полотенце открыть, закрыть."
@@ -14998,7 +14998,7 @@
       "id": "65c9a579c9c275d1d464c31d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6585.36,
       "etime": 6589.16,
       "text": "А вот атомные электростанции, они действительно работают с одинаковой скоростью."
@@ -15142,7 +15142,7 @@
       "id": "65c9a579c9c275d1d464c32d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6639.43,
       "etime": 6645.89,
       "text": "А еще эти батарейки очень хорошо будут работать с антеннами, которые на крыше стоят."
@@ -15151,7 +15151,7 @@
       "id": "65c9a579c9c275d1d464c32e",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6645.97,
       "etime": 6648.47,
       "text": "Которые им тоже продают в Америке. SolarCity."
@@ -15178,7 +15178,7 @@
       "id": "65c9a579c9c275d1d464c331",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6657.22,
       "etime": 6665.66,
       "text": "Нет, я имею в виду, что, как бы сказать, нельзя это поставить у провайдера, если электричество уже изготавливается дома, на крыше."
@@ -15232,7 +15232,7 @@
       "id": "65c9a579c9c275d1d464c337",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6686.82,
       "etime": 6689.36,
       "text": "Электричество-то вырабатывается, куда-то его девать надо."
@@ -15259,7 +15259,7 @@
       "id": "65c9a579c9c275d1d464c33a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6698.56,
       "etime": 6699.18,
       "text": "Конечно, конечно."
@@ -15385,7 +15385,7 @@
       "id": "65c9a579c9c275d1d464c348",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_00",
+      "author": "_artifact",
       "stime": 6752.92,
       "etime": 6753.92,
       "text": "Смешно."
@@ -15493,7 +15493,7 @@
       "id": "65c9a579c9c275d1d464c354",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6787.7,
       "etime": 6792.08,
       "text": "Мне нравится очень гиковская тема про то, что Mozilla хочет задеприкатить протокол HTTP."
@@ -15511,7 +15511,7 @@
       "id": "65c9a579c9c275d1d464c356",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6798.18,
       "etime": 6805.04,
       "text": "Мне во всей этой истории больше всего интересно, что случится раньше, Mozilla задеприкейтит Http или доля браузера Mozilla."
@@ -15529,7 +15529,7 @@
       "id": "65c9a579c9c275d1d464c358",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6806.32,
       "etime": 6807.42,
       "text": "Да, примерно так."
@@ -15538,7 +15538,7 @@
       "id": "65c9a579c9c275d1d464c359",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6807.46,
       "etime": 6814.48,
       "text": "А меня этот вопрос, как вы понимаете, очень сильно беспокоит, потому что язык программирования Rust делает компания Mozilla."
@@ -15547,7 +15547,7 @@
       "id": "65c9a579c9c275d1d464c35a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6814.52,
       "etime": 6820.54,
       "text": "И если вдруг протокол Http задеприкейтит компанию Mozilla, то он вместе с ним может задеприкейтить язык программирования Rust."
@@ -15574,7 +15574,7 @@
       "id": "65c9a579c9c275d1d464c35d",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6842.36,
       "etime": 6844.02,
       "text": "Вот я и говорю, что если вдруг Mozilla Corporation..."
@@ -15655,7 +15655,7 @@
       "id": "65c9a579c9c275d1d464c366",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6878.66,
       "etime": 6882.96,
       "text": "HTTPS 2 только со включенным SSL."
@@ -15682,7 +15682,7 @@
       "id": "65c9a579c9c275d1d464c369",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6887.27,
       "etime": 6889.73,
       "text": "Ну, вот у нас в Москве, например, есть метро."
@@ -15691,7 +15691,7 @@
       "id": "65c9a579c9c275d1d464c36a",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6889.77,
       "etime": 6901.67,
       "text": "И если ты в метро подключаешься к интернету, то у тебя, если находишься за сайтом по ШТП, в него прямо на сайте показываются какие-то непонятные рекламы, какая-то мутная."
@@ -15763,7 +15763,7 @@
       "id": "65c9a579c9c275d1d464c372",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6930.91,
       "etime": 6936.79,
       "text": "Левые сайты перестали бы вставлять на сайт Radio T свою рекламу или еще что-то."
@@ -15889,7 +15889,7 @@
       "id": "65c9a579c9c275d1d464c380",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6980.2,
       "etime": 6982.62,
       "text": "Кстати, со ЖДПС там еще есть одна тема."
@@ -15898,7 +15898,7 @@
       "id": "65c9a579c9c275d1d464c381",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6982.66,
       "etime": 6985.12,
       "text": "Это, может быть, самая важная тема, хотя про нее не говорят."
@@ -15907,7 +15907,7 @@
       "id": "65c9a579c9c275d1d464c382",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6985.14,
       "etime": 6992.65,
       "text": "Сейчас очень многие провайдеры интернета, по меньшей мере в России, продают разным другим организациям информацию о том, куда ходят пользователи."
@@ -15916,7 +15916,7 @@
       "id": "65c9a579c9c275d1d464c383",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6992.67,
       "etime": 6994.47,
       "text": "Чтобы потом им показывать рекламу сразу же."
@@ -15925,7 +15925,7 @@
       "id": "65c9a579c9c275d1d464c384",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 6995.41,
       "etime": 7000.63,
       "text": "Они, соответственно, не смогут это сделать, после того, как всюду будет то, что ТТС."
@@ -15943,7 +15943,7 @@
       "id": "65c9a579c9c275d1d464c386",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 7004.87,
       "etime": 7011.54,
       "text": "Нет, счетчику Яндекса не помешает, но вот другим разным организациям, которые покупают логи провайдеров, помешает."
@@ -16717,7 +16717,7 @@
       "id": "65c9a579c9c275d1d464c3dc",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 7414.98,
       "etime": 7420.97,
       "text": "У вас там будут тихие места, потому что я ни разу не видел тихих коворкингов, где все кричат."
@@ -16726,7 +16726,7 @@
       "id": "65c9a579c9c275d1d464c3dd",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 7420.99,
       "etime": 7422.65,
       "text": "Или там модераторы, что ли, какие-то будут?"
@@ -17059,7 +17059,7 @@
       "id": "65c9a579c9c275d1d464c402",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "stepa_koltsov",
       "stime": 7547.44,
       "etime": 7549.76,
       "text": "Мне кажется, там в камерах хранения дороже стоит."
@@ -17176,7 +17176,7 @@
       "id": "65c9a579c9c275d1d464c40f",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "_artifact",
       "stime": 7606.75,
       "etime": 7608.56,
       "text": "Вот тут я вынужден всех разочаровать."
@@ -17491,7 +17491,7 @@
       "id": "65c9a579c9c275d1d464c432",
       "issue": 442,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_MARIN",
+      "author": "_artifact",
       "stime": 7696.51,
       "etime": 7698.81,
       "text": "Ты сегодня вообще агрессивный и злой."

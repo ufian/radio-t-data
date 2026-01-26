@@ -6016,7 +6016,7 @@
       "id": "65c9a1885eadeca82e2bf665",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "_artifact",
       "stime": 2462.39,
       "etime": 2462.61,
       "text": "Ох..."
@@ -6943,7 +6943,7 @@
       "id": "65c9a1885eadeca82e2bf6cc",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 2810.52,
       "etime": 2813.12,
       "text": "Алексей."
@@ -6952,7 +6952,7 @@
       "id": "65c9a1885eadeca82e2bf6cd",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 2813.16,
       "etime": 2815.9,
       "text": "А ведь этим людям уже по 14 лет."
@@ -7015,7 +7015,7 @@
       "id": "65c9a1885eadeca82e2bf6d4",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 2830.68,
       "etime": 2832.74,
       "text": "Век начался с 2001, да."
@@ -7078,7 +7078,7 @@
       "id": "65c9a1885eadeca82e2bf6db",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 2857.43,
       "etime": 2859.33,
       "text": "Ну я и там, и там на самом деле."
@@ -7150,7 +7150,7 @@
       "id": "65c9a1885eadeca82e2bf6e3",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 2877.27,
       "etime": 2879.28,
       "text": "Нет, не очень."
@@ -7258,7 +7258,7 @@
       "id": "65c9a1885eadeca82e2bf6ef",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 2931.89,
       "etime": 2936.81,
       "text": "Ну, я могу сказать, что с точки зрения внешнего наблюдателя, Java и Maven тоже говно."
@@ -7294,7 +7294,7 @@
       "id": "65c9a1885eadeca82e2bf6f3",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 2945.67,
       "etime": 2946.77,
       "text": "Да не, я не прав."
@@ -7303,7 +7303,7 @@
       "id": "65c9a1885eadeca82e2bf6f4",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 2946.81,
       "etime": 2954.36,
       "text": "Просто я понимаю, что в Ruby действительно там система зависимости очень своеобразная, и ситуация, когда кто-то ломает зависимость, это бывает."
@@ -7312,7 +7312,7 @@
       "id": "65c9a1885eadeca82e2bf6f5",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 2954.4,
       "etime": 2960.7,
       "text": "И если сравнивать с Java, там как бы не компилируется, нельзя сделать один пакет и закинуть, поэтому да, есть такая проблема."
@@ -7330,7 +7330,7 @@
       "id": "65c9a1885eadeca82e2bf6f7",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 2972.27,
       "etime": 2975.67,
       "text": "Да, Ruby проект таким образом передать как пачку исходников сложнее."
@@ -7402,7 +7402,7 @@
       "id": "65c9a1885eadeca82e2bf6ff",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3003.73,
       "etime": 3008.61,
       "text": "Ну, RedBine это вообще очень-очень старый проект, он начался еще до Rails 1.0."
@@ -7411,7 +7411,7 @@
       "id": "65c9a1885eadeca82e2bf700",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3008.95,
       "etime": 3012.24,
       "text": "И там действительно очень-очень много всего плохого внутри."
@@ -7420,7 +7420,7 @@
       "id": "65c9a1885eadeca82e2bf701",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3012.1,
       "etime": 3016.78,
       "text": "С Octopress лично у меня таких проблем не было, но я не знаю, в чем там может быть."
@@ -7501,7 +7501,7 @@
       "id": "65c9a1885eadeca82e2bf70a",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3059.71,
       "etime": 3062.81,
       "text": "Там, скорее всего, нужно было просто бандл присобрать."
@@ -7510,7 +7510,7 @@
       "id": "65c9a1885eadeca82e2bf70b",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3065.13,
       "etime": 3070.9,
       "text": "В смысле, это выполнить команду bundle, то есть это так же, как в маве не притянуть зависимости от нужных версий."
@@ -7555,7 +7555,7 @@
       "id": "65c9a1885eadeca82e2bf710",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3081.74,
       "etime": 3083.44,
       "text": "Я не могу Redmine обновить."
@@ -7564,7 +7564,7 @@
       "id": "65c9a1885eadeca82e2bf711",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3083.46,
       "etime": 3085.75,
       "text": "В Redmine все гораздо хуже, да."
@@ -7672,7 +7672,7 @@
       "id": "65c9a1885eadeca82e2bf71d",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3115.09,
       "etime": 3117.65,
       "text": "Судя по версии, скорее слишком свежие руби."
@@ -7798,7 +7798,7 @@
       "id": "65c9a1885eadeca82e2bf72b",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3164.91,
       "etime": 3166.49,
       "text": "В данном случае это версия библиотеки."
@@ -7807,7 +7807,7 @@
       "id": "65c9a1885eadeca82e2bf72c",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3166.53,
       "etime": 3170.99,
       "text": "То есть версию библиотеки увеличить некорректно можно в любом языке."
@@ -7834,7 +7834,7 @@
       "id": "65c9a1885eadeca82e2bf72f",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3173.73,
       "etime": 3175.97,
       "text": "Ну, в смысле, сделать... Легальным способом?"
@@ -7843,7 +7843,7 @@
       "id": "65c9a1885eadeca82e2bf730",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3176.51,
       "etime": 3176.89,
       "text": "Не верю."
@@ -7861,7 +7861,7 @@
       "id": "65c9a1885eadeca82e2bf732",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3177.87,
       "etime": 3178.17,
       "text": "Ну, как?"
@@ -7870,7 +7870,7 @@
       "id": "65c9a1885eadeca82e2bf733",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3178.19,
       "etime": 3179.35,
       "text": "В Python есть библиотека."
@@ -7879,7 +7879,7 @@
       "id": "65c9a1885eadeca82e2bf734",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3179.43,
       "etime": 3183.14,
       "text": "Я делаю несовместимые изменения и уменьшаю только последнюю цифру."
@@ -7942,7 +7942,7 @@
       "id": "65c9a1885eadeca82e2bf73b",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3202.45,
       "etime": 3210.4,
       "text": "Нет, там дело в том, что Рейк изначально это была внешняя библиотека, начиная с какой-то версии Руби, она вошла в ядро, и вот как раз проблема на этом стыке возникла, видимо."
@@ -8068,7 +8068,7 @@
       "id": "65c9a1885eadeca82e2bf749",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3259.41,
       "etime": 3264.67,
       "text": "Ну и в Python тоже, в общем-то, setup tools появился раньше, но там, конечно, свои проблемы были."
@@ -8536,7 +8536,7 @@
       "id": "65c9a1885eadeca82e2bf77d",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3500.59,
       "etime": 3500.89,
       "text": "Почему нет?"
@@ -8545,7 +8545,7 @@
       "id": "65c9a1885eadeca82e2bf77e",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3500.91,
       "etime": 3502.61,
       "text": "Ну, в смысле, это разные веб-сервера, да."
@@ -8554,7 +8554,7 @@
       "id": "65c9a1885eadeca82e2bf77f",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3502.65,
       "etime": 3506.48,
       "text": "То есть, какой хочешь, такой используешь."
@@ -8743,7 +8743,7 @@
       "id": "65c9a1885eadeca82e2bf794",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3567.64,
       "etime": 3569.46,
       "text": "Нужно было более фанатично, да?"
@@ -8761,7 +8761,7 @@
       "id": "65c9a1885eadeca82e2bf796",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3573.4,
       "etime": 3574.66,
       "text": "Ну, да-да, я тоже думаю."
@@ -8770,7 +8770,7 @@
       "id": "65c9a1885eadeca82e2bf797",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3575.39,
       "etime": 3580.28,
       "text": "Я, кстати, хотел за этот случай извиниться, потому что тогда Олегу именно я написал."
@@ -8788,7 +8788,7 @@
       "id": "65c9a1885eadeca82e2bf799",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3582.01,
       "etime": 3583.89,
       "text": "За то, что, видимо, зря я его позвал."
@@ -8896,7 +8896,7 @@
       "id": "65c9a1885eadeca82e2bf7a5",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Guest_Alexey_392",
       "stime": 3614.78,
       "etime": 3615.92,
       "text": "Все пришли на Монгу, да?"
@@ -10813,7 +10813,7 @@
       "id": "65c9a1885eadeca82e2bf87a",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4389.53,
       "etime": 4390.69,
       "text": "Я за интеграционные тесты."
@@ -10840,7 +10840,7 @@
       "id": "65c9a1885eadeca82e2bf87d",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4395.05,
       "etime": 4396.75,
       "text": "Тут все сложно, на самом деле."
@@ -10894,7 +10894,7 @@
       "id": "65c9a1885eadeca82e2bf883",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4419.09,
       "etime": 4419.81,
       "text": "Да."
@@ -10903,7 +10903,7 @@
       "id": "65c9a1885eadeca82e2bf884",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4419.83,
       "etime": 4432.64,
       "text": "На самом деле я много этих тестов уже писал, и тут основная сложность заключается не в том, как тест написать, а в том, зачем его писать, по большей части."
@@ -10912,7 +10912,7 @@
       "id": "65c9a1885eadeca82e2bf885",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4432.66,
       "etime": 4436.49,
       "text": "То есть все зависит от конкретной системы."
@@ -10921,7 +10921,7 @@
       "id": "65c9a1885eadeca82e2bf886",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4437.23,
       "etime": 4445.47,
       "text": "Мы в своих системах пишем интеграционные тесты, потому что для вещей, которые редко меняются."
@@ -10930,7 +10930,7 @@
       "id": "65c9a1885eadeca82e2bf887",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4445.51,
       "etime": 4446.65,
       "text": "То есть юнит-тесты"
@@ -10939,7 +10939,7 @@
       "id": "65c9a1885eadeca82e2bf888",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4447.3,
       "etime": 4450.8,
       "text": "фактически, они будут для часто изменяемых вещей."
@@ -10948,7 +10948,7 @@
       "id": "65c9a1885eadeca82e2bf889",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4450.88,
       "etime": 4452.28,
       "text": "И они простые очень."
@@ -10957,7 +10957,7 @@
       "id": "65c9a1885eadeca82e2bf88a",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4452.32,
       "etime": 4458.65,
       "text": "Интеграционные — это такие смоук-тесты, которые там проверяют, что все ли поднялось."
@@ -10966,7 +10966,7 @@
       "id": "65c9a1885eadeca82e2bf88b",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4458.71,
       "etime": 4460.43,
       "text": "Тесты на 2К, всевозможные такие."
@@ -10975,7 +10975,7 @@
       "id": "65c9a1885eadeca82e2bf88c",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4460.47,
       "etime": 4466.43,
       "text": "Они не тестируют там все возможные графы входящих и исходящих значений."
@@ -11047,7 +11047,7 @@
       "id": "65c9a1885eadeca82e2bf894",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4487.99,
       "etime": 4491.01,
       "text": "Да, вот это как бы весь смысл."
@@ -11083,7 +11083,7 @@
       "id": "65c9a1885eadeca82e2bf898",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4499.95,
       "etime": 4500.55,
       "text": "Да."
@@ -11092,7 +11092,7 @@
       "id": "65c9a1885eadeca82e2bf899",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4500.85,
       "etime": 4505.58,
       "text": "Например, более конкретно, есть большие куски системы."
@@ -11101,7 +11101,7 @@
       "id": "65c9a1885eadeca82e2bf89a",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4506.4,
       "etime": 4509.08,
       "text": "Ее можно разбить на несколько больших кусков."
@@ -11110,7 +11110,7 @@
       "id": "65c9a1885eadeca82e2bf89b",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "Guest_Andrey_392",
       "stime": 4509.92,
       "etime": 4515.26,
       "text": "И каждый раз запускать смокчек каждого этого куска достаточно долго руками."
@@ -11218,7 +11218,7 @@
       "id": "65c9a1885eadeca82e2bf8a7",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4554.88,
       "etime": 4555.98,
       "text": "Да."
@@ -11227,7 +11227,7 @@
       "id": "65c9a1885eadeca82e2bf8a8",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4556.06,
       "etime": 4562.96,
       "text": "Ну, я, на самом деле, согласен с тем, что юнитексы, они часто изменяются для бизнес-логики фактически."
@@ -11389,7 +11389,7 @@
       "id": "65c9a1885eadeca82e2bf8ba",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "Guest_Andrey_392",
       "stime": 4644.35,
       "etime": 4650.47,
       "text": "Ну, просто сложно мне придумать юнит-тест, который бы вот так вот идеально работал."
@@ -11398,7 +11398,7 @@
       "id": "65c9a1885eadeca82e2bf8bb",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "Guest_Andrey_392",
       "stime": 4650.51,
       "etime": 4659.6,
       "text": "На самом деле бизнес-логика может быть размазана по многим потокам, и они должны как-то еще при этом синхронизироваться."
@@ -11407,7 +11407,7 @@
       "id": "65c9a1885eadeca82e2bf8bc",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4662.09,
       "etime": 4665.99,
       "text": "Баги у нас в основном появляются из-за чего?"
@@ -11416,7 +11416,7 @@
       "id": "65c9a1885eadeca82e2bf8bd",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4666.01,
       "etime": 4672.55,
       "text": "Из-за того, что мы неправильно засинхронизировали, неправильно передали массив из одного в другой объект."
@@ -11425,7 +11425,7 @@
       "id": "65c9a1885eadeca82e2bf8be",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4672.59,
       "etime": 4676.76,
       "text": "А вот логически они достаточно, мне кажется, редки."
@@ -11587,7 +11587,7 @@
       "id": "65c9a1885eadeca82e2bf8d0",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4743.57,
       "etime": 4744.99,
       "text": "Тонкий вопрос."
@@ -11722,7 +11722,7 @@
       "id": "65c9a1885eadeca82e2bf8df",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4794.97,
       "etime": 4797.33,
       "text": "Скорее всего, нет."
@@ -11731,7 +11731,7 @@
       "id": "65c9a1885eadeca82e2bf8e0",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4797.41,
       "etime": 4802.04,
       "text": "Но тут, опять же, это, скорее всего, будет уже интеграционный тест."
@@ -11740,7 +11740,7 @@
       "id": "65c9a1885eadeca82e2bf8e1",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4802.08,
       "etime": 4807.08,
       "text": "То есть, записали мы базу данных или нет, не имеет смысла проверять."
@@ -11749,7 +11749,7 @@
       "id": "65c9a1885eadeca82e2bf8e2",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4807.16,
       "etime": 4815.19,
       "text": "Не имеет смысла проверить просто, что в определенный момент я получаю эти данные на интеграционных неких моментах, там, в UI или где-то."
@@ -11821,7 +11821,7 @@
       "id": "65c9a1885eadeca82e2bf8ea",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4848.87,
       "etime": 4850.74,
       "text": "Почему бы тогда отдельно эти тесты не сделать?"
@@ -11830,7 +11830,7 @@
       "id": "65c9a1885eadeca82e2bf8eb",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4850.76,
       "etime": 4858.2,
       "text": "То есть максимально локализировать вот эти запросы и просто гонять их как SQL-тесты, а не как бизнес-логику?"
@@ -11929,7 +11929,7 @@
       "id": "65c9a1885eadeca82e2bf8f6",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4899.21,
       "etime": 4906.68,
       "text": "Проблема во всех этих методологиях, что они говорят, ребята, тестируйте, и будет всем счастье."
@@ -11938,7 +11938,7 @@
       "id": "65c9a1885eadeca82e2bf8f7",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4906.74,
       "etime": 4908.96,
       "text": "Но они не говорят, в каких случаях что тестировать."
@@ -11947,7 +11947,7 @@
       "id": "65c9a1885eadeca82e2bf8f8",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4908.1,
       "etime": 4910.12,
       "text": "И это самое важное, мне кажется."
@@ -11956,7 +11956,7 @@
       "id": "65c9a1885eadeca82e2bf8f9",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4910.14,
       "etime": 4914.14,
       "text": "Потому что тесты, применимость у них разная."
@@ -11965,7 +11965,7 @@
       "id": "65c9a1885eadeca82e2bf8fa",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4914.87,
       "etime": 4916.41,
       "text": "получается."
@@ -11974,7 +11974,7 @@
       "id": "65c9a1885eadeca82e2bf8fb",
       "issue": 392,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Guest_Andrey_392",
       "stime": 4916.53,
       "etime": 4920.99,
       "text": "И саппортабилити тоже там участвует."

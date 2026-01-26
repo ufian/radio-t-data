@@ -544,7 +544,7 @@
       "id": "65c7dedbb76b34edcf1b0e01",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 178.71,
       "etime": 179.71,
       "text": "Да, я на связи."
@@ -553,7 +553,7 @@
       "id": "65c7dedbb76b34edcf1b0e02",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 179.75,
       "etime": 180.15,
       "text": "Привет."
@@ -562,7 +562,7 @@
       "id": "65c7dedbb76b34edcf1b0e03",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 180.17,
       "etime": 180.37,
       "text": "Привет."
@@ -616,7 +616,7 @@
       "id": "65c7dedbb76b34edcf1b0e09",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 188.75,
       "etime": 190.25,
       "text": "Я зовут Дима Жемеров."
@@ -625,7 +625,7 @@
       "id": "65c7dedbb76b34edcf1b0e0a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 190.37,
       "etime": 196.17,
       "text": "Я из города Санкт-Петербурга, который находится в далеком замкаде, прошу заметить."
@@ -634,7 +634,7 @@
       "id": "65c7dedbb76b34edcf1b0e0b",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 196.31,
       "etime": 204.18,
       "text": "И я, собственно, работаю в компании JetBrains и занимаюсь разработкой всяких разных инструментов для разработчиков."
@@ -643,7 +643,7 @@
       "id": "65c7dedbb76b34edcf1b0e0c",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 204.2,
       "etime": 204.88,
       "text": "В частности, Java IDE IntelliJ IDEA."
@@ -895,7 +895,7 @@
       "id": "65c7dedbb76b34edcf1b0e28",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 333.83,
       "etime": 338.34,
       "text": "Поддержка Питона в плагин-менеджере, она выпущена на прошлой, если не ошибаюсь, неделе."
@@ -985,7 +985,7 @@
       "id": "65c7dedbb76b34edcf1b0e32",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 362.79,
       "etime": 367.3,
       "text": "Остальное все, к сожалению, будет где-нибудь так через полгодика, я бы так"
@@ -1003,7 +1003,7 @@
       "id": "65c7dedbb76b34edcf1b0e34",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 376.88,
       "etime": 380.68,
       "text": "Но при текущих темпах шевеления это где-нибудь через полгодика."
@@ -1039,7 +1039,7 @@
       "id": "65c7dedbb76b34edcf1b0e38",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 395.11,
       "etime": 406.09,
       "text": "К сожалению, так вышло, что делать поддержку Ruby мы начали раньше и большим количеством народу, поэтому в качестве отдельного продукта она тоже появилась раньше."
@@ -1048,7 +1048,7 @@
       "id": "65c7dedbb76b34edcf1b0e39",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 406.13,
       "etime": 409.7,
       "text": "У нас даже есть название для того продукта, который будет поддерживать Python."
@@ -1057,7 +1057,7 @@
       "id": "65c7dedbb76b34edcf1b0e3a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 409.92,
       "etime": 411.48,
       "text": "Он будет называться PyCharm."
@@ -1066,7 +1066,7 @@
       "id": "65c7dedbb76b34edcf1b0e3b",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 413.79,
       "etime": 418.57,
       "text": "Но кроме названия пока что у нас ничего публично доступного нет."
@@ -1129,7 +1129,7 @@
       "id": "65c7dedbb76b34edcf1b0e42",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 442.41,
       "etime": 447.3,
       "text": "Ну, NetBeans, конечно, скажем так, он очень старательно идет по нашим стопам."
@@ -1138,7 +1138,7 @@
       "id": "65c7dedbb76b34edcf1b0e43",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 447.34,
       "etime": 450.3,
       "text": "Они хорошо освоили искусство хождения по нашим стопам."
@@ -1147,7 +1147,7 @@
       "id": "65c7dedbb76b34edcf1b0e44",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 450.32,
       "etime": 454.1,
       "text": "И, в общем, мы все-таки пока что идем впереди, как мы считаем."
@@ -1156,7 +1156,7 @@
       "id": "65c7dedbb76b34edcf1b0e45",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 454.14,
       "etime": 458.64,
       "text": "То есть, по крайней мере, в том, что касается Java и именно Java-разработки."
@@ -1165,7 +1165,7 @@
       "id": "65c7dedbb76b34edcf1b0e46",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 458.7,
       "etime": 466.38,
       "text": "Насчет конкретно Python, насколько я понимаю, то, что они сейчас выпустили, оно может быть чуть-чуть лучше, чем то, что есть сейчас у нас."
@@ -1174,7 +1174,7 @@
       "id": "65c7dedbb76b34edcf1b0e47",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 466.42,
       "etime": 467.72,
       "text": "Ну, или где-то того же порядка."
@@ -1183,7 +1183,7 @@
       "id": "65c7dedbb76b34edcf1b0e48",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 468.88,
       "etime": 470.6,
       "text": "Законченности, скажем так."
@@ -1201,7 +1201,7 @@
       "id": "65c7dedbb76b34edcf1b0e4a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 472.24,
       "etime": 473.82,
       "text": "Сырости, да, можно так сказать."
@@ -1219,7 +1219,7 @@
       "id": "65c7dedbb76b34edcf1b0e4c",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 480.15,
       "etime": 482.93,
       "text": "Да как сказать?"
@@ -1237,7 +1237,7 @@
       "id": "65c7dedbb76b34edcf1b0e4e",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 485.08,
       "etime": 486.22,
       "text": "Ты с какой там ненавистью?"
@@ -1246,7 +1246,7 @@
       "id": "65c7dedbb76b34edcf1b0e4f",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 486.26,
       "etime": 490.97,
       "text": "Нет, на самом деле мы как-то довольно мало о нем думаем."
@@ -1255,7 +1255,7 @@
       "id": "65c7dedbb76b34edcf1b0e50",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 491.03,
       "etime": 496.89,
       "text": "То есть нас, конечно, задалбывают пользователи, которые спрашивают, а где у вас та фича Eclipse, а где эта фича Eclipse."
@@ -1264,7 +1264,7 @@
       "id": "65c7dedbb76b34edcf1b0e51",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 496.93,
       "etime": 501.09,
       "text": "Мы вот даже сделали самую главную фичу Eclipse, у нас в восьмой версии появились крестики на табиках."
@@ -1273,7 +1273,7 @@
       "id": "65c7dedbb76b34edcf1b0e52",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 501.13,
       "etime": 503.57,
       "text": "Теперь на каждый табик можно закрыть крестиком."
@@ -1282,7 +1282,7 @@
       "id": "65c7dedbb76b34edcf1b0e53",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 503.59,
       "etime": 508.35,
       "text": "Это вообще счастье всего прогрессивного человечества, особенно пользователей Eclipse."
@@ -1291,7 +1291,7 @@
       "id": "65c7dedbb76b34edcf1b0e54",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 508.39,
       "etime": 509.15,
       "text": "А так, на самом деле..."
@@ -1300,7 +1300,7 @@
       "id": "65c7dedbb76b34edcf1b0e55",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 511.16,
       "etime": 535.48,
       "text": "Я бы не сказал, что, например, мы бы оттуда могли черпать какие-то идеи по поводу того, куда нам дальше двигаться, потому что Eclipse, он очень крут как платформа, Eclipse как бы сейчас единственное реально существующее решение, чтобы если вам нужно сделать какую-то свою IDE для какого-то вашего внутреннего язычка или какой-то нашей внутренней технологии, вы ее, конечно, будете делать на базе Eclipse, и Eclipse для этого подходит очень хорошо."
@@ -1309,7 +1309,7 @@
       "id": "65c7dedbb76b34edcf1b0e56",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 535.5,
       "etime": 537.74,
       "text": "Но если вам нужна IDE для Java, то, в общем..."
@@ -1345,7 +1345,7 @@
       "id": "65c7dedbb76b34edcf1b0e5a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 558.39,
       "etime": 560.39,
       "text": "Мы предпочитаем сравнивать цену на IntelliJ IDEA и зарплату программиста."
@@ -1381,7 +1381,7 @@
       "id": "65c7dedbb76b34edcf1b0e5e",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 586.85,
       "etime": 590.03,
       "text": "Вот смотрите, вы можете на работу пешком, а можете ездить на машине."
@@ -1390,7 +1390,7 @@
       "id": "65c7dedbb76b34edcf1b0e5f",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 590.05,
       "etime": 598.02,
       "text": "И пешком ходить совершенно бесплатно, но почему-то многие люди платят совершенно ужасное количество денег, там 10-20 тысяч долларов за то, чтобы купить машину и ездить на работу на машине."
@@ -1399,7 +1399,7 @@
       "id": "65c7dedbb76b34edcf1b0e60",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 598.06,
       "etime": 602.88,
       "text": "Хотя, казалось бы, тоже пешком ходить не хочу, никому ничего платить не надо."
@@ -1570,7 +1570,7 @@
       "id": "65c7dedbb76b34edcf1b0e73",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 682.76,
       "etime": 685.98,
       "text": "Прозрачно с Eclipse работать можно еще в семерке стало, так что это не новость."
@@ -1579,7 +1579,7 @@
       "id": "65c7dedbb76b34edcf1b0e74",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 687,
       "etime": 690.67,
       "text": "Нет, конкретно новую фичу, но я могу зачитать, скажем так, ключевые пункты сайта."
@@ -1624,7 +1624,7 @@
       "id": "65c7dedbb76b34edcf1b0e79",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 705.61,
       "etime": 706.39,
       "text": "Что стоит обновиться?"
@@ -1633,7 +1633,7 @@
       "id": "65c7dedbb76b34edcf1b0e7a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 706.43,
       "etime": 709.77,
       "text": "Например, всякие приятные рефакторинги появились."
@@ -1642,7 +1642,7 @@
       "id": "65c7dedbb76b34edcf1b0e7b",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 709.87,
       "etime": 717.51,
       "text": "Я просто не знаю, насколько гикнуто мне говорить, но я, например, могу рассказывать про экстракт-метод для фрагмента кода, у которого есть несколько точек выхода."
@@ -1669,7 +1669,7 @@
       "id": "65c7dedbb76b34edcf1b0e7e",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 724.14,
       "etime": 724.56,
       "text": "Вот."
@@ -1678,7 +1678,7 @@
       "id": "65c7dedbb76b34edcf1b0e7f",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 724.6,
       "etime": 726.02,
       "text": "Или, например, такая фишка в названии dataflow to this."
@@ -1687,7 +1687,7 @@
       "id": "65c7dedbb76b34edcf1b0e80",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 726.1,
       "etime": 737.02,
       "text": "Это если у вас через какую-то длинную цепочку вызовов передается какое-то значение, вот у вас, например, свалился null pointer, а вы хотите понять, откуда же там null-то вообще взялся в этой точке."
@@ -1696,7 +1696,7 @@
       "id": "65c7dedbb76b34edcf1b0e81",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 737.04,
       "etime": 747.77,
       "text": "Вы говорите dataflow to this, вам раскручивается вся цепочка, что вот этот null, он на самом деле был присвоен значение такого-то поля, а конструктор того объекта, в котором присвоилось поле, он был вызван еще из такого-то метода."
@@ -1705,7 +1705,7 @@
       "id": "65c7dedbb76b34edcf1b0e82",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 747.79,
       "etime": 751.17,
       "text": "И вот в том-то методе, например, этот null был каким-то образом неправильно посчитан."
@@ -1714,7 +1714,7 @@
       "id": "65c7dedbb76b34edcf1b0e83",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 751.92,
       "etime": 755.72,
       "text": "И такую раскрутку мы теперь умеем делать практически автоматически."
@@ -1741,7 +1741,7 @@
       "id": "65c7dedbb76b34edcf1b0e86",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 758.82,
       "etime": 765.76,
       "text": "Плюсики в дереве надо нажимать руками, которые, соответственно, каждую следующую ноту достают."
@@ -1750,7 +1750,7 @@
       "id": "65c7dedbb76b34edcf1b0e87",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 765.8,
       "etime": 768.38,
       "text": "Так понятно, да."
@@ -1759,7 +1759,7 @@
       "id": "65c7dedbb76b34edcf1b0e88",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 768.4,
       "etime": 770.84,
       "text": "Что еще хорошего?"
@@ -1768,7 +1768,7 @@
       "id": "65c7dedbb76b34edcf1b0e89",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 770.88,
       "etime": 772.28,
       "text": "Ну, например, из того, что как бы..."
@@ -1777,7 +1777,7 @@
       "id": "65c7dedbb76b34edcf1b0e8a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 774.71,
       "etime": 775.51,
       "text": "То, что сразу видно."
@@ -1786,7 +1786,7 @@
       "id": "65c7dedbb76b34edcf1b0e8b",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 775.55,
       "etime": 794.53,
       "text": "Мы теперь на первом старте предлагаем пользователю выбрать, какие же, собственно, плагины ему нужны, и сразу говорим, что вот если ты выключишь плагины для, например, если сурсейфом не пользуешься и в гробу бы его обедал, то ты сразу выключаешь поддержку сурсейфа, и то, что она у нас есть, она тебе ничего не стоит в плане памяти, скорости и так далее."
@@ -1795,7 +1795,7 @@
       "id": "65c7dedbb76b34edcf1b0e8c",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 794.57,
       "etime": 798.69,
       "text": "И плагин-то выключать можно было и раньше, но то, что мы предлагаем это сделать сразу, это, в общем, существует."
@@ -1804,7 +1804,7 @@
       "id": "65c7dedbb76b34edcf1b0e8d",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 799.2,
       "etime": 803.77,
       "text": "сразу дает человеку путь к тому, чтобы идея у него работала быстрее и веселее."
@@ -1822,7 +1822,7 @@
       "id": "65c7dedbb76b34edcf1b0e8f",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 811.47,
       "etime": 818.8,
       "text": "Могли, конечно, идти по пути Eclipse и заставлять пользователей эти плагины все отдельно скачивать, потом разбираться с тем, что он скачал не той и не для той версии."
@@ -1831,7 +1831,7 @@
       "id": "65c7dedbb76b34edcf1b0e90",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 819.29,
       "etime": 822.47,
       "text": "Оно у него падает или там работает, но через раз."
@@ -1921,7 +1921,7 @@
       "id": "65c7dedbb76b34edcf1b0e9a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 843.7,
       "etime": 844.58,
       "text": "Нет, тут очень просто."
@@ -1930,7 +1930,7 @@
       "id": "65c7dedbb76b34edcf1b0e9b",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 844.6,
       "etime": 845.41,
       "text": "Вот у вас есть там..."
@@ -1939,7 +1939,7 @@
       "id": "65c7dedbb76b34edcf1b0e9c",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 846.35,
       "etime": 851.75,
       "text": "нашел CD-длок в продакшене, у вас есть, соответственно, куча, там вот есть, соответственно, полный треддамп из виртуальной машины."
@@ -1948,7 +1948,7 @@
       "id": "65c7dedbb76b34edcf1b0e9d",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 851.77,
       "etime": 868.6,
       "text": "Там, не знаю, 250 тредов или 50 тредов, из которых там, на самом деле, 248 из них спят или там занимаются чем-то совершенно неотносящим друг к другу, а два из них, собственно, либо там один бесконечный цикл ушел, либо они друг с другом CD-длочились, либо еще что-то такое."
@@ -1957,7 +1957,7 @@
       "id": "65c7dedbb76b34edcf1b0e9e",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 868.64,
       "etime": 874.52,
       "text": "Вы просто говорите аналайз, соответственно, анализ тег-трейс, поясните туда этот треддамп целиком, и вам показывается аккуратно"
@@ -1966,7 +1966,7 @@
       "id": "65c7dedbb76b34edcf1b0e9f",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 875.92,
       "etime": 879.46,
       "text": "разложенный список тредов, отсортированный по тому, насколько вам интересно на них смотреть."
@@ -1975,7 +1975,7 @@
       "id": "65c7dedbb76b34edcf1b0ea0",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 879.48,
       "etime": 882.54,
       "text": "То есть те треды, которые что-то делают существенно, они будут сверху списка."
@@ -1984,7 +1984,7 @@
       "id": "65c7dedbb76b34edcf1b0ea1",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 882.56,
       "etime": 886.3,
       "text": "Те треды, которые спят или чего-то ждут, они будут внизу сереньким."
@@ -1993,7 +1993,7 @@
       "id": "65c7dedbb76b34edcf1b0ea2",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 886.34,
       "etime": 888.6,
       "text": "И вы сразу знаете, куда он смотрит."
@@ -2011,7 +2011,7 @@
       "id": "65c7dedbb76b34edcf1b0ea4",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 894.01,
       "etime": 900.99,
       "text": "Нет, любой треддамп, который, например, там из еще трейдинга, поистине треддамп, и там код запущенным не должен быть вообще."
@@ -2065,7 +2065,7 @@
       "id": "65c7dedbb76b34edcf1b0eaa",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 921.75,
       "etime": 925.01,
       "text": "Скажем так, 6.5 как раз фичи не уже, 6.0 было большим воровством фичи."
@@ -2074,7 +2074,7 @@
       "id": "65c7dedbb76b34edcf1b0eab",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 927.16,
       "etime": 934.22,
       "text": "6.5 как раз интересный момент, потому что именно фичи по поддержке Java, они где-то там во второй половине списка."
@@ -2083,7 +2083,7 @@
       "id": "65c7dedbb76b34edcf1b0eac",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 934.26,
       "etime": 943.12,
       "text": "То есть главное, что у них новое, это поддержка Groovy, которая, конечно же, намного хуже, чем наша поддержка Groovy, которая вообще лучшая в мире пока что остается."
@@ -2092,7 +2092,7 @@
       "id": "65c7dedbb76b34edcf1b0ead",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 943.16,
       "etime": 947.47,
       "text": "Там появилась поддержка PHP, которую у нас пока нет ни в каком виде."
@@ -2101,7 +2101,7 @@
       "id": "65c7dedbb76b34edcf1b0eae",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 947.51,
       "etime": 952.59,
       "text": "Там появилась... Там, собственно, да, Python появился сейчас в Early Access'е."
@@ -2110,7 +2110,7 @@
       "id": "65c7dedbb76b34edcf1b0eaf",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 954.26,
       "etime": 957.28,
       "text": "И как бы главное, на что они напирают, это вот эта поддержка других языков, не Java."
@@ -2119,7 +2119,7 @@
       "id": "65c7dedbb76b34edcf1b0eb0",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 957.4,
       "etime": 962.07,
       "text": "И где-то там в конце списка, вот там, да, в Java, там тоже несколько фич они сделали."
@@ -2128,7 +2128,7 @@
       "id": "65c7dedbb76b34edcf1b0eb1",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 962.13,
       "etime": 966.77,
       "text": "И, в общем, наверное, у них кончилась фантазия или еще что-то."
@@ -2137,7 +2137,7 @@
       "id": "65c7dedbb76b34edcf1b0eb2",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 966.79,
       "etime": 971.19,
       "text": "У нас пока фантазии хватает на то, чтобы придумать, чтобы такое в Java сделать хорошее."
@@ -2173,7 +2173,7 @@
       "id": "65c7dedbb76b34edcf1b0eb6",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 987.37,
       "etime": 991.95,
       "text": "Вы бы тоже кого-нибудь позвали бы из САНа?"
@@ -2182,7 +2182,7 @@
       "id": "65c7dedbb76b34edcf1b0eb7",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 991.97,
       "etime": 994.31,
       "text": "Наверное, было бы интересно тоже пообщаться."
@@ -2407,7 +2407,7 @@
       "id": "65c7dedbb76b34edcf1b0ed0",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1100.31,
       "etime": 1108.59,
       "text": "— Скажем так, мы не знаем, что мы такое можем... Грубо говоря, на рынке есть довольно много других профайлеров."
@@ -2416,7 +2416,7 @@
       "id": "65c7dedbb76b34edcf1b0ed1",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1108.63,
       "etime": 1112.81,
       "text": "Некоторые из них довольно хорошие, одни из них мы сами пользуемся и, в общем, очень им довольны."
@@ -2425,7 +2425,7 @@
       "id": "65c7dedbb76b34edcf1b0ed2",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1112.91,
       "etime": 1118.58,
       "text": "И начинать делать свой профайлер имеет смысл, если мы можем сказать какое-то новое слово, если мы просто..."
@@ -2434,7 +2434,7 @@
       "id": "65c7dedbb76b34edcf1b0ed3",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1118.99,
       "etime": 1132.06,
       "text": "То есть мы можем взять этот самый неназываемый продукт, просто переписать, потратить силы на то, чтобы написать такой же, и, наверное, и, соответственно, просто ради того, чтобы увеличить привлекательность идеи."
@@ -2452,7 +2452,7 @@
       "id": "65c7dedbb76b34edcf1b0ed5",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1135.94,
       "etime": 1137.56,
       "text": "Мы предпочитаем все-таки делать новую вещь."
@@ -2461,7 +2461,7 @@
       "id": "65c7dedbb76b34edcf1b0ed6",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1137.6,
       "etime": 1144.2,
       "text": "Поэтому у нас есть Companion Products, то есть программа продуктов, которую мы рекомендуем использовать вместе с идеей."
@@ -2470,7 +2470,7 @@
       "id": "65c7dedbb76b34edcf1b0ed7",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1144.24,
       "etime": 1147.56,
       "text": "Там есть, соответственно, JProfiler, который мы предлагаем..."
@@ -2479,7 +2479,7 @@
       "id": "65c7dedbb76b34edcf1b0ed8",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1150.28,
       "etime": 1152.44,
       "text": "пользоваться им идеей, тоже покупать и тоже им пользоваться."
@@ -2569,7 +2569,7 @@
       "id": "65c7dedbb76b34edcf1b0ee2",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1187.58,
       "etime": 1193.49,
       "text": "В NetBeans, насколько я понимаю, все-таки не то, чтобы совсем простенький, там они достаточно много в это вложились."
@@ -2578,7 +2578,7 @@
       "id": "65c7dedbb76b34edcf1b0ee3",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1193.53,
       "etime": 1200.01,
       "text": "Нет, ну опять же, а простенький, его не будет хватать для реальных задач, то есть им будут мало кто, мало когда пользоваться, тоже непонятно, насколько это нужно."
@@ -2677,7 +2677,7 @@
       "id": "65c7dedbb76b34edcf1b0eee",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1226.64,
       "etime": 1227.52,
       "text": "Под Остен, то есть под Маком."
@@ -2686,7 +2686,7 @@
       "id": "65c7dedbb76b34edcf1b0eef",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1232.86,
       "etime": 1234.95,
       "text": "Под маком, где там какой-то шик под маком."
@@ -2866,7 +2866,7 @@
       "id": "65c7dedbb76b34edcf1b0f03",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1294.86,
       "etime": 1297.49,
       "text": "Честно говоря, вот именно такое обвинение нас"
@@ -2875,7 +2875,7 @@
       "id": "65c7dedbb76b34edcf1b0f04",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1298.28,
       "etime": 1312.55,
       "text": "Меня достаточно сильно удивляет, то есть как раз скорее наоборот, я бы понял, если бы вас обвиняли в том, что у нас все поуродски и наоборот, что наоборот у нас iCandy мало, а оказывается у нас его слишком много."
@@ -2884,7 +2884,7 @@
       "id": "65c7dedbb76b34edcf1b0f05",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1312.59,
       "etime": 1319.97,
       "text": "Нет, на самом деле iCandy история такая, что вот была и предыдущая версия идеи, и она использовала стандартные системные табики под всеми платформами."
@@ -2893,7 +2893,7 @@
       "id": "65c7dedbb76b34edcf1b0f06",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1321.14,
       "etime": 1329.12,
       "text": "Потом компания Apple выпустила новую версию своего замечательного GDK, новую версию замечательного AVT, в которой эти табики совершенно поломались."
@@ -2902,7 +2902,7 @@
       "id": "65c7dedbb76b34edcf1b0f07",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1329.14,
       "etime": 1336.21,
       "text": "То есть, например, активный табик не всегда переносится в видимую область экрана."
@@ -2911,7 +2911,7 @@
       "id": "65c7dedbb76b34edcf1b0f08",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1336.23,
       "etime": 1345.94,
       "text": "Если у вас есть много табиков, то у вас есть длинная-длинная полоса, которую вам нужно ручками скроллить, и если вы на что-то переключаетесь, что в этой полосе не видно, то оно так невидным и остается."
@@ -2920,7 +2920,7 @@
       "id": "65c7dedbb76b34edcf1b0f09",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1346.85,
       "etime": 1348.49,
       "text": "Ну и там еще всякие другие проблемы были."
@@ -2929,7 +2929,7 @@
       "id": "65c7dedbb76b34edcf1b0f0a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1348.51,
       "etime": 1357.4,
       "text": "И поэтому мы просто были вынуждены написать собственные табики, которые пришлось написать так, чтобы они выглядели примерно одинаково под всеми платформами, и которые теперь работают."
@@ -2956,7 +2956,7 @@
       "id": "65c7dedbb76b34edcf1b0f0d",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1373.59,
       "etime": 1374.57,
       "text": "Используем свинг."
@@ -2965,7 +2965,7 @@
       "id": "65c7dedbb76b34edcf1b0f0e",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1374.61,
       "etime": 1378.16,
       "text": "И WC это как бы, ну, нижний уровень свинга."
@@ -3019,7 +3019,7 @@
       "id": "65c7dedbb76b34edcf1b0f14",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1395.37,
       "etime": 1395.77,
       "text": "Во-первых, ты..."
@@ -3028,7 +3028,7 @@
       "id": "65c7dedbb76b34edcf1b0f15",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1397.1,
       "etime": 1402.94,
       "text": "Для того, чтобы он стал менее пестер, выкидывать свинг, во-первых, не надо, во-вторых, выкидывать свинг значит, что все переписать."
@@ -3154,7 +3154,7 @@
       "id": "65c7dedbb76b34edcf1b0f23",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1451.22,
       "etime": 1454.32,
       "text": "Это не совсем правда, потому что на самом деле там есть..."
@@ -3163,7 +3163,7 @@
       "id": "65c7dedbb76b34edcf1b0f24",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1456.66,
       "etime": 1460.44,
       "text": "Там есть опции, которые говорят, что надо перекомпилировать."
@@ -3172,7 +3172,7 @@
       "id": "65c7dedbb76b34edcf1b0f25",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1460.48,
       "etime": 1468.86,
       "text": "То есть если от вашего модуля ничего другого не зависит, то вы можете, например, запускать файлы в этом модуле, не компилируя никаких других модулей."
@@ -3190,7 +3190,7 @@
       "id": "65c7dedbb76b34edcf1b0f27",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1470.92,
       "etime": 1479.29,
       "text": "Если у вас есть ран-конфигурация, например, то она перекомпилирует только этот модуль и запустит, и вам не нужно исправлять ошибки в остальной части проекта."
@@ -3271,7 +3271,7 @@
       "id": "65c7dedbb76b34edcf1b0f30",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1512.31,
       "etime": 1513.68,
       "text": "Смотря как ты вызываешь компиляцию."
@@ -3280,7 +3280,7 @@
       "id": "65c7dedbb76b34edcf1b0f31",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1513.72,
       "etime": 1518.52,
       "text": "То есть, если ты говоришь build make, в смысле, там, build project, он, конечно, компилирует все."
@@ -3289,7 +3289,7 @@
       "id": "65c7dedbb76b34edcf1b0f32",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1518.54,
       "etime": 1523.09,
       "text": "А если из контекстного меню на модуль вызвать компиляцию модуля, он перекомпилирует этот модуль и его зависит."
@@ -3334,7 +3334,7 @@
       "id": "65c7dedbb76b34edcf1b0f37",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1531.8,
       "etime": 1534.32,
       "text": "Нет, он компилирует модули его зависимости."
@@ -3469,7 +3469,7 @@
       "id": "65c7dedbb76b34edcf1b0f46",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1570.4,
       "etime": 1571.1,
       "text": "Вот этот наезд, к сожалению..."
@@ -3478,7 +3478,7 @@
       "id": "65c7dedbb76b34edcf1b0f47",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1573.74,
       "etime": 1580.71,
       "text": "Ничего не могу возразить, действительно, у нас и диалоги некоторые разъехались сильно, и менюшка разъехалась сильно."
@@ -3505,7 +3505,7 @@
       "id": "65c7dedbb76b34edcf1b0f4a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1593.68,
       "etime": 1594.95,
       "text": "Нет, мы пытаемся дружить с Mac'ом, мы не..."
@@ -3514,7 +3514,7 @@
       "id": "65c7dedbb76b34edcf1b0f4b",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1596.83,
       "etime": 1599.42,
       "text": "Пытаемся дружить с 15-дюймовыми мониторами на Маке."
@@ -3523,7 +3523,7 @@
       "id": "65c7dedbb76b34edcf1b0f4c",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1600.34,
       "etime": 1600.86,
       "text": "Это правда."
@@ -3622,7 +3622,7 @@
       "id": "65c7dedbb76b34edcf1b0f57",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1635.44,
       "etime": 1639.92,
       "text": "Есть ровно один компонент, который я знаю, который работает, но неважно."
@@ -3631,7 +3631,7 @@
       "id": "65c7dedbb76b34edcf1b0f58",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1639.98,
       "etime": 1647.85,
       "text": "Нет, на самом деле такая теория выдвигалась, что на самом деле Ribbon — это будущее интерфейсов IDE."
@@ -3640,7 +3640,7 @@
       "id": "65c7dedbb76b34edcf1b0f59",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1647.89,
       "etime": 1647.91,
       "text": "И"
@@ -3649,7 +3649,7 @@
       "id": "65c7dedbb76b34edcf1b0f5a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1651.21,
       "etime": 1652.05,
       "text": "Я не знаю."
@@ -3658,7 +3658,7 @@
       "id": "65c7dedbb76b34edcf1b0f5b",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1652.09,
       "etime": 1654.48,
       "text": "Возможно, это так, но у нас пока как бы не хватило."
@@ -3667,7 +3667,7 @@
       "id": "65c7dedbb76b34edcf1b0f5c",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1654.52,
       "etime": 1658.46,
       "text": "То ли сил не хватило попробовать, то ли в общем."
@@ -3766,7 +3766,7 @@
       "id": "65c7dedbb76b34edcf1b0f67",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1683.07,
       "etime": 1684.45,
       "text": "Нет, ни с кем не путайте."
@@ -3775,7 +3775,7 @@
       "id": "65c7dedbb76b34edcf1b0f68",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1684.53,
       "etime": 1691.02,
       "text": "То есть персональная лицензия стоит 250 долларов, а для open source проектов можно получить лицензию бесплатно."
@@ -3784,7 +3784,7 @@
       "id": "65c7dedbb76b34edcf1b0f69",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1691.1,
       "etime": 1691.1,
       "text": "Все так же."
@@ -3802,7 +3802,7 @@
       "id": "65c7dedbb76b34edcf1b0f6b",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1699.2,
       "etime": 1700.76,
       "text": "В смысле, что ли, в торрентах нет."
@@ -3829,7 +3829,7 @@
       "id": "65c7dedbb76b34edcf1b0f6e",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1712.56,
       "etime": 1716.1,
       "text": "А что, вы не знаете, каким образом оно там оказывается?"
@@ -3838,7 +3838,7 @@
       "id": "65c7dedbb76b34edcf1b0f6f",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1716.16,
       "etime": 1717.56,
       "text": "Нет."
@@ -3856,7 +3856,7 @@
       "id": "65c7dedbb76b34edcf1b0f71",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1720.1,
       "etime": 1725.36,
       "text": "Скажем так, то есть, учитывая ситуацию на рынке, мы, конечно..."
@@ -3874,7 +3874,7 @@
       "id": "65c7dedbb76b34edcf1b0f73",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1742.32,
       "etime": 1746.46,
       "text": "Ну, потому что, например, некоторые конторы не поощряют использование пиратского софта."
@@ -3883,7 +3883,7 @@
       "id": "65c7dedbb76b34edcf1b0f74",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1746.5,
       "etime": 1751.06,
       "text": "Может быть, там не надо будет даже выклянчивать, а просто нужна идея, ему ее купят."
@@ -3901,7 +3901,7 @@
       "id": "65c7dedbb76b34edcf1b0f76",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1753.42,
       "etime": 1763.63,
       "text": "Поскольку у человека есть бесплатные альтернативы, то пусть он лучше бесплатно пользуется нашим продуктом, чем конкурентами, потому что если он привыкнет к конкурентам, то наш продукт он не купит никогда."
@@ -3910,7 +3910,7 @@
       "id": "65c7dedbb76b34edcf1b0f77",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1763.67,
       "etime": 1768.97,
       "text": "Так он, в общем, привыкнет, ему понравится, и потом, может быть, купит в другой раз."
@@ -4108,7 +4108,7 @@
       "id": "65c7dedbb76b34edcf1b0f8d",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1843.48,
       "etime": 1846.68,
       "text": "С негодованием закрывать табики, это, конечно, хорошо, да."
@@ -4153,7 +4153,7 @@
       "id": "65c7dedbb76b34edcf1b0f92",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1856.58,
       "etime": 1858.12,
       "text": "А как-то почему-то у нас в компании..."
@@ -4162,7 +4162,7 @@
       "id": "65c7dedbb76b34edcf1b0f93",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1861.26,
       "etime": 1861.7,
       "text": "Говори, говори."
@@ -4171,7 +4171,7 @@
       "id": "65c7dedbb76b34edcf1b0f94",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1861.72,
       "etime": 1869.4,
       "text": "Наши компании почему-то именно так называют этот элемент интерфейса."
@@ -4180,7 +4180,7 @@
       "id": "65c7dedbb76b34edcf1b0f95",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1869.5,
       "etime": 1872.08,
       "text": "Я не знаю, почему."
@@ -4189,7 +4189,7 @@
       "id": "65c7dedbb76b34edcf1b0f96",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1872.16,
       "etime": 1874.48,
       "text": "Как-то настолько уже так прижилось, что я совершенно не замечаю."
@@ -4198,7 +4198,7 @@
       "id": "65c7dedbb76b34edcf1b0f97",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1874.5,
       "etime": 1877.94,
       "text": "Вначале, когда пришел в компанию, тоже удивлялся, почему табики, а не как-то еще."
@@ -4270,7 +4270,7 @@
       "id": "65c7dedbb76b34edcf1b0f9f",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1912.62,
       "etime": 1926.48,
       "text": "Нет, на самом деле тут такая история, что, как обычно, что пока дело, как бы, к моменту, когда я научился снимать аккорды достаточно, чтобы они получались правильно, я уже потерял совершенно интерес к выкладыванию их в интернет, например."
@@ -4315,7 +4315,7 @@
       "id": "65c7dedbb76b34edcf1b0fa4",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1937.1,
       "etime": 1940.32,
       "text": "К сожалению, это очень технически сложно."
@@ -4324,7 +4324,7 @@
       "id": "65c7dedbb76b34edcf1b0fa5",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1940.62,
       "etime": 1943.68,
       "text": "И есть софт, который это пытается делать."
@@ -4333,7 +4333,7 @@
       "id": "65c7dedbb76b34edcf1b0fa6",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1943.78,
       "etime": 1947.9,
       "text": "И, насколько я понимаю, у него довольно плохо это получается."
@@ -4486,7 +4486,7 @@
       "id": "65c7dedbb76b34edcf1b0fb7",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 1998.6,
       "etime": 2007.48,
       "text": "Понятно, что есть быстрое преобразование фурье, что можно выделить частоты, которые там основные преобладающие, попробовать понять, каким нотам они соответствуют."
@@ -4495,7 +4495,7 @@
       "id": "65c7dedbb76b34edcf1b0fb8",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2007.5,
       "etime": 2018,
       "text": "Но поскольку гитара штука довольно шумная, с большим количеством призвуков, тизеньков и так далее, то в общем... Понятно."
@@ -4504,7 +4504,7 @@
       "id": "65c7dedbb76b34edcf1b0fb9",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2018.18,
       "etime": 2022.18,
       "text": "Один прогнать можно, но качество результата его работы будет не очень удовлетворительное."
@@ -6583,7 +6583,7 @@
       "id": "65c7dedbb76b34edcf1b10a0",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2917.36,
       "etime": 2918.44,
       "text": "JetBrains."
@@ -6646,7 +6646,7 @@
       "id": "65c7dedbb76b34edcf1b10a7",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2930.19,
       "etime": 2931.55,
       "text": "Русская, на самом деле."
@@ -6673,7 +6673,7 @@
       "id": "65c7dedbb76b34edcf1b10aa",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2934.29,
       "etime": 2935.31,
       "text": "Что?"
@@ -6691,7 +6691,7 @@
       "id": "65c7dedbb76b34edcf1b10ac",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2937.47,
       "etime": 2939.31,
       "text": "Ну, как сказать?"
@@ -6700,7 +6700,7 @@
       "id": "65c7dedbb76b34edcf1b10ad",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2939.33,
       "etime": 2940.59,
       "text": "Такой специфический офшор."
@@ -6709,7 +6709,7 @@
       "id": "65c7dedbb76b34edcf1b10ae",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2941.38,
       "etime": 2945.24,
       "text": "Нет, на самом деле у нас в Праге сейлз офис, а весь девелопмент в Питере."
@@ -6718,7 +6718,7 @@
       "id": "65c7dedbb76b34edcf1b10af",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2945.34,
       "etime": 2946.93,
       "text": "И мы пока нормально себя чувствуем."
@@ -6727,7 +6727,7 @@
       "id": "65c7dedbb76b34edcf1b10b0",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2946.97,
       "etime": 2952.31,
       "text": "То есть у нас, конечно, есть некоторый спад продаж."
@@ -6736,7 +6736,7 @@
       "id": "65c7dedbb76b34edcf1b10b1",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2952.33,
       "etime": 2954.91,
       "text": "Это не повод сокращать народ."
@@ -6772,7 +6772,7 @@
       "id": "65c7dedbb76b34edcf1b10b5",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2959.49,
       "etime": 2961.29,
       "text": "Что-что, бутерброды у нас всегда."
@@ -6808,7 +6808,7 @@
       "id": "65c7dedbb76b34edcf1b10b9",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2966.14,
       "etime": 2974.28,
       "text": "Нет, они кончаются к вечеру воскресенья, потому что в пятницу их, соответственно, выходных их новые не завозят, и вот к вечеру воскресенья они заканчиваются."
@@ -6835,7 +6835,7 @@
       "id": "65c7dedbb76b34edcf1b10bc",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2984.3,
       "etime": 2991.36,
       "text": "С полноценными обедами у нас та же история, у нас их тоже где-то в час дня они появляются и заканчиваются, ну да, в 8 заканчиваются, да."
@@ -6844,7 +6844,7 @@
       "id": "65c7dedbb76b34edcf1b10bd",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 2991.4,
       "etime": 2994.78,
       "text": "Но это как бы всегда так было, да, как-то с тех пор, как они появились."
@@ -6997,7 +6997,7 @@
       "id": "65c7dedbb76b34edcf1b10ce",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3043.89,
       "etime": 3051.17,
       "text": "Ты как-то знаешь, если бы были люди, которые нам настолько не нравятся, мы бы их, наверное, и без кризиса бы уволили."
@@ -7015,7 +7015,7 @@
       "id": "65c7dedbb76b34edcf1b10d0",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3054.23,
       "etime": 3058.72,
       "text": "В Питере в районе сотни, но это не только девелоперы, это всех, если посчитать."
@@ -7024,7 +7024,7 @@
       "id": "65c7dedbb76b34edcf1b10d1",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3058.74,
       "etime": 3059.97,
       "text": "В Праге еще человек двадцать."
@@ -7087,7 +7087,7 @@
       "id": "65c7dedbb76b34edcf1b10d8",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3086.39,
       "etime": 3088.23,
       "text": "Распытался один раз."
@@ -7123,7 +7123,7 @@
       "id": "65c7dedbb76b34edcf1b10dc",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3096.66,
       "etime": 3098.66,
       "text": "Я его и так слышу, зачем его переслушивать?"
@@ -7249,7 +7249,7 @@
       "id": "65c7dedbb76b34edcf1b10ea",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3145.36,
       "etime": 3152.74,
       "text": "Знаете, довольно многие сотрудники Sun, по крайней мере, в питерском офисе, они на самом деле используют идею."
@@ -7258,7 +7258,7 @@
       "id": "65c7dedbb76b34edcf1b10eb",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3152.78,
       "etime": 3155.72,
       "text": "Их заставляют этого не делать, но они все равно."
@@ -7276,7 +7276,7 @@
       "id": "65c7dedbb76b34edcf1b10ed",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3157.52,
       "etime": 3161.84,
       "text": "Потому что корпоративная политика, надбинцем надо всем пользоваться."
@@ -7294,7 +7294,7 @@
       "id": "65c7dedbb76b34edcf1b10ef",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3164.63,
       "etime": 3168.22,
       "text": "Ну, это не значит пользоваться, знать лицо."
@@ -7303,7 +7303,7 @@
       "id": "65c7dedbb76b34edcf1b10f0",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3168.24,
       "etime": 3172.98,
       "text": "Мы тоже как бы смотрим в лицо, не более того."
@@ -7924,7 +7924,7 @@
       "id": "65c7dedbb76b34edcf1b1135",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3478.39,
       "etime": 3487.05,
       "text": "Да я понимаю, что я довольно много времени посвятил чтению сайта growcloud.net, на котором этот кейс обсасывается во всех деталях, которые только можно."
@@ -7933,7 +7933,7 @@
       "id": "65c7dedbb76b34edcf1b1136",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3487.09,
       "etime": 3494.82,
       "text": "Я совершенно не представляю, зачем я это делаю, но почему-то до сих пор на время от времени захожу."
@@ -7942,7 +7942,7 @@
       "id": "65c7dedbb76b34edcf1b1137",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3494.96,
       "etime": 3496.82,
       "text": "И отношение-то к этому."
@@ -7951,7 +7951,7 @@
       "id": "65c7dedbb76b34edcf1b1138",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3498.12,
       "etime": 3502.2,
       "text": "Конечно, у СКО никаких нету вообще, никакого поинта не было никогда."
@@ -8041,7 +8041,7 @@
       "id": "65c7dedbb76b34edcf1b1142",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3567.55,
       "etime": 3572.33,
       "text": "По-моему, этот эффект был типа года... Вот когда это все начиналось, такой эффект действительно был."
@@ -8050,7 +8050,7 @@
       "id": "65c7dedbb76b34edcf1b1143",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 3572.35,
       "etime": 3576.09,
       "text": "А сейчас это уже настолько всем надоело, что уже даже осадочка не остается."
@@ -11092,7 +11092,7 @@
       "id": "65c7dedbb76b34edcf1b1295",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5052.66,
       "etime": 5055.18,
       "text": "С Украины у нас довольно много народу в компании работает."
@@ -11101,7 +11101,7 @@
       "id": "65c7dedbb76b34edcf1b1296",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5055.2,
       "etime": 5055.62,
       "text": "А живет ли?"
@@ -11110,7 +11110,7 @@
       "id": "65c7dedbb76b34edcf1b1297",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5055.64,
       "etime": 5056.78,
       "text": "Разве это жизнь?"
@@ -11119,7 +11119,7 @@
       "id": "65c7dedbb76b34edcf1b1298",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5056.82,
       "etime": 5057.34,
       "text": "Вроде живут."
@@ -11353,7 +11353,7 @@
       "id": "65c7dedbb76b34edcf1b12b2",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5177.23,
       "etime": 5183.73,
       "text": "Главная фигина заключается в том, что его каким-то образом в эти подземные штучки пускают, а никого другого не пускают."
@@ -11407,7 +11407,7 @@
       "id": "65c7dedbb76b34edcf1b12b8",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5200.42,
       "etime": 5201.66,
       "text": "Ну, наверное."
@@ -11443,7 +11443,7 @@
       "id": "65c7dedbb76b34edcf1b12bc",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5213.35,
       "etime": 5218.85,
       "text": "Я так понимаю, что он все совершенно официально делает, просто у него есть какие-то, видимо, хорошие способы это делать официально."
@@ -11578,7 +11578,7 @@
       "id": "65c7dedbb76b34edcf1b12cb",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5277.47,
       "etime": 5280.05,
       "text": "несколько десятков сантиметров."
@@ -11587,7 +11587,7 @@
       "id": "65c7dedbb76b34edcf1b12cc",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5280.07,
       "etime": 5282.21,
       "text": "В общем, на это все кончилось плохо."
@@ -12937,7 +12937,7 @@
       "id": "65c7dedbb76b34edcf1b1362",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5797.93,
       "etime": 5801.55,
       "text": "Так это не Nokia N810 получится, то, о чем вы говорите."
@@ -12964,7 +12964,7 @@
       "id": "65c7dedbb76b34edcf1b1365",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5807.85,
       "etime": 5810.53,
       "text": "Ну, она, конечно, весит меньше, чем... Она грамм 400 весит, по-моему, да?"
@@ -12973,7 +12973,7 @@
       "id": "65c7dedbb76b34edcf1b1366",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 5810.57,
       "etime": 5810.61,
       "text": "Да."
@@ -15187,7 +15187,7 @@
       "id": "65c7dedbb76b34edcf1b145c",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 6740.89,
       "etime": 6743.64,
       "text": "Да нет, на самом деле нормально к Яндексу отношусь совершенно."
@@ -15502,7 +15502,7 @@
       "id": "65c7dedbb76b34edcf1b147f",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 6865.44,
       "etime": 6866.18,
       "text": "через флешки."
@@ -15520,7 +15520,7 @@
       "id": "65c7dedbb76b34edcf1b1481",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 6871.85,
       "etime": 6872.75,
       "text": "Насколько мне известно."
@@ -15529,7 +15529,7 @@
       "id": "65c7dedbb76b34edcf1b1482",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 6873.21,
       "etime": 6873.83,
       "text": "Я такое читал."
@@ -15538,7 +15538,7 @@
       "id": "65c7dedbb76b34edcf1b1483",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 6873.85,
       "etime": 6876.53,
       "text": "И каким образом такой вирус можно было заслать из России?"
@@ -15547,7 +15547,7 @@
       "id": "65c7dedbb76b34edcf1b1484",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 6876.55,
       "etime": 6880.47,
       "text": "Видимо, послать по почте порошок из затравленных флешек или что-то такое."
@@ -16024,7 +16024,7 @@
       "id": "65c7dedbb76b34edcf1b14b9",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7029.45,
       "etime": 7030.45,
       "text": "Точно так."
@@ -16105,7 +16105,7 @@
       "id": "65c7dedbb76b34edcf1b14c2",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7047.66,
       "etime": 7049.53,
       "text": "Это как круиз-контроль, если так."
@@ -16132,7 +16132,7 @@
       "id": "65c7dedbb76b34edcf1b14c5",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7065.35,
       "etime": 7065.77,
       "text": "Если кто-то"
@@ -16141,7 +16141,7 @@
       "id": "65c7dedbb76b34edcf1b14c6",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7068.19,
       "etime": 7069.59,
       "text": "тесты и не причини."
@@ -16150,7 +16150,7 @@
       "id": "65c7dedbb76b34edcf1b14c7",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7069.65,
       "etime": 7071.34,
       "text": "Если в двух словах, то так."
@@ -16204,7 +16204,7 @@
       "id": "65c7dedbb76b34edcf1b14cd",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7084.84,
       "etime": 7086.92,
       "text": "очень косвенное отношение имеет."
@@ -16240,7 +16240,7 @@
       "id": "65c7dedbb76b34edcf1b14d1",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7097.68,
       "etime": 7099.44,
       "text": "Нет, у нее на самом деле совсем нет."
@@ -16249,7 +16249,7 @@
       "id": "65c7dedbb76b34edcf1b14d2",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7099.46,
       "etime": 7109.74,
       "text": "То есть у нее есть бесплатная, даже вообще бесплатная версия, которую можно использовать там до... Ну там дают какое-то ограничение на количество билд-конфигураций, на количество билд-агентов."
@@ -16258,7 +16258,7 @@
       "id": "65c7dedbb76b34edcf1b14d3",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7110.49,
       "etime": 7115.51,
       "text": "А полная версия стоит, если не ошибаюсь, полторы тысячи долларов."
@@ -16339,7 +16339,7 @@
       "id": "65c7dedbb76b34edcf1b14dc",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7135.15,
       "etime": 7137.73,
       "text": "В Яндексе стоит же, насколько я знаю."
@@ -16384,7 +16384,7 @@
       "id": "65c7dedbb76b34edcf1b14e1",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7168.58,
       "etime": 7176.98,
       "text": "На самом деле, насколько я видел то, что у вас было, там просто не было человека, который мог нормально это все настроить, поднять и объяснить, как этим пользоваться и так далее."
@@ -16393,7 +16393,7 @@
       "id": "65c7dedbb76b34edcf1b14e2",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7177.02,
       "etime": 7182.89,
       "text": "То есть, ну, грубо говоря, консультанта, что ли, который бы это все нормально внедрил."
@@ -16411,7 +16411,7 @@
       "id": "65c7dedbb76b34edcf1b14e4",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7189.37,
       "etime": 7190.69,
       "text": "Нет, не то, чтобы требуют."
@@ -16420,7 +16420,7 @@
       "id": "65c7dedbb76b34edcf1b14e5",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7190.73,
       "etime": 7195.84,
       "text": "То есть, там на самом деле в простых случаях все довольно просто и поднимается там типа за..."
@@ -16429,7 +16429,7 @@
       "id": "65c7dedbb76b34edcf1b14e6",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7197.61,
       "etime": 7199.43,
       "text": "Полчаса у вас все up and running."
@@ -16438,7 +16438,7 @@
       "id": "65c7dedbb76b34edcf1b14e7",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7200.13,
       "etime": 7204.81,
       "text": "Поскольку Яндекс не очень простая внутри, видимо, контора, то там все так халявы не прокатило."
@@ -17869,7 +17869,7 @@
       "id": "65c7dedbb76b34edcf1b1586",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7728.43,
       "etime": 7736.47,
       "text": "На самом деле, если хотите про Фар послушать, я поскольку к Фару некое отношение имел в какой-то момент, могу тоже что-нибудь сказать интересное."
@@ -17887,7 +17887,7 @@
       "id": "65c7dedbb76b34edcf1b1588",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7738.25,
       "etime": 7752.36,
       "text": "Я был в этом самом, когда вот был Фартим, после того, как Женя Рошаль забил на этот, на то, чтобы сам его развивать, я в какой-то момент присоединился к Фартиму, и поэтому, в общем... Ну..."
@@ -17905,7 +17905,7 @@
       "id": "65c7dedbb76b34edcf1b158a",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7773.91,
       "etime": 7781.44,
       "text": "И, кстати, официального релиза с поддержкой Unicode, насколько я знаю, нету, то есть есть просто версия, которая лежит в Subversion, из которой выпускаются билды время от времени, и все."
@@ -17923,7 +17923,7 @@
       "id": "65c7dedbb76b34edcf1b158c",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7785.66,
       "etime": 7787.82,
       "text": "1.7 нет у Unicode."
@@ -17968,7 +17968,7 @@
       "id": "65c7dedbb76b34edcf1b1591",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7799.85,
       "etime": 7800.89,
       "text": "Ой."
@@ -17986,7 +17986,7 @@
       "id": "65c7dedbb76b34edcf1b1593",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7802.63,
       "etime": 7806.31,
       "text": "Еще раз сразу, да."
@@ -17995,7 +17995,7 @@
       "id": "65c7dedbb76b34edcf1b1594",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7806.37,
       "etime": 7810.57,
       "text": "Можно скачать исходники из Subversion, то есть спустя много-много лет фар наконец-то стал open-source."
@@ -18004,7 +18004,7 @@
       "id": "65c7dedbb76b34edcf1b1595",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7811.71,
       "etime": 7814.17,
       "text": "если кто не в курсе."
@@ -18013,7 +18013,7 @@
       "id": "65c7dedbb76b34edcf1b1596",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7814.27,
       "etime": 7817.4,
       "text": "Либо можно скачать билд, который где-нибудь, наверное, лежит."
@@ -18022,7 +18022,7 @@
       "id": "65c7dedbb76b34edcf1b1597",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 7817.44,
       "etime": 7819.28,
       "text": "Я не знаю точно где."
@@ -18922,7 +18922,7 @@
       "id": "65c7dedbb76b34edcf1b15fb",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 8223.07,
       "etime": 8223.97,
       "text": "Есть, конечно, Ник."
@@ -18931,7 +18931,7 @@
       "id": "65c7dedbb76b34edcf1b15fc",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 8224.17,
       "etime": 8225.67,
       "text": "Йола я, если по никам."
@@ -19066,7 +19066,7 @@
       "id": "65c7dedbb76b34edcf1b160b",
       "issue": 114,
       "type": "cc",
-      "author": "Guest",
+      "author": "dima_zhemerov",
       "stime": 8260.28,
       "etime": 8263.16,
       "text": "Спасибо за приглашение, кстати."

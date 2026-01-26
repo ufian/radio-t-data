@@ -1,0 +1,21 @@
+batch_id: review_0900_0999
+description: Manual review tasks for episodes 900-999
+status: pending
+total_tasks: 2
+tasks:
+- episode: 937
+  speaker: ElevenLabs
+  total_duration_sec: 16
+  replies_count: 2
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 968
+  speaker: Guest1
+  total_duration_sec: 617.55
+  replies_count: 143
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate

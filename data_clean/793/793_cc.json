@@ -6178,7 +6178,7 @@
       "id": "65d2485f482d748ac7d7cf01",
       "issue": 793,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "Bobuk",
       "stime": 2528.76,
       "etime": 2531.7,
       "text": "Не отслеживаются, там прямо не отслеживаются."
@@ -7537,7 +7537,7 @@
       "id": "65d2485f482d748ac7d7cf98",
       "issue": 793,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "Bobuk",
       "stime": 3062.54,
       "etime": 3065.04,
       "text": "А, ну... Куда спешить?"
@@ -11074,7 +11074,7 @@
       "id": "65d2485f482d748ac7d7d121",
       "issue": 793,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "Bobuk",
       "stime": 4699.2,
       "etime": 4700.06,
       "text": "С французами?"
@@ -13036,7 +13036,7 @@
       "id": "65d2485f482d748ac7d7d1fb",
       "issue": 793,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "Bobuk",
       "stime": 5584.55,
       "etime": 5585.31,
       "text": "Я выбирал."
@@ -15160,7 +15160,7 @@
       "id": "65d2485f482d748ac7d7d2e7",
       "issue": 793,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "Bobuk",
       "stime": 6374.99,
       "etime": 6376.37,
       "text": "Ага, я уже открыл."
@@ -17185,7 +17185,7 @@
       "id": "65d2485f482d748ac7d7d3c8",
       "issue": 793,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "Bobuk",
       "stime": 7173.36,
       "etime": 7174.39,
       "text": "Ты пользовался?"
@@ -18292,7 +18292,7 @@
       "id": "65d2485f482d748ac7d7d443",
       "issue": 793,
       "type": "cc",
-      "author": "Gray",
+      "author": "_ad",
       "stime": 7632.01,
       "etime": 7641.45,
       "text": "Эта шоу создана при поддержке DigitalOcean App Platform — новой платформы для построения современных облачных приложений."
@@ -18301,7 +18301,7 @@
       "id": "65d2485f482d748ac7d7d444",
       "issue": 793,
       "type": "cc",
-      "author": "Gray",
+      "author": "_ad",
       "stime": 7641.57,
       "etime": 7650.96,
       "text": "С App Platform вы можете быстро и легко строить, запускать и масштабировать как приложения, так и статические веб-сайты."
@@ -18310,7 +18310,7 @@
       "id": "65d2485f482d748ac7d7d445",
       "issue": 793,
       "type": "cc",
-      "author": "Gray",
+      "author": "_ad",
       "stime": 7651.02,
       "etime": 7657.29,
       "text": "Просто укажите свой GitHub-репозиторий, и App Platform позаботится об остальном."
@@ -18319,7 +18319,7 @@
       "id": "65d2485f482d748ac7d7d446",
       "issue": 793,
       "type": "cc",
-      "author": "Gray",
+      "author": "_ad",
       "stime": 7657.57,
       "etime": 7665.73,
       "text": "Благодаря тому, что мы используем нашу собственную инфраструктуру, стоимость такого решения будет значительно ниже."
@@ -18328,7 +18328,7 @@
       "id": "65d2485f482d748ac7d7d447",
       "issue": 793,
       "type": "cc",
-      "author": "Gray",
+      "author": "_ad",
       "stime": 7666.77,
       "etime": 7677.4,
       "text": "App Platform построена поверх DigitalOcean Kubernetes, что позволит вам мигрировать свои приложения, полностью контролируя инфраструктуру, в том числе используя мощный API."

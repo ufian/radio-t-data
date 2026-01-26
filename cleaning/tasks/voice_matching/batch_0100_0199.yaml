@@ -1,0 +1,395 @@
+batch_id: voice_0100_0199
+description: Voice matching tasks for episodes 100-199
+status: pending
+total_tasks: 38
+tasks:
+- episode: 100
+  speaker: Guest6
+  total_duration_sec: 77
+  replies_count: 19
+  reference_segment:
+    stime: 5511.81
+    etime: 5543.8
+    text: Ну, если не учитывая то, что я сейчас второй раз в Радио Т попадаю, до этого
+      я был еще парочку раз после шоу, которое называется Авторпати...
+  reason: needs voice comparison
+  possible_matches: []
+- episode: 100
+  speaker: Guest4
+  total_duration_sec: 52
+  replies_count: 14
+  reference_segment: null
+  reason: 'В 7079s: ''Здравствуйте, меня зовут Айрат'''
+  possible_matches: []
+- episode: 100
+  speaker: Guest1
+  total_duration_sec: 51
+  replies_count: 10
+  reference_segment:
+    stime: 6173.67
+    etime: 6189.87
+    text: Хотя порой не достает профессиональных мнений. То есть просто обычные люди
+      говорят о том, как развивается этот мир в плане хай-тека. С другой стороны,
+      это большой плюс...
+  reason: needs voice comparison
+  possible_matches: []
+- episode: 100
+  speaker: Guest3
+  total_duration_sec: 48
+  replies_count: 13
+  reference_segment:
+    stime: 6975.3
+    etime: 6996.83
+    text: Действительно, хочу поздравить с сотым выпуском... пожелать еще сотен...
+      Пожелать удачи в частных подкастах Оляпки, Бобука, Умпутуна и Грея.
+  reason: needs voice comparison
+  possible_matches: []
+- episode: 100
+  speaker: Guest2
+  total_duration_sec: 45
+  replies_count: 15
+  reference_segment: null
+  reason: 'В 6635s: ''Меня зовут Александр''. В 6828s: ''У меня подкаст называется
+    Позитив''. В 6835s: ''Сайт Светляк.ру''.'
+  possible_matches: []
+- episode: 100
+  speaker: Guest5
+  total_duration_sec: 38
+  replies_count: 17
+  reference_segment: null
+  reason: 'В 7245s: ''Ну, я пингвинатор''. В 7251s: ''Пингвинатор''.'
+  possible_matches: []
+- episode: 110
+  speaker: Guest
+  total_duration_sec: 231
+  replies_count: 84
+  reference_segment:
+    stime: 5041.1
+    etime: 5050.5
+    text: Сначала я смотрел, думаю, может быть, действительно, может, я их случайно
+      знаю, может быть, не знаю...
+  reason: 'Представлен как "Дима" в контексте:
+
+    - 3716s: "Ну что, господа и дамы, я включаю Диму"
+
+    - 3722s: "О, привет, Дима"
+
+    - 7691s: "Вокруг меня тут сидит Дима, известный по подкасту «Янки после пьянки»"
+
+
+    Дима присоединился к эфиру примерно на 62 минуте (3720s).
+
+    Его представляют, он отвечает "Я знаю много Саш'
+  possible_matches:
+  - person_id: dima_yanki
+    confidence: 0.85
+    reason: Явно назван 'Дима из подкаста Янки после пьянки'
+- episode: 133
+  speaker: Guest
+  total_duration_sec: 47
+  replies_count: 22
+  reference_segment:
+    stime: 6946.12
+    etime: 6954.48
+    text: '"Понимаешь, если 90%, так я честно говорю, что 90%, а не вру.
+
+      Другой приходил бы, например, на 10%, сказал бы, что на 100%.
+
+      А я на 90% прихожу, на 90% и говорю..."
+
+      '
+  reason: 'Контекст указывает на человека по имени "Дима":
+
+    - Gray (6727.63s): "Сейчас Дима пойдет и еще тоже присоединится."
+
+    - Umputun (6732.59s): "Откуда ты знаешь, что Дима пришел?"
+
+    - Umputun (6734.25s): "Он только что пришел, я ему дал ключи."
+
+    - Umputun (6925.48s): "Дима, скажи еще раз."
+
+    - Bobuk (6936.19s):'
+  possible_matches:
+  - person_id: unknown_dima_chicago
+    confidence: 0.7
+    reason: По имени 'Дима', локальный знакомый Umputun в Чикаго, был на записях раньше
+- episode: 150
+  speaker: Guest3
+  total_duration_sec: 26
+  replies_count: 4
+  reference_segment: null
+  reason: 'Аудио-сообщение со стихом: ''Радио-Т это вам не самолет'' (1137s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest4
+  total_duration_sec: 24
+  replies_count: 5
+  reference_segment: null
+  reason: 'Сам представился: ''Меня зовут Алексей Пономарь, я подкастер из Ульяновска''
+    (1733s)'
+  possible_matches:
+  - person_id: alexey_ponomar
+    confidence: 0.7
+    reason: Представился как подкастер Алексей Пономарь из Ульяновска
+- episode: 150
+  speaker: Guest5
+  total_duration_sec: 17
+  replies_count: 5
+  reference_segment: null
+  reason: 'Короткое поздравление: ''Всем привет. Чуваки, вы лучшие'' (2115s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest6
+  total_duration_sec: 22
+  replies_count: 8
+  reference_segment: null
+  reason: 'Представился: ''Меня зовут Александр'' (2404s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest7
+  total_duration_sec: 41
+  replies_count: 9
+  reference_segment: null
+  reason: 'Поздравление: ''Хочу вас поздравить с вашим юбилейным 150 выпуском'' (2546s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest8
+  total_duration_sec: 16
+  replies_count: 4
+  reference_segment: null
+  reason: 'Аудио-поздравление: ''Поздравляю вас с юбилеем, с 150 выпуском'' (2782s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest9
+  total_duration_sec: 68
+  replies_count: 17
+  reference_segment: null
+  reason: 'Звонок: ''Привет, любимый Радио-Т. Привет, Умпутун. Привет, Бобук'' (2977s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest10
+  total_duration_sec: 55
+  replies_count: 9
+  reference_segment: null
+  reason: 'Аудио-сообщение: ''Радио-Т это часть моей жизни'' (3786s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest11
+  total_duration_sec: 28
+  replies_count: 5
+  reference_segment: null
+  reason: 'Поздравление: ''Поздравляю с юбилеем'' (4013s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest12
+  total_duration_sec: 22
+  replies_count: 7
+  reference_segment: null
+  reason: 'Поздравление: ''Хочу вас от всей души поздравить со 150 выпуском'' (4274s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest13
+  total_duration_sec: 26
+  replies_count: 11
+  reference_segment: null
+  reason: 'Упомянул ник: ''Да, я пингвинатор'' (4375s)'
+  possible_matches:
+  - person_id: pingvinator
+    confidence: 0.5
+    reason: Слушатель с ником Пингвинатор
+- episode: 150
+  speaker: Guest14
+  total_duration_sec: 112
+  replies_count: 35
+  reference_segment: null
+  reason: 'Звонок: ''Привет, ребят. О подкастинге узнал благодаря вам'' (4491s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest15
+  total_duration_sec: 89
+  replies_count: 16
+  reference_segment: null
+  reason: 'Звонок: ''Слушаю вас уже очень-очень давно'' (4622s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest16
+  total_duration_sec: 103
+  replies_count: 23
+  reference_segment: null
+  reason: 'Сам представился: ''Меня зовут Визи Пулатов'' (4845s)'
+  possible_matches:
+  - person_id: vizi_pulatov
+    confidence: 0.6
+    reason: Слушатель Визи Пулатов, начинающий подкастер
+- episode: 150
+  speaker: Guest17
+  total_duration_sec: 38
+  replies_count: 10
+  reference_segment: null
+  reason: 'Звонок: ''Присылал, присылал, было дело'' (5103s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest18
+  total_duration_sec: 40
+  replies_count: 11
+  reference_segment: null
+  reason: 'Звонок: ''Вот-вот, я здесь с вами'' (5223s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest19
+  total_duration_sec: 53
+  replies_count: 16
+  reference_segment: null
+  reason: 'Звонок: ''Всем здравствуйте'' (5378s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest20
+  total_duration_sec: 49
+  replies_count: 10
+  reference_segment: null
+  reason: 'Звонок: ''Наконец-то я попал на радиотик'' (5597s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest21
+  total_duration_sec: 42
+  replies_count: 13
+  reference_segment: null
+  reason: 'Сам представился: ''Меня зовут Визар Вэ. Меня вы можете найти в подкасте
+    Уральские вареники'' (5691s)'
+  possible_matches:
+  - person_id: visar_v
+    confidence: 0.7
+    reason: Подкастер Визар Вэ из 'Уральских вареников'
+- episode: 150
+  speaker: Guest22
+  total_duration_sec: 49
+  replies_count: 10
+  reference_segment: null
+  reason: 'Две реплики: ''Нет, все хорошо'' (5175s) и ''Привет'' (5956s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest23
+  total_duration_sec: 47
+  replies_count: 14
+  reference_segment: null
+  reason: 'Звонок: ''Я парень'' (6069s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest24
+  total_duration_sec: 36
+  replies_count: 10
+  reference_segment: null
+  reason: 'Звонок: ''Доброго времени суток, уважаемая радиотайм'' (6231s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest25
+  total_duration_sec: 38
+  replies_count: 11
+  reference_segment: null
+  reason: 'Звонок: ''Всем здравствуйте. Поздравляю'' (6338s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest26
+  total_duration_sec: 46
+  replies_count: 12
+  reference_segment: null
+  reason: 'Сам представился: ''Зовут меня Владимир. Я из города Волгограда'' (6560s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest27
+  total_duration_sec: 17
+  replies_count: 5
+  reference_segment: null
+  reason: 'Короткие реплики: ''Я не думаю, что со звуком плохо'' (6781s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest28
+  total_duration_sec: 48
+  replies_count: 16
+  reference_segment: null
+  reason: 'Звонок: ''Алло, меня слышно вообще, нет?'' (6860s)'
+  possible_matches: []
+- episode: 150
+  speaker: Guest29
+  total_duration_sec: 57
+  replies_count: 13
+  reference_segment: null
+  reason: 'Звонок: ''Здравствуйте. Спасибо, Гриша, большое'' (7024s)'
+  possible_matches: []
+- episode: 179
+  speaker: Guest
+  total_duration_sec: 166
+  replies_count: 56
+  reference_segment:
+    stime: 4343.57
+    etime: 4357.84
+    text: '"Слушайте, ну, хочется, конечно, верить, что вот все эти стартаперы,
+
+      которые болтаются по всяким вечерним кафешкам, там, не знаю, грубо говоря,
+
+      подворотням, теперь получат место, где они смогут концентрироваться."
+
+      '
+  reason: 'Эльдар представляет её в начале выпуска (28.92-38.46s):
+
+    "Я двулик, наверное, и сегодня я привел коллегу по подкасту
+
+    DJ Steve, Сашу, и она вот скажет сейчас привет, наверное."
+
+
+    Дополнительный контекст:
+
+    - Женщина (использует женский род в речи)
+
+    - Занимается журналистикой в сфере гаджетов/технологий (1'
+  possible_matches:
+  - person_id: dj_steve
+    confidence: 0.85
+    reason: 'Прямое представление Эльдаром как "коллега по подкасту DJ Steve, Саша".
+
+      Нужно добавить в people.yaml как нового гостя.
+
+      '
+- episode: 188
+  speaker: Guest
+  total_duration_sec: 151
+  replies_count: 32
+  reference_segment:
+    stime: 2105.48
+    etime: 2138.39
+    text: 'Длинный сегмент о шрифтах: "Очень сложно найти шрифт, который под правильной
+      лицензией распространяется... Вот такие простые проблемы позволяют решать"
+
+      '
+  reason: 'Umputun спрашивает (78s): "Мальчик, а, кстати, как тебя называть в нашем
+    эфире? Саша или Паша?" Guest отвечает (79s): "Паша." Марина представляет (27s):
+    "он программист, он питончик, и не только, достаточно умный молодой человек" Guest
+    (36s): "Привет, я тут действительно мальчик, никто не знает, кто'
+  possible_matches:
+  - person_id: pasha_pc
+    confidence: 0.7
+    reason: 'Имя "Паша", программист Python, пришёл с Мариной (Marin_k_a). Марина
+      упоминает "ник из загадочной PC". Активно участвует в обсуждении технических
+      тем (шрифты, Google TV, нетбуки).
+
+      '
+- episode: 195
+  speaker: _extra
+  total_duration_sec: 60
+  replies_count: 44
+  reference_segment: null
+  reason: 'Это аудиовставки - видеоролик "Сван пытается продать девушке HTC".
+
+
+    Начинается на ~2038 сек с английского текста:
+
+    "And it doesn''t require you to be on Wi-Fi to use video chat."
+
+    "I don''t care."
+
+
+    Продолжается на русском языке (перевод/озвучка ролика).
+
+
+    На 2111 сек подтверждение: "Да, эта сценка называ'
+  possible_matches: []

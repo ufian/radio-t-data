@@ -580,7 +580,7 @@
       "id": "65c91f0ae4d38ed5f5d91bad",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "_artifact",
       "stime": 199.53,
       "etime": 200.59,
       "text": "Не в курсе."
@@ -1237,7 +1237,7 @@
       "id": "65c91f0ae4d38ed5f5d91bf6",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 529.57,
       "etime": 530.35,
       "text": "Привет."
@@ -1246,7 +1246,7 @@
       "id": "65c91f0ae4d38ed5f5d91bf7",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 530.47,
       "etime": 532.71,
       "text": "Я Егор."
@@ -1363,7 +1363,7 @@
       "id": "65c91f0ae4d38ed5f5d91c04",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 556.46,
       "etime": 557.48,
       "text": "Я думаю, конечно, можно."
@@ -1534,7 +1534,7 @@
       "id": "65c91f0ae4d38ed5f5d91c17",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 628.53,
       "etime": 632.29,
       "text": "Собственно, не то чтобы это мажорный был релиз, все-таки это дот-5."
@@ -1543,7 +1543,7 @@
       "id": "65c91f0ae4d38ed5f5d91c18",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 632.35,
       "etime": 644.19,
       "text": "У нас мажорные релизы выходят, собственно, дот-0 обычно раз в году, а это мы решили сделать как бы через полгода тоже релиз."
@@ -1552,7 +1552,7 @@
       "id": "65c91f0ae4d38ed5f5d91c19",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 645.97,
       "etime": 652.24,
       "text": "На самом деле много разных обновлений, много импрументов в совершенно разных областях."
@@ -1561,7 +1561,7 @@
       "id": "65c91f0ae4d38ed5f5d91c1a",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 652.4,
       "etime": 653.86,
       "text": "Поменяли стили UI."
@@ -1570,7 +1570,7 @@
       "id": "65c91f0ae4d38ed5f5d91c1b",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 654.56,
       "etime": 658.7,
       "text": "Это, наверное, первое, что бросится в глаза при апгрейде."
@@ -1579,7 +1579,7 @@
       "id": "65c91f0ae4d38ed5f5d91c1c",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 658.74,
       "etime": 663.74,
       "text": "Добавили целый сет фич."
@@ -1588,7 +1588,7 @@
       "id": "65c91f0ae4d38ed5f5d91c1d",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 663.8,
       "etime": 665.63,
       "text": "Наверное, отдельно можно рассказывать."
@@ -1651,7 +1651,7 @@
       "id": "65c91f0ae4d38ed5f5d91c24",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 694.68,
       "etime": 698.55,
       "text": "С Hatsan это отдельное сравнение, видимо, отдельная тема."
@@ -1669,7 +1669,7 @@
       "id": "65c91f0ae4d38ed5f5d91c26",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 710.23,
       "etime": 721.54,
       "text": "То есть у нас давно уже есть фича Remote Run, когда можно не коммити-чейнджи вершин-контрол проверить, как они, собственно, бюдятся, компайлятся, проходят ли все тесты."
@@ -1678,7 +1678,7 @@
       "id": "65c91f0ae4d38ed5f5d91c27",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 721.58,
       "etime": 727.44,
       "text": "Вот появилась такая возможность для дистрибьюции вершин-контролов для ГИТА, Меркуриева."
@@ -1795,7 +1795,7 @@
       "id": "65c91f0ae4d38ed5f5d91c34",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 784.58,
       "etime": 789.42,
       "text": "В Eclipse сейчас ремонт для Subversion, Perforce и CVS."
@@ -1804,7 +1804,7 @@
       "id": "65c91f0ae4d38ed5f5d91c35",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 791.68,
       "etime": 795.76,
       "text": "Для Distributed Visual Control мы, вообще говоря, пошли другим путем."
@@ -1813,7 +1813,7 @@
       "id": "65c91f0ae4d38ed5f5d91c36",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 795.8,
       "etime": 804.33,
       "text": "То есть теперь можно запустить remote run в TeamCity, просто запушив свой бренч со специфическим именем на сервер."
@@ -1822,7 +1822,7 @@
       "id": "65c91f0ae4d38ed5f5d91c37",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 804.35,
       "etime": 804.91,
       "text": "То бишь не в Trunk."
@@ -1831,7 +1831,7 @@
       "id": "65c91f0ae4d38ed5f5d91c38",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 806.41,
       "etime": 812.83,
       "text": "А на сервере для TeamCity его найдет, зачеккаутит, сбилдит билд и покажет результаты."
@@ -1840,7 +1840,7 @@
       "id": "65c91f0ae4d38ed5f5d91c39",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 812.87,
       "etime": 820.15,
       "text": "То есть для Меркурия, для ГИТА интеграции из IDE еще нет."
@@ -1849,7 +1849,7 @@
       "id": "65c91f0ae4d38ed5f5d91c3a",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 820.21,
       "etime": 825.33,
       "text": "Или мы, в общем-то, экспериментируем в этом направлении."
@@ -1858,7 +1858,7 @@
       "id": "65c91f0ae4d38ed5f5d91c3b",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 825.47,
       "etime": 831.3,
       "text": "И, собственно, для DVCS слегка другая логика подразумевается."
@@ -1867,7 +1867,7 @@
       "id": "65c91f0ae4d38ed5f5d91c3c",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 831.38,
       "etime": 835.78,
       "text": "Для того, чтобы его начать, нужно просто создать бронечный сервер со специфическим именем."
@@ -2092,7 +2092,7 @@
       "id": "65c91f0ae4d38ed5f5d91c55",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 924.27,
       "etime": 925.85,
       "text": "Смотря какой версии идет речь."
@@ -2101,7 +2101,7 @@
       "id": "65c91f0ae4d38ed5f5d91c56",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 925.87,
       "etime": 926.61,
       "text": "Про 65 говорим, да."
@@ -2110,7 +2110,7 @@
       "id": "65c91f0ae4d38ed5f5d91c57",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 930.11,
       "etime": 938.03,
       "text": "А в 6.5, как раз начиная с 6.5, у нас начали работать переменные внутри настроек подключения к экшн-контролу."
@@ -2119,7 +2119,7 @@
       "id": "65c91f0ae4d38ed5f5d91c58",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 938.07,
       "etime": 943.32,
       "text": "И, собственно, эта фича ремонта на бренчах, она тоже только в 6.5 появилась."
@@ -2128,7 +2128,7 @@
       "id": "65c91f0ae4d38ed5f5d91c59",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 944.14,
       "etime": 947.44,
       "text": "Пока это, в общем, некие первые шаги в эту сторону."
@@ -2137,7 +2137,7 @@
       "id": "65c91f0ae4d38ed5f5d91c5a",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 947.48,
       "etime": 951.58,
       "text": "Мы все еще экспериментируем, мы планируем это в дальнейшем развивать."
@@ -2146,7 +2146,7 @@
       "id": "65c91f0ae4d38ed5f5d91c5b",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 951.7,
       "etime": 958.24,
       "text": "Но, тем не менее, это уже можно начинать использовать и, собственно, жаловаться нам, чтобы мы сделали лучше."
@@ -2308,7 +2308,7 @@
       "id": "65c91f0ae4d38ed5f5d91c6d",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1027.54,
       "etime": 1035.95,
       "text": "Ну, вот, кстати, по этому примеру, ну, как минимум, мы, те, кто приходят в Steam City на хадса, мы не пишем и не зовем обратно."
@@ -2317,7 +2317,7 @@
       "id": "65c91f0ae4d38ed5f5d91c6e",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1035.99,
       "etime": 1038.35,
       "text": "В том плане, что люди, может, одумаются и сами придут."
@@ -2326,7 +2326,7 @@
       "id": "65c91f0ae4d38ed5f5d91c6f",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1039.98,
       "etime": 1042.26,
       "text": "Собственно, это большой вопрос."
@@ -2335,7 +2335,7 @@
       "id": "65c91f0ae4d38ed5f5d91c70",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1042.3,
       "etime": 1046.9,
       "text": "И я, конечно, очень по определению очень заинтересованное лицо."
@@ -2344,7 +2344,7 @@
       "id": "65c91f0ae4d38ed5f5d91c71",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1047.08,
       "etime": 1052.12,
       "text": "Мало того, что я работаю в команде TeamCity, я, естественно, использую только TeamCity."
@@ -2353,7 +2353,7 @@
       "id": "65c91f0ae4d38ed5f5d91c72",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1052.2,
       "etime": 1060.75,
       "text": "Ну, понятно, JetBrains очень любят есть свою собачью еду."
@@ -2362,7 +2362,7 @@
       "id": "65c91f0ae4d38ed5f5d91c73",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1060.81,
       "etime": 1065.63,
       "text": "И поэтому в Hudson я могу даже чего-то, вероятно, не знать."
@@ -2389,7 +2389,7 @@
       "id": "65c91f0ae4d38ed5f5d91c76",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1070.31,
       "etime": 1078.74,
       "text": "Ну, в общем, собственно, наверное, есть некие параллели, вот как между IntelliJ IDEA и Eclipse, так, может, я надеюсь, параллели между TeamCity и Hudson."
@@ -2398,7 +2398,7 @@
       "id": "65c91f0ae4d38ed5f5d91c77",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1084.4,
       "etime": 1103.12,
       "text": "То есть TeamCity — это продукт, который мы делаем для себя и делаем для девелоперов, и пытаемся учитывать очень много мелких факторов, на которые open-source-солюшены иногда просто не доходят до своих усилий."
@@ -2416,7 +2416,7 @@
       "id": "65c91f0ae4d38ed5f5d91c79",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1112.02,
       "etime": 1116.47,
       "text": "Если, наверное, можно пройтись по неким деталям."
@@ -2425,7 +2425,7 @@
       "id": "65c91f0ae4d38ed5f5d91c7a",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1116.57,
       "etime": 1118.51,
       "text": "Например, у нас есть много очень фич."
@@ -2434,7 +2434,7 @@
       "id": "65c91f0ae4d38ed5f5d91c7b",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1118.57,
       "etime": 1124.69,
       "text": "Собственно, в первую очередь TeamCity девелоперы для себя и пытались решать свои проблемы."
@@ -2443,7 +2443,7 @@
       "id": "65c91f0ae4d38ed5f5d91c7c",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1124.75,
       "etime": 1128.29,
       "text": "Поэтому он и направлен, в общем-то, на активную работу девелопера."
@@ -2452,7 +2452,7 @@
       "id": "65c91f0ae4d38ed5f5d91c7d",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1128.35,
       "etime": 1132.29,
       "text": "Например, у нас есть много фич по борьбе с длинными билдами."
@@ -2470,7 +2470,7 @@
       "id": "65c91f0ae4d38ed5f5d91c7f",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1136.63,
       "etime": 1138.71,
       "text": "Бывает."
@@ -2479,7 +2479,7 @@
       "id": "65c91f0ae4d38ed5f5d91c80",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1138.79,
       "etime": 1146.63,
       "text": "Поэтому мы, например, репортим тесты, пока билд еще идет, не ожидая, пока он завершится."
@@ -2488,7 +2488,7 @@
       "id": "65c91f0ae4d38ed5f5d91c81",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1146.65,
       "etime": 1150.41,
       "text": "У нас довольно развитая система анализа падений тестов."
@@ -2497,7 +2497,7 @@
       "id": "65c91f0ae4d38ed5f5d91c82",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1150.45,
       "etime": 1163.01,
       "text": "Когда девелопер приходит в UI и видит, какие тесты упали первый раз в этом билде, тут же может посмотреть их стектрейс, тут же может кликнуть и открыть этот стектрейс в IDE, в нашем IDE-плагине"
@@ -2506,7 +2506,7 @@
       "id": "65c91f0ae4d38ed5f5d91c83",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1164.01,
       "etime": 1174.63,
       "text": "собственно, снавигироваться по логину, после этого дать, например, всей команде сигнал о том, что он уже проанализировал это падение и занимается им."
@@ -2515,7 +2515,7 @@
       "id": "65c91f0ae4d38ed5f5d91c84",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1174.67,
       "etime": 1175.31,
       "text": "То, что мы называем investigation."
@@ -2524,7 +2524,7 @@
       "id": "65c91f0ae4d38ed5f5d91c85",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1176.85,
       "etime": 1177.81,
       "text": "Раньше называлось responsibility."
@@ -2533,7 +2533,7 @@
       "id": "65c91f0ae4d38ed5f5d91c86",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1177.85,
       "etime": 1187.12,
       "text": "То есть это очень много фич, очень много деталей, которые направлены на, собственно, комфортную работу с продуктом."
@@ -3118,7 +3118,7 @@
       "id": "65c91f0ae4d38ed5f5d91cc7",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1382.88,
       "etime": 1388.45,
       "text": "Судя по всему, темплиты проектов."
@@ -3154,7 +3154,7 @@
       "id": "65c91f0ae4d38ed5f5d91ccb",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1393.71,
       "etime": 1394.91,
       "text": "Нет, ну, собственно, это..."
@@ -3163,7 +3163,7 @@
       "id": "65c91f0ae4d38ed5f5d91ccc",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1396.84,
       "etime": 1405.57,
       "text": "Темплетный проект — это набор сеттингов, которые можно использовать во многих других, переопределяя те, которые нужно."
@@ -3172,7 +3172,7 @@
       "id": "65c91f0ae4d38ed5f5d91ccd",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1405.59,
       "etime": 1419.76,
       "text": "То есть выделить общие настройки в такой темплет и потом менять, например, начиная с 6.5, по идее можно менять бренч, на котором билдится проект, какие-то настройки."
@@ -3181,7 +3181,7 @@
       "id": "65c91f0ae4d38ed5f5d91cce",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1420.48,
       "etime": 1432.5,
       "text": "которые параметризуют билд, но при этом изменения в темплите, собственно, меняют все конфигурации, которые от него наследуются."
@@ -3415,7 +3415,7 @@
       "id": "65c91f0ae4d38ed5f5d91ce8",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1555.96,
       "etime": 1562.58,
       "text": "То есть по такой быстрой прикидке, то есть процентов 10 у нас просто уже есть."
@@ -3424,7 +3424,7 @@
       "id": "65c91f0ae4d38ed5f5d91ce9",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1562.64,
       "etime": 1569.89,
       "text": "И мало того, то есть это не функциональность, которая прилеплена снаружи, это функциональность, которая проходит через всю систему"
@@ -3433,7 +3433,7 @@
       "id": "65c91f0ae4d38ed5f5d91cea",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1570.82,
       "etime": 1576.49,
       "text": "То есть отчасти это, в общем-то, создает довольно большие проблемы при девелопменте."
@@ -3442,7 +3442,7 @@
       "id": "65c91f0ae4d38ed5f5d91ceb",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1576.51,
       "etime": 1579.79,
       "text": "То есть мы не очень быстро добавляем новые фичи."
@@ -3451,7 +3451,7 @@
       "id": "65c91f0ae4d38ed5f5d91cec",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1579.83,
       "etime": 1588.21,
       "text": "Зато мы стараемся делать их так, чтобы они работали, собственно, во всех... То есть у нас есть, например, три функциональности, которые пересекаются."
@@ -3460,7 +3460,7 @@
       "id": "65c91f0ae4d38ed5f5d91ced",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1588.25,
       "etime": 1591.69,
       "text": "Но, собственно, в этих девяти вариантах все должно работать нормально."
@@ -3469,7 +3469,7 @@
       "id": "65c91f0ae4d38ed5f5d91cee",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1592.82,
       "etime": 1596.16,
       "text": "Вот, собственно, интеграция между плагинами."
@@ -3478,7 +3478,7 @@
       "id": "65c91f0ae4d38ed5f5d91cef",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1596.24,
       "etime": 1600.1,
       "text": "Мы пытаемся их достичь тем, что мы очень много бандлим с собой."
@@ -3487,7 +3487,7 @@
       "id": "65c91f0ae4d38ed5f5d91cf0",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1600.14,
       "etime": 1602.22,
       "text": "Ну, плагины для TeamCity тоже есть."
@@ -3496,7 +3496,7 @@
       "id": "65c91f0ae4d38ed5f5d91cf1",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1602.32,
       "etime": 1604.36,
       "text": "Не так много, конечно, несколько десятков."
@@ -3811,7 +3811,7 @@
       "id": "65c91f0ae4d38ed5f5d91d14",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1758.43,
       "etime": 1760.61,
       "text": "Были баги, конечно."
@@ -3820,7 +3820,7 @@
       "id": "65c91f0ae4d38ed5f5d91d15",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1760.67,
       "etime": 1764.09,
       "text": "Собственно, то, что отвалилось, мы пофиксим."
@@ -3829,7 +3829,7 @@
       "id": "65c91f0ae4d38ed5f5d91d16",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1764.15,
       "etime": 1766.03,
       "text": "Со всеми бывает."
@@ -3838,7 +3838,7 @@
       "id": "65c91f0ae4d38ed5f5d91d17",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1766.09,
       "etime": 1771.93,
       "text": "А в общем, на конкретные претензии готов конкретно ответить."
@@ -4009,7 +4009,7 @@
       "id": "65c91f0ae4d38ed5f5d91d2a",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1818.53,
       "etime": 1824.21,
       "text": "Конечно, как, собственно, понятно, везде есть поле для улучшений."
@@ -4018,7 +4018,7 @@
       "id": "65c91f0ae4d38ed5f5d91d2b",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1824.23,
       "etime": 1829.07,
       "text": "Дело в том, что этот инспекшн-репорт, он, в частности, поддерживает еще инспекшн-идеи."
@@ -4027,7 +4027,7 @@
       "id": "65c91f0ae4d38ed5f5d91d2c",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1830.23,
       "etime": 1845.02,
       "text": "То есть мы умеем запускать IntelliJ ID в Headless моде, собирать инспекшены, например, unused методы, собственно, все, что идея может сама показывать, и тоже показывать в этом отчете."
@@ -4045,7 +4045,7 @@
       "id": "65c91f0ae4d38ed5f5d91d2e",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1853.92,
       "etime": 1858.18,
       "text": "На конкретные юзабилити проблемы, собственно, готовы заадресить"
@@ -4162,7 +4162,7 @@
       "id": "65c91f0ae4d38ed5f5d91d3b",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_LAVALE",
+      "author": "_artifact",
       "stime": 1896.67,
       "etime": 1898.17,
       "text": "Которыми рисуют, да."
@@ -4405,7 +4405,7 @@
       "id": "65c91f0ae4d38ed5f5d91d56",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1994.78,
       "etime": 1997.3,
       "text": "Он продается и за больше, насколько я понимаю."
@@ -4414,7 +4414,7 @@
       "id": "65c91f0ae4d38ed5f5d91d57",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 1998.65,
       "etime": 2004.25,
       "text": "Например, у нас, кстати, есть фришная версия для маленьких тимов у бамбу, насколько я понимаю, ее нету."
@@ -4423,7 +4423,7 @@
       "id": "65c91f0ae4d38ed5f5d91d58",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2006.66,
       "etime": 2012.63,
       "text": "Зная о Bamboo, Atlassian вообще довольно интересная компания, то есть Jira, Confluence."
@@ -4432,7 +4432,7 @@
       "id": "65c91f0ae4d38ed5f5d91d59",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2012.93,
       "etime": 2024.88,
       "text": "Logitbrains на самом деле постихоньку начинает конкурировать с Atlassian, то есть изначально это были IDE, но сейчас у нас уже есть еще трекер, вот TeamCity с Bamboo конкурирует и так далее."
@@ -4450,7 +4450,7 @@
       "id": "65c91f0ae4d38ed5f5d91d5b",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2040.79,
       "etime": 2042.85,
       "text": "Это тоже однажды может появиться."
@@ -4459,7 +4459,7 @@
       "id": "65c91f0ae4d38ed5f5d91d5c",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2043.69,
       "etime": 2046.37,
       "text": "В общем, видимо, все-таки не скоро."
@@ -4468,7 +4468,7 @@
       "id": "65c91f0ae4d38ed5f5d91d5d",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2046.45,
       "etime": 2059.98,
       "text": "Но так как бюджет-бренд движется все-таки в направлении тулов для покрытия нужд разработчиков, нужд команды разработчиков, вероятно, это логичное продолжение."
@@ -4576,7 +4576,7 @@
       "id": "65c91f0ae4d38ed5f5d91d69",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2097.41,
       "etime": 2103.92,
       "text": "Собственно, он не был бесплатным, не было бесплатной версии по, скорее, техническим причинам."
@@ -4585,7 +4585,7 @@
       "id": "65c91f0ae4d38ed5f5d91d6a",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2104.02,
       "etime": 2110.72,
       "text": "Неким, не знаю, насколько они официально, там, их нужно обнародовать."
@@ -4594,7 +4594,7 @@
       "id": "65c91f0ae4d38ed5f5d91d6b",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2110.78,
       "etime": 2112.6,
       "text": "Хотя, собственно, наверное, это и так видно."
@@ -4603,7 +4603,7 @@
       "id": "65c91f0ae4d38ed5f5d91d6c",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2112.64,
       "etime": 2119.87,
       "text": "То есть Utrecht использовал Berkeley DB, которая просто... Ее невозможно отдавать бесплатно."
@@ -4612,7 +4612,7 @@
       "id": "65c91f0ae4d38ed5f5d91d6d",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2119.95,
       "etime": 2122.37,
       "text": "Нельзя на ее основе сделать бесплатную версию."
@@ -4630,7 +4630,7 @@
       "id": "65c91f0ae4d38ed5f5d91d6f",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2128.22,
       "etime": 2135.26,
       "text": "Вот я предлагаю подождать, в общем-то, пару недель и, в общем, посмотреть новости на нашем сайте."
@@ -4783,7 +4783,7 @@
       "id": "65c91f0ae4d38ed5f5d91d80",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2209.62,
       "etime": 2215.62,
       "text": "На самом деле уже можно пойти зарегистрироваться на пробную хостед-версию трека."
@@ -4792,7 +4792,7 @@
       "id": "65c91f0ae4d38ed5f5d91d81",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2216.92,
       "etime": 2219.16,
       "text": "которая, насколько я понимаю, с сайта должна быть."
@@ -4801,7 +4801,7 @@
       "id": "65c91f0ae4d38ed5f5d91d82",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2219.18,
       "etime": 2222.76,
       "text": "Ссылка, по крайней мере, в блоге Ютрековского мы проанонсили."
@@ -4810,7 +4810,7 @@
       "id": "65c91f0ae4d38ed5f5d91d83",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2222.82,
       "etime": 2227.36,
       "text": "То есть можно уже пробовать Ютрек уже той версией, которая еще не зарелизана."
@@ -4819,7 +4819,7 @@
       "id": "65c91f0ae4d38ed5f5d91d84",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2227.4,
       "etime": 2230.61,
       "text": "Она будет довольно скоро."
@@ -4828,7 +4828,7 @@
       "id": "65c91f0ae4d38ed5f5d91d85",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2230.65,
       "etime": 2231.89,
       "text": "Уже хостинг можно попробовать."
@@ -4837,7 +4837,7 @@
       "id": "65c91f0ae4d38ed5f5d91d86",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2231.91,
       "etime": 2233.79,
       "text": "Пока он бесплатен."
@@ -4909,7 +4909,7 @@
       "id": "65c91f0ae4d38ed5f5d91d8e",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2252.86,
       "etime": 2256.44,
       "text": "Собственно, в нее все-таки вложено довольно много усилий."
@@ -4918,7 +4918,7 @@
       "id": "65c91f0ae4d38ed5f5d91d8f",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2256.46,
       "etime": 2262.95,
       "text": "И есть, опять-таки, фришная версия для небольших тимов, которую можно пробовать использовать."
@@ -4927,7 +4927,7 @@
       "id": "65c91f0ae4d38ed5f5d91d90",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2262.99,
       "etime": 2274.41,
       "text": "Собственно, обычно тенденция такая, что когда люди начинают использовать TeamCity и видят, что он может, видят, насколько он, собственно, помогает..."
@@ -4936,7 +4936,7 @@
       "id": "65c91f0ae4d38ed5f5d91d91",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2276.48,
       "etime": 2277.92,
       "text": "экономит время."
@@ -4945,7 +4945,7 @@
       "id": "65c91f0ae4d38ed5f5d91d92",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2277.94,
       "etime": 2287.17,
       "text": "2000 долларов не кажется такой уж большой ценой, если сравнивать какое-нибудь время билд-инженера или даже девелоперов, которые смотрят на этот билд."
@@ -4954,7 +4954,7 @@
       "id": "65c91f0ae4d38ed5f5d91d93",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2287.19,
       "etime": 2295.62,
       "text": "2000 долларов, с другой стороны, для фирмы, которая использует TeamCity как Continuous Integration Tool, скорее всего, это вообще почти не деньги."
@@ -5314,7 +5314,7 @@
       "id": "65c91f0ae4d38ed5f5d91dbb",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2448.06,
       "etime": 2453.36,
       "text": "Нет, конечно, инсталляции, тысячи инсталляций."
@@ -5323,7 +5323,7 @@
       "id": "65c91f0ae4d38ed5f5d91dbc",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2453.4,
       "etime": 2470.59,
       "text": "Возможно, все-таки, так как нет опенсорсного комьюнити вокруг TeamCity, поэтому люди, может быть, не очень... Многие работают в больших корпорациях или в больших фирмах, не очень хотят тратить свое время на то, чтобы шарить свой опыт."
@@ -5332,7 +5332,7 @@
       "id": "65c91f0ae4d38ed5f5d91dbd",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2472.22,
       "etime": 2479.82,
       "text": "В общем-то, мы были бы рады его развивать и прилагаем к этому некие усилия."
@@ -5341,7 +5341,7 @@
       "id": "65c91f0ae4d38ed5f5d91dbe",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2479.84,
       "etime": 2484.86,
       "text": "Это же экосистема для плагинов и планируем дальше это делать."
@@ -5350,7 +5350,7 @@
       "id": "65c91f0ae4d38ed5f5d91dbf",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2484.96,
       "etime": 2493.29,
       "text": "Но тут нужны какие-то особые усилия, которые мы, как гиковская контора, может даже не очень знаем, с чего начать."
@@ -5557,7 +5557,7 @@
       "id": "65c91f0ae4d38ed5f5d91dd6",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2549.19,
       "etime": 2550.76,
       "text": "Спасибо, приятно слышать."
@@ -5566,7 +5566,7 @@
       "id": "65c91f0ae4d38ed5f5d91dd7",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2551.02,
       "etime": 2552.94,
       "text": "С вашим фидбэком будет еще лучше."
@@ -5683,7 +5683,7 @@
       "id": "65c91f0ae4d38ed5f5d91de4",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2609.24,
       "etime": 2611.71,
       "text": "Любой конструктивный фидбэк, в общем, мы приветствуем."
@@ -5773,7 +5773,7 @@
       "id": "65c91f0ae4d38ed5f5d91dee",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2647.15,
       "etime": 2648.55,
       "text": "Спасибо, взаимно."
@@ -5782,7 +5782,7 @@
       "id": "65c91f0ae4d38ed5f5d91def",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "yegor_jetbrains",
       "stime": 2648.57,
       "etime": 2650.91,
       "text": "В общем-то, с вашей помощью было несложно."
@@ -13063,7 +13063,7 @@
       "id": "65c91f0ae4d38ed5f5d92118",
       "issue": 241,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_LAVALE",
+      "author": "_artifact",
       "stime": 5519.58,
       "etime": 5522.5,
       "text": "Ты даже стихотворение туда записываешь."

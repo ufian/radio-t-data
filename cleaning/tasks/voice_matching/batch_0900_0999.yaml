@@ -1,0 +1,61 @@
+batch_id: voice_0900_0999
+description: Voice matching tasks for episodes 900-999
+status: pending
+total_tasks: 3
+tasks:
+- episode: 946
+  speaker: Guest1
+  total_duration_sec: 496.6
+  replies_count: 122
+  reference_segment:
+    stime: 777.8
+    etime: 796.8
+    text: Я знаю всего лишь несколько каких-то кейсов в разных компаниях, конкретно
+      в Телеграме, поскольку соз...
+  reason: 'В 89.6s Umputun обращается: "Дорогой Стив, ты можешь отмютить себя". В
+    656.2s Alek.sys говорит: "ты, по-моему, Стивом представился". В 2350.3s Umputun
+    прощается: "Стив, спасибо, дружище, что зашел". Гость - автор статьи о написании
+    кода без багов, постил на Hacker News (120 апвоутов). Работал в JetB'
+  possible_matches:
+  - person_id: steve_unknown
+    confidence: 0.8
+    reason: 'Имя "Стив" известно из обращений ведущих. Фамилия не называлась в эпизоде.
+      Профиль: разработчик с опытом в JetBrains, Telegram, предприниматель.
+
+      '
+- episode: 972
+  speaker: Guest1
+  total_duration_sec: 1254
+  replies_count: 246
+  reference_segment:
+    stime: 4750.0
+    etime: 4837.5
+    duration_sec: 87.5
+    text: Значит, я вот пытался на проекте применить .NET Aspire. Суть в чем, что
+      они рекламируют это как такой типа инструментарий для помощи разработчику при
+      локальной отладке проектов...
+  reason: '61.9s [Guest1]: "Меня зовут Андрей."
+
+    Umputun обращается к нему по имени в 32.9s и 76.7s.
+
+    Программист на C# (.NET), обсуждает .NET Aspire, MongoDB, DDD.
+
+    Участвует в дискуссии на протяжении всего выпуска (1254 сек = ~21 мин).
+
+    '
+  possible_matches: []
+- episode: 994
+  speaker: Guest1
+  total_duration_sec: 896
+  replies_count: 231
+  reference_segment: null
+  reason: 'Гость не представился по имени. На вопрос "Ты кто?" ответил "Я гость" (999s).
+
+    Alek.sys назвал его "заслуженный слушатель подказов" (1002s).
+
+    Гость сказал, что решил "перенять обязанности Бобука" в чате, поскольку
+
+    "у вас тут двое го-специалистов" (1022-1036s).
+
+    Обсуждал асинхронность в Python, feature '
+  possible_matches: []

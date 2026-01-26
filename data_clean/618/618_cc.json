@@ -2650,7 +2650,7 @@
       "id": "65c9cc333643df2326790c6d",
       "issue": 618,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 993.54,
       "etime": 995.76,
       "text": "Какая им, собственно, разница, что виртуальные?"
@@ -2659,7 +2659,7 @@
       "id": "65c9cc333643df2326790c6e",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 995.86,
       "etime": 999.39,
       "text": "Думаете, они прям монтируют, что ли, вот эти как-то образы на хостовую систему?"
@@ -2668,7 +2668,7 @@
       "id": "65c9cc333643df2326790c6f",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 999.43,
       "etime": 1002.27,
       "text": "Подожди, как ты по-другому себе это представляешь?"
@@ -2677,7 +2677,7 @@
       "id": "65c9cc333643df2326790c70",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 1002.37,
       "etime": 1004.11,
       "text": "Я не знаю."
@@ -2686,7 +2686,7 @@
       "id": "65c9cc333643df2326790c71",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 1004.17,
       "etime": 1006.61,
       "text": "Ссх тоже странно, да?"
@@ -2695,7 +2695,7 @@
       "id": "65c9cc333643df2326790c72",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 1006.73,
       "etime": 1008.37,
       "text": "Ссх куда?"
@@ -2704,7 +2704,7 @@
       "id": "65c9cc333643df2326790c73",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 1008.49,
       "etime": 1009.77,
       "text": "Она не запущена."
@@ -2713,7 +2713,7 @@
       "id": "65c9cc333643df2326790c74",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 1009.79,
       "etime": 1012.19,
       "text": "Она не запущена, в том-то и проблема."
@@ -2722,7 +2722,7 @@
       "id": "65c9cc333643df2326790c75",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 1012.25,
       "etime": 1020.03,
       "text": "То есть они, получается, как раз монтируют на хосте, потом что-то туда загружают, и потом уже запускают эту всю штуку."
@@ -2731,7 +2731,7 @@
       "id": "65c9cc333643df2326790c76",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 1020.09,
       "etime": 1022.63,
       "text": "То есть, смотри, это должна быть линуксовая система,"
@@ -2740,7 +2740,7 @@
       "id": "65c9cc333643df2326790c77",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 1025.03,
       "etime": 1029.95,
       "text": "с X2 Compatible тем самым, чтобы они могли хотя бы вредон ли ее прочитать."
@@ -2749,7 +2749,7 @@
       "id": "65c9cc333643df2326790c78",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 1030.01,
       "etime": 1034.29,
       "text": "Она наверняка еще в каком-нибудь VDI или RAW формате, да?"
@@ -2758,7 +2758,7 @@
       "id": "65c9cc333643df2326790c79",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 1034.31,
       "etime": 1038.73,
       "text": "В смысле, ну, типа в VirtualBox'овском."
@@ -2767,7 +2767,7 @@
       "id": "65c9cc333643df2326790c7a",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 1038.75,
       "etime": 1040.85,
       "text": "А, вот и нашел, да, так и есть."
@@ -2776,7 +2776,7 @@
       "id": "65c9cc333643df2326790c7b",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 1042.21,
       "etime": 1046.99,
       "text": "RAW, QCode 2, VDI, VMCode, ну, короче, все понятно."
@@ -2785,7 +2785,7 @@
       "id": "65c9cc333643df2326790c7c",
       "issue": 618,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 1047.45,
       "etime": 1049.43,
       "text": "Все ожидаемые форматы, в общем."
@@ -2794,7 +2794,7 @@
       "id": "65c9cc333643df2326790c7d",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 1049.49,
       "etime": 1051.48,
       "text": "Да-да-да, да."
@@ -2803,7 +2803,7 @@
       "id": "65c9cc333643df2326790c7e",
       "issue": 618,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 1051.54,
       "etime": 1052.1,
       "text": "Ну, понятно."
@@ -2812,7 +2812,7 @@
       "id": "65c9cc333643df2326790c7f",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 1052.8,
       "etime": 1054.3,
       "text": "А зачем они еще туда лезть-то хотят?"
@@ -2821,7 +2821,7 @@
       "id": "65c9cc333643df2326790c80",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 1054.32,
       "etime": 1056.45,
       "text": "Зачем они хотят ее монтировать, что-то с ней делать?"
@@ -2830,7 +2830,7 @@
       "id": "65c9cc333643df2326790c81",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 1056.47,
       "etime": 1059.39,
       "text": "То есть они же выкатили, вот Клаудыни там уже должен стоять и работать."
@@ -2839,7 +2839,7 @@
       "id": "65c9cc333643df2326790c82",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 1059.59,
       "etime": 1060.23,
       "text": "Им этого мало?"
@@ -2848,7 +2848,7 @@
       "id": "65c9cc333643df2326790c83",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 1060.25,
       "etime": 1061.65,
       "text": "Они что-то еще хотят поверх этого?"
@@ -2857,7 +2857,7 @@
       "id": "65c9cc333643df2326790c84",
       "issue": 618,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 1061.69,
       "etime": 1061.97,
       "text": "Ну да."
@@ -2866,7 +2866,7 @@
       "id": "65c9cc333643df2326790c85",
       "issue": 618,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 1062.03,
       "etime": 1063.87,
       "text": "А ты пробовал когда-нибудь мониторинг включать?"
@@ -2875,7 +2875,7 @@
       "id": "65c9cc333643df2326790c86",
       "issue": 618,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 1063.93,
       "etime": 1065.32,
       "text": "Ты знаешь, что при этом происходит."
@@ -2884,7 +2884,7 @@
       "id": "65c9cc333643df2326790c87",
       "issue": 618,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 1065.36,
       "etime": 1068.3,
       "text": "Они тебе в систему впендюривают там свой агент."
@@ -2893,7 +2893,7 @@
       "id": "65c9cc333643df2326790c88",
       "issue": 618,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 1069.77,
       "etime": 1072.84,
       "text": "А, это типа их именно мониторинги DigitalOcean-овские?"
@@ -2902,7 +2902,7 @@
       "id": "65c9cc333643df2326790c89",
       "issue": 618,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 1073.06,
       "etime": 1079.94,
       "text": "Да, их мониторинг DigitalOcean-овский, который тебе там все мерит, обо всем рассказывает и обо всем доказывает."
@@ -5755,7 +5755,7 @@
       "id": "65c9cc333643df2326790dc6",
       "issue": 618,
       "type": "cc",
-      "author": "Gray",
+      "author": "SPEAKER_MISATTRIBUTED_GRAY",
       "stime": 2226.12,
       "etime": 2227.17,
       "text": "Ты попробуй."
@@ -11245,7 +11245,7 @@
       "id": "65c9cc333643df2326791028",
       "issue": 618,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "_artifact",
       "stime": 4814.17,
       "etime": 4815.12,
       "text": "Утверждение."
@@ -17113,7 +17113,7 @@
       "id": "65c9cc333643df23267912b4",
       "issue": 618,
       "type": "cc",
-      "author": "Gray",
+      "author": "SPEAKER_MISATTRIBUTED_GRAY",
       "stime": 7621.14,
       "etime": 7622.28,
       "text": "И вот сидишь ты как дурак."

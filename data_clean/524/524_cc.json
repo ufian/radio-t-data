@@ -1894,7 +1894,7 @@
       "id": "65c9bc0143935c6cc18dfcf2",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_PETR",
+      "author": "_artifact",
       "stime": 687.66,
       "etime": 689.88,
       "text": "Они плохо работают?"
@@ -2866,7 +2866,7 @@
       "id": "65c9bc0143935c6cc18dfd5e",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_PETR",
+      "author": "_artifact",
       "stime": 1023.38,
       "etime": 1026.82,
       "text": "файл этого товарища."
@@ -5575,7 +5575,7 @@
       "id": "65c9bc0143935c6cc18dfe8b",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2424.21,
       "etime": 2426.49,
       "text": "Ну, в простом случае, да."
@@ -5593,7 +5593,7 @@
       "id": "65c9bc0143935c6cc18dfe8d",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2431.98,
       "etime": 2437.1,
       "text": "Но если UI усложняется, когда есть какие-то зависимые компоненты, скажем,"
@@ -5602,7 +5602,7 @@
       "id": "65c9bc0143935c6cc18dfe8e",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2437.92,
       "etime": 2444.48,
       "text": "Есть данные, но есть диалог, и вы в нем меняете, например, тайм-зону банально."
@@ -5611,7 +5611,7 @@
       "id": "65c9bc0143935c6cc18dfe8f",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2444.52,
       "etime": 2450.97,
       "text": "И нужно, чтобы данные в UI, вот в этой основной форме, поменялись в зависимости от той настройки."
@@ -5719,7 +5719,7 @@
       "id": "65c9bc0143935c6cc18dfe9b",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2501.16,
       "etime": 2505.04,
       "text": "Если это одно вью, да, конечно, можно сделать дополнительный запрос."
@@ -5737,7 +5737,7 @@
       "id": "65c9bc0143935c6cc18dfe9d",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2509.83,
       "etime": 2519.26,
       "text": "Там множество виджетов, и вы что-то меняете одно в одном месте, и оно эффектит сразу, может, десяток, например, виджетов."
@@ -5746,7 +5746,7 @@
       "id": "65c9bc0143935c6cc18dfe9e",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2519.32,
       "etime": 2527.51,
       "text": "И да, можно сделать 10 реквестов или какой-то большой бетч-реквест, но это же перформанс, и..."
@@ -5755,7 +5755,7 @@
       "id": "65c9bc0143935c6cc18dfe9f",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2528.89,
       "etime": 2529.53,
       "text": "Это первое."
@@ -6214,7 +6214,7 @@
       "id": "65c9bc0143935c6cc18dfed2",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2724.85,
       "etime": 2725.94,
       "text": "Вопрос тут в чем?"
@@ -6223,7 +6223,7 @@
       "id": "65c9bc0143935c6cc18dfed3",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2726.69,
       "etime": 2728.15,
       "text": "Ладно, давай."
@@ -6232,7 +6232,7 @@
       "id": "65c9bc0143935c6cc18dfed4",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2728.21,
       "etime": 2733.26,
       "text": "Это в случае, если запрос request-response, то есть мы ожидаем ответа."
@@ -6241,7 +6241,7 @@
       "id": "65c9bc0143935c6cc18dfed5",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2733.3,
       "etime": 2737.52,
       "text": "Скажем, минуту нужно ждать, пока респонс вернется."
@@ -6250,7 +6250,7 @@
       "id": "65c9bc0143935c6cc18dfed6",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2737.56,
       "etime": 2742.84,
       "text": "То есть мы отправили запрос какой-то там «сделай работу и вернись мне с ответом»."
@@ -6259,7 +6259,7 @@
       "id": "65c9bc0143935c6cc18dfed7",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2742.9,
       "etime": 2746.04,
       "text": "Вот в этом случае, например, этот подход не работает, правильно?"
@@ -6268,7 +6268,7 @@
       "id": "65c9bc0143935c6cc18dfed8",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2746.08,
       "etime": 2747.74,
       "text": "То есть нужно полить уже данные."
@@ -6520,7 +6520,7 @@
       "id": "65c9bc0143935c6cc18dfef4",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2870.47,
       "etime": 2886.88,
       "text": "Если это настройка какая-то не тайм-зона, а, например, моя позиция, скажем, я живу там в Европе или в США, и вот поменял эту настройку, у меня будут отображаться, например, стоки не европейские, а вот американские."
@@ -6529,7 +6529,7 @@
       "id": "65c9bc0143935c6cc18dfef5",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2887.84,
       "etime": 2893.86,
       "text": "То есть в этом случае это и даже источник данных меняется."
@@ -6538,7 +6538,7 @@
       "id": "65c9bc0143935c6cc18dfef6",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2893.9,
       "etime": 2897.24,
       "text": "Не только отображение, скажем, даты, не только форматирование."
@@ -6682,7 +6682,7 @@
       "id": "65c9bc0143935c6cc18dff06",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2958.91,
       "etime": 2962.53,
       "text": "Интересно, на самом деле, что мы обсуждаем?"
@@ -6691,7 +6691,7 @@
       "id": "65c9bc0143935c6cc18dff07",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 2962.67,
       "etime": 2967.25,
       "text": "Есть ли MVC на UI, нужен ли стейт на UI или one-way data flow?"
@@ -7033,7 +7033,7 @@
       "id": "65c9bc0143935c6cc18dff2d",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3156.25,
       "etime": 3161.49,
       "text": "Я согласен, что да, можно и без стейта, но это очень простые случаи."
@@ -7042,7 +7042,7 @@
       "id": "65c9bc0143935c6cc18dff2e",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3161.65,
       "etime": 3168.55,
       "text": "Даже банально те же фреймворки Angular и React, они дают такой раутинг, UI-ный раутинг,"
@@ -7069,7 +7069,7 @@
       "id": "65c9bc0143935c6cc18dff31",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3187.73,
       "etime": 3193.83,
       "text": "Понятно, в простом случае можно обойтись тремя запросами на страницу, и все счастливы."
@@ -7078,7 +7078,7 @@
       "id": "65c9bc0143935c6cc18dff32",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3193.87,
       "etime": 3196.69,
       "text": "Перешел на другую страницу, новых три запроса, и все счастливы."
@@ -7087,7 +7087,7 @@
       "id": "65c9bc0143935c6cc18dff33",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3197.19,
       "etime": 3213.03,
       "text": "Но когда все больше и больше добавляется вещей, когда у тебя какой-то есть стрим данных, то есть стрим там приходит данных, потом ты переключаешься на другую страничку, и там эти данные должны отобразиться в другом форме, в виде графика, например."
@@ -7096,7 +7096,7 @@
       "id": "65c9bc0143935c6cc18dff34",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3213.05,
       "etime": 3216.24,
       "text": "Ты можешь сделать такой же запрос, ты можешь это сделать."
@@ -7105,7 +7105,7 @@
       "id": "65c9bc0143935c6cc18dff35",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3217.24,
       "etime": 3223.79,
       "text": "Или ты захотел показать этот график на страничке с стримом данных."
@@ -7114,7 +7114,7 @@
       "id": "65c9bc0143935c6cc18dff36",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3223.83,
       "etime": 3228.35,
       "text": "Опять же, это два компонента отдельных, у них свои лайфсайклы."
@@ -7123,7 +7123,7 @@
       "id": "65c9bc0143935c6cc18dff37",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3228.43,
       "etime": 3232.13,
       "text": "И один может дернуть REST, и второй тот же REST."
@@ -7132,7 +7132,7 @@
       "id": "65c9bc0143935c6cc18dff38",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3233.16,
       "etime": 3241.83,
       "text": "А может быть, что есть центральное место, такой стор с данными, он только дернул, и через него заходят все обновления."
@@ -7141,7 +7141,7 @@
       "id": "65c9bc0143935c6cc18dff39",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3241.85,
       "etime": 3243.29,
       "text": "То есть по вебсокету, например."
@@ -7150,7 +7150,7 @@
       "id": "65c9bc0143935c6cc18dff3a",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3243.33,
       "etime": 3251.01,
       "text": "То есть изначально форесту дернули, получили основную массу данных, и по вебсокету просто приходит стрим обновлений."
@@ -7159,7 +7159,7 @@
       "id": "65c9bc0143935c6cc18dff3b",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3251.05,
       "etime": 3256.94,
       "text": "И эти данные проходят через один и тот же стор, и дальше уже распределяются в компоненты, которые используют его."
@@ -7168,7 +7168,7 @@
       "id": "65c9bc0143935c6cc18dff3c",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alexander",
       "stime": 3257.58,
       "etime": 3260.36,
       "text": "Поэтому, да, в простых случаях я абсолютно согласен."
@@ -16582,7 +16582,7 @@
       "id": "65c9bc0143935c6cc18e0352",
       "issue": 524,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_MARIN",
+      "author": "_artifact",
       "stime": 7755.73,
       "etime": 7761.06,
       "text": "Я проснулась, я просто пыталась на кнопку нажать истерически, и она куда-то не туда нажималась."

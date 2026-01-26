@@ -1,0 +1,717 @@
+batch_id: voice_0500_0599
+description: Voice matching tasks for episodes 500-599
+status: pending
+total_tasks: 34
+tasks:
+- episode: 500
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 16
+  replies_count: 6
+  reference_segment: null
+  reason: '6 коротких реплик разбросаны по эпизоду (4315s-7204s), каждая 1-4 сек.
+    Все вставлены между репликами ведущих. Типичные фразы-перебивки: ''Народ начал
+    покупать из расчета'', ''Майкрософт упал сразу'', ''Я, честно, не смотрел'' —
+    это ошибки распознавания голосов ведущих, не реальный гость Эльдар Муртазин.'
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.5
+    reason: Несколько реплик вставлены рядом с репликами Bobuk, тематика обсуждения
+      акций/Microsoft
+  - person_id: umputun
+    confidence: 0.3
+    reason: Некоторые реплики могут быть неправильно распознанным голосом Umputun
+  - person_id: gray
+    confidence: 0.2
+    reason: Реплика про LG Search следует после Gray
+- episode: 501
+  speaker: Alek.sys
+  total_duration_sec: 11
+  replies_count: 9
+  reference_segment:
+    stime: 2265.62
+    etime: 2266.48
+    text: Да, пятнашка.
+  reason: needs voice comparison
+  possible_matches:
+  - person_id: alek_sys
+    confidence: 0.3
+    reason: Формально размечен как Alek.sys, но очень мало реплик (9 шт, 11 сек) для
+      полноценного участия. В начале выпуска не представлен.
+  - person_id: bobuk
+    confidence: 0.4
+    reason: Первая реплика "Да, пятнашка" (2265s) идет сразу после Bobuk "Тринажка"
+      - может быть его голосом
+  - person_id: gray
+    confidence: 0.3
+    reason: Некоторые реплики могут принадлежать Gray
+- episode: 502
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 10
+  replies_count: 4
+  reference_segment:
+    stime: 5024.43
+    etime: 5029.77
+    text: В темах слушателей есть в самом начале очень неплохая такая темка.
+  reason: 'Спикер уже помечен как MISATTRIBUTED_ELDAR - это означает, что ранее
+
+    его ошибочно атрибутировали Эльдару Муртазину, но это было отменено.
+
+    4 коротких разрозненных реплики (10 сек суммарно) по всему эпизоду.
+
+    Эльдар НЕ упоминается в начале эпизода как гость.
+
+    Скорее всего это ошибки распознавания одного'
+  possible_matches:
+  - person_id: bobuk
+    confidence: 0.5
+    reason: Контекст реплик похож на стиль Bobuk. Первая реплика в диалоге с Umputun
+      про докерхаб.
+  - person_id: gray
+    confidence: 0.3
+    reason: Gray участвует в эпизоде, мог быть неправильно распознан
+- episode: 504
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 11
+  replies_count: 4
+  reference_segment:
+    stime: 4055.46
+    etime: 4057.74
+    text: Слушайте, тут есть такая классная штука про Atlassian.
+  reason: 'Эльдар Муртазин - известный гость, но не участвовал в данном эпизоде.
+
+    В начале эпизода упоминаются только Umputun, Ksenks, Gray. Bobuk присоединился
+    позже.
+
+    Никаких гостей в эпизоде не анонсировано и не представлено.
+
+
+    Анализ реплик:
+
+    1) 3460s "Если программа падает..." - продолжение дискуссии о fail-f'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: Реплики 1 и 2 следуют после или перед репликами Gray, стилистически похожи
+  - person_id: bobuk
+    confidence: 0.4
+    reason: Реплика 2 про Atlassian следует сразу за репликой Bobuk, возможно его
+      голос
+  - person_id: umputun
+    confidence: 0.3
+    reason: Реплики 3 и 4 могут быть Umputun - он модерирует обсуждение
+- episode: 505
+  speaker: SPEAKER_06
+  total_duration_sec: 477
+  replies_count: 123
+  reference_segment:
+    stime: 289.22
+    etime: 309.96
+    text: А я у них... У нас проблема, у нас три человека ходят реально в обед и ловят
+      покемонов. Вокруг офиса и не только. И пришла ведь долгая воспитательная беседа
+      по поводу того, что не надо так делать.
+  reason: 'Gray в начале: "Давайте начнём с Александра. Он первый пришёл."
+
+    SPEAKER_06 (47.5s): "Здравствуй." - первая реплика гостя.
+
+    Далее SPEAKER_06 рассказывает, что "руководил людьми, которые переписывали
+
+    это на ПХП, с ПХП на питомник" - это программист/руководитель.
+
+    Имя: Александр. Нужна дополнительная иде'
+  possible_matches:
+  - person_id: aleksandr_unknown
+    confidence: 0.7
+    reason: Представлен как Александр, программист с опытом руководства
+- episode: 505
+  speaker: SPEAKER_03
+  total_duration_sec: 450
+  replies_count: 153
+  reference_segment:
+    stime: 6691.58
+    etime: 6730.3
+    text: Они пытаются скрыть, решить проблему как-то тихо-втихаря... И вот идея того,
+      что нужно сделать посмортами нормальной ситуации и описывать, кто что сделал...
+  reason: 'Gray в начале: "Мне понравилось, что у него созвучный ник просто со моим"
+
+    Bobuk: "MaverickRainGrey, хорошо, можно тоже назвать Алексеем"
+
+    SPEAKER_03 говорит о себе: "enterprise-программист",
+
+    "работаю в небольшой белорусской компании", "нахожусь сейчас в Силиконовой долине"
+
+    Ник: MaverickRainGrey, имя:'
+  possible_matches:
+  - person_id: maverick_rain_grey
+    confidence: 0.8
+    reason: Алексей (MaverickRainGrey), enterprise-программист из белорусской аутсорс-компании
+      в Долине
+- episode: 506
+  speaker: SPEAKER_04
+  total_duration_sec: 1035
+  replies_count: 257
+  reference_segment:
+    stime: 545.73
+    etime: 559.14
+    text: Я видел недалее, чем пару недель назад такую маленькую систему, растянутую,
+      кажется, на пять машин, где они гордо заявляли, что это распределенная система,
+      написанная на C. Поэтому это не только Embedded.
+  reason: needs voice comparison
+  possible_matches:
+  - person_id: unknown_alexey
+    confidence: 0.6
+    reason: 'Gray представляет "Алексей, Александр" в начале (25s). SPEAKER_04 -
+
+      активный участник, много говорит о языках программирования, C/C++,
+
+      упоминает DevZen (656s: "Потому что я не помню, это была открытая или не
+
+      открытая информация... когда в DevZen приходила девушка и рассказывала
+
+      про продукт C-line от JetBrains"). Вероятно один из Алексеев.
+
+      '
+  - person_id: unknown_aleksandr
+    confidence: 0.3
+    reason: Второй представленный гость - Александр
+- episode: 506
+  speaker: SPEAKER_06
+  total_duration_sec: 383
+  replies_count: 122
+  reference_segment:
+    stime: 1292.72
+    etime: 1311.64
+    text: Я на самом деле не считаю, что это какая-то большая проблема... Так что
+      никаких проблем с этим нет.
+  reason: needs voice comparison
+  possible_matches:
+  - person_id: unknown_alexey_or_aleksandr
+    confidence: 0.5
+    reason: 'Активный участник дискуссии о языках программирования.
+
+      Говорит о Java (1289s: "Здравствуйте, джавист", 1323s: "интерпрайз яма").
+
+      Обсуждает C (1370s: "раньше, например, 30 лет назад это был Кабул").
+
+      Вероятно второй из представленных гостей (Алексей или Александр).
+
+      '
+- episode: 508
+  speaker: Guest
+  total_duration_sec: 703
+  replies_count: 169
+  reference_segment: null
+  reason: needs voice comparison
+  possible_matches:
+  - person_id: null
+    confidence: 0.0
+    reason: Нет совпадений в people.yaml по описанным характеристикам
+- episode: 517
+  speaker: Guest
+  total_duration_sec: 456
+  replies_count: 75
+  reference_segment:
+    stime: 3820.42
+    etime: 3847.02
+    text: Я попробую защитить это, потому что мне сама идея очень нравится, я активно
+      ее навязываю окружающим меня людям, потому что юнит-тесты прекрасны, но юнит-тесты
+      в сочетании с явным указанием типов спасают от еще большего количества ошибок...
+  reason: '1. Guest introduces himself at 35.89s: "Всем привет, меня зовут Дима"
+
+    2. Umputun confirms at 8233.43s: "Вместо Ксюши был Дмитрий, который молчал примерно,
+    как Ксюша молчит в свои худшие дни"
+
+    3. Active participation in technical discussions (Python typing, VMware, Siri)
+
+    '
+  possible_matches: []
+- episode: 521
+  speaker: SPEAKER_02
+  total_duration_sec: 1621
+  replies_count: 344
+  reference_segment:
+    stime: 87.89
+    etime: 96.76
+    text: Ну, ты же тоже учился в советской школе, там проходили по биологии всякие
+      гидры, размножаются пачкованием туда-сюда.
+  reason: 'В начале подкаста (32-44s) Umputun говорит: ''Вместо выбывшего Бобукова
+    пришел Алексей из Дружественного. Ты все еще из Дружественного подкаста или ты
+    прогнал?'' SPEAKER_02 отвечает: ''Я стараюсь. Там уже от нас отпочковываются уже
+    другие подкасты.'''
+  possible_matches:
+  - person_id: devzen_alexey
+    confidence: 0.3
+    reason: Упоминает 'Дружественный подкаст', возможно связь с DevZen или другим
+      русскоязычным IT-подкастом 2016 года
+- episode: 523
+  speaker: SPEAKER_01
+  total_duration_sec: 204
+  replies_count: 46
+  reference_segment:
+    stime: 1339.37
+    etime: 1355.3
+    text: У меня на прошлой работе я тоже там ввел, в принципе, проводительную проверку
+      всяких линтеров и, ну, обычные там JS-линты, HP-линты, Tone-линты, просто через
+      GitLab, стандартный там ProjectStab.
+  reason: '- В начале подкаста (~127с) Umputun обращается: "Серега, ну, сними трубку"
+
+    - В ~517с первая реплика SPEAKER_01: "Да, всем привет."
+
+    - В ~536с говорит: "Я работаю поэтом-заботчиком. Сейчас хожу на гоу в Острову
+    Гру" (Ostrovok.ru)
+
+    - В ~1673с Umputun прощается: "Ладно, все, спасибо, Серега, что зашел."
+
+    '
+  possible_matches:
+  - person_id: null
+    confidence: 0.0
+    reason: Имя Сергей, работает в Ostrovok.ru, Go-разработчик. Не найден в people.yaml
+- episode: 524
+  speaker: SPEAKER_04
+  total_duration_sec: 180
+  replies_count: 34
+  reference_segment:
+    stime: 3197.19
+    etime: 3260.36
+    text: 'Понятно, в простом случае можно обойтись тремя запросами на страницу, и
+      все счастливы.
+
+      Перешел на другую страницу, новых три запроса, и все счастливы.
+
+      Но когда все больше и больше добавляется вещей, когда у тебя какой-то есть стрим
+      данных...
+
+      [длинный сегмент непрерывной речи про state management]
+
+      '
+  reason: 'На 2378s Umputun говорит: "К нам, кстати, человек пришел."
+
+    На 2383s: "И говорит, что сейчас он тебе выдаст, или мне выдаст по первое число..."
+
+    На 2389s: "Александр." и "Привет."
+
+    На 2394s: "Ты с темной стороны, с этих UI-щиков, фронтенщиков."
+
+    Гость представлен как Александр, занимается фронтендом/UI.'
+  possible_matches:
+  - person_id: alexander_frontend
+    confidence: 0.9
+    reason: Явное представление как 'Александр', фронтенд-разработчик
+- episode: 525
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 22
+  replies_count: 6
+  reference_segment:
+    stime: 2542.5
+    etime: 2551.32
+    text: То есть, вообще говоря, структура компенсации, зарплаты и всего прочего
+      в других местах, это тоже довольно интимный вопрос в любом месте.
+  reason: 'Маркер MISATTRIBUTED указывает на отменённую ошибочную атрибуцию к Eldar
+    Murtazin. Реплики разбросаны по подкасту: - 234.2s: "Ну, крепко, да, хорошо сплю."
+    - ответ на вопрос Umputun к Gray - 2542.5s: О структуре компенсации - продолжение
+    темы зарплат - 4133.2s: "Там еще одна ошибка на самом деле." -'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: 'Реплика в 234s - прямой ответ на вопрос Umputun к Gray "Хорошо ли ты
+      спишь, дорогой?" Следующая реплика уже от Gray, но возможно это начало.
+
+      '
+  - person_id: bobuk
+    confidence: 0.4
+    reason: 'Реплики про кофемашины и ускорение Ksenks похожи на стиль Bobuk.
+
+      '
+- episode: 532
+  speaker: SPEAKER_06
+  total_duration_sec: 1563
+  replies_count: 245
+  reference_segment:
+    stime: 7323.1
+    etime: 7347.8
+    text: И в результате это спускалось разработчикам, которые смотрели на это и понимали,
+      что это такая шиза...
+  reason: 'Umputun представляет гостя в начале: "И даже на огонек зашел Леха. Леха,
+    здравствуй." (19.6s-22.7s)
+
+    SPEAKER_06 отвечает: "Всем привет." (23.6s)
+
+    Обращения к нему: "Я Леху спрашиваю" (158s), "Гиковский выпуск, Алексей" (159.9s)
+
+    В конце: "Алексей, спасибо, что зашел, помог мне Ксюшу ставить на место" ('
+  possible_matches:
+  - person_id: unknown_leha_532
+    confidence: 0.9
+    reason: Явное представление как 'Леха', активное участие в дискуссии о микросервисах
+      и архитектуре
+- episode: 536
+  speaker: SPEAKER_05
+  total_duration_sec: 1099
+  replies_count: 196
+  reference_segment:
+    stime: 1278.19
+    etime: 1333.98
+    text: Рассуждение о надежности AWS S3 и опыте работы с Amazon
+  reason: 'Umputun говорит "Леша, тебе рады" в 22s — это обращение к гостю.
+
+    В 4176s Umputun говорит "как правильно Леша сказал" после реплики SPEAKER_05 в
+    4164s.
+
+    Это подтверждает, что SPEAKER_05 = "Леша".
+
+    SPEAKER_05 активно участвует в обсуждении AWS (550s) и TDD (4113s+).
+
+    На "ты" с Bobuk, знает его конфигурац'
+  possible_matches:
+  - person_id: alek_sys
+    confidence: 0.3
+    reason: Имя Леша, но Alek.sys уже присутствует как отдельный спикер с 1562s
+  - person_id: null
+    confidence: 0.7
+    reason: Скорее всего отдельный гость по имени Алексей/Леша, не из справочника
+- episode: 536
+  speaker: SPEAKER_07
+  total_duration_sec: 267
+  replies_count: 85
+  reference_segment:
+    stime: 3006.43
+    etime: 3015.66
+    text: мы получаем дисциплину, которая позволяет нам садиться и делать то, что
+      перед тобой, не отвлекаться и повышать, как говорится, флоу.
+  reason: 'Представился сам: "Меня зовут Андрей, мне 29 лет. Я зарабатываю на жизнь
+    разработкой ПО и я люблю ТДТ." (2866-2874s)
+
+    Umputun прощается: "Андрей, ну, спасибо, что зашел" (4671s), "Ладно, Андрей, спасибо"
+    (4813s).
+
+    Гость пришел для обсуждения TDD как его защитник.
+
+    '
+  possible_matches:
+  - person_id: null
+    confidence: 1.0
+    reason: Имя Андрей, 29 лет в 2017 году, разработчик, энтузиаст TDD. Не идентифицирован
+      в справочнике.
+- episode: 536
+  speaker: EldarMurtazin
+  total_duration_sec: 353
+  replies_count: 58
+  reference_segment:
+    stime: 6372.92
+    etime: 6396.05
+    text: Руслан объясняет корутины в Kotlin — длинный монолог для voice comparison
+  reason: 'КРИТИЧЕСКАЯ ОШИБКА АТРИБУЦИИ!
+
+    EldarMurtazin (Эльдар Муртазин) — известный мобильный аналитик, не имеющий отношения
+    к TDD или Kotlin.
+
+    В этом выпуске "EldarMurtazin" говорит о TDD (3041-4447s) и Kotlin (6302-8064s).
+
+
+    Реальные спикеры:
+
+    1. TDD-часть (3041-4447s): скорее всего тот же Андрей (SPEAKER_07),'
+  possible_matches:
+  - person_id: null
+    confidence: 0.0
+    reason: 'Это НЕ Эльдар Муртазин. Это два разных человека: Андрей (TDD) и Руслан
+      (Kotlin).'
+- episode: 536
+  speaker: SPEAKER_01
+  total_duration_sec: 224
+  replies_count: 92
+  reference_segment:
+    stime: 6468.1
+    etime: 6476.02
+    text: 'Объяснение async/await в Kotlin: Но есть в библиотеке Kotlin и XKRoutine
+      функция async и await...'
+  reason: 'SPEAKER_01 появляется в 6413s, сразу после EldarMurtazin (6410s), в обсуждении
+    Kotlin.
+
+    Говорит технически грамотно о suspend функциях, async/await в Kotlin.
+
+    Чередуется с EldarMurtazin — возможно это тот же Руслан (ошибка сегментации),
+
+    либо другой эксперт по Kotlin.
+
+    '
+  possible_matches:
+  - person_id: null
+    confidence: 0.6
+    reason: Возможно Руслан — тот же человек что EldarMurtazin в Kotlin-части
+  - person_id: null
+    confidence: 0.4
+    reason: Отдельный участник, знающий Kotlin
+- episode: 538
+  speaker: SPEAKER_01
+  total_duration_sec: 146
+  replies_count: 20
+  reference_segment:
+    stime: 4210.06
+    etime: 4231.18
+    text: Ну, я же говорил, флагер нужен для введения документации, причем действительно
+      кто-то там в чате писал, что она еще интерактивная, можно попробовать прямо
+      эти API-методы повзывать, ну и плюс удобная библиотека, которая генерируется
+      автоматически для Swift, для Android, для .NET и для Unity.
+  reason: 'Гость по имени Антон - слушатель, который позвонил в эфир обсудить Swagger.
+
+    Представлен в начале: "На огонек обещал зайти гость... расскажет впечатление от
+    живого человека, который использует свагер в жизни" (16-25s).
+
+    Прямые обращения по имени:
+
+    - "Антон, это не ты ли тот вот этот злодей..." (3029s)
+
+    '
+  possible_matches: []
+- episode: 539
+  speaker: SPEAKER_MISATTRIBUTED_ELDAR
+  total_duration_sec: 51
+  replies_count: 9
+  reference_segment:
+    stime: 952.95
+    etime: 998.72
+    text: Длинный сегмент о стримах и обработке данных - можно сравнить с голосом
+      SPEAKER_07 (Виктор Гамов) или SPEAKER_04 (Барух Садогурский)
+  reason: Реплики относятся к обсуждению Java/стримов, что не соответствует экспертизе
+    Эльдара Муртазина (мобильный аналитик). Это скорее всего ошибочно атрибутированные
+    реплики одного из гостей (Виктор Гамов или Барух Садогурский).
+  possible_matches:
+  - person_id: ViktorGamov
+    confidence: 0.6
+    reason: Тематика реплик связана с Java стримами и pipeline обработки данных
+  - person_id: BaruchSadogursky
+    confidence: 0.4
+    reason: Также Java эксперт, мог говорить о стримах
+- episode: 555
+  speaker: SPEAKER_03
+  total_duration_sec: 12
+  replies_count: 5
+  reference_segment: null
+  reason: Это реклама Тинькофф Банка. Реплики чередуются с уже размеченной рекламой
+    (_ad). SPEAKER_03 - часть того же рекламного блока. Голос диктора рекламы.
+  possible_matches: []
+- episode: 557
+  speaker: SPEAKER_05
+  total_duration_sec: 1026
+  replies_count: 242
+  reference_segment:
+    stime: 4371.1
+    etime: 4389.7
+    text: Я скорее говорю про то, что если ты учишься в университете на первом курсе
+      и ты выбираешь технологию, то для того, чтобы найти работу, тебе будет гораздо
+      легче выучить какой-нибудь Node.js экспресс, чем учить Ruby в рельсе, потому
+      что последние гораздо сложнее в изучении, чем первая технология.
+  reason: '2867.9s: ''Зовут меня Валентин... Я уже 8 лет пишу на Руби на рельсах и
+    являюсь лидером минского Руби-сообщества нашего'''
+  possible_matches: []
+- episode: 557
+  speaker: SPEAKER_04
+  total_duration_sec: 12
+  replies_count: 5
+  reference_segment: null
+  reason: '5930.5s: ''Спонсор этого выпуска - Банк Тинькофф'' - начало рекламного
+    блока'
+  possible_matches: []
+- episode: 561
+  speaker: Alek.sys
+  total_duration_sec: 51
+  replies_count: 14
+  reference_segment:
+    stime: 3317
+    etime: 3350
+    text: Первые реплики Alek.sys
+  reason: needs voice comparison
+  possible_matches: []
+- episode: 562
+  speaker: SPEAKER_05
+  total_duration_sec: 1197
+  replies_count: 209
+  reference_segment:
+    stime: 227.88
+    etime: 239.66
+    text: Вообще во времена моей молодости были такие заведения, назывались «стекляшка».
+      Вот почему-то навевает ощущение не о театре, а о какой-то такой стекляшке.
+  reason: 'В начале выпуска Umputun представляет гостя:
+
+    - 30.75s: "Здравствуй, Леша."
+
+    - 31.55s: "Давно тебя не было."
+
+    - 32.85s: "Вместо тебя уже тут другой Алексей появился." (имеется в виду Alek.sys)
+
+    - 38.94s: "Тебе надо бороться за вот это гордое звание дефолта."
+
+    SPEAKER_05 отвечает (43.43s): "Ну, дежурного '
+  possible_matches:
+  - person_id: alexmak
+    confidence: 0.3
+    reason: Известный гость-Алексей (выпуски 196, 203), но нет прямых подтверждений
+- episode: 564
+  speaker: SPEAKER_06
+  total_duration_sec: 311
+  replies_count: 91
+  reference_segment:
+    stime: 7619.9
+    etime: 7643.1
+    duration_sec: 23.2
+    text: Нет, у нас просто, скажем так, главным аргументом, который просто вот побил
+      всю команду, что, ребята...
+  reason: 'Umputun в 7362s: "Леша, а ты что, прям реально читал?"
+
+    В 7355s: "Ты как раз на эту статью возбудился и сказал, что позвать."
+
+    Это слушатель по имени Леша, который позвонил обсудить статью про Kotlin.
+
+    Он Android-разработчик, пишет на Kotlin.
+
+    '
+  possible_matches:
+  - person_id: null
+    confidence: 0.0
+    reason: Неизвестный слушатель, звонивший обсудить статью про Kotlin
+- episode: 564
+  speaker: SPEAKER_01
+  total_duration_sec: 15
+  replies_count: 8
+  reference_segment: null
+  reason: 'Короткие разрозненные реплики в разных частях подкаста.
+
+    Типичные фразы: "Фигня полная", "Да", "Именно", "Запомните этот выпуск".
+
+    Появляется в моменты между репликами ведущих - скорее всего
+
+    ошибки распознавания голоса одного из ведущих (вероятно Alek.sys или Ksenks).
+
+    '
+  possible_matches: []
+- episode: 566
+  speaker: SPEAKER_06
+  total_duration_sec: 1958
+  replies_count: 343
+  reference_segment:
+    stime: 4389.61
+    etime: 4418.87
+    duration_sec: 29.26
+    text: '"Лямбды надо прогревать. То есть там есть возможность, но, опять же, это
+      нигде в документации не указано,
+
+      но у них есть такое время, по-моему, 10 минут. То есть если у тебя лямбда активна
+      в течение 10 минут,
+
+      хотя бы один запрос на нее пришел, то она не выгружается из памяти активно.
+      Но, опять же, вот это время,
+
+      10 минут, оно не гарантировано и может изменяться самим Амазоном. Если ты хочешь,
+      например, тебе надо
+
+      прогревать эту лямбду."
+
+      '
+  reason: 'В начале выпуска Umputun говорит: "между двумя Лешами сижу" и "Алексей,
+    вы первый раз вдвоем на одном гектаре".
+
+    Это означает, что в выпуске два Алексея: один - ведущий Alek.sys, второй - гость.
+
+    SPEAKER_06 = "Алексей Первый" (Umputun: "Ты Алексей Первый" @ 572s).
+
+    Alek.sys = "Алексей Второй" (Umputun:'
+  possible_matches:
+  - person_id: alexmak
+    confidence: 0.2
+    reason: Имя Алексей совпадает, но выпуски 196, 203 не пересекаются
+  - person_id: another_alex
+    confidence: 0.2
+    reason: Имя Алексей совпадает, но выпуски 857, 858 позже
+- episode: 567
+  speaker: SPEAKER_07
+  total_duration_sec: 10
+  replies_count: 7
+  reference_segment:
+    stime: 5702.42
+    etime: 5709.52
+    text: Феминистки и новости. Ты проверяешь, что феминистки сказали по поводу новости.
+      Джава 9 феминистки, да? Да нет, это...
+  reason: 'Все 7 реплик сконцентрированы в узком временном промежутке (~150 сек).
+    Содержание реплик (шутки про феминисток, ироничные комментарии типа "Джава 9 феминистки,
+    да?") характерно для стиля ведущих. Контекст: разговор между Umputun (Женя), Ksenks
+    и Gray. Скорее всего это ошибочно распознанный голос одн'
+  possible_matches:
+  - person_id: gray
+    confidence: 0.5
+    reason: Gray активно участвует в этом сегменте, похожий стиль юмора
+  - person_id: alek_sys
+    confidence: 0.3
+    reason: Alek.sys также присутствует, мог быть неправильно распознан
+- episode: 586
+  speaker: SPEAKER_02
+  total_duration_sec: 17
+  replies_count: 7
+  reference_segment: null
+  reason: 'Короткие реплики (1-4 секунды) разбросаны по эпизоду.
+
+    Примеры: "Пять лет уже в подкасте, да?" (654s), "Да-да-да" (2257s),
+
+    "Ипотезу подтверждаем" (7697s), "Два с половиной часа уже говорим" (8915s).
+
+    Это ошибки распознавания речи - реплики принадлежат одной из участниц
+
+    (скорее всего Ksenks или одной и'
+  possible_matches:
+  - person_id: ksenks
+    confidence: 0.6
+    reason: Контекстно реплики часто следуют после реплик Ksenks
+- episode: 587
+  speaker: SPEAKER_03
+  total_duration_sec: 282
+  replies_count: 62
+  reference_segment:
+    stime: 2841.43
+    etime: 2875.74
+    text: То есть основная причина, которую он видит... В общем, все становится проще,
+      да, и странно, что все остальные до этого не додумались.
+    duration_sec: 34
+  reason: 'Самопредставление (2484s): ''Я Алексей из соседнего подкаста. Я к вам приходил
+    уже несколько раз.'' Обсуждает vgo/Go modules, упоминает Russ Cox и Rob Pike -
+    эксперт по Go.'
+  possible_matches:
+  - person_id: alexey_abashov
+    confidence: 0.9
+    reason: Алексей Абашов из подкаста 'Разбор полетов' (о Go). Уже идентифицирован
+      в эпизодах 353 и 381 как гость из 'дружественного подкаста'. Контекст обсуждения
+      (vgo, Go modules) совпадает.
+- episode: 588
+  speaker: SPEAKER_00
+  total_duration_sec: 10
+  replies_count: 4
+  reference_segment: null
+  reason: Все 4 реплики являются ошибками распознавания спикера - короткие фразы,
+    разбросанные по эпизоду
+  possible_matches: []
+- episode: 590
+  speaker: SPEAKER_03
+  total_duration_sec: 1514
+  replies_count: 287
+  reference_segment:
+    stime: 1700.41
+    etime: 1742.72
+    text: Сейчас, конечно, Леша Шепелев крутится в своей кровати под одеялом, но чисто
+      технически вот этот хатспот, который был реализован, он был реализован на C++
+      с различными оптимизациями для различных платформ. То есть что-то такое генерится
+      на SME для каких-то там ARM, для x86 и тому подобное. Агроаль — это как раз
+      реализация на языке более высокого уровня, чтобы на Java вот этот garbage collector
+      без всяких таких вставок машинного кода, чтобы его можно быстро переносить между
+      платформами.
+  reason: 'В начале эпизода (16-29s) Umputun представляет: "Состав полный плюс один.
+    В виде плюс один Леша зашел. Не тот Леша, а тот Леша."
+
+    Bobuk уточняет: "Это Зе Леша. Да Леша."
+
+    На 156-177s: "мы тут давно не собирались поговорить с Лешей на любимые темы...
+    ему гость нужен. Гость пришел, новая Java здесь, Jav'
+  possible_matches:
+  - person_id: new_guest_lesha_java
+    confidence: 0.8
+    reason: Явно представлен как 'Леша' - гость по теме Java. Не Alek.sys (тот участвует
+      отдельно). Не Леша Шепелев (о нём говорит в третьем лице). Требует добавления
+      в people.yaml.

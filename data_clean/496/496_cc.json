@@ -5818,7 +5818,7 @@
       "id": "65c9a9be1a406349011e64c8",
       "issue": 496,
       "type": "cc",
-      "author": "SPEAKER_00",
+      "author": "_artifact",
       "stime": 2702.65,
       "etime": 2703.39,
       "text": "Угу."
@@ -7132,7 +7132,7 @@
       "id": "65c9a9be1a406349011e655a",
       "issue": 496,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "SPEAKER_UNKNOWN",
       "stime": 3321.12,
       "etime": 3327.04,
       "text": "Только не вообще, а не General, как обычно."
@@ -7411,7 +7411,7 @@
       "id": "65c9a9be1a406349011e6579",
       "issue": 496,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_PETR",
+      "author": "SPEAKER_UNKNOWN",
       "stime": 3451.03,
       "etime": 3452.53,
       "text": "И ты понятно объяснил."
@@ -7744,7 +7744,7 @@
       "id": "65c9a9be1a406349011e659e",
       "issue": 496,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "SPEAKER_UNKNOWN",
       "stime": 3580.54,
       "etime": 3585.14,
       "text": "И компания ее пытается планировать выпустить в сентябре."
@@ -10129,7 +10129,7 @@
       "id": "65c9a9be1a406349011e66a7",
       "issue": 496,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "SPEAKER_UNKNOWN",
       "stime": 4703.77,
       "etime": 4705.03,
       "text": "Надо по что-то точно заметили."
@@ -11992,7 +11992,7 @@
       "id": "65c9a9be1a406349011e6776",
       "issue": 496,
       "type": "cc",
-      "author": "SPEAKER_00",
+      "author": "_artifact",
       "stime": 5422.22,
       "etime": 5423.22,
       "text": "Ой, дай."
@@ -15574,7 +15574,7 @@
       "id": "65c9a9be1a406349011e6904",
       "issue": 496,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "SPEAKER_UNKNOWN",
       "stime": 7057.31,
       "etime": 7061.69,
       "text": "Так, обращение хаба-хаба на тему от блока."
@@ -15745,7 +15745,7 @@
       "id": "65c9a9be1a406349011e6917",
       "issue": 496,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "SPEAKER_UNKNOWN",
       "stime": 7123.24,
       "etime": 7126.96,
       "text": "Кстати, мы забыли про эту тему в нашем списке."
@@ -15961,7 +15961,7 @@
       "id": "65c9a9be1a406349011e692f",
       "issue": 496,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "SPEAKER_UNKNOWN",
       "stime": 7213.86,
       "etime": 7215.6,
       "text": "Ты можешь отключить вообще фичу."

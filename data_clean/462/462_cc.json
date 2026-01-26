@@ -220,7 +220,7 @@
       "id": "65c9a9394842eff3360fcbaf",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_MARIN",
+      "author": "_artifact",
       "stime": 130.05,
       "etime": 132.51,
       "text": "Мне кажется, на прошлой неделе тоже были такие темы."
@@ -490,7 +490,7 @@
       "id": "65c9a9394842eff3360fcbcd",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_MARIN",
+      "author": "_artifact",
       "stime": 215.87,
       "etime": 216.99,
       "text": "iPad столько же, сколько кошка."
@@ -895,7 +895,7 @@
       "id": "65c9a9394842eff3360fcbfa",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "_artifact",
       "stime": 347.05,
       "etime": 347.91,
       "text": "Он стоит 50 долларов."
@@ -3559,7 +3559,7 @@
       "id": "65c9a9394842eff3360fcd22",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "_artifact",
       "stime": 1369.47,
       "etime": 1370.83,
       "text": "Так он давно там был."
@@ -5125,7 +5125,7 @@
       "id": "65c9a9394842eff3360fcdd0",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_MARIN",
+      "author": "_artifact",
       "stime": 2079.33,
       "etime": 2081.03,
       "text": "Может, вы мне наглейте двадцатку?"
@@ -7339,7 +7339,7 @@
       "id": "65c9a9394842eff3360fcec6",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3048.89,
       "etime": 3051.43,
       "text": "Всем привет, меня зовут Сергей."
@@ -7348,7 +7348,7 @@
       "id": "65c9a9394842eff3360fcec7",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3051.47,
       "etime": 3053.73,
       "text": "Собственно, я представляю услугу виртуального приватного облака, VPC."
@@ -7357,7 +7357,7 @@
       "id": "65c9a9394842eff3360fcec8",
       "issue": 462,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3054.59,
       "etime": 3058.68,
       "text": "О, то есть тебя, а второй от вас кто был?"
@@ -7366,7 +7366,7 @@
       "id": "65c9a9394842eff3360fcec9",
       "issue": 462,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3058.72,
       "etime": 3062.5,
       "text": "Всем привет, меня зовут Виктор, и я представляю услугу Vscale."
@@ -7375,7 +7375,7 @@
       "id": "65c9a9394842eff3360fceca",
       "issue": 462,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 3062.66,
       "etime": 3066.2,
       "text": "Слушайте, а вы что, в одной комнате сидите?"
@@ -7537,7 +7537,7 @@
       "id": "65c9a9394842eff3360fcedc",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3121.54,
       "etime": 3123.54,
       "text": "Но если что-то непонятно, я могу объяснить."
@@ -7636,7 +7636,7 @@
       "id": "65c9a9394842eff3360fcee7",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3166.21,
       "etime": 3167.41,
       "text": "В целом, да."
@@ -7645,7 +7645,7 @@
       "id": "65c9a9394842eff3360fcee8",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3167.45,
       "etime": 3173.16,
       "text": "То есть это изолированный сегмент публичного облака, в котором есть приватные сети и управление доступом."
@@ -7735,7 +7735,7 @@
       "id": "65c9a9394842eff3360fcef2",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3218.17,
       "etime": 3220.68,
       "text": "По наружу у нас есть, собственно, два способа."
@@ -7744,7 +7744,7 @@
       "id": "65c9a9394842eff3360fcef3",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3220.72,
       "etime": 3224.04,
       "text": "Первый – это простой, просто публичный влан с белыми адресами."
@@ -7753,7 +7753,7 @@
       "id": "65c9a9394842eff3360fcef4",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3226.13,
       "etime": 3229.41,
       "text": "И есть способ с плавающими IP-адресами."
@@ -7762,7 +7762,7 @@
       "id": "65c9a9394842eff3360fcef5",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3229.43,
       "etime": 3231.86,
       "text": "Это аналог Elastic IP, соответственно."
@@ -7771,7 +7771,7 @@
       "id": "65c9a9394842eff3360fcef6",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3231.9,
       "etime": 3242.99,
       "text": "То есть, приватная подсеть покупает какое-то количество в рассыпную плавающих IP-адресов, и они один к одному с помощью NATA назначаются на приватные адреса виртуалок."
@@ -7825,7 +7825,7 @@
       "id": "65c9a9394842eff3360fcefc",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3267.67,
       "etime": 3278.45,
       "text": "Ну, к любой виртуальной машине можно привязать только приватный адрес, можно назначить на него плавающий, можно использовать публичный просто адрес без ничего."
@@ -7843,7 +7843,7 @@
       "id": "65c9a9394842eff3360fcefe",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3284.77,
       "etime": 3288.14,
       "text": "На самом деле сколько угодно, просто они блоками по 5 выделяются."
@@ -7933,7 +7933,7 @@
       "id": "65c9a9394842eff3360fcf08",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3326.39,
       "etime": 3330.16,
       "text": "Но у нас есть такое понятие, как проект или облако."
@@ -7942,7 +7942,7 @@
       "id": "65c9a9394842eff3360fcf09",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3330.28,
       "etime": 3339.18,
       "text": "В этот проект назначается какое-то количество ресурсов, и дальше в нем мы уже создаем виртуальные машины, назначаем столько памяти, сколько хочется, скажем так."
@@ -7951,7 +7951,7 @@
       "id": "65c9a9394842eff3360fcf0a",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3339.34,
       "etime": 3346.17,
       "text": "То есть мы покупаем 100 гигабайт на проект, а потом делаем 100 виртуалок по одному гигабайту или 10 по 10, как угодно."
@@ -7996,7 +7996,7 @@
       "id": "65c9a9394842eff3360fcf0f",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3360.31,
       "etime": 3361.87,
       "text": "С 5 терабайтами нет."
@@ -8005,7 +8005,7 @@
       "id": "65c9a9394842eff3360fcf10",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3361.95,
       "etime": 3363.85,
       "text": "Есть лимиты определенные, разумные."
@@ -8023,7 +8023,7 @@
       "id": "65c9a9394842eff3360fcf12",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3368.25,
       "etime": 3371.9,
       "text": "Сейчас на виртуальную машину 64 гигабайта получается."
@@ -8113,7 +8113,7 @@
       "id": "65c9a9394842eff3360fcf1c",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3415.74,
       "etime": 3427.63,
       "text": "Но изначально идея была такая, что планировать использование ресурсов будут, скажем так, какие-то отдельные люди, а использовать это какие-то другие люди."
@@ -8122,7 +8122,7 @@
       "id": "65c9a9394842eff3360fcf1d",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3427.65,
       "etime": 3435.85,
       "text": "То есть кто-то мыслит категориями больших проектов, ресурсов, а кто-то уже делает из этого инстансы."
@@ -8374,7 +8374,7 @@
       "id": "65c9a9394842eff3360fcf39",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3550.76,
       "etime": 3551.88,
       "text": "В данный момент нет."
@@ -8383,7 +8383,7 @@
       "id": "65c9a9394842eff3360fcf3a",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3552.04,
       "etime": 3555.58,
       "text": "То есть только если руками."
@@ -8572,7 +8572,7 @@
       "id": "65c9a9394842eff3360fcf4f",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3652.4,
       "etime": 3654.78,
       "text": "И есть отдельная услуга администрирования."
@@ -8581,7 +8581,7 @@
       "id": "65c9a9394842eff3360fcf50",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3654.82,
       "etime": 3660.35,
       "text": "Это если вы захотите, чтобы мы все за вас сделали целиком."
@@ -9292,7 +9292,7 @@
       "id": "65c9a9394842eff3360fcf9f",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3908.52,
       "etime": 3909.91,
       "text": "Это процесс уже идет, на самом деле."
@@ -9481,7 +9481,7 @@
       "id": "65c9a9394842eff3360fcfb4",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3977.23,
       "etime": 3978.45,
       "text": "Это все уже про VPC."
@@ -9490,7 +9490,7 @@
       "id": "65c9a9394842eff3360fcfb5",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3978.49,
       "etime": 3980.73,
       "text": "И, кстати, Core у вас там есть и снапшоты."
@@ -9499,7 +9499,7 @@
       "id": "65c9a9394842eff3360fcfb6",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3980.75,
       "etime": 3983.79,
       "text": "И загрузка в собственных образах также доступна."
@@ -9508,7 +9508,7 @@
       "id": "65c9a9394842eff3360fcfb7",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "sergey_selectel_462",
       "stime": 3983.83,
       "etime": 3987.55,
       "text": "В VPC, да."
@@ -18985,7 +18985,7 @@
       "id": "65c9a9394842eff3360fd3d4",
       "issue": 462,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_LAVALE",
+      "author": "_artifact",
       "stime": 8022.4,
       "etime": 8023.8,
       "text": "Нет."

@@ -4972,7 +4972,7 @@
       "id": "65c9bc43c20f30e9ba686584",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_MARIN",
+      "author": "_artifact",
       "stime": 2171.07,
       "etime": 2172.53,
       "text": "Нет, прям как-то страшно."
@@ -7051,7 +7051,7 @@
       "id": "65c9bc43c20f30e9ba68666b",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3019.52,
       "etime": 3020.52,
       "text": "Я через электрон."
@@ -7078,7 +7078,7 @@
       "id": "65c9bc43c20f30e9ba68666e",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3027.45,
       "etime": 3028.67,
       "text": "Ну, работает более-менее."
@@ -7105,7 +7105,7 @@
       "id": "65c9bc43c20f30e9ba686671",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3039.7,
       "etime": 3040.42,
       "text": "Нет, нет."
@@ -7240,7 +7240,7 @@
       "id": "65c9bc43c20f30e9ba686680",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3114.78,
       "etime": 3117.71,
       "text": "Я согласен, у нас так и происходит на самом деле."
@@ -7267,7 +7267,7 @@
       "id": "65c9bc43c20f30e9ba686683",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3123.01,
       "etime": 3140.24,
       "text": "Нет, у нас происходит, у нас бэкэнд-разработчики пишут слайдер-описание, и фронтенд-разработчики, если у них какие-то вопросы возникают, они спрашивают, и там бэкэнд-разработчики правят под нужды фронтенд-разработчиков, ну или мобильных разработчиков."
@@ -7402,7 +7402,7 @@
       "id": "65c9bc43c20f30e9ba686692",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3209.6,
       "etime": 3213.26,
       "text": "В принципе, более-менее."
@@ -7411,7 +7411,7 @@
       "id": "65c9bc43c20f30e9ba686693",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3213.32,
       "etime": 3222.85,
       "text": "Из API какого-то готового сделать Swagger описание можно, но на практике оно так на самом деле не очень работает."
@@ -7420,7 +7420,7 @@
       "id": "65c9bc43c20f30e9ba686694",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3222.89,
       "etime": 3236.65,
       "text": "Мы используем Django, и для Django есть пакет Django REST Swagger, который вроде бы делает то, что надо, но формат, точнее, ответ там, ну его там просто нет."
@@ -7546,7 +7546,7 @@
       "id": "65c9bc43c20f30e9ba6866a2",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3306.48,
       "etime": 3315.29,
       "text": "Нет, ну там есть такой проект Swagger CodeGen, который умеет из Swagger описания генерить библиотеки."
@@ -7555,7 +7555,7 @@
       "id": "65c9bc43c20f30e9ba6866a3",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3316.14,
       "etime": 3335.23,
       "text": "которые можно потом использовать, не думая о том, какие урлы куда поставить, какие там, ну то есть нужно только знать, какой метод вызвать, какие параметры в него передать, какой класс из этой библиотеки, объект какого класса из этой библиотеки ожидается в результате."
@@ -7690,7 +7690,7 @@
       "id": "65c9bc43c20f30e9ba6866b2",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3376.19,
       "etime": 3389.27,
       "text": "Это нужно генерить для того, чтобы допустим, Android-разработчику, который будет использовать эту библиотеку, которая получилась в результате генерации, чтобы ему не думать о..."
@@ -7699,7 +7699,7 @@
       "id": "65c9bc43c20f30e9ba6866b3",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3390.61,
       "etime": 3396.75,
       "text": "о том, как, допустим, десерилизовать данные, например, которые приходят в результате."
@@ -8581,7 +8581,7 @@
       "id": "65c9bc43c20f30e9ba686715",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3786.26,
       "etime": 3792.99,
       "text": "Ну, у нас Swagger нужен, во-первых, для документации, потому что у нас бэкэнд-команда пишет Swagger-описание."
@@ -8590,7 +8590,7 @@
       "id": "65c9bc43c20f30e9ba686716",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3793.07,
       "etime": 3800.45,
       "text": "А во-вторых, нужен для того, чтобы сгенерировать эту самую библиотеку, которую просто и удобно использовать."
@@ -8626,7 +8626,7 @@
       "id": "65c9bc43c20f30e9ba68671a",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3806.23,
       "etime": 3807.32,
       "text": "Да, это делает."
@@ -8635,7 +8635,7 @@
       "id": "65c9bc43c20f30e9ba68671b",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 3807.38,
       "etime": 3810.84,
       "text": "И еще с помощью нее можно вызывать методы API-а."
@@ -9382,7 +9382,7 @@
       "id": "65c9bc43c20f30e9ba68676e",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 4174.01,
       "etime": 4175.87,
       "text": "У нас работает."
@@ -9400,7 +9400,7 @@
       "id": "65c9bc43c20f30e9ba686770",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 4182.65,
       "etime": 4185.11,
       "text": "Нет."
@@ -9445,7 +9445,7 @@
       "id": "65c9bc43c20f30e9ba686775",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 4196.94,
       "etime": 4201.84,
       "text": "Нет, но они подойдут к нам и скажут, мы хотим новое поле вот в этом месте."
@@ -9472,7 +9472,7 @@
       "id": "65c9bc43c20f30e9ba686778",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Anton_Swagger_Guest",
       "stime": 4210.06,
       "etime": 4231.18,
       "text": "Ну, я же говорил, флагер нужен для введения документации, причем действительно кто-то там в чате писал, что она еще интерактивная, можно попробовать прямо эти API-методы повзывать, ну и плюс удобная библиотека, которая генерируется автоматически для Swift, для Android, для .NET и для Unity."
@@ -14746,7 +14746,7 @@
       "id": "65c9bc43c20f30e9ba6869c2",
       "issue": 538,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_ELDAR",
+      "author": "_artifact",
       "stime": 6375.22,
       "etime": 6378.48,
       "text": "Давайте посмотрим на тему наших слушателей."

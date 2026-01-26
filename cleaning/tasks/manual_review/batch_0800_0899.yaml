@@ -1,0 +1,94 @@
+batch_id: review_0800_0899
+description: Manual review tasks for episodes 800-899
+status: pending
+total_tasks: 11
+tasks:
+- episode: 814
+  speaker: Bobuk
+  total_duration_sec: 6.9
+  replies_count: 3
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+- episode: 832
+  speaker: Guest_01
+  total_duration_sec: 675
+  replies_count: 113
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 832
+  speaker: Guest_02
+  total_duration_sec: 350
+  replies_count: 65
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 857
+  speaker: SPEAKER_00
+  total_duration_sec: 491
+  replies_count: 77
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 857
+  speaker: Unknown
+  total_duration_sec: 9
+  replies_count: 6
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+- episode: 857
+  from_speaker: SPEAKER_02
+  to_speaker: Bobuk
+  confidence: medium
+  reason: Короткие реплики в стиле Bobuk на протяжении всего эпизода. Появляется до
+    первой 'правильной' реплики Bobuk. Требуется voice comparison для окончательного
+    подтверждения.
+  time_range: null
+  action: confirm_or_reject
+- episode: 857
+  from_speaker: Unknown
+  to_speaker: Bobuk
+  confidence: low
+  reason: Короткие односложные реакции, вероятно ошибки распознавания. Стиль соответствует
+    Bobuk, но требуется voice comparison.
+  time_range: null
+  action: confirm_or_reject
+- episode: 858
+  speaker: Unknown
+  total_duration_sec: 5
+  replies_count: 3
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+- episode: 895
+  speaker: Guest1
+  total_duration_sec: 983
+  replies_count: 171
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 895
+  speaker: Guest2
+  total_duration_sec: 662
+  replies_count: 166
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 896
+  speaker: Guest1
+  total_duration_sec: 996
+  replies_count: 261
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate

@@ -76,7 +76,7 @@
       "id": "65c9bbb3d62ca44c777e2fdf",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_07",
+      "author": "_artifact",
       "stime": 46.15,
       "etime": 46.41,
       "text": "Привет."
@@ -130,7 +130,7 @@
       "id": "65c9bbb3d62ca44c777e2fe5",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 53.64,
       "etime": 54.86,
       "text": "Я тут, привет."
@@ -1516,7 +1516,7 @@
       "id": "65c9bbb3d62ca44c777e307f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 710.97,
       "etime": 715.14,
       "text": "Есть абсолютно слайм, там написано, что это для C и C++, то есть это не только C++ IDE."
@@ -1525,7 +1525,7 @@
       "id": "65c9bbb3d62ca44c777e3080",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 715.22,
       "etime": 719.97,
       "text": "Ну, то есть сам JetBrains функционирует ее как C и C++."
@@ -2065,7 +2065,7 @@
       "id": "65c9bbb3d62ca44c777e30bc",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 995.06,
       "etime": 998.46,
       "text": "Да, смотрели, и это очень удивительно, что R выше, чем JavaScript."
@@ -2074,7 +2074,7 @@
       "id": "65c9bbb3d62ca44c777e30bd",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 998.68,
       "etime": 1004.74,
       "text": "Вот я никогда не поверю, не поверю, и, наверное, так и нету."
@@ -2083,7 +2083,7 @@
       "id": "65c9bbb3d62ca44c777e30be",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1004.78,
       "etime": 1019.31,
       "text": "То есть язык, который для анализа данных создан очень маленьким кругом людей, которым будут использовать его и могут использовать, стоит выше, чем язык, на котором может писать ребенок, и который сейчас лезет во все дыры."
@@ -2119,7 +2119,7 @@
       "id": "65c9bbb3d62ca44c777e30c2",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "_artifact",
       "stime": 1043.52,
       "etime": 1044.32,
       "text": "Не могут они гени..."
@@ -2155,7 +2155,7 @@
       "id": "65c9bbb3d62ca44c777e30c6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "_artifact",
       "stime": 1058.61,
       "etime": 1058.87,
       "text": "Хорошо бы."
@@ -2164,7 +2164,7 @@
       "id": "65c9bbb3d62ca44c777e30c7",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "_artifact",
       "stime": 1058.89,
       "etime": 1059.31,
       "text": "Так, Ксюша."
@@ -2173,7 +2173,7 @@
       "id": "65c9bbb3d62ca44c777e30c8",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "_artifact",
       "stime": 1059.33,
       "etime": 1059.65,
       "text": "Убили Ксюшу?"
@@ -2182,7 +2182,7 @@
       "id": "65c9bbb3d62ca44c777e30c9",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "_artifact",
       "stime": 1059.69,
       "etime": 1059.79,
       "text": "Нет."
@@ -2191,7 +2191,7 @@
       "id": "65c9bbb3d62ca44c777e30ca",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "_artifact",
       "stime": 1059.81,
       "etime": 1060.25,
       "text": "Не убил пока."
@@ -2200,7 +2200,7 @@
       "id": "65c9bbb3d62ca44c777e30cb",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "_artifact",
       "stime": 1060.29,
       "etime": 1061.11,
       "text": "Сейчас попробуем."
@@ -2776,7 +2776,7 @@
       "id": "65c9bbb3d62ca44c777e310b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1388.63,
       "etime": 1389.71,
       "text": "Так, кто там еще говорил?"
@@ -2785,7 +2785,7 @@
       "id": "65c9bbb3d62ca44c777e310c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1389.93,
       "etime": 1404.48,
       "text": "Хочется надеяться, что, например, Джава теряет свои места, не потому что он такая хорошая или там си-хорошая, а потому что есть другие языки, как Коклин или там Скалла, Груви, и они все-таки отъедают какую-то часть ее."
@@ -2794,7 +2794,7 @@
       "id": "65c9bbb3d62ca44c777e310d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1404.54,
       "etime": 1410.61,
       "text": "Как более современные и прикольные языки с хорошим набором фич."
@@ -2803,7 +2803,7 @@
       "id": "65c9bbb3d62ca44c777e310e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1410.69,
       "etime": 1414.95,
       "text": "То, чего не хватает на Джаве, потому что она никогда не сломает обратную совместимость."
@@ -2812,7 +2812,7 @@
       "id": "65c9bbb3d62ca44c777e310f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1417.26,
       "etime": 1425.35,
       "text": "Я как проповедник Котлина, меня там друзья называют, маркетологом Котлина, собственно, за этот вариант."
@@ -2992,7 +2992,7 @@
       "id": "65c9bbb3d62ca44c777e3123",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1501.68,
       "etime": 1504.1,
       "text": "Ну, в том-то и идея Котлин."
@@ -3001,7 +3001,7 @@
       "id": "65c9bbb3d62ca44c777e3124",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1504.16,
       "etime": 1510.34,
       "text": "Что ты не бежишь переписывать все, а добавляешь в футболку Котлина и начинаешь писать на Котлине."
@@ -3010,7 +3010,7 @@
       "id": "65c9bbb3d62ca44c777e3125",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1510.38,
       "etime": 1511.89,
       "text": "И оставляешь свою большую-большую джаву"
@@ -3037,7 +3037,7 @@
       "id": "65c9bbb3d62ca44c777e3128",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1530.68,
       "etime": 1532,
       "text": "Конечно же, реально."
@@ -3046,7 +3046,7 @@
       "id": "65c9bbb3d62ca44c777e3129",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1532.06,
       "etime": 1537.11,
       "text": "Причем последняя идея даже начала подсказывать основные моменты, на которых новички падают."
@@ -3055,7 +3055,7 @@
       "id": "65c9bbb3d62ca44c777e312a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1537.17,
       "etime": 1542.13,
       "text": "То, что надо классы делать open, потому что в Kotlin все файнал по дефолту."
@@ -3064,7 +3064,7 @@
       "id": "65c9bbb3d62ca44c777e312b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1542.17,
       "etime": 1544.55,
       "text": "То есть классы, методы, они все файнал."
@@ -3073,7 +3073,7 @@
       "id": "65c9bbb3d62ca44c777e312c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1544.61,
       "etime": 1551.09,
       "text": "Надо сказать явно, что они будут открыты для расширения, и тогда Spring заработает."
@@ -3082,7 +3082,7 @@
       "id": "65c9bbb3d62ca44c777e312d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1551.11,
       "etime": 1559.12,
       "text": "На том же YouTube есть с митапа видео со мной, где по степам, степ-бай-степ Spring Boot с Kotlin рассказывается."
@@ -3100,7 +3100,7 @@
       "id": "65c9bbb3d62ca44c777e312f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 1562.97,
       "etime": 1568.85,
       "text": "Без проблем."
@@ -6052,7 +6052,7 @@
       "id": "65c9bbb3d62ca44c777e3277",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 3299.11,
       "etime": 3300.09,
       "text": "Зачем докеру?"
@@ -6061,7 +6061,7 @@
       "id": "65c9bbb3d62ca44c777e3278",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 3300.37,
       "etime": 3306.01,
       "text": "Докеры бэкгендируют 12 постулатов, один из них – стейтлос."
@@ -6070,7 +6070,7 @@
       "id": "65c9bbb3d62ca44c777e3279",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 3306.17,
       "etime": 3310.26,
       "text": "И, собственно, там это не нужно."
@@ -11119,7 +11119,7 @@
       "id": "65c9bbb3d62ca44c777e34aa",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 6613.39,
       "etime": 6617.03,
       "text": "Еще и чары предела города или страны могут общаться между собой."
@@ -11128,7 +11128,7 @@
       "id": "65c9bbb3d62ca44c777e34ab",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 6617.07,
       "etime": 6623.44,
       "text": "Таким образом, легко лаеров, которые говорят, что мы работали в какой-то компании, отсеять на каких-то проектах."
@@ -11137,7 +11137,7 @@
       "id": "65c9bbb3d62ca44c777e34ac",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 6623.76,
       "etime": 6626.84,
       "text": "В Беларуси, например, нормальная практика."
@@ -11695,7 +11695,7 @@
       "id": "65c9bbb3d62ca44c777e34ea",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 6998.35,
       "etime": 7000.25,
       "text": "Ну, может быть, какой-нибудь."
@@ -11704,7 +11704,7 @@
       "id": "65c9bbb3d62ca44c777e34eb",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "ruslan_unknown",
       "stime": 7000.29,
       "etime": 7007.53,
       "text": "Наверное, что-то с Киком и НП когда-то брали имя в НП-модулях."

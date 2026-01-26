@@ -4153,7 +4153,7 @@
       "id": "65c9ccb1c720d07c7e32497c",
       "issue": 647,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Ksenks",
       "stime": 1668.76,
       "etime": 1669.28,
       "text": "Окей, ладно."
@@ -4162,7 +4162,7 @@
       "id": "65c9ccb1c720d07c7e32497d",
       "issue": 647,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Ksenks",
       "stime": 1669.3,
       "etime": 1669.7,
       "text": "Ладно."
@@ -13909,7 +13909,7 @@
       "id": "65c9ccb1c720d07c7e324db8",
       "issue": 647,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Ksenks",
       "stime": 5932.73,
       "etime": 5933.91,
       "text": "В смысле?"
@@ -14035,7 +14035,7 @@
       "id": "65c9ccb1c720d07c7e324dc6",
       "issue": 647,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Ksenks",
       "stime": 5977.95,
       "etime": 5978.45,
       "text": "То есть они в Google?"
@@ -14764,7 +14764,7 @@
       "id": "65c9ccb1c720d07c7e324e17",
       "issue": 647,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "Ksenks",
       "stime": 6276.2,
       "etime": 6278.52,
       "text": "Нет, это не то слово."
@@ -15565,7 +15565,7 @@
       "id": "65c9ccb1c720d07c7e324e70",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6607.11,
       "etime": 6609.01,
       "text": "То есть MongoDB покупает Realm."
@@ -15574,7 +15574,7 @@
       "id": "65c9ccb1c720d07c7e324e71",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6609.05,
       "etime": 6610.49,
       "text": "Кого убьют, MongoMobile или Realm?"
@@ -15583,7 +15583,7 @@
       "id": "65c9ccb1c720d07c7e324e72",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6611.81,
       "etime": 6614.19,
       "text": "Так, а MongoMobile вообще разве ушла из беты?"
@@ -15592,7 +15592,7 @@
       "id": "65c9ccb1c720d07c7e324e73",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6614.23,
       "etime": 6616.41,
       "text": "Она же была там типа вечно-вечно-вечно в бете."
@@ -15601,7 +15601,7 @@
       "id": "65c9ccb1c720d07c7e324e74",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6616.45,
       "etime": 6623.2,
       "text": "Она... Я не готов ответить на этот запрос."
@@ -15610,7 +15610,7 @@
       "id": "65c9ccb1c720d07c7e324e75",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6623.3,
       "etime": 6625.56,
       "text": "Я не помню, какой ее текущий статус."
@@ -15619,7 +15619,7 @@
       "id": "65c9ccb1c720d07c7e324e76",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6625.64,
       "etime": 6629.54,
       "text": "Я знаю, что я ее смотрел прям, ну, в смысле, в коде уже."
@@ -15628,7 +15628,7 @@
       "id": "65c9ccb1c720d07c7e324e77",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6629.72,
       "etime": 6632.9,
       "text": "Код не читал, а смотрел из ДК."
@@ -15637,7 +15637,7 @@
       "id": "65c9ccb1c720d07c7e324e78",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6632.96,
       "etime": 6633.66,
       "text": "И было нормально."
@@ -15646,7 +15646,7 @@
       "id": "65c9ccb1c720d07c7e324e79",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6634.84,
       "etime": 6640.86,
       "text": "Мне кажется, такое ощущение, что они так ее не выпустили никогда, и, может быть, это все-таки знак капитуляции."
@@ -15655,7 +15655,7 @@
       "id": "65c9ccb1c720d07c7e324e7a",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6640.9,
       "etime": 6642.38,
       "text": "Что такое, что они не выпустили?"
@@ -15664,7 +15664,7 @@
       "id": "65c9ccb1c720d07c7e324e7b",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6642.4,
       "etime": 6650.96,
       "text": "Ну, ты сейчас прямо можешь из подов, из кока-под поставить себе, собственно, СДК и воспользоваться им."
@@ -15673,7 +15673,7 @@
       "id": "65c9ccb1c720d07c7e324e7c",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6651.56,
       "etime": 6657.62,
       "text": "Ну, потому что если она, например, в статусе бета, то многие компании будут потенциально избегать использования ее в продакшене."
@@ -15682,7 +15682,7 @@
       "id": "65c9ccb1c720d07c7e324e7d",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6657.66,
       "etime": 6664.92,
       "text": "Может быть, у них там саппорта нет, может, у них там какие-то breaking changes могут быть, может, они не могут там три девятки или сколько-то там девяток предоставить."
@@ -15691,7 +15691,7 @@
       "id": "65c9ccb1c720d07c7e324e7e",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6665.2,
       "etime": 6666.86,
       "text": "Ну, три мало, да?"
@@ -15700,7 +15700,7 @@
       "id": "65c9ccb1c720d07c7e324e7f",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6666.9,
       "etime": 6669.52,
       "text": "Ну, сколько-то там девяток, например, предоставить и так далее."
@@ -15709,7 +15709,7 @@
       "id": "65c9ccb1c720d07c7e324e80",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6669.56,
       "etime": 6669.98,
       "text": "Для чего?"
@@ -15718,7 +15718,7 @@
       "id": "65c9ccb1c720d07c7e324e81",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6670.04,
       "etime": 6670.84,
       "text": "Девяток-то для чего?"
@@ -15727,7 +15727,7 @@
       "id": "65c9ccb1c720d07c7e324e82",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6671.6,
       "etime": 6674.67,
       "text": "Ну, у них же бэкэнд, они же дают тебе, правильно?"
@@ -15736,7 +15736,7 @@
       "id": "65c9ccb1c720d07c7e324e83",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6674.71,
       "etime": 6677.71,
       "text": "У них же какая-то облачная платформа эта."
@@ -15745,7 +15745,7 @@
       "id": "65c9ccb1c720d07c7e324e84",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6677.77,
       "etime": 6680.27,
       "text": "Нет, ты немножко неправильно понимаешь."
@@ -15754,7 +15754,7 @@
       "id": "65c9ccb1c720d07c7e324e85",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6680.29,
       "etime": 6682.63,
       "text": "Смотри, есть разные задачи."
@@ -15763,7 +15763,7 @@
       "id": "65c9ccb1c720d07c7e324e86",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6682.69,
       "etime": 6687.94,
       "text": "Хранение данных на клиенте и синхронизация — это раздельная задача."
@@ -15772,7 +15772,7 @@
       "id": "65c9ccb1c720d07c7e324e87",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6687.98,
       "etime": 6695.7,
       "text": "То есть внутри MongoDB есть модуль, который занимается синхронизацией с клаудом."
@@ -15781,7 +15781,7 @@
       "id": "65c9ccb1c720d07c7e324e88",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6695.94,
       "etime": 6701.06,
       "text": "А MongoDB Mobile — это просто SDK, такой же, как Realm, для работы с данными локально на устройстве."
@@ -15790,7 +15790,7 @@
       "id": "65c9ccb1c720d07c7e324e89",
       "issue": 647,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 6703.83,
       "etime": 6705.92,
       "text": "Синхронизация туда типа не входит."
@@ -15799,7 +15799,7 @@
       "id": "65c9ccb1c720d07c7e324e8a",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6705.94,
       "etime": 6709.06,
       "text": "Она входит, просто это одна и не самая важная часть."
@@ -15808,7 +15808,7 @@
       "id": "65c9ccb1c720d07c7e324e8b",
       "issue": 647,
       "type": "cc",
-      "author": "Bobuk",
+      "author": "_ad",
       "stime": 6709.08,
       "etime": 6716.59,
       "text": "Потому что на самом деле гораздо сложнее правильно организовать работу с данными на устройстве так, чтобы это все быстро работало."

@@ -1,0 +1,11 @@
+description: New guests to add to people.yaml
+total: 1
+guests:
+- id: alexey_fedorov
+  canonical_name: AlexeyFedorov
+  aliases:
+  - Алексей Федоров
+  - Федоров
+  real_name: Алексей Федоров
+  info: Организатор JPoint/JUG.ru conferences
+  episode: 541

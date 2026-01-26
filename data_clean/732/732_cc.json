@@ -292,7 +292,7 @@
       "id": "65d24da053d983afe4aefb43",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 152.54,
       "etime": 154.82,
       "text": "Я вообще, меня нормально слышно или так себе?"
@@ -319,7 +319,7 @@
       "id": "65d24da053d983afe4aefb46",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 168.73,
       "etime": 169.97,
       "text": "Не, ну у меня есть одна идейка."
@@ -328,7 +328,7 @@
       "id": "65d24da053d983afe4aefb47",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 170.93,
       "etime": 171.71,
       "text": "Можно..."
@@ -337,7 +337,7 @@
       "id": "65d24da053d983afe4aefb48",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 172.23,
       "etime": 173.43,
       "text": "Дайте мне пару минут."
@@ -445,7 +445,7 @@
       "id": "65d24da053d983afe4aefb54",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 224.63,
       "etime": 225.67,
       "text": "Ну, разберитесь."
@@ -490,7 +490,7 @@
       "id": "65d24da053d983afe4aefb59",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 247.72,
       "etime": 252.46,
       "text": "Нет, старик Умпутун хотел узнать, нужен ли ему GraphQL."
@@ -499,7 +499,7 @@
       "id": "65d24da053d983afe4aefb5a",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 252.54,
       "etime": 256.63,
       "text": "И я хотел поднять дискуссию в плане, а нужен ли?"
@@ -526,7 +526,7 @@
       "id": "65d24da053d983afe4aefb5d",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 262.26,
       "etime": 266.62,
       "text": "Ну, как я так сразу вам все карты раскрыть?"
@@ -535,7 +535,7 @@
       "id": "65d24da053d983afe4aefb5e",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 266.64,
       "etime": 267.42,
       "text": "Не хочу."
@@ -598,7 +598,7 @@
       "id": "65d24da053d983afe4aefb65",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 289.82,
       "etime": 297.49,
       "text": "Слушайте, за 16 секунд я могу зайти издалека, рассказать историю вообще, как возможно он возник и зачем он нужен."
@@ -634,7 +634,7 @@
       "id": "65d24da053d983afe4aefb69",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 306.25,
       "etime": 307.67,
       "text": "Это такой не RESTful веб-сервис, а такой RPC..."
@@ -643,7 +643,7 @@
       "id": "65d24da053d983afe4aefb6a",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 313.81,
       "etime": 327.77,
       "text": "который не как XMLRPC, а более продвинутый, он за вас еще может всякие разные делать агрегации, и выдавать вам то, что вы хотите, и расходует при этом CPU сервера, а не фронтенда."
@@ -652,7 +652,7 @@
       "id": "65d24da053d983afe4aefb6b",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 327.83,
       "etime": 330.47,
       "text": "Но фронтенщик в итоге получает то, что он хочет."
@@ -661,7 +661,7 @@
       "id": "65d24da053d983afe4aefb6c",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 330.49,
       "etime": 331.86,
       "text": "Наверное."
@@ -697,7 +697,7 @@
       "id": "65d24da053d983afe4aefb70",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 344.27,
       "etime": 345.71,
       "text": "обижаешь."
@@ -814,7 +814,7 @@
       "id": "65d24da053d983afe4aefb7d",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 387.3,
       "etime": 394.4,
       "text": "Ну, я как бы, меня называют типа лид-софтвер-девелопером, немножко эссеем."
@@ -823,7 +823,7 @@
       "id": "65d24da053d983afe4aefb7e",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 395.88,
       "etime": 406.07,
       "text": "Я там делаю всякое на бэкэнде, наверное, лет 10 уже делаю на всяких там Java, Kotlin, иногда на Rust пишу."
@@ -832,7 +832,7 @@
       "id": "65d24da053d983afe4aefb7f",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 406.15,
       "etime": 412.29,
       "text": "До этого, каюсь, писал на PHP, JavaScript и делал веб-сайты."
@@ -841,7 +841,7 @@
       "id": "65d24da053d983afe4aefb80",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 412.59,
       "etime": 416.69,
       "text": "Но это было давно, я уже забыл почти, как это было."
@@ -850,7 +850,7 @@
       "id": "65d24da053d983afe4aefb81",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 416.75,
       "etime": 417.85,
       "text": "Помню только, что тут был такой E6."
@@ -877,7 +877,7 @@
       "id": "65d24da053d983afe4aefb84",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 436.48,
       "etime": 438.18,
       "text": "Я бы не сказал, что я его люблю."
@@ -886,7 +886,7 @@
       "id": "65d24da053d983afe4aefb85",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 438.24,
       "etime": 442.58,
       "text": "Я просто понял, зачем он может быть нужен в определенных ситуациях."
@@ -940,7 +940,7 @@
       "id": "65d24da053d983afe4aefb8b",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 478.83,
       "etime": 481.17,
       "text": "Его надо рассматривать, наверное, более комплексно."
@@ -949,7 +949,7 @@
       "id": "65d24da053d983afe4aefb8c",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 481.21,
       "etime": 484.72,
       "text": "И вообще, если говорить про тебя, то, наверное, тебе он не нужен."
@@ -958,7 +958,7 @@
       "id": "65d24da053d983afe4aefb8d",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 484.78,
       "etime": 489.94,
       "text": "Но есть такие ситуации, когда он может оказаться довольно-таки неплохо."
@@ -967,7 +967,7 @@
       "id": "65d24da053d983afe4aefb8e",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 491.18,
       "etime": 497.56,
       "text": "скажем так, вот особенно, наверное, если скейл компании довольно-таки большой, который его пытается применить."
@@ -1084,7 +1084,7 @@
       "id": "65d24da053d983afe4aefb9b",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 559.4,
       "etime": 574.44,
       "text": "Ну, опять же, если у вас компания чуть-чуть побольше, да, и у вас много разных клиентов, и вам вот реально иногда бывает не нужно гонять столько трафика между клиентом и сервером, и вы хотите, чтобы каждый клиент брал ту часть, которая ему нужна."
@@ -1093,7 +1093,7 @@
       "id": "65d24da053d983afe4aefb9c",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 574.5,
       "etime": 583.58,
       "text": "Более того, вот этот большой гейтвей, который API Gateway, ну, фактически прокси между вашими бэкэндами и фронтэндом, который как бы должен быть GraphQL,"
@@ -1102,7 +1102,7 @@
       "id": "65d24da053d983afe4aefb9d",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 585.96,
       "etime": 587.4,
       "text": "работает не совсем так."
@@ -1111,7 +1111,7 @@
       "id": "65d24da053d983afe4aefb9e",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 587.44,
       "etime": 589.26,
       "text": "То есть он может работать не совсем так."
@@ -1120,7 +1120,7 @@
       "id": "65d24da053d983afe4aefb9f",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 589.3,
       "etime": 600.71,
       "text": "Например, каждая команда из большого количества тимов, которые пилят этот GraphQL, фронт-энд для себя, они могут накрываться таким еще как бы GraphQL Federation."
@@ -1129,7 +1129,7 @@
       "id": "65d24da053d983afe4aefba0",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 601.65,
       "etime": 603.93,
       "text": "И вот тут начинается самое интересное."
@@ -1138,7 +1138,7 @@
       "id": "65d24da053d983afe4aefba1",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 603.97,
       "etime": 614.25,
       "text": "То есть я могу написать не прокси GraphQL для всех своих веб-сервисов, а я могу написать как бы мини-прокси GraphQL для своего сабсета сервисов."
@@ -1147,7 +1147,7 @@
       "id": "65d24da053d983afe4aefba2",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 615.08,
       "etime": 622.02,
       "text": "И я могу еще через вот этот вот GraphQL Federation Extension сделать такой enrichment другого GraphQL."
@@ -1156,7 +1156,7 @@
       "id": "65d24da053d983afe4aefba3",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 622.16,
       "etime": 629.99,
       "text": "Ну, то есть, типа, есть прокси от команды, которая там, я не знаю, backend делает, например, каких-нибудь там пользовательских заказов."
@@ -1165,7 +1165,7 @@
       "id": "65d24da053d983afe4aefba4",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 630.03,
       "etime": 632.75,
       "text": "Есть команда, которая там платежки делает, там еще чего-то."
@@ -1174,7 +1174,7 @@
       "id": "65d24da053d983afe4aefba5",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 632.85,
       "etime": 638.83,
       "text": "И вот, например, одна команда может сказать, а мы вот расширяем GraphQL сущности другой команды."
@@ -1183,7 +1183,7 @@
       "id": "65d24da053d983afe4aefba6",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 638.87,
       "etime": 644.82,
       "text": "Вот, типа, у нас свое расширение к схемам, и мы можем, типа, докладывать туда данные."
@@ -1192,7 +1192,7 @@
       "id": "65d24da053d983afe4aefba7",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 645.45,
       "etime": 646.95,
       "text": "А потом все это накрывать сверху GraphQL Federation."
@@ -1201,7 +1201,7 @@
       "id": "65d24da053d983afe4aefba8",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 650.05,
       "etime": 656.93,
       "text": "По полу, по-моему, GraphQL Federation есть продукт, который может не просто, который объединяет, во-первых, все вместе."
@@ -1210,7 +1210,7 @@
       "id": "65d24da053d983afe4aefba9",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 656.97,
       "etime": 662.3,
       "text": "Во-вторых, он предоставляет общую схему на все вот эти вот подсервисы GraphQL."
@@ -1219,7 +1219,7 @@
       "id": "65d24da053d983afe4aefbaa",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 662.4,
       "etime": 671.44,
       "text": "И когда ты делаешь запрос, в зависимости от того, какие данные ты запросил, он может сам уже как бы связывать данные с этих разных GraphQL сервисов."
@@ -1228,7 +1228,7 @@
       "id": "65d24da053d983afe4aefbab",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 672.21,
       "etime": 674.67,
       "text": "Соответственно, по зависимости от твоего запроса."
@@ -1255,7 +1255,7 @@
       "id": "65d24da053d983afe4aefbae",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 689.92,
       "etime": 697.26,
       "text": "В данном случае с Федерейшном, в данном случае не то, что ты не тянешь все, а то, что Федерейшн за тебя еще делает агрегацию."
@@ -1372,7 +1372,7 @@
       "id": "65d24da053d983afe4aefbbb",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 764.05,
       "etime": 778.53,
       "text": "Ну, опять же говоря, на определенном скейре, когда ты хочешь иметь какую-то меняемую схему на все, хочешь как-то развязать, чтобы команда каждая пилила свое, а какие-то еще админы настроили федерейшн, и он все собрал, то это имеет смысл."
@@ -1381,7 +1381,7 @@
       "id": "65d24da053d983afe4aefbbc",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 778.57,
       "etime": 784.78,
       "text": "То есть я как бы не в совсем маленькой компании работаю, и как бы с того места, откуда я смотрю, там, возможно, имеет смысл."
@@ -1390,7 +1390,7 @@
       "id": "65d24da053d983afe4aefbbd",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 784.8,
       "etime": 792.24,
       "text": "Особенно учитывая то, какие там команды иногда встречаются, и прочих других внутренних особенностей."
@@ -1651,7 +1651,7 @@
       "id": "65d24da053d983afe4aefbda",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 912.86,
       "etime": 913.62,
       "text": "У тебя же"
@@ -1660,7 +1660,7 @@
       "id": "65d24da053d983afe4aefbdb",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 915.03,
       "etime": 924.22,
       "text": "Да, бывает же еще такое, что у тебя внутренний API, он намного, то есть там данных больше, чем вообще положено видеть кому-то на фронтенде."
@@ -1669,7 +1669,7 @@
       "id": "65d24da053d983afe4aefbdc",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 924.24,
       "etime": 931.73,
       "text": "То есть там какие-то дополнительные поля, айтишники, связанные с платежами, еще с чем-то, и ты не должен их экспозить в принципе."
@@ -1678,7 +1678,7 @@
       "id": "65d24da053d983afe4aefbdd",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 932.76,
       "etime": 939.04,
       "text": "И получается тебе, что так нужно какой-то писать прокси, который будет тебе сабсет данных отдавать наружу."
@@ -1903,7 +1903,7 @@
       "id": "65d24da053d983afe4aefbf6",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1050.97,
       "etime": 1052.29,
       "text": "Ну, типа того."
@@ -1912,7 +1912,7 @@
       "id": "65d24da053d983afe4aefbf7",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1052.33,
       "etime": 1060.12,
       "text": "Но смотри, а если, например, я много консюмеров разных, и разным консюмерам нужны немножко разные данные."
@@ -1921,7 +1921,7 @@
       "id": "65d24da053d983afe4aefbf8",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1061,
       "etime": 1070.01,
       "text": "То есть у тебя там, не знаю, мобильные клиенты, совсем маленькие мобильные клиенты, у тебя вебчик, у тебя там еще какой-нибудь виджет, который, кто его знает, куда встраивается."
@@ -1930,7 +1930,7 @@
       "id": "65d24da053d983afe4aefbf9",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1070.11,
       "etime": 1077.85,
       "text": "И, например, имя пользователя им надо, а вот дальше параметры, которые там идут по пользователю, им нужно не все всем."
@@ -1939,7 +1939,7 @@
       "id": "65d24da053d983afe4aefbfa",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1077.89,
       "etime": 1082.14,
       "text": "То есть кто-то покажет только имя, кто-то покажет какой-то более полный набор данных."
@@ -1948,7 +1948,7 @@
       "id": "65d24da053d983afe4aefbfb",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1082.22,
       "etime": 1085.9,
       "text": "И если у тебя большой вообще поток запросов,"
@@ -1957,7 +1957,7 @@
       "id": "65d24da053d983afe4aefbfc",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1086.64,
       "etime": 1093.59,
       "text": "то вообще имеет смысл ограничивать это и не отдавать универсальный джессончик во все клиенты."
@@ -2038,7 +2038,7 @@
       "id": "65d24da053d983afe4aefc05",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1118.73,
       "etime": 1120.53,
       "text": "Кэмерон аватарчика сколько делал."
@@ -2065,7 +2065,7 @@
       "id": "65d24da053d983afe4aefc08",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1130.55,
       "etime": 1131.97,
       "text": "Кстати, забыл."
@@ -2074,7 +2074,7 @@
       "id": "65d24da053d983afe4aefc09",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1132.05,
       "etime": 1134.85,
       "text": "Ну, давайте так, меня зовут Румата Исторский в интернете."
@@ -2191,7 +2191,7 @@
       "id": "65d24da053d983afe4aefc16",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1162.75,
       "etime": 1164.29,
       "text": "Нет, программировать надо."
@@ -2200,7 +2200,7 @@
       "id": "65d24da053d983afe4aefc17",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1164.35,
       "etime": 1171.93,
       "text": "То есть ты программируешь отдельно, грубо говоря, функцию, которая грузит аватарчик, и отдельно функцию, которая грузит все остальное."
@@ -2209,7 +2209,7 @@
       "id": "65d24da053d983afe4aefc18",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1171.97,
       "etime": 1178.94,
       "text": "И если клиент из поля аватарчик не вкладывает в запрос, то вот эта функция, которая грузит аватарчик, она не дергается."
@@ -2227,7 +2227,7 @@
       "id": "65d24da053d983afe4aefc1a",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1206.26,
       "etime": 1214.46,
       "text": "Ну и опять же, может быть ситуация связана еще с тем, что есть фронт-энд разработка и у этих ребят иногда свои запросы."
@@ -2236,7 +2236,7 @@
       "id": "65d24da053d983afe4aefc1b",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1215.64,
       "etime": 1224.77,
       "text": "И в некоторых командах, ну это так, мое предположение, особенно с эффективными менеджерами, когда склоняется все на сторону фронтенда, все может перейти плавно в граффити."
@@ -2245,7 +2245,7 @@
       "id": "65d24da053d983afe4aefc1c",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1224.83,
       "etime": 1226.03,
       "text": "То есть я поясню, почему."
@@ -2254,7 +2254,7 @@
       "id": "65d24da053d983afe4aefc1d",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1226.07,
       "etime": 1232.61,
       "text": "Обычно нормальный бэкхендер, он по-хорошему сделает какую-то предагрегацию, то есть не чистые таблички из базы будет отдавать."
@@ -2263,7 +2263,7 @@
       "id": "65d24da053d983afe4aefc1e",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1232.63,
       "etime": 1237.57,
       "text": "И некоторые объекты на фронтенда скажут, ну вот запрашивай этот URL, этот и соберешь себе страничку."
@@ -2272,7 +2272,7 @@
       "id": "65d24da053d983afe4aefc1f",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1237.61,
       "etime": 1238.57,
       "text": "А фронтенчик ему такой..."
@@ -2281,7 +2281,7 @@
       "id": "65d24da053d983afe4aefc20",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1239.62,
       "etime": 1243.18,
       "text": "А что, на одну страничку тебе пять запросов делать по сети?"
@@ -2290,7 +2290,7 @@
       "id": "65d24da053d983afe4aefc21",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1243.24,
       "etime": 1244.14,
       "text": "Я не хочу."
@@ -2299,7 +2299,7 @@
       "id": "65d24da053d983afe4aefc22",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1244.18,
       "etime": 1246.7,
       "text": "Давай мне один JSON на целую страничку."
@@ -2308,7 +2308,7 @@
       "id": "65d24da053d983afe4aefc23",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1246.74,
       "etime": 1250.25,
       "text": "Ну и тут как бы все зависит от того, у кого последнее слово на проекте."
@@ -2317,7 +2317,7 @@
       "id": "65d24da053d983afe4aefc24",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1250.29,
       "etime": 1262.06,
       "text": "То есть я вот как-то работал на проекте, я сказал, что нет, ребята, давайте вы будете запрашивать, мы вам отдаем данные и будете программировать на фронтенде, сами делать фильтрацию, сортировку данных и прочее."
@@ -2326,7 +2326,7 @@
       "id": "65d24da053d983afe4aefc25",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1262.72,
       "etime": 1272.59,
       "text": "А, например, в некоторых компаниях, теоретически, особенно с эффективными менеджерами, может случиться так, что БКН скажет, а мы не можем так работать, нам некомфортно, нам плохо."
@@ -2371,7 +2371,7 @@
       "id": "65d24da053d983afe4aefc2a",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1281.25,
       "etime": 1283.05,
       "text": "Ну, не всех, не всех."
@@ -2578,7 +2578,7 @@
       "id": "65d24da053d983afe4aefc41",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1366.39,
       "etime": 1371.21,
       "text": "Это я просто пытался гербализировать одну ситуацию, с которой я сталкивался на проекте."
@@ -2596,7 +2596,7 @@
       "id": "65d24da053d983afe4aefc43",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1375.83,
       "etime": 1377.5,
       "text": "Вообще не будем, мы не можем."
@@ -2605,7 +2605,7 @@
       "id": "65d24da053d983afe4aefc44",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1377.52,
       "etime": 1379.36,
       "text": "Я говорю, как не можем?"
@@ -2614,7 +2614,7 @@
       "id": "65d24da053d983afe4aefc45",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1379.44,
       "etime": 1382.18,
       "text": "Делайте, у нас нормальная, обменяемая API."
@@ -2623,7 +2623,7 @@
       "id": "65d24da053d983afe4aefc46",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1382.22,
       "etime": 1384.92,
       "text": "Они побежали, нашли какого-то человека,"
@@ -2641,7 +2641,7 @@
       "id": "65d24da053d983afe4aefc48",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1389.37,
       "etime": 1390.75,
       "text": "Да не, сервер положим."
@@ -2650,7 +2650,7 @@
       "id": "65d24da053d983afe4aefc49",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1390.81,
       "etime": 1392.81,
       "text": "У нас страница будет открываться три часа."
@@ -2668,7 +2668,7 @@
       "id": "65d24da053d983afe4aefc4b",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1394.53,
       "etime": 1401.01,
       "text": "И в итоге менеджер, который принимал, собственно говоря, за которым было последнее слово на проект, и сказал, ну сделайте им один ответ."
@@ -2911,7 +2911,7 @@
       "id": "65d24da053d983afe4aefc66",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1539.4,
       "etime": 1556.07,
       "text": "Не, но я имею в виду, что фронтенд, особенно, я не знаю, как там с мобильным фронтендом, там все-таки экранчик поменьше, но когда у тебя на весь экран большой рисуется UI, где есть табличка, информация о пользователе, менюшка, еще чего-то, то есть для меня это все очень разные сущности."
@@ -2920,7 +2920,7 @@
       "id": "65d24da053d983afe4aefc67",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1556.15,
       "etime": 1564.46,
       "text": "И вместе отдавать меню, первую страничку, там каких-то айтемов, информацию о пользователе, еще какое-то сообщение в хедере –"
@@ -2929,7 +2929,7 @@
       "id": "65d24da053d983afe4aefc68",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1565.32,
       "etime": 1566.02,
       "text": "и еще там чего-то."
@@ -2947,7 +2947,7 @@
       "id": "65d24da053d983afe4aefc6a",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1574.05,
       "etime": 1575.91,
       "text": "Это как-то не совсем логично."
@@ -3577,7 +3577,7 @@
       "id": "65d24da053d983afe4aefcb0",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 1947.1,
       "etime": 1948.86,
       "text": "Еще кешировать можно на фронте."
@@ -4783,7 +4783,7 @@
       "id": "65d24da053d983afe4aefd36",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2526.33,
       "etime": 2528.83,
       "text": "Ксюшины коллеги, они будут агрегацию себе определять."
@@ -4792,7 +4792,7 @@
       "id": "65d24da053d983afe4aefd37",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2530.6,
       "etime": 2532.28,
       "text": "Вот эту часть из того, что ты мне дал."
@@ -4801,7 +4801,7 @@
       "id": "65d24da053d983afe4aefd38",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2532.32,
       "etime": 2538.69,
       "text": "А какие-то другие коллеги, которые стоят рядом и пилят другой клиент, они другую агрегацию будут определять."
@@ -4819,7 +4819,7 @@
       "id": "65d24da053d983afe4aefd3a",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2545.69,
       "etime": 2548.09,
       "text": "А дальше как бы разгребаетесь там, меня это не волнует."
@@ -4864,7 +4864,7 @@
       "id": "65d24da053d983afe4aefd3f",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2579.42,
       "etime": 2581.92,
       "text": "но в определенных рамках, там все-таки рамки есть."
@@ -4981,7 +4981,7 @@
       "id": "65d24da053d983afe4aefd4c",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2640.62,
       "etime": 2642.49,
       "text": "Алло."
@@ -4990,7 +4990,7 @@
       "id": "65d24da053d983afe4aefd4d",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2642.71,
       "etime": 2646.62,
       "text": "Если это изначально заложено бэкэндерами, то можно."
@@ -5008,7 +5008,7 @@
       "id": "65d24da053d983afe4aefd4f",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2648.8,
       "etime": 2650.02,
       "text": "что нельзя."
@@ -5089,7 +5089,7 @@
       "id": "65d24da053d983afe4aefd58",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2667.16,
       "etime": 2667.4,
       "text": "Нет."
@@ -5098,7 +5098,7 @@
       "id": "65d24da053d983afe4aefd59",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2667.48,
       "etime": 2669.35,
       "text": "Ну, в принципе, наверное, нет."
@@ -5125,7 +5125,7 @@
       "id": "65d24da053d983afe4aefd5c",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2675.52,
       "etime": 2679.1,
       "text": "А тут зависит от того, как реализована та же самая графика."
@@ -5152,7 +5152,7 @@
       "id": "65d24da053d983afe4aefd5f",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2686.84,
       "etime": 2692.56,
       "text": "Две, три, четыре команды унылых бэкэнд-программистов, и все это накрыто еще федерацией."
@@ -5161,7 +5161,7 @@
       "id": "65d24da053d983afe4aefd60",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2692.58,
       "etime": 2701.86,
       "text": "Причем одни бэкэнд-программисты, которые используют, например, информацию о пользователе, они не знают, что вторая команда унылых бэкэнд-программистов может инричить данную информацию."
@@ -5170,7 +5170,7 @@
       "id": "65d24da053d983afe4aefd61",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2702.54,
       "etime": 2703.82,
       "text": "информацию о пользователе."
@@ -5179,7 +5179,7 @@
       "id": "65d24da053d983afe4aefd62",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2703.86,
       "etime": 2715.79,
       "text": "Но все это в итоге стекается через федеративный сервис, и пронтендер может взять пользователя, заэнричить его информацию из данных, которые проводят три другие команды, и получить все это одним JSON."
@@ -5224,7 +5224,7 @@
       "id": "65d24da053d983afe4aefd67",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2737.59,
       "etime": 2742.25,
       "text": "В некоторых компаниях производительность это довольно-таки абстрактное понятие."
@@ -5233,7 +5233,7 @@
       "id": "65d24da053d983afe4aefd68",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2742.29,
       "etime": 2746.93,
       "text": "И опять же, если у вас маленькая компания, вам граффити его лучше не использовать."
@@ -5242,7 +5242,7 @@
       "id": "65d24da053d983afe4aefd69",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2746.99,
       "etime": 2760.47,
       "text": "Но если у вас там, не знаю, десятки, сотни независимых команд, которые все это пилят, и вам надо как-то это все-таки в итоге под одну гребенку, и так еще, чтобы все-таки лишние поля там наружу не ходили, трафик не жрали, то не имеет смысл."
@@ -5251,7 +5251,7 @@
       "id": "65d24da053d983afe4aefd6a",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2761.37,
       "etime": 2766.28,
       "text": "Еще чтобы схема через один endpoint всю показывала, всю-всего, что можно запросить."
@@ -5278,7 +5278,7 @@
       "id": "65d24da053d983afe4aefd6d",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2774.1,
       "etime": 2775.52,
       "text": "Ну да, типа админы."
@@ -5287,7 +5287,7 @@
       "id": "65d24da053d983afe4aefd6e",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2775.58,
       "etime": 2789.14,
       "text": "То есть у нас есть, опять же, в концепции через федерейшн, то есть у нас есть маленький GraphQL у каждой команды, и админы деплоят большой федерейшн, который смотрит на все вот эти маленькие GraphQL, и все это заворачивает в себя."
@@ -5296,7 +5296,7 @@
       "id": "65d24da053d983afe4aefd6f",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2789.22,
       "etime": 2789.28,
       "text": "Да."
@@ -5314,7 +5314,7 @@
       "id": "65d24da053d983afe4aefd71",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2794.43,
       "etime": 2796.46,
       "text": "Да, я знаю."
@@ -5575,7 +5575,7 @@
       "id": "65d24da053d983afe4aefd8e",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2928.06,
       "etime": 2931.12,
       "text": "В профиле, конечно, есть нюансы."
@@ -5584,7 +5584,7 @@
       "id": "65d24da053d983afe4aefd8f",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2931.2,
       "etime": 2932.63,
       "text": "Маленькие нюансы, например."
@@ -5593,7 +5593,7 @@
       "id": "65d24da053d983afe4aefd90",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2932.73,
       "etime": 2947.67,
       "text": "Ну, да, там бэкэндер что-то проводит, то есть они как-то задают правила, по каким ободаются данные, но как бы это все сверху накрывается таким нехилым блэкбоксом и жирным уровнем абстракции."
@@ -5602,7 +5602,7 @@
       "id": "65d24da053d983afe4aefd91",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 2947.71,
       "etime": 2949.77,
       "text": "То есть просто в некоторых ситуациях с ним мирятся."
@@ -5764,7 +5764,7 @@
       "id": "65d24da053d983afe4aefda3",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 3003.19,
       "etime": 3008.19,
       "text": "Я точно так же разговаривал с фронтендерами, которые ко мне приходили с такими запросами."
@@ -6025,7 +6025,7 @@
       "id": "65d24da053d983afe4aefdc0",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 3125.72,
       "etime": 3130.04,
       "text": "Это из-за тех бэкэндеров, которые все через Spring Boot, стартер и хибернет делают."
@@ -6178,7 +6178,7 @@
       "id": "65d24da053d983afe4aefdd1",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 3207.76,
       "etime": 3209.62,
       "text": "Проблема в том, что я в частности с этим согласен."
@@ -6187,7 +6187,7 @@
       "id": "65d24da053d983afe4aefdd2",
       "issue": 732,
       "type": "cc",
-      "author": "Guest",
+      "author": "RumataEstorsky",
       "stime": 3209.68,
       "etime": 3215.32,
       "text": "Просто, опять же, там, где я на это смотрю, там в этом есть хоть какой-то смысл."

@@ -1,0 +1,1218 @@
+version: 1
+name: Ad time range rules (any speaker in ad range → _ad)
+priority: 6
+description: |
+  Автоматически найденные рекламные блоки по паттернам:
+  1. Кластеры Alek.sys с рекламными словами
+  2. Смешанные _ad блоки с другими спикерами
+
+
+rules:
+  - id: ad_range_e215_900_1041
+    type: ad_time_range
+    episode: 215
+    time_range:
+      start: 900
+      end: 1041
+    reason: "Mixed _ad block with 13 other speakers"
+
+  - id: ad_range_e215_1179_1210
+    type: ad_time_range
+    episode: 215
+    time_range:
+      start: 1179
+      end: 1210
+    reason: "Mixed _ad block with 3 other speakers"
+
+  - id: ad_range_e215_1268_1357
+    type: ad_time_range
+    episode: 215
+    time_range:
+      start: 1268
+      end: 1357
+    reason: "Mixed _ad block with 16 other speakers"
+
+  - id: ad_range_e215_1499_1573
+    type: ad_time_range
+    episode: 215
+    time_range:
+      start: 1499
+      end: 1573
+    reason: "Mixed _ad block with 20 other speakers"
+
+  - id: ad_range_e215_1604_1644
+    type: ad_time_range
+    episode: 215
+    time_range:
+      start: 1604
+      end: 1644
+    reason: "Mixed _ad block with 8 other speakers"
+
+  - id: ad_range_e215_1861_1882
+    type: ad_time_range
+    episode: 215
+    time_range:
+      start: 1861
+      end: 1882
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e215_2302_2345
+    type: ad_time_range
+    episode: 215
+    time_range:
+      start: 2302
+      end: 2345
+    reason: "Mixed _ad block with 11 other speakers"
+
+  - id: ad_range_e215_3723_3757
+    type: ad_time_range
+    episode: 215
+    time_range:
+      start: 3723
+      end: 3757
+    reason: "Mixed _ad block with 6 other speakers"
+
+  - id: ad_range_e227_891_911
+    type: ad_time_range
+    episode: 227
+    time_range:
+      start: 891
+      end: 911
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e227_1226_1246
+    type: ad_time_range
+    episode: 227
+    time_range:
+      start: 1226
+      end: 1246
+    reason: "Mixed _ad block with 3 other speakers"
+
+  - id: ad_range_e227_1331_1417
+    type: ad_time_range
+    episode: 227
+    time_range:
+      start: 1331
+      end: 1417
+    reason: "Mixed _ad block with 16 other speakers"
+
+  - id: ad_range_e227_1443_1493
+    type: ad_time_range
+    episode: 227
+    time_range:
+      start: 1443
+      end: 1493
+    reason: "Mixed _ad block with 11 other speakers"
+
+  - id: ad_range_e227_1554_1657
+    type: ad_time_range
+    episode: 227
+    time_range:
+      start: 1554
+      end: 1657
+    reason: "Mixed _ad block with 24 other speakers"
+
+  - id: ad_range_e227_1704_1741
+    type: ad_time_range
+    episode: 227
+    time_range:
+      start: 1704
+      end: 1741
+    reason: "Mixed _ad block with 5 other speakers"
+
+  - id: ad_range_e227_4156_4191
+    type: ad_time_range
+    episode: 227
+    time_range:
+      start: 4156
+      end: 4191
+    reason: "Mixed _ad block with 2 other speakers"
+
+  - id: ad_range_e227_4694_4732
+    type: ad_time_range
+    episode: 227
+    time_range:
+      start: 4694
+      end: 4732
+    reason: "Mixed _ad block with 10 other speakers"
+
+  - id: ad_range_e227_4852_4879
+    type: ad_time_range
+    episode: 227
+    time_range:
+      start: 4852
+      end: 4879
+    reason: "Mixed _ad block with 4 other speakers"
+
+  - id: ad_range_e227_5137_5160
+    type: ad_time_range
+    episode: 227
+    time_range:
+      start: 5137
+      end: 5160
+    reason: "Mixed _ad block with 3 other speakers"
+
+  - id: ad_range_e230_1014_1073
+    type: ad_time_range
+    episode: 230
+    time_range:
+      start: 1014
+      end: 1073
+    reason: "Mixed _ad block with 20 other speakers"
+
+  - id: ad_range_e230_2408_2426
+    type: ad_time_range
+    episode: 230
+    time_range:
+      start: 2408
+      end: 2426
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e353_4522_4554
+    type: ad_time_range
+    episode: 353
+    time_range:
+      start: 4522
+      end: 4554
+    reason: "Mixed _ad block with 2 other speakers"
+
+  - id: ad_range_e360_954_973
+    type: ad_time_range
+    episode: 360
+    time_range:
+      start: 954
+      end: 973
+    reason: "Mixed _ad block with 4 other speakers"
+
+  - id: ad_range_e382_2060_2080
+    type: ad_time_range
+    episode: 382
+    time_range:
+      start: 2060
+      end: 2080
+    reason: "Mixed _ad block with 4 other speakers"
+
+  - id: ad_range_e424_9968_10017
+    type: ad_time_range
+    episode: 424
+    time_range:
+      start: 9968
+      end: 10017
+    reason: "Mixed _ad block with 2 other speakers"
+
+  - id: ad_range_e456_1972_1991
+    type: ad_time_range
+    episode: 456
+    time_range:
+      start: 1972
+      end: 1991
+    reason: "Mixed _ad block with 5 other speakers"
+
+  - id: ad_range_e460_97_149
+    type: ad_time_range
+    episode: 460
+    time_range:
+      start: 97
+      end: 149
+    reason: "Mixed _ad block with 3 other speakers"
+
+  - id: ad_range_e462_3053_3067
+    type: ad_time_range
+    episode: 462
+    time_range:
+      start: 3053
+      end: 3067
+    reason: "Alek.sys ad cluster (1 replies, 4s)"
+
+  - id: ad_range_e475_1374_1431
+    type: ad_time_range
+    episode: 475
+    time_range:
+      start: 1374
+      end: 1431
+    reason: "Alek.sys ad cluster (4 replies, 47s)"
+
+  - id: ad_range_e475_1773_1797
+    type: ad_time_range
+    episode: 475
+    time_range:
+      start: 1773
+      end: 1797
+    reason: "Alek.sys ad cluster (2 replies, 14s)"
+
+  - id: ad_range_e511_1942_1969
+    type: ad_time_range
+    episode: 511
+    time_range:
+      start: 1942
+      end: 1969
+    reason: "Alek.sys ad cluster (3 replies, 17s)"
+
+  - id: ad_range_e511_2303_2332
+    type: ad_time_range
+    episode: 511
+    time_range:
+      start: 2303
+      end: 2332
+    reason: "Alek.sys ad cluster (3 replies, 19s)"
+
+  - id: ad_range_e511_2921_2957
+    type: ad_time_range
+    episode: 511
+    time_range:
+      start: 2921
+      end: 2957
+    reason: "Alek.sys ad cluster (4 replies, 26s)"
+
+  - id: ad_range_e540_1945_1998
+    type: ad_time_range
+    episode: 540
+    time_range:
+      start: 1945
+      end: 1998
+    reason: "Alek.sys ad cluster (7 replies, 42s)"
+
+  - id: ad_range_e541_3182_3291
+    type: ad_time_range
+    episode: 541
+    time_range:
+      start: 3182
+      end: 3291
+    reason: "Alek.sys ad cluster (11 replies, 99s)"
+
+  - id: ad_range_e541_4778_4806
+    type: ad_time_range
+    episode: 541
+    time_range:
+      start: 4778
+      end: 4806
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e541_4971_5007
+    type: ad_time_range
+    episode: 541
+    time_range:
+      start: 4971
+      end: 5007
+    reason: "Mixed _ad block with 4 other speakers"
+
+  - id: ad_range_e541_5156_5186
+    type: ad_time_range
+    episode: 541
+    time_range:
+      start: 5156
+      end: 5186
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e541_5482_5507
+    type: ad_time_range
+    episode: 541
+    time_range:
+      start: 5482
+      end: 5507
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e542_7282_7319
+    type: ad_time_range
+    episode: 542
+    time_range:
+      start: 7282
+      end: 7319
+    reason: "Alek.sys ad cluster (4 replies, 27s)"
+
+  - id: ad_range_e543_1181_1231
+    type: ad_time_range
+    episode: 543
+    time_range:
+      start: 1181
+      end: 1231
+    reason: "Alek.sys ad cluster (7 replies, 41s)"
+
+  - id: ad_range_e545_3151_3217
+    type: ad_time_range
+    episode: 545
+    time_range:
+      start: 3151
+      end: 3217
+    reason: "Alek.sys ad cluster (10 replies, 56s)"
+
+  - id: ad_range_e546_5956_6006
+    type: ad_time_range
+    episode: 546
+    time_range:
+      start: 5956
+      end: 6006
+    reason: "Alek.sys ad cluster (7 replies, 41s)"
+
+  - id: ad_range_e547_5385_5436
+    type: ad_time_range
+    episode: 547
+    time_range:
+      start: 5385
+      end: 5436
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e548_6436_6530
+    type: ad_time_range
+    episode: 548
+    time_range:
+      start: 6436
+      end: 6530
+    reason: "Alek.sys ad cluster (8 replies, 84s)"
+
+  - id: ad_range_e549_8022_8075
+    type: ad_time_range
+    episode: 549
+    time_range:
+      start: 8022
+      end: 8075
+    reason: "Alek.sys ad cluster (7 replies, 43s)"
+
+  - id: ad_range_e550_3285_3335
+    type: ad_time_range
+    episode: 550
+    time_range:
+      start: 3285
+      end: 3335
+    reason: "Alek.sys ad cluster (7 replies, 41s)"
+
+  - id: ad_range_e552_5190_5241
+    type: ad_time_range
+    episode: 552
+    time_range:
+      start: 5190
+      end: 5241
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e553_4352_4447
+    type: ad_time_range
+    episode: 553
+    time_range:
+      start: 4352
+      end: 4447
+    reason: "Alek.sys ad cluster (10 replies, 85s)"
+
+  - id: ad_range_e554_5100_5113
+    type: ad_time_range
+    episode: 554
+    time_range:
+      start: 5100
+      end: 5113
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e555_2760_2811
+    type: ad_time_range
+    episode: 555
+    time_range:
+      start: 2760
+      end: 2811
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e556_1154_1233
+    type: ad_time_range
+    episode: 556
+    time_range:
+      start: 1154
+      end: 1233
+    reason: "Alek.sys ad cluster (8 replies, 69s)"
+
+  - id: ad_range_e556_4934_4986
+    type: ad_time_range
+    episode: 556
+    time_range:
+      start: 4934
+      end: 4986
+    reason: "Alek.sys ad cluster (7 replies, 42s)"
+
+  - id: ad_range_e557_6569_6620
+    type: ad_time_range
+    episode: 557
+    time_range:
+      start: 6569
+      end: 6620
+    reason: "Alek.sys ad cluster (7 replies, 41s)"
+
+  - id: ad_range_e558_7584_7692
+    type: ad_time_range
+    episode: 558
+    time_range:
+      start: 7584
+      end: 7692
+    reason: "Alek.sys ad cluster (13 replies, 98s)"
+
+  - id: ad_range_e559_4533_4583
+    type: ad_time_range
+    episode: 559
+    time_range:
+      start: 4533
+      end: 4583
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e560_3407_3458
+    type: ad_time_range
+    episode: 560
+    time_range:
+      start: 3407
+      end: 3458
+    reason: "Alek.sys ad cluster (7 replies, 41s)"
+
+  - id: ad_range_e561_6409_6462
+    type: ad_time_range
+    episode: 561
+    time_range:
+      start: 6409
+      end: 6462
+    reason: "Alek.sys ad cluster (7 replies, 43s)"
+
+  - id: ad_range_e562_3527_3577
+    type: ad_time_range
+    episode: 562
+    time_range:
+      start: 3527
+      end: 3577
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e563_5802_5850
+    type: ad_time_range
+    episode: 563
+    time_range:
+      start: 5802
+      end: 5850
+    reason: "Alek.sys ad cluster (4 replies, 38s)"
+
+  - id: ad_range_e565_4666_4706
+    type: ad_time_range
+    episode: 565
+    time_range:
+      start: 4666
+      end: 4706
+    reason: "Alek.sys ad cluster (4 replies, 30s)"
+
+  - id: ad_range_e566_5229_5280
+    type: ad_time_range
+    episode: 566
+    time_range:
+      start: 5229
+      end: 5280
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e567_97_150
+    type: ad_time_range
+    episode: 567
+    time_range:
+      start: 97
+      end: 150
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e567_5931_5981
+    type: ad_time_range
+    episode: 567
+    time_range:
+      start: 5931
+      end: 5981
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e569_2074_2124
+    type: ad_time_range
+    episode: 569
+    time_range:
+      start: 2074
+      end: 2124
+    reason: "Alek.sys ad cluster (7 replies, 41s)"
+
+  - id: ad_range_e570_4883_4933
+    type: ad_time_range
+    episode: 570
+    time_range:
+      start: 4883
+      end: 4933
+    reason: "Alek.sys ad cluster (7 replies, 41s)"
+
+  - id: ad_range_e571_4939_4990
+    type: ad_time_range
+    episode: 571
+    time_range:
+      start: 4939
+      end: 4990
+    reason: "Alek.sys ad cluster (7 replies, 41s)"
+
+  - id: ad_range_e572_3821_3903
+    type: ad_time_range
+    episode: 572
+    time_range:
+      start: 3821
+      end: 3903
+    reason: "Alek.sys ad cluster (8 replies, 73s)"
+
+  - id: ad_range_e574_4366_4436
+    type: ad_time_range
+    episode: 574
+    time_range:
+      start: 4366
+      end: 4436
+    reason: "Alek.sys ad cluster (6 replies, 60s)"
+
+  - id: ad_range_e575_4617_4669
+    type: ad_time_range
+    episode: 575
+    time_range:
+      start: 4617
+      end: 4669
+    reason: "Alek.sys ad cluster (10 replies, 42s)"
+
+  - id: ad_range_e577_3162_3212
+    type: ad_time_range
+    episode: 577
+    time_range:
+      start: 3162
+      end: 3212
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e578_4671_4760
+    type: ad_time_range
+    episode: 578
+    time_range:
+      start: 4671
+      end: 4760
+    reason: "Alek.sys ad cluster (10 replies, 79s)"
+
+  - id: ad_range_e578_6772_6866
+    type: ad_time_range
+    episode: 578
+    time_range:
+      start: 6772
+      end: 6866
+    reason: "Alek.sys ad cluster (8 replies, 83s)"
+
+  - id: ad_range_e581_491_618
+    type: ad_time_range
+    episode: 581
+    time_range:
+      start: 491
+      end: 618
+    reason: "Alek.sys ad cluster (17 replies, 117s)"
+
+  - id: ad_range_e581_763_796
+    type: ad_time_range
+    episode: 581
+    time_range:
+      start: 763
+      end: 796
+    reason: "Alek.sys ad cluster (2 replies, 23s)"
+
+  - id: ad_range_e581_4172_4225
+    type: ad_time_range
+    episode: 581
+    time_range:
+      start: 4172
+      end: 4225
+    reason: "Alek.sys ad cluster (7 replies, 42s)"
+
+  - id: ad_range_e581_5556_5579
+    type: ad_time_range
+    episode: 581
+    time_range:
+      start: 5556
+      end: 5579
+    reason: "Alek.sys ad cluster (3 replies, 14s)"
+
+  - id: ad_range_e582_6152_6225
+    type: ad_time_range
+    episode: 582
+    time_range:
+      start: 6152
+      end: 6225
+    reason: "Alek.sys ad cluster (8 replies, 63s)"
+
+  - id: ad_range_e585_6161_6212
+    type: ad_time_range
+    episode: 585
+    time_range:
+      start: 6161
+      end: 6212
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e587_770_825
+    type: ad_time_range
+    episode: 587
+    time_range:
+      start: 770
+      end: 825
+    reason: "Alek.sys ad cluster (6 replies, 45s)"
+
+  - id: ad_range_e587_4641_4758
+    type: ad_time_range
+    episode: 587
+    time_range:
+      start: 4641
+      end: 4758
+    reason: "Alek.sys ad cluster (10 replies, 106s)"
+
+  - id: ad_range_e588_6470_6524
+    type: ad_time_range
+    episode: 588
+    time_range:
+      start: 6470
+      end: 6524
+    reason: "Alek.sys ad cluster (6 replies, 44s)"
+
+  - id: ad_range_e589_6052_6102
+    type: ad_time_range
+    episode: 589
+    time_range:
+      start: 6052
+      end: 6102
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e590_5211_5262
+    type: ad_time_range
+    episode: 590
+    time_range:
+      start: 5211
+      end: 5262
+    reason: "Alek.sys ad cluster (7 replies, 41s)"
+
+  - id: ad_range_e591_5379_5429
+    type: ad_time_range
+    episode: 591
+    time_range:
+      start: 5379
+      end: 5429
+    reason: "Alek.sys ad cluster (7 replies, 40s)"
+
+  - id: ad_range_e593_94_116
+    type: ad_time_range
+    episode: 593
+    time_range:
+      start: 94
+      end: 116
+    reason: "Alek.sys ad cluster (3 replies, 12s)"
+
+  - id: ad_range_e595_6708_6739
+    type: ad_time_range
+    episode: 595
+    time_range:
+      start: 6708
+      end: 6739
+    reason: "Alek.sys ad cluster (6 replies, 21s)"
+
+  - id: ad_range_e600_1267_1339
+    type: ad_time_range
+    episode: 600
+    time_range:
+      start: 1267
+      end: 1339
+    reason: "Alek.sys ad cluster (3 replies, 62s)"
+
+  - id: ad_range_e615_485_513
+    type: ad_time_range
+    episode: 615
+    time_range:
+      start: 485
+      end: 513
+    reason: "Alek.sys ad cluster (5 replies, 18s)"
+
+  - id: ad_range_e618_990_1077
+    type: ad_time_range
+    episode: 618
+    time_range:
+      start: 990
+      end: 1077
+    reason: "Alek.sys ad cluster (11 replies, 77s)"
+
+  - id: ad_range_e620_3031_3117
+    type: ad_time_range
+    episode: 620
+    time_range:
+      start: 3031
+      end: 3117
+    reason: "Alek.sys ad cluster (8 replies, 76s)"
+
+  - id: ad_range_e621_10013_10055
+    type: ad_time_range
+    episode: 621
+    time_range:
+      start: 10013
+      end: 10055
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e627_2337_2371
+    type: ad_time_range
+    episode: 627
+    time_range:
+      start: 2337
+      end: 2371
+    reason: "Alek.sys ad cluster (10 replies, 24s)"
+
+  - id: ad_range_e632_2489_2534
+    type: ad_time_range
+    episode: 632
+    time_range:
+      start: 2489
+      end: 2534
+    reason: "Alek.sys ad cluster (6 replies, 36s)"
+
+  - id: ad_range_e632_3146_3185
+    type: ad_time_range
+    episode: 632
+    time_range:
+      start: 3146
+      end: 3185
+    reason: "Alek.sys ad cluster (5 replies, 29s)"
+
+  - id: ad_range_e632_3935_3960
+    type: ad_time_range
+    episode: 632
+    time_range:
+      start: 3935
+      end: 3960
+    reason: "Alek.sys ad cluster (1 replies, 15s)"
+
+  - id: ad_range_e632_8602_8706
+    type: ad_time_range
+    episode: 632
+    time_range:
+      start: 8602
+      end: 8706
+    reason: "Alek.sys ad cluster (11 replies, 95s)"
+
+  - id: ad_range_e636_4955_5038
+    type: ad_time_range
+    episode: 636
+    time_range:
+      start: 4955
+      end: 5038
+    reason: "Alek.sys ad cluster (16 replies, 73s)"
+
+  - id: ad_range_e637_4647_4664
+    type: ad_time_range
+    episode: 637
+    time_range:
+      start: 4647
+      end: 4664
+    reason: "Alek.sys ad cluster (1 replies, 7s)"
+
+  - id: ad_range_e637_6122_6212
+    type: ad_time_range
+    episode: 637
+    time_range:
+      start: 6122
+      end: 6212
+    reason: "Alek.sys ad cluster (10 replies, 80s)"
+
+  - id: ad_range_e647_6606_6710
+    type: ad_time_range
+    episode: 647
+    time_range:
+      start: 6606
+      end: 6710
+    reason: "Alek.sys ad cluster (11 replies, 94s)"
+
+  - id: ad_range_e649_7220_7261
+    type: ad_time_range
+    episode: 649
+    time_range:
+      start: 7220
+      end: 7261
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e651_9691_9729
+    type: ad_time_range
+    episode: 651
+    time_range:
+      start: 9691
+      end: 9729
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e652_6884_6914
+    type: ad_time_range
+    episode: 652
+    time_range:
+      start: 6884
+      end: 6914
+    reason: "Alek.sys ad cluster (4 replies, 20s)"
+
+  - id: ad_range_e653_7118_7137
+    type: ad_time_range
+    episode: 653
+    time_range:
+      start: 7118
+      end: 7137
+    reason: "Alek.sys ad cluster (5 replies, 9s)"
+
+  - id: ad_range_e661_8483_8522
+    type: ad_time_range
+    episode: 661
+    time_range:
+      start: 8483
+      end: 8522
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e662_4248_4303
+    type: ad_time_range
+    episode: 662
+    time_range:
+      start: 4248
+      end: 4303
+    reason: "Alek.sys ad cluster (3 replies, 44s)"
+
+  - id: ad_range_e663_7794_7832
+    type: ad_time_range
+    episode: 663
+    time_range:
+      start: 7794
+      end: 7832
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e664_7889_7926
+    type: ad_time_range
+    episode: 664
+    time_range:
+      start: 7889
+      end: 7926
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e674_688_775
+    type: ad_time_range
+    episode: 674
+    time_range:
+      start: 688
+      end: 775
+    reason: "Alek.sys ad cluster (5 replies, 77s)"
+
+  - id: ad_range_e679_42_81
+    type: ad_time_range
+    episode: 679
+    time_range:
+      start: 42
+      end: 81
+    reason: "Mixed _ad block with 2 other speakers"
+
+  - id: ad_range_e679_719_816
+    type: ad_time_range
+    episode: 679
+    time_range:
+      start: 719
+      end: 816
+    reason: "Alek.sys ad cluster (8 replies, 87s)"
+
+  - id: ad_range_e679_1378_1473
+    type: ad_time_range
+    episode: 679
+    time_range:
+      start: 1378
+      end: 1473
+    reason: "Alek.sys ad cluster (13 replies, 85s)"
+
+  - id: ad_range_e690_1493_1622
+    type: ad_time_range
+    episode: 690
+    time_range:
+      start: 1493
+      end: 1622
+    reason: "Alek.sys ad cluster (13 replies, 119s)"
+
+  - id: ad_range_e699_44_87
+    type: ad_time_range
+    episode: 699
+    time_range:
+      start: 44
+      end: 87
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e719_3590_3627
+    type: ad_time_range
+    episode: 719
+    time_range:
+      start: 3590
+      end: 3627
+    reason: "Alek.sys ad cluster (2 replies, 27s)"
+
+  - id: ad_range_e721_5816_5867
+    type: ad_time_range
+    episode: 721
+    time_range:
+      start: 5816
+      end: 5867
+    reason: "Alek.sys ad cluster (8 replies, 42s)"
+
+  - id: ad_range_e725_968_1019
+    type: ad_time_range
+    episode: 725
+    time_range:
+      start: 968
+      end: 1019
+    reason: "Alek.sys ad cluster (13 replies, 41s)"
+
+  - id: ad_range_e725_1433_1556
+    type: ad_time_range
+    episode: 725
+    time_range:
+      start: 1433
+      end: 1556
+    reason: "Alek.sys ad cluster (21 replies, 113s)"
+
+  - id: ad_range_e725_1739_1849
+    type: ad_time_range
+    episode: 725
+    time_range:
+      start: 1739
+      end: 1849
+    reason: "Alek.sys ad cluster (18 replies, 100s)"
+
+  - id: ad_range_e731_8299_8392
+    type: ad_time_range
+    episode: 731
+    time_range:
+      start: 8299
+      end: 8392
+    reason: "Alek.sys ad cluster (13 replies, 83s)"
+
+  - id: ad_range_e738_1200_1268
+    type: ad_time_range
+    episode: 738
+    time_range:
+      start: 1200
+      end: 1268
+    reason: "Alek.sys ad cluster (6 replies, 58s)"
+
+  - id: ad_range_e738_3363_3399
+    type: ad_time_range
+    episode: 738
+    time_range:
+      start: 3363
+      end: 3399
+    reason: "Alek.sys ad cluster (6 replies, 26s)"
+
+  - id: ad_range_e742_668_747
+    type: ad_time_range
+    episode: 742
+    time_range:
+      start: 668
+      end: 747
+    reason: "Alek.sys ad cluster (6 replies, 69s)"
+
+  - id: ad_range_e762_4744_4822
+    type: ad_time_range
+    episode: 762
+    time_range:
+      start: 4744
+      end: 4822
+    reason: "Alek.sys ad cluster (5 replies, 67s)"
+
+  - id: ad_range_e768_56_116
+    type: ad_time_range
+    episode: 768
+    time_range:
+      start: 56
+      end: 116
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e774_38_88
+    type: ad_time_range
+    episode: 774
+    time_range:
+      start: 38
+      end: 88
+    reason: "Mixed _ad block with 3 other speakers"
+
+  - id: ad_range_e777_8066_8118
+    type: ad_time_range
+    episode: 777
+    time_range:
+      start: 8066
+      end: 8118
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e794_5486_5577
+    type: ad_time_range
+    episode: 794
+    time_range:
+      start: 5486
+      end: 5577
+    reason: "Alek.sys ad cluster (9 replies, 81s)"
+
+  - id: ad_range_e820_5004_5026
+    type: ad_time_range
+    episode: 820
+    time_range:
+      start: 5004
+      end: 5026
+    reason: "Alek.sys ad cluster (5 replies, 12s)"
+
+  - id: ad_range_e826_2007_2071
+    type: ad_time_range
+    episode: 826
+    time_range:
+      start: 2007
+      end: 2071
+    reason: "Alek.sys ad cluster (16 replies, 54s)"
+
+  - id: ad_range_e830_8748_8817
+    type: ad_time_range
+    episode: 830
+    time_range:
+      start: 8748
+      end: 8817
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e831_8600_8668
+    type: ad_time_range
+    episode: 831
+    time_range:
+      start: 8600
+      end: 8668
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e833_10381_10451
+    type: ad_time_range
+    episode: 833
+    time_range:
+      start: 10381
+      end: 10451
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e834_8771_8840
+    type: ad_time_range
+    episode: 834
+    time_range:
+      start: 8771
+      end: 8840
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e835_8439_8508
+    type: ad_time_range
+    episode: 835
+    time_range:
+      start: 8439
+      end: 8508
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e836_8785_8854
+    type: ad_time_range
+    episode: 836
+    time_range:
+      start: 8785
+      end: 8854
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e837_22_99
+    type: ad_time_range
+    episode: 837
+    time_range:
+      start: 22
+      end: 99
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e838_69_141
+    type: ad_time_range
+    episode: 838
+    time_range:
+      start: 69
+      end: 141
+    reason: "Mixed _ad block with 1 other speakers"
+
+  - id: ad_range_e838_3425_3513
+    type: ad_time_range
+    episode: 838
+    time_range:
+      start: 3425
+      end: 3513
+    reason: "Alek.sys ad cluster (12 replies, 78s)"
+
+  - id: ad_range_e843_4040_4070
+    type: ad_time_range
+    episode: 843
+    time_range:
+      start: 4040
+      end: 4070
+    reason: "Alek.sys ad cluster (3 replies, 20s)"
+
+  - id: ad_range_e846_187_249
+    type: ad_time_range
+    episode: 846
+    time_range:
+      start: 187
+      end: 249
+    reason: "Alek.sys ad cluster (4 replies, 52s)"
+
+  - id: ad_range_e848_2752_2782
+    type: ad_time_range
+    episode: 848
+    time_range:
+      start: 2752
+      end: 2782
+    reason: "Alek.sys ad cluster (5 replies, 20s)"
+
+  - id: ad_range_e878_4694_4713
+    type: ad_time_range
+    episode: 878
+    time_range:
+      start: 4694
+      end: 4713
+    reason: "Alek.sys ad cluster (8 replies, 9s)"
+
+  - id: ad_range_e893_1524_1618
+    type: ad_time_range
+    episode: 893
+    time_range:
+      start: 1524
+      end: 1618
+    reason: "Alek.sys ad cluster (16 replies, 84s)"
+
+  - id: ad_range_e895_3896_3973
+    type: ad_time_range
+    episode: 895
+    time_range:
+      start: 3896
+      end: 3973
+    reason: "Alek.sys ad cluster (13 replies, 66s)"
+
+  - id: ad_range_e915_1161_1177
+    type: ad_time_range
+    episode: 915
+    time_range:
+      start: 1161
+      end: 1177
+    reason: "Alek.sys ad cluster (2 replies, 6s)"
+
+  - id: ad_range_e939_9673_9729
+    type: ad_time_range
+    episode: 939
+    time_range:
+      start: 9673
+      end: 9729
+    reason: "Alek.sys ad cluster (4 replies, 45s)"
+
+  - id: ad_range_e950_250_308
+    type: ad_time_range
+    episode: 950
+    time_range:
+      start: 250
+      end: 308
+    reason: "Alek.sys ad cluster (10 replies, 48s)"
+
+  - id: ad_range_e973_1815_1940
+    type: ad_time_range
+    episode: 973
+    time_range:
+      start: 1815
+      end: 1940
+    reason: "Alek.sys ad cluster (14 replies, 114s)"
+
+  - id: ad_range_e993_3099_3158
+    type: ad_time_range
+    episode: 993
+    time_range:
+      start: 3099
+      end: 3158
+    reason: "Alek.sys ad cluster (7 replies, 49s)"
+
+  - id: ad_range_e993_3439_3569
+    type: ad_time_range
+    episode: 993
+    time_range:
+      start: 3439
+      end: 3569
+    reason: "Alek.sys ad cluster (12 replies, 120s)"
+

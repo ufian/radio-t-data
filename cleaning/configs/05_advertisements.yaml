@@ -1,0 +1,133 @@
+version: 1
+name: Advertisement rules (hosts in ads → _ad)
+priority: 5
+description: Ведущие в рекламных блоках → _ad
+rules:
+- id: ad_e229_SPEAKER_03
+  type: rename_episode
+  episode: 229
+  from: SPEAKER_03
+  to: _ad
+  reason: Рекламный диктор FastVPS, 4 реплики с рекламным текстом
+- id: ad_e231_SPEAKER_00
+  type: rename_episode
+  episode: 231
+  from: SPEAKER_00
+  to: _ad
+  reason: Рекламные вставки FastVPS
+- id: ad_e232_SPEAKER_00
+  type: rename_episode
+  episode: 232
+  from: SPEAKER_00
+  to: _ad
+  reason: Рекламный блок FastVPS - реклама спонсора
+- id: ad_e233_SPEAKER_00
+  type: rename_episode
+  episode: 233
+  from: SPEAKER_00
+  to: _ad
+  reason: Рекламный блок FastVPS после фразы 'крути рекламу'
+- id: ad_e282_SPEAKER_00
+  type: rename_episode
+  episode: 282
+  from: SPEAKER_00
+  to: _ad
+  reason: Англоязычная реклама Winamp, явно рекламная вставка
+- id: ad_e350_SPEAKER_00
+  type: rename_episode
+  episode: 350
+  from: SPEAKER_00
+  to: _ad
+  reason: Рекламный анонс мероприятия 'Рок-АйТи', не человек-участник
+- id: ad_e351_SPEAKER_00
+  type: rename_episode
+  episode: 351
+  from: SPEAKER_00
+  to: _ad
+  reason: 'Все 5 реплик SPEAKER_00 - рекламное объявление о мероприятии в Таллинне.
+
+    Это стандартная рекламная вставка, должна быть маркирована как _ad.
+
+    '
+- id: ad_e352_SPEAKER_00
+  type: rename_episode
+  episode: 352
+  from: SPEAKER_00
+  to: _ad
+  reason: Часть рекламного блока, чередуется с уже размеченной рекламой
+  time_range:
+  - 2707
+  - 2724
+- id: ad_e353_SPEAKER_00
+  type: rename_episode
+  episode: 353
+  from: SPEAKER_00
+  to: _ad
+  reason: 'Рекламный блок: ''Приглашаем найти события нового формата. 24 и 25 августа.
+    Таллинн.'''
+- id: ad_e453_Alek.sys
+  type: rename_episode
+  episode: 453
+  from: Alek.sys
+  to: _ad
+  reason: Рекламный ролик Vscale, не живое участие в выпуске
+- id: ad_e554_SPEAKER_01
+  type: rename_episode
+  episode: 554
+  from: SPEAKER_01
+  to: _ad
+  reason: Рекламный ролик банка Тинькофф, все 6 реплик в рекламном блоке
+- id: ad_e554_Alek.sys
+  type: rename_episode
+  episode: 554
+  from: Alek.sys
+  to: _ad
+  reason: 'В начале выпуска явно сказано, что только Umputun и Bobuk в эфире. Все
+    реплики Alek.sys - это предзаписанная реклама V-Scale и других спонсоров.
+
+    '
+- id: ad_e555_SPEAKER_03
+  type: rename_episode
+  episode: 555
+  from: SPEAKER_03
+  to: _ad
+  reason: Это часть рекламного блока Тинькофф. Реплики чередуются с _ad и содержат
+    рекламный текст ('Спонсор этого выпуска', 'кэшбэк', 'Тинькофф Блэк').
+- id: ad_e556_SPEAKER_02
+  type: rename_episode
+  episode: 556
+  from: SPEAKER_02
+  to: _ad
+  reason: Рекламный голос в блоке Тинькофф, чередуется с другими репликами _ad
+- id: ad_e556_Gray
+  type: rename_episode
+  episode: 556
+  from: Gray
+  to: _ad
+  reason: Gray отсутствует в этом выпуске (явно сказано в начале на 53-60 сек), единственная
+    реплика 'Пожалуй, лучшая карта с кэшбэком' на 3101 сек - часть рекламы Тинькофф
+- id: ad_e557_SPEAKER_04
+  type: rename_episode
+  episode: 557
+  from: SPEAKER_04
+  to: _ad
+  reason: Рекламный блок Тинькофф, чередуется с другими _ad сегментами
+- id: ad_e576_Alek.sys
+  type: rename_episode
+  episode: 576
+  from: Alek.sys
+  to: _ad
+  reason: '7 реплик в диапазоне 3617-3655s — это рекламный блок V-Scale, должны быть
+    помечены как _ad, а не Alek.sys.
+
+    '
+- id: ad_e793_Gray
+  type: rename_episode
+  episode: 793
+  from: Gray
+  to: _ad
+  reason: Это реклама DigitalOcean после окончания подкаста, аналогичная рекламе в
+    начале (78-125s), которая корректно помечена как _ad
+  time_range:
+    start: 7630
+    end: 7680

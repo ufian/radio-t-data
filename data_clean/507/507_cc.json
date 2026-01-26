@@ -409,7 +409,7 @@
       "id": "65c9bbb81e9ca896877310b2",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 151.22,
       "etime": 152.12,
       "text": "Привет."
@@ -463,7 +463,7 @@
       "id": "65c9bbb81e9ca896877310b8",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 162.47,
       "etime": 163.35,
       "text": "Всем привет."
@@ -499,7 +499,7 @@
       "id": "65c9bbb81e9ca896877310bc",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 173.31,
       "etime": 174.24,
       "text": "Уже был один раз."
@@ -508,7 +508,7 @@
       "id": "65c9bbb81e9ca896877310bd",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 175.06,
       "etime": 177.22,
       "text": "Уже опытный подкастер."
@@ -598,7 +598,7 @@
       "id": "65c9bbb81e9ca896877310c7",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 202.09,
       "etime": 209.36,
       "text": "Да, Milestone первый, первый взгляд на новые фичи, которые будут в 1.1."
@@ -841,7 +841,7 @@
       "id": "65c9bbb81e9ca896877310e2",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 307.26,
       "etime": 308.04,
       "text": "Отлично."
@@ -850,7 +850,7 @@
       "id": "65c9bbb81e9ca896877310e3",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 308.14,
       "etime": 310.63,
       "text": "Ну, Kotlin, как ты правильно сказал, он практичный."
@@ -859,7 +859,7 @@
       "id": "65c9bbb81e9ca896877310e4",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 310.65,
       "etime": 312.43,
       "text": "Как человек практичный, Kotlin практичный."
@@ -868,7 +868,7 @@
       "id": "65c9bbb81e9ca896877310e5",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 312.49,
       "etime": 317.73,
       "text": "То есть язык был придуман как дополнение к существующей кодовой базе идеи."
@@ -877,7 +877,7 @@
       "id": "65c9bbb81e9ca896877310e6",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 317.79,
       "etime": 322.15,
       "text": "То есть он должен хорошо компилироваться вместе с Java, работать с ней в две стороны."
@@ -886,7 +886,7 @@
       "id": "65c9bbb81e9ca896877310e7",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 322.94,
       "etime": 326.72,
       "text": "И, соответственно, это, наверное, основная фишка, которая интересна джавистам."
@@ -931,7 +931,7 @@
       "id": "65c9bbb81e9ca896877310ec",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 358.24,
       "etime": 359.82,
       "text": "Зачем?"
@@ -940,7 +940,7 @@
       "id": "65c9bbb81e9ca896877310ed",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 359.92,
       "etime": 360.74,
       "text": "Даже больше."
@@ -949,7 +949,7 @@
       "id": "65c9bbb81e9ca896877310ee",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 360.76,
       "etime": 364.98,
       "text": "В пределах одного модуля можно сделать все на Kotlin и на Java одновременно."
@@ -967,7 +967,7 @@
       "id": "65c9bbb81e9ca896877310f0",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 372.5,
       "etime": 376.13,
       "text": "Ну, это такой способ перейти с Java кодовой базы на Kotlin."
@@ -976,7 +976,7 @@
       "id": "65c9bbb81e9ca896877310f1",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 376.25,
       "etime": 389.04,
       "text": "То есть если у нас есть большой проект, и нам хочется писать на современном языке, мы пишем потихонечку на Kotlin, Java не трогаем, потихонечку в Java мигрируем, где нам хочется, а где не хочется, мы оставляем как есть."
@@ -985,7 +985,7 @@
       "id": "65c9bbb81e9ca896877310f2",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 389.72,
       "etime": 396.11,
       "text": "И по итогу мы получаем новый язык в старом проекции без каких-то особенных минусов."
@@ -1012,7 +1012,7 @@
       "id": "65c9bbb81e9ca896877310f5",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 404.79,
       "etime": 412.7,
       "text": "Я думаю, это используют все, потому что если мы пишем старые проекты и мы хотим котлить, мы все это используем, я это использую."
@@ -1345,7 +1345,7 @@
       "id": "65c9bbb81e9ca8968773111a",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 569.38,
       "etime": 581.86,
       "text": "Ну, вот если вспомнить Ceylon, который тоже вышел, но он как-то не выстрелил, так, не знаю, может, это российская, русская комьюнити очень сильно Kotlin пиарит и знает о нем, начали писать."
@@ -1354,7 +1354,7 @@
       "id": "65c9bbb81e9ca8968773111b",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 582.34,
       "etime": 585.21,
       "text": "Ceylon, давайте немножко про него тоже поговорим."
@@ -1363,7 +1363,7 @@
       "id": "65c9bbb81e9ca8968773111c",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 585.23,
       "etime": 595.99,
       "text": "Это тоже язык для JV, тоже как бы компилится в обычный наш байткод, но в отличие от Kotlin, он вообще никак не пытался делать интервал в Java."
@@ -1372,7 +1372,7 @@
       "id": "65c9bbb81e9ca8968773111d",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 596.98,
       "etime": 603.03,
       "text": "Соответственно, теперь все библиотеки мы переписываем с нуля из-за различных фич в языке."
@@ -1381,7 +1381,7 @@
       "id": "65c9bbb81e9ca8968773111e",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 603.07,
       "etime": 606.21,
       "text": "И тот же даже Spring мы использовать не можем."
@@ -1390,7 +1390,7 @@
       "id": "65c9bbb81e9ca8968773111f",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 606.25,
       "etime": 608.41,
       "text": "Ну, можем, но это достаточно сложно."
@@ -1399,7 +1399,7 @@
       "id": "65c9bbb81e9ca89687731120",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 608.43,
       "etime": 611.85,
       "text": "В скоттленном же Spring использовать несложно."
@@ -1408,7 +1408,7 @@
       "id": "65c9bbb81e9ca89687731121",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 611.95,
       "etime": 618.44,
       "text": "Причем в язык там даже добавили для частичной поддержки таких библиотек Depends Injection специальные фичи, как Lateinit, например."
@@ -1417,7 +1417,7 @@
       "id": "65c9bbb81e9ca89687731122",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 618.5,
       "etime": 618.78,
       "text": "То есть"
@@ -1426,7 +1426,7 @@
       "id": "65c9bbb81e9ca89687731123",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 625.56,
       "etime": 641.01,
       "text": "В целом, бат в том, что мы не получили больше фич, мы не сделали еще одну скалу, мы не сделали целон, мы сделали прагматичный, практичный язык, который можно использовать в реальных проектах, который не страшно взять и писать продакшн."
@@ -1462,7 +1462,7 @@
       "id": "65c9bbb81e9ca89687731127",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 659.31,
       "etime": 661.86,
       "text": "Петербургий остров, да, наподобие Джавы."
@@ -1516,7 +1516,7 @@
       "id": "65c9bbb81e9ca8968773112d",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 702.16,
       "etime": 704.6,
       "text": "Вспомним язык или что мы не вспомним?"
@@ -1525,7 +1525,7 @@
       "id": "65c9bbb81e9ca8968773112e",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 704.62,
       "etime": 706.16,
       "text": "Байткод останется тот же."
@@ -1615,7 +1615,7 @@
       "id": "65c9bbb81e9ca89687731138",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 742.85,
       "etime": 745.77,
       "text": "Конечно, всегда будет такая вероятность существовать."
@@ -1624,7 +1624,7 @@
       "id": "65c9bbb81e9ca89687731139",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 745.79,
       "etime": 760.62,
       "text": "Как сами Gpress говорят, они там пишут mission critical свои приложения, то есть какие-то важные для них приложения, профиль, который, где мы покупаем лицензии, где крутятся их деньги, то есть биллинг в какой-то степени там задействован."
@@ -1633,7 +1633,7 @@
       "id": "65c9bbb81e9ca8968773113a",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 761.38,
       "etime": 762.34,
       "text": "Ну, то есть, если"
@@ -1642,7 +1642,7 @@
       "id": "65c9bbb81e9ca8968773113b",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 763.88,
       "etime": 766.4,
       "text": "проекты, которые все считают провалившимся."
@@ -1651,7 +1651,7 @@
       "id": "65c9bbb81e9ca8968773113c",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 766.44,
       "etime": 768.09,
       "text": "Вот в чате МПС вспоминают."
@@ -1660,7 +1660,7 @@
       "id": "65c9bbb81e9ca8968773113d",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 768.13,
       "etime": 771.53,
       "text": "На самом деле МПС до сих пор существует и поддерживается, и развивается."
@@ -1669,7 +1669,7 @@
       "id": "65c9bbb81e9ca8968773113e",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 771.57,
       "etime": 775.49,
       "text": "То есть просто он не получил такого распространения, как хотелось."
@@ -1678,7 +1678,7 @@
       "id": "65c9bbb81e9ca8968773113f",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 775.55,
       "etime": 778.13,
       "text": "У Kotlin есть все шансы такое распространение получить."
@@ -1687,7 +1687,7 @@
       "id": "65c9bbb81e9ca89687731140",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 778.15,
       "etime": 779.61,
       "text": "В текущий момент его получают."
@@ -1696,7 +1696,7 @@
       "id": "65c9bbb81e9ca89687731141",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 781.12,
       "etime": 788.39,
       "text": "Интерес к языку есть, то есть я не вижу проблем, почему бы Джин Брейнсу не поднажать каких-то затыков с языком, почему бы ему не поднажать озаботку."
@@ -1705,7 +1705,7 @@
       "id": "65c9bbb81e9ca89687731142",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 788.41,
       "etime": 793.21,
       "text": "Уже пять лет на это потрачено, и, собственно, почему нет?"
@@ -1813,7 +1813,7 @@
       "id": "65c9bbb81e9ca8968773114e",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 840.51,
       "etime": 845.66,
       "text": "Естественно, мы находимся в стене Java, и Kotlin не настолько большой язык, еще не настолько большой комьюнити."
@@ -1822,7 +1822,7 @@
       "id": "65c9bbb81e9ca8968773114f",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 845.7,
       "etime": 849.12,
       "text": "Тут никаких вопросов не может быть."
@@ -1831,7 +1831,7 @@
       "id": "65c9bbb81e9ca89687731150",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 849.16,
       "etime": 856.08,
       "text": "Например, сейчас комьюнити с Kotlin в Slack примерно 3500 человек, насколько я помню."
@@ -1840,7 +1840,7 @@
       "id": "65c9bbb81e9ca89687731151",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 856.1,
       "etime": 861.19,
       "text": "То есть люди действительно этим интересуются."
@@ -1849,7 +1849,7 @@
       "id": "65c9bbb81e9ca89687731152",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 861.27,
       "etime": 861.37,
       "text": "Про"
@@ -1858,7 +1858,7 @@
       "id": "65c9bbb81e9ca89687731153",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 862.32,
       "etime": 875.15,
       "text": "То, что количество это как бы мало, могу сказать, что Kotlin на самом деле очень простой язык, и как бы понять новичку, то есть у меня в команде есть несколько джуниоров, и, соответственно, им пришлось немножко подучить Kotlin."
@@ -1867,7 +1867,7 @@
       "id": "65c9bbb81e9ca89687731154",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 875.33,
       "etime": 882.43,
       "text": "То есть после Java у них никаких проблем с ним не было, то есть я не вижу, чтобы они там что-то писали неправильно."
@@ -1876,7 +1876,7 @@
       "id": "65c9bbb81e9ca89687731155",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 882.51,
       "etime": 885.85,
       "text": "Я бы сказал, что у них остались некоторые плохие привычки с Java, но..."
@@ -1885,7 +1885,7 @@
       "id": "65c9bbb81e9ca89687731156",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 887.5,
       "etime": 893.42,
       "text": "Как язык, наоборот, Котлин заставляет писать хороший код."
@@ -2047,7 +2047,7 @@
       "id": "65c9bbb81e9ca89687731168",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 959.05,
       "etime": 964.19,
       "text": "Синтексис оставили стандартный, то есть на самом деле нового синтексиса для этой фичи не было."
@@ -2056,7 +2056,7 @@
       "id": "65c9bbb81e9ca89687731169",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 964.25,
       "etime": 984.38,
       "text": "То есть изначально были зарезервированы async await, ну то есть да, надо сказать, что коррутины это в том числе тут async await, такой набор функций, такой набор кейвордов, скажем, в данном случае это просто две функции, которые подсказывают компилятору в данном случае, где надо приостановить программу,"
@@ -2065,7 +2065,7 @@
       "id": "65c9bbb81e9ca8968773116a",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 986.07,
       "etime": 988.95,
       "text": "а дать выполнение в какой-то бэкграунд, но при этом не блокируя сред."
@@ -2074,7 +2074,7 @@
       "id": "65c9bbb81e9ca8968773116b",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 988.99,
       "etime": 991.65,
       "text": "То есть примерно то же самое, что и у рутины."
@@ -2083,7 +2083,7 @@
       "id": "65c9bbb81e9ca8968773116c",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 991.69,
       "etime": 997.88,
       "text": "То есть это возможность выполнять какую-то работу, но не останавливать текущий сред."
@@ -2092,7 +2092,7 @@
       "id": "65c9bbb81e9ca8968773116d",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 997.92,
       "etime": 999.5,
       "text": "То есть, думаю, тут все понятно."
@@ -2164,7 +2164,7 @@
       "id": "65c9bbb81e9ca89687731175",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1013.84,
       "etime": 1017.79,
       "text": "Да, ну можно добавить скобочки, но для краткости написания..."
@@ -2173,7 +2173,7 @@
       "id": "65c9bbb81e9ca89687731176",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1021.27,
       "etime": 1025.07,
       "text": "это не ключевое слово, на самом деле, это обычная функция."
@@ -2182,7 +2182,7 @@
       "id": "65c9bbb81e9ca89687731177",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1025.15,
       "etime": 1045.06,
       "text": "Изначально были заизерированы эти два слова осенковые, но на текущий момент дизайнеры языка, то есть Андрей Береслов и команда Котлина, видимо, остановились на том, что они не будут использовать это ключевое слово, а просто у компилятора будет особое знание этой функции, которая будет находиться в сценарии библиотеки."
@@ -2191,7 +2191,7 @@
       "id": "65c9bbb81e9ca89687731178",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1045.14,
       "etime": 1048.61,
       "text": "И, соответственно, так как у компилятора есть это особое знание..."
@@ -2200,7 +2200,7 @@
       "id": "65c9bbb81e9ca89687731179",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1049.95,
       "etime": 1053.29,
       "text": "мы сможем сделать какие-либо либо yield, либо async await."
@@ -2245,7 +2245,7 @@
       "id": "65c9bbb81e9ca8968773117e",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1072.05,
       "etime": 1077.32,
       "text": "Да, это тип future, то есть это параметризация future, которая вернется из async."
@@ -2254,7 +2254,7 @@
       "id": "65c9bbb81e9ca8968773117f",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1077.64,
       "etime": 1079.32,
       "text": "То есть мы вызываем функцию"
@@ -2263,7 +2263,7 @@
       "id": "65c9bbb81e9ca89687731180",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1080.62,
       "etime": 1084.32,
       "text": "которое выглядит как... которое называется async."
@@ -2272,7 +2272,7 @@
       "id": "65c9bbb81e9ca89687731181",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1084.38,
       "etime": 1086.88,
       "text": "Внутри мы пишем какие-то вычисления."
@@ -2281,7 +2281,7 @@
       "id": "65c9bbb81e9ca89687731182",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1086.94,
       "etime": 1092.32,
       "text": "Там, где нам нужно получить асинхронный ответ, мы пишем await."
@@ -2290,7 +2290,7 @@
       "id": "65c9bbb81e9ca89687731183",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1092.38,
       "etime": 1096.88,
       "text": "И, соответственно, мы там что-то возвращаем, так как это лямбда, мы просто не пишем даже ретурны."
@@ -2299,7 +2299,7 @@
       "id": "65c9bbb81e9ca89687731184",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1096.92,
       "etime": 1098.28,
       "text": "В ответ от async мы получаем future."
@@ -2308,7 +2308,7 @@
       "id": "65c9bbb81e9ca89687731185",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1098.32,
       "etime": 1100.64,
       "text": "Внутри async мы можем делать несколько await."
@@ -2317,7 +2317,7 @@
       "id": "65c9bbb81e9ca89687731186",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1100.9,
       "etime": 1107.94,
       "text": "То есть, я думаю, тем, кто писал async await, это C Sharp и свежий JavaScript, знакомый, как это работает, и последний Python."
@@ -2326,7 +2326,7 @@
       "id": "65c9bbb81e9ca89687731187",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1110.07,
       "etime": 1112.97,
       "text": "Мы получили future, теперь мы можем опять же сделать get."
@@ -2335,7 +2335,7 @@
       "id": "65c9bbb81e9ca89687731188",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1113.37,
       "etime": 1113.59,
       "text": "Зачем async await?"
@@ -2344,7 +2344,7 @@
       "id": "65c9bbb81e9ca89687731189",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1115.26,
       "etime": 1118.46,
       "text": "Можно вспомнить о развитии вообще синхронных вычислений."
@@ -2353,7 +2353,7 @@
       "id": "65c9bbb81e9ca8968773118a",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1118.52,
       "etime": 1124.7,
       "text": "Сначала мы писали callback, появился callback hell, потом у нас появились промиссы."
@@ -2362,7 +2362,7 @@
       "id": "65c9bbb81e9ca8968773118b",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1124.8,
       "etime": 1129.45,
       "text": "Промиссы это немножко упорядочили, но опять же это не то, как мы пишем код."
@@ -2371,7 +2371,7 @@
       "id": "65c9bbb81e9ca8968773118c",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1129.47,
       "etime": 1133.47,
       "text": "Async await это способ писать код асинхронный, в синхронном стиле."
@@ -2380,7 +2380,7 @@
       "id": "65c9bbb81e9ca8968773118d",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1133.53,
       "etime": 1136.23,
       "text": "Тут нету никаких зенов, нету апплаев."
@@ -2389,7 +2389,7 @@
       "id": "65c9bbb81e9ca8968773118e",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1137.14,
       "etime": 1140.52,
       "text": "Мы просто пишем синхронный код, но на самом деле он выполняется синхронно."
@@ -2398,7 +2398,7 @@
       "id": "65c9bbb81e9ca8968773118f",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1140.54,
       "etime": 1144.25,
       "text": "Ну, если это будет асинхронный код."
@@ -2434,7 +2434,7 @@
       "id": "65c9bbb81e9ca89687731193",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1168.93,
       "etime": 1176.05,
       "text": "Я понимаю, это будет стоять машина, и таких на самом деле подробностей я не изучал."
@@ -2866,7 +2866,7 @@
       "id": "65c9bbb81e9ca896877311c3",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1400.93,
       "etime": 1406.21,
       "text": "Ну, сама эта фича, она может использоваться по-разному."
@@ -2875,7 +2875,7 @@
       "id": "65c9bbb81e9ca896877311c4",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1406.23,
       "etime": 1415.91,
       "text": "То есть, на самом деле, я так понимаю, мы сможем задать, либо это будут какие-то каналы, то есть, ну, те же, да, гурутины, либо я подозреваю, что это можно запустить поверх пула."
@@ -2884,7 +2884,7 @@
       "id": "65c9bbb81e9ca896877311c5",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1415.95,
       "etime": 1417.59,
       "text": "То есть, на самом деле, тут нету..."
@@ -2893,7 +2893,7 @@
       "id": "65c9bbb81e9ca896877311c6",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1419.65,
       "etime": 1421.99,
       "text": "привязки к имплементации."
@@ -3028,7 +3028,7 @@
       "id": "65c9bbb81e9ca896877311d5",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1469.14,
       "etime": 1470.16,
       "text": "Да."
@@ -3037,7 +3037,7 @@
       "id": "65c9bbb81e9ca896877311d6",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1470.2,
       "etime": 1472.82,
       "text": "Мы часто пишем большие такие страшные функции, где..."
@@ -3046,7 +3046,7 @@
       "id": "65c9bbb81e9ca896877311d7",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1474.09,
       "etime": 1480.18,
       "text": "аргументы имеют большие типы с дженериками, и нам не хочется в пределах одного класса это повторять много раз."
@@ -3055,7 +3055,7 @@
       "id": "65c9bbb81e9ca896877311d8",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1480.2,
       "etime": 1482.86,
       "text": "Соответственно, у нас есть Type IAS, я думаю, тут как бы все понятно."
@@ -3064,7 +3064,7 @@
       "id": "65c9bbb81e9ca896877311d9",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1482.88,
       "etime": 1490.87,
       "text": "То есть функциональные какие-то типы, можно объявить им красивое имя и использовать в пределах класса либо модуля проекта."
@@ -3253,7 +3253,7 @@
       "id": "65c9bbb81e9ca896877311ee",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1606.65,
       "etime": 1609.31,
       "text": "А давай остановимся тут, смотри."
@@ -3262,7 +3262,7 @@
       "id": "65c9bbb81e9ca896877311ef",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1609.37,
       "etime": 1614.34,
       "text": "Если ты в Java создаешь новый интерфейс, который является Functional Interface, да?"
@@ -3271,7 +3271,7 @@
       "id": "65c9bbb81e9ca896877311f0",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1614.42,
       "etime": 1622.92,
       "text": "Ты же пишешь в Functional Interface для чего-то, чтобы писать там лямбды, ты у тебя в Functional Interface описан там один метод, правильно?"
@@ -3280,7 +3280,7 @@
       "id": "65c9bbb81e9ca896877311f1",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1622.98,
       "etime": 1627.99,
       "text": "Который абстрактный, и у него есть какие-то входные аргументы, входные параметры и выходной тип."
@@ -3289,7 +3289,7 @@
       "id": "65c9bbb81e9ca896877311f2",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1629.13,
       "etime": 1632.15,
       "text": "А теперь мы говорим, что вот этот вот functional interface, это type alias."
@@ -3298,7 +3298,7 @@
       "id": "65c9bbb81e9ca896877311f3",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1633.53,
       "etime": 1638.47,
       "text": "И теперь тебе не надо писать интерфейс, опционально его помечать аннотацией functional interface."
@@ -3307,7 +3307,7 @@
       "id": "65c9bbb81e9ca896877311f4",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1638.65,
       "etime": 1644.32,
       "text": "Ну и ты просто можешь сказать, что это type alias, и это будет примерно то же самое."
@@ -3316,7 +3316,7 @@
       "id": "65c9bbb81e9ca896877311f5",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1644.46,
       "etime": 1646.58,
       "text": "Ну, один из use cases, например."
@@ -3325,7 +3325,7 @@
       "id": "65c9bbb81e9ca896877311f6",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1646.62,
       "etime": 1648.16,
       "text": "Это плохо или хорошо?"
@@ -3388,7 +3388,7 @@
       "id": "65c9bbb81e9ca896877311fd",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1666.08,
       "etime": 1673.71,
       "text": "Ну, или вот если зайти в имплементацию стримов в 8-й Java, то там все кишит дженериками и очень тяжело все это читать."
@@ -3397,7 +3397,7 @@
       "id": "65c9bbb81e9ca896877311fe",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1673.73,
       "etime": 1679.5,
       "text": "Соответственно, TypeAlice спасут в какой-то степени в подобных ситуациях и помогут"
@@ -3406,7 +3406,7 @@
       "id": "65c9bbb81e9ca896877311ff",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1680.34,
       "etime": 1682.15,
       "text": "увеличить и добилить действительно."
@@ -3415,7 +3415,7 @@
       "id": "65c9bbb81e9ca89687731200",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1682.17,
       "etime": 1688.42,
       "text": "Потому что там без этих огромных дженериков никак не обойтись без огромных разделений."
@@ -3631,7 +3631,7 @@
       "id": "65c9bbb81e9ca89687731218",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1775.46,
       "etime": 1777.01,
       "text": "Какие референсы?"
@@ -3640,7 +3640,7 @@
       "id": "65c9bbb81e9ca89687731219",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1777.21,
       "etime": 1781.17,
       "text": "Да, метод референсы Java 8, опять же, вспоминаем."
@@ -3649,7 +3649,7 @@
       "id": "65c9bbb81e9ca8968773121a",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1781.85,
       "etime": 1786.95,
       "text": "И мы можем метод референс сделать на какой-то конкретный инстанс класса."
@@ -3658,7 +3658,7 @@
       "id": "65c9bbb81e9ca8968773121b",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1786.99,
       "etime": 1788.99,
       "text": "То есть мы можем, как в примере, взять..."
@@ -3667,7 +3667,7 @@
       "id": "65c9bbb81e9ca8968773121c",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1789.96,
       "etime": 1797.31,
       "text": "у какой-то стринги, допустим, стринга RadioT, Lens, и тогда мы не вызываем на данный момент этот метод."
@@ -3676,7 +3676,7 @@
       "id": "65c9bbb81e9ca8968773121d",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1797.57,
       "etime": 1799.21,
       "text": "И в момент, когда мы вызовем этот метод..."
@@ -3685,7 +3685,7 @@
       "id": "65c9bbb81e9ca8968773121e",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1800.51,
       "etime": 1806.81,
       "text": "методу нужен, соответственно, класс, на котором вызывать, и этот класс, он привяжется, когда мы будем делать вот этот метод reference."
@@ -3748,7 +3748,7 @@
       "id": "65c9bbb81e9ca89687731225",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1837.35,
       "etime": 1839.14,
       "text": "Да, примерно это."
@@ -3757,7 +3757,7 @@
       "id": "65c9bbb81e9ca89687731226",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1839.22,
       "etime": 1846.34,
       "text": "Но при этом мы говорим string, двоеточие, двоеточие не у класса, а у конкретного инстанса."
@@ -3766,7 +3766,7 @@
       "id": "65c9bbb81e9ca89687731227",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1846.36,
       "etime": 1847.08,
       "text": "И, соответственно, наш"
@@ -3775,7 +3775,7 @@
       "id": "65c9bbb81e9ca89687731228",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1847.9,
       "etime": 1853.91,
       "text": "Наш вызов дальнейший этого метода референса привязан к конкретному инстансу."
@@ -3784,7 +3784,7 @@
       "id": "65c9bbb81e9ca89687731229",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1853.97,
       "etime": 1855.31,
       "text": "Вот в этом, собственно, вся фича."
@@ -3793,7 +3793,7 @@
       "id": "65c9bbb81e9ca8968773122a",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1855.35,
       "etime": 1860.97,
       "text": "До этого был просто метод референс, который привязывается к классу."
@@ -3802,7 +3802,7 @@
       "id": "65c9bbb81e9ca8968773122b",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1861.03,
       "etime": 1864.84,
       "text": "Ему надо передавать объект, над которым вызывать этот метод."
@@ -3811,7 +3811,7 @@
       "id": "65c9bbb81e9ca8968773122c",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1864.86,
       "etime": 1868.58,
       "text": "В этом, собственно, все отличие."
@@ -3874,7 +3874,7 @@
       "id": "65c9bbb81e9ca89687731233",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1891.49,
       "etime": 1896.09,
       "text": "Ну, вот эта лямбда, которую мы передаем, она уже привязана к конкретному объекту."
@@ -3919,7 +3919,7 @@
       "id": "65c9bbb81e9ca89687731238",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1912.33,
       "etime": 1913.17,
       "text": "Да, в принципе."
@@ -3928,7 +3928,7 @@
       "id": "65c9bbb81e9ca89687731239",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1913.19,
       "etime": 1917.15,
       "text": "И, насколько я понимаю, в Java это тоже уже есть, и просто сейчас это поддержали в Kotlin'е."
@@ -3937,7 +3937,7 @@
       "id": "65c9bbb81e9ca8968773123a",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1919.22,
       "etime": 1922.74,
       "text": "В 1.0 не попало, видимо, и только сейчас прилетело."
@@ -3955,7 +3955,7 @@
       "id": "65c9bbb81e9ca8968773123c",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1931.58,
       "etime": 1932.64,
       "text": "Да, метод референсов."
@@ -3964,7 +3964,7 @@
       "id": "65c9bbb81e9ca8968773123d",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1932.68,
       "etime": 1935.53,
       "text": "Вот я не уверен, честно говоря, надо проверить."
@@ -4081,7 +4081,7 @@
       "id": "65c9bbb81e9ca8968773124a",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1964.67,
       "etime": 1965.29,
       "text": "Нет, умеет."
@@ -4090,7 +4090,7 @@
       "id": "65c9bbb81e9ca8968773124b",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1965.33,
       "etime": 1968.27,
       "text": "Судя по всему, я вот открыл идею и проверил."
@@ -4099,7 +4099,7 @@
       "id": "65c9bbb81e9ca8968773124c",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1968.87,
       "etime": 1969.23,
       "text": "Умеет."
@@ -4153,7 +4153,7 @@
       "id": "65c9bbb81e9ca89687731252",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1988.87,
       "etime": 1991.86,
       "text": "Там есть такие замечательные силы класса и дата класса."
@@ -4162,7 +4162,7 @@
       "id": "65c9bbb81e9ca89687731253",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1992.34,
       "etime": 1996.34,
       "text": "Для тех, кто писал на скале, это известно как кейс класса."
@@ -4171,7 +4171,7 @@
       "id": "65c9bbb81e9ca89687731254",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 1996.54,
       "etime": 2000.63,
       "text": "Соответственно, когда был релиз 1.0, они запретили наследоваться"
@@ -4180,7 +4180,7 @@
       "id": "65c9bbb81e9ca89687731255",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2005.24,
       "etime": 2007.26,
       "text": "дата-классом от кого-либо."
@@ -4198,7 +4198,7 @@
       "id": "65c9bbb81e9ca89687731257",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2011.4,
       "etime": 2021.42,
       "text": "Да, value-object, плюс там хеш-код, equals, toString, копи-методы, компонент-методы, то есть там всякие дополнительные плюшки, которые позволяют более функционально писать."
@@ -4378,7 +4378,7 @@
       "id": "65c9bbb81e9ca8968773126b",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2107.43,
       "etime": 2111.43,
       "text": "К сожалению, Джава не объектно-ориентированный язык, а скорее мультипарадигмальный."
@@ -4387,7 +4387,7 @@
       "id": "65c9bbb81e9ca8968773126c",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2112.35,
       "etime": 2116.11,
       "text": "Как бы не хотелось Егору Бугаенко, чтобы Джава была ОПМ."
@@ -4585,7 +4585,7 @@
       "id": "65c9bbb81e9ca89687731282",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2190.76,
       "etime": 2191.68,
       "text": "Никто не отказывается."
@@ -4594,7 +4594,7 @@
       "id": "65c9bbb81e9ca89687731283",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2191.7,
       "etime": 2194.72,
       "text": "В целом мы используем и то, и другое в последней жизни."
@@ -4603,7 +4603,7 @@
       "id": "65c9bbb81e9ca89687731284",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2194.78,
       "etime": 2199.8,
       "text": "Правильно, когда мы используем стримы, мы не используем объектно-регистрируемый подход, это скорее функциональный подход."
@@ -4612,7 +4612,7 @@
       "id": "65c9bbb81e9ca89687731285",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2199.84,
       "etime": 2209.13,
       "text": "Соответственно, дата класса, код на язык прагматичный, и дата класса это действительно полезная вещь, когда нам не хочется писать те же hashcode equals."
@@ -4621,7 +4621,7 @@
       "id": "65c9bbb81e9ca89687731286",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2210.53,
       "etime": 2214.07,
       "text": "Ну, конечно, у него есть и более продвинутые использования, но для..."
@@ -4630,7 +4630,7 @@
       "id": "65c9bbb81e9ca89687731287",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2215.23,
       "etime": 2218.35,
       "text": "Для всех это такой удобный инструмент."
@@ -4639,7 +4639,7 @@
       "id": "65c9bbb81e9ca89687731288",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2218.41,
       "etime": 2220.58,
       "text": "Не писать много кода, писать мало кода."
@@ -4648,7 +4648,7 @@
       "id": "65c9bbb81e9ca89687731289",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2220.62,
       "etime": 2224.32,
       "text": "Красиво, понятно."
@@ -4657,7 +4657,7 @@
       "id": "65c9bbb81e9ca8968773128a",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2224.38,
       "etime": 2230.78,
       "text": "Если с этой стороны подходить, с другой стороны, это возможность писать имитабельные структуры."
@@ -4666,7 +4666,7 @@
       "id": "65c9bbb81e9ca8968773128b",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2231.46,
       "etime": 2236.37,
       "text": "Опять же, не нужно дополнительные усилия."
@@ -4702,7 +4702,7 @@
       "id": "65c9bbb81e9ca8968773128f",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2246.53,
       "etime": 2251.96,
       "text": "Ну, тут есть выбор, конечно, дата класса не запрещает, но в целом очень легко написать имитабл-класс."
@@ -4711,7 +4711,7 @@
       "id": "65c9bbb81e9ca89687731290",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2252.02,
       "etime": 2259.43,
       "text": "Причем, когда нам нужно создать новый инст, заменив в нем одно поле, это буквально один вызов метода."
@@ -4720,7 +4720,7 @@
       "id": "65c9bbb81e9ca89687731291",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2259.45,
       "etime": 2260.89,
       "text": "То есть мы вызываем копированием,"
@@ -4756,7 +4756,7 @@
       "id": "65c9bbb81e9ca89687731295",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2278.5,
       "etime": 2282.04,
       "text": "Мэпы в Котлине и листы тоже по умолчанию иммютабелы."
@@ -4765,7 +4765,7 @@
       "id": "65c9bbb81e9ca89687731296",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2282.59,
       "etime": 2289.38,
       "text": "То есть если мы пишем просто мэп офф, то мы получаем немутабельную мапу."
@@ -4774,7 +4774,7 @@
       "id": "65c9bbb81e9ca89687731297",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2289.42,
       "etime": 2294.36,
       "text": "Причем на рантайме это будет обычная джавовая мапа, то есть без какого-то там оверхеда."
@@ -4783,7 +4783,7 @@
       "id": "65c9bbb81e9ca89687731298",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2294.44,
       "etime": 2302.35,
       "text": "Но компилятор будет проверять, что мы туда ничего не пишем, а только создаваем новые инстансы, когда мы хотим записать или удалить."
@@ -4810,7 +4810,7 @@
       "id": "65c9bbb81e9ca8968773129b",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2308.72,
       "etime": 2310.56,
       "text": "Ну, почему-то кривенько-косенько."
@@ -4819,7 +4819,7 @@
       "id": "65c9bbb81e9ca8968773129c",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2310.62,
       "etime": 2317.41,
       "text": "Это очень... То есть, с самого начала в Kotlin хорошо со всем этим."
@@ -4828,7 +4828,7 @@
       "id": "65c9bbb81e9ca8968773129d",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2317.51,
       "etime": 2323.81,
       "text": "Ну, как бы и с безопасностью, если мы уже говорим про юнитабилити, безопасность в Kotlin есть отличные фичи."
@@ -4837,7 +4837,7 @@
       "id": "65c9bbb81e9ca8968773129e",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2323.87,
       "etime": 2331.04,
       "text": "Тот же nullable, не nullable типы и всякие смарт-касты, например."
@@ -4855,7 +4855,7 @@
       "id": "65c9bbb81e9ca896877312a0",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2340.29,
       "etime": 2348.03,
       "text": "Это не optional, оно не имеет никакого overhead на runtime, это для Аксуши будет близко как свистя."
@@ -4864,7 +4864,7 @@
       "id": "65c9bbb81e9ca896877312a1",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2348.67,
       "etime": 2365.44,
       "text": "такая же свитча, то есть мы можем видеть тип как nullable, тогда это допустим string nullable, то есть это будет либо string, либо null, а мы можем видеть какой-то тип переменной как просто string, и, соответственно, компилятор будет проверить, что нигде в этот string, в эту переменную, в эту константу не попадет null."
@@ -5080,7 +5080,7 @@
       "id": "65c9bbb81e9ca896877312b9",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2508.29,
       "etime": 2519.55,
       "text": "А вот если продолжить про nullable, не nullable, вот про интерлоп именно с Java, то на самом деле там еще генерируются аннотации, наверное, известные nullable и not null."
@@ -5089,7 +5089,7 @@
       "id": "65c9bbb81e9ca896877312ba",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2519.63,
       "etime": 2521.27,
       "text": "И, соответственно, идея либо..."
@@ -5098,7 +5098,7 @@
       "id": "65c9bbb81e9ca896877312bb",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2522.28,
       "etime": 2530.44,
       "text": "чекеры, такие как Finebox, будут подсказывать при вызове из Java кода, что какой-то Kotlin метод ожидает не null."
@@ -5107,7 +5107,7 @@
       "id": "65c9bbb81e9ca896877312bc",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2530.5,
       "etime": 2532.79,
       "text": "Причем интероп в обе стороны."
@@ -5116,7 +5116,7 @@
       "id": "65c9bbb81e9ca896877312bd",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2532.91,
       "etime": 2544.75,
       "text": "Если мы в Java коде тоже напишем эти аннотации, то Kotlin будет точно знать, что вот этот Java метод возвращает какой-то nullable тип, а ожидает не nullable тип."
@@ -5143,7 +5143,7 @@
       "id": "65c9bbb81e9ca896877312c0",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2551.2,
       "etime": 2553.96,
       "text": "Да, но это опционально, по большому счету."
@@ -5152,7 +5152,7 @@
       "id": "65c9bbb81e9ca896877312c1",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2553.98,
       "etime": 2559.69,
       "text": "То есть, если ты аннотацию не напишешь, тебе никто за это, кроме каких-нибудь чекстайлов, по рукам не подбьет."
@@ -5161,7 +5161,7 @@
       "id": "65c9bbb81e9ca896877312c2",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2559.75,
       "etime": 2563.75,
       "text": "А в Kotlin это на уровне языка, и тут тебе хочется, не хочется, а ты это используешь."
@@ -5170,7 +5170,7 @@
       "id": "65c9bbb81e9ca896877312c3",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2563.79,
       "etime": 2568.29,
       "text": "И, соответственно, это тяжело использовать, это все очень просто."
@@ -5179,7 +5179,7 @@
       "id": "65c9bbb81e9ca896877312c4",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2570.31,
       "etime": 2577.3,
       "text": "Не требуется дополнительных усилий, поэтому все это по умолчанию используют и не могут от этого отказаться."
@@ -5188,7 +5188,7 @@
       "id": "65c9bbb81e9ca896877312c5",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2577.72,
       "etime": 2579.32,
       "text": "То есть, это работает, действительно."
@@ -5197,7 +5197,7 @@
       "id": "65c9bbb81e9ca896877312c6",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2579.38,
       "etime": 2580.16,
       "text": "Единственное, остается Interop Java и"
@@ -5206,7 +5206,7 @@
       "id": "65c9bbb81e9ca896877312c7",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2582.44,
       "etime": 2583.4,
       "text": "Там интересная история."
@@ -5215,7 +5215,7 @@
       "id": "65c9bbb81e9ca896877312c8",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2583.46,
       "etime": 2592.99,
       "text": "Сначала хотели все типы, возвращенные с Java, говорить, что не nullable, но это получилось не очень практично, поэтому там такое двоякое решение платформенные типы."
@@ -5224,7 +5224,7 @@
       "id": "65c9bbb81e9ca896877312c9",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2594.82,
       "etime": 2602.57,
       "text": "Соответственно, по умолчанию считается, что тип, который возвращен из Java, он платформенный, и это как бы и неналабл, и неналабл."
@@ -5233,7 +5233,7 @@
       "id": "65c9bbb81e9ca896877312ca",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2602.65,
       "etime": 2605.15,
       "text": "Налабл и неналабл тип одновременно."
@@ -5242,7 +5242,7 @@
       "id": "65c9bbb81e9ca896877312cb",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2605.21,
       "etime": 2610.35,
       "text": "И получается, компилятор в этом месте ставит свои проверки на ненал."
@@ -5251,7 +5251,7 @@
       "id": "65c9bbb81e9ca896877312cc",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2610.39,
       "etime": 2612.48,
       "text": "Если мы объявили его как неналабл тип в Kotlin."
@@ -5260,7 +5260,7 @@
       "id": "65c9bbb81e9ca896877312cd",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2612.54,
       "etime": 2616.12,
       "text": "То есть мы сами тут решаем, вызывают Java методы, что нам вернется."
@@ -5305,7 +5305,7 @@
       "id": "65c9bbb81e9ca896877312d2",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2628.81,
       "etime": 2632.09,
       "text": "Самое интересное, в Гредле мы будем писать на Котлине."
@@ -5341,7 +5341,7 @@
       "id": "65c9bbb81e9ca896877312d6",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2650.81,
       "etime": 2658.12,
       "text": "Обещают хорошую поддержку IDE, автодополнение, потому что код на статические типы зерны и всякие такие плюшки."
@@ -5386,7 +5386,7 @@
       "id": "65c9bbb81e9ca896877312db",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2682.62,
       "etime": 2688.66,
       "text": "Я думаю, сделают обязательно, потому что это хороший популяризатор языка."
@@ -5395,7 +5395,7 @@
       "id": "65c9bbb81e9ca896877312dc",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 2688.96,
       "etime": 2694.51,
       "text": "Если вас заставят писать градоскрипты на Kotlin, то вам придется еще и выучить Kotlin."
@@ -6916,7 +6916,7 @@
       "id": "65c9bbb81e9ca89687731385",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 3380.3,
       "etime": 3381.7,
       "text": "Студенты, студенты."
@@ -6925,7 +6925,7 @@
       "id": "65c9bbb81e9ca89687731386",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 3381.74,
       "etime": 3388.87,
       "text": "А на самом деле я смотрю на эту статью, и там же написано, что это количество коммит-месседжей на 100 тысяч коммитов."
@@ -6934,7 +6934,7 @@
       "id": "65c9bbb81e9ca89687731387",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 3388.91,
       "etime": 3393.15,
       "text": "То есть это не про строчки кода, а именно про коммит-месседжи в open-source проектах."
@@ -6943,7 +6943,7 @@
       "id": "65c9bbb81e9ca89687731388",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 3393.19,
       "etime": 3398.73,
       "text": "Собственно, это объясняет, почему та же Java имеет сильно меньше таких матерных слов."
@@ -6952,7 +6952,7 @@
       "id": "65c9bbb81e9ca89687731389",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 3398.75,
       "etime": 3401.89,
       "text": "Потому что, например, тот же спиннинг зарабатывается на GitHub, это open-source, но..."
@@ -6961,7 +6961,7 @@
       "id": "65c9bbb81e9ca8968773138a",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 3403.71,
       "etime": 3407.53,
       "text": "Туда никто не пришлет комит с матерными словами."
@@ -9976,7 +9976,7 @@
       "id": "65c9bbb81e9ca896877314d9",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 4847.42,
       "etime": 4871.09,
       "text": "Ну, если она говорит про стартапы, причем в начальной фазе, насколько я понимаю, когда они сидят еще в бизнесе как баттери, прорабатывают свои идеи, пишут прототипы, то тут, мне кажется, она права, потому что эффективность работы маленькой команды с низким человеком повышается, если не будет лишних преград между ними в виде интернета."
@@ -9985,7 +9985,7 @@
       "id": "65c9bbb81e9ca896877314da",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 4871.15,
       "etime": 4874.25,
       "text": "Если они находятся в одной комнате и пишут код, могут"
@@ -9994,7 +9994,7 @@
       "id": "65c9bbb81e9ca896877314db",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 4874.99,
       "etime": 4877.49,
       "text": "друг с другом пообщаться, все близко, быстро."
@@ -11326,7 +11326,7 @@
       "id": "65c9bbb81e9ca8968773156f",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 5516.16,
       "etime": 5523.81,
       "text": "На самом деле я тоже смотрю на этот список и не понимаю вообще, как он какие-то вещи сравнивает и зачем он поменял Amazon на этот Vendor Lock."
@@ -11740,7 +11740,7 @@
       "id": "65c9bbb81e9ca8968773159d",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 5717.6,
       "etime": 5723.88,
       "text": "Поскольку я помню, SNS это вообще для нотификации пушных заявлений для тех же мобильных девайсов."
@@ -11875,7 +11875,7 @@
       "id": "65c9bbb81e9ca896877315ac",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 5772.84,
       "etime": 5774.72,
       "text": "Там нет этого из коробки."
@@ -11884,7 +11884,7 @@
       "id": "65c9bbb81e9ca896877315ad",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 5774.74,
       "etime": 5778.54,
       "text": "То есть он тут говорит, что у меня есть все готовое, и мне не надо думать, ну..."
@@ -11893,7 +11893,7 @@
       "id": "65c9bbb81e9ca896877315ae",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 5779.28,
       "etime": 5784.43,
       "text": "Как бы думать надо и смотреть, какие есть гарантии, как это работает и сколько он будет платить за это."
@@ -13216,7 +13216,7 @@
       "id": "65c9bbb81e9ca89687731641",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 6269.3,
       "etime": 6279.32,
       "text": "Если посмотреть на этот список фич, который в сети приведен, на самом деле большинство я могу так же быстро, без использования мышки, делать в этой JetBrains IDE."
@@ -13225,7 +13225,7 @@
       "id": "65c9bbb81e9ca89687731642",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 6281.32,
       "etime": 6284.47,
       "text": "И что интересно, для некоторых это будет полезно."
@@ -13234,7 +13234,7 @@
       "id": "65c9bbb81e9ca89687731643",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 6284.57,
       "etime": 6288.13,
       "text": "В идее есть VI-мод."
@@ -13243,7 +13243,7 @@
       "id": "65c9bbb81e9ca89687731644",
       "issue": 507,
       "type": "cc",
-      "author": "Guest",
+      "author": "ruslan_unknown",
       "stime": 6288.15,
       "etime": 6292.27,
       "text": "То есть можно ломать пальцы и в идее, и в чем проблема."

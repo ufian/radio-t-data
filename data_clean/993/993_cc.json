@@ -3100,7 +3100,7 @@
       "id": "696d11cac07f3e0593b3664c",
       "issue": 993,
       "type": "cc",
-      "author": "",
+      "author": "_artifact",
       "stime": 1127.43,
       "etime": 1127.49,
       "text": "Да."
@@ -8005,7 +8005,7 @@
       "id": "696d11cac07f3e0593b3686d",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3099.73,
       "etime": 3103.98,
       "text": "То есть, аппликационные сервера для маленьких приложений."
@@ -8014,7 +8014,7 @@
       "id": "696d11cac07f3e0593b3686e",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3104.04,
       "etime": 3105.86,
       "text": "А в чем это так уникально?"
@@ -8023,7 +8023,7 @@
       "id": "696d11cac07f3e0593b3686f",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3105.94,
       "etime": 3111.3,
       "text": "Зайди на DigitalOcean, создай себе дроплет под это."
@@ -8032,7 +8032,7 @@
       "id": "696d11cac07f3e0593b36870",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3111.36,
       "etime": 3112.2,
       "text": "И что дальше?"
@@ -8041,7 +8041,7 @@
       "id": "696d11cac07f3e0593b36871",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3112.26,
       "etime": 3113.99,
       "text": "Создай дроплет."
@@ -8050,7 +8050,7 @@
       "id": "696d11cac07f3e0593b36872",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3114.05,
       "etime": 3119.53,
       "text": "Кто тебе будет делать SSL Termination?"
@@ -8059,7 +8059,7 @@
       "id": "696d11cac07f3e0593b36873",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3120.96,
       "etime": 3123.4,
       "text": "Надо золотой бансер поставить, правильно?"
@@ -8068,7 +8068,7 @@
       "id": "696d11cac07f3e0593b36874",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3123.42,
       "etime": 3123.6,
       "text": "Да, да."
@@ -8077,7 +8077,7 @@
       "id": "696d11cac07f3e0593b36875",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3123.62,
       "etime": 3128.57,
       "text": "То есть в том смысле, что... Не, ну тогда, говорю, тогда какой-нибудь fly.io, вот, пожалуйста, вот, запускай все, что угодно."
@@ -8086,7 +8086,7 @@
       "id": "696d11cac07f3e0593b36876",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3128.59,
       "etime": 3136.58,
       "text": "То есть это такой пасс, только... Типа как бы пасс, только не совсем пасс, который, по сути, на уровне сырых виртуалок."
@@ -8095,7 +8095,7 @@
       "id": "696d11cac07f3e0593b36877",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3136.82,
       "etime": 3137.94,
       "text": "Да, да, да."
@@ -8104,7 +8104,7 @@
       "id": "696d11cac07f3e0593b36878",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3137.96,
       "etime": 3139.46,
       "text": "Это такая средняя такая идея."
@@ -8113,7 +8113,7 @@
       "id": "696d11cac07f3e0593b36879",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3139.52,
       "etime": 3141.28,
       "text": "Интересная для гиков."
@@ -8122,7 +8122,7 @@
       "id": "696d11cac07f3e0593b3687a",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3141.32,
       "etime": 3142.81,
       "text": "Вот очень гиковская штука."
@@ -8131,7 +8131,7 @@
       "id": "696d11cac07f3e0593b3687b",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3143.13,
       "etime": 3143.99,
       "text": "Мне реально зашло."
@@ -8140,7 +8140,7 @@
       "id": "696d11cac07f3e0593b3687c",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3144.01,
       "etime": 3147.49,
       "text": "Когда они начнут деньги брать, я им эти 25 долларов заплачу."
@@ -8149,7 +8149,7 @@
       "id": "696d11cac07f3e0593b3687d",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3147.51,
       "etime": 3149.11,
       "text": "Потому что иметь место..."
@@ -8158,7 +8158,7 @@
       "id": "696d11cac07f3e0593b3687e",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3150.05,
       "etime": 3151.7,
       "text": "А 25 за что они будут брать?"
@@ -8167,7 +8167,7 @@
       "id": "696d11cac07f3e0593b3687f",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3151.72,
       "etime": 3153.36,
       "text": "25 долларов это что?"
@@ -8176,7 +8176,7 @@
       "id": "696d11cac07f3e0593b36880",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3154.72,
       "etime": 3155.28,
       "text": "Там сложно."
@@ -8185,7 +8185,7 @@
       "id": "696d11cac07f3e0593b36881",
       "issue": 993,
       "type": "cc",
-      "author": "Gray",
+      "author": "_ad",
       "stime": 3155.3,
       "etime": 3156.5,
       "text": "20 долларов, подожди."
@@ -8194,7 +8194,7 @@
       "id": "696d11cac07f3e0593b36882",
       "issue": 993,
       "type": "cc",
-      "author": "Gray",
+      "author": "_ad",
       "stime": 3156.6,
       "etime": 3158.35,
       "text": "Может 20 долларов."
@@ -8860,7 +8860,7 @@
       "id": "696d11cac07f3e0593b368cc",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3442.45,
       "etime": 3444.17,
       "text": "Леха, тебе нравится идея?"
@@ -8869,7 +8869,7 @@
       "id": "696d11cac07f3e0593b368cd",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3444.19,
       "etime": 3449.08,
       "text": "Слушай, мне идея нравится, неужели никто первый, а не первый кто-то гадался так сделать?"
@@ -8878,7 +8878,7 @@
       "id": "696d11cac07f3e0593b368ce",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3449.14,
       "etime": 3450.88,
       "text": "По сути, блин, виртуалки есть у всех."
@@ -8887,7 +8887,7 @@
       "id": "696d11cac07f3e0593b368cf",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3450.94,
       "etime": 3453.78,
       "text": "Ну, правда, есть миллион способов запустить виртуалку."
@@ -8896,7 +8896,7 @@
       "id": "696d11cac07f3e0593b368d0",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3453.84,
       "etime": 3460.79,
       "text": "Здесь просто, я так понимаю, что удобно сделано, что у тебя тут же SSL Termination сверху будет, только там на порт забанься, на этот и все такое."
@@ -8905,7 +8905,7 @@
       "id": "696d11cac07f3e0593b368d1",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3460.77,
       "etime": 3468.64,
       "text": "Ну, если просто такую, ну, как бы взяли, ну, в общем-то, очевидную идею и реализовали ее как продукт, ну, молодцы, потому что, казалось бы, на поверхности."
@@ -8914,7 +8914,7 @@
       "id": "696d11cac07f3e0593b368d2",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3468.74,
       "etime": 3487.22,
       "text": "Не-не, тут же даже не совсем идея в том, что любой может сделать VPS, но VPS, когда ты покупаешь VPS на DigitalOcean даже за 5 долларов, то к VPS, я не знаю, может, кто-то относится к такому чему-то disposable, типа, который на приложение."
@@ -8923,7 +8923,7 @@
       "id": "696d11cac07f3e0593b368d3",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3487.2,
       "etime": 3494.82,
       "text": "Но для меня виртуалка это та штука, в которой я буду несколько контейнеров запускать, где я поставлю какой-то прокси, где я что-то еще сделаю."
@@ -8932,7 +8932,7 @@
       "id": "696d11cac07f3e0593b368d4",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3494.88,
       "etime": 3495.7,
       "text": "Телодвижение."
@@ -8941,7 +8941,7 @@
       "id": "696d11cac07f3e0593b368d5",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3495.72,
       "etime": 3497.11,
       "text": "А здесь ничего этого нет."
@@ -8950,7 +8950,7 @@
       "id": "696d11cac07f3e0593b368d6",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3497.13,
       "etime": 3499.88,
       "text": "Здесь виртуалка это типа как контейнер."
@@ -8959,7 +8959,7 @@
       "id": "696d11cac07f3e0593b368d7",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3500.62,
       "etime": 3503.36,
       "text": "Она не совсем контейнер, но типа как контейнер."
@@ -8968,7 +8968,7 @@
       "id": "696d11cac07f3e0593b368d8",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3503.4,
       "etime": 3504.32,
       "text": "Но виртуалка."
@@ -8977,7 +8977,7 @@
       "id": "696d11cac07f3e0593b368d9",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3504.38,
       "etime": 3508.83,
       "text": "В результате ты можешь поднять компост с несколькими контейнерами."
@@ -8986,7 +8986,7 @@
       "id": "696d11cac07f3e0593b368da",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3508.85,
       "etime": 3510.54,
       "text": "То есть виртуалка на приложении."
@@ -8995,7 +8995,7 @@
       "id": "696d11cac07f3e0593b368db",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3510.58,
       "etime": 3512.06,
       "text": "Вот в этом идея."
@@ -9004,7 +9004,7 @@
       "id": "696d11cac07f3e0593b368dc",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3512.08,
       "etime": 3515.1,
       "text": "И я такой идеи, по-моему, не видел особо много где-то."
@@ -9013,7 +9013,7 @@
       "id": "696d11cac07f3e0593b368dd",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3515.12,
       "etime": 3518.89,
       "text": "Не, ну а кто тебе мешал опять же делать то же самое в DigitalOcean и AWS?"
@@ -9022,7 +9022,7 @@
       "id": "696d11cac07f3e0593b368de",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3518.91,
       "etime": 3519.65,
       "text": "Телодвижение."
@@ -9031,7 +9031,7 @@
       "id": "696d11cac07f3e0593b368df",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3519.63,
       "etime": 3520.58,
       "text": "Именно телодвижение."
@@ -9040,7 +9040,7 @@
       "id": "696d11cac07f3e0593b368e0",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3520.84,
       "etime": 3523.64,
       "text": "Ты представляешь, сколько телодвижения надо?"
@@ -9049,7 +9049,7 @@
       "id": "696d11cac07f3e0593b368e1",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3523.7,
       "etime": 3530.21,
       "text": "DNS прописать, где-то найти load balancer, где у них задается, потом firewall прописать."
@@ -9058,7 +9058,7 @@
       "id": "696d11cac07f3e0593b368e2",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3530.25,
       "etime": 3533.72,
       "text": "Все вот это, вот это все не для быстрого."
@@ -9067,7 +9067,7 @@
       "id": "696d11cac07f3e0593b368e3",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3533.8,
       "etime": 3536.24,
       "text": "Удобство у них на другом уровне, это я согласен."
@@ -9076,7 +9076,7 @@
       "id": "696d11cac07f3e0593b368e4",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3536.28,
       "etime": 3541.11,
       "text": "Но, говорю, опять же, вариант создать, до этого создать вот эту легковесную виртуалку, то их было миллион."
@@ -9085,7 +9085,7 @@
       "id": "696d11cac07f3e0593b368e5",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3541.15,
       "etime": 3542.43,
       "text": "Типа, ну, просто очень много."
@@ -9094,7 +9094,7 @@
       "id": "696d11cac07f3e0593b368e6",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3542.41,
       "etime": 3543.18,
       "text": "Да, конечно."
@@ -9103,7 +9103,7 @@
       "id": "696d11cac07f3e0593b368e7",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3543.4,
       "etime": 3547.38,
       "text": "Виртуалку можно в Амазоне создать за 5 долларов в месяц."
@@ -9112,7 +9112,7 @@
       "id": "696d11cac07f3e0593b368e8",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3547.42,
       "etime": 3548.56,
       "text": "Что за проблема-то?"
@@ -9121,7 +9121,7 @@
       "id": "696d11cac07f3e0593b368e9",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3548.62,
       "etime": 3549.3,
       "text": "Ну, все остальное."
@@ -9130,7 +9130,7 @@
       "id": "696d11cac07f3e0593b368ea",
       "issue": 993,
       "type": "cc",
-      "author": "Umputun",
+      "author": "_ad",
       "stime": 3549.36,
       "etime": 3550.49,
       "text": "Проблема-то с остальным."
@@ -9139,7 +9139,7 @@
       "id": "696d11cac07f3e0593b368eb",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3550.51,
       "etime": 3552.47,
       "text": "Обвязки вокруг, да."
@@ -9148,7 +9148,7 @@
       "id": "696d11cac07f3e0593b368ec",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3552.53,
       "etime": 3559.98,
       "text": "Странно, что даже какие-нибудь маленькие, когда-то маленькие, типа Digital Ocean в эту сторону не стали копать, а как-то стали сразу серьезно."
@@ -9157,7 +9157,7 @@
       "id": "696d11cac07f3e0593b368ed",
       "issue": 993,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_ad",
       "stime": 3560,
       "etime": 3564.15,
       "text": "Вот вам лот, балансер, вот вам еще что-то."
@@ -9166,7 +9166,7 @@
       "id": "696d11cac07f3e0593b368ee",
       "issue": 993,
       "type": "cc",
-      "author": "Gray",
+      "author": "_ad",
       "stime": 3564.81,
       "etime": 3572.34,
       "text": "Ты можешь, на самом деле, запустить готовый из Marketplace и так далее, и там будет все стоять, например..."
@@ -10462,7 +10462,7 @@
       "id": "696d11cac07f3e0593b3697e",
       "issue": 993,
       "type": "cc",
-      "author": "",
+      "author": "_artifact",
       "stime": 4066.23,
       "etime": 4066.61,
       "text": "— Я не знаю, как..."

@@ -3730,7 +3730,7 @@
       "id": "65c9bc3a4962feabe9b96fd1",
       "issue": 536,
       "type": "cc",
-      "author": "SPEAKER_09",
+      "author": "_artifact",
       "stime": 1837.72,
       "etime": 1838.76,
       "text": "Посмотрите на дашборды, да."
@@ -6025,7 +6025,7 @@
       "id": "65c9bc3a4962feabe9b970d0",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 3041.39,
       "etime": 3045.53,
       "text": "Придумал Кен Бек, а популяризирует наш любимый дядюшка Боб."
@@ -6295,7 +6295,7 @@
       "id": "65c9bc3a4962feabe9b970ee",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 3191.08,
       "etime": 3201.04,
       "text": "И сразу же возникает такое предположение, что сейчас у нас будет класс Game, класс Бросок, класс все вот это, что приходит на ум."
@@ -6628,7 +6628,7 @@
       "id": "65c9bc3a4962feabe9b97113",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 3373.86,
       "etime": 3387.48,
       "text": "То есть TDD это просто еще один, грубо говоря, мы все художники или маляры, в зависимости от того, что мы сейчас делаем, и когда нам нужно покрыть большую стену краской, мы берем валик подлиннее."
@@ -7357,7 +7357,7 @@
       "id": "65c9bc3a4962feabe9b97164",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 3741.29,
       "etime": 3745.07,
       "text": "Но потом приходит другой разработчик, и он не уверен в кодовой базе."
@@ -7429,7 +7429,7 @@
       "id": "65c9bc3a4962feabe9b9716c",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 3776.22,
       "etime": 3780.42,
       "text": "Ну то есть, грубо говоря, прошло управление по этой ветке, а ассертов нету?"
@@ -8014,7 +8014,7 @@
       "id": "65c9bc3a4962feabe9b971ad",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 4135.61,
       "etime": 4140.47,
       "text": "Это было бы так, если бы тестов не было изначально, если бы не было тестовой инфраструктуры."
@@ -8518,7 +8518,7 @@
       "id": "65c9bc3a4962feabe9b971e5",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 4396.3,
       "etime": 4399.62,
       "text": "Нет, предположим, что я пишу тесты для более низкого уровня компонентов."
@@ -8599,7 +8599,7 @@
       "id": "65c9bc3a4962feabe9b971ee",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 4419.52,
       "etime": 4422.02,
       "text": "Предположим, что она была написана раньше таким же методом."
@@ -8662,7 +8662,7 @@
       "id": "65c9bc3a4962feabe9b971f5",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 4445.97,
       "etime": 4447.99,
       "text": "Вот у меня конкретный кусок работы."
@@ -10480,7 +10480,7 @@
       "id": "65c9bc3a4962feabe9b972bf",
       "issue": 536,
       "type": "cc",
-      "author": "SPEAKER_09",
+      "author": "_artifact",
       "stime": 5250.83,
       "etime": 5252.77,
       "text": "Очень на объектно-ориентированном."
@@ -12352,7 +12352,7 @@
       "id": "65c9bc3a4962feabe9b9738f",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6302.55,
       "etime": 6306.8,
       "text": "Юзист, люблю, развиваю, пишу open-source проекты."
@@ -12379,7 +12379,7 @@
       "id": "65c9bc3a4962feabe9b97392",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6315.35,
       "etime": 6324.42,
       "text": "Да, причем на гитхабе есть примерно 8000 репозиториев и 10 миллионов строк кода на текущий момент."
@@ -12451,7 +12451,7 @@
       "id": "65c9bc3a4962feabe9b9739a",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6341.25,
       "etime": 6342.69,
       "text": "Да, по многим причинам."
@@ -12496,7 +12496,7 @@
       "id": "65c9bc3a4962feabe9b9739f",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6372.92,
       "etime": 6388.8,
       "text": "Ну, карутины, которые в Kotlin, можно сравнить с тем, что есть в Python, JS и C Sharp, может сравнить с Go, с его Channel Select, и можно те же генераторы и Yield из того же C Sharp и Python."
@@ -12505,7 +12505,7 @@
       "id": "65c9bc3a4962feabe9b973a0",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6388.96,
       "etime": 6396.05,
       "text": "То есть одной фичей, по сути, Kotlin убил много зайцев, как это ни странно."
@@ -12568,7 +12568,7 @@
       "id": "65c9bc3a4962feabe9b973a7",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6410.53,
       "etime": 6412.82,
       "text": "Нет, async и await на самом деле не ключевые слова, как и ELGenerator."
@@ -12595,7 +12595,7 @@
       "id": "65c9bc3a4962feabe9b973aa",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6416.64,
       "etime": 6420.92,
       "text": "То есть мы можем обозначать наши функции как suspendable."
@@ -12613,7 +12613,7 @@
       "id": "65c9bc3a4962feabe9b973ac",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6424.53,
       "etime": 6439.33,
       "text": "Дальше идет компиляторная магия, и для Kotlin 1.1 подготовили библиотеку, которая называется Kotlin XK-рутины, где уже собраны вот эти асинки, ауэйты, елды, ченнелы, все, что нужно для асинхронного программирования."
@@ -12658,7 +12658,7 @@
       "id": "65c9bc3a4962feabe9b973b1",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6458.79,
       "etime": 6461.73,
       "text": "У нас так же, только это не ключевое слово, а вызов функции."
@@ -12667,7 +12667,7 @@
       "id": "65c9bc3a4962feabe9b973b2",
       "issue": 536,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_PETR",
+      "author": "_artifact",
       "stime": 6461.75,
       "etime": 6467.38,
       "text": "Причем, допустим, в стандартной библиотеке функции с названием «го» нету, но можем легко добавить «с»."
@@ -12703,7 +12703,7 @@
       "id": "65c9bc3a4962feabe9b973b6",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6476.08,
       "etime": 6480.54,
       "text": "Идея нам красиво подсвечивает, что вот эта функция асинхронная."
@@ -12712,7 +12712,7 @@
       "id": "65c9bc3a4962feabe9b973b7",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6480.58,
       "etime": 6484.34,
       "text": "И внутри мы пишем наши await любым способом."
@@ -12721,7 +12721,7 @@
       "id": "65c9bc3a4962feabe9b973b8",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6484.36,
       "etime": 6489.48,
       "text": "Соответственно, мы получаем async и await, как в Python, C Sharp и так далее."
@@ -12739,7 +12739,7 @@
       "id": "65c9bc3a4962feabe9b973ba",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6491.59,
       "etime": 6502.21,
       "text": "Если мы захотим ченнелы, то мы сможем создать просто новый ченнел, передать его в какую-то Google-рутину, просто как замыкание, и использовать его там, посылать туда-сюда сообщения."
@@ -12784,7 +12784,7 @@
       "id": "65c9bc3a4962feabe9b973bf",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6511.89,
       "etime": 6514.85,
       "text": "То есть, по сути, это такой блокинг-ченнел."
@@ -12793,7 +12793,7 @@
       "id": "65c9bc3a4962feabe9b973c0",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6514.89,
       "etime": 6517.19,
       "text": "Ну, только там не Put, а Send и..."
@@ -12829,7 +12829,7 @@
       "id": "65c9bc3a4962feabe9b973c4",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6532.28,
       "etime": 6543.57,
       "text": "То есть когда мы, соответственно, заполним нашу эту очередь, мы начнем пытаться, то есть останавливаем выполнение и ждем, пока появится место."
@@ -12919,7 +12919,7 @@
       "id": "65c9bc3a4962feabe9b973ce",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6582.78,
       "etime": 6589.95,
       "text": "Мы избавились от future, с их функциональной композицией, от callbacks, с callback hell."
@@ -12928,7 +12928,7 @@
       "id": "65c9bc3a4962feabe9b973cf",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6590.05,
       "etime": 6594.43,
       "text": "Мы получили наш синхронный код, который выглядит синхронно, выполняется синхронно, причем"
@@ -13072,7 +13072,7 @@
       "id": "65c9bc3a4962feabe9b973df",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6649.46,
       "etime": 6651.58,
       "text": "Конечно, это кооперативная моя задачность."
@@ -13081,7 +13081,7 @@
       "id": "65c9bc3a4962feabe9b973e0",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6651.62,
       "etime": 6654.06,
       "text": "Если один накосячил, то все будет страдать."
@@ -13090,7 +13090,7 @@
       "id": "65c9bc3a4962feabe9b973e1",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6654.12,
       "etime": 6659.09,
       "text": "Тут, естественно, чуда нет."
@@ -13099,7 +13099,7 @@
       "id": "65c9bc3a4962feabe9b973e2",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6659.17,
       "etime": 6663.05,
       "text": "Сами коррутины могут запускаться поверх разных контекстов."
@@ -13126,7 +13126,7 @@
       "id": "65c9bc3a4962feabe9b973e5",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6670.03,
       "etime": 6675.94,
       "text": "То есть есть уже готовый набор, поверх чего можно запускать."
@@ -13135,7 +13135,7 @@
       "id": "65c9bc3a4962feabe9b973e6",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6675.98,
       "etime": 6679.88,
       "text": "И да, и чуда нет, потому что это кооперативная многозадачность."
@@ -13153,7 +13153,7 @@
       "id": "65c9bc3a4962feabe9b973e8",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6682.76,
       "etime": 6684.94,
       "text": "Ну, это есть Java, на котором запускаются те же самые стримы."
@@ -13171,7 +13171,7 @@
       "id": "65c9bc3a4962feabe9b973ea",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6695.87,
       "etime": 6704.65,
       "text": "Нет, есть Java-овый for-join пул, который называется Common, на котором запускается много чего Java-ового стандартного."
@@ -13567,7 +13567,7 @@
       "id": "65c9bc3a4962feabe9b97416",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6902.57,
       "etime": 6905.43,
       "text": "Это все зависит от того качества кода, который вы пишете."
@@ -13576,7 +13576,7 @@
       "id": "65c9bc3a4962feabe9b97417",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6905.51,
       "etime": 6913.19,
       "text": "Да, тут гарантии нет, что кто-то не сделает блокирующий вызов к рутине какой-то, либо начнет считать фибоначчи от 10 тысяч."
@@ -13594,7 +13594,7 @@
       "id": "65c9bc3a4962feabe9b97419",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6915.77,
       "etime": 6919.23,
       "text": "А в Go можно сделать вообще блокирующую какую-то операцию, на которой..."
@@ -13612,7 +13612,7 @@
       "id": "65c9bc3a4962feabe9b9741b",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 6924.52,
       "etime": 6929.91,
       "text": "То есть, диспетчер, который запускает го-рутины."
@@ -13990,7 +13990,7 @@
       "id": "65c9bc3a4962feabe9b97445",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7102.14,
       "etime": 7113.89,
       "text": "Действительно, теперь можно писать Kotlin код, который будет компилироваться в JavaScript, и я уже планирую, допустим, использовать это для валидации, ну, шарить правила валидации между backend и frontend."
@@ -14008,7 +14008,7 @@
       "id": "65c9bc3a4962feabe9b97447",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7116.41,
       "etime": 7126.15,
       "text": "Сейчас они уже сказали, все мы сделали, и сейчас постепенно будут дописывать и криминальную компиляцию, чтобы это все быстрее компилировалось, ну, и там другие фичи поддержки."
@@ -14233,7 +14233,7 @@
       "id": "65c9bc3a4962feabe9b97460",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7244.82,
       "etime": 7249.77,
       "text": "Есть еще история Scotland Native, которая пока не публичная, то есть они потихонечку его пишут."
@@ -14260,7 +14260,7 @@
       "id": "65c9bc3a4962feabe9b97463",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7258.15,
       "etime": 7260.19,
       "text": "Мы сможем на Kotlin писать для iOS, для OET."
@@ -14287,7 +14287,7 @@
       "id": "65c9bc3a4962feabe9b97466",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7263.39,
       "etime": 7267.11,
       "text": "То есть кроме нашего бэкэнда на Java Kotlin мы можем писать Frontend."
@@ -14296,7 +14296,7 @@
       "id": "65c9bc3a4962feabe9b97467",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7267.17,
       "etime": 7272.66,
       "text": "То есть мы можем взять React и писать на Kotlin с React."
@@ -14305,7 +14305,7 @@
       "id": "65c9bc3a4962feabe9b97468",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7272.74,
       "etime": 7280.98,
       "text": "Да, китаец, скорее всего, не осилит, но тот, кто пишет уже на Kotlin, например, я, для меня это очень интересно."
@@ -14323,7 +14323,7 @@
       "id": "65c9bc3a4962feabe9b9746a",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7281.81,
       "etime": 7291.72,
       "text": "когда это все дорастет до готовых взял, скачал, используешь библиотек, то это вполне жизнеспособное решение, я считаю."
@@ -15169,7 +15169,7 @@
       "id": "65c9bc3a4962feabe9b974c8",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7695.68,
       "etime": 7696.9,
       "text": "Конечно, прагматичный подход."
@@ -15205,7 +15205,7 @@
       "id": "65c9bc3a4962feabe9b974cc",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7707.85,
       "etime": 7708.35,
       "text": "Нет, не все."
@@ -15349,7 +15349,7 @@
       "id": "65c9bc3a4962feabe9b974dc",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7774.01,
       "etime": 7781.61,
       "text": "но там не было, точнее, Kotlin по умолчанию делал себе классы Final, то есть недоступными для расширения, для наследования."
@@ -15367,7 +15367,7 @@
       "id": "65c9bc3a4962feabe9b974de",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7786.35,
       "etime": 7799.58,
       "text": "Нет, нет, нет, а этот плагин, он работает для всех классов, помеченных специальной аннотацией, аннотации сами задаете, написали, что у вас там, не знаю, Makita аннотация, повесили над всеми тестами, у вас все хорошо работает, все красиво."
@@ -15421,7 +15421,7 @@
       "id": "65c9bc3a4962feabe9b974e4",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7814.01,
       "etime": 7821.25,
       "text": "Всегда приятно, если инкрементальный билд, изменение одного файла не заставляет все перебилдить."
@@ -15826,7 +15826,7 @@
       "id": "65c9bc3a4962feabe9b97511",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7963.19,
       "etime": 7968.53,
       "text": "Он там есть плагин, он опенсорсный, то есть он разрабатывается в комьюнити."
@@ -15844,7 +15844,7 @@
       "id": "65c9bc3a4962feabe9b97513",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7969.97,
       "etime": 7974.81,
       "text": "То есть мы уже посмеялись, да, и хорошо."
@@ -15853,7 +15853,7 @@
       "id": "65c9bc3a4962feabe9b97514",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 7975.03,
       "etime": 7988.75,
       "text": "Я еще, вот как бы мы заканчиваем тему, я еще одну фичу сказал, которая для меня лично важная, это то, что поддержали GCR, который про скриптинг, то есть можно писать скрипты на коплении, это отлично уже работает, я как бы заиспользовал и радуюсь."
@@ -15934,7 +15934,7 @@
       "id": "65c9bc3a4962feabe9b9751d",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 8021.66,
       "etime": 8025.58,
       "text": "Ну и я радуюсь этому."
@@ -15961,7 +15961,7 @@
       "id": "65c9bc3a4962feabe9b97520",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 8027.68,
       "etime": 8040.15,
       "text": "Да, и вот если ты Gradle писал на Groovy, то есть определенная боль, потому что идея плохо очень поддерживает Gradle скрипты на Groovy, а вот с Kotlin там уже все намного приятнее."
@@ -15997,7 +15997,7 @@
       "id": "65c9bc3a4962feabe9b97524",
       "issue": 536,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "Ruslan",
       "stime": 8053.54,
       "etime": 8064.79,
       "text": "То есть она там показывает, конечно, не все, но... Она очень-очень мало по сравнению даже с тем, что уже есть в Котлине, хотя там версия еще при Альфа, и там намного, ну, как бы в Котлине намного больше, чем то, что сейчас умеет."
@@ -16420,7 +16420,7 @@
       "id": "65c9bc3a4962feabe9b97553",
       "issue": 536,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_MARIN",
+      "author": "_artifact",
       "stime": 8220.66,
       "etime": 8224.97,
       "text": "Я вот не понимаю, почему... Нет, ну, Insertion Sort, мне кажется, вполне себе очевидный."
@@ -18517,7 +18517,7 @@
       "id": "65c9bc3a4962feabe9b9763c",
       "issue": 536,
       "type": "cc",
-      "author": "SPEAKER_MISATTRIBUTED_PETR",
+      "author": "_artifact",
       "stime": 9211.06,
       "etime": 9212.88,
       "text": "Всех в свою команду?"

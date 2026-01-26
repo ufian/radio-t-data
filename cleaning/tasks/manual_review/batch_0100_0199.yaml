@@ -1,0 +1,60 @@
+batch_id: review_0100_0199
+description: Manual review tasks for episodes 100-199
+status: pending
+total_tasks: 6
+tasks:
+- episode: 109
+  speaker: Umputun
+  total_duration_sec: 6.4
+  replies_count: 4
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+- episode: 121
+  speaker: Guest
+  total_duration_sec: 28
+  replies_count: 12
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 133
+  from_speaker: Guest
+  to_speaker: Dima
+  confidence: medium
+  reason: 'Контекст явно указывает на имя "Дима":
+
+    - Umputun дважды обращается по имени
+
+    - Gray упоминает "Сейчас Дима пойдет"
+
+    Без фамилии идентификация неполная, но имя подтверждено.
+
+    '
+  time_range: null
+  action: confirm_or_reject
+- episode: 183
+  speaker: Guest
+  total_duration_sec: 676
+  replies_count: 125
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 196
+  speaker: Guest2
+  total_duration_sec: 86
+  replies_count: 18
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 196
+  speaker: Guest1
+  total_duration_sec: 82
+  replies_count: 14
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate

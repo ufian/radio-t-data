@@ -1,0 +1,59 @@
+batch_id: review_0000_0099
+description: Manual review tasks for episodes 0-99
+status: pending
+total_tasks: 7
+tasks:
+- episode: 27
+  speaker: Guest
+  total_duration_sec: 166
+  replies_count: 46
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 32
+  speaker: Guest2
+  total_duration_sec: 260
+  replies_count: 81
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 34
+  from_speaker: Guest1
+  to_speaker: Valera
+  confidence: medium
+  reason: Bobuk называет гостя 'Валера' в момент подключения к звонку (1539-1543s)
+  time_range: null
+  action: confirm_or_reject
+- episode: 34
+  from_speaker: Guest3
+  to_speaker: Sergey
+  confidence: medium
+  reason: Bobuk называет гостя 'Сергей' в момент подключения к звонку (3489-3491s)
+  time_range: null
+  action: confirm_or_reject
+- episode: 35
+  speaker: Guest
+  total_duration_sec: 218
+  replies_count: 31
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 75
+  speaker: Guest
+  total_duration_sec: 53.8
+  replies_count: 12
+  is_error: false
+  identified_as: null
+  confidence: high
+  action: investigate
+- episode: 80
+  from_speaker: Guest
+  to_speaker: Umputun
+  confidence: medium
+  reason: Короткая реплика 'Говори.' скорее принадлежит ведущему, который приглашает
+    гостя говорить
+  time_range: null
+  action: confirm_or_reject

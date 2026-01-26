@@ -1633,7 +1633,7 @@
       "id": "65c7df4764d069cabd4b5912",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 778.05,
       "etime": 782.23,
       "text": "Добрый день, меня зовут Павел Плотников, я GUI-архитектор компании «Доктор Веб»."
@@ -1642,7 +1642,7 @@
       "id": "65c7df4764d069cabd4b5913",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 782.31,
       "etime": 787.97,
       "text": "Рядом со мной Сергей Комаров, начальник отдела разработок компании «Доктор Веб»."
@@ -1651,7 +1651,7 @@
       "id": "65c7df4764d069cabd4b5914",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 788.01,
       "etime": 789.33,
       "text": "Тоже добрый день."
@@ -1660,7 +1660,7 @@
       "id": "65c7df4764d069cabd4b5915",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 789.37,
       "etime": 804.39,
       "text": "И нам хотелось бы в первую очередь поблагодарить «Радио Теда» за возможность дать свои комментарии на вышедший недавно подкаст, в котором упоминался наш новый продукт «Доктор Веб» для «Макуэс Икс»."
@@ -1777,7 +1777,7 @@
       "id": "65c7df4764d069cabd4b5922",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 826.88,
       "etime": 835.12,
       "text": "Ну и сразу первый вопрос, который поднимался в прошлом подкасте, это то, что мы выпустили антивирус для Mac OS X"
@@ -1786,7 +1786,7 @@
       "id": "65c7df4764d069cabd4b5923",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 835.8,
       "etime": 844.12,
       "text": "просто прикрутив новый GUI к имеющемуся уже у нас Unix антивирусу."
@@ -1795,7 +1795,7 @@
       "id": "65c7df4764d069cabd4b5924",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 844.16,
       "etime": 862.53,
       "text": "Ну, так как не секрет, что OS X базируется на бездешном ядре, с нашей стороны было бы верхом опрометчивости не использовать наши Unix наработки, благо они хорошо зарекомендовали себя и все еще не потеряли актуальность."
@@ -1804,7 +1804,7 @@
       "id": "65c7df4764d069cabd4b5925",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 863.18,
       "etime": 871.26,
       "text": "Но вот так вот говорить, что это только прикрученный интерфейс к тому, что уже давным-давно существует, просто нельзя."
@@ -1813,7 +1813,7 @@
       "id": "65c7df4764d069cabd4b5926",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 871.32,
       "etime": 880.77,
       "text": "Потому что этот продукт у нас вышел первым продуктом нашей компании для Unix-like систем, который имеет у себя файловый монитор."
@@ -1930,7 +1930,7 @@
       "id": "65c7df4764d069cabd4b5933",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 926.54,
       "etime": 925.24,
       "text": "SpiderGuard."
@@ -1939,7 +1939,7 @@
       "id": "65c7df4764d069cabd4b5934",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 926.58,
       "etime": 928.14,
       "text": "Это совершенно новая разработка."
@@ -1948,7 +1948,7 @@
       "id": "65c7df4764d069cabd4b5935",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 928.2,
       "etime": 929.42,
       "text": "Она написана специально для macOS 10."
@@ -1957,7 +1957,7 @@
       "id": "65c7df4764d069cabd4b5936",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 931.55,
       "etime": 934.47,
       "text": "Так что здесь есть и уникальные вещи."
@@ -1966,7 +1966,7 @@
       "id": "65c7df4764d069cabd4b5937",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 934.57,
       "etime": 935.59,
       "text": "Да."
@@ -1975,7 +1975,7 @@
       "id": "65c7df4764d069cabd4b5938",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 935.65,
       "etime": 940.19,
       "text": "Второй вопрос, который был поднят, это то, что мы вируса не видим."
@@ -1984,7 +1984,7 @@
       "id": "65c7df4764d069cabd4b5939",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 940.25,
       "etime": 943.05,
       "text": "Сделали антивирус, а вируса не видим."
@@ -1993,7 +1993,7 @@
       "id": "65c7df4764d069cabd4b593a",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 943.23,
       "etime": 946.53,
       "text": "Конкретно даже сейчас скажу, какой это был вирус."
@@ -2002,7 +2002,7 @@
       "id": "65c7df4764d069cabd4b593b",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 946.57,
       "etime": 948.69,
       "text": "Это iService."
@@ -2011,7 +2011,7 @@
       "id": "65c7df4764d069cabd4b593c",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 951.08,
       "etime": 957.82,
       "text": "На момент, когда этот подкаст записывался, насколько я помню, в наших базах было уже несколько модификаций этого iService, и"
@@ -2020,7 +2020,7 @@
       "id": "65c7df4764d069cabd4b593d",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 961.16,
       "etime": 966.89,
       "text": "Я вполне допускаю, что существуют еще какие-то модификации, которые доктор Веб не знает."
@@ -2164,7 +2164,7 @@
       "id": "65c7df4764d069cabd4b594d",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1006.45,
       "etime": 1008.88,
       "text": "Может быть, но, к сожалению, мы их не получили."
@@ -2173,7 +2173,7 @@
       "id": "65c7df4764d069cabd4b594e",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1008.92,
       "etime": 1013.62,
       "text": "Если мы получим этот сэмпл, мы обязательно его добавим в базу."
@@ -2182,7 +2182,7 @@
       "id": "65c7df4764d069cabd4b594f",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1013.66,
       "etime": 1024.86,
       "text": "Что же касается того, что macOS 10 неуязвима для вирусов, об этом даже сами создатели Apple уже не говорят."
@@ -2191,7 +2191,7 @@
       "id": "65c7df4764d069cabd4b5950",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1024.88,
       "etime": 1025.88,
       "text": "macOS уязвима."
@@ -2200,7 +2200,7 @@
       "id": "65c7df4764d069cabd4b5951",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1027.8,
       "etime": 1033.8,
       "text": "Это доказывалось не раз и на конференциях, и, что называется, в быту."
@@ -2209,7 +2209,7 @@
       "id": "65c7df4764d069cabd4b5952",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1033.88,
       "etime": 1046.63,
       "text": "И практика наша, как антивирусной компании, показывает, что сейчас, в последнее время особенно, стали появляться настоящие живые боевые вирусы для Макинтоши."
@@ -2218,7 +2218,7 @@
       "id": "65c7df4764d069cabd4b5953",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1047.93,
       "etime": 1049.15,
       "text": "Можно с чем связать?"
@@ -2227,7 +2227,7 @@
       "id": "65c7df4764d069cabd4b5954",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1049.17,
       "etime": 1054.2,
       "text": "С тем, что операционная система, эта платформа стала более распространенной."
@@ -2236,7 +2236,7 @@
       "id": "65c7df4764d069cabd4b5955",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1054.24,
       "etime": 1055.48,
       "text": "Безусловно, именно так."
@@ -2245,7 +2245,7 @@
       "id": "65c7df4764d069cabd4b5956",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1055.52,
       "etime": 1060.22,
       "text": "За последний только месяц в два раза выросли продажи компьютеров Apple на рынке."
@@ -2254,7 +2254,7 @@
       "id": "65c7df4764d069cabd4b5957",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1060.24,
       "etime": 1063.26,
       "text": "Это какие-то завитки кризиса непонятные."
@@ -2263,7 +2263,7 @@
       "id": "65c7df4764d069cabd4b5958",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1063.42,
       "etime": 1070.77,
       "text": "Мне компьютеры... Почему-то продажи компьютеров падают, а продажи Apple растут."
@@ -2272,7 +2272,7 @@
       "id": "65c7df4764d069cabd4b5959",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1070.85,
       "etime": 1072.09,
       "text": "Но, слава богу..."
@@ -2281,7 +2281,7 @@
       "id": "65c7df4764d069cabd4b595a",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1073.21,
       "etime": 1076.01,
       "text": "Итак, вирусописатели обратили внимание на эту платформу."
@@ -2290,7 +2290,7 @@
       "id": "65c7df4764d069cabd4b595b",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1076.05,
       "etime": 1079.03,
       "text": "Да, сейчас можно говорить об этом совершенно уверенно."
@@ -2299,7 +2299,7 @@
       "id": "65c7df4764d069cabd4b595c",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1079.13,
       "etime": 1081.55,
       "text": "Вирусописатели обратили внимание на эту платформу."
@@ -2308,7 +2308,7 @@
       "id": "65c7df4764d069cabd4b595d",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1081.63,
       "etime": 1084.19,
       "text": "И вот свежий совершенно пример."
@@ -2317,7 +2317,7 @@
       "id": "65c7df4764d069cabd4b595e",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1084.21,
       "etime": 1087.51,
       "text": "Это на микроблогере Twitter, да?"
@@ -2326,7 +2326,7 @@
       "id": "65c7df4764d069cabd4b595f",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1087.55,
       "etime": 1089.77,
       "text": "Что там произошло?"
@@ -2335,7 +2335,7 @@
       "id": "65c7df4764d069cabd4b5960",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1089.81,
       "etime": 1092.13,
       "text": "Если мне не изменяет память, кто-то..."
@@ -2344,7 +2344,7 @@
       "id": "65c7df4764d069cabd4b5961",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1092.94,
       "etime": 1100.85,
       "text": "взломал блог одного из бывших сотрудников Apple и положил там ссылку на сайт, с которого раздавалось."
@@ -2353,7 +2353,7 @@
       "id": "65c7df4764d069cabd4b5962",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1100.89,
       "etime": 1110.14,
       "text": "Что любопытно, по-моему, это в первый случай, когда сайты раздавались в вирусы для двух платформ."
@@ -2362,7 +2362,7 @@
       "id": "65c7df4764d069cabd4b5963",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1110.2,
       "etime": 1112.18,
       "text": "Сразу для двух платформ."
@@ -2371,7 +2371,7 @@
       "id": "65c7df4764d069cabd4b5964",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1112.24,
       "etime": 1116.83,
       "text": "Если приходили с Винды, то для того, чтобы посмотреть..."
@@ -2380,7 +2380,7 @@
       "id": "65c7df4764d069cabd4b5965",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1117.55,
       "etime": 1120.42,
       "text": "Так называемый порно-сайт был для того, чтобы посмотреть порно-ролик."
@@ -2389,7 +2389,7 @@
       "id": "65c7df4764d069cabd4b5966",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1120.48,
       "etime": 1125.02,
       "text": "Пользователю нужно было скачать, якобы скачать кодек, установить его на своей системе."
@@ -2398,7 +2398,7 @@
       "id": "65c7df4764d069cabd4b5967",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1125.04,
       "etime": 1131.8,
       "text": "И, соответственно, если это было Windows, то отдавался экзешник с... Бредоносным кодом."
@@ -2407,7 +2407,7 @@
       "id": "65c7df4764d069cabd4b5968",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1131.86,
       "etime": 1133.02,
       "text": "Да, с бредоносной программой."
@@ -2416,7 +2416,7 @@
       "id": "65c7df4764d069cabd4b5969",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1133.08,
       "etime": 1140.45,
       "text": "Если я, опять же, не ошибаюсь, это была одна из модификаций Backdoor от DSS."
@@ -2425,7 +2425,7 @@
       "id": "65c7df4764d069cabd4b596a",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1140.51,
       "etime": 1142.41,
       "text": "Довольно вредная штука."
@@ -2434,7 +2434,7 @@
       "id": "65c7df4764d069cabd4b596b",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1142.49,
       "etime": 1144.63,
       "text": "Для Macintosh отдавался DNS-чейнджер."
@@ -2497,7 +2497,7 @@
       "id": "65c7df4764d069cabd4b5972",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1178.11,
       "etime": 1181.42,
       "text": "вирусописатели работали сразу на два фронта."
@@ -2506,7 +2506,7 @@
       "id": "65c7df4764d069cabd4b5973",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1181.48,
       "etime": 1192.91,
       "text": "Это означает, на мой взгляд, то, что вирусописатели поняли, что не только Windows может являться для них средством зарабатывания денег."
@@ -2515,7 +2515,7 @@
       "id": "65c7df4764d069cabd4b5974",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1192.93,
       "etime": 1204.49,
       "text": "Что в связи с распространенностью Macintosh, в связи с, я бы сказал так, легким отношением пользователей Mac'ов к Windows,"
@@ -2524,7 +2524,7 @@
       "id": "65c7df4764d069cabd4b5975",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1204.91,
       "etime": 1206.21,
       "text": "Безопасности."
@@ -2533,7 +2533,7 @@
       "id": "65c7df4764d069cabd4b5976",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1206.27,
       "etime": 1212.89,
       "text": "Их точно так же можно использовать для того, чтобы сажать туда вирусы и использовать."
@@ -2758,7 +2758,7 @@
       "id": "65c7df4764d069cabd4b598f",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1290.78,
       "etime": 1297.47,
       "text": "Конечно, что перед тем, как этот плагин устанавливался на macOS 10, выводилось стандартное предупреждение о вводе пароля администратора."
@@ -2767,7 +2767,7 @@
       "id": "65c7df4764d069cabd4b5990",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1298.03,
       "etime": 1307.29,
       "text": "Но так как люди совершенно не пуганные, они просто вводили пароль, нажимали Enter, и этот вирус устанавливался именно в систему."
@@ -2776,7 +2776,7 @@
       "id": "65c7df4764d069cabd4b5991",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1307.35,
       "etime": 1310.69,
       "text": "Я бы не сказал, что это предупреждение или ворнинг какой-то."
@@ -2785,7 +2785,7 @@
       "id": "65c7df4764d069cabd4b5992",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1310.73,
       "etime": 1314.48,
       "text": "Это скорее стандартный запрос, который пользователи воспринимают как запрос."
@@ -2794,7 +2794,7 @@
       "id": "65c7df4764d069cabd4b5993",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1314.5,
       "etime": 1322.3,
       "text": "Он ставит программу, скачиваемую из интернета, и довольно многие программы запрашивают пароль рута на Macintosh."
@@ -2803,7 +2803,7 @@
       "id": "65c7df4764d069cabd4b5994",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1322.4,
       "etime": 1325.08,
       "text": "Как защиту рассматривать пароль бессмысленно?"
@@ -2812,7 +2812,7 @@
       "id": "65c7df4764d069cabd4b5995",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1326.59,
       "etime": 1336.1,
       "text": "Итак, только за последнюю неделю, насколько я знаю, в этой модификации твиттера сколько уже было?"
@@ -2821,7 +2821,7 @@
       "id": "65c7df4764d069cabd4b5996",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1336.16,
       "etime": 1339.46,
       "text": "Не твиттер, вирус распространялся через твиттер."
@@ -2830,7 +2830,7 @@
       "id": "65c7df4764d069cabd4b5997",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1339.48,
       "etime": 1340.06,
       "text": "Это Mac DNS Changer."
@@ -2839,7 +2839,7 @@
       "id": "65c7df4764d069cabd4b5998",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1341.92,
       "etime": 1348.04,
       "text": "Буквально сегодня мы добавили третью модификацию DNS Changer, распространяющуюся точно по такой же схеме."
@@ -2848,7 +2848,7 @@
       "id": "65c7df4764d069cabd4b5999",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1348.1,
       "etime": 1350.1,
       "text": "Если идем с винды, отдается экзешник."
@@ -2857,7 +2857,7 @@
       "id": "65c7df4764d069cabd4b599a",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1350.12,
       "etime": 1353.88,
       "text": "Если мы идем с мака, отдается dmg файл."
@@ -2866,7 +2866,7 @@
       "id": "65c7df4764d069cabd4b599b",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1354.77,
       "etime": 1356.32,
       "text": "И, пожалуйста, ставьте себе вирусы."
@@ -2875,7 +2875,7 @@
       "id": "65c7df4764d069cabd4b599c",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1356.34,
       "etime": 1358.9,
       "text": "Это получается где-то по одному вирусу в неделю?"
@@ -2884,7 +2884,7 @@
       "id": "65c7df4764d069cabd4b599d",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1358.94,
       "etime": 1359.72,
       "text": "Примерно так."
@@ -2893,7 +2893,7 @@
       "id": "65c7df4764d069cabd4b599e",
       "issue": 143,
       "type": "cc",
-      "author": "Guest1",
+      "author": "pavel_plotnikov_drweb",
       "stime": 1359.74,
       "etime": 1360.66,
       "text": "Тенденция растет?"
@@ -2902,7 +2902,7 @@
       "id": "65c7df4764d069cabd4b599f",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1360.68,
       "etime": 1367.75,
       "text": "Ну, это по одному вирусу в неделю, это вот таких заметных вариантов, о которых можно упомянуть."
@@ -2911,7 +2911,7 @@
       "id": "65c7df4764d069cabd4b59a0",
       "issue": 143,
       "type": "cc",
-      "author": "Guest2",
+      "author": "sergey_komarov_drweb",
       "stime": 1367.79,
       "etime": 1374.54,
       "text": "Я думаю, что вирусов появляется больше уже сейчас, а чем дальше, тем сильнее, мне кажется."

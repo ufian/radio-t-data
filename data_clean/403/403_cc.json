@@ -40,7 +40,7 @@
       "id": "65c9a4dc6eb6c5a753ad35e4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8.3,
       "etime": 9.58,
       "text": "403 выпуск."
@@ -499,7 +499,7 @@
       "id": "65c9a4dc6eb6c5a753ad3617",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 216.93,
       "etime": 218.57,
       "text": "Ждала его все время."
@@ -508,7 +508,7 @@
       "id": "65c9a4dc6eb6c5a753ad3618",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 218.61,
       "etime": 219.91,
       "text": "И так и не дождалась."
@@ -958,7 +958,7 @@
       "id": "65c9a4dc6eb6c5a753ad364a",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 398.82,
       "etime": 422.38,
       "text": "Взяли OpenVZ, точнее взяли продукт, который назывался Virtuoso, открыли его исходные тексты, ядра и нескольких утилит, и сказали, что вот мы сейчас возьмем и всю нашу контейнерную технологию начнем отправлять в AppStream, и будут наши патчи уже не нашими, а, так сказать, общественным достоянием."
@@ -1705,7 +1705,7 @@
       "id": "65c9a4dc6eb6c5a753ad369d",
       "issue": 403,
       "type": "cc",
-      "author": "PetrDidenko",
+      "author": "SPEAKER_05",
       "stime": 839.97,
       "etime": 849.02,
       "text": "пока там бурление утихлет и патчи возьмут, у нас появилась возможность снять состояние памяти."
@@ -1948,7 +1948,7 @@
       "id": "65c9a4dc6eb6c5a753ad36b8",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 935.68,
       "etime": 940.14,
       "text": "Дальше их можно просто пнуть, и они побегут дальше, ничего не заметив."
@@ -2767,7 +2767,7 @@
       "id": "65c9a4dc6eb6c5a753ad3713",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 1379.85,
       "etime": 1388.77,
       "text": "Ну, они должны понимать, что сеть штука такая занятная, и иногда отклик может пропадать на какое-то определенное время."
@@ -2857,7 +2857,7 @@
       "id": "65c9a4dc6eb6c5a753ad371d",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 1430.88,
       "etime": 1438.28,
       "text": "Значит, он должен быть либо вменяемым, либо мы должны сделать перенос за время меньшее, чем клиент успевает понять, что что-то произошло."
@@ -3190,7 +3190,7 @@
       "id": "65c9a4dc6eb6c5a753ad3742",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 1570,
       "etime": 1579.79,
       "text": "Ну, вообще говоря, мы там уже несколько раз даже скриво умудрились напороться на ситуацию, когда мы думали, что что-то является нетипичным, а приложение вполне стандартное."
@@ -3352,7 +3352,7 @@
       "id": "65c9a4dc6eb6c5a753ad3754",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 1640.15,
       "etime": 1656.76,
       "text": "Это называется Mounting Space Пространство имен точек монтирования Причем люди, которые это писали Писал Со писал эту штуку Один из монтейнеров VFS Такая Весьма известная личность"
@@ -3460,7 +3460,7 @@
       "id": "65c9a4dc6eb6c5a753ad3760",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 1712.38,
       "etime": 1720.72,
       "text": "И когда мы с этим столкнулись, мы поняли, что нам, конечно, казалось, что это очень странный сценарий, мы с ним долго не встретимся, но пришлось написать поддержку."
@@ -3964,7 +3964,7 @@
       "id": "65c9a4dc6eb6c5a753ad3798",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 1947.66,
       "etime": 1950.76,
       "text": "Но много, я помню, что много."
@@ -4036,7 +4036,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a0",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 1994.2,
       "etime": 2011.73,
       "text": "Если взять наши утилиты, взять утилиту докера и взять утилиту, которую мы тут обошли под названием LXC, то окажется, что та часть, которая собственно создает контейнер, в смысле запускает его, она очень одинаковая у всех."
@@ -4108,7 +4108,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a8",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 2053.54,
       "etime": 2063.65,
       "text": "В какой-то момент с технической позицией поговорили и решили, что да, уже всем надоело ходить в ядро тремя разными кодами."
@@ -4144,7 +4144,7 @@
       "id": "65c9a4dc6eb6c5a753ad37ac",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 2076.04,
       "etime": 2080.04,
       "text": "И решили, что да, докер популярен, а OpenVZ как-то не очень."
@@ -4153,7 +4153,7 @@
       "id": "65c9a4dc6eb6c5a753ad37ad",
       "issue": 403,
       "type": "cc",
-      "author": "PetrDidenko",
+      "author": "SPEAKER_05",
       "stime": 2080.16,
       "etime": 2088.47,
       "text": "Ну, что, раз все равно с технической точки зрения все собрались дружить, давайте уж и это дело туда подвяжем."
@@ -4666,7 +4666,7 @@
       "id": "65c9a4dc6eb6c5a753ad37e6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 2352.37,
       "etime": 2354.14,
       "text": "То есть вроде идея такая простая."
@@ -4675,7 +4675,7 @@
       "id": "65c9a4dc6eb6c5a753ad37e7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 2354.24,
       "etime": 2355.48,
       "text": "Упростите этот процесс."
@@ -4711,7 +4711,7 @@
       "id": "65c9a4dc6eb6c5a753ad37eb",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 2368,
       "etime": 2369.08,
       "text": "Больше, чем про OpenVZ."
@@ -4720,7 +4720,7 @@
       "id": "65c9a4dc6eb6c5a753ad37ec",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 2369.22,
       "etime": 2374.38,
       "text": "То есть Докер сейчас обсуждают гораздо шире, мне кажется."
@@ -4738,7 +4738,7 @@
       "id": "65c9a4dc6eb6c5a753ad37ee",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 2377.09,
       "etime": 2380.55,
       "text": "То есть не в сообществах хостеров, а в сообществах просто обычных людей."
@@ -4801,7 +4801,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f5",
       "issue": 403,
       "type": "cc",
-      "author": "PetrDidenko",
+      "author": "SPEAKER_05",
       "stime": 2407.28,
       "etime": 2415.6,
       "text": "Мы еще показали людям утилиту, которую вот из Shell можно взять и что-то попытаться сделать."
@@ -4882,7 +4882,7 @@
       "id": "65c9a4dc6eb6c5a753ad37fe",
       "issue": 403,
       "type": "cc",
-      "author": "PetrDidenko",
+      "author": "SPEAKER_05",
       "stime": 2441.11,
       "etime": 2450.33,
       "text": "Они взяли OpenVZ с его ядром и с его утилитами и навертели сверху очень продвинутую систему по запаковке контейнеров."
@@ -4900,7 +4900,7 @@
       "id": "65c9a4dc6eb6c5a753ad3800",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 2462.21,
       "etime": 2472.92,
       "text": "Потом они, правда, с OpenVZ соскочили и переехали на LXC, но изначально шаги делались именно по канону."
@@ -5008,7 +5008,7 @@
       "id": "65c9a4dc6eb6c5a753ad380c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 2513.03,
       "etime": 2515.01,
       "text": "Да, он сидит напротив меня."
@@ -5350,7 +5350,7 @@
       "id": "65c9a4dc6eb6c5a753ad3832",
       "issue": 403,
       "type": "cc",
-      "author": "PetrDidenko",
+      "author": "SPEAKER_05",
       "stime": 2699.55,
       "etime": 2705.49,
       "text": "Но в продакшен, естественно, просто разработчики, которые делают докеры, его не выведут."
@@ -5431,7 +5431,7 @@
       "id": "65c9a4dc6eb6c5a753ad383b",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 2757.33,
       "etime": 2760.58,
       "text": "А у нас процесс был такой, ну, полуоткрытый."
@@ -5458,7 +5458,7 @@
       "id": "65c9a4dc6eb6c5a753ad383e",
       "issue": 403,
       "type": "cc",
-      "author": "PetrDidenko",
+      "author": "SPEAKER_05",
       "stime": 2770.78,
       "etime": 2779.81,
       "text": "То есть мы всячески говорили, да, ребят, у нас открытый проект, контейнеры, вот это вот утилита, давайте все вливайтесь, а никаких таких планов и"
@@ -5476,7 +5476,7 @@
       "id": "65c9a4dc6eb6c5a753ad3840",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 2784.11,
       "etime": 2787.93,
       "text": "Ну, вполне закономерно, что все внимание сейчас обращено к докеру."
@@ -5638,7 +5638,7 @@
       "id": "65c9a4dc6eb6c5a753ad3852",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 2885.24,
       "etime": 2890.01,
       "text": "VM-ки, виртуальные машины, они тяжелые по двум причинам."
@@ -5971,7 +5971,7 @@
       "id": "65c9a4dc6eb6c5a753ad3877",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 3092.31,
       "etime": 3097.81,
       "text": "Просто ядру говорится, вот этот контейнер, ему раньше можно было гиг жрать, а теперь пусть жрет два."
@@ -6187,7 +6187,7 @@
       "id": "65c9a4dc6eb6c5a753ad388f",
       "issue": 403,
       "type": "cc",
-      "author": "PetrDidenko",
+      "author": "SPEAKER_05",
       "stime": 3196.21,
       "etime": 3209.38,
       "text": "То есть внутрь гостя загружается специальный гостевой ядерный модуль, которому сообщается, дружок, съешь гигабайт памяти в госте."
@@ -6241,7 +6241,7 @@
       "id": "65c9a4dc6eb6c5a753ad3895",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 3230.38,
       "etime": 3234.26,
       "text": "И гипервизор знает, что на вот этих физических страницах он теперь может размещать другие VM."
@@ -6709,7 +6709,7 @@
       "id": "65c9a4dc6eb6c5a753ad38c9",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 3483.3,
       "etime": 3487.29,
       "text": "Сколько юзер занял дискового пространства и сколько группы юзеров занял дискового пространства."
@@ -7546,7 +7546,7 @@
       "id": "65c9a4dc6eb6c5a753ad3926",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 3915.15,
       "etime": 3917.77,
       "text": "Мне кажется, это будет интересно."
@@ -7573,7 +7573,7 @@
       "id": "65c9a4dc6eb6c5a753ad3929",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 3929.76,
       "etime": 3931.39,
       "text": "А почему ему бутона выгнать?"
@@ -7897,7 +7897,7 @@
       "id": "65c9a4dc6eb6c5a753ad394d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4056.55,
       "etime": 4058.55,
       "text": "А я вот такую подлянку кинул."
@@ -7906,7 +7906,7 @@
       "id": "65c9a4dc6eb6c5a753ad394e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4058.57,
       "etime": 4061.48,
       "text": "Внезапно откуда-то там про GoVD."
@@ -7915,7 +7915,7 @@
       "id": "65c9a4dc6eb6c5a753ad394f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4061.52,
       "etime": 4063.04,
       "text": "Такой темы даже нету."
@@ -7969,7 +7969,7 @@
       "id": "65c9a4dc6eb6c5a753ad3955",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4071.96,
       "etime": 4073.04,
       "text": "Ты что, не слышал?"
@@ -7996,7 +7996,7 @@
       "id": "65c9a4dc6eb6c5a753ad3958",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4076.71,
       "etime": 4079.39,
       "text": "Это значит мало кислорода в мозгу."
@@ -8014,7 +8014,7 @@
       "id": "65c9a4dc6eb6c5a753ad395a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4081.55,
       "etime": 4084.59,
       "text": "Мне кажется, у меня самый голый радиот сегодня."
@@ -8023,7 +8023,7 @@
       "id": "65c9a4dc6eb6c5a753ad395b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4084.65,
       "etime": 4086.63,
       "text": "Я не буду делать фоточку, но мне так жарко."
@@ -8032,7 +8032,7 @@
       "id": "65c9a4dc6eb6c5a753ad395c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4086.71,
       "etime": 4088.75,
       "text": "Просто кошмарно."
@@ -8050,7 +8050,7 @@
       "id": "65c9a4dc6eb6c5a753ad395e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4093.11,
       "etime": 4093.91,
       "text": "Сейчас я одна."
@@ -8320,7 +8320,7 @@
       "id": "65c9a4dc6eb6c5a753ad397c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4228.45,
       "etime": 4229.41,
       "text": "А у меня вопрос."
@@ -8338,7 +8338,7 @@
       "id": "65c9a4dc6eb6c5a753ad397e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4237.05,
       "etime": 4239.29,
       "text": "Или это как-то... То есть нет никаких привязок?"
@@ -8653,7 +8653,7 @@
       "id": "65c9a4dc6eb6c5a753ad39a1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4362.96,
       "etime": 4365.74,
       "text": "Ну, пьяница в одной корзине."
@@ -8896,7 +8896,7 @@
       "id": "65c9a4dc6eb6c5a753ad39bc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4481.21,
       "etime": 4482.19,
       "text": "Прям вообще нормально."
@@ -8914,7 +8914,7 @@
       "id": "65c9a4dc6eb6c5a753ad39be",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4486.05,
       "etime": 4488.59,
       "text": "Они просто как-то непонятно как сделаны."
@@ -8968,7 +8968,7 @@
       "id": "65c9a4dc6eb6c5a753ad39c4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4510.95,
       "etime": 4516.95,
       "text": "Мне кажется, что у них для не людей, а каких-то технических еще хуже просто."
@@ -9121,7 +9121,7 @@
       "id": "65c9a4dc6eb6c5a753ad39d5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4567.61,
       "etime": 4570.99,
       "text": "Я только подумала, зачем же дважды тебя?"
@@ -9130,7 +9130,7 @@
       "id": "65c9a4dc6eb6c5a753ad39d6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4571.03,
       "etime": 4572.03,
       "text": "Но они же вернут."
@@ -9139,7 +9139,7 @@
       "id": "65c9a4dc6eb6c5a753ad39d7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4572.09,
       "etime": 4574.09,
       "text": "Ты же им написал разгромное письмо."
@@ -9202,7 +9202,7 @@
       "id": "65c9a4dc6eb6c5a753ad39de",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4584.74,
       "etime": 4587.28,
       "text": "Первый тикет как раз."
@@ -9589,7 +9589,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a09",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4754.92,
       "etime": 4758.38,
       "text": "А это создатели Баффи «Истребительница вампиров»?"
@@ -9598,7 +9598,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a0a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4758.44,
       "etime": 4760.42,
       "text": "Я помню, мне в детстве нравилось."
@@ -9607,7 +9607,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a0b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4760.48,
       "etime": 4762.57,
       "text": "То есть это что-то похожее, да, Баффи?"
@@ -9652,7 +9652,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a10",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4786.88,
       "etime": 4791.17,
       "text": "Но «Футурама» не один сезон, по-моему, насколько я помню."
@@ -9724,7 +9724,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a18",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4818.22,
       "etime": 4820.49,
       "text": "В «Футураме», кстати, семь сезонов."
@@ -9733,7 +9733,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a19",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4820.59,
       "etime": 4821.65,
       "text": "Я правильно помнила?"
@@ -9742,7 +9742,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a1a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4821.67,
       "etime": 4824.75,
       "text": "Я просто решила тебя не исправлять, пока не проверила."
@@ -9751,7 +9751,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a1b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4824.83,
       "etime": 4826.33,
       "text": "А их потом досняли, ты правильно?"
@@ -9769,7 +9769,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a1d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4827.75,
       "etime": 4831.35,
       "text": "Нет, я помню, что у них был такой промежуток некоторый."
@@ -9967,7 +9967,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a33",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 4926.08,
       "etime": 4928.28,
       "text": "Так они же все такие."
@@ -10291,7 +10291,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a57",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "_artifact",
       "stime": 5087.73,
       "etime": 5089.13,
       "text": "А куда он вмещает?"
@@ -10300,7 +10300,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a58",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_01",
+      "author": "_artifact",
       "stime": 5089.15,
       "etime": 5092.05,
       "text": "У него два таких зайца в натуральную величину?"
@@ -10318,7 +10318,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a5a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5095.8,
       "etime": 5097.14,
       "text": "А, зайцы."
@@ -10336,7 +10336,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a5c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5098.96,
       "etime": 5102.32,
       "text": "А то я подумала, что он с такими зайцами ходит."
@@ -10462,7 +10462,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a6a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5155.18,
       "etime": 5156.64,
       "text": "Вот вопрос на эту тему."
@@ -10471,7 +10471,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a6b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5156.7,
       "etime": 5158.4,
       "text": "Ты, наверное, следишь как-то за этим?"
@@ -10498,7 +10498,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a6e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5166.63,
       "etime": 5168.51,
       "text": "Уходят в тренерскую работу?"
@@ -10507,7 +10507,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a6f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5168.55,
       "etime": 5169.73,
       "text": "То есть они делают..."
@@ -10561,7 +10561,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a75",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5193.99,
       "etime": 5194.25,
       "text": "20-30 лет."
@@ -10714,7 +10714,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a86",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5304.37,
       "etime": 5306.73,
       "text": "Где зрелищность, да, ты имеешь в виду?"
@@ -10768,7 +10768,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a8c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5327.29,
       "etime": 5333.67,
       "text": "Подожди, а по шахматам обычно, по-моему, это напоминает обычный чемпионат по шахматам."
@@ -10939,7 +10939,7 @@
       "id": "65c9a4dc6eb6c5a753ad3a9f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5406.52,
       "etime": 5408.36,
       "text": "Но вот он зайцам, видимо, рассказывает."
@@ -10948,7 +10948,7 @@
       "id": "65c9a4dc6eb6c5a753ad3aa0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5408.38,
       "etime": 5409.95,
       "text": "Правда, сосед может подслушать."
@@ -11047,7 +11047,7 @@
       "id": "65c9a4dc6eb6c5a753ad3aab",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5460.8,
       "etime": 5462.07,
       "text": "Она думала, что это женское имя?"
@@ -11164,7 +11164,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ab8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5503.66,
       "etime": 5504.68,
       "text": "Идея в чем?"
@@ -11182,7 +11182,7 @@
       "id": "65c9a4dc6eb6c5a753ad3aba",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5507.99,
       "etime": 5509.75,
       "text": "Это не сексизм, это биология."
@@ -11218,7 +11218,7 @@
       "id": "65c9a4dc6eb6c5a753ad3abe",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5529.88,
       "etime": 5530.9,
       "text": "Сейчас посмотрю."
@@ -11227,7 +11227,7 @@
       "id": "65c9a4dc6eb6c5a753ad3abf",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5530.92,
       "etime": 5531.34,
       "text": "Посмотри, посмотри."
@@ -11236,7 +11236,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ac0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5531.36,
       "etime": 5534.88,
       "text": "Это вот как раз то, что Бабук рассказывал."
@@ -11272,7 +11272,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ac4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5540.28,
       "etime": 5541.98,
       "text": "Почему?"
@@ -11281,7 +11281,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ac5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5542.02,
       "etime": 5543.32,
       "text": "И у меня тоже есть заяц."
@@ -11290,7 +11290,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ac6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5543.38,
       "etime": 5544.98,
       "text": "Я без заяца вроде."
@@ -11299,7 +11299,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ac7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5545.04,
       "etime": 5546.94,
       "text": "Так, я не вижу фотографии."
@@ -11308,7 +11308,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ac8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5546.98,
       "etime": 5547.38,
       "text": "Куда она?"
@@ -11326,7 +11326,7 @@
       "id": "65c9a4dc6eb6c5a753ad3aca",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5549.33,
       "etime": 5550.37,
       "text": "Да, все, я нашла, кажется, да."
@@ -11407,7 +11407,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ad3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5568.19,
       "etime": 5569.89,
       "text": "Какашуар, да."
@@ -11416,7 +11416,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ad4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5570.07,
       "etime": 5572.93,
       "text": "Не, я бы правда подумала, что это страшная японка."
@@ -11452,7 +11452,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ad8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5580.34,
       "etime": 5585.02,
       "text": "Мне даже кажется, что у этой японки даже как-то бюст есть."
@@ -11542,7 +11542,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ae2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5632.81,
       "etime": 5634.41,
       "text": "То есть сначала фамилия, имя."
@@ -11551,7 +11551,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ae3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5634.97,
       "etime": 5636.09,
       "text": "Да, понятно."
@@ -11560,7 +11560,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ae4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5636.15,
       "etime": 5639.11,
       "text": "То есть тогда по идее... Ну да, непонятно."
@@ -11632,7 +11632,7 @@
       "id": "65c9a4dc6eb6c5a753ad3aec",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5660.64,
       "etime": 5661.54,
       "text": "Я поняла, да."
@@ -11641,7 +11641,7 @@
       "id": "65c9a4dc6eb6c5a753ad3aed",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5661.56,
       "etime": 5663.88,
       "text": "Сначала имя, потом фамилия."
@@ -11785,7 +11785,7 @@
       "id": "65c9a4dc6eb6c5a753ad3afd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5728.41,
       "etime": 5729.25,
       "text": "И люди тоже."
@@ -11794,7 +11794,7 @@
       "id": "65c9a4dc6eb6c5a753ad3afe",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5729.29,
       "etime": 5730.13,
       "text": "Они привыкают."
@@ -11803,7 +11803,7 @@
       "id": "65c9a4dc6eb6c5a753ad3aff",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5730.17,
       "etime": 5732.87,
       "text": "Ты привыкаешь сначала писать фамилию, имя."
@@ -11812,7 +11812,7 @@
       "id": "65c9a4dc6eb6c5a753ad3b00",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5732.91,
       "etime": 5738.67,
       "text": "И потом, когда от тебя хотят имя, фамилию, ты по инерции пишешь неправильно."
@@ -11884,7 +11884,7 @@
       "id": "65c9a4dc6eb6c5a753ad3b08",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5757.38,
       "etime": 5760.28,
       "text": "Я просто знаю, как это обычно бывает."
@@ -11911,7 +11911,7 @@
       "id": "65c9a4dc6eb6c5a753ad3b0b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5765.44,
       "etime": 5766.74,
       "text": "Я не знаю, как."
@@ -11947,7 +11947,7 @@
       "id": "65c9a4dc6eb6c5a753ad3b0f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5778.33,
       "etime": 5779.73,
       "text": "В общем, да, гиковский выпуск."
@@ -11956,7 +11956,7 @@
       "id": "65c9a4dc6eb6c5a753ad3b10",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5779.77,
       "etime": 5781.71,
       "text": "Возвращаемся."
@@ -12118,7 +12118,7 @@
       "id": "65c9a4dc6eb6c5a753ad3b22",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5841.35,
       "etime": 5842.23,
       "text": "Это был Сван."
@@ -12136,7 +12136,7 @@
       "id": "65c9a4dc6eb6c5a753ad3b24",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 5847.4,
       "etime": 5849.68,
       "text": "Да, не дадим Сывану умереть."
@@ -13207,7 +13207,7 @@
       "id": "65c9a4dc6eb6c5a753ad3b9b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 6319.5,
       "etime": 6323.74,
       "text": "А в мире реляционных больше четырех таких гигантов?"
@@ -13396,7 +13396,7 @@
       "id": "65c9a4dc6eb6c5a753ad3bb0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 6418.93,
       "etime": 6419.13,
       "text": "Так вот."
@@ -13900,7 +13900,7 @@
       "id": "65c9a4dc6eb6c5a753ad3be8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 6633.1,
       "etime": 6634.32,
       "text": "На фуллскане?"
@@ -14116,7 +14116,7 @@
       "id": "65c9a4dc6eb6c5a753ad3c00",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 6755.98,
       "etime": 6759.24,
       "text": "Ну, то есть, как это делать нереляционно."
@@ -14719,7 +14719,7 @@
       "id": "65c9a4dc6eb6c5a753ad3c43",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7039.04,
       "etime": 7040.78,
       "text": "А autocomplete?"
@@ -15808,7 +15808,7 @@
       "id": "65c9a4dc6eb6c5a753ad3cbc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7596.23,
       "etime": 7599.65,
       "text": "Бобок, ты же вообще должен был не наезжать, а хвалить"
@@ -16096,7 +16096,7 @@
       "id": "65c9a4dc6eb6c5a753ad3cdc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7756.8,
       "etime": 7758.68,
       "text": "Так это же по-любому так вопрос."
@@ -16114,7 +16114,7 @@
       "id": "65c9a4dc6eb6c5a753ad3cde",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7769.1,
       "etime": 7771.66,
       "text": "Вот да, все понимают, кто виноват и кто прав."
@@ -16150,7 +16150,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ce2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7803.67,
       "etime": 7805.43,
       "text": "Это пиар и так далее."
@@ -16159,7 +16159,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ce3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7805.47,
       "etime": 7806.59,
       "text": "Все эти службы."
@@ -16177,7 +16177,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ce5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7815.95,
       "etime": 7817.72,
       "text": "которым это правда интересно."
@@ -16186,7 +16186,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ce6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7817.76,
       "etime": 7818.62,
       "text": "И вот эти"
@@ -16195,7 +16195,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ce7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7819.59,
       "etime": 7821.91,
       "text": "две стороны, они никогда не поймут друг друга."
@@ -16204,7 +16204,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ce8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7821.95,
       "etime": 7836.06,
       "text": "Потому что те стороны, которые пиар и маркетинг, у них есть такие мысли, давайте там всюду запилим, не знаю, сиськи котиков и прочее, и все будут хавать, простите."
@@ -16213,7 +16213,7 @@
       "id": "65c9a4dc6eb6c5a753ad3ce9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 7836.08,
       "etime": 7839.34,
       "text": "Ну, то есть будут ставить плюсики и так далее."
@@ -16753,7 +16753,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d25",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8100.42,
       "etime": 8101.08,
       "text": "Хорошо."
@@ -16843,7 +16843,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d2f",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 8132.37,
       "etime": 8133.39,
       "text": "Это на попоржать."
@@ -17014,7 +17014,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d42",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8209.21,
       "etime": 8210.73,
       "text": "Мне кажется, как-то Пелевин."
@@ -17050,7 +17050,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d46",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8222.5,
       "etime": 8223.4,
       "text": "Я уверен, это про это, да?"
@@ -17059,7 +17059,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d47",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8223.46,
       "etime": 8224.48,
       "text": "На картинке девчонки?"
@@ -17104,7 +17104,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d4c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8228.47,
       "etime": 8231.49,
       "text": "Девчонки будут лицом, да, на самом-то деле?"
@@ -17230,7 +17230,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d5a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8295.33,
       "etime": 8297.01,
       "text": "Безлимитный доступ."
@@ -17284,7 +17284,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d60",
       "issue": 403,
       "type": "cc",
-      "author": "PetrDidenko",
+      "author": "SPEAKER_05",
       "stime": 8324.83,
       "etime": 8330.72,
       "text": "То есть это приложение будет просто, я так понимаю."
@@ -17293,7 +17293,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d61",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8330.74,
       "etime": 8331.98,
       "text": "Под все платформы."
@@ -17482,7 +17482,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d76",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8405.13,
       "etime": 8406.99,
       "text": "А проекты представлены?"
@@ -17536,7 +17536,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d7c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8422.3,
       "etime": 8423.9,
       "text": "Через полгода же уже будет."
@@ -17662,7 +17662,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d8a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8459.32,
       "etime": 8460.28,
       "text": "А, он один?"
@@ -17671,7 +17671,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d8b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8460.38,
       "etime": 8461.8,
       "text": "То есть он без команды."
@@ -17689,7 +17689,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d8d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8463,
       "etime": 8463.98,
       "text": "Без ансамбля."
@@ -17833,7 +17833,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d9d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8518.8,
       "etime": 8523.48,
       "text": "Не, ну это в принципе на дом не хватит, да?"
@@ -17842,7 +17842,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d9e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8523.52,
       "etime": 8525.19,
       "text": "Только на квартиру."
@@ -17914,7 +17914,7 @@
       "id": "65c9a4dc6eb6c5a753ad3da6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8543.97,
       "etime": 8546.04,
       "text": "Да, расскажи про салат."
@@ -17968,7 +17968,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dac",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8575.51,
       "etime": 8578.67,
       "text": "Причем у него там совсем маленькая была сумма на салат."
@@ -17977,7 +17977,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dad",
       "issue": 403,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "SPEAKER_05",
       "stime": 8579.49,
       "etime": 8582.05,
       "text": "Ну, конечно."
@@ -18040,7 +18040,7 @@
       "id": "65c9a4dc6eb6c5a753ad3db4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8596.54,
       "etime": 8598.86,
       "text": "Я думаю, он выложил фотографию."
@@ -18076,7 +18076,7 @@
       "id": "65c9a4dc6eb6c5a753ad3db8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8624.49,
       "etime": 8626.83,
       "text": "Нудные интернет-странички, это просто как..."
@@ -18085,7 +18085,7 @@
       "id": "65c9a4dc6eb6c5a753ad3db9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8627.89,
       "etime": 8629.23,
       "text": "Очень странно звучит."
@@ -18094,7 +18094,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dba",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8629.31,
       "etime": 8632.79,
       "text": "Нет, я очень надеюсь, что это арт-проект."
@@ -18157,7 +18157,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dc1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8668.37,
       "etime": 8669.07,
       "text": "Ну да."
@@ -18175,7 +18175,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dc3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8671.77,
       "etime": 8673.98,
       "text": "На наноуровне."
@@ -18193,7 +18193,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dc5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8677.48,
       "etime": 8679,
       "text": "Не-не-не, было такое."
@@ -18202,7 +18202,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dc6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8679.06,
       "etime": 8688.21,
       "text": "Я помню, была статья, где какой-то эксперт по Apple писал, но там вот действительно каждое слово, это просто, ну, как-то было страшно."
@@ -18211,7 +18211,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dc7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8688.23,
       "etime": 8691.19,
       "text": "Это был реальный человек, и это были его убеждения."
@@ -18256,7 +18256,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dcc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8706.61,
       "etime": 8709.11,
       "text": "Да, нанотехнологии, на наноуровне все."
@@ -18274,7 +18274,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dce",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8714.67,
       "etime": 8717.02,
       "text": "Она очень веселая."
@@ -18292,7 +18292,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dd0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8719.1,
       "etime": 8721.2,
       "text": "Позитивная нота, мне кажется."
@@ -18337,7 +18337,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dd5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8737.13,
       "etime": 8740.99,
       "text": "Да, я сейчас здесь, тут очень жарко, честное слово."
@@ -18526,7 +18526,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dea",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8790.9,
       "etime": 8792.88,
       "text": "Ты уже все рассказал."
@@ -18571,7 +18571,7 @@
       "id": "65c9a4dc6eb6c5a753ad3def",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8802.61,
       "etime": 8803.51,
       "text": "Так все страшно."
@@ -18589,7 +18589,7 @@
       "id": "65c9a4dc6eb6c5a753ad3df1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8806.13,
       "etime": 8807.27,
       "text": "Кивни, да."
@@ -18769,7 +18769,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e05",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8845.1,
       "etime": 8846.7,
       "text": "Да."
@@ -18778,7 +18778,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e06",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8846.78,
       "etime": 8850.96,
       "text": "Про следующий гиговский выпуск надо тебе напомнить поближе к этому."
@@ -18823,7 +18823,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e0b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8856.69,
       "etime": 8857.91,
       "text": "Да."
@@ -18832,7 +18832,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e0c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8857.97,
       "etime": 8860.67,
       "text": "А он тоже работает в компании Паренс."
@@ -18868,7 +18868,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e10",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8872.76,
       "etime": 8872.88,
       "text": "Да."
@@ -18895,7 +18895,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e13",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8875.74,
       "etime": 8882.1,
       "text": "Просто понимаешь, когда ты работаешь в другой компании, ты не можешь своей второй половинке рассказать все секреты этой компании."
@@ -18931,7 +18931,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e17",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8890.99,
       "etime": 8891.65,
       "text": "Подробности ты не смог."
@@ -18976,7 +18976,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e1c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8900.8,
       "etime": 8901.96,
       "text": "А вот это, вот это."
@@ -18985,7 +18985,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e1d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8902.06,
       "etime": 8903.12,
       "text": "Да, точно."
@@ -18994,7 +18994,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e1e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8903.18,
       "etime": 8904.6,
       "text": "Ужас."
@@ -19003,7 +19003,7 @@
       "id": "65c9a4dc6eb6c5a753ad3e1f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "Ksenks",
       "stime": 8904.66,
       "etime": 8906.85,
       "text": "Ну, я могу поддержать такую беседу."

@@ -67,7 +67,7 @@
       "id": "65d24c78cb92bdf7b26ea874",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 40.72,
       "etime": 41.78,
       "text": "Да, так и было."
@@ -76,7 +76,7 @@
       "id": "65d24c78cb92bdf7b26ea875",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 41.82,
       "etime": 48.18,
       "text": "Можно переслушать этот выпуск, и такой говоришь, да кому этот год нужен, да что там, ничего нету, ни дженериков, ни исключений."
@@ -85,7 +85,7 @@
       "id": "65d24c78cb92bdf7b26ea876",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 48.2,
       "etime": 50.05,
       "text": "Я тебе говорил, как там все хорошо."
@@ -103,7 +103,7 @@
       "id": "65d24c78cb92bdf7b26ea878",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 54.31,
       "etime": 55.83,
       "text": "Дженерики уже скоро будут."
@@ -445,7 +445,7 @@
       "id": "65d24c78cb92bdf7b26ea89e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 253.4,
       "etime": 258.4,
       "text": "Хотя она это не особо хорошо делает."
@@ -607,7 +607,7 @@
       "id": "65d24c78cb92bdf7b26ea8b0",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 305.89,
       "etime": 308.33,
       "text": "А почему ты их к релизу делаешь, а не в пакеты кладешь на Github?"
@@ -670,7 +670,7 @@
       "id": "65d24c78cb92bdf7b26ea8b7",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 336.81,
       "etime": 341.27,
       "text": "В общем, помимо этих файлов, на самом деле релизы, они от тегов особо ничем отличаются."
@@ -679,7 +679,7 @@
       "id": "65d24c78cb92bdf7b26ea8b8",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 341.43,
       "etime": 347.35,
       "text": "В теге тоже может быть сообщение, это сообщение вполне может быть кусочком changelog'а, и оно попадает потом в релиз."
@@ -688,7 +688,7 @@
       "id": "65d24c78cb92bdf7b26ea8b9",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 347.39,
       "etime": 351.22,
       "text": "Но самое главное, что файл changelog.md в корне как бы тоже никто не отменял."
@@ -697,7 +697,7 @@
       "id": "65d24c78cb92bdf7b26ea8ba",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 351.28,
       "etime": 353.64,
       "text": "Его все так же нужно генерить."
@@ -706,7 +706,7 @@
       "id": "65d24c78cb92bdf7b26ea8bb",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 353.7,
       "etime": 354.44,
       "text": "Вот, это во-первых."
@@ -715,7 +715,7 @@
       "id": "65d24c78cb92bdf7b26ea8bc",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 354.46,
       "etime": 359.14,
       "text": "А во-вторых, как бы текущий генератор действительно, помимо того, что это вендерлог, так он еще не особо хорошо работает."
@@ -724,7 +724,7 @@
       "id": "65d24c78cb92bdf7b26ea8bd",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 359.16,
       "etime": 362.36,
       "text": "То есть альтернативные тулзы, они есть гораздо лучше."
@@ -751,7 +751,7 @@
       "id": "65d24c78cb92bdf7b26ea8c0",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 366.98,
       "etime": 375.47,
       "text": "Ну, просто если считать, что ChangeLog хорошо для того, чтобы люди его читали, он пока скорее машиночитаемый, чем человекочитаемый."
@@ -760,7 +760,7 @@
       "id": "65d24c78cb92bdf7b26ea8c1",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 375.49,
       "etime": 377.11,
       "text": "То есть там слишком много ручной работы."
@@ -841,7 +841,7 @@
       "id": "65d24c78cb92bdf7b26ea8ca",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 398.26,
       "etime": 401.96,
       "text": "Вообще тут текстмейт придумал, так можно сказать, текстимизация наконец-то."
@@ -1219,7 +1219,7 @@
       "id": "65d24c78cb92bdf7b26ea8f4",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 568.14,
       "etime": 569.48,
       "text": "Ну, вот, видишь."
@@ -1354,7 +1354,7 @@
       "id": "65d24c78cb92bdf7b26ea903",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 599.88,
       "etime": 604.26,
       "text": "Если они на IPO вышли, им теперь нужно деньги зарабатывать, цену акций поднимать."
@@ -1363,7 +1363,7 @@
       "id": "65d24c78cb92bdf7b26ea904",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 604.28,
       "etime": 607.28,
       "text": "Для этого нужно что-то для менеджеров показывать, а не для разработчиков."
@@ -1588,7 +1588,7 @@
       "id": "65d24c78cb92bdf7b26ea91d",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 697.24,
       "etime": 702.3,
       "text": "Ты упомянул Atlassian, и видно, что их проекты явно под впечатлением от Atlassian."
@@ -1597,7 +1597,7 @@
       "id": "65d24c78cb92bdf7b26ea91e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 702.34,
       "etime": 709.28,
       "text": "Особенно, когда я увидел эти графики, эти кастомные поля, это, конечно, просто такие флешбеки от Jira, что словами не предать."
@@ -1921,7 +1921,7 @@
       "id": "65d24c78cb92bdf7b26ea942",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 840.34,
       "etime": 842.66,
       "text": "Помимо этого они написали, что они его обновили."
@@ -1930,7 +1930,7 @@
       "id": "65d24c78cb92bdf7b26ea943",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 842.74,
       "etime": 844.61,
       "text": "Теперь еще более мощная модель."
@@ -1948,7 +1948,7 @@
       "id": "65d24c78cb92bdf7b26ea945",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 850.08,
       "etime": 850.5,
       "text": "Прикольно."
@@ -1957,7 +1957,7 @@
       "id": "65d24c78cb92bdf7b26ea946",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 850.54,
       "etime": 856.27,
       "text": "Нет, это чуть ниже написано, что типа enhanced open AI модел, она ниже для всех, да."
@@ -2272,7 +2272,7 @@
       "id": "65d24c78cb92bdf7b26ea969",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 998.67,
       "etime": 1001.71,
       "text": "У меня по другу пилота есть теория заговора."
@@ -2281,7 +2281,7 @@
       "id": "65d24c78cb92bdf7b26ea96a",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1001.73,
       "etime": 1009.34,
       "text": "Вот, я на работе как бы пишу операционную систему целиком на Go, то есть там ядро Linux, а все основное, весь юзерленд, все основное написано на Go."
@@ -2290,7 +2290,7 @@
       "id": "65d24c78cb92bdf7b26ea96b",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1009.44,
       "etime": 1014.45,
       "text": "Вот, такого кода, конечно, не очень много, скажем прямо на GitHub, да, особенно под open source лицензии."
@@ -2299,7 +2299,7 @@
       "id": "65d24c78cb92bdf7b26ea96c",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1015.29,
       "etime": 1030.03,
       "text": "Вот, две недели назад получил доступ ко пилоту, пишу там функцию, хоп, он меня дополняет, я смотрю на это, понимаю, что код, в принципе, плюс-минус правильный, ровно такого кода у меня еще нигде нет, то есть там есть такие строчки, такие токены, которые вообще в моем коде пока не встречаются."
@@ -2308,7 +2308,7 @@
       "id": "65d24c78cb92bdf7b26ea96d",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1030.81,
       "etime": 1035.78,
       "text": "И моя первая мысль, он меня подставляет, короче, хочет, чтобы я использовал код под несовместимой лицензией."
@@ -2317,7 +2317,7 @@
       "id": "65d24c78cb92bdf7b26ea96e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1035.82,
       "etime": 1037.46,
       "text": "Вот прям четко."
@@ -2326,7 +2326,7 @@
       "id": "65d24c78cb92bdf7b26ea96f",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1037.5,
       "etime": 1040.91,
       "text": "Иду на гитхаб в поиск, ввожу этот код и не могу найти."
@@ -2335,7 +2335,7 @@
       "id": "65d24c78cb92bdf7b26ea970",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1040.93,
       "etime": 1047.16,
       "text": "И я теперь понимаю, почему на гитхабе такой плохой поиск, чтобы нельзя было подогнать кого-то под нарушение лицензии."
@@ -2407,7 +2407,7 @@
       "id": "65d24c78cb92bdf7b26ea978",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1085.7,
       "etime": 1086.72,
       "text": "Вот это мой пойнт."
@@ -2416,7 +2416,7 @@
       "id": "65d24c78cb92bdf7b26ea979",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1086.8,
       "etime": 1088.34,
       "text": "У меня совсем не массовая задача."
@@ -2425,7 +2425,7 @@
       "id": "65d24c78cb92bdf7b26ea97a",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1088.5,
       "etime": 1092.67,
       "text": "Я вижу те токены, которых ни у меня нет, нигде особо других нет."
@@ -2434,7 +2434,7 @@
       "id": "65d24c78cb92bdf7b26ea97b",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1092.69,
       "etime": 1093.17,
       "text": "Он их придумал."
@@ -2956,7 +2956,7 @@
       "id": "65d24c78cb92bdf7b26ea9b5",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1407.08,
       "etime": 1420.57,
       "text": "Но меня в тот момент тоже, наверное, больше всего смущает то, что он как бы дополняет такое, и ты смотришь, и ты как бы такой пишешь код, и у тебя палит фантазия, а потом раз, он тебя вставил в дополнение, и тебе приходится все это переписывать, потому что она чуть-чуть неправильная и совсем не в твоем стиле."
@@ -2965,7 +2965,7 @@
       "id": "65d24c78cb92bdf7b26ea9b6",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1420.59,
       "etime": 1427.96,
       "text": "Вот это постоянное переключение между писанием и читанием, которое стало благодаря Купилоту еще более частым, оно, конечно, немного беспокоит."
@@ -3127,7 +3127,7 @@
       "id": "65d24c78cb92bdf7b26ea9c8",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1496.39,
       "etime": 1497.35,
       "text": "Когда кого-то забанили."
@@ -3163,7 +3163,7 @@
       "id": "65d24c78cb92bdf7b26ea9cc",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1509.27,
       "etime": 1514.94,
       "text": "Ну да, но он в интернетах был большим троллем и постоянно на людей кидался."
@@ -3172,7 +3172,7 @@
       "id": "65d24c78cb92bdf7b26ea9cd",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1515.02,
       "etime": 1519.82,
       "text": "И самое интересное, что он кидался в том числе на других администраторов, модераторов, в конце концов его забанили."
@@ -3181,7 +3181,7 @@
       "id": "65d24c78cb92bdf7b26ea9ce",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1519.84,
       "etime": 1524.6,
       "text": "При том, что в реальной жизни он хороший человек довольно, но в интернете он просто как в 90-х в России."
@@ -3208,7 +3208,7 @@
       "id": "65d24c78cb92bdf7b26ea9d1",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1531.69,
       "etime": 1534.23,
       "text": "Самая главная фича в очереди полуреквестов, мне кажется."
@@ -3280,7 +3280,7 @@
       "id": "65d24c78cb92bdf7b26ea9d9",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1558.35,
       "etime": 1571.47,
       "text": "Нет, это не группировка их в один коммит, то есть не так, что смерджить все пол-реквесты вместе, это добавление их в очередь, это один мерджер, проходит CI, тот обновляется, в общем, это все автоматическое тестирование через CI, через паузу."
@@ -3289,7 +3289,7 @@
       "id": "65d24c78cb92bdf7b26ea9da",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1571.53,
       "etime": 1577.98,
       "text": "То есть, когда ты вмержил пол-реквест, у тебя теперь другой пол-реквест пишет, он типа outdated, обнови его смерджер с мастером."
@@ -3298,7 +3298,7 @@
       "id": "65d24c78cb92bdf7b26ea9db",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1578.04,
       "etime": 1583.04,
       "text": "Это теперь все будет происходить автоматически, он будет их по одному обновлять, смерджить, обновлять, смерджить, обновлять, смерджить."
@@ -3361,7 +3361,7 @@
       "id": "65d24c78cb92bdf7b26ea9e2",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1600.51,
       "etime": 1605.75,
       "text": "Компьютер не разрулит, и, по идее, оно еще сломается, если CI не пройдет, и что, в общем-то, правильно."
@@ -3370,7 +3370,7 @@
       "id": "65d24c78cb92bdf7b26ea9e3",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 1605.81,
       "etime": 1621.16,
       "text": "Но когда есть просто реально очередь пиаров даже от разных людей, если какой-то open-source проект, который популярный, или просто компания пилит его в одни и те же плюс-минус рабочие часы, то когда пиары приходят, часто приходится ждать CI и марчить их в правильном порядке, и теперь он может делать все сам."
@@ -4324,7 +4324,7 @@
       "id": "65d24c78cb92bdf7b26eaa4d",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2137.22,
       "etime": 2139.44,
       "text": "Я фанат Safari, мне пришлось качать хром."
@@ -4765,7 +4765,7 @@
       "id": "65d24c78cb92bdf7b26eaa7e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2293.82,
       "etime": 2297.48,
       "text": "А самое главное, их разработчики голодают."
@@ -4783,7 +4783,7 @@
       "id": "65d24c78cb92bdf7b26eaa80",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2301.71,
       "etime": 2302.71,
       "text": "Это полный бред."
@@ -4792,7 +4792,7 @@
       "id": "65d24c78cb92bdf7b26eaa81",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2302.77,
       "etime": 2305.19,
       "text": "Даже я не знаю, с чего начать лучше."
@@ -4927,7 +4927,7 @@
       "id": "65d24c78cb92bdf7b26eaa90",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2344.26,
       "etime": 2346.89,
       "text": "Ну, я думаю, нужно сравнить браузеры."
@@ -4936,7 +4936,7 @@
       "id": "65d24c78cb92bdf7b26eaa91",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2346.91,
       "etime": 2349.43,
       "text": "Вот какой проприетарный браузер есть?"
@@ -4945,7 +4945,7 @@
       "id": "65d24c78cb92bdf7b26eaa92",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2349.45,
       "etime": 2349.43,
       "text": "Internet Explorer."
@@ -4954,7 +4954,7 @@
       "id": "65d24c78cb92bdf7b26eaa93",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2349.49,
       "etime": 2353.15,
       "text": "Он, конечно же, гораздо лучше, чем все остальные браузеры."
@@ -4981,7 +4981,7 @@
       "id": "65d24c78cb92bdf7b26eaa96",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2355.24,
       "etime": 2355.18,
       "text": "Internet Explorer?"
@@ -5296,7 +5296,7 @@
       "id": "65d24c78cb92bdf7b26eaab9",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2496.28,
       "etime": 2501.79,
       "text": "Я бы сказал, что программистам нужно есть, программисты как раз едят, а дизайнеров Open Source, видимо, не хватает."
@@ -5350,7 +5350,7 @@
       "id": "65d24c78cb92bdf7b26eaabf",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2525.62,
       "etime": 2527.42,
       "text": "Чем ближе к людям, тем больше они хотят есть."
@@ -5629,7 +5629,7 @@
       "id": "65d24c78cb92bdf7b26eaade",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2660.9,
       "etime": 2662.1,
       "text": "До сих пор многие нельзя."
@@ -5638,7 +5638,7 @@
       "id": "65d24c78cb92bdf7b26eaadf",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2662.16,
       "etime": 2664.65,
       "text": "То есть, JPL-3, допустим, нельзя запихать в Store."
@@ -6070,7 +6070,7 @@
       "id": "65d24c78cb92bdf7b26eab0f",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2867.47,
       "etime": 2875.68,
       "text": "Вообще в этом пункте пишут, что когда нету барьеров и гейткиперов, это половина опенсорса, если не на две трети опенсорса, это одни гейткиперы."
@@ -6079,7 +6079,7 @@
       "id": "65d24c78cb92bdf7b26eab10",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2875.72,
       "etime": 2880.85,
       "text": "Никто ничего не принимает, никуда не запушишь, сами люди все пишут и все."
@@ -6124,7 +6124,7 @@
       "id": "65d24c78cb92bdf7b26eab15",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 2894.51,
       "etime": 2898.79,
       "text": "У меня такая статистика, как у него 99."
@@ -6493,7 +6493,7 @@
       "id": "65d24c78cb92bdf7b26eab3e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3062.52,
       "etime": 3068.01,
       "text": "Не, ну, конечно, в офисной работе, где пишут популярный софт, ничего такого никогда не бывает."
@@ -6556,7 +6556,7 @@
       "id": "65d24c78cb92bdf7b26eab45",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3088.84,
       "etime": 3091.98,
       "text": "Ну, справедливости, все-таки люди токсичные и нетоксичные бывают везде."
@@ -6565,7 +6565,7 @@
       "id": "65d24c78cb92bdf7b26eab46",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3092.02,
       "etime": 3095.21,
       "text": "В опансионстве, в проприторном софте вообще не пригодится, как ни странно."
@@ -6610,7 +6610,7 @@
       "id": "65d24c78cb92bdf7b26eab4b",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3124.63,
       "etime": 3128.24,
       "text": "Смотри, вот подкаст же не open source, а ты сейчас надо мной издеваешься тут публично."
@@ -7114,7 +7114,7 @@
       "id": "65d24c78cb92bdf7b26eab83",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3341.77,
       "etime": 3341.81,
       "text": "Да."
@@ -7123,7 +7123,7 @@
       "id": "65d24c78cb92bdf7b26eab84",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3343.48,
       "etime": 3347.94,
       "text": "Только фронтендеры, бэкендеры, они работают за идею, потому что им очень интересно."
@@ -7177,7 +7177,7 @@
       "id": "65d24c78cb92bdf7b26eab8a",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3367.95,
       "etime": 3373.79,
       "text": "Потом еще у нас стоит Dependabot, чтобы оно автоматически обновлялось, да, и вообще будет пиара, мы тут постоянно, каждый день."
@@ -7528,7 +7528,7 @@
       "id": "65d24c78cb92bdf7b26eabb1",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3511.54,
       "etime": 3515.3,
       "text": "У него в профиле написано «программирует два десятка лет»."
@@ -7960,7 +7960,7 @@
       "id": "65d24c78cb92bdf7b26eabe1",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3677.67,
       "etime": 3688.24,
       "text": "Я бы еще добавил, что те проекты, которые вы сейчас называли, вряд ли бы они долго, если бы они вдруг были проприетарные, вряд ли бы они долго зарабатывали деньги, потому что это интересные проекты для гиков, и кто-нибудь бы сделал open source версию."
@@ -8347,7 +8347,7 @@
       "id": "65d24c78cb92bdf7b26eac0c",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3866.09,
       "etime": 3869.89,
       "text": "Да, знаю, который сейчас репортят в секьюрити-изумимости во всех, кто его использует, да?"
@@ -8455,7 +8455,7 @@
       "id": "65d24c78cb92bdf7b26eac18",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3915.23,
       "etime": 3917.11,
       "text": "Нет, на саппорте можно что-нибудь другое предоставить."
@@ -8509,7 +8509,7 @@
       "id": "65d24c78cb92bdf7b26eac1e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3927.55,
       "etime": 3928.35,
       "text": "Но это же не так."
@@ -8518,7 +8518,7 @@
       "id": "65d24c78cb92bdf7b26eac1f",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3928.39,
       "etime": 3935.87,
       "text": "То есть если ты пользуешься приобретенным софтом, да, и компания ушла из бизнеса, то у тебя точно саппорт закончился, потому что с приобретенным ты ничего сделать не можешь."
@@ -8527,7 +8527,7 @@
       "id": "65d24c78cb92bdf7b26eac20",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3935.91,
       "etime": 3938.67,
       "text": "Если у тебя open source, ты используешь какой-то форт, который поддерживается."
@@ -8536,7 +8536,7 @@
       "id": "65d24c78cb92bdf7b26eac21",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3938.73,
       "etime": 3945.57,
       "text": "Болт тот же самый, там есть компании, которые его поддерживают, которые делают свои форки, делают свои фичи, и они его поддерживают."
@@ -8545,7 +8545,7 @@
       "id": "65d24c78cb92bdf7b26eac22",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3945.63,
       "etime": 3947.41,
       "text": "К ним можно обратиться и вперед."
@@ -8554,7 +8554,7 @@
       "id": "65d24c78cb92bdf7b26eac23",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3947.43,
       "etime": 3952.35,
       "text": "В конце концов, да, можно и самому фортом поддерживать, если очень хочется, а с приобретенным софтом так не получится."
@@ -8590,7 +8590,7 @@
       "id": "65d24c78cb92bdf7b26eac27",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 3960.32,
       "etime": 3961.5,
       "text": "Да."
@@ -8941,7 +8941,7 @@
       "id": "65d24c78cb92bdf7b26eac4e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 4102.41,
       "etime": 4105.78,
       "text": "Точно так же открываешь тикет, ждешь 72 года, только еще и деньги платишь."
@@ -9283,7 +9283,7 @@
       "id": "65d24c78cb92bdf7b26eac74",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 4287.28,
       "etime": 4293.55,
       "text": "Какая-то в этом есть... Я как-то пытался серьезно использовать FOSS, он вообще скорее не работает."
@@ -9292,7 +9292,7 @@
       "id": "65d24c78cb92bdf7b26eac75",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 4293.59,
       "etime": 4300.74,
       "text": "Вот, кстати, хороший пример приобретательного софта, который не работает, при том, что он довольно больших денег стоит."
@@ -9310,7 +9310,7 @@
       "id": "65d24c78cb92bdf7b26eac77",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 4302.75,
       "etime": 4311.76,
       "text": "Он за деньги, да, он не open source, он как бы его основная идея, потому что они продают тебе гарантию, что твой корпоративный open source не содержит никакого JPL, IGPL и так далее."
@@ -9319,7 +9319,7 @@
       "id": "65d24c78cb92bdf7b26eac78",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 4312.34,
       "etime": 4320.74,
       "text": "Но по факту у него очень много false positive, много false negative и вот такие косяки, как здесь, когда просто все пропало, оно тоже часто довольно."
@@ -9328,7 +9328,7 @@
       "id": "65d24c78cb92bdf7b26eac79",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 4320.78,
       "etime": 4329.13,
       "text": "Поэтому есть много альтернатив open source, когда это нужно самому взять, самому допилить, самому захостить, конечно, но они работают."
@@ -9679,7 +9679,7 @@
       "id": "65d24c78cb92bdf7b26eaca0",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 4461.8,
       "etime": 4465.22,
       "text": "Если честно, я ждал этого до последнего момента."
@@ -9688,7 +9688,7 @@
       "id": "65d24c78cb92bdf7b26eaca1",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 4465.28,
       "etime": 4468.95,
       "text": "Но его последние два предложения, последние абзацы, конечно, перечеркиваются."
@@ -9697,7 +9697,7 @@
       "id": "65d24c78cb92bdf7b26eaca2",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 4468.99,
       "etime": 4472.37,
       "text": "Он говорит, что я мог бы написать про эту книгу, и вообще это полный кошмар."
@@ -9706,7 +9706,7 @@
       "id": "65d24c78cb92bdf7b26eaca3",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 4472.41,
       "etime": 4474.33,
       "text": "То есть нет, он на полном серьезе."
@@ -11317,7 +11317,7 @@
       "id": "65d24c78cb92bdf7b26ead56",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5190.31,
       "etime": 5192.35,
       "text": "Это ее добавил, скорее всего."
@@ -11416,7 +11416,7 @@
       "id": "65d24c78cb92bdf7b26ead61",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5233.72,
       "etime": 5235.1,
       "text": "Самое главное, что у него все в базе SQLite."
@@ -11560,7 +11560,7 @@
       "id": "65d24c78cb92bdf7b26ead71",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5286.89,
       "etime": 5290.25,
       "text": "Если я в Вики пишу страницу и хочу файлик приоттачить, там тоже SQLite пойдет?"
@@ -11587,7 +11587,7 @@
       "id": "65d24c78cb92bdf7b26ead74",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5292.93,
       "etime": 5295.03,
       "text": "Немножко волнительно."
@@ -11632,7 +11632,7 @@
       "id": "65d24c78cb92bdf7b26ead79",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5311.35,
       "etime": 5313.73,
       "text": "и там как настраивать репликации."
@@ -11668,7 +11668,7 @@
       "id": "65d24c78cb92bdf7b26ead7d",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5317.85,
       "etime": 5323.11,
       "text": "Но я имею в виду, что каждое изменение, получается, твоя бэкап-тулза должна бэкапить весь файл."
@@ -11677,7 +11677,7 @@
       "id": "65d24c78cb92bdf7b26ead7e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5323.13,
       "etime": 5325.02,
       "text": "Он может быть довольно большой на каждое изменение."
@@ -11686,7 +11686,7 @@
       "id": "65d24c78cb92bdf7b26ead7f",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5325.1,
       "etime": 5328.48,
       "text": "Либо настраивать репликацию, которая знает про SQL внутри SQLite файла."
@@ -12505,7 +12505,7 @@
       "id": "65d24c78cb92bdf7b26eadda",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5591.03,
       "etime": 5599.21,
       "text": "Ну, конкретно в этом случае это все перестанет работать, как только гид сделает свой репак и сделает это все в один пак, который уже имеет более сложную структуру."
@@ -12514,7 +12514,7 @@
       "id": "65d24c78cb92bdf7b26eaddb",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5599.23,
       "etime": 5602.62,
       "text": "Там, конечно, с гребом не получится просто."
@@ -12559,7 +12559,7 @@
       "id": "65d24c78cb92bdf7b26eade0",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5612.7,
       "etime": 5616.8,
       "text": "Я имею в виду, что вот таких отдельных объектов по файлу на объект уже не будет."
@@ -12568,7 +12568,7 @@
       "id": "65d24c78cb92bdf7b26eade1",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5616.86,
       "etime": 5618.83,
       "text": "Будет один пак, в котором уже лежит все."
@@ -12577,7 +12577,7 @@
       "id": "65d24c78cb92bdf7b26eade2",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5618.87,
       "etime": 5621.23,
       "text": "И как бы готовой ГНУ-утилиты для этого нет."
@@ -12586,7 +12586,7 @@
       "id": "65d24c78cb92bdf7b26eade3",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5621.25,
       "etime": 5623.65,
       "text": "Ну, то есть, конечно, есть сами утилиты ГИТА."
@@ -12793,7 +12793,7 @@
       "id": "65d24c78cb92bdf7b26eadfa",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5700.04,
       "etime": 5711.04,
       "text": "Я бы не сказал, что там есть люди, которые очень любят его автора, потому что его автор, в общем, такой относительно известный человек, он там критически выступает, где-то в подкаст записывали, там прям его фанаты."
@@ -12910,7 +12910,7 @@
       "id": "65d24c78cb92bdf7b26eae07",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5765.11,
       "etime": 5767.63,
       "text": "Я видел один."
@@ -12919,7 +12919,7 @@
       "id": "65d24c78cb92bdf7b26eae08",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5767.69,
       "etime": 5773.6,
       "text": "Мангрель 2, и он на фойзеле хостился, когда он был жив."
@@ -12946,7 +12946,7 @@
       "id": "65d24c78cb92bdf7b26eae0b",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5781.12,
       "etime": 5786.66,
       "text": "Я думаю, потому что Z-Show, автор Монгреля, тоже увидел Fossil, обрадовался и решился использовать."
@@ -12955,7 +12955,7 @@
       "id": "65d24c78cb92bdf7b26eae0c",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5786.7,
       "etime": 5790.68,
       "text": "Там вообще много было уникальных решений в Монгреле 2."
@@ -12964,7 +12964,7 @@
       "id": "65d24c78cb92bdf7b26eae0d",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 5790.76,
       "etime": 5796.55,
       "text": "И конфигурации через SQLite баз данных, кстати."
@@ -13432,7 +13432,7 @@
       "id": "65d24c78cb92bdf7b26eae41",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6001.42,
       "etime": 6002.2,
       "text": "Травис?"
@@ -13459,7 +13459,7 @@
       "id": "65d24c78cb92bdf7b26eae44",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6008.2,
       "etime": 6008.94,
       "text": "Дженкинс."
@@ -13477,7 +13477,7 @@
       "id": "65d24c78cb92bdf7b26eae46",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6011.34,
       "etime": 6012.18,
       "text": "Чувак в шляпе."
@@ -13738,7 +13738,7 @@
       "id": "65d24c78cb92bdf7b26eae63",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6119.83,
       "etime": 6123.58,
       "text": "В общем, в понедельник анонсировали проект, который действительно называется MongoDB."
@@ -13747,7 +13747,7 @@
       "id": "65d24c78cb92bdf7b26eae64",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6123.7,
       "etime": 6129.78,
       "text": "Явно ждут привета от MongoDB, season, disease, письма."
@@ -13756,7 +13756,7 @@
       "id": "65d24c78cb92bdf7b26eae65",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6129.82,
       "etime": 6133.86,
       "text": "Это прототип пока что, который использует Postgres для того, чтобы хранить данные."
@@ -13765,7 +13765,7 @@
       "id": "65d24c78cb92bdf7b26eae66",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6133.92,
       "etime": 6135.87,
       "text": "То есть, по сути, это прокси, написанная на Go."
@@ -13774,7 +13774,7 @@
       "id": "65d24c78cb92bdf7b26eae67",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6135.93,
       "etime": 6143.59,
       "text": "Одним концом она слушает MongoDB протокол, принимает посвящение от клиентов и записывает данные в Postgres и по всему JSONB."
@@ -13783,7 +13783,7 @@
       "id": "65d24c78cb92bdf7b26eae68",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6145.59,
       "etime": 6149.52,
       "text": "И, конечно, та реакция, которая последовала, это что-то с чем-то там."
@@ -13792,7 +13792,7 @@
       "id": "65d24c78cb92bdf7b26eae69",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6149.58,
       "etime": 6155.64,
       "text": "Висело на Hacker News больше суток в топе, огромное количество звездочек на ровном месте и так далее."
@@ -13801,7 +13801,7 @@
       "id": "65d24c78cb92bdf7b26eae6a",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6155.68,
       "etime": 6158.48,
       "text": "При этом сделано там пока что очень-очень мало."
@@ -13810,7 +13810,7 @@
       "id": "65d24c78cb92bdf7b26eae6b",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6158.5,
       "etime": 6160.14,
       "text": "То есть это явно прототип еще."
@@ -13819,7 +13819,7 @@
       "id": "65d24c78cb92bdf7b26eae6c",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6160.2,
       "etime": 6161.84,
       "text": "Просто посмотреть, какая будет реакция."
@@ -13828,7 +13828,7 @@
       "id": "65d24c78cb92bdf7b26eae6d",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6162,
       "etime": 6163.47,
       "text": "Ну и реакция была ого-го."
@@ -14026,7 +14026,7 @@
       "id": "65d24c78cb92bdf7b26eae83",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6237.79,
       "etime": 6239.45,
       "text": "Нет, там пока ничего вообще не реализовано."
@@ -14035,7 +14035,7 @@
       "id": "65d24c78cb92bdf7b26eae84",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6239.47,
       "etime": 6241.97,
       "text": "В чем фундаментальная проблема агрегейшна сделать?"
@@ -14053,7 +14053,7 @@
       "id": "65d24c78cb92bdf7b26eae86",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6245.28,
       "etime": 6261.04,
       "text": "Нет, конечно, это просто сейчас там сделано крайне-крайне мало, да, но фундаментальная идея, кажется, звучит, то есть какие-то могут быть проблемы, то, что, не знаю, там JavaScript-движок придется прикручивать для условий типа V, да, частично, а все остальное, по идее, не должно быть сложно сделать."
@@ -14116,7 +14116,7 @@
       "id": "65d24c78cb92bdf7b26eae8d",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6286.56,
       "etime": 6288.2,
       "text": "Такой же необходимости нет."
@@ -14125,7 +14125,7 @@
       "id": "65d24c78cb92bdf7b26eae8e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6288.3,
       "etime": 6291.5,
       "text": "Это прокси может отправить много запросов на постброс."
@@ -14134,7 +14134,7 @@
       "id": "65d24c78cb92bdf7b26eae8f",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6291.56,
       "etime": 6295.92,
       "text": "Если сложно составить один огромный сквиль-запрос, можно просто отправить несколько."
@@ -14188,7 +14188,7 @@
       "id": "65d24c78cb92bdf7b26eae95",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6310.09,
       "etime": 6310.67,
       "text": "Какой?"
@@ -14251,7 +14251,7 @@
       "id": "65d24c78cb92bdf7b26eae9c",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6344.83,
       "etime": 6347.19,
       "text": "Скорее всего, все эти звездочки уже и наставили отдать."
@@ -14287,7 +14287,7 @@
       "id": "65d24c78cb92bdf7b26eaea0",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6363.99,
       "etime": 6367.25,
       "text": "Да, это была такая пародия на питоне, которая там веб-сквелл... Как это пародия?"
@@ -14431,7 +14431,7 @@
       "id": "65d24c78cb92bdf7b26eaeb0",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6425.73,
       "etime": 6427.61,
       "text": "Лицензию еще не забыть."
@@ -14440,7 +14440,7 @@
       "id": "65d24c78cb92bdf7b26eaeb1",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6427.63,
       "etime": 6429.61,
       "text": "Лицензия просто замечательная."
@@ -14827,7 +14827,7 @@
       "id": "65d24c78cb92bdf7b26eaedc",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6624.89,
       "etime": 6638.11,
       "text": "Дело в том, что он как раз особо не развивается, у него там низкий уровень совместимости, то есть у них сейчас в документации написано, что уровень совместимости типа 3.0.0, потому что гошный драйвер требует уже минимум 3.2, и поэтому гошный драйвер не работает."
@@ -14836,7 +14836,7 @@
       "id": "65d24c78cb92bdf7b26eaedd",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6638.15,
       "etime": 6645.32,
       "text": "Ну и вообще количество ограничений у них очень большое, но самое главное, у них особо нету мотивации это улучшать, то есть внутри Apple работает и нормально."
@@ -15169,7 +15169,7 @@
       "id": "65d24c78cb92bdf7b26eaf02",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6798.1,
       "etime": 6800.57,
       "text": "Я тут пошел посмотреть на FoundationDB Documentation Layer."
@@ -15178,7 +15178,7 @@
       "id": "65d24c78cb92bdf7b26eaf03",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6801.01,
       "etime": 6806.55,
       "text": "У них есть issue типа поддержка протокола версии 4, который Mongo начинает с версии 3.2."
@@ -15187,7 +15187,7 @@
       "id": "65d24c78cb92bdf7b26eaf04",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6806.59,
       "etime": 6813.08,
       "text": "Последний комментарий моего бывшего коллеги про то, что MongoDB 5.0 задеприкетил эту версию протокола, нужно делать уже следующую."
@@ -15196,7 +15196,7 @@
       "id": "65d24c78cb92bdf7b26eaf05",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6813.12,
       "etime": 6816.1,
       "text": "То есть они уже предыдущие не успели сделать, уже следующих пора делать."
@@ -15232,7 +15232,7 @@
       "id": "65d24c78cb92bdf7b26eaf09",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6822.9,
       "etime": 6824.39,
       "text": "Там из трех пунктов один закрыт."
@@ -15241,7 +15241,7 @@
       "id": "65d24c78cb92bdf7b26eaf0a",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 6824.41,
       "etime": 6826.19,
       "text": "То есть OP-команду они все-таки сделали."
@@ -16060,7 +16060,7 @@
       "id": "65d24c78cb92bdf7b26eaf65",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7122.03,
       "etime": 7125.7,
       "text": "А снизу там рекорд по количеству водки за одну ночь."
@@ -16105,7 +16105,7 @@
       "id": "65d24c78cb92bdf7b26eaf6a",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7143.13,
       "etime": 7148.86,
       "text": "Ну вот справедливости ради, да, говорят, что она пошла собеседоваться, но она, по сути, только максимум скрининг прошла."
@@ -16114,7 +16114,7 @@
       "id": "65d24c78cb92bdf7b26eaf6b",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7148.96,
       "etime": 7149.38,
       "text": "Конечно."
@@ -16123,7 +16123,7 @@
       "id": "65d24c78cb92bdf7b26eaf6c",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7149.42,
       "etime": 7152.5,
       "text": "Если бы она нарвалась на первого человека, сразу было бы понятно."
@@ -16132,7 +16132,7 @@
       "id": "65d24c78cb92bdf7b26eaf6d",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7152.52,
       "etime": 7153.37,
       "text": "Конечно."
@@ -16141,7 +16141,7 @@
       "id": "65d24c78cb92bdf7b26eaf6e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7153.41,
       "etime": 7157.21,
       "text": "Вон еще в чатике пишут, что врут, никто к ним не приходил."
@@ -16267,7 +16267,7 @@
       "id": "65d24c78cb92bdf7b26eaf7c",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7210.35,
       "etime": 7213.01,
       "text": "Девопс это не профессия, не должность."
@@ -16501,7 +16501,7 @@
       "id": "65d24c78cb92bdf7b26eaf96",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7332.08,
       "etime": 7332.64,
       "text": "Я могу рассказать."
@@ -16510,7 +16510,7 @@
       "id": "65d24c78cb92bdf7b26eaf97",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7332.66,
       "etime": 7346.43,
       "text": "А то уязвимость такая про то, что многие в современном языке программирования, которые так или иначе используют Unicode в исходниках от E8, в частности, Go, например, можно объединить специальные символы Unicode, которые left to right, right to left меняют направление письма."
@@ -16519,7 +16519,7 @@
       "id": "65d24c78cb92bdf7b26eaf98",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7346.51,
       "etime": 7354.8,
       "text": "Дальше можно при помощи этого написать такой код, который в редакторе кода выглядит нормально, на GitHub в ревью выглядит нормально, а по факту компилируется по-другому."
@@ -16528,7 +16528,7 @@
       "id": "65d24c78cb92bdf7b26eaf99",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7356.58,
       "etime": 7370.21,
       "text": "написал отвертку на эту тему, что никакая это не проблема, то есть это, во-первых, не новая проблема, потому что она уже давно репортилась, и вообще не проблема, и нужно просто делать ревью качественно, и инструмент для ревью должен быть лучше."
@@ -16546,7 +16546,7 @@
       "id": "65d24c78cb92bdf7b26eaf9b",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7377.82,
       "etime": 7393.39,
       "text": "Есть, есть линтеры, и как бы главное следствие вот этой всей новости большой, которая была там громко везде, то, что GitHub теперь сам говорит, что если в PR или в Diff'е есть такие странные Unicode символы, типа вот left to right, right to left, он будет сразу ругаться на них."
@@ -16636,7 +16636,7 @@
       "id": "65d24c78cb92bdf7b26eafa5",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7421.95,
       "etime": 7424.55,
       "text": "Да, дальше просто копипастят, выделяют и заменяют."
@@ -16645,7 +16645,7 @@
       "id": "65d24c78cb92bdf7b26eafa6",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7424.75,
       "etime": 7425.94,
       "text": "Ну, все так и делали."
@@ -16654,7 +16654,7 @@
       "id": "65d24c78cb92bdf7b26eafa7",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7425.96,
       "etime": 7434.28,
       "text": "Кстати, я вот подумал, что GitHub копилот — это на самом деле современный дженерикогенератор, пока дженерики не завезли."
@@ -16663,7 +16663,7 @@
       "id": "65d24c78cb92bdf7b26eafa8",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7434.32,
       "etime": 7437.64,
       "text": "Пишешь там, сколько нужно нажимаешь, там он тебе делит для всех типов."
@@ -16699,7 +16699,7 @@
       "id": "65d24c78cb92bdf7b26eafac",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7450.37,
       "etime": 7452.97,
       "text": "Я, кажется, даже пробовал немножко и действительно работает."
@@ -16753,7 +16753,7 @@
       "id": "65d24c78cb92bdf7b26eafb2",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7472.38,
       "etime": 7473.22,
       "text": "С ифами."
@@ -16780,7 +16780,7 @@
       "id": "65d24c78cb92bdf7b26eafb5",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7482.95,
       "etime": 7483.45,
       "text": "Ну, да."
@@ -16789,7 +16789,7 @@
       "id": "65d24c78cb92bdf7b26eafb6",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7483.49,
       "etime": 7488.31,
       "text": "На самом деле, если ты пишешь в коде, в котором уже есть на Testify, он уже нормально его подставляет, использует."
@@ -16798,7 +16798,7 @@
       "id": "65d24c78cb92bdf7b26eafb7",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 7488.35,
       "etime": 7488.41,
       "text": "Да."
@@ -18652,7 +18652,7 @@
       "id": "65d24c78cb92bdf7b26eb085",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8177.54,
       "etime": 8179.62,
       "text": "Синхронизирует, я им пользуюсь."
@@ -18670,7 +18670,7 @@
       "id": "65d24c78cb92bdf7b26eb087",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8180.7,
       "etime": 8180.74,
       "text": "Да."
@@ -18715,7 +18715,7 @@
       "id": "65d24c78cb92bdf7b26eb08c",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8186.93,
       "etime": 8188.53,
       "text": "В смысле, я им тоже пробовал пользоваться."
@@ -18724,7 +18724,7 @@
       "id": "65d24c78cb92bdf7b26eb08d",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8188.57,
       "etime": 8189.45,
       "text": "Там есть два режима."
@@ -18733,7 +18733,7 @@
       "id": "65d24c78cb92bdf7b26eb08e",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8189.49,
       "etime": 8192.19,
       "text": "Один типа активный синк, когда он висит на зарядке."
@@ -18742,7 +18742,7 @@
       "id": "65d24c78cb92bdf7b26eb08f",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8192.23,
       "etime": 8193.19,
       "text": "И есть пассивный синк."
@@ -18751,7 +18751,7 @@
       "id": "65d24c78cb92bdf7b26eb090",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8193.29,
       "etime": 8197.2,
       "text": "У него есть жесткие ограничения по времени, конечно, сколько он больше синхронизирует."
@@ -18760,7 +18760,7 @@
       "id": "65d24c78cb92bdf7b26eb091",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8197.22,
       "etime": 8199.06,
       "text": "15 минут."
@@ -18769,7 +18769,7 @@
       "id": "65d24c78cb92bdf7b26eb092",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8199.14,
       "etime": 8200.62,
       "text": "Да, естественно."
@@ -18778,7 +18778,7 @@
       "id": "65d24c78cb92bdf7b26eb093",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8200.68,
       "etime": 8204.94,
       "text": "Если он уже синхронизирован, то он синхронизируется, досинхронизируется успешно."
@@ -19138,7 +19138,7 @@
       "id": "65d24c78cb92bdf7b26eb0bb",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8342.11,
       "etime": 8344.54,
       "text": "Она есть, но, по-моему, она просто выключена по умолчанию."
@@ -19147,7 +19147,7 @@
       "id": "65d24c78cb92bdf7b26eb0bc",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8344.6,
       "etime": 8346.64,
       "text": "Там как-то хитро."
@@ -19156,7 +19156,7 @@
       "id": "65d24c78cb92bdf7b26eb0bd",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8346.7,
       "etime": 8352.96,
       "text": "Я когда включал, нужно было язык системно менять, потом включать, потом менять обратно, естественно, на русский."
@@ -19165,7 +19165,7 @@
       "id": "65d24c78cb92bdf7b26eb0be",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8353,
       "etime": 8353.78,
       "text": "Вполне возможно, у нас"
@@ -19219,7 +19219,7 @@
       "id": "65d24c78cb92bdf7b26eb0c4",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8376.05,
       "etime": 8378.95,
       "text": "HashiCorp подал заявку на IPO."
@@ -19228,7 +19228,7 @@
       "id": "65d24c78cb92bdf7b26eb0c5",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8378.99,
       "etime": 8379.78,
       "text": "Кто? HashiCorp."
@@ -19255,7 +19255,7 @@
       "id": "65d24c78cb92bdf7b26eb0c8",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8385.84,
       "etime": 8387.66,
       "text": "Поздравляем."
@@ -19264,7 +19264,7 @@
       "id": "65d24c78cb92bdf7b26eb0c9",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8387.72,
       "etime": 8394.12,
       "text": "Там есть такой интересный момент, что недавно была новость, что сам Митчелл уходит с позиции SEO, будет индивидуал-контрибьютором."
@@ -19273,7 +19273,7 @@
       "id": "65d24c78cb92bdf7b26eb0ca",
       "issue": 779,
       "type": "cc",
-      "author": "Guest",
+      "author": "alexey_palazhchenko",
       "stime": 8394.14,
       "etime": 8400.61,
       "text": "И теперь, как следствие, не указано, сколько у него акций и сколько миллионов долларов у него будет."

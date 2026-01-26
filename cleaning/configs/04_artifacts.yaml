@@ -1,0 +1,5862 @@
+version: 1
+name: Artifact rules (short transcription errors)
+priority: 4
+description: Короткие ошибки транскрипции → _artifact
+rules:
+- id: artifact_e116_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 116
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e208_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 208
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Эльдар Муртазин не участвовал в эпизоде 208.
+
+    В эпизоде присутствуют только Umputun, Bobuk и PetrDidenko.
+
+    Реплика "ПКГ и CRC, да?" (2 сек на 368.98-370.64s) — это уточняющий вопрос в техническом
+    диалог'
+- id: artifact_e212_SPEAKER_02
+  type: rename_episode
+  episode: 212
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Очень короткие односложные реплики (0.1-2 сек) разбросаны по всему выпуску:
+
+    - 1537s: "А иначе как?" (1 сек)
+
+    - 2278s: "Нет?" (0.16 сек)
+
+    - 5044s: "Почему?" (0.2 сек)
+
+    - 6673s: "Ну, да." (2 сек)
+
+    Скорее вс'
+- id: artifact_e212_SPEAKER_04
+  type: rename_episode
+  episode: 212
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Ультракороткие реплики-междометия:
+
+    - 2594s: "Гуано, да, да." (0.5 сек) — контекст: обсуждение названий
+
+    - 5666s: "Угу." (0.1 сек)
+
+    Это типичные артефакты распознавания — короткие подтверждающие звуки,
+
+    к'
+- id: artifact_e212_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 212
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная реплика (6449s): "Бобок, а что такое?"
+
+    Судя по имени спикера, это было ошибочно приписано Lavale, но затем отменено.
+
+    Контекст: сразу после этого идёт реплика Marin_k_a с продолжением мысл'
+- id: artifact_e213_SPEAKER_03
+  type: rename_episode
+  episode: 213
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Только 3 очень короткие реплики (всего 4 сек): "Поясни" (658 сек), "Вот
+    черт" (2392 сек), "Угу, угу" (5483 сек).
+
+    Это типичные ошибки автоматического распознавания — короткие междометия,
+
+    которые могли '
+- id: artifact_e213_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 213
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Одна реплика помечена как MISATTRIBUTED — это означает, что ранее была
+
+    ошибочно присвоена Lavale, но затем присвоение отменено.
+
+    Реплика (2382 сек): "А что ж ты не рассказываешь-то хотя бы в радиоте-то'
+- id: artifact_e214_SPEAKER_01
+  type: rename_episode
+  episode: 214
+  from: SPEAKER_01
+  to: _artifact
+  reason: Ошибка распознавания речи Umputun. На 6547с Bobuk говорит 'Женя, с днем
+    рождения', SPEAKER_01 отвечает 'Спасибо' - это явно Umputun (его зовут Евгений/Женя).
+- id: artifact_e216_SPEAKER_02
+  type: rename_episode
+  episode: 216
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Очень короткая реплика (0.06 сек) с односложным междометием "Ну..." вставлена
+    между репликами Umputun и Bobuk. Это типичная ошибка автоматического распознавания
+    речи - фрагмент речи одного из ведущих '
+- id: artifact_e217_SPEAKER_04
+  type: rename_episode
+  episode: 217
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Всего 2 реплики за весь выпуск: "Но потоп выглядел назад" (2526s)
+
+    и "Вполне" (8258s). Типичные ошибки распознавания.
+
+    '
+- id: artifact_e217_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 217
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e218_SPEAKER_06
+  type: rename_episode
+  episode: 218
+  from: SPEAKER_06
+  to: _artifact
+  reason: Короткие реплики (1-2 сек), разбросаны по разным местам выпуска, типичные
+    короткие реакции
+- id: artifact_e218_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 218
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Одна короткая реплика, уже помечена как MISATTRIBUTED
+- id: artifact_e218_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 218
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e219_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 219
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Две очень короткие реплики (2.16 сек и 1.46 сек), разбросанные по эпизоду.
+    В начале эпизода Umputun явно представляет только трёх участников: "У нас сегодня
+    три гада" и "Здравствуй, Бобук, здравствуй,'
+- id: artifact_e220_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 220
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e222_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 222
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e222_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 222
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Эльдар Муртазин в этом выпуске не участвовал. Короткие междометия:
+
+    "Например" (857.9s) - сразу после такой же реплики Bobuk (дублирование?)
+
+    "А, вот оно что" (5768.5s) - короткая реакция
+
+    Скорее всего о'
+- id: artifact_e222_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 222
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e223_SPEAKER_00
+  type: rename_episode
+  episode: 223
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Очень короткие односложные реплики в разных местах эпизода:
+
+    - 2426s: "Ты думаешь?" (после реплики Umputun)
+
+    - 3526s: "Угу" (после реплики Bobuk)
+
+    - 6609s: "Да-да-да" (после реплики Bobuk)
+
+    Это типичные о'
+- id: artifact_e223_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 223
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e224_SPEAKER_00
+  type: rename_episode
+  episode: 224
+  from: SPEAKER_00
+  to: _artifact
+  reason: Одна короткая реплика 'Да' (0.04 сек) между репликами Bobuk и Gray. Типичная
+    ошибка автоматического распознавания — скорее всего это Gray, который сразу после
+    (654с) продолжает говорить.
+- id: artifact_e225_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 225
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная реплика (841.95-843.31s): "Гуглон будут сокращать, наверное."
+
+    Имя спикера уже содержит "MISATTRIBUTED" - это отменённое ошибочное присвоение.
+
+    Контекст: между репликами Umputun "Явно какой'
+- id: artifact_e226_SPEAKER_04
+  type: rename_episode
+  episode: 226
+  from: SPEAKER_04
+  to: _artifact
+  reason: Односложная реплика 'Угу' длительностью 0.08 сек между репликами Umputun
+    и EldarMurtazin. Типичная ошибка распознавания - короткий звук согласия, который
+    мог принадлежать любому из участников.
+- id: artifact_e227_Bobuk
+  type: rename_episode
+  episode: 227
+  from: Bobuk
+  to: _artifact
+  reason: 'Bobuk НЕ участвует в этом эпизоде!
+
+    Gray в начале (226.42s) прямо говорит: "Гриша, который Бобук, он просто вот сдал
+    сегодня утром телефон,
+
+    и два дня его даже в телефоне не будет. Он в больнице."
+
+    Единс'
+- id: artifact_e228_SPEAKER_06
+  type: rename_episode
+  episode: 228
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Только 3 очень короткие реплики (~1 сек каждая):
+
+    - 2457.69s: "Да-да-да"
+
+    - 4603.89s: "Русскими и кириллицами"
+
+    - 6272.52s: "Не заканчиваются"
+
+    Типичные междометия/реакции, вероятно ошибочно отделённые от'
+- id: artifact_e229_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 229
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Lavale не участвовала в этом выпуске. Реплика "Мне до тебя еще далеко"
+    (4151s)
+
+    находится в контексте диалога между Bobuk и Marin_k_a. Это скорее всего Marin_k_a.
+
+    '
+- id: artifact_e230_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 230
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e230_SPEAKER_03
+  type: rename_episode
+  episode: 230
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Две очень короткие реплики-междометия:
+
+    1. "Большое." (5377s, 1.12 сек) - вставка в монолог Umputun про яблоко MacBook
+
+    2. "Угу." (5660s, 0.18 сек!) - поддакивание в монологе Umputun
+
+    Обе вклиниваются в '
+- id: artifact_e231_SPEAKER_04
+  type: rename_episode
+  episode: 231
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Одна короткая реплика ''Занавес.'' (1.5 сек) в 6888s. Сразу после Gray
+    говорит ''Именно что занавес.'' - скорее всего это эхо или ошибка сегментации:
+    слово ''Занавес'' произнёс кто-то из ведущих, и оно попа'
+- id: artifact_e231_Bobuk
+  type: rename_episode
+  episode: 231
+  from: Bobuk
+  to: _artifact
+  reason: 'Бобук отсутствует в этом выпуске. Umputun в начале (8.19s) говорит: ''Опять
+    Бобук прогуливает, но, говорят, он в какой-то дыре, в которой интернет не дотянули.''
+    Две реплики с пометкой Bobuk (2365s и 67'
+- id: artifact_e233_Gray
+  type: rename_episode
+  episode: 233
+  from: Gray
+  to: _artifact
+  reason: 'Gray явно отсутствует в этом выпуске - об этом говорится в начале:
+
+    0:20 Marin_k_a: "у нас сегодня нету только нашего Небритыша. Небритыш, Чебурашка,
+    Грей,
+
+    он не смог настроить интернет"
+
+
+    Единственная '
+- id: artifact_e233_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 233
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e235_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 235
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Эльдар Муртазин НЕ участвовал в этом эпизоде. Umputun явно говорит: ''Эльдара
+    нет'' (86-89s)'
+- id: artifact_e237_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 237
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Одна короткая реплика "Нет, не понял" (5985s).
+
+    Была ошибочно приписана Петру Диденко, затем отменена.
+
+    Скорее всего ошибка распознавания.
+
+    '
+- id: artifact_e238_SPEAKER_01
+  type: rename_episode
+  episode: 238
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Единственная реплика "Да-да-да." (5212s, 2 сек) - типичная ошибка распознавания.
+
+    Короткое подтверждение посреди разговора, скорее всего принадлежит одному из активных
+    участников.
+
+    '
+- id: artifact_e238_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 238
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e238_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 238
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e240_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 240
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.7s)
+- id: artifact_e240_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 240
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.9s)
+- id: artifact_e240_SPEAKER_04
+  type: rename_episode
+  episode: 240
+  from: SPEAKER_04
+  to: _artifact
+  reason: Короткие реакции и смех, вероятно ошибка распознавания
+- id: artifact_e241_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 241
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Ошибка распознавания. Первая реплика (1896s: "Которыми рисуют, да.") —
+
+    дубль/эхо реплики Umputun непосредственно перед ней (1895s: "Которыми рисуют,
+    да?").
+
+    Вторая реплика (5519s: "Ты даже стихотворени'
+- id: artifact_e241_SPEAKER_05
+  type: rename_episode
+  episode: 241
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Явная ошибка распознавания. Реплика (199s: "Не в курсе.") —
+
+    это эхо/часть предыдущей реплики Bobuk (196s: "модно говорить, я не в курсе").
+
+    Сразу после неё Bobuk продолжает: "Да, да, Александр."
+
+    '
+- id: artifact_e242_SPEAKER_06
+  type: rename_episode
+  episode: 242
+  from: SPEAKER_06
+  to: _artifact
+  reason: Единственная реплика 'Угу, угу, угу' — междометие, артефакт распознавания
+- id: artifact_e242_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 242
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Уже помечен как ошибочное присвоение Eldar (Муртазин). Eldar не участвовал
+    в этом эпизоде
+- id: artifact_e242_Bobuk
+  type: rename_episode
+  episode: 242
+  from: Bobuk
+  to: _artifact
+  reason: Bobuk (Григорий) отсутствовал в эпизоде — Umputun в начале не понимает,
+    кто такой 'Гриша', Маруся говорит что заменяет отсутствующих
+- id: artifact_e243_SPEAKER_04
+  type: rename_episode
+  episode: 243
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Только 2 реплики за весь выпуск, обе - односложные междометия:
+
+    - 1987s: "Угу." (0.06 сек)
+
+    - 6685s: "Классно." (0.74 сек)
+
+
+    Суммарная длительность ~1 сек, реплики разнесены на 78 минут.
+
+    Это типичный пат'
+- id: artifact_e244_SPEAKER_00
+  type: rename_episode
+  episode: 244
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Три очень короткие реплики (по 1 сек каждая) в разных частях подкаста:
+    ''Это да'' (3557s), ''Ну, нормально'' (4032s), ''Правильно'' (5871s). Типичные
+    односложные реакции, которые система распознавания могла'
+- id: artifact_e244_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 244
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Единственная реплика 'У меня все хорошо с памятью' (5395s) в ответ на шутку
+    Бобука о памяти, обращённую к Маринке. Ранее была ошибочно приписана Lavale, но
+    Lavale не участвовала в этом выпуске.
+- id: artifact_e245_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 245
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e245_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 245
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная реплика в 116s: "Мы тут кого-то забыли." (1.04 сек)
+
+    Маркировка MISATTRIBUTED указывает на ошибочное присвоение.
+
+    Lavale не участвовала в выпуске 245.
+
+
+    Контекст: обсуждение юбилея подкаста,'
+- id: artifact_e246_SPEAKER_04
+  type: rename_episode
+  episode: 246
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Минимальные реплики (суммарно ~1 сек): "Или что?" (5058 сек), "Ура!" (6859
+    сек),
+
+    "Ну, конечно." (7508 сек). Типичные короткие восклицания/реакции.
+
+    Невозможно идентифицировать по таким коротким фрагмен'
+- id: artifact_e247_SPEAKER_07
+  type: rename_episode
+  episode: 247
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Всего 3 реплики, 4 секунды. Фразы: "Не могу расстаться.",
+
+    "На самом деле... Замечательно, давай."
+
+    Ошибки сегментации, возможно части реплик других спикеров.
+
+    '
+- id: artifact_e247_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 247
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Только 2 реплики по ~1 сек: "Это в раке, да." и "Ну, вот это сложно."
+
+    Маркировка указывает на ранее отменённое присвоение к Lavale.
+
+    В этом выпуске Lavale не участвует.
+
+    Это ошибки распознавания или обр'
+- id: artifact_e249_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 249
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e250_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 250
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e251_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 251
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e252_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 252
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Lavale не была гостем эпизода 252. Единственная реплика (4795s: ''Вот на
+    кого это все рассчитано, я на секундочку себе представила'') - женский голос.
+    В эпизоде только одна женщина - Marin_k_a (Марина).'
+- id: artifact_e252_SPEAKER_00
+  type: rename_episode
+  episode: 252
+  from: SPEAKER_00
+  to: _artifact
+  reason: 3 очень короткие реплики (<1 сек каждая) разбросаны по эпизоду. Это ошибки
+    распознавания или наложение голосов.
+- id: artifact_e253_SPEAKER_05
+  type: rename_episode
+  episode: 253
+  from: SPEAKER_05
+  to: _artifact
+  reason: Короткая односложная реакция 'Угу, угу, угу' (0.6 сек) между репликами Bobuk
+    и Umputun. Скорее всего ошибка распознавания одного из ведущих.
+- id: artifact_e253_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 253
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e254_SPEAKER_00
+  type: rename_episode
+  episode: 254
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Две короткие реплики (1 сек каждая) посреди диалога между Umputun и Bobuk.
+
+    Реплики: "Я думаю, вранье." и "Он разве был на Mac?"
+
+    Контекст: обсуждение Google Desktop. Вероятно, это ошибочно отделённые
+
+    р'
+- id: artifact_e256_SPEAKER_04
+  type: rename_episode
+  episode: 256
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Крайне короткие односложные реплики: "Так вот сейчас" (0.4s),
+
+    "Чай пью" (1.8s), "Угу" (0.2s), "Нет" (0.8s).
+
+    Это типичные артефакты распознавания речи.
+
+
+    Контекст 497s: Bobuk говорит "Мы с тобой договор'
+- id: artifact_e257_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 257
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Две очень короткие реплики (<1 сек каждая), вклинивающиеся между
+
+    репликами ведущих. Эльдар Муртазин не участвует в этом выпуске
+
+    (нет упоминаний, нет представления). Контекст указывает на
+
+    ошибку распоз'
+- id: artifact_e258_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 258
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная реплика в 4688с: "Это вообще-то он путун."
+
+    Контекст: после фразы Бобука "Маручка даже поцеловала" (4685-4688с).
+
+    Это явно реплика Марины (Marin_k_a), которая шутит про поцелуй.
+
+    Lavale в эт'
+- id: artifact_e259_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 259
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная короткая реплика "Твиттер это наше все" (1.4 сек).
+
+    В контексте диалога между Umputun и Bobuk о Twitter.
+
+    Вероятно ошибка распознавания одного из участников.
+
+    '
+- id: artifact_e259_Gray
+  type: rename_episode
+  episode: 259
+  from: Gray
+  to: _artifact
+  reason: 'Единственная реплика 0.7 сек в середине диалога Bobuk-Marin_k_a.
+
+    Umputun в конце выпуска (6510s) говорит "у нас нету Греи".
+
+    Скорее всего ошибка распознавания.
+
+    '
+- id: artifact_e260_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 260
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Одиночная короткая реплика (1.24 сек) в середине диалога между Umputun
+    и Bobuk. Фраза "Да, конечно, никому не нужен." является типичной репликой-подхватом
+    в контексте обсуждения: Bobuk спрашивает "Ком'
+- id: artifact_e261_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 261
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Единственная короткая реплика (1.4 сек). Явная ошибка распознавания.
+- id: artifact_e262_SPEAKER_05
+  type: rename_episode
+  episode: 262
+  from: SPEAKER_05
+  to: _artifact
+  reason: Единственная короткая реплика 'У меня даже есть' (1.3 сек) - ошибка распознавания,
+    вклинилась между репликами других спикеров
+- id: artifact_e263_SPEAKER_03
+  type: rename_episode
+  episode: 263
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Очень короткие реплики (менее 1.2 сек каждая) с односложными фразами: ''Дожили''
+    (повтор за Bobuk), ''Наслаждаться?'' (вопрос к Umputun), ''Всегда?'' (вопрос к
+    Umputun). Разбросаны по выпуску - типичные оши'
+- id: artifact_e264_SPEAKER_06
+  type: rename_episode
+  episode: 264
+  from: SPEAKER_06
+  to: _artifact
+  reason: Единственная короткая реплика 'Жень, ну ты что?' — скорее всего ошибка распознавания
+    одного из ведущих (Bobuk или Marin_k_a)
+- id: artifact_e264_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 264
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e265_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 265
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Короткие нейтральные реплики ("Это же прекрасно", "Вот сейчас бы не пришли").
+
+    Эльдар Муртазин НЕ участвует в этом выпуске (представлены только Бубук и Маруся).
+
+    Вероятно это ошибочная атрибуция одного '
+- id: artifact_e265_SPEAKER_04
+  type: rename_episode
+  episode: 265
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Очень короткие реплики (1.4 сек суммарно) в разное время (272s и 6153s).
+
+    "Arch и Linux from Scratch обязательно" (272s) - техническая фраза, похоже на
+    Bobuk или Umputun.
+
+    "Ага" (6153s) - междометие, ср'
+- id: artifact_e265_SPEAKER_99
+  type: rename_episode
+  episode: 265
+  from: SPEAKER_99
+  to: _artifact
+  reason: Аудио-артефакты, джинглы, звуковые эффекты. Игнорировать.
+- id: artifact_e266_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 266
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e266_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 266
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Метка MISATTRIBUTED указывает на отменённое ошибочное присвоение. Короткая
+    реплика 'Ты письмо читал оригинальное?' — типичный вопрос ведущего в диалоге.
+- id: artifact_e266_SPEAKER_05
+  type: rename_episode
+  episode: 266
+  from: SPEAKER_05
+  to: _artifact
+  reason: Единственная реплика 'Возможно' (0.3 сек) в контексте разговора, где Bobuk
+    обращается к 'Маручка'. Скорее всего это Marin_k_a или ошибка распознавания.
+- id: artifact_e267_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 267
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Единственная реплика (7187s): "Около двух часов." длительностью 0.66 сек.
+    Это явный дубль/эхо реплики Umputun, который за 2 секунды до этого (7186s) говорит
+    "Нет, около двух часов, Жень." Скорее всего'
+- id: artifact_e268_SPEAKER_99
+  type: rename_episode
+  episode: 268
+  from: SPEAKER_99
+  to: _artifact
+  reason: Отрицательная общая длительность указывает на ошибки в таймстемпах. SPEAKER_99
+    традиционно используется для аудио-артефактов и джинглов.
+- id: artifact_e269_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 269
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Единственная реплика (1 сек) "Но мы переходим." сразу же продолжается репликой
+    Umputun "Мы переходим с GoDaddy." — явная ошибка разбиения речи одного человека
+    на два спикера.
+
+    '
+- id: artifact_e270_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 270
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Три очень короткие реплики (<1.5 сек каждая). 'Поэтому не надо.', 'И куда
+    ты', фрагменты.
+- id: artifact_e270_SPEAKER_03
+  type: rename_episode
+  episode: 270
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Две реплики по ~1 сек: ''Да, да.'' и ''Еще раз выбью второй раз, товарищ.''
+    - вторая похожа на артефакт.'
+- id: artifact_e271_SPEAKER_02
+  type: rename_episode
+  episode: 271
+  from: SPEAKER_02
+  to: _artifact
+  reason: Единственная реплика длительностью 0.04 секунды — односложное "Ну,". Находится
+    между двумя репликами Bobuk'а (2375-2379 сек и 2381-2389 сек). Очевидная ошибка
+    сегментации — часть фразы одного из ведущ
+- id: artifact_e271_Gray
+  type: rename_episode
+  episode: 271
+  from: Gray
+  to: _artifact
+  reason: Gray не участвовал в этом эпизоде. В начале Umputun явно говорит что они
+    с Bobuk'ом вдвоём. Единственная реплика "Но вышло прикольно." (1.5 сек) на отметке
+    6913 сек — это ошибка атрибуции, скорее всег
+- id: artifact_e272_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 272
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: "Ошибочная атрибуция - очень короткие реплики (0.5-1 секунда):\n- 7195s:\
+    \ \"Не стал\" - ответ на вопрос Bobuk \"ты же, конечно, не поставил, да?\",\n\
+    \  следующая реплика Umputun: \"Я даже тему не открывал\" - эт"
+- id: artifact_e272_SPEAKER_03
+  type: rename_episode
+  episode: 272
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Единственная реплика длиной 0.5 секунды: "А Яндексу?" (2003.6s).
+
+    Контекст: Bobuk рассказывает про Twitter API, кто-то переспрашивает.
+
+    Скорее всего это Marin_k_a, которая присоединилась незадолго до эт'
+- id: artifact_e274_SPEAKER_03
+  type: rename_episode
+  episode: 274
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Три короткие разрозненные реплики (<2s каждая) в случайные моменты:
+
+    - 354s: "Да." (после вопроса про iPad и женщин, отвечает Marin_k_a следующей репликой)
+
+    - 2089s: "Я не понимаю тебя." (в контексте об'
+- id: artifact_e274_SPEAKER_05
+  type: rename_episode
+  episode: 274
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Три короткие реплики (<2s каждая):
+
+    - 1483s: "Померяться." (одно слово в обсуждении процессоров)
+
+    - 1593s: "Одному." (эхо слова Gray "Одному?")
+
+    - 2533s: "Они у него есть." (повтор слов Bobuk "Они у меня'
+- id: artifact_e274_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 274
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Две короткие реплики с пометкой MISATTRIBUTED (ошибочно приписанные Lavale):
+
+    - 1065s: "Я не знаю, как вы живете." (реакция на обсуждение интерфейса)
+
+    - 6856s: "Подготовился чувак." (комментарий к стать'
+- id: artifact_e274_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 274
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e274_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 274
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Одна короткая реплика с пометкой MISATTRIBUTED (ошибочно приписанная Petr
+    Didenko):
+
+    - 3896s: "Это что такое?" (вопрос к картинке/статье)
+
+    Petr Didenko не участвовал в выпуске 274. Это ошибочное распозн'
+- id: artifact_e275_SPEAKER_05
+  type: rename_episode
+  episode: 275
+  from: SPEAKER_05
+  to: _artifact
+  reason: Единственная реплика в 1 секунду в конце эпизода. Скорее всего артефакт
+    распознавания или случайная фраза одного из ведущих/гостя.
+- id: artifact_e276_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 276
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e276_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 276
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Одиночная короткая реплика (1.4 сек). Lavale не была представлена и не упоминается
+    в эпизоде. Это явно кто-то из присутствующих.
+- id: artifact_e276_Bobuk
+  type: rename_episode
+  episode: 276
+  from: Bobuk
+  to: _artifact
+  reason: Bobuk отсутствовал на записи. В конце эпизода (6882s) Umputun говорит 'Надеюсь,
+    Бобук доедет из Ярославля', что подтверждает его физическое отсутствие. Одна реплика
+    — явная ошибка распознавания.
+- id: artifact_e276_SPEAKER_99
+  type: rename_episode
+  episode: 276
+  from: SPEAKER_99
+  to: _artifact
+  reason: 'Аудио-артефакты, обрывки речи. Все реплики менее 1 сек: ''One.'', ''V8
+    JavaScript.'', ''То есть,'', ''USB 3?'''
+- id: artifact_e277_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 277
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e278_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 278
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e279_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 279
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e279_SPEAKER_03
+  type: rename_episode
+  episode: 279
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Ультракороткая реплика (0.12 сек): "М-м-м" в 5408.61s.
+
+    Между репликами Umputun и Bobuk. Явный аудио-артефакт или случайный звук.
+
+    '
+- id: artifact_e280_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 280
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e280_SPEAKER_03
+  type: rename_episode
+  episode: 280
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Единственная реплика "Угу" длительностью 0.14 секунды (7620.25-7620.39)
+
+    посреди длинного монолога Bobuk об архивации. Это типичная ошибка
+
+    распознавания — короткое междометие одного из ведущих (вероятн'
+- id: artifact_e281_SPEAKER_02
+  type: rename_episode
+  episode: 281
+  from: SPEAKER_02
+  to: _artifact
+  reason: Одиночная короткая реплика 'Красота' (619s), которая дублируется Umputun
+    сразу после (621s, то же слово). Вероятно эхо или ошибка сегментации.
+- id: artifact_e281_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 281
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Уже помечена как misattributed. Короткая реплика 'Это крутецкая вещь' в
+    контексте разговора Umputun и Bobuk про Google Voice. Bobuk сразу после говорит
+    'Да я с тобой согласен' - вероятно, это его репл
+- id: artifact_e281_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 281
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Уже помечена как misattributed. Две короткие реплики разбросаны по выпуску.
+    Первая (5047s) 'Ну, три-четыре года, где-то так' - ответ на вопрос Umputun про
+    сервер, вероятно Bobuk. Вторая (7746s) 'Давай
+- id: artifact_e281_Gray
+  type: rename_episode
+  episode: 281
+  from: Gray
+  to: _artifact
+  reason: Gray не участвует в этом выпуске. В начале (1s-40s) ясно слышно только Umputun
+    и Bobuk, они говорят 'мы с тобой' - двое. Единственная реплика Gray (1956s) 'То
+    есть Google, понимаешь?' вклинивается в м
+- id: artifact_e282_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 282
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e282_SPEAKER_00
+  type: rename_episode
+  episode: 282
+  from: SPEAKER_00
+  to: _artifact
+  reason: Англоязычная реклама Winamp, аудио-вставка
+- id: artifact_e283_SPEAKER_06
+  type: rename_episode
+  episode: 283
+  from: SPEAKER_06
+  to: _artifact
+  reason: Две очень короткие реплики ('Ну, конечно' 2.5s, 'Облачко' 0.7s) в случайных
+    местах диалога. Типичные ошибки сегментации.
+- id: artifact_e283_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 283
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e283_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 283
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e287_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 287
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Короткая реплика (2.32 сек) между двумя репликами Umputun. Контекст: Umputun
+    спрашивает "Кто писал?" (на OCaml), затем идёт эта реплика "Ну, серьезно, на кого
+    это рассчитано?", и сразу Umputun продолж'
+- id: artifact_e288_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 288
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Всего 3 очень короткие реплики (~1 сек каждая) в разных частях эпизода.
+    Lavale не была в этом выпуске. Классический паттерн ошибок распознавания.
+- id: artifact_e288_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 288
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Одна короткая реплика (1.7 сек). Пётр Диденко не был гостем этого выпуска.
+    Реплика идёт сразу после Marin_k_a — вероятно ошибка распознавания.
+- id: artifact_e288_SPEAKER_04
+  type: rename_episode
+  episode: 288
+  from: SPEAKER_04
+  to: _artifact
+  reason: Две очень короткие реплики (~2 сек каждая) в разных частях эпизода. Типичный
+    паттерн ошибок авто-транскрипции.
+- id: artifact_e289_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 289
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Имя SPEAKER_MISATTRIBUTED_LAVALE указывает на отменённую ошибочную атрибуцию
+    спикеру Lavale. Lavale не участвует в эпизоде 289 (присутствуют только Umputun,
+    Bobuk, Marin_k_a). Реплики в контексте обсу
+- id: artifact_e290_SPEAKER_00
+  type: rename_episode
+  episode: 290
+  from: SPEAKER_00
+  to: _artifact
+  reason: Единичная короткая реплика (2 сек) — типичная ошибка ASR
+- id: artifact_e290_SPEAKER_04
+  type: rename_episode
+  episode: 290
+  from: SPEAKER_04
+  to: _artifact
+  reason: Две очень короткие реплики в разных частях выпуска — ошибки ASR
+- id: artifact_e290_Gray
+  type: rename_episode
+  episode: 290
+  from: Gray
+  to: _artifact
+  reason: 'Gray в этом выпуске не участвовал. Marin_k_a в начале (35-41s): ''Грей
+    второй раз подряд прогуливает''. Реплика ''Вот.'' ошибочно размечена.'
+- id: artifact_e292_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 292
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e292_SPEAKER_02
+  type: rename_episode
+  episode: 292
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Две короткие реплики-подтверждения:
+
+    - "Угу." (2220s) — после объяснения Umputun про MD5
+
+    - "Конечно." (7354s) — сразу после вопроса Umputun к Марусе: "да ты, Маруся?"
+
+    Вторая реплика явно принадлежит Ma'
+- id: artifact_e294_SPEAKER_01
+  type: rename_episode
+  episode: 294
+  from: SPEAKER_01
+  to: _artifact
+  reason: Три очень короткие реплики (0.5s каждая) с междометиями 'Ага', 'Угу', 'Ну
+    да' в случайные моменты подкаста. В начале выпуска было заявлено, что в студии
+    только Bobuk и Gray (без Umputun). Эти междомет
+- id: artifact_e295_Umputun
+  type: rename_episode
+  episode: 295
+  from: Umputun
+  to: _artifact
+  reason: 'Umputun ОТСУТСТВУЕТ в этом эпизоде — это явно сказано в начале выпуска:
+
+    "Умпутун отдыхает". Единственная реплика (855s): "Вообще никто не может" —
+
+    короткое согласие между репликами Bobuk, явная ошибка'
+- id: artifact_e296_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 296
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e297_SPEAKER_01
+  type: rename_episode
+  episode: 297
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Четыре короткие реплики подряд (7566-7573s): ''Вот.'', ''Ладно.'', ''Да.'',
+    ''Можно пока... Протокол смартфона на Firefox OS.'' Все между Bobuk и Gray/PetrDidenko.
+    Типичная ошибка распознавания - короткие меж'
+- id: artifact_e297_SPEAKER_03
+  type: rename_episode
+  episode: 297
+  from: SPEAKER_03
+  to: _artifact
+  reason: Одна короткая реплика 'Ура.' (6823.88-6825.08s, ~1.2 сек) между PetrDidenko
+    и Gray. Типичная ошибка распознавания - односложная эмоциональная реакция.
+- id: artifact_e298_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 298
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Лаваль не участвует в этом эпизоде.
+
+    Всего 2 короткие реплики (4 секунды) в случайных местах.
+
+    Типичные ошибки распознавания: "Да, это даже я скажу." и "Ну, как большая разница."
+
+    '
+- id: artifact_e298_SPEAKER_04
+  type: rename_episode
+  episode: 298
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Единственная реплика "Нет." (0.3 секунды).
+
+    Очевидная ошибка распознавания - односложная реакция.
+
+    '
+- id: artifact_e299_SPEAKER_02
+  type: rename_episode
+  episode: 299
+  from: SPEAKER_02
+  to: _artifact
+  reason: Три короткие реплики, скорее всего ошибки распознавания.
+- id: artifact_e300_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 300
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Это явно не Эльдар Муртазин - он не участвовал в выпуске 300.
+
+    Короткие фразы ("Вот я пишу", "Ну а что тебе пуша?", "Я даже понимаю...")
+
+    Все в контексте диалога Umputun с другими ведущими.
+
+    Скорее всего'
+- id: artifact_e300_SPEAKER_01
+  type: rename_episode
+  episode: 300
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Единственная реплика: 6121s "Итак, я пишу стоп."
+
+    Сразу после Umputun "Смотрю, дробной части нет" и до Bobuk "Жень, ты в следующий
+    раз проси делить."
+
+    Контекст явно указывает что это Umputun пишет "стоп'
+- id: artifact_e300_SPEAKER_06
+  type: rename_episode
+  episode: 300
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Все реплики очень короткие (0.1-1.7 сек): "Да", "Да", "Это от грозы", "Ага",
+    "Уходи дважды", "Пока".
+
+    Разбросаны по всему выпуску - типичные ошибки распознавания.
+
+    Скорее всего это подхватки других учас'
+- id: artifact_e300_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 300
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная реплика 6971s: "Мы можем просто разыграть."
+
+    Находится между репликами Marin_k_a (6970s и 6973s).
+
+    Lavale не участвовала в выпуске 300.
+
+    '
+- id: artifact_e301_SPEAKER_03
+  type: rename_episode
+  episode: 301
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Две ультракороткие реплики ("Угу" на 375s, "Да" на 735s).
+
+    Длительность 0.08 и 0.06 секунд - артефакты распознавания.
+
+    Невозможно определить спикера, скорее всего Ksenks или один из ведущих.
+
+    '
+- id: artifact_e301_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 301
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (3.0s)
+- id: artifact_e301_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 301
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (4.0s)
+- id: artifact_e301_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 301
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (2.0s)
+- id: artifact_e302_SPEAKER_01
+  type: rename_episode
+  episode: 302
+  from: SPEAKER_01
+  to: _artifact
+  reason: Две очень короткие реплики (0.14 сек и 2 сек), разбросанные по эпизоду.
+    Первая "Они" (504.9s) — обрыв фразы между репликами Umputun. Вторая "Да ты шо?"
+    (7185.5s) — характерная реакция, скорее всего Bo
+- id: artifact_e302_SPEAKER_00
+  type: rename_episode
+  episode: 302
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Единственная реплика "Да." длительностью 0.18 сек между двумя репликами
+    Umputun. Типичная ошибка распознавания — короткое междометие, выделенное как отдельный
+    спикер.
+
+    '
+- id: artifact_e303_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 303
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e303_SPEAKER_06
+  type: rename_episode
+  episode: 303
+  from: SPEAKER_06
+  to: _artifact
+  reason: Единственная реплика 'Как слышать' длиной 1.3 сек на 5921s. Слишком короткая
+    и изолированная для идентификации. Скорее всего ошибка распознавания одного из
+    участников.
+- id: artifact_e304_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 304
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Ранее ошибочно атрибутировано как Lavale, затем отменено.
+
+    Реплика "Например, посылку каких-то данных по сети" (6797с)
+
+    находится между репликами SPEAKER_00 (=Ksenks) и продолжает её мысль.
+
+    Lavale не уч'
+- id: artifact_e304_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 304
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Ранее ошибочно атрибутировано как Eldar, затем отменено.
+
+    Короткая реплика "Я не очень знаю" (7437с) между репликами Bobuk.
+
+    Эльдар Муртазин не участвовал в этом эпизоде.
+
+    '
+- id: artifact_e305_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 305
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e306_SPEAKER_00
+  type: rename_episode
+  episode: 306
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Одна реплика "Где секьюрити?" (939s) - вероятно эхо/перебивка.
+
+    Сразу перед этим Umputun говорит "Где?" и после продолжает "Где, собственно, охрана
+    патентов?".
+
+    Скорее всего это часть речи Umputun, непр'
+- id: artifact_e307_Gray
+  type: rename_episode
+  episode: 307
+  from: Gray
+  to: _artifact
+  reason: 'Gray явно упомянут как ОТСУТСТВУЮЩИЙ в начале эпизода (77.92s):
+
+    "то есть есть еще Грей, но Грей отсутствует".
+
+    Две короткие реплики (185.55s "Какие другие?" и 895.10s "Ты будь аккуратней")
+
+    скорее всего'
+- id: artifact_e307_SPEAKER_03
+  type: rename_episode
+  episode: 307
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Единственная реплика "Или паркуется" (3.5 сек) в конце подкаста (7595s).
+
+    Вероятно это ошибочно выделенная реплика одного из участников —
+
+    скорее всего Ksenks (SPEAKER_02), учитывая женский характер ком'
+- id: artifact_e307_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 307
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Одна очень короткая обрывочная реплика "Я считаю, что..." (0.52 сек)
+
+    между двумя репликами Bobuk. Эльдар Муртазин не участвовал в этом эпизоде.
+
+    Это явно ошибочно отделённая часть речи Bobuk — он говор'
+- id: artifact_e308_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 308
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e308_SPEAKER_04
+  type: rename_episode
+  episode: 308
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Только 2 очень короткие реплики (суммарно ~1 сек).
+
+    "Угу" (5519с) и "Зачем же лица в камере?" (7315с).
+
+    Типичные ошибки автоматического распознавания спикеров.
+
+    '
+- id: artifact_e310_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 310
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e310_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 310
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Единственная очень короткая реплика "Все гораздо проще." (1.27 сек). Эльдар
+    Муртазин не участвовал в этом выпуске.
+
+    '
+- id: artifact_e311_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 311
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e311_SPEAKER_04
+  type: rename_episode
+  episode: 311
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Единственная короткая реплика (1.5 сек) "Что и всегда." в середине диалога.
+    Типичная ошибка автоматического распознавания - неправильно атрибутированная короткая
+    фраза одного из ведущих.
+
+    '
+- id: artifact_e313_SPEAKER_02
+  type: rename_episode
+  episode: 313
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Две короткие реплики (по ~1 сек) в разных местах: ''Морализонского'' (эхо
+    Umputun) и ''Не брала, да'' (ответ на обращение ''Ксюша''). Типичная ошибка автоматической
+    разметки - фразы скорее всего принадлежат'
+- id: artifact_e313_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 313
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Название спикера указывает на уже отменённое ошибочное присвоение. Одна
+    короткая реплика 'Вы не умеете их готовить, наверное' в контексте обсуждения потоков
+    - скорее всего Marin_k_a или кто-то из веду
+- id: artifact_e314_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 314
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Одиночная реплика, ранее ошибочно приписанная Эльдару Муртазину.
+
+    По контексту это продолжение рассказа Gray про планшеты в Эфиопии.
+
+    Gray говорит перед этой репликой, и сразу после.
+
+    Вероятнее всего это'
+- id: artifact_e316_SPEAKER_02
+  type: rename_episode
+  episode: 316
+  from: SPEAKER_02
+  to: _artifact
+  reason: '4 очень короткие реплики (суммарно 2 сек).
+
+    Все реплики - междометия: "Угу." (3743s, 4208s) и "Ха-ха." (6873s x2).
+
+    Типичные артефакты распознавания или неправильная атрибуция реакций.
+
+    '
+- id: artifact_e316_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 316
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e316_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 316
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e317_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 317
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Единственная реплика "Ближайшие полгода, год?" (7676.57-7679.75s)
+
+    идёт сразу после вопроса Marin_k_a "И как скоро, в какой перспективе?"
+
+    Контекст: обсуждение цен на Amazon хранилища.
+
+    Скорее всего это '
+- id: artifact_e317_SPEAKER_03
+  type: rename_episode
+  episode: 317
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Две очень короткие реплики:
+
+    1. "Ха-ха-ха." (7236.78-7237.08s) — смех после шутки Bobuk про "шлюхокот"
+
+    2. "Компилятор?" (7887.47-7888.41s) — переспрос после вопроса Umputun
+
+    Обе <1 сек, это артефакты ав'
+- id: artifact_e318_Bobuk
+  type: rename_episode
+  episode: 318
+  from: Bobuk
+  to: _artifact
+  reason: 'В начале эпизода (34.81s) Umputun явно говорит: "Бобука сегодня нет, но
+    подкаст есть".
+
+    Однако в транскрипте есть 1 реплика Bobuk (2269.7s): "Вообще нет уже баров никаких".
+
+    Контекст: обсуждение Яндекс.'
+- id: artifact_e319_Gray
+  type: rename_episode
+  episode: 319
+  from: Gray
+  to: _artifact
+  reason: 'Всего 1 реплика длительностью 4 секунды.
+
+    Gray не упоминается в начале выпуска среди участников.
+
+    Umputun говорит "нас четверо" - это Umputun, Bobuk, Ksenks и гость Андрей.
+
+    Реплика "А новое приложение к'
+- id: artifact_e320_SPEAKER_03
+  type: rename_episode
+  episode: 320
+  from: SPEAKER_03
+  to: _artifact
+  reason: Одна короткая реплика 'Пока' (7741s) в момент прощания. Скорее всего ошибка
+    распознавания — кто-то из участников (вероятно Ksenks или Marin_k_a) сказал 'Пока'
+    после Bobuk.
+- id: artifact_e320_SPEAKER_99
+  type: rename_episode
+  episode: 320
+  from: SPEAKER_99
+  to: _artifact
+  reason: Специальный спикер для аудио-артефактов, джинглов. Игнорировать.
+- id: artifact_e321_SPEAKER_04
+  type: rename_episode
+  episode: 321
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Единственная реплика — короткое "Угу" длительностью <0.2 сек (1718.17-1718.31s).
+
+    Это типичная ошибка распознавания: слишком короткий сегмент, односложная
+
+    реакция, не принадлежит отдельному спикеру.
+
+    '
+- id: artifact_e322_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 322
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e322_SPEAKER_01
+  type: rename_episode
+  episode: 322
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Только 2 коротких междометия: "Черт" (750s) и "Угу" (4860s).
+
+    Суммарно 3 секунды. Типичные ошибки сегментации/распознавания.
+
+    Скорее всего реплики кого-то из ведущих.
+
+    '
+- id: artifact_e322_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 322
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Одна реплика 2 сек: "То есть, в принципе, лет 10 назад" (482s).
+
+    Lavale не была гостем этого выпуска.
+
+    Маркер MISATTRIBUTED указывает, что это уже было выявлено ранее.
+
+    '
+- id: artifact_e323_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 323
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e323_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 323
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Короткая реплика между Gray и Marin_k_a. Пётр Диденко не был объявлен гостем
+    этого выпуска.
+
+    '
+- id: artifact_e323_SPEAKER_05
+  type: rename_episode
+  episode: 323
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Единственная односложная реплика "скачанных пиратских" (1.4 сек) между
+    двумя репликами Gray. Явная ошибка распознавания - это часть фразы Gray.
+
+    '
+- id: artifact_e324_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 324
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e324_SPEAKER_04
+  type: rename_episode
+  episode: 324
+  from: SPEAKER_04
+  to: _artifact
+  reason: Две очень короткие реплики - междометия, типичные ошибки транскрибирования
+- id: artifact_e324_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 324
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Одиночная короткая реплика между высказываниями Ksenks
+- id: artifact_e325_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 325
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e325_Bobuk
+  type: rename_episode
+  episode: 325
+  from: Bobuk
+  to: _artifact
+  reason: 'В начале эпизода (12.62s) Umputun говорит: "состав у нас сегодня непростой,
+    потому что Бобук решил..."
+
+    и далее объясняет, что Бобук не участвует. Единственная реплика "Bobuk" на 4885.73s
+
+    между реплика'
+- id: artifact_e326_SPEAKER_04
+  type: rename_episode
+  episode: 326
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Две короткие подряд реплики "Ну, да" на 2650s и 2651s.
+
+    Типичные подтверждающие междометия, вероятно ошибка распознавания одного из ведущих.
+
+    '
+- id: artifact_e326_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 326
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Очень короткие реплики (1-2 сек каждая) в разных частях эпизода.
+
+    "Конечно" (1540s), "Ужас и кошмар" (3551s), "Просто хитрый перец" (5220s).
+
+    Эльдар Муртазин НЕ участвовал в этом эпизоде (в начале предс'
+- id: artifact_e326_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 326
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e327_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 327
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e328_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 328
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Ошибочная атрибуция. Реплика находится между Marin_k_a и SPEAKER_00
+
+    в одном непрерывном диалоге (38-48 секунды).
+
+    Текст: "В общем, я думаю, это какие-то счеты между вами, а я ни при чем."
+
+    Это продолжен'
+- id: artifact_e328_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 328
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Односложная реплика "Хорошо" (177.58-178.58s) между репликами
+
+    Umputun (177.54s) и Bobuk (178.64s).
+
+    Вероятно ошибка распознавания или короткая реакция одного из ведущих.
+
+    '
+- id: artifact_e328_SPEAKER_03
+  type: rename_episode
+  episode: 328
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Односложное "Да" (715.33-716.11s) между репликами Umputun.
+
+    Типичная ошибка распознавания короткой реакции.
+
+    '
+- id: artifact_e329_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 329
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e329_SPEAKER_04
+  type: rename_episode
+  episode: 329
+  from: SPEAKER_04
+  to: _artifact
+  reason: Одно слово 'То есть...' - явная ошибка сегментации/распознавания
+- id: artifact_e330_SPEAKER_02
+  type: rename_episode
+  episode: 330
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Одиночная односложная реплика "Нет?" (705.9s) длительностью <1 сек.
+
+    Контекст: Bobuk рассказывает анекдот про воздушный шар.
+
+    До реплики: Bobuk "То, как чувак внезапно на воздушном шаре приземляется пос'
+- id: artifact_e330_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 330
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Одиночная короткая реплика "Ну, хорошо, да." (573.9s) длительностью <1
+    сек.
+
+    Контекст: обсуждение проблемы с видеокартой MacBook Pro.
+
+    До реплики: Umputun "И никогда после этого не выключается."
+
+    После р'
+- id: artifact_e330_Gray
+  type: rename_episode
+  episode: 330
+  from: Gray
+  to: _artifact
+  reason: 'Gray НЕ УЧАСТВОВАЛ в этом выпуске!
+
+    Umputun явно говорит в начале: "парный классический состав" (4.55s-11.53s)
+
+    и "что означает, что есть Бобок" - только двое ведущих.
+
+
+    Единственная реплика Gray "Глубок'
+- id: artifact_e331_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 331
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Одна короткая реплика (2.6 сек) в середине диалога между Umputun и Bobuk.
+    Эльдар НЕ представлялся в начале подкаста. Umputun явно говорит что выпуск "в
+    полном классическом составе" (только он и Bobuk)
+- id: artifact_e332_SPEAKER_02
+  type: rename_episode
+  episode: 332
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Только 2 коротких реплики за весь выпуск:
+
+    - 3256.8 сек: "Ммм..." (0.06 сек)
+
+    - 5690.8 сек: "20 раз." (0.88 сек)
+
+    Это междометия и фрагменты, ошибочно выделенные как отдельный спикер.
+
+    '
+- id: artifact_e332_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 332
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e332_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 332
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (4.0s)
+- id: artifact_e333_SPEAKER_03
+  type: rename_episode
+  episode: 333
+  from: SPEAKER_03
+  to: _artifact
+  reason: Единственная короткая реплика (1.5s) в 2632s - ошибка распознавания
+- id: artifact_e333_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 333
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Две короткие изолированные реплики (2554s: "Радиоприемника." и 7217s:
+
+    "Дальше у нас есть повторение тем.") - это ошибки распознавания,
+
+    вероятнее всего Umputun или другие ведущие.
+
+    '
+- id: artifact_e333_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 333
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная реплика (5650s: "И это активно обсуждается в подкасте Радио
+    Тип")
+
+    - ошибка распознавания. Лаваль не участвовала в этом эпизоде.
+
+    '
+- id: artifact_e334_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 334
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e335_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 335
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Короткая реплика (1 сек) в середине диалога Umputun. Скорее всего ошибка
+    распознавания или это один из ведущих
+- id: artifact_e335_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 335
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Короткая реплика о скорости браузеров. Контекст: разговор о Chrome/Blink.
+    Нет признаков присутствия Эльдара'
+- id: artifact_e335_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 335
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Короткая реплика сразу после обращения к Ксюше. Это явно Ksenks
+- id: artifact_e335_SPEAKER_04
+  type: rename_episode
+  episode: 335
+  from: SPEAKER_04
+  to: _artifact
+  reason: Односложная реплика 'Да.' в конце эпизода (5501с). Скорее всего ошибка распознавания
+- id: artifact_e336_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 336
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e337_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 337
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e338_SPEAKER_04
+  type: rename_episode
+  episode: 338
+  from: SPEAKER_04
+  to: _artifact
+  reason: Всего 2 короткие реплики — явная ошибка распознавания
+- id: artifact_e339_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 339
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e339_SPEAKER_01
+  type: rename_episode
+  episode: 339
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Единственная реплика длительностью 0.48 сек.
+
+    stime=4151.72: "Объясните мне."
+
+    Находится между Bobuk ("А что это такое?") и Marin_k_a (объяснение git bisect).
+
+    Скорее всего это продолжение вопроса Bobuk '
+- id: artifact_e339_Gray
+  type: rename_episode
+  episode: 339
+  from: Gray
+  to: _artifact
+  reason: 'Gray НЕ БЫЛ представлен в начале подкаста.
+
+    Umputun представил только: гостя Алексея, Bobuk, Ksenks.
+
+    Единственная реплика Gray в 7480s: "Ну, понятно." (3 сек).
+
+    Это явная ошибка распознавания — Gray не '
+- id: artifact_e340_SPEAKER_04
+  type: rename_episode
+  episode: 340
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Очень короткие реплики (0.08-1.78 сек) разбросаны по эпизоду:
+
+    - 4803s: "Угу." (0.08 сек)
+
+    - 6261s: "И ужаснуться." + "Подожди, подожди..." (1.9 сек)
+
+    - 7992s: "Угу." (0.12 сек)
+
+    - 8524s: "Давайте заканчи'
+- id: artifact_e341_SPEAKER_05
+  type: rename_episode
+  episode: 341
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Две короткие реплики:
+
+    1. 61.6s: "Да." - ответ на "Ксюша, скажи" -> это Ksenks
+
+    2. 7732.5s: "Он 48." - короткая вставка, неясный контекст
+
+    Слишком короткие сегменты для отдельного спикера.
+
+    '
+- id: artifact_e341_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 341
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e342_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 342
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Единичная реплика (2513s): "Ну, а что, конечно."
+
+    Ранее была ошибочно присвоена Эльдару Муртазину и отменена.
+
+    В контексте: Umputun говорит про веб-пай, затем эта реплика, затем снова Umputun
+    "Простите.'
+- id: artifact_e342_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 342
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e343_SPEAKER_03
+  type: rename_episode
+  episode: 343
+  from: SPEAKER_03
+  to: _artifact
+  reason: Одиночная реплика длиной 0.06 сек ('Ну,') - артефакт распознавания
+- id: artifact_e344_SPEAKER_05
+  type: rename_episode
+  episode: 344
+  from: SPEAKER_05
+  to: _artifact
+  reason: Одна короткая реплика 'Ну-ну' (0.22 сек) в 7652s между репликами Bobuk —
+    явная ошибка распознавания речи
+- id: artifact_e345_SPEAKER_07
+  type: rename_episode
+  episode: 345
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Всего 2 реплики (<2 сек каждая):
+
+    - 2582s: "Очень девочка моя, Титя, да?" - бессмысленная фраза, вероятно артефакт
+
+    - 2909s: "Угу" - односложная реакция
+
+    Типичный паттерн ошибок распознавания.
+
+    '
+- id: artifact_e345_SPEAKER_05
+  type: rename_episode
+  episode: 345
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Одна реплика в самом конце эпизода (7461s):
+
+    "Рок-н-ролл и отличные" - обрезанная фраза, вероятно часть заставки или артефакт.
+
+    '
+- id: artifact_e345_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 345
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e345_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 345
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e346_Gray
+  type: rename_episode
+  episode: 346
+  from: Gray
+  to: _artifact
+  reason: 'Gray не был объявлен участником выпуска. Umputun в начале говорит "в составе
+    из троих гадов"
+
+    (Umputun, Bobuk, Ksenks). Единственная реплика "Умпутуновскую" (7664s) - короткое
+    слово,
+
+    вероятно ошибка ра'
+- id: artifact_e346_SPEAKER_00
+  type: rename_episode
+  episode: 346
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Две последовательные микро-реплики (<0.2 сек каждая):
+
+    - "А AMQP, Женя?" (5106.75-5106.93s)
+
+    - "AMQP, да?" (5106.95-5107.03s)
+
+    Обращение "Женя" к Umputun указывает на кого-то из ведущих/участников.
+
+    Сразу'
+- id: artifact_e346_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 346
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Реплика "Я про что-нибудь тоже могу рассказать" (7732s) идёт сразу после
+    диалога:
+
+    - Umputun: "Ксюшенька, а ты про что будешь?"
+
+    - SPEAKER_01 (Ksenks): "Ох, я не знаю"
+
+    - [эта реплика]
+
+    Контекст указывает'
+- id: artifact_e346_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 346
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Две короткие реплики в разных частях выпуска:
+
+    1. "А зачем сразу выкладывать на YouTube?" (1870s) - в диалоге о Google Hangouts
+
+    2. "Что вы хотели сказать-то?" (4654s) - после Bobuk: "Евгений, давайте б'
+- id: artifact_e346_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 346
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Реплика "Короче, про группы ты меня нифига не убедил" (2277s) в споре о
+    Google+.
+
+    Контекст: Umputun и Bobuk спорят про Google+, реплика похожа на стиль Bobuk.
+
+    Petr Didenko не участвовал в выпуске 346. '
+- id: artifact_e347_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 347
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Одна реплика 'Контрол-зе, а потом делаешь... Я долго выходил из Вима, Бабук.'
+    — обращение к Бобуку, значит это не Бобук и не Пётр Диденко. Ошибка атрибуции.
+- id: artifact_e347_SPEAKER_06
+  type: rename_episode
+  episode: 347
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Реплика ''Продолжение следует...'' в 3318s — это рекламный голос/джингл.
+    Сразу после Bobuk комментирует: ''Господи, как я люблю эти рекламные голоса''.
+    Должен быть SPEAKER_99 или _ad.'
+- id: artifact_e348_SPEAKER_02
+  type: rename_episode
+  episode: 348
+  from: SPEAKER_02
+  to: _artifact
+  reason: Короткие реплики (2 сек), вероятно ошибка распознавания одного из ведущих
+- id: artifact_e348_SPEAKER_05
+  type: rename_episode
+  episode: 348
+  from: SPEAKER_05
+  to: _artifact
+  reason: Единственная реплика 1 сек - скорее всего ошибка распознавания
+- id: artifact_e348_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 348
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (2.0s)
+- id: artifact_e349_SPEAKER_03
+  type: rename_episode
+  episode: 349
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Единственная реплика (3836.77s): "Нет, это ГААС."
+
+    Это дубль реплики Umputun (3835.87s): "Нет, это ГААС."
+
+    Полностью совпадает текст и перекрывается время — ошибка распознавания.
+
+    '
+- id: artifact_e349_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 349
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Единственная короткая реплика (5199.3s): "Что сейчас было про это рассказывать?"
+
+    Эльдар Муртазин не участвовал в этом выпуске. MISATTRIBUTED означает,
+
+    что это уже была помечена как ошибочная атрибуция'
+- id: artifact_e349_Gray
+  type: rename_episode
+  episode: 349
+  from: Gray
+  to: _artifact
+  reason: 'Единственная реплика Gray за весь 2+ часовой выпуск: "В Digital Cloud"
+    (5921.62s).
+
+    В конце выпуска (7944s) Umputun перечисляет участников: только Ксения.
+
+    Gray явно не участвовал в этом выпуске.
+
+    Скорее'
+- id: artifact_e350_SPEAKER_05
+  type: rename_episode
+  episode: 350
+  from: SPEAKER_05
+  to: _artifact
+  reason: Короткие реплики (<2 сек), вероятно ошибка распознавания. Одна реплика 'Электропочта'
+    дублирует контекст обсуждения.
+- id: artifact_e350_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 350
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Ранее ошибочно приписана Lavale, отменено. Короткая одиночная реплика.
+- id: artifact_e351_SPEAKER_02
+  type: rename_episode
+  episode: 351
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Всего 2 коротких реплики (1-2 сек) в одном месте (2820s).
+
+    "Ну не гибкость" и "Эластичность, да" - это части общего диалога
+
+    о терминах scalability/elasticity. Скорее всего, ошибка в разделении
+
+    реплик м'
+- id: artifact_e351_SPEAKER_07
+  type: rename_episode
+  episode: 351
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Только 2 односложных реплики: "Угу" (0.1s) и "Нет" (0.4s).
+
+    Типичные ошибки распознавания - краткие реакции,
+
+    ошибочно выделенные в отдельного спикера.
+
+    '
+- id: artifact_e351_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 351
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e351_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 351
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e352_SPEAKER_05
+  type: rename_episode
+  episode: 352
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Ошибка распознавания Gray. Контекст: обсуждение украинского языка. Umputun
+    говорит ''парасолька'', затем SPEAKER_05 говорит ''В этом языке. Парасолька.''
+    - это продолжение реплики Gray, который только что'
+- id: artifact_e352_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 352
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Одиночная реплика 'Это нормальные пионеры' (3886.8s) между репликами Umputun.
+    Короткая реплика-комментарий. Имя спикера указывает на отменённое присвоение Эльдару,
+    но Эльдар не участвует в этом эпизод
+- id: artifact_e353_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 353
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Это отменённые присвоения спикера PetrDidenko. Всего 2 коротких реплики
+    (1015s и 1088s) - вероятно ошибки распознавания. Контекст не соответствует Петру
+    Диденко.
+
+    '
+- id: artifact_e353_SPEAKER_08
+  type: rename_episode
+  episode: 353
+  from: SPEAKER_08
+  to: _artifact
+  reason: 'Всего 2 короткие реплики: ''Да.'' (1687s) и ''Голубой вагон, который пока
+    целый.'' (3684s). Разбросаны по времени, короткие - скорее всего ошибки распознавания
+    кого-то из гостей.
+
+    '
+- id: artifact_e354_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 354
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Одна реплика 'И вот не убавить, не прибавить' (5788s). Маркер MISATTRIBUTED
+    указывает на ранее отменённое ошибочное присвоение Петру Диденко. Это реакция
+    на реплику SPEAKER_01 (Романа) об OpenStack.
+- id: artifact_e355_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 355
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e355_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 355
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Уже помечен как misattributed. Две короткие реплики:
+
+    - 6068s: "Плюс, например, такого нет." — между Marin_k_a и Bobuk
+
+    - 6689s: "Крайне рекомендую." — между Umputun и Umputun
+
+    Скорее всего один из ведущ'
+- id: artifact_e355_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 355
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Уже помечен как misattributed. Одна короткая реплика:
+
+    - 2381s: "Я сейчас активно читаю про него." — между SPEAKER_01 и Umputun
+
+    Скорее всего Ksenks (SPEAKER_01 = Ksenks).
+
+    '
+- id: artifact_e356_SPEAKER_02
+  type: rename_episode
+  episode: 356
+  from: SPEAKER_02
+  to: _artifact
+  reason: Одиночное короткое междометие 'Эээ...' длительностью 0.06 сек между репликами
+    Bobuk и Umputun. Типичная ошибка распознавания — реакция одного из ведущих (вероятно
+    Umputun, который отвечает сразу после
+- id: artifact_e358_SPEAKER_05
+  type: rename_episode
+  episode: 358
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Всего 4 короткие реплики разбросаны по эпизоду: "Угу" (4602s), "Да" (5685s),
+    "Угу" (7294s), "Как иначе?" (7405s). Это типичные ошибки автоматического распознавания
+    - междометия и короткие реакции, кот'
+- id: artifact_e359_SPEAKER_01
+  type: rename_episode
+  episode: 359
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Одиночная реплика (2 сек) в 5742s: "А, то есть это именно компания
+
+    Parallax сделала..." - скорее всего ошибка распознавания одного из
+
+    ведущих. Перед ней SPEAKER_02 (Ksenks), после - Gray.
+
+    '
+- id: artifact_e359_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 359
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Префикс SPEAKER_MISATTRIBUTED_ указывает на отменённую ошибочную атрибуцию.
+
+    Одиночная короткая реплика (4 сек) в 5858s: "Просто три ключа, то есть
+
+    они просто безлимитные" - в контексте розыгрыша Paral'
+- id: artifact_e361_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 361
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e362_SPEAKER_04
+  type: rename_episode
+  episode: 362
+  from: SPEAKER_04
+  to: _artifact
+  reason: Короткая реплика (1.3с) между двумя репликами Umputun. Текст 'Типа вас с
+    вами' - продолжение шутки про open source разработчиков. Ошибка сегментации речи.
+- id: artifact_e362_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 362
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Пётр Диденко НЕ участвовал в этом эпизоде. Реплика между двумя репликами
+    Bobuk, текст 'Ну, половина пулеметов вниз' - продолжение шутки про дата-центры.
+    MISATTRIBUTED указывает на отменённую ошибку.
+- id: artifact_e363_SPEAKER_00
+  type: rename_episode
+  episode: 363
+  from: SPEAKER_00
+  to: _artifact
+  reason: Короткие реплики (1 сек суммарно) - 'Она самая любимая' и 'А?'. Скорее всего
+    ошибка распознавания или перебивка одного из ведущих.
+- id: artifact_e364_SPEAKER_04
+  type: rename_episode
+  episode: 364
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Единственная короткая реплика "Как?" (0.68 сек) - типичная ошибка
+
+    автоматического распознавания. Скорее всего принадлежит одному из
+
+    присутствующих спикеров (вероятно Bobuk или один из гостей).
+
+    '
+- id: artifact_e365_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 365
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Единственная реплика длиной 2.5 сек: "Видимо, грядут часы" (3708.5s).
+
+    Слишком мало данных для идентификации, скорее всего ошибка распознавания.
+
+    '
+- id: artifact_e366_SPEAKER_03
+  type: rename_episode
+  episode: 366
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Всего 3 очень короткие реплики (<2 сек каждая) в разных частях эпизода:
+
+    - 1600.6s: "Не?" (0.9 сек)
+
+    - 2519.1s: "Ребята честные, да?" (1.8 сек)
+
+    - 6561.5s: "Может, ты чистую поставил?" (аномальный etime '
+- id: artifact_e367_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 367
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e367_SPEAKER_03
+  type: rename_episode
+  episode: 367
+  from: SPEAKER_03
+  to: _artifact
+  reason: Очень короткие односложные реплики (0.8-2 сек), разбросаны по выпуску -
+    типичная ошибка распознавания
+- id: artifact_e368_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 368
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e368_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 368
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Маркировка SPEAKER_MISATTRIBUTED_ указывает на ошибочную атрибуцию.
+
+    Единственная реплика "Вот так знали, что 4 части" (212.9s) - короткая ремарка
+    в середине речи Umputun.
+
+    Скорее всего это ошибка распо'
+- id: artifact_e369_SPEAKER_03
+  type: rename_episode
+  episode: 369
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Очень короткие фразы (менее 1 сек суммарно) в разных частях подкаста. Типичные
+    фразы-ошибки: "Больше седьмого, да." (29.4s), "Да." (8392s). Вероятно ошибка распознавания
+    кого-то из участников.
+
+    '
+- id: artifact_e370_Gray
+  type: rename_episode
+  episode: 370
+  from: Gray
+  to: _artifact
+  reason: Gray НЕ участвовал в этом эпизоде. В начале Umputun говорит "сейчас придёт
+    Грей", в конце спрашивают "Грей вернётся в семью?". Единственная реплика (2825s)
+    "Я большой специалист в этой области" - прод
+- id: artifact_e370_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 370
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e370_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 370
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e371_SPEAKER_03
+  type: rename_episode
+  episode: 371
+  from: SPEAKER_03
+  to: _artifact
+  reason: Single word 'русский' (216.5s) between Gray's utterances. Likely a fragment
+    of Gray's speech incorrectly split by ASR.
+- id: artifact_e372_SPEAKER_00
+  type: rename_episode
+  episode: 372
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Очень короткие реплики (1-2 сек), типичные ошибки распознавания: ''Вот
+    что-то ты сломал.'', ''Раздавят.'''
+- id: artifact_e372_SPEAKER_04
+  type: rename_episode
+  episode: 372
+  from: SPEAKER_04
+  to: _artifact
+  reason: Артефакт. Единственная реплика 'Ну-ну-ну-ну-ну-ну-ну.' в 6610 сек - похоже
+    на звуковой эффект или помеху.
+- id: artifact_e373_SPEAKER_03
+  type: rename_episode
+  episode: 373
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Очень короткие реплики ("А, можно, можно.", "Можно, можно.", "У меня прям
+    противоположный опыт.")
+
+    Всего 4 секунды на 3 реплики. Скорее всего ошибка сегментации -
+
+    это фрагменты речи других участников.
+
+    '
+- id: artifact_e373_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 373
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Одна очень короткая реплика (2 сек). Маркер MISATTRIBUTED указывает
+
+    на отменённое ошибочное присвоение Лаваль.
+
+    '
+- id: artifact_e375_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 375
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e375_SPEAKER_03
+  type: rename_episode
+  episode: 375
+  from: SPEAKER_03
+  to: _artifact
+  reason: Единственная реплика 'Давай' в 2071 сек - типичная ошибка распознавания
+- id: artifact_e375_Gray
+  type: rename_episode
+  episode: 375
+  from: Gray
+  to: _artifact
+  reason: Gray не упоминается в выпуске, единственная реплика 'Как-то выживают' (stime
+    108.9) скорее всего принадлежит Ksenks или SPEAKER_02
+- id: artifact_e376_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 376
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e377_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 377
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e377_SPEAKER_07
+  type: rename_episode
+  episode: 377
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Очень короткие разрозненные реплики: "В кусты" (35s), "Нижняя на S4 физическая
+    кнопка" (968s),
+
+    "Ну да" (3788s), "Сюжет" (5940s). Типичные ошибки распознавания.
+
+    '
+- id: artifact_e377_SPEAKER_05
+  type: rename_episode
+  episode: 377
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Одна реплика: "Почему оно вообще хуже-то?" (4284s).
+
+    Явная ошибка распознавания.
+
+    '
+- id: artifact_e378_SPEAKER_02
+  type: rename_episode
+  episode: 378
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Единственная реплика "Это всякое бывает" (796s) между репликами Gray.
+
+    Скорее всего ошибка сегментации - это продолжение речи Gray или
+
+    короткая реакция одного из участников.
+
+    '
+- id: artifact_e378_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 378
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e378_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 378
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e379_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 379
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e379_SPEAKER_02
+  type: rename_episode
+  episode: 379
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Очень короткие реплики (по 1-2 сек) в разных частях выпуска: ''И регионы
+    с английского'' (1462s), ''Вообще да'' (6210s), ''И на митингах'' (6581s). Это
+    ошибки распознавания - короткие вставки или перебивки.'
+- id: artifact_e380_SPEAKER_04
+  type: rename_episode
+  episode: 380
+  from: SPEAKER_04
+  to: _artifact
+  reason: Две короткие реплики (1.2 сек и 2.3 сек) в разных частях выпуска (1369s
+    и 4126s). Типичные ошибки автоматического распознавания - короткие фразы, вклинившиеся
+    в диалог ведущих.
+- id: artifact_e380_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 380
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e381_SPEAKER_08
+  type: rename_episode
+  episode: 381
+  from: SPEAKER_08
+  to: _artifact
+  reason: 'Единственная реплика в 1 секунду: "Есть такое, да."
+
+    Очевидная ошибка распознавания.
+
+    '
+- id: artifact_e382_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 382
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Отменённое ошибочное присвоение - реплики ранее ошибочно приписаны EldarMurtazin
+    (Эльдар не участвует в этом выпуске)
+- id: artifact_e383_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 383
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e385_SPEAKER_05
+  type: rename_episode
+  episode: 385
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Единственная реплика "Молодец" (3361s) длительностью 2.5 секунды.
+
+    Типичная ошибка распознавания - односложная реакция.
+
+    '
+- id: artifact_e386_SPEAKER_07
+  type: rename_episode
+  episode: 386
+  from: SPEAKER_07
+  to: _artifact
+  reason: "Обе реплики - эхо фраз Bobuk:\n1. В 3530s SPEAKER_07: \"Что вы делаете\
+    \ с этими письмами?\"\n   За 3 секунды до этого (3527s) Bobuk: \"А что вы делаете\
+    \ с этим писем?\"\n   Это одна и та же фраза, дублирование"
+- id: artifact_e386_SPEAKER_04
+  type: rename_episode
+  episode: 386
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Единственная реплика - эхо фразы Bobuk:
+
+    В 2527s Bobuk: "Скажите, какие слова-то?"
+
+    В 2528s SPEAKER_04: "Да, слова-то какие?"
+
+
+    Практически идентичная фраза, интервал <1 секунды.
+
+    Это артефакт распознаван'
+- id: artifact_e387_SPEAKER_07
+  type: rename_episode
+  episode: 387
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Очень короткие реплики (<1 сек): ''Ха-ха-ха'', ''Да'', ''Зато?''. Это аудио-артефакты
+    или ошибки распознавания смеха/коротких реакций.'
+- id: artifact_e388_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 388
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная реплика: "Я тоже не поняла" (7057s) - 1.5 сек.
+
+    Контекст: Gray говорит "Извините" -> SPEAKER_MISATTRIBUTED_LAVALE "Я тоже не поняла"
+    -> Gray "Ты сказала «блок»"
+
+    Это явно женщина (одна из д'
+- id: artifact_e389_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 389
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Очень короткие односложные реплики (0.5-1 сек). Скорее всего ошибки распознавания
+    одного из ведущих.
+- id: artifact_e389_SPEAKER_01
+  type: rename_episode
+  episode: 389
+  from: SPEAKER_01
+  to: _artifact
+  reason: Только 2 очень коротких реплики за весь эпизод. Явная ошибка распознавания.
+- id: artifact_e389_SPEAKER_03
+  type: rename_episode
+  episode: 389
+  from: SPEAKER_03
+  to: _artifact
+  reason: Только 3 очень коротких реплики (<1 сек каждая). Явная ошибка распознавания.
+- id: artifact_e390_SPEAKER_05
+  type: rename_episode
+  episode: 390
+  from: SPEAKER_05
+  to: _artifact
+  reason: Очень короткие реплики (<2 сек каждая), разбросаны. Скорее всего ошибки
+    распознавания одного из ведущих.
+- id: artifact_e390_SPEAKER_07
+  type: rename_episode
+  episode: 390
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Очень короткие односложные реплики (<1 сек): ''Кошмар какой-то'', ''Не
+    знаю'', ''Давай''. Типичные ошибки распознавания.'
+- id: artifact_e390_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 390
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Одна реплика (7047s: ''Ну, к счастью, не последнего''). Название спикера
+    указывает на ранее отменённую ошибочную атрибуцию Эльдару Муртазину. Эльдар не
+    участвует в этом эпизоде.'
+- id: artifact_e391_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 391
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Короткие изолированные реплики (1-2 сек каждая) в случайные моменты.
+
+    Lavale не участвует в этом эпизоде - в начале представлены только
+
+    "Ксюша и Бобук", плюс присутствует Марина (Marin_k_a).
+
+    Это ошибоч'
+- id: artifact_e391_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 391
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Одиночная реплика 1.5 сек.
+
+    Эльдар Муртазин не участвует в этом эпизоде.
+
+    Это ошибочное присвоение, которое уже помечено как MISATTRIBUTED.
+
+    '
+- id: artifact_e391_SPEAKER_04
+  type: rename_episode
+  episode: 391
+  from: SPEAKER_04
+  to: _artifact
+  reason: '3 коротких изолированных реплики (0.06-2.1 сек) в разных частях эпизода:
+
+    - 4298.7s: "Это британские ученые?" (2.1 сек)
+
+    - 6513.27s: "Угу." (0.06 сек)
+
+    - 7258.67s: "Хороший докладчик." (1.18 сек)
+
+
+    Коротк'
+- id: artifact_e392_SPEAKER_05
+  type: rename_episode
+  episode: 392
+  from: SPEAKER_05
+  to: _artifact
+  reason: Артефакт распознавания — односложное междометие 'Ох...' длительностью 0.22
+    сек
+- id: artifact_e393_SPEAKER_06
+  type: rename_episode
+  episode: 393
+  from: SPEAKER_06
+  to: _artifact
+  reason: Одна реплика 'Я вот удивительно согласна' (961s) - женский род указывает
+    на Marin_k_a
+- id: artifact_e394_SPEAKER_07
+  type: rename_episode
+  episode: 394
+  from: SPEAKER_07
+  to: _artifact
+  reason: Одна реплика 'Отлично' (0.4 сек) - явная ошибка распознавания
+- id: artifact_e394_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 394
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e394_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 394
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Помечено как 'misattributed' - ранее ошибочно присвоено Лаваль
+- id: artifact_e395_SPEAKER_01
+  type: rename_episode
+  episode: 395
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Всего 3 короткие реплики: "25-й" (369s), "Одинаково холодно, да?" (381s),
+
+    "Нет, я не кричу вообще сегодня" (3319s). Ошибки сегментации.
+
+    '
+- id: artifact_e395_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 395
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e395_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 395
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Маркер отменённой ошибочной атрибуции. 1 реплика "У вас в стране так не
+    принято"
+
+    в контексте обсуждения сексизма. Не имеет отношения к Эльдару Муртазину.
+
+    '
+- id: artifact_e396_SPEAKER_03
+  type: rename_episode
+  episode: 396
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Только 2 коротких реплики-междометия ("Непривязанное государство, да."
+    и "Вау.").
+
+    Типичные ошибки распознавания коротких реакций.
+
+    "Вау" появляется сразу после рассказа Bobuk и он же продолжает "Вау, т'
+- id: artifact_e397_SPEAKER_05
+  type: rename_episode
+  episode: 397
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Единственная короткая реплика в 1816.61s: "Потому что никто еще в жизни
+    не попользовался"
+
+    Скорее всего ошибка распознавания - короткая фраза в случайный момент.
+
+    '
+- id: artifact_e398_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 398
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: Ошибочная атрибуция - одиночная реплика между двумя репликами Marin_k_a
+- id: artifact_e399_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 399
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Одна короткая реплика (1 сек) в 3834s: "Мне понадобилось поднять Private
+    Registry."
+
+    Контекст: Umputun рассказывает о Docker Registry, и эта реплика - часть его рассказа.
+
+    Маркер MISATTRIBUTED указывает'
+- id: artifact_e400_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 400
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e400_SPEAKER_07
+  type: rename_episode
+  episode: 400
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Одна реплика "Конечно" в 328s длительностью 2 секунды.
+
+    Типичная ошибка распознавания - односложная реакция.
+
+    '
+- id: artifact_e401_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 401
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e401_SPEAKER_04
+  type: rename_episode
+  episode: 401
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Очень короткие реплики (3 сек на 5 реплик, менее 1 сек каждая): "Ага.",
+    "Ну, да.", "Ну.", "Ну, окей, да.", "Я понимаю." - типичные ошибки распознавания,
+    когда короткие поддакивания неверно атрибутирую'
+- id: artifact_e401_SPEAKER_06
+  type: rename_episode
+  episode: 401
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Три очень короткие реплики (по ~1 сек): "Ха-ха." (944s), "Американцы выдали."
+    (2979s), "Что нет?" (6751s). Разбросаны по всему выпуску, не образуют осмысленной
+    последовательности. Первая реплика - сме'
+- id: artifact_e403_SPEAKER_01
+  type: rename_episode
+  episode: 403
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Всего 2 очень короткие реплики подряд (5087-5092 сек):
+
+    - "А куда он вмещает?" (1.4 сек)
+
+    - "У него два таких зайца в натуральную величину?" (2.9 сек)
+
+
+    Контекст: обсуждение зайцев, SPEAKER_02 отвечает с'
+- id: artifact_e404_SPEAKER_07
+  type: rename_episode
+  episode: 404
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Единственная реплика "Да-да-да" (177.4-180.1с) длиной 3 секунды.
+
+    Контекст: Bobuk говорит о реакции чата на "дроплиты", затем Gray продолжает.
+
+    Типичная короткая реакция-согласие, скорее всего неверно а'
+- id: artifact_e406_SPEAKER_06
+  type: rename_episode
+  episode: 406
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Всего 2 реплики по ~0.5 и ~2 секунды: - 2804s: "Угу." (в контексте рассказа
+    Umputun) - 7346s: "Ну, стараюсь не редактировать." (в техническом обсуждении про
+    модели с 300 полей) Первая реплика - типичн'
+- id: artifact_e406_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 406
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная реплика в 4337s: "То есть оно должно быть практически идеальным."
+    Появляется между двумя репликами Marin_k_a (4334-4337s и 4339-4347s) - явно часть
+    того же диалога. Имя "SPEAKER_MISATTRIB'
+- id: artifact_e406_SPEAKER_01
+  type: rename_episode
+  episode: 406
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Единственная реплика в 4445s: "Опять съехала." Контекст: SPEAKER_05 (Марина)
+    говорит "Поэтому давайте выбирайте вы" -> SPEAKER_01 "Опять съехала" -> SPEAKER_05
+    "Так потому что я правда знаю". Это реак'
+- id: artifact_e407_SPEAKER_03
+  type: rename_episode
+  episode: 407
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Крайне короткие разрозненные реплики - типичные ошибки ASR.
+
+    Однословные реакции: "А, понятно", "В телефон", "Как?", "70% Ксюша".
+
+    '
+- id: artifact_e409_SPEAKER_07
+  type: rename_episode
+  episode: 409
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Только 3 односложные реплики в разных частях выпуска:
+
+    - "Угу." (3483с)
+
+    - "Угу." (5149с)
+
+    - "Окей." (6832с)
+
+
+    Это типичные ошибки автоматического распознавания — короткие подтверждения,
+
+    которые невозможн'
+- id: artifact_e409_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 409
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e410_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 410
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная реплика на вопрос "Ксюша, пришла на сеновал?" -
+
+    это ответ Ksenks "Я, да, я всегда на сеновале."
+
+    Тег MISATTRIBUTED указывает на отменённую ошибочную атрибуцию Lavale.
+
+    '
+- id: artifact_e411_SPEAKER_03
+  type: rename_episode
+  episode: 411
+  from: SPEAKER_03
+  to: _artifact
+  reason: Короткие реакции (< 2 сек), вклинивающиеся между репликами ведущих. Первая
+    реплика 'Страшное дело' идет сразу после реплики Bobuk, вторая 'О, боже мой, какие
+    дебилы' — Bobuk сразу повторяет эту же фра
+- id: artifact_e412_SPEAKER_04
+  type: rename_episode
+  episode: 412
+  from: SPEAKER_04
+  to: _artifact
+  reason: Две короткие реплики (0.7s и 1.3s) в разных частях выпуска, разбросанные
+    среди реплик других ведущих. Первая "Да ладно?" в 3911s - между репликами Ksenks.
+    Вторая "Может, тебя научили уже?" в 5896s - т
+- id: artifact_e413_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 413
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e414_SPEAKER_01
+  type: rename_episode
+  episode: 414
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Очень короткие реплики (1-2 сек): ''Нет'' (4684s), односложные ответы.
+    Типичные ошибки распознавания.'
+- id: artifact_e415_SPEAKER_05
+  type: rename_episode
+  episode: 415
+  from: SPEAKER_05
+  to: _artifact
+  reason: Очень короткие реплики (смех и односложное слово) - ошибки распознавания
+- id: artifact_e415_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 415
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e416_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 416
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e417_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 417
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Одиночная короткая реплика (<1 сек) между репликами Gray
+- id: artifact_e419_SPEAKER_01
+  type: rename_episode
+  episode: 419
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Три очень короткие реплики (менее 1 сек каждая):
+
+    - 2228.9s: "Это рабочее?" (0.5 сек)
+
+    - 2244.5s: "Зачем?" (0.5 сек)
+
+    - 4061.7s: "Идеальная ситуация." (1 сек)
+
+
+    Это типичные короткие вопросы/комментарии в'
+- id: artifact_e421_SPEAKER_01
+  type: rename_episode
+  episode: 421
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Всего 2 короткие реплики (3 сек суммарно) в случайные моменты:
+
+    1. 5682s: "И она гиковская?" (2 сек) — вопрос после реплики Gray
+
+    2. 6123s: "Окей." (1 сек) — односложная реакция
+
+    Типичные фразы-ошибки ра'
+- id: artifact_e421_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 421
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Одна реплика "У меня еще такой вопрос." (1 сек).
+
+    Сразу после этого Ksenks развивает этот вопрос ("Вот вы читали эту статью?").
+
+    Это часть диалога Ksenks, неверно атрибутированная.
+
+
+    Примечание: спикер у'
+- id: artifact_e422_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 422
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e422_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 422
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e422_SPEAKER_05
+  type: rename_episode
+  episode: 422
+  from: SPEAKER_05
+  to: _artifact
+  reason: Односложная реакция 'Понятно' длительностью 0.5 сек — типичный артефакт
+    распознавания
+- id: artifact_e423_SPEAKER_01
+  type: rename_episode
+  episode: 423
+  from: SPEAKER_01
+  to: _artifact
+  reason: Одна реплика в 8241s 'Такая компрессия' (2 сек) в конце выпуска. Явная ошибка
+    распознавания.
+- id: artifact_e423_SPEAKER_03
+  type: rename_episode
+  episode: 423
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Две короткие реплики в самом конце выпуска (8375s, 8377s): ''То же самое
+    сделаем'', ''Все, пока'' - прощальные фразы, вероятно ошибка распознавания'
+- id: artifact_e424_SPEAKER_05
+  type: rename_episode
+  episode: 424
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Две очень короткие реплики (1.5 сек каждая), разбросанные по эпизоду.
+
+    Это типичные ошибки распознавания - реплики-отклики в разговоре.
+
+
+    Анализ контекста:
+
+    - 4867s: "Это, по-моему, не таргетировано Амер'
+- id: artifact_e425_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 425
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Уже помечена как ошибочная атрибуция. Одна короткая реплика 'Вы можете пока
+    какую-нибудь другую тему?' в 6037s. Вероятно один из гостей.
+- id: artifact_e426_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 426
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e426_SPEAKER_01
+  type: rename_episode
+  episode: 426
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Обе реплики - односложные междометия длительностью <0.2 сек:
+
+    - "Нет." (0.1 сек) - между Bobuk и Umputun
+
+    - "Угу." (0.16 сек) - между репликами Gray
+
+    Типичные артефакты автоматического распознавания речи'
+- id: artifact_e427_SPEAKER_02
+  type: rename_episode
+  episode: 427
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Одна очень короткая реплика (1 сек): "Почему?" на 1148.1s.
+
+    Контекст: Umputun говорит о проблемах с ARM процессорами.
+
+    Скорее всего это реплика одного из участников (Ksenks, Афискон),
+
+    неправильно распоз'
+- id: artifact_e428_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 428
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Обе реплики - короткие фразы, следующие сразу за репликами Ksenks.
+
+    1) 24.4s "Меня никто не ждал" - логическое продолжение после "Можно считать, я
+    не опоздала"
+
+    2) 604.3s "Ну, посмотрим, поживем, увидим'
+- id: artifact_e428_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 428
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e429_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 429
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e429_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 429
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Одиночная короткая реплика (2 сек) в контексте разговора между
+
+    Umputun и другими ведущими. Пётр Диденко не участвовал в этом выпуске.
+
+
+    4058.48s: "Посмотрите на фьюжн?" - между Umputun репликами
+
+
+    Вероя'
+- id: artifact_e429_SPEAKER_05
+  type: rename_episode
+  episode: 429
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Одиночная короткая реплика (2 сек) в конце выпуска, между Umputun и Alek.sys.
+
+
+    6292.62s: "Да, у кого-то есть такая работа."
+
+
+    Это явно ошибка распознавания - либо Alek.sys (реплика перед ним),
+
+    либо оди'
+- id: artifact_e430_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 430
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e430_SPEAKER_02
+  type: rename_episode
+  episode: 430
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Единственная реплика (2283s): "Трипл тол капучино."
+
+    Это часть истории, которую рассказывает SPEAKER_04 (Владимир Иванов)
+
+    о сценарии атаки в Starbucks. Сразу после этого SPEAKER_04 продолжает:
+
+    "Вот, пр'
+- id: artifact_e431_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 431
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Маркер SPEAKER_MISATTRIBUTED указывает на ранее ошибочно приписанные Марине
+    реплики. Марина не участвовала в выпуске 431 (2015 год) - она была ведущей в ранних
+    выпусках. Реплики ''Xbox 360, да'' (433s) '
+- id: artifact_e431_SPEAKER_06
+  type: rename_episode
+  episode: 431
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Две односложные реплики: ''Такие наши?'' (2302s) и ''Угу'' (4485s). Типичные
+    ошибки распознавания - короткие междометия или уточняющие вопросы, которые транскрибер
+    не смог атрибутировать корректно.'
+- id: artifact_e431_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 431
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Gray явно говорит в 5850s 'жаль, что нет Пети' - подтверждает, что Пётр
+    Диденко не участвовал в этом выпуске. Реплика 'Не могу умолчать' (5440s) не может
+    принадлежать Петру. Маркер SPEAKER_MISATTRIBUT
+- id: artifact_e432_SPEAKER_01
+  type: rename_episode
+  episode: 432
+  from: SPEAKER_01
+  to: _artifact
+  reason: Три короткие реплики ('Да?', 'А, в этом смысле.', 'Да.') разбросанные по
+    эпизоду (62s, 6003s, 8409s) - типичные ошибки распознавания коротких подтверждающих
+    фраз
+- id: artifact_e432_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 432
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'ВНИМАНИЕ: Этот спикер НЕ НАЙДЕН в текущем файле транскрипта (432_cc.json).
+
+    При grep поиске "SPEAKER_MISATTRIBUTED" — 0 результатов.
+
+    Возможно данные в задании устарели или спикер уже был исправлен в пр'
+- id: artifact_e433_SPEAKER_05
+  type: rename_episode
+  episode: 433
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Только 2 реплики "Угу" (806s и 5006s) — типичная ошибка распознавания.
+
+    Короткие междометия посреди монолога Umputun.
+
+    '
+- id: artifact_e433_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 433
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Одна реплика "Это угрепа даже" (1969s) в середине технической дискуссии.
+
+    Марина не была гостем этого эпизода.
+
+    Скорее всего это ошибочно распознанная реплика Gimlis или другого спикера.
+
+    '
+- id: artifact_e434_SPEAKER_03
+  type: rename_episode
+  episode: 434
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Короткие односложные реплики-реакции, разбросанные по эпизоду.
+
+    Типичные фразы: "Ну, это да", "Ты злой", "Да вообще, жесть", "Злые вы".
+
+    Скорее всего ошибка распознавания одного из ведущих (вероятно Kse'
+- id: artifact_e434_SPEAKER_07
+  type: rename_episode
+  episode: 434
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Единственная реплика "Алексей" (345 сек) - кто-то называет гостя по имени.
+
+    Контекст: Umputun говорит "Я правильно понимаю, дорогой гость?" - "Правильно."
+
+    Скорее всего это сам гость подтверждает своё и'
+- id: artifact_e434_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 434
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Маркер MISATTRIBUTED означает ранее отменённое ошибочное присвоение.
+
+    Реплика "А вот реализовать по-своему, ну что, здорово" (1620 сек).
+
+    Контекст: обсуждение реверс-инжиниринга Windows API.
+
+    Скорее всег'
+- id: artifact_e434_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 434
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Маркер MISATTRIBUTED означает ранее отменённое ошибочное присвоение.
+
+    Реплика "Ну, можно сегодня, так поздно уже" (7712 сек).
+
+    Контекст: обсуждение поздравлений с 8 марта в конце выпуска.
+
+    Bobuk спрашива'
+- id: artifact_e435_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 435
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Ошибочная атрибуция. Марина (Marin_k_a) не участвовала в этом выпуске.
+
+    Обе реплики - очень короткие фразы в середине разговора других ведущих.
+
+
+    Реплики:
+
+    - 1228s "Ну, можно внешний какой-нибудь." - меж'
+- id: artifact_e435_SPEAKER_05
+  type: rename_episode
+  episode: 435
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Явная ошибка распознавания. Все три реплики - односложные междометия:
+
+    - 1936.6s: "Угу."
+
+    - 3618.6s: "Да."
+
+    - 5860.6s: "Окей."
+
+
+    Такие короткие реакции часто ошибочно распознаются как отдельный спикер.
+
+    Пр'
+- id: artifact_e436_SPEAKER_02
+  type: rename_episode
+  episode: 436
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Две очень короткие реплики: "С боткемпом" (1.5 сек) и "Угу" (0.1 сек).
+    Это междометия/подсказки в середине речи других ведущих. Типичные ошибки автоматической
+    разметки спикеров.
+
+    '
+- id: artifact_e438_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 438
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e439_SPEAKER_01
+  type: rename_episode
+  episode: 439
+  from: SPEAKER_01
+  to: _artifact
+  reason: Единственная короткая реплика 'А, и так бывает, да' (3 сек) — типичная ошибка
+    распознавания
+- id: artifact_e439_SPEAKER_07
+  type: rename_episode
+  episode: 439
+  from: SPEAKER_07
+  to: _artifact
+  reason: Единственная реплика 'Да, да, да' (0.8 сек) — типичная ошибка распознавания
+    короткой подтверждающей реакции
+- id: artifact_e439_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 439
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Единственная короткая реплика 'Это зачем так?' (0.6 сек) между Bobuk и PetrDidenko
+    — типичная ошибка распознавания
+- id: artifact_e441_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 441
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Короткая реплика "Да, всем, не только." (979s) между Ksenks и Umputun.
+
+    Маркер MISATTRIBUTED указывает что это не Петр Диденко.
+
+    Скорее всего один из гостей (Будам или Дмитрий).
+
+    '
+- id: artifact_e441_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 441
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Две короткие реплики: "Так они же виртуальные." (1771s) и "проносимую электронику."
+    (5281s)
+
+    Маркер MISATTRIBUTED указывает что это не Марина.
+
+    Скорее всего один из гостей.
+
+    '
+- id: artifact_e441_Alek.sys
+  type: rename_episode
+  episode: 441
+  from: Alek.sys
+  to: _artifact
+  reason: 'Единственная реплика "И что я буду делать?" (2809s) среди реплик Umputun.
+
+    Alek.sys - постоянный ведущий, но в этом выпуске только Umputun и Ksenks.
+
+    Umputun в финале явно говорит только о двух гостях ('
+- id: artifact_e442_SPEAKER_00
+  type: rename_episode
+  episode: 442
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Очень короткие односложные реакции в случайных местах:
+
+    - 1950 сек: "Да." (1 слово)
+
+    - 6752 сек: "Смешно." (1 слово)
+
+    Типичный паттерн ошибки распознавания голоса.
+
+    '
+- id: artifact_e442_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 442
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Ранее ошибочно атрибуировано как Lavale.
+
+    Реплика (1088 сек): "Где он, интересно, становится очень популярным?"
+
+    Контекст: предыдущая реплика "Ксения, наверное, про него знает."
+
+    Следующая реплика от Kse'
+- id: artifact_e442_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 442
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e442_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 442
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Ранее ошибочно атрибуировано как Eldar (Эльдар Муртазин).
+
+    Реплика (7606 сек): "Вот тут я вынужден всех разочаровать."
+
+    Сразу после Gray продолжает: "Стоянки под ковворкер-центром нет."
+
+
+    Похоже на типич'
+- id: artifact_e443_SPEAKER_06
+  type: rename_episode
+  episode: 443
+  from: SPEAKER_06
+  to: _artifact
+  reason: Односложная реакция 'Нет?' (0.46 сек) между репликами Bobuk. Типичная ошибка
+    распознавания.
+- id: artifact_e443_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 443
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Реплика "Стучалка" — ответ на вопрос Bobuk "как он называется?" (про встроенный
+    трекер).
+
+    Контекст указывает на одного из ведущих. Спикер уже помечен как MISATTRIBUTED_PETR,
+
+    т.е. ранее была попытка атр'
+- id: artifact_e443_SPEAKER_01
+  type: rename_episode
+  episode: 443
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Две короткие разбросанные реплики в разных частях выпуска:
+
+    - "Это не альтернатива" (1 сек) — в контексте обсуждения клипса
+
+    - "Да" (1.85 сек) — простое подтверждение на вопрос Bobuk
+
+    Типичный паттерн ош'
+- id: artifact_e444_SPEAKER_05
+  type: rename_episode
+  episode: 444
+  from: SPEAKER_05
+  to: _artifact
+  reason: Одна односложная реплика "Нет." (менее 1 секунды) в ответ на вопрос Bobuk
+    "Ты когда-нибудь на Smalltalk писал что-нибудь?" После ответа Bobuk продолжает
+    объяснять идею Smalltalk. Типичная ошибка распо
+- id: artifact_e444_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 444
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e446_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 446
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e446_SPEAKER_01
+  type: rename_episode
+  episode: 446
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Очень короткие реплики (0.3-2 сек) разбросаны по всему эпизоду:
+
+    86.33s: "И как?" (0.36 сек)
+
+    5055.85s: "Смотри." (0.26 сек)
+
+    8545.95s: "Спонсор." (1.06 сек)
+
+    8606.43s: "Почищаются." (1.9 сек)
+
+    Это типична'
+- id: artifact_e447_SPEAKER_06
+  type: rename_episode
+  episode: 447
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Очень короткие реплики (по ~0.7 сек), идут подряд.
+
+    "А как он учился-то?" и "Нет, подожди, ты..." - типичные перебивки.
+
+    Контекст - обсуждение обучения программированию, рядом говорят Umputun и Bobuk.
+
+    С'
+- id: artifact_e447_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 447
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e447_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 447
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Метка SPEAKER_MISATTRIBUTED_* означает отменённое ошибочное присвоение.
+
+    Пётр Диденко не упоминается в этом эпизоде, гостей нет.
+
+    Реплики "Почему?" и "Ну, пусть нам в чате тебе подскажут" - короткие,
+
+    ск'
+- id: artifact_e447_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 447
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Метка SPEAKER_MISATTRIBUTED_* означает отменённое ошибочное присвоение.
+
+    Эльдар Муртазин не упоминается в этом эпизоде, гостей нет.
+
+    Одна короткая реплика "Ну, хорошо, что в небо" - явная ошибка
+
+    распозн'
+- id: artifact_e448_SPEAKER_05
+  type: rename_episode
+  episode: 448
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Односложный ответ "Нет" длительностью 0.06 секунды.
+
+    Контекст: Bobuk спрашивает "Жень, ты пробовал что-нибудь на неме писать?" (обращается
+    к Umputun).
+
+    "Нет" - это ответ Umputun на вопрос Bobuk.
+
+    Затем B'
+- id: artifact_e449_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 449
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Короткие реплики (1-2 сек) разбросаны по эпизоду. Типичные реактивные
+
+    фразы. В эпизоде 449 (июнь 2015) Пётр Диденко не участвовал как гость.
+
+    Это скорее всего ошибочно размеченные реплики одного из вед'
+- id: artifact_e449_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 449
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e449_SPEAKER_05
+  type: rename_episode
+  episode: 449
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Единичная короткая реплика (2.7 сек) - реакция на шутку Bobuk о программе
+
+    и бутылке. Типичная реактивная фраза, не указывающая на реального гостя.
+
+    '
+- id: artifact_e449_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 449
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Единичная короткая реплика. Контекст: Umputun обращается к Ксюше (5313s),
+
+    затем эта реплика, затем снова Umputun. Марина (Marin_k_a) не была
+
+    ведущей в эпизоде 449. Это скорее всего реплика Ksenks (к н'
+- id: artifact_e450_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 450
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e451_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 451
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (3.0s)
+- id: artifact_e451_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 451
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e452_SPEAKER_07
+  type: rename_episode
+  episode: 452
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Очень короткие реплики (менее 1 сек каждая): ''Наверное, да.'' (1044s),
+    ''В Канаде так все?'' (1231s). Типичные ошибки распознавания - односложные реакции.'
+- id: artifact_e453_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 453
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Короткая реплика "Не рады" (4 сек) во время проблем со связью у Ksenks.
+
+    Контекст показывает, что это либо Umputun, либо Ksenks с плохим качеством связи.
+
+    Имя MISATTRIBUTED указывает, что это уже было и'
+- id: artifact_e453_SPEAKER_04
+  type: rename_episode
+  episode: 453
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Две очень короткие реплики (по 1 сек каждая) - это переспрашивания или
+    эхо:
+
+    1. 832.5s: "Только без коробки." - после слов Umputun о товаре в пакетике
+
+    2. 2500.5s: "Грязь?" - после слов Umputun "и на ни'
+- id: artifact_e454_SPEAKER_03
+  type: rename_episode
+  episode: 454
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Одиночная реплика "Угу" длительностью 0.08 секунды (790.54-790.62)
+
+    вставлена между репликами Bobuk''а. Типичная ошибка распознавания -
+
+    короткое междометие, которое система не смогла правильно атрибутир'
+- id: artifact_e454_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 454
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (2.1s)
+- id: artifact_e455_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 455
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e456_SPEAKER_05
+  type: rename_episode
+  episode: 456
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Только 2 реплики общей длительностью ~1 секунда.
+
+    "Давай." (1341s) и "Да..." (6273s) - междометия/артефакты.
+
+    Типичные ошибки автоматической разметки.
+
+    '
+- id: artifact_e457_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 457
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e457_SPEAKER_04
+  type: rename_episode
+  episode: 457
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Две очень короткие реплики:
+
+    - 784s: "Ну," (0.06 сек!) - между Gray и Bobuk
+
+    - 4891s: "Конечно." (1.4 сек) - после обращения Umputun к Ксюше
+
+
+    Первая реплика - артефакт (0.06 сек), вторая - ответ на обра'
+- id: artifact_e459_SPEAKER_04
+  type: rename_episode
+  episode: 459
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Две очень короткие реплики (1.5 сек каждая) в разных частях подкаста:
+
+    1. 2121.6s: "Наступило." (после реплики Umputun "Пришло, настало супервремя")
+
+    2. 2718.6s: "А потом и бесплатно." (после реплики Um'
+- id: artifact_e460_SPEAKER_04
+  type: rename_episode
+  episode: 460
+  from: SPEAKER_04
+  to: _artifact
+  reason: Односложная реплика 'Нет.' (0.92 сек) между репликами Umputun - типичная
+    ошибка распознавания
+- id: artifact_e461_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 461
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e461_SPEAKER_06
+  type: rename_episode
+  episode: 461
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Очень короткие реплики-вставки (0.5-1 сек): ''Вот, вот, вот'', ''А я удивляюсь'',
+    ''Угу'', ''80-го левела''. Типичные ошибки распознавания - короткие реакции других
+    спикеров.'
+- id: artifact_e461_SPEAKER_05
+  type: rename_episode
+  episode: 461
+  from: SPEAKER_05
+  to: _artifact
+  reason: Единственная реплика 'Окей' длительностью 0.7 сек. Явная ошибка распознавания.
+- id: artifact_e462_SPEAKER_06
+  type: rename_episode
+  episode: 462
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Только 2 короткие реплики (2 сек суммарно) в разные моменты:
+
+    347s: "Он стоит 50 долларов." — вклинивается между Umputun
+
+    1369s: "Так он давно там был." — вклинивается между Umputun и Ksenks
+
+    Это типичны'
+- id: artifact_e462_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 462
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e462_SPEAKER_MISATTRIBUTED_LAVALE
+  type: rename_episode
+  episode: 462
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: 'Единственная реплика "Нет." (1 сек) в конце выпуска.
+
+    Lavale НЕ участвует в этом выпуске.
+
+    Типичная ошибка распознавания односложного ответа.
+
+    '
+- id: artifact_e463_SPEAKER_05
+  type: rename_episode
+  episode: 463
+  from: SPEAKER_05
+  to: _artifact
+  reason: Короткие односложные реплики ("Это правда", "Миллиард", "Нет, я здесь")
+    разбросаны по эпизоду. Вероятнее всего это ошибки распознавания голосов основных
+    ведущих. Реплика в 4635s ("Нет, я здесь") скоре
+- id: artifact_e463_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 463
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e463_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 463
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Единственная реплика "В чатике написано «Боба купался шлипкой»" - типичное
+    чтение из чата, которое делают все ведущие. Марины (Marin_k_a) в этом эпизоде
+    нет - состав объявлен в начале. Ранее было ошиб
+- id: artifact_e464_SPEAKER_04
+  type: rename_episode
+  episode: 464
+  from: SPEAKER_04
+  to: _artifact
+  reason: Единственная реплика 'Ну,' (1955s) длиной 0.04 сек - обрывок в середине
+    речи Umputun. Явный артефакт распознавания.
+- id: artifact_e465_SPEAKER_01
+  type: rename_episode
+  episode: 465
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Две короткие реплики: "В общем, красавцы" (1395s) и "Да" (4850s). Обе в
+    контексте разговора ведущих, типичные подтверждения/реакции. Скорее всего ошибка
+    распознавания одного из ведущих.
+
+    '
+- id: artifact_e466_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 466
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Короткая реплика 'Ну, ты что?' (1 сек) между двумя репликами Bobuk. Скорее
+    всего ошибка распознавания, не Эльдар Муртазин.
+- id: artifact_e467_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 467
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e468_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 468
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Единичная короткая реплика (3 сек) между двумя репликами Umputun. Контекст:
+    обсуждение разработчиков Go и деплоймента. Umputun: "Вот это меня удивляет." ->
+    MISATTRIBUTED: "Для них это не проблема вооб'
+- id: artifact_e468_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 468
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Единичная очень короткая реплика (1.6 сек) между репликами Gray. Контекст:
+    обсуждение Rust. Gray: "Что-то народ так активно про этот." -> MISATTRIBUTED:
+    "Короче, раст 1.4." -> Gray: "И следом просят п'
+- id: artifact_e469_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 469
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e469_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 469
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Единственная короткая реплика "Так, ну что?" (1.7 сек) в момент 6575s.
+    Контекст: Gray говорит "не очень хорошо", затем эта реплика, затем снова Gray
+    "Может, хватит?". Скорее всего это реплика одного и'
+- id: artifact_e469_SPEAKER_08
+  type: rename_episode
+  episode: 469
+  from: SPEAKER_08
+  to: _artifact
+  reason: 'Единственная реплика "Простите" (1.4 сек) на 2483s между репликами Bobuk
+    ("Шмокер, шмокер") и Umputun ("Докер 1.9"). Типичная ошибка распознавания - короткое
+    междометие.
+
+    '
+- id: artifact_e470_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 470
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e470_Alek.sys
+  type: rename_episode
+  episode: 470
+  from: Alek.sys
+  to: _artifact
+  reason: Единственная реплика длиной 0.6 сек ("Вам же трудно.") в 7821.94s. Alek.sys
+    не был анонсирован в начале выпуска (Umputun сказал "состав собрался неполный").
+    Реплика слишком короткая и изолированная. С
+- id: artifact_e471_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 471
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Очень короткие реплики (2 сек каждая). Eldar не участвовал в этом выпуске.
+    Ошибочное распознавание.
+- id: artifact_e472_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 472
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Две короткие реплики (2 сек каждая) в разных частях эпизода.
+
+    Контекст указывает на ошибку распознавания:
+
+    1. "Он практически ненужный" (2651s) - реплика в диалоге Umputun и Ksenks о drag-and-drop
+
+    2. "О'
+- id: artifact_e472_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 472
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Одна короткая реплика "Они такие клевые, может, мне тоже купить?" (4223s).
+
+    Контекст диалога:
+
+    - Ksenks: "А у тебя уже один есть?" (4220s)
+
+    - Umputun: "У меня уже два есть." (4221s)
+
+    - [эта реплика]
+
+    - Ump'
+- id: artifact_e474_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 474
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Единственная короткая реплика "И на Javis." (1.5 сек) на 2537s.
+
+    Находится между репликами Umputun и Bobuk.
+
+    Слишком коротка для идентификации, скорее всего один из ведущих или Плющев.
+
+
+    Метка MISATTRIBU'
+- id: artifact_e475_SPEAKER_02
+  type: rename_episode
+  episode: 475
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Единственная короткая реплика "Первая помощь." (1.5 сек) в середине
+
+    монолога Umputun о школьных предметах. Скорее всего ошибка распознавания -
+
+    это часть речи одного из ведущих (вероятно Gray или Ksenk'
+- id: artifact_e476_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 476
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e477_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 477
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Единственная короткая реплика (1 сек) "Работа – это деньги." между репликами
+    Ksenks.
+
+    Контекст: Ksenks говорит о приоритетах и работе, эта фраза логически продолжает
+    её мысль.
+
+    Вероятно, ошибка распозна'
+- id: artifact_e478_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 478
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Короткая реплика (1 сек) "Что нужно программисту?" в 78s находится между
+    репликами Ksenks. Контекст: Ksenks говорит о том, что Umputun доволен от фикса
+    багов (78.27s), затем эта реплика (78.31s), зате'
+- id: artifact_e478_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 478
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Единственная реплика (3.4 сек) "А вот как человек, который производит продукт...
+    Почему как начальник любишь?" в 4737s. В эпизоде участвуют только Umputun и Ksenks.
+    Реплика содержит вопрос к Umputun, '
+- id: artifact_e478_SPEAKER_03
+  type: rename_episode
+  episode: 478
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Три очень коротких реплики-междометия в разных частях эпизода: - 7136.79s:
+    "Угу." (0.06 сек) - 7416.77s: "Какую?" (0.18 сек) - 7815.42s: "Да, есть такая."
+    (1.3 сек) Все реплики — это короткие реакции '
+- id: artifact_e479_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 479
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e479_SPEAKER_01
+  type: rename_episode
+  episode: 479
+  from: SPEAKER_01
+  to: _artifact
+  reason: Артефакт распознавания. Одиночная реплика длительностью 0.34 сек с текстом
+    'Полин.' - бессмысленный фрагмент.
+- id: artifact_e480_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 480
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (3.0s)
+- id: artifact_e480_SPEAKER_05
+  type: rename_episode
+  episode: 480
+  from: SPEAKER_05
+  to: _artifact
+  reason: Типичные короткие слова-реакции ('Да.', 'Да, да.') длительностью менее 1
+    секунды каждая. Разбросаны по разным частям эпизода (715s и 3148s). Скорее всего
+    ошибка сегментации речи одного из ведущих.
+- id: artifact_e481_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 481
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e482_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 482
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Короткие реплики, вписывающиеся в диалоги основных ведущих. Эльдар Муртазин
+    не упоминается как гость в этом выпуске
+- id: artifact_e482_SPEAKER_05
+  type: rename_episode
+  episode: 482
+  from: SPEAKER_05
+  to: _artifact
+  reason: Очень короткие односложные реплики, типичные ошибки распознавания речи
+- id: artifact_e483_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 483
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e483_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 483
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Отмененное ошибочное присвоение спикера Petr Didenko.
+
+    Пётр не участвовал в выпуске — в начале представлены только Umputun, Ksenks и
+    гость Артём.
+
+    Реплики очень короткие (2-4 сек), разбросаны по эпизоду'
+- id: artifact_e483_SPEAKER_04
+  type: rename_episode
+  episode: 483
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Единственная реплика "Да." длительностью ~2 сек в 6034s.
+
+    Односложная реакция, типичная ошибка распознавания.
+
+    Сразу после реплики SPEAKER_MISATTRIBUTED_PETR — вероятно тот же источник ошибки.
+
+    '
+- id: artifact_e484_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 484
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Единственная короткая реплика 'Ну что ты хочешь, транспаранты?' в контексте
+    разговора Bobuk и Ksenks. Marin не участвует в выпуске 484 (2016 год). Вероятно
+    ошибка распознавания одного из ведущих.
+- id: artifact_e485_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 485
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Короткая реплика (2 сек) "Ой, они, кстати, сейчас инвайты открыли" в контексте
+    обсуждения альфа-версии. Эльдара Муртазина в этом выпуске нет по статистике ведущих.
+    Имя "MISATTRIBUTED" указывает, что э
+- id: artifact_e485_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 485
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e485_SPEAKER_06
+  type: rename_episode
+  episode: 485
+  from: SPEAKER_06
+  to: _artifact
+  reason: Односложная реакция "Ого!" длительностью 0.5 сек между репликами Umputun
+    и Bobuk. Типичная ошибка распознавания — короткая реакция одного из ведущих неправильно
+    выделена как отдельный спикер. Контекст
+- id: artifact_e486_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 486
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e487_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 487
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e487_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 487
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Единственная реплика между двумя репликами Umputun. Umputun обращался к
+    Gray про NFS, ответ 'Я не думаю, что оно вообще нужно' скорее всего от Gray.
+- id: artifact_e487_SPEAKER_03
+  type: rename_episode
+  episode: 487
+  from: SPEAKER_03
+  to: _artifact
+  reason: 3 коротких реплики разбросаны между репликами разных ведущих. Ошибки распознавания.
+- id: artifact_e488_SPEAKER_06
+  type: rename_episode
+  episode: 488
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Единственная короткая реплика (~1.5 сек) в случайном месте эпизода. Контекст:
+    Umputun спрашивает "они делают ботов для чего, для Телеграма или для всего?" ->
+    SPEAKER_06 "Это телеграмма" -> Bobuk продо'
+- id: artifact_e489_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 489
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e489_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 489
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (4.0s)
+- id: artifact_e489_SPEAKER_07
+  type: rename_episode
+  episode: 489
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Две очень короткие реплики ("Ага." и "Она умеет мужским голосом говорить.")
+
+    в разных частях подкаста. Скорее всего это фрагменты речи ведущих,
+
+    неправильно атрибутированные при автоматическом распознав'
+- id: artifact_e489_SPEAKER_04
+  type: rename_episode
+  episode: 489
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Единственная короткая реплика "Почему это было неожиданно?" (441.8s).
+
+    Контекст: Ksenks рассказывает о презентации Apple, где Тим Кук начал
+
+    с темы ФБР. Вопрос логичен от ведущего (Umputun или Gray), но'
+- id: artifact_e490_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 490
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e490_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 490
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Единственная реплика (5713s) между репликами Umputun и SPEAKER_04. Эльдар
+    Муртазин не участвовал в выпуске. Тема: архитектура и передача сообщений через
+    store.'
+- id: artifact_e491_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 491
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Эльдар Муртазин не участвовал в выпуске 491. Эти реплики уже помечены как
+    ошибочно присвоенные (MISATTRIBUTED). Короткие фразы: ''Тут то же самое'', ''Ну
+    вот тут такая же история'', ''Ничего страшного в эт'
+- id: artifact_e491_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 491
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Марина не участвовала в выпуске 491. Одна короткая реплика 'Ну, мне кажется,
+    что с конкретными ситуациями' (3180s) уже помечена как ошибочное присвоение.
+- id: artifact_e491_Alek.sys
+  type: rename_episode
+  episode: 491
+  from: Alek.sys
+  to: _artifact
+  reason: 'Alek.sys не объявлен как участник в начале выпуска (''Состав полный минус
+    один'' означает отсутствие Gray, но остаётся 3 человека: Umputun, Bobuk, Ksenks).
+    Две изолированные реплики (''Бог интересовался '
+- id: artifact_e492_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 492
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Однословная реплика "Да нет, почему?" в контексте разговора Umputun-Gray.
+    Эльдара нет в этом выпуске (не представлен, не упоминается). Реплика слишком короткая
+    для идентификации.
+
+    '
+- id: artifact_e495_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 495
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Реплика "Я просто не знала, стоит ли мне отвечать" (35.2s-36.98s) следует
+    сразу после приветствия Umputun'а "Ксюша, здравствуй, дорогая" (31.2s-35.12s)
+    и предшествует реплике Ksenks "Да, я готова к во
+- id: artifact_e496_SPEAKER_00
+  type: rename_episode
+  episode: 496
+  from: SPEAKER_00
+  to: _artifact
+  reason: Две односложные реакции ('Угу.', 'Ой, дай.') в разных частях эпизода - типичные
+    ошибки ASR
+- id: artifact_e496_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 496
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Единственная короткая реплика 'И ты понятно объяснил.' (1.5 сек) - типичная
+    ошибка распознавания. Пётр Диденко - активный участник, который представляется
+    и много говорит. Одна случайная реплика не со
+- id: artifact_e497_SPEAKER_06
+  type: rename_episode
+  episode: 497
+  from: SPEAKER_06
+  to: _artifact
+  reason: Две короткие разрозненные реплики (2-3 сек каждая) с интервалом 60 секунд.
+    Первая "Перла, перла ему хватает" (2321s) - реакция в середине разговора про git
+    submodules. Вторая "Да-да" (2381s) - типична
+- id: artifact_e497_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 497
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Единственная короткая реплика (3 сек) в контексте обсуждения Jawbone. Название
+    спикера указывает, что ранее было ошибочно приписано Эльдару Муртазину, но затем
+    отменено. Эльдара в этом выпуске нет (да
+- id: artifact_e498_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 498
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Выпуск вдвоём (Umputun + Ksenks). Реплика вписывается в диалог с Ksenks.
+    Marin не представлена.
+- id: artifact_e498_SPEAKER_02
+  type: rename_episode
+  episode: 498
+  from: SPEAKER_02
+  to: _artifact
+  reason: Крайне короткая реплика (0.18 сек) 'Да, да.' между репликами Umputun. Типичная
+    ошибка распознавания.
+- id: artifact_e498_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 498
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Выпуск вдвоём. Petr Didenko не представлен и не упомянут.
+- id: artifact_e498_Alek.sys
+  type: rename_episode
+  episode: 498
+  from: Alek.sys
+  to: _artifact
+  reason: 'В начале эпизода явно сказано: вещают ВДВОЁМ Umputun и Ksenks. Gray, Bobuk
+    и Alek.sys отсутствуют. Одна короткая реплика посреди эпизода без представления
+    - ошибка.'
+- id: artifact_e499_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 499
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Ранее ошибочно атрибутировано как PetrDidenko, отменено.
+
+    Две короткие реплики:
+
+    - 1436s: "Капитан, короче" (1.7 сек) — после реплики Gray "Капитан"
+
+    - 2007s: "Почему просто не выпустить 4К?" (2 сек) — в'
+- id: artifact_e499_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 499
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Ранее ошибочно атрибутировано как Marin_k_a (Марина), отменено.
+
+    Одна реплика:
+
+    - 2232s: "Так а зачем, если тебе не нужны, ты не носишь?" (2.2 сек)
+
+    Контекст: обсуждение часов/наушников. После этого SPEA'
+- id: artifact_e500_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 500
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Одиночная короткая реплика (1.5 сек) между репликами Umputun и Bobuk. Фраза
+    'Он молчит просто.' — типичная ошибка распознавания голоса одного из ведущих.
+- id: artifact_e500_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 500
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Две коротких последовательных реплики (~4 сек) вставлены после речи Ksenks.
+    Фразы 'Я помню этот момент, да.' и 'Подкаст меняет людей.' — контекстуально продолжают
+    мысль Ksenks о том, как подкаст меняе
+- id: artifact_e501_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 501
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (8.0s)
+- id: artifact_e501_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 501
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Две короткие реплики (по 2 сек), разбросанные по выпуску. Реплики: "По-моему,
+    уже рассказали, о чем речь" (3330s), "Это изменило мою жизнь" (5011s). Обе реплики
+    - реактивные комментарии между репликам'
+- id: artifact_e501_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 501
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Одна короткая реплика (2 сек) "Тут другого характера задача" (5914s). Находится
+    между репликами Umputun и Ksenks в дискуссии о мобильной разработке. Пётр Диденко
+    не был представлен в этом выпуске.
+- id: artifact_e502_SPEAKER_03
+  type: rename_episode
+  episode: 502
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Единственная односложная реплика "Прикольно" длительностью 2 секунды.
+
+    Типичная ошибка распознавания - короткая реакция могла быть сказана
+
+    любым из присутствующих ведущих.
+
+    '
+- id: artifact_e503_SPEAKER_05
+  type: rename_episode
+  episode: 503
+  from: SPEAKER_05
+  to: _artifact
+  reason: Две очень короткие реплики (1-2 сек) в разных частях выпуска. Первая 'На
+    комсомолку.' - односложная шутка в ответ на вопрос Umputun. Вторая 'Ну...' - междометие.
+    Типичные ошибки распознавания голоса о
+- id: artifact_e503_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 503
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (3.0s)
+- id: artifact_e504_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 504
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (9.0s)
+- id: artifact_e504_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 504
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Одна короткая реплика (1.3 сек) в середине диалога между Umputun и Ksenks
+    о fail-fast.
+
+    Umputun говорит "на ошибки" (3356-3357s), затем сразу Ksenks продолжает о fail
+    fast (3358-3366s).
+
+    Эта фраза "Вот '
+- id: artifact_e505_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 505
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Уже помечен как ошибочная атрибуция (MISATTRIBUTED).
+
+    1422.8s: "Ровно неделю назад это было, да."
+
+    Контекст: обсуждение падения серверов Pokemon Go неделю назад.
+
+    Скорее всего это Ksenks (продолжение её '
+- id: artifact_e506_SPEAKER_01
+  type: rename_episode
+  episode: 506
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Очень короткие реплики (все < 1 сек), разбросанные случайным образом.
+
+    Примеры: "Не могут они гени..." (обрезанная фраза), "Хорошо бы.",
+
+    "Так, Ксюша.", "Убили Ксюшу?", "Нет.", "Не убил пока.", "Сейчас '
+- id: artifact_e506_SPEAKER_07
+  type: rename_episode
+  episode: 506
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Единственная реплика "Привет." (46s) длиной 0.26 сек во время переклички.
+
+    Скорее всего ошибка распознавания - один из других спикеров.
+
+    '
+- id: artifact_e520_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 520
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e520_SPEAKER_05
+  type: rename_episode
+  episode: 520
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Единственная реплика "Ну да." (1.5 сек) в 1413s.
+
+    Контекст: между репликами Alek.sys ("Без русских буквочек.") и Bobuk ("Оцените.").
+
+    Типичная междометие-подтверждение, скорее всего ошибка атрибуции.
+
+    '
+- id: artifact_e521_SPEAKER_06
+  type: rename_episode
+  episode: 521
+  from: SPEAKER_06
+  to: _artifact
+  reason: Одиночная короткая реплика (2 сек) в середине разговора Umputun о пул-реквестах.
+    Скорее всего ошибка распознавания - кто-то из ведущих вставил комментарий.
+- id: artifact_e521_SPEAKER_00
+  type: rename_episode
+  episode: 521
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Три коротких реплики в разных местах подкаста: ''Поздравляю ГОУ!'' (1 сек),
+    ''Где я храню все это дерево?'' (2 сек), ''Пока.'' (0.2 сек). Все похожи на ошибки
+    распознавания ведущих.'
+- id: artifact_e521_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 521
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Одиночная короткая реплика (1.5 сек) в середине разговора Ksenks про ленивость.
+    Контекст показывает продолжение мысли Ksenks ('Но он же, может быть, не скалиброван').
+    Это ошибка распознавания.
+- id: artifact_e521_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 521
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Две короткие реплики: ''Со вторника, если я не ошибаюсь'' (1.7 сек) и ''Женя,
+    ты успел починить ролик?'' (2.2 сек). Обе реплики типичны для ведущих.'
+- id: artifact_e522_SPEAKER_01
+  type: rename_episode
+  episode: 522
+  from: SPEAKER_01
+  to: _artifact
+  reason: Короткие реплики (0.2-1.6 сек каждая), разбросанные по подкасту. Все появляются
+    между репликами известных ведущих, часто непосредственно после Gray. Паттерн указывает
+    на ошибку распознавания.
+- id: artifact_e522_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 522
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Одна реплика длительностью 1 сек, незавершённая фраза 'Тут нет такого, что...'.
+    Находится между репликами Ksenks. Marina (Marin_k_a) - бывшая ведущая, не участвовала
+    в этом выпуске.
+- id: artifact_e523_SPEAKER_04
+  type: rename_episode
+  episode: 523
+  from: SPEAKER_04
+  to: _artifact
+  reason: Одиночная короткая реплика 'Ждем.' (4 сек) посреди диалога Umputun и Bobuk
+    об Alexa. Скорее всего ошибка распознавания - это реплика одного из ведущих.
+- id: artifact_e523_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 523
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Две короткие реплики ('Зачем мучиться так?' в 810с и 'Что за проблема?'
+    в 7621с) среди диалога ведущих. Эльдар Муртазин не участвовал в этом выпуске.
+    Вероятно ошибочное присвоение уже исправлено переи
+- id: artifact_e524_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 524
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (6.0s)
+- id: artifact_e524_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 524
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e525_SPEAKER_08
+  type: rename_episode
+  episode: 525
+  from: SPEAKER_08
+  to: _artifact
+  reason: 'Очень короткие реплики (31-35 сек) в начале подкаста, сразу после вопроса
+    Umputun к Ксюше "Ты не скажешь привет?". Контекст показывает, что это продолжение
+    приветствия Ksenks. Реплики: "Здрасте", "Зап'
+- id: artifact_e525_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 525
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e525_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 525
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Маркер MISATTRIBUTED указывает на отменённую ошибочную атрибуцию к Petr.
+    Единственная реплика "Конечно, быстро." (861s) - реакция на рассказ Umputun об
+    обработке 3 миллиардов записей. По контексту это
+- id: artifact_e526_SPEAKER_00
+  type: rename_episode
+  episode: 526
+  from: SPEAKER_00
+  to: _artifact
+  reason: Односложная реакция 'Угу' (0.06 сек) между репликами Umputun. Типичная ошибка
+    распознавания короткого подтверждения от Ksenks.
+- id: artifact_e527_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 527
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e528_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 528
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Имя спикера содержит ''MISATTRIBUTED'' - это уже отменённое ошибочное присвоение.
+    Две короткие вопросительные реплики: ''Что они рассказывают про себя?'' (204s)
+    и ''Как ты ему продал?'' (4806s). Скорее всег'
+- id: artifact_e528_SPEAKER_06
+  type: rename_episode
+  episode: 528
+  from: SPEAKER_06
+  to: _artifact
+  reason: Одна односложная реплика 'Ну, наверное.' (7024s) в конце выпуска. Типичная
+    ошибка ASR - вклинивание реакции.
+- id: artifact_e529_SPEAKER_01
+  type: rename_episode
+  episode: 529
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Две очень короткие реплики (<1 сек каждая): ''Да, было дело.'' и ''Ага.''
+    - типичные фразы-подтверждения, появляющиеся в диалоге между ведущими. Скорее
+    всего ошибка распознавания одного из ведущих (Bobuk '
+- id: artifact_e530_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 530
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Префикс MISATTRIBUTED означает уже отменённую ошибочную атрибуцию. Реплика
+    ''А, импостер-синдром.'' в контексте диалога Umputun→Ksenks - вероятно принадлежит
+    одному из присутствующих ведущих (Bobuk или '
+- id: artifact_e530_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 530
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Префикс MISATTRIBUTED означает уже отменённую ошибочную атрибуцию. Реплика
+    'Нет, последняя тема.' между Gray и Bobuk - явно один из них возражает. Эльдар
+    Муртазин не участвовал в этом выпуске
+- id: artifact_e531_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 531
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Короткие реплики (2-3 сек каждая) в случайных местах выпуска. Обе реплики
+    находятся в контексте, где говорит Ksenks - перед первой репликой Umputun упоминает
+    Ксюшу, сразу после обеих реплик говорит Ks
+- id: artifact_e531_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 531
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Единственная короткая реплика (3.5 сек) - типичная переходная фраза 'Ну,
+    посмотрим, в общем, что будет'. Такие фразы часто ошибочно атрибутируются системой
+    распознавания.
+- id: artifact_e532_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 532
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (5.0s)
+- id: artifact_e532_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 532
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Две короткие реплики (0.8s и 2.6s) в разных частях эпизода.
+
+    "Ну, я не знаю." (4564.8s) - в контексте диалога Bobuk/Umputun о книге.
+
+    "А, это хакеры, что ли?" (10800.1s) - реакция на разговор о микродоз'
+- id: artifact_e532_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 532
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Одна короткая реплика (2.5s) "Давай, примеры жизни." (6771.7s)
+
+    Следует за репликой Ksenks о библиотеках.
+
+    Скорее всего это SPEAKER_06 (Леха) - сразу после него идет реплика SPEAKER_06.
+
+    '
+- id: artifact_e533_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 533
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e533_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 533
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: Единственная короткая реплика (<1 сек). Марина (Marin_k_a) - бывшая ведущая,
+    но в эпизоде 533 не участвовала (не представлена в начале). Реплика 'Нет, я пропустила'
+    - типичная для женского голоса, ско
+- id: artifact_e534_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 534
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (1.5s)
+- id: artifact_e535_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 535
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e535_SPEAKER_05
+  type: rename_episode
+  episode: 535
+  from: SPEAKER_05
+  to: _artifact
+  reason: Очень короткие односложные реплики ('Почему?', 'Да.') - типичные ошибки
+    распознавания
+- id: artifact_e535_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 535
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: Одна короткая реплика в обсуждении Apple Care между ведущими
+- id: artifact_e536_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 536
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: MISATTRIBUTED with short duration (7.0s)
+- id: artifact_e536_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 536
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Одна реплика: "Я вот не понимаю, почему... Нет, ну, Insertion Sort, мне
+    кажется, вполне себе очевидный."
+
+    Метка "MISATTRIBUTED_MARIN" указывает на отменённую атрибуцию к Марине.
+
+    Контекст: обсуждение со'
+- id: artifact_e536_SPEAKER_09
+  type: rename_episode
+  episode: 536
+  from: SPEAKER_09
+  to: _artifact
+  reason: 'Две короткие реплики: "Посмотрите на дашборды, да." (1837s) и "Очень на
+    объектно-ориентированном." (5250s).
+
+    Всего 3 секунды в разных частях подкаста. Ошибка распознавания.
+
+    '
+- id: artifact_e538_SPEAKER_MISATTRIBUTED_MARIN
+  type: rename_episode
+  episode: 538
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: _artifact
+  reason: 'Короткая реплика (1.5 сек) между Umputun и Ksenks. Контекст: обсуждение
+    GitLab. Фраза ''Нет, прям как-то страшно'' - типичная реакция ведущего на обсуждаемую
+    тему. Вероятно ошибочно приписана Марине вме'
+- id: artifact_e538_SPEAKER_MISATTRIBUTED_ELDAR
+  type: rename_episode
+  episode: 538
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: Реплика 'Давайте посмотрим на тему наших слушателей' (6375s) сразу после
+    реплики Bobuk 'Давайте посмотрим' (6374s). Это продолжение мысли - вероятно один
+    спикер. Эльдар Муртазин не был представлен в э
+- id: artifact_e540_SPEAKER_MISATTRIBUTED_PETR
+  type: rename_episode
+  episode: 540
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: _artifact
+  reason: 'Единственная реплика "Мне кажется, ты зря попалился." (8071s)
+
+    идет сразу после реплики Umputun про утилиту RIG.
+
+    Реплика является реакцией одного из ведущих на шутку.
+
+    Спикер уже помечен как MISATTRIBUT'
+- id: artifact_e541_SPEAKER_07
+  type: rename_episode
+  episode: 541
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Очень короткие реплики (менее 1 сек суммарно).
+
+    Реплики "Раз в неделю?" и "А я за ним не ем." - это ошибка распознавания,
+
+    скорее всего принадлежат Ksenks, которая сразу после (7045.58s) говорит
+
+    "Я не е'
+- id: artifact_e542_SPEAKER_06
+  type: rename_episode
+  episode: 542
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Две короткие односложные реплики (''Окей.'' и ''Класс.'') разбросаны по
+    выпуску (7021s и 7854s). Это типичные фразы-ошибки распознавания, которые могли
+    быть неправильно выделены из речи основных спикеров '
+- id: artifact_e543_SPEAKER_04
+  type: rename_episode
+  episode: 543
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Две очень короткие разрозненные реплики:
+
+    1. 832.5s: "Только без коробки." - вставка во время монолога Umputun
+
+    2. 2500.5s: "Грязь?" - односложный переспрос
+
+    Обе реплики типичны для коротких реакций Ksen'
+- id: artifact_e544_SPEAKER_02
+  type: rename_episode
+  episode: 544
+  from: SPEAKER_02
+  to: _artifact
+  reason: Две очень короткие односложные реплики ("Ну, так." и "Да."), разбросанные
+    по эпизоду (1534s и 1677s). Обе реплики находятся в контексте диалога между ведущими
+    и представляют типичные междометия/подтве
+- id: artifact_e544_SPEAKER_04
+  type: rename_episode
+  episode: 544
+  from: SPEAKER_04
+  to: _artifact
+  reason: Единственная реплика "А, то есть даже нет Enum?" (7372.59-7373.87s) в контексте
+    обсуждения Go. Непосредственно перед этим Ksenks спрашивала "Слушай, так инамы
+    там есть." (7363-7365s), затем Umputun об
+- id: artifact_e545_SPEAKER_06
+  type: rename_episode
+  episode: 545
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Только 2 очень короткие реплики:
+
+    1. "Угу." (7219.29-7219.35, 0.06 сек) - междометие
+
+    2. "Хе-хе-хе." (7987.96-7988.4, 0.44 сек) - смех, Gray комментирует: "Это был
+    демонический смех"
+
+    Вероятно ошибка рас'
+- id: artifact_e546_SPEAKER_03
+  type: rename_episode
+  episode: 546
+  from: SPEAKER_03
+  to: _artifact
+  reason: Всего 2 односложные реплики ('Бывает, бывает.' на 2034s и 'Да?' на 6596s)
+    - типичные ошибки атрибуции коротких фраз-реакций.
+- id: artifact_e547_SPEAKER_03
+  type: rename_episode
+  episode: 547
+  from: SPEAKER_03
+  to: _artifact
+  reason: Одна короткая реплика (2.3 сек) - скорее всего ошибка распознавания ведущего
+- id: artifact_e547_SPEAKER_05
+  type: rename_episode
+  episode: 547
+  from: SPEAKER_05
+  to: _artifact
+  reason: Короткие реплики (0.3-1.2 сек) в разных местах эпизода - ошибка распознавания
+- id: artifact_e547_SPEAKER_06
+  type: rename_episode
+  episode: 547
+  from: SPEAKER_06
+  to: _artifact
+  reason: Короткие реплики (0.6-1.3 сек) в двух разных местах эпизода - ошибка распознавания
+    Ksenks
+- id: artifact_e548_SPEAKER_08
+  type: rename_episode
+  episode: 548
+  from: SPEAKER_08
+  to: _artifact
+  reason: Единственная реплика 'Да.' длительностью 0.04 сек (5610.81-5610.85s) между
+    репликами Umputun и Alek.sys. Явная ошибка автоматической разметки.
+- id: artifact_e549_SPEAKER_06
+  type: rename_episode
+  episode: 549
+  from: SPEAKER_06
+  to: _artifact
+  reason: Единственная короткая реплика (2.4 сек) в середине диалога между известными
+    ведущими. Явная ошибка распознавания.
+- id: artifact_e552_SPEAKER_06
+  type: rename_episode
+  episode: 552
+  from: SPEAKER_06
+  to: _artifact
+  reason: Две очень короткие реплики (0.06 и 0.5 сек) в случайные моменты эпизода.
+    Первая реплика "Зум." (6802.58s) - эхо реплики Umputun "Зум?" (6802.32s). Вторая
+    реплика "Угу." (7030.0s) - междометие между ре
+- id: artifact_e554_SPEAKER_05
+  type: rename_episode
+  episode: 554
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Единственная короткая реплика "Я уже это выучил" (1.5 сек) в контексте
+    диалога между Umputun и Bobuk о VS Code. По смыслу это ответ на реплику Umputun
+    "Они ломают совместимость в тот момент, когда ты '
+- id: artifact_e555_SPEAKER_07
+  type: rename_episode
+  episode: 555
+  from: SPEAKER_07
+  to: _artifact
+  reason: Единственная реплика 'И больше ничего.' идет сразу после реплики Umputun
+    'Apple News конкретно умеет мне правильно про баскетбол новости показывать.' и
+    перед его же 'Больше никуда он не попадает.' - э
+- id: artifact_e559_SPEAKER_02
+  type: rename_episode
+  episode: 559
+  from: SPEAKER_02
+  to: _artifact
+  reason: Единственная реплика 'Угу' - типичный артефакт распознавания
+- id: artifact_e560_SPEAKER_03
+  type: rename_episode
+  episode: 560
+  from: SPEAKER_03
+  to: _artifact
+  reason: Короткие односложные реплики ('Как?', 'Так прикольно', 'Ну,') разбросанные
+    по эпизоду. Типичная ошибка распознавания коротких реакций ведущих.
+- id: artifact_e560_SPEAKER_07
+  type: rename_episode
+  episode: 560
+  from: SPEAKER_07
+  to: _artifact
+  reason: Две очень короткие реплики ('Код-ревью!' в 3293s, 'Я не уверен.' в 7663s)
+    вставленные в монолог Umputun. Ошибка распознавания коротких вставок.
+- id: artifact_e561_SPEAKER_06
+  type: rename_episode
+  episode: 561
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Звуковой эффект. Реплика ''Щелк, щелк'' (22s) - имитация звука фотоаппарата.
+    Контекст: Umputun только что назвал Bobuk ''главный по фотоаппаратам''. Это не
+    речь, а аудио-артефакт или SFX.'
+- id: artifact_e561_Gray
+  type: rename_episode
+  episode: 561
+  from: Gray
+  to: _artifact
+  reason: 'Gray официально отсутствует в этом выпуске. В начале Umputun говорит: ''Главного
+    по номерам у нас нет сегодня'' (14.76s). Единственная реплика Gray в 8347s (''Наши-то
+    голоса, они, конечно, ого-го'') - это'
+- id: artifact_e562_SPEAKER_02
+  type: rename_episode
+  episode: 562
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Одна короткая реплика (1 сек) в середине разговора - типичная ошибка распознавания.
+
+    Вероятно это Ksenks или Gray - контекст обсуждения оплаты в метро/магазине.
+
+    Реплика: "У вас в Чехаго метро нету?" - '
+- id: artifact_e564_SPEAKER_03
+  type: rename_episode
+  episode: 564
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Только 2 односложных реплики "Угу" и "Да" около 8402-8404s.
+
+    Появляются рядом с репликами SPEAKER_06.
+
+    Типичная ошибка распознавания - короткие подтверждающие звуки.
+
+    '
+- id: artifact_e568_Bobuk
+  type: rename_episode
+  episode: 568
+  from: Bobuk
+  to: _artifact
+  reason: 'В начале выпуска (66s) Gray говорит ''Бобук еще не пришел, поэтому еще
+    не спасибо''. Однако в транскрипте есть 2 реплики Bobuk. Первая (680s) ''Ревенью
+    составляет 101 процент'' — не характерна для манеры '
+- id: artifact_e569_SPEAKER_08
+  type: rename_episode
+  episode: 569
+  from: SPEAKER_08
+  to: _artifact
+  reason: Единственная короткая реплика (2.5 сек) между репликами Bobuk. Вопрос в
+    контексте обсуждения Алисы, где активно участвует Ksenks.
+- id: artifact_e570_SPEAKER_01
+  type: rename_episode
+  episode: 570
+  from: SPEAKER_01
+  to: _artifact
+  reason: Единственная реплика 'Толстые бинарники' (1.5 сек) - это повторение фразы
+    Umputun, который непосредственно перед этим сказал 'почему толстые бинарники наши
+    все'. Скорее всего ошибка распознавания одно
+- id: artifact_e571_SPEAKER_06
+  type: rename_episode
+  episode: 571
+  from: SPEAKER_06
+  to: _artifact
+  reason: Единственная реплика 'точно говорю.' (1.5 сек) - типичная односложная реакция,
+    ошибочно выделенная в отдельный спикер
+- id: artifact_e572_SPEAKER_01
+  type: rename_episode
+  episode: 572
+  from: SPEAKER_01
+  to: _artifact
+  reason: Одиночная короткая реактивная фраза 'Красота.' (1 сек) между репликами Umputun.
+    Типичная ошибка распознавания - вероятно это реплика одного из ведущих.
+- id: artifact_e573_SPEAKER_06
+  type: rename_episode
+  episode: 573
+  from: SPEAKER_06
+  to: _artifact
+  reason: Две короткие односложные реплики ("Окей." и "Так бывает, да.") разбросаны
+    по эпизоду с интервалом ~14 минут. Обе реплики — типичные фразы-реакции, которые
+    могли быть неправильно атрибутированы при авт
+- id: artifact_e574_SPEAKER_06
+  type: rename_episode
+  episode: 574
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Единственная короткая реплика (1.66 сек) с шутливым содержанием ''Ой, какие
+    вопросы задаешь?'' между репликами основных ведущих. Появляется за 50 секунд до
+    первой реплики Alek.sys (1188s). Скорее всего '
+- id: artifact_e578_SPEAKER_06
+  type: rename_episode
+  episode: 578
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Одна короткая реплика (2.5 сек) ''Я надеюсь на это, конечно.'' в середине
+    разговора (8856s). Контекст: Gray говорит о GitHub и pull request, затем эта реплика,
+    потом Umputun продолжает тему. Скорее всег'
+- id: artifact_e589_SPEAKER_08
+  type: rename_episode
+  episode: 589
+  from: SPEAKER_08
+  to: _artifact
+  reason: Единственная реплика 'Вот смотри, Леша' (2586s) длительностью ~0.7 сек.
+    Обращение к Лёше (Alek.sys). Скорее всего ошибка распознавания Ksenks или Umputun.
+- id: artifact_e589_Gray
+  type: rename_episode
+  episode: 589
+  from: Gray
+  to: _artifact
+  reason: Gray НЕ был представлен в начале эпизода. Umputun явно говорит 'Состав половинный'
+    и называет только себя, Ксюшу, Лёшу и Аню. Единственная реплика Gray 'Поднял свою
+    ноду на ББС' (4424s) скорее всего о
+- id: artifact_e589_Bobuk
+  type: rename_episode
+  episode: 589
+  from: Bobuk
+  to: _artifact
+  reason: Bobuk НЕ был представлен в начале эпизода. Umputun явно называет только
+    4 участников. Единственная реплика Bobuk 'На интернете не было в то время, Ксюша'
+    (4414s) скорее всего ошибка распознавания - ве
+- id: artifact_e590_SPEAKER_08
+  type: rename_episode
+  episode: 590
+  from: SPEAKER_08
+  to: _artifact
+  reason: 'Единственная реплика на 2194.8s: "Не-не-не, ну ГЦ понятно." - короткая
+    реакция на SPEAKER_03.
+
+    Вероятно ошибочная атрибуция одного из ведущих или SPEAKER_03.
+
+    '
+- id: artifact_e590_SPEAKER_06
+  type: rename_episode
+  episode: 590
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Единственная реплика на 5172.4s: "Молодцы, молодцы." - короткая реакция
+    сразу после Ksenks.
+
+    Ошибка разметки, вероятно принадлежит одному из ведущих.
+
+    '
+- id: artifact_e594_SPEAKER_07
+  type: rename_episode
+  episode: 594
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Единственная реплика "Окей." (0.86 сек) в момент 5230.19s.
+
+    Появляется посреди рассказа Мэверика (SPEAKER_04) о тестовом задании.
+
+    Скорее всего это короткая реакция одного из ведущих (Umputun говорит
+
+    "О'
+- id: artifact_e595_SPEAKER_05
+  type: rename_episode
+  episode: 595
+  from: SPEAKER_05
+  to: _artifact
+  reason: Одиночная реплика 'Окей.' (<1 сек) между Bobuk и Gray в 7837 сек - типичная
+    ошибка распознавания короткой реакции
+- id: artifact_e596_SPEAKER_04
+  type: rename_episode
+  episode: 596
+  from: SPEAKER_04
+  to: _artifact
+  reason: Одиночная короткая реплика (1.4 сек) - ответ 'Developer Experience, я думаю'
+    на вопрос Umputun 'Что такое DX?'. Типичная ошибка распознавания при быстром ответе
+    одного из ведущих.
+- id: artifact_e596_SPEAKER_06
+  type: rename_episode
+  episode: 596
+  from: SPEAKER_06
+  to: _artifact
+  reason: Три односложные реакции ('Правильно', 'Окей', 'Окей, окей') разбросаны в
+    диапазоне 6565-6604s. Все реплики - типичные междометия, вставленные между репликами
+    Bobuk и Umputun.
+- id: artifact_e596_Alek.sys
+  type: rename_episode
+  episode: 596
+  from: Alek.sys
+  to: _artifact
+  reason: Три короткие реплики ('Какое?', 'Ну, окей.', 'ГОС скажет, что это такое?')
+    разбросаны по эпизоду (7234s, 7560s, 8021s). В начале эпизода Umputun явно говорит
+    'Грея с нами нет' и представляет только Bo
+- id: artifact_e598_SPEAKER_00
+  type: rename_episode
+  episode: 598
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Две односложные реплики по 0.2 сек и 0.06 сек: ''Окей.'' (4299 сек) и ''Да.''
+    (8274 сек). Типичные артефакты распознавания - слишком короткие для реальных реплик.'
+- id: artifact_e599_SPEAKER_05
+  type: rename_episode
+  episode: 599
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Две короткие реплики подряд (по ~2 сек каждая) в середине диалога между
+    Ksenks и Umputun.
+
+    Контекст: обсуждение показанного токена.
+
+    - Ksenks (5533s): "Теперь все знают твой токен."
+
+    - SPEAKER_05 (5534s)'
+- id: artifact_e600_SPEAKER_05
+  type: rename_episode
+  episode: 600
+  from: SPEAKER_05
+  to: _artifact
+  reason: Фрагмент длительностью 0.04 сек с текстом 'Ну,' между репликами Umputun
+    и Bobuk. Скорее всего начало фразы Bobuk ('Ну, да да'), неверно сегментированное.
+- id: artifact_e602_SPEAKER_06
+  type: rename_episode
+  episode: 602
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Всего 2 односложные реплики за весь эпизод:
+
+    - 216s: "Вот." — сразу после реплики Ksenks
+
+    - 9939s: "Пока." — прощание в самом конце эпизода
+
+    Обе реплики типичны для любого из ведущих.
+
+    "Вот" — скорее всег'
+- id: artifact_e603_SPEAKER_09
+  type: rename_episode
+  episode: 603
+  from: SPEAKER_09
+  to: _artifact
+  reason: 'Минимальные реплики (2 штуки, 2 сек суммарно).
+
+    Реплики: "Ну..." (755s), "Не-не-не, ты не понял." (8821s)
+
+
+    Односложные междометия разнесены на 2+ часа - явная ошибка распознавания.
+
+    '
+- id: artifact_e604_SPEAKER_01
+  type: rename_episode
+  episode: 604
+  from: SPEAKER_01
+  to: _artifact
+  reason: Очень короткая реплика (0.42 сек), односложная перебивка 'В смысле, она...'
+    между двумя репликами Bobuk о CouchDB. Типичная ошибка распознавания - кто-то
+    из ведущих начал говорить между репликами.
+- id: artifact_e606_SPEAKER_02
+  type: rename_episode
+  episode: 606
+  from: SPEAKER_02
+  to: _artifact
+  reason: Две короткие односложные реплики ('Конечно.', 'Возможно.'), разбросанные
+    по эпизоду (35 мин и 2ч15мин). Типичный паттерн ошибки распознавания речи. Первая
+    реплика сразу дублируется Bobuk'ом ('Ну, коне
+- id: artifact_e607_SPEAKER_04
+  type: rename_episode
+  episode: 607
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Три короткие реплики-реакции (<1 сек каждая) разбросаны по эпизоду:
+
+    - 725.7s: "Так не меняй." (между репликами Ksenks)
+
+    - 4029.2s: "Ну да, точно." (между SPEAKER_00 и SPEAKER_00)
+
+    - 5817.7s: "Конечно, в'
+- id: artifact_e608_SPEAKER_03
+  type: rename_episode
+  episode: 608
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Три изолированных коротких реплики в разные моменты:
+
+    - 306s: "Больше, да." (в контексте обсуждения выпусков)
+
+    - 2812s: "Я думаю, что видео правильное." (короткая реакция)
+
+    - 5228s: "Не та страна, знаешь'
+- id: artifact_e609_SPEAKER_06
+  type: rename_episode
+  episode: 609
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Единственная короткая реплика (2 сек) между Gray и Bobuk. Контекст: Gray
+    говорит ''Хорошо, договорились.'' (8398-8400s), затем SPEAKER_06 ''Вторая, не
+    самая интересная новость.'' (8400-8402s), затем Bobuk'
+- id: artifact_e611_SPEAKER_00
+  type: rename_episode
+  episode: 611
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Короткие реплики (1-2 сек каждая) разбросаны по эпизоду. Первая реплика
+    в 25.9s ''Я сказала привет'' - это явно Ksenks, отвечающая на реплику Umputun
+    (23.6s: ''Я не слышал, что Ксюша сказала здравствуйте'
+- id: artifact_e611_SPEAKER_05
+  type: rename_episode
+  episode: 611
+  from: SPEAKER_05
+  to: _artifact
+  reason: Только 2 очень короткие реплики (<1 сек каждая) на расстоянии ~30 минут
+    друг от друга. Обе реплики - короткие вопросительные/пояснительные фразы ('Так
+    тебе понятно?' и 'Потому что он пурровер'). Это т
+- id: artifact_e613_SPEAKER_03
+  type: rename_episode
+  episode: 613
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Всего 2 реплики по 0.04 и 0.4 секунды: "Да." (1183.87-1183.91s) и "Хорошо."
+    (1762.16-1762.56s).
+
+    Это явно тот же человек что SPEAKER_07 (гость Алексей), транскриптор ошибочно
+    выделил в отдельный спикер'
+- id: artifact_e614_SPEAKER_06
+  type: rename_episode
+  episode: 614
+  from: SPEAKER_06
+  to: _artifact
+  reason: Единственная короткая реплика (2 сек) между репликами Gray - вероятно ошибка
+    сегментации
+- id: artifact_e616_SPEAKER_05
+  type: rename_episode
+  episode: 616
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Единственная реплика "Ну, да." длительностью менее 1 секунды на 8425.84s.
+
+    Сразу после реплики Gray говорит то же самое "Ну, да." (8426.82s).
+
+    Вероятно, ошибка автоматического распознавания голоса Gray.'
+- id: artifact_e617_SPEAKER_06
+  type: rename_episode
+  episode: 617
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Три очень короткие реплики (0.5-2 сек), разбросанные в конце эпизода.
+
+    Типичные ошибки распознавания:
+
+    - "Ха-ха-ха" - смех, часто неверно атрибутируется
+
+    - "Ага, ага" - короткое согласие
+
+    - "Ну, это же пе'
+- id: artifact_e618_SPEAKER_06
+  type: rename_episode
+  episode: 618
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Одно короткое слово ''Утверждение'' (перевод ''statement'') в контексте
+    обсуждения Go. Umputun сразу подхватывает: ''Утверждение, которое выглядит как
+    селект''. Это явно реплика одного из ведущих, неправиль'
+- id: artifact_e619_SPEAKER_06
+  type: rename_episode
+  episode: 619
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Единственная короткая реплика ''Ну да.'' (3 секунды) в конце обсуждения
+    про Boring Company Илона Маска. Контекст: Umputun говорит ''У него же есть это
+    The Boring Company.'', затем SPEAKER_06: ''Ну да.'', за'
+- id: artifact_e620_SPEAKER_04
+  type: rename_episode
+  episode: 620
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Единственная реплика (3620.5s): "Почему вы решили заинтересоваться?"
+
+    Это вопрос в контексте обсуждения Winamp. Непосредственно перед этим Ksenks говорит
+
+    о сайте ("вот то, что написано на сайте"), а по'
+- id: artifact_e622_SPEAKER_07
+  type: rename_episode
+  episode: 622
+  from: SPEAKER_07
+  to: _artifact
+  reason: Единственная короткая реплика (2 сек) между Gray и Alek.sys. Сразу после
+    реплики Alek.sys обращается к 'Ксюше'. Вероятно, это ошибка распознавания Ksenks.
+- id: artifact_e624_SPEAKER_01
+  type: rename_episode
+  episode: 624
+  from: SPEAKER_01
+  to: _artifact
+  reason: Две короткие реплики (<1 сек каждая) в разных частях эпизода. Первая (0.3
+    сек) - вклинивается между репликами Bobuk, вероятно часть его речи. Вторая - маркер
+    'СМЕХ', явный аудио-артефакт.
+- id: artifact_e627_SPEAKER_01
+  type: rename_episode
+  episode: 627
+  from: SPEAKER_01
+  to: _artifact
+  reason: Единственная односложная реплика 'Ага' (1 сек) между репликами Bobuk - типичная
+    ошибка распознавания
+- id: artifact_e629_SPEAKER_02
+  type: rename_episode
+  episode: 629
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Всего 2 короткие реплики: "Давайте" (5993s) в ответ на вопрос Umputun''а
+    "Ну что, темы наших слушателей?", и "Ардуина" (6376s) - поправка произношения
+    после того, как Umputun сказал "Адурина?". Обе реп'
+- id: artifact_e629_SPEAKER_01
+  type: rename_episode
+  episode: 629
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Три очень короткие реплики: "В полиэтиленовом мешке?" (2576s) - вопрос
+    в диалоге с Umputun''ом, "Ну" (4862s) - реакция на вопрос Umputun''а "Готов?",
+    "Неа" (7692s) - ответ на вопрос Umputun''а к Bobuk''у '
+- id: artifact_e631_SPEAKER_08
+  type: rename_episode
+  episode: 631
+  from: SPEAKER_08
+  to: _artifact
+  reason: Единственная реплика 'Конечно.' с etime < stime (7556.18 -> 7556.10) - это
+    технический артефакт. Односложная реплика в середине обсуждения.
+- id: artifact_e632_SPEAKER_01
+  type: rename_episode
+  episode: 632
+  from: SPEAKER_01
+  to: _artifact
+  reason: Короткие реплики (2-3 сек), разбросаны по эпизоду. Контекст показывает что
+    это Ksenks - Umputun просит 'Отожми микрофон и скажи да', SPEAKER_01 отвечает
+    'Я отожмала', затем Bobuk говорит 'Можно я за К
+- id: artifact_e633_SPEAKER_01
+  type: rename_episode
+  episode: 633
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Единственная реплика в 2554s: "Да, доллар, доллар, решетка, решетка."
+
+    Длительность 2 сек, встроена между репликами Alek.sys о паролях.
+
+    Это продолжение мысли о символах в паролях - скорее всего ошибочн'
+- id: artifact_e635_SPEAKER_07
+  type: rename_episode
+  episode: 635
+  from: SPEAKER_07
+  to: _artifact
+  reason: Короткие реплики (1-2 сек), разбросаны. Первая реплика с женским родом ('пошла
+    плакать') - явно Ksenks отвечает на вопрос Umputun.
+- id: artifact_e635_SPEAKER_05
+  type: rename_episode
+  episode: 635
+  from: SPEAKER_05
+  to: _artifact
+  reason: Очень короткие междометия (2 сек каждое), типичные фразы-ошибки
+- id: artifact_e640_SPEAKER_07
+  type: rename_episode
+  episode: 640
+  from: SPEAKER_07
+  to: _artifact
+  reason: Короткие реактивные реплики (1-2 сек каждая), разбросанные по всему выпуску.
+    В начале эпизода Umputun говорит "Состав классический" - гостей нет. Все 4 реплики
+    - типичные фразы-подтверждения ("Да, да,
+- id: artifact_e641_Alek.sys
+  type: rename_episode
+  episode: 641
+  from: Alek.sys
+  to: _artifact
+  reason: 'Alek.sys was NOT announced in the intro. Umputun explicitly listed the
+    participants at 14-20s:
+
+    "Ксюша пришла первой сегодня. Грэй потянулся следом, ну а там уже и мы с Бобуком
+    подбежали."
+
+    This means t'
+- id: artifact_e642_SPEAKER_08
+  type: rename_episode
+  episode: 642
+  from: SPEAKER_08
+  to: _artifact
+  reason: 'Односложные переспрашивания и эхо-реплики: ''Слишком секси?'' (повтор фразы
+    Umputun), ''Забывчивость.'' и ''Простительность.'' (переводы/повторы слов). Типичная
+    ошибка распознавания коротких реакций.'
+- id: artifact_e643_SPEAKER_08
+  type: rename_episode
+  episode: 643
+  from: SPEAKER_08
+  to: _artifact
+  reason: 'Две очень короткие реплики (0.6s и 0.8s) в разных частях эпизода:
+
+    1. 1225s "Нет, бумажные" - в контексте обсуждения журналов между Gray и Alek.sys
+
+    2. 5277s "Не все" - в контексте технического обсужден'
+- id: artifact_e645_SPEAKER_00
+  type: rename_episode
+  episode: 645
+  from: SPEAKER_00
+  to: _artifact
+  reason: Женский род ('не уверена') + одиночная короткая реплика сразу после упоминания
+    Ксюши.
+- id: artifact_e645_SPEAKER_02
+  type: rename_episode
+  episode: 645
+  from: SPEAKER_02
+  to: _artifact
+  reason: Короткие разрозненные реплики (1-2 сек каждая), вероятно ошибки распознавания.
+- id: artifact_e645_SPEAKER_04
+  type: rename_episode
+  episode: 645
+  from: SPEAKER_04
+  to: _artifact
+  reason: Короткие одиночные реплики (2 сек каждая), разбросанные во времени.
+- id: artifact_e646_SPEAKER_07
+  type: rename_episode
+  episode: 646
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Очень короткие реплики (1-2 сек) разбросаны по эпизоду: ''А-а-а.'' (685s),
+    ''Подожди, подожди.'' (3783s), ''Короче, там все как бы виднее.'' (6743s). Типичный
+    паттерн ошибки автоматического распознавания — '
+- id: artifact_e648_SPEAKER_01
+  type: rename_episode
+  episode: 648
+  from: SPEAKER_01
+  to: _artifact
+  reason: Единственная односложная реплика 'Правильно?' (0.5 сек) - типичная ошибка
+    распознавания короткой реакции
+- id: artifact_e649_SPEAKER_01
+  type: rename_episode
+  episode: 649
+  from: SPEAKER_01
+  to: _artifact
+  reason: Единственная короткая (1 сек) обрезанная реплика 'И ты строишь из него разные.'
+    между репликами Umputun. Фраза не имеет самостоятельного смысла - явно часть предложения.
+    С большой вероятностью это оши
+- id: artifact_e649_SPEAKER_02
+  type: rename_episode
+  episode: 649
+  from: SPEAKER_02
+  to: _artifact
+  reason: Единственная короткая реплика 'А это хорошая мысль.' (2.5 сек) между Alek.sys
+    и Umputun. Типичная фраза-реакция, которая могла быть неправильно атрибутирована.
+- id: artifact_e652_SPEAKER_02
+  type: rename_episode
+  episode: 652
+  from: SPEAKER_02
+  to: _artifact
+  reason: Односложная реплика 'Да.' (0.3 сек) между SPEAKER_99 и Umputun. Типичная
+    ошибка атрибуции короткого междометия.
+- id: artifact_e652_SPEAKER_07
+  type: rename_episode
+  episode: 652
+  from: SPEAKER_07
+  to: _artifact
+  reason: Короткая реплика 'Спасибо.' (3 сек) между репликами Umputun и Bobuk. Типичная
+    ошибка атрибуции короткого слова.
+- id: artifact_e653_SPEAKER_99
+  type: rename_episode
+  episode: 653
+  from: SPEAKER_99
+  to: _artifact
+  reason: Очень короткие реплики (<0.5 сек), большинство с отрицательной длительностью.
+    Содержимое - эхо/переспросы других спикеров ('Mac Pro', '12', 'DisplayLink?',
+    'Ха-ха', '104?'). Типичные артефакты распозн
+- id: artifact_e655_SPEAKER_01
+  type: rename_episode
+  episode: 655
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Единственная короткая реплика (3 сек) "И тем более сейчас 27" на 1084с,
+
+    вставлена между двумя репликами Alek.sys (1083с и 1087с).
+
+    Скорее всего это часть реплики Alek.sys, неверно атрибутированная расп'
+- id: artifact_e656_SPEAKER_02
+  type: rename_episode
+  episode: 656
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Все 3 реплики - короткие фразы-реакции (1-2 секунды):
+
+    - "А, вас легализовали." (573s) - реакция на слова Alek.sys о легализации
+
+    - "Поздравляю." (574s) - продолжение предыдущей реплики
+
+    - "Ну, конечно."'
+- id: artifact_e657_SPEAKER_08
+  type: rename_episode
+  episode: 657
+  from: SPEAKER_08
+  to: _artifact
+  reason: Короткая одиночная реплика (2 сек) между репликами Gray и Ksenks в контексте
+    обсуждения UI. Вероятно ошибка распознавания голоса Ksenks.
+- id: artifact_e657_SPEAKER_07
+  type: rename_episode
+  episode: 657
+  from: SPEAKER_07
+  to: _artifact
+  reason: Три короткие реплики (1-2 сек каждая) в разных частях эпизода. Первая реплика
+    - ответ на вопрос Umputun к Ksenks. Последние две - в контексте разговора с Ksenks.
+    Скорее всего ошибки распознавания Ksen
+- id: artifact_e658_SPEAKER_07
+  type: rename_episode
+  episode: 658
+  from: SPEAKER_07
+  to: _artifact
+  reason: Короткая реплика 'Ну да.' (0.86 сек) между двумя репликами Bobuk. Типичная
+    ошибка распознавания — реактивное междометие, скорее всего принадлежащее одному
+    из ведущих (вероятно Gray или Umputun, реагир
+- id: artifact_e661_SPEAKER_04
+  type: rename_episode
+  episode: 661
+  from: SPEAKER_04
+  to: _artifact
+  reason: Две очень короткие реплики (<2 сек каждая) в разных частях выпуска, типичные
+    фразы-реакции
+- id: artifact_e663_SPEAKER_04
+  type: rename_episode
+  episode: 663
+  from: SPEAKER_04
+  to: _artifact
+  reason: Очень короткая реплика (0.58 сек) 'Они по-своему...' между репликами Gray
+    и Bobuk. Это перебивка/наложение голосов - кто-то начал говорить одновременно
+    с Gray. Скорее всего это Bobuk, который сразу по
+- id: artifact_e664_SPEAKER_99
+  type: rename_episode
+  episode: 664
+  from: SPEAKER_99
+  to: _artifact
+  reason: 'Аудио-артефакты: английские фразы из видео/аудио вставок (Goldman Sachs,
+    MySQL/Redis/PSQL, Center for Disease Control)'
+- id: artifact_e667_SPEAKER_06
+  type: rename_episode
+  episode: 667
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Короткие односложные реакции (<2 сек каждая), разбросанные по эпизоду в
+    836s, 3964s, 8165s, 8167s. Типичные фразы-ошибки: ''Да.'', ''Кошмар, кошмар.'',
+    ''Да?'' — характерные междометия, которые система расп'
+- id: artifact_e668_SPEAKER_06
+  type: rename_episode
+  episode: 668
+  from: SPEAKER_06
+  to: _artifact
+  reason: Единственная короткая реплика (3.5 сек, 3 слова) среди речи Ksenks. Типичная
+    ошибка распознавания - кто-то из ведущих вставил быстрый комментарий, который
+    система не атрибутировала.
+- id: artifact_e670_SPEAKER_03
+  type: rename_episode
+  episode: 670
+  from: SPEAKER_03
+  to: _artifact
+  reason: Три очень короткие реплики ("Apple.", "Понятно.", "Понятно.") в пределах
+    1 секунды, совпадающие по времени с репликой SPEAKER_99 ("Apple."). Это дубликаты/артефакты
+    автоматического распознавания. Конт
+- id: artifact_e670_SPEAKER_01
+  type: rename_episode
+  episode: 670
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Единственная реплика "Да." длительностью 0.06 секунды (8743.4-8743.46s).
+    Контекст: Bobuk рассказывает анекдот ("...у него в голове это было пол шестого.
+    Но все помнят, что пол."), затем это "Да." на 0'
+- id: artifact_e671_SPEAKER_03
+  type: rename_episode
+  episode: 671
+  from: SPEAKER_03
+  to: _artifact
+  reason: Очень короткие реплики (<2 сек), разбросаны по эпизоду. Типичные вопросы-уточнения
+    и комментарии - характерный паттерн неверно распознанных реплик ведущих.
+- id: artifact_e671_SPEAKER_04
+  type: rename_episode
+  episode: 671
+  from: SPEAKER_04
+  to: _artifact
+  reason: Всего 2 короткие реплики на разных концах эпизода (1171s и 8507s). Контекст
+    показывает, что это реакции на слова других ведущих - типичная ошибка распознавания.
+- id: artifact_e672_SPEAKER_08
+  type: rename_episode
+  episode: 672
+  from: SPEAKER_08
+  to: _artifact
+  reason: 'Единственная односложная реплика (<1 сек) между репликами Ksenks. Контекст:
+    обсуждение параметров в языках программирования. Ksenks спрашивает ''Окей, параметры
+    и именованные, и неименованные?'', затем '
+- id: artifact_e673_SPEAKER_06
+  type: rename_episode
+  episode: 673
+  from: SPEAKER_06
+  to: _artifact
+  reason: Короткие разрозненные реплики (<1 сек каждая), типичные фразы-ошибки распознавания
+- id: artifact_e674_SPEAKER_01
+  type: rename_episode
+  episode: 674
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Всего 2 короткие реплики (4 сек):
+
+    - "Говори просто... Спокойно, размеренно." (2162.55s)
+
+    - "Тебе не помогло, Ксюша." (2165.15s)
+
+    Обращение "Ксюша" указывает на одного из ведущих. Контекст - обсуждение
+
+    п'
+- id: artifact_e674_SPEAKER_09
+  type: rename_episode
+  episode: 674
+  from: SPEAKER_09
+  to: _artifact
+  reason: 'Единственная реплика (1.5 сек) "В Java она неповторимая" (4475.94s).
+
+    Контекст: Alek.sys спрашивает "где неповторяемые сборки, кроме Мэйка?",
+
+    сразу после SPEAKER_09 отвечает SPEAKER_03 (Степан) с длинн'
+- id: artifact_e675_SPEAKER_06
+  type: rename_episode
+  episode: 675
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Единственная реплика на 6348 сек: "Хочешь свое видео обсудить?"
+
+    Находится между репликами Ksenks (6346-6348 и 6350+).
+
+    Контекст: обсуждение тем, Ksenks отвечает "Нет, нет. Я видео не хочу."
+
+    Скорее всег'
+- id: artifact_e678_SPEAKER_03
+  type: rename_episode
+  episode: 678
+  from: SPEAKER_03
+  to: _artifact
+  reason: Две короткие реплики (2.4s + 1.7s) между Umputun и следующим спикером. Фразы
+    'Нет, это регулятор отдельный для Европы.' и 'То есть в Азии другой.' — технические
+    уточнения в контексте обсуждения RIPE/I
+- id: artifact_e678_SPEAKER_07
+  type: rename_episode
+  episode: 678
+  from: SPEAKER_07
+  to: _artifact
+  reason: Односложная реплика 'Конечно.' (1.5s) между Alek.sys и Ksenks. Gray говорит
+    то же самое 'Конечно.' через 5 секунд. Типичная ошибка распознавания короткой
+    реакции.
+- id: artifact_e679_SPEAKER_03
+  type: rename_episode
+  episode: 679
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Одиночная короткая реплика "Да." (0.4 сек) в ответ на вопрос Umputun: "И
+    последнее, что ты же, Бабук, три просил, да, назвать?" Явно ответ от Bobuk, ошибочно
+    распознанный как отдельный спикер.
+
+    '
+- id: artifact_e684_SPEAKER_06
+  type: rename_episode
+  episode: 684
+  from: SPEAKER_06
+  to: _artifact
+  reason: Ошибка распознавания Ksenks. Единственная реплика 'Закрыла?' (8194s) - прямой
+    ответ на слова Umputun 'Сюша, закрой уши' (8193s). 'Сюша' - уменьшительное от
+    'Ксюша' (Ksenks). Женский род глагола подтве
+- id: artifact_e685_Alek.sys
+  type: rename_episode
+  episode: 685
+  from: Alek.sys
+  to: _artifact
+  reason: 'Alek.sys не упоминается и не представлен в начале эпизода.
+
+    В начале Umputun говорит о Ксюше (Ksenks) и упоминает Gray и Bobuk.
+
+    Все 4 реплики Alek.sys очень короткие (0.5-1 сек), односложные реакции:
+
+    1'
+- id: artifact_e687_Gray
+  type: rename_episode
+  episode: 687
+  from: Gray
+  to: _artifact
+  reason: 'В начале выпуска Umputun явно говорит: "выпуск гиковский, то есть Грея
+    отсутствует".
+
+    Две короткие реплики Gray (247s и 1377s) - это ошибки распознавания.
+
+    Вероятно, реплики принадлежат Alek.sys или Any'
+- id: artifact_e688_SPEAKER_05
+  type: rename_episode
+  episode: 688
+  from: SPEAKER_05
+  to: _artifact
+  reason: Две очень короткие реплики (1.26s и 0.46s) в самом конце выпуска (8602s).
+    Типичные короткие подтверждения 'Ага, да.' и 'Пора.' в момент, когда Umputun предлагает
+    завершить ('Ну что, на этой оптимистич
+- id: artifact_e691_SPEAKER_01
+  type: rename_episode
+  episode: 691
+  from: SPEAKER_01
+  to: _artifact
+  reason: Единичная реплика смеха 'Ха-ха-ха' длительностью <1 сек между репликами
+    Umputun и Bobuk. Типичная ошибка распознавания - смех одного из ведущих был неправильно
+    атрибутирован.
+- id: artifact_e692_SPEAKER_02
+  type: rename_episode
+  episode: 692
+  from: SPEAKER_02
+  to: _artifact
+  reason: Односложное прощание 'Пока.' в самом конце подкаста (8876s) после 'Пока,
+    услышимся' от Umputun. Это один из присутствующих ведущих (Ksenks или Alek.sys).
+- id: artifact_e693_SPEAKER_01
+  type: rename_episode
+  episode: 693
+  from: SPEAKER_01
+  to: _artifact
+  reason: Односложная реплика 'Неа' в ответ на вопрос Umputun. Слишком короткая для
+    идентификации, скорее всего ошибка распознавания одного из ведущих.
+- id: artifact_e695_SPEAKER_00
+  type: rename_episode
+  episode: 695
+  from: SPEAKER_00
+  to: _artifact
+  reason: 'Единственная короткая реплика (2 сек) в конце эпизода среди диалога ведущих.
+    Фраза "Только что там в чатике началось?" - типичный вопрос ведущего во время
+    записи. Контекст: после Bobuk, перед ответами'
+- id: artifact_e696_SPEAKER_08
+  type: rename_episode
+  episode: 696
+  from: SPEAKER_08
+  to: _artifact
+  reason: Единственная короткая реплика (2 сек) - типичный паттерн ошибки распознавания.
+    Реплика является ответом на вопрос Ksenks в диалоге между ведущими.
+- id: artifact_e697_SPEAKER_03
+  type: rename_episode
+  episode: 697
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Две короткие односложные реплики в разных частях подкаста: подсказка слова
+    ''Отбеливатель'' (1.7 сек) и прощание ''Пока'' (0.24 сек). Скорее всего ошибка
+    распознавания одного из ведущих.'
+- id: artifact_e697_SPEAKER_01
+  type: rename_episode
+  episode: 697
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Две короткие односложные реплики: ''Лежи'' (0.58 сек) и ''Нет'' (0.28 сек).
+    Типичные фразы-ошибки распознавания, слишком короткие для идентификации.'
+- id: artifact_e702_SPEAKER_08
+  type: rename_episode
+  episode: 702
+  from: SPEAKER_08
+  to: _artifact
+  reason: 'Крайне короткие реплики (1-2 сек) в случайные моменты. Типичные фразы-ошибки:
+    ''Угу'', ''О, господи, опять''. Одна реплика упоминает Аню в третьем лице - скорее
+    всего ошибочная атрибуция реплики ведущего.'
+- id: artifact_e702_SPEAKER_06
+  type: rename_episode
+  episode: 702
+  from: SPEAKER_06
+  to: _artifact
+  reason: 'Только 2 очень короткие реплики (<2 сек каждая) в конце выпуска. Типичные
+    фразы-ошибки распознавания: ''Подожди, а скажи честно, это были клубы?'', ''Ну
+    ладно.'''
+- id: artifact_e705_SPEAKER_06
+  type: rename_episode
+  episode: 705
+  from: SPEAKER_06
+  to: _artifact
+  reason: Единственная реплика "Ну да." (0.36 сек) в момент 8547.8s появляется между
+    двумя репликами Ksenks. Ksenks до этого говорит о теме, затем SPEAKER_06 произносит
+    "Ну да.", и сразу после Ksenks продолжает
+- id: artifact_e706_SPEAKER_01
+  type: rename_episode
+  episode: 706
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Две короткие реплики (<1 сек каждая) в разных частях эпизода. Типичные
+    подтверждающие фразы от одного из ведущих. Реплика 1 (1465.93s): "Вообще не нужен."
+    - эхо слов Ksenks. Реплика 2 (5964.84s): "Она'
+- id: artifact_e707_SPEAKER_08
+  type: rename_episode
+  episode: 707
+  from: SPEAKER_08
+  to: _artifact
+  reason: 'Единственная короткая реплика (2.3 сек) "Это социально осуждаемо" в контексте
+    шутливой беседы про Flash. Bobuk сразу после повторяет ту же фразу: "Среди мальчиков
+    это просто социально осуждаемо." Скор'
+- id: artifact_e710_Gray
+  type: rename_episode
+  episode: 710
+  from: Gray
+  to: _artifact
+  reason: Gray не участвовал в этом выпуске - Umputun в начале явно говорит 'Без Грея,
+    но со всеми остальными' (7.15-9.6 сек). Единственная реплика Gray - короткий вопрос
+    'Что это было?' (0.6 сек) - явная ошибк
+- id: artifact_e710_SPEAKER_99
+  type: rename_episode
+  episode: 710
+  from: SPEAKER_99
+  to: _artifact
+  reason: 'Аудио-артефакты: короткие технические термины (''Linux?'', ''2.4.20'',
+    ''TeamCity Cloud'', ''RealMusic Player'', ''EKS?'', ''2%'') с отрицательной или
+    нулевой длительностью. Типичные джинглы/звуковые вставки.'
+- id: artifact_e711_SPEAKER_05
+  type: rename_episode
+  episode: 711
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Единственная реплика длительностью 2 секунды ("Про взлом в Твиттере.")
+    между репликами Bobuk. Это короткая фраза-переход к следующей теме. Контекст:
+    Bobuk говорит "Да." (186.0s), затем SPEAKER_05 "Про'
+- id: artifact_e711_SPEAKER_99
+  type: rename_episode
+  episode: 711
+  from: SPEAKER_99
+  to: _artifact
+  reason: 'Стандартные аудио-артефакты: "135.", "GDPR?", "12." Это не реплики людей,
+    а фоновый шум или артефакты распознавания.
+
+    '
+- id: artifact_e712_SPEAKER_02
+  type: rename_episode
+  episode: 712
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Очень короткие реплики (1-3 сек), разбросанные в случайных местах.
+
+    Типичные фразы-ошибки распознавания: "Ну как он?", "Нет?", "Нет."
+
+    Контекст показывает, что это реакции на реплики других ведущих,
+
+    вер'
+- id: artifact_e713_SPEAKER_03
+  type: rename_episode
+  episode: 713
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Только 2 очень короткие реплики (0.5 сек каждая) в разных частях выпуска:
+
+    - 4024.6s: "говорит." (обрывок фразы)
+
+    - 8287.2s: "Про что?" (односложный вопрос)
+
+    Скорее всего ошибки распознавания голоса одно'
+- id: artifact_e714_SPEAKER_07
+  type: rename_episode
+  episode: 714
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Единственная короткая реплика (1.5 сек) в 6698s.
+
+    Контекст: между репликами Umputun и Bobuk.
+
+    Текст "Послушай меня секундочку" - типичная фраза-перебивание.
+
+    Скорее всего это Bobuk перебивает Umputun (сл'
+- id: artifact_e809_
+  type: rename_episode
+  episode: 809
+  from: ''
+  to: _artifact
+  reason: Пустая реплика с пустым текстом в конце рекламного блока (8896.8s). Явная
+    ошибка парсинга/транскрипции.
+- id: artifact_e819_Umputun
+  type: rename_episode
+  episode: 819
+  from: Umputun
+  to: _artifact
+  reason: 'В начале эпизода Gray явно заявляет "И мы, как положено, раз в год без
+    Умпотуна"
+
+    (11.75s-16.11s) и далее подтверждает "А тут его вообще не будет" (21.09s-23.96s).
+
+
+    Единственная реплика "Ну это же цита'
+- id: artifact_e855_
+  type: rename_episode
+  episode: 855
+  from: ''
+  to: _artifact
+  reason: Единственная реплика, скорее всего ошибочно не атрибутированная Ksenks
+- id: artifact_e981_
+  type: rename_episode
+  episode: 981
+  from: ''
+  to: _artifact
+  reason: Обе реплики - односложные "Да." продолжительностью 0.06 сек каждая. Это
+    типичные ошибки распознавания (очень короткие реактивные фразы). Первая реплика
+    - вероятно ответ одного из ведущих на вопрос Kse
+- id: artifact_e982_
+  type: rename_episode
+  episode: 982
+  from: ''
+  to: _artifact
+  reason: 'Три очень коротких реплики (0.06-0.08 сек) с односложными словами "Угу",
+    "Угу", "Да".
+
+    Это артефакты распознавания речи, а не реальный спикер.
+
+    Реплики разбросаны по эпизоду: 5952s, 7646s, 7775s.
+
+    '
+- id: artifact_e983_
+  type: rename_episode
+  episode: 983
+  from: ''
+  to: _artifact
+  reason: 'Два очень коротких фрагмента (0.06s каждый) с односложными словами "Да."
+    и "Ну,".
+
+    Первый (1870.4s) дублирует реплику Guest1 в тот же момент времени.
+
+    Второй (5606.2s) обрезанное начало реплики Ksenks ('
+- id: artifact_e985_
+  type: rename_episode
+  episode: 985
+  from: ''
+  to: _artifact
+  reason: 'Все 5 реплик с пустым автором являются ошибками автоматического распознавания:
+
+    1. Длительность каждой реплики менее 0.1 секунды (от 0.06 до 0.1 сек)
+
+    2. Содержат только односложные междометия: "Ну...",'
+- id: artifact_e986_
+  type: rename_episode
+  episode: 986
+  from: ''
+  to: _artifact
+  reason: 'Три очень короткие реплики (0.06-0.12 сек каждая) с односложными
+
+    словами "Да" и "Ну да", разбросанные по эпизоду. Это типичные
+
+    артефакты распознавания речи — короткие подтверждающие реплики
+
+    одного из '
+- id: artifact_e987_
+  type: rename_episode
+  episode: 987
+  from: ''
+  to: _artifact
+  reason: 'Короткие междометия (<0.5 сек) без атрибуции: ''И...'', ''Угу.'', ''Угу.''
+    — артефакты распознавания речи между репликами ведущих'
+- id: artifact_e988_
+  type: rename_episode
+  episode: 988
+  from: ''
+  to: _artifact
+  reason: Очень короткая реплика (0.08 сек) 'Угу' между двумя репликами Alek.sys.
+    Это подтверждающее междометие от одного из ведущих (вероятно Umputun, который
+    задавал вопрос ранее). Ошибка автоматической разме
+- id: artifact_e989_
+  type: rename_episode
+  episode: 989
+  from: ''
+  to: _artifact
+  reason: 'Все 4 реплики - очень короткие междометия (<0.25 сек каждая): ''Нет, слушай,''
+    (0.24с), ''Да.'' (0.06с), ''Угу.'' (0.08с), ''Понятно.'' (0.16с). Типичные ошибки
+    распознавания - система не смогла атрибутироват'
+- id: artifact_e990_
+  type: rename_episode
+  episode: 990
+  from: ''
+  to: _artifact
+  reason: 'Две короткие реплики "Да." (по ~0.15 сек каждая) без атрибуции.
+
+    Первая (85.5s) — между репликами Umputun и Gray в диалоге о начале выпуска.
+
+    Вторая (6155.7s) — между репликами Alek.sys и Umputun в обсу'
+- id: artifact_e992_
+  type: rename_episode
+  episode: 992
+  from: ''
+  to: _artifact
+  reason: Очень короткая реплика (0.08 сек) с междометием 'Угу.' между репликами Umputun
+    и Gray. Типичная ошибка распознавания - пропущена атрибуция спикера.
+- id: artifact_e993_
+  type: rename_episode
+  episode: 993
+  from: ''
+  to: _artifact
+  reason: Две короткие реплики (0.06s и 0.38s) с пустым автором - артефакты транскрипции
+- id: artifact_e994_
+  type: rename_episode
+  episode: 994
+  from: ''
+  to: _artifact
+  reason: 'Пустой автор с микросекундными репликами (0.06s каждая).
+
+    Обе реплики - просто "Да." в середине диалога ведущих.
+
+    Первая (6532.4s): между репликами Alek.sys и Umputun.
+
+    Вторая (6942.0s): между репликами '
+- id: artifact_e995_
+  type: rename_episode
+  episode: 995
+  from: ''
+  to: _artifact
+  reason: 'Две короткие односложные реплики ("Окей." и "Да.") длительностью менее
+    0.1 сек каждая,
+
+    разбросанные в разных частях эпизода (8214s и 8553s).
+
+    Это типичные ошибки распознавания - короткие междометия, ко'
+- id: artifact_e996_
+  type: rename_episode
+  episode: 996
+  from: ''
+  to: _artifact
+  reason: 'Очень короткие реплики (0.06-0.18 сек) между репликами известных ведущих.
+    Типичные фразы-реакции: ''Да.'', ''И все.'', ''MobileMe.'' — обрывки речи ведущих,
+    неправильно выделенные транскрибером.'
+- id: artifact_e997_
+  type: rename_episode
+  episode: 997
+  from: ''
+  to: _artifact
+  reason: Очень короткие реплики (0.06 сек каждая) с односложным 'Да.' в случайных
+    местах диалога - типичные артефакты распознавания коротких реакций/подтверждений,
+    не атрибутированные никому из участников
