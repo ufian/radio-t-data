@@ -1,0 +1,87 @@
+episode: 996
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys]
+  hosts_absent: [Ksenks, Bobuk]
+  absence_reason: "Umputun в начале: 'Мы сегодня уже втроем. Уже у нас потери. Нас Ксюша покинула на время.'"
+  total_duration_sec: 8507
+  guests_announced: false
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 0.5
+    replies_count: 4
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Очень короткие реплики (0.06-0.18 сек) между репликами известных ведущих. Типичные фразы-реакции: 'Да.', 'И все.', 'MobileMe.' — обрывки речи ведущих, неправильно выделенные транскрибером."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+    # Детали каждой реплики
+    details:
+      - stime: 1000.27
+        etime: 1000.33
+        duration: 0.06
+        text: "Да."
+        context_before: "Alek.sys: 'То есть он там не просто новую сессию запускает, да?'"
+        context_after: "Umputun: 'У меня написано RALF.py.'"
+        likely_speaker: "Umputun (ответ на вопрос Alek.sys)"
+
+      - stime: 5272.05
+        etime: 5272.17
+        duration: 0.12
+        text: "И все."
+        context_before: "Umputun: 'Возьми, сделай дейт, посмотри в какой ты тайм-зоне...'"
+        context_after: "Umputun: 'И, кроме того, сделать хук, который будет работать.'"
+        likely_speaker: "Umputun (продолжение своей речи)"
+
+      - stime: 6078.15
+        etime: 6078.21
+        duration: 0.06
+        text: "Да."
+        context_before: "Alek.sys: 'Такое ощущение, что вот эту ошибку как раз сделал не код, а местные мешки сделали, правильно?'"
+        context_after: "Umputun: 'Ну, тут какая-то архитектурная проблема.'"
+        likely_speaker: "Umputun (подтверждение)"
+
+      - stime: 6680.21
+        etime: 6680.39
+        duration: 0.18
+        text: "MobileMe."
+        context_before: "Gray: 'MobileMe оно называлось.'"
+        context_after: "Gray: 'Да, когда была даже история про то...'"
+        likely_speaker: "Gray или другой ведущий (эхо/повторение)"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: "В начале эпизода Umputun чётко объясняет состав: втроём без Ксюши. Все остальные спикеры соответствуют ожидаемым ведущим."
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete_or_merge
+    episode: 996
+    from_speaker: ""
+    description: "4 реплики с пустым автором — артефакты транскрипции, можно удалить или объединить с соседними репликами"
+    confidence: high
+    reason: "Все реплики <0.2 сек, типичные фразы-реакции между репликами ведущих"
+    affected_times:
+      - 1000.27
+      - 5272.05
+      - 6078.15
+      - 6680.21

@@ -1,0 +1,56 @@
+episode: 992
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Alek.sys]
+  total_duration_sec: 8295
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 0.08
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Очень короткая реплика (0.08 сек) с междометием 'Угу.' между репликами Umputun и Gray. Типичная ошибка распознавания - пропущена атрибуция спикера."
+
+      # Идентификация не требуется - это ошибка
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.6
+          reason: "Реплика следует сразу после реплик Umputun, возможно продолжение его речи"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray начинает говорить сразу после этой реплики"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: ""
+      issue: "Пустой автор у реплики на 7413.06s - требуется ручное исправление или удаление"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete_or_merge
+    episode: 992
+    stime: 7413.06
+    etime: 7413.14
+    text: "Угу."
+    confidence: high
+    reason: "Очень короткое междометие без атрибуции. Варианты: удалить как артефакт, либо объединить с предыдущей репликой Umputun"

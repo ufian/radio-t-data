@@ -1,0 +1,107 @@
+episode: 994
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Ksenks]
+  hosts_absent: [Gray, Bobuk]
+  total_duration_sec: 9287
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 896
+    replies_count: 231
+    first_appearance_sec: 981
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Гость не представился по имени. На вопрос "Ты кто?" ответил "Я гость" (999s).
+        Alek.sys назвал его "заслуженный слушатель подказов" (1002s).
+        Гость сказал, что решил "перенять обязанности Бобука" в чате, поскольку
+        "у вас тут двое го-специалистов" (1022-1036s).
+        Обсуждал асинхронность в Python, feature flags, и другие технические темы.
+        Явно технический специалист, но имя не упоминалось.
+
+      possible_matches: []
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        audio_url: "https://cdn.radio-t.com/rt_podcast994.mp3"
+        reference_segments:
+          - stime: 1095.5
+            etime: 1179.8
+            duration_sec: 84
+            text: "Ну, типа такая же библиотека, ну, как ты написал. Просто в чем проблема? В том, что если у меня, например, есть уже асинхронное приложение..."
+          - stime: 1913.6
+            etime: 1937.7
+            duration_sec: 24
+            text: "ну, если ты хочешь сделать юзерфрендли, либо тебе нужно предугадывать, какой конкретно асинхронный клиент был у юзера..."
+
+  - speaker: ""
+    total_duration_sec: 0
+    replies_count: 2
+    first_appearance_sec: 6532
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Пустой автор с микросекундными репликами (0.06s каждая).
+        Обе реплики - просто "Да." в середине диалога ведущих.
+        Первая (6532.4s): между репликами Alek.sys и Umputun.
+        Вторая (6942.0s): между репликами Guest1 и Alek.sys.
+        Явные артефакты распознавания речи.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Guest1"
+      issue: |
+        Гость не представился по имени. Звонил в эфир как слушатель, активно
+        участвовал в обсуждении (~15 минут речи), но остался неидентифицированным.
+        Возможно постоянный слушатель из чата, которого знают ведущие.
+    - speaker: ""
+      issue: "Пустой автор - ошибка транскрипции, требуется удаление или переатрибуция"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete
+    episode: 994
+    speaker: ""
+    confidence: high
+    reason: "Микросекундные артефакты распознавания речи (2 реплики по 0.06s)"
+
+# Комментарии
+notes: |
+  Эпизод 994 от 3 января 2026 года. Гиковский выпуск без Gray и Bobuk.
+
+  Guest1 - активный слушатель, позвонивший в эфир (~16:21). Участвовал в
+  обсуждении Python async, feature flags, Claude/AI кодогенерации.
+  Технически грамотный, вероятно разработчик. Общался в чате до звонка
+  (упоминает дискуссию с Лехой про синхронность/асинхронность).
+
+  Для идентификации Guest1 рекомендуется:
+  1. Проверить чат эпизода на ники активных участников в это время
+  2. Voice comparison с известными гостями-разработчиками

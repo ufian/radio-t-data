@@ -1,0 +1,55 @@
+episode: 995
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk]
+  total_duration_sec: 9387  # ~2ч 36мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 0.16  # 0.1 + 0.06 сек
+    replies_count: 2
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        Две короткие односложные реплики ("Окей." и "Да.") длительностью менее 0.1 сек каждая,
+        разбросанные в разных частях эпизода (8214s и 8553s).
+        Это типичные ошибки распознавания - короткие междометия, которые система
+        не смогла атрибутировать конкретному спикеру.
+        Первая реплика между репликами Gray, вторая - между репликами Ksenks.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода Umputun явно указывает состав: "Все, кроме Бобука, подошли. Бобука мы все еще ожидаем."
+    Присутствуют: Umputun, Gray, Ksenks, Alek.sys - все они говорят в первые 45 секунд.
+    Гостей не было объявлено и не представлено.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Дополнительные заметки
+notes: |
+  Эпизод 995 от 2026-01-10.
+  Bobuk отсутствует (упомянуто в начале).
+  Две пустые реплики - это артефакты распознавания, не требующие исправления,
+  так как они не влияют на качество транскрипта (общая длительность <0.2 сек).

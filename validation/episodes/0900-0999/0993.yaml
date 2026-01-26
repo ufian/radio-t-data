@@ -1,0 +1,96 @@
+episode: 993
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Ksenks, Alek.sys]
+  hosts_absent: [Bobuk]
+  total_duration_sec: 10343.6
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: ""
+    total_duration_sec: 0.44
+    replies_count: 2
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Две короткие реплики (0.06s и 0.38s) с пустым автором - артефакты транскрипции"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Первая реплика 'Да.' в 1127s может быть реакцией Umputun на слова Alek.sys"
+        - person_id: "alek_sys"
+          confidence: 0.6
+          reason: "Вторая реплика '— Я не знаю, как...' в 4066s похожа на начало фразы Alek.sys, который продолжает говорить следом"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: ""
+      issue: "Две реплики без автора - требуют ручного присвоения или удаления"
+
+# Детали пустых реплик для ручной проверки
+empty_author_details:
+  - stime: 1127.43
+    etime: 1127.49
+    duration_sec: 0.06
+    text: "Да."
+    context_before:
+      speaker: "Alek.sys"
+      text: "Мы говорим из 73 часов 50 мы говорили про AI."
+    context_after:
+      speaker: "Gray"
+      text: "А про Амазон там особо ничего сказать."
+    likely_speaker: "Umputun или Gray"
+    recommendation: "Удалить как артефакт или присвоить Umputun"
+
+  - stime: 4066.23
+    etime: 4066.61
+    duration_sec: 0.38
+    text: "— Я не знаю, как..."
+    context_before:
+      speaker: "Umputun"
+      text: "Вот это было самое сложное."
+    context_after:
+      speaker: "Alek.sys"
+      text: "Не знаю, насколько хороший Go вот этот API для плейрайта."
+    likely_speaker: "Alek.sys"
+    recommendation: "Объединить с последующей репликой Alek.sys или присвоить Alek.sys"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 993
+    from_speaker: ""
+    to_speaker: "Alek.sys"
+    stime: 4066.23
+    confidence: medium
+    reason: "Реплика '— Я не знаю, как...' является началом фразы Alek.sys"
+
+  - type: delete_or_merge
+    episode: 993
+    from_speaker: ""
+    stime: 1127.43
+    confidence: low
+    reason: "Очень короткая реплика 'Да.' (0.06s) - артефакт транскрипции, можно удалить"
+
+# Метаданные эпизода
+episode_metadata:
+  date: "2025-12-27"
+  audio_url: "https://cdn.radio-t.com/rt_podcast993.mp3"
+  topics_count: 10
