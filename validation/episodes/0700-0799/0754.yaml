@@ -1,0 +1,53 @@
+episode: 754
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7459
+
+# Статистика ведущих
+hosts_stats:
+  - speaker: Bobuk
+    replies_count: 532
+    duration_sec: 1784
+    first_appearance_sec: 23
+  - speaker: Umputun
+    replies_count: 502
+    duration_sec: 1748
+    first_appearance_sec: 1
+  - speaker: Ksenks
+    replies_count: 328
+    duration_sec: 1360
+    first_appearance_sec: 888
+  - speaker: Gray
+    replies_count: 219
+    duration_sec: 947
+    first_appearance_sec: 147
+  - speaker: Alek.sys
+    replies_count: 247
+    duration_sec: 938
+    first_appearance_sec: 21
+
+# Специальные спикеры
+special_speakers:
+  - speaker: _ad
+    replies_count: 11
+    duration_sec: 88
+    note: "Рекламные сегменты"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - "Umputun открывает выпуск, упоминает что Ксюши пока нет"
+    - "Ksenks появляется в 888s, ведущие её приветствуют: 'Ксения, доброе утро'"
+    - "Все пять ведущих присутствуют, гостей нет"
+
+# Предлагаемые правила очистки
+suggested_rules: []

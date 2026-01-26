@@ -1,0 +1,140 @@
+episode: 703
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7821
+  notes: "Все 5 ведущих подтверждены в начале выпуска (91s: 'пять гадов на месте')"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_04"
+    total_duration_sec: 9
+    replies_count: 10
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Очень короткие реплики (0.5-2 сек), разбросанные по всему эпизоду.
+        Все 5 ведущих присутствуют и представлены в начале.
+        Гости не упоминались. Содержание реплик типично для обычных
+        комментариев ведущих: "Ну окей", "Ну да, ну да", вопросы про JPL.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.4
+          reason: "Реплика про JPL (7313-7318s) похожа на технические комментарии Bobuk"
+        - person_id: "alek_sys"
+          confidence: 0.3
+          reason: "Некоторые реплики могут быть от Alek.sys, у него меньше реплик в этом выпуске"
+        - person_id: "gray"
+          confidence: 0.2
+          reason: "Gray позже всех появился в разговоре (385s), возможны ошибки распознавания"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7313.97
+          etime: 7318.35
+          text: "Почему JPL? Потому что они под лицензией JPL. Окей."
+          notes: "Три последовательные реплики SPEAKER_04 - лучший сегмент для сравнения голосов"
+
+# Детальный лог реплик SPEAKER_04
+speaker_04_utterances:
+  - stime: 838.02
+    etime: 839.52
+    text: "Он тебе прогресс."
+    context_before: "Umputun: И там другой интерфейс чуть-чуть."
+    context_after: "Umputun: Ну, может быть. А почему ты, Бобок, умолчал о главном?"
+
+  - stime: 2963.01
+    etime: 2964.01
+    text: "В общем, короче, посмотрите."
+    context_before: "Umputun: Только там у нас не генератор, но это ладно."
+    context_after: "Bobuk: Посмотрите на то, как игра выглядит."
+
+  - stime: 5507.36
+    etime: 5508.20
+    text: "Ну окей."
+    context_before: "Umputun: А уровни зарплаты там прям клевые."
+    context_after: "Ksenks: Так что все едем к тебе потом."
+
+  - stime: 6705.63
+    etime: 6706.25
+    text: "Ну да, ну да."
+    context_before: "Umputun: Либо ты платишь, либо ты слушаешь рекламу."
+    context_after: "Gray: И поэтому, видимо, ты все-таки будешь продолжать слушать рекламу."
+
+  - stime: 7313.97
+    etime: 7314.25
+    text: "Почему JPL?"
+    context_before: "Bobuk: Ну вот, JPL, ваше все."
+    context_after: "Umputun: Она что, JPL будет?"
+
+  - stime: 7316.13
+    etime: 7317.99
+    text: "Потому что они под лицензией JPL."
+    context_before: "Umputun: Она что, JPL будет?"
+    context_after: "SPEAKER_04: Окей."
+
+  - stime: 7318.07
+    etime: 7318.35
+    text: "Окей."
+    context_before: "SPEAKER_04: Потому что они под лицензией JPL."
+    context_after: "Umputun: Ну, окей. Я не знаю, чему тут радоваться."
+
+  - stime: 8445.54
+    etime: 8445.90
+    text: "Текст."
+    context_before: "Umputun: Ну, вот это все."
+    context_after: "SPEAKER_04: Который текст идет, что ли?"
+
+  - stime: 8445.94
+    etime: 8447.16
+    text: "Который текст идет, что ли?"
+    context_before: "SPEAKER_04: Текст."
+    context_after: "Umputun: Да нет."
+
+  - stime: 8447.84
+    etime: 8448.78
+    text: "Или текст-мейд?"
+    context_before: "Umputun: Да нет."
+    context_after: "Bobuk: Тайпера?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  introduction_quote: "раз, два, три, четыре, пять, всех пять гадов на месте"
+  introduction_time: 84.86
+  issues:
+    - speaker: "SPEAKER_04"
+      issue: >
+        10 коротких реплик не атрибутированы ни одному из ведущих.
+        Скорее всего это ошибки распознавания голоса.
+        Требуется voice comparison для определения кому принадлежат реплики.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Не можем предложить конкретные правила без voice comparison.
+# После определения реального спикера добавить правило:
+# - type: rename
+#   episode: 703
+#   from_speaker: "SPEAKER_04"
+#   to_speaker: "<определённый ведущий>"
+#   confidence: high
+#   reason: "voice comparison подтвердил"
+
+# Метаданные анализа
+metadata:
+  episode_date: "2020-05-23"
+  audio_url: null  # метаданные недоступны в data_clean
+  special_notes: "Первый выпуск с видео-трансляцией"

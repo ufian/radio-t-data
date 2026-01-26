@@ -1,0 +1,63 @@
+episode: 778
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  hosts_announced_absent: [Gray]
+  total_duration_sec: 7184  # ~2 часа
+
+# Примечание по эпизоду
+episode_notes:
+  introduction: "Umputun в начале объявляет: «Выпуск Грея нет, Ксюша на подходе, а Бобук с Алексеем в ассортименте»"
+  gray_status: "Gray официально отсутствует в этом выпуске"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+  # Нет неизвестных спикеров (SPEAKER_*, Guest*) в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: "Имеет 1 реплику (6817.47-6818.57s, текст: 'От сротла вот этого'), хотя Umputun в начале объявил что Gray отсутствует"
+      context: |
+        Umputun: "А как мы правую руку оторвем?" (6814-6817s)
+        Gray: "От сротла вот этого." (6817-6818s) <- ОШИБКА
+        Umputun: "А зачем?" (6818-6819s)
+        Bobuk: "Во-первых, нет такой проблемы, Жень." (6820-6823s)
+      analysis: |
+        Короткая реплика (1.1 сек) между репликами Umputun.
+        Bobuk сразу после обращается к "Жень" (Umputun).
+        Вероятный реальный автор: Bobuk (продолжает диалог сразу после).
+        Альтернатива: Ksenks или Alek.sys.
+      recommended_action: "voice_comparison или ручная проверка аудио"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 778
+    from_speaker: "Gray"
+    to_speaker: "Bobuk"  # Наиболее вероятный автор, требует подтверждения
+    confidence: medium
+    reason: |
+      Gray официально отсутствует в выпуске (объявлено в начале).
+      Реплика находится в диалоге между Umputun и Bobuk.
+      Bobuk сразу продолжает говорить после этой реплики.
+      Требуется voice comparison для подтверждения.
+
+# Задание на voice comparison
+voice_comparison_tasks:
+  - task_id: "778_gray_misattribution"
+    description: "Определить реального автора реплики, ошибочно приписанной Gray"
+    suspect_segment:
+      speaker: "Gray"
+      stime: 6817.47
+      etime: 6818.57
+      text: "От сротла вот этого."
+    candidate_speakers: [Bobuk, Ksenks, Alek.sys]
+    most_likely: "Bobuk"
+    audio_url: null  # desc.json отсутствует в data_clean
+    notes: "Проверить аудио в районе 1:53:37"

@@ -1,0 +1,81 @@
+episode: 779
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys]
+  # Gray не присутствует в этом выпуске (только упоминается)
+  total_duration_sec: 7588  # ~2 часа 6 минут
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 749
+    replies_count: 186
+    pattern: consecutive  # Гость активно участвует во всём выпуске
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: "alexey_palazhchenko"
+      identification_method: "context"
+      confidence: high
+      evidence: |
+        1. Umputun в начале выпуска (33-39s): "Он утверждает, нагло причем, утверждает,
+           что это он, тот самый, кто меня на Go подсадил"
+        2. К гостю обращаются "Алексей" и "Лёша" (строки 3070, 4717, 6427, 9433, 16750 и др.)
+        3. Гость рассказывает про MangoDB/FerretDB (6119-6133s) - проект, который он
+           анонсировал в ноябре 2021 (дата выпуска - 6 ноября 2021)
+        4. Alexey Palazhchenko - сооснователь и CTO FerretDB, известен в Go-сообществе,
+           организатор Go-митапов - соответствует контексту "подсадил на Go"
+        5. В конце выпуска (8415s): "Алексей, спасибо, что зашел, поддержал наш подкаст"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Идентификация с высокой уверенностью не требует voice comparison
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Guest"
+      issue: |
+        Гость представлен косвенно ("тот, кто подсадил на Go"), но не назван по имени
+        в начале выпуска. Имя "Алексей" появляется позже в обращениях.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 779
+    from_speaker: "Guest"
+    to_speaker: "AlexeyPalazhchenko"
+    confidence: high
+    reason: |
+      Контекстная идентификация:
+      - Umputun говорит, что гость "подсадил его на Go"
+      - К гостю обращаются "Алексей", "Лёша"
+      - Гость рассказывает про проект MangoDB/FerretDB (анонс в понедельник - начало ноября 2021)
+      - Alexey Palazhchenko - CTO FerretDB, известный Go-разработчик, организатор Go-митапов
+
+# Дополнительная информация о госте (для добавления в people.yaml)
+new_guest_info:
+  id: "alexey_palazhchenko"
+  canonical_name: "AlexeyPalazhchenko"
+  aliases: ["Палажченко", "Aleksi"]
+  real_name: "Алексей Палажченко"
+  info: "Co-founder и CTO FerretDB, Go-разработчик, организатор Go-митапов. Выпуск 779."
+
+# Примечания
+notes: |
+  Эпизод 779 (6 ноября 2021) - гиковский выпуск.
+  Гость - Alexey Palazhchenko, который познакомил Umputun с Go много лет назад.
+  Пришёл рассказать про проект MangoDB (позже переименован в FerretDB) -
+  open-source альтернатива MongoDB на PostgreSQL.
+
+  Alek.sys присутствует в выпуске (7 коротких реплик), но это отдельный человек
+  от гостя Алексея Палажченко.

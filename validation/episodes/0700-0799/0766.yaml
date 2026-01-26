@@ -1,0 +1,87 @@
+episode: 766
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray]
+  hosts_mentioned_in_intro: [Umputun, Bobuk, Gray]
+  total_duration_sec: 7801
+
+# Детальный анализ проблемных спикеров
+unknown_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 13.1
+    replies_count: 6
+    pattern: scattered
+    first_appearance_sec: 251.78
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: |
+        Alek.sys НЕ был упомянут в начале эпизода. Umputun явно сказал:
+        "состав чисто мальчиковый пока, ну типа мы с Бобуком, ну и Грей".
+        В прощании также участвуют только Umputun, Bobuk и Gray.
+        6 коротких реплик (13 сек) разбросаны по эпизоду - типичный паттерн
+        ошибки автоматического распознавания голоса.
+
+      # Попытка идентификации
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Возможные варианты кому принадлежат реплики
+      possible_matches:
+        - person_id: "Bobuk"
+          confidence: 0.6
+          reason: "Большинство реплик окружены репликами Bobuk, продолжают его мысль"
+        - person_id: "Gray"
+          confidence: 0.3
+          reason: "Менее вероятно, но тоже возможно как ошибка распознавания"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reference_segments:
+          - stime: 251.78
+            etime: 254.18
+            text: "Хотя... А как вообще это?"
+            context: "Между двумя репликами Bobuk"
+          - stime: 2702.71
+            etime: 2704.29
+            text: "чекауты, бранчи."
+            context: "Продолжение мысли Bobuk про git"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Не был представлен в начале эпизода. Umputun явно назвал только
+        Bobuk и Gray как участников. Alek.sys не упоминается ни в начале,
+        ни в конце выпуска. Всего 6 коротких реплик (13 сек) разбросаны
+        по эпизоду - скорее всего ошибки распознавания голоса.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 766
+    from_speaker: "Alek.sys"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Alek.sys"
+    confidence: high
+    reason: |
+      Alek.sys не участвовал в эпизоде (не был представлен, не прощался).
+      6 коротких реплик - ошибки распознавания, требуют ручной проверки
+      для определения реального автора (вероятнее всего Bobuk).
+
+# Примечания
+notes: |
+  Эпизод от 7 августа 2021 года. В записи участвовали только Umputun,
+  Bobuk и Gray. Реплики, ошибочно присвоенные Alek.sys, требуют ручной
+  проверки по аудио для определения реального автора.
+
+  Рекомендация: прослушать аудио в таймкодах 251-254 и 2702-2704 секунд
+  для идентификации голоса.

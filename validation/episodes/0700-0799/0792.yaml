@@ -1,0 +1,184 @@
+episode: 792
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Ksenks, Alek.sys]
+  hosts_absent: [Gray, Bobuk]  # Umputun в начале сказал, что их не будет
+  total_duration_sec: 8539  # ~2ч 22мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest1"
+    total_duration_sec: 558
+    replies_count: 177
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # Нет в people.yaml, нужно добавить
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        В начале подкаста (110-114s) Guest1 представляется:
+        - "Всем привет. Я из Украины. Поэтому Олександр. Украинская мова."
+        Umputun до этого (103-107s) называет его "Олександр" и спрашивает, кто это.
+        Guest1 - автор FSNotes (программа для заметок), обсуждение которой занимает первую часть подкаста.
+        Umputun говорит (129-141s): "мы с ним необычным образом встретились на просторах гитхаба"
+        и называет его "Александр".
+
+      suggested_person:
+        id: "oleksandr_fsnotes"
+        canonical_name: "Oleksandr"
+        aliases: ["Александр", "Олександр"]
+        real_name: "Александр (Олександр)"
+        info: "Автор FSNotes, выпуск 792"
+
+      voice_task:
+        needed: false  # Идентификация высокой уверенности
+
+  - speaker: "Guest2"
+    total_duration_sec: 441
+    replies_count: 86
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      identified_as: null  # Нет в people.yaml, нужно добавить
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Guest2 представляется в 2344-2348s:
+        "Меня зовут Владик Хонанов или Влад, можно Владислав Григорьевич."
+        Он автор книги про DDD "Learning to manage your own design" (2355-2365s).
+        Упоминает, что был в подкасте раньше ("в прошлый раз Умпутун ты сказал").
+        Рассказывает про DDD, bounded contexts, микросервисы.
+
+      suggested_person:
+        id: "vladik_khononov"
+        canonical_name: "VladikKhononov"
+        aliases: ["Влад", "Владик", "Владислав"]
+        real_name: "Владислав Хонанов"
+        info: "Автор книги о DDD, выпуски 792 и ранее"
+
+      voice_task:
+        needed: false  # Идентификация высокой уверенности
+
+  - speaker: "Bobuk"
+    total_duration_sec: 118
+    replies_count: 28
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        КРИТИЧЕСКАЯ ОШИБКА АТРИБУЦИИ.
+        Umputun в начале подкаста (7-18s) явно говорит:
+        "не будет Бобука, который, ну, не будет"
+
+        Однако 28 реплик атрибутированы Bobuk. Анализ показывает:
+
+        1. Большинство реплик Bobuk (610s-2013s) содержат технические объяснения
+           работы FSNotes от ПЕРВОГО ЛИЦА:
+           - "я выложил в Open Source" (1607s)
+           - "я не вижу проблем" (1562s, 1607s)
+           - "я попробовал" (696s)
+           - "я понял, что iCloud это штука ненадежная" (1253s)
+           - "люди приносят pull-request" (1979s)
+
+        2. Эти реплики чередуются с репликами Guest1 и продолжают тот же контекст -
+           рассказ автора FSNotes о своём приложении.
+
+        3. Первая реплика "Bobuk" в 204s ("А по-другому нельзя") - короткая вставка,
+           возможно ошибка распознавания одного из ведущих.
+
+        4. Последняя реплика в 6842s ("Можно") - односложная, изолированная.
+
+        ВЫВОД: Большинство реплик Bobuk (610s-2013s) принадлежат Guest1 (Александру).
+        Остальные (204s, 6842s) требуют voice comparison для идентификации.
+
+      voice_task:
+        needed: true
+        segments_to_verify:
+          - stime: 1009.14
+            etime: 1039.88
+            text: "и потом приложение работает на iOS... строится DIV..."
+            note: "Длинный технический монолог - скорее всего Guest1"
+          - stime: 204.45
+            etime: 206.06
+            text: "А по-другому нельзя."
+            note: "Короткая реплика, нужно сравнить с голосами ведущих"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk НЕ был представлен как участник. Umputun явно сказал, что Bobuk не будет.
+        Однако 28 реплик атрибутированы ему. Это системная ошибка транскрипции.
+
+        Особенно явная проблема: реплики Bobuk рассказывают о разработке FSNotes
+        от первого лица, хотя автор FSNotes - Guest1 (Александр).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Переименование Guest1 в Oleksandr
+  - type: rename
+    episode: 792
+    from_speaker: "Guest1"
+    to_speaker: "Oleksandr"
+    confidence: high
+    reason: "Явное представление: 'Я из Украины. Поэтому Олександр. Украинская мова.'"
+
+  # Переименование Guest2 в VladikKhononov
+  - type: rename
+    episode: 792
+    from_speaker: "Guest2"
+    to_speaker: "VladikKhononov"
+    confidence: high
+    reason: "Явное представление: 'Меня зовут Владик Хонанов или Влад, можно Владислав Григорьевич.'"
+
+  # Исправление ошибочной атрибуции Bobuk -> Oleksandr
+  - type: rename
+    episode: 792
+    from_speaker: "Bobuk"
+    to_speaker: "Oleksandr"
+    time_range:
+      start: 610
+      end: 2014
+    confidence: high
+    reason: |
+      Реплики от первого лица о разработке FSNotes. Umputun подтвердил отсутствие Bobuk.
+      Guest1 (Oleksandr) - автор FSNotes, его голос мог быть ошибочно распознан как Bobuk.
+
+  # Проблемные короткие реплики Bobuk - требуют voice comparison
+  - type: needs_verification
+    episode: 792
+    speaker: "Bobuk"
+    times: [204.45, 6842.59]
+    reason: "Короткие изолированные реплики. Bobuk отсутствовал по словам Umputun. Возможно: Alek.sys, Ksenks или артефакт."
+
+# Дополнительные заметки
+notes: |
+  Эпизод 792 от 5 февраля 2022 года.
+
+  ВЕДУЩИЕ:
+  - Umputun - основной ведущий
+  - Ksenks - присутствует с начала
+  - Alek.sys - подключается позже (Umputun говорит "Лёха подойдёт")
+  - Gray - ОТСУТСТВУЕТ (по словам Umputun)
+  - Bobuk - ОТСУТСТВУЕТ (по словам Umputun)
+
+  ГОСТИ:
+  1. Олександр (Guest1) - автор FSNotes, из Украины
+     Обсуждение FSNotes занимает первую часть подкаста (~0-35 мин)
+
+  2. Владик Хонанов (Guest2) - автор книги о DDD
+     Появляется примерно на 38 минуте (2301s), раздаёт книги слушателям
+
+  КРИТИЧЕСКАЯ ПРОБЛЕМА:
+  Система транскрипции ошибочно атрибутировала часть реплик Олександра (Guest1)
+  как Bobuk. Это особенно заметно в сегменте 610-2014s, где "Bobuk" рассказывает
+  о своём опыте разработки FSNotes от первого лица.

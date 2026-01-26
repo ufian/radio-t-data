@@ -1,0 +1,88 @@
+episode: 757
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Gray]
+  total_duration_sec: 8550
+
+# Проблема: Gray указан как ведущий, но в начале выпуска явно сказано, что его "выгнали"
+# Цитата (stime 18.06): "Бобок с Лехой в ассортименте Грея мы выгнали, потому что чтобы не нес."
+# Цитата (stime 30.33): "Грей-то заменили теперь роботы"
+
+# Детальный анализ спикеров с аномалиями
+anomalous_speakers:
+  - speaker: "Gray"
+    total_duration_sec: 2
+    replies_count: 1
+    stime: 5364.86
+    etime: 5366.92
+    text: "Петрович Хренова, да."
+    pattern: single_isolated
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Gray явно отсутствует в этом выпуске - в начале подкаста (18 сек) ведущий
+        шутит что "Грея выгнали". Единственная реплика Gray (5365 сек) - короткая
+        фраза "Петрович Хренова, да." в диалоге между Umputun и Bobuk, где обсуждают
+        имена (Надя, вторая женщина). Это явная ошибка атрибуции ASR.
+
+      # Попытка идентификации настоящего автора
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "Bobuk"
+          confidence: 0.6
+          reason: >
+            Bobuk спрашивал "как вторую звали" (5357 сек) и продолжает
+            "Блин, как же ее звали?" сразу после спорной реплики (5367 сек).
+            Возможно реплика "Петрович Хренова" - его шутка.
+        - person_id: "Umputun"
+          confidence: 0.3
+          reason: >
+            Umputun отвечал "Говорят, гадя" перед спорной репликой (5362 сек).
+            Мог продолжить шутку.
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reason: "Короткая реплика (2 сек) - недостаточно для надежного voice match"
+        reference_segment:
+          stime: 5364.86
+          etime: 5366.92
+          text: "Петрович Хренова, да."
+        context_window:
+          stime: 5355.0
+          etime: 5380.0
+          description: "Диалог про имена - Надя, Оксана, вторая женщина"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Gray"
+      issue: >
+        Gray упоминается в начале выпуска как ОТСУТСТВУЮЩИЙ ("выгнали"),
+        но имеет 1 реплику на 5365 сек. Это противоречие указывает на
+        ошибку атрибуции ASR.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: manual_review
+    episode: 757
+    from_speaker: "Gray"
+    segment:
+      stime: 5364.86
+      etime: 5366.92
+      text: "Петрович Хренова, да."
+    confidence: medium
+    reason: >
+      Требуется прослушать сегмент 5355-5380 сек для определения
+      настоящего автора. Вероятнее всего Bobuk или Umputun.
+    suggested_to_speaker: "Bobuk"
+    suggested_confidence: medium

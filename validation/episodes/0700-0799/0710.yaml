@@ -1,0 +1,95 @@
+episode: 710
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks, Alek.sys]
+  hosts_absent: [Gray]  # Явно указано в начале эпизода: "Без Грея, но со всеми остальными"
+  total_duration_sec: 7399
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Gray"
+    total_duration_sec: 0.6
+    replies_count: 1
+    pattern: scattered
+    first_appearance_sec: 7247.71
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: "Gray не участвовал в этом выпуске - Umputun в начале явно говорит 'Без Грея, но со всеми остальными' (7.15-9.6 сек). Единственная реплика Gray - короткий вопрос 'Что это было?' (0.6 сек) - явная ошибка распознавания."
+
+      # Попытка идентификации настоящего автора
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      # Возможные кандидаты
+      possible_matches:
+        - person_id: "Ksenks"
+          confidence: 0.4
+          reason: "Активно участвовала в разговоре ранее (7135-7144 сек), женский голос"
+        - person_id: "Alek.sys"
+          confidence: 0.3
+          reason: "Участвовал в разговоре (7105-7128 сек)"
+        - person_id: "Bobuk"
+          confidence: 0.3
+          reason: "Сразу отвечает после этой реплики, возможно это его же вопрос себе"
+
+      # Задание на voice comparison
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7247.71
+          etime: 7248.31
+          text: "Что это было?"
+        comparison_candidates:
+          - speaker: Ksenks
+            reference_stime: 7135.41
+            reference_etime: 7144.9
+            reference_text: "Нет, это я просто так кричу. Это холодильник. Мне не нравится, когда он говорит всякие неполиткорректные вещи. Я просто начинаю кричать."
+          - speaker: Alek.sys
+            reference_stime: 7125.69
+            reference_etime: 7128.61
+            reference_text: "А мне кажется, он просто помудрял и понял, что..."
+
+  # SPEAKER_99 - артефакты, игнорируем
+  - speaker: "SPEAKER_99"
+    total_duration_sec: -2.5  # Отрицательная длительность указывает на проблемы с таймингом
+    replies_count: 6
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Аудио-артефакты: короткие технические термины ('Linux?', '2.4.20', 'TeamCity Cloud', 'RealMusic Player', 'EKS?', '2%') с отрицательной или нулевой длительностью. Типичные джинглы/звуковые вставки."
+
+      voice_task:
+        needed: false
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  gray_absence_confirmed: true
+  evidence: "Umputun в 7.15-9.6 сек: 'Без Грея, но со всеми остальными'"
+  issues:
+    - speaker: "Gray"
+      issue: "Присутствует 1 реплика Gray, хотя он явно отсутствует в этом выпуске"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 710
+    from_speaker: "Gray"
+    to_speaker: "SPEAKER_MISATTRIBUTED_Gray"
+    confidence: high
+    reason: "Gray не участвовал в выпуске (явно сказано в начале). Реплика требует voice comparison для определения настоящего автора."
+
+# Примечания
+notes:
+  - "Эпизод от 11 июля 2020 года"
+  - "Gray отсутствует - это явно подтверждено в начале выпуска"
+  - "SPEAKER_99 содержит только артефакты - можно игнорировать"
+  - "Для определения настоящего автора реплики 'Что это было?' нужен voice comparison"

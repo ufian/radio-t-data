@@ -1,0 +1,116 @@
+episode: 793
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Ksenks]
+  hosts_absent: [Gray, Alek.sys]
+  absence_confirmed: true
+  absence_evidence: "Umputun в начале эпизода (0:01-0:20): 'без Грея, не то что пока, а вообще, вообще без Грея' и 'Лёха тоже загулял'"
+  total_duration_sec: 7677
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Gray"
+      issue: "6 реплик (46 сек) от Gray, хотя он отсутствует по заявлению Umputun в начале эпизода"
+      details:
+        - time: 5951.4
+          text: "Ну да."
+          duration_sec: 1.8
+          likely_error: true
+          probable_speaker: "Bobuk или Ksenks"
+          reason: "Короткая реплика между Ksenks и Umputun, Gray отсутствует в этом эпизоде"
+        - time: 7632.0
+          text: "Реклама DigitalOcean (5 реплик)"
+          duration_sec: 45
+          likely_error: true
+          probable_speaker: "_ad"
+          reason: "Это реклама после окончания подкаста (Umputun попрощался в 7626s), должна быть помечена как _ad"
+    - speaker: "Alek.sys"
+      issue: "6 реплик (9 сек) от Alek.sys, хотя он отсутствует по заявлению Umputun в начале эпизода"
+      details:
+        - time: 2528.8
+          text: "Не отслеживаются, там прямо не отслеживаются."
+          duration_sec: 2.9
+          likely_error: true
+          probable_speaker: "Bobuk"
+          reason: "Короткая реплика в диалоге Umputun-Ksenks, Alek.sys отсутствует"
+        - time: 3062.5
+          text: "А, ну... Куда спешить?"
+          duration_sec: 2.5
+          likely_error: true
+          probable_speaker: "Bobuk"
+          reason: "Реплика в диалоге Bobuk-Umputun о Slackware, вписывается в контекст речи Bobuk"
+        - time: 4699.2
+          text: "С французами?"
+          duration_sec: 0.9
+          likely_error: true
+          probable_speaker: "Bobuk"
+          reason: "Короткий вопрос между Bobuk и Umputun"
+        - time: 5584.6
+          text: "Я выбирал."
+          duration_sec: 0.7
+          likely_error: true
+          probable_speaker: "Bobuk"
+          reason: "Умпутун говорит 'это Булбок выбирал эту тему', после чего идёт 'Я выбирал' - это явно Bobuk подтверждает"
+        - time: 6375.0
+          text: "Ага, я уже открыл."
+          duration_sec: 1.4
+          likely_error: true
+          probable_speaker: "Bobuk"
+          reason: "После ухода Ksenks остаются только Umputun и Bobuk, это Bobuk отвечает"
+        - time: 7173.4
+          text: "Ты пользовался?"
+          duration_sec: 1.0
+          likely_error: true
+          probable_speaker: "Bobuk"
+          reason: "Вопрос к Umputun про Palm в продолжение диалога Bobuk"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Реклама, помеченная как Gray
+  - type: rename
+    episode: 793
+    from_speaker: "Gray"
+    to_speaker: "_ad"
+    time_range:
+      start: 7630
+      end: 7680
+    confidence: high
+    reason: "Это реклама DigitalOcean после окончания подкаста, аналогичная рекламе в начале (78-125s), которая корректно помечена как _ad"
+
+  # Короткая реплика Gray
+  - type: rename
+    episode: 793
+    from_speaker: "Gray"
+    to_speaker: "Bobuk"
+    time_range:
+      start: 5950
+      end: 5955
+    confidence: medium
+    reason: "Gray отсутствует в эпизоде (подтверждено Umputun в начале). Короткая реплика 'Ну да' в диалоге, вероятно Bobuk"
+
+  # Реплики Alek.sys -> Bobuk
+  - type: rename
+    episode: 793
+    from_speaker: "Alek.sys"
+    to_speaker: "Bobuk"
+    apply_to_all: true
+    confidence: high
+    reason: "Alek.sys отсутствует в эпизоде (подтверждено Umputun в начале). Все 6 реплик - короткие вставки в диалоги, особенно явно [5584.6s] 'Я выбирал' после слов Umputun 'это Булбок выбирал эту тему'"
+
+# Voice comparison не требуется - ошибки очевидны из контекста
+voice_tasks: []
+
+# Дополнительные заметки
+notes:
+  - "Эпизод 793 от 12 февраля 2022 - без Gray и Alek.sys"
+  - "Присутствуют только: Umputun, Bobuk, Ksenks"
+  - "Ksenks уходит раньше (около 6362s)"
+  - "Все реплики Gray и Alek.sys - ошибки распознавания"

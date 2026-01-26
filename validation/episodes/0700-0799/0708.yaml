@@ -1,0 +1,36 @@
+episode: 708
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7914  # без _ad и SPEAKER_99
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров - все реплики размечены на известных ведущих
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  # В начале эпизода (22-37s) Umputun перечисляет участников:
+  # "А были там все, кто и сейчас есть, Бобук есть, и был Грей, и Ксюша..."
+  # "Леша" (реплика Alek.sys)
+  # Все 5 ведущих упомянуты и присутствуют в транскрипте
+  issues: []
+
+# Специальные спикеры (игнорируются по заданию)
+special_speakers:
+  _ad:
+    count: 11
+    duration_sec: 48
+    note: "Рекламные вставки Digital Ocean"
+  SPEAKER_99:
+    count: 10
+    duration_sec: -4  # отрицательная из-за артефактов разметки
+    note: "Аудио-артефакты: короткие слова (iPadOS, Home, Apple), названия компаний, счёт"
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Эпизод чистый, правила не требуются

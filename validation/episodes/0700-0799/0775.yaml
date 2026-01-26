@@ -1,0 +1,92 @@
+episode: 775
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 9295  # ~2.5 часа
+
+# Детальный анализ спикеров
+host_analysis:
+  - speaker: Umputun
+    replies_count: 1155
+    total_duration_sec: 3604
+    first_appearance_sec: 0
+    status: ok
+    notes: "Ведущий, представил состав в начале"
+
+  - speaker: Bobuk
+    replies_count: 870
+    total_duration_sec: 3288
+    first_appearance_sec: 92
+    status: ok
+    notes: "Упомянут в начале как участник"
+
+  - speaker: Gray
+    replies_count: 166
+    total_duration_sec: 562
+    first_appearance_sec: 157
+    status: ok
+    notes: "Упомянут в начале как участник"
+
+  - speaker: Ksenks
+    replies_count: 458
+    total_duration_sec: 1828
+    first_appearance_sec: 3634
+    status: ok
+    notes: "Umputun в начале сказал 'Ксюша подойдёт, она задержалась'. Появляется на ~60 минуте, узнана Греем: 'Боже мой, Ксюша'"
+
+  - speaker: Alek.sys
+    replies_count: 7
+    total_duration_sec: 13
+    first_appearance_sec: 1188
+    status: error_likely
+    notes: |
+      ПРОБЛЕМА: Umputun в начале эпизода (20-30 сек) сказал: "Леха без руля... он теперь без руля, он не смог доехать".
+      Это означает, что Alek.sys НЕ участвовал в этом выпуске.
+      Однако в транскрипте есть 7 реплик Alek.sys - все очень короткие (1-4 сек), разбросанные случайно:
+      - 1188 сек: "Вот в чем дело." (1.2 сек)
+      - 1735 сек: "Как же они называются-то?" (0.8 сек)
+      - 2702 сек: "Ну, ассемблеры на C, да." (1.9 сек)
+      - 3014 сек: "Мы же все помним это." (1.4 сек)
+      - 4590 сек: "Просто в просак." (1.2 сек)
+      - 8993 сек: "Да, пункт за год." (2.2 сек)
+      - 9391 сек: "Так, дальше питон мы пропускаем, потому что обсудили." (4.2 сек)
+      Все эти реплики вклинены между репликами других ведущих - типичный паттерн ошибки распознавания.
+
+# Неизвестные спикеры
+unknown_speakers: []
+# Нет SPEAKER_* или Guest* в этом эпизоде
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: Alek.sys
+      issue: |
+        Alek.sys объявлен отсутствующим в начале выпуска ("Леха без руля, не смог доехать"),
+        но в транскрипте присутствует 7 коротких реплик от его имени.
+        Это явная ошибка распознавания - реплики принадлежат другим ведущим.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: delete_speaker
+    episode: 775
+    speaker: Alek.sys
+    confidence: high
+    reason: |
+      Alek.sys официально объявлен отсутствующим в начале эпизода.
+      7 реплик (13 сек) - короткие вставки, разбросанные по эпизоду,
+      типичный паттерн ошибки голосового распознавания.
+      Эти реплики следует переатрибутировать ближайшему соседнему спикеру
+      или пометить как SPEAKER_MISATTRIBUTED_Alek.sys.
+
+# Дополнительные заметки
+notes: |
+  Эпизод от 9 октября 2021 года.
+  Состав: Umputun (ведущий), Bobuk, Gray, Ksenks (подключилась на 60-й минуте).
+  Alek.sys официально отсутствует - ошибка транскрипции.
+
+  Рекомендация: Требуется ручная проверка 7 реплик Alek.sys и их переатрибуция.
+  Вероятно, это реплики Bobuk, Gray или Umputun.

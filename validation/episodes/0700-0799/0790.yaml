@@ -1,0 +1,46 @@
+episode: 790
+status: clean
+analyzed_at: "2026-01-25"
+
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+    - Gray
+    - Alek.sys
+  total_duration_sec: 8260  # Approximate based on stats: 2556+2083+1521+1204+896
+
+host_statistics:
+  - speaker: Umputun
+    replies_count: 855
+    total_duration_sec: 2556
+    first_appearance_sec: 1
+  - speaker: Bobuk
+    replies_count: 593
+    total_duration_sec: 2083
+    first_appearance_sec: 64
+  - speaker: Ksenks
+    replies_count: 381
+    total_duration_sec: 1521
+    first_appearance_sec: 32
+  - speaker: Gray
+    replies_count: 273
+    total_duration_sec: 1204
+    first_appearance_sec: 183
+  - speaker: Alek.sys
+    replies_count: 264
+    total_duration_sec: 896
+    first_appearance_sec: 130
+
+unknown_speakers: []
+
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Полный состав ведущих (5 человек).
+    Umputun в начале упоминает, что состав будет полный.
+    Все ведущие появляются в первые 3 минуты.
+
+suggested_rules: []

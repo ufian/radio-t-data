@@ -1,0 +1,113 @@
+episode: 702
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 8820  # ~2h 27min based on last timestamp ~7966s + buffer
+  guests_announced: ["Anya"]  # Umputun: "Бобук на месте, Аня зашла в гости"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 633
+    replies_count: 132
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Umputun в начале (53-61 сек): "Бобук на месте, Аня зашла в гости"
+        2. Первая реплика SPEAKER_07 в 63.3 сек - сразу после представления
+        3. Ksenks (2020-2033 сек) напрямую обращается: "Слушай, Аня, мне кажется, социализация..."
+        4. Bobuk (2080-2085 сек): "Обратите внимание, Аня в свободном поиске" после реплики SPEAKER_07
+        5. Ksenks (7914 сек): "Да, конечно, Аня рассказывает" в контексте разговора SPEAKER_07
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 3
+    replies_count: 3
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Крайне короткие реплики (1-2 сек) в случайные моменты. Типичные фразы-ошибки: 'Угу', 'О, господи, опять'. Одна реплика упоминает Аню в третьем лице - скорее всего ошибочная атрибуция реплики ведущего."
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики SPEAKER_08:
+        - 1857.2s: "Угу." (0.06 сек)
+        - 4037.3s: "Аня так серьезно заинтересовалась." (2 сек) - говорит об Ане в 3 лице, вероятно Alek.sys или другой ведущий
+        - 7956.4s: "О, господи, опять." (1.5 сек)
+
+      possible_matches:
+        - person_id: "alek_sys"
+          confidence: 0.4
+          reason: "Реплика про Аню (4037s) соответствует стилю комментария Alek.sys"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 4037.33
+          etime: 4039.26
+          text: "Аня так серьезно заинтересовалась."
+
+  - speaker: "SPEAKER_06"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Только 2 очень короткие реплики (<2 сек каждая) в конце выпуска. Типичные фразы-ошибки распознавания: 'Подожди, а скажи честно, это были клубы?', 'Ну ладно.'"
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: |
+        Реплики SPEAKER_06:
+        - 7765.1s: "Подожди, а скажи честно, это были клубы?" (1.5 сек)
+        - 7910.5s: "Ну ладно." (0.3 сек)
+        Контекст: Диалог идёт между SPEAKER_07 (Аня) и ведущими. Вероятно ошибочная атрибуция реплики одного из ведущих.
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Контекст разговора о социализации, дейтинге - тема, которую активно обсуждала Ksenks"
+        - person_id: "umputun"
+          confidence: 0.3
+          reason: "Характерный стиль вопроса 'Подожди, а скажи честно'"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 7765.12
+          etime: 7766.58
+          text: "Подожди, а скажи честно, это были клубы?"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 702
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Anya"
+    confidence: high
+    reason: "Явное представление в начале выпуска + множественные обращения по имени от других участников (Ksenks, Bobuk)"

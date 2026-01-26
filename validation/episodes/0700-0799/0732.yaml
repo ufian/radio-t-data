@@ -1,0 +1,73 @@
+episode: 732
+status: needs_review
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Gray, Ksenks, Bobuk]
+  total_duration_sec: 6630
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 586
+    replies_count: 121
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: "Гость представился сам на 1132s: 'меня зовут Румата Исторский в интернете'. Это интернет-псевдоним (отсылка к Стругацким). Реальное имя не названо."
+
+      # Информация о госте
+      guest_info:
+        nickname: "Румата Исторский"
+        real_name: null
+        profession: "Lead Software Developer"
+        experience: "10+ лет бэкенд (Java, Kotlin, Rust)"
+        topic: "GraphQL vs REST API"
+
+      # Не удалось идентифицировать реальную личность
+      possible_matches: []
+
+      # Задание на voice comparison не требуется - гость представился
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Guest"
+      issue: "Гость назвал только интернет-псевдоним (Румата Исторский), реальное имя неизвестно"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 732
+    from_speaker: "Guest"
+    to_speaker: "RumataEstorsky"
+    confidence: high
+    reason: "Гость представился как 'Румата Исторский' на 1132s. Рекомендуется добавить в people.yaml как нового гостя."
+
+# Рекомендуемое добавление в people.yaml
+new_guest_entry:
+  id: "rumata_estorsky"
+  canonical_name: "RumataEstorsky"
+  aliases: ["Румата Исторский", "Румата", "Дон Румата"]
+  real_name: null
+  info: "Lead Software Developer, 10+ лет бэкенд (Java, Kotlin, Rust). Выпуск 732 (GraphQL)"
+
+# Дополнительные заметки
+notes:
+  - "Гость активно участвовал в дискуссии о GraphQL vs REST"
+  - "12 кластеров активности за выпуск (153s - 3215s)"
+  - "Представился только на ~1132s после напоминания ведущих"
+  - "Bobuk почти не участвовал (8 реплик, 39 сек) - возможно технические проблемы"

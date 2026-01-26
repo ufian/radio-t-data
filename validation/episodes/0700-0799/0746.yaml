@@ -1,0 +1,78 @@
+episode: 746
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Gray, Ksenks]
+  hosts_absent: [Bobuk]
+  total_duration_sec: 9132
+  notes: >
+    В начале эпизода Umputun говорит "один коренной и одна престижная
+    почему-то отсутствуют в нашем составе". Ksenks подключилась позже (~31 мин).
+    У Bobuk всего 2 реплики за весь эпизод — скорее всего ошибки распознавания.
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 530
+    replies_count: 98
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "pavel_mineev"
+      identification_method: "introduction"
+      confidence: high
+      evidence: >
+        77.2s: "Всем привет, меня зовут Павел Минеев."
+        82.3s: "Есть какой-то ник, но обычно подписываюсь своим именем."
+        85.7s: "Занимаюсь JavaScript давным-давно."
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Bobuk"
+      issue: >
+        Всего 2 короткие реплики (383s и 1178s, суммарно ~3 сек) за 2.5-часовой эпизод.
+        В начале Umputun говорит об отсутствии "коренного" ведущего.
+        Вероятно, это ошибки распознавания речи Gray (обе реплики в контексте его речи).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 746
+    from_speaker: "Guest"
+    to_speaker: "PavelMineev"
+    confidence: high
+    reason: >
+      Гость явно представился: "Всем привет, меня зовут Павел Минеев" (77.2s).
+      JavaScript-разработчик, активно участвует в обсуждении веб-технологий.
+
+  - type: rename
+    episode: 746
+    from_speaker: "Bobuk"
+    to_speaker: "Gray"
+    confidence: medium
+    reason: >
+      Bobuk отсутствовал в этом эпизоде (упомянуто в начале).
+      2 реплики (383s, 1178s) находятся в контексте речи Gray и могут быть
+      ошибками распознавания. Требует ручной верификации голоса.
+
+# Новый гость для добавления в people.yaml
+new_guest:
+  id: "pavel_mineev"
+  canonical_name: "PavelMineev"
+  aliases: ["Павел Минеев", "Павел"]
+  real_name: "Павел Минеев"
+  info: "JavaScript-разработчик, выпуск 746"

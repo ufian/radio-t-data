@@ -1,0 +1,76 @@
+episode: 723
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Gray
+    - Ksenks
+  guests_present:
+    - Anya
+  total_speakers: 4
+  note: "Bobuk отсутствует (упомянуто в начале выпуска)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Все спикеры идентифицированы:
+# - Anya: известная гостья из people.yaml (13 выпусков)
+# - Нет SPEAKER_*, Guest, или других неидентифицированных спикеров
+
+# Статистика спикеров
+speaker_stats:
+  - speaker: Umputun
+    replies_count: 1143
+    first_appearance_sec: 0.39
+    role: host
+
+  - speaker: Gray
+    replies_count: 560
+    first_appearance_sec: 25.54
+    role: host
+
+  - speaker: Ksenks
+    replies_count: 353
+    first_appearance_sec: 1502.13
+    role: host
+    note: "Присоединилась позже, приветствие от Ани: 'Привет, Ксюша'"
+
+  - speaker: Anya
+    replies_count: 98
+    first_appearance_sec: 253.01
+    role: guest
+    identified_as: anya
+    identification_method: context
+    confidence: high
+    evidence: |
+      1. Umputun обращается к ней по имени "Аня" в 39.6 сек: "Я когда-то давным-давно, Аня, ты наверняка..."
+      2. Многократные обращения к ней по имени в течение эпизода
+      3. Известна в справочнике people.yaml как гостья (13 выпусков)
+      4. Осмысленные реплики на технические темы
+
+  - speaker: _ad
+    replies_count: 10
+    role: advertisement
+    note: "Реклама Digital Ocean App Platform"
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes:
+    - "Umputun называет Аню по имени в первую минуту (39.6 сек)"
+    - "Ksenks появляется позже (1502 сек), приветствуется Аней"
+    - "В начале объявлено, что выпуск без Бобука"
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Никаких изменений не требуется - все спикеры корректно идентифицированы
+
+# Дополнительные наблюдения
+observations:
+  - "Эпизод 723 от 10 октября 2020 года"
+  - "Выпуск без Бобука (упомянуто Умпутуном в начале)"
+  - "Аня - регулярная гостья, участвует в технических обсуждениях"
+  - "Ksenks присоединяется примерно на 25-й минуте"

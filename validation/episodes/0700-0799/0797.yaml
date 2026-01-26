@@ -1,0 +1,54 @@
+episode: 797
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Alek.sys
+  total_duration_sec: 6215.2
+
+# Детальный анализ спикеров
+speakers_detail:
+  - speaker: Bobuk
+    replies_count: 650
+    total_duration_sec: 2468.4
+    first_appearance_sec: 152.3
+  - speaker: Umputun
+    replies_count: 787
+    total_duration_sec: 2261.8
+    first_appearance_sec: 0.6
+  - speaker: Gray
+    replies_count: 258
+    total_duration_sec: 1024.3
+    first_appearance_sec: 23.1
+  - speaker: Alek.sys
+    replies_count: 139
+    total_duration_sec: 460.7
+    first_appearance_sec: 41.1
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все четыре ведущих упомянуты в начале эпизода (0-50 сек):
+    - Umputun открывает выпуск (0.6s)
+    - Упоминает Bobuk: "Бобук, как ни странно, вышел из бомбоубежища" (13.6s)
+    - Упоминает Gray: "Грей туда не ходит" (18.0s)
+    - Упоминает Alek.sys: "Леха с острова" (35.7s), первая реплика Alek.sys в 41.1s
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+
+# Комментарии
+comments: |
+  Эпизод 797 от 12 марта 2022 года - "третий выпуск в военное время".
+  Все спикеры - известные ведущие, гостей нет.
+  Разметка чистая, неизвестных спикеров нет.

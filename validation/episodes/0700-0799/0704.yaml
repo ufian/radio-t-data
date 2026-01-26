@@ -1,0 +1,128 @@
+episode: 704
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Alek.sys, Ksenks, Gray]
+  total_duration_sec: 8072  # примерная оценка по статистике
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 6
+    replies_count: 7
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: "Это ошибочная разметка реплик известных ведущих. Реплики разбросаны по времени и содержат характерные признаки голосов ведущих."
+
+      # Детализация по репликам:
+      # 1. 857.79s "Нет, это был самый популярный." - спор с Alek.sys, мужской род
+      #    Вероятно Bobuk или Umputun (нужна voice comparison)
+      # 2. 1351.29s "Уже забыл, все." - Umputun сразу обращается "Поздно, Леха" = Alek.sys
+      # 3. 1355.99s "Ушло со стека все же." - продолжение диалога с Alek.sys
+      # 4. 2232.16s "Я его, честно, ждала." - женский род = Ksenks
+      # 5. 3041.52s "Забрала, да." - женский род = Ksenks
+      # 6. 3042.12s "Я поняла." - женский род = Ksenks
+      # 7. 3042.70s "Поправлю." - контекст про микрофон, вероятно Ksenks
+
+      identified_as: null  # Смешанные реплики разных ведущих
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches: []
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 857.79
+          etime: 859.01
+          text: "Нет, это был самый популярный."
+        note: "Единственная реплика в мужском роде не от Alek.sys. Нужно определить Bobuk или Umputun."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: "7 реплик ошибочно размечены как SPEAKER_01 вместо известных ведущих"
+
+# Предлагаемые правила очистки
+suggested_rules:
+  # Реплики в женском роде → Ksenks
+  - type: rename
+    episode: 704
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    stime: 2232.16
+    etime: 2232.9
+    confidence: high
+    reason: "Женский род глагола: 'ждала'"
+
+  - type: rename
+    episode: 704
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    stime: 3041.52
+    etime: 3042.1
+    confidence: high
+    reason: "Женский род глагола: 'Забрала'"
+
+  - type: rename
+    episode: 704
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    stime: 3042.12
+    etime: 3042.58
+    confidence: high
+    reason: "Женский род: 'Я поняла'"
+
+  - type: rename
+    episode: 704
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Ksenks"
+    stime: 3042.7
+    etime: 3043.0
+    confidence: medium
+    reason: "Контекст про микрофон, продолжение диалога с Ksenks"
+
+  # Реплики с обращением "Лёха" → Alek.sys
+  - type: rename
+    episode: 704
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Alek.sys"
+    stime: 1351.29
+    etime: 1352.85
+    confidence: high
+    reason: "Umputun сразу после говорит 'Поздно, слишком поздно, Леха' - прямое обращение"
+
+  - type: rename
+    episode: 704
+    from_speaker: "SPEAKER_01"
+    to_speaker: "Alek.sys"
+    stime: 1355.99
+    etime: 1357.45
+    confidence: high
+    reason: "Продолжение диалога, программистская шутка 'Ушло со стека'"
+
+  # Реплика 857.79s - требует voice comparison
+  - type: rename
+    episode: 704
+    from_speaker: "SPEAKER_01"
+    to_speaker: "NEEDS_VOICE_COMPARISON"
+    stime: 857.79
+    etime: 859.01
+    confidence: low
+    reason: "Спор с Alek.sys, мужской род. Bobuk или Umputun - нужна проверка голоса"
+
+notes: |
+  Umputun в начале выпуска явно говорит "состав обычный, не гостей, никого" (20.8s).
+  Все реплики SPEAKER_01 принадлежат известным ведущим - это ошибки автоматической разметки.
+
+  6 из 7 реплик идентифицированы с высокой уверенностью:
+  - 4 реплики → Ksenks (женский род глаголов)
+  - 2 реплики → Alek.sys (прямое обращение "Лёха" от Umputun)
+  - 1 реплика → требует voice comparison (мужской род, но не Alek.sys)

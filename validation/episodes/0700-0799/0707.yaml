@@ -1,0 +1,58 @@
+episode: 707
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 9280
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_08"
+    total_duration_sec: 2.3
+    replies_count: 1
+    pattern: scattered
+
+    # Результат анализа
+    analysis:
+      is_error: true
+      error_reason: >
+        Единственная короткая реплика (2.3 сек) "Это социально осуждаемо" в контексте
+        шутливой беседы про Flash. Bobuk сразу после повторяет ту же фразу: "Среди мальчиков
+        это просто социально осуждаемо." Скорее всего это ошибочная атрибуция реплики
+        одного из присутствующих ведущих (вероятнее всего Ksenks или Gray, которые
+        участвовали в этой части разговора).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.5
+          reason: "Ksenks активно участвует в этой части разговора про Flash и девочек"
+        - person_id: "gray"
+          confidence: 0.3
+          reason: "Gray присутствует и комментирует сразу после"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Комментарий к статусу
+notes: >
+  Эпизод чистый. SPEAKER_08 — единичная ошибка распознавания (2.3 секунды),
+  не является реальным гостем. Все пять ведущих присутствуют, Ksenks
+  присоединилась на 1179s (~20 минут). Нет необходимости в дополнительных
+  правилах очистки — такие короткие единичные ошибки допустимы и не влияют
+  на качество транскрипта.
+
+# Предлагаемые правила очистки
+suggested_rules: []

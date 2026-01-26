@@ -1,0 +1,29 @@
+episode: 788
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+    - Alek.sys
+    - Gray
+  total_duration_sec: 8596
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    В начале эпизода Umputun представляет всех участников:
+    - "Бобу, говорят, подойдет сейчас" (Bobuk - присоединился позже)
+    - "Ксюша тоже где-то в пути" (Ksenks - присоединилась позже)
+    - "Тут у нас Алексей Самгрей" (Alek.sys и Gray - уже присутствуют)
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

@@ -1,0 +1,171 @@
+episode: 713
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray]
+  guests_present: [SPEAKER_05, SPEAKER_01]  # Ваня Емщуков, Стас Ангелек
+  total_duration_sec: 7677  # ~2h 8min
+  note: "Выпуск от 1 августа 2020. Гости - сотрудники ABBYY: Ваня Емщуков (ML/подкастер) и Стас Ангелек (разработчик NeoML)"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 2237
+    replies_count: 512
+    first_appearance_sec: 157
+    last_appearance_sec: 8429
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+
+      identified_as: "ivan_yamshchikov"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Gray представляет в начале (58-76 сек): "Ваня Емщуков... хорошо известен вообще и подкастовой публике,
+           и тем, кто смотрит вообще за всем, что происходит в сфере машинного обучения,
+           потому что он долгое время работал старшим аналитиком компании Яндекс"
+        2. Umputun обращается "Иван" (148 сек), "Ваня" (1952, 2076, 3355, 3497, 5020, 5061 сек и др.)
+        3. SPEAKER_05 упоминает свой подкаст (167 сек): "подкаст делаю... он иногда мелькает в разделе технологии"
+        4. SPEAKER_05 упоминает "Стас возглавляет команду NeoML" (279 сек) - говорит о коллеге в 3м лице
+        5. Остаётся до конца выпуска (last at 8429 сек), что соответствует контексту "Ваня остаётся"
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Идентификация надёжная
+
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 244
+    replies_count: 74
+    first_appearance_sec: 353
+    last_appearance_sec: 3395
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+
+      identified_as: "stas_angelek"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        1. Gray представляет в начале (76-89 сек): "Стас Ангелек, это разработчик библиотеки
+           машинного обучения, которую компания Эбби вот недавно выпустила в открытый доступ"
+        2. Umputun обращается "Стас" напрямую: "Стас, говори ближе в микрофон" (1262 сек),
+           "ты мне поинт подбросил, Стас" (3078 сек), "Стас, спасибо, дружище" (3348 сек)
+        3. SPEAKER_01 говорит о разработке библиотеки NeoML от первого лица: "мы сейчас работаем
+           над созданием полноценного Python интерфейса" (1325 сек), "Мы собираемся с имейком" (1641 сек)
+        4. Последняя реплика SPEAKER_01 в 3395 сек, сразу после "Стас уходит" (3381 сек)
+        5. Umputun подтверждает: "Стас уже ушёл" (3409 сек)
+
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Идентификация надёжная
+
+  - speaker: "SPEAKER_03"
+    total_duration_sec: 1
+    replies_count: 2
+    first_appearance_sec: 4025
+    last_appearance_sec: 8287
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Только 2 очень короткие реплики (0.5 сек каждая) в разных частях выпуска:
+        - 4024.6s: "говорит." (обрывок фразы)
+        - 8287.2s: "Про что?" (односложный вопрос)
+        Скорее всего ошибки распознавания голоса одного из ведущих или гостей.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+      possible_matches: []
+
+      voice_task:
+        needed: false  # Слишком короткие сегменты
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys не упоминался как участник выпуска (только Umputun, Gray и гости из ABBYY).
+        3 короткие реплики (5 сек суммарно): "Что такое?" (466 сек), "Это прямо вау." (7274 сек),
+        "Дронов запускают, что ли?" (7359 сек) - скорее всего ошибки распознавания голоса
+        SPEAKER_05 (Ваня Емщуков) или Gray.
+
+    - speaker: "Bobuk"
+      issue: |
+        Bobuk не упоминался как участник выпуска. Единственная реплика (3 сек) на 5386 сек:
+        "Чуть-чуть провохнулись, мы всего минуты три или четыре поговорили." -
+        скорее всего ошибка распознавания голоса SPEAKER_05 (Ваня Емщуков).
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 713
+    from_speaker: "SPEAKER_05"
+    to_speaker: "IvanYamshchikov"
+    confidence: high
+    reason: |
+      Ваня Емщуков (Ivan Yamshchikov) - бывший старший аналитик Яндекс, на момент записи
+      сотрудник ABBYY. Ведёт собственный подкаст. Представлен Gray в начале выпуска,
+      неоднократно обращаются по имени Ваня/Иван.
+
+  - type: rename
+    episode: 713
+    from_speaker: "SPEAKER_01"
+    to_speaker: "StasAngelek"
+    confidence: high
+    reason: |
+      Стас Ангелек - разработчик и руководитель команды библиотеки NeoML в ABBYY.
+      Представлен Gray в начале выпуска, обращаются по имени Стас. Уходит в середине
+      выпуска (около 3380 сек), что подтверждается отсутствием его реплик после этого.
+
+  - type: rename
+    episode: 713
+    from_speaker: "SPEAKER_03"
+    to_speaker: "SPEAKER_MISATTRIBUTED"
+    confidence: medium
+    reason: |
+      Ошибки распознавания - 2 обрывочные реплики по ~0.5 сек каждая.
+      Требуется дополнительный анализ для определения реального спикера.
+
+  - type: rename
+    episode: 713
+    from_speaker: "Alek.sys"
+    to_speaker: "SPEAKER_MISATTRIBUTED"
+    confidence: medium
+    reason: |
+      Alek.sys отсутствовал в этом выпуске. 3 короткие реплики (5 сек) -
+      скорее всего ошибки распознавания SPEAKER_05 или Gray.
+
+  - type: rename
+    episode: 713
+    from_speaker: "Bobuk"
+    to_speaker: "SPEAKER_MISATTRIBUTED"
+    confidence: medium
+    reason: |
+      Bobuk отсутствовал в этом выпуске. 1 реплика (3 сек) между репликами Gray -
+      скорее всего ошибка распознавания SPEAKER_05 или Gray.
+
+# Новые гости для добавления в people.yaml
+new_guests:
+  - id: "ivan_yamshchikov"
+    canonical_name: "IvanYamshchikov"
+    aliases: ["Ваня Емщуков", "Иван Ямщиков", "Ivan Yamshchikov"]
+    real_name: "Иван Ямщиков"
+    info: "Бывший старший аналитик Яндекс, сотрудник ABBYY, подкастер. Выпуск 713."
+
+  - id: "stas_angelek"
+    canonical_name: "StasAngelek"
+    aliases: ["Стас Ангелек", "Станислав Ангелек"]
+    real_name: "Станислав Ангелек"
+    info: "Разработчик, руководитель команды NeoML в ABBYY. Выпуск 713."

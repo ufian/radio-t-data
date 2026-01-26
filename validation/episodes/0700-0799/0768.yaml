@@ -1,0 +1,30 @@
+episode: 768
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7757
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - speaker: Umputun
+      note: "Начинает эпизод, основной ведущий"
+    - speaker: Gray
+      note: "Появляется с 16s, активно участвует с начала"
+    - speaker: Alek.sys
+      note: "Упомянут в 27s ('Леха вернулся из загулов'), первая реплика в 43s"
+    - speaker: Bobuk
+      note: "Упомянут в 111s ('наехать на Бобука'), первая реплика в 124s"
+    - speaker: Ksenks
+      note: "Упомянута в 18-22s (ожидается позже), присоединяется в 1393s с приветствием"
+
+# Предлагаемые правила очистки
+suggested_rules: []

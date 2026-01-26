@@ -1,0 +1,72 @@
+episode: 734
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Gray, Bobuk, Alek.sys, Ksenks]
+  total_duration_sec: 8011
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "Guest"
+    total_duration_sec: 1144
+    replies_count: 191
+    pattern: consecutive
+
+    # Результат анализа
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация гостя
+      identified_as: null
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Гость явно представился в 307.0s: "Меня зовут Алексей. Я работаю в компании Раусфорд, full-stack инженером. И пришел сегодня рассказать немножко про Руби."
+        "Раусфорд" — вероятно искаженное "Raiffeisen" (банк Райффайзен).
+        Bobuk шутит в 321.7s: "Предлагаю больше гостей Алексеев не звать. А то они приходят ненадолго и потом остаются."
+
+      # Гость не найден в people.yaml — требуется добавление
+      possible_matches:
+        - person_id: "aleksey_raiffeisen_ruby"
+          confidence: 0.9
+          reason: "Новый гость: Алексей, full-stack инженер из Raiffeisen, эксперт по Ruby"
+
+      # Задание на voice comparison (опционально)
+      voice_task:
+        needed: false
+        reference_segment:
+          stime: 801.43
+          etime: 972.82
+          text: "Нет, у нас такого нету, 3-0 это все-таки большой дил, то есть, скажем так, мы его ждали достаточно долго..."
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 734
+    from_speaker: "Guest"
+    to_speaker: "AlekseyRuby"
+    confidence: high
+    reason: |
+      Гость явно представился: "Меня зовут Алексей. Я работаю в компании Раусфорд, full-stack инженером. И пришел сегодня рассказать немножко про Руби."
+      Все 191 реплика принадлежат одному человеку — паттерн consecutive, голос экспертный про Ruby.
+
+# Рекомендации
+notes: |
+  1. Добавить нового гостя в people.yaml:
+     - id: "aleksey_ruby"
+       canonical_name: "AlekseyRuby"
+       aliases: []
+       real_name: "Алексей"
+       info: "Full-stack инженер из Raiffeisen, эксперт по Ruby. Выпуск 734."
+
+  2. Применить правило переименования Guest -> AlekseyRuby для эпизода 734.
+
+  3. Дата выпуска: 26 декабря 2020 года (упоминается в начале: "29 декабря... 26-е").

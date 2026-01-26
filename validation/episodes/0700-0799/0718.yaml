@@ -1,0 +1,35 @@
+episode: 718
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+    - Alek.sys
+    - Gray
+  total_duration_sec: 8312
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes:
+    - speaker: Umputun
+      note: "Ведет выпуск с самого начала (0s)"
+    - speaker: Bobuk
+      note: "Присутствует с начала (11s)"
+    - speaker: Ksenks
+      note: "Упомянута в 25s ('Надеемся, к нашей тусиловке подойдет Ксюша'), присоединилась позже (1162s)"
+    - speaker: Alek.sys
+      note: "Первая реплика в 118s, естественное включение в обсуждение Docker"
+    - speaker: Gray
+      note: "Упомянут в шутке в 78s ('Грэй, конечно, не называю коллегами'), первая реплика в 425s"
+
+# Предлагаемые правила очистки
+suggested_rules: []

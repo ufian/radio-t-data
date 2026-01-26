@@ -1,0 +1,62 @@
+episode: 751
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Alek.sys
+    - Gray
+    - Ksenks
+  total_duration_sec: 8720
+  episode_date: "2021-04-24"
+
+# Статистика ведущих
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 1081
+    total_duration_sec: 3429
+    first_appearance_sec: 1
+  - speaker: Bobuk
+    replies_count: 452
+    total_duration_sec: 1569
+    first_appearance_sec: 20
+  - speaker: Alek.sys
+    replies_count: 384
+    total_duration_sec: 1557
+    first_appearance_sec: 61
+  - speaker: Gray
+    replies_count: 298
+    total_duration_sec: 1213
+    first_appearance_sec: 233
+  - speaker: Ksenks
+    replies_count: 233
+    total_duration_sec: 952
+    first_appearance_sec: 943
+
+# Специальные спикеры (не требуют анализа)
+special_speakers:
+  - speaker: _ad
+    replies_count: 10
+    description: "Рекламные вставки"
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все пять ведущих присутствуют в эпизоде.
+    Umputun открывает выпуск (0.59 сек), упоминает день рождения Bobuk.
+    Bobuk вступает на 20 секунде.
+    Alek.sys вступает на 61 секунде.
+    Gray вступает на 233 секунде.
+    Ksenks вступает на 943 секунде (15:43).
+    Эпизод "неполный" состав по словам Umputun в начале, но все 5 ведущих присутствуют.
+
+# Предлагаемые правила очистки
+suggested_rules: []

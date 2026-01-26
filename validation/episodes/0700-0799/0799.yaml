@@ -1,0 +1,28 @@
+episode: 799
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Ksenks
+    - Alek.sys
+    - Gray
+  total_duration_sec: 7930
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    Все пять ведущих присутствуют в этом эпизоде.
+    Bobuk присоединяется позже (на 2458s / ~41 минуте), что типично для формата подкаста.
+    Никаких представлений не требуется - все известные ведущие.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

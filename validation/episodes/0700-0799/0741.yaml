@@ -1,0 +1,95 @@
+episode: 741
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks]
+  hosts_announced: [Umputun, Bobuk, Gray, Ksenks]
+  total_duration_sec: 9011.9
+  notes: |
+    Эпизод от 13 февраля 2021 года.
+    В начале выпуска (0:00-3:00) объявлены только Umputun, Ksenks, Gray, Bobuk.
+    Alek.sys НЕ была объявлена как участник.
+
+# Подозрительные спикеры (ведущие с аномалиями)
+suspicious_speakers:
+  - speaker: "Alek.sys"
+    total_duration_sec: 4.4
+    replies_count: 3
+    pattern: scattered
+    first_appearance_sec: 3104
+
+    analysis:
+      is_error: true
+      error_reason: |
+        1. Alek.sys не объявлена в начале выпуска (в отличие от Umputun, Bobuk, Gray, Ksenks)
+        2. Всего 3 реплики общей длительностью 4.4 сек — аномально мало для ведущего
+        3. Первая реплика появляется только на 51-й минуте (3104 сек)
+        4. Все реплики — короткие комментарии, характерные для ошибок распознавания:
+           - "Это может быть, Ксюша." (1.3 сек)
+           - "Так эти добрые люди..." (0.9 сек)
+           - "Это так, просто шутка такая." (2.3 сек)
+        5. Реплики вклиниваются в диалоги других ведущих без контекстной связи
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "ksenks"
+          confidence: 0.4
+          reason: |
+            Первая реплика ("Это может быть, Ксюша") — ответ на реплику Ksenks,
+            но обращение "Ксюша" может указывать на другого спикера (Umputun обычно так к ней обращается)
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: |
+            Вторая реплика ("Так эти добрые люди...") вклинивается в рассказ Bobuk о комментариях в его канале
+        - person_id: "gray"
+          confidence: 0.3
+          reason: |
+            Третья реплика ("Это так, просто шутка такая") следует за диалогом Gray-Bobuk о гейтах
+
+      voice_task:
+        needed: true
+        audio_url: null  # Не удалось получить URL из метаданных
+        reference_segments:
+          - stime: 3104.1
+            etime: 3105.4
+            text: "Это может быть, Ксюша."
+            context: "После реплики Umputun 'Ну да, они там любят за новыми версиями гоняться.'"
+          - stime: 4877.7
+            etime: 4878.6
+            text: "Так эти добрые люди..."
+            context: "Во время рассказа Bobuk о модерации комментариев"
+          - stime: 7625.5
+            etime: 7627.8
+            text: "Это так, просто шутка такая."
+            context: "После диалога Gray-Bobuk о Matrix/Jabber"
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: false
+  issues:
+    - speaker: "Alek.sys"
+      issue: |
+        Alek.sys присутствует в транскрипте, но не была объявлена в начале выпуска.
+        Статистика участия (3 реплики, 4.4 сек) указывает на ошибку voice recognition,
+        а не на реальное присутствие в эфире.
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 741
+    from_speaker: "Alek.sys"
+    to_speaker: "SPEAKER_MISATTRIBUTED_ALEKSYS"
+    confidence: high
+    reason: |
+      Alek.sys не объявлена в начале выпуска, имеет всего 3 короткие реплики (4.4 сек),
+      что характерно для ошибок voice recognition. Реплики скорее всего принадлежат
+      одному из объявленных ведущих (Umputun, Bobuk, Gray или Ksenks).

@@ -1,0 +1,32 @@
+episode: 745
+status: clean
+analyzed_at: "2025-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 9570
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода (0:00-1:10) Umputun представляет всех участников:
+    - Ksenks ("прекрасная Петерина к нам подойдёт") - анонсировано позднее подключение
+    - Bobuk ("на месте, держит микрофон зубами") - 0:40
+    - Gray ("Грею вообще всегда рот широко открывать не советуют") - 1:00
+    - Alek.sys ("Лёха") - 1:05
+
+    Ksenks присоединилась в 19:19 (1159 сек), что соответствует анонсу.
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []

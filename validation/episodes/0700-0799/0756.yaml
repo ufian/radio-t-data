@@ -1,0 +1,119 @@
+episode: 756
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys]
+  total_duration_sec: 7192  # ~2 часа
+
+# Детальный анализ спикеров
+speakers_analysis:
+  - speaker: Umputun
+    replies_count: 899
+    total_duration_sec: 2792
+    first_appearance_sec: 1
+    notes: "Ведущий. Представил состав в начале как 'суровый мужской, близок к классическому'."
+
+  - speaker: Bobuk
+    replies_count: 858
+    total_duration_sec: 2940
+    first_appearance_sec: 99
+    notes: "Ведущий. Активно участвует в обсуждении."
+
+  - speaker: Gray
+    replies_count: 359
+    total_duration_sec: 1458
+    first_appearance_sec: 22
+    notes: "Ведущий (Сергей Петренко). Упоминается как 'Сережа' в тексте."
+
+  - speaker: Alek.sys
+    replies_count: 7
+    total_duration_sec: 9
+    first_appearance_sec: 198
+    notes: |
+      Ведущий. Очень мало реплик, все короткие (1-2 сек).
+      Подтверждение присутствия: реплика "А мы с Сережей просто так приходим" (6929 сек).
+      Фраза в начале "один лишний есть" указывает на 4-го участника помимо классики.
+
+# Анализ отдельных реплик Alek.sys
+alek_sys_replies:
+  - stime: 198.5
+    etime: 199.06
+    text: "Что ты?"
+    duration_sec: 0.56
+    analysis: "Короткая реплика-вопрос, контекст разговора о клавиатурах"
+
+  - stime: 2519.46
+    etime: 2520.88
+    text: "Да, у меня вопрос вот какой."
+    duration_sec: 1.42
+    analysis: "Начало вопроса, перебит Bobuk"
+
+  - stime: 4309.64
+    etime: 4310.52
+    text: "Ну, тем не менее."
+    duration_sec: 0.88
+    analysis: "Короткая ремарка"
+
+  - stime: 5144.52
+    etime: 5146.14
+    text: "Прич тексте."
+    duration_sec: 1.62
+    analysis: "Неразборчивая реплика, возможно 'причем тексте' или артефакт распознавания"
+
+  - stime: 6929.42
+    etime: 6931.46
+    text: "А мы с Сережей просто так приходим."
+    duration_sec: 2.04
+    analysis: "Ключевая реплика, подтверждает присутствие Alek.sys. Говорит о себе и Gray (Сережа)"
+
+  - stime: 7618.63
+    etime: 7619.43
+    text: "Что такое Glovo?"
+    duration_sec: 0.8
+    analysis: "Вопрос о сервисе доставки"
+
+  - stime: 7858.6
+    etime: 7859.86
+    text: "Знаешь, что я хочу сказать?"
+    duration_sec: 1.26
+    analysis: "Начало фразы, перебит Bobuk"
+
+# Специальные спикеры
+special_speakers:
+  - speaker: _ad
+    replies_count: 10
+    notes: "Рекламные вставки Digital Ocean"
+
+# Неизвестные спикеры
+unknown_speakers: []
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    В начале эпизода Umputun говорит: "Состав суровый мужской. Близок к классическому.
+    Не то, чтобы совсем уж классический, как это бывало. Один лишний есть, но два
+    классических на месте." Это указывает на присутствие 4 ведущих: классика
+    (Umputun, Bobuk, Gray) + один дополнительный (Alek.sys).
+
+# Потенциальные проблемы (для ручного ревью)
+potential_issues:
+  - speaker: Alek.sys
+    issue: "Очень мало реплик (7) и малая суммарная длительность (9 сек)"
+    severity: low
+    notes: |
+      Несмотря на малое количество реплик, присутствие Alek.sys подтверждается:
+      1. Фразой "один лишний есть" в начале эпизода
+      2. Репликой "А мы с Сережей просто так приходим" (6929 сек)
+      Вероятно, Alek.sys в этом выпуске больше слушал, чем говорил.
+
+  - speaker: Alek.sys
+    issue: "Неразборчивая реплика 'Прич тексте' на 5144 сек"
+    severity: low
+    notes: "Возможно артефакт распознавания или неполная фраза"
+
+# Предлагаемые правила очистки
+suggested_rules: []

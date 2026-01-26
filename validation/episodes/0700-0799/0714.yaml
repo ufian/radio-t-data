@@ -1,0 +1,99 @@
+episode: 714
+status: has_tasks
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Ksenks, Alek.sys]
+  total_duration_sec: 7830  # примерно 2:10:30
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_05"
+    total_duration_sec: 392
+    replies_count: 118
+    pattern: consecutive
+
+    analysis:
+      is_error: false
+      error_reason: null
+
+      # Идентификация
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Явное представление в начале выпуска:
+        - 33.9s Umputun: "Аня, хорошо, что ты зашла"
+        - 35.5s Umputun: "А ты на каком расстоянии от Ксюши находишься?"
+        - 41.4s SPEAKER_05: "На расстоянии шести часов, я так думаю, где-то."
+
+        Многократные обращения по имени в течение выпуска:
+        - 5716s: "Да, Аня, извини, что перебил, говори"
+        - 6679s: "Аня тему читала, а мы ее ни разу не спросили"
+        - 7804s: "Опять тебя, Аня, чуть Ксюше не назвал"
+        - 7921s: "У меня для тебя есть новость, Аня"
+        - 12151s: "Аня, расскажешь, что это такое?"
+
+        Контекст: Ксюша привела гостью Аню (из Лос-Анджелеса, на расстоянии ~6 часов от Сан-Франциско).
+        Аня участвовала в 13 выпусках согласно people.yaml.
+
+      possible_matches: []
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+  - speaker: "SPEAKER_07"
+    total_duration_sec: 1
+    replies_count: 1
+    pattern: scattered
+
+    analysis:
+      is_error: true
+      error_reason: |
+        Единственная короткая реплика (1.5 сек) в 6698s.
+        Контекст: между репликами Umputun и Bobuk.
+        Текст "Послушай меня секундочку" - типичная фраза-перебивание.
+        Скорее всего это Bobuk перебивает Umputun (следующая длинная реплика - от Bobuk).
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "bobuk"
+          confidence: 0.8
+          reason: "Контекст указывает на Bobuk - следующая реплика его, фраза типична для перебивания"
+
+      voice_task:
+        needed: false
+        reference_segment: null
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules:
+  - type: rename
+    episode: 714
+    from_speaker: "SPEAKER_05"
+    to_speaker: "Anya"
+    confidence: high
+    reason: |
+      Явное представление в начале выпуска ("Аня, хорошо, что ты зашла"),
+      многократные обращения по имени в течение всего выпуска,
+      соответствие known guest "anya" из people.yaml.
+
+  - type: rename
+    episode: 714
+    from_speaker: "SPEAKER_07"
+    to_speaker: "Bobuk"
+    confidence: medium
+    reason: |
+      Единственная короткая реплика-перебивание между Umputun и Bobuk.
+      Следующая реплика продолжается от Bobuk, что указывает на него как автора.
+      Однако без voice comparison нельзя быть полностью уверенным.

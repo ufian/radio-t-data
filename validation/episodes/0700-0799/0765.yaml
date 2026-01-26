@@ -1,0 +1,56 @@
+episode: 765
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Alek.sys, Gray]
+  guests_present: [Anya]
+  total_speakers: 4
+  # Общая длительность реплик (примерно, на основе предрассчитанных данных)
+  hosts_duration_sec:
+    Umputun: 3416
+    Alek.sys: 1880
+    Gray: 1601
+  guests_duration_sec:
+    Anya: 1324
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# В эпизоде нет неизвестных спикеров (SPEAKER_*, Guest*, и т.д.)
+
+# Анализ гостей
+identified_guests:
+  - speaker: "Anya"
+    person_id: "anya"
+    total_duration_sec: 1324
+    replies_count: 392
+    first_reply_at_sec: 45
+
+    analysis:
+      is_error: false
+      identified_as: "anya"
+      identification_method: "introduction"
+      confidence: high
+      evidence: |
+        Umputun явно представляет гостью в начале выпуска:
+        - 25.06s: "Но сегодня зашла Аня."
+        - 41.47s: "Аня, ты почему так долго не приходила?"
+        После этого спикер Anya отвечает на вопросы.
+        Anya — известная гостья из people.yaml (13 выпусков).
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  issues: []
+  notes: |
+    Все спикеры представлены в начале выпуска:
+    - Umputun ведёт выпуск (59.44s: "Грей в студии, Леха тоже пришел вовремя")
+    - Gray представлен как "Грей в студии"
+    - Alek.sys представлен как "Леха тоже пришел вовремя"
+    - Anya представлена как "сегодня зашла Аня"
+    Отсутствуют: Bobuk, Ksenks (упомянуты как отсутствующие)
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Правила не требуются — эпизод уже корректно размечен

@@ -1,0 +1,54 @@
+episode: 725
+status: clean
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present:
+    - Umputun
+    - Bobuk
+    - Gray
+    - Ksenks
+    - Alek.sys
+  total_duration_sec: 8324
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers: []
+# Нет неизвестных спикеров в этом эпизоде.
+# Все реплики принадлежат известным ведущим или рекламным блокам (_ad).
+
+# Статистика по ведущим
+hosts_statistics:
+  - speaker: Umputun
+    replies_count: 687
+    total_duration_sec: 2275
+    first_appearance_sec: 0
+  - speaker: Bobuk
+    replies_count: 455
+    total_duration_sec: 1888
+    first_appearance_sec: 100
+  - speaker: Ksenks
+    replies_count: 343
+    total_duration_sec: 1275
+    first_appearance_sec: 843
+  - speaker: Gray
+    replies_count: 306
+    total_duration_sec: 1272
+    first_appearance_sec: 84
+  - speaker: Alek.sys
+    replies_count: 216
+    total_duration_sec: 770
+    first_appearance_sec: 254
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: |
+    В начале эпизода Umputun упоминает: "пока без прекрасной петерины, но подгребет".
+    Ksenks присоединяется на ~843 сек (14 мин) со словами "Здрасте".
+    Остальные ведущие (Bobuk, Gray, Alek.sys) участвуют с начала обсуждения (~84-254 сек).
+  issues: []
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Никаких проблем не обнаружено - эпизод чистый.

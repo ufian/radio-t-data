@@ -1,0 +1,78 @@
+episode: 706
+status: needs_review
+analyzed_at: "2026-01-25"
+
+# Статистика по всем спикерам
+speakers_summary:
+  hosts_present: [Umputun, Bobuk, Gray, Alek.sys, Ksenks]
+  total_duration_sec: 9603  # ~2ч 40мин
+
+# Детальный анализ неизвестных спикеров
+unknown_speakers:
+  - speaker: "SPEAKER_01"
+    total_duration_sec: 2
+    replies_count: 2
+    pattern: scattered  # реплики разбросаны по эпизоду (1466s и 5965s)
+
+    analysis:
+      is_error: true
+      error_reason: >
+        Две короткие реплики (<1 сек каждая) в разных частях эпизода.
+        Типичные подтверждающие фразы от одного из ведущих.
+        Реплика 1 (1465.93s): "Вообще не нужен." - эхо слов Ksenks.
+        Реплика 2 (5964.84s): "Она с нами только что разговаривала." - комментарий о Ksenks от мужчины-ведущего.
+
+      identified_as: null
+      identification_method: null
+      confidence: null
+      evidence: null
+
+      possible_matches:
+        - person_id: "umputun"
+          confidence: 0.4
+          reason: "Umputun говорит до и после обеих реплик, может быть его голос неправильно сегментирован"
+        - person_id: "bobuk"
+          confidence: 0.3
+          reason: "Bobuk часто делает короткие комментарии в диалогах"
+        - person_id: "alek_sys"
+          confidence: 0.2
+          reason: "Alek.sys присутствует в выпуске, может быть его голос"
+        - person_id: "gray"
+          confidence: 0.1
+          reason: "Gray менее вероятен, его стиль речи отличается"
+
+      voice_task:
+        needed: true
+        reference_segment:
+          stime: 5964.84
+          etime: 5966.16
+          text: "Она с нами только что разговаривала."
+        audio_context: >
+          Контекст: Umputun спрашивает Ksenks, с ними ли она.
+          SPEAKER_01 комментирует, что "она с нами только что разговаривала".
+          Это явно мужской голос, комментирующий о третьем лице (Ksenks).
+
+# Проверка консистентности
+consistency_check:
+  all_speakers_introduced: true
+  notes: >
+    Все пять ведущих присутствуют с начала эпизода.
+    Гостей в этом выпуске нет (обычный состав "прекрасная пятерина").
+    SPEAKER_01 — скорее всего ошибка сегментации одного из ведущих.
+  issues:
+    - speaker: "SPEAKER_01"
+      issue: >
+        Не идентифицированный спикер с 2 короткими репликами.
+        По контексту — один из ведущих-мужчин (Umputun, Bobuk, Alek.sys или Gray).
+        Требуется voice comparison для точной идентификации.
+
+# Предлагаемые правила очистки
+suggested_rules: []
+# Пока нет правил — нужен voice comparison для определения, кому принадлежат реплики.
+# После идентификации добавить:
+#  - type: rename
+#    episode: 706
+#    from_speaker: "SPEAKER_01"
+#    to_speaker: "<идентифицированный ведущий>"
+#    confidence: high
+#    reason: "voice comparison"
