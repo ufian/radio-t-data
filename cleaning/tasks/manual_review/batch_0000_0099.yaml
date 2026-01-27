@@ -1,22 +1,8 @@
 batch_id: review_0000_0099
 description: Manual review tasks for episodes 0-99
 status: pending
-total_tasks: 4
+total_tasks: 2
 tasks:
-- episode: 34
-  from_speaker: Guest1
-  to_speaker: Valera
-  confidence: medium
-  reason: Bobuk называет гостя 'Валера' в момент подключения к звонку (1539-1543s)
-  time_range: null
-  action: confirm_or_reject
-- episode: 34
-  from_speaker: Guest3
-  to_speaker: Sergey
-  confidence: medium
-  reason: Bobuk называет гостя 'Сергей' в момент подключения к звонку (3489-3491s)
-  time_range: null
-  action: confirm_or_reject
 - episode: 35
   speaker: Guest
   total_duration_sec: 218

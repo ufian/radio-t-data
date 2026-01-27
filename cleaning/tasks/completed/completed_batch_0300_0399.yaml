@@ -1,7 +1,7 @@
 batch_id: review_0300_0399
 description: Manual review tasks for episodes 300-399
 status: completed
-total_tasks: 88
+total_tasks: 120
 tasks:
 - episode: 301
   from_speaker: SPEAKER_MISATTRIBUTED_LAVALE
@@ -1038,3 +1038,81 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
+- episode: 319
+  speaker: SPEAKER_04
+  total_duration_sec: 5
+  replies_count: 3
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+  resolution:
+    action: assigned
+    to: Umputun
+  status: completed
+- episode: 327
+  speaker: Bobuk
+  total_duration_sec: 6
+  replies_count: 1
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+  resolution: &id001
+    action: misattributed
+    to: SPEAKER_MISATTRIBUTED_BOBUK
+  status: completed
+- episode: 327
+  speaker: Gray
+  total_duration_sec: 5
+  replies_count: 1
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+  resolution: &id002
+    action: misattributed
+    to: SPEAKER_MISATTRIBUTED_GRAY
+  status: completed
+- episode: 327
+  from_speaker: Bobuk
+  to_speaker: SPEAKER_NEEDS_REVIEW
+  confidence: medium
+  reason: Umputun сказал 'мы без Бобука'. Нужна voice verification для определения
+    спикера.
+  time_range: null
+  action: confirm_or_reject
+  resolution: *id001
+  status: completed
+- episode: 327
+  from_speaker: Gray
+  to_speaker: SPEAKER_NEEDS_REVIEW
+  confidence: medium
+  reason: Gray не упоминался в начале. Нужна voice verification для определения спикера.
+  time_range: null
+  action: confirm_or_reject
+  resolution: *id002
+  status: completed
+- episode: 336
+  from_speaker: SPEAKER_00
+  to_speaker: SPEAKER_99
+  confidence: medium
+  reason: Короткие эхо-реплики, типичные артефакты распознавания, можно игнорировать
+  time_range: null
+  action: confirm_or_reject
+  resolution:
+    action: assigned
+    to: Umputun
+  status: completed
+- episode: 382
+  speaker: SPEAKER_05
+  total_duration_sec: 5
+  replies_count: 1
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+  resolution:
+    action: assigned
+    to: Swan
+  status: completed

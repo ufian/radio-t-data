@@ -1,48 +1,8 @@
 batch_id: review_0500_0599
 description: Manual review tasks for episodes 500-599
 status: pending
-total_tasks: 10
+total_tasks: 1
 tasks:
-- episode: 505
-  speaker: SPEAKER_05
-  total_duration_sec: 6
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 505
-  speaker: SPEAKER_02
-  total_duration_sec: 5
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 505
-  speaker: Umputun
-  total_duration_sec: 7
-  replies_count: 2
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 505
-  from_speaker: Umputun
-  to_speaker: SPEAKER_06
-  confidence: medium
-  reason: Umputun отсутствует в этом эпизоде (отпуск). Реплики идут сразу после SPEAKER_06
-    и продолжают его мысль.
-  time_range: null
-  action: confirm_or_reject
-- episode: 536
-  speaker: SPEAKER_03
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 541
   from_speaker: _ad
   to_speaker: AlexeyFedorov
@@ -56,34 +16,3 @@ tasks:
     start: 4621
     end: 6000
   action: confirm_or_reject
-- episode: 564
-  from_speaker: SPEAKER_06
-  to_speaker: Listener_Lesha
-  confidence: medium
-  reason: Слушатель Леша, позвонивший обсудить статью про Kotlin
-  time_range: null
-  action: confirm_or_reject
-- episode: 590
-  speaker: SPEAKER_04
-  total_duration_sec: 7
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 590
-  from_speaker: SPEAKER_03
-  to_speaker: Guest_Lesha_Java
-  confidence: medium
-  reason: Гость явно представлен как 'Леша', эксперт по Java. Требуется voice comparison
-    для точной идентификации личности. Временное имя до идентификации.
-  time_range: null
-  action: confirm_or_reject
-- episode: 597
-  speaker: SPEAKER_05
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate

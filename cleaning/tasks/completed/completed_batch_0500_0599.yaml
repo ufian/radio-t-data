@@ -1,7 +1,7 @@
 batch_id: review_0500_0599
 description: Manual review tasks for episodes 500-599
 status: completed
-total_tasks: 57
+total_tasks: 81
 tasks:
 - episode: 500
   from_speaker: SPEAKER_MISATTRIBUTED_PETR
@@ -673,3 +673,26 @@ tasks:
   identified_as: null
   confidence: null
   action: investigate
+- episode: 505
+  speaker: SPEAKER_02
+  total_duration_sec: 5
+  replies_count: 2
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+  resolution:
+    action: artifact
+  status: completed
+- episode: 536
+  speaker: SPEAKER_03
+  total_duration_sec: 5
+  replies_count: 3
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+  resolution:
+    action: assigned
+    to: Umputun
+  status: completed

@@ -1,7 +1,7 @@
 batch_id: review_0200_0299
 description: Manual review tasks for episodes 200-299
 status: pending
-total_tasks: 41
+total_tasks: 28
 tasks:
 - episode: 202
   speaker: Guest1
@@ -99,22 +99,6 @@ tasks:
   identified_as: null
   confidence: high
   action: investigate
-- episode: 215
-  speaker: SPEAKER_00
-  total_duration_sec: 8
-  replies_count: 3
-  is_error: false
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 217
-  speaker: SPEAKER_00
-  total_duration_sec: 9
-  replies_count: 9
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 217
   from_speaker: SPEAKER_05
   to_speaker: KirillGotovtsev
@@ -122,14 +106,6 @@ tasks:
   reason: Вероятно тот же гость, контекст и паттерн разговора совпадают
   time_range: null
   action: confirm_or_reject
-- episode: 228
-  speaker: SPEAKER_01
-  total_duration_sec: 8
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 230
   speaker: Gray
   identified_as: Plushev
@@ -146,17 +122,6 @@ tasks:
   to_speaker: Plushev
   confidence: medium
   reason: Gray не представлен, реплики вклиниваются в речь SPEAKER_04 (Плющева)
-  time_range: null
-  action: confirm_or_reject
-- episode: 232
-  from_speaker: SPEAKER_03
-  to_speaker: NevyIvan
-  confidence: medium
-  reason: 'Слушатель Иван из Мурманска, ник Nevy (NAVI наоборот).
-
-    Звонит обсудить Firefox 4.
-
-    '
   time_range: null
   action: confirm_or_reject
 - episode: 237
@@ -207,14 +172,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 250
-  speaker: SPEAKER_00
-  total_duration_sec: 5
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 252
   speaker: SPEAKER_04
   total_duration_sec: 409
@@ -281,41 +238,6 @@ tasks:
     Требует подтверждения через voice comparison.
   time_range: null
   action: confirm_or_reject
-- episode: 282
-  speaker: SPEAKER_02
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 283
-  speaker: SPEAKER_03
-  total_duration_sec: 9
-  replies_count: 8
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 286
-  speaker: SPEAKER_00
-  total_duration_sec: 7
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 286
-  from_speaker: SPEAKER_00
-  to_speaker: Marin_k_a
-  confidence: medium
-  reason: '4 очень короткие реплики (7 сек всего), вероятно ошибка распознавания.
-
-    Стиль похож на Marin_k_a, но нужна верификация голоса.
-
-    '
-  time_range: null
-  action: confirm_or_reject
 - episode: 290
   from_speaker: SPEAKER_01
   to_speaker: Marin_k_a
@@ -323,40 +245,3 @@ tasks:
   reason: Реплики женского рода ('я всегда особенная'), короткие реакции
   time_range: null
   action: confirm_or_reject
-- episode: 291
-  from_speaker: Gray
-  to_speaker: Umputun
-  confidence: medium
-  reason: 'Gray не участвовал в эпизоде (явно заявлено "мы вдвоём").
-
-    Реплика между фразами Bobuk, логически продолжает мысль Umputun.
-
-    Требуется voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 293
-  speaker: SPEAKER_02
-  total_duration_sec: 5
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 296
-  speaker: SPEAKER_05
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 298
-  speaker: SPEAKER_02
-  total_duration_sec: 9
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate

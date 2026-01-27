@@ -1,37 +1,8 @@
 batch_id: review_0600_0699
 description: Manual review tasks for episodes 600-699
 status: pending
-total_tasks: 24
+total_tasks: 5
 tasks:
-- episode: 602
-  speaker: SPEAKER_00
-  total_duration_sec: 8
-  replies_count: 7
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 602
-  from_speaker: SPEAKER_00
-  to_speaker: Bobuk
-  confidence: medium
-  reason: 'Реплики SPEAKER_00 в 5088-5092s и 5218s расположены между репликами Bobuk
-
-    и стилистически соответствуют его манере (короткие комментарии).
-
-    Требуется voice comparison для подтверждения.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 603
-  speaker: SPEAKER_03
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 605
   from_speaker: Alek.sys
   to_speaker: SPEAKER_MISATTRIBUTED_ALEK_SYS
@@ -43,46 +14,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 618
-  speaker: SPEAKER_01
-  total_duration_sec: 5
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 626
-  speaker: SPEAKER_01
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 626
-  speaker: SPEAKER_07
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 629
-  speaker: SPEAKER_03
-  total_duration_sec: 5
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 642
-  speaker: SPEAKER_06
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 647
   from_speaker: SPEAKER_02
   to_speaker: SPEAKER_MISATTRIBUTED_02
@@ -115,37 +46,6 @@ tasks:
     за/перед Alek.sys
   time_range: null
   action: confirm_or_reject
-- episode: 669
-  speaker: SPEAKER_03
-  total_duration_sec: 9
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 671
-  speaker: SPEAKER_01
-  total_duration_sec: 8
-  replies_count: 7
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 671
-  speaker: SPEAKER_09
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 674
-  from_speaker: SPEAKER_05
-  to_speaker: Lyoha
-  confidence: medium
-  reason: Umputun представил как 'оригинальный Лёха' в начале эпизода
-  time_range: null
-  action: confirm_or_reject
 - episode: 677
   from_speaker: SPEAKER_03
   to_speaker: SPEAKER_MISATTRIBUTED_03
@@ -159,58 +59,3 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 681
-  speaker: SPEAKER_03
-  total_duration_sec: 9
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 686
-  speaker: SPEAKER_06
-  total_duration_sec: 6
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 686
-  speaker: SPEAKER_03
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 687
-  speaker: SPEAKER_02
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 687
-  from_speaker: SPEAKER_02
-  to_speaker: SPEAKER_MISATTRIBUTED_02
-  confidence: medium
-  reason: Короткие scattered реплики - скорее всего ошибки распознавания
-  time_range: null
-  action: confirm_or_reject
-- episode: 698
-  speaker: SPEAKER_06
-  total_duration_sec: 7
-  replies_count: 9
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 699
-  speaker: SPEAKER_07
-  total_duration_sec: 6
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate

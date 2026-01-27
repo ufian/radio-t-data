@@ -1,0 +1,2622 @@
+version: 1
+name: Context-based speaker assignments (manual review session 2)
+priority: 7
+description: Назначение SPEAKER_XX по контексту окружающих реплик (≥40% одного ведущего)
+rules:
+# batch_0200-0299
+- id: ctx_e250_SPEAKER_00_to_alexey_abashev
+  type: rename_episode
+  episode: 250
+  from: SPEAKER_00
+  to: alexey_abashev
+  reason: 'Context: 50% alexey_abashev (гость эпизода). 5 коротких реплик.'
+
+- id: ctx_e298_SPEAKER_02_to_Umputun
+  type: rename_episode
+  episode: 298
+  from: SPEAKER_02
+  to: Umputun
+  reason: 'Context: 43% Umputun. 4 реплики, 9 сек.'
+
+# batch_0300-0399
+- id: ctx_e319_SPEAKER_04_to_Umputun
+  type: rename_episode
+  episode: 319
+  from: SPEAKER_04
+  to: Umputun
+  reason: 'Context: 40% Umputun. 3 реплики, 5 сек.'
+
+- id: ctx_e382_SPEAKER_05_to_Swan
+  type: rename_episode
+  episode: 382
+  from: SPEAKER_05
+  to: Swan
+  reason: 'Context: 100% Swan (единственный окружающий). 1 реплика, 5 сек.'
+
+# batch_0400-0499
+- id: ctx_e423_SPEAKER_09_to_Umputun
+  type: rename_episode
+  episode: 423
+  from: SPEAKER_09
+  to: Umputun
+  reason: 'Context: 50% Umputun. 4 реплики, 8 сек.'
+
+- id: ctx_e444_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 444
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context: 100% Umputun. 3 реплики, 5 сек.'
+
+# batch_0500-0599
+- id: ctx_e536_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 536
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context: 100% Umputun. 3 реплики, 5 сек.'
+
+# batch_0600-0699
+- id: ctx_e602_SPEAKER_00_to_Umputun
+  type: rename_episode
+  episode: 602
+  from: SPEAKER_00
+  to: Umputun
+  reason: 'Context: 50% Umputun. 7 реплик, 8 сек.'
+
+- id: ctx_e626_SPEAKER_01_to_Bobuk
+  type: rename_episode
+  episode: 626
+  from: SPEAKER_01
+  to: Bobuk
+  reason: 'Context: 50% Bobuk. 3 реплики, 6 сек.'
+
+- id: ctx_e642_SPEAKER_06_to_Umputun
+  type: rename_episode
+  episode: 642
+  from: SPEAKER_06
+  to: Umputun
+  reason: 'Context: 50% Umputun. 3 реплики, 6 сек.'
+
+- id: ctx_e669_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 669
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context: 50% Umputun. 4 реплики, 9 сек.'
+
+- id: ctx_e671_SPEAKER_01_to_Gray
+  type: rename_episode
+  episode: 671
+  from: SPEAKER_01
+  to: Gray
+  reason: 'Context: 40% Gray. 7 реплик, 8 сек.'
+
+- id: ctx_e671_SPEAKER_09_to_Bobuk
+  type: rename_episode
+  episode: 671
+  from: SPEAKER_09
+  to: Bobuk
+  reason: 'Context: 50% Bobuk. 3 реплики, 6 сек.'
+
+- id: ctx_e686_SPEAKER_06_to_Alek.sys
+  type: rename_episode
+  episode: 686
+  from: SPEAKER_06
+  to: Alek.sys
+  reason: 'Context: 50% Alek.sys. 5 реплик, 6 сек.'
+
+- id: ctx_e686_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 686
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context: 50% Umputun. 3 реплики, 5 сек.'
+
+- id: ctx_e698_SPEAKER_06_to_Umputun
+  type: rename_episode
+  episode: 698
+  from: SPEAKER_06
+  to: Umputun
+  reason: 'Context: 50% Umputun. 9 реплик, 7 сек.'
+
+# batch_0700-0799
+- id: ctx_e703_SPEAKER_04_to_Umputun
+  type: rename_episode
+  episode: 703
+  from: SPEAKER_04
+  to: Umputun
+  reason: 'Context: 44% Umputun. 10 реплик, 9 сек.'
+
+# Confirmed from manual_review confirm_or_reject
+- id: ctx_e336_SPEAKER_00_to_Umputun
+  type: rename_episode
+  episode: 336
+  from: SPEAKER_00
+  to: Umputun
+  reason: 'Context: 75% Umputun. 15 реплик, 27 сек. Осмысленные комментарии.'
+
+- id: ctx_e237_SPEAKER_00_to_Umputun
+  type: rename_episode
+  episode: 237
+  from: SPEAKER_00
+  to: Umputun
+  reason: 'Confirmed. Фраза "Я тебя сейчас попробую переместить" - технические действия ведущего.'
+
+# TODO: ep376 Umputun (63.59s) → Ksenks - женский род "я была слушателем"
+# Требуется добавить поддержку rename_ids или time_range в clean.py
+
+# ep327: Bobuk и Gray отсутствовали ("Ксюша и я", "мы без Бобука")
+- id: misattr_e327_Bobuk
+  type: rename_episode
+  episode: 327
+  from: Bobuk
+  to: SPEAKER_MISATTRIBUTED_BOBUK
+  reason: 'Bobuk отсутствовал в эпизоде (только Umputun и Ksenks). Требуется voice matching.'
+
+- id: misattr_e327_Gray
+  type: rename_episode
+  episode: 327
+  from: Gray
+  to: SPEAKER_MISATTRIBUTED_GRAY
+  reason: 'Gray не упомянут в представлении. Требуется voice matching.'
+
+# ep291: Gray отсутствовал ("мы вдвоём" = Umputun + Bobuk)
+- id: misattr_e291_Gray
+  type: rename_episode
+  episode: 291
+  from: Gray
+  to: Bobuk
+  reason: 'Gray отсутствовал ("мы вдвоём"). Единственная реплика окружена речью Bobuk (context 100%).'
+
+# Host Error fixes (session 3 interactive)
+- id: ctx_e361_Gray_to_voice_matching
+  type: rename_episode
+  episode: 361
+  from: Gray
+  to: SPEAKER_MISATTRIBUTED_GRAY
+  reason: 'Gray отсутствовал. 1 реплика, 5s. Требуется voice matching.'
+
+- id: ctx_e384_Bobuk_to_artifact
+  type: rename_episode
+  episode: 384
+  from: Bobuk
+  to: _artifact
+  reason: 'Bobuk не участвовал. 2 реплики, 5s, короткие изолированные.'
+
+- id: ctx_e395_Umputun_to_Bobuk
+  type: rename_episode
+  episode: 395
+  from: Umputun
+  to: Bobuk
+  reason: 'Umputun отсутствовал. 4 реплики между Bobuk. Context 100%.'
+
+- id: ctx_e431_Alek.sys_to_Umputun
+  type: rename_episode
+  episode: 431
+  from: Alek.sys
+  to: Umputun
+  reason: 'Alek.sys не участвовал. 2 реплики, 5s, context 75% Umputun.'
+
+- id: ctx_e505_Umputun_to_SPEAKER_06
+  type: rename_episode
+  episode: 505
+  from: Umputun
+  to: SPEAKER_06
+  reason: 'Umputun отсутствовал (отпуск). 2 реплики, 7s, context 50% SPEAKER_06.'
+
+- id: ctx_e771_Alek.sys_to_Bobuk
+  type: rename_episode
+  episode: 771
+  from: Alek.sys
+  to: Bobuk
+  reason: 'Alek.sys не участвовал. 5 реплик, 5s, context 50% Bobuk.'
+
+- id: ctx_e814_Bobuk_to_Umputun
+  type: rename_episode
+  episode: 814
+  from: Bobuk
+  to: Umputun
+  reason: 'Bobuk не участвовал. 3 реплики, 7s, context 50% Umputun.'
+
+- id: ctx_e857_Unknown_to_Umputun
+  type: rename_episode
+  episode: 857
+  from: Unknown
+  to: Umputun
+  reason: 'Unknown speaker. 6 реплик, 9s, context 75% Umputun.'
+
+- id: ctx_e858_Unknown_to_Umputun
+  type: rename_episode
+  episode: 858
+  from: Unknown
+  to: Umputun
+  reason: 'Unknown speaker. 3 реплики, 5s, context 67% Umputun.'
+
+- id: ctx_e937_ElevenLabs_to_voice_matching
+  type: rename_episode
+  episode: 937
+  from: ElevenLabs
+  to: SPEAKER_ELEVENLABS
+  reason: 'ElevenLabs speaker. 2 реплики, 16s. Требуется проверка.'
+
+# Guest Rename (confirmed from transcript)
+- id: guest_e34_Guest1_to_Valera
+  type: rename_episode
+  episode: 34
+  from: Guest1
+  to: Valera
+  reason: 'Bobuk называет "Валера" (1539-1543s).'
+
+- id: guest_e34_Guest3_to_Sergey
+  type: rename_episode
+  episode: 34
+  from: Guest3
+  to: Sergey
+  reason: 'Bobuk называет "Сергей" (3489-3491s).'
+
+- id: guest_e133_Guest_to_Dima
+  type: rename_episode
+  episode: 133
+  from: Guest
+  to: Dima
+  reason: 'Umputun и Gray обращаются по имени "Дима".'
+
+# Speaker → Guest (confirmed from transcript mentions)
+- id: guest_e232_SPEAKER_03_to_NevyIvan
+  type: rename_episode
+  episode: 232
+  from: SPEAKER_03
+  to: NevyIvan
+  reason: 'Слушатель Иван из Мурманска, ник Nevy.'
+
+- id: guest_e318_SPEAKER_00_to_ListenerIgor
+  type: rename_episode
+  episode: 318
+  from: SPEAKER_00
+  to: ListenerIgor
+  reason: 'Umputun называет "Игорь".'
+
+- id: guest_e432_SPEAKER_05_to_Listener_Aleksandr
+  type: rename_episode
+  episode: 432
+  from: SPEAKER_05
+  to: Listener_Aleksandr
+  reason: 'Umputun обращается как "Александр".'
+
+- id: guest_e452_SPEAKER_04_to_DimaMinsk
+  type: rename_episode
+  episode: 452
+  from: SPEAKER_04
+  to: DimaMinsk
+  reason: 'Представление: "Я Дима из Минска".'
+
+- id: guest_e564_SPEAKER_06_to_Listener_Lesha
+  type: rename_episode
+  episode: 564
+  from: SPEAKER_06
+  to: Listener_Lesha
+  reason: 'Слушатель Лёша, обсуждение Kotlin.'
+
+- id: guest_e590_SPEAKER_03_to_Guest_Lesha_Java
+  type: rename_episode
+  episode: 590
+  from: SPEAKER_03
+  to: Guest_Lesha_Java
+  reason: 'Гость представлен как "Леша", эксперт по Java.'
+
+- id: guest_e674_SPEAKER_05_to_Lyoha
+  type: rename_episode
+  episode: 674
+  from: SPEAKER_05
+  to: Lyoha
+  reason: 'Umputun представил как "оригинальный Лёха".'
+
+# Small SPEAKER_XX (<=10s) - context-based or artifact
+- id: ctx_e215_SPEAKER_00_to_Umputun
+  type: rename_episode
+  episode: 215
+  from: SPEAKER_00
+  to: Umputun
+  reason: 'Context 100% Umputun. 3 replies, 8s.'
+
+- id: ctx_e217_SPEAKER_00_to_Umputun
+  type: rename_episode
+  episode: 217
+  from: SPEAKER_00
+  to: Umputun
+  reason: 'Context 50% Umputun. 9 replies, 9s.'
+
+- id: artifact_e228_SPEAKER_01
+  type: rename_episode
+  episode: 228
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Unclear context (38% Marin_k_a). 5 replies, 8s.'
+
+- id: artifact_e282_SPEAKER_02
+  type: rename_episode
+  episode: 282
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Unclear context (33% Bobuk). 3 replies, 6s.'
+
+- id: ctx_e283_SPEAKER_03_to_Bobuk
+  type: rename_episode
+  episode: 283
+  from: SPEAKER_03
+  to: Bobuk
+  reason: 'Context 50% Bobuk. 8 replies, 9s.'
+
+- id: ctx_e286_SPEAKER_00_to_Umputun
+  type: rename_episode
+  episode: 286
+  from: SPEAKER_00
+  to: Umputun
+  reason: 'Context 50% Umputun. 4 replies, 7s.'
+
+- id: ctx_e326_SPEAKER_01_to_Ksenks
+  type: rename_episode
+  episode: 326
+  from: SPEAKER_01
+  to: Ksenks
+  reason: 'Context 83% Ksenks. 7 replies, 6s.'
+
+- id: ctx_e370_SPEAKER_02_to_Bobuk
+  type: rename_episode
+  episode: 370
+  from: SPEAKER_02
+  to: Bobuk
+  reason: 'Context 50% Bobuk. 6 replies, 6s.'
+
+- id: artifact_e377_SPEAKER_01
+  type: rename_episode
+  episode: 377
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Unclear context (33% Gray). 4 replies, 6s.'
+
+- id: ctx_e385_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 385
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context 50% Umputun. 4 replies, 8s.'
+
+- id: artifact_e428_SPEAKER_02
+  type: rename_episode
+  episode: 428
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Unclear context (38% Gray). 5 replies, 6s.'
+
+- id: artifact_e487_SPEAKER_04
+  type: rename_episode
+  episode: 487
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Unclear context (38% Bobuk). 4 replies, 8s.'
+
+- id: artifact_e505_SPEAKER_05
+  type: rename_episode
+  episode: 505
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Unclear context (25% Ksenks). 4 replies, 6s.'
+
+- id: artifact_e590_SPEAKER_04
+  type: rename_episode
+  episode: 590
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Unclear context (38% Umputun). 4 replies, 7s.'
+
+- id: artifact_e597_SPEAKER_05
+  type: rename_episode
+  episode: 597
+  from: SPEAKER_05
+  to: _artifact
+  reason: 'Unclear context (33% Ksenks). 3 replies, 6s.'
+
+- id: artifact_e603_SPEAKER_03
+  type: rename_episode
+  episode: 603
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Unclear context (33% Anya). 3 replies, 6s.'
+
+- id: artifact_e681_SPEAKER_03
+  type: rename_episode
+  episode: 681
+  from: SPEAKER_03
+  to: _artifact
+  reason: 'Unclear context (33% Alek.sys). 6 replies, 9s.'
+
+- id: artifact_e687_SPEAKER_02
+  type: rename_episode
+  episode: 687
+  from: SPEAKER_02
+  to: _artifact
+  reason: 'Unclear context (33% Umputun). 3 replies, 6s.'
+
+- id: artifact_e699_SPEAKER_07
+  type: rename_episode
+  episode: 699
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Unclear context (33% Umputun). 3 replies, 6s.'
+
+# Guest identification
+- id: guest_e183_Guest_to_Vladimir_Security
+  type: rename_episode
+  episode: 183
+  from: Guest
+  to: Vladimir_Security
+  reason: 'Bobuk представил: "Человека зовут Владимир, эксперт по безопасности".'
+
+- id: guest_e121_Guest_to_Listener
+  type: rename_episode
+  episode: 121
+  from: Guest
+  to: Listener_121
+  reason: 'Слушатель задающий вопросы в конце эпизода.'
+
+# Session 4: Rules from commit 081f422
+- id: ctx_e213_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 213
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: ctx_e214_SPEAKER_06_to_Umputun
+  type: rename_episode
+  episode: 214
+  from: SPEAKER_06
+  to: Umputun
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: ctx_e215_SPEAKER_01_to_Gray
+  type: rename_episode
+  episode: 215
+  from: SPEAKER_01
+  to: Gray
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e217_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 217
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e221_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 221
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context-based assignment. 2 replies.'
+
+- id: ctx_e222_SPEAKER_00_to_Umputun
+  type: rename_episode
+  episode: 222
+  from: SPEAKER_00
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e222_SPEAKER_02_to_Umputun
+  type: rename_episode
+  episode: 222
+  from: SPEAKER_02
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e222_SPEAKER_07_to_Gray
+  type: rename_episode
+  episode: 222
+  from: SPEAKER_07
+  to: Gray
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e225_SPEAKER_04_to_Bobuk
+  type: rename_episode
+  episode: 225
+  from: SPEAKER_04
+  to: Bobuk
+  reason: 'Context-based assignment. 7 replies.'
+
+- id: ctx_e227_SPEAKER_02_to_Gray
+  type: rename_episode
+  episode: 227
+  from: SPEAKER_02
+  to: Gray
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: artifact_e229_Gray
+  type: rename_episode
+  episode: 229
+  from: Gray
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: ctx_e232_SPEAKER_02_to_Umputun
+  type: rename_episode
+  episode: 232
+  from: SPEAKER_02
+  to: Umputun
+  reason: 'Context-based assignment. 2 replies.'
+
+- id: ctx_e234_SPEAKER_04_to_Umputun
+  type: rename_episode
+  episode: 234
+  from: SPEAKER_04
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e235_SPEAKER_04_to_Gray
+  type: rename_episode
+  episode: 235
+  from: SPEAKER_04
+  to: Gray
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: ctx_e237_SPEAKER_01_to_Bobuk
+  type: rename_episode
+  episode: 237
+  from: SPEAKER_01
+  to: Bobuk
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e237_SPEAKER_06_to_Bobuk
+  type: rename_episode
+  episode: 237
+  from: SPEAKER_06
+  to: Bobuk
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e239_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 239
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e245_SPEAKER_03_to_Gray
+  type: rename_episode
+  episode: 245
+  from: SPEAKER_03
+  to: Gray
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: ctx_e245_SPEAKER_05_to_Bobuk
+  type: rename_episode
+  episode: 245
+  from: SPEAKER_05
+  to: Bobuk
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e246_SPEAKER_00_to_Umputun
+  type: rename_episode
+  episode: 246
+  from: SPEAKER_00
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e246_SPEAKER_05_to_Gray
+  type: rename_episode
+  episode: 246
+  from: SPEAKER_05
+  to: Gray
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e247_SPEAKER_06_to_Umputun
+  type: rename_episode
+  episode: 247
+  from: SPEAKER_06
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e249_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 249
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e250_SPEAKER_03_to_Bobuk
+  type: rename_episode
+  episode: 250
+  from: SPEAKER_03
+  to: Bobuk
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e255_SPEAKER_05_to_Gray
+  type: rename_episode
+  episode: 255
+  from: SPEAKER_05
+  to: Gray
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e256_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 256
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e259_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 259
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: ctx_e261_SPEAKER_02_to_Umputun
+  type: rename_episode
+  episode: 261
+  from: SPEAKER_02
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: artifact_e263_Gray
+  type: rename_episode
+  episode: 263
+  from: Gray
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: ctx_e264_SPEAKER_04_to_Marin_k_a
+  type: rename_episode
+  episode: 264
+  from: SPEAKER_04
+  to: Marin_k_a
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e270_SPEAKER_06_to_Umputun
+  type: rename_episode
+  episode: 270
+  from: SPEAKER_06
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: artifact_e279_Gray
+  type: rename_episode
+  episode: 279
+  from: Gray
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: ctx_e283_SPEAKER_04_to_Bobuk
+  type: rename_episode
+  episode: 283
+  from: SPEAKER_04
+  to: Bobuk
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e284_SPEAKER_00_to_Gray
+  type: rename_episode
+  episode: 284
+  from: SPEAKER_00
+  to: Gray
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e285_SPEAKER_05_to_Umputun
+  type: rename_episode
+  episode: 285
+  from: SPEAKER_05
+  to: Umputun
+  reason: 'Context-based assignment. 7 replies.'
+
+- id: ctx_e289_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 289
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e293_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 293
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e299_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 299
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: ctx_e303_SPEAKER_04_to_Marin_k_a
+  type: rename_episode
+  episode: 303
+  from: SPEAKER_04
+  to: Marin_k_a
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e305_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 305
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context-based assignment. 9 replies.'
+
+- id: ctx_e315_SPEAKER_04_to_Umputun
+  type: rename_episode
+  episode: 315
+  from: SPEAKER_04
+  to: Umputun
+  reason: 'Context-based assignment. 7 replies.'
+
+- id: artifact_e316_Umputun
+  type: rename_episode
+  episode: 316
+  from: Umputun
+  to: _artifact
+  reason: 'Short isolated artifact. 2 replies.'
+
+- id: ctx_e334_SPEAKER_01_to_Gray
+  type: rename_episode
+  episode: 334
+  from: SPEAKER_01
+  to: Gray
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e342_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 342
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: ctx_e346_SPEAKER_04_to_Umputun
+  type: rename_episode
+  episode: 346
+  from: SPEAKER_04
+  to: Umputun
+  reason: 'Context-based assignment. 2 replies.'
+
+- id: ctx_e354_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 354
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e354_SPEAKER_04_to_Umputun
+  type: rename_episode
+  episode: 354
+  from: SPEAKER_04
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e354_SPEAKER_06_to_Umputun
+  type: rename_episode
+  episode: 354
+  from: SPEAKER_06
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: artifact_e363_Gray
+  type: rename_episode
+  episode: 363
+  from: Gray
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: ctx_e365_SPEAKER_02_to_Umputun
+  type: rename_episode
+  episode: 365
+  from: SPEAKER_02
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e368_SPEAKER_02_to_Umputun
+  type: rename_episode
+  episode: 368
+  from: SPEAKER_02
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e374_SPEAKER_05_to_Umputun
+  type: rename_episode
+  episode: 374
+  from: SPEAKER_05
+  to: Umputun
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: ctx_e384_SPEAKER_04_to_Umputun
+  type: rename_episode
+  episode: 384
+  from: SPEAKER_04
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: artifact_e385_Bobuk
+  type: rename_episode
+  episode: 385
+  from: Bobuk
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: ctx_e387_SPEAKER_00_to_Umputun
+  type: rename_episode
+  episode: 387
+  from: SPEAKER_00
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e393_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 393
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e393_SPEAKER_04_to_Gray
+  type: rename_episode
+  episode: 393
+  from: SPEAKER_04
+  to: Gray
+  reason: 'Context-based assignment. 2 replies.'
+
+- id: ctx_e395_SPEAKER_02_to_Bobuk
+  type: rename_episode
+  episode: 395
+  from: SPEAKER_02
+  to: Bobuk
+  reason: 'Context-based assignment. 7 replies.'
+
+- id: ctx_e395_SPEAKER_05_to_Ksenks
+  type: rename_episode
+  episode: 395
+  from: SPEAKER_05
+  to: Ksenks
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e399_SPEAKER_05_to_Umputun
+  type: rename_episode
+  episode: 399
+  from: SPEAKER_05
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e400_SPEAKER_03_to_Ksenks
+  type: rename_episode
+  episode: 400
+  from: SPEAKER_03
+  to: Ksenks
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e403_SPEAKER_06_to_Umputun
+  type: rename_episode
+  episode: 403
+  from: SPEAKER_06
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e415_SPEAKER_01_to__artifact
+  type: rename_episode
+  episode: 415
+  from: SPEAKER_01
+  to: _artifact
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: artifact_e421_Alek.sys
+  type: rename_episode
+  episode: 421
+  from: Alek.sys
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: ctx_e448_SPEAKER_02_to_Bobuk
+  type: rename_episode
+  episode: 448
+  from: SPEAKER_02
+  to: Bobuk
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e450_SPEAKER_05_to_Bobuk
+  type: rename_episode
+  episode: 450
+  from: SPEAKER_05
+  to: Bobuk
+  reason: 'Context-based assignment. 2 replies.'
+
+- id: ctx_e457_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 457
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e462_SPEAKER_08_to_Umputun
+  type: rename_episode
+  episode: 462
+  from: SPEAKER_08
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e464_SPEAKER_02_to_Bobuk
+  type: rename_episode
+  episode: 464
+  from: SPEAKER_02
+  to: Bobuk
+  reason: 'Context-based assignment. 11 replies.'
+
+- id: ctx_e467_SPEAKER_01_to_Bobuk
+  type: rename_episode
+  episode: 467
+  from: SPEAKER_01
+  to: Bobuk
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e474_SPEAKER_02_to_Umputun
+  type: rename_episode
+  episode: 474
+  from: SPEAKER_02
+  to: Umputun
+  reason: 'Context-based assignment. 7 replies.'
+
+- id: artifact_e482_Alek.sys
+  type: rename_episode
+  episode: 482
+  from: Alek.sys
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: ctx_e484_SPEAKER_01_to_Bobuk
+  type: rename_episode
+  episode: 484
+  from: SPEAKER_01
+  to: Bobuk
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e486_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 486
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e487_SPEAKER_05_to_Umputun
+  type: rename_episode
+  episode: 487
+  from: SPEAKER_05
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: artifact_e494_Alek.sys
+  type: rename_episode
+  episode: 494
+  from: Alek.sys
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: ctx_e499_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 499
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e499_SPEAKER_05_to_Gray
+  type: rename_episode
+  episode: 499
+  from: SPEAKER_05
+  to: Gray
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e520_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 520
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e524_SPEAKER_07_to_Umputun
+  type: rename_episode
+  episode: 524
+  from: SPEAKER_07
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e525_SPEAKER_09_to_Umputun
+  type: rename_episode
+  episode: 525
+  from: SPEAKER_09
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e530_SPEAKER_03_to_Umputun
+  type: rename_episode
+  episode: 530
+  from: SPEAKER_03
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e537_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 537
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 2 replies.'
+
+- id: ctx_e537_SPEAKER_02_to_Bobuk
+  type: rename_episode
+  episode: 537
+  from: SPEAKER_02
+  to: Bobuk
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e539_SPEAKER_02_to_Gray
+  type: rename_episode
+  episode: 539
+  from: SPEAKER_02
+  to: Gray
+  reason: 'Context-based assignment. 8 replies.'
+
+- id: ctx_e559_SPEAKER_04_to_Gray
+  type: rename_episode
+  episode: 559
+  from: SPEAKER_04
+  to: Gray
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e563_SPEAKER_04_to__artifact
+  type: rename_episode
+  episode: 563
+  from: SPEAKER_04
+  to: _artifact
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e567_SPEAKER_02_to_Umputun
+  type: rename_episode
+  episode: 567
+  from: SPEAKER_02
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e568_SPEAKER_04_to_Umputun
+  type: rename_episode
+  episode: 568
+  from: SPEAKER_04
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e575_SPEAKER_05_to_Bobuk
+  type: rename_episode
+  episode: 575
+  from: SPEAKER_05
+  to: Bobuk
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e586_SPEAKER_00_to_Alek.sys
+  type: rename_episode
+  episode: 586
+  from: SPEAKER_00
+  to: Alek.sys
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e589_SPEAKER_06_to_Umputun
+  type: rename_episode
+  episode: 589
+  from: SPEAKER_06
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e591_SPEAKER_06_to_Umputun
+  type: rename_episode
+  episode: 591
+  from: SPEAKER_06
+  to: Umputun
+  reason: 'Context-based assignment. 2 replies.'
+
+- id: ctx_e594_SPEAKER_02_to_Umputun
+  type: rename_episode
+  episode: 594
+  from: SPEAKER_02
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e597_SPEAKER_07_to_Bobuk
+  type: rename_episode
+  episode: 597
+  from: SPEAKER_07
+  to: Bobuk
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e597_SPEAKER_09_to_Umputun
+  type: rename_episode
+  episode: 597
+  from: SPEAKER_09
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e601_SPEAKER_07_to_Gray
+  type: rename_episode
+  episode: 601
+  from: SPEAKER_07
+  to: Gray
+  reason: 'Context-based assignment. 2 replies.'
+
+- id: ctx_e603_SPEAKER_04_to_Alek.sys
+  type: rename_episode
+  episode: 603
+  from: SPEAKER_04
+  to: Alek.sys
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e611_SPEAKER_01_to_Bobuk
+  type: rename_episode
+  episode: 611
+  from: SPEAKER_01
+  to: Bobuk
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e621_SPEAKER_07_to__artifact
+  type: rename_episode
+  episode: 621
+  from: SPEAKER_07
+  to: _artifact
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e623_SPEAKER_04_to_Bobuk
+  type: rename_episode
+  episode: 623
+  from: SPEAKER_04
+  to: Bobuk
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e623_SPEAKER_08_to_Umputun
+  type: rename_episode
+  episode: 623
+  from: SPEAKER_08
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e625_SPEAKER_05_to_Umputun
+  type: rename_episode
+  episode: 625
+  from: SPEAKER_05
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e626_SPEAKER_09_to_Umputun
+  type: rename_episode
+  episode: 626
+  from: SPEAKER_09
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e628_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 628
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: ctx_e633_SPEAKER_07_to_Umputun
+  type: rename_episode
+  episode: 633
+  from: SPEAKER_07
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e634_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 634
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: ctx_e635_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 635
+  from: SPEAKER_01
+  to: Umputun
+  reason: 'Context-based assignment. 2 replies.'
+
+- id: ctx_e639_SPEAKER_01_to_Bobuk
+  type: rename_episode
+  episode: 639
+  from: SPEAKER_01
+  to: Bobuk
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e642_SPEAKER_04_to_Umputun
+  type: rename_episode
+  episode: 642
+  from: SPEAKER_04
+  to: Umputun
+  reason: 'Context-based assignment. 6 replies.'
+
+- id: artifact_e646_Alek.sys
+  type: rename_episode
+  episode: 646
+  from: Alek.sys
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: artifact_e648_Bobuk
+  type: rename_episode
+  episode: 648
+  from: Bobuk
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: artifact_e650_Alek.sys
+  type: rename_episode
+  episode: 650
+  from: Alek.sys
+  to: _artifact
+  reason: 'Short isolated artifact. 2 replies.'
+
+- id: artifact_e650_Gray
+  type: rename_episode
+  episode: 650
+  from: Gray
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: artifact_e661_Gray
+  type: rename_episode
+  episode: 661
+  from: Gray
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: ctx_e662_SPEAKER_00_to_Gray
+  type: rename_episode
+  episode: 662
+  from: SPEAKER_00
+  to: Gray
+  reason: 'Context-based assignment. 1 replies.'
+
+- id: ctx_e681_SPEAKER_04_to_Umputun
+  type: rename_episode
+  episode: 681
+  from: SPEAKER_04
+  to: Umputun
+  reason: 'Context-based assignment. 5 replies.'
+
+- id: ctx_e682_SPEAKER_06_to_Umputun
+  type: rename_episode
+  episode: 682
+  from: SPEAKER_06
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: ctx_e686_SPEAKER_07_to_Umputun
+  type: rename_episode
+  episode: 686
+  from: SPEAKER_07
+  to: Umputun
+  reason: 'Context-based assignment. 3 replies.'
+
+- id: artifact_e692_Gray
+  type: rename_episode
+  episode: 692
+  from: Gray
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: ctx_e709_SPEAKER_05_to_Umputun
+  type: rename_episode
+  episode: 709
+  from: SPEAKER_05
+  to: Umputun
+  reason: 'Context-based assignment. 4 replies.'
+
+- id: artifact_e713_Bobuk
+  type: rename_episode
+  episode: 713
+  from: Bobuk
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: artifact_e735_Bobuk
+  type: rename_episode
+  episode: 735
+  from: Bobuk
+  to: _artifact
+  reason: 'Short isolated artifact. 2 replies.'
+
+- id: artifact_e746_Bobuk
+  type: rename_episode
+  episode: 746
+  from: Bobuk
+  to: _artifact
+  reason: 'Short isolated artifact. 2 replies.'
+
+- id: artifact_e778_Gray
+  type: rename_episode
+  episode: 778
+  from: Gray
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: artifact_e791_Gray
+  type: rename_episode
+  episode: 791
+  from: Gray
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+- id: artifact_e793_Gray
+  type: rename_episode
+  episode: 793
+  from: Gray
+  to: _artifact
+  reason: 'Short isolated artifact. 1 replies.'
+
+# Session 4: Rules from commit 324bcca (MISATTRIBUTED fixes)
+- id: misattr_e109_Umputun_to__artifact
+  type: rename_episode
+  episode: 109
+  from: SPEAKER_MISATTRIBUTED_Umputun
+  to: _artifact
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e231_BOBUK_to__artifact
+  type: rename_episode
+  episode: 231
+  from: SPEAKER_MISATTRIBUTED_BOBUK
+  to: _artifact
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e231_ELDAR_to_Gray
+  type: rename_episode
+  episode: 231
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e232_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 232
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 12 replies.'
+
+- id: misattr_e233_GRAY_to__artifact
+  type: rename_episode
+  episode: 233
+  from: SPEAKER_MISATTRIBUTED_GRAY
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e234_LAVALE_to_Umputun
+  type: rename_episode
+  episode: 234
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Umputun
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e235_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 235
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e236_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 236
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e237_LAVALE_to_Bobuk
+  type: rename_episode
+  episode: 237
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e239_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 239
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e242_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 242
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e243_ELDAR_to_Gray
+  type: rename_episode
+  episode: 243
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e250_LAVALE_to_Bobuk
+  type: rename_episode
+  episode: 250
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e268_ELDAR_to_Gray
+  type: rename_episode
+  episode: 268
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e269_ELDAR_to_Gray
+  type: rename_episode
+  episode: 269
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 16 replies.'
+
+- id: misattr_e270_LAVALE_to_Umputun
+  type: rename_episode
+  episode: 270
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Umputun
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e282_ELDAR_to_Bobuk
+  type: rename_episode
+  episode: 282
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 13 replies.'
+
+- id: misattr_e286_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 286
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 10 replies.'
+
+- id: misattr_e286_LAVALE_to_Umputun
+  type: rename_episode
+  episode: 286
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Umputun
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e288_ELDAR_to_Bobuk
+  type: rename_episode
+  episode: 288
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 18 replies.'
+
+- id: misattr_e290_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 290
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e290_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 290
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e292_ELDAR_to_Gray
+  type: rename_episode
+  episode: 292
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 15 replies.'
+
+- id: misattr_e293_ELDAR_to_Gray
+  type: rename_episode
+  episode: 293
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e295_ELDAR_to_Gray
+  type: rename_episode
+  episode: 295
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e297_ELDAR_to_Gray
+  type: rename_episode
+  episode: 297
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e298_ELDAR_to_SPEAKER_00
+  type: rename_episode
+  episode: 298
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: SPEAKER_00
+  reason: 'Fix misattributed speaker. 9 replies.'
+
+- id: misattr_e299_LAVALE_to_Umputun
+  type: rename_episode
+  episode: 299
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Umputun
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e306_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 306
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 10 replies.'
+
+- id: misattr_e306_PETR_to_Umputun
+  type: rename_episode
+  episode: 306
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e308_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 308
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e309_ELDAR_to_Bobuk
+  type: rename_episode
+  episode: 309
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e309_PETR_to_Bobuk
+  type: rename_episode
+  episode: 309
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e310_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 310
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e314_PETR_to_Bobuk
+  type: rename_episode
+  episode: 314
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e315_ELDAR_to_Gray
+  type: rename_episode
+  episode: 315
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e319_ELDAR_to_Bobuk
+  type: rename_episode
+  episode: 319
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e323_ELDAR_to_Gray
+  type: rename_episode
+  episode: 323
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 10 replies.'
+
+- id: misattr_e325_PETR_to_Umputun
+  type: rename_episode
+  episode: 325
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e326_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 326
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e327_LAVALE_to_Umputun
+  type: rename_episode
+  episode: 327
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Umputun
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e329_ELDAR_to_SPEAKER_02
+  type: rename_episode
+  episode: 329
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: SPEAKER_02
+  reason: 'Fix misattributed speaker. 9 replies.'
+
+- id: misattr_e334_ELDAR_to_Gray
+  type: rename_episode
+  episode: 334
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e336_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 336
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 7 replies.'
+
+- id: misattr_e339_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 339
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e341_ELDAR_to_Gray
+  type: rename_episode
+  episode: 341
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e357_ELDAR_to_Gray
+  type: rename_episode
+  episode: 357
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e359_PETR_to_Bobuk
+  type: rename_episode
+  episode: 359
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e361_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 361
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e362_ELDAR_to_Gray
+  type: rename_episode
+  episode: 362
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 7 replies.'
+
+- id: misattr_e363_ELDAR_to_Plushev
+  type: rename_episode
+  episode: 363
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Plushev
+  reason: 'Fix misattributed speaker. 9 replies.'
+
+- id: misattr_e363_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 363
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e365_ELDAR_to_Gray
+  type: rename_episode
+  episode: 365
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 11 replies.'
+
+- id: misattr_e365_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 365
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 7 replies.'
+
+- id: misattr_e366_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 366
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 10 replies.'
+
+- id: misattr_e367_ELDAR_to_Gray
+  type: rename_episode
+  episode: 367
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 9 replies.'
+
+- id: misattr_e367_PETR_to_Marin_k_a
+  type: rename_episode
+  episode: 367
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e369_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 369
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e371_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 371
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 10 replies.'
+
+- id: misattr_e371_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 371
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e372_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 372
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 9 replies.'
+
+- id: misattr_e372_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 372
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e373_ELDAR_to__artifact
+  type: rename_episode
+  episode: 373
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e373_PETR_to_Ksenks
+  type: rename_episode
+  episode: 373
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e375_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 375
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e376_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 376
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e377_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 377
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e380_PETR_to_Gray
+  type: rename_episode
+  episode: 380
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Gray
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e381_ELDAR_to_Bobuk
+  type: rename_episode
+  episode: 381
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e382_LAVALE_to_Umputun
+  type: rename_episode
+  episode: 382
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Umputun
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e382_PETR_to_Umputun
+  type: rename_episode
+  episode: 382
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e383_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 383
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 7 replies.'
+
+- id: misattr_e385_ELDAR_to_Gray
+  type: rename_episode
+  episode: 385
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e385_PETR_to_Marin_k_a
+  type: rename_episode
+  episode: 385
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e386_ELDAR_to_Gray
+  type: rename_episode
+  episode: 386
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 11 replies.'
+
+- id: misattr_e387_ELDAR_to_Gray
+  type: rename_episode
+  episode: 387
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e387_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 387
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 7 replies.'
+
+- id: misattr_e389_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 389
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 7 replies.'
+
+- id: misattr_e396_ELDAR_to_Bobuk
+  type: rename_episode
+  episode: 396
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e396_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 396
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e409_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 409
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e410_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 410
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e411_ELDAR_to_Gray
+  type: rename_episode
+  episode: 411
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e412_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 412
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e412_PETR_to_Ksenks
+  type: rename_episode
+  episode: 412
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e413_ELDAR_to_Gray
+  type: rename_episode
+  episode: 413
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e414_ELDAR_to_Gray
+  type: rename_episode
+  episode: 414
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e414_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 414
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e416_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 416
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e417_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 417
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e418_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 418
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e418_PETR_to_Ksenks
+  type: rename_episode
+  episode: 418
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e419_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 419
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 9 replies.'
+
+- id: misattr_e419_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 419
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 8 replies.'
+
+- id: misattr_e420_ELDAR_to_Gray
+  type: rename_episode
+  episode: 420
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e423_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 423
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e427_ELDAR_to_devzen_afiskon
+  type: rename_episode
+  episode: 427
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: devzen_afiskon
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e436_ELDAR_to_Gray
+  type: rename_episode
+  episode: 436
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e437_ELDAR_to_Bobuk
+  type: rename_episode
+  episode: 437
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 10 replies.'
+
+- id: misattr_e440_ELDAR_to_Gray
+  type: rename_episode
+  episode: 440
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e440_PETR_to_Ksenks
+  type: rename_episode
+  episode: 440
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e443_ALEK_to__artifact
+  type: rename_episode
+  episode: 443
+  from: SPEAKER_MISATTRIBUTED_ALEK
+  to: _artifact
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e443_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 443
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e445_LAVALE_to_Ksenks
+  type: rename_episode
+  episode: 445
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e445_PETR_to_Ksenks
+  type: rename_episode
+  episode: 445
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e448_ELDAR_to_Gray
+  type: rename_episode
+  episode: 448
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e457_ELDAR_to_Gray
+  type: rename_episode
+  episode: 457
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e458_ELDAR_to_Gray
+  type: rename_episode
+  episode: 458
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e462_ELDAR_to_Bobuk
+  type: rename_episode
+  episode: 462
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 7 replies.'
+
+- id: misattr_e462_PETR_to_Umputun
+  type: rename_episode
+  episode: 462
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e464_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 464
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e464_PETR_to_Umputun
+  type: rename_episode
+  episode: 464
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e467_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 467
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e470_PETR_to_Umputun
+  type: rename_episode
+  episode: 470
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e471_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 471
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e475_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 475
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e475_MARIN_to_Ksenks
+  type: rename_episode
+  episode: 475
+  from: SPEAKER_MISATTRIBUTED_MARIN
+  to: Ksenks
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e479_ELDAR_to_Bobuk
+  type: rename_episode
+  episode: 479
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e481_ELDAR_to_Gray
+  type: rename_episode
+  episode: 481
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 5 replies.'
+
+- id: misattr_e488_ELDAR_to_Bobuk
+  type: rename_episode
+  episode: 488
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Bobuk
+  reason: 'Fix misattributed speaker. 11 replies.'
+
+- id: misattr_e499_ELDAR_to_Gray
+  type: rename_episode
+  episode: 499
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e500_ELDAR_to_Gray
+  type: rename_episode
+  episode: 500
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e502_ELDAR_to_Gray
+  type: rename_episode
+  episode: 502
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Gray
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e504_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 504
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e525_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 525
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e539_ELDAR_to_Umputun
+  type: rename_episode
+  episode: 539
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Umputun
+  reason: 'Fix misattributed speaker. 9 replies.'
+
+- id: misattr_e540_GRAY_to__artifact
+  type: rename_episode
+  episode: 540
+  from: SPEAKER_MISATTRIBUTED_GRAY
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e551_Bobuk_to__artifact
+  type: rename_episode
+  episode: 551
+  from: SPEAKER_MISATTRIBUTED_Bobuk
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e561_Gray_to__artifact
+  type: rename_episode
+  episode: 561
+  from: SPEAKER_MISATTRIBUTED_Gray
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e569_Gray_to__artifact
+  type: rename_episode
+  episode: 569
+  from: SPEAKER_MISATTRIBUTED_Gray
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e576_06_to__artifact
+  type: rename_episode
+  episode: 576
+  from: SPEAKER_MISATTRIBUTED_06
+  to: _artifact
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e596_04_to__artifact
+  type: rename_episode
+  episode: 596
+  from: SPEAKER_MISATTRIBUTED_04
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e596_06_to__artifact
+  type: rename_episode
+  episode: 596
+  from: SPEAKER_MISATTRIBUTED_06
+  to: _artifact
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e612_Alek.sys_to__artifact
+  type: rename_episode
+  episode: 612
+  from: SPEAKER_MISATTRIBUTED_Alek.sys
+  to: _artifact
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e612_Umputun_to__artifact
+  type: rename_episode
+  episode: 612
+  from: SPEAKER_MISATTRIBUTED_Umputun
+  to: _artifact
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e618_GRAY_to__artifact
+  type: rename_episode
+  episode: 618
+  from: SPEAKER_MISATTRIBUTED_GRAY
+  to: _artifact
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e620_Bobuk_to__artifact
+  type: rename_episode
+  episode: 620
+  from: SPEAKER_MISATTRIBUTED_Bobuk
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e621_BOBUK_to__artifact
+  type: rename_episode
+  episode: 621
+  from: SPEAKER_MISATTRIBUTED_BOBUK
+  to: _artifact
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e631_Gray_to__artifact
+  type: rename_episode
+  episode: 631
+  from: SPEAKER_MISATTRIBUTED_Gray
+  to: _artifact
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e638_Alek.sys_to__artifact
+  type: rename_episode
+  episode: 638
+  from: SPEAKER_MISATTRIBUTED_Alek.sys
+  to: _artifact
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e663_04_to__artifact
+  type: rename_episode
+  episode: 663
+  from: SPEAKER_MISATTRIBUTED_04
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e663_ALEK_to__artifact
+  type: rename_episode
+  episode: 663
+  from: SPEAKER_MISATTRIBUTED_ALEK
+  to: _artifact
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e665_Bobuk_to__artifact
+  type: rename_episode
+  episode: 665
+  from: SPEAKER_MISATTRIBUTED_Bobuk
+  to: _artifact
+  reason: 'Fix misattributed speaker. 2 replies.'
+
+- id: misattr_e710_Gray_to__artifact
+  type: rename_episode
+  episode: 710
+  from: SPEAKER_MISATTRIBUTED_Gray
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e721_Gray_to__artifact
+  type: rename_episode
+  episode: 721
+  from: SPEAKER_MISATTRIBUTED_Gray
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e741_ALEKSYS_to__artifact
+  type: rename_episode
+  episode: 741
+  from: SPEAKER_MISATTRIBUTED_ALEKSYS
+  to: _artifact
+  reason: 'Fix misattributed speaker. 3 replies.'
+
+- id: misattr_e763_BOBUK_to__artifact
+  type: rename_episode
+  episode: 763
+  from: SPEAKER_MISATTRIBUTED_BOBUK
+  to: _artifact
+  reason: 'Fix misattributed speaker. 4 replies.'
+
+- id: misattr_e766_Alek.sys_to__artifact
+  type: rename_episode
+  episode: 766
+  from: SPEAKER_MISATTRIBUTED_Alek.sys
+  to: _artifact
+  reason: 'Fix misattributed speaker. 6 replies.'
+
+- id: misattr_e794_Gray_to__artifact
+  type: rename_episode
+  episode: 794
+  from: SPEAKER_MISATTRIBUTED_Gray
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+- id: misattr_e819_UMPUTUN_819_to__artifact
+  type: rename_episode
+  episode: 819
+  from: SPEAKER_MISATTRIBUTED_UMPUTUN_819
+  to: _artifact
+  reason: 'Fix misattributed speaker. 1 replies.'
+
+# Session 4: SPEAKER_XX rules from commit 324bcca
+- id: ctx_e316_SPEAKER_03_to_Ksenks
+  type: rename_episode
+  episode: 316
+  from: SPEAKER_03
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 15 replies.'
+
+- id: ctx_e337_SPEAKER_02_to_Ksenks
+  type: rename_episode
+  episode: 337
+  from: SPEAKER_02
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 13 replies.'
+
+- id: ctx_e350_SPEAKER_06_to_Ksenks
+  type: rename_episode
+  episode: 350
+  from: SPEAKER_06
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 7 replies.'
+
+- id: ctx_e355_SPEAKER_00_to_Ksenks
+  type: rename_episode
+  episode: 355
+  from: SPEAKER_00
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 5 replies.'
+
+- id: ctx_e369_SPEAKER_04_to_Ksenks
+  type: rename_episode
+  episode: 369
+  from: SPEAKER_04
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 117 replies.'
+
+- id: ctx_e372_SPEAKER_02_to_Ksenks
+  type: rename_episode
+  episode: 372
+  from: SPEAKER_02
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 17 replies.'
+
+- id: ctx_e373_SPEAKER_00_to_Ksenks
+  type: rename_episode
+  episode: 373
+  from: SPEAKER_00
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 136 replies.'
+
+- id: ctx_e375_SPEAKER_02_to_Ksenks
+  type: rename_episode
+  episode: 375
+  from: SPEAKER_02
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 351 replies.'
+
+- id: ctx_e383_SPEAKER_00_to_Ksenks
+  type: rename_episode
+  episode: 383
+  from: SPEAKER_00
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 189 replies.'
+
+- id: ctx_e390_SPEAKER_01_to_Ksenks
+  type: rename_episode
+  episode: 390
+  from: SPEAKER_01
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 9 replies.'
+
+- id: ctx_e394_SPEAKER_02_to_Ksenks
+  type: rename_episode
+  episode: 394
+  from: SPEAKER_02
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 246 replies.'
+
+- id: ctx_e402_SPEAKER_04_to_Ksenks
+  type: rename_episode
+  episode: 402
+  from: SPEAKER_04
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 3 replies.'
+
+- id: ctx_e410_SPEAKER_02_to_Ksenks
+  type: rename_episode
+  episode: 410
+  from: SPEAKER_02
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 6 replies.'
+
+- id: ctx_e438_SPEAKER_05_to_Ksenks
+  type: rename_episode
+  episode: 438
+  from: SPEAKER_05
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 3 replies.'
+
+- id: ctx_e452_SPEAKER_05_to_Ksenks
+  type: rename_episode
+  episode: 452
+  from: SPEAKER_05
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 5 replies.'
+
+- id: ctx_e492_SPEAKER_01_to_Ksenks
+  type: rename_episode
+  episode: 492
+  from: SPEAKER_01
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 3 replies.'
+
+- id: ctx_e498_SPEAKER_04_to_Ksenks
+  type: rename_episode
+  episode: 498
+  from: SPEAKER_04
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 4 replies.'
+
+- id: ctx_e525_SPEAKER_07_to_Ksenks
+  type: rename_episode
+  episode: 525
+  from: SPEAKER_07
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 5 replies.'
+
+- id: ctx_e526_SPEAKER_03_to_Ksenks
+  type: rename_episode
+  episode: 526
+  from: SPEAKER_03
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 3 replies.'
+
+- id: ctx_e568_SPEAKER_07_to_Ksenks
+  type: rename_episode
+  episode: 568
+  from: SPEAKER_07
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 5 replies.'
+
+- id: ctx_e587_SPEAKER_00_to_Ksenks
+  type: rename_episode
+  episode: 587
+  from: SPEAKER_00
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 1 replies.'
+
+- id: ctx_e598_SPEAKER_01_to_Ksenks
+  type: rename_episode
+  episode: 598
+  from: SPEAKER_01
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 5 replies.'
+
+- id: ctx_e620_SPEAKER_06_to_Ksenks
+  type: rename_episode
+  episode: 620
+  from: SPEAKER_06
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 6 replies.'
+
+- id: ctx_e653_SPEAKER_06_to_Ksenks
+  type: rename_episode
+  episode: 653
+  from: SPEAKER_06
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 6 replies.'
+
+- id: ctx_e665_SPEAKER_01_to_Ksenks
+  type: rename_episode
+  episode: 665
+  from: SPEAKER_01
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 3 replies.'
+
+- id: ctx_e683_SPEAKER_03_to_Ksenks
+  type: rename_episode
+  episode: 683
+  from: SPEAKER_03
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 196 replies.'
+
+- id: ctx_e693_SPEAKER_02_to_Ksenks
+  type: rename_episode
+  episode: 693
+  from: SPEAKER_02
+  to: Ksenks
+  reason: 'Context-based from 324bcca. 5 replies.'
+
+# Session 4: Marin_k_a → Ksenks overrides from 324bcca
+- id: override_e316_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 316
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'Override: Ksenks confirmed in ep (from 324bcca). 119 replies.'
+
+- id: override_e366_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 366
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'Override: Ksenks confirmed in ep (from 324bcca). 167 replies.'
+
+- id: override_e376_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 376
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'Override: Ksenks confirmed in ep (from 324bcca). 91 replies.'
+
+- id: override_e388_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 388
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'Override: Ksenks confirmed in ep (from 324bcca). 123 replies.'

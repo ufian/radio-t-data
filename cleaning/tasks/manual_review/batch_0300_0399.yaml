@@ -1,66 +1,8 @@
 batch_id: review_0300_0399
 description: Manual review tasks for episodes 300-399
 status: pending
-total_tasks: 31
+total_tasks: 15
 tasks:
-- episode: 318
-  from_speaker: SPEAKER_00
-  to_speaker: ListenerIgor
-  confidence: medium
-  reason: 'Umputun называет позвонившего слушателя "Игорь". Можно оставить SPEAKER_00
-
-    или переименовать для читаемости. Это не регулярный гость.
-
-    '
-  time_range: null
-  action: confirm_or_reject
-- episode: 319
-  speaker: SPEAKER_04
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 326
-  speaker: SPEAKER_01
-  total_duration_sec: 6
-  replies_count: 7
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 327
-  speaker: Bobuk
-  total_duration_sec: 6
-  replies_count: 1
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 327
-  speaker: Gray
-  total_duration_sec: 5
-  replies_count: 1
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 327
-  from_speaker: Bobuk
-  to_speaker: SPEAKER_NEEDS_REVIEW
-  confidence: medium
-  reason: Umputun сказал 'мы без Бобука'. Нужна voice verification для определения
-    спикера.
-  time_range: null
-  action: confirm_or_reject
-- episode: 327
-  from_speaker: Gray
-  to_speaker: SPEAKER_NEEDS_REVIEW
-  confidence: medium
-  reason: Gray не упоминался в начале. Нужна voice verification для определения спикера.
-  time_range: null
-  action: confirm_or_reject
 - episode: 328
   from_speaker: Marin_k_a
   to_speaker: Ksenks
@@ -109,13 +51,6 @@ tasks:
     и ошибочно помеченный Gray. Вероятно один человек.
   time_range: null
   action: confirm_or_reject
-- episode: 336
-  from_speaker: SPEAKER_00
-  to_speaker: SPEAKER_99
-  confidence: medium
-  reason: Короткие эхо-реплики, типичные артефакты распознавания, можно игнорировать
-  time_range: null
-  action: confirm_or_reject
 - episode: 359
   from_speaker: EldarMurtazin
   to_speaker: Gray
@@ -149,22 +84,6 @@ tasks:
   reason: Единственный гость в эпизоде; требуется voice comparison для подтверждения
   time_range: null
   action: confirm_or_reject
-- episode: 361
-  speaker: Gray
-  total_duration_sec: 5
-  replies_count: 1
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 361
-  from_speaker: Gray
-  to_speaker: SPEAKER_UNKNOWN
-  confidence: medium
-  reason: Gray был 'в пути'. Единственная реплика скорее принадлежит гостю. Требуется
-    voice comparison.
-  time_range: null
-  action: confirm_or_reject
 - episode: 369
   speaker: SPEAKER_02
   total_duration_sec: 701
@@ -181,14 +100,6 @@ tasks:
   identified_as: null
   confidence: high
   action: investigate
-- episode: 370
-  speaker: SPEAKER_02
-  total_duration_sec: 6
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 376
   from_speaker: Umputun
   to_speaker: Ksenks
@@ -200,38 +111,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 377
-  speaker: SPEAKER_01
-  total_duration_sec: 6
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 382
-  speaker: SPEAKER_05
-  total_duration_sec: 5
-  replies_count: 1
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 384
-  speaker: Bobuk
-  total_duration_sec: 5
-  replies_count: 2
-  is_error: false
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 385
-  speaker: SPEAKER_03
-  total_duration_sec: 8
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 388
   from_speaker: EldarMurtazin
   to_speaker: SPEAKER_MISATTRIBUTED_ELDAR
@@ -245,14 +124,6 @@ tasks:
     Threshold 60 сек не сработал, нужно руч'
   time_range: null
   action: confirm_or_reject
-- episode: 395
-  speaker: Umputun
-  total_duration_sec: 7
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 395
   from_speaker: SPEAKER_06
   to_speaker: Swan

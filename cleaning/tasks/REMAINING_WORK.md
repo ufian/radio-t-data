@@ -1,61 +1,41 @@
 # Remaining Work Statistics
 
-Generated: 2025-01-25 (updated)
+Generated: 2025-01-26 (session 3 complete)
 
 ## Summary
 
-| Category | Tasks | Notes |
-|----------|-------|-------|
-| Manual Review | 139 | Investigate unknown speakers |
-| Voice Matching | 268 | Requires audio comparison |
-| **Total Tasks** | **407** | |
+| Category | Tasks |
+|----------|-------|
+| Manual Review | 63 |
+| → Investigate | 22 |
+| → Confirm/Reject | 41 |
 
 ### Data in data_clean/
 
-| Speaker Type | Replies | Episodes | Duration |
-|--------------|---------|----------|----------|
-| SPEAKER_MISATTRIBUTED_* | 135 | 22 | 12 min |
-| SPEAKER_XX (00-09) | 14,205 | 154 | 968 min (~16 hours) |
-| **Total unresolved** | **14,340** | | |
+| Speaker Type | Replies | Duration |
+|--------------|---------|----------|
+| SPEAKER_MISATTRIBUTED_* | 880 | 58 min |
+| SPEAKER_XX (00-09) | 15055 | 972 min |
+| **Total unresolved** | **15935** | 1030 min |
 
-## Session Progress
+## Session 3 Summary (Interactive)
 
-### This Session Applied
+**Tasks resolved: 46** (109 → 63)
 
-| Rule | Replies |
-|------|---------|
-| SPEAKER_0X → Umputun | 248 |
-| SPEAKER_0X → Bobuk | 86 |
-| SPEAKER_0X → Gray | 60 |
-| SPEAKER_0X → Marin_k_a | 9 |
-| SPEAKER_0X → Ksenks | 6 |
-| SPEAKER_0X → Alek.sys | 7 |
-| Short artifacts → _artifact | 37 |
-| **Subtotal (context)** | **453** |
+### Rules created:
+- Host Error fixes: 10
+- Guest Rename: 5 (Valera, Sergey, Dima, Vladimir, Listener)
+- Speaker → Guest: 7
+- Small SPEAKER_XX: 19 (8 context + 11 artifact)
 
-### Previous Session Applied
-
-| Rule | Replies |
-|------|---------|
-| MISATTRIBUTED_ELDAR → hosts | 283 |
-| MISATTRIBUTED_LAVALE → hosts | 153 |
-| MISATTRIBUTED_PETR → hosts | 40 |
-| MISATTRIBUTED_MARIN → Ksenks | 41 |
-| Small MISATTRIBUTED → _artifact | 59 |
-| **Subtotal** | **576** |
-
-**Total this session: 1,029 replies fixed**
-
-## Remaining Manual Review by Type
-
-| Type | Tasks | Description |
-|------|-------|-------------|
-| SPEAKER_0X | ~55 | Need voice matching (low context confidence) |
-| Guest | 19 | Old episodes (ep34-202) - identify guests |
-| confirm_or_reject | ~65 | Short replies - verify or artifact |
+### Remaining work:
+- **Guest identify** (ep202): 14 tasks - need detailed research
+- **Big SPEAKER_XX** (>60s): 8 tasks → voice_matching
+- **Confirm/Reject**: 41 tasks → voice_matching
 
 ## Next Steps
 
-1. **Voice Matching**: SPEAKER_XX with substantial speech blocks
-2. **Guest Identification**: ep202 has 12 unidentified guests
-3. **MISATTRIBUTED**: 135 replies still in voice_matching batches
+1. **ep202**: Юбилейный выпуск с 12 гостями - требует детального исследования
+2. **Voice Matching**: ~49 задач требуют сравнения голоса
+3. **Add time-range support**: Для ep376 Umputun → Ksenks (женский род)
+

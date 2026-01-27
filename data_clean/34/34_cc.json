@@ -2209,7 +2209,7 @@
       "id": "65c7cfb0c1f864ea85d4a934",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1543.45,
       "etime": 1543.87,
       "text": "Я здесь."
@@ -2236,7 +2236,7 @@
       "id": "65c7cfb0c1f864ea85d4a937",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1551.76,
       "etime": 1561.7,
       "text": "Я не хочу рассказать про CLR, я хочу сказать, что есть аналог CLR, который называется Parrot, который меня очень сильно сейчас занимает и очень интересует."
@@ -2245,7 +2245,7 @@
       "id": "65c7cfb0c1f864ea85d4a938",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1561.8,
       "etime": 1570.74,
       "text": "Я думаю, что рано или поздно его создатели как-то доведут до ума идею, и будет аналог CLR."
@@ -2272,7 +2272,7 @@
       "id": "65c7cfb0c1f864ea85d4a93b",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1587.16,
       "etime": 1590.56,
       "text": "Там есть несколько замечательных идей."
@@ -2281,7 +2281,7 @@
       "id": "65c7cfb0c1f864ea85d4a93c",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1590.72,
       "etime": 1599.25,
       "text": "То есть, конечно же... Я, конечно же..."
@@ -2308,7 +2308,7 @@
       "id": "65c7cfb0c1f864ea85d4a93f",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1606.54,
       "etime": 1608.55,
       "text": "Да, рассказать о них просто сходу не получается."
@@ -2317,7 +2317,7 @@
       "id": "65c7cfb0c1f864ea85d4a940",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1608.57,
       "etime": 1610.91,
       "text": "Во-первых, это единая платформа, то есть..."
@@ -2326,7 +2326,7 @@
       "id": "65c7cfb0c1f864ea85d4a941",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1612.61,
       "etime": 1619.04,
       "text": "Они не говорят громко, что это common language runtime, но он все равно common."
@@ -2335,7 +2335,7 @@
       "id": "65c7cfb0c1f864ea85d4a942",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1619.1,
       "etime": 1635.59,
       "text": "То есть можно туда компилировать различные языки, причем компиляция языков упрощается тем, что там есть общий язык для виртуальной машины."
@@ -2362,7 +2362,7 @@
       "id": "65c7cfb0c1f864ea85d4a945",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1642.05,
       "etime": 1661.57,
       "text": "Он двухуровневый, то есть ассемблер и intermediate representation, как они его называют, это такой, с моей точки зрения, это язык хакеров, где там можно различными символами, различными хитрыми директивами заставить машину работать всяческим образом."
@@ -2371,7 +2371,7 @@
       "id": "65c7cfb0c1f864ea85d4a946",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1661.69,
       "etime": 1667.13,
       "text": "Но, тем не менее, я пока не видел, пока не видел"
@@ -2380,7 +2380,7 @@
       "id": "65c7cfb0c1f864ea85d4a947",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1669.05,
       "etime": 1683.16,
       "text": "нормально работающих языков под него, хотя контрибьюторы грозятся написать под него и Python, и PHP, и всего, что только пожелается."
@@ -2389,7 +2389,7 @@
       "id": "65c7cfb0c1f864ea85d4a948",
       "issue": 34,
       "type": "cc",
-      "author": "Guest1",
+      "author": "Valera",
       "stime": 1683.2,
       "etime": 1690.28,
       "text": "Но, тем не менее, сама платформа выглядит весьма перспективной, с моей точки зрения."
@@ -5539,7 +5539,7 @@
       "id": "65c7cfb0c1f864ea85d4aaa6",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3491.16,
       "etime": 3492.3,
       "text": "Добрый вечер."
@@ -5566,7 +5566,7 @@
       "id": "65c7cfb0c1f864ea85d4aaa9",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3495.12,
       "etime": 3496.44,
       "text": "Я сижу в наушниках."
@@ -5584,7 +5584,7 @@
       "id": "65c7cfb0c1f864ea85d4aaab",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3498.06,
       "etime": 3502.02,
       "text": "Я хотел рассказать о установке взломанной версии macOS на PC."
@@ -5602,7 +5602,7 @@
       "id": "65c7cfb0c1f864ea85d4aaad",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3505.26,
       "etime": 3507.32,
       "text": "Навея на свои работы, и у меня все сидят на Macintosh'е,"
@@ -5647,7 +5647,7 @@
       "id": "65c7cfb0c1f864ea85d4aab2",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3520.65,
       "etime": 3522.63,
       "text": "Я считаю, что это должно быть первым шагом."
@@ -5656,7 +5656,7 @@
       "id": "65c7cfb0c1f864ea85d4aab3",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3522.73,
       "etime": 3528.7,
       "text": "И после этого я могу прочувствовать и понять, ну, нужно ли мне действительно ставить эту операционную систему."
@@ -5665,7 +5665,7 @@
       "id": "65c7cfb0c1f864ea85d4aab4",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3528.78,
       "etime": 3534.72,
       "text": "Если да, то тогда я готов купить за бешеные 3000 долларов ноутбук."
@@ -5683,7 +5683,7 @@
       "id": "65c7cfb0c1f864ea85d4aab6",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3536.91,
       "etime": 3539.73,
       "text": "Ну, цены довольно высокие все-таки."
@@ -5782,7 +5782,7 @@
       "id": "65c7cfb0c1f864ea85d4aac1",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3591.24,
       "etime": 3593.86,
       "text": "Дело в том, что там должна быть поддержка SSE 2 или SSE 3."
@@ -5791,7 +5791,7 @@
       "id": "65c7cfb0c1f864ea85d4aac2",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3593.92,
       "etime": 3596.04,
       "text": "То есть, ну, не на каждый компьютер."
@@ -5809,7 +5809,7 @@
       "id": "65c7cfb0c1f864ea85d4aac4",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3600.55,
       "etime": 3602.67,
       "text": "Возникает еще куча побочных проблем."
@@ -5818,7 +5818,7 @@
       "id": "65c7cfb0c1f864ea85d4aac5",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3602.69,
       "etime": 3608.33,
       "text": "Например, должен быть обязательно один канал CD и HDD висеть на одном проводе."
@@ -5827,7 +5827,7 @@
       "id": "65c7cfb0c1f864ea85d4aac6",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3608.37,
       "etime": 3610.27,
       "text": "Процессор AMD не поддерживается."
@@ -5836,7 +5836,7 @@
       "id": "65c7cfb0c1f864ea85d4aac7",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3610.75,
       "etime": 3614.09,
       "text": "Wi-Fi-карты, сетевые карты практически не одна."
@@ -5845,7 +5845,7 @@
       "id": "65c7cfb0c1f864ea85d4aac8",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3614.21,
       "etime": 3619.92,
       "text": "И люди борются с тем, что покупают и меняют в ноутбуке карты для того, чтобы это все работало."
@@ -5854,7 +5854,7 @@
       "id": "65c7cfb0c1f864ea85d4aac9",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3619.96,
       "etime": 3624.8,
       "text": "Практической ценности, к сожалению, никакой для меня не оказалось, потому что у меня ни одна сетевая карта не работает."
@@ -5863,7 +5863,7 @@
       "id": "65c7cfb0c1f864ea85d4aaca",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3624.84,
       "etime": 3625.78,
       "text": "Я не могу их поменять."
@@ -5872,7 +5872,7 @@
       "id": "65c7cfb0c1f864ea85d4aacb",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3626.24,
       "etime": 3628.06,
       "text": "потому что у меня ноутбук."
@@ -5899,7 +5899,7 @@
       "id": "65c7cfb0c1f864ea85d4aace",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3640.36,
       "etime": 3642.89,
       "text": "Тут возникает куча серьезных таких смешных ситуаций."
@@ -5908,7 +5908,7 @@
       "id": "65c7cfb0c1f864ea85d4aacf",
       "issue": 34,
       "type": "cc",
-      "author": "Guest3",
+      "author": "Sergey",
       "stime": 3642.95,
       "etime": 3651.49,
       "text": "Например, нужно обязательно с внешним монитором все устанавливать и прыгать с бубном, потому что драйвера скачиваются только после того, как ты поставил Mac OS."

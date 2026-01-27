@@ -1,7 +1,7 @@
 batch_id: review_0400_0499
 description: Manual review tasks for episodes 400-499
 status: pending
-total_tasks: 17
+total_tasks: 10
 tasks:
 - episode: 400
   from_speaker: SPEAKER_04
@@ -35,14 +35,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 423
-  speaker: SPEAKER_09
-  total_duration_sec: 8
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 424
   speaker: Alek.sys
   identified_as: Alek.sys
@@ -70,34 +62,11 @@ tasks:
   reason: После voice comparison - если подтвердится, что это не Gray
   time_range: null
   action: confirm_or_reject
-- episode: 428
-  speaker: SPEAKER_02
-  total_duration_sec: 6
-  replies_count: 5
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 431
-  speaker: Alek.sys
-  total_duration_sec: 5
-  replies_count: 2
-  is_error: false
-  identified_as: alek_sys
-  confidence: low
-  action: investigate
 - episode: 431
   from_speaker: SPEAKER_02
   to_speaker: UNIDENTIFIED
   confidence: medium
   reason: Невозможно точно определить спикера, но это точно один из ведущих
-  time_range: null
-  action: confirm_or_reject
-- episode: 432
-  from_speaker: SPEAKER_05
-  to_speaker: Listener_Aleksandr
-  confidence: medium
-  reason: Слушатель позвонил в эфир, Umputun обращается к нему как 'Александр'
   time_range: null
   action: confirm_or_reject
 - episode: 441
@@ -122,22 +91,6 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 444
-  speaker: SPEAKER_01
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 452
-  from_speaker: SPEAKER_04
-  to_speaker: DimaMinsk
-  confidence: medium
-  reason: 'Представление в 5384s (ошибочно помечено как EldarMurtazin): ''Я Дима из
-    Минска'''
-  time_range: null
-  action: confirm_or_reject
 - episode: 458
   speaker: SPEAKER_01
   total_duration_sec: 919
@@ -159,11 +112,3 @@ tasks:
     '
   time_range: null
   action: confirm_or_reject
-- episode: 487
-  speaker: SPEAKER_04
-  total_duration_sec: 8
-  replies_count: 4
-  is_error: true
-  identified_as: null
-  confidence: low
-  action: investigate

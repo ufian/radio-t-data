@@ -8509,7 +8509,7 @@
       "id": "65c7cad59efac8eb061d84e1",
       "issue": 686,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "Alek.sys",
       "stime": 4207.3,
       "etime": 4208.06,
       "text": "Ну, не знаю."
@@ -8824,7 +8824,7 @@
       "id": "65c7cad59efac8eb061d8504",
       "issue": 686,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 4318.84,
       "etime": 4321.08,
       "text": "Ну, если голову... Где, где?"
@@ -8833,7 +8833,7 @@
       "id": "65c7cad59efac8eb061d8505",
       "issue": 686,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 4321.1,
       "etime": 4323.32,
       "text": "Мне не повезло."
@@ -8842,7 +8842,7 @@
       "id": "65c7cad59efac8eb061d8506",
       "issue": 686,
       "type": "cc",
-      "author": "SPEAKER_03",
+      "author": "Umputun",
       "stime": 4323.4,
       "etime": 4324.02,
       "text": "Есть, есть."
@@ -14593,7 +14593,7 @@
       "id": "65c7cad59efac8eb061d8785",
       "issue": 686,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "Alek.sys",
       "stime": 7035.16,
       "etime": 7038.46,
       "text": "Ничего там, по-моему, не изменилось."
@@ -14611,7 +14611,7 @@
       "id": "65c7cad59efac8eb061d8787",
       "issue": 686,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "Alek.sys",
       "stime": 7040.93,
       "etime": 7041.37,
       "text": "Все как Unikernel и Unikernel."
@@ -14620,7 +14620,7 @@
       "id": "65c7cad59efac8eb061d8788",
       "issue": 686,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "Alek.sys",
       "stime": 7041.43,
       "etime": 7041.89,
       "text": "Почему-то он avoid serverless lock-in."
@@ -14629,7 +14629,7 @@
       "id": "65c7cad59efac8eb061d8789",
       "issue": 686,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "Alek.sys",
       "stime": 7041.91,
       "etime": 7042.71,
       "text": "Да, он также avoid этот serverless lock-in, как и Kubernetes avoid."

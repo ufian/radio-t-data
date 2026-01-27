@@ -847,7 +847,8 @@ tasks:
   confidence: medium
   reason: Petr не представлен. Контекст диалога указывает на Ksenks.
   time_range: null
-  action: confirm_or_reject- episode: 400
+  action: confirm_or_reject
+- episode: 400
   speaker: SPEAKER_03
   total_duration_sec: 5
   replies_count: 3

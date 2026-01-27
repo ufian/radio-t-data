@@ -1,13 +1,5 @@
 batch_id: review_0900_0999
 description: Manual review tasks for episodes 900-999
 status: pending
-total_tasks: 1
-tasks:
-- episode: 937
-  speaker: ElevenLabs
-  total_duration_sec: 16
-  replies_count: 2
-  is_error: false
-  identified_as: null
-  confidence: high
-  action: investigate
+total_tasks: 0
+tasks: []

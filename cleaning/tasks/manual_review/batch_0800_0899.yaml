@@ -1,24 +1,8 @@
 batch_id: review_0800_0899
 description: Manual review tasks for episodes 800-899
 status: pending
-total_tasks: 5
+total_tasks: 1
 tasks:
-- episode: 814
-  speaker: Bobuk
-  total_duration_sec: 6.9
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
-- episode: 857
-  speaker: Unknown
-  total_duration_sec: 9
-  replies_count: 6
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate
 - episode: 857
   from_speaker: SPEAKER_02
   to_speaker: Bobuk
@@ -28,19 +12,3 @@ tasks:
     подтверждения.
   time_range: null
   action: confirm_or_reject
-- episode: 857
-  from_speaker: Unknown
-  to_speaker: Bobuk
-  confidence: low
-  reason: Короткие односложные реакции, вероятно ошибки распознавания. Стиль соответствует
-    Bobuk, но требуется voice comparison.
-  time_range: null
-  action: confirm_or_reject
-- episode: 858
-  speaker: Unknown
-  total_duration_sec: 5
-  replies_count: 3
-  is_error: true
-  identified_as: null
-  confidence: null
-  action: investigate

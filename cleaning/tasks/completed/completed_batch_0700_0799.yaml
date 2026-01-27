@@ -1,7 +1,7 @@
 batch_id: review_0700_0799
 description: Manual review tasks for episodes 700-799
 status: completed
-total_tasks: 18
+total_tasks: 28
 tasks:
 - episode: 704
   speaker: SPEAKER_01
@@ -156,7 +156,8 @@ tasks:
   is_error: false
   identified_as: null
   confidence: high
-  action: investigate- episode: 709
+  action: investigate
+- episode: 709
   speaker: SPEAKER_05
   total_duration_sec: 5.9
   replies_count: 4
@@ -250,4 +251,15 @@ tasks:
     start: 5950
     end: 5955
   action: confirm_or_reject
-
+- episode: 703
+  speaker: SPEAKER_04
+  total_duration_sec: 9
+  replies_count: 10
+  is_error: true
+  identified_as: null
+  confidence: null
+  action: investigate
+  resolution:
+    action: assigned
+    to: Umputun
+  status: completed

@@ -400,7 +400,7 @@
       "id": "65c9191265d0bbae0aa2f169",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 269.21,
       "etime": 272.33,
       "text": "Ну да, я немножко покопался."
@@ -409,7 +409,7 @@
       "id": "65c9191265d0bbae0aa2f16a",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 272.35,
       "etime": 273.03,
       "text": "У меня есть"
@@ -418,7 +418,7 @@
       "id": "65c9191265d0bbae0aa2f16b",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 273.94,
       "etime": 276.08,
       "text": "Там есть несколько версий на эту тему."
@@ -427,7 +427,7 @@
       "id": "65c9191265d0bbae0aa2f16c",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 277.3,
       "etime": 285.54,
       "text": "Первая версия, которая обычно всплывает, ну и, собственно, как обычно самая распространенная, это то, что у тех, кого поломали, были какие-то районы."
@@ -436,7 +436,7 @@
       "id": "65c9191265d0bbae0aa2f16d",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 286.3,
       "etime": 297.29,
       "text": "Но, судя по статистике, пользователей через какое-то время отмелось, потому что там есть и какое-то количество людей из-под Мака, и какое-то даже количество линксоидов."
@@ -445,7 +445,7 @@
       "id": "65c9191265d0bbae0aa2f16e",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 298.76,
       "etime": 307.59,
       "text": "Поэтому, скорее всего, такого универсального трояна, который подсветит рисунки, был бы, наверное, и было бы нет."
@@ -472,7 +472,7 @@
       "id": "65c9191265d0bbae0aa2f171",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 313.59,
       "etime": 314.71,
       "text": "Ну, непонятно зачем."
@@ -481,7 +481,7 @@
       "id": "65c9191265d0bbae0aa2f172",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 314.75,
       "etime": 318.81,
       "text": "Ты же представляешь себе, что овчинка какого-то выделка не стоит."
@@ -490,7 +490,7 @@
       "id": "65c9191265d0bbae0aa2f173",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 318.87,
       "etime": 324.75,
       "text": "Если бы у меня был бы такой супер-пупер универсальный троян подсветит рисунки системы,"
@@ -553,7 +553,7 @@
       "id": "65c9191265d0bbae0aa2f17a",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 349.8,
       "etime": 353.56,
       "text": "Ну, вот я, собственно говоря, про это и думаю, что, скорее всего..."
@@ -562,7 +562,7 @@
       "id": "65c9191265d0bbae0aa2f17b",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 354.88,
       "etime": 368.55,
       "text": "Опять же, наблюдая за теми людьми, которые пытались найти между ними что-то общее, я, конечно, хочу заранее предупредить, что это моя исключительно спекуляция."
@@ -571,7 +571,7 @@
       "id": "65c9191265d0bbae0aa2f17c",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 368.65,
       "etime": 377.69,
       "text": "Есть ощущение, что у всех этих людей, они все получали, собственно, письма, и все они, видимо, были так или иначе подключены к Google Wave."
@@ -580,7 +580,7 @@
       "id": "65c9191265d0bbae0aa2f17d",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 380.03,
       "etime": 396.46,
       "text": "И из этого у меня рождается ощущение, что где-то в Google Wave была XSS, которая позволила, вероятно, утащить авторизационные куки."
@@ -589,7 +589,7 @@
       "id": "65c9191265d0bbae0aa2f17e",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 396.5,
       "etime": 398.39,
       "text": "А дальше ситуация происходила очень просто."
@@ -598,7 +598,7 @@
       "id": "65c9191265d0bbae0aa2f17f",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 398.43,
       "etime": 401.45,
       "text": "Злоумышленники, которые продавали эти авторизационные куки, могли..."
@@ -607,7 +607,7 @@
       "id": "65c9191265d0bbae0aa2f180",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 402.77,
       "etime": 409.89,
       "text": "Соответственно, они использовали мобильный интерфейс, потому что мобильный интерфейс легко парсится, ну, относительно легко парсится относительно остальных модулей."
@@ -625,7 +625,7 @@
       "id": "65c9191265d0bbae0aa2f182",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 412.76,
       "etime": 417.88,
       "text": "Ну, безусловно, да, никакого там JavaScript-а нет, там все очень-очень просто."
@@ -634,7 +634,7 @@
       "id": "65c9191265d0bbae0aa2f183",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 417.9,
       "etime": 421.64,
       "text": "Вот, они использовали робота, который заходил на этот мобильный интерфейс."
@@ -643,7 +643,7 @@
       "id": "65c9191265d0bbae0aa2f184",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 421.66,
       "etime": 427.86,
       "text": "Соответственно, этот робот брал адресную книгу Google, а адресная книга Google вся доступна, собственно."
@@ -652,7 +652,7 @@
       "id": "65c9191265d0bbae0aa2f185",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 427.92,
       "etime": 429.9,
       "text": "Адресная книга пользователя вся доступна на сервере."
@@ -661,7 +661,7 @@
       "id": "65c9191265d0bbae0aa2f186",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 430.92,
       "etime": 440.47,
       "text": "Это радость на книге, благополучно рассылал спам, и плюс, соответственно, видимо, он же рассылал точно такое же письмо, содержащее XSS."
@@ -670,7 +670,7 @@
       "id": "65c9191265d0bbae0aa2f187",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 441.77,
       "etime": 446.74,
       "text": "Ну и дальше, соответственно, каждый следующий пользователь получает такое письмо."
@@ -679,7 +679,7 @@
       "id": "65c9191265d0bbae0aa2f188",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 448.94,
       "etime": 453.3,
       "text": "Точно так же его кукла утекала, и опять же, все повторял с самого начала."
@@ -688,7 +688,7 @@
       "id": "65c9191265d0bbae0aa2f189",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 453.34,
       "etime": 456.38,
       "text": "Мобильная интерфейс, доступ к вкладочной книге и так далее и тому подобное."
@@ -724,7 +724,7 @@
       "id": "65c9191265d0bbae0aa2f18d",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 467.68,
       "etime": 472.57,
       "text": "Я так понимаю, что видимо получали только те, кто были в Вэйве."
@@ -733,7 +733,7 @@
       "id": "65c9191265d0bbae0aa2f18e",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 472.69,
       "etime": 475.57,
       "text": "Скорее всего... Ну, как, это моя стекуляция."
@@ -742,7 +742,7 @@
       "id": "65c9191265d0bbae0aa2f18f",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 475.65,
       "etime": 476.55,
       "text": "Я там..."
@@ -751,7 +751,7 @@
       "id": "65c9191265d0bbae0aa2f190",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 477.19,
       "etime": 491.66,
       "text": "лампу не держал, рядом не стоял, но из того, что я видел из всех этих обсуждений на купонах, вроде бы это касается в основном пользователей, которые сбывали."
@@ -760,7 +760,7 @@
       "id": "65c9191265d0bbae0aa2f191",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 491.7,
       "etime": 505.11,
       "text": "То есть, либо в самом Wave, либо в Live Messages, либо вот в чем-то таком, возможно, была недостаточная, был недостаточный экранизм, недостаточный эскейпинг, который позволил"
@@ -778,7 +778,7 @@
       "id": "65c9191265d0bbae0aa2f193",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 515.36,
       "etime": 522.7,
       "text": "Да, банальный XSS, помноженный, собственно, на тот факт, что адресные книги всех пользователей находятся на сервере и доступны в области."
@@ -814,7 +814,7 @@
       "id": "65c9191265d0bbae0aa2f197",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 535.53,
       "etime": 537.01,
       "text": "Да, они все в адресной книге."
@@ -823,7 +823,7 @@
       "id": "65c9191265d0bbae0aa2f198",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 537.03,
       "etime": 546.25,
       "text": "И, как я понимаю, еще там проблема в том, что такие контракты автоматически антиспам-системами считаются более доверенными."
@@ -832,7 +832,7 @@
       "id": "65c9191265d0bbae0aa2f199",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 546.29,
       "etime": 547.39,
       "text": "То есть те люди, с которыми..."
@@ -841,7 +841,7 @@
       "id": "65c9191265d0bbae0aa2f19a",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 548.22,
       "etime": 559.83,
       "text": "А взломанный пользователь уже успел пообщаться взаимно по электронной почте, считается проверенными, доверенными, и, соответственно, спам от них фильтруется, возможно, с меньшей пристрастностью."
@@ -850,7 +850,7 @@
       "id": "65c9191265d0bbae0aa2f19b",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 559.87,
       "etime": 563.63,
       "text": "Таким образом это и сделало эту рассылку более эффективной."
@@ -895,7 +895,7 @@
       "id": "65c9191265d0bbae0aa2f1a0",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 572.85,
       "etime": 573.89,
       "text": "Нет, она к IP не привязана."
@@ -904,7 +904,7 @@
       "id": "65c9191265d0bbae0aa2f1a1",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 573.91,
       "etime": 581.2,
       "text": "У них есть, опять же, мои спекуляции из того, что я представляю себя внутренней архитектурой Gmail."
@@ -913,7 +913,7 @@
       "id": "65c9191265d0bbae0aa2f1a2",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 581.26,
       "etime": 582.24,
       "text": "У них есть две куки."
@@ -922,7 +922,7 @@
       "id": "65c9191265d0bbae0aa2f1a3",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 582.28,
       "etime": 585.36,
       "text": "Одна на весь портал, как на весь Google.com."
@@ -931,7 +931,7 @@
       "id": "65c9191265d0bbae0aa2f1a4",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 585.44,
       "etime": 593.31,
       "text": "А вторая для более таких важных сервисов, в частности, для самого Gmail."
@@ -940,7 +940,7 @@
       "id": "65c9191265d0bbae0aa2f1a5",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 593.53,
       "etime": 595.77,
       "text": "Gmail аутентифицируется по iCook."
@@ -949,7 +949,7 @@
       "id": "65c9191265d0bbae0aa2f1a6",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 597.42,
       "etime": 607.71,
       "text": "Причем вот, может быть, или те пользователи, которые пользуются Gmail, они видели такую ситуацию, когда человек заходит в Gmail и видит, что имя его уже..."
@@ -958,7 +958,7 @@
       "id": "65c9191265d0bbae0aa2f1a7",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 609.35,
       "etime": 610.65,
       "text": "Забито, его изменить нельзя."
@@ -967,7 +967,7 @@
       "id": "65c9191265d0bbae0aa2f1a8",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 610.69,
       "etime": 612.79,
       "text": "А пароль вы можете отвести еще раз внизу приписочки."
@@ -976,7 +976,7 @@
       "id": "65c9191265d0bbae0aa2f1a9",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 612.83,
       "etime": 617.85,
       "text": "Мы иногда спрашиваем нашу пароль у уже залогиненных пользователей в целях улучшения безопасности."
@@ -985,7 +985,7 @@
       "id": "65c9191265d0bbae0aa2f1aa",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 617.91,
       "etime": 624.8,
       "text": "Чем именно Google руководствуется в тот момент, когда он так вот повторно у залогиненного пользователя спрашивает пароль, я сейчас никогда не знаю."
@@ -994,7 +994,7 @@
       "id": "65c9191265d0bbae0aa2f1ab",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 625.06,
       "etime": 632.44,
       "text": "Но есть ощущение, что это как раз происходит в той ситуации, когда Gmail-ная кука становится невалидной."
@@ -1003,7 +1003,7 @@
       "id": "65c9191265d0bbae0aa2f1ac",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 634.02,
       "etime": 637.2,
       "text": "тотальная кука остается все еще правильной с точки зрения Google."
@@ -1039,7 +1039,7 @@
       "id": "65c9191265d0bbae0aa2f1b0",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 654.11,
       "etime": 663.34,
       "text": "Да, видимо, то ли она упрощенная, то ли очень интересно, что получается, что мобильный сервис, видимо, верит не мобильным кукам."
@@ -1111,7 +1111,7 @@
       "id": "65c9191265d0bbae0aa2f1b8",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 707.58,
       "etime": 713.12,
       "text": "Сегодня произошло глобальное логинивание всех пользователей."
@@ -1120,7 +1120,7 @@
       "id": "65c9191265d0bbae0aa2f1b9",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 713.16,
       "etime": 714.17,
       "text": "Где-то примерно..."
@@ -1129,7 +1129,7 @@
       "id": "65c9191265d0bbae0aa2f1ba",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 715.42,
       "etime": 723.53,
       "text": "По состоянию, наверное, часа на два дня по Москве, судя по всему, Google взял и разлогинил вообще всех."
@@ -1138,7 +1138,7 @@
       "id": "65c9191265d0bbae0aa2f1bb",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 723.89,
       "etime": 726.39,
       "text": "И, соответственно, сделал все куки невалидными."
@@ -1147,7 +1147,7 @@
       "id": "65c9191265d0bbae0aa2f1bc",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 726.45,
       "etime": 730.59,
       "text": "Я так понимаю, что, наверное, они их там не раздали, они разбили, наверное."
@@ -1192,7 +1192,7 @@
       "id": "65c9191265d0bbae0aa2f1c1",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 767.13,
       "etime": 778.49,
       "text": "Вообще, сама по себе... Интересное дело, я так прикинул, а так, видимо, ночевать где-то после шести вечера в Калифорнии, в пятницу."
@@ -1201,7 +1201,7 @@
       "id": "65c9191265d0bbae0aa2f1c2",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 778.51,
       "etime": 784.66,
       "text": "Вечер, пятница, админы медленно разглядываются по домам, начинают пить свое пиво, и вот тут-то"
@@ -1219,7 +1219,7 @@
       "id": "65c9191265d0bbae0aa2f1c4",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 787.63,
       "etime": 790.95,
       "text": "Люди, да, грамотно начали вовремя."
@@ -1255,7 +1255,7 @@
       "id": "65c9191265d0bbae0aa2f1c8",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 807.48,
       "etime": 807.94,
       "text": "Ну, действительно."
@@ -1264,7 +1264,7 @@
       "id": "65c9191265d0bbae0aa2f1c9",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 811.7,
       "etime": 819.15,
       "text": "В общем, привычные отличать спам от неспама, и они обычно понимают, что не надо ходить туда, куда ходить не надо."
@@ -1273,7 +1273,7 @@
       "id": "65c9191265d0bbae0aa2f1ca",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 819.21,
       "etime": 828.34,
       "text": "Но с точки зрения статистического пользователя, а, естественно, гуглеет большинство от знакомого человека, ему приходит письмо."
@@ -1282,7 +1282,7 @@
       "id": "65c9191265d0bbae0aa2f1cb",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 829.56,
       "etime": 831.7,
       "text": "где есть какая-то ссылка."
@@ -1291,7 +1291,7 @@
       "id": "65c9191265d0bbae0aa2f1cc",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 831.74,
       "etime": 836.53,
       "text": "Скорее всего, он особенно не будет вчитываться, что там написано, и благополучно по ним пойдет."
@@ -2002,7 +2002,7 @@
       "id": "65c9191265d0bbae0aa2f21b",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1178.81,
       "etime": 1180.99,
       "text": "Извини, я тебя потерял."
@@ -2011,7 +2011,7 @@
       "id": "65c9191265d0bbae0aa2f21c",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1181.51,
       "etime": 1185.07,
       "text": "Правила для разработчиков, которые..."
@@ -2065,7 +2065,7 @@
       "id": "65c9191265d0bbae0aa2f222",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1210.36,
       "etime": 1212.72,
       "text": "Ну, я тоже могу соврать."
@@ -2074,7 +2074,7 @@
       "id": "65c9191265d0bbae0aa2f223",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1213.44,
       "etime": 1214.36,
       "text": "Хотя, в общем..."
@@ -2083,7 +2083,7 @@
       "id": "65c9191265d0bbae0aa2f224",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1217.29,
       "etime": 1223.64,
       "text": "Есть, конечно, набор правил, которые позволяют решить действительно 90% правил и проблем."
@@ -2092,7 +2092,7 @@
       "id": "65c9191265d0bbae0aa2f225",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1223.68,
       "etime": 1231.74,
       "text": "Собственно, XSS и проблемы безопасности, которые возникают от XSS, это ничего нового."
@@ -2101,7 +2101,7 @@
       "id": "65c9191265d0bbae0aa2f226",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1231.78,
       "etime": 1233.5,
       "text": "Проблема стара как нет."
@@ -2110,7 +2110,7 @@
       "id": "65c9191265d0bbae0aa2f227",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1233.54,
       "etime": 1242.06,
       "text": "Это неправильная или недостаточная фильтрация того, что поступает в наши программы на вход со стороны пользователя."
@@ -2119,7 +2119,7 @@
       "id": "65c9191265d0bbae0aa2f228",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1242.1,
       "etime": 1246.32,
       "text": "Если бы все программисты всегда во всем мире проверяли"
@@ -2128,7 +2128,7 @@
       "id": "65c9191265d0bbae0aa2f229",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1247.34,
       "etime": 1267.95,
       "text": "все, что им приходит из внешнего мира, из их программы, и убеждали, что там все правильно, то не было бы таких проблем, как CSS, не было бы таких проблем, как SQL-инъекции, не было бы срывов стека, которые были 5 лет назад еще бичом, и так далее, и тому подобное."
@@ -2137,7 +2137,7 @@
       "id": "65c9191265d0bbae0aa2f22a",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1268.59,
       "etime": 1271.6,
       "text": "Сотен тысяч проблем, наверное, никогда бы не случилось."
@@ -2146,7 +2146,7 @@
       "id": "65c9191265d0bbae0aa2f22b",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1271.64,
       "etime": 1275.84,
       "text": "Проверка ввода — это буквально то, что каждый программист должен..."
@@ -2155,7 +2155,7 @@
       "id": "65c9191265d0bbae0aa2f22c",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1277.02,
       "etime": 1283.13,
       "text": "написать себе и повесить перед глазами или выжечь каленым железом на левой руке или на правой руке."
@@ -2164,7 +2164,7 @@
       "id": "65c9191265d0bbae0aa2f22d",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1283.23,
       "etime": 1285.42,
       "text": "Угу."
@@ -2497,7 +2497,7 @@
       "id": "65c9191265d0bbae0aa2f252",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1450.27,
       "etime": 1452.06,
       "text": "Да, я здесь."
@@ -2515,7 +2515,7 @@
       "id": "65c9191265d0bbae0aa2f254",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1456.28,
       "etime": 1460.64,
       "text": "Да, подвел меня провайдер, неназываемый, чтобы не давать антирекламу."
@@ -2524,7 +2524,7 @@
       "id": "65c9191265d0bbae0aa2f255",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1463.18,
       "etime": 1464.2,
       "text": "Ну, собственно, да."
@@ -2533,7 +2533,7 @@
       "id": "65c9191265d0bbae0aa2f256",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1464.26,
       "etime": 1466.66,
       "text": "Я думаю, что как раз я мысль свою выразил."
@@ -2542,7 +2542,7 @@
       "id": "65c9191265d0bbae0aa2f257",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1466.74,
       "etime": 1482.1,
       "text": "Если бы программисты ответственно подходили к тому, что они принимаются со стороны пользователей, со стороны внешних программ, то львиная доля проблем, я думаю, 80% вообще всех проблем безопасности, удалось бы избежать."
@@ -2551,7 +2551,7 @@
       "id": "65c9191265d0bbae0aa2f258",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1482.16,
       "etime": 1485.42,
       "text": "Соответственно, в этом смысле совершенно не исключение."
@@ -2578,7 +2578,7 @@
       "id": "65c9191265d0bbae0aa2f25b",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1504.08,
       "etime": 1506.84,
       "text": "Давайте попробуем в ролях."
@@ -2596,7 +2596,7 @@
       "id": "65c9191265d0bbae0aa2f25d",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1508.46,
       "etime": 1509.18,
       "text": "На пальцах."
@@ -2605,7 +2605,7 @@
       "id": "65c9191265d0bbae0aa2f25e",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1509.22,
       "etime": 1515.23,
       "text": "Вот представь себе, ты пользуешься почтой и читаешь ее через веб."
@@ -2614,7 +2614,7 @@
       "id": "65c9191265d0bbae0aa2f25f",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1519.62,
       "etime": 1525.88,
       "text": "письмо HTML, то есть в котором язык, который находится в HTML."
@@ -2623,7 +2623,7 @@
       "id": "65c9191265d0bbae0aa2f260",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1527.02,
       "etime": 1529.42,
       "text": "Внутри этого HTML есть JavaScript."
@@ -2632,7 +2632,7 @@
       "id": "65c9191265d0bbae0aa2f261",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1529.62,
       "etime": 1544.55,
       "text": "В обычной ситуации, в типичной ситуации, если бы всех уровней защиты не было, это письмо пришло бы к тебе, и когда бы ты открыл его в браузере и посмотрел бы на него, то этот JavaScript в твоем браузере исполнился."
@@ -2641,7 +2641,7 @@
       "id": "65c9191265d0bbae0aa2f262",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1547.32,
       "etime": 1556.89,
       "text": "И, соответственно, мой зловредный JavaScript исполнится бы в твоем браузере, имея доступ к твоим куклам, ну и мог бы уже сделать с ними все, что ему бы пришло в голову."
@@ -2650,7 +2650,7 @@
       "id": "65c9191265d0bbae0aa2f263",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1556.93,
       "etime": 1560.07,
       "text": "На что бы моя злобная фантазия ее хватила."
@@ -2668,7 +2668,7 @@
       "id": "65c9191265d0bbae0aa2f265",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1564.14,
       "etime": 1568.8,
       "text": "Да, дальше эта кука отправляется на сторонний сервер, и если она не привязана к IP-адресу,"
@@ -2677,7 +2677,7 @@
       "id": "65c9191265d0bbae0aa2f266",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1569.88,
       "etime": 1578.84,
       "text": "то я благополучно беру эту куклу, вставляю ее себе в браузер и захожу читать свою почту, свою переписку с Маринкой."
@@ -2695,7 +2695,7 @@
       "id": "65c9191265d0bbae0aa2f268",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1582.2,
       "etime": 1594.89,
       "text": "Соответственно, чтобы такого не происходило, все писатели веб-почт очень тщательно относятся к содержимым писем, причем их показать пользователям."
@@ -2704,7 +2704,7 @@
       "id": "65c9191265d0bbae0aa2f269",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1594.91,
       "etime": 1599.17,
       "text": "Например, они убирают такие вещи, как..."
@@ -2713,7 +2713,7 @@
       "id": "65c9191265d0bbae0aa2f26a",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1600.99,
       "etime": 1604.39,
       "text": "JavaScript или как-то стараются его экранировать."
@@ -2722,7 +2722,7 @@
       "id": "65c9191265d0bbae0aa2f26b",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1604.43,
       "etime": 1608.41,
       "text": "Зачастую они стараются убирать прямые ссылки на внешние картинки."
@@ -2731,7 +2731,7 @@
       "id": "65c9191265d0bbae0aa2f26c",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1608.45,
       "etime": 1610.17,
       "text": "Или, по крайней мере, они старше веб-пользователей."
@@ -2740,7 +2740,7 @@
       "id": "65c9191265d0bbae0aa2f26d",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1610.19,
       "etime": 1619.78,
       "text": "Наверное, все пользователи веб-почты видели, что приходит письмо с картинками, а картинок самих нет, а есть только кнопочка «Показать картинки» или «Не показывать картинки»."
@@ -2749,7 +2749,7 @@
       "id": "65c9191265d0bbae0aa2f26e",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1619.84,
       "etime": 1621.8,
       "text": "Ну и так далее, и тому подобное."
@@ -2758,7 +2758,7 @@
       "id": "65c9191265d0bbae0aa2f26f",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1621.84,
       "etime": 1627.14,
       "text": "Вот если программист этой веб-почты где-то в чем-то ошибся в таком,"
@@ -2767,7 +2767,7 @@
       "id": "65c9191265d0bbae0aa2f270",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1630.79,
       "etime": 1634.89,
       "text": "скрипт исполнился в твоем браузере, и пусть мои."
@@ -2794,7 +2794,7 @@
       "id": "65c9191265d0bbae0aa2f273",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1650.83,
       "etime": 1654.37,
       "text": "Это зависит еще безусловно от браузера."
@@ -2803,7 +2803,7 @@
       "id": "65c9191265d0bbae0aa2f274",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1654.45,
       "etime": 1657.65,
       "text": "Браузер, который, скажем так, мы хотим новое,"
@@ -2812,7 +2812,7 @@
       "id": "65c9191265d0bbae0aa2f275",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1660.2,
       "etime": 1661.3,
       "text": "хуже защищены от этого."
@@ -2821,7 +2821,7 @@
       "id": "65c9191265d0bbae0aa2f276",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1661.32,
       "etime": 1664.68,
       "text": "В более новых браузерах иногда предпринимаются дополнительные шаги."
@@ -2830,7 +2830,7 @@
       "id": "65c9191265d0bbae0aa2f277",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1664.88,
       "etime": 1676.84,
       "text": "Какой-нибудь простой пример старой версии интернет-эксплора, пусть простите меня, занимались тем, что интерпретировали JavaScript внутри картинок."
@@ -2839,7 +2839,7 @@
       "id": "65c9191265d0bbae0aa2f278",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1676.88,
       "etime": 1680.08,
       "text": "То есть если у нас есть буквально почтимое сообщение,"
@@ -2848,7 +2848,7 @@
       "id": "65c9191265d0bbae0aa2f279",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1681.94,
       "etime": 1695.69,
       "text": "точнее, в любой HTML-страничке у нас есть тег вида image.src, указывающий на картинку, но по тому адресу находится на самом деле не картинка, а JavaScript, то этот JavaScript будет исполнен."
@@ -2857,7 +2857,7 @@
       "id": "65c9191265d0bbae0aa2f27a",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1695.71,
       "etime": 1697.43,
       "text": "Вот, например, такого вот проблема."
@@ -2866,7 +2866,7 @@
       "id": "65c9191265d0bbae0aa2f27b",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1697.47,
       "etime": 1703.77,
       "text": "Да, и в этом смысле, если ты бы читал свою почту из какого-то старого интернет-экспресса,"
@@ -2875,7 +2875,7 @@
       "id": "65c9191265d0bbae0aa2f27c",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1704.48,
       "etime": 1712.9,
       "text": "то просто сказав «покажи мне картинки с внешних срезов», ты бы мог оказаться уязвимым для такого рода атаки."
@@ -2884,7 +2884,7 @@
       "id": "65c9191265d0bbae0aa2f27d",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1713.06,
       "etime": 1721.69,
       "text": "Но, естественно, все-таки программисты-браузеры тоже не стоят на месте, поэтому такого рода ошибки стараются исправлять."
@@ -2893,7 +2893,7 @@
       "id": "65c9191265d0bbae0aa2f27e",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1721.71,
       "etime": 1723.87,
       "text": "В общем, их больше, чем одна."
@@ -2902,7 +2902,7 @@
       "id": "65c9191265d0bbae0aa2f27f",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1725.29,
       "etime": 1727.75,
       "text": "Но смысл схожий."
@@ -2911,7 +2911,7 @@
       "id": "65c9191265d0bbae0aa2f280",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1727.83,
       "etime": 1746.34,
       "text": "И, к сожалению, поскольку HTML-штука сложная, и все ее вариации тоже сложные, в части XSS, в части всяких схем, например, схемы JavaScript или еще чего-нибудь такого, то иногда бывает, что программисты не успевают затыкать все возможные дырки."
@@ -2920,7 +2920,7 @@
       "id": "65c9191265d0bbae0aa2f281",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1746.4,
       "etime": 1748.52,
       "text": "Такая война брони и снаряда."
@@ -2929,7 +2929,7 @@
       "id": "65c9191265d0bbae0aa2f282",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1748.56,
       "etime": 1751.17,
       "text": "Хакер же тоже в положении не сидел."
@@ -2992,7 +2992,7 @@
       "id": "65c9191265d0bbae0aa2f289",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1780.63,
       "etime": 1784.87,
       "text": "Ну, руки ровно от того места, ниже поясницы, откуда они растут."
@@ -3010,7 +3010,7 @@
       "id": "65c9191265d0bbae0aa2f28b",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1791.45,
       "etime": 1802.62,
       "text": "Да, их надо разгонять по скорости, приближающейся к космической, или уже по сторонам ближайшей теоретической стены."
@@ -3190,7 +3190,7 @@
       "id": "65c9191265d0bbae0aa2f29f",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1901.11,
       "etime": 1902.65,
       "text": "Тут всегда один ответ."
@@ -3199,7 +3199,7 @@
       "id": "65c9191265d0bbae0aa2f2a0",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1903.49,
       "etime": 1905.81,
       "text": "Это проблема в ДНК, в биологии уже."
@@ -3208,7 +3208,7 @@
       "id": "65c9191265d0bbae0aa2f2a1",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1906.07,
       "etime": 1909.71,
       "text": "Ты знаешь, на деле, я даже не знаю, что тебе сказать."
@@ -3217,7 +3217,7 @@
       "id": "65c9191265d0bbae0aa2f2a2",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1912.63,
       "etime": 1914.92,
       "text": "Ну да, и так оно бывает."
@@ -3226,7 +3226,7 @@
       "id": "65c9191265d0bbae0aa2f2a3",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1915.32,
       "etime": 1919.61,
       "text": "Жизнь, она многодатнее, чем любая наша фантазия."
@@ -3316,7 +3316,7 @@
       "id": "65c9191265d0bbae0aa2f2ad",
       "issue": 183,
       "type": "cc",
-      "author": "Guest",
+      "author": "Vladimir_Security",
       "stime": 1951.19,
       "etime": 1952.45,
       "text": "Спасибо вам."

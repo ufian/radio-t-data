@@ -9211,7 +9211,7 @@
       "id": "65c9a55295c718673a5306ec",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4280.27,
       "etime": 4282.72,
       "text": "Секундочку, я отключу."
@@ -9337,7 +9337,7 @@
       "id": "65c9a55295c718673a5306fa",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4322.38,
       "etime": 4326.02,
       "text": "Я скорее согласен с этим."
@@ -9346,7 +9346,7 @@
       "id": "65c9a55295c718673a5306fb",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4326.08,
       "etime": 4330.66,
       "text": "Дело в том, что это маркетинговая штука, микросервисы."
@@ -9454,7 +9454,7 @@
       "id": "65c9a55295c718673a530707",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4411.32,
       "etime": 4411.7,
       "text": "Давай."
@@ -9472,7 +9472,7 @@
       "id": "65c9a55295c718673a530709",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4430.1,
       "etime": 4440.64,
       "text": "Если этого не понимать, то можно наломать дров и, соответственно, принять неправильные решения."
@@ -9823,7 +9823,7 @@
       "id": "65c9a55295c718673a530730",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4566.91,
       "etime": 4567.95,
       "text": "Других сервисов?"
@@ -9859,7 +9859,7 @@
       "id": "65c9a55295c718673a530734",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4594.64,
       "etime": 4597.91,
       "text": "Сначала ее сделать в рамках одной системы."
@@ -9886,7 +9886,7 @@
       "id": "65c9a55295c718673a530737",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4610.98,
       "etime": 4611.94,
       "text": "Безусловно."
@@ -9895,7 +9895,7 @@
       "id": "65c9a55295c718673a530738",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4612.06,
       "etime": 4616.34,
       "text": "Но меняется сложность реализации всего этого."
@@ -9904,7 +9904,7 @@
       "id": "65c9a55295c718673a530739",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4616.36,
       "etime": 4620.14,
       "text": "И сложность сопровождения."
@@ -9931,7 +9931,7 @@
       "id": "65c9a55295c718673a53073c",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4633.57,
       "etime": 4638.43,
       "text": "И в рамках него, естественно, возникнут контексты и целостность их поддерживает."
@@ -10012,7 +10012,7 @@
       "id": "65c9a55295c718673a530745",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4684.88,
       "etime": 4688.44,
       "text": "И ничего страшного не будет, если ее вынести..."
@@ -10021,7 +10021,7 @@
       "id": "65c9a55295c718673a530746",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4690.69,
       "etime": 4697.37,
       "text": "И она не будет отвлекать от основных сущностей модели."
@@ -10030,7 +10030,7 @@
       "id": "65c9a55295c718673a530747",
       "issue": 432,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "Listener_Aleksandr",
       "stime": 4697.47,
       "etime": 4700.23,
       "text": "И будет повторно использоваться."

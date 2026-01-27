@@ -5860,3 +5860,68 @@ rules:
   reason: Очень короткие реплики (0.06 сек каждая) с односложным 'Да.' в случайных
     местах диалога - типичные артефакты распознавания коротких реакций/подтверждений,
     не атрибутированные никому из участников
+
+# Session 2: Short artifacts from manual_review (≤5 sec, no clear context)
+- id: artifact_e293_SPEAKER_02
+  type: rename_episode
+  episode: 293
+  from: SPEAKER_02
+  to: _artifact
+  reason: '5 sec, 4 replies, self-referencing context (ошибка сегментации)'
+
+- id: artifact_e296_SPEAKER_05
+  type: rename_episode
+  episode: 296
+  from: SPEAKER_05
+  to: _artifact
+  reason: '5 sec, 3 replies, no clear context (33% Gray)'
+
+- id: artifact_e505_SPEAKER_02
+  type: rename_episode
+  episode: 505
+  from: SPEAKER_02
+  to: _artifact
+  reason: '5 sec, 2 replies, no clear context (25% Ksenks)'
+
+- id: artifact_e618_SPEAKER_01
+  type: rename_episode
+  episode: 618
+  from: SPEAKER_01
+  to: _artifact
+  reason: '5 sec, 5 replies, no clear context (38% Bobuk)'
+
+- id: artifact_e626_SPEAKER_07
+  type: rename_episode
+  episode: 626
+  from: SPEAKER_07
+  to: _artifact
+  reason: '5 sec, 3 replies, no clear context (33% Anya)'
+
+- id: artifact_e629_SPEAKER_03
+  type: rename_episode
+  episode: 629
+  from: SPEAKER_03
+  to: _artifact
+  reason: '5 sec, 5 replies, no clear context (30% Ksenks)'
+
+# Session 3: SPEAKER_MISATTRIBUTED → _artifact (short isolated replies)
+- id: artifact_e109_SPEAKER_MISATTRIBUTED_Umputun
+  type: rename_episode
+  episode: 109
+  from: SPEAKER_MISATTRIBUTED_Umputun
+  to: _artifact
+  reason: 'All 4 replies are short artifacts (0.9-3.4s). Umputun absent from episode.'
+
+- id: artifact_e612_SPEAKER_MISATTRIBUTED_Umputun
+  type: rename_episode
+  episode: 612
+  from: SPEAKER_MISATTRIBUTED_Umputun
+  to: _artifact
+  reason: 'Both replies are short artifacts (1.6-6.1s). Umputun absent from episode.'
+
+- id: artifact_e612_SPEAKER_MISATTRIBUTED_Alek.sys
+  type: rename_episode
+  episode: 612
+  from: SPEAKER_MISATTRIBUTED_Alek.sys
+  to: _artifact
+  reason: 'All 3 replies are short artifacts (0.4-1.4s). Alek.sys absent from episode.'
