@@ -606,3 +606,109 @@ rules:
   from: SPEAKER_02
   to: Ksenks
   reason: "Ksenks - ведущая."
+
+# ============================================
+# Guest/GuestN identification from context
+# ============================================
+
+# === Episode 20 ===
+- id: manual_e020_Guest_to_Guest_Nikolay
+  type: rename_episode
+  episode: 20
+  from: Guest
+  to: Guest_Nikolay
+  reason: "Guest представляется: 'Меня зовут Николай'."
+
+# === Episode 35 ===
+- id: manual_e035_Guest_to_record_Vyacheslav
+  type: rename_episode
+  episode: 35
+  from: Guest
+  to: record_Vyacheslav
+  reason: "Bobuk обращается: 'Да, Вячеслав'. Звонок слушателя."
+
+# === Episode 72 ===
+- id: manual_e072_Guest_to_Guest_Alexey
+  type: rename_episode
+  episode: 72
+  from: Guest
+  to: Guest_Alexey
+  reason: "Umputun: 'Леша, как тебя называют?'. Гость отвечает."
+
+# === Episode 75 ===
+- id: manual_e075_Guest_to_record_Anton
+  type: rename_episode
+  episode: 75
+  from: Guest
+  to: record_Anton
+  reason: "Аудио-вставка: 'С вами был Антон из Израиля'."
+
+# === Episode 100 ===
+- id: manual_e100_Guest6_to_Gimlis
+  type: rename_episode
+  episode: 100
+  from: Guest6
+  to: Gimlis
+  reason: "Umputun: 'Здравствуй, Гимлис' @ 5445s. Известный подкастер."
+
+# === Episode 110 ===
+- id: manual_e110_Guest_to_Guest_Dima
+  type: rename_episode
+  episode: 110
+  from: Guest
+  to: Guest_Dima
+  reason: "Umputun: 'я включаю Диму'."
+
+# === Episode 188 ===
+- id: manual_e188_Guest_to_Guest_Pasha
+  type: rename_episode
+  episode: 188
+  from: Guest
+  to: Guest_Pasha
+  reason: "Вопрос 'Саша или Паша?', ответ 'Паша'."
+
+# === Episode 508 ===
+- id: manual_e508_Guest_to_Guest_Dmitry_Google
+  type: rename_episode
+  episode: 508
+  from: Guest
+  to: Guest_Dmitry_Google
+  reason: "Упоминание 'тезка твой придет, Грэй' - Дмитрий из Google."
+
+# === Episode 888 ===
+- id: manual_e888_Guest_to_Guest_Andrey
+  type: rename_episode
+  episode: 888
+  from: Guest
+  to: Guest_Andrey
+  reason: "Guest представляется: 'Меня зовут Андрей' (94.3s)."
+
+- id: manual_e888_Guest1_to_Guest_Andrey
+  type: rename_episode
+  episode: 888
+  from: Guest1
+  to: Guest_Andrey
+  reason: "Guest1 = Guest_Andrey (тот же человек)."
+
+# === Episode 891 ===
+- id: manual_e891_Guest_to_Guest_Mikhail
+  type: rename_episode
+  episode: 891
+  from: Guest
+  to: Guest_Mikhail
+  reason: "Guest представляется: 'Меня зовут Михаил' (144s)."
+
+# === Episode 972 ===
+- id: manual_e972_Guest_to_Guest_Andrey_972
+  type: rename_episode
+  episode: 972
+  from: Guest
+  to: Guest_Andrey_972
+  reason: "Guest представляется: 'Меня зовут Андрей' (61.9s). Другой Андрей, не из ep888."
+
+- id: manual_e972_Guest1_to_Guest_Andrey_972
+  type: rename_episode
+  episode: 972
+  from: Guest1
+  to: Guest_Andrey_972
+  reason: "Guest1 = Guest_Andrey_972 (тот же человек)."
