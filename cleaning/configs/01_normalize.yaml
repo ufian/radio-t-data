@@ -107,3 +107,9 @@ rules:
     from: ["_ad_"]
     to: "_ad"
     reason: "Нормализация рекламных вставок"
+
+  - id: normalize_speaker_99
+    type: normalize
+    from: ["SPEAKER_99"]
+    to: "_artifact_99"
+    reason: "SPEAKER_99 — аудио-артефакты, джинглы, звуковые эффекты"
