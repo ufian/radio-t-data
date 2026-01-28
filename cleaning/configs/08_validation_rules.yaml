@@ -712,3 +712,348 @@ rules:
   from: Guest1
   to: Guest_Andrey_972
   reason: "Guest1 = Guest_Andrey_972 (тот же человек)."
+
+# ============================================
+# Episode 202 - Jubilee episode guests
+# ============================================
+
+- id: manual_e202_Guest1_to_Guest_Ruslan
+  type: rename_episode
+  episode: 202
+  from: Guest1
+  to: Guest_Ruslan
+  reason: "Guest представляется: 'Меня зовут Руслан' (1289s)."
+
+- id: manual_e202_Guest2_to_Guest_Leya
+  type: rename_episode
+  episode: 202
+  from: Guest2
+  to: Guest_Leya
+  reason: "Umputun: 'Здравствуй, Лея' (2036s)."
+
+- id: manual_e202_Guest4_to_Anton_Nikitchuk
+  type: rename_episode
+  episode: 202
+  from: Guest4
+  to: Anton_Nikitchuk
+  reason: "'Меня зовут Никитчук Антон' - представитель SPB.net user group (2313s)."
+
+- id: manual_e202_Guest3_to_Guest_Unknown
+  type: rename_episode
+  episode: 202
+  from: Guest3
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод, гость не представился."
+
+- id: manual_e202_Guest5_to_Guest_Unknown
+  type: rename_episode
+  episode: 202
+  from: Guest5
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод, гость не представился."
+
+- id: manual_e202_Guest6_to_Guest_Unknown
+  type: rename_episode
+  episode: 202
+  from: Guest6
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод, гость не представился."
+
+- id: manual_e202_Guest7_to_Guest_Unknown
+  type: rename_episode
+  episode: 202
+  from: Guest7
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод, гость не представился."
+
+- id: manual_e202_Guest8_to_Guest_Unknown
+  type: rename_episode
+  episode: 202
+  from: Guest8
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод, гость не представился."
+
+- id: manual_e202_Guest9_to_Guest_Unknown
+  type: rename_episode
+  episode: 202
+  from: Guest9
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод, гость не представился."
+
+- id: manual_e202_Guest10_to_Guest_Unknown
+  type: rename_episode
+  episode: 202
+  from: Guest10
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод, гость не представился."
+
+- id: manual_e202_Guest11_to_Guest_Unknown
+  type: rename_episode
+  episode: 202
+  from: Guest11
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод, гость не представился."
+
+- id: manual_e202_Guest12_to_Guest_Unknown
+  type: rename_episode
+  episode: 202
+  from: Guest12
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод, гость не представился."
+
+# ============================================
+# Episode 150 - Jubilee episode (27 guests)
+# ============================================
+
+- id: manual_e150_Guest3_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest3
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest4_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest4
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest5_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest5
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest6_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest6
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest7_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest7
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest8_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest8
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest9_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest9
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest10_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest10
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest11_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest11
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest12_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest12
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest13_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest13
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest14_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest14
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest15_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest15
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest16_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest16
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest17_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest17
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest18_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest18
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest19_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest19
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest20_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest20
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest21_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest21
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest22_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest22
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest23_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest23
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest24_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest24
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest25_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest25
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest26_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest26
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest27_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest27
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest28_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest28
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+- id: manual_e150_Guest29_to_Guest_Unknown
+  type: rename_episode
+  episode: 150
+  from: Guest29
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 150, гость не представился."
+
+# ============================================
+# Episode 100 - Jubilee episode remaining guests
+# ============================================
+
+- id: manual_e100_Guest1_to_Guest_Unknown
+  type: rename_episode
+  episode: 100
+  from: Guest1
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 100, гость не представился."
+
+- id: manual_e100_Guest2_to_Guest_Unknown
+  type: rename_episode
+  episode: 100
+  from: Guest2
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 100, гость не представился."
+
+- id: manual_e100_Guest3_to_Guest_Unknown
+  type: rename_episode
+  episode: 100
+  from: Guest3
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 100, гость не представился."
+
+- id: manual_e100_Guest5_to_Guest_Unknown
+  type: rename_episode
+  episode: 100
+  from: Guest5
+  to: Guest_Unknown
+  reason: "Юбилейный эпизод 100, гость не представился."
+
+# ============================================
+# Other episodes - anonymous callers
+# ============================================
+
+- id: manual_e034_Guest2_to_Guest_Unknown
+  type: rename_episode
+  episode: 34
+  from: Guest2
+  to: Guest_Unknown
+  reason: "Анонимный звонок, имя не названо."
+
+- id: manual_e049_Guest2_to_Guest_Unknown
+  type: rename_episode
+  episode: 49
+  from: Guest2
+  to: Guest_Unknown
+  reason: "Анонимный звонок, имя не названо."
+
+- id: manual_e787_Guest1_to_Guest_Unknown
+  type: rename_episode
+  episode: 787
+  from: Guest1
+  to: Guest_Unknown
+  reason: "Ник 'Заяц', реальное имя неизвестно."
+
+- id: manual_e994_Guest1_to_Guest_Unknown
+  type: rename_episode
+  episode: 994
+  from: Guest1
+  to: Guest_Unknown
+  reason: "Гость не представился ('Я гость')."
