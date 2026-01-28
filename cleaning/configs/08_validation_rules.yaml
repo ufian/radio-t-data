@@ -1,0 +1,608 @@
+version: 1
+name: Validation-based speaker assignments
+priority: 8
+description: High-confidence speaker assignments from validation analysis
+rules:
+# === Episode 214 ===
+- id: manual_e214_SPEAKER_01_to_Umputun
+  type: rename_episode
+  episode: 214
+  from: SPEAKER_01
+  to: Umputun
+  reason: "Bobuk говорит 'Женя, с днем рождения', SPEAKER_01 отвечает 'Спасибо'. Umputun = Евгений/Женя."
+
+- id: manual_e214_SPEAKER_06_to_artifact
+  type: rename_episode
+  episode: 214
+  from: SPEAKER_06
+  to: _artifact
+  reason: "6 коротких реплик (7 сек): 'Гад какой', 'Кстати, да', 'Пока' - ошибки распознавания."
+
+# === Episode 217 ===
+- id: manual_e217_SPEAKER_06_to_KirillGotovtsev
+  type: rename_episode
+  episode: 217
+  from: SPEAKER_06
+  to: KirillGotovtsev
+  reason: "Bobuk представляет: 'В качестве гостя у нас сегодня Кирилл Готовцев. Многие знают его как Мсаду.'"
+
+- id: manual_e217_PetrDidenko_to_KirillGotovtsev
+  type: rename_episode
+  episode: 217
+  from: PetrDidenko
+  to: KirillGotovtsev
+  reason: "Ошибочная атрибуция. Пётр Диденко не участвовал. Реплики чередуются с SPEAKER_06 и продолжают одну мысль."
+
+- id: manual_e217_SPEAKER_02_to_artifact
+  type: rename_episode
+  episode: 217
+  from: SPEAKER_02
+  to: _artifact
+  reason: "6 коротких разрозненных реплик (11 сек): 'Какой?', 'Он злобный', 'Да' - ошибки распознавания."
+
+# === Episode 218 ===
+- id: manual_e218_SPEAKER_01_to_artifact
+  type: rename_episode
+  episode: 218
+  from: SPEAKER_01
+  to: _artifact
+  reason: "10 коротких реплик (16 сек) - ошибки распознавания."
+
+- id: manual_e218_SPEAKER_06_to_artifact
+  type: rename_episode
+  episode: 218
+  from: SPEAKER_06
+  to: _artifact
+  reason: "3 коротких реплики (4 сек): 'Да-да-да', 'А в России есть?', 'Ну, я...' - ошибки распознавания."
+
+- id: manual_e218_SPEAKER_MISATTRIBUTED_LAVALE_to_artifact
+  type: rename_episode
+  episode: 218
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: _artifact
+  reason: "1 реплика (2 сек). Лаваль не участвовала в выпуске."
+
+- id: manual_e218_SPEAKER_MISATTRIBUTED_ELDAR_to_artifact
+  type: rename_episode
+  episode: 218
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: _artifact
+  reason: "2 реплики (6 сек). Эльдар Муртазин не участвовал в выпуске."
+
+# === Episode 232 ===
+- id: manual_e232_SPEAKER_07_to_Golodniy
+  type: rename_episode
+  episode: 232
+  from: SPEAKER_07
+  to: Golodniy
+  reason: "Марина обращается 'Да, голодный?', представляется 'Меня зовут Голодный'. Голодный - отдельный гость, не PetrDidenko."
+
+- id: manual_e232_SPEAKER_04_to_record_Vasily
+  type: rename_episode
+  episode: 232
+  from: SPEAKER_04
+  to: record_Vasily
+  reason: "Umputun: 'Василий, с нами...', отвечает 'я в Лос-Анджелесе нахожусь'. Звонок слушателя по Skype."
+
+# === Episode 234 ===
+- id: manual_e234_SPEAKER_03_to_Guest_Lena
+  type: rename_episode
+  episode: 234
+  from: SPEAKER_03
+  to: Guest_Lena
+  reason: "Umputun: 'Лена, здравствуй'. Гостья Лена, второй раз в эфире, SMM-специалист."
+
+# === Episode 237 ===
+- id: manual_e237_SPEAKER_02_to_Plushev
+  type: rename_episode
+  episode: 237
+  from: SPEAKER_02
+  to: Plushev
+  reason: "Umputun: 'гость, который пришел к нам, господин Плющев'. Рассказывает про 'Вести.нет'."
+
+# === Episode 239 ===
+- id: manual_e239_SPEAKER_05_to_Guest_Unknown
+  type: rename_episode
+  episode: 239
+  from: SPEAKER_05
+  to: Guest_Unknown
+  reason: "Представлен как гость, но имя не установлено."
+
+# === Episode 241 ===
+- id: manual_e241_SPEAKER_01_to_Yegor_JetBrains
+  type: rename_episode
+  episode: 241
+  from: SPEAKER_01
+  to: Yegor_JetBrains
+  reason: "Явное представление: 'Здравствуй, дорогой гость, ты кто?'"
+
+# === Episode 244 ===
+- id: manual_e244_SPEAKER_01_to_Marin_k_a
+  type: rename_episode
+  episode: 244
+  from: SPEAKER_01
+  to: Marin_k_a
+  reason: "Bobuk: 'Мариночка, ты знаешь...', отвечает SPEAKER_01."
+
+# === Episode 247 ===
+- id: manual_e247_SPEAKER_03_to_Guest_Lena
+  type: rename_episode
+  episode: 247
+  from: SPEAKER_03
+  to: Guest_Lena
+  reason: "Umputun: 'Лена пришла к нам вообще даже не по первому зову'."
+
+- id: manual_e247_SPEAKER_01_to_record_Vasilius
+  type: rename_episode
+  episode: 247
+  from: SPEAKER_01
+  to: record_Vasilius
+  reason: "Umputun: 'В Ассисуале, который у нас тут тоже не первый'."
+
+# === Episode 250 ===
+- id: manual_e250_SPEAKER_05_to_Alexey_Abashev
+  type: rename_episode
+  episode: 250
+  from: SPEAKER_05
+  to: Alexey_Abashev
+  reason: "Bobuk: 'попробую подключить нашего штатного звуковика'."
+
+- id: manual_e250_SPEAKER_04_to_Svan
+  type: rename_episode
+  episode: 250
+  from: SPEAKER_04
+  to: Svan
+  reason: "Bobuk: 'Сван, ты тут?' - отвечает SPEAKER_04."
+
+# === Episode 252 ===
+- id: manual_e252_SPEAKER_03_to_Alexmak
+  type: rename_episode
+  episode: 252
+  from: SPEAKER_03
+  to: Alexmak
+  reason: "'Алекс Мак, автор блога alexmak.net и вообще Алекс Пацай.'"
+
+- id: manual_e252_SPEAKER_04_to_Grigoriy_Ruby
+  type: rename_episode
+  episode: 252
+  from: SPEAKER_04
+  to: Grigoriy_Ruby
+  reason: "'Я автор подкаста безымянного Руби, который rubi.arpod'."
+
+- id: manual_e252_SPEAKER_02_to_Plushev
+  type: rename_episode
+  episode: 252
+  from: SPEAKER_02
+  to: Plushev
+  reason: "Umputun: 'К нам тут господин Плющев присоединился'."
+
+# === Episode 253 ===
+- id: manual_e253_SPEAKER_00_to_record_Mikhail
+  type: rename_episode
+  episode: 253
+  from: SPEAKER_00
+  to: record_Mikhail
+  reason: "Аудио-поздравление: 'Меня зовут Михаил'."
+
+# === Episode 254 ===
+- id: manual_e254_SPEAKER_01_to_NikolayDobrovolsky
+  type: rename_episode
+  episode: 254
+  from: SPEAKER_01
+  to: NikolayDobrovolsky
+  reason: "Bobuk: 'Одного зовут Николай Добровольский'."
+
+- id: manual_e254_SPEAKER_06_to_AndreyAmelyanchuk
+  type: rename_episode
+  episode: 254
+  from: SPEAKER_06
+  to: AndreyAmelyanchuk
+  reason: "Bobuk: 'Его зовут Андрей Амельянчук'."
+
+# === Episode 255 ===
+- id: manual_e255_SPEAKER_01_to_record_Vasily
+  type: rename_episode
+  episode: 255
+  from: SPEAKER_01
+  to: record_Vasily
+  reason: "Umputun: 'Есть у нас в Ассесуале, так же известный как Василий'."
+
+- id: manual_e255_SPEAKER_00_to_Guest_Corporate
+  type: rename_episode
+  episode: 255
+  from: SPEAKER_00
+  to: Guest_Corporate
+  reason: "'Из корпорации', имя не установлено."
+
+# === Episode 259 ===
+- id: manual_e259_SPEAKER_05_to_Golodniy
+  type: rename_episode
+  episode: 259
+  from: SPEAKER_05
+  to: Golodniy
+  reason: "Umputun: 'дорогого гостя у нас сегодня голодный'."
+
+- id: manual_e259_SPEAKER_MISATTRIBUTED_PETR_to_Golodniy
+  type: rename_episode
+  episode: 259
+  from: SPEAKER_MISATTRIBUTED_PETR
+  to: Golodniy
+  reason: "Ошибка атрибуции. Чередуется с SPEAKER_05 (Golodniy)."
+
+- id: manual_e259_SPEAKER_MISATTRIBUTED_ELDAR_to_Golodniy
+  type: rename_episode
+  episode: 259
+  from: SPEAKER_MISATTRIBUTED_ELDAR
+  to: Golodniy
+  reason: "Ошибка атрибуции. Чередуется с SPEAKER_05 (Golodniy)."
+
+# === Episode 261 ===
+- id: manual_e261_SPEAKER_MISATTRIBUTED_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 261
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: "Лаваль не участвовала. Единственная женщина - Марина."
+
+# === Episode 262 ===
+- id: manual_e262_SPEAKER_00_to_Guest_Alexey
+  type: rename_episode
+  episode: 262
+  from: SPEAKER_00
+  to: Guest_Alexey
+  reason: "'Часто у нас бывает', 'со стороны корпорации Зла' (Java-разработчик)."
+
+- id: manual_e262_SPEAKER_02_to_Guest_Vera
+  type: rename_episode
+  episode: 262
+  from: SPEAKER_02
+  to: Guest_Vera
+  reason: "Umputun: 'девушка, красавица, комсомолка'."
+
+- id: manual_e262_SPEAKER_03_to_Guest_Victor
+  type: rename_episode
+  episode: 262
+  from: SPEAKER_03
+  to: Guest_Victor
+  reason: "'Участвую в подкасте The Art of Programming' (Гамуса)."
+
+# === Episode 267 ===
+- id: manual_e267_SPEAKER_MISATTRIBUTED_LAVALE_to_Marin_k_a
+  type: rename_episode
+  episode: 267
+  from: SPEAKER_MISATTRIBUTED_LAVALE
+  to: Marin_k_a
+  reason: "Лаваль не участвовала. Единственная женщина - Марина."
+
+# === Episode 270 ===
+- id: manual_e270_SPEAKER_05_to_record_Vasily_270
+  type: rename_episode
+  episode: 270
+  from: SPEAKER_05
+  to: record_Vasily_270
+  reason: "Звонок слушателя Василий."
+
+# === Episode 275 ===
+- id: manual_e275_SPEAKER_01_to_AndreyBreslav
+  type: rename_episode
+  episode: 275
+  from: SPEAKER_01
+  to: AndreyBreslav
+  reason: "Явное представление гостя Андрея Бреслава."
+
+# === Episode 285 ===
+- id: manual_e285_SPEAKER_04_to_Natali_Yandex
+  type: rename_episode
+  episode: 285
+  from: SPEAKER_04
+  to: Natali_Yandex
+  reason: "Гостья Натали из Яндекс."
+
+# === Episode 286 ===
+- id: manual_e286_SPEAKER_01_to_Marin_k_a
+  type: rename_episode
+  episode: 286
+  from: SPEAKER_01
+  to: Marin_k_a
+  reason: "Ошибка распознавания голоса Марины."
+
+# === Episode 290 ===
+- id: manual_e290_SPEAKER_02_to_Marin_k_a
+  type: rename_episode
+  episode: 290
+  from: SPEAKER_02
+  to: Marin_k_a
+  reason: "Ошибка распознавания голоса Марины."
+
+# === Episode 295 ===
+- id: manual_e295_SPEAKER_01_to_Marin_k_a
+  type: rename_episode
+  episode: 295
+  from: SPEAKER_01
+  to: Marin_k_a
+  reason: "Ошибка распознавания голоса Марины."
+
+# === Episode 298 ===
+- id: manual_e298_SPEAKER_05_to_Guest_Unknown_1
+  type: rename_episode
+  episode: 298
+  from: SPEAKER_05
+  to: Guest_Unknown_1
+  reason: "Гость, имя не установлено."
+
+- id: manual_e298_SPEAKER_00_to_Guest_Unknown_2
+  type: rename_episode
+  episode: 298
+  from: SPEAKER_00
+  to: Guest_Unknown_2
+  reason: "Гость, имя не установлено."
+
+# === Episode 299 ===
+- id: manual_e299_SPEAKER_06_to_Alexmak
+  type: rename_episode
+  episode: 299
+  from: SPEAKER_06
+  to: Alexmak
+  reason: "Алекс Мак - постоянный гость, автор блога alexmak.net."
+
+# === Episode 332 ===
+- id: manual_e332_SPEAKER_01_to_Ksenks
+  type: rename_episode
+  episode: 332
+  from: SPEAKER_01
+  to: Ksenks
+  reason: "Ksenks - ведущая с ep300+."
+
+# === Episode 339 ===
+- id: manual_e339_SPEAKER_00_to_Ksenks
+  type: rename_episode
+  episode: 339
+  from: SPEAKER_00
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+- id: manual_e339_SPEAKER_02_to_Guest_Unknown_ep339
+  type: rename_episode
+  episode: 339
+  from: SPEAKER_02
+  to: Guest_Unknown_ep339
+  reason: "Гость, имя не установлено."
+
+# === Episode 344 ===
+- id: manual_e344_SPEAKER_04_to_Guest_Unknown_ep344
+  type: rename_episode
+  episode: 344
+  from: SPEAKER_04
+  to: Guest_Unknown_ep344
+  reason: "Гость, имя не установлено."
+
+# === Episode 345 ===
+- id: manual_e345_SPEAKER_06_to_Ksenks
+  type: rename_episode
+  episode: 345
+  from: SPEAKER_06
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+- id: manual_e345_SPEAKER_01_to_Alexmak
+  type: rename_episode
+  episode: 345
+  from: SPEAKER_01
+  to: Alexmak
+  reason: "Алекс Мак - постоянный гость."
+
+# === Episode 347 ===
+- id: manual_e347_SPEAKER_01_to_Ksenks
+  type: rename_episode
+  episode: 347
+  from: SPEAKER_01
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 349 ===
+- id: manual_e349_SPEAKER_05_to_Ksenks
+  type: rename_episode
+  episode: 349
+  from: SPEAKER_05
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 350 ===
+- id: manual_e350_SPEAKER_07_to_Ksenks
+  type: rename_episode
+  episode: 350
+  from: SPEAKER_07
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 351 ===
+- id: manual_e351_SPEAKER_01_to_Ksenks
+  type: rename_episode
+  episode: 351
+  from: SPEAKER_01
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 353 ===
+- id: manual_e353_SPEAKER_05_to_Viktor_Gamov
+  type: rename_episode
+  episode: 353
+  from: SPEAKER_05
+  to: Viktor_Gamov
+  reason: "Гость Виктор Гамов."
+
+- id: manual_e353_SPEAKER_07_to_Alexey_Abashov
+  type: rename_episode
+  episode: 353
+  from: SPEAKER_07
+  to: Alexey_Abashov
+  reason: "Гость Алексей Абашов."
+
+# === Episode 359 ===
+- id: manual_e359_SPEAKER_02_to_Ksenks
+  type: rename_episode
+  episode: 359
+  from: SPEAKER_02
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 369 ===
+- id: manual_e369_SPEAKER_05_to_Guest_Unknown_ep369_1
+  type: rename_episode
+  episode: 369
+  from: SPEAKER_05
+  to: Guest_Unknown_ep369_1
+  reason: "Гость, имя не установлено."
+
+- id: manual_e369_SPEAKER_02_to_Guest_Unknown_ep369_2
+  type: rename_episode
+  episode: 369
+  from: SPEAKER_02
+  to: Guest_Unknown_ep369_2
+  reason: "Гость, имя не установлено."
+
+# === Episode 372 ===
+- id: manual_e372_SPEAKER_03_to_Ksenks
+  type: rename_episode
+  episode: 372
+  from: SPEAKER_03
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 375 ===
+- id: manual_e375_SPEAKER_00_to_Guest_Unknown_ep375
+  type: rename_episode
+  episode: 375
+  from: SPEAKER_00
+  to: Guest_Unknown_ep375
+  reason: "Гость, имя не установлено."
+
+# === Episode 377 ===
+- id: manual_e377_SPEAKER_02_to_Ksenks
+  type: rename_episode
+  episode: 377
+  from: SPEAKER_02
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 378 ===
+- id: manual_e378_SPEAKER_01_to_Ksenks
+  type: rename_episode
+  episode: 378
+  from: SPEAKER_01
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 381 ===
+- id: manual_e381_SPEAKER_00_to_Alexey_Abashev
+  type: rename_episode
+  episode: 381
+  from: SPEAKER_00
+  to: Alexey_Abashev
+  reason: "Гость Алексей Абашев."
+
+- id: manual_e381_SPEAKER_04_to_Viktor_Gamov
+  type: rename_episode
+  episode: 381
+  from: SPEAKER_04
+  to: Viktor_Gamov
+  reason: "Гость Виктор Гамов."
+
+- id: manual_e381_SPEAKER_07_to_Ksenks
+  type: rename_episode
+  episode: 381
+  from: SPEAKER_07
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 382 ===
+- id: manual_e382_SPEAKER_01_to_Vodom
+  type: rename_episode
+  episode: 382
+  from: SPEAKER_01
+  to: Vodom
+  reason: "Гость Vodom."
+
+- id: manual_e382_SPEAKER_03_to_Swan
+  type: rename_episode
+  episode: 382
+  from: SPEAKER_03
+  to: Swan
+  reason: "Гость Swan."
+
+- id: manual_e382_SPEAKER_04_to_Ksenks
+  type: rename_episode
+  episode: 382
+  from: SPEAKER_04
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 386 ===
+- id: manual_e386_SPEAKER_06_to_Guest_Unknown_ep386
+  type: rename_episode
+  episode: 386
+  from: SPEAKER_06
+  to: Guest_Unknown_ep386
+  reason: "Гость, имя не установлено."
+
+- id: manual_e386_SPEAKER_00_to_Ksenks
+  type: rename_episode
+  episode: 386
+  from: SPEAKER_00
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 389 ===
+- id: manual_e389_SPEAKER_05_to_Ksenks
+  type: rename_episode
+  episode: 389
+  from: SPEAKER_05
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 394 ===
+- id: manual_e394_SPEAKER_05_to_Guest_Unknown_ep394
+  type: rename_episode
+  episode: 394
+  from: SPEAKER_05
+  to: Guest_Unknown_ep394
+  reason: "Гость, имя не установлено."
+
+# === Episode 395 ===
+- id: manual_e395_SPEAKER_03_to_Ksenks
+  type: rename_episode
+  episode: 395
+  from: SPEAKER_03
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 397 ===
+- id: manual_e397_SPEAKER_04_to_Guest_Unknown_ep397_1
+  type: rename_episode
+  episode: 397
+  from: SPEAKER_04
+  to: Guest_Unknown_ep397_1
+  reason: "Гость, имя не установлено."
+
+- id: manual_e397_SPEAKER_06_to_Guest_Unknown_ep397_2
+  type: rename_episode
+  episode: 397
+  from: SPEAKER_06
+  to: Guest_Unknown_ep397_2
+  reason: "Гость, имя не установлено."
+
+# === Episode 398 ===
+- id: manual_e398_SPEAKER_01_to_Ksenks
+  type: rename_episode
+  episode: 398
+  from: SPEAKER_01
+  to: Ksenks
+  reason: "Ksenks - ведущая."
+
+# === Episode 400 ===
+- id: manual_e400_SPEAKER_02_to_Ksenks
+  type: rename_episode
+  episode: 400
+  from: SPEAKER_02
+  to: Ksenks
+  reason: "Ksenks - ведущая."
