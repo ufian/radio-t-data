@@ -2,6 +2,41 @@
 
 Задания для идентификации спикеров через сравнение голосовых эмбеддингов.
 
+## Requirements
+
+**Python 3.11** (обязательно — PyTorch/torchaudio не поддерживают 3.13+)
+
+### Создание виртуального окружения
+
+```bash
+# macOS (Homebrew)
+brew install python@3.11
+
+# Создать venv
+python3.11 -m venv .venv
+
+# Активировать
+source .venv/bin/activate
+
+# Проверить версию
+python --version  # Python 3.11.x
+```
+
+### Установка зависимостей
+
+```bash
+# Базовые зависимости
+pip install torch 'torchaudio>=2.0.0,<2.5.0' numpy scipy soundfile pyyaml requests tqdm
+
+# Speaker embedding модели
+pip install pyannote.audio speechbrain
+
+# TitaNet (опционально, ~2GB)
+pip install nemo_toolkit[asr]
+```
+
+**Важно:** torchaudio 2.10+ несовместим со speechbrain (удалён `list_audio_backends()`). Используйте `torchaudio < 2.5`.
+
 ## Структура
 
 ```
@@ -127,23 +162,6 @@ comparisons:              # Что с чем сравнивать
 ## Запуск process_voice_batch.py
 
 Основной скрипт для извлечения аудио-сегментов и вычисления voice embeddings.
-
-### Установка зависимостей
-
-```bash
-# Основные зависимости
-pip install torch torchaudio numpy scipy soundfile pyyaml requests tqdm
-
-# Speaker embedding модели
-pip install pyannote.audio speechbrain
-
-# TitaNet (опционально, тяжёлая зависимость)
-pip install nemo_toolkit[asr]
-
-# ВАЖНО: torchaudio 2.10+ не совместим со speechbrain!
-# Используйте torchaudio < 2.5:
-pip install 'torchaudio>=2.0.0,<2.5.0'
-```
 
 ### Использование
 
