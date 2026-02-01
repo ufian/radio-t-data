@@ -37,6 +37,26 @@ pip install nemo_toolkit[asr]
 
 **Важно:** torchaudio 2.10+ несовместим со speechbrain (удалён `list_audio_backends()`). Используйте `torchaudio < 2.5`.
 
+### Настройка HuggingFace
+
+Модель `pyannote/embedding` требует принятия лицензии:
+
+1. Создайте аккаунт на [huggingface.co](https://huggingface.co)
+2. Примите условия использования модели: [pyannote/embedding](https://huggingface.co/pyannote/embedding)
+3. Создайте токен: [Settings → Access Tokens](https://huggingface.co/settings/tokens)
+4. Авторизуйтесь:
+
+```bash
+pip install huggingface_hub
+huggingface-cli login
+# Вставьте токен когда попросит
+```
+
+Или через переменную окружения:
+```bash
+export HF_TOKEN=hf_xxxxxxxxxxxxx
+```
+
 ## Структура
 
 ```
