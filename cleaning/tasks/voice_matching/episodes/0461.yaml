@@ -1,0 +1,94 @@
+episode: 461
+unknown_speakers:
+- speaker: SPEAKER_02
+  total_time: 81.4
+  segments:
+  - stime: 8441.95
+    etime: 8455.27
+    text: Ой, господи, нет. Так, кто еще? IBM с Node.js, IBM против облаков.
+    duration: 13.319999999999709
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2981.5
+  reference_segment:
+    stime: 7396.13
+    etime: 7530.54
+    text: 'На самом деле там в Нахабре достаточно хорошо описано. Может быть, без
+      некоторых деталей. Но, тем не менее. Короче, пока Нахабре... Посмотрите на статью
+      Нахабре. Вот я вам ссылочку на нее дал. Как вы '
+    duration: 134.40999999999985
+- speaker: Umputun
+  total_time: 2484.1
+  reference_segment:
+    stime: 6095.3
+    etime: 6149.63
+    text: Причем они какие-то еще выпускники каких-то местных курсов были. То есть
+      они там еще квалификацию повышали. И тут они как-то узнали, я скрывал. То ли
+      жена проболталась, то ли кто меня знал, что я, зна
+    duration: 54.32999999999993
+- speaker: Gray
+  total_time: 286.0
+  reference_segment:
+    stime: 3310.65
+    etime: 3356.17
+    text: 'Ну, на самом деле, слушайте, главная фича там это TD Touch, конечно. Причем,
+      нет, Force Touch это то, что в макбуках все-таки, и оно тут явно отличается,
+      потому что вот по опыту использования макбука '
+    duration: 45.51999999999998
+- speaker: Ksenks
+  total_time: 1343.7
+  reference_segment:
+    stime: 6286.39
+    etime: 6346.34
+    text: Ну вот да, мне всегда все надо. То есть сейчас же разговор о том, что девочек,
+      которые сейчас приходят после универов, их много. То есть если мы сейчас смотрим
+      в разницу людей, которым, например, сраз
+    duration: 59.94999999999982
+- speaker: IlyaBalashov
+  total_time: 599.8
+  reference_segment:
+    stime: 5160.13
+    etime: 5285.09
+    text: Не, ну это же... А то, что Бобук все надеется, что Apple побоит операторов,
+      я просто тут, так сказать, наблюдаю, как Google пытается побороть операторов.
+      Ну, в общем, это такое очень печальное зрелище
+    duration: 124.96000000000004
+segments_to_extract:
+- speaker: Gray
+  stime: 3310.65
+  etime: 3356.17
+  duration: 45.51999999999998
+  type: reference
+- speaker: IlyaBalashov
+  stime: 5160.13
+  etime: 5285.09
+  duration: 124.96000000000004
+  type: reference
+- speaker: Umputun
+  stime: 6095.3
+  etime: 6149.63
+  duration: 54.32999999999993
+  type: reference
+- speaker: Ksenks
+  stime: 6286.39
+  etime: 6346.34
+  duration: 59.94999999999982
+  type: reference
+- speaker: Bobuk
+  stime: 7396.13
+  etime: 7530.54
+  duration: 134.40999999999985
+  type: reference
+- speaker: SPEAKER_02
+  stime: 8441.95
+  etime: 8455.27
+  duration: 13.319999999999709
+  type: unknown
+comparisons:
+- unknown: SPEAKER_02
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Gray
+  - Ksenks
+  - IlyaBalashov

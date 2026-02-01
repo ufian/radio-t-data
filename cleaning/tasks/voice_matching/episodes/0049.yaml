@@ -1,0 +1,66 @@
+episode: 49
+unknown_speakers:
+- speaker: Guest_Unknown
+  total_time: 149.9
+  segments:
+  - stime: 2281.01
+    etime: 2442.54
+    text: Ну и теперь насчет аудиофидбэка. А... Интересный подкаст, на самом деле.
+      Сегодня слушал почти, ну, как весь день. Ехал в университет, ехал назад, ехал
+      в автобусе, ехал в поезде все время. Потому что д
+    duration: 161.52999999999975
+reference_speakers:
+- speaker: Bobuk
+  total_time: 1773.4
+  reference_segment:
+    stime: 3738.16
+    etime: 3818.68
+    text: 'Слушай, к вопросу о безопасности подобной информации. Я тут не так давно
+      покупал новый мотоцикл и, собственно, покупал его в довольно хороших, то есть
+      мне показалась очень приятной контора, в которой '
+    duration: 80.51999999999998
+- speaker: Umputun
+  total_time: 1868.2
+  reference_segment:
+    stime: 3558.21
+    etime: 3628.05
+    text: Я вам скажу больше. Прочитавши про взлом монстркома в полглаза, я поначалу
+      даже не понял, а что собственно там можно такого украсть, что пользователь и
+      так бесплатно и добровольно не дал. Оказывается,
+    duration: 69.84000000000015
+- speaker: evil_penguin
+  total_time: 74.0
+  reference_segment:
+    stime: 2675.36
+    etime: 2752.24
+    text: Добрый день, это аудиофидбэк от слушателя Радио Ти Эвил Пингвина. Радио
+      Ти, на мой взгляд, это уникальный проект, который весьма умело балансирует на
+      грани социальных новостей и импровизации на хай-те
+    duration: 76.87999999999965
+segments_to_extract:
+- speaker: Guest_Unknown
+  stime: 2281.01
+  etime: 2442.54
+  duration: 161.52999999999975
+  type: unknown
+- speaker: evil_penguin
+  stime: 2675.36
+  etime: 2752.24
+  duration: 76.87999999999965
+  type: reference
+- speaker: Umputun
+  stime: 3558.21
+  etime: 3628.05
+  duration: 69.84000000000015
+  type: reference
+- speaker: Bobuk
+  stime: 3738.16
+  etime: 3818.68
+  duration: 80.51999999999998
+  type: reference
+comparisons:
+- unknown: Guest_Unknown
+  compare_with:
+  - Bobuk
+  - Umputun
+  - evil_penguin

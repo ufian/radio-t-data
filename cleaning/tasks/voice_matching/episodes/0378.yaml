@@ -1,0 +1,80 @@
+episode: 378
+unknown_speakers:
+- speaker: SPEAKER_00
+  total_time: 98.0
+  segments:
+  - stime: 7442.92
+    etime: 7452.31
+    text: Нет, я когда увидела вот эту вот жирную часть, которая за часы отвечает,
+      все, я теперь уже не могу, я не смогу это забыть.
+    duration: 9.390000000000327
+reference_speakers:
+- speaker: Umputun
+  total_time: 3415.1
+  reference_segment:
+    stime: 5045.7
+    etime: 5134.3
+    text: Это интересная технология. Мне на днях сегодня, нет, вчера, или сегодня,
+      когда это? Вчера, сегодня было. Хотел я поставить себе такую штуку, которая
+      как-то почти неприлично называется. Называется Рход
+    duration: 88.60000000000036
+- speaker: Marin_k_a
+  total_time: 1189.1
+  reference_segment:
+    stime: 2414.2
+    etime: 2461.1
+    text: Не-не-не, я считаю, что вот я просто сейчас как бы, ну, как на английском,
+      и так получается, что с азиатами много говорю, и которые учат язык, они, у них
+      гораздо больше проблем, чем у русских. Русском
+    duration: 46.90000000000009
+- speaker: Gray
+  total_time: 1308.0
+  reference_segment:
+    stime: 4161.98
+    etime: 4245.02
+    text: Они просто сделали... Flow это старый их поиск, который вообще до сих пор
+      был использован, точно существовал в вебе. Если кто помнит, они в свое время
+      строили такую поисковую систему под названием А9.
+    duration: 83.04000000000087
+- speaker: Ksenks
+  total_time: 990.6
+  reference_segment:
+    stime: 6838.11
+    etime: 6867.54
+    text: Мне кажется, что если говорить про игроманов, которые прям игроманы, то
+      все-таки это для них не ушло ни в какие там сервисы, которые шлют картинки.
+      Это сейчас все-таки перешло большей частью в консоли
+    duration: 29.43000000000029
+segments_to_extract:
+- speaker: Marin_k_a
+  stime: 2414.2
+  etime: 2461.1
+  duration: 46.90000000000009
+  type: reference
+- speaker: Gray
+  stime: 4161.98
+  etime: 4245.02
+  duration: 83.04000000000087
+  type: reference
+- speaker: Umputun
+  stime: 5045.7
+  etime: 5134.3
+  duration: 88.60000000000036
+  type: reference
+- speaker: Ksenks
+  stime: 6838.11
+  etime: 6867.54
+  duration: 29.43000000000029
+  type: reference
+- speaker: SPEAKER_00
+  stime: 7442.92
+  etime: 7452.31
+  duration: 9.390000000000327
+  type: unknown
+comparisons:
+- unknown: SPEAKER_00
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - Gray
+  - Ksenks

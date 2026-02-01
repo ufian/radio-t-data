@@ -1,0 +1,203 @@
+description: Compare same speaker name across episodes to verify identity
+total_speakers: 8
+tasks:
+- speaker: Alex
+  episodes:
+  - 2
+  - 5
+  - 6
+  - 17
+  - 18
+  segments:
+  - episode: 2
+    speaker: Alex
+    stime: 940.43
+    etime: 980.86
+    duration: 40.430000000000064
+    total_time: 85.4
+  - episode: 5
+    speaker: Alex
+    stime: 540.3
+    etime: 605.53
+    duration: 65.23000000000002
+    total_time: 500.4
+  - episode: 6
+    speaker: Alex
+    stime: 645.92
+    etime: 751.3
+    duration: 105.38
+    total_time: 464.9
+  - episode: 17
+    speaker: Alex
+    stime: 3219.74
+    etime: 3336.91
+    duration: 117.17000000000007
+    total_time: 1189.8
+  - episode: 18
+    speaker: Alex
+    stime: 6410.1
+    etime: 6484.98
+    duration: 74.8799999999992
+    total_time: 620.5
+  note: Compare Alex across 5 episodes to verify same person
+- speaker: Alexander
+  episodes:
+  - 27
+  - 243
+  - 524
+  segments:
+  - episode: 27
+    speaker: Alexander
+    stime: 2620.42
+    etime: 2642.08
+    duration: 21.659999999999854
+    total_time: 166.0
+  - episode: 243
+    speaker: Alexander
+    stime: 5046.99
+    etime: 5108.7
+    duration: 61.710000000000036
+    total_time: 148.2
+  - episode: 524
+    speaker: Alexander
+    stime: 3187.73
+    etime: 3260.36
+    duration: 72.63000000000011
+    total_time: 179.7
+  note: Compare Alexander across 3 episodes to verify same person
+- speaker: Grinch
+  episodes:
+  - 193
+  - 196
+  segments:
+  - episode: 193
+    speaker: Grinch
+    stime: 5582.09
+    etime: 5663.64
+    duration: 81.55000000000018
+    total_time: 961.3
+  - episode: 196
+    speaker: Grinch
+    stime: 3564.53
+    etime: 3637.4
+    duration: 72.86999999999989
+    total_time: 466.2
+  note: Compare Grinch across 2 episodes to verify same person
+- speaker: Mika
+  episodes:
+  - 209
+  - 211
+  segments:
+  - episode: 209
+    speaker: Mika
+    stime: 2122.21
+    etime: 2145.98
+    duration: 23.769999999999982
+    total_time: 128.8
+  - episode: 211
+    speaker: Mika
+    stime: 1650.84
+    etime: 1697.27
+    duration: 46.430000000000064
+    total_time: 159.2
+  note: Compare Mika across 2 episodes to verify same person
+- speaker: Lena
+  episodes:
+  - 234
+  - 239
+  - 247
+  segments:
+  - episode: 234
+    speaker: Lena
+    stime: 1366.02
+    etime: 1505.14
+    duration: 139.12000000000012
+    total_time: 1783.4
+  - episode: 239
+    speaker: Lena
+    stime: 1791.91
+    etime: 1861.36
+    duration: 69.44999999999982
+    total_time: 571.6
+  - episode: 247
+    speaker: Lena
+    stime: 3906.55
+    etime: 3977.83
+    duration: 71.27999999999975
+    total_time: 778.9
+  note: Compare Lena across 3 episodes to verify same person
+- speaker: Ruslan
+  episodes:
+  - 299
+  - 327
+  - 425
+  - 465
+  - 536
+  segments:
+  - episode: 299
+    speaker: Ruslan
+    stime: 3995.44
+    etime: 4019.24
+    duration: 23.799999999999727
+    total_time: 136.8
+  - episode: 327
+    speaker: Ruslan
+    stime: 1400.4
+    etime: 1424.68
+    duration: 24.279999999999973
+    total_time: 220.4
+  - episode: 425
+    speaker: Ruslan
+    stime: 6143.18
+    etime: 6181.32
+    duration: 38.13999999999942
+    total_time: 299.9
+  - episode: 465
+    speaker: Ruslan
+    stime: 903.98
+    etime: 934.55
+    duration: 30.569999999999936
+    total_time: 256.3
+  - episode: 536
+    speaker: Ruslan
+    stime: 6372.92
+    etime: 6396.05
+    duration: 23.13000000000011
+    total_time: 353.2
+  note: Compare Ruslan across 5 episodes to verify same person
+- speaker: Dmitry
+  episodes:
+  - 441
+  - 517
+  segments:
+  - episode: 441
+    speaker: Dmitry
+    stime: 4954.74
+    etime: 5027.22
+    duration: 72.48000000000047
+    total_time: 381.4
+  - episode: 517
+    speaker: Dmitry
+    stime: 3820.42
+    etime: 3870.63
+    duration: 50.210000000000036
+    total_time: 455.5
+  note: Compare Dmitry across 2 episodes to verify same person
+- speaker: Andrey
+  episodes:
+  - 486
+  - 976
+  segments:
+  - episode: 486
+    speaker: Andrey
+    stime: 4726
+    etime: 4748.7
+    duration: 22.699999999999818
+    total_time: 185.6
+  - episode: 976
+    speaker: Andrey
+    stime: 4029.71
+    etime: 4107.64
+    duration: 77.93000000000029
+    total_time: 968.7
+  note: Compare Andrey across 2 episodes to verify same person

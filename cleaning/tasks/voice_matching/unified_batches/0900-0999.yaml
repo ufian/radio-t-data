@@ -1,0 +1,71 @@
+batch: 0900-0999
+episodes_count: 2
+total_segments: 7
+total_duration_sec: 572.5
+total_duration_min: 9.5
+episodes:
+  976:
+    segment_count: 1
+    total_duration_sec: 77.9
+    segments:
+    - speaker: Andrey
+      stime: 4029.71
+      etime: 4107.64
+      duration: 77.93
+      types:
+      - cross_episode
+      task_types:
+      - cross_episode_comparison
+      comparison_group: Andrey
+  994:
+    segment_count: 6
+    total_duration_sec: 494.5
+    segments:
+    - speaker: Alek.sys
+      stime: 499.66
+      etime: 561.85
+      duration: 62.19
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Guest_Unknown
+      stime: 1095.48
+      etime: 1179.77
+      duration: 84.29
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Guest_Unknown
+      stime: 4200.61
+      etime: 4252.25
+      duration: 51.64
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Ksenks
+      stime: 4401.99
+      etime: 4514.91
+      duration: 112.92
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Guest_Unknown
+      stime: 5197.68
+      etime: 5259.57
+      duration: 61.89
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 5782.1
+      etime: 5903.7
+      duration: 121.6
+      types:
+      - reference
+      task_types:
+      - episode_identification

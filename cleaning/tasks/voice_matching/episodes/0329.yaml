@@ -1,0 +1,211 @@
+episode: 329
+unknown_speakers:
+- speaker: SPEAKER_01
+  total_time: 996.9
+  segments:
+  - stime: 6339.05
+    etime: 6372.55
+    text: А с вот этим, ну, как бы, вот с этой моделью, когда приставка очень простое
+      устройство, все там где-то рендерится на сервере, есть большие проблемы отчасти,
+      вот поэтому онлайф, например... И, ну, то е
+    duration: 33.5
+  - stime: 5759.9
+    etime: 5786.66
+    text: У Samsung телефонов, как раз у Samsung Galaxy S3, есть такая проблема, что
+      если при некотором количестве копипастов у тебя в итоге телефон приходит в такое
+      состояние, что ему поможет только Hard Reset
+    duration: 26.76000000000022
+  - stime: 6094.28
+    etime: 6120.31
+    text: Да, но самое грустное, что теперь это ломает совместимость. То есть те игры,
+      которые были написаны под вот этот целый процессор, они, соответственно, не
+      смогут запускаться на PlayStation 4, который на
+    duration: 26.030000000000655
+- speaker: SPEAKER_02
+  total_time: 734.1
+  segments:
+  - stime: 2903.49
+    etime: 2997.44
+    text: А дальше, как бы после офиса, казуальные задачи, ну, не во всех отделах
+      они происходят, да, это работа с фото, допустим, там нужно какую-нибудь красивую
+      открытку забабахать, какому-нибудь начальнику о
+    duration: 93.95000000000027
+  - stime: 2253.43
+    etime: 2311.82
+    text: Ага. Следующая проблема, ну, как бы процесс идет, эпопея продолжается с
+      мармезонским балетом. Замечательные файловые сервера, на которых лежит все в
+      разных там, где в NFS, где в NFS или еще в какой-ни
+    duration: 58.39000000000033
+  - stime: 2186.8
+    etime: 2240.8
+    text: Тогда возникнет проблема с тем, что, во-первых, нужно взять Pi, чего-то
+      на него поставить, а таких девайсов у меня не один в здании. Тогда возникнет
+      проблема для драйверов с капсулами. В общем, с точк
+    duration: 54.0
+- speaker: SPEAKER_06
+  total_time: 116.6
+  segments:
+  - stime: 6671.45
+    etime: 6691.93
+    text: Развиты, конечно, Kinect и Move. Это разработки, соответственно, Microsoft
+      и Sony. В частности, Kinect — это управление с помощью камер, это купленная
+      технология компании Microsoft и развита очень хор
+    duration: 20.480000000000473
+  - stime: 6632.63
+    etime: 6651.42
+    text: С другой стороны, на самом деле, есть предположение, что, скорее всего,
+      они старались вот эту презентацию запустить только для того, чтобы насолить
+      Microsoft, чтобы выйти как можно раньше, показать, ч
+    duration: 18.789999999999964
+  - stime: 6847.37
+    etime: 6861.81
+    text: Сейчас появился VU, но он немножко видоизменен. Там появился, теперь есть
+      у него джойстик в виде планшета. Непонятно, зачем это, конечно, сделано. Графику
+      подтянули до консоли, которая сейчас уже зака
+    duration: 14.44000000000051
+- speaker: SPEAKER_05
+  total_time: 80.9
+  segments:
+  - stime: 6451.65
+    etime: 6486.52
+    text: 'Нет, я хотел бы дать просто взгляд с другой стороны. Давай, давай. Вопрос
+      о философии. Мне презентация в Sony очень понравилась. То есть, конечно, было
+      много воды, но много интересных вещей показали. '
+    duration: 34.8700000000008
+  - stime: 6506.16
+    etime: 6521.17
+    text: Ну да, то есть ты не качаешь всю игру, ты просто пробуешь ее. Если тебе
+      нравится, ты ее качаешь полностью. А если не нравится, ну не качаешь. И они
+      сделали тоже очень интересную вещь. Ты можешь начать
+    duration: 15.010000000000218
+  - stime: 6800.16
+    etime: 6809.09
+    text: Ну, для простого труженика никакой. Единственное, что не будет обратной
+      совместимости с PlayStation 3. Вот и все. Вся разница. Пытаются два раза платить
+      за те же игры.
+    duration: 8.930000000000291
+reference_speakers:
+- speaker: Umputun
+  total_time: 3687.4
+  reference_segment:
+    stime: 3102.25
+    etime: 3221.26
+    text: 'Понятно, понятно. Я с тобой. Вот я свою любимую леталку тоже трудом представляю
+      во флэше, хотя, может, она там и есть. Не, не встречал. А так, берешь айфон
+      в руки, включаешь ему проекцию на телевизор '
+    duration: 119.01000000000022
+- speaker: Marin_k_a
+  total_time: 1121.2
+  reference_segment:
+    stime: 641.95
+    etime: 684.92
+    text: Я не знаю, понимают ли дорогие слушатели, но я вот трогала ее, и я не могу
+      согласиться с ораторами в интернете, которые говорят, опять же, что вот, мы
+      все переехали в браузер, ну вот, когда, вы помнит
+    duration: 42.969999999999914
+- speaker: Guest_Aleksandr_GameJournalist
+  total_time: 147.2
+  reference_segment:
+    stime: 6382.79
+    etime: 6427.44
+    text: Ну, тут можно поспорить, потому что, с другой стороны, может быть, пользователю
+      гораздо легче использовать это как мобильное некое устройство, потому что ты
+      не будешь переезжать, скажем, с огромной пр
+    duration: 44.649999999999636
+segments_to_extract:
+- speaker: Marin_k_a
+  stime: 641.95
+  etime: 684.92
+  duration: 42.969999999999914
+  type: reference
+- speaker: SPEAKER_02
+  stime: 2186.8
+  etime: 2240.8
+  duration: 54.0
+  type: unknown
+- speaker: SPEAKER_02
+  stime: 2253.43
+  etime: 2311.82
+  duration: 58.39000000000033
+  type: unknown
+- speaker: SPEAKER_02
+  stime: 2903.49
+  etime: 2997.44
+  duration: 93.95000000000027
+  type: unknown
+- speaker: Umputun
+  stime: 3102.25
+  etime: 3221.26
+  duration: 119.01000000000022
+  type: reference
+- speaker: SPEAKER_01
+  stime: 5759.9
+  etime: 5786.66
+  duration: 26.76000000000022
+  type: unknown
+- speaker: SPEAKER_01
+  stime: 6094.28
+  etime: 6120.31
+  duration: 26.030000000000655
+  type: unknown
+- speaker: SPEAKER_01
+  stime: 6339.05
+  etime: 6372.55
+  duration: 33.5
+  type: unknown
+- speaker: Guest_Aleksandr_GameJournalist
+  stime: 6382.79
+  etime: 6427.44
+  duration: 44.649999999999636
+  type: reference
+- speaker: SPEAKER_05
+  stime: 6451.65
+  etime: 6486.52
+  duration: 34.8700000000008
+  type: unknown
+- speaker: SPEAKER_05
+  stime: 6506.16
+  etime: 6521.17
+  duration: 15.010000000000218
+  type: unknown
+- speaker: SPEAKER_06
+  stime: 6632.63
+  etime: 6651.42
+  duration: 18.789999999999964
+  type: unknown
+- speaker: SPEAKER_06
+  stime: 6671.45
+  etime: 6691.93
+  duration: 20.480000000000473
+  type: unknown
+- speaker: SPEAKER_05
+  stime: 6800.16
+  etime: 6809.09
+  duration: 8.930000000000291
+  type: unknown
+- speaker: SPEAKER_06
+  stime: 6847.37
+  etime: 6861.81
+  duration: 14.44000000000051
+  type: unknown
+comparisons:
+- unknown: SPEAKER_01
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - Guest_Aleksandr_GameJournalist
+- unknown: SPEAKER_02
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - Guest_Aleksandr_GameJournalist
+- unknown: SPEAKER_06
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - Guest_Aleksandr_GameJournalist
+- unknown: SPEAKER_05
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - Guest_Aleksandr_GameJournalist

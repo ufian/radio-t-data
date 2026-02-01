@@ -1,0 +1,176 @@
+batch: 0100-0199
+episodes_count: 4
+total_segments: 19
+total_duration_sec: 1065.3
+total_duration_min: 17.8
+episodes:
+  100:
+    segment_count: 8
+    total_duration_sec: 405.9
+    segments:
+    - speaker: Bobuk
+      stime: 5065.16
+      etime: 5134.69
+      duration: 69.53
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Gray
+      stime: 5304.76
+      etime: 5397.61
+      duration: 92.85
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Gimlis
+      stime: 5511.81
+      etime: 5563.86
+      duration: 52.05
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Guest_Unknown
+      stime: 6162.67
+      etime: 6189.87
+      duration: 27.2
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Guest_Unknown
+      stime: 6971.67
+      etime: 7000.98
+      duration: 29.31
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Olyapka
+      stime: 7079.92
+      etime: 7129.99
+      duration: 50.07
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Guest_Unknown
+      stime: 7288.24
+      etime: 7317.97
+      duration: 29.73
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 7351.44
+      etime: 7406.58
+      duration: 55.14
+      types:
+      - reference
+      task_types:
+      - episode_identification
+  150:
+    segment_count: 9
+    total_duration_sec: 505.0
+    segments:
+    - speaker: Rosnovsky
+      stime: 434.96
+      etime: 479.95
+      duration: 44.99
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: EldarMurtazin
+      stime: 975.57
+      etime: 1029.1
+      duration: 53.53
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Guest_Unknown
+      stime: 2977.57
+      etime: 3048.61
+      duration: 71.04
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Gray
+      stime: 3470.84
+      etime: 3542.16
+      duration: 71.32
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Guest_Unknown
+      stime: 4685.36
+      etime: 4734.15
+      duration: 48.79
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Guest_Unknown
+      stime: 5377.97
+      etime: 5427.53
+      duration: 49.56
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Bobuk
+      stime: 6388.35
+      etime: 6440.53
+      duration: 52.18
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Marin_k_a
+      stime: 6477.54
+      etime: 6534.18
+      duration: 56.64
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 7590.07
+      etime: 7647.02
+      duration: 56.95
+      types:
+      - reference
+      task_types:
+      - episode_identification
+  193:
+    segment_count: 1
+    total_duration_sec: 81.6
+    segments:
+    - speaker: Grinch
+      stime: 5582.09
+      etime: 5663.64
+      duration: 81.55
+      types:
+      - cross_episode
+      task_types:
+      - cross_episode_comparison
+      comparison_group: Grinch
+  196:
+    segment_count: 1
+    total_duration_sec: 72.9
+    segments:
+    - speaker: Grinch
+      stime: 3564.53
+      etime: 3637.4
+      duration: 72.87
+      types:
+      - cross_episode
+      task_types:
+      - cross_episode_comparison
+      comparison_group: Grinch

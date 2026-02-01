@@ -1,0 +1,502 @@
+batch: 0600-0699
+episodes_count: 8
+total_segments: 58
+total_duration_sec: 4083.8
+total_duration_min: 68.1
+episodes:
+  613:
+    segment_count: 6
+    total_duration_sec: 344.8
+    segments:
+    - speaker: SPEAKER_07
+      stime: 4450.69
+      etime: 4496.81
+      duration: 46.12
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_07
+      stime: 4673.39
+      etime: 4714.53
+      duration: 41.14
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_07
+      stime: 4718.82
+      etime: 4763.31
+      duration: 44.49
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Bobuk
+      stime: 5958.77
+      etime: 6026.47
+      duration: 67.7
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Ksenks
+      stime: 6105.42
+      etime: 6143.49
+      duration: 38.07
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 6179.03
+      etime: 6286.33
+      duration: 107.3
+      types:
+      - reference
+      task_types:
+      - episode_identification
+  621:
+    segment_count: 7
+    total_duration_sec: 601.3
+    segments:
+    - speaker: Umputun
+      stime: 396.05
+      etime: 545.39
+      duration: 149.34
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Alek.sys
+      stime: 4660.02
+      etime: 4718.75
+      duration: 58.73
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_06
+      stime: 5653.79
+      etime: 5746.28
+      duration: 92.49
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_06
+      stime: 5865.45
+      etime: 5946.65
+      duration: 81.2
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Ksenks
+      stime: 7589.13
+      etime: 7676.56
+      duration: 87.43
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_06
+      stime: 7961.81
+      etime: 8045.92
+      duration: 84.11
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Anya
+      stime: 8351.58
+      etime: 8399.56
+      duration: 47.98
+      types:
+      - reference
+      task_types:
+      - episode_identification
+  622:
+    segment_count: 8
+    total_duration_sec: 492.2
+    segments:
+    - speaker: SPEAKER_02
+      stime: 645.87
+      etime: 673.57
+      duration: 27.7
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_02
+      stime: 815.14
+      etime: 865.23
+      duration: 50.09
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_02
+      stime: 1402.14
+      etime: 1439.96
+      duration: 37.82
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Alek.sys
+      stime: 2060.34
+      etime: 2130.38
+      duration: 70.04
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 5301.27
+      etime: 5409.63
+      duration: 108.36
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Bobuk
+      stime: 5749.09
+      etime: 5823.68
+      duration: 74.59
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Gray
+      stime: 7274.38
+      etime: 7317.8
+      duration: 43.42
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Ksenks
+      stime: 8233.45
+      etime: 8313.61
+      duration: 80.16
+      types:
+      - reference
+      task_types:
+      - episode_identification
+  627:
+    segment_count: 8
+    total_duration_sec: 418.3
+    segments:
+    - speaker: Ksenks
+      stime: 253.13
+      etime: 286.22
+      duration: 33.09
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_02
+      stime: 988.49
+      etime: 1005.34
+      duration: 16.85
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 1201.36
+      etime: 1285.61
+      duration: 84.25
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_02
+      stime: 4120.32
+      etime: 4170.74
+      duration: 50.42
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Gray
+      stime: 5049.95
+      etime: 5136.79
+      duration: 86.84
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_02
+      stime: 5267.99
+      etime: 5300.62
+      duration: 32.63
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Alek.sys
+      stime: 5885.28
+      etime: 5932.85
+      duration: 47.57
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Bobuk
+      stime: 7999.58
+      etime: 8066.26
+      duration: 66.68
+      types:
+      - reference
+      task_types:
+      - episode_identification
+  628:
+    segment_count: 6
+    total_duration_sec: 668.3
+    segments:
+    - speaker: Anya
+      stime: 179.56
+      etime: 218.04
+      duration: 38.48
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 2815.05
+      etime: 3041.97
+      duration: 226.92
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_04
+      stime: 3246.99
+      etime: 3346.67
+      duration: 99.68
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_04
+      stime: 6583.56
+      etime: 6682.03
+      duration: 98.47
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Ksenks
+      stime: 6705.47
+      etime: 6806.29
+      duration: 100.82
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_04
+      stime: 7424.87
+      etime: 7528.81
+      duration: 103.94
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+  643:
+    segment_count: 8
+    total_duration_sec: 507.0
+    segments:
+    - speaker: Bobuk
+      stime: 2025.42
+      etime: 2115.97
+      duration: 90.55
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 3910.04
+      etime: 4037.04
+      duration: 127.0
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_02
+      stime: 4399.45
+      etime: 4449.09
+      duration: 49.64
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_02
+      stime: 4512.12
+      etime: 4541.54
+      duration: 29.42
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_02
+      stime: 5506.13
+      etime: 5536.08
+      duration: 29.95
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Alek.sys
+      stime: 6986.29
+      etime: 7040.32
+      duration: 54.03
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Ksenks
+      stime: 7801.53
+      etime: 7868.03
+      duration: 66.5
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Gray
+      stime: 7956.13
+      etime: 8016.04
+      duration: 59.91
+      types:
+      - reference
+      task_types:
+      - episode_identification
+  662:
+    segment_count: 9
+    total_duration_sec: 519.9
+    segments:
+    - speaker: Alek.sys
+      stime: 410.33
+      etime: 450.12
+      duration: 39.79
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_04
+      stime: 542.96
+      etime: 625.34
+      duration: 82.38
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_04
+      stime: 1052.81
+      etime: 1164.58
+      duration: 111.77
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Anya
+      stime: 1797.08
+      etime: 1838.73
+      duration: 41.65
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_04
+      stime: 1945.68
+      etime: 1986.67
+      duration: 40.99
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Gray
+      stime: 2417.76
+      etime: 2452.76
+      duration: 35.0
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Bobuk
+      stime: 2963.3
+      etime: 2977.09
+      duration: 13.79
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Ksenks
+      stime: 5072.18
+      etime: 5113.11
+      duration: 40.93
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 5348.96
+      etime: 5462.56
+      duration: 113.6
+      types:
+      - reference
+      task_types:
+      - episode_identification
+  675:
+    segment_count: 6
+    total_duration_sec: 532.0
+    segments:
+    - speaker: SPEAKER_05
+      stime: 570.71
+      etime: 670.14
+      duration: 99.43
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 798.09
+      etime: 921.06
+      duration: 122.97
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Alek.sys
+      stime: 2008.15
+      etime: 2045.34
+      duration: 37.19
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_05
+      stime: 2289.82
+      etime: 2395.93
+      duration: 106.11
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: Ksenks
+      stime: 6483.77
+      etime: 6559.37
+      duration: 75.6
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: SPEAKER_05
+      stime: 7691.2
+      etime: 7781.9
+      duration: 90.7
+      types:
+      - unknown
+      task_types:
+      - episode_identification

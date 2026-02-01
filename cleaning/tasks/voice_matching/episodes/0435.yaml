@@ -1,0 +1,103 @@
+episode: 435
+unknown_speakers:
+- speaker: SPEAKER_03
+  total_time: 269.7
+  segments:
+  - stime: 5098.68
+    etime: 5120.55
+    text: Нет, там, видимо, это как-то в наставлении сервера, естественно, очинили,
+      потому что происходило это вообще безумно. Это заметили просто после обновления
+      Windows Skype. А так-то, в общем, оно там то п
+    duration: 21.86999999999989
+  - stime: 6656.03
+    etime: 6677.85
+    text: Потому что только на нем оно все работает. По-моему, Linux-версия появилась
+      года два назад, и там, кажется, не все очень хорошо. Поэтому, естественно, если
+      у кого-то вся инфраструктура Linux-овая, ему
+    duration: 21.82000000000062
+  - stime: 5511.98
+    etime: 5531.37
+    text: У eBay есть, вообще говоря, сложности часто с доставкой в Россию, а китайцы
+      это очень оперативно работают. Ну, там, в Россию, в Украину. В любом случае,
+      я там всякого китайского, ну, рассказы про всяк
+    duration: 19.390000000000327
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2290.0
+  reference_segment:
+    stime: 6967.94
+    etime: 7030.72
+    text: Да. Понимаешь, это же классическая история. Мы как идиоты думали, на компьютере
+      надо работать, чтобы деньги зарабатывать. Оказалось, нет. Можно просто к принтеру
+      подключить и тупо печатать. Вот тут то
+    duration: 62.780000000000655
+- speaker: Umputun
+  total_time: 2494.6
+  reference_segment:
+    stime: 6345.08
+    etime: 6442.62
+    text: Окей. Окей. Ну, у них тут плохо с... Мотивационная часть плохо представлена.
+      То есть их главная проблема, то, что они не хотят скимолез, им вот этот сильно
+      прямо кушать не могут, так скимолезом мешают
+    duration: 97.53999999999996
+- speaker: Gray
+  total_time: 329.5
+  reference_segment:
+    stime: 1875.17
+    etime: 1894.22
+    text: На самом деле смешно, я пару критиков почитал, вот эта фича, что можно теперь
+      позвонить в часы, осмеивается ровно теми, кто радовался, что они есть там в
+      Android на смарт-бочах. Когда у Самсунга, знач
+    duration: 19.049999999999955
+- speaker: Ksenks
+  total_time: 1033.4
+  reference_segment:
+    stime: 236.03
+    etime: 304.07
+    text: Вот непонятно. У них сейчас есть Air и Retina, и называть... Ну, теперь
+      они выпустили просто MacBook. Окей. Идея нового MacBook в том, что, во-первых,
+      представьте себе, он чуть-чуть легче первого iPad
+    duration: 68.03999999999999
+segments_to_extract:
+- speaker: Ksenks
+  stime: 236.03
+  etime: 304.07
+  duration: 68.03999999999999
+  type: reference
+- speaker: Gray
+  stime: 1875.17
+  etime: 1894.22
+  duration: 19.049999999999955
+  type: reference
+- speaker: SPEAKER_03
+  stime: 5098.68
+  etime: 5120.55
+  duration: 21.86999999999989
+  type: unknown
+- speaker: SPEAKER_03
+  stime: 5511.98
+  etime: 5531.37
+  duration: 19.390000000000327
+  type: unknown
+- speaker: Umputun
+  stime: 6345.08
+  etime: 6442.62
+  duration: 97.53999999999996
+  type: reference
+- speaker: SPEAKER_03
+  stime: 6656.03
+  etime: 6677.85
+  duration: 21.82000000000062
+  type: unknown
+- speaker: Bobuk
+  stime: 6967.94
+  etime: 7030.72
+  duration: 62.780000000000655
+  type: reference
+comparisons:
+- unknown: SPEAKER_03
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Gray
+  - Ksenks

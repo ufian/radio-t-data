@@ -1,0 +1,103 @@
+episode: 425
+unknown_speakers:
+- speaker: SPEAKER_NEEDS_VOICE_CHECK
+  total_time: 251.0
+  segments:
+  - stime: 661.92
+    etime: 692.71
+    text: Но вот на различных конфах, на каких бывали, люди часто жалуются на то,
+      что им трудно выкатывать софт, когда на одну и ту же машину выкатывается несколько
+      программных продуктов, и те имеют взаимоисклю
+    duration: 30.790000000000077
+  - stime: 5758.84
+    etime: 5785
+    text: Если я правильно понял статью, и в принципе мотивация Амазона мне понятна,
+      ребята просто хотят некой унификации, чтобы не поддерживать два режима работы.
+      Тем более, что пара виртуализации, если так во
+    duration: 26.159999999999854
+  - stime: 1204.82
+    etime: 1224.85
+    text: Такими почестями для англара, потому что если тот же самый jQuery в свое
+      время прошел своего рода естественный отбор, всякие мутулсы, иксаджаксы были
+      забыты и сообщество выбрало jQuery, то вот на попр
+    duration: 20.029999999999973
+reference_speakers:
+- speaker: Umputun
+  total_time: 3553.7
+  reference_segment:
+    stime: 4270.06
+    etime: 4407.4
+    text: Вот такой пример. У меня есть заказчик, который присылает вечером два файла.
+      Два файла, они такие с запятыми разделенные, в каждом файле куча записей фиксированного
+      количества этих колонок, как бы так
+    duration: 137.33999999999924
+- speaker: Ksenks
+  total_time: 2033.1
+  reference_segment:
+    stime: 1078.67
+    etime: 1173.04
+    text: Ну, там так не сказано, и это займет у Swift, мне кажется, очень долгое
+      время, чтобы куда-то кого-то засунуть, потому что он все-таки очень сырой сейчас.
+      И как в последнее время все, что выпускает App
+    duration: 94.36999999999989
+- speaker: Ruslan
+  total_time: 299.9
+  reference_segment:
+    stime: 6143.18
+    etime: 6181.32
+    text: 'Я, кстати, могу здесь поплакаться на эту тему. У меня есть один заказчик,
+      я занимаюсь для него разработкой бэкэнда, и там все в порядке, написано на питончике,
+      даже на третьем, там осенька, все дела, '
+    duration: 38.13999999999942
+- speaker: Igor
+  total_time: 233.8
+  reference_segment:
+    stime: 3577.48
+    etime: 3604.17
+    text: В общем... В тему понятности, прошу прощения, что перебил Ксения, функционального
+      синтаксиса я хочу поделиться ссылкой на слайды, которые, по-моему, еще не звучали
+      в этом подкасте. Некий товарищ, знат
+    duration: 26.690000000000055
+segments_to_extract:
+- speaker: SPEAKER_NEEDS_VOICE_CHECK
+  stime: 661.92
+  etime: 692.71
+  duration: 30.790000000000077
+  type: unknown
+- speaker: Ksenks
+  stime: 1078.67
+  etime: 1173.04
+  duration: 94.36999999999989
+  type: reference
+- speaker: SPEAKER_NEEDS_VOICE_CHECK
+  stime: 1204.82
+  etime: 1224.85
+  duration: 20.029999999999973
+  type: unknown
+- speaker: Igor
+  stime: 3577.48
+  etime: 3604.17
+  duration: 26.690000000000055
+  type: reference
+- speaker: Umputun
+  stime: 4270.06
+  etime: 4407.4
+  duration: 137.33999999999924
+  type: reference
+- speaker: SPEAKER_NEEDS_VOICE_CHECK
+  stime: 5758.84
+  etime: 5785
+  duration: 26.159999999999854
+  type: unknown
+- speaker: Ruslan
+  stime: 6143.18
+  etime: 6181.32
+  duration: 38.13999999999942
+  type: reference
+comparisons:
+- unknown: SPEAKER_NEEDS_VOICE_CHECK
+  compare_with:
+  - Umputun
+  - Ksenks
+  - Ruslan
+  - Igor

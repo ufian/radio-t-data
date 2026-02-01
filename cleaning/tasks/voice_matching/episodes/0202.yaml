@@ -1,0 +1,88 @@
+episode: 202
+unknown_speakers:
+- speaker: Guest_Unknown
+  total_time: 614.5
+  segments:
+  - stime: 4628.31
+    etime: 4699.97
+    text: То есть наблюдается некоторая расфокусированность в… работе Гугла, это во-первых.
+      И во-вторых, конечно, на этом поле они конкурируют, если конкурируют не только
+      со Скайпом, а с совершеннейшей гигантск
+    duration: 71.65999999999985
+  - stime: 4727.54
+    etime: 4771.72
+    text: Нет, но зато я лично видал и использовал буквально до вчерашнего дня телефонную
+      трубку, которая являлась одновременно и текст, и скайп телефона. Ну, тоже такое
+      вполне себе устройство, которое работает
+    duration: 44.18000000000029
+  - stime: 2954.67
+    etime: 2997.32
+    text: 'Да нет, там можно сказать по воде. В общем, город Игл-Ривер маленький такой,
+      вам проще, наверное, сейчас по карте найти, чем так на словах объяснять. А я
+      пока поздравлю вас с юбилеем. Я начал слушать '
+    duration: 42.65000000000009
+reference_speakers:
+- speaker: Bobuk
+  total_time: 1739.8
+  reference_segment:
+    stime: 5553.32
+    etime: 5619.29
+    text: Все, кому не нравится реклама в радиоте, могут прямо сейчас приглушить звуки
+      вашего радиоприемника. Хорошо сказал, молодец. Значит, у нас традиционный уже
+      спонсор FastVPS. В принципе, мы про него мног
+    duration: 65.97000000000025
+- speaker: Umputun
+  total_time: 2697.6
+  reference_segment:
+    stime: 846.79
+    etime: 894.53
+    text: Вот нормальные люди его уже перестали понимать, и лингвисты ведут серьезную
+      дискуссию о том, является ли это языком или под видом английского. Ну, короче
+      говоря, невозможно расшифровать эти пленки наб
+    duration: 47.74000000000001
+- speaker: Marin_k_a
+  total_time: 968.7
+  reference_segment:
+    stime: 3401
+    etime: 3450.03
+    text: 'Потому что они могут, их Apple, наконец-то, когда Apple засудит Microsoft,
+      ну или кто-то там, бывший сотрудник Microsoft, и отобьет кучу денег, Apple начнет
+      судить всех остальных и отбивать тоже кучу '
+    duration: 49.0300000000002
+segments_to_extract:
+- speaker: Umputun
+  stime: 846.79
+  etime: 894.53
+  duration: 47.74000000000001
+  type: reference
+- speaker: Guest_Unknown
+  stime: 2954.67
+  etime: 2997.32
+  duration: 42.65000000000009
+  type: unknown
+- speaker: Marin_k_a
+  stime: 3401
+  etime: 3450.03
+  duration: 49.0300000000002
+  type: reference
+- speaker: Guest_Unknown
+  stime: 4628.31
+  etime: 4699.97
+  duration: 71.65999999999985
+  type: unknown
+- speaker: Guest_Unknown
+  stime: 4727.54
+  etime: 4771.72
+  duration: 44.18000000000029
+  type: unknown
+- speaker: Bobuk
+  stime: 5553.32
+  etime: 5619.29
+  duration: 65.97000000000025
+  type: reference
+comparisons:
+- unknown: Guest_Unknown
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Marin_k_a

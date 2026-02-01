@@ -1,0 +1,120 @@
+batch: 0000-0099
+episodes_count: 7
+total_segments: 10
+total_duration_sec: 813.5
+total_duration_min: 13.6
+episodes:
+  2:
+    segment_count: 1
+    total_duration_sec: 40.4
+    segments:
+    - speaker: Alex
+      stime: 940.43
+      etime: 980.86
+      duration: 40.43
+      types:
+      - cross_episode
+      task_types:
+      - cross_episode_comparison
+      comparison_group: Alex
+  5:
+    segment_count: 1
+    total_duration_sec: 65.2
+    segments:
+    - speaker: Alex
+      stime: 540.3
+      etime: 605.53
+      duration: 65.23
+      types:
+      - cross_episode
+      task_types:
+      - cross_episode_comparison
+      comparison_group: Alex
+  6:
+    segment_count: 1
+    total_duration_sec: 105.4
+    segments:
+    - speaker: Alex
+      stime: 645.92
+      etime: 751.3
+      duration: 105.38
+      types:
+      - cross_episode
+      task_types:
+      - cross_episode_comparison
+      comparison_group: Alex
+  17:
+    segment_count: 1
+    total_duration_sec: 117.2
+    segments:
+    - speaker: Alex
+      stime: 3219.74
+      etime: 3336.91
+      duration: 117.17
+      types:
+      - cross_episode
+      task_types:
+      - cross_episode_comparison
+      comparison_group: Alex
+  18:
+    segment_count: 1
+    total_duration_sec: 74.9
+    segments:
+    - speaker: Alex
+      stime: 6410.1
+      etime: 6484.98
+      duration: 74.88
+      types:
+      - cross_episode
+      task_types:
+      - cross_episode_comparison
+      comparison_group: Alex
+  27:
+    segment_count: 1
+    total_duration_sec: 21.7
+    segments:
+    - speaker: Alexander
+      stime: 2620.42
+      etime: 2642.08
+      duration: 21.66
+      types:
+      - cross_episode
+      task_types:
+      - cross_episode_comparison
+      comparison_group: Alexander
+  49:
+    segment_count: 4
+    total_duration_sec: 388.8
+    segments:
+    - speaker: Guest_Unknown
+      stime: 2281.01
+      etime: 2442.54
+      duration: 161.53
+      types:
+      - unknown
+      task_types:
+      - episode_identification
+    - speaker: evil_penguin
+      stime: 2675.36
+      etime: 2752.24
+      duration: 76.88
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Umputun
+      stime: 3558.21
+      etime: 3628.05
+      duration: 69.84
+      types:
+      - reference
+      task_types:
+      - episode_identification
+    - speaker: Bobuk
+      stime: 3738.16
+      etime: 3818.68
+      duration: 80.52
+      types:
+      - reference
+      task_types:
+      - episode_identification

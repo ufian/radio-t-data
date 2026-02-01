@@ -1,0 +1,133 @@
+episode: 359
+unknown_speakers:
+- speaker: SPEAKER_03
+  total_time: 388.6
+  segments:
+  - stime: 3863.04
+    etime: 3951.84
+    text: Неужели? Не совсем так. Световой поток, в принципе, только от светового
+      потока и зависит. А спектр, даже не спектр, спектр больше относится к лампочкам
+      типа Хью, про которые Сергей рассказывал. Если б
+    duration: 88.80000000000018
+  - stime: 3469.83
+    etime: 3518.18
+    text: Не, не совсем так. Срок службы светодиодов считается порядка 100 тысяч часов.
+      То есть это очень грубо так около 11 лет. Но на самом деле, естественно, даже
+      светодиодные лампочки, они так долго, как пр
+    duration: 48.34999999999991
+  - stime: 4067.75
+    etime: 4110.62
+    text: Ну, на самом деле, мы ориентируемся больше на лампы фирмы Цивилайт, потому
+      что это очень качественный бренд. Они делают, собственно, под другими брендами
+      выпускают очень известные эти лампы. Недавно о
+    duration: 42.86999999999989
+reference_speakers:
+- speaker: Bobuk
+  total_time: 1853.3
+  reference_segment:
+    stime: 6944.46
+    etime: 7029.38
+    text: Да, вот, смотри, сказала же. Вот так и повторяй теперь, все знают уже, все
+      правильное слово ты знаешь. Там из интересных, условно, новостей про то, что
+      вышел Rust 0.8, в смысле Mozilla Rust, который н
+    duration: 84.92000000000007
+- speaker: Umputun
+  total_time: 2609.0
+  reference_segment:
+    stime: 1775.09
+    etime: 1856.81
+    text: Ну, экранчик остался такой же, вот этот позорный. Full HD при 24 дюймах
+      и вот та следующая их разрешение при 27 дюймах вообще ничего не поменялось с
+      точки зрения экрана. Да, Бобук правильно сказал, те
+    duration: 81.72000000000003
+- speaker: Marin_k_a
+  total_time: 299.2
+  reference_segment:
+    stime: 568.35
+    etime: 620.1
+    text: Ну, 30 лет назад Столман предложил всем скинуться на то, чтобы сделать набор
+      тулзов. Он еще очень интересно говорил, если прочитать его изначальное письмо,
+      он там предлагал написать «Редактор, командн
+    duration: 51.75
+- speaker: Gray
+  total_time: 932.5
+  reference_segment:
+    stime: 133.91
+    etime: 185.81
+    text: Я не понял, почему тебе это кажется, потому что это вполне официально объявленная
+      вообще-то штука, то есть действительно партнерство с Post-it, это бренд компании
+      Tarem, и в общем это, по-моему, повто
+    duration: 51.900000000000006
+- speaker: Ksenks
+  total_time: 348.0
+  reference_segment:
+    stime: 5155.49
+    etime: 5188.96
+    text: 'Ну, да, нет, просто сообщение туда-обратно отлично у тебя будет ходить
+      через вот этот... А прочитанность, например, и прочие параметры? Нет, но прочитанность,
+      насколько она синхронизируется между iOS '
+    duration: 33.470000000000255
+- speaker: EldarMurtazin
+  total_time: 187.2
+  reference_segment:
+    stime: 5492.26
+    etime: 5511.14
+    text: Помните там, где начали появляться специализированные кнопки? Поскольку
+      начали появляться ATX корпуса с шейными управлением питанием, то начали появляться
+      клавиатуры, где были кнопочки Sleep, Reboot и
+    duration: 18.88000000000011
+segments_to_extract:
+- speaker: Gray
+  stime: 133.91
+  etime: 185.81
+  duration: 51.900000000000006
+  type: reference
+- speaker: Marin_k_a
+  stime: 568.35
+  etime: 620.1
+  duration: 51.75
+  type: reference
+- speaker: Umputun
+  stime: 1775.09
+  etime: 1856.81
+  duration: 81.72000000000003
+  type: reference
+- speaker: SPEAKER_03
+  stime: 3469.83
+  etime: 3518.18
+  duration: 48.34999999999991
+  type: unknown
+- speaker: SPEAKER_03
+  stime: 3863.04
+  etime: 3951.84
+  duration: 88.80000000000018
+  type: unknown
+- speaker: SPEAKER_03
+  stime: 4067.75
+  etime: 4110.62
+  duration: 42.86999999999989
+  type: unknown
+- speaker: Ksenks
+  stime: 5155.49
+  etime: 5188.96
+  duration: 33.470000000000255
+  type: reference
+- speaker: EldarMurtazin
+  stime: 5492.26
+  etime: 5511.14
+  duration: 18.88000000000011
+  type: reference
+- speaker: Bobuk
+  stime: 6944.46
+  etime: 7029.38
+  duration: 84.92000000000007
+  type: reference
+comparisons:
+- unknown: SPEAKER_03
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Marin_k_a
+  - Gray
+  - Ksenks
+  - EldarMurtazin

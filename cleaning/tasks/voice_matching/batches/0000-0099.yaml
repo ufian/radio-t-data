@@ -1,0 +1,29 @@
+episode_range: 0000-0099
+episodes:
+- 49
+total_segments: 4
+segments:
+- episode: 49
+  speaker: Guest_Unknown
+  stime: 2281.01
+  etime: 2442.54
+  duration: 161.52999999999975
+  type: unknown
+- episode: 49
+  speaker: evil_penguin
+  stime: 2675.36
+  etime: 2752.24
+  duration: 76.87999999999965
+  type: reference
+- episode: 49
+  speaker: Umputun
+  stime: 3558.21
+  etime: 3628.05
+  duration: 69.84000000000015
+  type: reference
+- episode: 49
+  speaker: Bobuk
+  stime: 3738.16
+  etime: 3818.68
+  duration: 80.51999999999998
+  type: reference

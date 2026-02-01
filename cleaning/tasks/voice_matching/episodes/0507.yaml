@@ -1,0 +1,73 @@
+episode: 507
+unknown_speakers:
+- speaker: ruslan_unknown
+  total_time: 929.0
+  segments:
+  - stime: 1072.05
+    etime: 1144.25
+    text: Да, это тип future, то есть это параметризация future, которая вернется
+      из async. То есть мы вызываем функцию которое выглядит как... которое называется
+      async. Внутри мы пишем какие-то вычисления. Там
+    duration: 72.20000000000005
+  - stime: 2551.2
+    etime: 2616.12
+    text: Да, но это опционально, по большому счету. То есть, если ты аннотацию не
+      напишешь, тебе никто за это, кроме каких-нибудь чекстайлов, по рукам не подбьет.
+      А в Kotlin это на уровне языка, и тут тебе хоч
+    duration: 64.92000000000007
+  - stime: 840.51
+    etime: 893.42
+    text: Естественно, мы находимся в стене Java, и Kotlin не настолько большой язык,
+      еще не настолько большой комьюнити. Тут никаких вопросов не может быть. Например,
+      сейчас комьюнити с Kotlin в Slack примерно
+    duration: 52.90999999999997
+reference_speakers:
+- speaker: Umputun
+  total_time: 4070.6
+  reference_segment:
+    stime: 5525.77
+    etime: 5716.58
+    text: Он сравнивает горячее с длинным. Говорит, Google позволяет тебе создавать
+      простые firewall rules. Молодцы. Если бы он это сравнивал с Digital Ocean, в
+      котором нет Firewall внешне, я бы сказал, ты прав
+    duration: 190.8099999999995
+- speaker: Ksenks
+  total_time: 1744.5
+  reference_segment:
+    stime: 2779.53
+    etime: 2900.75
+    text: Ну подожди, это все... Давайте сравнивать яблоки с яблоками. То есть если
+      мы сравниваем туллинг под iOS и туллинг под Android, в iOS все шикарно. Ну то
+      есть у нас есть очень хороший симулятор, у нас е
+    duration: 121.2199999999998
+segments_to_extract:
+- speaker: ruslan_unknown
+  stime: 840.51
+  etime: 893.42
+  duration: 52.90999999999997
+  type: unknown
+- speaker: ruslan_unknown
+  stime: 1072.05
+  etime: 1144.25
+  duration: 72.20000000000005
+  type: unknown
+- speaker: ruslan_unknown
+  stime: 2551.2
+  etime: 2616.12
+  duration: 64.92000000000007
+  type: unknown
+- speaker: Ksenks
+  stime: 2779.53
+  etime: 2900.75
+  duration: 121.2199999999998
+  type: reference
+- speaker: Umputun
+  stime: 5525.77
+  etime: 5716.58
+  duration: 190.8099999999995
+  type: reference
+comparisons:
+- unknown: ruslan_unknown
+  compare_with:
+  - Umputun
+  - Ksenks

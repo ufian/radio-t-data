@@ -1,0 +1,41 @@
+episode_range: 0900-0999
+episodes:
+- 994
+total_segments: 6
+segments:
+- episode: 994
+  speaker: Alek.sys
+  stime: 499.66
+  etime: 561.85
+  duration: 62.19
+  type: reference
+- episode: 994
+  speaker: Guest_Unknown
+  stime: 1095.48
+  etime: 1179.77
+  duration: 84.28999999999996
+  type: unknown
+- episode: 994
+  speaker: Guest_Unknown
+  stime: 4200.61
+  etime: 4252.25
+  duration: 51.64000000000033
+  type: unknown
+- episode: 994
+  speaker: Ksenks
+  stime: 4401.99
+  etime: 4514.91
+  duration: 112.92000000000007
+  type: reference
+- episode: 994
+  speaker: Guest_Unknown
+  stime: 5197.68
+  etime: 5259.57
+  duration: 61.88999999999942
+  type: unknown
+- episode: 994
+  speaker: Umputun
+  stime: 5782.1
+  etime: 5903.7
+  duration: 121.59999999999945
+  type: reference

@@ -1,0 +1,118 @@
+episode: 622
+unknown_speakers:
+- speaker: SPEAKER_02
+  total_time: 295.8
+  segments:
+  - stime: 815.14
+    etime: 865.23
+    text: 'Да, есть такая опасность, и у нас очень была большая дискуссия в нашей
+      внутренней рассылке по этому поводу. Нам обещали, что это все останется. Что
+      все свободы, которые мы имеем, они будут такими же, '
+    duration: 50.09000000000003
+  - stime: 1402.14
+    etime: 1439.96
+    text: 'Сотрудники замечательно работают. Я хочу вспомнить историю. Red Hat же
+      делал Linux много-много лет. И, собственно, у нас была проблема в том, что мы
+      не делали middleware. Собственно, Gboss, в котором '
+    duration: 37.819999999999936
+  - stime: 645.87
+    etime: 673.57
+    text: Я согласен, да, там моя мама знает, что такое IBM, а что такое Red Hat еще
+      объяснять надо. Но как-то мы вот очень грустно восприняли эту новость, но пока
+      нам тут столько всего обещают, всякого разного
+    duration: 27.700000000000045
+reference_speakers:
+- speaker: Bobuk
+  total_time: 1688.0
+  reference_segment:
+    stime: 5749.09
+    etime: 5823.68
+    text: 'Ты просто из интереса посмотри, если тебе интересно. Это довольно прикольная
+      тулза сама по себе. Она подкупает очень... очень вылизанностью в некоторых странных
+      аспектах. Например, у нее GUI есть для '
+    duration: 74.59000000000015
+- speaker: Alek.sys
+  total_time: 825.0
+  reference_segment:
+    stime: 2060.34
+    etime: 2130.38
+    text: 'Посыл в статье интересный. Там приводится пример предыдущего, я так понимаю,
+      совсем-совсем предыдущего CEO IBM, Герстнер, который сделал огромную ставку
+      в свое время, когда IBM занималась клиентскими '
+    duration: 70.03999999999996
+- speaker: Umputun
+  total_time: 3559.1
+  reference_segment:
+    stime: 5301.27
+    etime: 5409.63
+    text: Я до конца, но по диагонали. Краткое содержание такое. У них произошел партишинг.
+      Причем такой, в глобальном масштабе. Когда одна часть системы не видит другую
+      часть системы, в результате система орке
+    duration: 108.35999999999967
+- speaker: Gray
+  total_time: 705.6
+  reference_segment:
+    stime: 7274.38
+    etime: 7317.8
+    text: Да у меня пару случаев было, когда система мониторинга присылала кучу тикетов.
+      А при проверке оказывалось, что это у нее коннекшн до сервера падал. Ты уходишь
+      и отбиваешься только от ее смс-ок, потому
+    duration: 43.42000000000007
+- speaker: Ksenks
+  total_time: 884.2
+  reference_segment:
+    stime: 8233.45
+    etime: 8313.61
+    text: Лучше знаешь, как это происходит? Я тебе сейчас расскажу, как это происходит.
+      Вот начинается с того, что тебе вообще ничего не надо. Потом ты такой подумал,
+      блин, как-то херово, ну давай добавим немно
+    duration: 80.15999999999985
+segments_to_extract:
+- speaker: SPEAKER_02
+  stime: 645.87
+  etime: 673.57
+  duration: 27.700000000000045
+  type: unknown
+- speaker: SPEAKER_02
+  stime: 815.14
+  etime: 865.23
+  duration: 50.09000000000003
+  type: unknown
+- speaker: SPEAKER_02
+  stime: 1402.14
+  etime: 1439.96
+  duration: 37.819999999999936
+  type: unknown
+- speaker: Alek.sys
+  stime: 2060.34
+  etime: 2130.38
+  duration: 70.03999999999996
+  type: reference
+- speaker: Umputun
+  stime: 5301.27
+  etime: 5409.63
+  duration: 108.35999999999967
+  type: reference
+- speaker: Bobuk
+  stime: 5749.09
+  etime: 5823.68
+  duration: 74.59000000000015
+  type: reference
+- speaker: Gray
+  stime: 7274.38
+  etime: 7317.8
+  duration: 43.42000000000007
+  type: reference
+- speaker: Ksenks
+  stime: 8233.45
+  etime: 8313.61
+  duration: 80.15999999999985
+  type: reference
+comparisons:
+- unknown: SPEAKER_02
+  compare_with:
+  - Bobuk
+  - Alek.sys
+  - Umputun
+  - Gray
+  - Ksenks

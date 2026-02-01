@@ -1,0 +1,88 @@
+episode: 628
+unknown_speakers:
+- speaker: SPEAKER_04
+  total_time: 2509.0
+  segments:
+  - stime: 7424.87
+    etime: 7528.81
+    text: Вообще, как бы, с одной стороны, у тебя может... Такое представление о Кубернетесе,
+      когда он еще был в коротких штанишках ходил, когда для того, чтобы его установить,
+      там надо еще Put Solace есть, там
+    duration: 103.94000000000051
+  - stime: 3246.99
+    etime: 3346.67
+    text: Да. А потом он все-таки подумал, как бы, а зачем он это делает? Зачем он
+      отыгрывается на разработчике? И здесь, честно говоря, вот тут вот как раз та
+      самая грань, как мне кажется, по крайней мере, я д
+    duration: 99.68000000000029
+  - stime: 6583.56
+    etime: 6682.03
+    text: Не, Ксюш, смотри, как бы ситуация, да, допустим, вы хотите убрать вот эту
+      вот токсичную обратную связь. Но я не помню, где-то читал, психологи писали,
+      но это наши российские психологи, что дети, котор
+    duration: 98.46999999999935
+reference_speakers:
+- speaker: Umputun
+  total_time: 3590.6
+  reference_segment:
+    stime: 2815.05
+    etime: 3041.97
+    text: Нет, это даже не про моих программистов. Это про таких коллег, которым я
+      иногда помогаю. Они... Когда-то были нашими, с одной стороны, заказчиками, с
+      другой стороны, поставщиками. Давно это было. С те
+    duration: 226.91999999999962
+- speaker: Ksenks
+  total_time: 1677.0
+  reference_segment:
+    stime: 6705.47
+    etime: 6806.29
+    text: Окей. Просто если ты немножко поглубже кутнёшь, то там есть очень разные
+      подходы. И вот эти два подхода, первый, который такой жёсткий, когда там ушата
+      на тебя выливают, тебя жёстко долбят домашкой, е
+    duration: 100.81999999999971
+- speaker: Anya
+  total_time: 520.7
+  reference_segment:
+    stime: 179.56
+    etime: 218.04
+    text: Значит, Apple Music Support хит Amazon Echo Speakers. Теперь, если у вас
+      есть Amazon Alexa, вы можете установить Apple Music по умолчанию как стриминговый
+      сервис и слушать Apple Music. Мне кажется, эт
+    duration: 38.47999999999999
+segments_to_extract:
+- speaker: Anya
+  stime: 179.56
+  etime: 218.04
+  duration: 38.47999999999999
+  type: reference
+- speaker: Umputun
+  stime: 2815.05
+  etime: 3041.97
+  duration: 226.91999999999962
+  type: reference
+- speaker: SPEAKER_04
+  stime: 3246.99
+  etime: 3346.67
+  duration: 99.68000000000029
+  type: unknown
+- speaker: SPEAKER_04
+  stime: 6583.56
+  etime: 6682.03
+  duration: 98.46999999999935
+  type: unknown
+- speaker: Ksenks
+  stime: 6705.47
+  etime: 6806.29
+  duration: 100.81999999999971
+  type: reference
+- speaker: SPEAKER_04
+  stime: 7424.87
+  etime: 7528.81
+  duration: 103.94000000000051
+  type: unknown
+comparisons:
+- unknown: SPEAKER_04
+  compare_with:
+  - Umputun
+  - Ksenks
+  - Anya

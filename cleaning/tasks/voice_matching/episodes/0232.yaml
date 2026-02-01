@@ -1,0 +1,118 @@
+episode: 232
+unknown_speakers:
+- speaker: SPEAKER_06
+  total_time: 141.9
+  segments:
+  - stime: 4474.89
+    etime: 4503.92
+    text: 4.0, на мой, по крайней мере, взгляд... Во-первых, умеет освобождать память.
+      Ну, в какой-то мере, естественно. По крайней мере, мне так показалось. Потому
+      что 3.6 этого вообще не умеет делать. То, что
+    duration: 29.029999999999745
+  - stime: 4393.7
+    etime: 4419.96
+    text: 'Я оставил на всем, что только возможно. Я на всем своем Linux, на Windows
+      и на Mac OS X поставил, и, скажем так, ощущение гораздо лучше, чем от третьего.
+      Я просто в свое время отказался от Mozilla 3, '
+    duration: 26.26000000000022
+  - stime: 4542.19
+    etime: 4557.32
+    text: Я человек, который пытаюсь, по крайней мере, программировать для серверов.
+      Пытаюсь чуть-чуть. Я все-таки еще начинаю относительно программировать. Я по
+      опыту скажу, что памяти вроде много, но ее легко
+    duration: 15.13000000000011
+reference_speakers:
+- speaker: Umputun
+  total_time: 3293.2
+  reference_segment:
+    stime: 3091.53
+    etime: 3201.37
+    text: 'Это они его купили за 250 миллионов долларов. Вот этот домен на имя себе.
+      Ужас какой. Или 240 миллионов. Вот какая-то такая совершенно несусветная цена.
+      Этот Color сделал, ну, как все пишут, поделку. '
+    duration: 109.83999999999969
+- speaker: Marin_k_a
+  total_time: 1459.0
+  reference_segment:
+    stime: 861.89
+    etime: 944.99
+    text: Ты знаешь, я вот сейчас просто вспоминаю, когда я первый раз столкнулась
+      с андроидом, Тогда еще железок, ну, не то, что не было, просто-просто вот анонсировался
+      Android. Я скачала эмулятор для разрабо
+    duration: 83.10000000000002
+- speaker: PetrDidenko
+  total_time: 1033.8
+  reference_segment:
+    stime: 2633.43
+    etime: 2711.92
+    text: Я вот смотрю на этот график, и вот с одной стороны он такой позитивный-позитивный,
+      так вверх-вверх тянется, а с другой стороны... Да, такой красивый график. Но
+      вот проблема, мне кажется, мы недооценив
+    duration: 78.49000000000024
+- speaker: VasilyLA
+  total_time: 275.6
+  reference_segment:
+    stime: 2931.81
+    etime: 2958.88
+    text: Ну, суть верна, да, так и есть. А потом же, опять же, возвращаясь к количеству
+      населения, просто, как говорится, процент хороших программистов, он приблизительно,
+      наверное, одинаковый, может быть, даж
+    duration: 27.070000000000164
+- speaker: NevyIvan
+  total_time: 336.3
+  reference_segment:
+    stime: 5292.72
+    etime: 5348.03
+    text: 'Да-да, Марусь, не расстраивайся, я живу в самом что ни на есть морском
+      городе, город Мурманск. У нас тут моряки, у нас тут все есть. И белые медведи,
+      и все что угодно, как-то Женя уже рассказывал. По '
+    duration: 55.30999999999949
+segments_to_extract:
+- speaker: Marin_k_a
+  stime: 861.89
+  etime: 944.99
+  duration: 83.10000000000002
+  type: reference
+- speaker: PetrDidenko
+  stime: 2633.43
+  etime: 2711.92
+  duration: 78.49000000000024
+  type: reference
+- speaker: VasilyLA
+  stime: 2931.81
+  etime: 2958.88
+  duration: 27.070000000000164
+  type: reference
+- speaker: Umputun
+  stime: 3091.53
+  etime: 3201.37
+  duration: 109.83999999999969
+  type: reference
+- speaker: SPEAKER_06
+  stime: 4393.7
+  etime: 4419.96
+  duration: 26.26000000000022
+  type: unknown
+- speaker: SPEAKER_06
+  stime: 4474.89
+  etime: 4503.92
+  duration: 29.029999999999745
+  type: unknown
+- speaker: SPEAKER_06
+  stime: 4542.19
+  etime: 4557.32
+  duration: 15.13000000000011
+  type: unknown
+- speaker: NevyIvan
+  stime: 5292.72
+  etime: 5348.03
+  duration: 55.30999999999949
+  type: reference
+comparisons:
+- unknown: SPEAKER_06
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - PetrDidenko
+  - VasilyLA
+  - NevyIvan

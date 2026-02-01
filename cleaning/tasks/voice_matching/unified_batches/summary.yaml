@@ -1,0 +1,143 @@
+description: Unified batches for audio extraction - combines episode and cross-episode
+  tasks
+total_batches: 8
+total_episodes: 80
+total_segments: 483
+total_duration_sec: 28639.5
+batches:
+  0000-0099:
+    episode_range: 0000-0099
+    episodes_count: 7
+    episodes:
+    - 2
+    - 5
+    - 6
+    - 17
+    - 18
+    - 27
+    - 49
+    total_segments: 10
+    total_duration_sec: 813.5
+    total_duration_min: 13.6
+  0100-0199:
+    episode_range: 0100-0199
+    episodes_count: 4
+    episodes:
+    - 100
+    - 150
+    - 193
+    - 196
+    total_segments: 19
+    total_duration_sec: 1065.3
+    total_duration_min: 17.8
+  0200-0299:
+    episode_range: 0200-0299
+    episodes_count: 14
+    episodes:
+    - 202
+    - 209
+    - 211
+    - 232
+    - 234
+    - 237
+    - 239
+    - 243
+    - 247
+    - 254
+    - 284
+    - 286
+    - 298
+    - 299
+    total_segments: 58
+    total_duration_sec: 3334.8
+    total_duration_min: 55.6
+  0300-0399:
+    episode_range: 0300-0399
+    episodes_count: 19
+    episodes:
+    - 309
+    - 327
+    - 328
+    - 329
+    - 339
+    - 344
+    - 350
+    - 353
+    - 359
+    - 369
+    - 372
+    - 373
+    - 377
+    - 378
+    - 382
+    - 386
+    - 394
+    - 395
+    - 397
+    total_segments: 154
+    total_duration_sec: 8137.8
+    total_duration_min: 135.6
+  0400-0499:
+    episode_range: 0400-0499
+    episodes_count: 17
+    episodes:
+    - 400
+    - 403
+    - 408
+    - 423
+    - 425
+    - 429
+    - 435
+    - 441
+    - 445
+    - 446
+    - 458
+    - 461
+    - 462
+    - 465
+    - 466
+    - 471
+    - 486
+    total_segments: 107
+    total_duration_sec: 5962.7
+    total_duration_min: 99.4
+  0500-0599:
+    episode_range: 0500-0599
+    episodes_count: 9
+    episodes:
+    - 505
+    - 506
+    - 507
+    - 517
+    - 524
+    - 532
+    - 536
+    - 562
+    - 566
+    total_segments: 70
+    total_duration_sec: 4669.1
+    total_duration_min: 77.8
+  0600-0699:
+    episode_range: 0600-0699
+    episodes_count: 8
+    episodes:
+    - 613
+    - 621
+    - 622
+    - 627
+    - 628
+    - 643
+    - 662
+    - 675
+    total_segments: 58
+    total_duration_sec: 4083.8
+    total_duration_min: 68.1
+  0900-0999:
+    episode_range: 0900-0999
+    episodes_count: 2
+    episodes:
+    - 976
+    - 994
+    total_segments: 7
+    total_duration_sec: 572.5
+    total_duration_min: 9.5

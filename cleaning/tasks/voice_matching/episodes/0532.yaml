@@ -1,0 +1,118 @@
+episode: 532
+unknown_speakers:
+- speaker: SPEAKER_06
+  total_time: 1563.0
+  segments:
+  - stime: 5172.77
+    etime: 5321.86
+    text: Так нет, так и получается, что у тебя есть какой-то контекст, ты там фигачишь-фигачишь
+      логику, когда у тебя подготовилось уже выполнять бизнес-требования, ты понимаешь,
+      как это все работает, ты уже, у
+    duration: 149.08999999999924
+  - stime: 7269.13
+    etime: 7399.16
+    text: Так нет, мы же тебе и предлагаем тот смысл, что, смотри, много-много-много
+      лет назад, когда еще Java Enterprise была кому-то нужна, на рынке искали даже
+      таких людей, назывался это Enterprise Architect
+    duration: 130.02999999999975
+  - stime: 8972.13
+    etime: 9059.61
+    text: У нас идет в обратную сторону. То есть кто-то что-то пишет, какой-то код
+      идет. Например, кэш там надо какой-то свой специальный написать. Он идет внутри
+      этого микросервиса, внутри этого проекта, где о
+    duration: 87.48000000000138
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2623.4
+  reference_segment:
+    stime: 630.68
+    etime: 708.8
+    text: Нет, ну, в смысле, там, типа, это смешанный процесс. Тебе нужно поднять
+      по гид-статусу большое количество объектов из базы. Каждый подъем этого объекта
+      выглядит так. Дай мне объект номер такой-то. Ну,
+    duration: 78.12
+- speaker: Alek.sys
+  total_time: 107.6
+  reference_segment:
+    stime: 3693.97
+    etime: 3709.57
+    text: Все делают HTTP и эти сервисы, а он такой, а давайте теперь я просто для
+      вас напишу gRPC вот этот слой и оберну это в какой-нибудь типа акторов фреймворк,
+      чтобы у вас с интерфейс приходили сообщения.
+    duration: 15.600000000000364
+- speaker: Umputun
+  total_time: 4036.8
+  reference_segment:
+    stime: 3323.56
+    etime: 3452.66
+    text: АКО.нет, то есть вот которые дадут на это имплементацию. И он, как человек,
+      измученный АКО, сказал, жить так дальше нельзя, причем объяснил, собственно,
+      чего не так. А не так там много где. Главная ег
+    duration: 129.0999999999999
+- speaker: Gray
+  total_time: 380.0
+  reference_segment:
+    stime: 3195.97
+    etime: 3255.16
+    text: 'Ну, они подсказывают. А теперь у них можно подключиться по VNC через веб-клиент
+      из панели управления. Единственное, чтобы это дело появилось, надо перезапустить
+      бокс, потому что оно накатит изменения '
+    duration: 59.190000000000055
+- speaker: Ksenks
+  total_time: 1825.2
+  reference_segment:
+    stime: 8289.43
+    etime: 8424.15
+    text: Первое. Во-первых, та библиотека, которая уже за open-source, это один уровень.
+      То есть моя команда работает не только над тем, чтобы поддержать одну библиотеку,
+      но и над тем, чтобы над другими библио
+    duration: 134.71999999999935
+segments_to_extract:
+- speaker: Bobuk
+  stime: 630.68
+  etime: 708.8
+  duration: 78.12
+  type: reference
+- speaker: Gray
+  stime: 3195.97
+  etime: 3255.16
+  duration: 59.190000000000055
+  type: reference
+- speaker: Umputun
+  stime: 3323.56
+  etime: 3452.66
+  duration: 129.0999999999999
+  type: reference
+- speaker: Alek.sys
+  stime: 3693.97
+  etime: 3709.57
+  duration: 15.600000000000364
+  type: reference
+- speaker: SPEAKER_06
+  stime: 5172.77
+  etime: 5321.86
+  duration: 149.08999999999924
+  type: unknown
+- speaker: SPEAKER_06
+  stime: 7269.13
+  etime: 7399.16
+  duration: 130.02999999999975
+  type: unknown
+- speaker: Ksenks
+  stime: 8289.43
+  etime: 8424.15
+  duration: 134.71999999999935
+  type: reference
+- speaker: SPEAKER_06
+  stime: 8972.13
+  etime: 9059.61
+  duration: 87.48000000000138
+  type: unknown
+comparisons:
+- unknown: SPEAKER_06
+  compare_with:
+  - Bobuk
+  - Alek.sys
+  - Umputun
+  - Gray
+  - Ksenks

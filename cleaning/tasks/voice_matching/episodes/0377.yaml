@@ -1,0 +1,100 @@
+episode: 377
+unknown_speakers:
+- speaker: SPEAKER_00
+  total_time: 87.0
+  segments:
+  - stime: 6890.22
+    etime: 6900.82
+    text: Мне кажется, это странно, когда получается, что все руки, глаза и все остальное,
+      когда слишком много сил бросается на открытие чего-то, это как-то выглядит...
+    duration: 10.599999999999454
+  - stime: 6970.9
+    etime: 6980.92
+    text: Ну вот я тоже подумала. Мне кажется, это может быть очень странной ситуацией,
+      когда ты там, не знаю, посреди совещания волнуешься, нервничаешь.
+    duration: 10.020000000000437
+  - stime: 7047.05
+    etime: 7055.44
+    text: Мне кажется, это тоже сурово. Ну, в смысле, точно так же, как... Нет, да,
+      да, точно так же, как какое-нибудь совещание, и татуха у тебя ремень расстегнулась.
+    duration: 8.389999999999418
+reference_speakers:
+- speaker: Bobuk
+  total_time: 3447.5
+  reference_segment:
+    stime: 1117.19
+    etime: 1225.24
+    text: 'Да, но проблема в том, что раньше, по крайней мере, в мире, давайте скажем,
+      в мире до прихода сюда крупных игроков на этот рынок, мир телефонов выглядел
+      совсем по-другому. Там было, грубо говоря, 70% '
+    duration: 108.04999999999995
+- speaker: Marin_k_a
+  total_time: 586.8
+  reference_segment:
+    stime: 6119.98
+    etime: 6157.99
+    text: А я читала, что есть вообще какие-то слухи по поводу того, что Apple все-таки
+      даст выбирать клавиатуры, но не пользовательские установленные, а сразу из коробки
+      в iOS будут идти несколько клавиатур, т
+    duration: 38.01000000000022
+- speaker: Gray
+  total_time: 1686.2
+  reference_segment:
+    stime: 5425.28
+    etime: 5543.98
+    text: 'И, короче, поскольку это был совершенно новый аппарат, который, естественно,
+      никакой гарантии уже не подлежал, естественно, не подлежал искупанной, Вот,
+      эффект был, конечно, смертельный, 700 долларов '
+    duration: 118.69999999999982
+- speaker: Ksenks
+  total_time: 1169.9
+  reference_segment:
+    stime: 6506.83
+    etime: 6541.83
+    text: тебе будет полезнее не факт я сама разберусь как делать не знаю у меня вообще
+      вот эта вот идея с тем что ну как бы хотят то есть я за некоторые вещи я лучше
+      заплачу но не хочу сообщать никому мою перс
+    duration: 35.0
+segments_to_extract:
+- speaker: Bobuk
+  stime: 1117.19
+  etime: 1225.24
+  duration: 108.04999999999995
+  type: reference
+- speaker: Gray
+  stime: 5425.28
+  etime: 5543.98
+  duration: 118.69999999999982
+  type: reference
+- speaker: Marin_k_a
+  stime: 6119.98
+  etime: 6157.99
+  duration: 38.01000000000022
+  type: reference
+- speaker: Ksenks
+  stime: 6506.83
+  etime: 6541.83
+  duration: 35.0
+  type: reference
+- speaker: SPEAKER_00
+  stime: 6890.22
+  etime: 6900.82
+  duration: 10.599999999999454
+  type: unknown
+- speaker: SPEAKER_00
+  stime: 6970.9
+  etime: 6980.92
+  duration: 10.020000000000437
+  type: unknown
+- speaker: SPEAKER_00
+  stime: 7047.05
+  etime: 7055.44
+  duration: 8.389999999999418
+  type: unknown
+comparisons:
+- unknown: SPEAKER_00
+  compare_with:
+  - Bobuk
+  - Marin_k_a
+  - Gray
+  - Ksenks

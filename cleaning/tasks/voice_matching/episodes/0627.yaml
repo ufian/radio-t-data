@@ -1,0 +1,118 @@
+episode: 627
+unknown_speakers:
+- speaker: SPEAKER_02
+  total_time: 315.3
+  segments:
+  - stime: 4120.32
+    etime: 4170.74
+    text: 'Если вот разрабатываешь веб-сайт, нужно также думать о том, чтобы люди,
+      которые плохо видят, тоже могли им пользоваться. А люди, которые плохо видят,
+      не пользуются мышкой. Они пользуются клавиатурой. '
+    duration: 50.42000000000007
+  - stime: 5267.99
+    etime: 5300.62
+    text: Знаете, мессенджеров много, и много из них выполняют такие функции, как
+      просто отправить сообщение и сделать видеозвонок. Но для работы, например, тоже
+      иногда нужны такого типа приложения. И я знаю, у
+    duration: 32.63000000000011
+  - stime: 988.49
+    etime: 1005.34
+    text: Они странное слово выбрали, на которое заменять, потому что теперь уже никак
+      не вернуть обратно. Ну, то есть, если они попробуют вернуть, как было, то не
+      получится, потому что все слова «хад» будут...
+    duration: 16.850000000000023
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2231.8
+  reference_segment:
+    stime: 7999.58
+    etime: 8066.26
+    text: Да-да, ты тыкаешь в row файл, идешь туда по ссылке. Проблема только в том,
+      что, во-первых, там дикие ограничения на скачивание. То есть ты по такой ссылке,
+      которая на github-user-content, там, да, как
+    duration: 66.68000000000029
+- speaker: Alek.sys
+  total_time: 829.5
+  reference_segment:
+    stime: 5885.28
+    etime: 5932.85
+    text: Я насчет лям ничего не скажу, а про ту новость, которую ты упомянул, потому
+      что Pivotal анонсировал вот этот сервер-лес фреймворк. Да, это то, что Pivotal
+      зарелизил, это называется Function as a Servi
+    duration: 47.57000000000062
+- speaker: Umputun
+  total_time: 2289.9
+  reference_segment:
+    stime: 1201.36
+    etime: 1285.61
+    text: Еще один случай. Вчера нашел, но это, правда, не китайцы, это другой человек
+      сделал. Есть у нас тоже, где я написал подобный комментарий, отвечая они на
+      вопрос. Есть система, которая делает разные про
+    duration: 84.25
+- speaker: Gray
+  total_time: 1380.8
+  reference_segment:
+    stime: 5049.95
+    etime: 5136.79
+    text: Нет, там получается такая интересная фигня, я уже не отслеживал, сразу они
+      это сделали или нет, но там получается так. Они поменяли API, И теперь желающий,
+      кто все-таки хочет продолжать это все делать
+    duration: 86.84000000000015
+- speaker: Ksenks
+  total_time: 500.2
+  reference_segment:
+    stime: 253.13
+    etime: 286.22
+    text: И тогда они немножко зашевелились, потому что до этого, я так понимаю, их
+      все устраивало, правильно? И после того, как их выперли из App Store, они даже
+      не хотели рассказывать, почему их выперли. Но п
+    duration: 33.09000000000003
+segments_to_extract:
+- speaker: Ksenks
+  stime: 253.13
+  etime: 286.22
+  duration: 33.09000000000003
+  type: reference
+- speaker: SPEAKER_02
+  stime: 988.49
+  etime: 1005.34
+  duration: 16.850000000000023
+  type: unknown
+- speaker: Umputun
+  stime: 1201.36
+  etime: 1285.61
+  duration: 84.25
+  type: reference
+- speaker: SPEAKER_02
+  stime: 4120.32
+  etime: 4170.74
+  duration: 50.42000000000007
+  type: unknown
+- speaker: Gray
+  stime: 5049.95
+  etime: 5136.79
+  duration: 86.84000000000015
+  type: reference
+- speaker: SPEAKER_02
+  stime: 5267.99
+  etime: 5300.62
+  duration: 32.63000000000011
+  type: unknown
+- speaker: Alek.sys
+  stime: 5885.28
+  etime: 5932.85
+  duration: 47.57000000000062
+  type: reference
+- speaker: Bobuk
+  stime: 7999.58
+  etime: 8066.26
+  duration: 66.68000000000029
+  type: reference
+comparisons:
+- unknown: SPEAKER_02
+  compare_with:
+  - Bobuk
+  - Alek.sys
+  - Umputun
+  - Gray
+  - Ksenks

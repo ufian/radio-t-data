@@ -1,0 +1,116 @@
+episode: 254
+unknown_speakers:
+- speaker: SPEAKER_MISATTRIBUTED_EldarMurtazin
+  total_time: 88.9
+  segments:
+  - stime: 5922.43
+    etime: 5936.42
+    text: То есть все существующие продукты, они используют драйвера для виртуализации
+      и они не могут быть в App Store по текущим как бы правилам? То есть ни MyFusion,
+      ни Parallels, ни VirtualBox в AppStore с т
+    duration: 13.989999999999782
+  - stime: 978.99
+    etime: 990.77
+    text: Мы начали этот переезд там еще с PD6, и там как бы весь энжин виртуальной
+      машины мы сделали 64 бита, но GUI был по-прежнему 32 битный.
+    duration: 11.779999999999973
+  - stime: 6108.44
+    etime: 6116.58
+    text: В МВАРе, конечно, этот продукт очень хороший, и, в принципе, мы по многим
+      параметрам с ними паритетны.
+    duration: 8.140000000000327
+reference_speakers:
+- speaker: Bobuk
+  total_time: 1720.0
+  reference_segment:
+    stime: 2439.04
+    etime: 2554.3
+    text: Как-нибудь так по-отечески, по холке поговорить. Конечно, есть. На самом
+      деле, как бы и что бы я ни говорил, я довольно часто пользуюсь продуктами компании
+      Google. Это вообще такая икона IT во многом.
+    duration: 115.26000000000022
+- speaker: Umputun
+  total_time: 1766.1
+  reference_segment:
+    stime: 700.41
+    etime: 807.47
+    text: Вот с этим, по-моему, пока плохо получается. Почему? А я расскажу, почему.
+      Я как раз тоже из тех людей, кто попытался в свое время уйти от безнадеги работы
+      с экшенжами, поэтому запускал Outlook, самый
+    duration: 107.06000000000006
+- speaker: Gray
+  total_time: 1026.0
+  reference_segment:
+    stime: 4268.18
+    etime: 4364.59
+    text: Ну, я на самом деле вижу. Я, собственно, правда, был на этой неделе в гостях
+      в Apple Insider и тоже про это, в общем, говорил. Поэтому могу просто немножко
+      повторить. HP, когда оброняла цену до 99 дол
+    duration: 96.40999999999985
+- speaker: nikolay_dobrovolskiy
+  total_time: 930.6
+  reference_segment:
+    stime: 4763.2
+    etime: 4830.63
+    text: На самом деле основное в клауде – это как раз именно автоматизация. Потому
+      что какие виртуальные машины, на каких железках, они тут перечисляют кучу разных
+      идем, это хорошо. Но основная вещь – это как
+    duration: 67.43000000000029
+- speaker: andrey_amelyanchuk
+  total_time: 289.4
+  reference_segment:
+    stime: 872.89
+    etime: 917.96
+    text: То есть нужно смотреть. В целом, по нашим тестам, мы как бы потребление
+      CPU в PD7 мы уменьшили по сравнению с PD6. И, кстати, еще одна интересная вещь,
+      я уже заодно ее приплету. Кроме, так сказать, по
+    duration: 45.07000000000005
+segments_to_extract:
+- speaker: Umputun
+  stime: 700.41
+  etime: 807.47
+  duration: 107.06000000000006
+  type: reference
+- speaker: andrey_amelyanchuk
+  stime: 872.89
+  etime: 917.96
+  duration: 45.07000000000005
+  type: reference
+- speaker: SPEAKER_MISATTRIBUTED_EldarMurtazin
+  stime: 978.99
+  etime: 990.77
+  duration: 11.779999999999973
+  type: unknown
+- speaker: Bobuk
+  stime: 2439.04
+  etime: 2554.3
+  duration: 115.26000000000022
+  type: reference
+- speaker: Gray
+  stime: 4268.18
+  etime: 4364.59
+  duration: 96.40999999999985
+  type: reference
+- speaker: nikolay_dobrovolskiy
+  stime: 4763.2
+  etime: 4830.63
+  duration: 67.43000000000029
+  type: reference
+- speaker: SPEAKER_MISATTRIBUTED_EldarMurtazin
+  stime: 5922.43
+  etime: 5936.42
+  duration: 13.989999999999782
+  type: unknown
+- speaker: SPEAKER_MISATTRIBUTED_EldarMurtazin
+  stime: 6108.44
+  etime: 6116.58
+  duration: 8.140000000000327
+  type: unknown
+comparisons:
+- unknown: SPEAKER_MISATTRIBUTED_EldarMurtazin
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Gray
+  - nikolay_dobrovolskiy
+  - andrey_amelyanchuk

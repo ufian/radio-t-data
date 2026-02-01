@@ -1,0 +1,127 @@
+episode: 309
+unknown_speakers:
+- speaker: SPEAKER_04
+  total_time: 234.7
+  segments:
+  - stime: 7136.22
+    etime: 7149.01
+    text: А может быть там парк, все прекрасно. Тут не так сильно коррелирует, сколько
+      у тебя денег в конкретный момент. Уровень жизни выражается вокруг блага. Плюс
+      социальные.
+    duration: 12.789999999999964
+  - stime: 2214.37
+    etime: 2226.02
+    text: РПМов и вообще ковырянием в этом. Мне это нравится. Но вот сейчас я занимаюсь
+      ГУЕМ и понимаю, что это... Даже мне нравилось и под Linux писать ГУЕМ на ГТК.
+    duration: 11.650000000000091
+  - stime: 3109.56
+    etime: 3119.53
+    text: Вот да, я сразу Xcode вспомнила. Он тоже как-то, ну, не всегда его поведение
+      ожидаемо после того, как ты делаешь Ctrl-Z.
+    duration: 9.970000000000255
+- speaker: SPEAKER_00
+  total_time: 849.1
+  segments:
+  - stime: 1910.57
+    etime: 1960.94
+    text: 'Не, подожди, Жень, смотри. Если, во-первых, это для open-source, то есть
+      оно open-source изначально не предполагается, на чем оно будет в конце концов
+      работать. То есть те же Java-приложения, которые '
+    duration: 50.37000000000012
+  - stime: 925.41
+    etime: 962.56
+    text: Не, но если... Если брать там изначально, я так понимаю, это что-то такое
+      вроде Кассандры, когда еще Кассандры не было. То есть, если мы будем брать начальную
+      Кассандру, там схема была какая-то, то же
+    duration: 37.14999999999998
+  - stime: 8830.8
+    etime: 8857.24
+    text: А, кстати, вот, Жень, там есть офигенная интеграция, прям, я не знаю, правда,
+      это на презентации говорили, что когда кто-то хочет закачать себе файл, он нажимает
+      на него, и тот грузится не к нему на л
+    duration: 26.44000000000051
+reference_speakers:
+- speaker: Bobuk
+  total_time: 3124.2
+  reference_segment:
+    stime: 8509.89
+    etime: 8597.59
+    text: Ты зачем тогда выступаешь? В одном. В настройках скина поставить visible
+      false. Это прикольное решение, только это скин. Понимаешь? Это не решит вопрос
+      убрать кнопку во всех скинах. Правда? давай пойд
+    duration: 87.70000000000073
+- speaker: Umputun
+  total_time: 3862.1
+  reference_segment:
+    stime: 715.25
+    etime: 800.61
+    text: Вот у меня тоже. Я прочитал треть, потом понял, что что-то удовольствие
+      не получаю и бросил. Но те, кто дочитал его, видимо, до конца в своих комментариях,
+      описывают, что этот Spanner это глобальная р
+    duration: 85.36000000000001
+- speaker: Marin_k_a
+  total_time: 526.5
+  reference_segment:
+    stime: 178.42
+    etime: 214.24
+    text: Там вообще шикарные, часто задаваемые вопросы. Там просто такие ответы,
+      что мне хотелось по каждому слову еще спросить штук пять. Что GUI написать просто,
+      что вот, видите, для iPhone написали 220 тыся
+    duration: 35.82000000000002
+segments_to_extract:
+- speaker: Marin_k_a
+  stime: 178.42
+  etime: 214.24
+  duration: 35.82000000000002
+  type: reference
+- speaker: Umputun
+  stime: 715.25
+  etime: 800.61
+  duration: 85.36000000000001
+  type: reference
+- speaker: SPEAKER_00
+  stime: 925.41
+  etime: 962.56
+  duration: 37.14999999999998
+  type: unknown
+- speaker: SPEAKER_00
+  stime: 1910.57
+  etime: 1960.94
+  duration: 50.37000000000012
+  type: unknown
+- speaker: SPEAKER_04
+  stime: 2214.37
+  etime: 2226.02
+  duration: 11.650000000000091
+  type: unknown
+- speaker: SPEAKER_04
+  stime: 3109.56
+  etime: 3119.53
+  duration: 9.970000000000255
+  type: unknown
+- speaker: SPEAKER_04
+  stime: 7136.22
+  etime: 7149.01
+  duration: 12.789999999999964
+  type: unknown
+- speaker: Bobuk
+  stime: 8509.89
+  etime: 8597.59
+  duration: 87.70000000000073
+  type: reference
+- speaker: SPEAKER_00
+  stime: 8830.8
+  etime: 8857.24
+  duration: 26.44000000000051
+  type: unknown
+comparisons:
+- unknown: SPEAKER_04
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Marin_k_a
+- unknown: SPEAKER_00
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Marin_k_a

@@ -1,0 +1,79 @@
+episode: 237
+unknown_speakers:
+- speaker: SPEAKER_03
+  total_time: 242.3
+  segments:
+  - stime: 4048.33
+    etime: 4056.71
+    text: Это которая SAS? SAS проект от Rackspace и NASA.
+    duration: 8.38000000000011
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2268.4
+  reference_segment:
+    stime: 1533.32
+    etime: 1593.26
+    text: 'Да-да, здесь же, на этом месте, в 98-м году. Нет, на самом деле, мне в
+      истории с Том Томом очень понравилось, конечно же, действительно, как они просто
+      на ровном месте. Вообще, вы знаете, да, что там '
+    duration: 59.940000000000055
+- speaker: Umputun
+  total_time: 2607.2
+  reference_segment:
+    stime: 6163.67
+    etime: 6224.31
+    text: Не-не, был правильный сисадмин, только не выспался. Хорошо звучит. Но кроме
+      вот этого, вот этой проблемы у них началась совершенно понятная для систем вот
+      такого рода каскадное отключение систем из-за
+    duration: 60.64000000000033
+- speaker: Marin_k_a
+  total_time: 665.7
+  reference_segment:
+    stime: 7138.89
+    etime: 7196.14
+    text: Короче, ну, в итоге там начали, ну, опять же, это было, я не знаю, как это
+      все, зачем это все делается, понятно, что типа там борьба с торговлей а-ля человеческими
+      телами и все такое, но... Человеческ
+    duration: 57.25
+- speaker: Plushev
+  total_time: 1220.4
+  reference_segment:
+    stime: 514.09
+    etime: 618.82
+    text: Извините. Например, есть Россия 24, там есть люди, которые одновременно
+      работают на радио Вести, да, Вести ФМ. Я не могу, в силу того, что я на Эхе
+      Москвы работаю, работать на радио Вести ФМ. Туда я м
+    duration: 104.73000000000002
+segments_to_extract:
+- speaker: Plushev
+  stime: 514.09
+  etime: 618.82
+  duration: 104.73000000000002
+  type: reference
+- speaker: Bobuk
+  stime: 1533.32
+  etime: 1593.26
+  duration: 59.940000000000055
+  type: reference
+- speaker: SPEAKER_03
+  stime: 4048.33
+  etime: 4056.71
+  duration: 8.38000000000011
+  type: unknown
+- speaker: Umputun
+  stime: 6163.67
+  etime: 6224.31
+  duration: 60.64000000000033
+  type: reference
+- speaker: Marin_k_a
+  stime: 7138.89
+  etime: 7196.14
+  duration: 57.25
+  type: reference
+comparisons:
+- unknown: SPEAKER_03
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Marin_k_a
+  - Plushev

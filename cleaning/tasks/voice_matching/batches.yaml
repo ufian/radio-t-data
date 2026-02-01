@@ -1,0 +1,101 @@
+description: Aggregated tasks by episode range for parallel audio extraction
+total_batches: 8
+batches:
+  0000-0099:
+    episode_range: 0000-0099
+    episodes_count: 1
+    episodes:
+    - 49
+    total_segments: 4
+  0100-0199:
+    episode_range: 0100-0199
+    episodes_count: 2
+    episodes:
+    - 100
+    - 150
+    total_segments: 17
+  0200-0299:
+    episode_range: 0200-0299
+    episodes_count: 7
+    episodes:
+    - 202
+    - 232
+    - 237
+    - 254
+    - 284
+    - 286
+    - 298
+    total_segments: 51
+  0300-0399:
+    episode_range: 0300-0399
+    episodes_count: 18
+    episodes:
+    - 309
+    - 328
+    - 329
+    - 339
+    - 344
+    - 350
+    - 353
+    - 359
+    - 369
+    - 372
+    - 373
+    - 377
+    - 378
+    - 382
+    - 386
+    - 394
+    - 395
+    - 397
+    total_segments: 153
+  0400-0499:
+    episode_range: 0400-0499
+    episodes_count: 14
+    episodes:
+    - 400
+    - 403
+    - 408
+    - 423
+    - 425
+    - 429
+    - 435
+    - 445
+    - 446
+    - 458
+    - 461
+    - 462
+    - 466
+    - 471
+    total_segments: 104
+  0500-0599:
+    episode_range: 0500-0599
+    episodes_count: 7
+    episodes:
+    - 505
+    - 506
+    - 507
+    - 532
+    - 536
+    - 562
+    - 566
+    total_segments: 68
+  0600-0699:
+    episode_range: 0600-0699
+    episodes_count: 8
+    episodes:
+    - 613
+    - 621
+    - 622
+    - 627
+    - 628
+    - 643
+    - 662
+    - 675
+    total_segments: 58
+  0900-0999:
+    episode_range: 0900-0999
+    episodes_count: 1
+    episodes:
+    - 994
+    total_segments: 6

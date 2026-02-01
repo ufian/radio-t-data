@@ -1,0 +1,102 @@
+episode: 471
+unknown_speakers:
+- speaker: SPEAKER_04
+  total_time: 1639.3
+  segments:
+  - stime: 6050.17
+    etime: 6128.31
+    text: 'Понимаешь, тут как бы я скорее соглашусь к Сюше, потому что, ну, ты знаешь,
+      есть такое понятие, как mother tongue, то есть какой-то материнский язык, и
+      у тебя, например, материнский язык, он русский, '
+    duration: 78.14000000000033
+  - stime: 8405.02
+    etime: 8483.11
+    text: Нет, это как раз самое правильное, как я считаю. Потому что то, что происходит
+      на собеседовании, ты пытаешься понять, как с человеком будет работать и пытаешься
+      понять, как человек мыслит. Это все, чт
+    duration: 78.09000000000015
+  - stime: 7764.53
+    etime: 7834.17
+    text: Понимаешь, ну, с моей точки зрения здесь... ты как бы не понимаешь, как
+      меняется мир вокруг тебя. То есть ты подразумеваешь, что вот сейчас давайте
+      мы будем всех программистов, которые у нас есть, буд
+    duration: 69.64000000000033
+reference_speakers:
+- speaker: Alek.sys
+  total_time: 93.5
+  reference_segment:
+    stime: 7417.69
+    etime: 7429.61
+    text: Твои приближенные могут понять эту логику, а другой сторонний программист,
+      если ты ему заплатишь, не знаю, 100 долларов в час, он не сможет этого сделать.
+    duration: 11.920000000000073
+- speaker: Umputun
+  total_time: 4696.8
+  reference_segment:
+    stime: 5090.11
+    etime: 5206.62
+    text: Почти. MySQL мне не захотелось. Мне захотелось воспользоваться в Aggregation
+      Pipeline в Монге новой их фичей для того, чтобы джойны делать. Конечно, злые
+      языки скажут, что, мол, иди козлина и использу
+    duration: 116.51000000000022
+- speaker: Gray
+  total_time: 813.6
+  reference_segment:
+    stime: 2127.36
+    etime: 2187.1
+    text: А я из таких сильно массовых вещей... помню, которая действительно могла
+      бы понадобиться обычному юзеру, у нас довольно много развивалось и продавалось
+      роутеров, прошиваемых под той же модемы. В Росси
+    duration: 59.73999999999978
+- speaker: Ksenks
+  total_time: 1312.3
+  reference_segment:
+    stime: 8594.46
+    etime: 8681.81
+    text: Смотри, мне кажется, как раз вот эта задачка, она, ну, мне кажется, примерно
+      то же самое, что они будут делать на работе, правильно? И это как-то более адекватно.
+      То есть я была на разных собеседовани
+    duration: 87.35000000000036
+segments_to_extract:
+- speaker: Gray
+  stime: 2127.36
+  etime: 2187.1
+  duration: 59.73999999999978
+  type: reference
+- speaker: Umputun
+  stime: 5090.11
+  etime: 5206.62
+  duration: 116.51000000000022
+  type: reference
+- speaker: SPEAKER_04
+  stime: 6050.17
+  etime: 6128.31
+  duration: 78.14000000000033
+  type: unknown
+- speaker: Alek.sys
+  stime: 7417.69
+  etime: 7429.61
+  duration: 11.920000000000073
+  type: reference
+- speaker: SPEAKER_04
+  stime: 7764.53
+  etime: 7834.17
+  duration: 69.64000000000033
+  type: unknown
+- speaker: SPEAKER_04
+  stime: 8405.02
+  etime: 8483.11
+  duration: 78.09000000000015
+  type: unknown
+- speaker: Ksenks
+  stime: 8594.46
+  etime: 8681.81
+  duration: 87.35000000000036
+  type: reference
+comparisons:
+- unknown: SPEAKER_04
+  compare_with:
+  - Alek.sys
+  - Umputun
+  - Gray
+  - Ksenks

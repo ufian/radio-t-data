@@ -1,0 +1,103 @@
+episode: 286
+unknown_speakers:
+- speaker: SPEAKER_03
+  total_time: 191.6
+  segments:
+  - stime: 5223.51
+    etime: 5247.91
+    text: Нет, я сейчас объясню. Просто мне на работе моей в наследство досталось
+      очень много старых проектов на Джаве, которые местами пытаются куда-то переписываться
+      без моего ведома. Ну, что же сделаешь? И о
+    duration: 24.399999999999636
+  - stime: 5111.88
+    etime: 5133.03
+    text: Я могу сказать одно. В Ubuntu, что хорошо они сделали. Для меня, по крайней
+      мере, обновился весь тот софт, который я руками обновлял на 10.04. Это тот самый
+      Python. Это ужас. Это Python на LVM. И это,
+    duration: 21.149999999999636
+  - stime: 5077.93
+    etime: 5096.41
+    text: У меня фото, я страшно скажу, у меня всего 15 фоток за мои 20 лет, которые
+      я храню. В цифровом виде, я надеюсь. Да, в цифровом. Если еще не в цифре, считать
+      хорошо 30. 30 фото, цифровых и не цифровых.
+    duration: 18.479999999999563
+reference_speakers:
+- speaker: Umputun
+  total_time: 3620.5
+  reference_segment:
+    stime: 1826.85
+    etime: 1902.24
+    text: Кроме того, Google Drive, вот этот самый, умеет, вот когда вы давите ссылочку
+      на файл, если этот файл более-менее стандартный с его точки зрения, например,
+      картинка или PDF, он его тут же покажет. Ну,
+    duration: 75.3900000000001
+- speaker: Marin_k_a
+  total_time: 742.3
+  reference_segment:
+    stime: 3722
+    etime: 3755.29
+    text: Я тебе расскажу. Да подожди ты, у меня на почте, да, Google смотрит там
+      каким-то образом мою почту и дает мне рекламу, значит, мне нужно уехать на Мальдивы,
+      нет, я не против, конечно, но только мне ту
+    duration: 33.289999999999964
+- speaker: Gray
+  total_time: 1119.5
+  reference_segment:
+    stime: 7223.07
+    etime: 7284.34
+    text: Там, понимаешь, там, условно, у меня инженерная специальность, которая,
+      в общем, мало связана там с... языками программирования, но там нас учили очень
+      простой вещи в действительности. Нам на выпускны
+    duration: 61.27000000000044
+- speaker: PetrDidenko
+  total_time: 1589.0
+  reference_segment:
+    stime: 898.1
+    etime: 977.8
+    text: 'Слушайте, знаете, что я вспомнил, когда мы разговаривали о спектруме, я
+      недавно читал историю вот этого человека, которого звали Клайв Синклер. Собственно,
+      он начал свою разрешительную деятельность в '
+    duration: 79.69999999999993
+segments_to_extract:
+- speaker: PetrDidenko
+  stime: 898.1
+  etime: 977.8
+  duration: 79.69999999999993
+  type: reference
+- speaker: Umputun
+  stime: 1826.85
+  etime: 1902.24
+  duration: 75.3900000000001
+  type: reference
+- speaker: Marin_k_a
+  stime: 3722
+  etime: 3755.29
+  duration: 33.289999999999964
+  type: reference
+- speaker: SPEAKER_03
+  stime: 5077.93
+  etime: 5096.41
+  duration: 18.479999999999563
+  type: unknown
+- speaker: SPEAKER_03
+  stime: 5111.88
+  etime: 5133.03
+  duration: 21.149999999999636
+  type: unknown
+- speaker: SPEAKER_03
+  stime: 5223.51
+  etime: 5247.91
+  duration: 24.399999999999636
+  type: unknown
+- speaker: Gray
+  stime: 7223.07
+  etime: 7284.34
+  duration: 61.27000000000044
+  type: reference
+comparisons:
+- unknown: SPEAKER_03
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - Gray
+  - PetrDidenko

@@ -1,0 +1,221 @@
+episode: 536
+unknown_speakers:
+- speaker: SPEAKER_05
+  total_time: 1098.6
+  segments:
+  - stime: 5363.18
+    etime: 5452.47
+    text: Нет, просто тут такая история как бы немного длинная. Где-то, по-моему,
+      несколько месяцев назад или что-то около полугода назад он приезжал на московский
+      джук. И рассказывал как раз по поводу всякой с
+    duration: 89.28999999999996
+  - stime: 1278.19
+    etime: 1340.14
+    text: Вообще, довольно странно, что Боба говорит по поводу того, что S3 это такая
+      надежная машина, которая работает так замечательно, и никто не ожидал, что она
+      упадет. Потому что вот у нас есть опыт работы
+    duration: 61.950000000000045
+  - stime: 9448.13
+    etime: 9501.03
+    text: Не, не, не. Жень, ну дайте сказать в конце-то конца. Смотри, по поводу того,
+      что мы нанимаем джуниоров, мы как раз ищем того единственного и неповторимого.
+      Мы не джуниоров ищем. Это во-первых. Во-втор
+    duration: 52.900000000001455
+- speaker: SPEAKER_07
+  total_time: 266.8
+  segments:
+  - stime: 3163.89
+    etime: 3190.23
+    text: Более тестируемый код получится, даже если мы, в принципе, сядем писать
+      тест. Рано или поздно он получится более тестируемый. Главное, что мы не напишем
+      ничего лишнего. Например, есть канонический при
+    duration: 26.340000000000146
+  - stime: 4448.05
+    etime: 4469.34
+    text: Как мы до сюда дошли, давайте оставим за пределами этого примера. И в таком
+      случае у меня получается, если я пишу это без TDD, то я даже не понимаю, как
+      это делать. Совершенно в лоб это реально дергат
+    duration: 21.289999999999964
+  - stime: 3261.9
+    etime: 3282.66
+    text: Ну, по поводу дисциплины, бывают просто плохие дни. Бывают плохие дни, бывает
+      конец рабочего дня, бывает, что ты работаешь с энтузиазмом, бывает, что ты ковыряешь
+      свой код, как тарелку остывшей манной
+    duration: 20.759999999999764
+- speaker: SPEAKER_01
+  total_time: 224.4
+  segments:
+  - stime: 7047.8
+    etime: 7073.98
+    text: Нету. Это Java Agents, Java Flow. То есть я когда был там первый релиз,
+      грубо говоря, первый milestone, я пошел изучать тему. Да, есть юзеры Java Agents
+      для JRE, но они делают ровно все то же самое. О
+    duration: 26.17999999999938
+  - stime: 7708.39
+    etime: 7725.46
+    text: Там есть определенный набор рефлекшена, но, конечно же, не все покрыто.
+      А идея подсказывает, что будет недоступно. Это одна из фич Kotlin, то, что...
+      язык только обновился, а IDE уже готова ко всему.
+    duration: 17.06999999999971
+  - stime: 7930.49
+    etime: 7944.94
+    text: Про статик не знаю, но про файловые я сказал. То есть есть «Макита 2», Там,
+      где используется, по-моему, ByteBuddy. ByteBuddy это все хорошо умеет без агента.
+      И есть плагин, если у вас макет один.
+    duration: 14.449999999999818
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2259.9
+  reference_segment:
+    stime: 3512.55
+    etime: 3595.36
+    text: Аргументы вида практика показывают, у нас тут не работают. Потому что практика
+      показывает, что на Земле каждая шестая женщина, каждый шестой человек, женщина
+      у нас на Земле, понимаешь, по практике пок
+    duration: 82.80999999999995
+- speaker: Alek.sys
+  total_time: 129.1
+  reference_segment:
+    stime: 4094.52
+    etime: 4113.09
+    text: Он подойдет для написания какого-то нового функционала, реализации бизнес-логики
+      отдельно, в какой-нибудь Waterflow-системе, где ты все уже спланировал, у тебя
+      дофига времени, ты сидишь такой, ковыряе
+    duration: 18.570000000000164
+- speaker: Umputun
+  total_time: 3712.4
+  reference_segment:
+    stime: 3780.99
+    etime: 3878.82
+    text: Да есть ассерты. Я тебе примеры жизни приведу, дорогой, которые Ксюша позицию
+      объясняет. У меня до сегодняшнего момента был стопроцентный каверидж в системе,
+      которая анализировала некие особые случаи.
+    duration: 97.83000000000038
+- speaker: Gray
+  total_time: 540.7
+  reference_segment:
+    stime: 8472.85
+    etime: 8514.59
+    text: Я обожаю писать. Я завел себе бумажный планок на самом деле, даже несколько.
+      С таким удовольствием это и ручки купил. Слушайте, у меня два первое. Я просто
+      придумал, если ко мне придет человек и скаже
+    duration: 41.73999999999978
+- speaker: Ksenks
+  total_time: 870.0
+  reference_segment:
+    stime: 8601.97
+    etime: 8674.52
+    text: 'Мне кажется, там интересно, что как бы часть людей говорила про то, что
+      про какие-то именно проблемы синтаксиса. Например, Objective-C девелоперы часто
+      писали, вот я там Objective-C девелопер, и я до '
+    duration: 72.55000000000109
+- speaker: Ruslan
+  total_time: 353.2
+  reference_segment:
+    stime: 6372.92
+    etime: 6396.05
+    text: 'Ну, карутины, которые в Kotlin, можно сравнить с тем, что есть в Python,
+      JS и C Sharp, может сравнить с Go, с его Channel Select, и можно те же генераторы
+      и Yield из того же C Sharp и Python. То есть '
+    duration: 23.13000000000011
+segments_to_extract:
+- speaker: SPEAKER_05
+  stime: 1278.19
+  etime: 1340.14
+  duration: 61.950000000000045
+  type: unknown
+- speaker: SPEAKER_07
+  stime: 3163.89
+  etime: 3190.23
+  duration: 26.340000000000146
+  type: unknown
+- speaker: SPEAKER_07
+  stime: 3261.9
+  etime: 3282.66
+  duration: 20.759999999999764
+  type: unknown
+- speaker: Bobuk
+  stime: 3512.55
+  etime: 3595.36
+  duration: 82.80999999999995
+  type: reference
+- speaker: Umputun
+  stime: 3780.99
+  etime: 3878.82
+  duration: 97.83000000000038
+  type: reference
+- speaker: Alek.sys
+  stime: 4094.52
+  etime: 4113.09
+  duration: 18.570000000000164
+  type: reference
+- speaker: SPEAKER_07
+  stime: 4448.05
+  etime: 4469.34
+  duration: 21.289999999999964
+  type: unknown
+- speaker: SPEAKER_05
+  stime: 5363.18
+  etime: 5452.47
+  duration: 89.28999999999996
+  type: unknown
+- speaker: Ruslan
+  stime: 6372.92
+  etime: 6396.05
+  duration: 23.13000000000011
+  type: reference
+- speaker: SPEAKER_01
+  stime: 7047.8
+  etime: 7073.98
+  duration: 26.17999999999938
+  type: unknown
+- speaker: SPEAKER_01
+  stime: 7708.39
+  etime: 7725.46
+  duration: 17.06999999999971
+  type: unknown
+- speaker: SPEAKER_01
+  stime: 7930.49
+  etime: 7944.94
+  duration: 14.449999999999818
+  type: unknown
+- speaker: Gray
+  stime: 8472.85
+  etime: 8514.59
+  duration: 41.73999999999978
+  type: reference
+- speaker: Ksenks
+  stime: 8601.97
+  etime: 8674.52
+  duration: 72.55000000000109
+  type: reference
+- speaker: SPEAKER_05
+  stime: 9448.13
+  etime: 9501.03
+  duration: 52.900000000001455
+  type: unknown
+comparisons:
+- unknown: SPEAKER_05
+  compare_with:
+  - Bobuk
+  - Alek.sys
+  - Umputun
+  - Gray
+  - Ksenks
+  - Ruslan
+- unknown: SPEAKER_07
+  compare_with:
+  - Bobuk
+  - Alek.sys
+  - Umputun
+  - Gray
+  - Ksenks
+  - Ruslan
+- unknown: SPEAKER_01
+  compare_with:
+  - Bobuk
+  - Alek.sys
+  - Umputun
+  - Gray
+  - Ksenks
+  - Ruslan

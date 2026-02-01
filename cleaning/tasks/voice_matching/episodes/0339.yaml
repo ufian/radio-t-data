@@ -1,0 +1,103 @@
+episode: 339
+unknown_speakers:
+- speaker: Guest_Unknown_ep339
+  total_time: 1290.7
+  segments:
+  - stime: 4755.89
+    etime: 4835.09
+    text: 'Статью выдает там первый абзац. Когда развивается уже система, когда появляется
+      что-то новое, когда вот этот человек думает, что ага, помимо текста там еще
+      есть и какие-то картинки, он вот этот тест, '
+    duration: 79.19999999999982
+  - stime: 2939.42
+    etime: 2991.52
+    text: Ну, так это вот и получается различная методология процесса, то есть ты
+      мысленно еще живешь во времени CVS, хотя перешел вот на Меркурию. Если брать
+      гитовский workflow, то там не обязательно делать та
+    duration: 52.09999999999991
+  - stime: 7627.92
+    etime: 7678.95
+    text: Вообще, по-хорошему, я так подумал, если рассуждать, то все это пошло не
+      из-за того, что не хотят изучать SQL, а из-за того, что его уже не изучают.
+      Потому что, по крайней мере, если брать все системы
+    duration: 51.029999999999745
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2359.1
+  reference_segment:
+    stime: 477.28
+    etime: 572.96
+    text: Не, ну справедливости ради, конкретно профессора вот этого из Кернига Милона,
+      о котором тут все говорят, я на самом деле знаю, и на самом деле, конечно, он
+      говорил совсем не это. Но это, в общем, не о
+    duration: 95.68000000000006
+- speaker: Umputun
+  total_time: 3887.1
+  reference_segment:
+    stime: 5046.16
+    etime: 5193.12
+    text: Ну, да. Собственно, все так делают. С более-менее нетривиальными объектами.
+      И вот у меня объект дорос до размера, когда нетривиальность его начала зашкаливать.
+      То есть, конкретно говоря, билдер запрос
+    duration: 146.96000000000004
+- speaker: Marin_k_a
+  total_time: 335.9
+  reference_segment:
+    stime: 4154.05
+    etime: 4188.83
+    text: 'Смотри, Жень, ты можешь запустить... У тебя есть проект, у тебя есть тесты,
+      у тебя есть понимание, что какое-то время назад у тебя что-то сломалось, и ты
+      хочешь найти этот проблемный коммит. И в ГИТЕ '
+    duration: 34.779999999999745
+- speaker: Ksenks
+  total_time: 340.0
+  reference_segment:
+    stime: 1522.27
+    etime: 1596.58
+    text: Это не то. Я хочу быть в ряду Java и C-Sharp. Кто пишет там на Objective-C?
+      Три коллеги. Все на лифте пишут. На лифте, да. В общем, суть не в этом. Суть
+      в том, что товарищ пытается рассказать, он пока
+    duration: 74.30999999999995
+segments_to_extract:
+- speaker: Bobuk
+  stime: 477.28
+  etime: 572.96
+  duration: 95.68000000000006
+  type: reference
+- speaker: Ksenks
+  stime: 1522.27
+  etime: 1596.58
+  duration: 74.30999999999995
+  type: reference
+- speaker: Guest_Unknown_ep339
+  stime: 2939.42
+  etime: 2991.52
+  duration: 52.09999999999991
+  type: unknown
+- speaker: Marin_k_a
+  stime: 4154.05
+  etime: 4188.83
+  duration: 34.779999999999745
+  type: reference
+- speaker: Guest_Unknown_ep339
+  stime: 4755.89
+  etime: 4835.09
+  duration: 79.19999999999982
+  type: unknown
+- speaker: Umputun
+  stime: 5046.16
+  etime: 5193.12
+  duration: 146.96000000000004
+  type: reference
+- speaker: Guest_Unknown_ep339
+  stime: 7627.92
+  etime: 7678.95
+  duration: 51.029999999999745
+  type: unknown
+comparisons:
+- unknown: Guest_Unknown_ep339
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Marin_k_a
+  - Ksenks

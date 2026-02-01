@@ -1,0 +1,103 @@
+episode: 458
+unknown_speakers:
+- speaker: SPEAKER_01
+  total_time: 918.7
+  segments:
+  - stime: 2818.9
+    etime: 2885.15
+    text: Нет, здесь два момента. Первый, что Go это не совсем Google. Это отдельная
+      группа внутри Google, но это практически на уже, наверное, все больше и больше
+      в процентном отношении. Это open-source проект
+    duration: 66.25
+  - stime: 3321.39
+    etime: 3385.19
+    text: Просто на эту тему написаны сотни статей, и, грубо говоря, есть два метода
+      обработки ошибок. Первый – это выбрасывать исключения, их ловить. Там они уже
+      разные бывают, исключения. Можно придираться, ч
+    duration: 63.80000000000018
+  - stime: 2928.52
+    etime: 2983.12
+    text: Нет. Значит, буквально недавно был ряд статей от компаний. Я не знаю, как
+      вы себе представляете сейчас популярность Go, но, например, Dropbox полностью
+      зависит на Go. У них переписана вся их внутрення
+    duration: 54.59999999999991
+reference_speakers:
+- speaker: Bobuk
+  total_time: 66.0
+  reference_segment:
+    stime: 2471.01
+    etime: 2483.65
+    text: Действительно, дебаггером эффективнее пользоваться только в одном случае,
+      если ты анализируешь чужой код, который ты не знаешь, еще если там какой-то
+      хитрый алгоритм, и тебе действительно нужно пройти
+    duration: 12.639999999999873
+- speaker: Umputun
+  total_time: 3294.1
+  reference_segment:
+    stime: 1013.9
+    etime: 1093.16
+    text: У них есть экспериментальная поддержка вендоринга внешних зависимостей.
+      Это как-то не по-русски автор там писал. Что бы это значило, надо по ссылке
+      пройти. Но я так понимаю, наконец-то вот этот depend
+    duration: 79.2600000000001
+- speaker: Gray
+  total_time: 654.2
+  reference_segment:
+    stime: 1489.55
+    etime: 1544.65
+    text: А потом опустим, да. Смотрите, значит, я смотрю на спецификации вот этого
+      самого онхаба и вижу, что вообще фактически они очень интересно подошли к проблеме,
+      то есть они явно хотели сделать... хороший
+    duration: 55.100000000000136
+- speaker: Ksenks
+  total_time: 1556.9
+  reference_segment:
+    stime: 5277.48
+    etime: 5395.01
+    text: Он как-то очень, не знаю, очень по-человечески, по-программистски говорил.
+      Например, когда у него спросили, что будет с Linux через 10 лет, он говорит,
+      ну, товарищи, 10 лет назад я бы никогда не подум
+    duration: 117.53000000000065
+segments_to_extract:
+- speaker: Umputun
+  stime: 1013.9
+  etime: 1093.16
+  duration: 79.2600000000001
+  type: reference
+- speaker: Gray
+  stime: 1489.55
+  etime: 1544.65
+  duration: 55.100000000000136
+  type: reference
+- speaker: Bobuk
+  stime: 2471.01
+  etime: 2483.65
+  duration: 12.639999999999873
+  type: reference
+- speaker: SPEAKER_01
+  stime: 2818.9
+  etime: 2885.15
+  duration: 66.25
+  type: unknown
+- speaker: SPEAKER_01
+  stime: 2928.52
+  etime: 2983.12
+  duration: 54.59999999999991
+  type: unknown
+- speaker: SPEAKER_01
+  stime: 3321.39
+  etime: 3385.19
+  duration: 63.80000000000018
+  type: unknown
+- speaker: Ksenks
+  stime: 5277.48
+  etime: 5395.01
+  duration: 117.53000000000065
+  type: reference
+comparisons:
+- unknown: SPEAKER_01
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Gray
+  - Ksenks

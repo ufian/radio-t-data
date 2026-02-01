@@ -1,0 +1,88 @@
+episode: 328
+unknown_speakers:
+- speaker: SPEAKER_00
+  total_time: 391.7
+  segments:
+  - stime: 5561.82
+    etime: 5584.36
+    text: Мне спросили, программирует ли он еще. И он сказал, что да, я программирую
+      меньше, чем мне хотелось бы. И пишу на C, C-sharp и иногда на бэсике. Мне прям
+      показалось забавным, что он все равно еще что-
+    duration: 22.539999999999964
+  - stime: 5537.38
+    etime: 5555.82
+    text: 'Нет, там было интересно про Windows 8. Спросили, что лучше, Windows 7 или
+      Windows 8. И он сказал, что больше лучше. То есть higher is better. Больше лучше,
+      да. И все об этом очень смеяли, что Windows '
+    duration: 18.4399999999996
+  - stime: 4806.11
+    etime: 4823.33
+    text: По крайней мере... Это какая-то такая субъективная защита для тебя. А вождение
+      у нас такое же интенсивное, как во всех других странах. А водят без правил.
+      Поэтому, мне кажется, регистраторы у нас, нав
+    duration: 17.220000000000255
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2629.6
+  reference_segment:
+    stime: 4399.22
+    etime: 4485.88
+    text: Слушай, вот давай так. Зная историю... У меня там Сван в чате очень правильно
+      поправляет, что Бразилия и Португальский, и я гоню. Бразильский и португальский,
+      давайте уточним. Так вот, зная историю ра
+    duration: 86.65999999999985
+- speaker: Umputun
+  total_time: 2739.8
+  reference_segment:
+    stime: 5915.55
+    etime: 5975.56
+    text: Ну, ладно. Но, тем не менее, это вообще не цены. Ты представляешь, сколько
+      стоят эти решения? Это рынок, на котором продают решения. И эти решения стоят
+      несусветно, непонятно, огромных денег. Я каждый
+    duration: 60.01000000000022
+- speaker: Marin_k_a
+  total_time: 627.7
+  reference_segment:
+    stime: 2757.55
+    etime: 2801.51
+    text: Ну, я как ты, но так как я смогла с ним разобраться прямо сразу и с насколько
+      не особо там вчиливаясь, я поняла, что гитхаб все-таки написан не чужими для
+      хищников. Бывают, конечно, непонятные моменты
+    duration: 43.960000000000036
+segments_to_extract:
+- speaker: Marin_k_a
+  stime: 2757.55
+  etime: 2801.51
+  duration: 43.960000000000036
+  type: reference
+- speaker: Bobuk
+  stime: 4399.22
+  etime: 4485.88
+  duration: 86.65999999999985
+  type: reference
+- speaker: SPEAKER_00
+  stime: 4806.11
+  etime: 4823.33
+  duration: 17.220000000000255
+  type: unknown
+- speaker: SPEAKER_00
+  stime: 5537.38
+  etime: 5555.82
+  duration: 18.4399999999996
+  type: unknown
+- speaker: SPEAKER_00
+  stime: 5561.82
+  etime: 5584.36
+  duration: 22.539999999999964
+  type: unknown
+- speaker: Umputun
+  stime: 5915.55
+  etime: 5975.56
+  duration: 60.01000000000022
+  type: reference
+comparisons:
+- unknown: SPEAKER_00
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Marin_k_a

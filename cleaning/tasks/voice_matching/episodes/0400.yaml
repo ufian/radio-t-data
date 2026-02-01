@@ -1,0 +1,107 @@
+episode: 400
+unknown_speakers:
+- speaker: SPEAKER_04
+  total_time: 126.1
+  segments:
+  - stime: 5335.48
+    etime: 5344.48
+    text: Ну, правда, они тут, видишь, они действительно есть файл-волк. Да, да, то
+      есть мне кажется, вот это... То есть ты можешь просто файл, любые файлы туда
+      загнать.
+    duration: 9.0
+  - stime: 437.84
+    etime: 446.04
+    text: Поэтому сегодня наш выпуск называется Bad Eye Quest. 404-го выпуска не будет,
+      а 451-й будет доступен только через VPN. 403-й, да, будет, но никому не дадут.
+      Тоже правильный.
+    duration: 8.200000000000045
+reference_speakers:
+- speaker: Bobuk
+  total_time: 1944.5
+  reference_segment:
+    stime: 1865.61
+    etime: 1929.32
+    text: Блин, это очень популярная в Долине история. Есть некоторый фонд, точнее,
+      был некоторый магазин, который торговал дорогими персидскими коврами в Долине.
+      И когда пошел первый бум доткомов... в этот маг
+    duration: 63.710000000000036
+- speaker: Umputun
+  total_time: 2056.6
+  reference_segment:
+    stime: 5122.26
+    etime: 5159.66
+    text: Да нет, никакой. Иногда самый всего лишь банан, всего лишь банан. Это редко
+      бывает, но бывает. Forklift 2 в прошлый раз тоже участвовал. Это такая приблуда
+      для таких старых, как мы с Бобуком. Если всп
+    duration: 37.399999999999636
+- speaker: Marin_k_a
+  total_time: 657.9
+  reference_segment:
+    stime: 6536.37
+    etime: 6558.75
+    text: Это, в принципе, теоретически можно было продать. Но это, конечно, ерунда.
+      То есть пишите ответы, пишите какие-то, я не знаю, ваши откровения про изменение
+      жизни. В общем, я жду, и я думаю, что где-то
+    duration: 22.38000000000011
+- speaker: Gray
+  total_time: 273.4
+  reference_segment:
+    stime: 5185.1
+    etime: 5208.77
+    text: Только он не про Он про нас А не про Форклифт Так это никогда не мешает
+      Скажите пожалуйста Дорогие товарищи Какое животное однажды Было в жизни нашего
+      подкаста Еще раз Какое животное Было в жизни наше
+    duration: 23.670000000000073
+- speaker: Ksenks
+  total_time: 1054.5
+  reference_segment:
+    stime: 6065.23
+    etime: 6099.19
+    text: 'Да, это бэкап. И там даже, по-моему, в эти версии, которые мы даем и для
+      Mac, и для Windows, есть клаудный бэкап. Я вот сейчас точно не скажу, насколько.
+      Но, в общем, это полноценная классная версия. '
+    duration: 33.960000000000036
+segments_to_extract:
+- speaker: SPEAKER_04
+  stime: 437.84
+  etime: 446.04
+  duration: 8.200000000000045
+  type: unknown
+- speaker: Bobuk
+  stime: 1865.61
+  etime: 1929.32
+  duration: 63.710000000000036
+  type: reference
+- speaker: Umputun
+  stime: 5122.26
+  etime: 5159.66
+  duration: 37.399999999999636
+  type: reference
+- speaker: Gray
+  stime: 5185.1
+  etime: 5208.77
+  duration: 23.670000000000073
+  type: reference
+- speaker: SPEAKER_04
+  stime: 5335.48
+  etime: 5344.48
+  duration: 9.0
+  type: unknown
+- speaker: Ksenks
+  stime: 6065.23
+  etime: 6099.19
+  duration: 33.960000000000036
+  type: reference
+- speaker: Marin_k_a
+  stime: 6536.37
+  etime: 6558.75
+  duration: 22.38000000000011
+  type: reference
+comparisons:
+- unknown: SPEAKER_04
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Marin_k_a
+  - Gray
+  - Ksenks

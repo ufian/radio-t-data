@@ -1,0 +1,88 @@
+episode: 394
+unknown_speakers:
+- speaker: Guest_Unknown_ep394
+  total_time: 688.4
+  segments:
+  - stime: 1853.59
+    etime: 1935.36
+    text: Я конкретно Про эту штуку не знаю, сейчас, конечно, тебе сказать не могу.
+      Но обычно все такие атаки устроены следующим образом. У тебя есть какие-то незначительные
+      изменения в большом объеме данных. И
+    duration: 81.76999999999998
+  - stime: 1235.99
+    etime: 1304.1
+    text: Есть еще один нюанс. Он выглядит так. Дело в том, что TrueCrypt Такая софтина,
+      на безопасность которой полагалось очень много людей, и относительно недавно
+      была попытка предпринята... сделать независи
+    duration: 68.1099999999999
+  - stime: 986.68
+    etime: 1050.75
+    text: 'На самом деле, главное достоинство TrueCrypt по сравнению со всеми этими
+      штуками, это то, что называется plausible deniability. Возможность отказаться
+      от факта зашифрованного сообщения. Вы, наверное, '
+    duration: 64.07000000000005
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2631.5
+  reference_segment:
+    stime: 7269.08
+    etime: 7343.87
+    text: Я поставил Secret в момент его запуска, буквально через два часа после того,
+      как он появился в App Store. Дело в том, что это приложение, которое в Америке
+      запустили на фестивале SXSW, South by Southw
+    duration: 74.78999999999996
+- speaker: Umputun
+  total_time: 2595.7
+  reference_segment:
+    stime: 5665.16
+    etime: 5739.47
+    text: Окей. То есть с микросервисами что получается? Сам по себе сервис получается
+      крайне простой, правильно? Который делает одну вещь. Но как сайд-эффект вот
+      этого простого и в одну вещь вы получаете их ог
+    duration: 74.3100000000004
+- speaker: Ksenks
+  total_time: 1575.8
+  reference_segment:
+    stime: 6909.74
+    etime: 6964.95
+    text: Не знаю, мне кажется, еще про работу ночью, ну... Если человек при этом
+      встает рано и работает потом ночью, это может породить какие-то баги еще в плане
+      того, что ты работаешь не в самом эффективном с
+    duration: 55.210000000000036
+segments_to_extract:
+- speaker: Guest_Unknown_ep394
+  stime: 986.68
+  etime: 1050.75
+  duration: 64.07000000000005
+  type: unknown
+- speaker: Guest_Unknown_ep394
+  stime: 1235.99
+  etime: 1304.1
+  duration: 68.1099999999999
+  type: unknown
+- speaker: Guest_Unknown_ep394
+  stime: 1853.59
+  etime: 1935.36
+  duration: 81.76999999999998
+  type: unknown
+- speaker: Umputun
+  stime: 5665.16
+  etime: 5739.47
+  duration: 74.3100000000004
+  type: reference
+- speaker: Ksenks
+  stime: 6909.74
+  etime: 6964.95
+  duration: 55.210000000000036
+  type: reference
+- speaker: Bobuk
+  stime: 7269.08
+  etime: 7343.87
+  duration: 74.78999999999996
+  type: reference
+comparisons:
+- unknown: Guest_Unknown_ep394
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Ksenks

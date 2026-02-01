@@ -1,0 +1,88 @@
+episode: 408
+unknown_speakers:
+- speaker: SPEAKER_03
+  total_time: 993.1
+  segments:
+  - stime: 8323.36
+    etime: 8392.82
+    text: Это же важная тема. Форк скалы. Так, значит, дальше. Яндекс.Деньги. И если
+      вы не тратите деньги, лежащие на Яндекс.Деньгах в течение двух лет, Яндекс делает
+      это за вас. Да, я могу рассказать свою исто
+    duration: 69.45999999999913
+  - stime: 7947.76
+    etime: 7976.6
+    text: 'Окей. Ладно. Что, дальше едем? Дальше у нас про... Пользователи просят
+      рассказать что-то про слив анонимных фотографий голливудских звезд. То есть,
+      там интересует техническая сторона вопроса, как это '
+    duration: 28.840000000000146
+  - stime: 4206.76
+    etime: 4225.96
+    text: Не знаю, мне вот на тот момент, когда JavaScript немножко изучала, я даже
+      не программировала 20 лет, и все равно мне показалось, что не привнес ничего
+      нового. То есть там нет каких-то, не знаю, рвущих
+    duration: 19.199999999999818
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2718.7
+  reference_segment:
+    stime: 634.13
+    etime: 728.74
+    text: На самом деле нет, потому что все произошло дальше довольно весело. В тот
+      момент, когда они выпустили, собственно, вот это описание, эти тесты, Джон Грубер,
+      который был изначально, напомню, изначальны
+    duration: 94.61000000000001
+- speaker: Umputun
+  total_time: 3512.2
+  reference_segment:
+    stime: 5947.42
+    etime: 6049.35
+    text: А не то ты вызовешь тем самым еще один конфликт. Самая веселуха начинается...
+      Все с ним просто. То есть реально. Загнать документ путом, взять документ гетом.
+      Все просто как три копейки с этой точки з
+    duration: 101.93000000000029
+- speaker: Marin_k_a
+  total_time: 971.6
+  reference_segment:
+    stime: 4722.57
+    etime: 4753.79
+    text: Так не зря же на Ruby было написано. Я пробовала Ruby, и несмотря на то,
+      что я люблю Python, мне Ruby показалась интересным. Отличие от JavaScript, где
+      вообще ничего, в Ruby какие-то есть интересные м
+    duration: 31.220000000000255
+segments_to_extract:
+- speaker: Bobuk
+  stime: 634.13
+  etime: 728.74
+  duration: 94.61000000000001
+  type: reference
+- speaker: SPEAKER_03
+  stime: 4206.76
+  etime: 4225.96
+  duration: 19.199999999999818
+  type: unknown
+- speaker: Marin_k_a
+  stime: 4722.57
+  etime: 4753.79
+  duration: 31.220000000000255
+  type: reference
+- speaker: Umputun
+  stime: 5947.42
+  etime: 6049.35
+  duration: 101.93000000000029
+  type: reference
+- speaker: SPEAKER_03
+  stime: 7947.76
+  etime: 7976.6
+  duration: 28.840000000000146
+  type: unknown
+- speaker: SPEAKER_03
+  stime: 8323.36
+  etime: 8392.82
+  duration: 69.45999999999913
+  type: unknown
+comparisons:
+- unknown: SPEAKER_03
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Marin_k_a

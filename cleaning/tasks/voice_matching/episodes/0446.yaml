@@ -1,0 +1,117 @@
+episode: 446
+unknown_speakers:
+- speaker: SPEAKER_UNKNOWN_RAZBOR
+  total_time: 70.0
+  segments:
+  - stime: 3247.06
+    etime: 3261.84
+    text: а уже всякие такие функциональщины и добавления всяких интересных фреймворков,
+      которые добавляют пичи, они больше принесут бед в этот проект, чем... То есть
+      ты считаешь, что вообще никаких фреймворков
+    duration: 14.7800000000002
+  - stime: 6188.21
+    etime: 6201.31
+    text: То есть есть QA, который сидит по экрану, а есть реально серьезные инженеры,
+      которые занимаются QA-тестированием, они пишут код, они пишут именно код.
+    duration: 13.100000000000364
+  - stime: 770.3
+    etime: 779.62
+    text: И такие вещи, то есть, например, если я где-то уже был, например, в этом
+      ресторане, или я его искал, или у меня, я вот не знаю, он умеет еще с чем-то
+      интегрироваться, но вот такая вот
+    duration: 9.32000000000005
+reference_speakers:
+- speaker: Alek.sys
+  total_time: 146.3
+  reference_segment:
+    stime: 7074.95
+    etime: 7095.32
+    text: По поводу вирусов, да, никто не делает вирусы, которые заражают makefiles,
+      заражают там вирусы, они могут заражать компилятор там GCC, да, который собирает
+      и что-то добавляет дополнительно в собранный
+    duration: 20.36999999999989
+- speaker: Umputun
+  total_time: 4238.3
+  reference_segment:
+    stime: 4440.28
+    etime: 4565.96
+    text: Да нет, вы как-то не очень понимаете, о чем речь идет. Вот смотрите, бытовой
+      случай. Бытовой случай. Пишет ваш индейец или китаец тест. Тест это должен для
+      того, чтобы приготовить какой-то набор данны
+    duration: 125.68000000000029
+- speaker: Ksenks
+  total_time: 1330.3
+  reference_segment:
+    stime: 1232.11
+    etime: 1291.1
+    text: Да, они хостятся на GitHub, и, в принципе, для гугловых библиотек, как они
+      говорили... что типа спасибо комьюнити, вы делали эти пакеты. То есть там делать
+      этот пакет, но просто конфиг сделать. Единст
+    duration: 58.99000000000001
+- speaker: ViktorGamov
+  total_time: 981.5
+  reference_segment:
+    stime: 3621.28
+    etime: 3675.9
+    text: Я не скрываю, уже все знают. Нет, я просто объясняю дальше. И есть такой
+      паттерн, например, как взять размер, проверить размер мапа, там map.size. Да
+      нет, даже проще, например, map.put. Если берем map
+    duration: 54.61999999999989
+- speaker: AlexeyAbashev
+  total_time: 1344.8
+  reference_segment:
+    stime: 6028.45
+    etime: 6095.08
+    text: То есть не у всех, например, есть опыт настройки Linux под высокую нагрузку.
+      Не знаю, какие-нибудь буфера подкрутить, где-нибудь память подстроить, где-нибудь
+      открытые коннекшены настроить, да? Не все
+    duration: 66.63000000000011
+segments_to_extract:
+- speaker: SPEAKER_UNKNOWN_RAZBOR
+  stime: 770.3
+  etime: 779.62
+  duration: 9.32000000000005
+  type: unknown
+- speaker: Ksenks
+  stime: 1232.11
+  etime: 1291.1
+  duration: 58.99000000000001
+  type: reference
+- speaker: SPEAKER_UNKNOWN_RAZBOR
+  stime: 3247.06
+  etime: 3261.84
+  duration: 14.7800000000002
+  type: unknown
+- speaker: ViktorGamov
+  stime: 3621.28
+  etime: 3675.9
+  duration: 54.61999999999989
+  type: reference
+- speaker: Umputun
+  stime: 4440.28
+  etime: 4565.96
+  duration: 125.68000000000029
+  type: reference
+- speaker: AlexeyAbashev
+  stime: 6028.45
+  etime: 6095.08
+  duration: 66.63000000000011
+  type: reference
+- speaker: SPEAKER_UNKNOWN_RAZBOR
+  stime: 6188.21
+  etime: 6201.31
+  duration: 13.100000000000364
+  type: unknown
+- speaker: Alek.sys
+  stime: 7074.95
+  etime: 7095.32
+  duration: 20.36999999999989
+  type: reference
+comparisons:
+- unknown: SPEAKER_UNKNOWN_RAZBOR
+  compare_with:
+  - Alek.sys
+  - Umputun
+  - Ksenks
+  - ViktorGamov
+  - AlexeyAbashev

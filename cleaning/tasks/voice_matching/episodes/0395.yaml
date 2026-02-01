@@ -1,0 +1,92 @@
+episode: 395
+unknown_speakers:
+- speaker: SPEAKER_06
+  total_time: 111.8
+  segments:
+  - stime: 2547.82
+    etime: 2559.28
+    text: Нет, относительно Samsung они, конечно, молодцы, да. Но нельзя сравнивать
+      это с Samsung в этом месте. Но столько лет делать таким невыносимым, неудобным
+      трансфер данных с телефона в компьютер и обратн
+    duration: 11.460000000000036
+  - stime: 4797.38
+    etime: 4807.69
+    text: Ты его говоришь IOS. В IOS есть аккаунт употребления питания приложениями.
+      Это то единственное, ради чего стоит ставить новый IOS. Чтобы узнать, из-за
+      чего телефон живет 4 часа и греется.
+    duration: 10.30999999999949
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2924.1
+  reference_segment:
+    stime: 7686.58
+    etime: 7790.03
+    text: 'Больше того, она у меня есть, я ее уже должен приобретать. Ну, не знаю,
+      у меня есть, если хочешь, я могу ее одолжить, почитать. Самое важное, что есть
+      в этой книге, она не в островном дизайне. Это же '
+    duration: 103.44999999999982
+- speaker: Marin_k_a
+  total_time: 1646.7
+  reference_segment:
+    stime: 7376.95
+    etime: 7423.99
+    text: Нет-нет-нет, это проблема, что ты будешь в конце очень далеко от всех уже,
+      в тот момент, когда тебе выкрутят руки. Нет, если для тебя это, ну, то есть,
+      если ты, как бы, не знаю, не интересуешься техно
+    duration: 47.039999999999964
+- speaker: Gray
+  total_time: 1481.3
+  reference_segment:
+    stime: 2139.8
+    etime: 2206.21
+    text: Хэнгоф. Это я вообще не понимаю. Ты их с хэнгаус путаешь. Нет. Неважно,
+      короче, да. Ну да, окей, hand-off, ты прав. Короче, речь идет вообще на самом
+      деле про комплекс функций, которые позволяют взаим
+    duration: 66.40999999999985
+- speaker: Ksenks
+  total_time: 901.7
+  reference_segment:
+    stime: 3818.58
+    etime: 3845.5
+    text: Вот что можно делать. Экшен — это, скорее всего, то, что ты, когда, например,
+      нажимаешь стандартную ICO, ну, вот в iOS есть такое меню, там, экшен, стандартный
+      контроллер, экшен-контроллер, который ты
+    duration: 26.920000000000073
+segments_to_extract:
+- speaker: Gray
+  stime: 2139.8
+  etime: 2206.21
+  duration: 66.40999999999985
+  type: reference
+- speaker: SPEAKER_06
+  stime: 2547.82
+  etime: 2559.28
+  duration: 11.460000000000036
+  type: unknown
+- speaker: Ksenks
+  stime: 3818.58
+  etime: 3845.5
+  duration: 26.920000000000073
+  type: reference
+- speaker: SPEAKER_06
+  stime: 4797.38
+  etime: 4807.69
+  duration: 10.30999999999949
+  type: unknown
+- speaker: Marin_k_a
+  stime: 7376.95
+  etime: 7423.99
+  duration: 47.039999999999964
+  type: reference
+- speaker: Bobuk
+  stime: 7686.58
+  etime: 7790.03
+  duration: 103.44999999999982
+  type: reference
+comparisons:
+- unknown: SPEAKER_06
+  compare_with:
+  - Bobuk
+  - Marin_k_a
+  - Gray
+  - Ksenks

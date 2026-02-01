@@ -1,0 +1,187 @@
+episode: 369
+unknown_speakers:
+- speaker: Guest_Unknown_ep369_1
+  total_time: 1728.8
+  segments:
+  - stime: 7739.96
+    etime: 7827.91
+    text: 'психологии. И зачастую эти люди, может быть, не до конца понимают, может
+      быть, глубину, так сказать, спринг-фреймворка, и что вот именно, как этот DI
+      делается, и какие вообще другие есть виды DI, да, '
+    duration: 87.94999999999982
+  - stime: 4536.42
+    etime: 4613.34
+    text: Ну, интервью здесь такое, значит, он у него спрашивает, зачем, откуда, что,
+      почему, вот ты вот всю жизнь занимался, писал всякие Message Queue, там Hornet
+      Queue писал, написал чуть-чуть Rabbit MQ како
+    duration: 76.92000000000007
+  - stime: 2313.42
+    etime: 2388.03
+    text: Ну, мы же в курсе все, что есть отдельный ID, который называется Android
+      Studio. И теперь это вроде как бы единственное правильное. Google сам теперь
+      делает именно вот этот Android ID на основе Intell
+    duration: 74.61000000000013
+- speaker: Guest_Unknown_ep369_2
+  total_time: 701.2
+  segments:
+  - stime: 4204.1
+    etime: 4247.75
+    text: 'У нас есть такая вещь, как vCPU, то есть он виртуальный, его можно добавить.
+      Я не сталкивался с той конфигурацией, где бы можно было побольше CPU, то есть
+      распределить полностью CPU, все CPU кластера '
+    duration: 43.649999999999636
+  - stime: 3014.32
+    etime: 3057.72
+    text: 'Вообще-то, по моему опыту, к ВИМу склоняются больше те, кто работает удаленно,
+      потому что рефакторингом и дебаггингом заниматься приходится достаточно редко.
+      Допустим, я как Unix-инженер, скажем так, '
+    duration: 43.399999999999636
+  - stime: 3280.95
+    etime: 3323.31
+    text: Ну вот в данном случае в последнее время очень популярна такая программа
+      Vagrant называется. Это как бы враппер для виртуал-бокса. для него есть темно,
+      что имиджи, там, наверное, разные дистрибуции, о
+    duration: 42.36000000000013
+- speaker: SPEAKER_00
+  total_time: 255.3
+  segments:
+  - stime: 7565.82
+    etime: 7587.35
+    text: 'Ну да, да, да. На самом деле практика говорит о том, что да, через автовар
+      все-таки не стоит это делать. Но бывают иногда случаи, когда надо было писать
+      UI. И смысл Dependency Ejection там просто для '
+    duration: 21.530000000000655
+  - stime: 675.97
+    etime: 694.13
+    text: Бывают просто проекты разные. Например, все вебы, они достаточно однотипные.
+      И всякие Spring MVC, форма, контроллер, база, сервис. И они все из одного в
+      день повторяются. И нужно какую-то делать автом
+    duration: 18.159999999999968
+  - stime: 7344.22
+    etime: 7362.17
+    text: Да, все так. На самом деле, с точки зрения тестирования, тут абсолютно без
+      разницы, что вызвать set object какой-то, либо вызвать set приватное поле. То
+      есть там будет разница в 10 строчек, которые по
+    duration: 17.949999999999818
+reference_speakers:
+- speaker: Umputun
+  total_time: 4044.5
+  reference_segment:
+    stime: 5518.12
+    etime: 5613.46
+    text: Но проблемы округления известны всем. А используйте даблы, дорогие мои,
+      не считайте флотами, а то вот как у нас получится 101%. Ну что, накинем на вентилятор?
+      Нет никаких возражений. Есть тема накинут
+    duration: 95.34000000000015
+- speaker: Marin_k_a
+  total_time: 433.5
+  reference_segment:
+    stime: 3358.69
+    etime: 3384.95
+    text: Нет, просто иногда ты не понимаешь, почему у тебя работает, а там не работает.
+      И тогда ты можешь очень долго сидеть и думать, и смотреть на свою программу,
+      а можешь сходить туда один раз и увидеть хот
+    duration: 26.259999999999764
+- speaker: Gray
+  total_time: 193.9
+  reference_segment:
+    stime: 1936.32
+    etime: 1985.9
+    text: А презентейшн мод, он тебе сразу, вот у тебя тот же самый проект остается,
+      но он сразу делает большие шрифты, и у тебя сразу там все на весь экран, все
+      видно хорошо, потому что люди тоже приходят. Вот
+    duration: 49.580000000000155
+- speaker: Ksenks
+  total_time: 318.9
+  reference_segment:
+    stime: 6949.74
+    etime: 6965.47
+    text: Так, ну, все зависит от ситуации. То есть, если этот класс ответственный,
+      ну, то есть, если по логике программы он должен себе что-то создавать, то он
+      создает. Если по логике программы он должен это п
+    duration: 15.730000000000473
+segments_to_extract:
+- speaker: SPEAKER_00
+  stime: 675.97
+  etime: 694.13
+  duration: 18.159999999999968
+  type: unknown
+- speaker: Gray
+  stime: 1936.32
+  etime: 1985.9
+  duration: 49.580000000000155
+  type: reference
+- speaker: Guest_Unknown_ep369_1
+  stime: 2313.42
+  etime: 2388.03
+  duration: 74.61000000000013
+  type: unknown
+- speaker: Guest_Unknown_ep369_2
+  stime: 3014.32
+  etime: 3057.72
+  duration: 43.399999999999636
+  type: unknown
+- speaker: Guest_Unknown_ep369_2
+  stime: 3280.95
+  etime: 3323.31
+  duration: 42.36000000000013
+  type: unknown
+- speaker: Marin_k_a
+  stime: 3358.69
+  etime: 3384.95
+  duration: 26.259999999999764
+  type: reference
+- speaker: Guest_Unknown_ep369_2
+  stime: 4204.1
+  etime: 4247.75
+  duration: 43.649999999999636
+  type: unknown
+- speaker: Guest_Unknown_ep369_1
+  stime: 4536.42
+  etime: 4613.34
+  duration: 76.92000000000007
+  type: unknown
+- speaker: Umputun
+  stime: 5518.12
+  etime: 5613.46
+  duration: 95.34000000000015
+  type: reference
+- speaker: Ksenks
+  stime: 6949.74
+  etime: 6965.47
+  duration: 15.730000000000473
+  type: reference
+- speaker: SPEAKER_00
+  stime: 7344.22
+  etime: 7362.17
+  duration: 17.949999999999818
+  type: unknown
+- speaker: SPEAKER_00
+  stime: 7565.82
+  etime: 7587.35
+  duration: 21.530000000000655
+  type: unknown
+- speaker: Guest_Unknown_ep369_1
+  stime: 7739.96
+  etime: 7827.91
+  duration: 87.94999999999982
+  type: unknown
+comparisons:
+- unknown: Guest_Unknown_ep369_1
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - Gray
+  - Ksenks
+- unknown: Guest_Unknown_ep369_2
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - Gray
+  - Ksenks
+- unknown: SPEAKER_00
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - Gray
+  - Ksenks

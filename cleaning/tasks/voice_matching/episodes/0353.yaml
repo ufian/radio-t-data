@@ -1,0 +1,151 @@
+episode: 353
+unknown_speakers:
+- speaker: SPEAKER_04
+  total_time: 60.7
+  segments:
+  - stime: 813.5
+    etime: 842.68
+    text: 'Меня зовут Артем. Возможно, меня кто-то по голосу уже узнал, что я тут
+      был. С Дебианом я общался больше в самостоятельной практике. Делали мы сервер
+      сначала OpenMeeting, потом BigBlueButton. Кто не в '
+    duration: 29.17999999999995
+  - stime: 880.09
+    etime: 891.52
+    text: Примерно так. Там это использовалось конкретно для того, чтобы есть три
+      офиса, понятно, географически по городу далеко друг от друга.
+    duration: 11.42999999999995
+reference_speakers:
+- speaker: Umputun
+  total_time: 3292.6
+  reference_segment:
+    stime: 4737.27
+    etime: 4864.12
+    text: 'А я со всеми не согласен. С пятью, со всеми вами. Я считаю, эти 20%, может,
+      их не нужно формализовывать, может, не 20 должно быть, а 17. И про проценты
+      не буду спорить. Ой, кстати, с процентами такой '
+    duration: 126.84999999999945
+- speaker: Marin_k_a
+  total_time: 464.2
+  reference_segment:
+    stime: 4453.42
+    etime: 4481.18
+    text: Да, в том, что больше с приходом Ларри Пейджа в 2011 году они стали прямо
+      хотеть быть, пытаются быть эффективнее. И, соответственно, правило 20%, как
+      раньше, все знали, что в Google в пятницу, а может
+    duration: 27.76000000000022
+- speaker: Gray
+  total_time: 141.0
+  reference_segment:
+    stime: 2334.82
+    etime: 2353.82
+    text: Да, как Razer, какой-то такой, то есть он чуть поменьше, чем Razer, он говорит,
+      о, мне так нравится, вот именно вот открываешь, так чпок-чпок, я говорю, ну,
+      наверное, это просто вот для людей, которые
+    duration: 19.0
+- speaker: Ksenks
+  total_time: 514.6
+  reference_segment:
+    stime: 7431.24
+    etime: 7478.57
+    text: Там идея какая в Сан-Франциско? Они привлекают этих бомжей тем, что там
+      бесплатная кормежка и так далее. Просто есть такое мнение, что художники, свободные
+      какие-то люди творческих профессий, Они могу
+    duration: 47.32999999999993
+- speaker: ViktorGamov
+  total_time: 888.8
+  reference_segment:
+    stime: 5780.92
+    etime: 5880.76
+    text: А на примере Google мы вот видим, что вот да, оно теперь... Здесь надо сказать
+      о том, что все люди, которые вот в таких вот небольших проектах, они все слегка
+      ненормальные люди, да? Я себя тоже как бы
+    duration: 99.84000000000015
+- speaker: AlexeyAbashev
+  total_time: 602.2
+  reference_segment:
+    stime: 4666.1
+    etime: 4736.73
+    text: Ну да, и это стало модным, и они как бы такой флаг несли, как мы первооткрыватели,
+      мы самые лучшие, поэтому идите к нам. Но по большому счету такого чего-то оригинального
+      в этом нет. Ну, есть компании
+    duration: 70.6299999999992
+- speaker: kirill_titov
+  total_time: 531.9
+  reference_segment:
+    stime: 3488.9
+    etime: 3557.34
+    text: Хорошо смотрят на iPad, на все Apple. Я был дико удивлен. На самом деле,
+      я небольшую, маленькую ремарочку вставлю. Может быть, знаете, есть такой анекдот.
+      Ты откуда? Я из Киева. Тут все из Киева. Отку
+    duration: 68.44000000000005
+- speaker: ivan_it_consultant
+  total_time: 865.9
+  reference_segment:
+    stime: 6193.17
+    etime: 6262.75
+    text: Потому что, во-первых, Евгений, немножечко зная изнутри эту тему, могу сказать,
+      что японских роботов не существует, как показала практика. Существуют идеальные,
+      допиленные просто до бриллиантового бле
+    duration: 69.57999999999993
+segments_to_extract:
+- speaker: SPEAKER_04
+  stime: 813.5
+  etime: 842.68
+  duration: 29.17999999999995
+  type: unknown
+- speaker: SPEAKER_04
+  stime: 880.09
+  etime: 891.52
+  duration: 11.42999999999995
+  type: unknown
+- speaker: Gray
+  stime: 2334.82
+  etime: 2353.82
+  duration: 19.0
+  type: reference
+- speaker: kirill_titov
+  stime: 3488.9
+  etime: 3557.34
+  duration: 68.44000000000005
+  type: reference
+- speaker: Marin_k_a
+  stime: 4453.42
+  etime: 4481.18
+  duration: 27.76000000000022
+  type: reference
+- speaker: AlexeyAbashev
+  stime: 4666.1
+  etime: 4736.73
+  duration: 70.6299999999992
+  type: reference
+- speaker: Umputun
+  stime: 4737.27
+  etime: 4864.12
+  duration: 126.84999999999945
+  type: reference
+- speaker: ViktorGamov
+  stime: 5780.92
+  etime: 5880.76
+  duration: 99.84000000000015
+  type: reference
+- speaker: ivan_it_consultant
+  stime: 6193.17
+  etime: 6262.75
+  duration: 69.57999999999993
+  type: reference
+- speaker: Ksenks
+  stime: 7431.24
+  etime: 7478.57
+  duration: 47.32999999999993
+  type: reference
+comparisons:
+- unknown: SPEAKER_04
+  compare_with:
+  - Umputun
+  - Marin_k_a
+  - Gray
+  - Ksenks
+  - ViktorGamov
+  - AlexeyAbashev
+  - kirill_titov
+  - ivan_it_consultant

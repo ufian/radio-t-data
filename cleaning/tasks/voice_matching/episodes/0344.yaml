@@ -1,0 +1,117 @@
+episode: 344
+unknown_speakers:
+- speaker: Guest_Unknown_ep344
+  total_time: 498.1
+  segments:
+  - stime: 280.76
+    etime: 375
+    text: Ну, я лично занимаюсь... Ну, давайте так, сначала, когда шли до жизни. Наша
+      компания занималась много чем, ну и сейчас занимается много чем, но одно из
+      направлений деятельности — это как раз OpenStack
+    duration: 94.24000000000001
+  - stime: 408.22
+    etime: 454.46
+    text: Ну, давайте тогда немножко... Магии, да? В идеале это выглядит так. У вас
+      есть парк в тысячу машин, у вас есть наша ISO-шка, вы вставляете в одну из этих
+      тачек, у них у всех какая-то конфигурация есть
+    duration: 46.23999999999995
+  - stime: 918.15
+    etime: 951.45
+    text: Дело в том, что использование нашего продукта, оно предполагает все-таки
+      представление об OpenStack. В OpenStack... Да, потому что мы занимаемся... Вокруг
+      этого наша задача, конечно же, в том числе, д
+    duration: 33.30000000000007
+reference_speakers:
+- speaker: Bobuk
+  total_time: 2534.1
+  reference_segment:
+    stime: 7435.85
+    etime: 7550.24
+    text: Подожди, стой. Я там просто пошел по ссылкам наших пользователей. Кто-то
+      пишет, что сломали оперу, сломают и Мозилу. И дают ссылку на портал ITC.ua.
+      У которого, значит, просто прекрасная статья, знает
+    duration: 114.38999999999942
+- speaker: Umputun
+  total_time: 2881.2
+  reference_segment:
+    stime: 7765.62
+    etime: 7841.63
+    text: В компании великих. Все, у нас был сегодня в гостях Петя. Петя, спасибо,
+      что пришел. И вот еще, приходи, у нас всегда открыто. Как между своими? Сядешь
+      с пивом, со всеми пацанами поговоришь на лавочке
+    duration: 76.01000000000022
+- speaker: Gray
+  total_time: 324.2
+  reference_segment:
+    stime: 2970.3
+    etime: 2999.08
+    text: Мне не хватает места на жестком диске, который не жесткий диск, понятно.
+      У меня просто там самый младший 256. И у меня есть там несколько непонятных
+      точек, неприятных точек на дисплее, которые явно, в
+    duration: 28.779999999999745
+- speaker: PetrDidenko
+  total_time: 741.4
+  reference_segment:
+    stime: 7176.32
+    etime: 7233.45
+    text: Интересно про эти социальные сети. Мне кажется, что если ты хочешь от потенциального
+      работодателя что-нибудь скрыть, то есть пришел к нему на собеседование, он тебе
+      задает вопрос, а ты на них неправил
+    duration: 57.13000000000011
+- speaker: EldarMurtazin
+  total_time: 62.2
+  reference_segment:
+    stime: 4038.8
+    etime: 4051.81
+    text: Ну, при этом есть официальная запись Дэвида Драванда, который главный юрист
+      Гугла, что повестка никогда не имела доступа к сервисам Гугла.
+    duration: 13.009999999999764
+segments_to_extract:
+- speaker: Guest_Unknown_ep344
+  stime: 280.76
+  etime: 375
+  duration: 94.24000000000001
+  type: unknown
+- speaker: Guest_Unknown_ep344
+  stime: 408.22
+  etime: 454.46
+  duration: 46.23999999999995
+  type: unknown
+- speaker: Guest_Unknown_ep344
+  stime: 918.15
+  etime: 951.45
+  duration: 33.30000000000007
+  type: unknown
+- speaker: Gray
+  stime: 2970.3
+  etime: 2999.08
+  duration: 28.779999999999745
+  type: reference
+- speaker: EldarMurtazin
+  stime: 4038.8
+  etime: 4051.81
+  duration: 13.009999999999764
+  type: reference
+- speaker: PetrDidenko
+  stime: 7176.32
+  etime: 7233.45
+  duration: 57.13000000000011
+  type: reference
+- speaker: Bobuk
+  stime: 7435.85
+  etime: 7550.24
+  duration: 114.38999999999942
+  type: reference
+- speaker: Umputun
+  stime: 7765.62
+  etime: 7841.63
+  duration: 76.01000000000022
+  type: reference
+comparisons:
+- unknown: Guest_Unknown_ep344
+  compare_with:
+  - Bobuk
+  - Umputun
+  - Gray
+  - PetrDidenko
+  - EldarMurtazin

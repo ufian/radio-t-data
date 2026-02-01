@@ -1,0 +1,88 @@
+episode: 675
+unknown_speakers:
+- speaker: SPEAKER_05
+  total_time: 2542.7
+  segments:
+  - stime: 2289.82
+    etime: 2395.93
+    text: Нет, Жень, смотри. Во-первых, по поводу твоей конфигурации, то, что у тебя
+      все описано в виде кода, вот этот файл configuration, в котором бины запиханы.
+      Там смысл не в том, что ты описываешь эти бины
+    duration: 106.10999999999967
+  - stime: 570.71
+    etime: 670.14
+    text: Нет, ну, тут ты, конечно, перегибаешь палку. Честно говоря, как мне видится,
+      по крайней мере, это все, это, ну... Во-первых, первосотно связано с политикой,
+      100% связано с политикой. Нету какого-то та
+    duration: 99.42999999999995
+  - stime: 7691.2
+    etime: 7781.9
+    text: Это вот опять же по поводу всяких этих «я что-то думал». Как бы это сформулировать
+      там? А, я думал, название, например, «негры», оно появляется из какого-то определяющего
+      признака. Не знаю, какое-нибу
+    duration: 90.69999999999982
+reference_speakers:
+- speaker: Alek.sys
+  total_time: 526.2
+  reference_segment:
+    stime: 2008.15
+    etime: 2045.34
+    text: 'Упутун, смотри, а вот ты говоришь, что все эти инструменты, они не нужны.
+      Но просто они же появились в той же, ну, в джаве, да, в любом языке, правильно?
+      Они же появились не потому, что люди прям там '
+    duration: 37.18999999999983
+- speaker: Umputun
+  total_time: 4211.3
+  reference_segment:
+    stime: 798.09
+    etime: 921.06
+    text: Не важно, я виртуально между вами сижу. Какую-то мысль я хотел сказать,
+      но тут твой приход меня совсем с панталой кузбил. Какую-то умную мысль по поводу
+      всего этого, но забыл уже. Ну, забыл и забыл. Л
+    duration: 122.96999999999991
+- speaker: Ksenks
+  total_time: 1419.1
+  reference_segment:
+    stime: 6483.77
+    etime: 6559.37
+    text: некий вопрос. То есть, если мы говорим про то, с какого приложения можно
+      настричь больше, iOS или Android, конечно, iOS, потому что на Android гораздо
+      меньше покупают, гораздо больше воруют и так дале
+    duration: 75.59999999999945
+segments_to_extract:
+- speaker: SPEAKER_05
+  stime: 570.71
+  etime: 670.14
+  duration: 99.42999999999995
+  type: unknown
+- speaker: Umputun
+  stime: 798.09
+  etime: 921.06
+  duration: 122.96999999999991
+  type: reference
+- speaker: Alek.sys
+  stime: 2008.15
+  etime: 2045.34
+  duration: 37.18999999999983
+  type: reference
+- speaker: SPEAKER_05
+  stime: 2289.82
+  etime: 2395.93
+  duration: 106.10999999999967
+  type: unknown
+- speaker: Ksenks
+  stime: 6483.77
+  etime: 6559.37
+  duration: 75.59999999999945
+  type: reference
+- speaker: SPEAKER_05
+  stime: 7691.2
+  etime: 7781.9
+  duration: 90.69999999999982
+  type: unknown
+comparisons:
+- unknown: SPEAKER_05
+  compare_with:
+  - Alek.sys
+  - Umputun
+  - Ksenks

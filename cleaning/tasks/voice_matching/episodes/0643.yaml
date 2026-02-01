@@ -1,0 +1,118 @@
+episode: 643
+unknown_speakers:
+- speaker: SPEAKER_02
+  total_time: 411.9
+  segments:
+  - stime: 4399.45
+    etime: 4449.09
+    text: В общем, да, это правда. Лучше всего начать с самого начала, потому что...
+      Ну, я долго не буду, конечно, рассказывать, например, займет 30 секунд. Так
+      вот, веб-ассемблее это как... Это такой... Почему
+    duration: 49.64000000000033
+  - stime: 5506.13
+    etime: 5536.08
+    text: Здесь он просто... В этом весь смысл, собственно. По сути, что предлагается,
+      то, что можно любую программу, которая была написана вообще человечеством с
+      70-х годов на C, ты можешь взять и просто скомп
+    duration: 29.949999999999818
+  - stime: 4512.12
+    etime: 4541.54
+    text: Многие делают ошибку, когда говорят о том, что это то же самое, что нет
+      отличия на концептуальном уровне от JavaScript и Java. Оно есть, в общем-то.
+      Оно как раз и состоит в этой концепции абстракции J
+    duration: 29.420000000000073
+reference_speakers:
+- speaker: Bobuk
+  total_time: 1488.5
+  reference_segment:
+    stime: 2025.42
+    etime: 2115.97
+    text: Ну да. При этом, должен сказать, что на момент, когда они анонсировали ее,
+      ничего не было понятно, что за игры будут. А если заглянуть сейчас на сайт Apple
+      Arcade, обнаружишь, там довольно большой спи
+    duration: 90.54999999999973
+- speaker: Alek.sys
+  total_time: 1049.3
+  reference_segment:
+    stime: 6986.29
+    etime: 7040.32
+    text: В наш век такого agile и вот этого всего гибких подходов мы говорим про
+      то, что там нужна спецификация. Но мне кажется, он здесь немножко все-таки не
+      про то, если там почитать его посылы, он, скажем т
+    duration: 54.029999999999745
+- speaker: Umputun
+  total_time: 3480.1
+  reference_segment:
+    stime: 3910.04
+    etime: 4037.04
+    text: Особенно приятный тикет, потому что писать его 7,5 секунд. Присвоишь аутуеррор
+      и передаешь их дальше, и все будет нормально. А не райтеры одинаковые, какая
+      разница. Закоммитил, запустил. И жду. А ниче
+    duration: 127.0
+- speaker: Gray
+  total_time: 1282.7
+  reference_segment:
+    stime: 7956.13
+    etime: 8016.04
+    text: Давайте. Давайте. Первая тема. Вася. Поэтому пропускаем... Конечно, Вася.
+      Да. Принятые за поправки в закон об авторском праве в Евросоюзе. Это закон,
+      директива 11, по-моему, да, по номеру? Значит, она
+    duration: 59.909999999999854
+- speaker: Ksenks
+  total_time: 947.6
+  reference_segment:
+    stime: 7801.53
+    etime: 7868.03
+    text: Мне кажется, у вас был типичный митинг планирования. То есть у вас есть
+      какая-то не очень определённая задача. Вы старались из этой задачи сделать выжимку
+      того, что будет конкретно сделано. Как ты гов
+    duration: 66.5
+segments_to_extract:
+- speaker: Bobuk
+  stime: 2025.42
+  etime: 2115.97
+  duration: 90.54999999999973
+  type: reference
+- speaker: Umputun
+  stime: 3910.04
+  etime: 4037.04
+  duration: 127.0
+  type: reference
+- speaker: SPEAKER_02
+  stime: 4399.45
+  etime: 4449.09
+  duration: 49.64000000000033
+  type: unknown
+- speaker: SPEAKER_02
+  stime: 4512.12
+  etime: 4541.54
+  duration: 29.420000000000073
+  type: unknown
+- speaker: SPEAKER_02
+  stime: 5506.13
+  etime: 5536.08
+  duration: 29.949999999999818
+  type: unknown
+- speaker: Alek.sys
+  stime: 6986.29
+  etime: 7040.32
+  duration: 54.029999999999745
+  type: reference
+- speaker: Ksenks
+  stime: 7801.53
+  etime: 7868.03
+  duration: 66.5
+  type: reference
+- speaker: Gray
+  stime: 7956.13
+  etime: 8016.04
+  duration: 59.909999999999854
+  type: reference
+comparisons:
+- unknown: SPEAKER_02
+  compare_with:
+  - Bobuk
+  - Alek.sys
+  - Umputun
+  - Gray
+  - Ksenks
