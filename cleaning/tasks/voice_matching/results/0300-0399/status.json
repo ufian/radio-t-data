@@ -1,0 +1,120 @@
+{
+  "started_at": "2026-02-01T14:15:57.818691",
+  "episodes": {
+    "309": {
+      "status": "completed",
+      "segments_processed": 9,
+      "segments_total": 9,
+      "completed_at": "2026-02-01T14:17:10.043645"
+    },
+    "327": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:17:18.682145"
+    },
+    "328": {
+      "status": "completed",
+      "segments_processed": 6,
+      "segments_total": 6,
+      "completed_at": "2026-02-01T14:17:42.280182"
+    },
+    "329": {
+      "status": "completed",
+      "segments_processed": 15,
+      "segments_total": 15,
+      "completed_at": "2026-02-01T14:18:40.866103"
+    },
+    "339": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:19:09.846466"
+    },
+    "344": {
+      "status": "completed",
+      "segments_processed": 8,
+      "segments_total": 8,
+      "completed_at": "2026-02-01T14:19:38.175383"
+    },
+    "350": {
+      "status": "completed",
+      "segments_processed": 11,
+      "segments_total": 11,
+      "completed_at": "2026-02-01T14:20:48.366873"
+    },
+    "353": {
+      "status": "completed",
+      "segments_processed": 10,
+      "segments_total": 10,
+      "completed_at": "2026-02-01T14:21:51.281922"
+    },
+    "359": {
+      "status": "completed",
+      "segments_processed": 9,
+      "segments_total": 9,
+      "completed_at": "2026-02-01T14:22:33.251762"
+    },
+    "369": {
+      "status": "completed",
+      "segments_processed": 13,
+      "segments_total": 13,
+      "completed_at": "2026-02-01T14:23:50.492242"
+    },
+    "372": {
+      "status": "completed",
+      "segments_processed": 8,
+      "segments_total": 8,
+      "completed_at": "2026-02-01T14:24:29.280875"
+    },
+    "373": {
+      "status": "completed",
+      "segments_processed": 8,
+      "segments_total": 8,
+      "completed_at": "2026-02-01T14:25:33.066532"
+    },
+    "377": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:26:48.940813"
+    },
+    "378": {
+      "status": "completed",
+      "segments_processed": 5,
+      "segments_total": 5,
+      "completed_at": "2026-02-01T14:27:21.761899"
+    },
+    "382": {
+      "status": "completed",
+      "segments_processed": 8,
+      "segments_total": 8,
+      "completed_at": "2026-02-01T14:27:53.712055"
+    },
+    "386": {
+      "status": "completed",
+      "segments_processed": 8,
+      "segments_total": 8,
+      "completed_at": "2026-02-01T14:28:26.008706"
+    },
+    "394": {
+      "status": "completed",
+      "segments_processed": 6,
+      "segments_total": 6,
+      "completed_at": "2026-02-01T14:28:50.995770"
+    },
+    "395": {
+      "status": "completed",
+      "segments_processed": 6,
+      "segments_total": 6,
+      "completed_at": "2026-02-01T14:29:24.441069"
+    },
+    "397": {
+      "status": "completed",
+      "segments_processed": 9,
+      "segments_total": 9,
+      "completed_at": "2026-02-01T14:30:24.059414"
+    }
+  },
+  "batch": "0300-0399"
+}

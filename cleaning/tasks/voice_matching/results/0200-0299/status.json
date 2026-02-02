@@ -1,0 +1,90 @@
+{
+  "started_at": "2026-02-01T14:19:08.142485",
+  "episodes": {
+    "202": {
+      "status": "completed",
+      "segments_processed": 6,
+      "segments_total": 6,
+      "completed_at": "2026-02-01T14:20:35.431317"
+    },
+    "209": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:20:51.960089"
+    },
+    "211": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:21:17.039906"
+    },
+    "232": {
+      "status": "completed",
+      "segments_processed": 8,
+      "segments_total": 8,
+      "completed_at": "2026-02-01T14:21:55.364999"
+    },
+    "234": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:22:21.194467"
+    },
+    "237": {
+      "status": "completed",
+      "segments_processed": 5,
+      "segments_total": 5,
+      "completed_at": "2026-02-01T14:23:27.452416"
+    },
+    "239": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:23:40.299362"
+    },
+    "243": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:24:16.830424"
+    },
+    "247": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:24:31.169780"
+    },
+    "254": {
+      "status": "completed",
+      "segments_processed": 8,
+      "segments_total": 8,
+      "completed_at": "2026-02-01T14:25:15.146528"
+    },
+    "284": {
+      "status": "completed",
+      "segments_processed": 9,
+      "segments_total": 9,
+      "completed_at": "2026-02-01T14:25:45.155314"
+    },
+    "286": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:26:32.616178"
+    },
+    "298": {
+      "status": "completed",
+      "segments_processed": 8,
+      "segments_total": 8,
+      "completed_at": "2026-02-01T14:27:36.017973"
+    },
+    "299": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:27:47.623760"
+    }
+  },
+  "batch": "0200-0299"
+}

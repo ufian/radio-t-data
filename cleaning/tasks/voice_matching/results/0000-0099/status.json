@@ -1,0 +1,48 @@
+{
+  "started_at": "2026-02-01T14:19:08.133141",
+  "episodes": {
+    "2": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:19:25.220727"
+    },
+    "5": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:19:46.836578"
+    },
+    "6": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:19:56.573280"
+    },
+    "17": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:20:06.624744"
+    },
+    "18": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:20:28.100987"
+    },
+    "27": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:20:45.698062"
+    },
+    "49": {
+      "status": "completed",
+      "segments_processed": 4,
+      "segments_total": 4,
+      "completed_at": "2026-02-01T14:21:24.127562"
+    }
+  },
+  "batch": "0000-0099"
+}

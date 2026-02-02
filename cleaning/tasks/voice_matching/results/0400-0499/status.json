@@ -1,0 +1,108 @@
+{
+  "started_at": "2026-02-01T14:19:08.150999",
+  "episodes": {
+    "400": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:20:28.079806"
+    },
+    "403": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:21:35.631651"
+    },
+    "408": {
+      "status": "completed",
+      "segments_processed": 6,
+      "segments_total": 6,
+      "completed_at": "2026-02-01T14:22:14.453994"
+    },
+    "423": {
+      "status": "completed",
+      "segments_processed": 12,
+      "segments_total": 12,
+      "completed_at": "2026-02-01T14:23:37.175915"
+    },
+    "425": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:24:03.617107"
+    },
+    "429": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:24:50.554540"
+    },
+    "435": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:25:30.155210"
+    },
+    "441": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:25:43.003783"
+    },
+    "445": {
+      "status": "completed",
+      "segments_processed": 9,
+      "segments_total": 9,
+      "completed_at": "2026-02-01T14:26:28.395563"
+    },
+    "446": {
+      "status": "completed",
+      "segments_processed": 8,
+      "segments_total": 8,
+      "completed_at": "2026-02-01T14:27:13.214350"
+    },
+    "458": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:27:41.299753"
+    },
+    "461": {
+      "status": "completed",
+      "segments_processed": 6,
+      "segments_total": 6,
+      "completed_at": "2026-02-01T14:28:15.172947"
+    },
+    "462": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:28:42.807154"
+    },
+    "465": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:28:52.628552"
+    },
+    "466": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:29:32.610760"
+    },
+    "471": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-01T14:30:36.869969"
+    },
+    "486": {
+      "status": "completed",
+      "segments_processed": 1,
+      "segments_total": 1,
+      "completed_at": "2026-02-01T14:30:49.079640"
+    }
+  },
+  "batch": "0400-0499"
+}
