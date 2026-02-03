@@ -1,0 +1,69 @@
+# Объединение дубликатов спикеров
+# Приоритет: 9 (выполняется последним, после всех других правил)
+# Эти правила объединяют разные написания одного и того же человека
+version: 1
+name: "Объединение дубликатов"
+priority: 9
+
+rules:
+  # === Подтверждённые дубликаты ===
+
+  - id: merge_wylsacom
+    type: normalize
+    from: ["Wylsacom"]
+    to: "wylsacom"
+    reason: "Wylsacom и wylsacom — один человек (ep409 overlap)"
+
+  - id: merge_vladimir_ivanov
+    type: normalize
+    from: ["vladimir_ivanov"]
+    to: "VladimirIvanov"
+    reason: "vladimir_ivanov → VladimirIvanov (ep430 overlap)"
+
+  - id: merge_alexey_abashev
+    type: normalize
+    from: ["alexey_abashev", "AlexeyAbashov", "alexey_abashov"]
+    to: "AlexeyAbashev"
+    reason: "Алексей Абашев из 'Разбор полётов'. ep587: 'Я Алексей из соседнего подкаста'"
+
+  - id: merge_nikolay_dobrovolskiy
+    type: normalize
+    from: ["nikolay_dobrovolsky"]
+    to: "nikolay_dobrovolskiy"
+    reason: "Опечатка в фамилии (ий vs ы)"
+
+  - id: merge_viktor_gamov
+    type: normalize
+    from: ["VictorGamov", "viktor_gamov"]
+    to: "ViktorGamov"
+    reason: "Виктор Гамов, DevRel. Victor=Viktor"
+
+  - id: merge_dima_zhemerov
+    type: normalize
+    from: ["dmitry_zhemerov"]
+    to: "dima_zhemerov"
+    reason: "Дмитрий Жемеров из JetBrains. Dima=Dmitry"
+
+  - id: merge_rosnovsky
+    type: normalize
+    from: ["ArtemRosnovskiy"]
+    to: "Rosnovsky"
+    reason: "Артём Росновский, один человек"
+
+  - id: merge_vladik_khononov
+    type: normalize
+    from: ["vladik_khononov"]
+    to: "VladikKhononov"
+    reason: "Владик Хононов, один человек (ep589, ep792)"
+
+  - id: merge_alena
+    type: normalize
+    from: ["alena"]
+    to: "Alena"
+    reason: "Алёна, один человек (ep607-612)"
+
+  - id: merge_svan
+    type: normalize
+    from: ["svan", "Swan"]
+    to: "Svan"
+    reason: "Swan — опечатка, один человек"

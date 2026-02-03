@@ -76,11 +76,11 @@ rules:
     to: "Plushev"
     reason: "Нормализация имени гостя"
 
-  - id: normalize_artem_rosnovskiy
+  - id: normalize_rosnovsky
     type: normalize
     from: ["Артём"]
-    to: "ArtemRosnovskiy"
-    reason: "Нормализация имени гостя"
+    to: "Rosnovsky"
+    reason: "Нормализация имени гостя (Артём Росновский)"
 
   - id: normalize_golodniy
     type: normalize
@@ -113,3 +113,4 @@ rules:
     from: ["SPEAKER_99"]
     to: "_artifact_99"
     reason: "SPEAKER_99 — аудио-артефакты, джинглы, звуковые эффекты"
+
