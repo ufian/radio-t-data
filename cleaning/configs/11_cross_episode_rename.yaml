@@ -1,0 +1,38 @@
+version: 1
+name: Cross-episode rename - unique names for different people with same name
+priority: 11
+description: Voice matching подтвердил что одноимённые гости в разных эпизодах — разные люди.
+  Даём уникальные имена по области экспертизы.
+rules:
+# Alexander — 3 разных человека (voice match avg < 0.3 между эпизодами)
+- id: cross_e27_Alexander_to_Alexander_Desktop
+  type: rename_episode
+  episode: 27
+  from: Alexander
+  to: Alexander_Desktop
+  reason: 'Коллега Бобука, разработчик десктопных приложений (Windows). Voice different from ep243,ep524'
+- id: cross_e243_Alexander_to_Alexander_CPP
+  type: rename_episode
+  episode: 243
+  from: Alexander
+  to: Alexander_CPP
+  reason: 'Эксперт по C++/GPU, OpenCL/CUDA, Visual Studio. Voice different from ep27,ep524'
+- id: cross_e524_Alexander_to_Alexander_Frontend
+  type: rename_episode
+  episode: 524
+  from: Alexander
+  to: Alexander_Frontend
+  reason: 'Frontend/UI разработчик, MVC, React, state management. Voice different from ep27,ep243'
+# Andrey — 2 разных человека (voice match avg = 0.22)
+- id: cross_e486_Andrey_to_Andrey_FP
+  type: rename_episode
+  episode: 486
+  from: Andrey
+  to: Andrey_FP
+  reason: 'Эксперт по функциональному программированию. Voice different from ep976'
+- id: cross_e976_Andrey_to_Andrey_Testing
+  type: rename_episode
+  episode: 976
+  from: Andrey
+  to: Andrey_Testing
+  reason: 'Backend/тестирование, AI-инструменты, подменяет Ksenks. Voice different from ep486'

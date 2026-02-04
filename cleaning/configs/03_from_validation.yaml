@@ -9400,13 +9400,13 @@ rules:
     Экспертиза соответствует профилю Антона Архипова (JetBrains Developer Advocate).
 
     '
-- id: auto_e891_Umputun_Guest
-  type: rename_episode
-  episode: 891
-  from: Umputun
-  to: Guest
-  reason: Ответ гостя на вопрос Umputun 'А как тебя зовут?' - явно должен принадлежать
-    Guest, а не Umputun
+# REMOVED (session 4, 2026-02-03): Правило ошибочно переименовывало ВСЕХ Umputun (674 реплики)
+# в Guest. Umputun ведёт эпизод с 1-й секунды. Guest появляется только с 124.7s.
+# - id: auto_e891_Umputun_Guest
+#   type: rename_episode
+#   episode: 891
+#   from: Umputun
+#   to: Guest
 - id: auto_e895_Guest1_AndreyAWS
   type: rename_episode
   episode: 895

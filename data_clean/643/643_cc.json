@@ -10003,7 +10003,7 @@
       "id": "65c9cc9b62ffc4c6c331a09c",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4231.7,
       "etime": 4235.65,
       "text": "Да-да-да, всем привет, я тут отрубал наследство."
@@ -10021,7 +10021,7 @@
       "id": "65c9cc9b62ffc4c6c331a09e",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4238.37,
       "etime": 4239.63,
       "text": "Отрубал музычку."
@@ -10066,7 +10066,7 @@
       "id": "65c9cc9b62ffc4c6c331a0a3",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4251.76,
       "etime": 4252.82,
       "text": "Непонятно."
@@ -10525,7 +10525,7 @@
       "id": "65c9cc9b62ffc4c6c331a0d6",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4387.3,
       "etime": 4388.22,
       "text": "Гав."
@@ -10570,7 +10570,7 @@
       "id": "65c9cc9b62ffc4c6c331a0db",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4399.45,
       "etime": 4403.39,
       "text": "В общем, да, это правда."
@@ -10579,7 +10579,7 @@
       "id": "65c9cc9b62ffc4c6c331a0dc",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4403.49,
       "etime": 4411.82,
       "text": "Лучше всего начать с самого начала, потому что... Ну, я долго не буду, конечно, рассказывать, например, займет 30 секунд."
@@ -10588,7 +10588,7 @@
       "id": "65c9cc9b62ffc4c6c331a0dd",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4411.86,
       "etime": 4417.86,
       "text": "Так вот, веб-ассемблее это как... Это такой..."
@@ -10597,7 +10597,7 @@
       "id": "65c9cc9b62ffc4c6c331a0de",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4418.96,
       "etime": 4423.01,
       "text": "Почему его сравнивают с Докером?"
@@ -10606,7 +10606,7 @@
       "id": "65c9cc9b62ffc4c6c331a0df",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4423.09,
       "etime": 4433.63,
       "text": "Сравнивают с Докером, потому что он предлагает тоже изоляцию, то есть слой изоляции над исполнением."
@@ -10615,7 +10615,7 @@
       "id": "65c9cc9b62ffc4c6c331a0e0",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4433.71,
       "etime": 4436.21,
       "text": "Но при этом он это делает до..."
@@ -10624,7 +10624,7 @@
       "id": "65c9cc9b62ffc4c6c331a0e1",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4437.46,
       "etime": 4441.27,
       "text": "запуска программы на этапе компиляции."
@@ -10633,7 +10633,7 @@
       "id": "65c9cc9b62ffc4c6c331a0e2",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4441.33,
       "etime": 4449.09,
       "text": "То есть, получается, у вас вторая компиляция происходит внутри рантайма, который предоставлен системой."
@@ -10651,7 +10651,7 @@
       "id": "65c9cc9b62ffc4c6c331a0e4",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4451.45,
       "etime": 4451.71,
       "text": "Это как Cajit, but ahead of time."
@@ -10741,7 +10741,7 @@
       "id": "65c9cc9b62ffc4c6c331a0ee",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4512.12,
       "etime": 4522.63,
       "text": "Многие делают ошибку, когда говорят о том, что это то же самое, что нет отличия на концептуальном уровне от JavaScript и Java."
@@ -10750,7 +10750,7 @@
       "id": "65c9cc9b62ffc4c6c331a0ef",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4523.95,
       "etime": 4526.46,
       "text": "Оно есть, в общем-то."
@@ -10759,7 +10759,7 @@
       "id": "65c9cc9b62ffc4c6c331a0f0",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4526.5,
       "etime": 4531.66,
       "text": "Оно как раз и состоит в этой концепции абстракции Java."
@@ -10768,7 +10768,7 @@
       "id": "65c9cc9b62ffc4c6c331a0f1",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4533.32,
       "etime": 4541.54,
       "text": "которые без ценных инструкций, которые не стоят ничего, в этом как бы основная ценность."
@@ -10786,7 +10786,7 @@
       "id": "65c9cc9b62ffc4c6c331a0f3",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4552.47,
       "etime": 4554.23,
       "text": "В итоге у тебя не будет байт-кода."
@@ -10795,7 +10795,7 @@
       "id": "65c9cc9b62ffc4c6c331a0f4",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4554.27,
       "etime": 4567.02,
       "text": "Идея в том, что у тебя в итоге не остается байт-кода после компиляции этого ВАСМа, валидации и компиляции этого ВАСМа, допустим, например, браузером."
@@ -10840,7 +10840,7 @@
       "id": "65c9cc9b62ffc4c6c331a0f9",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4583.52,
       "etime": 4586.52,
       "text": "На самом деле GRE... Ну, нативный."
@@ -10849,7 +10849,7 @@
       "id": "65c9cc9b62ffc4c6c331a0fa",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4586.56,
       "etime": 4587.68,
       "text": "Прямо нативный."
@@ -10858,7 +10858,7 @@
       "id": "65c9cc9b62ffc4c6c331a0fb",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4587.74,
       "etime": 4588.82,
       "text": "Железно-нативный."
@@ -10876,7 +10876,7 @@
       "id": "65c9cc9b62ffc4c6c331a0fd",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4592.28,
       "etime": 4593.76,
       "text": "Ну да, но только в рантайме."
@@ -10885,7 +10885,7 @@
       "id": "65c9cc9b62ffc4c6c331a0fe",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4593.78,
       "etime": 4595.96,
       "text": "Только он делает в рантайме, а тут на этапе компиляции."
@@ -10894,7 +10894,7 @@
       "id": "65c9cc9b62ffc4c6c331a0ff",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4595.98,
       "etime": 4598.04,
       "text": "Это отдельный этап, который делается заранее."
@@ -11011,7 +11011,7 @@
       "id": "65c9cc9b62ffc4c6c331a10c",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4676.96,
       "etime": 4684.84,
       "text": "— В идеале без накладных расходов, в идеале универсальные бинарники."
@@ -11020,7 +11020,7 @@
       "id": "65c9cc9b62ffc4c6c331a10d",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4684.86,
       "etime": 4698.55,
       "text": "В нем нет никакого... Как GDM, можно сравнить в этом смысле, что у тебя универсальный бинарник, который потом компилируют, потом исполнители его компилируют для себя."
@@ -11038,7 +11038,7 @@
       "id": "65c9cc9b62ffc4c6c331a10f",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4702.51,
       "etime": 4704.85,
       "text": "Конечно, конечно."
@@ -11047,7 +11047,7 @@
       "id": "65c9cc9b62ffc4c6c331a110",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4704.93,
       "etime": 4713.71,
       "text": "Но рантайм этот не участвует уже, когда он будет скомпилирован в нативный код, рантайм уже никакого участия не принимает, в отличие от JVM."
@@ -11065,7 +11065,7 @@
       "id": "65c9cc9b62ffc4c6c331a112",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4719.2,
       "etime": 4724.06,
       "text": "Просто он компилятор с... У тебя для конкретного рантайма компилируется конкретный бинарник."
@@ -11074,7 +11074,7 @@
       "id": "65c9cc9b62ffc4c6c331a113",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4724.1,
       "etime": 4728.45,
       "text": "То есть у тебя, например, конкретно-натемный под конкретную платформу."
@@ -11326,7 +11326,7 @@
       "id": "65c9cc9b62ffc4c6c331a12f",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4864.73,
       "etime": 4867.45,
       "text": "Он уже пошел не по тому пути просто."
@@ -11335,7 +11335,7 @@
       "id": "65c9cc9b62ffc4c6c331a130",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4867.51,
       "etime": 4868.87,
       "text": "То есть, как бы, это другой путь."
@@ -11362,7 +11362,7 @@
       "id": "65c9cc9b62ffc4c6c331a133",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4880.18,
       "etime": 4884.1,
       "text": "Это никакого не имеет отношения к динамическому языку программирования."
@@ -11371,7 +11371,7 @@
       "id": "65c9cc9b62ffc4c6c331a134",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4884.72,
       "etime": 4890.74,
       "text": "То есть это не динамический, в итоге у тебя получается статический бинарник с вызовами."
@@ -11389,7 +11389,7 @@
       "id": "65c9cc9b62ffc4c6c331a136",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4893.42,
       "etime": 4898.53,
       "text": "Это ключевые детали реализации, это предполагается изначально."
@@ -11398,7 +11398,7 @@
       "id": "65c9cc9b62ffc4c6c331a137",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4898.55,
       "etime": 4903.63,
       "text": "То есть это предлагалось изначально, когда этот васм, собственно, задумался."
@@ -11407,7 +11407,7 @@
       "id": "65c9cc9b62ffc4c6c331a138",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4903.69,
       "etime": 4906.43,
       "text": "То есть это то, что хотелось."
@@ -11632,7 +11632,7 @@
       "id": "65c9cc9b62ffc4c6c331a151",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4973.89,
       "etime": 4980.38,
       "text": "У тебя есть на этапе компиляции, на этапе валидации, ты смотришь, какие сисколы ты хочешь запретить и делаешь blacklist."
@@ -11641,7 +11641,7 @@
       "id": "65c9cc9b62ffc4c6c331a152",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4980.84,
       "etime": 4983.5,
       "text": "Точнее, можешь и whitelist сделать."
@@ -11668,7 +11668,7 @@
       "id": "65c9cc9b62ffc4c6c331a155",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4989.2,
       "etime": 4990.06,
       "text": "Да, статически."
@@ -11677,7 +11677,7 @@
       "id": "65c9cc9b62ffc4c6c331a156",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 4990.1,
       "etime": 4992.48,
       "text": "Ты статически проверяешь код, который тебе приходит."
@@ -11722,7 +11722,7 @@
       "id": "65c9cc9b62ffc4c6c331a15b",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5011.87,
       "etime": 5014.01,
       "text": "Нет, все статически будет."
@@ -11731,7 +11731,7 @@
       "id": "65c9cc9b62ffc4c6c331a15c",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5014.03,
       "etime": 5018.09,
       "text": "То есть паника будет на компиляции, это правда."
@@ -11749,7 +11749,7 @@
       "id": "65c9cc9b62ffc4c6c331a15e",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5028.68,
       "etime": 5032.46,
       "text": "Возможно, есть какие-то динамические проверки, но я в этом не уверен."
@@ -11776,7 +11776,7 @@
       "id": "65c9cc9b62ffc4c6c331a161",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5040.56,
       "etime": 5043.25,
       "text": "То есть ты можешь сказать, что нет доступа к файлам."
@@ -11794,7 +11794,7 @@
       "id": "65c9cc9b62ffc4c6c331a163",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5047.95,
       "etime": 5050.57,
       "text": "Дальше ты можешь углубляться как бы в это управление."
@@ -11830,7 +11830,7 @@
       "id": "65c9cc9b62ffc4c6c331a167",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5059.02,
       "etime": 5059.34,
       "text": "Да, но"
@@ -11839,7 +11839,7 @@
       "id": "65c9cc9b62ffc4c6c331a168",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5060.2,
       "etime": 5062.2,
       "text": "Может быть, на этапе... Ну, как бы да."
@@ -11956,7 +11956,7 @@
       "id": "65c9cc9b62ffc4c6c331a175",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5131.56,
       "etime": 5142.44,
       "text": "Они по умолчанию говорят, что сейчас, я думаю, что это будет развиваться, я так предполагаю, но сейчас они позволяют твоей программе видеть только директорию, в которой она запущена."
@@ -11965,7 +11965,7 @@
       "id": "65c9cc9b62ffc4c6c331a176",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5142.76,
       "etime": 5143.2,
       "text": "Например..."
@@ -12001,7 +12001,7 @@
       "id": "65c9cc9b62ffc4c6c331a17a",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5154.89,
       "etime": 5156.39,
       "text": "Это разные рантаймы."
@@ -12010,7 +12010,7 @@
       "id": "65c9cc9b62ffc4c6c331a17b",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5156.61,
       "etime": 5162.38,
       "text": "Тут могут быть разные рантаймы, и по разным рантаймам могут предоставить тебе разные спот, разные буквы."
@@ -12037,7 +12037,7 @@
       "id": "65c9cc9b62ffc4c6c331a17e",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5181.79,
       "etime": 5185.63,
       "text": "Ключевой момент, это не статический, именно статический."
@@ -12046,7 +12046,7 @@
       "id": "65c9cc9b62ffc4c6c331a17f",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5185.67,
       "etime": 5190.27,
       "text": "То, что JIT, как раз он работает по статической модели."
@@ -12055,7 +12055,7 @@
       "id": "65c9cc9b62ffc4c6c331a180",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5190.31,
       "etime": 5197.06,
       "text": "Он смотрит, вызывается постоянно этот горячий код, и начинает компилировать его."
@@ -12064,7 +12064,7 @@
       "id": "65c9cc9b62ffc4c6c331a181",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5197.26,
       "etime": 5198.46,
       "text": "А Head of Time по-другому работает."
@@ -12073,7 +12073,7 @@
       "id": "65c9cc9b62ffc4c6c331a182",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5198.52,
       "etime": 5200.14,
       "text": "Сначала все валидирует, компилирует."
@@ -12118,7 +12118,7 @@
       "id": "65c9cc9b62ffc4c6c331a187",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5208.26,
       "etime": 5214.07,
       "text": "Да, и он будет жрать память."
@@ -12136,7 +12136,7 @@
       "id": "65c9cc9b62ffc4c6c331a189",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5221.12,
       "etime": 5225.4,
       "text": "Обычная статическая локация, динамическая, как в TI."
@@ -12145,7 +12145,7 @@
       "id": "65c9cc9b62ffc4c6c331a18a",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5225.44,
       "etime": 5230.74,
       "text": "Поэтому не поддерживаются языки без ГЦ, без граббер-коллектора."
@@ -12154,7 +12154,7 @@
       "id": "65c9cc9b62ffc4c6c331a18b",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5230.9,
       "etime": 5240.51,
       "text": "Если ты хочешь скомпилировать JVM в WASM, то тебе придется туда запихивать еще и граббер-коллектор."
@@ -12190,7 +12190,7 @@
       "id": "65c9cc9b62ffc4c6c331a18f",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5256.57,
       "etime": 5258.63,
       "text": "Операционная система, по сути, на самом деле."
@@ -12199,7 +12199,7 @@
       "id": "65c9cc9b62ffc4c6c331a190",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5258.65,
       "etime": 5260.2,
       "text": "То есть ты заменяешь операционную систему."
@@ -12208,7 +12208,7 @@
       "id": "65c9cc9b62ffc4c6c331a191",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5260.24,
       "etime": 5261.32,
       "text": "То есть она то же самое делает."
@@ -12217,7 +12217,7 @@
       "id": "65c9cc9b62ffc4c6c331a192",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5261.34,
       "etime": 5262.1,
       "text": "Она же выполняет нативный код."
@@ -12226,7 +12226,7 @@
       "id": "65c9cc9b62ffc4c6c331a193",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5263.02,
       "etime": 5265.16,
       "text": "У нее есть проверки, скедеринг."
@@ -12235,7 +12235,7 @@
       "id": "65c9cc9b62ffc4c6c331a194",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5265.2,
       "etime": 5267.42,
       "text": "То есть, по сути..."
@@ -12343,7 +12343,7 @@
       "id": "65c9cc9b62ffc4c6c331a1a0",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5311.2,
       "etime": 5312.12,
       "text": "Нет, не так."
@@ -12352,7 +12352,7 @@
       "id": "65c9cc9b62ffc4c6c331a1a1",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5312.18,
       "etime": 5319.54,
       "text": "То есть runtime уже предоставляет какой-то готовый набор ограничений."
@@ -12361,7 +12361,7 @@
       "id": "65c9cc9b62ffc4c6c331a1a2",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5319.64,
       "etime": 5324.39,
       "text": "И WebAssembly исполняется в этих границах."
@@ -12370,7 +12370,7 @@
       "id": "65c9cc9b62ffc4c6c331a1a3",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5324.49,
       "etime": 5327.19,
       "text": "Вот и все."
@@ -12514,7 +12514,7 @@
       "id": "65c9cc9b62ffc4c6c331a1b3",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5380.39,
       "etime": 5383.52,
       "text": "То, что он есть, не означает, что им кто-то пользуется."
@@ -12523,7 +12523,7 @@
       "id": "65c9cc9b62ffc4c6c331a1b4",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5387.24,
       "etime": 5387.92,
       "text": "Ну, возможно."
@@ -12532,7 +12532,7 @@
       "id": "65c9cc9b62ffc4c6c331a1b5",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5388.02,
       "etime": 5391.58,
       "text": "Но мы же как раз для этого и делаем, чтобы начали пользоваться."
@@ -12640,7 +12640,7 @@
       "id": "65c9cc9b62ffc4c6c331a1c1",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5456.76,
       "etime": 5460.56,
       "text": "Но с Java немного можно нативный код сразу же."
@@ -12649,7 +12649,7 @@
       "id": "65c9cc9b62ffc4c6c331a1c2",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5460.58,
       "etime": 5464.02,
       "text": "С Java немного можно сразу нативный код."
@@ -12748,7 +12748,7 @@
       "id": "65c9cc9b62ffc4c6c331a1cd",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5506.13,
       "etime": 5511.67,
       "text": "Здесь он просто... В этом весь смысл, собственно."
@@ -12757,7 +12757,7 @@
       "id": "65c9cc9b62ffc4c6c331a1ce",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5511.75,
       "etime": 5526.8,
       "text": "По сути, что предлагается, то, что можно любую программу, которая была написана вообще человечеством с 70-х годов на C, ты можешь взять и просто скомпилировать в универсальную штуку, которая будет работать везде."
@@ -12766,7 +12766,7 @@
       "id": "65c9cc9b62ffc4c6c331a1cf",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5528.51,
       "etime": 5530.27,
       "text": "Кроме, конечно, если бы там нет вставок."
@@ -12775,7 +12775,7 @@
       "id": "65c9cc9b62ffc4c6c331a1d0",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5530.29,
       "etime": 5533.26,
       "text": "Вставок, конечно, ассембль вставок, да, действительно."
@@ -12784,7 +12784,7 @@
       "id": "65c9cc9b62ffc4c6c331a1d1",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5533.32,
       "etime": 5536.08,
       "text": "Если там ассембль вставок, то придется их как-то транслировать тоже."
@@ -12802,7 +12802,7 @@
       "id": "65c9cc9b62ffc4c6c331a1d3",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5538.61,
       "etime": 5539.29,
       "text": "Это рантайм."
@@ -12811,7 +12811,7 @@
       "id": "65c9cc9b62ffc4c6c331a1d4",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5539.31,
       "etime": 5539.89,
       "text": "Это рантайм."
@@ -12820,7 +12820,7 @@
       "id": "65c9cc9b62ffc4c6c331a1d5",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5542.42,
       "etime": 5544,
       "text": "То есть это все рантайно?"
@@ -12829,7 +12829,7 @@
       "id": "65c9cc9b62ffc4c6c331a1d6",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5544.06,
       "etime": 5550.46,
       "text": "То есть это дефолтный рантайм можно замапать, который есть уже во всех Unix'ах и Windows'ах и так далее."
@@ -12838,7 +12838,7 @@
       "id": "65c9cc9b62ffc4c6c331a1d7",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5550.48,
       "etime": 5553.24,
       "text": "Ты мапишь дефолтный рантайм."
@@ -12856,7 +12856,7 @@
       "id": "65c9cc9b62ffc4c6c331a1d9",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5557.04,
       "etime": 5570.23,
       "text": "Потому что постоянно вспоминают JVM и сразу же все... Go, VM, все эти вещи, они уже не попадают под категорию тех языков, которые нужно сравнивать с этим."
@@ -12874,7 +12874,7 @@
       "id": "65c9cc9b62ffc4c6c331a1db",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5583.57,
       "etime": 5597.88,
       "text": "Да, то есть он становится безопасным с точки зрения того, что рантайм может проверить его, когда он приходит до рантайма, рантайм такой, о, типа, что-то тут файлы открываешь, сокеты какие-то, не-не, здесь это запрещено."
@@ -12892,7 +12892,7 @@
       "id": "65c9cc9b62ffc4c6c331a1dd",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5604.06,
       "etime": 5609.25,
       "text": "Да, но ты можешь там ограничивать память, количество памяти, которое ты инициализируешь."
@@ -12919,7 +12919,7 @@
       "id": "65c9cc9b62ffc4c6c331a1e0",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5616.05,
       "etime": 5620.04,
       "text": "Качество – это зависит от рантайма."
@@ -13027,7 +13027,7 @@
       "id": "65c9cc9b62ffc4c6c331a1ec",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5661.11,
       "etime": 5662.01,
       "text": "IBM может компилировать WASM."
@@ -13036,7 +13036,7 @@
       "id": "65c9cc9b62ffc4c6c331a1ed",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5662.23,
       "etime": 5667.25,
       "text": "И он компилирует самые быстрые бинарники у тебя получаются."
@@ -13045,7 +13045,7 @@
       "id": "65c9cc9b62ffc4c6c331a1ee",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5667.29,
       "etime": 5670.54,
       "text": "Собственно, я вот скидывал там бенчмарк."
@@ -13054,7 +13054,7 @@
       "id": "65c9cc9b62ffc4c6c331a1ef",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5670.78,
       "etime": 5680.68,
       "text": "То есть понятное дело, что ты не можешь быстрее... Странно хотеть что-то быстрее, чем native."
@@ -13063,7 +13063,7 @@
       "id": "65c9cc9b62ffc4c6c331a1f0",
       "issue": 643,
       "type": "cc",
-      "author": "SPEAKER_02",
+      "author": "AlexeyWASM",
       "stime": 5680.76,
       "etime": 5689.99,
       "text": "Но в рамках погрешности так получается иногда, что у тебя даже и быстрее работает иногда то, что WASM скомпилировано."

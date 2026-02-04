@@ -1975,7 +1975,7 @@
       "id": "65c9a190876fc48fc1b0b2b6",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 986.68,
       "etime": 992.54,
       "text": "На самом деле, главное достоинство TrueCrypt по сравнению со всеми этими штуками, это то, что называется plausible deniability."
@@ -1984,7 +1984,7 @@
       "id": "65c9a190876fc48fc1b0b2b7",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 995.54,
       "etime": 1000.37,
       "text": "Возможность отказаться от факта зашифрованного сообщения."
@@ -1993,7 +1993,7 @@
       "id": "65c9a190876fc48fc1b0b2b8",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1000.43,
       "etime": 1014.24,
       "text": "Вы, наверное, знаете, и я думаю, здесь много раз обсуждалось, что в некоторых странах факт отказа от выдачи ключей соответствующим органам, если вдруг ты оказываешься перед судом,"
@@ -2002,7 +2002,7 @@
       "id": "65c9a190876fc48fc1b0b2b9",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1016.91,
       "etime": 1020.51,
       "text": "является сам по себе уголовным преступлением."
@@ -2011,7 +2011,7 @@
       "id": "65c9a190876fc48fc1b0b2ba",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1020.71,
       "etime": 1024.23,
       "text": "Ну, например, так происходит в Великобритании."
@@ -2020,7 +2020,7 @@
       "id": "65c9a190876fc48fc1b0b2bb",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1024.25,
       "etime": 1031.51,
       "text": "Там нельзя отказаться сотрудничать со следствием, если у тебя нашли зашифрованные данные на диске."
@@ -2029,7 +2029,7 @@
       "id": "65c9a190876fc48fc1b0b2bc",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1031.59,
       "etime": 1034.59,
       "text": "И TrueCrypt позволял эту проблему преодолеть."
@@ -2038,7 +2038,7 @@
       "id": "65c9a190876fc48fc1b0b2bd",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1034.61,
       "etime": 1042.11,
       "text": "У него была такая удобная функциональность, когда можно было внутри одного зашифрованного тома создать другой зашифрованный том,"
@@ -2047,7 +2047,7 @@
       "id": "65c9a190876fc48fc1b0b2be",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1042.89,
       "etime": 1049.99,
       "text": "Причем доказать существование внутреннего зашифрованного тома было нельзя."
@@ -2056,7 +2056,7 @@
       "id": "65c9a190876fc48fc1b0b2bf",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1050.03,
       "etime": 1050.75,
       "text": "Было очень удобно."
@@ -2083,7 +2083,7 @@
       "id": "65c9a190876fc48fc1b0b2c2",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1056.7,
       "etime": 1062.28,
       "text": "Можно было им пользоваться, только зная, что он там есть и зная к нему пароль, что важнее."
@@ -2092,7 +2092,7 @@
       "id": "65c9a190876fc48fc1b0b2c3",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1062.32,
       "etime": 1067.04,
       "text": "Ну и таким образом механизм, в общем-то, отказа очень простой."
@@ -2101,7 +2101,7 @@
       "id": "65c9a190876fc48fc1b0b2c4",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1067.08,
       "etime": 1077.2,
       "text": "Ты создаешь пришифрованный дом, кладешь в него, ну, не знаю, личные фотографии домашние твоей совершеннолетней девушки,"
@@ -2110,7 +2110,7 @@
       "id": "65c9a190876fc48fc1b0b2c5",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1078.9,
       "etime": 1086.05,
       "text": "После этого рядом внутри этого зашифрованного тома создаешь еще один зашифрованный том, куда уже кладешь секреты АНБ."
@@ -2119,7 +2119,7 @@
       "id": "65c9a190876fc48fc1b0b2c6",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1086.11,
       "etime": 1090.65,
       "text": "И таким образом доказать о существовании секретов АНБ никак нельзя."
@@ -2128,7 +2128,7 @@
       "id": "65c9a190876fc48fc1b0b2c7",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1090.67,
       "etime": 1104.08,
       "text": "Можно, если ты оказываешься перед судом, и тебя требует ввести пароль, ты спокойно будешь пароль от внешнего тома, он расшифровывается, и ты предъявляешь суду фотографии, которые у тебя там были."
@@ -2137,7 +2137,7 @@
       "id": "65c9a190876fc48fc1b0b2c8",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1104.18,
       "etime": 1105.1,
       "text": "И на этом все."
@@ -2263,7 +2263,7 @@
       "id": "65c9a190876fc48fc1b0b2d6",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1145.89,
       "etime": 1153.36,
       "text": "У BitLocker такой возможности нету, и у FileVault такой возможности тоже нет."
@@ -2272,7 +2272,7 @@
       "id": "65c9a190876fc48fc1b0b2d7",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1153.42,
       "etime": 1156.42,
       "text": "То есть, скажем так, среди широко распространенных"
@@ -2281,7 +2281,7 @@
       "id": "65c9a190876fc48fc1b0b2d8",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1157.19,
       "etime": 1164.41,
       "text": "приложение для шифрования, у TrueCrypt был единственной системой, которая такую штуку позволяла делать."
@@ -2308,7 +2308,7 @@
       "id": "65c9a190876fc48fc1b0b2db",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1175.52,
       "etime": 1176.86,
       "text": "Я, в общем, пытался..."
@@ -2317,7 +2317,7 @@
       "id": "65c9a190876fc48fc1b0b2dc",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1178.08,
       "etime": 1183.54,
       "text": "поузнавать среди криптопланков, кто чего придумал."
@@ -2326,7 +2326,7 @@
       "id": "65c9a190876fc48fc1b0b2dd",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1183.56,
       "etime": 1202.76,
       "text": "На самом деле информации не очень много, и вся теория заговора крутится в основном в области, что все-таки, несмотря на то, что ребята, создатели TrueCrypt очень долго шифровались, там же история в том, что никто не знает, кто эти люди."
@@ -2335,7 +2335,7 @@
       "id": "65c9a190876fc48fc1b0b2de",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1202.8,
       "etime": 1205.16,
       "text": "Они специально не разглашали, кто они."
@@ -2344,7 +2344,7 @@
       "id": "65c9a190876fc48fc1b0b2df",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1205.18,
       "etime": 1205.9,
       "text": "Их все-таки нашли."
@@ -2353,7 +2353,7 @@
       "id": "65c9a190876fc48fc1b0b2e0",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1207.22,
       "etime": 1212.56,
       "text": "И найти АИ мы им сделали предложение, от которого они не могут отказаться."
@@ -2371,7 +2371,7 @@
       "id": "65c9a190876fc48fc1b0b2e2",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1216.96,
       "etime": 1219.9,
       "text": "Насколько я понимаю, НБР такими делами не занимается."
@@ -2380,7 +2380,7 @@
       "id": "65c9a190876fc48fc1b0b2e3",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1219.1,
       "etime": 1222.26,
       "text": "Это скорее ФБР."
@@ -2389,7 +2389,7 @@
       "id": "65c9a190876fc48fc1b0b2e4",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1222.3,
       "etime": 1224.72,
       "text": "Неизвестно же, где эти люди находятся."
@@ -2398,7 +2398,7 @@
       "id": "65c9a190876fc48fc1b0b2e5",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1224.76,
       "etime": 1227.44,
       "text": "Но да, что-нибудь такое."
@@ -2407,7 +2407,7 @@
       "id": "65c9a190876fc48fc1b0b2e6",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1227.52,
       "etime": 1229.24,
       "text": "Слухи все эти не подтверждены."
@@ -2425,7 +2425,7 @@
       "id": "65c9a190876fc48fc1b0b2e8",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1235.99,
       "etime": 1237.45,
       "text": "Есть еще один нюанс."
@@ -2434,7 +2434,7 @@
       "id": "65c9a190876fc48fc1b0b2e9",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1237.47,
       "etime": 1238.47,
       "text": "Он выглядит так."
@@ -2443,7 +2443,7 @@
       "id": "65c9a190876fc48fc1b0b2ea",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1238.55,
       "etime": 1239.91,
       "text": "Дело в том, что TrueCrypt"
@@ -2452,7 +2452,7 @@
       "id": "65c9a190876fc48fc1b0b2eb",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1242.88,
       "etime": 1250.96,
       "text": "Такая софтина, на безопасность которой полагалось очень много людей, и относительно недавно была попытка предпринята..."
@@ -2461,7 +2461,7 @@
       "id": "65c9a190876fc48fc1b0b2ec",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1253.15,
       "etime": 1266.69,
       "text": "сделать независимый аудит безопасности TrueCrypt, как алгоритма и как собственной реализации софтовой."
@@ -2470,7 +2470,7 @@
       "id": "65c9a190876fc48fc1b0b2ed",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1266.77,
       "etime": 1282.52,
       "text": "Долгое время, как я сказал, никто этим не занимался, и TokenSSL тоже такая пример программы, которая реализовывала крипту, и долгое время внутрь ее кода никто не заглядывал, несмотря на то, что она была open-source, на достаточном количестве не заглядывал."
@@ -2479,7 +2479,7 @@
       "id": "65c9a190876fc48fc1b0b2ee",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1283.46,
       "etime": 1285.57,
       "text": "Ну и мы знаем, чем это закончилось."
@@ -2488,7 +2488,7 @@
       "id": "65c9a190876fc48fc1b0b2ef",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1285.61,
       "etime": 1296.64,
       "text": "Поэтому какое-то время назад начали независимый аудит этого дела, и относительно недавно даже первый этап его закончился."
@@ -2497,7 +2497,7 @@
       "id": "65c9a190876fc48fc1b0b2f0",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1296.66,
       "etime": 1297.28,
       "text": "Должны были..."
@@ -2506,7 +2506,7 @@
       "id": "65c9a190876fc48fc1b0b2f1",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1299.57,
       "etime": 1304.1,
       "text": "перейти к анализу, собственно, кода и ошибок в реализации."
@@ -2524,7 +2524,7 @@
       "id": "65c9a190876fc48fc1b0b2f3",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1310.02,
       "etime": 1312.14,
       "text": "Да, закончился анализ алгоритма и подходов."
@@ -2533,7 +2533,7 @@
       "id": "65c9a190876fc48fc1b0b2f4",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1312.22,
       "etime": 1327.43,
       "text": "И даже у Брюса Шнайера, по-моему, недавно была в блоге запись о том, что он там немножко сбоку стоял от этого дела, и он написал, что он продолжает пользоваться TrueCrypt, и отлично себя чувствует при этом."
@@ -2578,7 +2578,7 @@
       "id": "65c9a190876fc48fc1b0b2f9",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1346.61,
       "etime": 1354.79,
       "text": "При этом люди, которые делали аудит, они собирались как раз..."
@@ -2587,7 +2587,7 @@
       "id": "65c9a190876fc48fc1b0b2fa",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1356.13,
       "etime": 1357.83,
       "text": "На следующей, что ли, неделе."
@@ -2596,7 +2596,7 @@
       "id": "65c9a190876fc48fc1b0b2fb",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1357.87,
       "etime": 1364.1,
       "text": "Ну, в общем, в ближайшее время представить результаты первой этапа, и вроде бы у них были какие-то big announcements, как там было сказано."
@@ -2605,7 +2605,7 @@
       "id": "65c9a190876fc48fc1b0b2fc",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1365.06,
       "etime": 1377.31,
       "text": "Но по нынешним меркам всегда же непонятно, что такое big announcements, потому что в эпоху, когда у каждого бага появляется веб-сайт и пиар, хэштег..."
@@ -2614,7 +2614,7 @@
       "id": "65c9a190876fc48fc1b0b2fd",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1377.87,
       "etime": 1381.01,
       "text": "Теперь уже тяжело сказать, что именно это означает."
@@ -2623,7 +2623,7 @@
       "id": "65c9a190876fc48fc1b0b2fe",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1381.17,
       "etime": 1388.78,
       "text": "Но так или иначе, кажется, разработчики TrueCrypt перепили этот big announcement своим еще более... Еще более big."
@@ -2632,7 +2632,7 @@
       "id": "65c9a190876fc48fc1b0b2ff",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1388.86,
       "etime": 1389.62,
       "text": "Да."
@@ -2677,7 +2677,7 @@
       "id": "65c9a190876fc48fc1b0b304",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1401.14,
       "etime": 1403.66,
       "text": "Если честно, я думаю, ни к чему."
@@ -2704,7 +2704,7 @@
       "id": "65c9a190876fc48fc1b0b307",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1408.81,
       "etime": 1414.69,
       "text": "А еще недавно Челябинский метеорит относительно падал, и это тоже все причина."
@@ -2740,7 +2740,7 @@
       "id": "65c9a190876fc48fc1b0b30b",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1441.66,
       "etime": 1445.66,
       "text": "Так или иначе, исходники его доступны."
@@ -2749,7 +2749,7 @@
       "id": "65c9a190876fc48fc1b0b30c",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1445.88,
       "etime": 1449.95,
       "text": "Я думаю, что результаты исследований все равно будут опубликованы."
@@ -2758,7 +2758,7 @@
       "id": "65c9a190876fc48fc1b0b30d",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1450.78,
       "etime": 1456.52,
       "text": "А это значит, что если там чего-то было биг, то это будет новость сама по себе."
@@ -2767,7 +2767,7 @@
       "id": "65c9a190876fc48fc1b0b30e",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1456.56,
       "etime": 1462.21,
       "text": "Если там ничего биг не было, то я уверен, что кто-нибудь форкнет TrueCrypt."
@@ -2776,7 +2776,7 @@
       "id": "65c9a190876fc48fc1b0b30f",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1462.89,
       "etime": 1470.61,
       "text": "Либо там еще начали делать независимую реализацию, точно таких же алгоритмов, совместимую на диске с TrueCrypt'ом."
@@ -2785,7 +2785,7 @@
       "id": "65c9a190876fc48fc1b0b310",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1473.5,
       "etime": 1480.26,
       "text": "И вполне возможно, либо к ней привожат больше усилий, либо форкнут действительно только и в том виде, в котором он есть."
@@ -2794,7 +2794,7 @@
       "id": "65c9a190876fc48fc1b0b311",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1480.3,
       "etime": 1483.78,
       "text": "Там сейчас некие непонятности с лицензией, но я думаю, они будут преодолены."
@@ -2821,7 +2821,7 @@
       "id": "65c9a190876fc48fc1b0b314",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1488.29,
       "etime": 1498.12,
       "text": "В общем, я думаю, через какое-то время у нас снова появится open-source продукт, который будет обладать функциональностью, которая нравится всем криптопаранойкам и шахтапанкам."
@@ -2884,7 +2884,7 @@
       "id": "65c9a190876fc48fc1b0b31b",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1529.96,
       "etime": 1531.78,
       "text": "Ты же знаешь, что крипты искат."
@@ -2893,7 +2893,7 @@
       "id": "65c9a190876fc48fc1b0b31c",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1533.85,
       "etime": 1539.91,
       "text": "Crypto is hard, и очень много людей может хорошо делать криптографию."
@@ -2902,7 +2902,7 @@
       "id": "65c9a190876fc48fc1b0b31d",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1539.93,
       "etime": 1559.82,
       "text": "Одно дело рассуждать о прекрасных, чудесных криптоалгоритмах, которые теоретически неуязвимы, а другое дело правильно их реализовывать, борясь попутно со всевозможными сайд-эффектами, со всевозможными странными атаками, которые появляются в реальной жизни на реальных компьютерах."
@@ -2911,7 +2911,7 @@
       "id": "65c9a190876fc48fc1b0b31e",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1559.86,
       "etime": 1561.94,
       "text": "И это, в общем-то, как говорят, две больших разницы."
@@ -2938,7 +2938,7 @@
       "id": "65c9a190876fc48fc1b0b321",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1576.82,
       "etime": 1586.44,
       "text": "Надо продолжать пользоваться предыдущей версией, которая есть и работает, и дистрибутивы ее можно взять, и подписи..."
@@ -2983,7 +2983,7 @@
       "id": "65c9a190876fc48fc1b0b326",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1610,
       "etime": 1611.14,
       "text": "Ну, что тут сказать."
@@ -3010,7 +3010,7 @@
       "id": "65c9a190876fc48fc1b0b329",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1641.46,
       "etime": 1647.71,
       "text": "Ты знаешь, ну тут все зависит от того, как далеко простирается степень твоей паранойи."
@@ -3019,7 +3019,7 @@
       "id": "65c9a190876fc48fc1b0b32a",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1647.83,
       "etime": 1664.46,
       "text": "Если говорить конкретно про реализацию крипто-ФС в Индии, то, если ты помнишь, Microsoft же как-то запаливалась на том, что у них нашелся в поставке ключ, который был помечен ID-шником NSA-K."
@@ -3037,7 +3037,7 @@
       "id": "65c9a190876fc48fc1b0b32c",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1667.99,
       "etime": 1669.05,
       "text": "Да-да-да."
@@ -3046,7 +3046,7 @@
       "id": "65c9a190876fc48fc1b0b32d",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1669.09,
       "etime": 1680.26,
       "text": "Они после этого объясняли, что этот ключ используется только внутри правительственных организаций американских."
@@ -3055,7 +3055,7 @@
       "id": "65c9a190876fc48fc1b0b32e",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1680.28,
       "etime": 1681.72,
       "text": "И поэтому он так называется."
@@ -3073,7 +3073,7 @@
       "id": "65c9a190876fc48fc1b0b330",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1694.24,
       "etime": 1710.1,
       "text": "Но поскольку настоящий параноик этому никак не поверит, ты же понимаешь, такому объяснению, то и пользоваться встроенными в Windows системами, то есть будь то CryptoFS поверх NTFS, будь то BitLocker поверх блочных девайсов,"
@@ -3109,7 +3109,7 @@
       "id": "65c9a190876fc48fc1b0b334",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1727.97,
       "etime": 1730.79,
       "text": "Если тебе не нужна plausible deniability, то можно пробовать..."
@@ -3118,7 +3118,7 @@
       "id": "65c9a190876fc48fc1b0b335",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1737.03,
       "etime": 1738.79,
       "text": "Я бы так сказал."
@@ -3136,7 +3136,7 @@
       "id": "65c9a190876fc48fc1b0b337",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1748.96,
       "etime": 1765.27,
       "text": "Нужно понимать, что почти любая программа шифрования, кроме совсем примитивных, почти всегда остановит с точки зрения криптоанализа любую полицейскую организацию, которая может встретиться с обычным человеком, если он не шпион."
@@ -3145,7 +3145,7 @@
       "id": "65c9a190876fc48fc1b0b338",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1766.34,
       "etime": 1788.44,
       "text": "И для ее взлома будет скорее применяться... Ты же помнишь этот XKCD комикс про то, что электропараноик думает, что вот у него там ключ на 4096 бит, а реальный специалист говорит, вот тебе гаечный ключ и иди бей ему по голове его, пока он не скажет пароль."
@@ -3163,7 +3163,7 @@
       "id": "65c9a190876fc48fc1b0b33a",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1791.48,
       "etime": 1801.42,
       "text": "Да-да-да, эктотермальный криптоанализ никто не отменял, и всем криптопараноикам скорее стоит беспокоиться при использовании других программ помимо криптоанализа."
@@ -3172,7 +3172,7 @@
       "id": "65c9a190876fc48fc1b0b33b",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1802.08,
       "etime": 1813.05,
       "text": "стоит беспокоиться в основном о применении именно этого способа восстановления ключа, чем о каких-то уязвимостях в конкретных реализациях."
@@ -3199,7 +3199,7 @@
       "id": "65c9a190876fc48fc1b0b33e",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1822.95,
       "etime": 1824.17,
       "text": "Точно-точно, все так."
@@ -3226,7 +3226,7 @@
       "id": "65c9a190876fc48fc1b0b341",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1853.59,
       "etime": 1854.31,
       "text": "Я конкретно"
@@ -3235,7 +3235,7 @@
       "id": "65c9a190876fc48fc1b0b342",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1855.54,
       "etime": 1859.58,
       "text": "Про эту штуку не знаю, сейчас, конечно, тебе сказать не могу."
@@ -3244,7 +3244,7 @@
       "id": "65c9a190876fc48fc1b0b343",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1859.72,
       "etime": 1862.58,
       "text": "Но обычно все такие атаки устроены следующим образом."
@@ -3253,7 +3253,7 @@
       "id": "65c9a190876fc48fc1b0b344",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1862.6,
       "etime": 1868.2,
       "text": "У тебя есть какие-то незначительные изменения в большом объеме данных."
@@ -3262,7 +3262,7 @@
       "id": "65c9a190876fc48fc1b0b345",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1868.3,
       "etime": 1879.42,
       "text": "И самое примитивное, доведенное до ультимативного характера, это то, что называется дифференциальный криптоанализ."
@@ -3271,7 +3271,7 @@
       "id": "65c9a190876fc48fc1b0b346",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1879.44,
       "etime": 1881.95,
       "text": "Это когда ты изменяешь один бит"
@@ -3280,7 +3280,7 @@
       "id": "65c9a190876fc48fc1b0b347",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1882.96,
       "etime": 1888.1,
       "text": "во входе на алгоритм шифрования и смотришь, как изменяется выход алгоритма шифрования."
@@ -3289,7 +3289,7 @@
       "id": "65c9a190876fc48fc1b0b348",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1889.04,
       "etime": 1895.68,
       "text": "В идеальной ситуации ровно половина бит в выходе должна измениться, но на практике это не всегда так по разным причинам."
@@ -3298,7 +3298,7 @@
       "id": "65c9a190876fc48fc1b0b349",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1895.7,
       "etime": 1905.39,
       "text": "Возможно, то, о чем ты говоришь, это как раз один из вариантов такой атаки."
@@ -3307,7 +3307,7 @@
       "id": "65c9a190876fc48fc1b0b34a",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1905.49,
       "etime": 1907.43,
       "text": "Но, опять же, как правило..."
@@ -3316,7 +3316,7 @@
       "id": "65c9a190876fc48fc1b0b34b",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1909.49,
       "etime": 1913.71,
       "text": "Проблемы с шифрованием томов находятся в другой области."
@@ -3325,7 +3325,7 @@
       "id": "65c9a190876fc48fc1b0b34c",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1913.77,
       "etime": 1926.91,
       "text": "Именно ты можешь хранить свои зашифрованные файлы, конечно же, на этом томе, но, например, когда открываешь какой-нибудь документ Word с него или еще что-то, временный файл создается где попало."
@@ -3334,7 +3334,7 @@
       "id": "65c9a190876fc48fc1b0b34d",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1927.01,
       "etime": 1935.36,
       "text": "И может создаться вовсе даже не на этом зашифрованном томе, а потом его оттуда очень удобно вытаскивать."
@@ -3361,7 +3361,7 @@
       "id": "65c9a190876fc48fc1b0b350",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1942.04,
       "etime": 1952.55,
       "text": "Временные разделы, они находятся не на зашифрованной части, и оттуда очень все это здорово потом забирается при расследовании."
@@ -3370,7 +3370,7 @@
       "id": "65c9a190876fc48fc1b0b351",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1952.99,
       "etime": 1961.9,
       "text": "Поэтому, собственно, и причина, почему считается важным создание Full Disk Encryption, то есть таких... А?"
@@ -3379,7 +3379,7 @@
       "id": "65c9a190876fc48fc1b0b352",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1968.38,
       "etime": 1970.58,
       "text": "Да, извини, я здесь."
@@ -3388,7 +3388,7 @@
       "id": "65c9a190876fc48fc1b0b353",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1970.62,
       "etime": 1983.56,
       "text": "Таких программ, которые позволяют не иметь на компьютере вообще незашифрованных областей и, соответственно, не попадаться под такую атаку."
@@ -3397,7 +3397,7 @@
       "id": "65c9a190876fc48fc1b0b354",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1983.64,
       "etime": 1986.24,
       "text": "Но на практике"
@@ -3406,7 +3406,7 @@
       "id": "65c9a190876fc48fc1b0b355",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1987.83,
       "etime": 1993.33,
       "text": "Этим же часто понедвигает, вот он же только что сказал, ну, давайте мы там обойдемся чем-нибудь полегче."
@@ -3415,7 +3415,7 @@
       "id": "65c9a190876fc48fc1b0b356",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 1993.85,
       "etime": 1997.79,
       "text": "И, соответственно, опять же, все атаки, они возникают в этом месте."
@@ -3496,7 +3496,7 @@
       "id": "65c9a190876fc48fc1b0b35f",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2017.78,
       "etime": 2021.14,
       "text": "Он не подходит для файл-левел шифрования."
@@ -3505,7 +3505,7 @@
       "id": "65c9a190876fc48fc1b0b360",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2021.28,
       "etime": 2024.8,
       "text": "И так не используется."
@@ -3514,7 +3514,7 @@
       "id": "65c9a190876fc48fc1b0b361",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2025.06,
       "etime": 2029.05,
       "text": "Поэтому с точки зрения Dropbox у тебя будет выглядеть так."
@@ -3523,7 +3523,7 @@
       "id": "65c9a190876fc48fc1b0b362",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2029.11,
       "etime": 2038.07,
       "text": "Если у тебя два раза пошифрован этот файл, то он у тебя приедет в Dropbox невидимым."
@@ -3532,7 +3532,7 @@
       "id": "65c9a190876fc48fc1b0b363",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2038.76,
       "etime": 2040.3,
       "text": "В смысле, пошифрованным один раз."
@@ -3541,7 +3541,7 @@
       "id": "65c9a190876fc48fc1b0b364",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2040.34,
       "etime": 2043.38,
       "text": "Ты его будешь там держать пошифрованным один раз."
@@ -3550,7 +3550,7 @@
       "id": "65c9a190876fc48fc1b0b365",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2043.42,
       "etime": 2044.98,
       "text": "Дальше, конечно, есть много вариантов."
@@ -3559,7 +3559,7 @@
       "id": "65c9a190876fc48fc1b0b366",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2045.02,
       "etime": 2053.84,
       "text": "Ну, например, представим себе чисто теоретически, гипотетически, что ключ шифрования для внешнего и для внутреннего файла у тебя оказался почему-то одинаковым."
@@ -3568,7 +3568,7 @@
       "id": "65c9a190876fc48fc1b0b367",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2053.9,
       "etime": 2057.15,
       "text": "Ну, выработался он из пароля у тебя, а пароль у тебя был одинаковый."
@@ -3577,7 +3577,7 @@
       "id": "65c9a190876fc48fc1b0b368",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2058.55,
       "etime": 2067.74,
       "text": "И алгоритм шифрования, который у тебя использовался, это, для примера, любой произвольный поточный шифр, либо S в режиме поточного шифрования, либо какой-нибудь RC4."
@@ -3595,7 +3595,7 @@
       "id": "65c9a190876fc48fc1b0b36a",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2081.35,
       "etime": 2083.41,
       "text": "XOR-ом к твоему файлу."
@@ -3604,7 +3604,7 @@
       "id": "65c9a190876fc48fc1b0b36b",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2083.49,
       "etime": 2090.21,
       "text": "Что произойдет, если мы два раза применим XOR одной и той же последовательности бит к любому файлу, мы понимаем."
@@ -3640,7 +3640,7 @@
       "id": "65c9a190876fc48fc1b0b36f",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2095.98,
       "etime": 2105.94,
       "text": "Но, тем не менее, ходили же шутки о том, что для того, чтобы зашифровать что-то более эффективно, надо применить алгоритм шифрования два раза к нему."
@@ -3712,7 +3712,7 @@
       "id": "65c9a190876fc48fc1b0b377",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2127.32,
       "etime": 2127.96,
       "text": "Спасибо вам."
@@ -3721,7 +3721,7 @@
       "id": "65c9a190876fc48fc1b0b378",
       "issue": 394,
       "type": "cc",
-      "author": "Guest_Unknown_ep394",
+      "author": "Vlad_TrueCrypt",
       "stime": 2127.98,
       "etime": 2128.06,
       "text": "Пока."

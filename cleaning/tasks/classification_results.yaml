@@ -1,0 +1,486 @@
+# Результаты ручной классификации неразмеченных спикеров
+# Дата начала: 2026-02-02
+# Последнее обновление: 2026-02-03
+# Статус: основная классификация завершена, осталось 3 embeddings-проверки
+
+# ============================================================
+# ЗАВЕРШЁННЫЕ НАЗНАЧЕНИЯ
+# ============================================================
+completed_assignments:
+
+  # --- Ранние эпизоды ---
+  - episode: 20
+    speaker: Guest_Nikolay
+    assign_to: NikolayPhotographer
+    context: "Фотограф, эксперт по фотооборудованию"
+
+  - episode: 72
+    speaker: Guest_Alexey
+    assign_to: Alexey_ep72
+    context: "Алексей из Москвы, программист"
+
+  - episode: 100
+    speaker: Guest_Unknown
+    assign_to: _split
+    context: "Юбилейный выпуск, несколько звонивших слушателей"
+    split_into:
+      - Caller_ep100_1
+      - Aleksandr_Pozitiv
+      - Caller_ep100_JapaneseTea
+      - Pingvinator
+
+  - episode: 110
+    speaker: Guest_Dima
+    assign_to: DimaYPP
+    context: "Дима из 'Янки после пьянки', регулярный участник послешоу"
+
+  - episode: 150
+    speaker: Guest_Unknown
+    assign_to: _split
+    context: "Юбилейный выпуск, множество звонивших слушателей (Guest3-Guest29)"
+    split_into:
+      - Guest3: Caller_ep150_Poem
+      - Guest4: AlexeyPonomar
+      - Guest5: Caller_ep150_5
+      - Guest6: Caller_Aleksandr_ep150
+      - Guest7-12: Caller_ep150_N  # безымянные
+      - Guest13: Pingvinator
+      - Guest14-15: Caller_ep150_N
+      - Guest16: ViziPulatov
+      - Guest17-20: Caller_ep150_N
+      - Guest21: VizarV
+      - Guest22-25: Caller_ep150_N
+      - Guest26: Caller_Vladimir_Volgograd_ep150
+      - Guest27-29: Caller_ep150_N
+    notes: "Guest1→Rosnovsky и Guest2→Golodniy уже были размечены ранее"
+
+  - episode: 202
+    speaker: Guest_Unknown
+    assign_to: _split
+    context: "Юбилейный выпуск, множество звонивших слушателей"
+    split_into:
+      - Ruslan_ep202
+      - Leya_ep202
+      - Caller_ep202_3
+      - AntonNikitchuk
+      - Caller_Wisconsin_ep202
+      - Caller_Illinois_ep202
+      - Caller_Sweden_ep202
+      - Caller_Portugal_ep202
+      - Caller_SPb_ep202
+      - Caller_Finland_ep202
+      - Caller_Krasnoyarsk_ep202
+      - Caller_Espoo_ep202
+    notes: "Безымянных называть по городу/стране"
+
+  # --- Средние эпизоды (237-329) ---
+  - episode: 237
+    speaker: SPEAKER_03
+    assign_to: Marin_k_a
+    context: "Ошибка сегментации — тот же голос, что и Марина"
+
+  - episode: 255
+    speaker: Guest_Corporate
+    assign_to: AlexeyMS
+    context: "Алексей из Microsoft"
+
+  - episode: 262
+    speaker: Guest_Alexey
+    assign_to: AlexeyMS
+    context: "Тот же Алексей из Microsoft (повторное появление)"
+
+  - episode: 284
+    speaker: SPEAKER_01
+    assign_to: Caller_Spain_ep284
+    context: "Анонимный украинский студент в Испании"
+
+  - episode: 286
+    speaker: SPEAKER_03
+    assign_to: AleksandrNorth
+    context: "Найден по контексту: PetrDidenko обращается 'Александр' в 4907s"
+
+  - episode: 298
+    speaker: Guest_Unknown_1
+    assign_to: StanislavParallels
+    context: "Станислав из Parallels, представлен в начале"
+
+  - episode: 298
+    speaker: Guest_Unknown_2
+    assign_to: Viktor_ep298
+    context: "Виктор, IT-консультант"
+
+  - episode: 309
+    speaker: SPEAKER_00
+    assign_to: AlexeyMS
+    context: "Тот же Алексей из Microsoft (ep255, 262, 309). Специалист по Java/ZFS"
+
+  - episode: 329
+    speaker: Guest_Aleksandr_GameJournalist
+    assign_to: AleksandrGameJournalist
+    context: "Александр, игровой журналист"
+
+  - episode: 329
+    speaker: SPEAKER_02
+    assign_to: Igor_Ukraine_ep329
+    context: "Игорь из Украины, дозвонившийся в эфир"
+
+  # --- Средние эпизоды (339-403) ---
+  - episode: 339
+    speaker: Guest_Unknown_ep339
+    assign_to: AlekseyAbashev
+    context: "Подтверждено по чату эпизода"
+
+  - episode: 344
+    speaker: Guest_Unknown_ep344
+    assign_to: AndreyMirantis
+    context: "Андрей из Mirantis, эксперт по OpenStack/FuelWeb"
+
+  - episode: 350
+    speaker: SPEAKER_02
+    assign_to: Caller_CERN_ep350
+    context: "Работник ЦЕРНа в Швейцарии, обслуживает БАК"
+
+  - episode: 359
+    speaker: SPEAKER_03
+    assign_to: Guest_LEDshop_ep359
+    context: "Представитель магазина LED-ламп, эксперт по светодиодам"
+
+  - episode: 369
+    speaker: Guest_Unknown_ep369_2
+    assign_to: RomanDell
+    context: "Роман, связан с Dell"
+
+  - episode: 369
+    speaker: SPEAKER_00
+    assign_to: AndreyDeutscheBank
+    context: "Андрей, Java-разработчик в Deutsche Bank"
+
+  - episode: 372
+    speaker: SPEAKER_07
+    assign_to: Guest_QuickBlocks_ep372
+    context: "Представитель сервиса QuickBlocks (BaaS)"
+
+  - episode: 373
+    speaker: SPEAKER_01
+    assign_to: AlekseyAbashev
+    context: "Подтверждено по чату: 'Скорее всего, Абашев'"
+
+  - episode: 382
+    speaker: SPEAKER_02
+    assign_to: RomanDell
+    context: "Тот же Роман из ep369, подтверждено связью с Barclay и контекстом"
+
+  - episode: 386
+    speaker: Guest_Unknown_ep386
+    assign_to: AlekseyAbashev
+    context: "Подтверждено по чату эпизода"
+
+  - episode: 393
+    speaker: Guest_Dmitry
+    assign_to: DmitrySurface
+    context: "Дмитрий, 'защитник поверхностей' (Surface), появляется ~1390s"
+
+  - episode: 393
+    speaker: Guest_Maxim
+    assign_to: MaximKursk
+    context: "Максим из Курска, обсуждает поисковик 'Спутник'"
+
+  - episode: 394
+    speaker: Guest_Unknown_ep394
+    assign_to: Vlad_TrueCrypt
+    context: "Влад (Володя), эксперт по криптографии/TrueCrypt, гость по Skype"
+
+  - episode: 397
+    speaker: Guest_Unknown_ep397_1
+    assign_to: Dmitry_ep397
+    context: "Дмитрий, молодой гость-разработчик, Docker/Go/FPGA"
+
+  - episode: 399
+    speaker: GuestAlexey399
+    assign_to: AlexeyRuby
+    context: "Алексей, слушатель из чата, дважды защищал Ruby"
+
+  - episode: 403
+    speaker: SPEAKER_05
+    assign_to: PavelOpenVZ
+    context: "Павел, эксперт по контейнерам из Parallels/OpenVZ, вероятно Павел Емельянов"
+
+  # --- Эпизоды 423-462 (сессия 2, 2026-02-03) ---
+  - episode: 423
+    speaker: SPEAKER_06
+    assign_to: AntonArkhipov
+    context: "Антон Архипов, JetBrains DevAdvocate из Эстонии, коллега Виктора Гамова. Уже в системе (ep890)"
+
+  - episode: 425
+    speaker: SPEAKER_NEEDS_VOICE_CHECK
+    assign_to: RuslanTelecom
+    context: "Мисатрибуция Bobuk/Gray/Eldar. По контексту (Docker, saltstack) — Руслан (интернет-провайдер)"
+
+  - episode: 435
+    speaker: SPEAKER_03
+    assign_to: Bobuk
+    context: "Ksenks прямо называет 'Бобок' (170s). Ошибка сегментации голоса Бобука"
+
+  - episode: 445
+    speaker: SPEAKER_06
+    assign_to: IvanDevZen
+    context: "Иван из подкаста DevZen, представлен в 75s"
+
+  - episode: 445
+    speaker: SPEAKER_02
+    assign_to: AlexeyReact
+    context: "Алексей, фронтенд-разработчик React, представлен в 1207s"
+
+  - episode: 462
+    speaker: SPEAKER_05
+    assign_to: DmitryPython
+    context: "Дмитрий, Python/Linux/DevOps, заменяет Gray. Тот же что в ep441 и ep517 (voice 0.70)"
+
+  # --- Эпизоды 505-675 (сессия 3, 2026-02-03) ---
+  - episode: 505
+    speaker: SPEAKER_03
+    assign_to: AlexeyMaverick
+    context: "Алексей 'Maverick Crank GRey', enterprise Java-разработчик из белорусской компании, в Кремниевой долине"
+
+  - episode: 506
+    speaker: SPEAKER_06
+    assign_to: AlexeyMaverick
+    context: "Тот же Алексей Maverick из ep505 (Gray подтверждает: 'те же гости из предыдущего')"
+
+  - episode: 506
+    speaker: ruslan_unknown
+    assign_to: RuslanKotlin
+    context: "Руслан, Kotlin-евангелист из Беларуси ('друзья называют маркетологом Котлина'). ep465,506,507,536"
+
+  - episode: 508
+    speaker: Guest_Dmitry_Google
+    assign_to: DmitryGoogle
+    context: "Дмитрий, сотрудник Google. Обсуждает инфраструктуру Google, облачные сервисы, Fuchsia"
+
+  - episode: 536
+    speaker: SPEAKER_01
+    assign_to: RuslanKotlin
+    context: "Ошибка сегментации голоса Руслана. Чередуется с Ruslan, обсуждает suspend-функции Kotlin. Umputun: 'Руслан, спасибо'"
+
+  - episode: 536
+    speaker: SPEAKER_07
+    assign_to: AndreyTDD
+    context: "Андрей, 29 лет. 'Я зарабатываю на жизнь разработкой ПО и я люблю ТДТ'. Защитник TDD"
+
+  - episode: 566
+    speaker: SPEAKER_06
+    assign_to: TheLesha
+    context: "'Алексей Первый'. PostgreSQL/AWS/Lambda/Go/Docker. Voice match подтверждает: ep566=621=628=675 один человек (0.86-0.91)"
+
+  - episode: 590
+    speaker: Guest_Lesha_Java
+    assign_to: TheLesha
+    context: "'Зе Лёша'. Java 10, JVM internals, GC/JIT. По контексту тот же что ep566/621/628/675 (embeddings не извлечены)"
+
+  - episode: 603
+    speaker: Guest_Anton_TeamCity
+    assign_to: AntonArkhipov
+    context: "Антон из JetBrains ('Я в JetBrains пришёл в начале года'), писал промо-видео для TeamCity. ep423,603,890"
+
+  - episode: 613
+    speaker: SPEAKER_07
+    assign_to: AlexeyGo
+    context: "Алексей, Go modules/Vigo, GopherCon Russia. Voice match подтверждает: ОТЛИЧАЕТСЯ от TheLesha (score 0.30-0.37)"
+
+  - episode: 621
+    speaker: SPEAKER_06
+    assign_to: TheLesha
+    context: "'Второй Лёша'. Protobuf, API, AWS, бэкенд. Voice confirmed same as ep566/628/675 (0.87-0.91)"
+
+  - episode: 622
+    speaker: SPEAKER_02
+    assign_to: Caller_RedHat_ep622
+    context: "Сотрудник Red Hat, пользователь Fedora. Обсуждает поглощение Red Hat компанией IBM"
+
+  - episode: 627
+    speaker: SPEAKER_02
+    assign_to: SanyaCSS
+    context: "'Саня' (Александра), женщина. Web-разработчик, CSS/accessibility, :focus селекторы. Работала в компании делавшей телефоны"
+
+  - episode: 628
+    speaker: SPEAKER_04
+    assign_to: TheLesha
+    context: "'Лёша'. AWS/K8s/Go/Rust, code review. Зовёт Umputun 'Женя'. Voice confirmed same as ep566/621/675 (0.86-0.91)"
+
+  - episode: 643
+    speaker: SPEAKER_02
+    assign_to: AlexeyWASM
+    context: "Алексей, WASI/WebAssembly эксперт. Привёл Bobuk. Voice match: ОТЛИЧАЕТСЯ от TheLesha (0.34-0.47)"
+
+  - episode: 675
+    speaker: SPEAKER_05
+    assign_to: TheLesha
+    context: "'Лёша', 42 мин в эфире, в США. Java/Go/AWS. Voice confirmed same as ep566/621/628 (0.89-0.91)"
+
+  - episode: 855
+    speaker: SPEAKER_01
+    assign_to: _artifact
+    context: "385 реплик, 382 <3с. Смайлики (🤨😎🤔), 'Субтитры делал DimaTorzok', короткие междометия"
+
+  - episode: 856
+    speaker: SPEAKER_02
+    assign_to: _artifact
+    context: "507 реплик, 500 <3с. Тот же паттерн: эмодзи, субтитры, фрагменты"
+
+  - episode: 891
+    speaker: Guest_Mikhail
+    assign_to: MikhailBazel
+    context: "Михаил, эксперт Bazel, Java/Kotlin/Scala→Go. ВАЖНО: Umputun мисатрибутирован как Guest_Mikhail — нужно разделить"
+
+  - episode: 994
+    speaker: Guest_Unknown
+    assign_to: TheGuest
+    context: "Анонимный Python-разработчик из чата. Имя не назвал. Alek.sys: 'обращусь как гость'"
+
+# ============================================================
+# НЕЗАВЕРШЁННЫЕ ИССЛЕДОВАНИЯ
+# ============================================================
+pending_research:
+
+  # ИСПРАВЛЕНО 2026-02-03 (сессия 4):
+  # - ep397: 59 реплик SPEAKER_06 восстановлены из Bobuk → RuslanTelecom в data_clean
+  # - ep891: 674 реплики Umputun восстановлены из Guest_Mikhail, Guest→MikhailBazel в data_clean
+
+  # EMBEDDINGS ЗАВЕРШЕНЫ 2026-02-03 (сессия 4):
+  # Извлечены embeddings (pyannote+ecapa+titanet), проведено кросс-сравнение.
+
+  - episode: 868
+    speaker: Guest_01
+    status: completed
+    assign_to: AlexeyMath
+    notes: |
+      Алексей, математик, C++/MPI → Python/DS. Уникальный гость.
+      Self-consistency: 0.85-0.89. Максимальное сходство с другими: 0.60 (TheLesha) — не совпадает.
+      Не совпадает ни с одним из ~280 существующих гостевых сегментов.
+
+  - episode: 888
+    speaker: Guest_Andrey
+    status: completed
+    assign_to: Andrey_ep888
+    notes: |
+      Андрей, 30 лет опыта. IntelliJ, Docker Compose. 3.7 мин.
+      НЕ совпадает с ep972 (0.11-0.23) и ep976 (0.15-0.28).
+      Self-consistency низкая (0.57-0.73) — возможно качество сегментов.
+      Уникальный гость. Отдельный от AndreyDotNet.
+
+  - episode: 972
+    speaker: Guest_Andrey_972
+    status: completed
+    assign_to: AndreyDotNet
+    notes: |
+      Андрей, C#/.NET Aspire, Entity Framework. 20.9 мин.
+      СОВПАДАЕТ с ep976 Andrey: avg 0.91-0.93 → один человек!
+      Self-consistency отличная: 0.95-0.96.
+      НЕ совпадает с ep888 Guest_Andrey (0.11-0.23) — разные люди.
+
+# ============================================================
+# КРОСС-ЭПИЗОДНЫЕ СЕКЦИИ (не обработаны)
+# ============================================================
+remaining_cross_episode:
+  # ЗАВЕРШЕНО 2026-02-03 (сессия 4):
+  completed_review:
+    - speaker: Alex
+      clusters:
+        - name: AlexDolceVille
+          episodes: [5, 6, 17, 18]
+          notes: |
+            Алекс из подкаста "Дольче Вилли". Ep5/6 (окт 2006) — Кремниевая долина.
+            Ep17/18 (янв 2007) — Германия/Европа. Voice: ep5↔6=0.926, ep17↔18=0.835,
+            cross 0.53-0.67 (пограничный, но подкаст "Дольче Вилли" связывает все 4 эпизода)
+        - name: Alex_ep2
+          episodes: [2]
+          notes: "Отдельный Alex, voice 0.42-0.55 к остальным"
+    - speaker: Dmitry
+      assign_to: DmitryPython
+      episodes: [441, 462, 517]
+      notes: "Score 0.70 (ep441↔517). Контекст подтверждает: Python/Linux/DevOps, заменяет ведущих"
+    - speaker: Grinch
+      assign_to: Grinch
+      episodes: [193, 196]
+      notes: "Score 0.70. Денис из СПб, 'Радио Гринч'. Ep193 (июн 2010), ep196 (июл 2010)"
+    - speaker: Mika
+      assign_to: Mika
+      episodes: [209, 211]
+      notes: "Score 0.78. Девушка, 'приведённая Бобуком', заменяет Маринку. Ep209+211 (окт 2010)"
+    - speaker: Ruslan
+      clusters:
+        - name: RuslanTelecom
+          episodes: [299, 327, 397, 402, 404, 425]
+          notes: "Интернет-провайдер. Voice ep299↔327=0.66"
+        - name: RuslanKotlin
+          episodes: [465, 506, 507, 536]
+          notes: "Kotlin-евангелист из Беларуси. Voice ep327↔465=0.73 (пограничный, но контекст разный)"
+  already_resolved:
+    - { speaker: Alexander, episodes: [27, 243, 524], notes: "scores 0.26-0.30 — все разные" }
+    - { speaker: Lena, episodes: [234, 239, 247], notes: "scores 0.89-0.91 — одна Лена" }
+    - { speaker: Andrey, episodes: [486, 976], notes: "score 0.22 — разные" }
+    - { speaker: Guest_Alexey, episodes: [262, 72], notes: "262=AlexeyMS, 72=Alexey_ep72 — разные" }
+    - { speaker: Guest_Unknown, episodes: [100, 150, 202, 994], notes: "юбилейные выпуски — все разные" }
+
+# ============================================================
+# ОБНАРУЖЕННЫЕ ПАТТЕРНЫ (для продолжения)
+# ============================================================
+discovered_patterns:
+  recurring_guests:
+    AlexDolceVille: [5, 6, 17, 18]  # Алекс из подкаста "Дольче Вилли", Кр. долина→Германия. Voice 0.53-0.93
+    Grinch: [193, 196]  # Денис из СПб, "Радио Гринч". Voice 0.70
+    Mika: [209, 211]  # Девушка, заменяет Маринку. Voice 0.78
+    Lena: [234, 239, 247]  # Voice 0.89-0.91
+    AlexeyMS: [255, 262, 309]
+    AlekseyAbashev: [339, 373, 386]
+    RomanDell: [369, 382]
+    Pingvinator: [100, 150]
+    RuslanTelecom: [299, 327, 397, 402, 404, 425]  # интернет-провайдер
+    AntonArkhipov: [423, 603, 890]  # JetBrains, TeamCity DevAdvocate
+    DmitryPython: [441, 462, 517]  # Python/Linux/DevOps, заменяет ведущих. Voice 0.70
+    AlexeyMaverick: [505, 506]  # Maverick Crank GRey, enterprise Java, Беларусь
+    RuslanKotlin: [465, 506, 507, 536]  # Kotlin-евангелист, Беларусь
+    TheLesha: [566, 590, 621, 628, 675]  # Java+Go+AWS бэкенд, в США, знает ведущих. Voice confirmed 0.86-0.91
+    AndreyDotNet: [972, 976]  # C#/.NET Aspire, Entity Framework. Voice confirmed 0.91-0.93
+
+  naming_conventions:
+    - "Безымянных называть вместе с городом/страной: Caller_Spain_ep284, Caller_CERN_ep350"
+    - "Гости с профессиональной привязкой: AndreyMirantis, AndreyDeutscheBank, Guest_LEDshop_ep359"
+    - "Гости с продуктовой привязкой: DmitrySurface, Vlad_TrueCrypt, PavelOpenVZ"
+    - "Гости с технологической привязкой: AlexeyReact, DmitryPython, AlexeyRuby"
+    - "Гости с подкастом: IvanDevZen, DimaYPP"
+    - "Юбилейные выпуски (100, 150, 202) — разбивать на отдельных звонящих"
+    - "Ошибки сегментации ведущих: назначать имя ведущего (Bobuk, Marin_k_a)"
+    - "Артефакты: _artifact"
+    - "Прозвища ведущих: TheLesha, TheGuest"
+
+  # Известные «Дмитрии» для избежания путаницы:
+  dmitry_disambiguation:
+    DimaYPP: "ep110+, Дима из 'Янки после пьянки', Чикаго"
+    DimaZhemerov: "ep114,133,173,484, JetBrains/Kotlin, СПб"
+    DmitriyWinamp: "ep375, из Гавайев, Черноголовка"
+    DmitrySurface: "ep393, защитник Surface"
+    Dmitry_ep397: "ep397, молодой, Docker/Go/FPGA, новичок"
+    DmitryPython: "ep441,462,517, Python/Linux/DevOps, заменяет ведущих"
+    DmitryGoogle: "ep508, сотрудник Google"
+
+  # Известные «Алексеи» для избежания путаницы:
+  alexey_disambiguation:
+    AlexeyMS: "ep255,262,309, Microsoft, Java/ZFS"
+    AlekseyAbashev: "ep339,373,386,364, подкаст 'Разбор полётов'"
+    AlexeyRuby: "ep399, защитник Ruby"
+    AlexeyReact: "ep445, фронтенд React"
+    Alexey_ep72: "ep72, программист из Москвы"
+    AlexeyMaverick: "ep505,506, Maverick Crank GRey, enterprise Java, Беларусь/Кремниевая долина"
+    TheLesha: "ep566,590,621,628,675, Java+Go+AWS бэкенд, в США. Voice confirmed"
+    AlexeyGo: "ep613, Go modules/Vigo, GopherCon. Voice отличается от TheLesha"
+    AlexeyWASM: "ep643, WASI/WebAssembly"
+    AlexeyMath: "ep868, математик, C++/MPI → Python/DS. Уникальный гость (embeddings confirmed)"
+
+  # Известные «Андреи» для избежания путаницы:
+  andrey_disambiguation:
+    AndreyMirantis: "ep344, Mirantis, OpenStack/FuelWeb"
+    AndreyDeutscheBank: "ep369, Java-разработчик Deutsche Bank"
+    AndreyTDD: "ep536, 29 лет, защитник TDD"
+    Andrey_ep888: "ep888, 30 лет опыта, IntelliJ/Docker. Уникальный (не совпадает с другими)"
+    AndreyDotNet: "ep972,976, C#/.NET Aspire. Voice confirmed 0.91-0.93"

@@ -11794,7 +11794,7 @@
       "id": "65c91f0f66d1ec8c7a628484",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4823.83,
       "etime": 4825.23,
       "text": "Здравствуйте."
@@ -11812,7 +11812,7 @@
       "id": "65c91f0f66d1ec8c7a628486",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4835.97,
       "etime": 4838.49,
       "text": "Ну, давайте я начну потихоньку."
@@ -11965,7 +11965,7 @@
       "id": "65c91f0f66d1ec8c7a628497",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4885.35,
       "etime": 4886.97,
       "text": "Здравствуйте еще раз."
@@ -11992,7 +11992,7 @@
       "id": "65c91f0f66d1ec8c7a62849a",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4892.31,
       "etime": 4896.07,
       "text": "Ну, я знаю ее настолько, насколько я знаю."
@@ -12001,7 +12001,7 @@
       "id": "65c91f0f66d1ec8c7a62849b",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4896.11,
       "etime": 4900.48,
       "text": "Но начнем с того, что в Visual Studio там вот прям супер нового нету."
@@ -12010,7 +12010,7 @@
       "id": "65c91f0f66d1ec8c7a62849c",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4900.52,
       "etime": 4904.16,
       "text": "Они просто собрали все решения как бы в одно место."
@@ -12019,7 +12019,7 @@
       "id": "65c91f0f66d1ec8c7a62849d",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4904.18,
       "etime": 4908.72,
       "text": "Скорее всего, сделают очень хорошую документацию по ней."
@@ -12073,7 +12073,7 @@
       "id": "65c91f0f66d1ec8c7a6284a3",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4920.1,
       "etime": 4923.62,
       "text": "Ну, начнем с того, что вот про GPU они говорят."
@@ -12082,7 +12082,7 @@
       "id": "65c91f0f66d1ec8c7a6284a4",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4923.66,
       "etime": 4924.9,
       "text": "Они говорят там про CPU."
@@ -12091,7 +12091,7 @@
       "id": "65c91f0f66d1ec8c7a6284a5",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4925.98,
       "etime": 4929.88,
       "text": "Это все хорошо, но на самом деле, во-первых, у них будут проблемы."
@@ -12100,7 +12100,7 @@
       "id": "65c91f0f66d1ec8c7a6284a6",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4929.92,
       "etime": 4932.38,
       "text": "Они про AMD говорят, потому что у них есть так..."
@@ -12109,7 +12109,7 @@
       "id": "65c91f0f66d1ec8c7a6284a7",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4933.78,
       "etime": 4950.07,
       "text": "По разговорам в интернете считается, что у них есть какой-то там особый договор, что вот мы будем сначала AMD, а потом NVIDIA, потому что у NVIDIA как бы поддержка появилась GPU пораньше, чем у AMD, и в общем у них оно выглядит гораздо лучше."
@@ -12118,7 +12118,7 @@
       "id": "65c91f0f66d1ec8c7a6284a8",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 4950.11,
       "etime": 4958.5,
       "text": "У них там можно и под Linux собрать, и под Windows собрать, и вычисления на GPU будут идти хорошо."
@@ -12361,7 +12361,7 @@
       "id": "65c91f0f66d1ec8c7a6284c3",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5046.99,
       "etime": 5049.61,
       "text": "Ну, вот там сказали про открытый стандарт."
@@ -12370,7 +12370,7 @@
       "id": "65c91f0f66d1ec8c7a6284c4",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5049.69,
       "etime": 5053.64,
       "text": "Сразу хочется заметить, что они не придумывают как бы новый стандарт."
@@ -12379,7 +12379,7 @@
       "id": "65c91f0f66d1ec8c7a6284c5",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5053.68,
       "etime": 5055.72,
       "text": "Он уже неофициально есть."
@@ -12388,7 +12388,7 @@
       "id": "65c91f0f66d1ec8c7a6284c6",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5055.74,
       "etime": 5062.38,
       "text": "Потому что вот люди, если хотят особо хорошо распараллеливать, они, скорее всего, что-то делают с Linux."
@@ -12397,7 +12397,7 @@
       "id": "65c91f0f66d1ec8c7a6284c7",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5062.44,
       "etime": 5064.44,
       "text": "И, скорее всего, это не GCC, потому что GCC..."
@@ -12406,7 +12406,7 @@
       "id": "65c91f0f66d1ec8c7a6284c8",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5065.7,
       "etime": 5070.74,
       "text": "Ну, скажем так, на мой взгляд, не очень хорошо умеет распараллелить процесс, а тем более работать с GPU."
@@ -12415,7 +12415,7 @@
       "id": "65c91f0f66d1ec8c7a6284c9",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5073.13,
       "etime": 5074.43,
       "text": "Нет возможности."
@@ -12424,7 +12424,7 @@
       "id": "65c91f0f66d1ec8c7a6284ca",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5074.51,
       "etime": 5078.73,
       "text": "Я смотрю сейчас в сторону двух возможных наблюдателей."
@@ -12433,7 +12433,7 @@
       "id": "65c91f0f66d1ec8c7a6284cb",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5078.77,
       "etime": 5081.31,
       "text": "Это Intel-овский компилятор и Selang."
@@ -12442,7 +12442,7 @@
       "id": "65c91f0f66d1ec8c7a6284cc",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5081.97,
       "etime": 5088.66,
       "text": "Это такой новый компилятор, который способен очень достаточно прилично компилировать."
@@ -12451,7 +12451,7 @@
       "id": "65c91f0f66d1ec8c7a6284cd",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5088.74,
       "etime": 5095.38,
       "text": "И то, что получается после его сборки, работает, скажем так, на 5, максимум 20% лучше."
@@ -12460,7 +12460,7 @@
       "id": "65c91f0f66d1ec8c7a6284ce",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5095.4,
       "etime": 5097.8,
       "text": "У него внутри какие-то хитрые оптимизации идут."
@@ -12469,7 +12469,7 @@
       "id": "65c91f0f66d1ec8c7a6284cf",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5098.52,
       "etime": 5102.97,
       "text": "Там же еще джит-компилятор для того, чтобы он был везде встроен."
@@ -12478,7 +12478,7 @@
       "id": "65c91f0f66d1ec8c7a6284d0",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5102.99,
       "etime": 5106.23,
       "text": "И вообще Силэнг спонсируется Эпплом."
@@ -12487,7 +12487,7 @@
       "id": "65c91f0f66d1ec8c7a6284d1",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5106.27,
       "etime": 5108.7,
       "text": "Это должно всех радовать, наверное."
@@ -12766,7 +12766,7 @@
       "id": "65c91f0f66d1ec8c7a6284f0",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5224.58,
       "etime": 5224.78,
       "text": "Можно?"
@@ -12775,7 +12775,7 @@
       "id": "65c91f0f66d1ec8c7a6284f1",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5224.82,
       "etime": 5225.62,
       "text": "Давай, давай."
@@ -12784,7 +12784,7 @@
       "id": "65c91f0f66d1ec8c7a6284f2",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5225.64,
       "etime": 5226.88,
       "text": "Я чуть-чуть вклинить."
@@ -12793,7 +12793,7 @@
       "id": "65c91f0f66d1ec8c7a6284f3",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5226.9,
       "etime": 5241.87,
       "text": "Вот у меня есть такая своя теория, что они будут делать таким образом, что вы вроде пишете, немножко распараллеливаете, а вот все остальное для вас сделает эта чудесная Visual Studio, с которой очень сложно работать."
@@ -12802,7 +12802,7 @@
       "id": "65c91f0f66d1ec8c7a6284f4",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5242.63,
       "etime": 5251.94,
       "text": "И она волшебным способом, наверное, при инсталляции будет задавать каким-нибудь ификом вопрос, а какая у вас видеокарточка?"
@@ -12811,7 +12811,7 @@
       "id": "65c91f0f66d1ec8c7a6284f5",
       "issue": 243,
       "type": "cc",
-      "author": "Alexander",
+      "author": "Alexander_CPP",
       "stime": 5251.98,
       "etime": 5259.85,
       "text": "И она будет говорить, ой, у меня IT-видеокарточка, поэтому мы пойдем распараллелить процессы с помощью GPU."

@@ -1,0 +1,18 @@
+description: Cross-episode speakers confirmed as same person (avg >= 0.8)
+total: 2
+results:
+- speaker: Alex
+  episodes:
+  - 5
+  - 6
+  - 17
+  - 18
+  verdict: same_person
+  evidence: ep5-ep6=0.9260; ep17-ep18=0.8347
+- speaker: Lena
+  episodes:
+  - 234
+  - 239
+  - 247
+  verdict: same_person
+  evidence: ep234-ep239=0.8922; ep234-ep247=0.9104; ep239-ep247=0.9080

@@ -1471,7 +1471,7 @@
       "id": "65c9a533d7743017bb9fcb1b",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 559.97,
       "etime": 566.73,
       "text": "Нумерация, когда докер ставится ниже того же ангулара, это несколько странно."
@@ -1507,7 +1507,7 @@
       "id": "65c9a533d7743017bb9fcb1f",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 581.55,
       "etime": 586.36,
       "text": "Ну, это же не докер, это просто виртуал-энв."
@@ -1525,7 +1525,7 @@
       "id": "65c9a533d7743017bb9fcb21",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 589.5,
       "etime": 606.17,
       "text": "Докер ценится, ну, в принципе, да, потому что при деплойменте на продакшн всегда возникают всякие издержки с версиями тех или иных зависимостей, не всегда это решается деп-пакетом, и приходится искать различные..."
@@ -1651,7 +1651,7 @@
       "id": "65c9a533d7743017bb9fcb2f",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 646.3,
       "etime": 652.26,
       "text": "Это на питоне аналог папета, ансамбля и чифа."
@@ -1687,7 +1687,7 @@
       "id": "65c9a533d7743017bb9fcb33",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 661.92,
       "etime": 680.68,
       "text": "Но вот на различных конфах, на каких бывали, люди часто жалуются на то, что им трудно выкатывать софт, когда на одну и ту же машину выкатывается несколько программных продуктов, и те имеют взаимоисключающие возможности."
@@ -1696,7 +1696,7 @@
       "id": "65c9a533d7743017bb9fcb34",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 680.88,
       "etime": 684.2,
       "text": "версии библиотек, и вот здесь им нужен докер."
@@ -1705,7 +1705,7 @@
       "id": "65c9a533d7743017bb9fcb35",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 684.24,
       "etime": 692.71,
       "text": "То есть, когда ты в рамках одной операционной системы пытаешься запустить два взаимосвязающих продукта, если так можно сказать."
@@ -2515,7 +2515,7 @@
       "id": "65c9a533d7743017bb9fcb8f",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 1204.82,
       "etime": 1224.85,
       "text": "Такими почестями для англара, потому что если тот же самый jQuery в свое время прошел своего рода естественный отбор, всякие мутулсы, иксаджаксы были забыты и сообщество выбрало jQuery, то вот на поприще библиотек с двойным биндингом, где вот со стороны дом..."
@@ -2668,7 +2668,7 @@
       "id": "65c9a533d7743017bb9fcba0",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 1286.93,
       "etime": 1295.2,
       "text": "На мой взгляд, эти три продукта еще спорят друг с другом, и то, что за Angular стоит Google, честно говоря, еще ничего не означает."
@@ -2785,7 +2785,7 @@
       "id": "65c9a533d7743017bb9fcbad",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 1362.09,
       "etime": 1371.96,
       "text": "То есть Angular, я не знаю, насколько это смелое заявление, но, возможно, можно поставить в один ряд с таким монстром, как XGS, например."
@@ -2794,7 +2794,7 @@
       "id": "65c9a533d7743017bb9fcbae",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 1372.04,
       "etime": 1373.56,
       "text": "Ну, вот как-то так."
@@ -2803,7 +2803,7 @@
       "id": "65c9a533d7743017bb9fcbaf",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 1373.58,
       "etime": 1377.82,
       "text": "Ну, вот лично мы, конечно, в своей работе тоже Angular используем."
@@ -5809,7 +5809,7 @@
       "id": "65c9a533d7743017bb9fccfd",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 2934.96,
       "etime": 2948.08,
       "text": "То есть, когда твоя функция возвращает функцию, которая имеет доступ к области видимости переменных первой функции."
@@ -5980,7 +5980,7 @@
       "id": "65c9a533d7743017bb9fcd10",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 3075.6,
       "etime": 3088.59,
       "text": "Я про Java не могу сказать, но в тех же Ruby или Python все вышеперечисленные, скажем так, характеристики функционального языка, они присущи."
@@ -6007,7 +6007,7 @@
       "id": "65c9a533d7743017bb9fcd13",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 3093.59,
       "etime": 3096.05,
       "text": "Java, думаю, тоже здесь не исключение."
@@ -6025,7 +6025,7 @@
       "id": "65c9a533d7743017bb9fcd15",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 3101.6,
       "etime": 3112.11,
       "text": "Это последняя ипостась, о которой нету в классических языках программирования, которые в последние годы приобрели функциональные черты."
@@ -7969,7 +7969,7 @@
       "id": "65c9a533d7743017bb9fcded",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 4073.2,
       "etime": 4078.93,
       "text": "Я, конечно, сейчас, наверное, совершу очень глупый поступок, попытаюсь поспорить с умпудоном."
@@ -8023,7 +8023,7 @@
       "id": "65c9a533d7743017bb9fcdf3",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 4107.44,
       "etime": 4109.87,
       "text": "Гораздо проще тестировать мелкими кусками."
@@ -8041,7 +8041,7 @@
       "id": "65c9a533d7743017bb9fcdf5",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 4111.07,
       "etime": 4115.73,
       "text": "А во-вторых, ну, это как бы самоконтроль, самообразование."
@@ -8050,7 +8050,7 @@
       "id": "65c9a533d7743017bb9fcdf6",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 4115.75,
       "etime": 4126.58,
       "text": "То есть, когда ты не позволяешь себе скатиться в какую-то лапшу и стараешься, чтобы код был в соцсетке даже, как сказать, радовал глаз."
@@ -8842,7 +8842,7 @@
       "id": "65c9a533d7743017bb9fce4e",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 4583.24,
       "etime": 4591.15,
       "text": "Через 6 месяцев заказчик, новый заказчик, текущий заказчик, заявляет желание сделать какой-то новый проект."
@@ -8851,7 +8851,7 @@
       "id": "65c9a533d7743017bb9fce4f",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 4591.17,
       "etime": 4596.3,
       "text": "И ты смотришь, что фреймворк, вокруг которого ты вертелся, уже обновился."
@@ -8869,7 +8869,7 @@
       "id": "65c9a533d7743017bb9fce51",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 4598.68,
       "etime": 4605.05,
       "text": "И от всего старого кода тебе ни холодно, ни жарко, потому что он совершенно никак..."
@@ -11056,7 +11056,7 @@
       "id": "65c9a533d7743017bb9fcf44",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 5758.84,
       "etime": 5770.58,
       "text": "Если я правильно понял статью, и в принципе мотивация Амазона мне понятна, ребята просто хотят некой унификации, чтобы не поддерживать два режима работы."
@@ -11065,7 +11065,7 @@
       "id": "65c9a533d7743017bb9fcf45",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 5770.62,
       "etime": 5785,
       "text": "Тем более, что пара виртуализации, если так вот разобраться, это не совсем виртуализация, это даже такой легкий отголосок контейнеризации попахивает, потому что там есть завязка на конкретной версии ядра,"
@@ -11092,7 +11092,7 @@
       "id": "65c9a533d7743017bb9fcf48",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 5793.19,
       "etime": 5801.16,
       "text": "Там приводится пример то, что возникают издержки, связанные с тем, что необходимо во всех регионах поддерживать определенный набор версий ядер, чтобы..."
@@ -11173,7 +11173,7 @@
       "id": "65c9a533d7743017bb9fcf51",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 5820.37,
       "etime": 5836.37,
       "text": "Если посмотреть на конфиг Zen домена, который не hardware, а который именно para-virtualization, там прямо в конфиге домена указывается путь к файлу ядра."
@@ -11191,7 +11191,7 @@
       "id": "65c9a533d7743017bb9fcf53",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 5838.8,
       "etime": 5844.48,
       "text": "на своих хостовых машинах поддерживают не все версии ядра во всех регионах."
@@ -11200,7 +11200,7 @@
       "id": "65c9a533d7743017bb9fcf54",
       "issue": 425,
       "type": "cc",
-      "author": "SPEAKER_NEEDS_VOICE_CHECK",
+      "author": "RuslanTelecom",
       "stime": 5844.5,
       "etime": 5848.87,
       "text": "Есть какой-то Linux 1.2.3 в одном регионе."

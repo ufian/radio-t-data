@@ -1,0 +1,1204 @@
+[
+  {
+    "episode": 20,
+    "speaker": "Guest_Nikolay",
+    "replies": 157,
+    "duration_min": 12.7,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null
+  },
+  {
+    "episode": 72,
+    "speaker": "Guest_Alexey",
+    "replies": 120,
+    "duration_min": 7.7,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null
+  },
+  {
+    "episode": 100,
+    "speaker": "Guest_Unknown",
+    "replies": 55,
+    "duration_min": 3.0,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Bobuk",
+      "best_avg": 0.503
+    }
+  },
+  {
+    "episode": 110,
+    "speaker": "Guest_Dima",
+    "replies": 84,
+    "duration_min": 3.9,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null,
+    "notes": "Эпизод 110 от 1 ноября 2008 года.\nРасширенный состав: 3 ведущих (Umputun, Bobuk, Gray) + 3 гостя.\n\nEldarMurtazin и Lavale уже есть в people.yaml и корректно размечены.\n\nGuest (Дима) требует:\n1. Создания записи в people.yaml\n2. Переименования Guest -> DimaYanki в транскрипте\n\nВАЖНО: Дима из \"Янки после пьянки\" - регулярный участник послешоу Radio-T.\nУпоминается в эпизодах: 17, 24, 27, 48, 49, 55, 59, 60, 63, 65, 66, 76, 82,\n91, 99, 100, 102, 104, 106, 108, 110, 112, 117, 124, 133, 162, 167, 176, 179,\n188, 202, 207, 260, 265, 308 и др.\n\nДима живёт в Чикаго рядом с Umputun (\"Вокруг меня тут сидит Дима\").\nВедёт подкаст \"Янки после пьянки\" совместно с Umputun.\n\nВ эпизоде 517 есть гость Дима: \"Всем привет, меня зовут Дима, и я сегодня\nнарушаю все diversity в подкасте\" — возможно тот же человек, требует проверки."
+  },
+  {
+    "episode": 150,
+    "speaker": "Guest_Unknown",
+    "replies": 309,
+    "duration_min": 20.1,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Umputun",
+      "best_avg": 0.3674,
+      "all_scores": {
+        "Umputun": 0.3674,
+        "EldarMurtazin": 0.336,
+        "Marin_k_a": 0.2642,
+        "Rosnovsky": 0.2621,
+        "Gray": 0.2273,
+        "Bobuk": 0.2131
+      },
+      "reason": "Inconclusive. Best: Umputun=0.3674"
+    },
+    "notes": "Юбилейный выпуск №150 (22 августа 2009) имеет особый формат:\n\nОСНОВНЫЕ УЧАСТНИКИ (идентифицированы корректно):\n- Umputun, Bobuk, Gray - ведущие\n- Marin_k_a (Марина) - бывшая ведущая, представлена в начале\n- EldarMurtazin - частый гость, представлен Бобуком\n\nТРЕБУЕТ ПЕРЕИМЕНОВАНИЯ:\n- Guest1 → Rosnovsky (Артём Росновский) - HIGH confidence\n- Guest2 → Golodniy - HIGH confidence\n\nОДНОРАЗОВЫЕ ЗВОНКИ СЛУШАТЕЛЕЙ (Guest3-Guest29):\nЭто формат \"звонок в студию\" для юбилейного выпуска.\nСлушатели звонили с поздравлениями, некоторые представились:\n- Guest4: Алексей Пономарь из Ульяновска\n- Guest6: Александр\n- Guest13: ник \"Пингвинатор\"\n- Guest16: Визи Пулатов\n- Guest21: Визар Вэ (подкаст \"Уральские вареники\")\n- Guest26: Владимир из Волгограда\n\nЭти люди не являются постоянными гостями подкаста, их идентификация\nне критична для целей очистки транскрипта. Можно оставить как Guest*."
+  },
+  {
+    "episode": 202,
+    "speaker": "Guest_Unknown",
+    "replies": 180,
+    "duration_min": 10.2,
+    "validation_status": "clean",
+    "identification": null,
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Bobuk",
+      "best_avg": 0.3897,
+      "all_scores": {
+        "Bobuk": 0.3897,
+        "Marin_k_a": 0.3107,
+        "Umputun": 0.2318
+      },
+      "reason": "Inconclusive. Best: Bobuk=0.3897"
+    }
+  },
+  {
+    "episode": 237,
+    "speaker": "SPEAKER_03",
+    "replies": 131,
+    "duration_min": 4.0,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_03",
+      "identified_as": "marin_k_a",
+      "confidence": "medium",
+      "evidence": "SPEAKER_03 использует женский род (\"Да, я поняла как раз, да\" в 672s; \"Я отстала\" в 3007s - но это SPEAKER_06).\nРеплики SPEAKER_03 перемежаются с репликами Marin_k_a в одних временных диапазонах.\nНапример: 93.1-93.8 (SPEAKER_03 \"У меня есть вопрос\") и сразу 93.8-96.2 (Marin_k_a).\nВ 921s Umputun отвечает на реплику SPEAKER_03: \"Умница, смогла помочь\" - женский род.\nСкорее всего это ошибка распознавания - один голос (Марины) разделён на два спикера.",
+      "method": "context",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Marin_k_a",
+      "best_avg": 0.4817,
+      "all_scores": {
+        "Marin_k_a": 0.4817,
+        "Umputun": 0.2528,
+        "Bobuk": 0.1183,
+        "Plushev": 0.0922
+      },
+      "reason": "Inconclusive. Best: Marin_k_a=0.4817"
+    },
+    "consistency_issue": "131 реплика, 242 секунды - слишком много для ошибки распознавания.\nПеремежается с Marin_k_a, но отдельный спикер. Требует voice comparison.\n"
+  },
+  {
+    "episode": 255,
+    "speaker": "Guest_Corporate",
+    "replies": 183,
+    "duration_min": 14.3,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null
+  },
+  {
+    "episode": 262,
+    "speaker": "Guest_Alexey",
+    "replies": 240,
+    "duration_min": 21.1,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null
+  },
+  {
+    "episode": 284,
+    "speaker": "SPEAKER_01",
+    "replies": 57,
+    "duration_min": 3.5,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_01",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "",
+      "method": null,
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Gray",
+      "best_avg": 0.3331
+    },
+    "consistency_issue": "Слушатель в эфире (call-in), имя не называется"
+  },
+  {
+    "episode": 286,
+    "speaker": "SPEAKER_03",
+    "replies": 63,
+    "duration_min": 3.2,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_03",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "Появляется на 81-й минуте при обсуждении Ubuntu 12.04.\nПервая реплика: \"Ну, стесняюсь признаться, но периодически приходится.\" (4861s)\nОбсуждает версии Ubuntu: \"Это 1.10 было.\" (4886s)\n\nВозможные варианты:\n- Gray (плохо распознанный)\n- PetrDidenko (плохо распознанный)\n- Слушатель, дозвонившийся в эфир",
+      "method": null,
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "PetrDidenko",
+      "best_avg": 0.3844
+    },
+    "notes": "Выпуск без Bobuk (он в дороге). Присутствуют Umputun, Gray, Marin_k_a и гость PetrDidenko.",
+    "consistency_issue": "Неидентифицированный спикер с 63 репликами, появляется в середине выпуска"
+  },
+  {
+    "episode": 298,
+    "speaker": "Guest_Unknown_1",
+    "replies": 620,
+    "duration_min": 55.3,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Marin_k_a",
+      "best_avg": 0.3148
+    },
+    "notes": "Эпизод требует значительной ревизии атрибуции спикеров:\n\n1. SPEAKER_05 = Станислав из Parallels (высокая уверенность, представлен в начале)\n2. SPEAKER_00 = Виктор, IT-консультант (высокая уверенность, представлен в начале)\n3. PetrDidenko - ошибочная атрибуция, на самом деле это Станислав (требует voice comparison)\n4. SPEAKER_MISATTRIBUTED_ELDAR - ошибочная атрибуция (требует voice comparison)\n5. SPEAKER_MISATTRIBUTED_LAVALE - ошибочная атрибуция коротких реплик\n\nИнтересно, что Bobuk и Gray имеют очень мало реплик для этого эпизода.\nВозможно, часть их реплик ошибочно атрибутирована другим спикерам."
+  },
+  {
+    "episode": 298,
+    "speaker": "Guest_Unknown_2",
+    "replies": 207,
+    "duration_min": 14.2,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Marin_k_a",
+      "best_avg": 0.2564
+    },
+    "notes": "Эпизод требует значительной ревизии атрибуции спикеров:\n\n1. SPEAKER_05 = Станислав из Parallels (высокая уверенность, представлен в начале)\n2. SPEAKER_00 = Виктор, IT-консультант (высокая уверенность, представлен в начале)\n3. PetrDidenko - ошибочная атрибуция, на самом деле это Станислав (требует voice comparison)\n4. SPEAKER_MISATTRIBUTED_ELDAR - ошибочная атрибуция (требует voice comparison)\n5. SPEAKER_MISATTRIBUTED_LAVALE - ошибочная атрибуция коротких реплик\n\nИнтересно, что Bobuk и Gray имеют очень мало реплик для этого эпизода.\nВозможно, часть их реплик ошибочно атрибутирована другим спикерам."
+  },
+  {
+    "episode": 309,
+    "speaker": "SPEAKER_00",
+    "replies": 209,
+    "duration_min": 14.2,
+    "validation_status": "error: while parsing a block mapping\n  in \"/Users/ufian/projects/experiment/validation/",
+    "identification": null,
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Bobuk",
+      "best_avg": 0.4476,
+      "all_scores": {
+        "Bobuk": 0.4476,
+        "Marin_k_a": 0.3106,
+        "Umputun": 0.1678
+      },
+      "reason": "Inconclusive. Best: Bobuk=0.4476"
+    }
+  },
+  {
+    "episode": 329,
+    "speaker": "SPEAKER_02",
+    "replies": 131,
+    "duration_min": 12.2,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_02",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "Звонящий Игорь из Украины. Представился сам: 'Добрый вечер, Игорь меня зовут из недалекой Украины' (1668s). Рассказывает о проблемах с Microsoft и переходе на другие ОС.",
+      "method": null,
+      "is_error": false,
+      "error_reason": null
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Guest_Aleksandr_GameJournalist",
+      "best_avg": 0.3928,
+      "all_scores": {
+        "Guest_Aleksandr_GameJournalist": 0.3928,
+        "Umputun": 0.2905,
+        "Marin_k_a": 0.2567
+      },
+      "reason": "Inconclusive. Best: Guest_Aleksandr_GameJournalist=0.3928"
+    }
+  },
+  {
+    "episode": 329,
+    "speaker": "Guest_Aleksandr_GameJournalist",
+    "replies": 39,
+    "duration_min": 4.4,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null
+  },
+  {
+    "episode": 339,
+    "speaker": "Guest_Unknown_ep339",
+    "replies": 226,
+    "duration_min": 21.5,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Bobuk",
+      "best_avg": 0.3841
+    }
+  },
+  {
+    "episode": 344,
+    "speaker": "Guest_Unknown_ep344",
+    "replies": 103,
+    "duration_min": 8.3,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "PetrDidenko",
+      "best_avg": 0.432,
+      "all_scores": {
+        "PetrDidenko": 0.432,
+        "Umputun": 0.3554,
+        "Gray": 0.3309,
+        "Bobuk": 0.2938,
+        "EldarMurtazin": 0.2842
+      },
+      "reason": "Inconclusive. Best: PetrDidenko=0.4320"
+    }
+  },
+  {
+    "episode": 350,
+    "speaker": "SPEAKER_02",
+    "replies": 48,
+    "duration_min": 4.1,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_02",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "Реальный гость-слушатель из эфира:\n- Представился как работник ЦЕРНа в Швейцарии (973.5s)\n- Рассказывает про разделение аникейщиков и сисадминов в ЦЕРНе\n- Обслуживает эксперимент на Большом Адронном Коллайдере",
+      "method": null,
+      "is_error": false,
+      "error_reason": ""
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Gray",
+      "best_avg": 0.4735,
+      "all_scores": {
+        "Gray": 0.4735,
+        "EldarMurtazin": 0.466,
+        "Marin_k_a": 0.2899,
+        "Ksenks": 0.2753,
+        "Umputun": 0.2672
+      },
+      "reason": "Inconclusive. Best: Gray=0.4735"
+    },
+    "notes": "Эпизод 350 (27 июля 2013) — юбилейный выпуск с Днём системного администратора.\n\nСостав:\n- Ведущие: Umputun, Gray, Bobuk (мало реплик), Ksenks (размечена как SPEAKER_07)\n- Гости: Marin_k_a (Марина), EldarMurtazin (Эльдар Муртазин)\n- Слушатели в эфире: Артём (SPEAKER_01), сотрудник ЦЕРНа (SPEAKER_02)\n\nОсновные проблемы:\n1. Ksenks не размечена своим именем — все её реплики под SPEAKER_07 и частично SPEAKER_06\n2. У Bobuk подозрительно мало реплик для ведущего\n3. SPEAKER_00 — реклама, должна быть _ad",
+    "consistency_issue": "Слушатель из ЦЕРНа не представлен формально, пришёл по ходу эфира (~969s)"
+  },
+  {
+    "episode": 359,
+    "speaker": "SPEAKER_03",
+    "replies": 83,
+    "duration_min": 6.5,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_03",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "Появляется с 3340s после слов Gray: \"представитель того самого\nмагазина с теплым ламповым светом\" (3304s).\nUmputun спрашивает: \"В этом магазине есть кто-то, кроме тебя?\" (3337s).\nSPEAKER_03 отвечает: \"Не, ну, вообще-то есть, да. У меня еще сотрудники.\"\nГоворит экспертно о LED-лампах, светодиодах, сроке службы, цветопередаче.\nИмя не названо в эпизоде.",
+      "method": null,
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Gray",
+      "best_avg": 0.402,
+      "all_scores": {
+        "Gray": 0.402,
+        "EldarMurtazin": 0.3954,
+        "Umputun": 0.3201,
+        "Bobuk": 0.3145,
+        "Ksenks": 0.1982,
+        "Marin_k_a": 0.1752
+      },
+      "reason": "Inconclusive. Best: Gray=0.4020"
+    },
+    "notes": "Эпизод 359 от 28 сентября 2013 года.\n\nОсновные участники:\n- Ведущие: Umputun, Bobuk, Gray, Ksenks (помечена как SPEAKER_02)\n- Гости: Marin_k_a (бывшая ведущая), SPEAKER_03 (представитель магазина LED-ламп)\n\nКритическая проблема: EldarMurtazin ОШИБОЧНО присутствует в эпизоде.\nВсе 32 его реплики - ошибки автоматической атрибуции:\n- ~70% - продолжения речи Gray\n- ~30% - реплики SPEAKER_03 (про лампы)\n\nТребуется voice comparison для точного разделения реплик EldarMurtazin между Gray и SPEAKER_03.",
+    "consistency_issue": "Гость (представитель магазина LED-ламп) не назван по имени в эпизоде."
+  },
+  {
+    "episode": 369,
+    "speaker": "Guest_Unknown_ep369_2",
+    "replies": 171,
+    "duration_min": 11.7,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Marin_k_a",
+      "best_avg": 0.2881
+    }
+  },
+  {
+    "episode": 369,
+    "speaker": "SPEAKER_00",
+    "replies": 70,
+    "duration_min": 4.3,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_00",
+      "identified_as": null,
+      "confidence": "high",
+      "evidence": "Явное представление (185.9s-192.6s): \"Добрый вечер. Меня зовут Андрей. Я джава-разработчик. Работаю в Deutsche Bank.\" Umputun реагирует \"Здравствуй, Андрей!\"",
+      "method": "introduction",
+      "is_error": false,
+      "error_reason": null
+    },
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Gray",
+      "best_avg": 0.346
+    }
+  },
+  {
+    "episode": 372,
+    "speaker": "SPEAKER_07",
+    "replies": 67,
+    "duration_min": 5.6,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_07",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "Гость представляет сервис QuickBlocks (Backend as a Service).\nПоявляется в 2072 сек, Umputun приветствует: \"Здравствуй, дорогой\".\nНе был представлен по имени в транскрипте.\nГоворит про технические детали BaaS: \"В общем, у нас QuickBlocks два в одном. Это BaaS и Communication as a Service.\"",
+      "method": null,
+      "is_error": false,
+      "error_reason": "",
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Gray",
+      "best_avg": 0.4576,
+      "all_scores": {
+        "Gray": 0.4576,
+        "Bobuk": 0.2767,
+        "Marin_k_a": 0.2539,
+        "Ksenks": 0.226,
+        "Umputun": 0.1443
+      },
+      "reason": "Inconclusive. Best: Gray=0.4576"
+    },
+    "consistency_issue": "Гость из QuickBlocks не был представлен по имени. Umputun приветствует его как 'дорогой' в 2069 сек."
+  },
+  {
+    "episode": 373,
+    "speaker": "SPEAKER_01",
+    "replies": 379,
+    "duration_min": 32.7,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_01",
+      "identified_as": null,
+      "confidence": "medium",
+      "evidence": "В начале выпуска (строка 34-41, 118) Umputun говорит: \"гость из дружественного подкаста\".\nВ строке 550 Umputun обращается: \"Алексей, пока мы не отошли далеко от этой темы...\".\nВ строке 586 упоминается: \"Скорее всего, Абашев\".\nЭто указывает на гостя по имени Алексей, возможно связанного с Антоном Абашевым.\n\nSPEAKER_01 активно участвует в технических дискуссиях:\n- Облачные сервисы Amazon (Китай, CloudFront)\n- Юнит-тестирование, CI/CD, проблемы с моками\n- Безопасность и backdoors\n- Stack Overflow\n\nСуммарно говорит ~1963 сек (13% эпизода) - это полноценный гость.",
+      "method": "context",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Bobuk",
+      "best_avg": 0.6639,
+      "all_scores": {
+        "Bobuk": 0.6639,
+        "Gray": 0.4325,
+        "Ksenks": 0.3561,
+        "Marin_k_a": 0.3174,
+        "Umputun": 0.2517
+      },
+      "reason": "Inconclusive. Best: Bobuk=0.6639"
+    },
+    "notes": "Эпизод 373 от 4 января 2014 года - первый выпуск 2014 года.\n\nОсновные проблемы:\n1. SPEAKER_01 - неидентифицированный гость \"Алексей\" (1963 сек, 379 реплик)\n2. Несоответствие Marin_k_a/SPEAKER_00 и обращений к \"Ксюше\"\n3. Мелкие ошибки сегментации (SPEAKER_03, MISATTRIBUTED_*)\n\nПриоритеты для следующих шагов:\n1. Voice comparison для SPEAKER_01 - определить кто такой \"Алексей\"\n2. Voice comparison для SPEAKER_00 vs Ksenks\n3. Проверить консистентность Marin_k_a в других эпизодах",
+    "consistency_issue": "Гость представлен как \"из дружественного подкаста\", назван \"Алексеем\",\nупомянут \"Абашев\". Но имя не указано явно в начале.\nТребуется идентификация: возможно Алексей из AppleInsider.ru.\n"
+  },
+  {
+    "episode": 382,
+    "speaker": "SPEAKER_02",
+    "replies": 91,
+    "duration_min": 6.7,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_02",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "Появляется на 1491s, когда Umputun говорит \"Нет, ты прямо скажи, Умпутун несет чушь, а Сван красавец\"\nНа 1495s SPEAKER_02 говорит: \"Сван, ты тоже урод, как и я. Приятно быть в хорошей компании\"\nНа 1581s: \"Ну, я работал сам-то в Barclay...\"\nЭто НЕ Водом (SPEAKER_01 продолжает говорить отдельно после 2005s)\nВозможно это ошибка распознавания Водома или третий неанонсированный участник\nВ начале выпуска Umputun говорит о двух гостях (Водом и Сван), но SPEAKER_02 - отдельный голос",
+      "method": null,
+      "is_error": false,
+      "error_reason": "",
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Vodom",
+      "best_avg": 0.3682
+    },
+    "notes": "Эпизод 382 (8 марта 2014) - особый выпуск без Бобука и Грея.\n\nУчастники по данным начала выпуска:\n- Umputun (ведущий)\n- Ксюша (Ksenks) - \"найдете Ксюшу\"\n- Водом - подкаст americhka.us\n- Сван - сисадмин\n- Марина (Marin_k_a) - не анонсирована, но присутствует\n\nSPEAKER_02 требует дополнительного анализа - либо это ошибка распознавания Водома,\nлибо третий неанонсированный гость. Реплика о работе в Barclays уникальна.\n\nВсе SPEAKER_MISATTRIBUTED_* - это реплики, ранее ошибочно атрибутированные\nучастникам, которые НЕ участвуют в этом выпуске (Petr, Eldar, Lavale).",
+    "consistency_issue": "Umputun в начале анонсирует только двух гостей (Водом и Сван), но SPEAKER_02 появляется как третий\nголос с 1491s и имеет 91 реплику (404 сек). Возможно это ошибка распознавания Водома,\nно нужно voice comparison для подтверждения.\n"
+  },
+  {
+    "episode": 386,
+    "speaker": "Guest_Unknown_ep386",
+    "replies": 174,
+    "duration_min": 14.6,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Bobuk",
+      "best_avg": 0.4059,
+      "all_scores": {
+        "Bobuk": 0.4059,
+        "Gray": 0.2711,
+        "Marin_k_a": 0.2667,
+        "Ksenks": 0.2664,
+        "Umputun": 0.2072
+      },
+      "reason": "Inconclusive. Best: Bobuk=0.4059"
+    }
+  },
+  {
+    "episode": 393,
+    "speaker": "Guest_Dmitry",
+    "replies": 49,
+    "duration_min": 4.5,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null,
+    "notes": "Эпизод 393 от 24 мая 2013 года.\n\nВедущие: Umputun и Gray. Bobuk отсутствует (упоминается \"где блуждает Бобук?\").\n\nПостоянный гость: Marin_k_a (Марина, бывшая ведущая) - 345 реплик.\n\nПриглашённые гости:\n1. Дмитрий - \"защитник поверхностей\" (Surface), появляется ~1390s.\n   Его реплики ошибочно разбиты на SPEAKER_01, EldarMurtazin и SPEAKER_MISATTRIBUTED_PETR.\n\n2. Максим из Курска - появляется ~3427s для обсуждения поисковика \"Спутник\".\n   Отмечен как SPEAKER_08.\n\nSPEAKER_03, SPEAKER_04, SPEAKER_06 - короткие ошибочные атрибуции, вероятно реплики ведущих или Марины."
+  },
+  {
+    "episode": 393,
+    "speaker": "Guest_Maxim",
+    "replies": 61,
+    "duration_min": 6.4,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null,
+    "notes": "Эпизод 393 от 24 мая 2013 года.\n\nВедущие: Umputun и Gray. Bobuk отсутствует (упоминается \"где блуждает Бобук?\").\n\nПостоянный гость: Marin_k_a (Марина, бывшая ведущая) - 345 реплик.\n\nПриглашённые гости:\n1. Дмитрий - \"защитник поверхностей\" (Surface), появляется ~1390s.\n   Его реплики ошибочно разбиты на SPEAKER_01, EldarMurtazin и SPEAKER_MISATTRIBUTED_PETR.\n\n2. Максим из Курска - появляется ~3427s для обсуждения поисковика \"Спутник\".\n   Отмечен как SPEAKER_08.\n\nSPEAKER_03, SPEAKER_04, SPEAKER_06 - короткие ошибочные атрибуции, вероятно реплики ведущих или Марины."
+  },
+  {
+    "episode": 394,
+    "speaker": "Guest_Unknown_ep394",
+    "replies": 114,
+    "duration_min": 11.5,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Bobuk",
+      "best_avg": 0.4522,
+      "all_scores": {
+        "Bobuk": 0.4522,
+        "Ksenks": 0.3132,
+        "Umputun": 0.27
+      },
+      "reason": "Inconclusive. Best: Bobuk=0.4522"
+    }
+  },
+  {
+    "episode": 397,
+    "speaker": "Guest_Unknown_ep397_1",
+    "replies": 200,
+    "duration_min": 17.6,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Bobuk",
+      "best_avg": 0.3995,
+      "all_scores": {
+        "Bobuk": 0.3995,
+        "Umputun": 0.3278,
+        "Gray": 0.2683
+      },
+      "reason": "Inconclusive. Best: Bobuk=0.3995"
+    }
+  },
+  {
+    "episode": 399,
+    "speaker": "GuestAlexey399",
+    "replies": 165,
+    "duration_min": 11.3,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null,
+    "notes": "Эпизод 399 от 5 июля 2014 года.\nСостав: Umputun, Bobuk, Ksenks (как SPEAKER_01), Marin_k_a.\nGray отсутствует (явно указано в начале).\n\nГость: Алексей (SPEAKER_02) - слушатель из чата, защищал Ruby ранее.\nПоявляется с 4750s, активно участвует в обсуждении Go vs Node.js.\n\nSPEAKER_05 - ошибки распознавания (4 короткие реплики).\nSPEAKER_MISATTRIBUTED_PETR - уже помечена как ошибка, 1 реплика."
+  },
+  {
+    "episode": 403,
+    "speaker": "SPEAKER_05",
+    "replies": 458,
+    "duration_min": 35.2,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_05",
+      "identified_as": null,
+      "confidence": "high",
+      "evidence": "Umputun представляет гостя в 73-80 сек: \"И вот, собственно, Павел, который пришел к нам сегодня. Паша, здравствуй.\"\nSPEAKER_05 отвечает \"Привет\" в 79.67 сек.\nГость - эксперт по контейнерам/OpenVZ/Parallels, работает в команде, которая делает OpenVZ/Virtuozzo.\nГоворит \"мы\" о команде OpenVZ: \"OpenVZ появился таким забавным образом в компании Parallels\" (371.77 сек)",
+      "method": "introduction",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Bobuk",
+      "best_avg": 0.4614,
+      "all_scores": {
+        "Bobuk": 0.4614,
+        "Marin_k_a": 0.3093,
+        "Umputun": 0.276,
+        "Ksenks": 0.2621
+      },
+      "reason": "Inconclusive. Best: Bobuk=0.4614"
+    },
+    "notes": "1. Главный гость эпизода - Павел (SPEAKER_05), эксперт по контейнерам из Parallels/OpenVZ.\n   По контексту это скорее всего Павел Емельянов - один из создателей CRIU.\n   Рекомендуется добавить его в people.yaml после подтверждения.\n\n2. EldarMurtazin и PetrDidenko ошибочно размечены - их реплики принадлежат Павлу.\n   Эта ошибка могла возникнуть при автоматической разметке на основе голосового\n   сходства с другими эпизодами.\n\n3. Marin_k_a (Марина) и Ksenks (SPEAKER_02) - две разные участницы,\n   обе женщины, что могло вызвать путаницу при разметке.\n\n4. Эпизод требует ручной проверки для подтверждения идентификации Павла\n   и исправления ошибочных присвоений EldarMurtazin/PetrDidenko.",
+    "consistency_issue": "Гость представлен как \"Павел\" и \"Паша\", но фамилия не названа.\nПо контексту (OpenVZ, CRIU, Parallels) это скорее всего Павел Емельянов -\nразработчик ядра Linux, автор CRIU.\n"
+  },
+  {
+    "episode": 423,
+    "speaker": "SPEAKER_06",
+    "replies": 126,
+    "duration_min": 7.5,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_06",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "Активный участник дискуссии с 998s. Говорит о Грее: 'Это, по-моему, Грей тоже такой пенсионер, он любит диски' - знает ведущих.",
+      "method": null,
+      "is_error": false,
+      "error_reason": "",
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Bobuk",
+      "best_avg": 0.9153,
+      "all_scores": {
+        "Bobuk": 0.9153,
+        "Alek.sys": 0.913,
+        "Gray": 0.3223,
+        "EldarMurtazin": 0.3213,
+        "Ksenks": 0.2434,
+        "Umputun": 0.1339
+      },
+      "reason": "Ambiguous: multiple references above 0.8: Bobuk=0.9153, Alek.sys=0.9130"
+    },
+    "notes": "Эпизод 423 от 20.12.2014 с необычно большим составом участников (7 человек):\n- 5 ведущих: Umputun, Gray, Ksenks, Bobuk (мало реплик - 81 сек), Alek.sys\n- Гости представленные в начале: Гимлис (SPEAKER_02), Виктор (SPEAKER_08), Антон Архипов (упомянут)\n\nКРИТИЧЕСКАЯ ПРОБЛЕМА: EldarMurtazin\n- Разметка EldarMurtazin (28 реплик, 135 сек) вероятно ОШИБОЧНА\n- Эльдар Муртазин НЕ представлен в начале эпизода\n- Его имя НЕ упоминается ни разу в транскрипте\n- В начале представлены только: Ксюша, Грей, Гимлис, Виктор, Антон Архипов\n- Требуется voice comparison для определения реального спикера\n\nИдентифицированные спикеры:\n- SPEAKER_02 = Gimlis (высокая уверенность, явное представление)\n- SPEAKER_08 = Виктор (высокая уверенность, обращение по имени + самопредставление)\n- SPEAKER_06 = вероятно Антон Архипов (средняя уверенность, упомянут как коллега Виктора)\n\nМелкие ошибки распознавания (SPEAKER_01, SPEAKER_03, SPEAKER_09) - единичные реплики, не критично.",
+    "consistency_issue": "Не представлен явно, но вероятно это Антон Архипов (упомянут SPEAKER_08 в 91s)"
+  },
+  {
+    "episode": 425,
+    "speaker": "SPEAKER_NEEDS_VOICE_CHECK",
+    "replies": 29,
+    "duration_min": 4.2,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Igor",
+      "best_avg": 0.4174,
+      "all_scores": {
+        "Igor": 0.4174,
+        "Umputun": 0.2441,
+        "Ksenks": 0.2229
+      },
+      "reason": "Inconclusive. Best: Igor=0.4174"
+    }
+  },
+  {
+    "episode": 435,
+    "speaker": "SPEAKER_03",
+    "replies": 94,
+    "duration_min": 4.5,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_03",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "- SPEAKER_03 в 22.7s: \"Типа до этого их не было.\" (ответ на Umputun)\n- SPEAKER_03 в 168s: \"Слушай, это ты еще мою шею не видишь.\" (после Gray \"ты в Техасе\")\n- SPEAKER_03 знает цены Apple: \"1200, по-моему, и 1500\" (1616s)\n- SPEAKER_03: \"Единственное, что в нем печальнее, это 8 гигабайт памяти\" (1644s)",
+      "method": null,
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Gray",
+      "best_avg": 0.5389,
+      "all_scores": {
+        "Gray": 0.5389,
+        "Bobuk": 0.3969,
+        "Ksenks": 0.1937,
+        "Umputun": 0.1649
+      },
+      "reason": "Inconclusive. Best: Gray=0.5389"
+    },
+    "consistency_issue": "94 реплики (270 сек) неидентифицированной речи. Контекст на 168-170s\n(Ksenks говорит \"Бобок\" сразу после SPEAKER_03) указывает на Bobuk.\nНо первая реплика (22s) похожа на Gray. Возможно смесь ошибок.\nТребуется voice comparison.\n"
+  },
+  {
+    "episode": 445,
+    "speaker": "SPEAKER_06",
+    "replies": 135,
+    "duration_min": 7.3,
+    "validation_status": "error: while parsing a block collection\n  in \"/Users/ufian/projects/experiment/validati",
+    "identification": null,
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Gray",
+      "best_avg": 0.3234,
+      "all_scores": {
+        "Gray": 0.3234,
+        "Umputun": 0.2795,
+        "Ksenks": 0.1792
+      },
+      "reason": "Inconclusive. Best: Gray=0.3234"
+    }
+  },
+  {
+    "episode": 445,
+    "speaker": "SPEAKER_02",
+    "replies": 78,
+    "duration_min": 8.8,
+    "validation_status": "error: while parsing a block collection\n  in \"/Users/ufian/projects/experiment/validati",
+    "identification": null,
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Ksenks",
+      "best_avg": 0.3378
+    }
+  },
+  {
+    "episode": 462,
+    "speaker": "SPEAKER_05",
+    "replies": 63,
+    "duration_min": 3.5,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_05",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "",
+      "method": null,
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Umputun",
+      "best_avg": 0.3717,
+      "all_scores": {
+        "Umputun": 0.3717,
+        "Bobuk": 0.3188,
+        "sergey_selectel_462": 0.2458,
+        "Ksenks": 0.2363
+      },
+      "reason": "Inconclusive. Best: Umputun=0.3717"
+    },
+    "notes": "Эпизод 462 имеет сложную структуру гостей:\n1. Гость Дмитрий (вместо Gray) - участвует весь выпуск\n2. Гости от Selectel (Сергей и Виктор) - спонсорский сегмент ~3000-4000s\n\nОсновные проблемы:\n- SPEAKER_05 (вероятно Дмитрий) не идентифицирован\n- Alek.sys возможно ошибочно присутствует (или частично ошибочно)\n- Реплики гостей Selectel перемешаны между несколькими спикерами\n\nРекомендуется:\n1. Voice comparison для подтверждения SPEAKER_05 = Дмитрий\n2. Проверка участия Alek.sys через другие источники\n3. Разделение реплик Сергея и Виктора в сегменте Selectel",
+    "consistency_issue": "63 реплики (210 сек) - значительный вклад, но не идентифицирован.\nПо контексту это скорее всего гость Дмитрий.\n"
+  },
+  {
+    "episode": 505,
+    "speaker": "SPEAKER_03",
+    "replies": 153,
+    "duration_min": 7.5,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_03",
+      "identified_as": null,
+      "confidence": "medium",
+      "evidence": "Gray в начале: \"Мне понравилось, что у него созвучный ник просто со моим\"\nBobuk: \"MaverickRainGrey, хорошо, можно тоже назвать Алексеем\"\nSPEAKER_03 говорит о себе: \"enterprise-программист\",\n\"работаю в небольшой белорусской компании\", \"нахожусь сейчас в Силиконовой долине\"\nНик: MaverickRainGrey, имя: Алексей",
+      "method": "introduction",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Alek.sys",
+      "best_avg": 0.8899,
+      "all_scores": {
+        "Alek.sys": 0.8899,
+        "Bobuk": 0.8683,
+        "Gray": 0.386,
+        "EldarMurtazin": 0.2496,
+        "Ksenks": 0.24
+      },
+      "reason": "Ambiguous: multiple references above 0.8: Alek.sys=0.8899, Bobuk=0.8683"
+    },
+    "consistency_issue": "Идентифицирован как Алексей (MaverickRainGrey), enterprise-разработчик"
+  },
+  {
+    "episode": 506,
+    "speaker": "SPEAKER_06",
+    "replies": 122,
+    "duration_min": 6.4,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_06",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "",
+      "method": null,
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Alek.sys",
+      "best_avg": 0.88,
+      "all_scores": {
+        "Alek.sys": 0.88,
+        "Bobuk": 0.8549,
+        "Gray": 0.4273,
+        "EldarMurtazin": 0.3136,
+        "Ksenks": 0.2877
+      },
+      "reason": "Ambiguous: multiple references above 0.8: Alek.sys=0.8800, Bobuk=0.8549"
+    },
+    "notes": "1. EldarMurtazin уже корректно идентифицирован в транскрипте.\n\n2. SPEAKER_03 - это Руслан, \"проповедник Котлина\" из Беларуси. Нужно найти\n   его полное имя через поиск упоминаний митапов Kotlin в YouTube.\n\n3. SPEAKER_04 и SPEAKER_06 - это Алексей и Александр (в каком-то порядке).\n   Оба активные участники, обсуждают языки программирования и JetBrains/DevZen.\n   Для точной идентификации нужен voice comparison с выпуском 505.\n\n4. Gray упоминает что гости \"были в прошлом выпуске\" (505), что подтверждается\n   наличием SPEAKER_03 и SPEAKER_06 в том выпуске.\n\n5. Umputun появляется только в 5796s (почти 1.5 часа от начала), Bobuk в 1106s.\n   Это необычно мало для основных ведущих - подтверждает слова Gray о том,\n   что \"двух ведущих нет\".",
+    "consistency_issue": "Не идентифицирован точно как Алексей или Александр. Нужен voice comparison."
+  },
+  {
+    "episode": 508,
+    "speaker": "Guest_Dmitry_Google",
+    "replies": 169,
+    "duration_min": 11.7,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null
+  },
+  {
+    "episode": 536,
+    "speaker": "SPEAKER_07",
+    "replies": 85,
+    "duration_min": 4.4,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_07",
+      "identified_as": null,
+      "confidence": "high",
+      "evidence": "Представился сам: \"Меня зовут Андрей, мне 29 лет. Я зарабатываю на жизнь разработкой ПО и я люблю ТДТ.\" (2866-2874s)\nUmputun прощается: \"Андрей, ну, спасибо, что зашел\" (4671s), \"Ладно, Андрей, спасибо\" (4813s).\nГость пришел для обсуждения TDD как его защитник.",
+      "method": "introduction",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Bobuk",
+      "best_avg": 0.5025,
+      "all_scores": {
+        "Bobuk": 0.5025,
+        "Alek.sys": 0.3444,
+        "Umputun": 0.2763,
+        "Gray": 0.2747,
+        "Ksenks": 0.2332
+      },
+      "reason": "Inconclusive. Best: Bobuk=0.5025"
+    }
+  },
+  {
+    "episode": 536,
+    "speaker": "SPEAKER_01",
+    "replies": 92,
+    "duration_min": 3.7,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_01",
+      "identified_as": null,
+      "confidence": "medium",
+      "evidence": "SPEAKER_01 появляется в 6413s, сразу после EldarMurtazin (6410s), в обсуждении Kotlin.\nГоворит технически грамотно о suspend функциях, async/await в Kotlin.\nЧередуется с EldarMurtazin — возможно это тот же Руслан (ошибка сегментации),\nлибо другой эксперт по Kotlin.",
+      "method": "context",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Bobuk",
+      "best_avg": 0.3267
+    }
+  },
+  {
+    "episode": 566,
+    "speaker": "SPEAKER_06",
+    "replies": 343,
+    "duration_min": 32.6,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_06",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "В начале выпуска Umputun говорит: \"между двумя Лешами сижу\" и \"Алексей, вы первый раз вдвоем на одном гектаре\".\nЭто означает, что в выпуске два Алексея: один - ведущий Alek.sys, второй - гость.\nSPEAKER_06 = \"Алексей Первый\" (Umputun: \"Ты Алексей Первый\" @ 572s).\nAlek.sys = \"Алексей Второй\" (Umputun: \"Вот этот, который сейчас говорил, это был Алексей Второй\" @ 567s).\n\nГость активно участвует в технических дискуссиях о PostgreSQL, AWS, лямбдах.\nИмеет опыт работы с AWS Lambda, говорит о прогреве лямбд.\nВозможно, регулярный гость подкаста (Umputun: \"Обычно вы были как Mutex\").",
+      "method": null,
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Alek.sys",
+      "best_avg": 0.4584,
+      "all_scores": {
+        "Alek.sys": 0.4584,
+        "Артур": 0.3148,
+        "Umputun": 0.2659,
+        "Ksenks": 0.1469
+      },
+      "reason": "Inconclusive. Best: Alek.sys=0.4584"
+    },
+    "notes": "SPEAKER_06 требует voice comparison с предыдущими выпусками, где участвовал Алексей.\nВероятные кандидаты для сравнения: выпуски с alexmak (196, 203), another_alex (857, 858).\nТакже стоит проверить выпуски до 566, где был только один \"Алексей\" помимо Alek.sys.\n\nAudio URL: https://cdn.radio-t.com/rt_podcast566.mp3\nДата эпизода: 2017-10-07",
+    "consistency_issue": "Гость не представлен по полному имени/фамилии.\nИзвестно только имя \"Алексей\" (называется \"Алексей Первый\" или \"Леша Первый\").\nUmputun говорит \"вы первый раз вдвоем\" - значит, оба гостя были раньше, но не вместе.\n"
+  },
+  {
+    "episode": 590,
+    "speaker": "Guest_Lesha_Java",
+    "replies": 287,
+    "duration_min": 25.2,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null
+  },
+  {
+    "episode": 603,
+    "speaker": "Guest_Anton_TeamCity",
+    "replies": 136,
+    "duration_min": 10.4,
+    "validation_status": "has_tasks",
+    "identification": null,
+    "voice_matching": null,
+    "notes": "1. SPEAKER_08 = Anya (высокая уверенность) - готово к переименованию\n2. SPEAKER_01 = гость Антон (высокая уверенность) - требуется определить полное имя\n3. SPEAKER_04, SPEAKER_03, SPEAKER_09 - скорее всего ошибки распознавания,\n   требуется ручная проверка для подтверждения\n4. Bobuk появляется несмотря на заявление об отсутствии - требует проверки"
+  },
+  {
+    "episode": 613,
+    "speaker": "SPEAKER_07",
+    "replies": 159,
+    "duration_min": 12.9,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_07",
+      "identified_as": null,
+      "confidence": "medium",
+      "evidence": "Umputun обращается к гостю по имени \"Алексей\" в нескольких местах:\n- 1172s: \"...на что ты к нам приходил, по-моему, Алексей, да?\"\n- 1295s: \"Алексей, добавь, я прав...\"\n- 1603s: \"...примерно так же, да, Алексей?\"\nГость подтверждает что приходил \"неоднократно\" по теме Vigo (Go modules).\nЭто Go-разработчик, эксперт по модулям, был на GopherCon Russia в марте.",
+      "method": "context",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Bobuk",
+      "best_avg": 0.3642
+    },
+    "notes": "Гость Алексей — Go-разработчик, эксперт по модулям:\n- Приходил раньше по теме Vigo (система управления зависимостями Go)\n- Был на GopherCon Russia в марте 2018\n- Хорошо знает внутреннее устройство Go modules, MVS алгоритм\n- Упоминает что был на GopherCon в Америке (август 2018)\n- Знаком с Брайаном Кэтлсоном (создателем Athens/goproxy)\n\nДля точной идентификации рекомендуется:\n1. Проверить выпуски где обсуждался Vigo (до 613)\n2. Voice comparison с известными гостями-Go-разработчиками\n3. Поиск в истории GopherCon Russia 2018 докладчиков по модулям",
+    "consistency_issue": "Гость назван по имени (Алексей), упоминается что приходил раньше по теме Vigo,\nно полное представление с фамилией отсутствует. Нужна voice comparison\nдля идентификации личности.\n"
+  },
+  {
+    "episode": 621,
+    "speaker": "SPEAKER_06",
+    "replies": 351,
+    "duration_min": 31.1,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_06",
+      "identified_as": null,
+      "confidence": "medium",
+      "evidence": "В начале эпизода (50s) Umputun представляет участников: \"один Лёша, второй Лёша, первая Аня\"\nKsenks добавляет (59s): \"И вторая Аня\"\nНа 158s Ksenks говорит: \"одного будем называть Лёша, который наехал на темы, а другого просто Лёша\"\nК SPEAKER_06 обращаются как \"Лёша\" на: 5746s, 6023s, 6346s, 8123s\nНа 8123s Alek.sys спрашивает SPEAKER_06: \"Лёша, а где ты работаешь?\"\nЭто \"второй Лёша\" - гость, разработчик (бэкенд), обсуждает протобаф, API, работу в компании",
+      "method": "context",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Umputun",
+      "best_avg": 0.3542
+    },
+    "notes": "Эпизод 621 от 2018-10-27.\nСостав: Umputun + Ksenks + Alek.sys + два гостя (Лёша и Аня).\n\nГлавные задачи:\n1. Исправить ошибочную атрибуцию Bobuk -> определить правильного спикера\n2. Идентифицировать SPEAKER_06 (\"второй Лёша\") - backend разработчик\n3. Подтвердить что SPEAKER_02 это Anya из справочника\n4. Решить судьбу SPEAKER_07 (артефакт или реальные реплики)",
+    "consistency_issue": "Не представлен по имени в начале эпизода, но упоминается как \"второй Лёша\".\nОчень активный участник (1865s речи) - явно не ошибка распознавания.\nТребуется идентификация для справочника.\n"
+  },
+  {
+    "episode": 622,
+    "speaker": "SPEAKER_02",
+    "replies": 82,
+    "duration_min": 4.9,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_02",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "",
+      "method": null,
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Umputun",
+      "best_avg": 0.257
+    },
+    "notes": "Эпизод от 3 ноября 2018 года. Тема - покупка Red Hat компанией IBM.\n\nSPEAKER_02 - сотрудник Red Hat, позвонил в эфир для обсуждения сделки.\nАктивно участвует в дискуссии ~545s-3006s (около 40 минут присутствия).\nРассказывает про:\n- Использование Fedora на работе\n- Реакцию сотрудников на покупку IBM\n- Внутреннюю культуру Red Hat\n- Обещания руководства о сохранении независимости\n\nГость говорит с техническим пониманием, явно инженер/разработчик.\nДля точной идентификации требуется voice comparison с известными гостями\nили поиск в архивах чата того выпуска.",
+    "consistency_issue": "Гость из Red Hat не был представлен по имени. Umputun называет его 'чувак из Red Hat'. Нужна идентификация через voice comparison или внешние источники."
+  },
+  {
+    "episode": 627,
+    "speaker": "SPEAKER_02",
+    "replies": 94,
+    "duration_min": 5.3,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_02",
+      "identified_as": null,
+      "confidence": "medium",
+      "evidence": "1. Женщина - говорит \"Я написала\" (390.97s), Bobuk говорит ей \"Ты права\" (4171.72s)\n2. Упоминается как \"Саня\" дважды:\n   - \"Ксюша Саня еще целевая аудитория Тумблера\" (381.51s)\n   - \"Вон Саня уже сидит из подобной компании, которая тоже телефон делала\" (6302.66s)\n3. Web-разработчик с экспертизой в CSS/accessibility (4109-4170s - обсуждает :focus селекторы)\n4. Работала в компании, делавшей телефоны",
+      "method": "context",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Ksenks",
+      "best_avg": 0.4716,
+      "all_scores": {
+        "Ksenks": 0.4716,
+        "Umputun": 0.2245,
+        "Alek.sys": 0.209,
+        "Bobuk": 0.1721,
+        "Gray": 0.16
+      },
+      "reason": "Inconclusive. Best: Ksenks=0.4716"
+    },
+    "notes": "SPEAKER_02 - это реальный гость по имени Саня (женщина, web-разработчик).\nДля окончательной идентификации требуется:\n1. Voice comparison с известными гостями-женщинами\n2. Поиск информации о Сане, работавшей в телефонной компании\n\nSPEAKER_01 - с высокой вероятностью ошибка распознавания, рекомендуется переименовать в Bobuk."
+  },
+  {
+    "episode": 628,
+    "speaker": "SPEAKER_04",
+    "replies": 498,
+    "duration_min": 41.8,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_04",
+      "identified_as": null,
+      "confidence": "high",
+      "evidence": "Umputun многократно обращается к этому спикеру как \"Леша\", \"Алёха\":\n- 1180s: \"Вариативность у ребенка, видимо, высокая, Алёха.\"\n- 3313s: \"Да ты же, Леша, все не так красиво как ты рассказываешь.\"\n- 7111s: \"Там был разговор, Леша выбрал, ты рассказывай.\"\n- 9138s: \"Леш, спасибо, что зашел...\"\nГость работает с технологиями (code review, Go), знает всех ведущих.",
+      "method": "context",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Umputun",
+      "best_avg": 0.3813,
+      "all_scores": {
+        "Umputun": 0.3813,
+        "Anya": 0.2175,
+        "Ksenks": 0.2036
+      },
+      "reason": "Inconclusive. Best: Umputun=0.3813"
+    },
+    "notes": "В конце выпуска Umputun явно говорит: \"Леш, спасибо, что зашел,\nподдержал отсутствующего одновременно Бобука и Грея\" (9138s).\nЭто означает:\n1. Bobuk и Gray отсутствуют в этом выпуске\n2. Леша - гость, который \"заменил\" их\n3. 30 реплик, атрибутированных Bobuk - ошибка транскрипции"
+  },
+  {
+    "episode": 643,
+    "speaker": "SPEAKER_02",
+    "replies": 96,
+    "duration_min": 6.9,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_02",
+      "identified_as": null,
+      "confidence": "medium",
+      "evidence": "В 4205-4226s Umputun говорит \"Бов(ук) к нам привел\" и \"Давай я его дерну за вами. Леху. Еще один Леха будет.\"\nBobuk подтверждает: \"он сам пришел, поэтому ты можешь его там подергать\".\nВ 4226s: \"Алексей, перестань стучать по клавиатуре, скажи голосом\".\nГость отвечает в 4231s: \"Да-да-да, всем привет, я тут отрубал наследство.\"\nОбсуждает тему WASI/WebAssembly (из темы эпизода \"WASI — WebAssembly вне браузера\").",
+      "method": "introduction",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Bobuk",
+      "best_avg": 0.3759
+    },
+    "notes": "Эпизод от 30 марта 2019 года. Полный состав ведущих + гость.\n\nГость Алексей (SPEAKER_02) приглашен Бобуком для обсуждения темы WASI/WebAssembly.\nПоявляется с 4232s (примерно 1:10:32) и активно участвует до конца выпуска.\n\nТребуется:\n1. Идентификация гостя Алексея (возможно через записи темы WASI на prep-643 или внешние источники)\n2. Верификация предложенных переназначений SPEAKER_08 через прослушивание",
+    "consistency_issue": "Гость представлен только по имени (Алексей/Леха), фамилия не названа. Требуется идентификация через внешние источники или voice comparison с известными гостями."
+  },
+  {
+    "episode": 675,
+    "speaker": "SPEAKER_05",
+    "replies": 485,
+    "duration_min": 42.4,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_05",
+      "identified_as": null,
+      "confidence": "medium",
+      "evidence": "В начале Umputun обращается: \"Ты, Леша, добавляешь той самой концентрации\".\nSPEAKER_05 отвечает и активно участвует весь выпуск (485 реплик, 2543 сек).\nНа 1150 сек Alek.sys обращается к нему: \"И, кстати, я не думаю, Леша\".\nВ конце (9477 сек) Umputun: \"А второй Леша, который хороший Леша\" - о Alek.sys.\nSPEAKER_05 говорит \"по эту сторону океана\" (326 сек) - вероятно, в США.\nЭто гость по имени Алексей/Леша, но фамилия не названа.",
+      "method": "context",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": {
+      "source": "manual_review",
+      "best_match": "Umputun",
+      "best_avg": 0.477,
+      "all_scores": {
+        "Umputun": 0.477,
+        "Alek.sys": 0.351,
+        "Ksenks": 0.2258
+      },
+      "reason": "Inconclusive. Best: Umputun=0.4770"
+    },
+    "notes": "1. SPEAKER_05 - главный вопрос этого выпуска. Это гость по имени Леша/Алексей,\n   который активно участвует (485 реплик, 2543 сек - больше всех кроме Umputun).\n   Возможно, это постоянный участник, который обычно размечен как известный ведущий.\n\n2. В файле all_identified_guests.json SPEAKER_05 уже идентифицирован как\n   \"Алексей / Леша\" с пометкой \"это явное обращение к Леше (Алексей / Alek.sys)\".\n   Но это НЕВЕРНО - в выпуске два Алексея: SPEAKER_05 и Alek.sys (отдельно).\n\n3. Нужно проверить:\n   - Кто этот гость-Леша? Возможно, он участвовал в других выпусках.\n   - Проверить голос по референсному сегменту (326-343 сек).\n\n4. SPEAKER_06 - скорее всего ошибка распознавания Umputun (1 реплика, 2 сек).\n\n5. Дата эпизода: 2019-11-09\n   Темы: GitLab, Go 10 лет, GitHub Octoverse, Visual Studio в облаке, UniFi Dream Machine\n\nAudio URL: https://cdn.radio-t.com/rt_podcast675.mp3",
+    "consistency_issue": "Гость-Леша (SPEAKER_05) не был официально представлен.\nUmputun сразу обращается к нему по имени с первых секунд.\nЭто обычный ведущий подкаста, который участвует как гость.\nНужно идентифицировать по голосу или проверить историю выпусков.\n"
+  },
+  {
+    "episode": 855,
+    "speaker": "SPEAKER_01",
+    "replies": 385,
+    "duration_min": 4.2,
+    "validation_status": "clean",
+    "identification": {
+      "original_speaker": "SPEAKER_01",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "Анализ показал следующее:\n- 15.8% (61 реплика) - явные артефакты: смайлики (🤨, 😎, 🤔) и титры (\"Субтитры делал DimaTorzok\")\n- 83.4% (321 реплика) - короткие реакции длительностью <3 секунд\n- 0.8% (3 реплики) - \"осмысленные\" >3 сек, но это дубликаты фраз других спикеров\n\nСамые частые \"реплики\":\n- 19x: 🤨\n- 18x: \"Субтитры делал DimaTorzok\"\n- 14x: 😎\n- 8x: 🤔\n\nПримеры дублирования:\n- [6532.59s] \"И влияет ли сейчас человечество, чтобы как-то остановилось?\" - дубль реплики Gray\n- [6814.01s] \"Я же говорю, а почему не поискать заказательства?\" - искажённая реплика из контекста\n\nПервое появление: 413.94s без представления, вклинивается в разговор о 1Password.\n\nВывод: SPEAKER_01 не является реальным гостем, а представляет собой комбинацию:\n1. Артефактов субтитров (смайлики, титры)\n2. Ошибочно распознанных коротких междометий ведущих\n3. Дублей/искажений реплик других спикеров",
+      "method": null,
+      "is_error": true,
+      "error_reason": "Ошибки распознавания речи, артефакты и короткие междометия"
+    },
+    "voice_matching": null,
+    "notes": "Эпизод 855 демонстрирует типичную проблему автоматического распознавания:\n- Система создала фантомного спикера SPEAKER_01 из артефактов (смайлики, титры)\n- Короткие междометия ведущих были ошибочно атрибутированы несуществующему гостю\n- Одна реплика осталась без атрибуции (пустой спикер)\n\nРекомендация: применить правила очистки для удаления SPEAKER_01 и исправления пустого спикера.",
+    "consistency_issue": "Не представлен, появляется внезапно на 413.94s, является артефактом распознавания"
+  },
+  {
+    "episode": 856,
+    "speaker": "SPEAKER_02",
+    "replies": 507,
+    "duration_min": 5.5,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "SPEAKER_02",
+      "identified_as": null,
+      "confidence": null,
+      "evidence": "",
+      "method": null,
+      "is_error": true,
+      "error_reason": "Артефакты автоматического распознавания речи (ASR). 95% реплик короче 2 секунд (средняя длительность 0.65с), содержат односложные междометия, эмодзи, дубликаты фраз других спикеров. Примеры дублирования: реплика в 1569.3s 'Подожди, она вообще травится' дублирует Gray (1570.0s); реплика в 1581.9s появляется дважды подряд. Также включает субтитры ('Субтитры делал DimaTorzok'). Первая реплика в 21.0s - просто слово 'Бобук' в контексте где Umputun говорит о Бобуке."
+    },
+    "voice_matching": null
+  },
+  {
+    "episode": 868,
+    "speaker": "Guest_01",
+    "replies": 152,
+    "duration_min": 15.1,
+    "validation_status": "needs_review",
+    "identification": {
+      "original_speaker": "Guest_01",
+      "identified_as": null,
+      "confidence": "medium",
+      "evidence": "Гость представился в начале эпизода (75.2s):\n- \"Всем привет. Меня зовут Алексей.\"\n- Откликнулся на призыв Umputun в чатике Радио-Т (65.4s)\n- Математик из научного института\n- Работал с C++/MPI для научных задач\n- Изучает Python, Data Science, машинное обучение\n\nКонтекст представления:\n- Umputun (65.4s): \"Но зато на мой призыв в чатике радио ИТ пришел гость дорогой, который... Ты кто?\"\n- Guest_01 (75.2s): \"Всем привет. Меня зовут Алексей.\"\n- Математик, изучающий программирование\n- Активно участвовал на протяжении всего эпизода (75s - 8027s)\n\nФамилия, ник или другая идентифицирующая информация не упоминались.",
+      "method": "introduction",
+      "is_error": false,
+      "error_reason": null,
+      "voice_task_needed": true
+    },
+    "voice_matching": null,
+    "notes": "Эпизод 868 (22 июля 2023):\n- Ведущие: Umputun, Ksenks\n- Гость: Алексей (Guest_01) - математик, начинающий программист\n- Статистика Guest_01: 152 реплики, ~15 минут эфирного времени\n- Гость представлен явно, активно участвует в дискуссии\n- Фамилия/ник не упоминались\n- НЕ является AnotherAlex из выпусков 857-858 (профили не совпадают)\n\nТребуется:\n- Voice comparison для потенциальной идентификации\n- Проверка чата Радио-Т за июль 2023 (если доступен)\n- Сравнение с другими гостями по имени Алексей"
+  },
+  {
+    "episode": 888,
+    "speaker": "Guest_Andrey",
+    "replies": 74,
+    "duration_min": 3.7,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null
+  },
+  {
+    "episode": 891,
+    "speaker": "Guest_Mikhail",
+    "replies": 1172,
+    "duration_min": 83.2,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null,
+    "notes": "Гость активно участвовал в обсуждении технической темы (Bazel) на протяжении всего эпизода.\nПокинул эфир около 7674s с фразой \"Если что, приглашайте еще. Спасибо. Пока.\"\n\nПрофиль гостя:\n- Имя: Михаил\n- Экспертиза: Bazel, системы сборки, монорепозитории\n- Опыт: Java/Kotlin/Scala -> Go, бэкенд-разработка\n- Работал в больших проектах с локализацией на сотни языков\n- Несколько лет опыта миграции и поддержки Bazel-репозиториев\n\nТребуется:\n1. Voice comparison для идентификации (возможно, повторный гость)\n2. Поиск в предыдущих эпизодах упоминаний о запланированном госте по теме Bazel\n3. Исправление ошибки атрибуции реплики с представлением"
+  },
+  {
+    "episode": 972,
+    "speaker": "Guest_Andrey_972",
+    "replies": 246,
+    "duration_min": 20.9,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": null
+  },
+  {
+    "episode": 994,
+    "speaker": "Guest_Unknown",
+    "replies": 231,
+    "duration_min": 14.9,
+    "validation_status": "needs_review",
+    "identification": null,
+    "voice_matching": {
+      "source": "analysis",
+      "best_match": "Alek.sys",
+      "best_avg": 0.2859
+    },
+    "notes": "Эпизод 994 от 3 января 2026 года. Гиковский выпуск без Gray и Bobuk.\n\nGuest1 - активный слушатель, позвонивший в эфир (~16:21). Участвовал в\nобсуждении Python async, feature flags, Claude/AI кодогенерации.\nТехнически грамотный, вероятно разработчик. Общался в чате до звонка\n(упоминает дискуссию с Лехой про синхронность/асинхронность).\n\nДля идентификации Guest1 рекомендуется:\n1. Проверить чат эпизода на ники активных участников в это время\n2. Voice comparison с известными гостями-разработчиками"
+  }
+]

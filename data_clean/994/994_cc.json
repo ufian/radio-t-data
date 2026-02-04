@@ -2308,7 +2308,7 @@
       "id": "696d120b9760406e0596adf2",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 981.18,
       "etime": 982.18,
       "text": "Прием, прием."
@@ -2335,7 +2335,7 @@
       "id": "696d120b9760406e0596adf5",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 983.88,
       "etime": 987.85,
       "text": "Я вас так себе слышу сейчас, секунду."
@@ -2353,7 +2353,7 @@
       "id": "696d120b9760406e0596adf7",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 989.77,
       "etime": 990.31,
       "text": "Как это?"
@@ -2362,7 +2362,7 @@
       "id": "696d120b9760406e0596adf8",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 990.33,
       "etime": 991.67,
       "text": "Все, отлично, отлично."
@@ -2380,7 +2380,7 @@
       "id": "696d120b9760406e0596adfa",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 993.64,
       "etime": 993.84,
       "text": "Да, супер."
@@ -2398,7 +2398,7 @@
       "id": "696d120b9760406e0596adfc",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 996.26,
       "etime": 997.8,
       "text": "Ты кто?"
@@ -2407,7 +2407,7 @@
       "id": "696d120b9760406e0596adfd",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 998.68,
       "etime": 999.2,
       "text": "Кто я?"
@@ -2416,7 +2416,7 @@
       "id": "696d120b9760406e0596adfe",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 999.26,
       "etime": 1000.64,
       "text": "Я гость."
@@ -2434,7 +2434,7 @@
       "id": "696d120b9760406e0596ae00",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1005.23,
       "etime": 1006.73,
       "text": "Да, да, можно и так сказать."
@@ -2488,7 +2488,7 @@
       "id": "696d120b9760406e0596ae06",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1020.45,
       "etime": 1022.49,
       "text": "Во-первых, не поставил."
@@ -2497,7 +2497,7 @@
       "id": "696d120b9760406e0596ae07",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1022.55,
       "etime": 1036.39,
       "text": "Во-вторых, я пока нету Бобука, решил в чате немножко перенять на себя его обязанности, потому что у вас тут двое го-специалистов."
@@ -2515,7 +2515,7 @@
       "id": "696d120b9760406e0596ae09",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1038.77,
       "etime": 1040.33,
       "text": "Да, в питоне никто не соображает."
@@ -2542,7 +2542,7 @@
       "id": "696d120b9760406e0596ae0c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1048.9,
       "etime": 1050.46,
       "text": "Не, ну, верю."
@@ -2731,7 +2731,7 @@
       "id": "696d120b9760406e0596ae21",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1095.48,
       "etime": 1099.6,
       "text": "Ну, типа такая же библиотека, ну, как ты написал."
@@ -2740,7 +2740,7 @@
       "id": "696d120b9760406e0596ae22",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1099.64,
       "etime": 1101.68,
       "text": "Просто в чем проблема?"
@@ -2749,7 +2749,7 @@
       "id": "696d120b9760406e0596ae23",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1101.72,
       "etime": 1123.59,
       "text": "В том, что если у меня, например, есть уже асинхронное приложение, ну, например, асинхронный веб-сервер, то, что обычно все и 90% пишут, то я не хочу заводить отдельный ThreadPool и выносить в него вот эти типа либы, которые не умеют в Async, если у меня уже асинхронное приложение."
@@ -2758,7 +2758,7 @@
       "id": "696d120b9760406e0596ae24",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1123.92,
       "etime": 1141.53,
       "text": "А по поводу того, что Леха говорит, типа, тогда не делай это в endpoint, а выноси куда-то в фон. В этом случае, например, я, например, не хочу это выносить в фон. Например, если я буду делать фичетоггл,"
@@ -2767,7 +2767,7 @@
       "id": "696d120b9760406e0596ae25",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1141.51,
       "etime": 1154.54,
       "text": "На этой штуке, например, я захочу, когда мне нужно спросить, какое значение в этом фичетогле, я возьму это значение из кэша."
@@ -2776,7 +2776,7 @@
       "id": "696d120b9760406e0596ae26",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1154.79,
       "etime": 1156.83,
       "text": "и сразу же отдам юзеру."
@@ -2785,7 +2785,7 @@
       "id": "696d120b9760406e0596ae27",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1156.87,
       "etime": 1163.62,
       "text": "Но при этом я проверю, например, что этот кэш еще не истек."
@@ -2794,7 +2794,7 @@
       "id": "696d120b9760406e0596ae28",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1163.76,
       "etime": 1171.71,
       "text": "Если кэш уже истек, то я тогда в фоне еще раз запрошу уже новое значение."
@@ -2803,7 +2803,7 @@
       "id": "696d120b9760406e0596ae29",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1171.77,
       "etime": 1174.28,
       "text": "Но юзеру отдам старое."
@@ -2812,7 +2812,7 @@
       "id": "696d120b9760406e0596ae2a",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1174.32,
       "etime": 1179.77,
       "text": "И вот таким образом буду обновлять, а не каким-то изначально в фоне процесса."
@@ -2848,7 +2848,7 @@
       "id": "696d120b9760406e0596ae2e",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1193.45,
       "etime": 1195.18,
       "text": "Так а зачем?"
@@ -2884,7 +2884,7 @@
       "id": "696d120b9760406e0596ae32",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1200.32,
       "etime": 1201.45,
       "text": "Не, подожди, почему?"
@@ -2893,7 +2893,7 @@
       "id": "696d120b9760406e0596ae33",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1201.47,
       "etime": 1206.7,
       "text": "Блин, у вас очень непривычно без умцев, конечно."
@@ -2902,7 +2902,7 @@
       "id": "696d120b9760406e0596ae34",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1206.72,
       "etime": 1208.5,
       "text": "Я же тут сбиваюсь."
@@ -2911,7 +2911,7 @@
       "id": "696d120b9760406e0596ae35",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1208.54,
       "etime": 1211.32,
       "text": "Ну, а почему у тебя есть библиотека синхронная?"
@@ -2920,7 +2920,7 @@
       "id": "696d120b9760406e0596ae36",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1211.36,
       "etime": 1213.63,
       "text": "В принципе, как в питоне почти все делают."
@@ -2929,7 +2929,7 @@
       "id": "696d120b9760406e0596ae37",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1213.71,
       "etime": 1214.45,
       "text": "Все синхронные."
@@ -2938,7 +2938,7 @@
       "id": "696d120b9760406e0596ae38",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1214.51,
       "etime": 1218.58,
       "text": "Положи рядом с таким же контрактом асинхронную, и все."
@@ -2947,7 +2947,7 @@
       "id": "696d120b9760406e0596ae39",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1218.6,
       "etime": 1220.72,
       "text": "И пользователь будет выбирать, что ему нужно."
@@ -3001,7 +3001,7 @@
       "id": "696d120b9760406e0596ae3f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1242.47,
       "etime": 1247.23,
       "text": "А зачем ты будешь писать синхронную библиотеку и под капотом вызывать request.get?"
@@ -3028,7 +3028,7 @@
       "id": "696d120b9760406e0596ae42",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1254.38,
       "etime": 1257.71,
       "text": "Ну да, я же и говорю, положить просто рядом еще одну реализацию."
@@ -3037,7 +3037,7 @@
       "id": "696d120b9760406e0596ae43",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1257.83,
       "etime": 1260.97,
       "text": "Не переписывать тот клиент, положить рядом еще одну реализацию асинхронную."
@@ -3055,7 +3055,7 @@
       "id": "696d120b9760406e0596ae45",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1263.34,
       "etime": 1263.78,
       "text": "Рядом."
@@ -3064,7 +3064,7 @@
       "id": "696d120b9760406e0596ae46",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1263.8,
       "etime": 1266.06,
       "text": "Ну да, да."
@@ -3271,7 +3271,7 @@
       "id": "696d120b9760406e0596ae5d",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1375.27,
       "etime": 1375.97,
       "text": "Модерн."
@@ -3325,7 +3325,7 @@
       "id": "696d120b9760406e0596ae63",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1398.7,
       "etime": 1399.62,
       "text": "Нет, ненависти нет."
@@ -3334,7 +3334,7 @@
       "id": "696d120b9760406e0596ae64",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1399.68,
       "etime": 1406.53,
       "text": "Просто из-за того, что в питоне гил, там с тредами есть некоторые проблемы."
@@ -3352,7 +3352,7 @@
       "id": "696d120b9760406e0596ae66",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1412.32,
       "etime": 1415.58,
       "text": "Концептуально у меня вообще никаких проблем с тредами нет."
@@ -3469,7 +3469,7 @@
       "id": "696d120b9760406e0596ae73",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1476.72,
       "etime": 1486.24,
       "text": "Нет, так нельзя, то есть вот этот, ну, сахар, что он потом сделал, он может быть только асинхронным, а асинхронно ты уже не сможешь, типа, у него положить или взять из него."
@@ -3478,7 +3478,7 @@
       "id": "696d120b9760406e0596ae74",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1486.26,
       "etime": 1487.35,
       "text": "Да, да, да."
@@ -3487,7 +3487,7 @@
       "id": "696d120b9760406e0596ae75",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1487.33,
       "etime": 1494.39,
       "text": "Ну, я в целом даже не про то, что так плохо или так не делать."
@@ -3505,7 +3505,7 @@
       "id": "696d120b9760406e0596ae77",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1502.92,
       "etime": 1506.17,
       "text": "Нет, такого я не говорил."
@@ -3514,7 +3514,7 @@
       "id": "696d120b9760406e0596ae78",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1506.27,
       "etime": 1512.99,
       "text": "Я просто написал, что если она, по-моему, не той синхронщины, то... В топку, да."
@@ -3523,7 +3523,7 @@
       "id": "696d120b9760406e0596ae79",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1513.01,
       "etime": 1513.23,
       "text": "Не в топку."
@@ -3541,7 +3541,7 @@
       "id": "696d120b9760406e0596ae7b",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1515.54,
       "etime": 1517.15,
       "text": "Эталонное не нужно, да."
@@ -3550,7 +3550,7 @@
       "id": "696d120b9760406e0596ae7c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1517.41,
       "etime": 1520.66,
       "text": "Просто к тому, что 100%"
@@ -3559,7 +3559,7 @@
       "id": "696d120b9760406e0596ae7d",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1521.35,
       "etime": 1522.55,
       "text": "Ну, будет такой кейс."
@@ -3568,7 +3568,7 @@
       "id": "696d120b9760406e0596ae7e",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1522.57,
       "etime": 1523.79,
       "text": "В принципе, ну, это же что?"
@@ -3577,7 +3577,7 @@
       "id": "696d120b9760406e0596ae7f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1523.81,
       "etime": 1526.03,
       "text": "Это просто k-value, правильно?"
@@ -3586,7 +3586,7 @@
       "id": "696d120b9760406e0596ae80",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1526.05,
       "etime": 1528.42,
       "text": "То есть ты можешь там хранить что угодно."
@@ -3595,7 +3595,7 @@
       "id": "696d120b9760406e0596ae81",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1528.5,
       "etime": 1530.42,
       "text": "И в целом, ну, оно прикольно."
@@ -3604,7 +3604,7 @@
       "id": "696d120b9760406e0596ae82",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1530.44,
       "etime": 1535.18,
       "text": "Типа маленький сервер, который ты можешь там поставить, он есть не просит."
@@ -3613,7 +3613,7 @@
       "id": "696d120b9760406e0596ae83",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1535.26,
       "etime": 1541.81,
       "text": "И сверху него, ну, можно кроме обычной конфигурации, в принципе, можно вернуть много всяких прикольных штук."
@@ -3622,7 +3622,7 @@
       "id": "696d120b9760406e0596ae84",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1541.89,
       "etime": 1545.18,
       "text": "И опять же, если у тебя уже асинхронное приложение,"
@@ -3631,7 +3631,7 @@
       "id": "696d120b9760406e0596ae85",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1545.16,
       "etime": 1552.44,
       "text": "то с асинхронной библиотекой всякие эти прикольные штуки наворачивать было бы намного проще."
@@ -3721,7 +3721,7 @@
       "id": "696d120b9760406e0596ae8f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1595.75,
       "etime": 1596.05,
       "text": "Никак."
@@ -3775,7 +3775,7 @@
       "id": "696d120b9760406e0596ae95",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1614.57,
       "etime": 1624.41,
       "text": "Ты же там библиотеки в публичном, по-моему, не сделал, encryption, вот эти все штуки, да, ты же их прямо в сам клиент, типа, всунул, правильно же?"
@@ -3919,7 +3919,7 @@
       "id": "696d120b9760406e0596aea5",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1699.01,
       "etime": 1707.8,
       "text": "Так я бы и не пользовался SDK, если бы я захотел эту библиотеку воспользоваться, потому что асинхронично не добавил в топку, как говорится."
@@ -4045,7 +4045,7 @@
       "id": "696d120b9760406e0596aeb3",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1744.08,
       "etime": 1747.84,
       "text": "Ну, потому что у тебя AI дрессированный уже тобой."
@@ -4054,7 +4054,7 @@
       "id": "696d120b9760406e0596aeb4",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1747.97,
       "etime": 1759.72,
       "text": "Я-то вчера тоже сходил в AI, спросил у него, он сказал, что в целом было бы неплохо асинхронную версию библиотеки добавить, потому что кейсы у всех могут быть разные."
@@ -4081,7 +4081,7 @@
       "id": "696d120b9760406e0596aeb7",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1772.31,
       "etime": 1780.44,
       "text": "Я думаю, что AI у ботанов в лицо уже знают, и они заранее уже... Опасаются, опасаются спорить."
@@ -4162,7 +4162,7 @@
       "id": "696d120b9760406e0596aec0",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1814.29,
       "etime": 1816.75,
       "text": "Возможно, это и странно, если ты с мира Го приходишь."
@@ -4171,7 +4171,7 @@
       "id": "696d120b9760406e0596aec1",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1816.77,
       "etime": 1819.5,
       "text": "Но, в принципе, в Питоне так живут."
@@ -4180,7 +4180,7 @@
       "id": "696d120b9760406e0596aec2",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1819.54,
       "etime": 1822.82,
       "text": "Посмотри на множество библиотек."
@@ -4189,7 +4189,7 @@
       "id": "696d120b9760406e0596aec3",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1822.8,
       "etime": 1824.34,
       "text": "Они все так и делают."
@@ -4207,7 +4207,7 @@
       "id": "696d120b9760406e0596aec5",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1829.11,
       "etime": 1833.41,
       "text": "Как любят говорить умпутун, но тут так принято."
@@ -4216,7 +4216,7 @@
       "id": "696d120b9760406e0596aec6",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1833.58,
       "etime": 1835.3,
       "text": "Какая жизнь?"
@@ -4270,7 +4270,7 @@
       "id": "696d120b9760406e0596aecc",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1852.5,
       "etime": 1854.78,
       "text": "Ну, так и, во-первых, исторически сложилось."
@@ -4279,7 +4279,7 @@
       "id": "696d120b9760406e0596aecd",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1854.86,
       "etime": 1867.17,
       "text": "Во-вторых, если, ну, не если, но, видимо, когда-то случится, они уберут ГИЛ, тогда дела, я думаю, станут намного интереснее."
@@ -4324,7 +4324,7 @@
       "id": "696d120b9760406e0596aed2",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1896.39,
       "etime": 1901.26,
       "text": "Ну, если мы все еще про Python, ну, в принципе, там ничего такого не будет."
@@ -4333,7 +4333,7 @@
       "id": "696d120b9760406e0596aed3",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1901.3,
       "etime": 1909.48,
       "text": "Единственное, что проблема, да, и непонятно почему до сих пор в STD Libby нет асинхронного клиента."
@@ -4342,7 +4342,7 @@
       "id": "696d120b9760406e0596aed4",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1909.52,
       "etime": 1913.63,
       "text": "То есть тебе в идеале нужно будет как..."
@@ -4351,7 +4351,7 @@
       "id": "696d120b9760406e0596aed5",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1913.61,
       "etime": 1937.74,
       "text": "ну, если ты хочешь сделать юзерфрендли, либо тебе нужно предугадывать, какой конкретно асинхронный клиент был у юзера, типа, и мало того, что у тебя будет еще одна дополнительная имплементация, типа, асинхронная, так у тебя еще внутри асинхронная имплементация, ты будешь там смотреть, ага, в системе установлен HTTPX, значит, используем его."
@@ -4360,7 +4360,7 @@
       "id": "696d120b9760406e0596aed6",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1937.78,
       "etime": 1942.32,
       "text": "Или если, например, установлен, как он, IHTTP, значит, используем его."
@@ -4369,7 +4369,7 @@
       "id": "696d120b9760406e0596aed7",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1942.4,
       "etime": 1943.44,
       "text": "Ну,"
@@ -4378,7 +4378,7 @@
       "id": "696d120b9760406e0596aed8",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1943.42,
       "etime": 1945.35,
       "text": "Да."
@@ -4459,7 +4459,7 @@
       "id": "696d120b9760406e0596aee1",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 1987.46,
       "etime": 1991.27,
       "text": "Эм... Ну..."
@@ -4549,7 +4549,7 @@
       "id": "696d120b9760406e0596aeeb",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2020.19,
       "etime": 2026.03,
       "text": "Не, ну ты можешь сам оффлоудить в Трэдпул, что хочешь, типа через примитивы Async.io."
@@ -4558,7 +4558,7 @@
       "id": "696d120b9760406e0596aeec",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2026.09,
       "etime": 2031.22,
       "text": "То есть Async.io просто это очень низкого уровня библиотека."
@@ -4567,7 +4567,7 @@
       "id": "696d120b9760406e0596aeed",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2031.26,
       "etime": 2035.68,
       "text": "Она, ну, как-то... Посмотри."
@@ -4576,7 +4576,7 @@
       "id": "696d120b9760406e0596aeee",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2035.72,
       "etime": 2044.99,
       "text": "Она дает тебе инструменты, там есть, типа, ты можешь, что хочешь, типа, откинуть в Трэдпул, но, опять же, из Агилы это может быть очень неожиданно и очень неприятно."
@@ -4585,7 +4585,7 @@
       "id": "696d120b9760406e0596aeef",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2045.31,
       "etime": 2048.27,
       "text": "А есть другие штуки, типа, как они, Трио, по-моему, называются."
@@ -4594,7 +4594,7 @@
       "id": "696d120b9760406e0596aef0",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2048.29,
       "etime": 2050.2,
       "text": "То есть это более высокоуровневые."
@@ -4639,7 +4639,7 @@
       "id": "696d120b9760406e0596aef5",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2069.38,
       "etime": 2069.84,
       "text": "Можешь."
@@ -4648,7 +4648,7 @@
       "id": "696d120b9760406e0596aef6",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2069.9,
       "etime": 2079.66,
       "text": "Я, правда, не помню в Starlet, в Starlet так и работает, но ты же можешь определять не только асинхронные эти вьюхи,"
@@ -4657,7 +4657,7 @@
       "id": "696d120b9760406e0596aef7",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2079.64,
       "etime": 2086.49,
       "text": "А ты можешь и синхронно определять, и тогда фреймворк синхронный будет выполнять в трейдпуле."
@@ -4711,7 +4711,7 @@
       "id": "696d120b9760406e0596aefd",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2095.47,
       "etime": 2095.67,
       "text": "Нет, нет."
@@ -4720,7 +4720,7 @@
       "id": "696d120b9760406e0596aefe",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2095.73,
       "etime": 2102.64,
       "text": "Если ты хочешь, ты можешь в нем же любую часть своей работы зафлоудить в этот трейдпул."
@@ -4738,7 +4738,7 @@
       "id": "696d120b9760406e0596af00",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2107.01,
       "etime": 2107.71,
       "text": "Да, сам."
@@ -4837,7 +4837,7 @@
       "id": "696d120b9760406e0596af0b",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2148.76,
       "etime": 2164.27,
       "text": "по понятным причинам, и им всем нужно обновиться, по-моему, на новой Абе перекомпилироваться, и в самом коде произошли breaking-changes, и нужно там тоже менять код."
@@ -4846,7 +4846,7 @@
       "id": "696d120b9760406e0596af0c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2164.31,
       "etime": 2168.12,
       "text": "То есть это еще будет довольно такой длительный процесс."
@@ -4855,7 +4855,7 @@
       "id": "696d120b9760406e0596af0d",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2168.1,
       "etime": 2171.7,
       "text": "Дай бог там ближайшее в течение пяти лет это все произойдет."
@@ -4927,7 +4927,7 @@
       "id": "696d120b9760406e0596af15",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2196.7,
       "etime": 2197.9,
       "text": "О, можно, кстати, да."
@@ -4936,7 +4936,7 @@
       "id": "696d120b9760406e0596af16",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2197.92,
       "etime": 2204.27,
       "text": "Но это ведь не так. То есть и сейчас у тебя могут быть рейсы."
@@ -4945,7 +4945,7 @@
       "id": "696d120b9760406e0596af17",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2204.31,
       "etime": 2205.92,
       "text": "То есть ничего не поменяется."
@@ -4954,7 +4954,7 @@
       "id": "696d120b9760406e0596af18",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2205.96,
       "etime": 2210.86,
       "text": "В твоем именно питомском коде, если мы сейчас не лезем в сишные библиотеки,"
@@ -4963,7 +4963,7 @@
       "id": "696d120b9760406e0596af19",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2210.84,
       "etime": 2224.29,
       "text": "Если у тебя сейчас плохо написан этот код с наличием тредов, если у тебя сейчас там рейс кондишены есть, то они у тебя будут, если ты гил отключишь."
@@ -4972,7 +4972,7 @@
       "id": "696d120b9760406e0596af1a",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2224.31,
       "etime": 2225.69,
       "text": "То есть ничего не поменялось?"
@@ -5017,7 +5017,7 @@
       "id": "696d120b9760406e0596af1f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2241.55,
       "etime": 2242.51,
       "text": "Почему не попадешь?"
@@ -5098,7 +5098,7 @@
       "id": "696d120b9760406e0596af28",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2276.23,
       "etime": 2283.77,
       "text": "Потому что у тебя в одну единицу времени работает один тред."
@@ -5107,7 +5107,7 @@
       "id": "696d120b9760406e0596af29",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2284.23,
       "etime": 2285.45,
       "text": "Это, собственно, гилл."
@@ -5116,7 +5116,7 @@
       "id": "696d120b9760406e0596af2a",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2285.55,
       "etime": 2291.42,
       "text": "Но при этом у тебя тред какое-то количество миллисекунд."
@@ -5125,7 +5125,7 @@
       "id": "696d120b9760406e0596af2b",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2291.44,
       "etime": 2293.06,
       "text": "По-моему, раньше это были тики."
@@ -5134,7 +5134,7 @@
       "id": "696d120b9760406e0596af2c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2293.04,
       "etime": 2295.04,
       "text": "до 3.2, по-моему."
@@ -5143,7 +5143,7 @@
       "id": "696d120b9760406e0596af2d",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2295.06,
       "etime": 2297.21,
       "text": "Потом мне это переделали на миллисекунды."
@@ -5152,7 +5152,7 @@
       "id": "696d120b9760406e0596af2e",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2297.23,
       "etime": 2302.45,
       "text": "То есть, допустим, там, не помню, каждые 5 миллисекунд или 100 он переключается."
@@ -5161,7 +5161,7 @@
       "id": "696d120b9760406e0596af2f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2302.53,
       "etime": 2307.78,
       "text": "То есть, у тебя будет тот же самый race condition, как если бы у тебя просто сразу было бы 10 трейдов."
@@ -5206,7 +5206,7 @@
       "id": "696d120b9760406e0596af34",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2315.35,
       "etime": 2330.22,
       "text": "Ну, у тебя один тред прочитал значение, дальше он делает, ну, классическое, это плюс один, и в этот же момент у тебя другой тред прочитал значение, тоже он делает плюс один, он перезаписывает то, что до этого пытался туда записать второй тред."
@@ -5215,7 +5215,7 @@
       "id": "696d120b9760406e0596af35",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2330.24,
       "etime": 2332.57,
       "text": "Ну, это не рейс кондишн разве?"
@@ -5341,7 +5341,7 @@
       "id": "696d120b9760406e0596af43",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2377.23,
       "etime": 2377.66,
       "text": "Да?"
@@ -5350,7 +5350,7 @@
       "id": "696d120b9760406e0596af44",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2377.68,
       "etime": 2379.72,
       "text": "Ну, я не согласен."
@@ -5359,7 +5359,7 @@
       "id": "696d120b9760406e0596af45",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2379.74,
       "etime": 2397.11,
       "text": "То есть если ты, в принципе, у тебя до этого код был написан плохо, и он, в принципе, может поломаться, у тебя, ну, рейсы там и так могут быть, то, ну, да, ты скорее увидишь больше этих проблем, когда у тебя одновременно будет больше потоков, но у тебя и до этого код поломанный был."
@@ -5467,7 +5467,7 @@
       "id": "696d120b9760406e0596af51",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2448.02,
       "etime": 2465,
       "text": "Мне, кстати, действительно интересно, мне тоже кажется, что когда действительно в питоне появятся уже нормальные, ну, они и так нормальные, просто без гила, то, возможно, вот это движение все в Async, все используем Async, оно немножко повернется вспять."
@@ -5476,7 +5476,7 @@
       "id": "696d120b9760406e0596af52",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2465.02,
       "etime": 2468.34,
       "text": "Хотя, конечно, писать с тредами тоже..."
@@ -5566,7 +5566,7 @@
       "id": "696d120b9760406e0596af5c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2494.56,
       "etime": 2505.22,
       "text": "Питон — это маленькая инди-конторка, которую делают волонтеры и эти энтузиасты, в которую они вливают миллиарды денег."
@@ -5593,7 +5593,7 @@
       "id": "696d120b9760406e0596af5f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2511.65,
       "etime": 2517.36,
       "text": "Да нет, на самом деле я прям сильно не копал, но там, по-моему..."
@@ -5602,7 +5602,7 @@
       "id": "696d120b9760406e0596af60",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2517.34,
       "etime": 2524.59,
       "text": "Да, Microsoft там выделял пару человек, Instagram, по-моему, выделял одного или двух инженеров."
@@ -5647,7 +5647,7 @@
       "id": "696d120b9760406e0596af65",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2535.61,
       "etime": 2535.89,
       "text": "Более не было."
@@ -5656,7 +5656,7 @@
       "id": "696d120b9760406e0596af66",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2535.87,
       "etime": 2549.09,
       "text": "Не, вот последнее, это то, что они пытались улучшить Python с каждой версией, по-моему, на 50% было обещание, но что-то они не вывезли и их распустили всех."
@@ -5665,7 +5665,7 @@
       "id": "696d120b9760406e0596af67",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2549.21,
       "etime": 2555.9,
       "text": "Они занимались только производительностью, то есть всякими другими штуками не занимались."
@@ -5674,7 +5674,7 @@
       "id": "696d120b9760406e0596af68",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2555.96,
       "etime": 2557.73,
       "text": "И, по-моему, это Microsoft был."
@@ -5800,7 +5800,7 @@
       "id": "696d120b9760406e0596af76",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2593.32,
       "etime": 2594.12,
       "text": "Ты не поверишь."
@@ -5809,7 +5809,7 @@
       "id": "696d120b9760406e0596af77",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2594.16,
       "etime": 2596.56,
       "text": "По-моему, уже есть такая."
@@ -5998,7 +5998,7 @@
       "id": "696d120b9760406e0596af8c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2675.97,
       "etime": 2676.71,
       "text": "Каратиста?"
@@ -6025,7 +6025,7 @@
       "id": "696d120b9760406e0596af8f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2680.18,
       "etime": 2683.69,
       "text": "Ну, опыт у нас просто волына есть."
@@ -6196,7 +6196,7 @@
       "id": "696d120b9760406e0596afa2",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2737.92,
       "etime": 2738.88,
       "text": "Не нужен был."
@@ -6331,7 +6331,7 @@
       "id": "696d120b9760406e0596afb1",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2782.59,
       "etime": 2783.67,
       "text": "Найс."
@@ -6376,7 +6376,7 @@
       "id": "696d120b9760406e0596afb6",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2800.92,
       "etime": 2801.82,
       "text": "Так все и было."
@@ -6547,7 +6547,7 @@
       "id": "696d120b9760406e0596afc9",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2865.38,
       "etime": 2865.94,
       "text": "Джейка."
@@ -6628,7 +6628,7 @@
       "id": "696d120b9760406e0596afd2",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 2901.89,
       "etime": 2902.57,
       "text": "Да."
@@ -7096,7 +7096,7 @@
       "id": "696d120b9760406e0596b006",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 3082.51,
       "etime": 3083.55,
       "text": "Он говорит, да это нормально."
@@ -8518,7 +8518,7 @@
       "id": "696d120b9760406e0596b0a4",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 3611.17,
       "etime": 3612.19,
       "text": "Не факт, что там Джейс."
@@ -8644,7 +8644,7 @@
       "id": "696d120b9760406e0596b0b2",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 3653.8,
       "etime": 3654.32,
       "text": "Вывод."
@@ -8653,7 +8653,7 @@
       "id": "696d120b9760406e0596b0b3",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 3654.38,
       "etime": 3658.88,
       "text": "Никогда не пытайся улучшить мир. Я на самом деле на стороне Тома."
@@ -8662,7 +8662,7 @@
       "id": "696d120b9760406e0596b0b4",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 3658.94,
       "etime": 3661.41,
       "text": "Пришел какой-то умник."
@@ -8680,7 +8680,7 @@
       "id": "696d120b9760406e0596b0b6",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 3664.61,
       "etime": 3667.37,
       "text": "Начал там какие-то свои комментарии умные писать."
@@ -8689,7 +8689,7 @@
       "id": "696d120b9760406e0596b0b7",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 3667.43,
       "etime": 3671.02,
       "text": "Ни у кого ничего не спросил."
@@ -8698,7 +8698,7 @@
       "id": "696d120b9760406e0596b0b8",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 3671.2,
       "etime": 3673.98,
       "text": "И удалил к чертям базу."
@@ -8707,7 +8707,7 @@
       "id": "696d120b9760406e0596b0b9",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 3674.02,
       "etime": 3675.11,
       "text": "Кто так делает?"
@@ -9724,7 +9724,7 @@
       "id": "696d120b9760406e0596b12a",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 4200.61,
       "etime": 4201.85,
       "text": "Веселое."
@@ -9733,7 +9733,7 @@
       "id": "696d120b9760406e0596b12b",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 4201.99,
       "etime": 4207.06,
       "text": "Ну, лично... Ну, не совсем."
@@ -9742,7 +9742,7 @@
       "id": "696d120b9760406e0596b12c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 4207.16,
       "etime": 4215.78,
       "text": "Лично у меня прям таких историй не было, но было чуть-чуть другое, как я сбоку видел."
@@ -9751,7 +9751,7 @@
       "id": "696d120b9760406e0596b12d",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 4216.86,
       "etime": 4218.8,
       "text": "В одной из компаний, в которых я работал,"
@@ -9760,7 +9760,7 @@
       "id": "696d120b9760406e0596b12e",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 4218.78,
       "etime": 4234.33,
       "text": "Так случилось, что искали новых фронтендеров, и в какой-то день пришел новенький, буквально один день поработал, получил доступ и склонировал проект."
@@ -9769,7 +9769,7 @@
       "id": "696d120b9760406e0596b12f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 4234.35,
       "etime": 4245.58,
       "text": "Сидел почему-то весь день, там тихонечко сидел, матюкался себя, по голове бил, а на следующий день позвонил, сказал, что он не придет больше."
@@ -9778,7 +9778,7 @@
       "id": "696d120b9760406e0596b130",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 4245.3,
       "etime": 4245.68,
       "text": "Вот."
@@ -9787,7 +9787,7 @@
       "id": "696d120b9760406e0596b131",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 4246.44,
       "etime": 4252.25,
       "text": "Там проект просто был на Angular написан, на jQuery, и все с таймаутами вешено."
@@ -11596,7 +11596,7 @@
       "id": "696d120b9760406e0596b1fa",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 5197.68,
       "etime": 5204.65,
       "text": "Смотрите, а нет такого опасения, мне кажется, вы немножечко, возможно, с разных сторон про разные кейсы говорите."
@@ -11605,7 +11605,7 @@
       "id": "696d120b9760406e0596b1fb",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 5204.71,
       "etime": 5216.13,
       "text": "То есть пример легкий в том, что ты можешь прийти в незнакомый проект, за часик накидать свой марч-реквест, там тебе автор ответит, подскажет, что ты сделал не так, и все."
@@ -11614,7 +11614,7 @@
       "id": "696d120b9760406e0596b1fc",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 5216.15,
       "etime": 5219.17,
       "text": "И ты пойдешь дальше, ты про этот проект потом завтра и не вспомнишь."
@@ -11623,7 +11623,7 @@
       "id": "696d120b9760406e0596b1fd",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 5219.21,
       "etime": 5222.48,
       "text": "Тебе не нужно каждый день в него вносить изменения."
@@ -11632,7 +11632,7 @@
       "id": "696d120b9760406e0596b1fe",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 5222.46,
       "etime": 5236.06,
       "text": "Но если ты, например, приходишь на новую работу, на какой-то большой проект, и ты точно так же можешь прийти, свой первый MR очень быстро сделать с помощью AI, накидать, разобраться."
@@ -11641,7 +11641,7 @@
       "id": "696d120b9760406e0596b1ff",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 5236.12,
       "etime": 5244.31,
       "text": "Но в таком случае у тебя понимание проекта будет расти сильно медленнее, чем если бы ты разбирался сам."
@@ -11650,7 +11650,7 @@
       "id": "696d120b9760406e0596b200",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 5244.29,
       "etime": 5259.57,
       "text": "И в итоге вот то, про что говорит Ксюша, что у тебя так и не наступит вот этого момента, что ты сам станешь экспертом в этой кодовой базе, ты можешь уже ими не стать, потому что все штуки тебе подсказывает AI и разбирается за тебя он там."
@@ -12253,7 +12253,7 @@
       "id": "696d120b9760406e0596b243",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 5508.79,
       "etime": 5509.98,
       "text": "Мне просто интересно."
@@ -12496,7 +12496,7 @@
       "id": "696d120b9760406e0596b25e",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 5611.31,
       "etime": 5611.61,
       "text": "Какой?"
@@ -13738,7 +13738,7 @@
       "id": "696d120b9760406e0596b2e8",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6129.11,
       "etime": 6130.17,
       "text": "Ну, конечно."
@@ -13927,7 +13927,7 @@
       "id": "696d120b9760406e0596b2fd",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6187.88,
       "etime": 6189.41,
       "text": "Может быть, это твой кейс, Ксюша?"
@@ -13954,7 +13954,7 @@
       "id": "696d120b9760406e0596b300",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6191.83,
       "etime": 6193.43,
       "text": "На Гоне пробовала писать?"
@@ -14143,7 +14143,7 @@
       "id": "696d120b9760406e0596b315",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6275.41,
       "etime": 6276.79,
       "text": "перестали."
@@ -14152,7 +14152,7 @@
       "id": "696d120b9760406e0596b316",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6276.81,
       "etime": 6277.25,
       "text": "Не знаю."
@@ -14161,7 +14161,7 @@
       "id": "696d120b9760406e0596b317",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6277.27,
       "etime": 6279.79,
       "text": "Меня этот веб-чат уже замучил."
@@ -14170,7 +14170,7 @@
       "id": "696d120b9760406e0596b318",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6279.85,
       "etime": 6285.52,
       "text": "Я, видимо, когда-то написал в этом, в глобальном промте, что отвечай коротко и по делу."
@@ -14179,7 +14179,7 @@
       "id": "696d120b9760406e0596b319",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6285.56,
       "etime": 6289.79,
       "text": "И он на каждый вопрос мне теперь первым строчкой пишет, коротко и по делу."
@@ -14188,7 +14188,7 @@
       "id": "696d120b9760406e0596b31a",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6289.81,
       "etime": 6291.21,
       "text": "Ну и дальше уже ответ на вопрос."
@@ -14368,7 +14368,7 @@
       "id": "696d120b9760406e0596b32e",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6373.75,
       "etime": 6375.67,
       "text": "Брутально честным."
@@ -15241,7 +15241,7 @@
       "id": "696d120b9760406e0596b38f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6739.18,
       "etime": 6740.88,
       "text": "Специфические, как и все в ГО."
@@ -15349,7 +15349,7 @@
       "id": "696d120b9760406e0596b39b",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6781.87,
       "etime": 6789.77,
       "text": "А Леха теперь действительно больше питонист, потому что про Макс Мин даже я знал, что в ГО появились там с какой-то... Да."
@@ -15376,7 +15376,7 @@
       "id": "696d120b9760406e0596b39e",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6808.6,
       "etime": 6808.66,
       "text": "Да."
@@ -15664,7 +15664,7 @@
       "id": "696d120b9760406e0596b3be",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6921.7,
       "etime": 6922.06,
       "text": "Прикинь."
@@ -15745,7 +15745,7 @@
       "id": "696d120b9760406e0596b3c7",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 6940.27,
       "etime": 6942.01,
       "text": "Мы так на мусоре."
@@ -15934,7 +15934,7 @@
       "id": "696d120b9760406e0596b3dc",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7024.37,
       "etime": 7025.39,
       "text": "Они только плентами."
@@ -15970,7 +15970,7 @@
       "id": "696d120b9760406e0596b3e0",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7032.69,
       "etime": 7035.49,
       "text": "У нас горутин нет, у нас таких проблем нет."
@@ -16051,7 +16051,7 @@
       "id": "696d120b9760406e0596b3e9",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7059.24,
       "etime": 7060.83,
       "text": "Всегда хотел спросить."
@@ -16060,7 +16060,7 @@
       "id": "696d120b9760406e0596b3ea",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7061.23,
       "etime": 7063.59,
       "text": "А почему темы автоматизации не открываются?"
@@ -16312,7 +16312,7 @@
       "id": "696d120b9760406e0596b406",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7173.1,
       "etime": 7174.15,
       "text": "Ну ладно, ладно."
@@ -16672,7 +16672,7 @@
       "id": "696d120b9760406e0596b42e",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7282.03,
       "etime": 7285,
       "text": "Я видео не смотрел, но отвечаю на твой вопрос, зачем."
@@ -16681,7 +16681,7 @@
       "id": "696d120b9760406e0596b42f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7285.02,
       "etime": 7292.28,
       "text": "У них прямо написано на сайте, что это для тех... Для того, чтобы ты что-то творил, а не дом скроил целый день."
@@ -16708,7 +16708,7 @@
       "id": "696d120b9760406e0596b432",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7298.86,
       "etime": 7302.97,
       "text": "Может быть, они удаляют TikTok, если ты его ставишь, без понятия."
@@ -16762,7 +16762,7 @@
       "id": "696d120b9760406e0596b438",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7329.72,
       "etime": 7335.66,
       "text": "Ой, знаешь, на какой периодически засматриваюсь на телефон, у которого экран Zing,"
@@ -16771,7 +16771,7 @@
       "id": "696d120b9760406e0596b439",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7335.64,
       "etime": 7338.47,
       "text": "Ну, обычный мобильный телефон, только там, где инк-экран."
@@ -16780,7 +16780,7 @@
       "id": "696d120b9760406e0596b43a",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7338.63,
       "etime": 7340.51,
       "text": "И вот примерно из тех же соображений."
@@ -16789,7 +16789,7 @@
       "id": "696d120b9760406e0596b43b",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7340.57,
       "etime": 7342.65,
       "text": "Но все, никак не соберусь."
@@ -16798,7 +16798,7 @@
       "id": "696d120b9760406e0596b43c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7342.67,
       "etime": 7344.18,
       "text": "Они все в основном какие-то китайские."
@@ -16807,7 +16807,7 @@
       "id": "696d120b9760406e0596b43d",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7344.24,
       "etime": 7348.16,
       "text": "Там с кем-то приколами же нужно перепрошивать их."
@@ -16834,7 +16834,7 @@
       "id": "696d120b9760406e0596b440",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7353.67,
       "etime": 7357.73,
       "text": "Ну, они прям китайские-китайские."
@@ -16888,7 +16888,7 @@
       "id": "696d120b9760406e0596b446",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7374.56,
       "etime": 7377.83,
       "text": "Окей."
@@ -16897,7 +16897,7 @@
       "id": "696d120b9760406e0596b447",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7377.85,
       "etime": 7379.25,
       "text": "Окей."
@@ -17428,7 +17428,7 @@
       "id": "696d120b9760406e0596b482",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7616.9,
       "etime": 7618.08,
       "text": "Это просто красиво."
@@ -17455,7 +17455,7 @@
       "id": "696d120b9760406e0596b485",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7628.37,
       "etime": 7628.73,
       "text": "Как?"
@@ -17464,7 +17464,7 @@
       "id": "696d120b9760406e0596b486",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7629.61,
       "etime": 7629.69,
       "text": "Нет."
@@ -17482,7 +17482,7 @@
       "id": "696d120b9760406e0596b488",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7630.55,
       "etime": 7631.29,
       "text": "Нет, нет, нет."
@@ -17527,7 +17527,7 @@
       "id": "696d120b9760406e0596b48d",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7651.09,
       "etime": 7652.03,
       "text": "Подскажите."
@@ -17572,7 +17572,7 @@
       "id": "696d120b9760406e0596b492",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 7660.9,
       "etime": 7661.82,
       "text": "Да, да, да."
@@ -18409,7 +18409,7 @@
       "id": "696d120b9760406e0596b4ef",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8077.44,
       "etime": 8079.96,
       "text": "Так там даже не в том, что ты заплатишь, не заплатишь."
@@ -18418,7 +18418,7 @@
       "id": "696d120b9760406e0596b4f0",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8080,
       "etime": 8081.12,
       "text": "У них же нет этих данных."
@@ -18427,7 +18427,7 @@
       "id": "696d120b9760406e0596b4f1",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8081.14,
       "etime": 8087.07,
       "text": "Они просто считают, что ты... Какой-то свой скор."
@@ -18436,7 +18436,7 @@
       "id": "696d120b9760406e0596b4f2",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8087.09,
       "etime": 8088.25,
       "text": "Да, да, да."
@@ -18445,7 +18445,7 @@
       "id": "696d120b9760406e0596b4f3",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8088.29,
       "etime": 8090.61,
       "text": "Что ты, возможно, даешь там всем."
@@ -18463,7 +18463,7 @@
       "id": "696d120b9760406e0596b4f5",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8092.57,
       "etime": 8093.86,
       "text": "А откуда у них эти данные?"
@@ -18859,7 +18859,7 @@
       "id": "696d120b9760406e0596b521",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8248.34,
       "etime": 8252.67,
       "text": "Если вы действительно хотите дать чаевые водителю, то дайте наличкой."
@@ -18877,7 +18877,7 @@
       "id": "696d120b9760406e0596b523",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8260.34,
       "etime": 8261.06,
       "text": "Ничего себе."
@@ -19633,7 +19633,7 @@
       "id": "696d120b9760406e0596b577",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8594.54,
       "etime": 8595.4,
       "text": "Окей."
@@ -19813,7 +19813,7 @@
       "id": "696d120b9760406e0596b58b",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8655.64,
       "etime": 8656.28,
       "text": "Что?"
@@ -19822,7 +19822,7 @@
       "id": "696d120b9760406e0596b58c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8656.32,
       "etime": 8656.86,
       "text": "Куда?"
@@ -19930,7 +19930,7 @@
       "id": "696d120b9760406e0596b598",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8703.81,
       "etime": 8706.23,
       "text": "Чтобы зимой руки греть."
@@ -19966,7 +19966,7 @@
       "id": "696d120b9760406e0596b59c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8722.39,
       "etime": 8728.68,
       "text": "Ну ты же ноутбук с собой везде таскать не будешь, а так сможешь ходить по супермаркету и общаться с..."
@@ -20074,7 +20074,7 @@
       "id": "696d120b9760406e0596b5a8",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8763.02,
       "etime": 8764.94,
       "text": "Дали бы ссылку на оригинал."
@@ -20119,7 +20119,7 @@
       "id": "696d120b9760406e0596b5ad",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8777.33,
       "etime": 8781.13,
       "text": "Мне комментарии на Reddit нравятся."
@@ -20128,7 +20128,7 @@
       "id": "696d120b9760406e0596b5ae",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8781.15,
       "etime": 8783.02,
       "text": "Давайте теперь называть MicroSlop."
@@ -20326,7 +20326,7 @@
       "id": "696d120b9760406e0596b5c4",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8857.01,
       "etime": 8857.62,
       "text": "Удивительная новость."
@@ -20389,7 +20389,7 @@
       "id": "696d120b9760406e0596b5cb",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8874.59,
       "etime": 8876.03,
       "text": "Так, так."
@@ -20425,7 +20425,7 @@
       "id": "696d120b9760406e0596b5cf",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8884.49,
       "etime": 8886.15,
       "text": "AirDrop."
@@ -20434,7 +20434,7 @@
       "id": "696d120b9760406e0596b5d0",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8886.17,
       "etime": 8887.76,
       "text": "AirDrop, он пошлет."
@@ -20443,7 +20443,7 @@
       "id": "696d120b9760406e0596b5d1",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8887.78,
       "etime": 8890.82,
       "text": "Почти пошел."
@@ -20515,7 +20515,7 @@
       "id": "696d120b9760406e0596b5d9",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8913.91,
       "etime": 8915.13,
       "text": "Хопал."
@@ -20641,7 +20641,7 @@
       "id": "696d120b9760406e0596b5e7",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8959.13,
       "etime": 8960.49,
       "text": "Стремно же."
@@ -20650,7 +20650,7 @@
       "id": "696d120b9760406e0596b5e8",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8961.01,
       "etime": 8962.51,
       "text": "Я слышал такие истории."
@@ -20659,7 +20659,7 @@
       "id": "696d120b9760406e0596b5e9",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8962.61,
       "etime": 8964.68,
       "text": "Так это что, 40-градусное шампанское?"
@@ -20668,7 +20668,7 @@
       "id": "696d120b9760406e0596b5ea",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8964.7,
       "etime": 8966.58,
       "text": "Или как это вообще напиток называется?"
@@ -20722,7 +20722,7 @@
       "id": "696d120b9760406e0596b5f0",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 8977.63,
       "etime": 8980.5,
       "text": "А он, ну, запах, вот это все."
@@ -20911,7 +20911,7 @@
       "id": "696d120b9760406e0596b605",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 9027.33,
       "etime": 9029.69,
       "text": "Мне друзья такое про самогон рассказывали."
@@ -20920,7 +20920,7 @@
       "id": "696d120b9760406e0596b606",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 9029.71,
       "etime": 9030.44,
       "text": "Какой-то особенный."
@@ -21163,7 +21163,7 @@
       "id": "696d120b9760406e0596b621",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 9082.45,
       "etime": 9085.55,
       "text": "То, что ты ее помнишь, это, конечно, уже достижение."
@@ -21550,7 +21550,7 @@
       "id": "696d120b9760406e0596b64c",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 9213.93,
       "etime": 9217.96,
       "text": "Попробуй под этой штукой код попробовать пописать."
@@ -21559,7 +21559,7 @@
       "id": "696d120b9760406e0596b64d",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 9218.08,
       "etime": 9219.82,
       "text": "Как оно будет получаться."
@@ -21721,7 +21721,7 @@
       "id": "696d120b9760406e0596b65f",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 9265.77,
       "etime": 9266.95,
       "text": "Дефицит?"
@@ -21775,7 +21775,7 @@
       "id": "696d120b9760406e0596b665",
       "issue": 994,
       "type": "cc",
-      "author": "Guest_Unknown",
+      "author": "TheGuest",
       "stime": 9280.83,
       "etime": 9282.62,
       "text": "Спасибо, что позвали."

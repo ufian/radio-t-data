@@ -11560,7 +11560,7 @@
       "id": "65c9a1a585d327a2ec11ff94",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 4749.71,
       "etime": 4752.04,
       "text": "Да, я уже второй раз Ruby защищал у вас."
@@ -11614,7 +11614,7 @@
       "id": "65c9a1a585d327a2ec11ff9a",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 4775.15,
       "etime": 4780.27,
       "text": "На самом деле интересно то, что TJ Халавайчик не факт, что это один человек."
@@ -11632,7 +11632,7 @@
       "id": "65c9a1a585d327a2ec11ff9c",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 4782.43,
       "etime": 4787.81,
       "text": "Есть легенда, да, что он очень большое количество кода пишет, и что, возможно, это толпа."
@@ -11866,7 +11866,7 @@
       "id": "65c9a1a585d327a2ec11ffb6",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 4884.58,
       "etime": 4885.38,
       "text": "Ну да."
@@ -11875,7 +11875,7 @@
       "id": "65c9a1a585d327a2ec11ffb7",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 4885.42,
       "etime": 4887.88,
       "text": "Но так же, как и его авторы, в общем-то."
@@ -12190,7 +12190,7 @@
       "id": "65c9a1a585d327a2ec11ffda",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5022.75,
       "etime": 5026.76,
       "text": "Он начал с того, что сказал, что в ГОНе правильная обработка исключительных ситуаций."
@@ -12199,7 +12199,7 @@
       "id": "65c9a1a585d327a2ec11ffdb",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5026.78,
       "etime": 5029.3,
       "text": "Исключительные ситуации – это как раз паника."
@@ -12208,7 +12208,7 @@
       "id": "65c9a1a585d327a2ec11ffdc",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5029.36,
       "etime": 5033.26,
       "text": "И в случае паники нужно аккуратно закрыть все ресурсы и выйти."
@@ -12217,7 +12217,7 @@
       "id": "65c9a1a585d327a2ec11ffdd",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5033.3,
       "etime": 5035.12,
       "text": "Для этого паника существует."
@@ -12226,7 +12226,7 @@
       "id": "65c9a1a585d327a2ec11ffde",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5035.16,
       "etime": 5040.42,
       "text": "Все остальные ошибки, которые происходят в программе, это не исключительные ситуации, это обычные ситуации."
@@ -12235,7 +12235,7 @@
       "id": "65c9a1a585d327a2ec11ffdf",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5040.46,
       "etime": 5044.9,
       "text": "И поэтому они каждый раз возвращают результат операции."
@@ -12244,7 +12244,7 @@
       "id": "65c9a1a585d327a2ec11ffe0",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5044.92,
       "etime": 5046.42,
       "text": "Это философский вопрос."
@@ -12262,7 +12262,7 @@
       "id": "65c9a1a585d327a2ec11ffe2",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5058.26,
       "etime": 5058.86,
       "text": "Не, не совсем."
@@ -12271,7 +12271,7 @@
       "id": "65c9a1a585d327a2ec11ffe3",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5058.92,
       "etime": 5067.2,
       "text": "То есть, например, я пишу продакшн-код на год, и вот если у меня есть веб-сервис, в нем происходит какая-то исключительная ситуация."
@@ -12280,7 +12280,7 @@
       "id": "65c9a1a585d327a2ec11ffe4",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5067.22,
       "etime": 5069.7,
       "text": "В результате это все заворачивается в том, что клиенту отдаются 500."
@@ -12289,7 +12289,7 @@
       "id": "65c9a1a585d327a2ec11ffe5",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5069.88,
       "etime": 5075.78,
       "text": "Естественно, весь процесс при этом не падает, и вот здесь как раз механизм паники рекава вполне можно использовать."
@@ -12298,7 +12298,7 @@
       "id": "65c9a1a585d327a2ec11ffe6",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5077,
       "etime": 5081.76,
       "text": "Но если я там, не знаю, пытаюсь открыть файл, а файла нет, это не исключительная ситуация."
@@ -12307,7 +12307,7 @@
       "id": "65c9a1a585d327a2ec11ffe7",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5081.78,
       "etime": 5082.84,
       "text": "Это нужно проверять в коде."
@@ -12379,7 +12379,7 @@
       "id": "65c9a1a585d327a2ec11ffef",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5129.61,
       "etime": 5132.88,
       "text": "Я бы сказал, что обработка ошибок это вообще сложная тема."
@@ -12388,7 +12388,7 @@
       "id": "65c9a1a585d327a2ec11fff0",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5132.96,
       "etime": 5136.24,
       "text": "Если мы берем любой язык программирования и смотрим на его документацию,"
@@ -12397,7 +12397,7 @@
       "id": "65c9a1a585d327a2ec11fff1",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5137.18,
       "etime": 5141.34,
       "text": "Документация про ошибки, как правило, очень-очень плохая."
@@ -12406,7 +12406,7 @@
       "id": "65c9a1a585d327a2ec11fff2",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5141.38,
       "etime": 5145.09,
       "text": "И поэтому Go эту сложность не скрывает."
@@ -12469,7 +12469,7 @@
       "id": "65c9a1a585d327a2ec11fff9",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5160.26,
       "etime": 5160.84,
       "text": "Авторы те же."
@@ -12478,7 +12478,7 @@
       "id": "65c9a1a585d327a2ec11fffa",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5160.88,
       "etime": 5161.5,
       "text": "Что ты хотел?"
@@ -12496,7 +12496,7 @@
       "id": "65c9a1a585d327a2ec11fffc",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5163.1,
       "etime": 5166.56,
       "text": "Авторы там действительно те же, да, этим очень многое можно объяснить."
@@ -12505,7 +12505,7 @@
       "id": "65c9a1a585d327a2ec11fffd",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5166.62,
       "etime": 5168.14,
       "text": "Но на самом деле в C это гораздо хуже."
@@ -12514,7 +12514,7 @@
       "id": "65c9a1a585d327a2ec11fffe",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5168.26,
       "etime": 5172.26,
       "text": "То есть все, что мы имеем, ерно, в котором только как бы цифра."
@@ -12523,7 +12523,7 @@
       "id": "65c9a1a585d327a2ec11ffff",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5172.34,
       "etime": 5176.64,
       "text": "Да, ошибка в Go это интерфейс, в который можно спросить дополнительную информацию."
@@ -12532,7 +12532,7 @@
       "id": "65c9a1a585d327a2ec120000",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5176.68,
       "etime": 5183.05,
       "text": "В конце концов, у нее есть тип, который скрывается за этим интерфейсом, и можно по типу узнать, что это было."
@@ -12694,7 +12694,7 @@
       "id": "65c9a1a585d327a2ec120012",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5247.25,
       "etime": 5249.23,
       "text": "Указатель, да."
@@ -12739,7 +12739,7 @@
       "id": "65c9a1a585d327a2ec120017",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5263.87,
       "etime": 5264.97,
       "text": "Ну, в том числе для этого, да."
@@ -12757,7 +12757,7 @@
       "id": "65c9a1a585d327a2ec120019",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5270.77,
       "etime": 5272.09,
       "text": "Я не знаю, какой самый главный."
@@ -12766,7 +12766,7 @@
       "id": "65c9a1a585d327a2ec12001a",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5272.11,
       "etime": 5276.07,
       "text": "Вообще говоря, один из значительных юзкейсов это просто оптимизация."
@@ -12775,7 +12775,7 @@
       "id": "65c9a1a585d327a2ec12001b",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5276.27,
       "etime": 5282.8,
       "text": "То есть если ты передашь функцию какую-то большую структуру, то если передавать ее через стэк, то это слишком неэффективно."
@@ -12784,7 +12784,7 @@
       "id": "65c9a1a585d327a2ec12001c",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5282.82,
       "etime": 5284.56,
       "text": "Поэтому проще передать указатель."
@@ -12829,7 +12829,7 @@
       "id": "65c9a1a585d327a2ec120021",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5309.65,
       "etime": 5311.23,
       "text": "Нет, нет, нет."
@@ -12838,7 +12838,7 @@
       "id": "65c9a1a585d327a2ec120022",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5311.27,
       "etime": 5315.57,
       "text": "Как бы Go не запрещает этого, но он как бы не заставляет тебя этого делать."
@@ -12847,7 +12847,7 @@
       "id": "65c9a1a585d327a2ec120023",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5315.59,
       "etime": 5317.88,
       "text": "То есть ты функцию можешь написать и так, и так."
@@ -12865,7 +12865,7 @@
       "id": "65c9a1a585d327a2ec120025",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5322.42,
       "etime": 5336.67,
       "text": "Exception, потому что там исторический момент, то есть паника была изначально, а вот механизм восстановления после ошибки, то, что сейчас стало defer recovery, он изменился, они его специально сделали менее удобным для того, чтобы не использовали исключения для передачи управления."
@@ -12964,7 +12964,7 @@
       "id": "65c9a1a585d327a2ec120030",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5365.31,
       "etime": 5369.44,
       "text": "А насчет объектно-ориентированного подхода есть интересный анекдот?"
@@ -13054,7 +13054,7 @@
       "id": "65c9a1a585d327a2ec12003a",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5402.11,
       "etime": 5407.26,
       "text": "Имитабилити, ну как, ничто не мешает функции придать параметры по значению."
@@ -13063,7 +13063,7 @@
       "id": "65c9a1a585d327a2ec12003b",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5407.3,
       "etime": 5408.9,
       "text": "Создастся копия, получится копия."
@@ -13216,7 +13216,7 @@
       "id": "65c9a1a585d327a2ec12004c",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5466.45,
       "etime": 5469.16,
       "text": "Потому что Go в этом смысле не ограничивает тебя."
@@ -13225,7 +13225,7 @@
       "id": "65c9a1a585d327a2ec12004d",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5469.2,
       "etime": 5476.38,
       "text": "На самом деле, если у тебя есть структура, в которой ты хочешь, чтобы ее поля не менялись, просто эти поля не экспортируются."
@@ -13234,7 +13234,7 @@
       "id": "65c9a1a585d327a2ec12004e",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5476.4,
       "etime": 5481.84,
       "text": "И, соответственно, все, что внутри пакета находится, все может менять эти поля, а все, что снаружи, нет."
@@ -13459,7 +13459,7 @@
       "id": "65c9a1a585d327a2ec120067",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5572.22,
       "etime": 5574.66,
       "text": "Нормально, не отсыхают."
@@ -13468,7 +13468,7 @@
       "id": "65c9a1a585d327a2ec120068",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5574.72,
       "etime": 5583.47,
       "text": "Если сравнивать с другими языками, которые я писал до этого, если сравнивать с C++, на котором я много писал, то Go существенно проще."
@@ -13477,7 +13477,7 @@
       "id": "65c9a1a585d327a2ec120069",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5585.34,
       "etime": 5593.89,
       "text": "Прям в разы, потому что в C++ отстрелить себя ногу есть миллион способов, и когда там одно и то же ключевое слово в разных контекстах означает разные вещи, это ужасно."
@@ -13486,7 +13486,7 @@
       "id": "65c9a1a585d327a2ec12006a",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5593.93,
       "etime": 5595.17,
       "text": "В Go все гораздо проще."
@@ -13495,7 +13495,7 @@
       "id": "65c9a1a585d327a2ec12006b",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5595.23,
       "etime": 5600.27,
       "text": "Если сравнивать с Ruby и Python, то Go гораздо быстрее, конечно."
@@ -13504,7 +13504,7 @@
       "id": "65c9a1a585d327a2ec12006c",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5600.33,
       "etime": 5604.05,
       "text": "При этом он не сильно меня по сравнению с Ruby и с Python ограничивает."
@@ -13540,7 +13540,7 @@
       "id": "65c9a1a585d327a2ec120070",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5624.03,
       "etime": 5636.2,
       "text": "Ну, вот я бы сказал, что он там, не знаю, дает мне 90% того, что дает Ruby Python, да, то есть да, как бы есть статическая типизация, да, строгая, но при этом там есть duck typing, например, и так далее."
@@ -13549,7 +13549,7 @@
       "id": "65c9a1a585d327a2ec120071",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5636.24,
       "etime": 5639.63,
       "text": "Это компилируемый язык, но при этом компиляция очень быстрая и так далее."
@@ -13558,7 +13558,7 @@
       "id": "65c9a1a585d327a2ec120072",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5639.67,
       "etime": 5641.05,
       "text": "Я бы сказал, что не сильно."
@@ -13612,7 +13612,7 @@
       "id": "65c9a1a585d327a2ec120078",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5672.56,
       "etime": 5676,
       "text": "Ну, это, грубо говоря, чтобы не перепутать присвоение и определение."
@@ -13621,7 +13621,7 @@
       "id": "65c9a1a585d327a2ec120079",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5676.16,
       "etime": 5684.08,
       "text": "То есть двоеточие равно – это определение, а равно – это присваивание."
@@ -13639,7 +13639,7 @@
       "id": "65c9a1a585d327a2ec12007b",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5686.44,
       "etime": 5688.92,
       "text": "Ну, в смысле… Двоеточие равно – это как new trpr decider, да?"
@@ -13648,7 +13648,7 @@
       "id": "65c9a1a585d327a2ec12007c",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5691.1,
       "etime": 5691.54,
       "text": "Не совсем."
@@ -13657,7 +13657,7 @@
       "id": "65c9a1a585d327a2ec12007d",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5691.64,
       "etime": 5697.25,
       "text": "Двоеточие равно это там, если там пишешь foo, двоеточие равно 42, то это то же самое, что var foo равно 42."
@@ -13666,7 +13666,7 @@
       "id": "65c9a1a585d327a2ec12007e",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5698.11,
       "etime": 5701.61,
       "text": "Это определение переменной и присвоение значения, да."
@@ -13693,7 +13693,7 @@
       "id": "65c9a1a585d327a2ec120081",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5706.29,
       "etime": 5710.94,
       "text": "В следующей строчке нельзя написать foo, двоеточие равно 42, потому что foo уже определено."
@@ -13702,7 +13702,7 @@
       "id": "65c9a1a585d327a2ec120082",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5710.98,
       "etime": 5715.32,
       "text": "Это именно для того, чтобы не перепутать создание новой переменной и присвоение значения старой."
@@ -13747,7 +13747,7 @@
       "id": "65c9a1a585d327a2ec120087",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5739.64,
       "etime": 5744.04,
       "text": "Ну, потому что у Го действительно довольно специфичное понимание, кто такие идиоты."
@@ -13765,7 +13765,7 @@
       "id": "65c9a1a585d327a2ec120089",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5745.38,
       "etime": 5746.66,
       "text": "Да, можно так сказать."
@@ -13774,7 +13774,7 @@
       "id": "65c9a1a585d327a2ec12008a",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5746.7,
       "etime": 5752.75,
       "text": "Потому что у авторов действительно свой опыт, который они переносят на язык."
@@ -13783,7 +13783,7 @@
       "id": "65c9a1a585d327a2ec12008b",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5752.81,
       "etime": 5756.33,
       "text": "Он сильно не совпадает с нашим, можно сказать."
@@ -13801,7 +13801,7 @@
       "id": "65c9a1a585d327a2ec12008d",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5760.55,
       "etime": 5761.19,
       "text": "Я не соглашусь."
@@ -13837,7 +13837,7 @@
       "id": "65c9a1a585d327a2ec120091",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5782.71,
       "etime": 5783.35,
       "text": "Давай."
@@ -13846,7 +13846,7 @@
       "id": "65c9a1a585d327a2ec120092",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5783.45,
       "etime": 5794.32,
       "text": "Ну, вообще, история зарождения языка Go заключается в том, что Роб Пайк запустил компиляцию C++-проектов в Гугле, которая шла 45 минут, и у него было время подумать, пока она компилируется."
@@ -13855,7 +13855,7 @@
       "id": "65c9a1a585d327a2ec120093",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5794.36,
       "etime": 5799.36,
       "text": "И в этот момент он начал думать о том, что он хочет сделать новый язык, который не будет компилироваться так долго."
@@ -14017,7 +14017,7 @@
       "id": "65c9a1a585d327a2ec1200a5",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5882.04,
       "etime": 5883.62,
       "text": "Да."
@@ -14026,7 +14026,7 @@
       "id": "65c9a1a585d327a2ec1200a6",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5883.74,
       "etime": 5886.96,
       "text": "Ну, я так понимаю, что это просто невозможно сделать сейчас."
@@ -14035,7 +14035,7 @@
       "id": "65c9a1a585d327a2ec1200a7",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5886.98,
       "etime": 5888.43,
       "text": "Почему?"
@@ -14089,7 +14089,7 @@
       "id": "65c9a1a585d327a2ec1200ad",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5909.64,
       "etime": 5917.31,
       "text": "Я так понимаю, что если это сделать, то это придет к большему изменению внутри и пользы особо никакой не будет."
@@ -14098,7 +14098,7 @@
       "id": "65c9a1a585d327a2ec1200ae",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5917.55,
       "etime": 5918.19,
       "text": "То, что я знаю."
@@ -14215,7 +14215,7 @@
       "id": "65c9a1a585d327a2ec1200bb",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5956.23,
       "etime": 5957.83,
       "text": "Инкапсуляция-то как раз есть."
@@ -14233,7 +14233,7 @@
       "id": "65c9a1a585d327a2ec1200bd",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5959.9,
       "etime": 5962.58,
       "text": "На уровне экспортированной поли или нет."
@@ -14242,7 +14242,7 @@
       "id": "65c9a1a585d327a2ec1200be",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5963.67,
       "etime": 5966.47,
       "text": "Или ты имеешь в виду, что методов нету приватных?"
@@ -14251,7 +14251,7 @@
       "id": "65c9a1a585d327a2ec1200bf",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5966.49,
       "etime": 5968.62,
       "text": "Ну, они тоже есть."
@@ -14260,7 +14260,7 @@
       "id": "65c9a1a585d327a2ec1200c0",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5968.7,
       "etime": 5969.18,
       "text": "Я не знаю."
@@ -14278,7 +14278,7 @@
       "id": "65c9a1a585d327a2ec1200c2",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5970.56,
       "etime": 5971.02,
       "text": "Да, есть."
@@ -14287,7 +14287,7 @@
       "id": "65c9a1a585d327a2ec1200c3",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5971.06,
       "etime": 5974.78,
       "text": "Ну, которые с маленькой буквы пишутся, это не экспортированные методы из пакета."
@@ -14296,7 +14296,7 @@
       "id": "65c9a1a585d327a2ec1200c4",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5974.82,
       "etime": 5977.02,
       "text": "Но они на уровне пакета, да."
@@ -14323,7 +14323,7 @@
       "id": "65c9a1a585d327a2ec1200c7",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5982.3,
       "etime": 5983.68,
       "text": "Да, примерно так."
@@ -14332,7 +14332,7 @@
       "id": "65c9a1a585d327a2ec1200c8",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5983.7,
       "etime": 5984.5,
       "text": "Ну, не совсем."
@@ -14341,7 +14341,7 @@
       "id": "65c9a1a585d327a2ec1200c9",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 5984.54,
       "etime": 5989.81,
       "text": "В Python все-таки его можно вызвать, а вот в Go из другого пакета совсем никак не вызвать."
@@ -14530,7 +14530,7 @@
       "id": "65c9a1a585d327a2ec1200de",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6064.43,
       "etime": 6065.31,
       "text": "Нет, что-то со всеми."
@@ -14539,7 +14539,7 @@
       "id": "65c9a1a585d327a2ec1200df",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6065.45,
       "etime": 6073.19,
       "text": "Есть структуры обычные, у них есть функции, которые в качестве первого аргумента принимают указатель на структуру, ну или саму структуру."
@@ -14548,7 +14548,7 @@
       "id": "65c9a1a585d327a2ec1200e0",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6073.21,
       "etime": 6075.21,
       "text": "Это на самом деле так же, как в питоне, по сути, сделано."
@@ -14620,7 +14620,7 @@
       "id": "65c9a1a585d327a2ec1200e8",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6102.3,
       "etime": 6104.18,
       "text": "В ГО это сильно проще."
@@ -14629,7 +14629,7 @@
       "id": "65c9a1a585d327a2ec1200e9",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6104.2,
       "etime": 6108.14,
       "text": "Там есть типы, соответственно, есть структуры, есть привязанные к ним методы."
@@ -14638,7 +14638,7 @@
       "id": "65c9a1a585d327a2ec1200ea",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6108.2,
       "etime": 6112.13,
       "text": "А вот с полиморфизмом действительно не все так обычно, но, наверное, Путин сейчас расскажет."
@@ -14701,7 +14701,7 @@
       "id": "65c9a1a585d327a2ec1200f1",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6140.58,
       "etime": 6142.9,
       "text": "Нет, это скорее замена наследования."
@@ -14710,7 +14710,7 @@
       "id": "65c9a1a585d327a2ec1200f2",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6142.98,
       "etime": 6144.84,
       "text": "Это не работает как наследование."
@@ -14719,7 +14719,7 @@
       "id": "65c9a1a585d327a2ec1200f3",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6144.88,
       "etime": 6146.22,
       "text": "Это как бы встраивание."
@@ -14728,7 +14728,7 @@
       "id": "65c9a1a585d327a2ec1200f4",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6146.28,
       "etime": 6150.34,
       "text": "Но оно для другого все-таки."
@@ -14737,7 +14737,7 @@
       "id": "65c9a1a585d327a2ec1200f5",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6150.38,
       "etime": 6150.72,
       "text": "Для чего?"
@@ -14746,7 +14746,7 @@
       "id": "65c9a1a585d327a2ec1200f6",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6151.86,
       "etime": 6155.84,
       "text": "Наследование означает, что что-то является чем-то."
@@ -14755,7 +14755,7 @@
       "id": "65c9a1a585d327a2ec1200f7",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6155.9,
       "etime": 6160.99,
       "text": "А встраивание — это, по сути, наличие поля, которое просто анонимно доступно извне."
@@ -14764,7 +14764,7 @@
       "id": "65c9a1a585d327a2ec1200f8",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6161.03,
       "etime": 6166.27,
       "text": "То есть у него можно вызывать методы, например, не указывая имя поля."
@@ -14800,7 +14800,7 @@
       "id": "65c9a1a585d327a2ec1200fc",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6175.33,
       "etime": 6184.36,
       "text": "То есть это действительно похоже на... Но ключевое отличие от наследования в том, что нет динамического понимательства."
@@ -14809,7 +14809,7 @@
       "id": "65c9a1a585d327a2ec1200fd",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6184.38,
       "etime": 6190.32,
       "text": "То есть указатель будет именно на это внутреннее поле приемника метода, а не внешнее."
@@ -14827,7 +14827,7 @@
       "id": "65c9a1a585d327a2ec1200ff",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6198.59,
       "etime": 6199.37,
       "text": "Можно и так сказать."
@@ -14836,7 +14836,7 @@
       "id": "65c9a1a585d327a2ec120100",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6199.39,
       "etime": 6208.72,
       "text": "На самом деле все люди, которые приходят, давайте я сейчас ногой сделаю наследование и полиморфизм, все обламываются, потому что это невозможно сделать прям так, сходу."
@@ -14845,7 +14845,7 @@
       "id": "65c9a1a585d327a2ec120101",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6208.78,
       "etime": 6215.09,
       "text": "То есть полиморфизм реализуется тем образом, что у нас у структуры есть некое поведение, оно заключается в метод."
@@ -14854,7 +14854,7 @@
       "id": "65c9a1a585d327a2ec120102",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6215.75,
       "etime": 6222.27,
       "text": "Дальше делается интерфейс, который говорит о том, что все структуры реализуют этот метод и делают это вот что-то другое, разное."
@@ -14863,7 +14863,7 @@
       "id": "65c9a1a585d327a2ec120103",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6222.31,
       "etime": 6227.59,
       "text": "А дальше метод, который принимает эти структуры, которые чем-то отличаются, принимает эту структуру."
@@ -14872,7 +14872,7 @@
       "id": "65c9a1a585d327a2ec120104",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6227.61,
       "etime": 6231.15,
       "text": "И тут интересный момент в том, что этот метод, он внешний по отношению к этой структуре."
@@ -14881,7 +14881,7 @@
       "id": "65c9a1a585d327a2ec120105",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6231.17,
       "etime": 6235.19,
       "text": "То есть, по сути, это просто отдельные функции."
@@ -14890,7 +14890,7 @@
       "id": "65c9a1a585d327a2ec120106",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6235.21,
       "etime": 6240.41,
       "text": "И это, конечно, удивляет людей, которые приходят с Java или C++."
@@ -14917,7 +14917,7 @@
       "id": "65c9a1a585d327a2ec120109",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6248.15,
       "etime": 6252.08,
       "text": "Им пока что это проще, но непривычно, и, скорее всего, они уйдут обратно."
@@ -14962,7 +14962,7 @@
       "id": "65c9a1a585d327a2ec12010e",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6273.12,
       "etime": 6274.5,
       "text": "Я просто, на самом деле, криво объяснил."
@@ -14971,7 +14971,7 @@
       "id": "65c9a1a585d327a2ec12010f",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6274.56,
       "etime": 6278.47,
       "text": "То есть у нас вот есть какая-то функция, которая принимает один аргумент."
@@ -14980,7 +14980,7 @@
       "id": "65c9a1a585d327a2ec120110",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6278.49,
       "etime": 6281.51,
       "text": "Этот аргумент, про него известно, что он реализует какой-то интерфейс."
@@ -14989,7 +14989,7 @@
       "id": "65c9a1a585d327a2ec120111",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6282.44,
       "etime": 6289.42,
       "text": "Как раз за этим интерфейсом скрыта разница между теми реальными структурами, которые он принимает."
@@ -14998,7 +14998,7 @@
       "id": "65c9a1a585d327a2ec120112",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6289.46,
       "etime": 6299.13,
       "text": "Ну, то есть, грубо говоря, он принимает что-то похожее на утку, и дальше ему можно передать там и утку, и гуся, и все остальное, у чего есть метод DAC, грубо говоря."
@@ -15016,7 +15016,7 @@
       "id": "65c9a1a585d327a2ec120114",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6310.49,
       "etime": 6313.37,
       "text": "А здесь это не обязательно структура, это именно интерфейс."
@@ -15025,7 +15025,7 @@
       "id": "65c9a1a585d327a2ec120115",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6313.43,
       "etime": 6316.53,
       "text": "То есть любая вещь, которая реализует какие-то методы."
@@ -15043,7 +15043,7 @@
       "id": "65c9a1a585d327a2ec120117",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6321.81,
       "etime": 6327.47,
       "text": "Я бы сказал, что там виртуальные методы реализованы через дактайпинг."
@@ -15052,7 +15052,7 @@
       "id": "65c9a1a585d327a2ec120118",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6327.57,
       "etime": 6327.77,
       "text": "Ну да."
@@ -15115,7 +15115,7 @@
       "id": "65c9a1a585d327a2ec12011f",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6358.63,
       "etime": 6362.02,
       "text": "На самом деле на Go они нужны реже, чем кажется."
@@ -15124,7 +15124,7 @@
       "id": "65c9a1a585d327a2ec120120",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6362.08,
       "etime": 6369.7,
       "text": "Кажется, что они нужны всегда, а на практике довольно редко."
@@ -15133,7 +15133,7 @@
       "id": "65c9a1a585d327a2ec120121",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6369.74,
       "etime": 6373.8,
       "text": "Это чисто из моего опыта программирования на языке."
@@ -15142,7 +15142,7 @@
       "id": "65c9a1a585d327a2ec120122",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6373.84,
       "etime": 6376.22,
       "text": "Тут сложно сказать, что является причиной, а что следствием."
@@ -15151,7 +15151,7 @@
       "id": "65c9a1a585d327a2ec120123",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6376.42,
       "etime": 6380.38,
       "text": "То ли я их не использую, потому что их нет, то ли потому что они особо и не нужны."
@@ -15178,7 +15178,7 @@
       "id": "65c9a1a585d327a2ec120126",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6393.04,
       "etime": 6396.18,
       "text": "Ну, то есть есть, не знаю, как минимум три варианта."
@@ -15187,7 +15187,7 @@
       "id": "65c9a1a585d327a2ec120127",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6396.26,
       "etime": 6400.42,
       "text": "Первый вариант, это как я уже пытался описать, это как раз через интерфейсы."
@@ -15196,7 +15196,7 @@
       "id": "65c9a1a585d327a2ec120128",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6400.46,
       "etime": 6404.14,
       "text": "Второй вариант, это через пустой интерфейс, который, не знаю, является там..."
@@ -15205,7 +15205,7 @@
       "id": "65c9a1a585d327a2ec120129",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6405.05,
       "etime": 6413.89,
       "text": "базовым самым типом, точнее даже не типа, а просто будет звездочка, по сути, которую можно к чему угодно привезти безопасно и проверить, что получилось."
@@ -15268,7 +15268,7 @@
       "id": "65c9a1a585d327a2ec120130",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6439.13,
       "etime": 6448.61,
       "text": "Вот, для этого можно использовать, опять же, либо интерфейсы, если это известно, как бы, что это, но интерфейсы, как бы, не очень хорошо работают, если тебе нужны какие-то, не знаю, базовые типы, да."
@@ -15277,7 +15277,7 @@
       "id": "65c9a1a585d327a2ec120131",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6448.65,
       "etime": 6454.16,
       "text": "В этом случае либо пишут код, либо делают код-генерацию."
@@ -15286,7 +15286,7 @@
       "id": "65c9a1a585d327a2ec120132",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6454.2,
       "etime": 6455.14,
       "text": "К сожалению, пока так."
@@ -15295,7 +15295,7 @@
       "id": "65c9a1a585d327a2ec120133",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6456.64,
       "etime": 6464.38,
       "text": "Это, на самом деле, известная проблема, и разработчики ГО, грубо говоря, пытаются выбрать вариант дженериков, который бы их устроил."
@@ -15304,7 +15304,7 @@
       "id": "65c9a1a585d327a2ec120134",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6464.4,
       "etime": 6466.66,
       "text": "Там есть большие статьи на эту тему."
@@ -15313,7 +15313,7 @@
       "id": "65c9a1a585d327a2ec120135",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6466.7,
       "etime": 6475.37,
       "text": "Грубо говоря, они выбирают, что тормозить, медленнее работать будет либо компилятор, либо в процессе выполнения, либо программисту больше писать."
@@ -15322,7 +15322,7 @@
       "id": "65c9a1a585d327a2ec120136",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6475.59,
       "etime": 6477.23,
       "text": "Пока что программисты больше писать."
@@ -15376,7 +15376,7 @@
       "id": "65c9a1a585d327a2ec12013c",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6494.79,
       "etime": 6499.69,
       "text": "И, соответственно, текущее решение этой проблемы в год – то, что тормозит программист."
@@ -15385,7 +15385,7 @@
       "id": "65c9a1a585d327a2ec12013d",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6499.73,
       "etime": 6503.22,
       "text": "Он пишет дублирующий код или использует код генерации."
@@ -15475,7 +15475,7 @@
       "id": "65c9a1a585d327a2ec120147",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6534.39,
       "etime": 6538.72,
       "text": "Ну вот после перехода из языков, которые долго компилируются, переход на Go, он такой качественный."
@@ -15484,7 +15484,7 @@
       "id": "65c9a1a585d327a2ec120148",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6538.74,
       "etime": 6542.66,
       "text": "Там компилирование даже очень большой программы занимает реально секунду."
@@ -15538,7 +15538,7 @@
       "id": "65c9a1a585d327a2ec12014e",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6577.27,
       "etime": 6582.68,
       "text": "Ну, вот я бы сказал, что просто переход к быстрой компиляции, это все-таки такой качественный скачок именно в том, как ты работаешь."
@@ -15547,7 +15547,7 @@
       "id": "65c9a1a585d327a2ec12014f",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6583.27,
       "etime": 6592.71,
       "text": "То есть, когда ты сохранил файл, они у тебя автоматически сохранились, автоматически прогнались тесты, и ты не останавливаясь пишешь дальше, и там у тебя через 2 секунды появляется значок о том, что все окей."
@@ -15556,7 +15556,7 @@
       "id": "65c9a1a585d327a2ec120150",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6592.75,
       "etime": 6595.07,
       "text": "Это меняет сам подход, как ты работаешь."
@@ -15637,7 +15637,7 @@
       "id": "65c9a1a585d327a2ec120159",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6620.98,
       "etime": 6622.38,
       "text": "Да нет."
@@ -15691,7 +15691,7 @@
       "id": "65c9a1a585d327a2ec12015f",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6637.67,
       "etime": 6644.53,
       "text": "Но это скорее для того, чтобы потом, просто когда ты возвращаешься к этому потом, это уже обычно сложнее к этому вернуться."
@@ -15700,7 +15700,7 @@
       "id": "65c9a1a585d327a2ec120160",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6644.55,
       "etime": 6645.93,
       "text": "Вот и все."
@@ -15880,7 +15880,7 @@
       "id": "65c9a1a585d327a2ec120174",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6745.95,
       "etime": 6752.09,
       "text": "Но я бы еще добавил, что еще вещи, которые есть в C++, которые нет в Go, это препроцессор."
@@ -15916,7 +15916,7 @@
       "id": "65c9a1a585d327a2ec120178",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6761.18,
       "etime": 6772.78,
       "text": "Ну, на практике как раз-то вот она и именно гарда включения, да, то есть вот это вот объявление, когда инклюзив файлы, объявление кайдера специально, это как раз вот вещь, которая тормозит компенсацию чаще всего."
@@ -16240,7 +16240,7 @@
       "id": "65c9a1a585d327a2ec12019c",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6962.14,
       "etime": 6968.63,
       "text": "Ну, как раз очень многие нелюбители Go и говорят, что это ерунда, это всегда можно сделать в библиотеке отдельно."
@@ -16249,7 +16249,7 @@
       "id": "65c9a1a585d327a2ec12019d",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6968.65,
       "etime": 6975.39,
       "text": "Как раз то, что это сделали в базовом языке и сделали такой простой удобный синтекс, да, это одна из киллер фич, я бы сказал."
@@ -16312,7 +16312,7 @@
       "id": "65c9a1a585d327a2ec1201a4",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 6996.86,
       "etime": 7015.07,
       "text": "Ну, библиотека у нее нормальная, то есть она, не знаю, не доходит пока до питоновской, конечно, то есть в питоне она гораздо мощнее, но при этом там из коробки есть очень много хороших вещей, которых там, не знаю, в том же питоне, например, нет, да, то есть библиотека для сети и для HTTP, она из коробки поддерживает там."
@@ -16321,7 +16321,7 @@
       "id": "65c9a1a585d327a2ec1201a5",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7015.83,
       "etime": 7020.59,
       "text": "Много последних фич конца прошлого века."
@@ -16330,7 +16330,7 @@
       "id": "65c9a1a585d327a2ec1201a6",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7020.65,
       "etime": 7021.25,
       "text": "Кипа."
@@ -16339,7 +16339,7 @@
       "id": "65c9a1a585d327a2ec1201a7",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7021.33,
       "etime": 7024.1,
       "text": "Ну, Kipa Live, Pipeline, нет, Pipeline там нет."
@@ -16348,7 +16348,7 @@
       "id": "65c9a1a585d327a2ec1201a8",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7025.02,
       "etime": 7030.04,
       "text": "Kipa Live, HTTP1, Chunk Encoding, автоматическая декомпрессия, автоматическое сжатие и так далее."
@@ -16483,7 +16483,7 @@
       "id": "65c9a1a585d327a2ec1201b7",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7069.19,
       "etime": 7072.23,
       "text": "Нет, этот выбор авторов там можно вполне сделать."
@@ -16492,7 +16492,7 @@
       "id": "65c9a1a585d327a2ec1201b8",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7072.35,
       "etime": 7073.31,
       "text": "Нормально."
@@ -16510,7 +16510,7 @@
       "id": "65c9a1a585d327a2ec1201ba",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7076.55,
       "etime": 7085.46,
       "text": "Не, ну, в смысле, в стандартной библиотеке работа как бы с сертификатами, да, то есть там можно его проверить, не проверить, можно принять там самоподписанное, то есть это возможно."
@@ -16519,7 +16519,7 @@
       "id": "65c9a1a585d327a2ec1201bb",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7085.48,
       "etime": 7088.1,
       "text": "Почему в Докере это не сделали, да, я не знаю."
@@ -16555,7 +16555,7 @@
       "id": "65c9a1a585d327a2ec1201bf",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7097.8,
       "etime": 7099.22,
       "text": "Хорошего ничего."
@@ -16564,7 +16564,7 @@
       "id": "65c9a1a585d327a2ec1201c0",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7100.52,
       "etime": 7108.81,
       "text": "Нет, я бы сказал, что действительно этот язык не для того, чтобы придумывать какие-то новые фичи или эволюционировать с старта."
@@ -16573,7 +16573,7 @@
       "id": "65c9a1a585d327a2ec1201c1",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7108.85,
       "etime": 7111.91,
       "text": "Говорили, что одна из киллер-фич — это его конкурентность."
@@ -16582,7 +16582,7 @@
       "id": "65c9a1a585d327a2ec1201c2",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7111.95,
       "etime": 7115.59,
       "text": "Я бы сказал, что одна из главных его киллер-фич — это его простота."
@@ -16591,7 +16591,7 @@
       "id": "65c9a1a585d327a2ec1201c3",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7115.63,
       "etime": 7121.36,
       "text": "Он простой, он сверхпростой, и поэтому на нем просто удобно писать."
@@ -17176,7 +17176,7 @@
       "id": "65c9a1a585d327a2ec120204",
       "issue": 399,
       "type": "cc",
-      "author": "GuestAlexey399",
+      "author": "AlexeyRuby",
       "stime": 7378.07,
       "etime": 7382.46,
       "text": "Да, тут нужно задуматься, почему оно все так."

@@ -1,0 +1,129 @@
+description: Cross-episode comparisons requiring manual review (avg between 0.4 and 0.8)
+total: 14
+tasks:
+- speaker: Alex
+  episode_a: 2
+  episode_b: 5
+  avg_score: 0.4221
+  per_model:
+    pyannote: 0.4207
+    ecapa: 0.3865
+    titanet: 0.459
+  action: investigate
+- speaker: Alex
+  episode_a: 2
+  episode_b: 6
+  avg_score: 0.4425
+  per_model:
+    pyannote: 0.4296
+    ecapa: 0.4228
+    titanet: 0.4751
+  action: investigate
+- speaker: Alex
+  episode_a: 2
+  episode_b: 17
+  avg_score: 0.5482
+  per_model:
+    pyannote: 0.5075
+    ecapa: 0.5249
+    titanet: 0.6123
+  action: investigate
+- speaker: Alex
+  episode_a: 2
+  episode_b: 18
+  avg_score: 0.5319
+  per_model:
+    pyannote: 0.4889
+    ecapa: 0.4974
+    titanet: 0.6093
+  action: investigate
+- speaker: Alex
+  episode_a: 5
+  episode_b: 17
+  avg_score: 0.6664
+  per_model:
+    pyannote: 0.6376
+    ecapa: 0.6456
+    titanet: 0.7159
+  action: investigate
+- speaker: Alex
+  episode_a: 5
+  episode_b: 18
+  avg_score: 0.5666
+  per_model:
+    pyannote: 0.5202
+    ecapa: 0.5349
+    titanet: 0.6448
+  action: investigate
+- speaker: Alex
+  episode_a: 6
+  episode_b: 17
+  avg_score: 0.6324
+  per_model:
+    pyannote: 0.5599
+    ecapa: 0.6373
+    titanet: 0.6999
+  action: investigate
+- speaker: Alex
+  episode_a: 6
+  episode_b: 18
+  avg_score: 0.5316
+  per_model:
+    pyannote: 0.4459
+    ecapa: 0.5211
+    titanet: 0.6279
+  action: investigate
+- speaker: Dmitry
+  episode_a: 441
+  episode_b: 517
+  avg_score: 0.7013
+  per_model:
+    pyannote: 0.6167
+    ecapa: 0.7203
+    titanet: 0.767
+  action: investigate
+- speaker: Grinch
+  episode_a: 193
+  episode_b: 196
+  avg_score: 0.6951
+  per_model:
+    pyannote: 0.6731
+    ecapa: 0.7195
+    titanet: 0.6926
+  action: investigate
+- speaker: Mika
+  episode_a: 209
+  episode_b: 211
+  avg_score: 0.7799
+  per_model:
+    pyannote: 0.7029
+    ecapa: 0.7947
+    titanet: 0.8421
+  action: investigate
+- speaker: Ruslan
+  episode_a: 299
+  episode_b: 327
+  avg_score: 0.6622
+  per_model:
+    pyannote: 0.5991
+    ecapa: 0.675
+    titanet: 0.7124
+  action: investigate
+- speaker: Ruslan
+  episode_a: 299
+  episode_b: 465
+  avg_score: 0.6187
+  per_model:
+    pyannote: 0.5357
+    ecapa: 0.639
+    titanet: 0.6813
+  action: investigate
+- speaker: Ruslan
+  episode_a: 327
+  episode_b: 465
+  avg_score: 0.7303
+  per_model:
+    pyannote: 0.6874
+    ecapa: 0.7289
+    titanet: 0.7746
+  action: investigate

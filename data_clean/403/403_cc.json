@@ -256,7 +256,7 @@
       "id": "65c9a4dc6eb6c5a753ad35fc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 79.67,
       "etime": 80.49,
       "text": "Привет."
@@ -274,7 +274,7 @@
       "id": "65c9a4dc6eb6c5a753ad35fe",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 98.3,
       "etime": 100.36,
       "text": "Ну, не то, что прямо нанесли, конечно..."
@@ -310,7 +310,7 @@
       "id": "65c9a4dc6eb6c5a753ad3602",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 109.74,
       "etime": 111.36,
       "text": "Но мне в целом понравилось."
@@ -724,7 +724,7 @@
       "id": "65c9a4dc6eb6c5a753ad3630",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 284.48,
       "etime": 286.46,
       "text": "Вот так и произносится Крио."
@@ -742,7 +742,7 @@
       "id": "65c9a4dc6eb6c5a753ad3632",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 288.29,
       "etime": 288.71,
       "text": "Да."
@@ -751,7 +751,7 @@
       "id": "65c9a4dc6eb6c5a753ad3633",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 288.75,
       "etime": 296.41,
       "text": "Это мне напомнило этот MP3-шку от Торвальдса, что это Линус Торвальдс, и я произношу Линукс как Линукс."
@@ -787,7 +787,7 @@
       "id": "65c9a4dc6eb6c5a753ad3637",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 308.1,
       "etime": 310.6,
       "text": "Я его уже давно там не видел."
@@ -796,7 +796,7 @@
       "id": "65c9a4dc6eb6c5a753ad3638",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 310.68,
       "etime": 313.56,
       "text": "И находил я его, по-моему, вообще не в исходниках."
@@ -859,7 +859,7 @@
       "id": "65c9a4dc6eb6c5a753ad363f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 346.87,
       "etime": 348.51,
       "text": "Да, легко."
@@ -868,7 +868,7 @@
       "id": "65c9a4dc6eb6c5a753ad3640",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 348.57,
       "etime": 354.18,
       "text": "В общем, вся эта история уходит своими корнями далеко-далеко."
@@ -877,7 +877,7 @@
       "id": "65c9a4dc6eb6c5a753ad3641",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 354.26,
       "etime": 357.48,
       "text": "Можно даже сказать, самое начало проекта OpenVZ."
@@ -886,7 +886,7 @@
       "id": "65c9a4dc6eb6c5a753ad3642",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 358.5,
       "etime": 361.09,
       "text": "С OpenVZ-ом-то, наверное, все уже знакомы, да?"
@@ -913,7 +913,7 @@
       "id": "65c9a4dc6eb6c5a753ad3645",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 368.51,
       "etime": 371.75,
       "text": "Да, да, да."
@@ -922,7 +922,7 @@
       "id": "65c9a4dc6eb6c5a753ad3646",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 371.77,
       "etime": 379.08,
       "text": "OpenVZ появился таким забавным образом в компании Parallels, которая тогда называлась SVSoft."
@@ -931,7 +931,7 @@
       "id": "65c9a4dc6eb6c5a753ad3647",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 379.14,
       "etime": 386.78,
       "text": "Решили, что раз уж мы делаем что-то на базе Linux, то неплохо бы взять и открыть все эти исходники."
@@ -940,7 +940,7 @@
       "id": "65c9a4dc6eb6c5a753ad3648",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 386.82,
       "etime": 390.02,
       "text": "Тем более, что лицензия предписывает."
@@ -949,7 +949,7 @@
       "id": "65c9a4dc6eb6c5a753ad3649",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 390.12,
       "etime": 397.47,
       "text": "Да и в какой-то момент ядерной команде поднадоело с переездами с ядра на ядро перетаскивать огромный патч."
@@ -958,7 +958,7 @@
       "id": "65c9a4dc6eb6c5a753ad364a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 398.82,
       "etime": 422.38,
       "text": "Взяли OpenVZ, точнее взяли продукт, который назывался Virtuoso, открыли его исходные тексты, ядра и нескольких утилит, и сказали, что вот мы сейчас возьмем и всю нашу контейнерную технологию начнем отправлять в AppStream, и будут наши патчи уже не нашими, а, так сказать, общественным достоянием."
@@ -994,7 +994,7 @@
       "id": "65c9a4dc6eb6c5a753ad364e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 444.07,
       "etime": 446.31,
       "text": "Да, это очень круто."
@@ -1003,7 +1003,7 @@
       "id": "65c9a4dc6eb6c5a753ad364f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 446.45,
       "etime": 452.25,
       "text": "Такая фича, которая одна из немногих, которую можно очень эффектно демонстрировать на всяких конференциях."
@@ -1012,7 +1012,7 @@
       "id": "65c9a4dc6eb6c5a753ad3650",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 453.25,
       "etime": 460.08,
       "text": "То есть продемонстрировать живой контейнер, это как-то непонятно, как его показывать."
@@ -1021,7 +1021,7 @@
       "id": "65c9a4dc6eb6c5a753ad3651",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 460.26,
       "etime": 470.08,
       "text": "Он такой нематериальный, то есть выходит по тем временам Кир Колышкин, набирает что-то в команд-лайне и говорит, видите вот эти буковки, это контейнер."
@@ -1030,7 +1030,7 @@
       "id": "65c9a4dc6eb6c5a753ad3652",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 470.24,
       "etime": 473.96,
       "text": "А когда контейнер мигрирует, да, это эффектно."
@@ -1039,7 +1039,7 @@
       "id": "65c9a4dc6eb6c5a753ad3653",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 474,
       "etime": 478.87,
       "text": "Показывают какой-нибудь видеоролик из контейнера, говорят, а мы его сейчас отмигрируем."
@@ -1048,7 +1048,7 @@
       "id": "65c9a4dc6eb6c5a753ad3654",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 478.89,
       "etime": 482.47,
       "text": "Видеоролик начинает дергаться, потом замирает, а потом..."
@@ -1057,7 +1057,7 @@
       "id": "65c9a4dc6eb6c5a753ad3655",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 483.43,
       "etime": 489.85,
       "text": "опять играет, а вот эти вот буквки, которые олицетворяет собой контейнер, уже мигают на другом терминале."
@@ -1066,7 +1066,7 @@
       "id": "65c9a4dc6eb6c5a753ad3656",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 489.89,
       "etime": 491.27,
       "text": "Очень эффектно."
@@ -1084,7 +1084,7 @@
       "id": "65c9a4dc6eb6c5a753ad3658",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 501.68,
       "etime": 502.14,
       "text": "Да, да."
@@ -1093,7 +1093,7 @@
       "id": "65c9a4dc6eb6c5a753ad3659",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 503.21,
       "etime": 512.36,
       "text": "Это самым прямым образом относится к криву, потому что вся вот эта технология поживой миграции, она делается в три шага."
@@ -1102,7 +1102,7 @@
       "id": "65c9a4dc6eb6c5a753ad365a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 512.38,
       "etime": 515.5,
       "text": "Ну, там, со всякими... В первом приближении в три шага."
@@ -1111,7 +1111,7 @@
       "id": "65c9a4dc6eb6c5a753ad365b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 515.52,
       "etime": 521.94,
       "text": "Сначала мы берем контейнер и все его состояние записываем в какой-нибудь файл на диске."
@@ -1120,7 +1120,7 @@
       "id": "65c9a4dc6eb6c5a753ad365c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 521.98,
       "etime": 526.66,
       "text": "Потом мы этот файл копируем на вторую машину, куда мы хотим смигрировать."
@@ -1129,7 +1129,7 @@
       "id": "65c9a4dc6eb6c5a753ad365d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 526.68,
       "etime": 530.04,
       "text": "И на той второй машине из файла состояние контейнера восстанавливаем."
@@ -1138,7 +1138,7 @@
       "id": "65c9a4dc6eb6c5a753ad365e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 531.4,
       "etime": 537.28,
       "text": "Получается, что мы контейнер взяли и перенесли живьем с одной машины на другую, а он ничего не заметил."
@@ -1147,7 +1147,7 @@
       "id": "65c9a4dc6eb6c5a753ad365f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 537.46,
       "etime": 550.63,
       "text": "А Крио как раз реализует возможность сохранить состояние контейнера в виде набора маленьких файликов и, взяв эти файлики, восстановить его обратно."
@@ -1291,7 +1291,7 @@
       "id": "65c9a4dc6eb6c5a753ad366f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 605.52,
       "etime": 607.58,
       "text": "Это вообще отличный вопрос."
@@ -1300,7 +1300,7 @@
       "id": "65c9a4dc6eb6c5a753ad3670",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 607.64,
       "etime": 611.08,
       "text": "С моей точки зрения он из двух частей состоит."
@@ -1309,7 +1309,7 @@
       "id": "65c9a4dc6eb6c5a753ad3671",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 611.16,
       "etime": 613.32,
       "text": "Первая часть заключается в том, что"
@@ -1318,7 +1318,7 @@
       "id": "65c9a4dc6eb6c5a753ad3672",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 615.31,
       "etime": 620.13,
       "text": "Ну, нужно как-то разделить состояние докера от состояния контейнера."
@@ -1327,7 +1327,7 @@
       "id": "65c9a4dc6eb6c5a753ad3673",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 620.21,
       "etime": 627.12,
       "text": "А вторая часть состоит в том, что да, у контейнера есть связи со внешним миром."
@@ -1336,7 +1336,7 @@
       "id": "65c9a4dc6eb6c5a753ad3674",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 627.2,
       "etime": 628.84,
       "text": "И этих связей огромное количество."
@@ -1345,7 +1345,7 @@
       "id": "65c9a4dc6eb6c5a753ad3675",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 629.04,
       "etime": 635.88,
       "text": "TCP-соединения и файлы — это частые, конечно, но далеко не единственные связи."
@@ -1354,7 +1354,7 @@
       "id": "65c9a4dc6eb6c5a753ad3676",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 636.66,
       "etime": 638.02,
       "text": "Ну, давайте по порядку."
@@ -1363,7 +1363,7 @@
       "id": "65c9a4dc6eb6c5a753ad3677",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 638.06,
       "etime": 638.48,
       "text": "Значит..."
@@ -1372,7 +1372,7 @@
       "id": "65c9a4dc6eb6c5a753ad3678",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 640.28,
       "etime": 642.45,
       "text": "Докер сам по себе – это такой демон."
@@ -1381,7 +1381,7 @@
       "id": "65c9a4dc6eb6c5a753ad3679",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 642.49,
       "etime": 655.9,
       "text": "Это процесс, который где-то там болтается на машине, и в него в качестве дочерних процессов выступают корневые процессы контейнеров, которые он запускает."
@@ -1390,7 +1390,7 @@
       "id": "65c9a4dc6eb6c5a753ad367a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 657.35,
       "etime": 666.99,
       "text": "Когда мы мигрируем контейнер, мы хотим мигрировать именно состояние вот этих вот корневых процессов и их детей, если они у них есть."
@@ -1399,7 +1399,7 @@
       "id": "65c9a4dc6eb6c5a753ad367b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 667.03,
       "etime": 672.52,
       "text": "А состояние самого докер-демона мы мигрировать... Ну, вот мы в параллелс не хотим."
@@ -1408,7 +1408,7 @@
       "id": "65c9a4dc6eb6c5a753ad367c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 672.58,
       "etime": 684.74,
       "text": "А вот парни из Гугла, которые недавно пришли к нам в Криву и стали задавать вопросы и немножко помогать, у них есть какие-то загадочные фантазии касательно того, что они хотят отмигрировать контейнер вместе с докер-демоном."
@@ -1426,7 +1426,7 @@
       "id": "65c9a4dc6eb6c5a753ad367e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 693.2,
       "etime": 705.53,
       "text": "Фиг их знает, вот из сумбурного объяснения этого человека, с которым я беседовал, я так понял, что у них этот сценарий сводится к тому, что у них есть компьютер, который они хотят выключить, и им оттуда надо унести вообще все контейнеры."
@@ -1435,7 +1435,7 @@
       "id": "65c9a4dc6eb6c5a753ad367f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 707.05,
       "etime": 713.59,
       "text": "И чтобы по мелочам не побираться, они берут прямо с докер-демона и все это дело уносят на вторую машину."
@@ -1444,7 +1444,7 @@
       "id": "65c9a4dc6eb6c5a753ad3680",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 713.63,
       "etime": 719.73,
       "text": "Они еще пока не очень представляют, как они будут двух докер-демонов на соседней машине друг с другом сдруживать."
@@ -1453,7 +1453,7 @@
       "id": "65c9a4dc6eb6c5a753ad3681",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 719.81,
       "etime": 723.45,
       "text": "Но, наверное, они что-нибудь придумают."
@@ -1462,7 +1462,7 @@
       "id": "65c9a4dc6eb6c5a753ad3682",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 723.55,
       "etime": 726.28,
       "text": "Вот, значит, собственно, с первой частью определились."
@@ -1471,7 +1471,7 @@
       "id": "65c9a4dc6eb6c5a753ad3683",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 726.34,
       "etime": 732.36,
       "text": "Мы хотим сохранить состояние не докер-демона, а контейнера."
@@ -1480,7 +1480,7 @@
       "id": "65c9a4dc6eb6c5a753ad3684",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 732.44,
       "etime": 732.72,
       "text": "Ага."
@@ -1489,7 +1489,7 @@
       "id": "65c9a4dc6eb6c5a753ad3685",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 733.5,
       "etime": 738.97,
       "text": "И вот вопрос, как это сделать, это, по сути, собственно, весь проект Крио и есть."
@@ -1498,7 +1498,7 @@
       "id": "65c9a4dc6eb6c5a753ad3686",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 739.07,
       "etime": 747.95,
       "text": "Потому что, когда мы только начали писать его, мы пошли, ну так, стали решать задачу в лоб."
@@ -1507,7 +1507,7 @@
       "id": "65c9a4dc6eb6c5a753ad3687",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 749.45,
       "etime": 751.35,
       "text": "Мы хотим сохранить состояние процессов."
@@ -1516,7 +1516,7 @@
       "id": "65c9a4dc6eb6c5a753ad3688",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 751.37,
       "etime": 752.23,
       "text": "Для этого что нам нужно?"
@@ -1534,7 +1534,7 @@
       "id": "65c9a4dc6eb6c5a753ad368a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 756.94,
       "etime": 762.3,
       "text": "Потом нужно узнать, какие у процессов есть ресурсы, которыми они пользуются."
@@ -1543,7 +1543,7 @@
       "id": "65c9a4dc6eb6c5a753ad368b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 762.46,
       "etime": 766.23,
       "text": "В Linux ресурсов огромное количество, это открытые файлы."
@@ -1552,7 +1552,7 @@
       "id": "65c9a4dc6eb6c5a753ad368c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 768.21,
       "etime": 776.1,
       "text": "которые могут быть просто файлами, могут быть устройствами, могут быть пайпами, сетевыми соединениями и так далее и тому подобное."
@@ -1561,7 +1561,7 @@
       "id": "65c9a4dc6eb6c5a753ad368d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 777.06,
       "etime": 779.7,
       "text": "Есть еще непосексные файлы, про них там"
@@ -1570,7 +1570,7 @@
       "id": "65c9a4dc6eb6c5a753ad368e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 780.78,
       "etime": 782.68,
       "text": "отдельно можно поговорить."
@@ -1579,7 +1579,7 @@
       "id": "65c9a4dc6eb6c5a753ad368f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 782.92,
       "etime": 786.72,
       "text": "Есть регион с виртуальной памятью и так далее."
@@ -1588,7 +1588,7 @@
       "id": "65c9a4dc6eb6c5a753ad3690",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 787.14,
       "etime": 790.88,
       "text": "Мы весь этот списочек записали и стали идти по пунктам."
@@ -1597,7 +1597,7 @@
       "id": "65c9a4dc6eb6c5a753ad3691",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 790.94,
       "etime": 794.22,
       "text": "Можем узнать, какие файлы у процесса открыты."
@@ -1606,7 +1606,7 @@
       "id": "65c9a4dc6eb6c5a753ad3692",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 794.8,
       "etime": 796.52,
       "text": "В проке есть директория."
@@ -1615,7 +1615,7 @@
       "id": "65c9a4dc6eb6c5a753ad3693",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 796.58,
       "etime": 798.48,
       "text": "Прок — это файловая система такая."
@@ -1624,7 +1624,7 @@
       "id": "65c9a4dc6eb6c5a753ad3694",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 798.52,
       "etime": 802.39,
       "text": "Прок, пид, там под директорией fd, там все это дело сложено."
@@ -1633,7 +1633,7 @@
       "id": "65c9a4dc6eb6c5a753ad3695",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 802.41,
       "etime": 804.21,
       "text": "Замечательно."
@@ -1642,7 +1642,7 @@
       "id": "65c9a4dc6eb6c5a753ad3696",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 804.27,
       "etime": 805.45,
       "text": "Можем ли мы узнать,"
@@ -1651,7 +1651,7 @@
       "id": "65c9a4dc6eb6c5a753ad3697",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 806.49,
       "etime": 810.31,
       "text": "Как у процессора размечена виртуальная память?"
@@ -1669,7 +1669,7 @@
       "id": "65c9a4dc6eb6c5a753ad3699",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 815.5,
       "etime": 815.96,
       "text": "Мы взяли..."
@@ -1678,7 +1678,7 @@
       "id": "65c9a4dc6eb6c5a753ad369a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 817.76,
       "etime": 828.31,
       "text": "Поскольку я сам вырос из Linux Kernel команды, и люди, которые мне помогали, они тоже оттуда же выросли, нам было не впервой взять Linux ядро и что-то там поменять под себя."
@@ -1687,7 +1687,7 @@
       "id": "65c9a4dc6eb6c5a753ad369b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 828.33,
       "etime": 837.29,
       "text": "Вот мы взяли Linux ядро, сделали так, чтобы получить информацию о том, какая память у процесса имеется в наличии, было возможно."
@@ -1696,7 +1696,7 @@
       "id": "65c9a4dc6eb6c5a753ad369c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 837.35,
       "etime": 838.59,
       "text": "Отправили эти патчи в HTML."
@@ -1705,7 +1705,7 @@
       "id": "65c9a4dc6eb6c5a753ad369d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 839.97,
       "etime": 849.02,
       "text": "пока там бурление утихлет и патчи возьмут, у нас появилась возможность снять состояние памяти."
@@ -1714,7 +1714,7 @@
       "id": "65c9a4dc6eb6c5a753ad369e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 849.06,
       "etime": 851.08,
       "text": "И так дальше по списку и пошли."
@@ -1723,7 +1723,7 @@
       "id": "65c9a4dc6eb6c5a753ad369f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 851.14,
       "etime": 854.32,
       "text": "Пайпы, сетевые соединения."
@@ -1732,7 +1732,7 @@
       "id": "65c9a4dc6eb6c5a753ad36a0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 854.4,
       "etime": 859.68,
       "text": "И вот до сих пор мы с этим всем делом разгребаемся."
@@ -1741,7 +1741,7 @@
       "id": "65c9a4dc6eb6c5a753ad36a1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 859.72,
       "etime": 864.04,
       "text": "Ну, по большей части уже разгреблись."
@@ -1750,7 +1750,7 @@
       "id": "65c9a4dc6eb6c5a753ad36a2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 864.08,
       "etime": 866.22,
       "text": "Это как сохранить состояние контейнера."
@@ -1759,7 +1759,7 @@
       "id": "65c9a4dc6eb6c5a753ad36a3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 867.34,
       "etime": 873.48,
       "text": "С восстановлением состояния контейнера ситуация легче, но примерно такая же."
@@ -1768,7 +1768,7 @@
       "id": "65c9a4dc6eb6c5a753ad36a4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 874.22,
       "etime": 875.86,
       "text": "Что значит восстановить состояние контейнера?"
@@ -1777,7 +1777,7 @@
       "id": "65c9a4dc6eb6c5a753ad36a5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 875.88,
       "etime": 880.42,
       "text": "Вот у нас есть информация о том, что у нас есть процесс с пидом 2."
@@ -1786,7 +1786,7 @@
       "id": "65c9a4dc6eb6c5a753ad36a6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 880.46,
       "etime": 883.45,
       "text": "У него есть дочерний процесс с пидами 3, 4, 5."
@@ -1795,7 +1795,7 @@
       "id": "65c9a4dc6eb6c5a753ad36a7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 885.11,
       "etime": 886.85,
       "text": "У четвертого свои дети."
@@ -1804,7 +1804,7 @@
       "id": "65c9a4dc6eb6c5a753ad36a8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 886.89,
       "etime": 890.89,
       "text": "У процесса номер 1 открыт такой-то файл, у процесса номер 2 открыт такой-то файл."
@@ -1813,7 +1813,7 @@
       "id": "65c9a4dc6eb6c5a753ad36a9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 890.91,
       "etime": 892.29,
       "text": "У них там память так-то размечена."
@@ -1822,7 +1822,7 @@
       "id": "65c9a4dc6eb6c5a753ad36aa",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 895.06,
       "etime": 897.32,
       "text": "Мы, собственно, берем стандартный линексовый API."
@@ -1831,7 +1831,7 @@
       "id": "65c9a4dc6eb6c5a753ad36ab",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 898.71,
       "etime": 899.93,
       "text": "Я правильно это слово произношу?"
@@ -1867,7 +1867,7 @@
       "id": "65c9a4dc6eb6c5a753ad36af",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 902.37,
       "etime": 903.83,
       "text": "Да-да-да."
@@ -1876,7 +1876,7 @@
       "id": "65c9a4dc6eb6c5a753ad36b0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 904.07,
       "etime": 910.9,
       "text": "Мы берем Linux-овый API и, собственно, делаем те приседания, которые нужны, чтобы получить это состояние."
@@ -1885,7 +1885,7 @@
       "id": "65c9a4dc6eb6c5a753ad36b1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 910.94,
       "etime": 913.06,
       "text": "У процесса номер 2 есть дети с педами 3, 4, 5."
@@ -1894,7 +1894,7 @@
       "id": "65c9a4dc6eb6c5a753ad36b2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 913.62,
       "etime": 916.2,
       "text": "Замечательно, он зовет 3 форка."
@@ -1903,7 +1903,7 @@
       "id": "65c9a4dc6eb6c5a753ad36b3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 916.26,
       "etime": 922.48,
       "text": "У него открыт файл с именем слэш А, слэш Б, слэш С. Ну, прекрасно, есть syscall."
@@ -1921,7 +1921,7 @@
       "id": "65c9a4dc6eb6c5a753ad36b5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 923.22,
       "etime": 925.53,
       "text": "Мы его зовем и открываем файл."
@@ -1930,7 +1930,7 @@
       "id": "65c9a4dc6eb6c5a753ad36b6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 925.57,
       "etime": 926.33,
       "text": "Когда все готово,"
@@ -1939,7 +1939,7 @@
       "id": "65c9a4dc6eb6c5a753ad36b7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 927.46,
       "etime": 935.64,
       "text": "У нас процессы оказываются в том состоянии, в котором они были на тот момент, когда мы это состояние снимали."
@@ -1948,7 +1948,7 @@
       "id": "65c9a4dc6eb6c5a753ad36b8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 935.68,
       "etime": 940.14,
       "text": "Дальше их можно просто пнуть, и они побегут дальше, ничего не заметив."
@@ -2020,7 +2020,7 @@
       "id": "65c9a4dc6eb6c5a753ad36c0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 964.31,
       "etime": 967.21,
       "text": "А это уже мы плавно переходим ко второй части вопроса."
@@ -2029,7 +2029,7 @@
       "id": "65c9a4dc6eb6c5a753ad36c1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 967.31,
       "etime": 973.19,
       "text": "У процессов есть связи со внешним миром."
@@ -2038,7 +2038,7 @@
       "id": "65c9a4dc6eb6c5a753ad36c2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 973.25,
       "etime": 975.17,
       "text": "Условно со внешним миром."
@@ -2047,7 +2047,7 @@
       "id": "65c9a4dc6eb6c5a753ad36c3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 975.77,
       "etime": 977.59,
       "text": "У Крио основная концепция какая?"
@@ -2056,7 +2056,7 @@
       "id": "65c9a4dc6eb6c5a753ad36c4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 977.65,
       "etime": 980.25,
       "text": "Ей дают пит процесса, с которого начать."
@@ -2065,7 +2065,7 @@
       "id": "65c9a4dc6eb6c5a753ad36c5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 980.29,
       "etime": 983.29,
       "text": "Она собирает все под дерево процессов, который сидит под ним."
@@ -2074,7 +2074,7 @@
       "id": "65c9a4dc6eb6c5a753ad36c6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 983.35,
       "etime": 985.53,
       "text": "Собирает все ресурсы, которыми они пользуются."
@@ -2083,7 +2083,7 @@
       "id": "65c9a4dc6eb6c5a753ad36c7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 986.41,
       "etime": 996.7,
       "text": "А дальше пытается понять, а все возможные, грубо говоря, средства IPC, которыми процессы пользуются, они замкнуты внутри вот этого поддерева?"
@@ -2092,7 +2092,7 @@
       "id": "65c9a4dc6eb6c5a753ad36c8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 996.74,
       "etime": 1005.24,
       "text": "То есть если у процесса А есть пайп, то второй конец этого пайпа, он внутри поддерева растущего из этого процесса или он где-то еще?"
@@ -2101,7 +2101,7 @@
       "id": "65c9a4dc6eb6c5a753ad36c9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1005.28,
       "etime": 1006.68,
       "text": "И вот такие вот вопросы."
@@ -2110,7 +2110,7 @@
       "id": "65c9a4dc6eb6c5a753ad36ca",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1006.7,
       "etime": 1009.75,
       "text": "Оно это дело анализирует, и если видит, что есть что-то висящее наружу,"
@@ -2128,7 +2128,7 @@
       "id": "65c9a4dc6eb6c5a753ad36cc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1020.12,
       "etime": 1022.92,
       "text": "К Рио нужно отдельно сказать, что «да, я к TCP-соединениям готов»."
@@ -2137,7 +2137,7 @@
       "id": "65c9a4dc6eb6c5a753ad36cd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1022.94,
       "etime": 1028.13,
       "text": "И вот давай тогда уже перейдем к TCP-соединениям, а то я все вокруг да около хожу."
@@ -2146,7 +2146,7 @@
       "id": "65c9a4dc6eb6c5a753ad36ce",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1028.17,
       "etime": 1030.23,
       "text": "Значит, с TCP-соединением ситуация…"
@@ -2155,7 +2155,7 @@
       "id": "65c9a4dc6eb6c5a753ad36cf",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1033.33,
       "etime": 1038.23,
       "text": "С одной стороны простая, с другой стороны сложная."
@@ -2164,7 +2164,7 @@
       "id": "65c9a4dc6eb6c5a753ad36d0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1038.31,
       "etime": 1041.27,
       "text": "Что такое TCP-соединение с точки зрения ядра?"
@@ -2173,7 +2173,7 @@
       "id": "65c9a4dc6eb6c5a753ad36d1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1041.29,
       "etime": 1048.37,
       "text": "С точки зрения ядра TCP-соединение это объект, который в ядре называется сокет."
@@ -2182,7 +2182,7 @@
       "id": "65c9a4dc6eb6c5a753ad36d2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1048.43,
       "etime": 1050.59,
       "text": "Удивительно, правда?"
@@ -2191,7 +2191,7 @@
       "id": "65c9a4dc6eb6c5a753ad36d3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1050.65,
       "etime": 1056.63,
       "text": "На этом сокете сохранено какое-то количество внутренней ядерной информации."
@@ -2200,7 +2200,7 @@
       "id": "65c9a4dc6eb6c5a753ad36d4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1056.65,
       "etime": 1058.62,
       "text": "Например, IP-адрес..."
@@ -2209,7 +2209,7 @@
       "id": "65c9a4dc6eb6c5a753ad36d5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1060.38,
       "etime": 1061.66,
       "text": "Удаленной стороны."
@@ -2218,7 +2218,7 @@
       "id": "65c9a4dc6eb6c5a753ad36d6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1062.02,
       "etime": 1063.98,
       "text": "IP-адрес локальный."
@@ -2227,7 +2227,7 @@
       "id": "65c9a4dc6eb6c5a753ad36d7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1064.16,
       "etime": 1065.54,
       "text": "Пара портов."
@@ -2236,7 +2236,7 @@
       "id": "65c9a4dc6eb6c5a753ad36d8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1065.6,
       "etime": 1068.66,
       "text": "Соседа и мой."
@@ -2245,7 +2245,7 @@
       "id": "65c9a4dc6eb6c5a753ad36d9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1068.7,
       "etime": 1077.15,
       "text": "Всякие там флажочки и регуляторы, которые настраиваются с помощью сискола под названием setsockopt."
@@ -2254,7 +2254,7 @@
       "id": "65c9a4dc6eb6c5a753ad36da",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1077.21,
       "etime": 1080.65,
       "text": "Сокетная опция."
@@ -2263,7 +2263,7 @@
       "id": "65c9a4dc6eb6c5a753ad36db",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1080.73,
       "etime": 1084.37,
       "text": "И, что уже касается непосредственно TCP-соединения,"
@@ -2272,7 +2272,7 @@
       "id": "65c9a4dc6eb6c5a753ad36dc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1087.03,
       "etime": 1091.86,
       "text": "Достаточное количество данных, которые описывает именно TCP-соединение."
@@ -2281,7 +2281,7 @@
       "id": "65c9a4dc6eb6c5a753ad36dd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1091.9,
       "etime": 1097.62,
       "text": "Это очереди пакетов, их две, с которыми мы работаем."
@@ -2290,7 +2290,7 @@
       "id": "65c9a4dc6eb6c5a753ad36de",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1097.66,
       "etime": 1107.17,
       "text": "Первая очередь – это те, которые ядро хранит для отправки в сеть, возможно, повторной, когда в сокет TCP-шный."
@@ -2299,7 +2299,7 @@
       "id": "65c9a4dc6eb6c5a753ad36df",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1108.47,
       "etime": 1112.03,
       "text": "приложение пишет, ядро может не сразу эти данные отправить."
@@ -2308,7 +2308,7 @@
       "id": "65c9a4dc6eb6c5a753ad36e0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1112.05,
       "etime": 1116.22,
       "text": "А может отправить, но все равно их потом хранить некоторое время, чтобы, возможно, их перепослать."
@@ -2317,7 +2317,7 @@
       "id": "65c9a4dc6eb6c5a753ad36e1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1116.28,
       "etime": 1121.38,
       "text": "По сути, это одна очередь просто с указателем в середину, кого мы еще не посылали."
@@ -2326,7 +2326,7 @@
       "id": "65c9a4dc6eb6c5a753ad36e2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1121.42,
       "etime": 1126.76,
       "text": "А вторая очередь это те пакеты, которые к нам пришли, которые TCP..."
@@ -2335,7 +2335,7 @@
       "id": "65c9a4dc6eb6c5a753ad36e3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1129.45,
       "etime": 1134.7,
       "text": "Автомат восстановил по порядку и уже готов их отдать приложению."
@@ -2344,7 +2344,7 @@
       "id": "65c9a4dc6eb6c5a753ad36e4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1134.76,
       "etime": 1141.45,
       "text": "Он уже обратно своему второму концу сказал, что я их получил, ак послал."
@@ -2353,7 +2353,7 @@
       "id": "65c9a4dc6eb6c5a753ad36e5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1141.49,
       "etime": 1143.19,
       "text": "Вот это вторая очередь."
@@ -2362,7 +2362,7 @@
       "id": "65c9a4dc6eb6c5a753ad36e6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1143.27,
       "etime": 1146.83,
       "text": "Плюс номерочки, которые называются TCP sequences."
@@ -2371,7 +2371,7 @@
       "id": "65c9a4dc6eb6c5a753ad36e7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1146.91,
       "etime": 1152.08,
       "text": "Это просто номера байтов, которые прошли в ту или в другую сторону."
@@ -2380,7 +2380,7 @@
       "id": "65c9a4dc6eb6c5a753ad36e8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1153.91,
       "etime": 1161.1,
       "text": "Вот концептуально, чтобы вот эту вот штуку сохранить ее состояние и восстановить ее состояние, мы должны сделать те же самые две вещи."
@@ -2389,7 +2389,7 @@
       "id": "65c9a4dc6eb6c5a753ad36e9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1161.14,
       "etime": 1172.8,
       "text": "Мы должны эти данные получить каким-то образом, из ядра их достать, а потом создать сокет и сказать ему, а теперь у тебя состояние вот такое вот, и эти цифры и очереди с пакетами запихнуть ему обратно."
@@ -2425,7 +2425,7 @@
       "id": "65c9a4dc6eb6c5a753ad36ed",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1186.76,
       "etime": 1187.9,
       "text": "А оно про них не узнает."
@@ -2470,7 +2470,7 @@
       "id": "65c9a4dc6eb6c5a753ad36f2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1203.27,
       "etime": 1204.21,
       "text": "Да, конечно."
@@ -2488,7 +2488,7 @@
       "id": "65c9a4dc6eb6c5a753ad36f4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1207.64,
       "etime": 1208.7,
       "text": "Нет, IP не меняется."
@@ -2497,7 +2497,7 @@
       "id": "65c9a4dc6eb6c5a753ad36f5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1208.74,
       "etime": 1211.22,
       "text": "Если мы переносим контейнер, то IP контейнера не меняется."
@@ -2506,7 +2506,7 @@
       "id": "65c9a4dc6eb6c5a753ad36f6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1211.3,
       "etime": 1213.24,
       "text": "Это ключевой момент в каком-то смысле."
@@ -2515,7 +2515,7 @@
       "id": "65c9a4dc6eb6c5a753ad36f7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1214.22,
       "etime": 1221.47,
       "text": "Важно, чтобы маршрут перепроложился для пакетов, чтобы они ходили не на старое место, а на новое."
@@ -2524,7 +2524,7 @@
       "id": "65c9a4dc6eb6c5a753ad36f8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1221.51,
       "etime": 1224.52,
       "text": "Это достигается как бы без криво отдельно."
@@ -2533,7 +2533,7 @@
       "id": "65c9a4dc6eb6c5a753ad36f9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1225.44,
       "etime": 1228.87,
       "text": "И это не самое трудное в этой технологии."
@@ -2560,7 +2560,7 @@
       "id": "65c9a4dc6eb6c5a753ad36fc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1253.24,
       "etime": 1254.86,
       "text": "Правильно перенастроен, да, да."
@@ -2569,7 +2569,7 @@
       "id": "65c9a4dc6eb6c5a753ad36fd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1255.74,
       "etime": 1257.1,
       "text": "Именно так."
@@ -2578,7 +2578,7 @@
       "id": "65c9a4dc6eb6c5a753ad36fe",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1257.18,
       "etime": 1260.44,
       "text": "При этом нужно выполнить маленькое граничное условие."
@@ -2587,7 +2587,7 @@
       "id": "65c9a4dc6eb6c5a753ad36ff",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1260.48,
       "etime": 1270.78,
       "text": "Пока мы вот эти все манипуляции делаем, вторая сторона не должна видеть никаких пакетов и не должна получать никаких ответов на свои пакеты."
@@ -2596,7 +2596,7 @@
       "id": "65c9a4dc6eb6c5a753ad3700",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1270.82,
       "etime": 1280.19,
       "text": "То есть, по сути дела, пока мы вот эти препараты с TCP-соединением делаем, мы их нетфильтром просто все пакеты дропаем в обе стороны, чтобы там не пролезло."
@@ -2623,7 +2623,7 @@
       "id": "65c9a4dc6eb6c5a753ad3703",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1286.22,
       "etime": 1287.78,
       "text": "Ничего не происходит."
@@ -2632,7 +2632,7 @@
       "id": "65c9a4dc6eb6c5a753ad3704",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1287.8,
       "etime": 1289.34,
       "text": "А потом опять пакеты появляются."
@@ -2641,7 +2641,7 @@
       "id": "65c9a4dc6eb6c5a753ad3705",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1289.38,
       "etime": 1291.56,
       "text": "Они как бы ходят по другим путям."
@@ -2650,7 +2650,7 @@
       "id": "65c9a4dc6eb6c5a753ad3706",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1291.66,
       "etime": 1298.19,
       "text": "Если вторая сторона достаточно любопытна, чтобы выяснять, по каким путям ходят эти себе пакеты."
@@ -2668,7 +2668,7 @@
       "id": "65c9a4dc6eb6c5a753ad3708",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1300.69,
       "etime": 1305.15,
       "text": "И все признаки, которые на этих пакетах присутствуют,"
@@ -2677,7 +2677,7 @@
       "id": "65c9a4dc6eb6c5a753ad3709",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1305.97,
       "etime": 1320.84,
       "text": "которые суть sequence number, номер порта второго конца, его IP-адрес, и там еще есть всякие TCP-специфичные вещи, они все остались прежними."
@@ -2686,7 +2686,7 @@
       "id": "65c9a4dc6eb6c5a753ad370a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1320.9,
       "etime": 1323.7,
       "text": "И клиенту как-то все равно, если у него пакет проходит..."
@@ -2695,7 +2695,7 @@
       "id": "65c9a4dc6eb6c5a753ad370b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1324.44,
       "etime": 1329.51,
       "text": "А что называется фейс-контроль и проверки на вшивость, он его принимает и продолжает работать."
@@ -2740,7 +2740,7 @@
       "id": "65c9a4dc6eb6c5a753ad3710",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1364.2,
       "etime": 1365.02,
       "text": "Да, конечно."
@@ -2749,7 +2749,7 @@
       "id": "65c9a4dc6eb6c5a753ad3711",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1365.12,
       "etime": 1376.81,
       "text": "Если мы заморозим соединение на 5 минут, а приложение считает, что за 5 минут у нас должен пройти одно сердцебиение, то да, все это дело развалится."
@@ -2758,7 +2758,7 @@
       "id": "65c9a4dc6eb6c5a753ad3712",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1376.89,
       "etime": 1378.97,
       "text": "Но, как правило, все-таки приложение..."
@@ -2767,7 +2767,7 @@
       "id": "65c9a4dc6eb6c5a753ad3713",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1379.85,
       "etime": 1388.77,
       "text": "Ну, они должны понимать, что сеть штука такая занятная, и иногда отклик может пропадать на какое-то определенное время."
@@ -2776,7 +2776,7 @@
       "id": "65c9a4dc6eb6c5a753ad3714",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1388.79,
       "etime": 1394.28,
       "text": "Вот в течение этого промежутка сокет нужно разобрать и собрать заново."
@@ -2848,7 +2848,7 @@
       "id": "65c9a4dc6eb6c5a753ad371c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1429.64,
       "etime": 1429.66,
       "text": "А..."
@@ -2857,7 +2857,7 @@
       "id": "65c9a4dc6eb6c5a753ad371d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1430.88,
       "etime": 1438.28,
       "text": "Значит, он должен быть либо вменяемым, либо мы должны сделать перенос за время меньшее, чем клиент успевает понять, что что-то произошло."
@@ -2866,7 +2866,7 @@
       "id": "65c9a4dc6eb6c5a753ad371e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1438.34,
       "etime": 1445.13,
       "text": "Именно поэтому Крио по умолчанию отказывается снимать и восстанавливать состояние TCP-соединения."
@@ -2992,7 +2992,7 @@
       "id": "65c9a4dc6eb6c5a753ad372c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1499.38,
       "etime": 1501.06,
       "text": "У нас файловые дескрипторы сохраняются."
@@ -3046,7 +3046,7 @@
       "id": "65c9a4dc6eb6c5a753ad3732",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1507.24,
       "etime": 1508.57,
       "text": "Сохранятся, конечно."
@@ -3055,7 +3055,7 @@
       "id": "65c9a4dc6eb6c5a753ad3733",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1508.61,
       "etime": 1510.97,
       "text": "Это идентификатор соединения."
@@ -3064,7 +3064,7 @@
       "id": "65c9a4dc6eb6c5a753ad3734",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1511.01,
       "etime": 1512.47,
       "text": "Пара портов и пара IP-адресов."
@@ -3073,7 +3073,7 @@
       "id": "65c9a4dc6eb6c5a753ad3735",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1512.51,
       "etime": 1514.21,
       "text": "Если хоть что-то меняется, все разваливается."
@@ -3082,7 +3082,7 @@
       "id": "65c9a4dc6eb6c5a753ad3736",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1515.07,
       "etime": 1520.99,
       "text": "Независимо от того, успели мы в тайм-аут или не успели."
@@ -3109,7 +3109,7 @@
       "id": "65c9a4dc6eb6c5a753ad3739",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1528.19,
       "etime": 1533.61,
       "text": "Мы же, поскольку работаем с контейнерами, у нас порты, что называется, виртуализованы."
@@ -3118,7 +3118,7 @@
       "id": "65c9a4dc6eb6c5a753ad373a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1533.65,
       "etime": 1536.1,
       "text": "То есть, когда мы восстанавливаем контейнер, мы ему восстанавливаем все порты, которые у него были."
@@ -3127,7 +3127,7 @@
       "id": "65c9a4dc6eb6c5a753ad373b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1537.02,
       "etime": 1538.36,
       "text": "Там конфликт возникнуть не может."
@@ -3145,7 +3145,7 @@
       "id": "65c9a4dc6eb6c5a753ad373d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1549.34,
       "etime": 1555.68,
       "text": "Мы их даже коллекционируем у нас на сайте, как можно написать приложение, чтобы криво отказался снимать его состояние."
@@ -3190,7 +3190,7 @@
       "id": "65c9a4dc6eb6c5a753ad3742",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1570,
       "etime": 1579.79,
       "text": "Ну, вообще говоря, мы там уже несколько раз даже скриво умудрились напороться на ситуацию, когда мы думали, что что-то является нетипичным, а приложение вполне стандартное."
@@ -3199,7 +3199,7 @@
       "id": "65c9a4dc6eb6c5a753ad3743",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1579.83,
       "etime": 1582.23,
       "text": "Я не знаю, SystemD вы считаете стандартным приложением?"
@@ -3208,7 +3208,7 @@
       "id": "65c9a4dc6eb6c5a753ad3744",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1582.25,
       "etime": 1582.99,
       "text": "Вполне."
@@ -3217,7 +3217,7 @@
       "id": "65c9a4dc6eb6c5a753ad3745",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1583.05,
       "etime": 1584.55,
       "text": "Нам приходится."
@@ -3226,7 +3226,7 @@
       "id": "65c9a4dc6eb6c5a753ad3746",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1584.79,
       "etime": 1586.44,
       "text": "А SystemD такие штуки делает."
@@ -3235,7 +3235,7 @@
       "id": "65c9a4dc6eb6c5a753ad3747",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1586.5,
       "etime": 1588.82,
       "text": "Нам их пришлось поддержать."
@@ -3262,7 +3262,7 @@
       "id": "65c9a4dc6eb6c5a753ad374a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1594.86,
       "etime": 1601.93,
       "text": "Значит, я вот так вот сходу могу вспомнить только самый большой геморрой, который на нас навалился."
@@ -3271,7 +3271,7 @@
       "id": "65c9a4dc6eb6c5a753ad374b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1601.99,
       "etime": 1603.25,
       "text": "Называется он Mount Namespace."
@@ -3280,7 +3280,7 @@
       "id": "65c9a4dc6eb6c5a753ad374c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1606.19,
       "etime": 1608.98,
       "text": "То есть надо расшифровать, да, я так понял?"
@@ -3289,7 +3289,7 @@
       "id": "65c9a4dc6eb6c5a753ad374d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1609.04,
       "etime": 1610.18,
       "text": "Да, да."
@@ -3298,7 +3298,7 @@
       "id": "65c9a4dc6eb6c5a753ad374e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1610.26,
       "etime": 1614.9,
       "text": "Значит, в Linux можно монтировать файловые системы, это все знают."
@@ -3307,7 +3307,7 @@
       "id": "65c9a4dc6eb6c5a753ad374f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1614.92,
       "etime": 1615.12,
       "text": "Ну да."
@@ -3316,7 +3316,7 @@
       "id": "65c9a4dc6eb6c5a753ad3750",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1615.84,
       "etime": 1622.9,
       "text": "Но оказывается, что с какой-то версией, я, честно говоря, даже сам прошлепал этот момент, с какой-то версией можно сделать следующее."
@@ -3325,7 +3325,7 @@
       "id": "65c9a4dc6eb6c5a753ad3751",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1622.98,
       "etime": 1626.3,
       "text": "Процесс новый может сказать, а я создаю свой собственный mount namespace."
@@ -3334,7 +3334,7 @@
       "id": "65c9a4dc6eb6c5a753ad3752",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1627.82,
       "etime": 1634.27,
       "text": "Это значит, что все точки монтирования, которые делает этот процесс, они невидимы во всей остальной системе."
@@ -3352,7 +3352,7 @@
       "id": "65c9a4dc6eb6c5a753ad3754",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1640.15,
       "etime": 1656.76,
       "text": "Это называется Mounting Space Пространство имен точек монтирования Причем люди, которые это писали Писал Со писал эту штуку Один из монтейнеров VFS Такая Весьма известная личность"
@@ -3361,7 +3361,7 @@
       "id": "65c9a4dc6eb6c5a753ad3755",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1658.98,
       "etime": 1659.3,
       "text": "в LKML."
@@ -3370,7 +3370,7 @@
       "id": "65c9a4dc6eb6c5a753ad3756",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1659.34,
       "etime": 1666.9,
       "text": "Они, когда это дело писали, они сделали это не просто так, что есть один набор точек монтирования, а есть другой набор точек монтирования, и их видят разные процессы."
@@ -3379,7 +3379,7 @@
       "id": "65c9a4dc6eb6c5a753ad3757",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1666.94,
       "etime": 1671.25,
       "text": "А они сделали связи между точками монтирования в разных пространствах имен."
@@ -3388,7 +3388,7 @@
       "id": "65c9a4dc6eb6c5a753ad3758",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1671.33,
       "etime": 1679.27,
       "text": "И есть возможность создать такие точки монтирования, что когда меняется что-то в одном пространстве имен, поменяется и во всех остальных."
@@ -3397,7 +3397,7 @@
       "id": "65c9a4dc6eb6c5a753ad3759",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1679.53,
       "etime": 1682.67,
       "text": "Это так называемые разделяемые и наследуемые."
@@ -3406,7 +3406,7 @@
       "id": "65c9a4dc6eb6c5a753ad375a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1682.71,
       "etime": 1683.4,
       "text": "Шерид и Слейф."
@@ -3424,7 +3424,7 @@
       "id": "65c9a4dc6eb6c5a753ad375c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1687.62,
       "etime": 1690.04,
       "text": "Это вот private называется."
@@ -3433,7 +3433,7 @@
       "id": "65c9a4dc6eb6c5a753ad375d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1690.22,
       "etime": 1694.62,
       "text": "И вот систем D, когда стартует сервисы, он создает mount namespaces."
@@ -3442,7 +3442,7 @@
       "id": "65c9a4dc6eb6c5a753ad375e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1696.89,
       "etime": 1707.06,
       "text": "Для, как мы догадываемся, из соображений безопасности, он разным сервисам делает свою собственную точку монтирования для tempfs, для slash temp."
@@ -3451,7 +3451,7 @@
       "id": "65c9a4dc6eb6c5a753ad375f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1710.24,
       "etime": 1712.32,
       "text": "Но, тем не менее, он это делает."
@@ -3460,7 +3460,7 @@
       "id": "65c9a4dc6eb6c5a753ad3760",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1712.38,
       "etime": 1720.72,
       "text": "И когда мы с этим столкнулись, мы поняли, что нам, конечно, казалось, что это очень странный сценарий, мы с ним долго не встретимся, но пришлось написать поддержку."
@@ -3496,7 +3496,7 @@
       "id": "65c9a4dc6eb6c5a753ad3764",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1729.26,
       "etime": 1730.48,
       "text": "На самом деле, это естественно."
@@ -3505,7 +3505,7 @@
       "id": "65c9a4dc6eb6c5a753ad3765",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1730.52,
       "etime": 1734.83,
       "text": "Я боюсь, что все сценарии, которые мы сейчас не поддерживаем, нам рано или поздно придется поддержать."
@@ -3523,7 +3523,7 @@
       "id": "65c9a4dc6eb6c5a753ad3767",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1743.28,
       "etime": 1747.36,
       "text": "Ну, в докере-то, конечно, но мы-то криво не для докера писали, а для нас."
@@ -3631,7 +3631,7 @@
       "id": "65c9a4dc6eb6c5a753ad3773",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1804.86,
       "etime": 1807.26,
       "text": "Да, для контейнеров такого пока есть."
@@ -3640,7 +3640,7 @@
       "id": "65c9a4dc6eb6c5a753ad3774",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1807.28,
       "etime": 1812.8,
       "text": "Такое пока есть только в наших контейнерах параллеловских."
@@ -3658,7 +3658,7 @@
       "id": "65c9a4dc6eb6c5a753ad3776",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1821.08,
       "etime": 1823.17,
       "text": "А какие облака ваши любимые?"
@@ -3676,7 +3676,7 @@
       "id": "65c9a4dc6eb6c5a753ad3778",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1831.31,
       "etime": 1833.13,
       "text": "Да, пока это разные сущности тогда."
@@ -3739,7 +3739,7 @@
       "id": "65c9a4dc6eb6c5a753ad377f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1854.68,
       "etime": 1855.24,
       "text": "Я понял."
@@ -3748,7 +3748,7 @@
       "id": "65c9a4dc6eb6c5a753ad3780",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1855.32,
       "etime": 1860.64,
       "text": "Я подумал, что запустить свой виртуальный инстанс внутри контейнера в Амазон Клауде"
@@ -3802,7 +3802,7 @@
       "id": "65c9a4dc6eb6c5a753ad3786",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1873.94,
       "etime": 1875.2,
       "text": "Ну, да, я понял."
@@ -3811,7 +3811,7 @@
       "id": "65c9a4dc6eb6c5a753ad3787",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1875.46,
       "etime": 1877.44,
       "text": "Тогда можно и там, пока миграции нет."
@@ -3820,7 +3820,7 @@
       "id": "65c9a4dc6eb6c5a753ad3788",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1877.5,
       "etime": 1879.06,
       "text": "Но мы, собственно, трудимся над этим."
@@ -3856,7 +3856,7 @@
       "id": "65c9a4dc6eb6c5a753ad378c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1898.7,
       "etime": 1899.82,
       "text": "Докера мы полюбили..."
@@ -3865,7 +3865,7 @@
       "id": "65c9a4dc6eb6c5a753ad378d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1902.1,
       "etime": 1905.56,
       "text": "Скользкий вопрос, блин, значит."
@@ -3919,7 +3919,7 @@
       "id": "65c9a4dc6eb6c5a753ad3793",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1916.61,
       "etime": 1918.58,
       "text": "Докера мы полюбили за его популярность."
@@ -3928,7 +3928,7 @@
       "id": "65c9a4dc6eb6c5a753ad3794",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1920.93,
       "etime": 1930.54,
       "text": "А докер ответил нам взаимностью, потому что у нас большое покрытие серверов нашими ядрами."
@@ -3937,7 +3937,7 @@
       "id": "65c9a4dc6eb6c5a753ad3795",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1930.58,
       "etime": 1939.43,
       "text": "То есть OpenVZ и Virtuoso стоит на... Ох, среди хостеров там число как-то сильно за 60 или 70 процентов, по-моему, переваливает."
@@ -3946,7 +3946,7 @@
       "id": "65c9a4dc6eb6c5a753ad3796",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1941.43,
       "etime": 1944.01,
       "text": "Ну и так еще по сторонам где-то пользуются."
@@ -3955,7 +3955,7 @@
       "id": "65c9a4dc6eb6c5a753ad3797",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1944.03,
       "etime": 1947.6,
       "text": "Вот это вот заточенная статистика, на самом деле, не ко мне вопрос."
@@ -3964,7 +3964,7 @@
       "id": "65c9a4dc6eb6c5a753ad3798",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1947.66,
       "etime": 1950.76,
       "text": "Но много, я помню, что много."
@@ -3982,7 +3982,7 @@
       "id": "65c9a4dc6eb6c5a753ad379a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1957.68,
       "etime": 1965.99,
       "text": "У докеров они спрашивают, а можно ли развернуть вас на OpenVZ, а у нас, соответственно, спрашивают, можно ли развернуть на вас докер."
@@ -3991,7 +3991,7 @@
       "id": "65c9a4dc6eb6c5a753ad379b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1966.03,
       "etime": 1968.61,
       "text": "И пока что и мы, и докеры вынуждены так"
@@ -4000,7 +4000,7 @@
       "id": "65c9a4dc6eb6c5a753ad379c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1969.7,
       "etime": 1974.23,
       "text": "потупив глазки, говорить, что понимаете, пока никак."
@@ -4009,7 +4009,7 @@
       "id": "65c9a4dc6eb6c5a753ad379d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1974.29,
       "etime": 1979.63,
       "text": "Вот, собственно, оттуда эта пламенная любовь и возникла."
@@ -4027,7 +4027,7 @@
       "id": "65c9a4dc6eb6c5a753ad379f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1991.04,
       "etime": 1994.14,
       "text": "Ну и по техническим тоже, понимаешь?"
@@ -4036,7 +4036,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 1994.2,
       "etime": 2011.73,
       "text": "Если взять наши утилиты, взять утилиту докера и взять утилиту, которую мы тут обошли под названием LXC, то окажется, что та часть, которая собственно создает контейнер, в смысле запускает его, она очень одинаковая у всех."
@@ -4045,7 +4045,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2011.81,
       "etime": 2019.44,
       "text": "Писать три одинаковых кода нам троим, условно троим, как технарям в какой-то момент надоело."
@@ -4054,7 +4054,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2021,
       "etime": 2023.24,
       "text": "Ну, грубо говоря, что такое создание контейнера?"
@@ -4063,7 +4063,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2023.26,
       "etime": 2029.25,
       "text": "Это нужно позвать системный вызов клон для создания нового процесса и передать ему правильные флаги."
@@ -4072,7 +4072,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2029.29,
       "etime": 2034.49,
       "text": "А системный вызов клон, он такой очень умный, ему там нужно стэк заготовить."
@@ -4081,7 +4081,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2034.53,
       "etime": 2046.06,
       "text": "Потом нужно создать директории для C-групп, настроить виртуальный сетевой канал между контейнером и внешним миром, еще как-то присесть и подпрыгнуть."
@@ -4090,7 +4090,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2046.1,
       "etime": 2047.9,
       "text": "И все это делают одинаковым образом."
@@ -4099,7 +4099,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2048.36,
       "etime": 2053.52,
       "text": "Это невозможно делать по-разному, потому что это стандартный набор системных вызовов."
@@ -4108,7 +4108,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2053.54,
       "etime": 2063.65,
       "text": "В какой-то момент с технической позицией поговорили и решили, что да, уже всем надоело ходить в ядро тремя разными кодами."
@@ -4117,7 +4117,7 @@
       "id": "65c9a4dc6eb6c5a753ad37a9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2063.69,
       "etime": 2065.01,
       "text": "Решили написать один."
@@ -4126,7 +4126,7 @@
       "id": "65c9a4dc6eb6c5a753ad37aa",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2065.05,
       "etime": 2070.74,
       "text": "Потом подтянулись люди, которые занимаются... Я не знаю, как это слово правильно..."
@@ -4135,7 +4135,7 @@
       "id": "65c9a4dc6eb6c5a753ad37ab",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2072,
       "etime": 2076.02,
       "text": "маркетингом, там, связями с общественностью, вот этими всеми делами."
@@ -4144,7 +4144,7 @@
       "id": "65c9a4dc6eb6c5a753ad37ac",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2076.04,
       "etime": 2080.04,
       "text": "И решили, что да, докер популярен, а OpenVZ как-то не очень."
@@ -4153,7 +4153,7 @@
       "id": "65c9a4dc6eb6c5a753ad37ad",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2080.16,
       "etime": 2088.47,
       "text": "Ну, что, раз все равно с технической точки зрения все собрались дружить, давайте уж и это дело туда подвяжем."
@@ -4279,7 +4279,7 @@
       "id": "65c9a4dc6eb6c5a753ad37bb",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2130.26,
       "etime": 2134.52,
       "text": "Нас какое-то время включали в Ubuntu, потом выключили обратно."
@@ -4297,7 +4297,7 @@
       "id": "65c9a4dc6eb6c5a753ad37bd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2136.08,
       "etime": 2141.42,
       "text": "А у нас не хватило производственных мощностей обслуживать еще одно ядро."
@@ -4396,7 +4396,7 @@
       "id": "65c9a4dc6eb6c5a753ad37c8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2187.67,
       "etime": 2199.27,
       "text": "Значит, контейнеры, все на них кинулись, на них все давно хотели кинуться, но не могли, потому что контейнеры, они технологически более сложные, чем виртуальные машины, их тяжелее сделать."
@@ -4405,7 +4405,7 @@
       "id": "65c9a4dc6eb6c5a753ad37c9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2199.77,
       "etime": 2211.27,
       "text": "У компании Parallels ушло много-много лет, чтобы сделать контейнеры в таком виде, чтобы в них можно было запускать тот набор софта, который нравится хостерам."
@@ -4414,7 +4414,7 @@
       "id": "65c9a4dc6eb6c5a753ad37ca",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2212.84,
       "etime": 2223.51,
       "text": "И потом еще много-много лет эта технология всячески модифицировалась, расширялась и улучшалась, чтобы соответствовать новым веяниям."
@@ -4423,7 +4423,7 @@
       "id": "65c9a4dc6eb6c5a753ad37cb",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2223.57,
       "etime": 2237.7,
       "text": "А сделать то же самое в мейнстрим-Линуксе, это, конечно, возможно, но тяжелее, потому что разработка чего бы то ни было в мейнстрим-ядре, она..."
@@ -4432,7 +4432,7 @@
       "id": "65c9a4dc6eb6c5a753ad37cc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2238.1,
       "etime": 2249.03,
       "text": "Я вот не знаю, либо в несколько раз, либо на порядок медленнее, чем если даже отдельно как-то в open-source формате все это делать."
@@ -4486,7 +4486,7 @@
       "id": "65c9a4dc6eb6c5a753ad37d2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2265.97,
       "etime": 2268.56,
       "text": "Конечно, потому что им пользоваться было невозможно."
@@ -4495,7 +4495,7 @@
       "id": "65c9a4dc6eb6c5a753ad37d3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2268.68,
       "etime": 2270.3,
       "text": "Ну, то есть, как open source..."
@@ -4504,7 +4504,7 @@
       "id": "65c9a4dc6eb6c5a753ad37d4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2272.68,
       "etime": 2276.36,
       "text": "Программы — это вещи, которые пишут программисты для программистов."
@@ -4513,7 +4513,7 @@
       "id": "65c9a4dc6eb6c5a753ad37d5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2276.44,
       "etime": 2280.31,
       "text": "Если вы программист, вы можете взять LXT и сделать себе контейнер."
@@ -4522,7 +4522,7 @@
       "id": "65c9a4dc6eb6c5a753ad37d6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2280.57,
       "etime": 2291.5,
       "text": "А если вы хостер или что-нибудь похожее, то взять LXT и сделать контейнер проблематично, потому что хауту, как сделать контейнер на несколько экранов, не всякий отважится."
@@ -4549,7 +4549,7 @@
       "id": "65c9a4dc6eb6c5a753ad37d9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2297.06,
       "etime": 2298.54,
       "text": "Причем их много."
@@ -4558,7 +4558,7 @@
       "id": "65c9a4dc6eb6c5a753ad37da",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2298.58,
       "etime": 2302.87,
       "text": "И что интересно, они все начинают со словами «сходите на сайт OpenVZ, скачайте темплит-контейнер»."
@@ -4585,7 +4585,7 @@
       "id": "65c9a4dc6eb6c5a753ad37dd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2313.18,
       "etime": 2313.56,
       "text": "Вот."
@@ -4594,7 +4594,7 @@
       "id": "65c9a4dc6eb6c5a753ad37de",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2313.64,
       "etime": 2319.11,
       "text": "Соответственно, когда появился докер, это было как дуновение свежего ветерка."
@@ -4603,7 +4603,7 @@
       "id": "65c9a4dc6eb6c5a753ad37df",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2319.13,
       "etime": 2328.07,
       "text": "Потому что теперь контейнеры, для того, чтобы создать контейнеры, не нужно читать длинный мануал, а достаточно... Там у докера было очень прикольно у них на сайте такая..."
@@ -4612,7 +4612,7 @@
       "id": "65c9a4dc6eb6c5a753ad37e0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2330.73,
       "etime": 2332.23,
       "text": "Такой интерактивный туториал."
@@ -4639,7 +4639,7 @@
       "id": "65c9a4dc6eb6c5a753ad37e3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2341.93,
       "etime": 2345.03,
       "text": "Он набирал буковки, нажимал Enter, у него появлялся контейнер."
@@ -4648,7 +4648,7 @@
       "id": "65c9a4dc6eb6c5a753ad37e4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2345.05,
       "etime": 2347.67,
       "text": "Вот, все."
@@ -4684,7 +4684,7 @@
       "id": "65c9a4dc6eb6c5a753ad37e8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2356.19,
       "etime": 2357.25,
       "text": "Да, Докер это сделал."
@@ -4693,7 +4693,7 @@
       "id": "65c9a4dc6eb6c5a753ad37e9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2357.27,
       "etime": 2361.72,
       "text": "Или это называется параллел свертого за контейнер."
@@ -4747,7 +4747,7 @@
       "id": "65c9a4dc6eb6c5a753ad37ef",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2380.97,
       "etime": 2381.45,
       "text": "Нет, конечно."
@@ -4756,7 +4756,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2381.49,
       "etime": 2385.98,
       "text": "Просто докер сделал то, что в принципе должны были сделать мы в какой-то момент."
@@ -4765,7 +4765,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2386.02,
       "etime": 2393.31,
       "text": "То есть сначала мы притащили в open source самую базовую технологию, то есть запатчили ядро."
@@ -4774,7 +4774,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2393.37,
       "etime": 2401.26,
       "text": "Ну, не только мы, но в большой степени мы принесли в ядро технологию, которая позволяет создать контейнер."
@@ -4783,7 +4783,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2401.3,
       "etime": 2401.74,
       "text": "Потом мы..."
@@ -4792,7 +4792,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2404.39,
       "etime": 2407.24,
       "text": "как-то вяленько, но все-таки сделали второй шаг."
@@ -4801,7 +4801,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2407.28,
       "etime": 2415.6,
       "text": "Мы еще показали людям утилиту, которую вот из Shell можно взять и что-то попытаться сделать."
@@ -4810,7 +4810,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2415.82,
       "etime": 2420.26,
       "text": "Но тут нас немножко подопскакали те люди, которые Lexi писали."
@@ -4819,7 +4819,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2420.28,
       "etime": 2424.95,
       "text": "Сначала это были люди из IBM, а потом они уволились в Canonical."
@@ -4828,7 +4828,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2424.99,
       "etime": 2426.33,
       "text": "А следующего шага никто не делал."
@@ -4837,7 +4837,7 @@
       "id": "65c9a4dc6eb6c5a753ad37f9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2426.37,
       "etime": 2430.29,
       "text": "Почему его не делал Parallels?"
@@ -4846,7 +4846,7 @@
       "id": "65c9a4dc6eb6c5a753ad37fa",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2430.35,
       "etime": 2432.35,
       "text": "Для меня, честно говоря, тоже загадка."
@@ -4855,7 +4855,7 @@
       "id": "65c9a4dc6eb6c5a753ad37fb",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2432.47,
       "etime": 2432.67,
       "text": "Вот."
@@ -4864,7 +4864,7 @@
       "id": "65c9a4dc6eb6c5a753ad37fc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2434.15,
       "etime": 2435.47,
       "text": "А это сделали люди из докера."
@@ -4873,7 +4873,7 @@
       "id": "65c9a4dc6eb6c5a753ad37fd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2435.51,
       "etime": 2441.09,
       "text": "Причем они его делали, как они мне рассказывали, вот ровно так, как его должны были делать мы."
@@ -4882,7 +4882,7 @@
       "id": "65c9a4dc6eb6c5a753ad37fe",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2441.11,
       "etime": 2450.33,
       "text": "Они взяли OpenVZ с его ядром и с его утилитами и навертели сверху очень продвинутую систему по запаковке контейнеров."
@@ -4891,7 +4891,7 @@
       "id": "65c9a4dc6eb6c5a753ad37ff",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2451.1,
       "etime": 2462.17,
       "text": "о создании вот этих репозиториев с контейнерами, по скачиванию все это дело, по разворачиванию на машине, а дальше просто звали наши утилиты, которые создавали контейнеры."
@@ -4900,7 +4900,7 @@
       "id": "65c9a4dc6eb6c5a753ad3800",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2462.21,
       "etime": 2472.92,
       "text": "Потом они, правда, с OpenVZ соскочили и переехали на LXC, но изначально шаги делались именно по канону."
@@ -4909,7 +4909,7 @@
       "id": "65c9a4dc6eb6c5a753ad3801",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2472.94,
       "etime": 2477.07,
       "text": "Сначала технологии на низком уровне, потом повыше, потом еще повыше."
@@ -4918,7 +4918,7 @@
       "id": "65c9a4dc6eb6c5a753ad3802",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2479.3,
       "etime": 2485.81,
       "text": "Почему это сделал докер аниме, ну, я тоже не знаю, к сожалению."
@@ -4945,7 +4945,7 @@
       "id": "65c9a4dc6eb6c5a753ad3805",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2489.77,
       "etime": 2490.23,
       "text": "Нормально."
@@ -4954,7 +4954,7 @@
       "id": "65c9a4dc6eb6c5a753ad3806",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2490.29,
       "etime": 2494.06,
       "text": "Ну, или люди, там, желание, понимание, не знаю, чего было."
@@ -4990,7 +4990,7 @@
       "id": "65c9a4dc6eb6c5a753ad380a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2506.65,
       "etime": 2510.23,
       "text": "В широком смысле он в городке под названием Киркланд, окрест Сиэтла."
@@ -4999,7 +4999,7 @@
       "id": "65c9a4dc6eb6c5a753ad380b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2511.01,
       "etime": 2512.57,
       "text": "А, о чем там дело?"
@@ -5017,7 +5017,7 @@
       "id": "65c9a4dc6eb6c5a753ad380d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2515.07,
       "etime": 2517.3,
       "text": "Он там живет и работает."
@@ -5026,7 +5026,7 @@
       "id": "65c9a4dc6eb6c5a753ad380e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2518.1,
       "etime": 2519.26,
       "text": "А, он теперь там живет."
@@ -5035,7 +5035,7 @@
       "id": "65c9a4dc6eb6c5a753ad380f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2519.28,
       "etime": 2520.46,
       "text": "Все, я понял."
@@ -5044,7 +5044,7 @@
       "id": "65c9a4dc6eb6c5a753ad3810",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2520.62,
       "etime": 2522.46,
       "text": "А, я понял, ты совсем не в курсе."
@@ -5053,7 +5053,7 @@
       "id": "65c9a4dc6eb6c5a753ad3811",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2522.5,
       "etime": 2525.43,
       "text": "Да, Кир у нас прихватил трактор и..."
@@ -5170,7 +5170,7 @@
       "id": "65c9a4dc6eb6c5a753ad381e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2577.71,
       "etime": 2581.05,
       "text": "Ну, это как в каком-то смысле, как любой другой open-source проект."
@@ -5179,7 +5179,7 @@
       "id": "65c9a4dc6eb6c5a753ad381f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2581.07,
       "etime": 2591.91,
       "text": "Сначала люди что-то делают, всем говорят, что, ребят, смотрите, у нас вот такой вот есть небольшой кусок кода, который умеет делать вот чуть-чуть."
@@ -5188,7 +5188,7 @@
       "id": "65c9a4dc6eb6c5a753ad3820",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2591.95,
       "etime": 2596.91,
       "text": "И у нас такие огромные планы, и мы их будем делать сами, и если кто-то хочет нам помочь, то..."
@@ -5197,7 +5197,7 @@
       "id": "65c9a4dc6eb6c5a753ad3821",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2598.35,
       "etime": 2604.82,
       "text": "вообще всем добро пожаловать, исходники открыты, лицензия какая-нибудь очень вкусная."
@@ -5206,7 +5206,7 @@
       "id": "65c9a4dc6eb6c5a753ad3822",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2604.86,
       "etime": 2607.52,
       "text": "Давайте все вместе сделаем классные контейнеры."
@@ -5224,7 +5224,7 @@
       "id": "65c9a4dc6eb6c5a753ad3824",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2622.1,
       "etime": 2623.44,
       "text": "Хотелок, которые..."
@@ -5242,7 +5242,7 @@
       "id": "65c9a4dc6eb6c5a753ad3826",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2633.54,
       "etime": 2638.35,
       "text": "Те люди, чьи хотелки покрылись, они в полном восторге, они говорят, что у нас все работает, все прекрасно."
@@ -5251,7 +5251,7 @@
       "id": "65c9a4dc6eb6c5a753ad3827",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2640.39,
       "etime": 2647.81,
       "text": "И он как бы движется вперед, показывая всем roadmap и время от времени соответствие этому roadmap."
@@ -5260,7 +5260,7 @@
       "id": "65c9a4dc6eb6c5a753ad3828",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2648.25,
       "etime": 2652.15,
       "text": "То есть вот у нас появилась такая фича, появилась такая фича."
@@ -5269,7 +5269,7 @@
       "id": "65c9a4dc6eb6c5a753ad3829",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2652.23,
       "etime": 2662.62,
       "text": "Плюс они, что тоже, кстати, очень важно для open-source проекта, они уделяют достаточно много внимания интеграциям со всякими другими вещами."
@@ -5278,7 +5278,7 @@
       "id": "65c9a4dc6eb6c5a753ad382a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2662.64,
       "etime": 2666.06,
       "text": "Вот в частности недавно там как-то крепко с RedHat подружились."
@@ -5287,7 +5287,7 @@
       "id": "65c9a4dc6eb6c5a753ad382b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2666.08,
       "etime": 2668.82,
       "text": "Так что RedHat даже заявил, что мы у себя докер будем поддерживать."
@@ -5323,7 +5323,7 @@
       "id": "65c9a4dc6eb6c5a753ad382f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2680.2,
       "etime": 2681.4,
       "text": "Да, что-то такое."
@@ -5332,7 +5332,7 @@
       "id": "65c9a4dc6eb6c5a753ad3830",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2681.46,
       "etime": 2683.88,
       "text": "Я вот в это до конца пока еще не вник."
@@ -5341,7 +5341,7 @@
       "id": "65c9a4dc6eb6c5a753ad3831",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2683.9,
       "etime": 2698.47,
       "text": "Ну, в общем, идет стандартная вот такая вот движуха, когда open-source проект так разрастается всячески, обрастает сообществом, кодом и всякими щупальцами, которыми он хватается за соседние проекты."
@@ -5350,7 +5350,7 @@
       "id": "65c9a4dc6eb6c5a753ad3832",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2699.55,
       "etime": 2705.49,
       "text": "Но в продакшен, естественно, просто разработчики, которые делают докеры, его не выведут."
@@ -5359,7 +5359,7 @@
       "id": "65c9a4dc6eb6c5a753ad3833",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2705.51,
       "etime": 2715.44,
       "text": "Это не получается так, что люди, которые делают проект open source еще, и потом они же в состоянии сделать из него продукт, который можно поставить и пользоваться."
@@ -5368,7 +5368,7 @@
       "id": "65c9a4dc6eb6c5a753ad3834",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2716.18,
       "etime": 2729.83,
       "text": "Вот тут его должен, либо они как-то должны подразрастись, чтобы у них появились люди, которые занимаются именно превращением проекта в продукт, или они должны с кем-то подружиться, кто за них это сделает."
@@ -5377,7 +5377,7 @@
       "id": "65c9a4dc6eb6c5a753ad3835",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2729.97,
       "etime": 2732.59,
       "text": "Видимо, они это хотят от Red Hat, может быть."
@@ -5386,7 +5386,7 @@
       "id": "65c9a4dc6eb6c5a753ad3836",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2734.49,
       "etime": 2737.12,
       "text": "А почему это докеры, а не мы?"
@@ -5395,7 +5395,7 @@
       "id": "65c9a4dc6eb6c5a753ad3837",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2737.14,
       "etime": 2739.88,
       "text": "А у нас этого всего не было."
@@ -5404,7 +5404,7 @@
       "id": "65c9a4dc6eb6c5a753ad3838",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2739.92,
       "etime": 2750.6,
       "text": "У нас было ядро, которое было... Исходники были открыты, а вот процесс разработки открытым, к сожалению, не стал."
@@ -5413,7 +5413,7 @@
       "id": "65c9a4dc6eb6c5a753ad3839",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2750.62,
       "etime": 2753.68,
       "text": "То есть мы как-то переключились на разработку мейнстрим-ядра."
@@ -5422,7 +5422,7 @@
       "id": "65c9a4dc6eb6c5a753ad383a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2755.73,
       "etime": 2757.27,
       "text": "контейнерной технологии там."
@@ -5431,7 +5431,7 @@
       "id": "65c9a4dc6eb6c5a753ad383b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2757.33,
       "etime": 2760.58,
       "text": "А у нас процесс был такой, ну, полуоткрытый."
@@ -5440,7 +5440,7 @@
       "id": "65c9a4dc6eb6c5a753ad383c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2760.8,
       "etime": 2767.48,
       "text": "Плюс не было никаких внятных... Ну и сейчас пока еще в открытую нет, они появляются."
@@ -5449,7 +5449,7 @@
       "id": "65c9a4dc6eb6c5a753ad383d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2767.54,
       "etime": 2770.74,
       "text": "Не было никаких внятных планов, а что же мы в будущем-то хотим?"
@@ -5458,7 +5458,7 @@
       "id": "65c9a4dc6eb6c5a753ad383e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2770.78,
       "etime": 2779.81,
       "text": "То есть мы всячески говорили, да, ребят, у нас открытый проект, контейнеры, вот это вот утилита, давайте все вливайтесь, а никаких таких планов и"
@@ -5467,7 +5467,7 @@
       "id": "65c9a4dc6eb6c5a753ad383f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2781.4,
       "etime": 2784.03,
       "text": "Огромной активности не было."
@@ -5476,7 +5476,7 @@
       "id": "65c9a4dc6eb6c5a753ad3840",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2784.11,
       "etime": 2787.93,
       "text": "Ну, вполне закономерно, что все внимание сейчас обращено к докеру."
@@ -5557,7 +5557,7 @@
       "id": "65c9a4dc6eb6c5a753ad3849",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2832.34,
       "etime": 2835.16,
       "text": "Да, очень близок."
@@ -5566,7 +5566,7 @@
       "id": "65c9a4dc6eb6c5a753ad384a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2835.2,
       "etime": 2842.06,
       "text": "Вот на эту тему очень любит наш Джеймс Боттомли в последнее время рассказывать, что облака и контейнеры, они особенно созданы друг для друга."
@@ -5575,7 +5575,7 @@
       "id": "65c9a4dc6eb6c5a753ad384b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2842.08,
       "etime": 2845.75,
       "text": "И, в принципе, в его словах очень много правды."
@@ -5584,7 +5584,7 @@
       "id": "65c9a4dc6eb6c5a753ad384c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2845.77,
       "etime": 2846.65,
       "text": "В каком смысле?"
@@ -5602,7 +5602,7 @@
       "id": "65c9a4dc6eb6c5a753ad384e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2857.21,
       "etime": 2863.27,
       "text": "хоть в каком-то смысле слова, такой Linux-бокс, в котором он может делать все, что угодно."
@@ -5611,7 +5611,7 @@
       "id": "65c9a4dc6eb6c5a753ad384f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2863.31,
       "etime": 2868.85,
       "text": "Все-таки туда приходят за тем, чтобы запустить веб-приложение или что-нибудь посчитать себе."
@@ -5620,7 +5620,7 @@
       "id": "65c9a4dc6eb6c5a753ad3850",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2868.89,
       "etime": 2881.9,
       "text": "То есть им нужен Linux, который они могут как-то под себя поднастроить, не в системном смысле, а в смысле прикладных каких-то программ, и пользоваться."
@@ -5629,7 +5629,7 @@
       "id": "65c9a4dc6eb6c5a753ad3851",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2881.96,
       "etime": 2883.26,
       "text": "Вот для такого использования"
@@ -5638,7 +5638,7 @@
       "id": "65c9a4dc6eb6c5a753ad3852",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2885.24,
       "etime": 2890.01,
       "text": "VM-ки, виртуальные машины, они тяжелые по двум причинам."
@@ -5647,7 +5647,7 @@
       "id": "65c9a4dc6eb6c5a753ad3853",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2890.05,
       "etime": 2905.38,
       "text": "Первая причина состоит в том, что сама технология предполагает, что для поддержания виртуальной машины в работоспособном состоянии нужно больше памяти и процессора."
@@ -5656,7 +5656,7 @@
       "id": "65c9a4dc6eb6c5a753ad3854",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2905.42,
       "etime": 2907.59,
       "text": "Потому что нужно эмулировать железо, нужно поддерживать..."
@@ -5665,7 +5665,7 @@
       "id": "65c9a4dc6eb6c5a753ad3855",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2910.68,
       "etime": 2916.4,
       "text": "Ядро гостевое, оно там выполняется, считай, что оно выполняется на железе."
@@ -5674,7 +5674,7 @@
       "id": "65c9a4dc6eb6c5a753ad3856",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2916.46,
       "etime": 2922.16,
       "text": "Даже если оно паровиртуализовано, все равно ядро там присутствует."
@@ -5683,7 +5683,7 @@
       "id": "65c9a4dc6eb6c5a753ad3857",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2922.2,
       "etime": 2923.5,
       "text": "Контейнеры все этого не требуют."
@@ -5692,7 +5692,7 @@
       "id": "65c9a4dc6eb6c5a753ad3858",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2923.56,
       "etime": 2926.78,
       "text": "Они предоставляют одно ядро, а внутри ядра расставлены перегородки."
@@ -5746,7 +5746,7 @@
       "id": "65c9a4dc6eb6c5a753ad385e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2962.4,
       "etime": 2964.78,
       "text": "Переносить можно и в EMC живьем?"
@@ -5773,7 +5773,7 @@
       "id": "65c9a4dc6eb6c5a753ad3861",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2970.76,
       "etime": 2973.61,
       "text": "Это проблема, но внутри Амазона вполне себе можно."
@@ -5800,7 +5800,7 @@
       "id": "65c9a4dc6eb6c5a753ad3864",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 2999.38,
       "etime": 3002.43,
       "text": "Это все-таки не живая миграция, это смена типа, да?"
@@ -5818,7 +5818,7 @@
       "id": "65c9a4dc6eb6c5a753ad3866",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3014.09,
       "etime": 3015.99,
       "text": "Это да."
@@ -5827,7 +5827,7 @@
       "id": "65c9a4dc6eb6c5a753ad3867",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3016.05,
       "etime": 3020.51,
       "text": "Но на самом деле, с моей точки зрения, контейнеры, они такие классные для облаков."
@@ -5836,7 +5836,7 @@
       "id": "65c9a4dc6eb6c5a753ad3868",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3022.33,
       "etime": 3027.28,
       "text": "Не потому, что их можно больше напихать туда, и не потому, что их можно живьем мигрировать."
@@ -5854,7 +5854,7 @@
       "id": "65c9a4dc6eb6c5a753ad386a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3034.58,
       "etime": 3039.1,
       "text": "У контейнеров очень легко менять ресурсы, которые им доступны."
@@ -5863,7 +5863,7 @@
       "id": "65c9a4dc6eb6c5a753ad386b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3039.14,
       "etime": 3048.5,
       "text": "То есть взять и сказать, что мой контейнер сейчас не один гигабайт памяти может выжрать, а два, а потом через час передумать и сказать, нет, все-таки один."
@@ -5872,7 +5872,7 @@
       "id": "65c9a4dc6eb6c5a753ad386c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3048.52,
       "etime": 3049.81,
       "text": "Это, в принципе, возможно."
@@ -5881,7 +5881,7 @@
       "id": "65c9a4dc6eb6c5a753ad386d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3050.78,
       "etime": 3057.09,
       "text": "с VM-ками такая технология, она работает с надрывами, прям скажем."
@@ -5890,7 +5890,7 @@
       "id": "65c9a4dc6eb6c5a753ad386e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3057.11,
       "etime": 3058.76,
       "text": "То есть вот добавить памяти в VM-ки,"
@@ -5899,7 +5899,7 @@
       "id": "65c9a4dc6eb6c5a753ad386f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3060.25,
       "etime": 3065.15,
       "text": "Эта процедура довольно рискованная."
@@ -5908,7 +5908,7 @@
       "id": "65c9a4dc6eb6c5a753ad3870",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3065.35,
       "etime": 3069.93,
       "text": "Memory hotplug до сих пор не везде работает."
@@ -5935,7 +5935,7 @@
       "id": "65c9a4dc6eb6c5a753ad3873",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3076.1,
       "etime": 3083.34,
       "text": "А это, понимаешь, для пользователя это выглядит, как к контейнеру добавили памяти."
@@ -5944,7 +5944,7 @@
       "id": "65c9a4dc6eb6c5a753ad3874",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3083.36,
       "etime": 3086.64,
       "text": "На самом деле, с точки зрения системы, все выглядит немножко по-другому."
@@ -5953,7 +5953,7 @@
       "id": "65c9a4dc6eb6c5a753ad3875",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3086.66,
       "etime": 3089.93,
       "text": "К контейнеру не добавили памяти, а просто разрешили больше ее использовать."
@@ -5962,7 +5962,7 @@
       "id": "65c9a4dc6eb6c5a753ad3876",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3091.15,
       "etime": 3092.29,
       "text": "А это делается очень просто."
@@ -5971,7 +5971,7 @@
       "id": "65c9a4dc6eb6c5a753ad3877",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3092.31,
       "etime": 3097.81,
       "text": "Просто ядру говорится, вот этот контейнер, ему раньше можно было гиг жрать, а теперь пусть жрет два."
@@ -5998,7 +5998,7 @@
       "id": "65c9a4dc6eb6c5a753ad387a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3108.14,
       "etime": 3111.24,
       "text": "Это ограничение не технологии, а самих докеров."
@@ -6007,7 +6007,7 @@
       "id": "65c9a4dc6eb6c5a753ad387b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3111.34,
       "etime": 3112.64,
       "text": "Я не знаю, почему они так сделали."
@@ -6025,7 +6025,7 @@
       "id": "65c9a4dc6eb6c5a753ad387d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3115.99,
       "etime": 3117.89,
       "text": "А уменьшить тоже легко."
@@ -6034,7 +6034,7 @@
       "id": "65c9a4dc6eb6c5a753ad387e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3117.93,
       "etime": 3122.32,
       "text": "Вот смотри, с уменьшением тут две вещи."
@@ -6052,7 +6052,7 @@
       "id": "65c9a4dc6eb6c5a753ad3880",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3128.44,
       "etime": 3130.22,
       "text": "Это вопрос на самом деле философский."
@@ -6061,7 +6061,7 @@
       "id": "65c9a4dc6eb6c5a753ad3881",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3130.28,
       "etime": 3130.66,
       "text": "Что делать?"
@@ -6070,7 +6070,7 @@
       "id": "65c9a4dc6eb6c5a753ad3882",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3130.7,
       "etime": 3135.94,
       "text": "Разрешать и поджать его потом по мере возможности."
@@ -6079,7 +6079,7 @@
       "id": "65c9a4dc6eb6c5a753ad3883",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3135.98,
       "etime": 3141.51,
       "text": "Или сказать, что извините, у вас уже больше, сделайте что-нибудь с вашим контейнером, потом уменьшите."
@@ -6088,7 +6088,7 @@
       "id": "65c9a4dc6eb6c5a753ad3884",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3141.53,
       "etime": 3142.25,
       "text": "Это вопрос такой…"
@@ -6097,7 +6097,7 @@
       "id": "65c9a4dc6eb6c5a753ad3885",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3144.2,
       "etime": 3146.78,
       "text": "не технического уровня."
@@ -6106,7 +6106,7 @@
       "id": "65c9a4dc6eb6c5a753ad3886",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3146.82,
       "etime": 3157.01,
       "text": "А вот с технической точки зрения, если у нас есть VM, который мы разрешили использовать 2 ГБ, и мы хотим сказать, что теперь всего один, то с VM это сделать очень тяжело."
@@ -6115,7 +6115,7 @@
       "id": "65c9a4dc6eb6c5a753ad3887",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3157.51,
       "etime": 3166.81,
       "text": "Начнем с того, что взять и сделать операцию симметричную memory hotplug под названием memory hotunplug,"
@@ -6124,7 +6124,7 @@
       "id": "65c9a4dc6eb6c5a753ad3888",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3169.42,
       "etime": 3172.14,
       "text": "Это, я бы сказал, вообще невозможно."
@@ -6133,7 +6133,7 @@
       "id": "65c9a4dc6eb6c5a753ad3889",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3172.18,
       "etime": 3177.51,
       "text": "Потому что взять и выдрать виртуальный банк памяти из VM, он не выделится."
@@ -6142,7 +6142,7 @@
       "id": "65c9a4dc6eb6c5a753ad388a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3177.53,
       "etime": 3181.91,
       "text": "Там лежит какой-нибудь ядерный объект в этом банке, и все, его уже нельзя забрать."
@@ -6151,7 +6151,7 @@
       "id": "65c9a4dc6eb6c5a753ad388b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3181.93,
       "etime": 3187.23,
       "text": "А перемещать ядерные объекты по физическому адресному пространству никто еще не научился."
@@ -6160,7 +6160,7 @@
       "id": "65c9a4dc6eb6c5a753ad388c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3187.29,
       "etime": 3189.37,
       "text": "Ни Linux, ни Windows."
@@ -6169,7 +6169,7 @@
       "id": "65c9a4dc6eb6c5a753ad388d",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3189.43,
       "etime": 3191.91,
       "text": "Поэтому там применяют такие..."
@@ -6178,7 +6178,7 @@
       "id": "65c9a4dc6eb6c5a753ad388e",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3192.55,
       "etime": 3196.19,
       "text": "обходные маневры под названием балунинг памяти."
@@ -6187,7 +6187,7 @@
       "id": "65c9a4dc6eb6c5a753ad388f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3196.21,
       "etime": 3209.38,
       "text": "То есть внутрь гостя загружается специальный гостевой ядерный модуль, которому сообщается, дружок, съешь гигабайт памяти в госте."
@@ -6196,7 +6196,7 @@
       "id": "65c9a4dc6eb6c5a753ad3890",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3209.44,
       "etime": 3211.14,
       "text": "Он его выделяет, съедает."
@@ -6214,7 +6214,7 @@
       "id": "65c9a4dc6eb6c5a753ad3892",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3216.36,
       "etime": 3220.32,
       "text": "И процессом, и прочим ядерным процессом"
@@ -6223,7 +6223,7 @@
       "id": "65c9a4dc6eb6c5a753ad3893",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3220.65,
       "etime": 3222.99,
       "text": "Таким нужностям этот гигабайт не выделяется."
@@ -6241,7 +6241,7 @@
       "id": "65c9a4dc6eb6c5a753ad3895",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3230.38,
       "etime": 3234.26,
       "text": "И гипервизор знает, что на вот этих физических страницах он теперь может размещать другие VM."
@@ -6376,7 +6376,7 @@
       "id": "65c9a4dc6eb6c5a753ad38a4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3284.18,
       "etime": 3296.13,
       "text": "Значит, во-первых, если пространство на хосте продается, как у хостеров, то... Ну, они же парни такие ушлые, да?"
@@ -6385,7 +6385,7 @@
       "id": "65c9a4dc6eb6c5a753ad38a5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3296.17,
       "etime": 3299.69,
       "text": "Если есть память, то ее можно продать."
@@ -6403,7 +6403,7 @@
       "id": "65c9a4dc6eb6c5a753ad38a7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3302.87,
       "etime": 3305.5,
       "text": "И не разрешать контейнеру кушать больше."
@@ -6412,7 +6412,7 @@
       "id": "65c9a4dc6eb6c5a753ad38a8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3305.54,
       "etime": 3308.7,
       "text": "Поэтому все-таки хозяин контейнера, он..."
@@ -6421,7 +6421,7 @@
       "id": "65c9a4dc6eb6c5a753ad38a9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3312.12,
       "etime": 3315.54,
       "text": "Он должен знать, сколько памяти ему продали, да?"
@@ -6475,7 +6475,7 @@
       "id": "65c9a4dc6eb6c5a753ad38af",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3338.62,
       "etime": 3341.02,
       "text": "Вообще поймет."
@@ -6484,7 +6484,7 @@
       "id": "65c9a4dc6eb6c5a753ad38b0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3341.06,
       "etime": 3344.4,
       "text": "На самом деле зависит от конфигурации Apache, насколько мне известно."
@@ -6493,7 +6493,7 @@
       "id": "65c9a4dc6eb6c5a753ad38b1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3344.88,
       "etime": 3358.08,
       "text": "Но даже если сам по себе Apache не поймет, об этом очень быстро догадается все те скрипты или еще что-то, что Apache внутри себя запускает."
@@ -6502,7 +6502,7 @@
       "id": "65c9a4dc6eb6c5a753ad38b2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3358.14,
       "etime": 3363.16,
       "text": "Он начнет трогать какие-то файлы, они либо влезут в страничный кэш, который этому контейнеру доступен, или не влезут."
@@ -6547,7 +6547,7 @@
       "id": "65c9a4dc6eb6c5a753ad38b7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3377.55,
       "etime": 3379.33,
       "text": "Пока, конечно, не поймет, да."
@@ -6556,7 +6556,7 @@
       "id": "65c9a4dc6eb6c5a753ad38b8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3379.37,
       "etime": 3383.13,
       "text": "Но, опять-таки, там будет играть эффект с дисковым кэшем."
@@ -6601,7 +6601,7 @@
       "id": "65c9a4dc6eb6c5a753ad38bd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3398.5,
       "etime": 3412.64,
       "text": "Кроме того, если мы хотим, чтобы Mongo работала не на полгига, а на гиге, даже если она такая, ну как это скажем, неоптимальная, так деликатно, то поднять память и перезапустить контейнер все-таки быстрее, чем виртуальная машина."
@@ -6655,7 +6655,7 @@
       "id": "65c9a4dc6eb6c5a753ad38c3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3438.04,
       "etime": 3447.01,
       "text": "Storage на контейнере – это тоже такая веселая тема для нас."
@@ -6664,7 +6664,7 @@
       "id": "65c9a4dc6eb6c5a753ad38c4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3447.03,
       "etime": 3459.83,
       "text": "Какое-то время назад для контейнеров мы использовали не отдельный диск, а все контейнеры были сложены на одном большом диске, и контейнер звал просто системный вызов «change root»."
@@ -6673,7 +6673,7 @@
       "id": "65c9a4dc6eb6c5a753ad38c5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3462.42,
       "etime": 3468.69,
       "text": "Все файлики лежали на одном диске у всех контейнеров, но каждый видел только свое поддерево."
@@ -6682,7 +6682,7 @@
       "id": "65c9a4dc6eb6c5a753ad38c6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3468.73,
       "etime": 3473.76,
       "text": "Для того, чтобы один контейнер не сожрал своими файлами все дисковое пространство, мы немножко расширили Linux-квоту."
@@ -6691,7 +6691,7 @@
       "id": "65c9a4dc6eb6c5a753ad38c7",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3475.68,
       "etime": 3481.5,
       "text": "У нее так канонично два идентификатора, по которым она считает статистику."
@@ -6700,7 +6700,7 @@
       "id": "65c9a4dc6eb6c5a753ad38c8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3481.56,
       "etime": 3483.22,
       "text": "Это юзер и группа."
@@ -6709,7 +6709,7 @@
       "id": "65c9a4dc6eb6c5a753ad38c9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3483.3,
       "etime": 3487.29,
       "text": "Сколько юзер занял дискового пространства и сколько группы юзеров занял дискового пространства."
@@ -6718,7 +6718,7 @@
       "id": "65c9a4dc6eb6c5a753ad38ca",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3487.33,
       "etime": 3491.29,
       "text": "Мы добавили третий под названием контейнер ID."
@@ -6736,7 +6736,7 @@
       "id": "65c9a4dc6eb6c5a753ad38cc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3497.86,
       "etime": 3502.28,
       "text": "Достаточно было просто поменять предел на вот этой третьей квоте."
@@ -6745,7 +6745,7 @@
       "id": "65c9a4dc6eb6c5a753ad38cd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3503.94,
       "etime": 3512.23,
       "text": "Опять-таки оставим за скобками этот философский вопрос, что делать, когда мы квоты уменьшаем, а использование дискового пространства уже больше."
@@ -6754,7 +6754,7 @@
       "id": "65c9a4dc6eb6c5a753ad38ce",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3512.27,
       "etime": 3516.47,
       "text": "Но технически это было сделать очень просто."
@@ -6763,7 +6763,7 @@
       "id": "65c9a4dc6eb6c5a753ad38cf",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3516.51,
       "etime": 3520.01,
       "text": "Сейчас мы для контейнера Storage переделываем."
@@ -6772,7 +6772,7 @@
       "id": "65c9a4dc6eb6c5a753ad38d0",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3520.05,
       "etime": 3521.45,
       "text": "Можно сказать, уже переделали."
@@ -6781,7 +6781,7 @@
       "id": "65c9a4dc6eb6c5a753ad38d1",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3521.49,
       "etime": 3524.34,
       "text": "Сейчас наши контейнеры запускаются на виртуальном диске."
@@ -6790,7 +6790,7 @@
       "id": "65c9a4dc6eb6c5a753ad38d2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3526.15,
       "etime": 3530.7,
       "text": "Вот те, кто с Linux тесно работает, знают, есть там такой луп-девайс блочный."
@@ -6799,7 +6799,7 @@
       "id": "65c9a4dc6eb6c5a753ad38d3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3530.72,
       "etime": 3535.22,
       "text": "Вот у нас есть свой луп-девайс, который немного лучше, чем обычный."
@@ -6817,7 +6817,7 @@
       "id": "65c9a4dc6eb6c5a753ad38d5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3537.26,
       "etime": 3542.91,
       "text": "У него нет дабл-кешинга, и он не виснет на ядерной рекурсе при нехватке памяти."
@@ -6826,7 +6826,7 @@
       "id": "65c9a4dc6eb6c5a753ad38d6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3542.97,
       "etime": 3545.31,
       "text": "В обычном лупе там такое было."
@@ -6853,7 +6853,7 @@
       "id": "65c9a4dc6eb6c5a753ad38d9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3555.73,
       "etime": 3575.54,
       "text": "Значит, я сейчас не готов ответить на этот вопрос, потому что там для того, чтобы вот эта вот вторая проблема, которую я озвучил, что там была блокировка рекурсивная, вот чтобы она ушла, там нужно было запатчить довольно такое низкоуровневое место в ядре, которое занималось балансировкой грязной памяти."
@@ -6862,7 +6862,7 @@
       "id": "65c9a4dc6eb6c5a753ad38da",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3575.62,
       "etime": 3577.02,
       "text": "И там была очень длинная..."
@@ -6871,7 +6871,7 @@
       "id": "65c9a4dc6eb6c5a753ad38db",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3580.22,
       "etime": 3589.79,
       "text": "перепалка в списке рассылки между нашими людьми, которые эту патч туда пропихивали, и между людьми, которые думали, что все должно быть по-другому."
@@ -6880,7 +6880,7 @@
       "id": "65c9a4dc6eb6c5a753ad38dc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3589.83,
       "etime": 3594.53,
       "text": "И я честно скажу, я не знаю, закончилась ли она вообще, если закончилась, то чем."
@@ -6889,7 +6889,7 @@
       "id": "65c9a4dc6eb6c5a753ad38dd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3594.55,
       "etime": 3597.19,
       "text": "Вот если она закончилась, то да."
@@ -6934,7 +6934,7 @@
       "id": "65c9a4dc6eb6c5a753ad38e2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3609.36,
       "etime": 3614.69,
       "text": "Они очень политкорректные и в открытую матом никого не ругают."
@@ -6943,7 +6943,7 @@
       "id": "65c9a4dc6eb6c5a753ad38e3",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3614.75,
       "etime": 3616.89,
       "text": "Они, в смысле, ты об их величестве сейчас?"
@@ -6952,7 +6952,7 @@
       "id": "65c9a4dc6eb6c5a753ad38e4",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3616.91,
       "etime": 3618.27,
       "text": "Да нет вообще всей рассылки."
@@ -7015,7 +7015,7 @@
       "id": "65c9a4dc6eb6c5a753ad38eb",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3640.59,
       "etime": 3647.45,
       "text": "Ну, опять-таки, с помощью напильника его можно, конечно, довести до кондиции, если вот этот патч запихнут в Linux, да?"
@@ -7024,7 +7024,7 @@
       "id": "65c9a4dc6eb6c5a753ad38ec",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3647.49,
       "etime": 3648.33,
       "text": "Но мы пока..."
@@ -7033,7 +7033,7 @@
       "id": "65c9a4dc6eb6c5a753ad38ed",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3649.17,
       "etime": 3657.38,
       "text": "Не озадачились тем, чтобы взять и сделать его отдельным модулем, который компилируется как экстернал модуль и грузится."
@@ -7042,7 +7042,7 @@
       "id": "65c9a4dc6eb6c5a753ad38ee",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3657.4,
       "etime": 3659.88,
       "text": "Хотя у меня есть такое в планах."
@@ -7051,7 +7051,7 @@
       "id": "65c9a4dc6eb6c5a753ad38ef",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3659.92,
       "etime": 3664.85,
       "text": "Дадут ли мне, я извиняюсь, людей на эту мечту, я не знаю."
@@ -7078,7 +7078,7 @@
       "id": "65c9a4dc6eb6c5a753ad38f2",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3672.34,
       "etime": 3675.48,
       "text": "Они все слушают вас, поэтому можно не передавать."
@@ -7105,7 +7105,7 @@
       "id": "65c9a4dc6eb6c5a753ad38f5",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3681.88,
       "etime": 3688.36,
       "text": "Ты знаешь, обычно маркетинг люди и технические люди имеют весьма разные представления о том, какие дела нужны."
@@ -7114,7 +7114,7 @@
       "id": "65c9a4dc6eb6c5a753ad38f6",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3688.4,
       "etime": 3690.02,
       "text": "Ну, я вообще догадываюсь так-то."
@@ -7132,7 +7132,7 @@
       "id": "65c9a4dc6eb6c5a753ad38f8",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3695.04,
       "etime": 3704.94,
       "text": "Сейчас, погоди, значит, IOPS-ограничение, оно к пилупу не имеет отношения прямого, а IOPS имеет отношение, как это не странно звучит, к сегруппам."
@@ -7141,7 +7141,7 @@
       "id": "65c9a4dc6eb6c5a753ad38f9",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3708.03,
       "etime": 3712.35,
       "text": "Пилуп я помянул, потому что вообще зашла речь про сторож для контейнеров."
@@ -7150,7 +7150,7 @@
       "id": "65c9a4dc6eb6c5a753ad38fa",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3712.37,
       "etime": 3722.37,
       "text": "Мы сейчас сделали пилуп и сейчас вынуждены жить теми же проблемами, которые жили до нас люди с VM."
@@ -7159,7 +7159,7 @@
       "id": "65c9a4dc6eb6c5a753ad38fb",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3722.43,
       "etime": 3731.7,
       "text": "Мы теперь точно так же не можем быстро увеличить размер виртуального диска, не можем его уменьшить, потому что ни одна файловая система на лету себя уменьшить до сих пор надежно не может."
@@ -7168,7 +7168,7 @@
       "id": "65c9a4dc6eb6c5a753ad38fc",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3733.32,
       "etime": 3734.48,
       "text": "Я подчеркиваю, ненадежно."
@@ -7177,7 +7177,7 @@
       "id": "65c9a4dc6eb6c5a753ad38fd",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3734.52,
       "etime": 3740.52,
       "text": "Конечно, всякие там говорят, что мы можем, но довольно часто падают при этой процедуре."
@@ -7186,7 +7186,7 @@
       "id": "65c9a4dc6eb6c5a753ad38fe",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3740.54,
       "etime": 3741.2,
       "text": "А вот IOPS, это..."
@@ -7195,7 +7195,7 @@
       "id": "65c9a4dc6eb6c5a753ad38ff",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3745.27,
       "etime": 3750.29,
       "text": "Вопрос уровня не диска на самом деле, а это вопрос чуть выше."
@@ -7204,7 +7204,7 @@
       "id": "65c9a4dc6eb6c5a753ad3900",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3750.33,
       "etime": 3751.89,
       "text": "И вот почему."
@@ -7213,7 +7213,7 @@
       "id": "65c9a4dc6eb6c5a753ad3901",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3751.93,
       "etime": 3767.32,
       "text": "Мы уже пытались сделать IOPS на уровне диска, на уровне дискового планировщика, и очень быстро столкнулись с такой... Ну, она вроде как на поверхности плавает проблема, но мы почему-то на нее напоролись только когда живьем стали пробовать."
@@ -7222,7 +7222,7 @@
       "id": "65c9a4dc6eb6c5a753ad3902",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3767.36,
       "etime": 3771.02,
       "text": "Как это ни странно, но в Linux Kernel есть дисковый кэш."
@@ -7231,7 +7231,7 @@
       "id": "65c9a4dc6eb6c5a753ad3903",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3771.1,
       "etime": 3772.28,
       "text": "И когда в него пишут..."
@@ -7240,7 +7240,7 @@
       "id": "65c9a4dc6eb6c5a753ad3904",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3773.49,
       "etime": 3778.19,
       "text": "то он сначала данные в себе копит и никому больше об этом не рассказывает."
@@ -7249,7 +7249,7 @@
       "id": "65c9a4dc6eb6c5a753ad3905",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3778.23,
       "etime": 3789.38,
       "text": "И вот когда он в какой-то момент решает всего себя записать на диск и упирается в IOPS-лимит, вот тут наступают такие очень забавные спецэффекты."
@@ -7258,7 +7258,7 @@
       "id": "65c9a4dc6eb6c5a753ad3906",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3789.42,
       "etime": 3800.58,
       "text": "Поэтому если хочется делать IOPS, то нужно обязательно его делать таким образом, чтобы он знал про вот эту гадскую особенность ядра Linux под названием дисковый кэш."
@@ -7267,7 +7267,7 @@
       "id": "65c9a4dc6eb6c5a753ad3907",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3800.62,
       "etime": 3801.98,
       "text": "А это уже не уровень диска."
@@ -7285,7 +7285,7 @@
       "id": "65c9a4dc6eb6c5a753ad3909",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3808.93,
       "etime": 3810.99,
       "text": "А там уже есть какой-то."
@@ -7294,7 +7294,7 @@
       "id": "65c9a4dc6eb6c5a753ad390a",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3811.03,
       "etime": 3813.05,
       "text": "Он называется троттлинг."
@@ -7303,7 +7303,7 @@
       "id": "65c9a4dc6eb6c5a753ad390b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3813.13,
       "etime": 3819.92,
       "text": "Я единственное только не помню, сделали ли там троттлинг по операциям, по размерам сделали, по операциям не знаю."
@@ -7312,7 +7312,7 @@
       "id": "65c9a4dc6eb6c5a753ad390c",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3819.96,
       "etime": 3821.62,
       "text": "Но делать его нужно в том месте."
@@ -7735,7 +7735,7 @@
       "id": "65c9a4dc6eb6c5a753ad393b",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 3997.74,
       "etime": 4002.36,
       "text": "Ну, в первой паузе музыка там какая-то звучала, а тут что-то один текст."
@@ -7771,7 +7771,7 @@
       "id": "65c9a4dc6eb6c5a753ad393f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 4007.96,
       "etime": 4008.12,
       "text": "Пока."
@@ -7780,7 +7780,7 @@
       "id": "65c9a4dc6eb6c5a753ad3940",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 4008.14,
       "etime": 4008.28,
       "text": "Окей."
@@ -16843,7 +16843,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d2f",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 8132.37,
       "etime": 8133.39,
       "text": "Это на попоржать."
@@ -17284,7 +17284,7 @@
       "id": "65c9a4dc6eb6c5a753ad3d60",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 8324.83,
       "etime": 8330.72,
       "text": "То есть это приложение будет просто, я так понимаю."
@@ -17977,7 +17977,7 @@
       "id": "65c9a4dc6eb6c5a753ad3dad",
       "issue": 403,
       "type": "cc",
-      "author": "SPEAKER_05",
+      "author": "PavelOpenVZ",
       "stime": 8579.49,
       "etime": 8582.05,
       "text": "Ну, конечно."

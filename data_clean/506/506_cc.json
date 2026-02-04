@@ -130,7 +130,7 @@
       "id": "65c9bbb3d62ca44c777e2fe5",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 53.64,
       "etime": 54.86,
       "text": "Я тут, привет."
@@ -301,7 +301,7 @@
       "id": "65c9bbb3d62ca44c777e2ff8",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 133.1,
       "etime": 133.34,
       "text": "Да-да."
@@ -625,7 +625,7 @@
       "id": "65c9bbb3d62ca44c777e301c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 282.07,
       "etime": 283.91,
       "text": "Правда?"
@@ -643,7 +643,7 @@
       "id": "65c9bbb3d62ca44c777e301e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 287.42,
       "etime": 291.06,
       "text": "Я вот не сисадмин, но тоже помогал отмечать."
@@ -670,7 +670,7 @@
       "id": "65c9bbb3d62ca44c777e3021",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 301.52,
       "etime": 311.14,
       "text": "Наши два сейс-админа могут в любом состоянии поднять продакшн или что-либо, поэтому не знаю."
@@ -715,7 +715,7 @@
       "id": "65c9bbb3d62ca44c777e3026",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 320.52,
       "etime": 321.44,
       "text": "Земля-то круглая."
@@ -850,7 +850,7 @@
       "id": "65c9bbb3d62ca44c777e3035",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 369.87,
       "etime": 372.13,
       "text": "А это, типа, красивое число в дне?"
@@ -868,7 +868,7 @@
       "id": "65c9bbb3d62ca44c777e3037",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 379.78,
       "etime": 380.46,
       "text": "Какая нам разница?"
@@ -877,7 +877,7 @@
       "id": "65c9bbb3d62ca44c777e3038",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 380.62,
       "etime": 381.42,
       "text": "Мы же программисты."
@@ -886,7 +886,7 @@
       "id": "65c9bbb3d62ca44c777e3039",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 381.46,
       "etime": 384.02,
       "text": "Нам не важно, что считать."
@@ -949,7 +949,7 @@
       "id": "65c9bbb3d62ca44c777e3040",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 419.17,
       "etime": 421.44,
       "text": "Хорошо."
@@ -976,7 +976,7 @@
       "id": "65c9bbb3d62ca44c777e3043",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 424.2,
       "etime": 426.06,
       "text": "Начните."
@@ -985,7 +985,7 @@
       "id": "65c9bbb3d62ca44c777e3044",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 426.24,
       "etime": 432.46,
       "text": "Я готов... Я очень, если честно, жду рейтинг языков."
@@ -994,7 +994,7 @@
       "id": "65c9bbb3d62ca44c777e3045",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 432.48,
       "etime": 436.18,
       "text": "Потому что похлевать... Так давайте начнем с него."
@@ -1255,7 +1255,7 @@
       "id": "65c9bbb3d62ca44c777e3062",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 545.73,
       "etime": 559.14,
       "text": "Я видел недалее, чем пару недель назад такую маленькую систему, растянутую, кажется, на пять машин, где они гордо заявляли, что это распределенная система, написанная на C. Поэтому это не только Embedded."
@@ -1273,7 +1273,7 @@
       "id": "65c9bbb3d62ca44c777e3064",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 565.88,
       "etime": 569.88,
       "text": "Это же C только, а C++ отдельно."
@@ -1282,7 +1282,7 @@
       "id": "65c9bbb3d62ca44c777e3065",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 569.94,
       "etime": 570.76,
       "text": "Да, естественно."
@@ -1327,7 +1327,7 @@
       "id": "65c9bbb3d62ca44c777e306a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 600.73,
       "etime": 601.75,
       "text": "Не, я не так."
@@ -1336,7 +1336,7 @@
       "id": "65c9bbb3d62ca44c777e306b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 601.77,
       "etime": 604.86,
       "text": "Я извиняюсь, что перебил тебя, не очень согласен."
@@ -1354,7 +1354,7 @@
       "id": "65c9bbb3d62ca44c777e306d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 614.14,
       "etime": 615.56,
       "text": "Как вариант."
@@ -1426,7 +1426,7 @@
       "id": "65c9bbb3d62ca44c777e3075",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 656.54,
       "etime": 661.14,
       "text": "Потому что я не помню, это была открытая или не открытая информация."
@@ -1444,7 +1444,7 @@
       "id": "65c9bbb3d62ca44c777e3077",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 664.62,
       "etime": 676.75,
       "text": "Насколько я помню, когда в DevZen приходила девушка и рассказывала про продукт C-line от JetBrains, она говорила, что в Италии, в России и ещё каких-то странах C и C++ дико популярен."
@@ -1453,7 +1453,7 @@
       "id": "65c9bbb3d62ca44c777e3078",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 676.77,
       "etime": 677.62,
       "text": "– Но C-line вообще для C++."
@@ -1462,7 +1462,7 @@
       "id": "65c9bbb3d62ca44c777e3079",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 680.11,
       "etime": 682.97,
       "text": "Ну, он же умеет кушать Си, как бы."
@@ -1471,7 +1471,7 @@
       "id": "65c9bbb3d62ca44c777e307a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 683.03,
       "etime": 684.83,
       "text": "Не вижу в этом проблем."
@@ -1516,7 +1516,7 @@
       "id": "65c9bbb3d62ca44c777e307f",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 710.97,
       "etime": 715.14,
       "text": "Есть абсолютно слайм, там написано, что это для C и C++, то есть это не только C++ IDE."
@@ -1525,7 +1525,7 @@
       "id": "65c9bbb3d62ca44c777e3080",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 715.22,
       "etime": 719.97,
       "text": "Ну, то есть сам JetBrains функционирует ее как C и C++."
@@ -1624,7 +1624,7 @@
       "id": "65c9bbb3d62ca44c777e308b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 801.09,
       "etime": 803.75,
       "text": "например, говорят о том, что мне нужны такие люди."
@@ -1669,7 +1669,7 @@
       "id": "65c9bbb3d62ca44c777e3090",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 838.29,
       "etime": 840.03,
       "text": "А я извиняюсь еще раз."
@@ -1678,7 +1678,7 @@
       "id": "65c9bbb3d62ca44c777e3091",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 840.07,
       "etime": 840.75,
       "text": "Такой вопрос."
@@ -1687,7 +1687,7 @@
       "id": "65c9bbb3d62ca44c777e3092",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 840.79,
       "etime": 844.13,
       "text": "А мы же все видим, что тут вообще как бы нескольких графиков."
@@ -1696,7 +1696,7 @@
       "id": "65c9bbb3d62ca44c777e3093",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 844.19,
       "etime": 855.01,
       "text": "Мы сейчас обсуждаем первый, который про платформу типа сервер, а там есть еще платформа типа мобайл, и типа то, что они называют что-то еще, вот так скажем."
@@ -1714,7 +1714,7 @@
       "id": "65c9bbb3d62ca44c777e3095",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 863.34,
       "etime": 864.14,
       "text": "А, нет, бру."
@@ -1723,7 +1723,7 @@
       "id": "65c9bbb3d62ca44c777e3096",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 864.16,
       "etime": 866.16,
       "text": "Всё, это я неправильно читаю графики."
@@ -1732,7 +1732,7 @@
       "id": "65c9bbb3d62ca44c777e3097",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 866.18,
       "etime": 867.2,
       "text": "Всё, увидели."
@@ -1741,7 +1741,7 @@
       "id": "65c9bbb3d62ca44c777e3098",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 867.26,
       "etime": 868.66,
       "text": "Простите."
@@ -1759,7 +1759,7 @@
       "id": "65c9bbb3d62ca44c777e309a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 871.56,
       "etime": 872.74,
       "text": "Да, одиннадцатое место."
@@ -1777,7 +1777,7 @@
       "id": "65c9bbb3d62ca44c777e309c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 877.24,
       "etime": 878.98,
       "text": "Swift — достаточно молодой язык."
@@ -2047,7 +2047,7 @@
       "id": "65c9bbb3d62ca44c777e30ba",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 984.93,
       "etime": 989.73,
       "text": "Go, все логично, хороший молодой язык."
@@ -2065,7 +2065,7 @@
       "id": "65c9bbb3d62ca44c777e30bc",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 995.06,
       "etime": 998.46,
       "text": "Да, смотрели, и это очень удивительно, что R выше, чем JavaScript."
@@ -2074,7 +2074,7 @@
       "id": "65c9bbb3d62ca44c777e30bd",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 998.68,
       "etime": 1004.74,
       "text": "Вот я никогда не поверю, не поверю, и, наверное, так и нету."
@@ -2083,7 +2083,7 @@
       "id": "65c9bbb3d62ca44c777e30be",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1004.78,
       "etime": 1019.31,
       "text": "То есть язык, который для анализа данных создан очень маленьким кругом людей, которым будут использовать его и могут использовать, стоит выше, чем язык, на котором может писать ребенок, и который сейчас лезет во все дыры."
@@ -2245,7 +2245,7 @@
       "id": "65c9bbb3d62ca44c777e30d0",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1094.29,
       "etime": 1094.73,
       "text": "Поговорить."
@@ -2299,7 +2299,7 @@
       "id": "65c9bbb3d62ca44c777e30d6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1143.9,
       "etime": 1145.4,
       "text": "Вот."
@@ -2308,7 +2308,7 @@
       "id": "65c9bbb3d62ca44c777e30d7",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1145.66,
       "etime": 1146.32,
       "text": "Ну, я не знаю..."
@@ -2317,7 +2317,7 @@
       "id": "65c9bbb3d62ca44c777e30d8",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1147.96,
       "etime": 1149.02,
       "text": "Странный вопросик."
@@ -2335,7 +2335,7 @@
       "id": "65c9bbb3d62ca44c777e30da",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1156.12,
       "etime": 1160.44,
       "text": "Кто-нибудь знает про него?"
@@ -2380,7 +2380,7 @@
       "id": "65c9bbb3d62ca44c777e30df",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1178.05,
       "etime": 1182.49,
       "text": "Нет, я тоже про него не знаю, но... А ты ползу не пришел, я понял."
@@ -2398,7 +2398,7 @@
       "id": "65c9bbb3d62ca44c777e30e1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1186.03,
       "etime": 1187.17,
       "text": "Ну, D не так."
@@ -2407,7 +2407,7 @@
       "id": "65c9bbb3d62ca44c777e30e2",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1187.19,
       "etime": 1195.82,
       "text": "Я видел даже рабочий продакшн-модуль один для системы, написанный на D. Ну, я знаю."
@@ -2416,7 +2416,7 @@
       "id": "65c9bbb3d62ca44c777e30e3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1195.84,
       "etime": 1202.98,
       "text": "Verilog я действительно не знаю, но вот Prolog, Erlang, Lisp, VHDL я как бы видел хотя бы раз в своей жизни."
@@ -2443,7 +2443,7 @@
       "id": "65c9bbb3d62ca44c777e30e6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1237.4,
       "etime": 1238.1,
       "text": "А Ксюша?"
@@ -2452,7 +2452,7 @@
       "id": "65c9bbb3d62ca44c777e30e7",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1239.04,
       "etime": 1240.16,
       "text": "Допрос от джависта."
@@ -2470,7 +2470,7 @@
       "id": "65c9bbb3d62ca44c777e30e9",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1244.9,
       "etime": 1246.46,
       "text": "Или это временная поминка?"
@@ -2551,7 +2551,7 @@
       "id": "65c9bbb3d62ca44c777e30f2",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1280.19,
       "etime": 1283.03,
       "text": "Ну хорошо, давайте я расскажу."
@@ -2569,7 +2569,7 @@
       "id": "65c9bbb3d62ca44c777e30f4",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1285.49,
       "etime": 1289.85,
       "text": "И я не знаю... Здравствуйте, джавист."
@@ -2578,7 +2578,7 @@
       "id": "65c9bbb3d62ca44c777e30f5",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1289.93,
       "etime": 1292.6,
       "text": "Да, здравствуйте."
@@ -2587,7 +2587,7 @@
       "id": "65c9bbb3d62ca44c777e30f6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1292.72,
       "etime": 1295.82,
       "text": "Я на самом деле не считаю, что это какая-то большая проблема."
@@ -2614,7 +2614,7 @@
       "id": "65c9bbb3d62ca44c777e30f9",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1308.33,
       "etime": 1311.64,
       "text": "Так что никаких проблем с этим нет."
@@ -2623,7 +2623,7 @@
       "id": "65c9bbb3d62ca44c777e30fa",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1311.7,
       "etime": 1312.56,
       "text": "Опыт какой?"
@@ -2650,7 +2650,7 @@
       "id": "65c9bbb3d62ca44c777e30fd",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1322.62,
       "etime": 1323.68,
       "text": "Сейчас это меньше уже."
@@ -2659,7 +2659,7 @@
       "id": "65c9bbb3d62ca44c777e30fe",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1323.74,
       "etime": 1326.42,
       "text": "То есть я имею в виду интерпрайз яма."
@@ -2677,7 +2677,7 @@
       "id": "65c9bbb3d62ca44c777e3100",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1332.48,
       "etime": 1334.7,
       "text": "Не так размашисто."
@@ -2695,7 +2695,7 @@
       "id": "65c9bbb3d62ca44c777e3102",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1337.99,
       "etime": 1355.16,
       "text": "меня странники вопрос а почему каббал я бы не сказал что джоуэта каббал джоуэта вполне современный язык который убирать много интересных функциональных вещей как бы почему именно такая параллель с каббалом если пожалуйста хочет по его так и сказали здравствуй не джорист я"
@@ -2722,7 +2722,7 @@
       "id": "65c9bbb3d62ca44c777e3105",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1370.92,
       "etime": 1373.86,
       "text": "Да, раньше, например, 30 лет назад это был Кабул."
@@ -2731,7 +2731,7 @@
       "id": "65c9bbb3d62ca44c777e3106",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1373.9,
       "etime": 1376.44,
       "text": "Сейчас, да, это Ява."
@@ -2740,7 +2740,7 @@
       "id": "65c9bbb3d62ca44c777e3107",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1376.52,
       "etime": 1377.98,
       "text": "Вот только поэтому."
@@ -2749,7 +2749,7 @@
       "id": "65c9bbb3d62ca44c777e3108",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1378.1,
       "etime": 1380.32,
       "text": "Больше ничего, ни почему."
@@ -2758,7 +2758,7 @@
       "id": "65c9bbb3d62ca44c777e3109",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1382.38,
       "etime": 1384.22,
       "text": "Все, мысли личные."
@@ -2767,7 +2767,7 @@
       "id": "65c9bbb3d62ca44c777e310a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1384.24,
       "etime": 1384.79,
       "text": "Спасибо."
@@ -2776,7 +2776,7 @@
       "id": "65c9bbb3d62ca44c777e310b",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1388.63,
       "etime": 1389.71,
       "text": "Так, кто там еще говорил?"
@@ -2785,7 +2785,7 @@
       "id": "65c9bbb3d62ca44c777e310c",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1389.93,
       "etime": 1404.48,
       "text": "Хочется надеяться, что, например, Джава теряет свои места, не потому что он такая хорошая или там си-хорошая, а потому что есть другие языки, как Коклин или там Скалла, Груви, и они все-таки отъедают какую-то часть ее."
@@ -2794,7 +2794,7 @@
       "id": "65c9bbb3d62ca44c777e310d",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1404.54,
       "etime": 1410.61,
       "text": "Как более современные и прикольные языки с хорошим набором фич."
@@ -2803,7 +2803,7 @@
       "id": "65c9bbb3d62ca44c777e310e",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1410.69,
       "etime": 1414.95,
       "text": "То, чего не хватает на Джаве, потому что она никогда не сломает обратную совместимость."
@@ -2812,7 +2812,7 @@
       "id": "65c9bbb3d62ca44c777e310f",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1417.26,
       "etime": 1425.35,
       "text": "Я как проповедник Котлина, меня там друзья называют, маркетологом Котлина, собственно, за этот вариант."
@@ -2821,7 +2821,7 @@
       "id": "65c9bbb3d62ca44c777e3110",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1425.79,
       "etime": 1427.73,
       "text": "А Котлин вообще не видно, да."
@@ -2839,7 +2839,7 @@
       "id": "65c9bbb3d62ca44c777e3112",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1432.57,
       "etime": 1434.17,
       "text": "Это понятно."
@@ -2857,7 +2857,7 @@
       "id": "65c9bbb3d62ca44c777e3114",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1445.32,
       "etime": 1448.66,
       "text": "Но, может быть, они и другие туда зацепили?"
@@ -2875,7 +2875,7 @@
       "id": "65c9bbb3d62ca44c777e3116",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1452.23,
       "etime": 1454.17,
       "text": "Нет, стоп, клоужи, кажется, есть."
@@ -2884,7 +2884,7 @@
       "id": "65c9bbb3d62ca44c777e3117",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1454.21,
       "etime": 1454.79,
       "text": "Нет, клоужи есть."
@@ -2893,7 +2893,7 @@
       "id": "65c9bbb3d62ca44c777e3118",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1454.81,
       "etime": 1456.31,
       "text": "Клоужи есть."
@@ -2929,7 +2929,7 @@
       "id": "65c9bbb3d62ca44c777e311c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1483.73,
       "etime": 1486.31,
       "text": "Ну, я бы сказал, что это не троянский конь."
@@ -2938,7 +2938,7 @@
       "id": "65c9bbb3d62ca44c777e311d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1486.37,
       "etime": 1488.93,
       "text": "Это скорее такой подарок с сюрпризом."
@@ -2947,7 +2947,7 @@
       "id": "65c9bbb3d62ca44c777e311e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1488.95,
       "etime": 1491.26,
       "text": "А еще мы имеем вот это."
@@ -2956,7 +2956,7 @@
       "id": "65c9bbb3d62ca44c777e311f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1491.36,
       "etime": 1494.28,
       "text": "И весело бежим переписывать все на Котлин."
@@ -2983,7 +2983,7 @@
       "id": "65c9bbb3d62ca44c777e3122",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1499.04,
       "etime": 1501.6,
       "text": "Это скорее такой хитрый подарок."
@@ -2992,7 +2992,7 @@
       "id": "65c9bbb3d62ca44c777e3123",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1501.68,
       "etime": 1504.1,
       "text": "Ну, в том-то и идея Котлин."
@@ -3001,7 +3001,7 @@
       "id": "65c9bbb3d62ca44c777e3124",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1504.16,
       "etime": 1510.34,
       "text": "Что ты не бежишь переписывать все, а добавляешь в футболку Котлина и начинаешь писать на Котлине."
@@ -3010,7 +3010,7 @@
       "id": "65c9bbb3d62ca44c777e3125",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1510.38,
       "etime": 1511.89,
       "text": "И оставляешь свою большую-большую джаву"
@@ -3019,7 +3019,7 @@
       "id": "65c9bbb3d62ca44c777e3126",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1512.98,
       "etime": 1526.67,
       "text": "Можно, если ты такой проповедник Котлина, ты мне расскажи, у нас просто на работе один из отделов сейчас мучает Котлина со спрингом."
@@ -3028,7 +3028,7 @@
       "id": "65c9bbb3d62ca44c777e3127",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1526.71,
       "etime": 1529.46,
       "text": "Его вообще реально запустить или они просто убивают время?"
@@ -3037,7 +3037,7 @@
       "id": "65c9bbb3d62ca44c777e3128",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1530.68,
       "etime": 1532,
       "text": "Конечно же, реально."
@@ -3046,7 +3046,7 @@
       "id": "65c9bbb3d62ca44c777e3129",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1532.06,
       "etime": 1537.11,
       "text": "Причем последняя идея даже начала подсказывать основные моменты, на которых новички падают."
@@ -3055,7 +3055,7 @@
       "id": "65c9bbb3d62ca44c777e312a",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1537.17,
       "etime": 1542.13,
       "text": "То, что надо классы делать open, потому что в Kotlin все файнал по дефолту."
@@ -3064,7 +3064,7 @@
       "id": "65c9bbb3d62ca44c777e312b",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1542.17,
       "etime": 1544.55,
       "text": "То есть классы, методы, они все файнал."
@@ -3073,7 +3073,7 @@
       "id": "65c9bbb3d62ca44c777e312c",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1544.61,
       "etime": 1551.09,
       "text": "Надо сказать явно, что они будут открыты для расширения, и тогда Spring заработает."
@@ -3082,7 +3082,7 @@
       "id": "65c9bbb3d62ca44c777e312d",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1551.11,
       "etime": 1559.12,
       "text": "На том же YouTube есть с митапа видео со мной, где по степам, степ-бай-степ Spring Boot с Kotlin рассказывается."
@@ -3100,7 +3100,7 @@
       "id": "65c9bbb3d62ca44c777e312f",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 1562.97,
       "etime": 1568.85,
       "text": "Без проблем."
@@ -3118,7 +3118,7 @@
       "id": "65c9bbb3d62ca44c777e3131",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1572.19,
       "etime": 1574.25,
       "text": "Ну, если ты трогал Яву, можешь."
@@ -3127,7 +3127,7 @@
       "id": "65c9bbb3d62ca44c777e3132",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1574.39,
       "etime": 1575.75,
       "text": "Не, я не так."
@@ -3136,7 +3136,7 @@
       "id": "65c9bbb3d62ca44c777e3133",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1575.87,
       "etime": 1581.91,
       "text": "Я трогаю Яву ровно тогда, когда они начинают где-то использовать Хазелькаст."
@@ -3145,7 +3145,7 @@
       "id": "65c9bbb3d62ca44c777e3134",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1581.95,
       "etime": 1586.89,
       "text": "Потому что у меня есть некий был бэкграунд работы с Хазелькастом."
@@ -3154,7 +3154,7 @@
       "id": "65c9bbb3d62ca44c777e3135",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1586.91,
       "etime": 1589.85,
       "text": "Меня периодически к джавистам привлекают, чтобы им помочь."
@@ -3163,7 +3163,7 @@
       "id": "65c9bbb3d62ca44c777e3136",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1590.92,
       "etime": 1601.35,
       "text": "Но я не джавист, я там в своей природе разработчик на крестах или на четырех костылях, как пошутили много выпусков назад."
@@ -3172,7 +3172,7 @@
       "id": "65c9bbb3d62ca44c777e3137",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1601.45,
       "etime": 1604.24,
       "text": "Я на C++ пишу в основном."
@@ -3181,7 +3181,7 @@
       "id": "65c9bbb3d62ca44c777e3138",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1604.32,
       "etime": 1610.18,
       "text": "Сейчас вот пишу местами на питон, местами на го для скорости."
@@ -3190,7 +3190,7 @@
       "id": "65c9bbb3d62ca44c777e3139",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1610.24,
       "etime": 1611.78,
       "text": "Вот как с этим справляюсь."
@@ -3208,7 +3208,7 @@
       "id": "65c9bbb3d62ca44c777e313b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1620.7,
       "etime": 1629.15,
       "text": "Но так как я не настоящий джавист, то одни все говорят, нет, нет, но как-то живем с этим."
@@ -3226,7 +3226,7 @@
       "id": "65c9bbb3d62ca44c777e313d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1633.3,
       "etime": 1634.76,
       "text": "А раз чудесный язык."
@@ -3235,7 +3235,7 @@
       "id": "65c9bbb3d62ca44c777e313e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1634.94,
       "etime": 1640.55,
       "text": "Я на нем недавно смог сделать сейф-сейф-сейф ссылки, чего-то там."
@@ -3244,7 +3244,7 @@
       "id": "65c9bbb3d62ca44c777e313f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1640.61,
       "etime": 1643.61,
       "text": "Так что эта штука стала очень небезопасной."
@@ -3253,7 +3253,7 @@
       "id": "65c9bbb3d62ca44c777e3140",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1643.63,
       "etime": 1645.17,
       "text": "Все хорошо."
@@ -3262,7 +3262,7 @@
       "id": "65c9bbb3d62ca44c777e3141",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1645.25,
       "etime": 1648.65,
       "text": "Раз живее, всех живее будет."
@@ -3406,7 +3406,7 @@
       "id": "65c9bbb3d62ca44c777e3151",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 1742.34,
       "etime": 1745.26,
       "text": "Может, она что-то сможет рассказать?"
@@ -3703,7 +3703,7 @@
       "id": "65c9bbb3d62ca44c777e3172",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1952.1,
       "etime": 1955.1,
       "text": "Можно вопрос следующего содержания?"
@@ -3712,7 +3712,7 @@
       "id": "65c9bbb3d62ca44c777e3173",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1956.06,
       "etime": 1972.79,
       "text": "Может быть, то, что прибыльность Амазона возросла, точнее, стала лучше, связано с тем, что много блатных клиентов ушло, и их место заняло много обычных клиентов, которые платят ту цену, которая у них оговорена."
@@ -3721,7 +3721,7 @@
       "id": "65c9bbb3d62ca44c777e3174",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1972.87,
       "etime": 1975.15,
       "text": "Такой какой-то взаимосвязи не может быть."
@@ -3748,7 +3748,7 @@
       "id": "65c9bbb3d62ca44c777e3177",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1986.84,
       "etime": 1988.64,
       "text": "Ну, у меня есть предположение."
@@ -3757,7 +3757,7 @@
       "id": "65c9bbb3d62ca44c777e3178",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1988.72,
       "etime": 1991.32,
       "text": "Я объясню, откуда строится такое предположение."
@@ -3766,7 +3766,7 @@
       "id": "65c9bbb3d62ca44c777e3179",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1991.36,
       "etime": 1996.51,
       "text": "Насколько я помню, Spotify эмигрировал со своего на клаудное решение."
@@ -3775,7 +3775,7 @@
       "id": "65c9bbb3d62ca44c777e317a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 1996.53,
       "etime": 2000.75,
       "text": "И, насколько я понимаю, они же получили какую-то особую цену."
@@ -3784,7 +3784,7 @@
       "id": "65c9bbb3d62ca44c777e317b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2000.79,
       "etime": 2010.66,
       "text": "Может быть, таких клиентов было много у Amazon, они просто переехали куда-то, и их заняло нормальное место, и они вышли на окупание."
@@ -3793,7 +3793,7 @@
       "id": "65c9bbb3d62ca44c777e317c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2010.68,
       "etime": 2013.3,
       "text": "Прошу прощения, неправильная фраза окупания."
@@ -3802,7 +3802,7 @@
       "id": "65c9bbb3d62ca44c777e317d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2013.34,
       "etime": 2016.1,
       "text": "У них улучшились квартальные отчеты."
@@ -3892,7 +3892,7 @@
       "id": "65c9bbb3d62ca44c777e3187",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2067.92,
       "etime": 2073.22,
       "text": "Потому что когда вы делаете инфраструктуру под себя, она затачивается у вас под свои параметры."
@@ -3901,7 +3901,7 @@
       "id": "65c9bbb3d62ca44c777e3188",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2073.24,
       "etime": 2075.38,
       "text": "То есть под свои какие-то бизнес-кейсы."
@@ -3910,7 +3910,7 @@
       "id": "65c9bbb3d62ca44c777e3189",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2075.42,
       "etime": 2076.22,
       "text": "И это все работает."
@@ -3919,7 +3919,7 @@
       "id": "65c9bbb3d62ca44c777e318a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2076.24,
       "etime": 2082.67,
       "text": "Но когда вы хотите сделать это более обобщенно, то это приводит к тому, что вам нужно узнать, а какие они есть."
@@ -3928,7 +3928,7 @@
       "id": "65c9bbb3d62ca44c777e318b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2082.69,
       "etime": 2086.37,
       "text": "И самый хороший способ – это когда начать как бы есть собственную еду."
@@ -3937,7 +3937,7 @@
       "id": "65c9bbb3d62ca44c777e318c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2086.41,
       "etime": 2090.29,
       "text": "Когда вы сами все едите эту собственную собачью еду, все нормально."
@@ -3946,7 +3946,7 @@
       "id": "65c9bbb3d62ca44c777e318d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2090.35,
       "etime": 2095.14,
       "text": "Но когда у вас свои предпочтения уже остались, то есть вы все их выработали, все работает,"
@@ -3955,7 +3955,7 @@
       "id": "65c9bbb3d62ca44c777e318e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2096.17,
       "etime": 2101.91,
       "text": "Теперь попытаться кого-то пригласить ещё поесть этой еды и увидеть им, что нравится."
@@ -4171,7 +4171,7 @@
       "id": "65c9bbb3d62ca44c777e31a6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2223.61,
       "etime": 2227.65,
       "text": "он увяз слишком большим количеством конечностей в этой штуке."
@@ -4180,7 +4180,7 @@
       "id": "65c9bbb3d62ca44c777e31a7",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2227.69,
       "etime": 2234.9,
       "text": "Потому что маленькому клиенту уйти будет не очень, может быть, тяжело, потому что инфраструктура поменьше."
@@ -4198,7 +4198,7 @@
       "id": "65c9bbb3d62ca44c777e31a9",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2239.18,
       "etime": 2243.69,
       "text": "А вот большому клиенту это может быть очень тяжело."
@@ -4207,7 +4207,7 @@
       "id": "65c9bbb3d62ca44c777e31aa",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2243.75,
       "etime": 2246.07,
       "text": "Ну, то есть это как бы сравнимо с тем, что Маймонд,"
@@ -4216,7 +4216,7 @@
       "id": "65c9bbb3d62ca44c777e31ab",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2246.8,
       "etime": 2250.68,
       "text": "Момент мучает и увязает в болоте и вымирает."
@@ -4225,7 +4225,7 @@
       "id": "65c9bbb3d62ca44c777e31ac",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2250.88,
       "etime": 2252.59,
       "text": "Смысл-то в этом получается тогда."
@@ -4261,7 +4261,7 @@
       "id": "65c9bbb3d62ca44c777e31b0",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2266.25,
       "etime": 2267.36,
       "text": "Им не надо, чтобы он погибал."
@@ -4270,7 +4270,7 @@
       "id": "65c9bbb3d62ca44c777e31b1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2267.42,
       "etime": 2269.82,
       "text": "Если он погиб, то от него молока не будет."
@@ -4288,7 +4288,7 @@
       "id": "65c9bbb3d62ca44c777e31b3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2294.66,
       "etime": 2296.16,
       "text": "У меня быстрый вопросик."
@@ -4297,7 +4297,7 @@
       "id": "65c9bbb3d62ca44c777e31b4",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2296.2,
       "etime": 2308.88,
       "text": "А кто-нибудь видел, если среди нас есть специалисты по Амазону, что-то аналогичное Google Dataflow, только в Амазон?"
@@ -4378,7 +4378,7 @@
       "id": "65c9bbb3d62ca44c777e31bd",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2325.1,
       "etime": 2328.18,
       "text": "Ты, я. Давай ты расскажи."
@@ -4387,7 +4387,7 @@
       "id": "65c9bbb3d62ca44c777e31be",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2330.36,
       "etime": 2334.4,
       "text": "Кратко, версия очень... Это их система."
@@ -4396,7 +4396,7 @@
       "id": "65c9bbb3d62ca44c777e31bf",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2334.44,
       "etime": 2340.54,
       "text": "Для того, чтобы выполнять потоковый MapReduce, ну, это очень сильное упрощение."
@@ -4405,7 +4405,7 @@
       "id": "65c9bbb3d62ca44c777e31c0",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2340.58,
       "etime": 2345.48,
       "text": "Для того, чтобы... У тебя есть условно в кавычках, ну, не в кавычках, просто окно."
@@ -4414,7 +4414,7 @@
       "id": "65c9bbb3d62ca44c777e31c1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2345.5,
       "etime": 2348.47,
       "text": "Ты говоришь, что началось окно анализа данных."
@@ -4423,7 +4423,7 @@
       "id": "65c9bbb3d62ca44c777e31c2",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2348.55,
       "etime": 2354.01,
       "text": "Там какое-то количество элементов проходит туда, окно схлопывается, потом они обрабатывают."
@@ -4432,7 +4432,7 @@
       "id": "65c9bbb3d62ca44c777e31c3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2354.05,
       "etime": 2355.59,
       "text": "Он гарантирует большое количество..."
@@ -4441,7 +4441,7 @@
       "id": "65c9bbb3d62ca44c777e31c4",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2356.13,
       "etime": 2361.29,
       "text": "за счет того, что построены файлы в системе и используют их собственную базу данных."
@@ -4450,7 +4450,7 @@
       "id": "65c9bbb3d62ca44c777e31c5",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2361.35,
       "etime": 2372.04,
       "text": "Они гарантируют очень большое количество разных гарантий, которые сейчас не гарантируются ни Эхо, ни Спарком, ни Флинком, ни Штормом."
@@ -4459,7 +4459,7 @@
       "id": "65c9bbb3d62ca44c777e31c6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2373.36,
       "etime": 2389.31,
       "text": "И на данный момент они являются очень большими мастерами по тому, как батч, микробатч, окна и разные другие разновидности того, как запихать данные куда-нибудь, лидерами в этом."
@@ -4477,7 +4477,7 @@
       "id": "65c9bbb3d62ca44c777e31c8",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2395.05,
       "etime": 2395.53,
       "text": "Ну вот как раз..."
@@ -4495,7 +4495,7 @@
       "id": "65c9bbb3d62ca44c777e31ca",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2406.41,
       "etime": 2409.16,
       "text": "Не все настолько шоколадно, как бы."
@@ -4522,7 +4522,7 @@
       "id": "65c9bbb3d62ca44c777e31cd",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2424.2,
       "etime": 2429.47,
       "text": "И да, это похоже чем-то на Флинг больше, чем на Спарк."
@@ -4531,7 +4531,7 @@
       "id": "65c9bbb3d62ca44c777e31ce",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2430.65,
       "etime": 2437.69,
       "text": "Сейчас тот SDK, на котором вы можете писать эти пайплайны, они передали в Apache, это называется Apache Beam."
@@ -4576,7 +4576,7 @@
       "id": "65c9bbb3d62ca44c777e31d3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2458.73,
       "etime": 2459.51,
       "text": "Будет хорошо."
@@ -4585,7 +4585,7 @@
       "id": "65c9bbb3d62ca44c777e31d4",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2459.57,
       "etime": 2462.17,
       "text": "Я в этом действительно не очень сильно специалист."
@@ -4594,7 +4594,7 @@
       "id": "65c9bbb3d62ca44c777e31d5",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2462.27,
       "etime": 2467.01,
       "text": "Мой проект связан с этим, но я не так глубоко в нем увяз."
@@ -4603,7 +4603,7 @@
       "id": "65c9bbb3d62ca44c777e31d6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2467.09,
       "etime": 2480.76,
       "text": "Но идея того, что вы можете писать пайплайны на каком-то своем одном языке, при этом после этого использовать разные раннеры и разные среды, где вы можете запускать, мне кажется, достаточно очень интересной."
@@ -4612,7 +4612,7 @@
       "id": "65c9bbb3d62ca44c777e31d7",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2482,
       "etime": 2484.75,
       "text": "А разве там только один язык говорит?"
@@ -4648,7 +4648,7 @@
       "id": "65c9bbb3d62ca44c777e31db",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2503.38,
       "etime": 2506.74,
       "text": "То есть те концепции, которые в этом СДК есть."
@@ -4657,7 +4657,7 @@
       "id": "65c9bbb3d62ca44c777e31dc",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2506.78,
       "etime": 2509.66,
       "text": "То есть то, что описано у них на сайте, называется Data Flow Module."
@@ -4666,7 +4666,7 @@
       "id": "65c9bbb3d62ca44c777e31dd",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2511.97,
       "etime": 2514.51,
       "text": "И используя их, вы можете делать."
@@ -4702,7 +4702,7 @@
       "id": "65c9bbb3d62ca44c777e31e1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2536.96,
       "etime": 2540.38,
       "text": "Но я не уверен, я небольшой специалист в амазоновских технологиях."
@@ -4783,7 +4783,7 @@
       "id": "65c9bbb3d62ca44c777e31ea",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2583.91,
       "etime": 2589.93,
       "text": "То есть, а DataFlow, Apache Beam, это одна штука."
@@ -4792,7 +4792,7 @@
       "id": "65c9bbb3d62ca44c777e31eb",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2589.97,
       "etime": 2593.69,
       "text": "То есть, она может работать в двух ипостасях."
@@ -4801,7 +4801,7 @@
       "id": "65c9bbb3d62ca44c777e31ec",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2593.77,
       "etime": 2596.15,
       "text": "Мне можно три замечания?"
@@ -4819,7 +4819,7 @@
       "id": "65c9bbb3d62ca44c777e31ee",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2597.77,
       "etime": 2598.54,
       "text": "Да."
@@ -4828,7 +4828,7 @@
       "id": "65c9bbb3d62ca44c777e31ef",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2598.58,
       "etime": 2600.02,
       "text": "Во-первых, мне не промывали мозги."
@@ -4837,7 +4837,7 @@
       "id": "65c9bbb3d62ca44c777e31f0",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2600.08,
       "etime": 2606.22,
       "text": "Я очень сильно в свободное время изучаю разные такие штуки, поэтому нет, мне не промывали мозги."
@@ -4846,7 +4846,7 @@
       "id": "65c9bbb3d62ca44c777e31f1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2606.32,
       "etime": 2606.92,
       "text": "Это первое."
@@ -4855,7 +4855,7 @@
       "id": "65c9bbb3d62ca44c777e31f2",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2620.09,
       "etime": 2621.21,
       "text": "Spotify."
@@ -4864,7 +4864,7 @@
       "id": "65c9bbb3d62ca44c777e31f3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2620.13,
       "etime": 2621.21,
       "text": "Они там не укуренные."
@@ -4873,7 +4873,7 @@
       "id": "65c9bbb3d62ca44c777e31f4",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2621.23,
       "etime": 2622.06,
       "text": "Все логично."
@@ -4882,7 +4882,7 @@
       "id": "65c9bbb3d62ca44c777e31f5",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2622.1,
       "etime": 2627.14,
       "text": "Есть такой замечательный проект The Project кокаина, который Яндекса."
@@ -4891,7 +4891,7 @@
       "id": "65c9bbb3d62ca44c777e31f6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2627.16,
       "etime": 2630,
       "text": "У них, насколько я понимаю, главный автор сейчас сидит там."
@@ -4900,7 +4900,7 @@
       "id": "65c9bbb3d62ca44c777e31f7",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2630.04,
       "etime": 2631.12,
       "text": "Поэтому они не укуренные."
@@ -4909,7 +4909,7 @@
       "id": "65c9bbb3d62ca44c777e31f8",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2631.16,
       "etime": 2636.18,
       "text": "Они нормальные люди, они понимают, как делать продукт."
@@ -4918,7 +4918,7 @@
       "id": "65c9bbb3d62ca44c777e31f9",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2636.26,
       "etime": 2640.51,
       "text": "Я не говорю о том, что я, когда говорю укуренный, это значит, ребята увлеченные."
@@ -4927,7 +4927,7 @@
       "id": "65c9bbb3d62ca44c777e31fa",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2640.57,
       "etime": 2642.59,
       "text": "Я не говорю, что это плохо."
@@ -4936,7 +4936,7 @@
       "id": "65c9bbb3d62ca44c777e31fb",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2642.65,
       "etime": 2644.49,
       "text": "А, все, прости, не понял тебя."
@@ -4972,7 +4972,7 @@
       "id": "65c9bbb3d62ca44c777e31ff",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2669.27,
       "etime": 2674.26,
       "text": "Люди в чёрном показывали, что это возможно, поэтому теоретически всё возможно."
@@ -5062,7 +5062,7 @@
       "id": "65c9bbb3d62ca44c777e3209",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2716.48,
       "etime": 2723.1,
       "text": "Я был на предыдущей теме рассказывал про Google Dataflow, а кто-то другой должен начать рассказывать."
@@ -5089,7 +5089,7 @@
       "id": "65c9bbb3d62ca44c777e320c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2730.42,
       "etime": 2732.3,
       "text": "Ладно, хорошо, я рассказываю."
@@ -5098,7 +5098,7 @@
       "id": "65c9bbb3d62ca44c777e320d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2732.34,
       "etime": 2736.01,
       "text": "Да, сам виноват, согласен."
@@ -5107,7 +5107,7 @@
       "id": "65c9bbb3d62ca44c777e320e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2736.85,
       "etime": 2742.35,
       "text": "OpenOZ, рассказывай всю историю, все знают, что такое OpenOZ, просто надо рассказать изменения."
@@ -5143,7 +5143,7 @@
       "id": "65c9bbb3d62ca44c777e3212",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2749.18,
       "etime": 2751.1,
       "text": "Ну, нет."
@@ -5152,7 +5152,7 @@
       "id": "65c9bbb3d62ca44c777e3213",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2751.14,
       "etime": 2755.48,
       "text": "Сначала была виртуоза, она была такая прелестная вся."
@@ -5161,7 +5161,7 @@
       "id": "65c9bbb3d62ca44c777e3214",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2755.54,
       "etime": 2762.17,
       "text": "И, насколько я понимаю, работала сильно раньше, чем все остальные решения по контейнеризации."
@@ -5170,7 +5170,7 @@
       "id": "65c9bbb3d62ca44c777e3215",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2762.19,
       "etime": 2763.25,
       "text": "Будешь меня кто-то поправить?"
@@ -5179,7 +5179,7 @@
       "id": "65c9bbb3d62ca44c777e3216",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2764.08,
       "etime": 2768.54,
       "text": "И она, по некоторым причинам, не очень смогла захватить рынок."
@@ -5188,7 +5188,7 @@
       "id": "65c9bbb3d62ca44c777e3217",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2768.6,
       "etime": 2772.06,
       "text": "Видимо, не проявляла такую большую агрессию, в отличие от Докера."
@@ -5296,7 +5296,7 @@
       "id": "65c9bbb3d62ca44c777e3223",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2823.51,
       "etime": 2828.15,
       "text": "Ну, я не уверен, мне кажется, что это реально очень простая технология."
@@ -5314,7 +5314,7 @@
       "id": "65c9bbb3d62ca44c777e3225",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2832.24,
       "etime": 2832.62,
       "text": "То есть"
@@ -5341,7 +5341,7 @@
       "id": "65c9bbb3d62ca44c777e3228",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2839.27,
       "etime": 2840.63,
       "text": "Нет, я измучен, это да."
@@ -5395,7 +5395,7 @@
       "id": "65c9bbb3d62ca44c777e322e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2872.28,
       "etime": 2874.5,
       "text": "Да, я согласен с Ксенией, это именно вот так."
@@ -5422,7 +5422,7 @@
       "id": "65c9bbb3d62ca44c777e3231",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2883.62,
       "etime": 2886.71,
       "text": "А тогда даже виртуальной машины было трудно объяснять."
@@ -5431,7 +5431,7 @@
       "id": "65c9bbb3d62ca44c777e3232",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2888.98,
       "etime": 2889.52,
       "text": "Не знаю."
@@ -5440,7 +5440,7 @@
       "id": "65c9bbb3d62ca44c777e3233",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2889.62,
       "etime": 2900.51,
       "text": "Я, насколько знаю, 5 или 6 лет назад я был на проекте, где как раз OpenAZ тестировалось сплитбрейны для достаточно сложного программного обеспечения."
@@ -5449,7 +5449,7 @@
       "id": "65c9bbb3d62ca44c777e3234",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2900.57,
       "etime": 2903.85,
       "text": "Ничего, и как бы все было хорошо."
@@ -5494,7 +5494,7 @@
       "id": "65c9bbb3d62ca44c777e3239",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2930.89,
       "etime": 2937.49,
       "text": "Давайте не будем пытаться обобщать с наших маленьких точек зрения, потому что любые примеры ничего не доказывают."
@@ -5503,7 +5503,7 @@
       "id": "65c9bbb3d62ca44c777e323a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 2937.53,
       "etime": 2944.17,
       "text": "Это очень сложно сделать, когда у нас тут всего три человека, четыре человека, и мы пытаемся что-то обобщить мирозначительно больше."
@@ -5566,7 +5566,7 @@
       "id": "65c9bbb3d62ca44c777e3241",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 2990.05,
       "etime": 2995.31,
       "text": "Потому что раньше была одна из больших проблем, что оно бегало на достаточно старом ядре 2"
@@ -5584,7 +5584,7 @@
       "id": "65c9bbb3d62ca44c777e3243",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3000.39,
       "etime": 3004.35,
       "text": "А тут всё-таки 3.10, и я считаю, что это победа."
@@ -5611,7 +5611,7 @@
       "id": "65c9bbb3d62ca44c777e3246",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3021.85,
       "etime": 3025.07,
       "text": "Поэтому я считаю, что они сделали очень большой прорыв."
@@ -5629,7 +5629,7 @@
       "id": "65c9bbb3d62ca44c777e3248",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3031.49,
       "etime": 3034.98,
       "text": "Например, в Яндексе используется что-то подобное?"
@@ -5638,7 +5638,7 @@
       "id": "65c9bbb3d62ca44c777e3249",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3035.04,
       "etime": 3038.34,
       "text": "Или если можно об этом говорить?"
@@ -5719,7 +5719,7 @@
       "id": "65c9bbb3d62ca44c777e3252",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3077.49,
       "etime": 3079.05,
       "text": "Но потом, видимо, это отвалилось."
@@ -5728,7 +5728,7 @@
       "id": "65c9bbb3d62ca44c777e3253",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3079.09,
       "etime": 3082.65,
       "text": "По коммитам можно посмотреть, естественно, как оно там было."
@@ -5737,7 +5737,7 @@
       "id": "65c9bbb3d62ca44c777e3254",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3082.75,
       "etime": 3087.79,
       "text": "Поэтому теоретически, наверное, где-то использовался."
@@ -5746,7 +5746,7 @@
       "id": "65c9bbb3d62ca44c777e3255",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3087.87,
       "etime": 3089.13,
       "text": "То есть у них есть живая миграция?"
@@ -5755,7 +5755,7 @@
       "id": "65c9bbb3d62ca44c777e3256",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3090.31,
       "etime": 3100,
       "text": "Ну, скажем так, когда я был последний раз на презентации на Яке, я видел живыми глазами своими, что есть миграция, все хорошо работает."
@@ -5764,7 +5764,7 @@
       "id": "65c9bbb3d62ca44c777e3257",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3100.06,
       "etime": 3102.22,
       "text": "Но это было еще до выпуска свежего OpenWazette."
@@ -5773,7 +5773,7 @@
       "id": "65c9bbb3d62ca44c777e3258",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3102.28,
       "etime": 3102.83,
       "text": "Ну, хорошо."
@@ -5782,7 +5782,7 @@
       "id": "65c9bbb3d62ca44c777e3259",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3106.96,
       "etime": 3113.3,
       "text": "Причем миграция, если очень повезет, можно смигрировать даже сокет с машины-машины."
@@ -5791,7 +5791,7 @@
       "id": "65c9bbb3d62ca44c777e325a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3113.36,
       "etime": 3116.11,
       "text": "Причем это выглядит действительно очень красиво."
@@ -5800,7 +5800,7 @@
       "id": "65c9bbb3d62ca44c777e325b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3116.17,
       "etime": 3119.73,
       "text": "И самое главное, это сейчас работает в большем числе случаев."
@@ -5809,7 +5809,7 @@
       "id": "65c9bbb3d62ca44c777e325c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3119.81,
       "etime": 3122.15,
       "text": "Я просто очень большой фанат Крио."
@@ -5818,7 +5818,7 @@
       "id": "65c9bbb3d62ca44c777e325d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3122.25,
       "etime": 3123.27,
       "text": "Я болею за них."
@@ -5827,7 +5827,7 @@
       "id": "65c9bbb3d62ca44c777e325e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3123.29,
       "etime": 3126.33,
       "text": "Чтобы у них дальше развивался."
@@ -5854,7 +5854,7 @@
       "id": "65c9bbb3d62ca44c777e3261",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3144.57,
       "etime": 3147.69,
       "text": "Поэтому они растут, развиваются."
@@ -5863,7 +5863,7 @@
       "id": "65c9bbb3d62ca44c777e3262",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3147.73,
       "etime": 3155.48,
       "text": "Тем более, они, насколько я понимаю, сейчас поддерживают все самое свежее, начиная с систем DEC группами, заканчивая чем-то немыслимым."
@@ -5872,7 +5872,7 @@
       "id": "65c9bbb3d62ca44c777e3263",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3155.54,
       "etime": 3158.9,
       "text": "Они вроде сейчас более-менее уже поддерживают."
@@ -5881,7 +5881,7 @@
       "id": "65c9bbb3d62ca44c777e3264",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3159.1,
       "etime": 3159.96,
       "text": "То есть я правильно понял?"
@@ -5908,7 +5908,7 @@
       "id": "65c9bbb3d62ca44c777e3267",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3177.83,
       "etime": 3179.37,
       "text": "Ну, теоретически, да."
@@ -5926,7 +5926,7 @@
       "id": "65c9bbb3d62ca44c777e3269",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3186.05,
       "etime": 3191.88,
       "text": "не очень понятно, потому что база данных всё время чуть-чуть дописывает."
@@ -5935,7 +5935,7 @@
       "id": "65c9bbb3d62ca44c777e326a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3191.92,
       "etime": 3195.9,
       "text": "Поэтому с базами данных я не представляю, как это работает."
@@ -5989,7 +5989,7 @@
       "id": "65c9bbb3d62ca44c777e3270",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3259.57,
       "etime": 3260.51,
       "text": "Красивая схема."
@@ -5998,7 +5998,7 @@
       "id": "65c9bbb3d62ca44c777e3271",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3263.69,
       "etime": 3267.87,
       "text": "Я считаю, что Крио большие молодцы, потому что они продвигают систему"
@@ -6007,7 +6007,7 @@
       "id": "65c9bbb3d62ca44c777e3272",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3269.39,
       "etime": 3270.99,
       "text": "Заморозки в юзерспейсе."
@@ -6052,7 +6052,7 @@
       "id": "65c9bbb3d62ca44c777e3277",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 3299.11,
       "etime": 3300.09,
       "text": "Зачем докеру?"
@@ -6061,7 +6061,7 @@
       "id": "65c9bbb3d62ca44c777e3278",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 3300.37,
       "etime": 3306.01,
       "text": "Докеры бэкгендируют 12 постулатов, один из них – стейтлос."
@@ -6070,7 +6070,7 @@
       "id": "65c9bbb3d62ca44c777e3279",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 3306.17,
       "etime": 3310.26,
       "text": "И, собственно, там это не нужно."
@@ -6088,7 +6088,7 @@
       "id": "65c9bbb3d62ca44c777e327b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3316.68,
       "etime": 3325,
       "text": "Может быть, в тот момент кто-то из Гугла или из Крио хотел видеть какой-то кейс, что контейнер мигрирует."
@@ -6097,7 +6097,7 @@
       "id": "65c9bbb3d62ca44c777e327c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3325.12,
       "etime": 3326.46,
       "text": "Я тебе не могу ответить на вопрос."
@@ -6115,7 +6115,7 @@
       "id": "65c9bbb3d62ca44c777e327e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3335.58,
       "etime": 3337.84,
       "text": "Ну, я как понимаю, внутри Гугла это работает так."
@@ -6124,7 +6124,7 @@
       "id": "65c9bbb3d62ca44c777e327f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3337.92,
       "etime": 3345.11,
       "text": "То есть, когда процессы переносятся, они так и могут быть заморожены и потом восстановлены."
@@ -6133,7 +6133,7 @@
       "id": "65c9bbb3d62ca44c777e3280",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3345.33,
       "etime": 3349.71,
       "text": "Ну, они, видимо, в этом видят какую-то выгоду, которую мы просто пока еще не поняли."
@@ -6151,7 +6151,7 @@
       "id": "65c9bbb3d62ca44c777e3282",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3367.24,
       "etime": 3372.83,
       "text": "То есть в Google они не выключали машины, как это делал Amazon."
@@ -6160,7 +6160,7 @@
       "id": "65c9bbb3d62ca44c777e3283",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3372.87,
       "etime": 3374.91,
       "text": "Они просто делали это независимо."
@@ -6169,7 +6169,7 @@
       "id": "65c9bbb3d62ca44c777e3284",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3382.01,
       "etime": 3384.11,
       "text": "Что-то еще там интересное есть?"
@@ -6178,7 +6178,7 @@
       "id": "65c9bbb3d62ca44c777e3285",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3384.27,
       "etime": 3386.67,
       "text": "Ну, я так быстро пролистал."
@@ -6187,7 +6187,7 @@
       "id": "65c9bbb3d62ca44c777e3286",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3386.71,
       "etime": 3389.9,
       "text": "Там самое главное, это, естественно, переезд на новое ядро."
@@ -6196,7 +6196,7 @@
       "id": "65c9bbb3d62ca44c777e3287",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3389.96,
       "etime": 3393.32,
       "text": "Немножко обновили стандартные утилиты."
@@ -6205,7 +6205,7 @@
       "id": "65c9bbb3d62ca44c777e3288",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3393.42,
       "etime": 3395.38,
       "text": "Проинтегрировали с Лимбиртом."
@@ -6214,7 +6214,7 @@
       "id": "65c9bbb3d62ca44c777e3289",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3395.42,
       "etime": 3397.08,
       "text": "Все знают, что такое Лимбирт?"
@@ -6223,7 +6223,7 @@
       "id": "65c9bbb3d62ca44c777e328a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3397.1,
       "etime": 3399.81,
       "text": "Или надо пояснить?"
@@ -6232,7 +6232,7 @@
       "id": "65c9bbb3d62ca44c777e328b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3399.85,
       "etime": 3400.25,
       "text": "Поясним."
@@ -6241,7 +6241,7 @@
       "id": "65c9bbb3d62ca44c777e328c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3402.59,
       "etime": 3415.48,
       "text": "Библиотека высокоуровневая нужна для того, чтобы работать с разнородными гипервизорами."
@@ -6250,7 +6250,7 @@
       "id": "65c9bbb3d62ca44c777e328d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3415.5,
       "etime": 3423.42,
       "text": "Теперь еще с контейнерами и разными другими системами разнородной виртуализации."
@@ -6268,7 +6268,7 @@
       "id": "65c9bbb3d62ca44c777e328f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3429.82,
       "etime": 3431.45,
       "text": "Смогли проинтегрироваться с ней."
@@ -6277,7 +6277,7 @@
       "id": "65c9bbb3d62ca44c777e3290",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3431.47,
       "etime": 3433.59,
       "text": "Всё хорошо, молодцы."
@@ -6286,7 +6286,7 @@
       "id": "65c9bbb3d62ca44c777e3291",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3433.65,
       "etime": 3436.61,
       "text": "Соответственно, надо похлопать людям."
@@ -6295,7 +6295,7 @@
       "id": "65c9bbb3d62ca44c777e3292",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3436.65,
       "etime": 3438.79,
       "text": "Они развиваются, верят в свой продукт."
@@ -6313,7 +6313,7 @@
       "id": "65c9bbb3d62ca44c777e3294",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3440.8,
       "etime": 3444.34,
       "text": "Я просто большой фанат виртуозы."
@@ -6340,7 +6340,7 @@
       "id": "65c9bbb3d62ca44c777e3297",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3458.8,
       "etime": 3460.84,
       "text": "Как ты можешь так говорить?"
@@ -6349,7 +6349,7 @@
       "id": "65c9bbb3d62ca44c777e3298",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3461.02,
       "etime": 3462.84,
       "text": "Ну, почему на разном уровне?"
@@ -6358,7 +6358,7 @@
       "id": "65c9bbb3d62ca44c777e3299",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3462.9,
       "etime": 3463.64,
       "text": "Песни, пожалуйста."
@@ -6376,7 +6376,7 @@
       "id": "65c9bbb3d62ca44c777e329b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3484.88,
       "etime": 3487.04,
       "text": "Сейчас они начинают идти в этом направлении."
@@ -6403,7 +6403,7 @@
       "id": "65c9bbb3d62ca44c777e329e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3493.55,
       "etime": 3495.03,
       "text": "Можно сделать так, можно по-другому."
@@ -6412,7 +6412,7 @@
       "id": "65c9bbb3d62ca44c777e329f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3496.4,
       "etime": 3504.58,
       "text": "Подожди, давай ответ разделим хотя бы на две части, потому что я понимаю, что ты не понимаешь, что такое OpenWZ тогда."
@@ -6421,7 +6421,7 @@
       "id": "65c9bbb3d62ca44c777e32a0",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3504.6,
       "etime": 3507.83,
       "text": "Потому что у OpenWZ в какой-то мере это все есть."
@@ -6430,7 +6430,7 @@
       "id": "65c9bbb3d62ca44c777e32a1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3507.87,
       "etime": 3515.45,
       "text": "Просто это может быть не настолько понятно нынешним программистам и девопсам, но это есть."
@@ -6448,7 +6448,7 @@
       "id": "65c9bbb3d62ca44c777e32a3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3518.85,
       "etime": 3521.93,
       "text": "которые сейчас уже спокойно интегрируются."
@@ -6475,7 +6475,7 @@
       "id": "65c9bbb3d62ca44c777e32a6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3530.3,
       "etime": 3530.66,
       "text": "Сейчас..."
@@ -6502,7 +6502,7 @@
       "id": "65c9bbb3d62ca44c777e32a9",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3560.13,
       "etime": 3560.61,
       "text": "Я как бы"
@@ -6601,7 +6601,7 @@
       "id": "65c9bbb3d62ca44c777e32b4",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3624.07,
       "etime": 3626.43,
       "text": "Может быть, ты права."
@@ -6610,7 +6610,7 @@
       "id": "65c9bbb3d62ca44c777e32b5",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3626.63,
       "etime": 3638.22,
       "text": "Возможно, я слишком читаю по новозад хорошему, поэтому не могу здраво подходить к оценке того, насколько он крут или не крут."
@@ -6646,7 +6646,7 @@
       "id": "65c9bbb3d62ca44c777e32b9",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3655.8,
       "etime": 3658.68,
       "text": "Нет, мы не используем фреймворки."
@@ -6655,7 +6655,7 @@
       "id": "65c9bbb3d62ca44c777e32ba",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3659.2,
       "etime": 3663.24,
       "text": "Сел я, сел мой напарник, и мы там за пару вечеров подняли"
@@ -6700,7 +6700,7 @@
       "id": "65c9bbb3d62ca44c777e32bf",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3701.56,
       "etime": 3704.68,
       "text": "То есть вы себе маленькую такую Crazy Monkey сделали?"
@@ -6709,7 +6709,7 @@
       "id": "65c9bbb3d62ca44c777e32c0",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3704.82,
       "etime": 3707.62,
       "text": "Да, но сделали на питоне."
@@ -6718,7 +6718,7 @@
       "id": "65c9bbb3d62ca44c777e32c1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3707.66,
       "etime": 3714.3,
       "text": "Если надо, теоретически мы можем даже поделиться это с кем-нибудь, если кто-то придет, потому что с начальством поговорить..."
@@ -6871,7 +6871,7 @@
       "id": "65c9bbb3d62ca44c777e32d2",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3770.87,
       "etime": 3771.61,
       "text": "Как бы вам тут"
@@ -6880,7 +6880,7 @@
       "id": "65c9bbb3d62ca44c777e32d3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3773.11,
       "etime": 3776.13,
       "text": "Я боюсь, что нас тогда он всех убьет."
@@ -6889,7 +6889,7 @@
       "id": "65c9bbb3d62ca44c777e32d4",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3776.19,
       "etime": 3777.07,
       "text": "Давайте мы не будем."
@@ -6916,7 +6916,7 @@
       "id": "65c9bbb3d62ca44c777e32d7",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3785.04,
       "etime": 3795.65,
       "text": "Я готов через неделю прийти и поговорить, потому что мы пытались это все использовать, и есть некоторые выводы о том, что можно в продакшн пускать, и что использовать, и что нельзя."
@@ -6943,7 +6943,7 @@
       "id": "65c9bbb3d62ca44c777e32da",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3801.25,
       "etime": 3803.24,
       "text": "Так, неглубоко, так, чуть-чуть."
@@ -6970,7 +6970,7 @@
       "id": "65c9bbb3d62ca44c777e32dd",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 3823.36,
       "etime": 3824.06,
       "text": "Вот лично у нас."
@@ -7015,7 +7015,7 @@
       "id": "65c9bbb3d62ca44c777e32e2",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 3832.43,
       "etime": 3833.69,
       "text": "Хорошо."
@@ -7348,7 +7348,7 @@
       "id": "65c9bbb3d62ca44c777e3307",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 4078.72,
       "etime": 4079.72,
       "text": "А они... Да, говори, прости."
@@ -7357,7 +7357,7 @@
       "id": "65c9bbb3d62ca44c777e3308",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 4079.92,
       "etime": 4081.06,
       "text": "Нет, говори, говори."
@@ -7366,7 +7366,7 @@
       "id": "65c9bbb3d62ca44c777e3309",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 4085.07,
       "etime": 4087.75,
       "text": "Тогда сюда другой вопрос должен следовать."
@@ -7375,7 +7375,7 @@
       "id": "65c9bbb3d62ca44c777e330a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 4087.79,
       "etime": 4089.19,
       "text": "А вот есть такая приставка Wii."
@@ -7384,7 +7384,7 @@
       "id": "65c9bbb3d62ca44c777e330b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 4089.27,
       "etime": 4091.33,
       "text": "В ней как бы все хорошо."
@@ -7393,7 +7393,7 @@
       "id": "65c9bbb3d62ca44c777e330c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 4091.35,
       "etime": 4093.51,
       "text": "В теннис поиграть, в хоккей поиграть."
@@ -7411,7 +7411,7 @@
       "id": "65c9bbb3d62ca44c777e330e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 4102.76,
       "etime": 4103.72,
       "text": "Нет, подожди."
@@ -7699,7 +7699,7 @@
       "id": "65c9bbb3d62ca44c777e332e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 4263.13,
       "etime": 4263.59,
       "text": "Это не так."
@@ -7726,7 +7726,7 @@
       "id": "65c9bbb3d62ca44c777e3331",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 4291.12,
       "etime": 4295.85,
       "text": "Не будет такого, что они будут как-то конкретно... Я сейчас немножко поясню, как это с тем работает."
@@ -8185,7 +8185,7 @@
       "id": "65c9bbb3d62ca44c777e3364",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 4554.11,
       "etime": 4555.19,
       "text": "Взмахом кисти."
@@ -8194,7 +8194,7 @@
       "id": "65c9bbb3d62ca44c777e3365",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 4555.23,
       "etime": 4560.29,
       "text": "То есть не касаться, а встряхивать кисточку над поверхностью экрана."
@@ -8716,7 +8716,7 @@
       "id": "65c9bbb3d62ca44c777e339f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 4908.54,
       "etime": 4910.78,
       "text": "Можно пояснить, что такое неокортекс?"
@@ -8734,7 +8734,7 @@
       "id": "65c9bbb3d62ca44c777e33a1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 4917.81,
       "etime": 4926.65,
       "text": "Ну, это слой головного мозга, который у млекопитающих существует, отвечает за сенсорику."
@@ -8779,7 +8779,7 @@
       "id": "65c9bbb3d62ca44c777e33a6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 4964.81,
       "etime": 4965.53,
       "text": "Я не знаю, как..."
@@ -8860,7 +8860,7 @@
       "id": "65c9bbb3d62ca44c777e33af",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5034.62,
       "etime": 5039.62,
       "text": "Например, сделать, сымитировать вес оружия, который ты держишь."
@@ -8878,7 +8878,7 @@
       "id": "65c9bbb3d62ca44c777e33b1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5046.68,
       "etime": 5052.03,
       "text": "Но это, по-моему, очень сейчас сложно будет сделать."
@@ -8887,7 +8887,7 @@
       "id": "65c9bbb3d62ca44c777e33b2",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5052.09,
       "etime": 5052.13,
       "text": "Да."
@@ -9013,7 +9013,7 @@
       "id": "65c9bbb3d62ca44c777e33c0",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5097.66,
       "etime": 5099.76,
       "text": "Или ты ничего не хочешь?"
@@ -9022,7 +9022,7 @@
       "id": "65c9bbb3d62ca44c777e33c1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5100.32,
       "etime": 5104.63,
       "text": "Нет, давайте мы остаемся до гиковского выпуска."
@@ -9040,7 +9040,7 @@
       "id": "65c9bbb3d62ca44c777e33c3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5105.77,
       "etime": 5107.07,
       "text": "Давайте до гиковского выпуска."
@@ -9049,7 +9049,7 @@
       "id": "65c9bbb3d62ca44c777e33c4",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5107.78,
       "etime": 5116.74,
       "text": "Потому что TeamCity, потому что они нам столько всего обещали, теоретически должен быть взрывовыносящим."
@@ -9058,7 +9058,7 @@
       "id": "65c9bbb3d62ca44c777e33c5",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5116.78,
       "etime": 5120.88,
       "text": "Но насколько это правда, надо поизучать вопрос."
@@ -9202,7 +9202,7 @@
       "id": "65c9bbb3d62ca44c777e33d5",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5201.93,
       "etime": 5204.57,
       "text": "Не спрашивают, а какой вот такой пункт у нас такой?"
@@ -9211,7 +9211,7 @@
       "id": "65c9bbb3d62ca44c777e33d6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5204.61,
       "etime": 5205.81,
       "text": "Что вы ответите на этот вопрос?"
@@ -9220,7 +9220,7 @@
       "id": "65c9bbb3d62ca44c777e33d7",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5206.27,
       "etime": 5208.85,
       "text": "А я извиняюсь, а..."
@@ -9229,7 +9229,7 @@
       "id": "65c9bbb3d62ca44c777e33d8",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5209.72,
       "etime": 5223.47,
       "text": "В Южном Парке по поводу этого всего была хорошая тема, когда там делали человеческую многоножку, склеивали людей, потому что люди не читали описание того, с чем они соглашаются."
@@ -9310,7 +9310,7 @@
       "id": "65c9bbb3d62ca44c777e33e1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5286.13,
       "etime": 5293.63,
       "text": "Давайте раздадим каждому пункт и просто будем так рассказывать."
@@ -9490,7 +9490,7 @@
       "id": "65c9bbb3d62ca44c777e33f5",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5453.8,
       "etime": 5458.56,
       "text": "Ну, или если ты не товар, то... Ну, точнее, если нет товара, значит, ты товар."
@@ -9499,7 +9499,7 @@
       "id": "65c9bbb3d62ca44c777e33f6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5458.58,
       "etime": 5465.49,
       "text": "Там какая-то такая была присказка пару выпусков назад, в кавычках."
@@ -9508,7 +9508,7 @@
       "id": "65c9bbb3d62ca44c777e33f7",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5465.77,
       "etime": 5467.81,
       "text": "Ну, окей."
@@ -9517,7 +9517,7 @@
       "id": "65c9bbb3d62ca44c777e33f8",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5467.83,
       "etime": 5469.09,
       "text": "Это все правильно такое говорить, да."
@@ -9652,7 +9652,7 @@
       "id": "65c9bbb3d62ca44c777e3407",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5565.49,
       "etime": 5567.33,
       "text": "Я думаю, надо по-другому поступать."
@@ -9661,7 +9661,7 @@
       "id": "65c9bbb3d62ca44c777e3408",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5567.43,
       "etime": 5574.06,
       "text": "Я тестирую мысли Гриши, что надо людям вообще выдавать права на пользование интернетом."
@@ -9670,7 +9670,7 @@
       "id": "65c9bbb3d62ca44c777e3409",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5574.12,
       "etime": 5575.92,
       "text": "Это очень хорошая практика."
@@ -9679,7 +9679,7 @@
       "id": "65c9bbb3d62ca44c777e340a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5575.94,
       "etime": 5580.32,
       "text": "Мы сейчас выдаем права на пользование автомобилем, надо то же самое для интернета ввести."
@@ -9733,7 +9733,7 @@
       "id": "65c9bbb3d62ca44c777e3410",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5622.77,
       "etime": 5636.43,
       "text": "Когда его вытаскивают, он весь такой красивый, в том, что было в колодце, и начинает возмущаться, подводят к нему переводчика, он начинает объяснять, что как же так, как так можно, ну почему тут никакого ограждения, никаких красных флажочков, чтобы показать, что здесь опасно."
@@ -9742,7 +9742,7 @@
       "id": "65c9bbb3d62ca44c777e3411",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5636.49,
       "etime": 5644.5,
       "text": "И ему переводчик, который одновременно является сотрудником КГБ, объясняет, вы когда в Шереметьево прилетели, красный флаг видели?"
@@ -9751,7 +9751,7 @@
       "id": "65c9bbb3d62ca44c777e3412",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5645.31,
       "etime": 5652.95,
       "text": "видели, распространяется на всю страну."
@@ -9814,7 +9814,7 @@
       "id": "65c9bbb3d62ca44c777e3419",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5703.93,
       "etime": 5705.09,
       "text": "Это интересно, Сергей."
@@ -9823,7 +9823,7 @@
       "id": "65c9bbb3d62ca44c777e341a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5705.13,
       "etime": 5708.15,
       "text": "Сергей, ты говоришь, поставил покемонов."
@@ -9904,7 +9904,7 @@
       "id": "65c9bbb3d62ca44c777e3423",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5762.21,
       "etime": 5764.55,
       "text": "Snapchat тут не сильно оригинален."
@@ -9913,7 +9913,7 @@
       "id": "65c9bbb3d62ca44c777e3424",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5764.59,
       "etime": 5768.45,
       "text": "Не, ну на самом деле тут уже может быть и другая мысль."
@@ -9931,7 +9931,7 @@
       "id": "65c9bbb3d62ca44c777e3426",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5775.54,
       "etime": 5787.2,
       "text": "Потому что, насколько я помню, в сериале «Как я встретил вашу маму», когда устраивался юрист на новую работу, там был момент, что там есть обязательная проверка в интернете."
@@ -9940,7 +9940,7 @@
       "id": "65c9bbb3d62ca44c777e3427",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5788.37,
       "etime": 5796.17,
       "text": "Там был квест «Руки полторашки», когда две бутылки пива по полтора привязываются к рукам."
@@ -9958,7 +9958,7 @@
       "id": "65c9bbb3d62ca44c777e3429",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5798.71,
       "etime": 5804.84,
       "text": "Может быть, Snapchat говорит, что не надо только про это, а ещё, может, не надо компрометирующий себя."
@@ -10057,7 +10057,7 @@
       "id": "65c9bbb3d62ca44c777e3434",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5873.89,
       "etime": 5875.03,
       "text": "На следующий пункт?"
@@ -10066,7 +10066,7 @@
       "id": "65c9bbb3d62ca44c777e3435",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5875.07,
       "etime": 5876.99,
       "text": "Да, давайте."
@@ -10075,7 +10075,7 @@
       "id": "65c9bbb3d62ca44c777e3436",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5877.09,
       "etime": 5878.71,
       "text": "То, что написано в Инстаграме."
@@ -10093,7 +10093,7 @@
       "id": "65c9bbb3d62ca44c777e3438",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5884.26,
       "etime": 5885.24,
       "text": "Как перевести?"
@@ -10102,7 +10102,7 @@
       "id": "65c9bbb3d62ca44c777e3439",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5885.36,
       "etime": 5899.46,
       "text": "Порочить, преследовать, задирать, злоупотреблять, приставать и угрожать людям на Инстаграме."
@@ -10147,7 +10147,7 @@
       "id": "65c9bbb3d62ca44c777e343e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5908.7,
       "etime": 5909,
       "text": "Да-да-да."
@@ -10156,7 +10156,7 @@
       "id": "65c9bbb3d62ca44c777e343f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5909.9,
       "etime": 5916.71,
       "text": "То есть, когда вы делаете это сами или вы пытаетесь, например, кому-то в комментарии что-то писать?"
@@ -10165,7 +10165,7 @@
       "id": "65c9bbb3d62ca44c777e3440",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 5917.09,
       "etime": 5918.97,
       "text": "Наверное, вот так."
@@ -10264,7 +10264,7 @@
       "id": "65c9bbb3d62ca44c777e344b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5982.3,
       "etime": 5983.7,
       "text": "Нет, тут есть не так."
@@ -10273,7 +10273,7 @@
       "id": "65c9bbb3d62ca44c777e344c",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5983.76,
       "etime": 5986.51,
       "text": "Эти слова можно еще немножко по-другому трактовать."
@@ -10282,7 +10282,7 @@
       "id": "65c9bbb3d62ca44c777e344d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5986.57,
       "etime": 5990.23,
       "text": "Тут говорят только про профили информации."
@@ -10291,7 +10291,7 @@
       "id": "65c9bbb3d62ca44c777e344e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5990.25,
       "etime": 5994.49,
       "text": "Но профили информации, я так понимаю, это еще и картинки в Инстаграме."
@@ -10300,7 +10300,7 @@
       "id": "65c9bbb3d62ca44c777e344f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 5994.53,
       "etime": 6005.82,
       "text": "А знаете, сколько сайтов есть разных, скажем так, не очень 16+, а скорее больше, которые, я уверен, живут именно поверх этих Инстаграмов."
@@ -10318,7 +10318,7 @@
       "id": "65c9bbb3d62ca44c777e3451",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6013.7,
       "etime": 6015.12,
       "text": "25+, что ли?"
@@ -10327,7 +10327,7 @@
       "id": "65c9bbb3d62ca44c777e3452",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6015.16,
       "etime": 6021.56,
       "text": "Нет, я имею в виду, которые фоточки еще как бы не 18+, но и не меньше."
@@ -10336,7 +10336,7 @@
       "id": "65c9bbb3d62ca44c777e3453",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6021.58,
       "etime": 6024.87,
       "text": "Они такие, они спорные, так сказать."
@@ -10345,7 +10345,7 @@
       "id": "65c9bbb3d62ca44c777e3454",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6024.91,
       "etime": 6026.29,
       "text": "И не туда, и не туда относятся."
@@ -10354,7 +10354,7 @@
       "id": "65c9bbb3d62ca44c777e3455",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6026.31,
       "etime": 6033.69,
       "text": "Но при этом они там... Я не понял твоего пояснения, я не понял еще хуже."
@@ -10363,7 +10363,7 @@
       "id": "65c9bbb3d62ca44c777e3456",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6033.83,
       "etime": 6034.83,
       "text": "Я имею в виду, что..."
@@ -10381,7 +10381,7 @@
       "id": "65c9bbb3d62ca44c777e3458",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6048.79,
       "etime": 6056.69,
       "text": "Без указания того, откуда это взяли и из какого места."
@@ -10534,7 +10534,7 @@
       "id": "65c9bbb3d62ca44c777e3469",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 6170.73,
       "etime": 6175.57,
       "text": "То есть вы не пытаетесь как-то накрутить себе, добавить что-то в резюме?"
@@ -10543,7 +10543,7 @@
       "id": "65c9bbb3d62ca44c777e346a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 6175.63,
       "etime": 6183.91,
       "text": "Я не знаю, многие ли из вас сталкивались с резюме, которое выглядит, ну, очень-очень удивительно."
@@ -10552,7 +10552,7 @@
       "id": "65c9bbb3d62ca44c777e346b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6183.97,
       "etime": 6187.06,
       "text": "Поясни, что такое очень-очень удивительно."
@@ -10570,7 +10570,7 @@
       "id": "65c9bbb3d62ca44c777e346d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 6193.88,
       "etime": 6194.36,
       "text": "Вот."
@@ -10579,7 +10579,7 @@
       "id": "65c9bbb3d62ca44c777e346e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 6194.38,
       "etime": 6195.8,
       "text": "То есть те, когда ты говоришь..."
@@ -10588,7 +10588,7 @@
       "id": "65c9bbb3d62ca44c777e346f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 6197.17,
       "etime": 6198.57,
       "text": "Да, это не Бог."
@@ -10597,7 +10597,7 @@
       "id": "65c9bbb3d62ca44c777e3470",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 6198.59,
       "etime": 6201.75,
       "text": "И тогда становится очень странно."
@@ -10804,7 +10804,7 @@
       "id": "65c9bbb3d62ca44c777e3487",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 6357.36,
       "etime": 6358.46,
       "text": "Именно для них это нужно."
@@ -11002,7 +11002,7 @@
       "id": "65c9bbb3d62ca44c777e349d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6535.68,
       "etime": 6539.96,
       "text": "Можно я немножко комментариев добавлю по поводу первой линии обороны?"
@@ -11011,7 +11011,7 @@
       "id": "65c9bbb3d62ca44c777e349e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6540.2,
       "etime": 6541.81,
       "text": "Вы сказали, они просто ищут теги."
@@ -11029,7 +11029,7 @@
       "id": "65c9bbb3d62ca44c777e34a0",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6544.49,
       "etime": 6552.55,
       "text": "Когда ты оплавишься на какие-то должности, не очень простые места."
@@ -11038,7 +11038,7 @@
       "id": "65c9bbb3d62ca44c777e34a1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6552.57,
       "etime": 6560.84,
       "text": "Там даже первая линия обороны достаточно подготовленная, чтобы распознать, насколько человек вменяемый и понимает в этой технологии..."
@@ -11056,7 +11056,7 @@
       "id": "65c9bbb3d62ca44c777e34a3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6567.9,
       "etime": 6575.94,
       "text": "В зависимости от того, насколько тренированная линия обороны, она может достаточно хорошо отсеивать людей."
@@ -11119,7 +11119,7 @@
       "id": "65c9bbb3d62ca44c777e34aa",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 6613.39,
       "etime": 6617.03,
       "text": "Еще и чары предела города или страны могут общаться между собой."
@@ -11128,7 +11128,7 @@
       "id": "65c9bbb3d62ca44c777e34ab",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 6617.07,
       "etime": 6623.44,
       "text": "Таким образом, легко лаеров, которые говорят, что мы работали в какой-то компании, отсеять на каких-то проектах."
@@ -11137,7 +11137,7 @@
       "id": "65c9bbb3d62ca44c777e34ac",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 6623.76,
       "etime": 6626.84,
       "text": "В Беларуси, например, нормальная практика."
@@ -11200,7 +11200,7 @@
       "id": "65c9bbb3d62ca44c777e34b3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 6684.31,
       "etime": 6685.37,
       "text": "Это очень важно."
@@ -11308,7 +11308,7 @@
       "id": "65c9bbb3d62ca44c777e34bf",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 6764.39,
       "etime": 6765.79,
       "text": "Отлично, замечательно."
@@ -11470,7 +11470,7 @@
       "id": "65c9bbb3d62ca44c777e34d1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6851.48,
       "etime": 6864.49,
       "text": "Правильно понимаю, что компания, которая делает такие фейковые хистери для людей про прохождение собеседования, использует тысячу миллионов пользователей фейковых, которые идут и ему накручивают навыки?"
@@ -11479,7 +11479,7 @@
       "id": "65c9bbb3d62ca44c777e34d2",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6864.51,
       "etime": 6864.61,
       "text": "Зачем?"
@@ -11488,7 +11488,7 @@
       "id": "65c9bbb3d62ca44c777e34d3",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 6867.83,
       "etime": 6873.97,
       "text": "Ну, я не знаю, чтобы у человека неожиданно, там, не знаю, 99 было по какой-нибудь технологии."
@@ -11695,7 +11695,7 @@
       "id": "65c9bbb3d62ca44c777e34ea",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 6998.35,
       "etime": 7000.25,
       "text": "Ну, может быть, какой-нибудь."
@@ -11704,7 +11704,7 @@
       "id": "65c9bbb3d62ca44c777e34eb",
       "issue": 506,
       "type": "cc",
-      "author": "ruslan_unknown",
+      "author": "RuslanKotlin",
       "stime": 7000.29,
       "etime": 7007.53,
       "text": "Наверное, что-то с Киком и НП когда-то брали имя в НП-модулях."
@@ -12010,7 +12010,7 @@
       "id": "65c9bbb3d62ca44c777e350d",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7197.9,
       "etime": 7202.49,
       "text": "Кто читал новость?"
@@ -12019,7 +12019,7 @@
       "id": "65c9bbb3d62ca44c777e350e",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7202.61,
       "etime": 7206.57,
       "text": "Я ее не вижу, но я догадываюсь, что это статья с Хаббла, нет?"
@@ -12172,7 +12172,7 @@
       "id": "65c9bbb3d62ca44c777e351f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7302.14,
       "etime": 7302.92,
       "text": "Все хорошо."
@@ -12181,7 +12181,7 @@
       "id": "65c9bbb3d62ca44c777e3520",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7303.48,
       "etime": 7306.6,
       "text": "Я уверен, что эта штука нужна для экстремальных ситуаций."
@@ -12190,7 +12190,7 @@
       "id": "65c9bbb3d62ca44c777e3521",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7306.64,
       "etime": 7312.38,
       "text": "Поскольку я помню Эльбрус... Ой, Эверест, простите."
@@ -12199,7 +12199,7 @@
       "id": "65c9bbb3d62ca44c777e3522",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7312.58,
       "etime": 7313.48,
       "text": "Неважно."
@@ -12208,7 +12208,7 @@
       "id": "65c9bbb3d62ca44c777e3523",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7313.58,
       "etime": 7315.85,
       "text": "Фигня одна и все равно не работает."
@@ -12217,7 +12217,7 @@
       "id": "65c9bbb3d62ca44c777e3524",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7316.11,
       "etime": 7316.63,
       "text": "Неправда."
@@ -12235,7 +12235,7 @@
       "id": "65c9bbb3d62ca44c777e3526",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7322.49,
       "etime": 7323.11,
       "text": "Все хорошо."
@@ -12406,7 +12406,7 @@
       "id": "65c9bbb3d62ca44c777e3539",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7417.25,
       "etime": 7422.37,
       "text": "Нет, подождите, но Air это же не какое-то специальное слово, это общее слово."
@@ -12550,7 +12550,7 @@
       "id": "65c9bbb3d62ca44c777e3549",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7490.93,
       "etime": 7495.44,
       "text": "Потому что я ездил много с MacBook Air, но там проблема."
@@ -12559,7 +12559,7 @@
       "id": "65c9bbb3d62ca44c777e354a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7495.46,
       "etime": 7503.38,
       "text": "Иногда для презентаций, которые я делаю, точнее, не презентаций, а таких демон, нужно много Linux."
@@ -12568,7 +12568,7 @@
       "id": "65c9bbb3d62ca44c777e354b",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7503.46,
       "etime": 7506.76,
       "text": "И не на удаленной машине, а вот прямо здесь, локально."
@@ -12604,7 +12604,7 @@
       "id": "65c9bbb3d62ca44c777e354f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 7516.85,
       "etime": 7517.91,
       "text": "Но все очень надеются."
@@ -12685,7 +12685,7 @@
       "id": "65c9bbb3d62ca44c777e3558",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7555.9,
       "etime": 7557.6,
       "text": "Много Линукса?"
@@ -12694,7 +12694,7 @@
       "id": "65c9bbb3d62ca44c777e3559",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7557.64,
       "etime": 7568.78,
       "text": "У меня есть Макбук, у меня есть iPad, у меня есть все равно, и я не хочу делать какую-то порнографию с устройствами."
@@ -12703,7 +12703,7 @@
       "id": "65c9bbb3d62ca44c777e355a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7568.86,
       "etime": 7571.75,
       "text": "Я лучше... Я рада, что мы упомянули порно."
@@ -12748,7 +12748,7 @@
       "id": "65c9bbb3d62ca44c777e355f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 7597.99,
       "etime": 7599.35,
       "text": "они, получается, одновременно нужны."
@@ -12766,7 +12766,7 @@
       "id": "65c9bbb3d62ca44c777e3561",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7604.56,
       "etime": 7606.52,
       "text": "Вот как раз коллега меня понял."
@@ -12775,7 +12775,7 @@
       "id": "65c9bbb3d62ca44c777e3562",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7606.54,
       "etime": 7609.22,
       "text": "Мне надо, чтобы одновременно было и то, и то."
@@ -12784,7 +12784,7 @@
       "id": "65c9bbb3d62ca44c777e3563",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7609.32,
       "etime": 7616.23,
       "text": "И тема показывается обычно у меня, по крайней мере, того, чего я показываю, обычно происходит именно вот так."
@@ -12793,7 +12793,7 @@
       "id": "65c9bbb3d62ca44c777e3564",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7616.25,
       "etime": 7618.25,
       "text": "То есть там надо именно два ноутбука."
@@ -12847,7 +12847,7 @@
       "id": "65c9bbb3d62ca44c777e356a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7650.61,
       "etime": 7662.57,
       "text": "Смотрите, у меня всегда, когда я показываю эту тему, в смысле звучит следующий смысл, что мы это можем запустить на 512 оперативке с одним ядром."
@@ -12892,7 +12892,7 @@
       "id": "65c9bbb3d62ca44c777e356f",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 7680.88,
       "etime": 7681.88,
       "text": "Разборипай же."
@@ -12901,7 +12901,7 @@
       "id": "65c9bbb3d62ca44c777e3570",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 7681.92,
       "etime": 7685.1,
       "text": "Ты же говорил, что у тебя и был кластер на разборипай."
@@ -12910,7 +12910,7 @@
       "id": "65c9bbb3d62ca44c777e3571",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7686.22,
       "etime": 7692.16,
       "text": "Я сначала ездил как раз-таки с этим лэптопом."
@@ -12919,7 +12919,7 @@
       "id": "65c9bbb3d62ca44c777e3572",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7692.24,
       "etime": 7694.68,
       "text": "Неттопом, точнее."
@@ -12946,7 +12946,7 @@
       "id": "65c9bbb3d62ca44c777e3575",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7701.63,
       "etime": 7703.43,
       "text": "Ну вот одно время я ездил..."
@@ -12955,7 +12955,7 @@
       "id": "65c9bbb3d62ca44c777e3576",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7704.56,
       "etime": 7708.65,
       "text": "Одно время я с нетбуком ездил, одно время как раз-таки с неттопом."
@@ -12973,7 +12973,7 @@
       "id": "65c9bbb3d62ca44c777e3578",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7712.57,
       "etime": 7718.63,
       "text": "На самом деле, для меня был самый удобный кейс, когда у меня был MacBook Pro и Air."
@@ -12982,7 +12982,7 @@
       "id": "65c9bbb3d62ca44c777e3579",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7718.69,
       "etime": 7725.24,
       "text": "Потом, неожиданно, кейсы некоторые поменялись, и оказалось, что мне надо, чтобы на маленьком устройстве был Linux."
@@ -12991,7 +12991,7 @@
       "id": "65c9bbb3d62ca44c777e357a",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 7726.42,
       "etime": 7732.58,
       "text": "Вот я думаю, что я Xiaomi себе прикуплю, как минимум для поездок и разных презентаций будет интересно."
@@ -13063,7 +13063,7 @@
       "id": "65c9bbb3d62ca44c777e3582",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 7757.79,
       "etime": 7759.85,
       "text": "Я понимаю, очень важна батарейка."
@@ -13342,7 +13342,7 @@
       "id": "65c9bbb3d62ca44c777e35a1",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 8009.09,
       "etime": 8013.57,
       "text": "Но зато у нас есть Яндекс.Авиабилеты, чудесный сервис, которым я всегда пользуюсь."
@@ -13351,7 +13351,7 @@
       "id": "65c9bbb3d62ca44c777e35a2",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 8013.63,
       "etime": 8017.26,
       "text": "Я продвигаю его в массы практически."
@@ -13405,7 +13405,7 @@
       "id": "65c9bbb3d62ca44c777e35a8",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "EldarMurtazin",
       "stime": 8029.35,
       "etime": 8030.97,
       "text": "на этом сервисе."
@@ -13720,7 +13720,7 @@
       "id": "65c9bbb3d62ca44c777e35cb",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 8215.24,
       "etime": 8218.14,
       "text": "И вопрос, наверное, будет, что будет потом."
@@ -13990,7 +13990,7 @@
       "id": "65c9bbb3d62ca44c777e35e9",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 8388.92,
       "etime": 8389.26,
       "text": "Спасибо."
@@ -14107,7 +14107,7 @@
       "id": "65c9bbb3d62ca44c777e35f6",
       "issue": 506,
       "type": "cc",
-      "author": "SPEAKER_06",
+      "author": "AlexeyMaverick",
       "stime": 8438.07,
       "etime": 8438.67,
       "text": "Всем не болейте."

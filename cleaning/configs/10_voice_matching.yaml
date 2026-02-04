@@ -1,0 +1,128 @@
+version: 1
+name: Voice matching - confirmed speaker identifications
+priority: 10
+description: Автоматические правила на основе voice embeddings (avg cosine similarity >= 0.8, единственный кандидат, все сегменты
+  согласованы)
+rules:
+- id: vm_e254_SPEAKER_MISATTRIBUTED_EldarMurtazin_to_andrey_amelyanchuk
+  type: rename_episode
+  episode: 254
+  from: SPEAKER_MISATTRIBUTED_EldarMurtazin
+  to: andrey_amelyanchuk
+  reason: 'Voice match avg=0.8746 (segments: 0.8481, 0.8620, 0.9137)'
+- id: vm_e309_SPEAKER_04_to_Marin_k_a
+  type: rename_episode
+  episode: 309
+  from: SPEAKER_04
+  to: Marin_k_a
+  reason: 'Voice match avg=0.8496 (segments: 0.8662, 0.8617, 0.8208)'
+- id: vm_e328_SPEAKER_00_to_Marin_k_a
+  type: rename_episode
+  episode: 328
+  from: SPEAKER_00
+  to: Marin_k_a
+  reason: 'Voice match avg=0.8745 (segments: 0.8731, 0.8563, 0.8942)'
+- id: vm_e329_SPEAKER_01_to_Marin_k_a
+  type: rename_episode
+  episode: 329
+  from: SPEAKER_01
+  to: Marin_k_a
+  reason: 'Voice match avg=0.8817 (segments: 0.8916, 0.8531, 0.9003)'
+- id: vm_e329_SPEAKER_06_to_Guest_Aleksandr_GameJournalist
+  type: rename_episode
+  episode: 329
+  from: SPEAKER_06
+  to: Guest_Aleksandr_GameJournalist
+  reason: 'Voice match avg=0.8893 (segments: 0.8895, 0.9351, 0.8434)'
+- id: vm_e369_Guest_Unknown_ep369_1_to_Gray
+  type: rename_episode
+  episode: 369
+  from: Guest_Unknown_ep369_1
+  to: Gray
+  reason: 'Voice match avg=0.9072 (segments: 0.9356, 0.8924, 0.8937)'
+# FIXED (session 4, 2026-02-03): Voice match ошибочно определил SPEAKER_06 как Bobuk.
+# По контексту это Руслан (интернет-провайдер), тот же что в ep299,327,402,404,425.
+- id: vm_e397_Guest_Unknown_ep397_2_to_RuslanTelecom
+  type: rename_episode
+  episode: 397
+  from: Guest_Unknown_ep397_2
+  to: RuslanTelecom
+  reason: 'Руслан (интернет-провайдер). Voice match ошибочен — контекст подтверждает (Docker, saltstack, местные сходки)'
+- id: vm_e408_SPEAKER_03_to_Marin_k_a
+  type: rename_episode
+  episode: 408
+  from: SPEAKER_03
+  to: Marin_k_a
+  reason: 'Voice match avg=0.9066 (segments: 0.9088, 0.9015, 0.9094)'
+- id: vm_e423_SPEAKER_08_to_EldarMurtazin
+  type: rename_episode
+  episode: 423
+  from: SPEAKER_08
+  to: EldarMurtazin
+  reason: 'Voice match avg=0.8883 (segments: 0.8796, 0.9303, 0.8551)'
+- id: vm_e429_SPEAKER_03_to_Alek.sys
+  type: rename_episode
+  episode: 429
+  from: SPEAKER_03
+  to: Alek.sys
+  reason: 'Voice match avg=0.8978 (segments: 0.9031, 0.8984, 0.8918)'
+- id: vm_e446_SPEAKER_UNKNOWN_RAZBOR_to_ViktorGamov
+  type: rename_episode
+  episode: 446
+  from: SPEAKER_UNKNOWN_RAZBOR
+  to: ViktorGamov
+  reason: 'Voice match avg=0.8427 (segments: 0.8617, 0.8461, 0.8203)'
+- id: vm_e458_SPEAKER_01_to_Bobuk
+  type: rename_episode
+  episode: 458
+  from: SPEAKER_01
+  to: Bobuk
+  reason: 'Voice match avg=0.8282 (segments: 0.8278, 0.8410, 0.8157)'
+- id: vm_e466_SPEAKER_02_to_Alek.sys
+  type: rename_episode
+  episode: 466
+  from: SPEAKER_02
+  to: Alek.sys
+  reason: 'Voice match avg=0.8890 (segments: 0.8467, 0.8979, 0.9224)'
+- id: vm_e471_SPEAKER_04_to_Alek.sys
+  type: rename_episode
+  episode: 471
+  from: SPEAKER_04
+  to: Alek.sys
+  reason: 'Voice match avg=0.8832 (segments: 0.8958, 0.8735, 0.8803)'
+- id: vm_e505_SPEAKER_06_to_EldarMurtazin
+  type: rename_episode
+  episode: 505
+  from: SPEAKER_06
+  to: EldarMurtazin
+  reason: 'Voice match avg=0.8691 (segments: 0.8485, 0.8822, 0.8765)'
+- id: vm_e506_SPEAKER_04_to_EldarMurtazin
+  type: rename_episode
+  episode: 506
+  from: SPEAKER_04
+  to: EldarMurtazin
+  reason: 'Voice match avg=0.8944 (segments: 0.9003, 0.9199, 0.8631)'
+- id: vm_e532_SPEAKER_06_to_Alek.sys
+  type: rename_episode
+  episode: 532
+  from: SPEAKER_06
+  to: Alek.sys
+  reason: 'Voice match avg=0.9019 (segments: 0.9122, 0.8861, 0.9075)'
+- id: vm_e536_SPEAKER_05_to_Alek.sys
+  type: rename_episode
+  episode: 536
+  from: SPEAKER_05
+  to: Alek.sys
+  reason: 'Voice match avg=0.9083 (segments: 0.9263, 0.9044, 0.8943)'
+- id: vm_e562_SPEAKER_05_to_Alek.sys
+  type: rename_episode
+  episode: 562
+  from: SPEAKER_05
+  to: Alek.sys
+  reason: 'Voice match avg=0.9230 (segments: 0.9332, 0.9346, 0.9013)'
+- id: vm_e662_SPEAKER_04_to_Bobuk
+  type: rename_episode
+  episode: 662
+  from: SPEAKER_04
+  to: Bobuk
+  reason: 'Voice match avg=0.8485 (segments: 0.8896, 0.8557, 0.8003)'

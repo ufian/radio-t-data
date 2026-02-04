@@ -499,7 +499,7 @@
       "id": "65c9a95c32ce28ad10ec0e70",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 167.38,
       "etime": 168.44,
       "text": "Вроде да."
@@ -508,7 +508,7 @@
       "id": "65c9a95c32ce28ad10ec0e71",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 168.84,
       "etime": 175.13,
       "text": "А это подкаст не продолжение этого сериала, где мы рассказываем про гол уже какой выпуск подряд?"
@@ -526,7 +526,7 @@
       "id": "65c9a95c32ce28ad10ec0e73",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 177.31,
       "etime": 180.97,
       "text": "Не знаю, я вот еще не знаю, готов к этому или нет."
@@ -598,7 +598,7 @@
       "id": "65c9a95c32ce28ad10ec0e7b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 200.68,
       "etime": 210.77,
       "text": "Не, ну, я хотел это в комментариях написать, но так по большому счету ты человека пинал, типа вот у меня есть библиотека, в которой надо..."
@@ -607,7 +607,7 @@
       "id": "65c9a95c32ce28ad10ec0e7c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 211.33,
       "etime": 219.31,
       "text": "Сначала connection получать, потом канал открывать, потом еще что-то открывать, типа RabbitMQ или Mongo."
@@ -616,7 +616,7 @@
       "id": "65c9a95c32ce28ad10ec0e7d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 219.41,
       "etime": 225.6,
       "text": "И почему вы не сделали так, что статуса ошибок нет одного такого."
@@ -625,7 +625,7 @@
       "id": "65c9a95c32ce28ad10ec0e7e",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 225.88,
       "etime": 230.22,
       "text": "Не знаю, статуса у меня не подключилось, и все, и он отваливался."
@@ -634,7 +634,7 @@
       "id": "65c9a95c32ce28ad10ec0e7f",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 230.26,
       "etime": 230.98,
       "text": "А человек как бы"
@@ -643,7 +643,7 @@
       "id": "65c9a95c32ce28ad10ec0e80",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 232.15,
       "etime": 240.84,
       "text": "Вроде в непонятках, а почему это именно недостаток языка и почему именно к нему идет этот вопрос?"
@@ -679,7 +679,7 @@
       "id": "65c9a95c32ce28ad10ec0e84",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 271.04,
       "etime": 276.11,
       "text": "получается то, что там, не знаю, какую-нибудь библиотеку там для Монго, да, драйвер."
@@ -688,7 +688,7 @@
       "id": "65c9a95c32ce28ad10ec0e85",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 276.17,
       "etime": 282.33,
       "text": "Драйвери для Монго, для Джавы, например, там, не знаю, открыть Connection, открыть еще чего-то, открыть еще чего-то."
@@ -697,7 +697,7 @@
       "id": "65c9a95c32ce28ad10ec0e86",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 282.39,
       "etime": 288.76,
       "text": "И люди, которые писали вот этот драйвер для Монго, они просто взяли в тупую и передрали."
@@ -706,7 +706,7 @@
       "id": "65c9a95c32ce28ad10ec0e87",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 288.82,
       "etime": 289.36,
       "text": "Почему?"
@@ -805,7 +805,7 @@
       "id": "65c9a95c32ce28ad10ec0e92",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 314.83,
       "etime": 317.85,
       "text": "Так, но проблема в том, что в семье несколько уродов."
@@ -832,7 +832,7 @@
       "id": "65c9a95c32ce28ad10ec0e95",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 322.5,
       "etime": 324.52,
       "text": "Ну, семья такая же, генетика."
@@ -967,7 +967,7 @@
       "id": "65c9a95c32ce28ad10ec0ea4",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 363.76,
       "etime": 365.16,
       "text": "Тут все читали темы, я смотрю."
@@ -1048,7 +1048,7 @@
       "id": "65c9a95c32ce28ad10ec0ead",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 406.23,
       "etime": 410.93,
       "text": "А кто-нибудь помнит, когда появился Сигвей?"
@@ -1093,7 +1093,7 @@
       "id": "65c9a95c32ce28ad10ec0eb2",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 418.13,
       "etime": 418.87,
       "text": "Да, давненько."
@@ -1102,7 +1102,7 @@
       "id": "65c9a95c32ce28ad10ec0eb3",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 418.89,
       "etime": 426.41,
       "text": "По-моему, тоже какой-то год был прям... Год самой крутейшей технологии."
@@ -1129,7 +1129,7 @@
       "id": "65c9a95c32ce28ad10ec0eb6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 431.49,
       "etime": 442.77,
       "text": "2001 года самая клевая технология Segway, все теперь будут ходить на Segway, никто не будет двигаться, Segway проботит все, нам не нужны ни машины, ничего, ничего нет."
@@ -1138,7 +1138,7 @@
       "id": "65c9a95c32ce28ad10ec0eb7",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 442.81,
       "etime": 445.71,
       "text": "Нам ноги даже не нужны, нам нужен только Segway."
@@ -1273,7 +1273,7 @@
       "id": "65c9a95c32ce28ad10ec0ec6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 505.18,
       "etime": 510.8,
       "text": "Но это не экскурсии, а вообще такие как бы парки, что еще?"
@@ -1282,7 +1282,7 @@
       "id": "65c9a95c32ce28ad10ec0ec7",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 510.84,
       "etime": 512.3,
       "text": "Ну, в основном в Москве это парки."
@@ -1291,7 +1291,7 @@
       "id": "65c9a95c32ce28ad10ec0ec8",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 512.34,
       "etime": 513.32,
       "text": "Почему по городу тоже..."
@@ -1498,7 +1498,7 @@
       "id": "65c9a95c32ce28ad10ec0edf",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 609.47,
       "etime": 611.3,
       "text": "Ну, с высоты роста."
@@ -1840,7 +1840,7 @@
       "id": "65c9a95c32ce28ad10ec0f05",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 758.05,
       "etime": 764.42,
       "text": "Он как-то складывается там посередине или это такая здоровая бандура, которую таскать с собой надо?"
@@ -1930,7 +1930,7 @@
       "id": "65c9a95c32ce28ad10ec0f0f",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 805.65,
       "etime": 810.17,
       "text": "Ну да, ручек, ничего, и она грязная, скорее всего, будет там."
@@ -2704,7 +2704,7 @@
       "id": "65c9a95c32ce28ad10ec0f65",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1138.92,
       "etime": 1141.42,
       "text": "Тут же на картинке нету каких-то масштабов."
@@ -2713,7 +2713,7 @@
       "id": "65c9a95c32ce28ad10ec0f66",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1143.66,
       "etime": 1146.2,
       "text": "Это размером, например, с кирпич."
@@ -2722,7 +2722,7 @@
       "id": "65c9a95c32ce28ad10ec0f67",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1146.56,
       "etime": 1147.72,
       "text": "И рядом вот такой булыжник."
@@ -2911,7 +2911,7 @@
       "id": "65c9a95c32ce28ad10ec0f7c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1209.32,
       "etime": 1216.07,
       "text": "Не, я почему-то себе представил, если какой-нибудь типа Shark Tank, да, и приходит вот этот со стартапом такой."
@@ -2920,7 +2920,7 @@
       "id": "65c9a95c32ce28ad10ec0f7d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1216.13,
       "etime": 1219.63,
       "text": "Ребята, вот смотрите, есть проблема безопасности часов Pebble."
@@ -2929,7 +2929,7 @@
       "id": "65c9a95c32ce28ad10ec0f7e",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1219.69,
       "etime": 1225.11,
       "text": "Такой достаёт из одного кармана кирпич, из другого кармана достаёт камень."
@@ -2938,7 +2938,7 @@
       "id": "65c9a95c32ce28ad10ec0f7f",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1225.13,
       "etime": 1230.93,
       "text": "Вот эти вот две вещи помогут вам решить все ваши проблемы с безопасностью."
@@ -3865,7 +3865,7 @@
       "id": "65c9a95c32ce28ad10ec0fe6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1614.89,
       "etime": 1618.81,
       "text": "Сейчас мейджоры стали бабло брать, или я что-то потерял?"
@@ -3874,7 +3874,7 @@
       "id": "65c9a95c32ce28ad10ec0fe7",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1618.85,
       "etime": 1620.51,
       "text": "Как ситуация с дальнобойщиками?"
@@ -3910,7 +3910,7 @@
       "id": "65c9a95c32ce28ad10ec0feb",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1638.15,
       "etime": 1643.67,
       "text": "Так насколько я помню, Apple подминает со своим iTunes уже хрен знает сколько."
@@ -3919,7 +3919,7 @@
       "id": "65c9a95c32ce28ad10ec0fec",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1644.49,
       "etime": 1647.83,
       "text": "И всякие магазины же по продаже музыки."
@@ -4216,7 +4216,7 @@
       "id": "65c9a95c32ce28ad10ec100d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1773.95,
       "etime": 1779.53,
       "text": "Нет, подожди, а Pandora и Spotify, они же до сих пор US-based."
@@ -4225,7 +4225,7 @@
       "id": "65c9a95c32ce28ad10ec100e",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1779.59,
       "etime": 1784.34,
       "text": "Ну, то есть, как бы, по-моему, Spotify в Европу вышел, а Pandora так и осталась."
@@ -4252,7 +4252,7 @@
       "id": "65c9a95c32ce28ad10ec1011",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1790.26,
       "etime": 1793.36,
       "text": "Тем более, но Apple Music это же глобальное будет."
@@ -4261,7 +4261,7 @@
       "id": "65c9a95c32ce28ad10ec1012",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1793.38,
       "etime": 1795.8,
       "text": "Всех-всех-всех сразу."
@@ -4576,7 +4576,7 @@
       "id": "65c9a95c32ce28ad10ec1035",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1960.74,
       "etime": 1961.24,
       "text": "А там и есть Linux, кстати."
@@ -4585,7 +4585,7 @@
       "id": "65c9a95c32ce28ad10ec1036",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1965.31,
       "etime": 1967.05,
       "text": "Да ладно, OpenWrt, Linux, да ты что?"
@@ -4603,7 +4603,7 @@
       "id": "65c9a95c32ce28ad10ec1038",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 1970.17,
       "etime": 1981.27,
       "text": "Не, я к тому, что как бы какой смысл в таком новом маршрутизаторе, если уже дофига всяких там TP-Link'ов и китайских там... Не, я тебе даже скажу больше."
@@ -5809,7 +5809,7 @@
       "id": "65c9a95c32ce28ad10ec10be",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 2629.28,
       "etime": 2631.66,
       "text": "Даже у Apple Express есть кулер?"
@@ -7366,7 +7366,7 @@
       "id": "65c9a95c32ce28ad10ec116b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3327.12,
       "etime": 3333.16,
       "text": "Думают, что засунут какой-нибудь JSON потом туда или что-нибудь такое, которое автоматически будет парситься."
@@ -7393,7 +7393,7 @@
       "id": "65c9a95c32ce28ad10ec116e",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3351.9,
       "etime": 3353.86,
       "text": "Ну, какой-нибудь композит ID."
@@ -7402,7 +7402,7 @@
       "id": "65c9a95c32ce28ad10ec116f",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3353.92,
       "etime": 3358.94,
       "text": "Там, не знаю, строчка, ID-шник, клонка, еще что-нибудь."
@@ -7474,7 +7474,7 @@
       "id": "65c9a95c32ce28ad10ec1177",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3383.43,
       "etime": 3384.54,
       "text": "Размер ID чего?"
@@ -7564,7 +7564,7 @@
       "id": "65c9a95c32ce28ad10ec1181",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3412.14,
       "etime": 3417.81,
       "text": "То есть изначально кто-то затачивается на то, что имя инстанца будет фиксированного размера."
@@ -7681,7 +7681,7 @@
       "id": "65c9a95c32ce28ad10ec118e",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3461.84,
       "etime": 3467.79,
       "text": "Нет, джавовская там, она такая прям просто обертканная над рестом."
@@ -7690,7 +7690,7 @@
       "id": "65c9a95c32ce28ad10ec118f",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3467.83,
       "etime": 3473.79,
       "text": "То есть, считай, как будто ты рестов дергаешь, но только просто используешь джавовские какие-то конструкции."
@@ -7708,7 +7708,7 @@
       "id": "65c9a95c32ce28ad10ec1191",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3477.93,
       "etime": 3491.18,
       "text": "Ну, и го, оно точно такое же, как твоя проблема, что надо создавать сначала connection, потом надо открывать канал, потом еще чего-то надо делать, потом уже только посылать запрос."
@@ -7879,7 +7879,7 @@
       "id": "65c9a95c32ce28ad10ec11a4",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3549.76,
       "etime": 3555.88,
       "text": "Странно, мэпы в пропорции бина как-то... Не такой уж Rocket Science, чтобы это сделать."
@@ -7888,7 +7888,7 @@
       "id": "65c9a95c32ce28ad10ec11a5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3555.9,
       "etime": 3556.72,
       "text": "Странно, почему нет."
@@ -7951,7 +7951,7 @@
       "id": "65c9a95c32ce28ad10ec11ac",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3570.08,
       "etime": 3587.73,
       "text": "Такой набор депенденций, учитывая этот Apache HTTP Client, и еще учитывая, что они этот Apache HTTP Client как-то там патчат, еще там что-то конфигурят его особенно, там с депенденциями вот как раз SDK, AWS-овский прям вообще жесть-жесть-жесть."
@@ -8005,7 +8005,7 @@
       "id": "65c9a95c32ce28ad10ec11b2",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3617.01,
       "etime": 3618.3,
       "text": "А почему было?"
@@ -8041,7 +8041,7 @@
       "id": "65c9a95c32ce28ad10ec11b6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3637.49,
       "etime": 3638.33,
       "text": "Это который Cloud Starter?"
@@ -8212,7 +8212,7 @@
       "id": "65c9a95c32ce28ad10ec11c9",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3690.92,
       "etime": 3692.52,
       "text": "Ленин за кого?"
@@ -8320,7 +8320,7 @@
       "id": "65c9a95c32ce28ad10ec11d5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3714.61,
       "etime": 3723.02,
       "text": "Ну, я так понимаю, вот этот хайп по поводу того, что Oracle теряет интерес к Java, развивают те, кого уволили как раз."
@@ -8329,7 +8329,7 @@
       "id": "65c9a95c32ce28ad10ec11d6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3723.91,
       "etime": 3734.74,
       "text": "Они теперь говорят, нас уволили, и Oracle теряет интерес к Java, но проблема в том, что эти люди, которые сидели, это... Ну, они, подожди, это же не люди были пальцами сделаны."
@@ -8356,7 +8356,7 @@
       "id": "65c9a95c32ce28ad10ec11d9",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3748.73,
       "etime": 3750.75,
       "text": "Ну, в твоей квалификации это бездельники."
@@ -8401,7 +8401,7 @@
       "id": "65c9a95c32ce28ad10ec11de",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3761.69,
       "etime": 3763.63,
       "text": "Ну, с кого-то надо начинать."
@@ -8410,7 +8410,7 @@
       "id": "65c9a95c32ce28ad10ec11df",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3763.69,
       "etime": 3765.28,
       "text": "Не знаю, была стопка резюме."
@@ -8419,7 +8419,7 @@
       "id": "65c9a95c32ce28ad10ec11e0",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3765.6,
       "etime": 3768.66,
       "text": "Половина, нам не нужны неудачники."
@@ -8428,7 +8428,7 @@
       "id": "65c9a95c32ce28ad10ec11e1",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3768.7,
       "etime": 3770.88,
       "text": "Вот джава-евангелистов теперь покоцали."
@@ -8509,7 +8509,7 @@
       "id": "65c9a95c32ce28ad10ec11ea",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3810.4,
       "etime": 3822.61,
       "text": "Ну, учитывая, что они продвигают, как он там, Oracle Java in Cloud, да, и списывать Java в рамках этой инициативы, ну, как-то странно звучит и стрёмно."
@@ -8518,7 +8518,7 @@
       "id": "65c9a95c32ce28ad10ec11eb",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3822.65,
       "etime": 3830.84,
       "text": "Я не знаю, вот такие письма, насколько подлинные или нет, да, ну, а то, что там какой-то менеджер..."
@@ -8527,7 +8527,7 @@
       "id": "65c9a95c32ce28ad10ec11ec",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3831.48,
       "etime": 3836.92,
       "text": "там, не знаю, который полотер или завхоз, такой пишет, а, что-то нам не надо Java, ну и фиг с ним."
@@ -8536,7 +8536,7 @@
       "id": "65c9a95c32ce28ad10ec11ed",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3837,
       "etime": 3844.84,
       "text": "Это же не Эллисон писал, типа, что-то нам Java неинтересно, давайте мы теперь клауд будем двигать."
@@ -8563,7 +8563,7 @@
       "id": "65c9a95c32ce28ad10ec11f0",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3851.09,
       "etime": 3857.81,
       "text": "Ну, собственно, это основной актив, который купил Oracle вместе с Sun."
@@ -8572,7 +8572,7 @@
       "id": "65c9a95c32ce28ad10ec11f1",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3858.43,
       "etime": 3861.03,
       "text": "И я не думаю, что он куда-то денется."
@@ -8590,7 +8590,7 @@
       "id": "65c9a95c32ce28ad10ec11f3",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3871.38,
       "etime": 3874.6,
       "text": "Они там остались более-менее, сидели."
@@ -8599,7 +8599,7 @@
       "id": "65c9a95c32ce28ad10ec11f4",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3874.66,
       "etime": 3880.04,
       "text": "Ну, окей, они пришли вместе с Sun, но время пришло от них избавиться, потому что, собственно..."
@@ -8608,7 +8608,7 @@
       "id": "65c9a95c32ce28ad10ec11f5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3881.72,
       "etime": 3884.43,
       "text": "Java и так номер один на рынке."
@@ -8617,7 +8617,7 @@
       "id": "65c9a95c32ce28ad10ec11f6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3885.07,
       "etime": 3893.31,
       "text": "И такого, чтобы люди ездили по конференциям и рассказывали, насколько Java крутая, ну, собственно, зачем это делать?"
@@ -8626,7 +8626,7 @@
       "id": "65c9a95c32ce28ad10ec11f7",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3893.37,
       "etime": 3894.49,
       "text": "Они и так номер один."
@@ -8635,7 +8635,7 @@
       "id": "65c9a95c32ce28ad10ec11f8",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3894.83,
       "etime": 3895.87,
       "text": "Все знают, что такое Java."
@@ -8644,7 +8644,7 @@
       "id": "65c9a95c32ce28ad10ec11f9",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3896.21,
       "etime": 3898.29,
       "text": "Зачем ездить и рассказывать?"
@@ -8653,7 +8653,7 @@
       "id": "65c9a95c32ce28ad10ec11fa",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3898.35,
       "etime": 3903.15,
       "text": "Есть там сейлы, которые делают какие-то конкретные проекты."
@@ -8662,7 +8662,7 @@
       "id": "65c9a95c32ce28ad10ec11fb",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3903.23,
       "etime": 3903.98,
       "text": "Ну и нормально."
@@ -8671,7 +8671,7 @@
       "id": "65c9a95c32ce28ad10ec11fc",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3904.6,
       "etime": 3911.18,
       "text": "А такой набор евангелистов, он нужен для стартапа, которому надо продвигать какие-то свои технологии."
@@ -8761,7 +8761,7 @@
       "id": "65c9a95c32ce28ad10ec1206",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3965.75,
       "etime": 3968.53,
       "text": "Ну, тут, понимаешь, как бы такая ситуация."
@@ -8770,7 +8770,7 @@
       "id": "65c9a95c32ce28ad10ec1207",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3968.55,
       "etime": 3971.61,
       "text": "А может быть, это они, наоборот, оседлали тренд, да?"
@@ -8779,7 +8779,7 @@
       "id": "65c9a95c32ce28ad10ec1208",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3971.67,
       "etime": 3978.82,
       "text": "То есть Java EE, ну, у нее были истории, скажем так, падения и подъема."
@@ -8788,7 +8788,7 @@
       "id": "65c9a95c32ce28ad10ec1209",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3978.88,
       "etime": 3981.88,
       "text": "То есть не было такого, что она вот росла, росла, росла всегда."
@@ -8797,7 +8797,7 @@
       "id": "65c9a95c32ce28ad10ec120a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3981.94,
       "etime": 3993.25,
       "text": "Где-то там, не помню, версии третьей, да, она немного сдала, никому не была нужна, потом выпустили новую версию, вот она там application сервера пошли, и какое-то время..."
@@ -8806,7 +8806,7 @@
       "id": "65c9a95c32ce28ad10ec120b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 3994.11,
       "etime": 4006.66,
       "text": "Они вместе со Spring даже на равных как-то там конкурировали, да, и у человека, который начинал какой-то проект, у него реально был вопрос, да, начинать на Spring или на Java Enterprise Edition."
@@ -8815,7 +8815,7 @@
       "id": "65c9a95c32ce28ad10ec120c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4007.2,
       "etime": 4014.01,
       "text": "Сейчас, мне кажется, у людей, которые пишут на Java, даже не возникает вопроса взять Enterprise Edition или на Spring написать."
@@ -8824,7 +8824,7 @@
       "id": "65c9a95c32ce28ad10ec120d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4016.51,
       "etime": 4017.83,
       "text": "новые приложения."
@@ -8833,7 +8833,7 @@
       "id": "65c9a95c32ce28ad10ec120e",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4017.89,
       "etime": 4024.52,
       "text": "Я не знаю, у тебя возникало когда-нибудь желание попробовать Enterprise Edition сейчас?"
@@ -8878,7 +8878,7 @@
       "id": "65c9a95c32ce28ad10ec1213",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4050.88,
       "etime": 4065.92,
       "text": "Ну вот, собственно, и Oracle решил как бы... Посмотрели на то, что происходит, посмотрели, куда движутся разработчики сейчас, и они решили как бы присесть, сконцентрироваться, сгруппироваться немного."
@@ -8887,7 +8887,7 @@
       "id": "65c9a95c32ce28ad10ec1214",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4065.96,
       "etime": 4068.1,
       "text": "Ну ладно, чего мы пихаем этот Enterprise Edition всем?"
@@ -9022,7 +9022,7 @@
       "id": "65c9a95c32ce28ad10ec1223",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4133.74,
       "etime": 4154.46,
       "text": "Ну, смотри, во-первых, по поводу Enterprise Edition, да, ну, я могу понять Oracle, да, они решили не метать бисер перед свиньями, да, вот, которые собираются на всех этих джавских конференциях, посмотрели на эти лица, поняли, что им Enterprise впихивать, ну, не надо, да, то есть люди там пишут чего-то на Java Edition стандартный, да,"
@@ -9031,7 +9031,7 @@
       "id": "65c9a95c32ce28ad10ec1224",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4156.1,
       "etime": 4158.66,
       "text": "Ну, оставим их в покое, не будем их трогать."
@@ -9040,7 +9040,7 @@
       "id": "65c9a95c32ce28ad10ec1225",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4158.8,
       "etime": 4165.92,
       "text": "И WebLogic, вся эта бодяга, она развивается и пихается людям в костюмах."
@@ -9085,7 +9085,7 @@
       "id": "65c9a95c32ce28ad10ec122a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4180.87,
       "etime": 4188.25,
       "text": "Главные деньги как раз и стригутся вот с этих баз данных и со всяких аппликейшн серверов с интерпрайзов."
@@ -9094,7 +9094,7 @@
       "id": "65c9a95c32ce28ad10ec122b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4188.27,
       "etime": 4194.03,
       "text": "Вот эти молодые динамичные, которые ходят на конференции, они бабла Oracle не приносят."
@@ -9103,7 +9103,7 @@
       "id": "65c9a95c32ce28ad10ec122c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4194.27,
       "etime": 4202.71,
       "text": "И опять же, тратить на них время, закидывать евангелистов, которые будут прыгать и говорить, вот давайте интерпрайз, давайте интерпрайз."
@@ -9112,7 +9112,7 @@
       "id": "65c9a95c32ce28ad10ec122d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4202.73,
       "etime": 4203.31,
       "text": "Это не надо."
@@ -9121,7 +9121,7 @@
       "id": "65c9a95c32ce28ad10ec122e",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4203.37,
       "etime": 4208.07,
       "text": "Тут вопрос решается среди людей в костюмах, на гольфе."
@@ -9130,7 +9130,7 @@
       "id": "65c9a95c32ce28ad10ec122f",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4208.11,
       "etime": 4209.45,
       "text": "Вот они там покупают эти..."
@@ -9139,7 +9139,7 @@
       "id": "65c9a95c32ce28ad10ec1230",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4210.05,
       "etime": 4215.1,
       "text": "сервера Рокловские, они там покупают эти базы, они там покупают еще вместе с этим WebLogic."
@@ -9148,7 +9148,7 @@
       "id": "65c9a95c32ce28ad10ec1231",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4216.04,
       "etime": 4217.78,
       "text": "И вот тут вот он внедряется."
@@ -9328,7 +9328,7 @@
       "id": "65c9a95c32ce28ad10ec1245",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4298.93,
       "etime": 4312.17,
       "text": "Сейчас под вот этим зонтиком OpenJDK собрали всякие IBM, там, не знаю, Microsoft даже, Google, которые все вместе пилят вот этот OpenJDK и что-то делают."
@@ -9337,7 +9337,7 @@
       "id": "65c9a95c32ce28ad10ec1246",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4312.25,
       "etime": 4316.3,
       "text": "И даже если они скажут, что «Нет, ребят, мы ничего не будем делать»,"
@@ -9346,7 +9346,7 @@
       "id": "65c9a95c32ce28ad10ec1247",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4317.08,
       "etime": 4340.84,
       "text": "то эти люди продолжат пилить вот этот GPL-ный код, да, и никуда GDK не денется, ну, окей, да, там, допустим, уйдут вот эти оракловые коммитеры все, да, вот все люди, которые разрабатывали GDK, вот они все уйдут, так останутся там, не знаю, гугловые, IBM-овские, все, которые собрались в рамках этого проекта, ну,"
@@ -9445,7 +9445,7 @@
       "id": "65c9a95c32ce28ad10ec1252",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4382.93,
       "etime": 4392.43,
       "text": "Ну, у нас был такой период, у нас как разработчиков Java, у нас был такой период перехода 4, 5, 6, наверное."
@@ -9454,7 +9454,7 @@
       "id": "65c9a95c32ce28ad10ec1253",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4392.49,
       "etime": 4397.05,
       "text": "То есть вот эти несколько лет, когда никак ничего не развивалось, никак ничего не делалось."
@@ -9463,7 +9463,7 @@
       "id": "65c9a95c32ce28ad10ec1254",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4397.13,
       "etime": 4397.17,
       "text": "Ну,"
@@ -9472,7 +9472,7 @@
       "id": "65c9a95c32ce28ad10ec1255",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4398.49,
       "etime": 4407.36,
       "text": "И при этом количество Java-разработчиков только росло, зарплаты их только росли, и все было удивительно."
@@ -9481,7 +9481,7 @@
       "id": "65c9a95c32ce28ad10ec1256",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4407.4,
       "etime": 4409.22,
       "text": "Все танцуем и пьем."
@@ -9490,7 +9490,7 @@
       "id": "65c9a95c32ce28ad10ec1257",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4409.28,
       "etime": 4413.72,
       "text": "Почему даже если сейчас все обрубится, почему все остановится?"
@@ -9499,7 +9499,7 @@
       "id": "65c9a95c32ce28ad10ec1258",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4414.46,
       "etime": 4422.81,
       "text": "Java находится в каком-то таком состоянии, или язык находится в каком-то таком убогом состоянии, что сам по себе он не может существовать?"
@@ -9571,7 +9571,7 @@
       "id": "65c9a95c32ce28ad10ec1260",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4457.34,
       "etime": 4463.49,
       "text": "Окей, ну хорошо, не знаю, ты считаешь, что ты не сможешь освоить какой-то свой язык?"
@@ -9580,7 +9580,7 @@
       "id": "65c9a95c32ce28ad10ec1261",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4464.16,
       "etime": 4466.18,
       "text": "Вернее, какой-то новый язык?"
@@ -9589,7 +9589,7 @@
       "id": "65c9a95c32ce28ad10ec1262",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4466.72,
       "etime": 4469.52,
       "text": "Или что, даже если Java пропадет?"
@@ -9661,7 +9661,7 @@
       "id": "65c9a95c32ce28ad10ec126a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4493.31,
       "etime": 4494.27,
       "text": "Который по базе JVM?"
@@ -9715,7 +9715,7 @@
       "id": "65c9a95c32ce28ad10ec1270",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4516.96,
       "etime": 4519.55,
       "text": "Почему ты видишь свое будущее только внутри JVM?"
@@ -9724,7 +9724,7 @@
       "id": "65c9a95c32ce28ad10ec1271",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4520.73,
       "etime": 4535.9,
       "text": "Я бы, честно говоря, если двигался вперед, допустим, мы сейчас сидим, как 30 лет назад программисты на Кобале сидели, ой, а что это такое, скоро Коба умрет, туда-сюда, куда бы нам идти."
@@ -9733,7 +9733,7 @@
       "id": "65c9a95c32ce28ad10ec1272",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4536.48,
       "etime": 4541.31,
       "text": "Ну и мы пошли бы там, не знаю, на Go, на Rust, да, вместо C, почему бы нет?"
@@ -9931,7 +9931,7 @@
       "id": "65c9a95c32ce28ad10ec1288",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4613.69,
       "etime": 4614.23,
       "text": "На Node.js?"
@@ -9940,7 +9940,7 @@
       "id": "65c9a95c32ce28ad10ec1289",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4614.29,
       "etime": 4620.63,
       "text": "Я бы, честно говоря, подождал бы, пока для какого-нибудь Go или Rasta появится что-то типа спринга."
@@ -9949,7 +9949,7 @@
       "id": "65c9a95c32ce28ad10ec128a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4620.67,
       "etime": 4630.76,
       "text": "То есть такой слой, да, middleware, на котором можно будет писать что-то на уровне бизнес-логики, скажем так."
@@ -10084,7 +10084,7 @@
       "id": "65c9a95c32ce28ad10ec1299",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4698.22,
       "etime": 4701.51,
       "text": "Так, мы сейчас говорим про написание сервер-сайда."
@@ -10093,7 +10093,7 @@
       "id": "65c9a95c32ce28ad10ec129a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4701.57,
       "etime": 4703.07,
       "text": "Какого рода сервер-сайда?"
@@ -10102,7 +10102,7 @@
       "id": "65c9a95c32ce28ad10ec129b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4703.13,
       "etime": 4719.66,
       "text": "Если надо, например, бизнес-логику написать, не знаю, создать юзера с полями first name, last name и сохранить его в базу, то подойдет как раз какой-нибудь такой вот типа TypeScript или, не знаю, Dart или что-нибудь такое вполне подойдет."
@@ -10111,7 +10111,7 @@
       "id": "65c9a95c32ce28ad10ec129c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4719.7,
       "etime": 4724.81,
       "text": "Если ты говоришь про серверный код, который на уровне обработки пакетов,"
@@ -10120,7 +10120,7 @@
       "id": "65c9a95c32ce28ad10ec129d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4725.39,
       "etime": 4730.31,
       "text": "типа Netty, то понятно, что подойдет что-то вроде Go или Rust."
@@ -10192,7 +10192,7 @@
       "id": "65c9a95c32ce28ad10ec12a5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4769.16,
       "etime": 4773.33,
       "text": "Ну, тогда как бы с такими кандидатами, я не знаю, Rust."
@@ -10201,7 +10201,7 @@
       "id": "65c9a95c32ce28ad10ec12a6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4773.37,
       "etime": 4774.57,
       "text": "Почему бы нет?"
@@ -10210,7 +10210,7 @@
       "id": "65c9a95c32ce28ad10ec12a7",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4774.61,
       "etime": 4784.41,
       "text": "То есть такой сервер-сайт-язык, для которого надо подождать, пока появится middleware типа Spring."
@@ -10237,7 +10237,7 @@
       "id": "65c9a95c32ce28ad10ec12aa",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4795.95,
       "etime": 4809.1,
       "text": "Язык, конечно, хороший, но... Хорошо, а если мы забываем, ну, например, Ruby, да, какое-то время назад Ruby в связке с рельсами было прямо офигенное-офигенное решение для написания сервер-сайт-кода."
@@ -10255,7 +10255,7 @@
       "id": "65c9a95c32ce28ad10ec12ac",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4809.56,
       "etime": 4817.24,
       "text": "И не только круто, да, если брать там scaffolding на рельсах, да... Писали все на нем, ну да."
@@ -10273,7 +10273,7 @@
       "id": "65c9a95c32ce28ad10ec12ae",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4819.49,
       "etime": 4821.67,
       "text": "Ну а почему мы не можем к этому вернуться?"
@@ -10318,7 +10318,7 @@
       "id": "65c9a95c32ce28ad10ec12b3",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4847.26,
       "etime": 4851.06,
       "text": "Ну, это потому, что есть куда уходить."
@@ -10327,7 +10327,7 @@
       "id": "65c9a95c32ce28ad10ec12b4",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4851.34,
       "etime": 4853.2,
       "text": "То есть они могут уйти на Java."
@@ -10336,7 +10336,7 @@
       "id": "65c9a95c32ce28ad10ec12b5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4853.28,
       "etime": 4860.57,
       "text": "Если, например, после атомной бомбардировки придется вернуться к палке-копалке, то придется вернуться к палке-копалке."
@@ -10345,7 +10345,7 @@
       "id": "65c9a95c32ce28ad10ec12b6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4860.61,
       "etime": 4867.7,
       "text": "Если у тебя осталось только Ruby и написание сервер-сайт-кода, то ты будешь плакать и колоться, но писать на Ruby."
@@ -10480,7 +10480,7 @@
       "id": "65c9a95c32ce28ad10ec12c5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 4945.83,
       "etime": 4952.21,
       "text": "У Плутона, как начинает трястись мир, он везде начинает ассемблерные ставки вставлять, чтобы было, куда вернуться."
@@ -11119,7 +11119,7 @@
       "id": "65c9a95c32ce28ad10ec130c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 5208.46,
       "etime": 5210.76,
       "text": "Не ставишь что-нибудь реляционное."
@@ -11164,7 +11164,7 @@
       "id": "65c9a95c32ce28ad10ec1311",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 5229.37,
       "etime": 5230.43,
       "text": "Не, а вообще почему..."
@@ -11173,7 +11173,7 @@
       "id": "65c9a95c32ce28ad10ec1312",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 5233.7,
       "etime": 5241.87,
       "text": "Ты настолько фундаменталист и ортодокс, скажем так, что используешь только один тип сториджа."
@@ -11191,7 +11191,7 @@
       "id": "65c9a95c32ce28ad10ec1314",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 5248.27,
       "etime": 5256.51,
       "text": "Ну, например, хотя бы не микросервисы, а хотя бы один сервис, который использует, например, разные сториджи."
@@ -11200,7 +11200,7 @@
       "id": "65c9a95c32ce28ad10ec1315",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 5256.53,
       "etime": 5264.62,
       "text": "То есть ты при создании чего-то, например, пишешь часть в Realtor, пишешь в Mongo, часть пишешь в Elastic."
@@ -11209,7 +11209,7 @@
       "id": "65c9a95c32ce28ad10ec1316",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 5264.98,
       "etime": 5274.96,
       "text": "И когда тебе надо поиск, ты используешь Elastic, когда тебе нужно Join, используешь MySQL, а когда нужно хранение документов, ты используешь Mongo."
@@ -11218,7 +11218,7 @@
       "id": "65c9a95c32ce28ad10ec1317",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 5275.9,
       "etime": 5282.19,
       "text": "Ты же всех уверяешь, что место на диске, оно практически сейчас бесплатное."
@@ -11227,7 +11227,7 @@
       "id": "65c9a95c32ce28ad10ec1318",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 5283.01,
       "etime": 5284.83,
       "text": "И что стараться?"
@@ -11236,7 +11236,7 @@
       "id": "65c9a95c32ce28ad10ec1319",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 5284.87,
       "etime": 5287.87,
       "text": "Как развернул в докере свои какие-то базы данных?"
@@ -11245,7 +11245,7 @@
       "id": "65c9a95c32ce28ad10ec131a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 5287.91,
       "etime": 5289.43,
       "text": "Вот и используй все сразу."
@@ -12649,7 +12649,7 @@
       "id": "65c9a95c32ce28ad10ec13b6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6050.17,
       "etime": 6072.65,
       "text": "Понимаешь, тут как бы я скорее соглашусь к Сюше, потому что, ну, ты знаешь, есть такое понятие, как mother tongue, то есть какой-то материнский язык, и у тебя, например, материнский язык, он русский, да, и несмотря на то, что ты живешь там в Америке уже хрен знает сколько, разговариваешь там на английском уже, там, не знаю, и думаешь, может быть, на английском,"
@@ -12658,7 +12658,7 @@
       "id": "65c9a95c32ce28ad10ec13b7",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6073.25,
       "etime": 6084.24,
       "text": "Но тебя разбуди ночью или, не знаю, молотком дать тебе по руке, ты не закричишь «фак» туда-сюда, ты закричишь «твою мать»."
@@ -12667,7 +12667,7 @@
       "id": "65c9a95c32ce28ad10ec13b8",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6084.34,
       "etime": 6088.86,
       "text": "И сейчас у тебя есть такое понятие императивного языка."
@@ -12676,7 +12676,7 @@
       "id": "65c9a95c32ce28ad10ec13b9",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6088.94,
       "etime": 6092.48,
       "text": "Ты с него начинал, ты с ним работал хрен знает когда."
@@ -12685,7 +12685,7 @@
       "id": "65c9a95c32ce28ad10ec13ba",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6093.1,
       "etime": 6106.66,
       "text": "И вот этот год, который ты играешь с функциональностью, если смотреть с точки зрения масштаба всего твоего опыта, это крошечная песчинка, которую ты выучил."
@@ -12694,7 +12694,7 @@
       "id": "65c9a95c32ce28ad10ec13bb",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6106.76,
       "etime": 6120.99,
       "text": "Ну, окей, тебе кажется, что ты ее знаешь хорошо, но она не отложилась у тебя на подкорку, и это не начальная парадигма и не начальный язык, с которого ты начинал."
@@ -12703,7 +12703,7 @@
       "id": "65c9a95c32ce28ad10ec13bc",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6121.73,
       "etime": 6128.31,
       "text": "Поэтому, что ты возвращаешься к коду и тебе кажется, что это хрень какая-то написана."
@@ -13270,7 +13270,7 @@
       "id": "65c9a95c32ce28ad10ec13fb",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6425.67,
       "etime": 6446.8,
       "text": "Не, ну вот по поводу того, что взлетело, не взлетело, это, опять же, мне кажется, там, не знаю, чистая случайность, да, был, не знаю, сборище 30 лет назад там каких-нибудь бородатых, да, и так случилось, что бородатые, которые были за функциональное программирование, их было там меньше."
@@ -13279,7 +13279,7 @@
       "id": "65c9a95c32ce28ad10ec13fc",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6447.59,
       "etime": 6450.78,
       "text": "А бородатых, которые заимперативные, их было больше."
@@ -13288,7 +13288,7 @@
       "id": "65c9a95c32ce28ad10ec13fd",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6450.8,
       "etime": 6455.56,
       "text": "И поэтому они чаще выступали где-нибудь на конференциях, на радио и тому подобное."
@@ -13297,7 +13297,7 @@
       "id": "65c9a95c32ce28ad10ec13fe",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6455.66,
       "etime": 6457.44,
       "text": "И так оно развилось."
@@ -13522,7 +13522,7 @@
       "id": "65c9a95c32ce28ad10ec1417",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6559.63,
       "etime": 6567.69,
       "text": "То, что притаскивают там какую-то фигню из функционального в джаву, это же не значит, что джава полностью стала функциональным."
@@ -13531,7 +13531,7 @@
       "id": "65c9a95c32ce28ad10ec1418",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6567.73,
       "etime": 6572.74,
       "text": "Как свинью помазать помадой, она не станет женщиной от этого."
@@ -13540,7 +13540,7 @@
       "id": "65c9a95c32ce28ad10ec1419",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6572.86,
       "etime": 6572.92,
       "text": "Да."
@@ -13549,7 +13549,7 @@
       "id": "65c9a95c32ce28ad10ec141a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6573.48,
       "etime": 6586.89,
       "text": "Вот, и то, что взяли какие-то элементы, там, не знаю, работа с коллекциями или тому подобное, это не поменяло никак язык, да, это не поменяло методы программирования."
@@ -13558,7 +13558,7 @@
       "id": "65c9a95c32ce28ad10ec141b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6586.97,
       "etime": 6593.2,
       "text": "Ну да, в каких-то случаях появилась возможность чего-то сделать быстрее и проще, например, как..."
@@ -13567,7 +13567,7 @@
       "id": "65c9a95c32ce28ad10ec141c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6593.88,
       "etime": 6597.1,
       "text": "Но это не более того."
@@ -13576,7 +13576,7 @@
       "id": "65c9a95c32ce28ad10ec141d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6597.14,
       "etime": 6603.82,
       "text": "Как я и говорил, то, что императивное программирование, оно стало более распространенной."
@@ -13585,7 +13585,7 @@
       "id": "65c9a95c32ce28ad10ec141e",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6603.88,
       "etime": 6621.51,
       "text": "И сейчас это факт, и, опять же, функционально он не двигается в сторону продакшн, потому что, опять же, так случилось, да, когда, не знаю, бабочка махнула крылом, вот так вот сложилось, что нефункциональное пошло в продакшн, а сейчас уже это не поменять."
@@ -13594,7 +13594,7 @@
       "id": "65c9a95c32ce28ad10ec141f",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6621.57,
       "etime": 6622.91,
       "text": "То же самое там, не знаю, какие..."
@@ -13639,7 +13639,7 @@
       "id": "65c9a95c32ce28ad10ec1424",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6643.41,
       "etime": 6650.1,
       "text": "Я думаю, они не в том, что у тебя получились грамотные вещи, ты сам говоришь, что твой код красивый и туда-сюда."
@@ -13648,7 +13648,7 @@
       "id": "65c9a95c32ce28ad10ec1425",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6651.02,
       "etime": 6653.8,
       "text": "Вопрос в том, что с ним будет дальше."
@@ -13657,7 +13657,7 @@
       "id": "65c9a95c32ce28ad10ec1426",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6653.82,
       "etime": 6661.24,
       "text": "Сейчас вот так вот сложилось, что найти разработчика, который на Java, гораздо проще, чем найти функциональщика."
@@ -13666,7 +13666,7 @@
       "id": "65c9a95c32ce28ad10ec1427",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6661.84,
       "etime": 6675.11,
       "text": "И вот ты сам для себя понимаешь, что ты можешь быть офигенный функциональщик, ты можешь тут фигачить очень красивые решения, но ты понимаешь, что будет после тебя."
@@ -13675,7 +13675,7 @@
       "id": "65c9a95c32ce28ad10ec1428",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6675.15,
       "etime": 6679.76,
       "text": "Какой-то человек будет это поддерживать, и где ты найдешь этого человека?"
@@ -13684,7 +13684,7 @@
       "id": "65c9a95c32ce28ad10ec1429",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6679.8,
       "etime": 6682.48,
       "text": "Вот так вот сейчас сложилось."
@@ -13693,7 +13693,7 @@
       "id": "65c9a95c32ce28ad10ec142a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6682.58,
       "etime": 6689.01,
       "text": "Я не думаю, что в ближайшие лет 20 функциональное программирование сильно пойдет в универах,"
@@ -13702,7 +13702,7 @@
       "id": "65c9a95c32ce28ad10ec142b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6689.81,
       "etime": 6693.12,
       "text": "И появятся новые студенты, которые будут знать функциональный язык."
@@ -13711,7 +13711,7 @@
       "id": "65c9a95c32ce28ad10ec142c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6693.14,
       "etime": 6695.97,
       "text": "А без этого он по-любому не взлетит."
@@ -13936,7 +13936,7 @@
       "id": "65c9a95c32ce28ad10ec1445",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6832.24,
       "etime": 6838.51,
       "text": "В смысле, ну и в джаве ты тоже не добьешься этого конвеншента."
@@ -14062,7 +14062,7 @@
       "id": "65c9a95c32ce28ad10ec1453",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6897.8,
       "etime": 6899.28,
       "text": "Все эти проекты, это тулзы."
@@ -14134,7 +14134,7 @@
       "id": "65c9a95c32ce28ad10ec145b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6915.83,
       "etime": 6918.83,
       "text": "Интернет-магазин."
@@ -14269,7 +14269,7 @@
       "id": "65c9a95c32ce28ad10ec146a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6986.72,
       "etime": 6990.06,
       "text": "Так они многоязычность не из-за того, что там"
@@ -14278,7 +14278,7 @@
       "id": "65c9a95c32ce28ad10ec146b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 6990.59,
       "etime": 7001.45,
       "text": "Мне кажется, как раз многоязычность не из-за того, что там язык что-то дает, что один язык дает по сравнению с другим, а проблема из-за того, что не могут найти людей."
@@ -14287,7 +14287,7 @@
       "id": "65c9a95c32ce28ad10ec146c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7001.51,
       "etime": 7011.26,
       "text": "То есть если ты там, не знаю, джава-шоп какой-то, то ты все пишешь на джава, и ты можешь найти, не знаю, N программистов на рынке."
@@ -14296,7 +14296,7 @@
       "id": "65c9a95c32ce28ad10ec146d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7011.32,
       "etime": 7016.22,
       "text": "Но если ты, например, на джаве и на питоне какую-то часть делаешь, то ты можешь уже..."
@@ -14359,7 +14359,7 @@
       "id": "65c9a95c32ce28ad10ec1474",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7062.26,
       "etime": 7069.3,
       "text": "Залезает он в твои спринговые контроллеры, потому что ты наружу выставляешь REST, который не документирован, скорее всего."
@@ -14368,7 +14368,7 @@
       "id": "65c9a95c32ce28ad10ec1475",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7069.36,
       "etime": 7076.75,
       "text": "Если бы у тебя была бы документация на весь твой API, полная, какие там параметры, как чего, то зачем ему лезть в твой контроллер?"
@@ -14458,7 +14458,7 @@
       "id": "65c9a95c32ce28ad10ec147f",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7124.26,
       "etime": 7136.62,
       "text": "Ну, опять же, этого человека вы брали JavaScript рулить, и по пути он как-то нахватался от вас Java и как-то теперь имеет возможность чего-то дописывать."
@@ -14467,7 +14467,7 @@
       "id": "65c9a95c32ce28ad10ec1480",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7136.64,
       "etime": 7143.78,
       "text": "Так и здесь у тебя будет N Java программистов, будет M Python программистов."
@@ -14485,7 +14485,7 @@
       "id": "65c9a95c32ce28ad10ec1482",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7151.39,
       "etime": 7157.21,
       "text": "И питоновские тоже, они там как-то будут смотреть на джава-код и как-то что-то понимать."
@@ -14494,7 +14494,7 @@
       "id": "65c9a95c32ce28ad10ec1483",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7157.27,
       "etime": 7167.88,
       "text": "Твой китаец как раз самый яркий примет того, что можно набрать несколько людей, которые знают разные языки, и постепенно они, такая диффузия будет знаний, да?"
@@ -14503,7 +14503,7 @@
       "id": "65c9a95c32ce28ad10ec1484",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7168.6,
       "etime": 7176.72,
       "text": "которые могут, не знаю, не переписать всю систему, конечно, но какие-то простые действия они могут вполне делать."
@@ -14539,7 +14539,7 @@
       "id": "65c9a95c32ce28ad10ec1488",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7190.63,
       "etime": 7192.87,
       "text": "При размере больше?"
@@ -14692,7 +14692,7 @@
       "id": "65c9a95c32ce28ad10ec1499",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7268.29,
       "etime": 7278.9,
       "text": "Так нет, ну окей, ты купил холодильник к себе домой, ты же не залазишь в него внутрь, не проверяешь компрессор, какой фреон залит, какие там проводки сделаны."
@@ -14701,7 +14701,7 @@
       "id": "65c9a95c32ce28ad10ec149a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7278.96,
       "etime": 7279.82,
       "text": "Вот у тебя есть холодильник."
@@ -14728,7 +14728,7 @@
       "id": "65c9a95c32ce28ad10ec149d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7288.92,
       "etime": 7294.65,
       "text": "Вдруг этому холодильнику нужно... Ты только что говорил, что это вот он отдает HTML, то есть он закрытый сам по себе."
@@ -14791,7 +14791,7 @@
       "id": "65c9a95c32ce28ad10ec14a4",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7315.34,
       "etime": 7321.77,
       "text": "Так окей, смотри, ты открываешь там, не знаю, Google, пишешь «фрилансеры на Лиспе»."
@@ -14800,7 +14800,7 @@
       "id": "65c9a95c32ce28ad10ec14a5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7322.78,
       "etime": 7337.15,
       "text": "Открываешь какую-нибудь биржу, ищешь там чувака-фрилансер, да, чувак, говоришь ему, вот смотри, вот у меня есть такой проект, тебе надо там, не знаю, в нем, чтобы порубил лед на полосочке, не на кубике, а на полосочке."
@@ -14809,7 +14809,7 @@
       "id": "65c9a95c32ce28ad10ec14a6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7337.17,
       "etime": 7341.73,
       "text": "Вот тебе там, не знаю, 100 долларов денег, вот порешай."
@@ -14917,7 +14917,7 @@
       "id": "65c9a95c32ce28ad10ec14b2",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7394.25,
       "etime": 7416.79,
       "text": "Не, ну подожди, смотри, с одной стороны, это как бы сложный проект, ты говоришь там, что-то такое сложное, но с другой стороны, если ты найдешь вот такого фрилансера на Лиспе, да, и опишешь ему в спецификации, вот сейчас вот есть там такая ситуация, тебе надо вот это вот реализовать, да, то есть ты считаешь, что только ты, только там, не знаю..."
@@ -14944,7 +14944,7 @@
       "id": "65c9a95c32ce28ad10ec14b5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7432.76,
       "etime": 7439.22,
       "text": "Ну, может, он это и сделает не сразу, но, не знаю, через какое-то время, через неделю, если это грамотный чувак."
@@ -14980,7 +14980,7 @@
       "id": "65c9a95c32ce28ad10ec14b9",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7458.1,
       "etime": 7462.93,
       "text": "ты как бы стараешься держать всегда этот холодильник в разобранном состоянии."
@@ -14989,7 +14989,7 @@
       "id": "65c9a95c32ce28ad10ec14ba",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7462.97,
       "etime": 7473.7,
       "text": "А так, если вот он у тебя есть там, не знаю, с кубиками, да, ты чего-то сделал, он там с полосками, какая хрен тебе разница, как он сделан, эти полоски, хоть там гномы"
@@ -14998,7 +14998,7 @@
       "id": "65c9a95c32ce28ad10ec14bb",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7474.32,
       "etime": 7477.46,
       "text": "не знаю, режут на эти полоски, внутри сидят."
@@ -15007,7 +15007,7 @@
       "id": "65c9a95c32ce28ad10ec14bc",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7477.52,
       "etime": 7478.84,
       "text": "Разница есть."
@@ -15079,7 +15079,7 @@
       "id": "65c9a95c32ce28ad10ec14c4",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7513.02,
       "etime": 7516.56,
       "text": "Ну, именно так я, наверное, и сказал."
@@ -15088,7 +15088,7 @@
       "id": "65c9a95c32ce28ad10ec14c5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7516.72,
       "etime": 7523.97,
       "text": "Но я к тому, что вот этот вот кусок тебе надо было оформить, не знаю, библиотека, хорошо."
@@ -15097,7 +15097,7 @@
       "id": "65c9a95c32ce28ad10ec14c6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7524.09,
       "etime": 7529.87,
       "text": "Допустим, если бы эта ситуация была такая, что это не сервис, который HTML генерирует."
@@ -15115,7 +15115,7 @@
       "id": "65c9a95c32ce28ad10ec14c8",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7539.5,
       "etime": 7543.36,
       "text": "Что бы это поменяло, если ты C++ не знаешь?"
@@ -15196,7 +15196,7 @@
       "id": "65c9a95c32ce28ad10ec14d1",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7591.45,
       "etime": 7594.08,
       "text": "У тебя, получается, интерфейсы по факту."
@@ -15205,7 +15205,7 @@
       "id": "65c9a95c32ce28ad10ec14d2",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7594.12,
       "etime": 7600.16,
       "text": "То есть вот ты сейчас делаешь первую версию своей библиотеки, в нее приходит 35 параметров."
@@ -15214,7 +15214,7 @@
       "id": "65c9a95c32ce28ad10ec14d3",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7600.2,
       "etime": 7614.21,
       "text": "Ты описываешь, какие методы у тебя есть, пишешь документацию на те методы, которые есть, заворачиваешь все это в одну библиотеку, вот у тебя закрытый кусок, который там что-то считает, и ты не паришь себе мозг на тему, на чем он написан, где он написан."
@@ -15250,7 +15250,7 @@
       "id": "65c9a95c32ce28ad10ec14d7",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7631.92,
       "etime": 7638.75,
       "text": "Ну да, это и, собственно, первый вариант, который ты предлагаешь."
@@ -15259,7 +15259,7 @@
       "id": "65c9a95c32ce28ad10ec14d8",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7638.83,
       "etime": 7648.07,
       "text": "Я тебе говорю, мы не делаем какую-то rocket science, что там, не знаю, только шишкалобы, какие-то математики."
@@ -15268,7 +15268,7 @@
       "id": "65c9a95c32ce28ad10ec14d9",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7648.11,
       "etime": 7650.55,
       "text": "Окей, я про себя говорю, не знаю, ты там..."
@@ -15277,7 +15277,7 @@
       "id": "65c9a95c32ce28ad10ec14da",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7651.17,
       "etime": 7668.32,
       "text": "У тебя свои биржевые хрени, да, свои обсчеты, но опять же, да, нету каких-то таких сокровенных знаний, которые знает только один человек, который знает только на одном языке программирования, там, не знаю, тебе достаточно, может, ты просто не встречал там грамотных чуваков."
@@ -15286,7 +15286,7 @@
       "id": "65c9a95c32ce28ad10ec14db",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7668.97,
       "etime": 7673.06,
       "text": "с которым ты можешь объяснить, что ты делаешь и в чем твоя проблема."
@@ -15430,7 +15430,7 @@
       "id": "65c9a95c32ce28ad10ec14eb",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7764.53,
       "etime": 7767.65,
       "text": "Понимаешь, ну, с моей точки зрения здесь..."
@@ -15439,7 +15439,7 @@
       "id": "65c9a95c32ce28ad10ec14ec",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7770.29,
       "etime": 7774.43,
       "text": "ты как бы не понимаешь, как меняется мир вокруг тебя."
@@ -15448,7 +15448,7 @@
       "id": "65c9a95c32ce28ad10ec14ed",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7774.47,
       "etime": 7782.78,
       "text": "То есть ты подразумеваешь, что вот сейчас давайте мы будем всех программистов, которые у нас есть, будем набирать к нам в компанию."
@@ -15457,7 +15457,7 @@
       "id": "65c9a95c32ce28ad10ec14ee",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7782.82,
       "etime": 7790.06,
       "text": "То есть мы там делаем что-то, допустим, мы решили на ГО, значит, нам надо ГО программистов."
@@ -15466,7 +15466,7 @@
       "id": "65c9a95c32ce28ad10ec14ef",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7790.12,
       "etime": 7797.42,
       "text": "Если мы решим что-то писать на Хаскеле, то нам нужно нанять в штат Хаскеле программистов и тому подобное."
@@ -15475,7 +15475,7 @@
       "id": "65c9a95c32ce28ad10ec14f0",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7798.18,
       "etime": 7807.55,
       "text": "А сейчас ситуация такая, что найти адекватных разработчиков, тем более в штат компании, не представляется возможным."
@@ -15484,7 +15484,7 @@
       "id": "65c9a95c32ce28ad10ec14f1",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7807.61,
       "etime": 7812.53,
       "text": "По крайней мере, очень тяжело даже джава-разработчикам."
@@ -15493,7 +15493,7 @@
       "id": "65c9a95c32ce28ad10ec14f2",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7812.55,
       "etime": 7825.61,
       "text": "Поэтому вариант, когда у тебя есть какой-то кусок кода, который разные разработчики пилят, и при этом ты должен знать, что этот кусок кода делает, какие у него входящие, какие там выходящие."
@@ -15502,7 +15502,7 @@
       "id": "65c9a95c32ce28ad10ec14f3",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7826.25,
       "etime": 7829.9,
       "text": "Но при этом тебе должно быть все равно, что там находится внутри."
@@ -15511,7 +15511,7 @@
       "id": "65c9a95c32ce28ad10ec14f4",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7829.94,
       "etime": 7834.17,
       "text": "То есть, ну, окей, да, у тебя там есть бизнес."
@@ -15583,7 +15583,7 @@
       "id": "65c9a95c32ce28ad10ec14fc",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7893.57,
       "etime": 7899.29,
       "text": "У тебя нет, опять же, описания вот этих точек контакта, да?"
@@ -15601,7 +15601,7 @@
       "id": "65c9a95c32ce28ad10ec14fe",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7902.81,
       "etime": 7907.76,
       "text": "Ты ему сказал, вот долби вот консул вот здесь вот по такому порту, бери DNS."
@@ -15619,7 +15619,7 @@
       "id": "65c9a95c32ce28ad10ec1500",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7914.92,
       "etime": 7916.56,
       "text": "Все, что ему надо-то еще?"
@@ -15736,7 +15736,7 @@
       "id": "65c9a95c32ce28ad10ec150d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7984.56,
       "etime": 7985.3,
       "text": "Ну, не знаю."
@@ -15745,7 +15745,7 @@
       "id": "65c9a95c32ce28ad10ec150e",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7985.32,
       "etime": 7989.26,
       "text": "Изначально как бы, то есть, Джава, опять же, из-за чего поднялась?"
@@ -15754,7 +15754,7 @@
       "id": "65c9a95c32ce28ad10ec150f",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 7989.28,
       "etime": 8001.31,
       "text": "Из-за того, что много всяких библиотек, которых написано, и если уж вспомнить «Серебряную пулю», да, и Брукса, он там еще в своей книге прям уже, когда это писал, наверное, в 70-е, 80-е годы, что..."
@@ -15763,7 +15763,7 @@
       "id": "65c9a95c32ce28ad10ec1510",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8003.55,
       "etime": 8008.26,
       "text": "Сейчас столько всяких решений, что не надо ничего нового писать."
@@ -15772,7 +15772,7 @@
       "id": "65c9a95c32ce28ad10ec1511",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8008.32,
       "etime": 8011.5,
       "text": "Если вам что-то надо сделать, то вы это купите."
@@ -15781,7 +15781,7 @@
       "id": "65c9a95c32ce28ad10ec1512",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8011.54,
       "etime": 8013.26,
       "text": "Сейчас даже покупать не надо."
@@ -15790,7 +15790,7 @@
       "id": "65c9a95c32ce28ad10ec1513",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8013.3,
       "etime": 8017.12,
       "text": "Все есть open source, все библиотеки, все это решает."
@@ -15799,7 +15799,7 @@
       "id": "65c9a95c32ce28ad10ec1514",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8017.2,
       "etime": 8023.63,
       "text": "И проблема с описанием взаимодействия в большинстве случаев, скажем так."
@@ -15853,7 +15853,7 @@
       "id": "65c9a95c32ce28ad10ec151a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8045.15,
       "etime": 8049.64,
       "text": "Ну, она не проще, но она позволяет изолировать и понять."
@@ -16078,7 +16078,7 @@
       "id": "65c9a95c32ce28ad10ec1533",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8150.93,
       "etime": 8153.91,
       "text": "У меня тоже уровень снизился уже."
@@ -16087,7 +16087,7 @@
       "id": "65c9a95c32ce28ad10ec1534",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8153.99,
       "etime": 8160.05,
       "text": "То есть дается простая задачка написать джава-код, строчек на пять."
@@ -16096,7 +16096,7 @@
       "id": "65c9a95c32ce28ad10ec1535",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8160.81,
       "etime": 8164.29,
       "text": "Но у меня проблема, у меня поток индусов еще идет."
@@ -16114,7 +16114,7 @@
       "id": "65c9a95c32ce28ad10ec1537",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8175.66,
       "etime": 8177.78,
       "text": "То есть есть набор символов."
@@ -16123,7 +16123,7 @@
       "id": "65c9a95c32ce28ad10ec1538",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8177.8,
       "etime": 8180.08,
       "text": "И вывести вот эту строчку в обратном порядке."
@@ -16132,7 +16132,7 @@
       "id": "65c9a95c32ce28ad10ec1539",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8180.12,
       "etime": 8185.98,
       "text": "И вот написать, решить это на Java, вот один из 30, дай бог."
@@ -16141,7 +16141,7 @@
       "id": "65c9a95c32ce28ad10ec153a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8186.02,
       "etime": 8187.06,
       "text": "И каждый раз меня..."
@@ -16150,7 +16150,7 @@
       "id": "65c9a95c32ce28ad10ec153b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8188.84,
       "etime": 8202.07,
       "text": "после прочтения вот резюме, там люди пишут, я там JP Morgan, там, а США, там, допустим, ну, это Junior, там, во всяких корпоративных аутсорсерах, там, что-то делаю, там, сижу, там, разработчик."
@@ -16159,7 +16159,7 @@
       "id": "65c9a95c32ce28ad10ec153c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8202.11,
       "etime": 8212.98,
       "text": "Я, честно говоря, не понимаю, вот, если на Java не можешь написать вот эти пять строчек, просто, просто тупо написать код, то где все эти люди работают и что они там делают?"
@@ -16168,7 +16168,7 @@
       "id": "65c9a95c32ce28ad10ec153d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8213.02,
       "etime": 8213.56,
       "text": "То есть, вот,"
@@ -16249,7 +16249,7 @@
       "id": "65c9a95c32ce28ad10ec1546",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8242.53,
       "etime": 8265.38,
       "text": "Не, у меня чувак был там на собеседовании, ну, у меня как бы открытый редактор, который это, ну, видно, как человек печатает, да, и чувак, прям видно, что из гугла искал там, вот, например, надо цикл написать, да, то есть он вставляет цикл, то есть там for и равно, там, ноль, туда-сюда, скобки, то есть внутри там что-то написано, систем аут,"
@@ -16258,7 +16258,7 @@
       "id": "65c9a95c32ce28ad10ec1547",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8265.78,
       "etime": 8274.1,
       "text": "Он вот это вот копипастит, то есть вставляет в редактор, удаляет то, что в середине, там чуть-чуть подписывает это и начинает дальше."
@@ -16267,7 +16267,7 @@
       "id": "65c9a95c32ce28ad10ec1548",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8274.14,
       "etime": 8279.03,
       "text": "Видимо, следующий этап там найти как строчку, найти как букву, да?"
@@ -16276,7 +16276,7 @@
       "id": "65c9a95c32ce28ad10ec1549",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8279.07,
       "etime": 8285.27,
       "text": "Опять копипастит строчку, удаляет там символ, который, видимо, в примере был, надо найти."
@@ -16285,7 +16285,7 @@
       "id": "65c9a95c32ce28ad10ec154a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8285.31,
       "etime": 8288.25,
       "text": "И вот так вот делает прям реально вот копипастит."
@@ -16294,7 +16294,7 @@
       "id": "65c9a95c32ce28ad10ec154b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8288.31,
       "etime": 8290.61,
       "text": "То есть я первый раз видел человека, который вот"
@@ -16303,7 +16303,7 @@
       "id": "65c9a95c32ce28ad10ec154c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8291.07,
       "etime": 8293.38,
       "text": "Реально программирует копипастом."
@@ -16312,7 +16312,7 @@
       "id": "65c9a95c32ce28ad10ec154d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8293.68,
       "etime": 8298.16,
       "text": "И при этом не стесняется, он понимает, что видно, что он пишет."
@@ -16537,7 +16537,7 @@
       "id": "65c9a95c32ce28ad10ec1566",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8381.47,
       "etime": 8402.16,
       "text": "Интересно, программировать функционально на Excel, это какой-то, не знаю... Еще дополнительно, кстати, Барлогу ответить, собеседование, то, что происходит на собеседовании, это я уже нам в чате нашего подкаста писал, то, что происходит на собеседовании, это никак не относится к тому, что надо будет делать."
@@ -16555,7 +16555,7 @@
       "id": "65c9a95c32ce28ad10ec1568",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8405.02,
       "etime": 8408.6,
       "text": "Нет, это как раз самое правильное, как я считаю."
@@ -16564,7 +16564,7 @@
       "id": "65c9a95c32ce28ad10ec1569",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8408.64,
       "etime": 8417.59,
       "text": "Потому что то, что происходит на собеседовании, ты пытаешься понять, как с человеком будет работать и пытаешься понять, как человек мыслит."
@@ -16573,7 +16573,7 @@
       "id": "65c9a95c32ce28ad10ec156a",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8418.13,
       "etime": 8419.29,
       "text": "Это все, что надо."
@@ -16582,7 +16582,7 @@
       "id": "65c9a95c32ce28ad10ec156b",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8419.37,
       "etime": 8421.1,
       "text": "Больше ничего не надо."
@@ -16591,7 +16591,7 @@
       "id": "65c9a95c32ce28ad10ec156c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8421.7,
       "etime": 8432.02,
       "text": "Даже если там просят развернуть строчку или, не знаю, нарисовать на доске какую-то систему, всем абсолютно, ну, по крайней мере, окей."
@@ -16600,7 +16600,7 @@
       "id": "65c9a95c32ce28ad10ec156d",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8432.08,
       "etime": 8435.83,
       "text": "Мне абсолютно на собеседование по барабану, что конкретно он нарисует."
@@ -16609,7 +16609,7 @@
       "id": "65c9a95c32ce28ad10ec156e",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8435.89,
       "etime": 8443.27,
       "text": "Там могут быть, не знаю, неправильные стрелочки, могут быть неправильные квадратики, может вообще неправильная решенная задача быть."
@@ -16618,7 +16618,7 @@
       "id": "65c9a95c32ce28ad10ec156f",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8443.83,
       "etime": 8444.79,
       "text": "Не знаю, мне кажется, это очень странно."
@@ -16627,7 +16627,7 @@
       "id": "65c9a95c32ce28ad10ec1570",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8444.81,
       "etime": 8468.17,
       "text": "Но если человек понятно, как мыслит, да, и он мыслит в том направлении, в котором мне надо, и при этом мне там, не знаю, комфортно с ним общаться, а не знаю, какой-то немытый бородатый, который там огрызается на каждый вопрос, типа, что вы написали, да, если с человеком комфортно общаться, если понимаешь, как он мыслит, и мыслит он правильно, да, то это уже как бы..."
@@ -16636,7 +16636,7 @@
       "id": "65c9a95c32ce28ad10ec1571",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8469.71,
       "etime": 8471.65,
       "text": "решение его принять."
@@ -16645,7 +16645,7 @@
       "id": "65c9a95c32ce28ad10ec1572",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8472.17,
       "etime": 8476.75,
       "text": "Не важно, что ты там ни разу не разворачивал строчку на своей работе."
@@ -16654,7 +16654,7 @@
       "id": "65c9a95c32ce28ad10ec1573",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8476.81,
       "etime": 8483.11,
       "text": "То, что тебя попросили на собеседование строчку развернуть, это не значит, что на работе ты будешь разворачивать строчку только."
@@ -17212,7 +17212,7 @@
       "id": "65c9a95c32ce28ad10ec15b1",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8765.14,
       "etime": 8769.97,
       "text": "Мы как бы с Умпутуном набираем людей для стартапов, для маленькой команды."
@@ -17221,7 +17221,7 @@
       "id": "65c9a95c32ce28ad10ec15b2",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8769.99,
       "etime": 8776.37,
       "text": "Я знаю, что я буду с этим человеком работать, Умпутун знает, что вот он конкретно близко с этим человеком будет работать."
@@ -17230,7 +17230,7 @@
       "id": "65c9a95c32ce28ad10ec15b3",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8776.95,
       "etime": 8783.98,
       "text": "Большие компании, не знаю, из тех, кто интервьюирует, не все будут с этим человеком работать."
@@ -17239,7 +17239,7 @@
       "id": "65c9a95c32ce28ad10ec15b4",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8784.02,
       "etime": 8787.96,
       "text": "Поэтому им просто надо, не знаю, давай поговорим про бинарные деревья."
@@ -17248,7 +17248,7 @@
       "id": "65c9a95c32ce28ad10ec15b5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8788.02,
       "etime": 8790.8,
       "text": "Давай решим, почему люки круглые."
@@ -17257,7 +17257,7 @@
       "id": "65c9a95c32ce28ad10ec15b6",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8791.09,
       "etime": 8792.87,
       "text": "Потому что надо что-то спросить."
@@ -17383,7 +17383,7 @@
       "id": "65c9a95c32ce28ad10ec15c4",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8853.93,
       "etime": 8854.37,
       "text": "Я не возьму."
@@ -17392,7 +17392,7 @@
       "id": "65c9a95c32ce28ad10ec15c5",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 8855.91,
       "etime": 8857.31,
       "text": "Я возьму ему удаленную."
@@ -17887,7 +17887,7 @@
       "id": "65c9a95c32ce28ad10ec15fc",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 9037.68,
       "etime": 9040.86,
       "text": "Уронил валенок на пульт."
@@ -18175,7 +18175,7 @@
       "id": "65c9a95c32ce28ad10ec161c",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 9129.98,
       "etime": 9131.68,
       "text": "Десять статей."
@@ -18517,7 +18517,7 @@
       "id": "65c9a95c32ce28ad10ec1642",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 9230.06,
       "etime": 9234.36,
       "text": "То есть, ты должен сделать какие-то... Нет, смело, это, по-моему, самый бюджетный-бюджетный."
@@ -18859,7 +18859,7 @@
       "id": "65c9a95c32ce28ad10ec1668",
       "issue": 471,
       "type": "cc",
-      "author": "SPEAKER_04",
+      "author": "Alek.sys",
       "stime": 9391.92,
       "etime": 9392.94,
       "text": "Я не знаю, где у вас там."

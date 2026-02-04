@@ -1,0 +1,18 @@
+description: Cross-episode speakers confirmed as different people (avg < 0.4)
+total: 2
+results:
+- speaker: Alexander
+  episodes:
+  - 27
+  - 243
+  - 524
+  verdict: different_people
+  evidence: ep27-ep243=0.2990; ep27-ep524=0.2624; ep243-ep524=0.2968
+  action: Need unique names for each episode
+- speaker: Andrey
+  episodes:
+  - 486
+  - 976
+  verdict: different_people
+  evidence: ep486-ep976=0.2201
+  action: Need unique names for each episode

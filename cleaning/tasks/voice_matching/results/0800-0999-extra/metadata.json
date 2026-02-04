@@ -1,0 +1,353 @@
+{
+  "batch": "0800-0999-extra",
+  "models": [
+    "pyannote",
+    "ecapa",
+    "titanet"
+  ],
+  "created_at": "2026-02-03T21:31:22.120223",
+  "segments": [
+    {
+      "episode": 868,
+      "speaker": "Guest_01",
+      "stime": 919.08,
+      "etime": 998.29,
+      "duration": 79.21,
+      "types": [
+        "unknown"
+      ],
+      "task_types": [
+        "episode_identification",
+        "cross_episode_comparison"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/868_Guest_01_919.08.npy",
+        "ecapa": "embeddings/ecapa/868_Guest_01_919.08.npy",
+        "titanet": "embeddings/titanet/868_Guest_01_919.08.npy"
+      },
+      "comparison_group": "Alexey"
+    },
+    {
+      "episode": 868,
+      "speaker": "Guest_01",
+      "stime": 7539.25,
+      "etime": 7589.19,
+      "duration": 49.94,
+      "types": [
+        "unknown"
+      ],
+      "task_types": [
+        "episode_identification",
+        "cross_episode_comparison"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/868_Guest_01_7539.25.npy",
+        "ecapa": "embeddings/ecapa/868_Guest_01_7539.25.npy",
+        "titanet": "embeddings/titanet/868_Guest_01_7539.25.npy"
+      },
+      "comparison_group": "Alexey"
+    },
+    {
+      "episode": 868,
+      "speaker": "Guest_01",
+      "stime": 2904.1,
+      "etime": 2952.51,
+      "duration": 48.41,
+      "types": [
+        "unknown"
+      ],
+      "task_types": [
+        "episode_identification",
+        "cross_episode_comparison"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/868_Guest_01_2904.1.npy",
+        "ecapa": "embeddings/ecapa/868_Guest_01_2904.1.npy",
+        "titanet": "embeddings/titanet/868_Guest_01_2904.1.npy"
+      },
+      "comparison_group": "Alexey"
+    },
+    {
+      "episode": 868,
+      "speaker": "Umputun",
+      "stime": 1878.65,
+      "etime": 2044.57,
+      "duration": 165.92,
+      "types": [
+        "reference"
+      ],
+      "task_types": [
+        "episode_identification"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/868_Umputun_1878.65.npy",
+        "ecapa": "embeddings/ecapa/868_Umputun_1878.65.npy",
+        "titanet": "embeddings/titanet/868_Umputun_1878.65.npy"
+      }
+    },
+    {
+      "episode": 868,
+      "speaker": "Ksenks",
+      "stime": 3410,
+      "etime": 3504.87,
+      "duration": 94.87,
+      "types": [
+        "reference"
+      ],
+      "task_types": [
+        "episode_identification"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/868_Ksenks_3410.npy",
+        "ecapa": "embeddings/ecapa/868_Ksenks_3410.npy",
+        "titanet": "embeddings/titanet/868_Ksenks_3410.npy"
+      }
+    },
+    {
+      "episode": 888,
+      "speaker": "Guest_Andrey",
+      "stime": 6257.71,
+      "etime": 6278.53,
+      "duration": 20.82,
+      "types": [
+        "unknown"
+      ],
+      "task_types": [
+        "episode_identification",
+        "cross_episode_comparison"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/888_Guest_Andrey_6257.71.npy",
+        "ecapa": "embeddings/ecapa/888_Guest_Andrey_6257.71.npy",
+        "titanet": "embeddings/titanet/888_Guest_Andrey_6257.71.npy"
+      },
+      "comparison_group": "Andrey"
+    },
+    {
+      "episode": 888,
+      "speaker": "Guest_Andrey",
+      "stime": 94.29,
+      "etime": 112.75,
+      "duration": 18.46,
+      "types": [
+        "unknown"
+      ],
+      "task_types": [
+        "episode_identification",
+        "cross_episode_comparison"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/888_Guest_Andrey_94.29.npy",
+        "ecapa": "embeddings/ecapa/888_Guest_Andrey_94.29.npy",
+        "titanet": "embeddings/titanet/888_Guest_Andrey_94.29.npy"
+      },
+      "comparison_group": "Andrey"
+    },
+    {
+      "episode": 888,
+      "speaker": "Guest_Andrey",
+      "stime": 6041.52,
+      "etime": 6058.86,
+      "duration": 17.34,
+      "types": [
+        "unknown"
+      ],
+      "task_types": [
+        "episode_identification",
+        "cross_episode_comparison"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/888_Guest_Andrey_6041.52.npy",
+        "ecapa": "embeddings/ecapa/888_Guest_Andrey_6041.52.npy",
+        "titanet": "embeddings/titanet/888_Guest_Andrey_6041.52.npy"
+      },
+      "comparison_group": "Andrey"
+    },
+    {
+      "episode": 888,
+      "speaker": "Umputun",
+      "stime": 872.01,
+      "etime": 967.36,
+      "duration": 95.35,
+      "types": [
+        "reference"
+      ],
+      "task_types": [
+        "episode_identification"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/888_Umputun_872.01.npy",
+        "ecapa": "embeddings/ecapa/888_Umputun_872.01.npy",
+        "titanet": "embeddings/titanet/888_Umputun_872.01.npy"
+      }
+    },
+    {
+      "episode": 888,
+      "speaker": "Bobuk",
+      "stime": 1381.22,
+      "etime": 1449.76,
+      "duration": 68.54,
+      "types": [
+        "reference"
+      ],
+      "task_types": [
+        "episode_identification"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/888_Bobuk_1381.22.npy",
+        "ecapa": "embeddings/ecapa/888_Bobuk_1381.22.npy",
+        "titanet": "embeddings/titanet/888_Bobuk_1381.22.npy"
+      }
+    },
+    {
+      "episode": 888,
+      "speaker": "Alek.sys",
+      "stime": 6875.18,
+      "etime": 6948.3,
+      "duration": 73.12,
+      "types": [
+        "reference"
+      ],
+      "task_types": [
+        "episode_identification"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/888_Alek_sys_6875.18.npy",
+        "ecapa": "embeddings/ecapa/888_Alek_sys_6875.18.npy",
+        "titanet": "embeddings/titanet/888_Alek_sys_6875.18.npy"
+      }
+    },
+    {
+      "episode": 888,
+      "speaker": "Gray",
+      "stime": 8979.13,
+      "etime": 9062.7,
+      "duration": 83.57,
+      "types": [
+        "reference"
+      ],
+      "task_types": [
+        "episode_identification"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/888_Gray_8979.13.npy",
+        "ecapa": "embeddings/ecapa/888_Gray_8979.13.npy",
+        "titanet": "embeddings/titanet/888_Gray_8979.13.npy"
+      }
+    },
+    {
+      "episode": 972,
+      "speaker": "Guest_Andrey_972",
+      "stime": 4750.04,
+      "etime": 4837.54,
+      "duration": 87.5,
+      "types": [
+        "unknown"
+      ],
+      "task_types": [
+        "episode_identification",
+        "cross_episode_comparison"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/972_Guest_Andrey_972_4750.04.npy",
+        "ecapa": "embeddings/ecapa/972_Guest_Andrey_972_4750.04.npy",
+        "titanet": "embeddings/titanet/972_Guest_Andrey_972_4750.04.npy"
+      },
+      "comparison_group": "Andrey"
+    },
+    {
+      "episode": 972,
+      "speaker": "Guest_Andrey_972",
+      "stime": 4990.08,
+      "etime": 5066.66,
+      "duration": 76.58,
+      "types": [
+        "unknown"
+      ],
+      "task_types": [
+        "episode_identification",
+        "cross_episode_comparison"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/972_Guest_Andrey_972_4990.08.npy",
+        "ecapa": "embeddings/ecapa/972_Guest_Andrey_972_4990.08.npy",
+        "titanet": "embeddings/titanet/972_Guest_Andrey_972_4990.08.npy"
+      },
+      "comparison_group": "Andrey"
+    },
+    {
+      "episode": 972,
+      "speaker": "Guest_Andrey_972",
+      "stime": 5187.02,
+      "etime": 5257.32,
+      "duration": 70.3,
+      "types": [
+        "unknown"
+      ],
+      "task_types": [
+        "episode_identification",
+        "cross_episode_comparison"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/972_Guest_Andrey_972_5187.02.npy",
+        "ecapa": "embeddings/ecapa/972_Guest_Andrey_972_5187.02.npy",
+        "titanet": "embeddings/titanet/972_Guest_Andrey_972_5187.02.npy"
+      },
+      "comparison_group": "Andrey"
+    },
+    {
+      "episode": 972,
+      "speaker": "Umputun",
+      "stime": 2699.66,
+      "etime": 2850.19,
+      "duration": 150.53,
+      "types": [
+        "reference"
+      ],
+      "task_types": [
+        "episode_identification"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/972_Umputun_2699.66.npy",
+        "ecapa": "embeddings/ecapa/972_Umputun_2699.66.npy",
+        "titanet": "embeddings/titanet/972_Umputun_2699.66.npy"
+      }
+    },
+    {
+      "episode": 972,
+      "speaker": "Alek.sys",
+      "stime": 5462.58,
+      "etime": 5542.92,
+      "duration": 80.34,
+      "types": [
+        "reference"
+      ],
+      "task_types": [
+        "episode_identification"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/972_Alek_sys_5462.58.npy",
+        "ecapa": "embeddings/ecapa/972_Alek_sys_5462.58.npy",
+        "titanet": "embeddings/titanet/972_Alek_sys_5462.58.npy"
+      }
+    },
+    {
+      "episode": 972,
+      "speaker": "Gray",
+      "stime": 7398.05,
+      "etime": 7493.85,
+      "duration": 95.8,
+      "types": [
+        "reference"
+      ],
+      "task_types": [
+        "episode_identification"
+      ],
+      "embeddings": {
+        "pyannote": "embeddings/pyannote/972_Gray_7398.05.npy",
+        "ecapa": "embeddings/ecapa/972_Gray_7398.05.npy",
+        "titanet": "embeddings/titanet/972_Gray_7398.05.npy"
+      }
+    }
+  ]
+}

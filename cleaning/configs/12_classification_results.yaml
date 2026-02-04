@@ -1,0 +1,468 @@
+version: 1
+name: Classification results - manual speaker identification (sessions 1-4)
+priority: 12
+description: |
+  Ручная классификация неразмеченных спикеров на основе контекста эпизодов,
+  voice embeddings (pyannote+ecapa+titanet) и кросс-эпизодного анализа.
+  Результаты в cleaning/tasks/classification_results.yaml.
+
+rules:
+
+# ============================================================
+# Ранние эпизоды (ep2-18)
+# ============================================================
+
+# Alex — кросс-эпизодный анализ: ep5+6+17+18 один человек (Дольче Вилли),
+# ep2 — другой. Voice: ep5↔6=0.926, ep17↔18=0.835, cross 0.53-0.67.
+- id: cls_e2_Alex_to_Alex_ep2
+  type: rename_episode
+  episode: 2
+  from: Alex
+  to: Alex_ep2
+  reason: 'Другой Alex, отличается от ep5/6/17/18 (voice 0.42-0.55)'
+- id: cls_e5_Alex_to_AlexDolceVille
+  type: rename_episode
+  episode: 5
+  from: Alex
+  to: AlexDolceVille
+  reason: 'Алекс из подкаста "Дольче Вилли", Кремниевая долина. Voice ep5↔6=0.926'
+- id: cls_e6_Alex_to_AlexDolceVille
+  type: rename_episode
+  episode: 6
+  from: Alex
+  to: AlexDolceVille
+  reason: 'Тот же Алекс из "Дольче Вилли". Voice ep5↔6=0.926'
+- id: cls_e17_Alex_to_AlexDolceVille
+  type: rename_episode
+  episode: 17
+  from: Alex
+  to: AlexDolceVille
+  reason: 'Тот же Алекс из "Дольче Вилли", теперь в Германии. Voice ep17↔18=0.835'
+- id: cls_e18_Alex_to_AlexDolceVille
+  type: rename_episode
+  episode: 18
+  from: Alex
+  to: AlexDolceVille
+  reason: 'Тот же Алекс из "Дольче Вилли", в Германии. Voice ep17↔18=0.835'
+- id: cls_e20_Guest_Nikolay_to_NikolayPhotographer
+  type: rename_episode
+  episode: 20
+  from: Guest_Nikolay
+  to: NikolayPhotographer
+  reason: 'Фотограф, эксперт по фотооборудованию'
+- id: cls_e72_Guest_Alexey_to_Alexey_ep72
+  type: rename_episode
+  episode: 72
+  from: Guest_Alexey
+  to: Alexey_ep72
+  reason: 'Алексей из Москвы, программист'
+- id: cls_e110_Guest_Dima_to_DimaYPP
+  type: rename_episode
+  episode: 110
+  from: Guest_Dima
+  to: DimaYPP
+  reason: 'Дима из "Янки после пьянки", регулярный участник послешоу'
+
+# ============================================================
+# Эпизоды 193-262
+# ============================================================
+
+# Grinch — ep193+196 один человек. Voice 0.70. Имя уже Grinch — не нужно переименовывать.
+# Mika — ep209+211 одна. Имя уже Mika — не нужно переименовывать.
+
+- id: cls_e237_SPEAKER_03_to_Marin_k_a
+  type: rename_episode
+  episode: 237
+  from: SPEAKER_03
+  to: Marin_k_a
+  reason: 'Ошибка сегментации — тот же голос, что и Марина'
+- id: cls_e255_Guest_Corporate_to_AlexeyMS
+  type: rename_episode
+  episode: 255
+  from: Guest_Corporate
+  to: AlexeyMS
+  reason: 'Алексей из Microsoft'
+- id: cls_e262_Guest_Alexey_to_AlexeyMS
+  type: rename_episode
+  episode: 262
+  from: Guest_Alexey
+  to: AlexeyMS
+  reason: 'Тот же Алексей из Microsoft (повторное появление, ep255,262,309)'
+
+# ============================================================
+# Эпизоды 284-329
+# ============================================================
+
+- id: cls_e284_SPEAKER_01_to_Caller_Spain_ep284
+  type: rename_episode
+  episode: 284
+  from: SPEAKER_01
+  to: Caller_Spain_ep284
+  reason: 'Анонимный украинский студент в Испании'
+- id: cls_e286_SPEAKER_03_to_AleksandrNorth
+  type: rename_episode
+  episode: 286
+  from: SPEAKER_03
+  to: AleksandrNorth
+  reason: 'Найден по контексту: PetrDidenko обращается "Александр" в 4907s'
+- id: cls_e298_Guest_Unknown_1_to_StanislavParallels
+  type: rename_episode
+  episode: 298
+  from: Guest_Unknown_1
+  to: StanislavParallels
+  reason: 'Станислав из Parallels, представлен в начале'
+- id: cls_e298_Guest_Unknown_2_to_Viktor_ep298
+  type: rename_episode
+  episode: 298
+  from: Guest_Unknown_2
+  to: Viktor_ep298
+  reason: 'Виктор, IT-консультант'
+- id: cls_e309_SPEAKER_00_to_AlexeyMS
+  type: rename_episode
+  episode: 309
+  from: SPEAKER_00
+  to: AlexeyMS
+  reason: 'Тот же Алексей из Microsoft (ep255,262,309). Специалист по Java/ZFS'
+- id: cls_e329_GameJournalist_to_AleksandrGameJournalist
+  type: rename_episode
+  episode: 329
+  from: Guest_Aleksandr_GameJournalist
+  to: AleksandrGameJournalist
+  reason: 'Александр, игровой журналист (уже идентифицирован в config 10 по голосу)'
+- id: cls_e329_SPEAKER_02_to_Igor_Ukraine_ep329
+  type: rename_episode
+  episode: 329
+  from: SPEAKER_02
+  to: Igor_Ukraine_ep329
+  reason: 'Игорь из Украины, дозвонившийся в эфир'
+
+# ============================================================
+# Эпизоды 339-403
+# ============================================================
+
+- id: cls_e339_Guest_Unknown_to_AlekseyAbashev
+  type: rename_episode
+  episode: 339
+  from: Guest_Unknown_ep339
+  to: AlekseyAbashev
+  reason: 'Подтверждено по чату эпизода'
+- id: cls_e344_Guest_Unknown_to_AndreyMirantis
+  type: rename_episode
+  episode: 344
+  from: Guest_Unknown_ep344
+  to: AndreyMirantis
+  reason: 'Андрей из Mirantis, эксперт по OpenStack/FuelWeb'
+- id: cls_e350_SPEAKER_02_to_Caller_CERN_ep350
+  type: rename_episode
+  episode: 350
+  from: SPEAKER_02
+  to: Caller_CERN_ep350
+  reason: 'Работник ЦЕРНа в Швейцарии, обслуживает БАК'
+- id: cls_e359_SPEAKER_03_to_Guest_LEDshop_ep359
+  type: rename_episode
+  episode: 359
+  from: SPEAKER_03
+  to: Guest_LEDshop_ep359
+  reason: 'Представитель магазина LED-ламп, эксперт по светодиодам'
+- id: cls_e369_Guest_Unknown_ep369_2_to_RomanDell
+  type: rename_episode
+  episode: 369
+  from: Guest_Unknown_ep369_2
+  to: RomanDell
+  reason: 'Роман, связан с Dell'
+- id: cls_e369_SPEAKER_00_to_AndreyDeutscheBank
+  type: rename_episode
+  episode: 369
+  from: SPEAKER_00
+  to: AndreyDeutscheBank
+  reason: 'Андрей, Java-разработчик в Deutsche Bank'
+- id: cls_e372_SPEAKER_07_to_Guest_QuickBlocks_ep372
+  type: rename_episode
+  episode: 372
+  from: SPEAKER_07
+  to: Guest_QuickBlocks_ep372
+  reason: 'Представитель сервиса QuickBlocks (BaaS)'
+- id: cls_e373_SPEAKER_01_to_AlekseyAbashev
+  type: rename_episode
+  episode: 373
+  from: SPEAKER_01
+  to: AlekseyAbashev
+  reason: 'Подтверждено по чату: "Скорее всего, Абашев"'
+- id: cls_e382_SPEAKER_02_to_RomanDell
+  type: rename_episode
+  episode: 382
+  from: SPEAKER_02
+  to: RomanDell
+  reason: 'Тот же Роман из ep369, подтверждено связью с Barclay и контекстом'
+- id: cls_e386_Guest_Unknown_to_AlekseyAbashev
+  type: rename_episode
+  episode: 386
+  from: Guest_Unknown_ep386
+  to: AlekseyAbashev
+  reason: 'Подтверждено по чату эпизода'
+- id: cls_e393_Guest_Dmitry_to_DmitrySurface
+  type: rename_episode
+  episode: 393
+  from: Guest_Dmitry
+  to: DmitrySurface
+  reason: 'Дмитрий, "защитник поверхностей" (Surface), появляется ~1390s'
+- id: cls_e393_Guest_Maxim_to_MaximKursk
+  type: rename_episode
+  episode: 393
+  from: Guest_Maxim
+  to: MaximKursk
+  reason: 'Максим из Курска, обсуждает поисковик "Спутник"'
+- id: cls_e394_Guest_Unknown_to_Vlad_TrueCrypt
+  type: rename_episode
+  episode: 394
+  from: Guest_Unknown_ep394
+  to: Vlad_TrueCrypt
+  reason: 'Влад (Володя), эксперт по криптографии/TrueCrypt, гость по Skype'
+- id: cls_e397_Guest_Unknown_ep397_1_to_Dmitry_ep397
+  type: rename_episode
+  episode: 397
+  from: Guest_Unknown_ep397_1
+  to: Dmitry_ep397
+  reason: 'Дмитрий, молодой гость-разработчик, Docker/Go/FPGA'
+- id: cls_e399_GuestAlexey399_to_AlexeyRuby
+  type: rename_episode
+  episode: 399
+  from: GuestAlexey399
+  to: AlexeyRuby
+  reason: 'Алексей, слушатель из чата, дважды защищал Ruby'
+- id: cls_e403_SPEAKER_05_to_PavelOpenVZ
+  type: rename_episode
+  episode: 403
+  from: SPEAKER_05
+  to: PavelOpenVZ
+  reason: 'Павел, эксперт по контейнерам из Parallels/OpenVZ, вероятно Павел Емельянов'
+
+# ============================================================
+# Эпизоды 423-462
+# ============================================================
+
+- id: cls_e423_SPEAKER_06_to_AntonArkhipov
+  type: rename_episode
+  episode: 423
+  from: SPEAKER_06
+  to: AntonArkhipov
+  reason: 'Антон Архипов, JetBrains DevAdvocate из Эстонии. Уже в системе (ep890). ep423,603,890'
+- id: cls_e425_SPEAKER_NEEDS_VOICE_CHECK_to_RuslanTelecom
+  type: rename_episode
+  episode: 425
+  from: SPEAKER_NEEDS_VOICE_CHECK
+  to: RuslanTelecom
+  reason: 'Мисатрибуция Bobuk/Gray/Eldar. По контексту (Docker, saltstack) — Руслан (интернет-провайдер)'
+- id: cls_e435_SPEAKER_03_to_Bobuk
+  type: rename_episode
+  episode: 435
+  from: SPEAKER_03
+  to: Bobuk
+  reason: 'Ksenks прямо называет "Бобок" (170s). Ошибка сегментации голоса Бобука'
+- id: cls_e445_SPEAKER_06_to_IvanDevZen
+  type: rename_episode
+  episode: 445
+  from: SPEAKER_06
+  to: IvanDevZen
+  reason: 'Иван из подкаста DevZen, представлен в 75s'
+- id: cls_e445_SPEAKER_02_to_AlexeyReact
+  type: rename_episode
+  episode: 445
+  from: SPEAKER_02
+  to: AlexeyReact
+  reason: 'Алексей, фронтенд-разработчик React, представлен в 1207s'
+- id: cls_e462_SPEAKER_05_to_DmitryPython
+  type: rename_episode
+  episode: 462
+  from: SPEAKER_05
+  to: DmitryPython
+  reason: 'Дмитрий, Python/Linux/DevOps, заменяет Gray. Voice 0.70 = ep441,517'
+
+# ============================================================
+# Эпизоды 505-536
+# ============================================================
+
+- id: cls_e505_SPEAKER_03_to_AlexeyMaverick
+  type: rename_episode
+  episode: 505
+  from: SPEAKER_03
+  to: AlexeyMaverick
+  reason: 'Алексей "Maverick Crank GRey", enterprise Java, Беларусь → Кремниевая долина'
+- id: cls_e506_SPEAKER_06_to_AlexeyMaverick
+  type: rename_episode
+  episode: 506
+  from: SPEAKER_06
+  to: AlexeyMaverick
+  reason: 'Тот же Алексей Maverick из ep505 (Gray: "те же гости из предыдущего")'
+- id: cls_e506_ruslan_unknown_to_RuslanKotlin
+  type: rename_episode
+  episode: 506
+  from: ruslan_unknown
+  to: RuslanKotlin
+  reason: 'Руслан, Kotlin-евангелист из Беларуси. ep465,506,507,536'
+- id: cls_e508_Guest_Dmitry_Google_to_DmitryGoogle
+  type: rename_episode
+  episode: 508
+  from: Guest_Dmitry_Google
+  to: DmitryGoogle
+  reason: 'Дмитрий, сотрудник Google. Инфраструктура Google, облачные сервисы, Fuchsia'
+- id: cls_e536_SPEAKER_01_to_RuslanKotlin
+  type: rename_episode
+  episode: 536
+  from: SPEAKER_01
+  to: RuslanKotlin
+  reason: 'Ошибка сегментации. Обсуждает suspend-функции Kotlin. Umputun: "Руслан, спасибо"'
+- id: cls_e536_SPEAKER_07_to_AndreyTDD
+  type: rename_episode
+  episode: 536
+  from: SPEAKER_07
+  to: AndreyTDD
+  reason: 'Андрей, 29 лет. "Я зарабатываю на жизнь разработкой ПО и я люблю ТДТ"'
+
+# ============================================================
+# Эпизоды 566-675
+# ============================================================
+
+- id: cls_e566_SPEAKER_06_to_TheLesha
+  type: rename_episode
+  episode: 566
+  from: SPEAKER_06
+  to: TheLesha
+  reason: '"Алексей Первый". PostgreSQL/AWS/Lambda/Go/Docker. Voice confirmed: ep566=621=628=675 (0.86-0.91)'
+- id: cls_e590_Guest_Lesha_Java_to_TheLesha
+  type: rename_episode
+  episode: 590
+  from: Guest_Lesha_Java
+  to: TheLesha
+  reason: '"Зе Лёша". Java 10, JVM internals, GC/JIT. По контексту тот же что ep566/621/628/675'
+- id: cls_e603_Guest_Anton_TeamCity_to_AntonArkhipov
+  type: rename_episode
+  episode: 603
+  from: Guest_Anton_TeamCity
+  to: AntonArkhipov
+  reason: 'Антон из JetBrains, писал промо-видео для TeamCity. ep423,603,890'
+- id: cls_e613_SPEAKER_07_to_AlexeyGo
+  type: rename_episode
+  episode: 613
+  from: SPEAKER_07
+  to: AlexeyGo
+  reason: 'Алексей, Go modules/Vigo, GopherCon Russia. Voice ОТЛИЧАЕТСЯ от TheLesha (0.30-0.37)'
+- id: cls_e621_SPEAKER_06_to_TheLesha
+  type: rename_episode
+  episode: 621
+  from: SPEAKER_06
+  to: TheLesha
+  reason: '"Второй Лёша". Protobuf, API, AWS, бэкенд. Voice confirmed same as ep566/628/675 (0.87-0.91)'
+- id: cls_e622_SPEAKER_02_to_Caller_RedHat_ep622
+  type: rename_episode
+  episode: 622
+  from: SPEAKER_02
+  to: Caller_RedHat_ep622
+  reason: 'Сотрудник Red Hat, пользователь Fedora. Обсуждает поглощение Red Hat компанией IBM'
+- id: cls_e627_SPEAKER_02_to_SanyaCSS
+  type: rename_episode
+  episode: 627
+  from: SPEAKER_02
+  to: SanyaCSS
+  reason: '"Саня" (Александра), женщина. Web-разработчик, CSS/accessibility, :focus селекторы'
+- id: cls_e628_SPEAKER_04_to_TheLesha
+  type: rename_episode
+  episode: 628
+  from: SPEAKER_04
+  to: TheLesha
+  reason: '"Лёша". AWS/K8s/Go/Rust, code review. Voice confirmed same as ep566/621/675 (0.86-0.91)'
+- id: cls_e643_SPEAKER_02_to_AlexeyWASM
+  type: rename_episode
+  episode: 643
+  from: SPEAKER_02
+  to: AlexeyWASM
+  reason: 'Алексей, WASI/WebAssembly эксперт. Привёл Bobuk. Voice ОТЛИЧАЕТСЯ от TheLesha (0.34-0.47)'
+- id: cls_e675_SPEAKER_05_to_TheLesha
+  type: rename_episode
+  episode: 675
+  from: SPEAKER_05
+  to: TheLesha
+  reason: '"Лёша", 42 мин в эфире, в США. Java/Go/AWS. Voice confirmed same as ep566/621/628 (0.89-0.91)'
+
+# ============================================================
+# Эпизоды 855-994
+# ============================================================
+
+- id: cls_e855_SPEAKER_01_to_artifact
+  type: rename_episode
+  episode: 855
+  from: SPEAKER_01
+  to: _artifact
+  reason: '385 реплик, 382 <3с. Субтитры DimaTorzok, смайлики, короткие междометия'
+- id: cls_e856_SPEAKER_02_to_artifact
+  type: rename_episode
+  episode: 856
+  from: SPEAKER_02
+  to: _artifact
+  reason: '507 реплик, 500 <3с. Тот же паттерн: эмодзи, субтитры, фрагменты'
+- id: cls_e891_Guest_Mikhail_to_MikhailBazel
+  type: rename_episode
+  episode: 891
+  from: Guest_Mikhail
+  to: MikhailBazel
+  reason: 'Михаил, эксперт Bazel, Java/Kotlin/Scala→Go. Config 08 переименовал Guest→Guest_Mikhail'
+- id: cls_e994_Guest_Unknown_to_TheGuest
+  type: rename_episode
+  episode: 994
+  from: Guest_Unknown
+  to: TheGuest
+  reason: 'Анонимный Python-разработчик из чата. Имя не назвал. Alek.sys: "обращусь как гость"'
+
+# ============================================================
+# Embeddings-подтверждённые гости (сессия 4, 2026-02-03)
+# ============================================================
+
+- id: cls_e868_Guest_01_to_AlexeyMath
+  type: rename_episode
+  episode: 868
+  from: Guest_01
+  to: AlexeyMath
+  reason: 'Алексей, математик, C++/MPI → Python/DS. Уникальный гость (embeddings confirmed)'
+- id: cls_e888_Guest_Andrey_to_Andrey_ep888
+  type: rename_episode
+  episode: 888
+  from: Guest_Andrey
+  to: Andrey_ep888
+  reason: 'Андрей, 30 лет опыта, IntelliJ/Docker. Уникальный, не совпадает с ep972/976'
+- id: cls_e972_Guest_Andrey_972_to_AndreyDotNet
+  type: rename_episode
+  episode: 972
+  from: Guest_Andrey_972
+  to: AndreyDotNet
+  reason: 'Андрей, C#/.NET Aspire, Entity Framework. Voice confirmed same as ep976 (0.91-0.93)'
+# ep976: override config 11 (Andrey_Testing → AndreyDotNet)
+- id: cls_e976_Andrey_Testing_to_AndreyDotNet
+  type: rename_episode
+  episode: 976
+  from: Andrey_Testing
+  to: AndreyDotNet
+  reason: 'Voice confirmed same as ep972 (0.91-0.93). Override config 11 (Andrey_Testing)'
+
+# ============================================================
+# Кросс-эпизодные: DmitryPython (ep441, 517)
+# Voice 0.70 подтверждает = тот же что ep462
+# ============================================================
+
+- id: cls_e441_Dmitry_to_DmitryPython
+  type: rename_episode
+  episode: 441
+  from: Dmitry
+  to: DmitryPython
+  reason: 'Дмитрий, Python/Linux/DevOps. Voice 0.70 = ep462,517'
+- id: cls_e517_Dmitry_to_DmitryPython
+  type: rename_episode
+  episode: 517
+  from: Dmitry
+  to: DmitryPython
+  reason: 'Дмитрий, Python/Linux/DevOps. "Нарушаю diversity". Voice 0.70 = ep441,462'
+
+# ============================================================
+# TODO: Юбилейные выпуски (ep100, 150, 202) — split
+# Требуют time-range правил, не поддерживается rename_episode.
+# См. classification_results.yaml → completed_assignments.
+# ============================================================

@@ -1,0 +1,861 @@
+description: Voice matching tasks requiring manual review
+total_tasks: 32
+tasks:
+- episode: 150
+  speaker: Guest_Unknown
+  best_match: Umputun
+  best_avg: 0.3674
+  all_scores:
+    Umputun: 0.3674
+    EldarMurtazin: 0.336
+    Marin_k_a: 0.2642
+    Rosnovsky: 0.2621
+    Gray: 0.2273
+    Bobuk: 0.2131
+  per_segment:
+    ep150_2977.57:
+      Umputun: 0.4472
+      EldarMurtazin: 0.2818
+      Marin_k_a: 0.2456
+      Rosnovsky: 0.207
+      Gray: 0.1663
+      Bobuk: 0.1321
+    ep150_4685.36:
+      EldarMurtazin: 0.4175
+      Marin_k_a: 0.3392
+      Umputun: 0.3007
+      Rosnovsky: 0.2865
+      Gray: 0.2394
+      Bobuk: 0.2083
+    ep150_5377.97:
+      Umputun: 0.3543
+      EldarMurtazin: 0.3087
+      Bobuk: 0.2989
+      Rosnovsky: 0.2928
+      Gray: 0.2761
+      Marin_k_a: 0.2078
+  action: investigate
+  reason: 'Inconclusive. Best: Umputun=0.3674'
+- episode: 202
+  speaker: Guest_Unknown
+  best_match: Bobuk
+  best_avg: 0.3897
+  all_scores:
+    Bobuk: 0.3897
+    Marin_k_a: 0.3107
+    Umputun: 0.2318
+  per_segment:
+    ep202_2954.67:
+      Bobuk: 0.3569
+      Marin_k_a: 0.2898
+      Umputun: 0.227
+    ep202_4628.31:
+      Bobuk: 0.4094
+      Marin_k_a: 0.3191
+      Umputun: 0.2371
+    ep202_4727.54:
+      Bobuk: 0.4029
+      Marin_k_a: 0.3233
+      Umputun: 0.2314
+  action: investigate
+  reason: 'Inconclusive. Best: Bobuk=0.3897'
+- episode: 232
+  speaker: SPEAKER_06
+  best_match: PetrDidenko
+  best_avg: 0.4037
+  all_scores:
+    PetrDidenko: 0.4037
+    Umputun: 0.2939
+    VasilyLA: 0.2934
+    NevyIvan: 0.2902
+    Marin_k_a: 0.2449
+  per_segment:
+    ep232_4393.7:
+      PetrDidenko: 0.3935
+      VasilyLA: 0.2801
+      NevyIvan: 0.2605
+      Umputun: 0.2439
+      Marin_k_a: 0.2146
+    ep232_4474.89:
+      PetrDidenko: 0.3989
+      NevyIvan: 0.2985
+      Umputun: 0.2877
+      VasilyLA: 0.2857
+      Marin_k_a: 0.2724
+    ep232_4542.19:
+      PetrDidenko: 0.4187
+      Umputun: 0.3501
+      VasilyLA: 0.3143
+      NevyIvan: 0.3115
+      Marin_k_a: 0.2476
+  action: investigate
+  reason: 'Inconclusive. Best: PetrDidenko=0.4037'
+- episode: 237
+  speaker: SPEAKER_03
+  best_match: Marin_k_a
+  best_avg: 0.4817
+  all_scores:
+    Marin_k_a: 0.4817
+    Umputun: 0.2528
+    Bobuk: 0.1183
+    Plushev: 0.0922
+  per_segment:
+    ep237_4048.33:
+      Marin_k_a: 0.4817
+      Umputun: 0.2528
+      Bobuk: 0.1183
+      Plushev: 0.0922
+  action: investigate
+  reason: 'Inconclusive. Best: Marin_k_a=0.4817'
+- episode: 309
+  speaker: SPEAKER_00
+  best_match: Bobuk
+  best_avg: 0.4476
+  all_scores:
+    Bobuk: 0.4476
+    Marin_k_a: 0.3106
+    Umputun: 0.1678
+  per_segment:
+    ep309_1910.57:
+      Bobuk: 0.429
+      Marin_k_a: 0.3084
+      Umputun: 0.1643
+    ep309_8830.8:
+      Bobuk: 0.4787
+      Marin_k_a: 0.3127
+      Umputun: 0.1743
+    ep309_925.41:
+      Bobuk: 0.4351
+      Marin_k_a: 0.3107
+      Umputun: 0.1647
+  action: investigate
+  reason: 'Inconclusive. Best: Bobuk=0.4476'
+- episode: 329
+  speaker: SPEAKER_02
+  best_match: Guest_Aleksandr_GameJournalist
+  best_avg: 0.3928
+  all_scores:
+    Guest_Aleksandr_GameJournalist: 0.3928
+    Umputun: 0.2905
+    Marin_k_a: 0.2567
+  per_segment:
+    ep329_2186.8:
+      Guest_Aleksandr_GameJournalist: 0.3988
+      Umputun: 0.3276
+      Marin_k_a: 0.2544
+    ep329_2253.43:
+      Guest_Aleksandr_GameJournalist: 0.4087
+      Umputun: 0.2657
+      Marin_k_a: 0.2353
+    ep329_2903.49:
+      Guest_Aleksandr_GameJournalist: 0.3708
+      Marin_k_a: 0.2805
+      Umputun: 0.2781
+  action: investigate
+  reason: 'Inconclusive. Best: Guest_Aleksandr_GameJournalist=0.3928'
+- episode: 329
+  speaker: SPEAKER_05
+  best_match: Guest_Aleksandr_GameJournalist
+  best_avg: 0.3777
+  all_scores:
+    Guest_Aleksandr_GameJournalist: 0.3777
+    Umputun: 0.2805
+    Marin_k_a: 0.1693
+  per_segment:
+    ep329_6451.65:
+      Guest_Aleksandr_GameJournalist: 0.379
+      Umputun: 0.3166
+      Marin_k_a: 0.1639
+    ep329_6506.16:
+      Guest_Aleksandr_GameJournalist: 0.3215
+      Umputun: 0.2713
+      Marin_k_a: 0.1548
+    ep329_6800.16:
+      Guest_Aleksandr_GameJournalist: 0.4325
+      Umputun: 0.2535
+      Marin_k_a: 0.1892
+  action: investigate
+  reason: 'Inconclusive. Best: Guest_Aleksandr_GameJournalist=0.3777'
+- episode: 344
+  speaker: Guest_Unknown_ep344
+  best_match: PetrDidenko
+  best_avg: 0.432
+  all_scores:
+    PetrDidenko: 0.432
+    Umputun: 0.3554
+    Gray: 0.3309
+    Bobuk: 0.2938
+    EldarMurtazin: 0.2842
+  per_segment:
+    ep344_280.76:
+      PetrDidenko: 0.4516
+      Umputun: 0.367
+      Gray: 0.35
+      Bobuk: 0.3206
+      EldarMurtazin: 0.3088
+    ep344_408.22:
+      PetrDidenko: 0.4085
+      Umputun: 0.3748
+      Gray: 0.3254
+      EldarMurtazin: 0.2763
+      Bobuk: 0.2743
+    ep344_918.15:
+      PetrDidenko: 0.436
+      Umputun: 0.3244
+      Gray: 0.3172
+      Bobuk: 0.2865
+      EldarMurtazin: 0.2676
+  action: investigate
+  reason: 'Inconclusive. Best: PetrDidenko=0.4320'
+- episode: 350
+  speaker: SPEAKER_02
+  best_match: Gray
+  best_avg: 0.4735
+  all_scores:
+    Gray: 0.4735
+    EldarMurtazin: 0.466
+    Marin_k_a: 0.2899
+    Ksenks: 0.2753
+    Umputun: 0.2672
+  per_segment:
+    ep350_1074.11:
+      Gray: 0.4654
+      EldarMurtazin: 0.4574
+      Marin_k_a: 0.2977
+      Umputun: 0.2874
+      Ksenks: 0.277
+    ep350_1131.6:
+      EldarMurtazin: 0.4786
+      Gray: 0.4769
+      Marin_k_a: 0.3078
+      Ksenks: 0.2991
+      Umputun: 0.246
+    ep350_1212.87:
+      Gray: 0.4783
+      EldarMurtazin: 0.4621
+      Umputun: 0.2682
+      Marin_k_a: 0.2641
+      Ksenks: 0.2499
+  action: investigate
+  reason: 'Inconclusive. Best: Gray=0.4735'
+- episode: 359
+  speaker: SPEAKER_03
+  best_match: Gray
+  best_avg: 0.402
+  all_scores:
+    Gray: 0.402
+    EldarMurtazin: 0.3954
+    Umputun: 0.3201
+    Bobuk: 0.3145
+    Ksenks: 0.1982
+    Marin_k_a: 0.1752
+  per_segment:
+    ep359_3469.83:
+      Gray: 0.4016
+      EldarMurtazin: 0.3755
+      Umputun: 0.3745
+      Bobuk: 0.3562
+      Ksenks: 0.1789
+      Marin_k_a: 0.1508
+    ep359_3863.04:
+      Gray: 0.4177
+      EldarMurtazin: 0.4042
+      Bobuk: 0.3119
+      Umputun: 0.3118
+      Ksenks: 0.1932
+      Marin_k_a: 0.1701
+    ep359_4067.75:
+      EldarMurtazin: 0.4065
+      Gray: 0.3867
+      Bobuk: 0.2753
+      Umputun: 0.2741
+      Ksenks: 0.2224
+      Marin_k_a: 0.2047
+  action: investigate
+  reason: 'Inconclusive. Best: Gray=0.4020'
+- episode: 372
+  speaker: SPEAKER_07
+  best_match: Gray
+  best_avg: 0.4576
+  all_scores:
+    Gray: 0.4576
+    Bobuk: 0.2767
+    Marin_k_a: 0.2539
+    Ksenks: 0.226
+    Umputun: 0.1443
+  per_segment:
+    ep372_2382.64:
+      Gray: 0.4463
+      Bobuk: 0.2701
+      Marin_k_a: 0.2383
+      Ksenks: 0.2141
+      Umputun: 0.1228
+    ep372_2457.53:
+      Gray: 0.4822
+      Bobuk: 0.2945
+      Marin_k_a: 0.26
+      Ksenks: 0.2417
+      Umputun: 0.1611
+    ep372_2776.55:
+      Gray: 0.4443
+      Bobuk: 0.2654
+      Marin_k_a: 0.2635
+      Ksenks: 0.2222
+      Umputun: 0.1489
+  action: investigate
+  reason: 'Inconclusive. Best: Gray=0.4576'
+- episode: 373
+  speaker: SPEAKER_01
+  best_match: Bobuk
+  best_avg: 0.6639
+  all_scores:
+    Bobuk: 0.6639
+    Gray: 0.4325
+    Ksenks: 0.3561
+    Marin_k_a: 0.3174
+    Umputun: 0.2517
+  per_segment:
+    ep373_4903.24:
+      Bobuk: 0.6699
+      Gray: 0.4432
+      Ksenks: 0.3753
+      Marin_k_a: 0.3374
+      Umputun: 0.269
+    ep373_5120.09:
+      Bobuk: 0.662
+      Gray: 0.404
+      Ksenks: 0.3453
+      Marin_k_a: 0.3211
+      Umputun: 0.2481
+    ep373_9569.92:
+      Bobuk: 0.6597
+      Gray: 0.4504
+      Ksenks: 0.3478
+      Marin_k_a: 0.2936
+      Umputun: 0.238
+  action: investigate
+  reason: 'Inconclusive. Best: Bobuk=0.6639'
+- episode: 377
+  speaker: SPEAKER_00
+  best_match: Ksenks
+  best_avg: 0.7497
+  all_scores:
+    Ksenks: 0.7497
+    Marin_k_a: 0.6572
+    Bobuk: 0.1633
+    Gray: 0.1213
+  per_segment:
+    ep377_6890.22:
+      Ksenks: 0.7539
+      Marin_k_a: 0.6527
+      Bobuk: 0.1075
+      Gray: 0.0721
+    ep377_6970.9:
+      Ksenks: 0.7566
+      Marin_k_a: 0.6864
+      Bobuk: 0.125
+      Gray: 0.09
+    ep377_7047.05:
+      Ksenks: 0.7387
+      Marin_k_a: 0.6326
+      Bobuk: 0.2573
+      Gray: 0.2019
+  action: investigate
+  reason: 'Inconclusive. Best: Ksenks=0.7497'
+- episode: 378
+  speaker: SPEAKER_00
+  best_match: Marin_k_a
+  best_avg: 0.7476
+  all_scores:
+    Marin_k_a: 0.7476
+    Ksenks: 0.73
+    Gray: 0.1539
+    Umputun: 0.126
+  per_segment:
+    ep378_7442.92:
+      Marin_k_a: 0.7476
+      Ksenks: 0.73
+      Gray: 0.1539
+      Umputun: 0.126
+  action: investigate
+  reason: 'Inconclusive. Best: Marin_k_a=0.7476'
+- episode: 386
+  speaker: Guest_Unknown_ep386
+  best_match: Bobuk
+  best_avg: 0.4059
+  all_scores:
+    Bobuk: 0.4059
+    Gray: 0.2711
+    Marin_k_a: 0.2667
+    Ksenks: 0.2664
+    Umputun: 0.2072
+  per_segment:
+    ep386_1147.41:
+      Bobuk: 0.3848
+      Ksenks: 0.2922
+      Marin_k_a: 0.2856
+      Gray: 0.27
+      Umputun: 0.204
+    ep386_5814.23:
+      Bobuk: 0.3973
+      Marin_k_a: 0.2662
+      Gray: 0.265
+      Ksenks: 0.2568
+      Umputun: 0.2209
+    ep386_6045.57:
+      Bobuk: 0.4355
+      Gray: 0.2783
+      Ksenks: 0.2503
+      Marin_k_a: 0.2482
+      Umputun: 0.1966
+  action: investigate
+  reason: 'Inconclusive. Best: Bobuk=0.4059'
+- episode: 394
+  speaker: Guest_Unknown_ep394
+  best_match: Bobuk
+  best_avg: 0.4522
+  all_scores:
+    Bobuk: 0.4522
+    Ksenks: 0.3132
+    Umputun: 0.27
+  per_segment:
+    ep394_1235.99:
+      Bobuk: 0.4609
+      Ksenks: 0.3301
+      Umputun: 0.2802
+    ep394_1853.59:
+      Bobuk: 0.4622
+      Ksenks: 0.3285
+      Umputun: 0.2597
+    ep394_986.68:
+      Bobuk: 0.4334
+      Ksenks: 0.2809
+      Umputun: 0.2701
+  action: investigate
+  reason: 'Inconclusive. Best: Bobuk=0.4522'
+- episode: 397
+  speaker: Guest_Unknown_ep397_1
+  best_match: Bobuk
+  best_avg: 0.3995
+  all_scores:
+    Bobuk: 0.3995
+    Umputun: 0.3278
+    Gray: 0.2683
+  per_segment:
+    ep397_2560.12:
+      Bobuk: 0.4193
+      Umputun: 0.3096
+      Gray: 0.2623
+    ep397_5141.8:
+      Bobuk: 0.4502
+      Umputun: 0.3581
+      Gray: 0.2837
+    ep397_6240.96:
+      Bobuk: 0.3289
+      Umputun: 0.3158
+      Gray: 0.2589
+  action: investigate
+  reason: 'Inconclusive. Best: Bobuk=0.3995'
+- episode: 400
+  speaker: SPEAKER_04
+  best_match: Gray
+  best_avg: 0.633
+  all_scores:
+    Gray: 0.633
+    Bobuk: 0.3124
+    Ksenks: 0.2964
+    Marin_k_a: 0.2806
+    Umputun: 0.2121
+  per_segment:
+    ep400_437.84:
+      Gray: 0.6177
+      Bobuk: 0.2882
+      Ksenks: 0.2315
+      Umputun: 0.2147
+      Marin_k_a: 0.2113
+    ep400_5335.48:
+      Gray: 0.6482
+      Ksenks: 0.3613
+      Marin_k_a: 0.35
+      Bobuk: 0.3365
+      Umputun: 0.2094
+  action: investigate
+  reason: 'Inconclusive. Best: Gray=0.6330'
+- episode: 403
+  speaker: SPEAKER_05
+  best_match: Bobuk
+  best_avg: 0.4614
+  all_scores:
+    Bobuk: 0.4614
+    Marin_k_a: 0.3093
+    Umputun: 0.276
+    Ksenks: 0.2621
+  per_segment:
+    ep403_1020.12:
+      Bobuk: 0.4736
+      Marin_k_a: 0.2915
+      Umputun: 0.286
+      Ksenks: 0.2566
+    ep403_2680.2:
+      Bobuk: 0.4758
+      Marin_k_a: 0.3234
+      Umputun: 0.2934
+      Ksenks: 0.2707
+    ep403_3695.04:
+      Bobuk: 0.4347
+      Marin_k_a: 0.3129
+      Ksenks: 0.2591
+      Umputun: 0.2487
+  action: investigate
+  reason: 'Inconclusive. Best: Bobuk=0.4614'
+- episode: 423
+  speaker: SPEAKER_06
+  best_match: Bobuk
+  best_avg: 0.9153
+  all_scores:
+    Bobuk: 0.9153
+    Alek.sys: 0.913
+    Gray: 0.3223
+    EldarMurtazin: 0.3213
+    Ksenks: 0.2434
+    Umputun: 0.1339
+  per_segment:
+    ep423_5875.04:
+      Bobuk: 0.9353
+      Alek.sys: 0.927
+      Gray: 0.3287
+      EldarMurtazin: 0.326
+      Ksenks: 0.2245
+      Umputun: 0.1246
+    ep423_6125.15:
+      Bobuk: 0.9174
+      Alek.sys: 0.9117
+      Gray: 0.3429
+      EldarMurtazin: 0.3172
+      Ksenks: 0.25
+      Umputun: 0.1532
+    ep423_6269.71:
+      Alek.sys: 0.9004
+      Bobuk: 0.8932
+      EldarMurtazin: 0.3206
+      Gray: 0.2953
+      Ksenks: 0.2556
+      Umputun: 0.1239
+  action: investigate
+  reason: 'Ambiguous: multiple references above 0.8: Bobuk=0.9153, Alek.sys=0.9130'
+- episode: 425
+  speaker: SPEAKER_NEEDS_VOICE_CHECK
+  best_match: Igor
+  best_avg: 0.4174
+  all_scores:
+    Igor: 0.4174
+    Umputun: 0.2441
+    Ksenks: 0.2229
+  per_segment:
+    ep425_1204.82:
+      Igor: 0.4319
+      Umputun: 0.2339
+      Ksenks: 0.2198
+    ep425_5758.84:
+      Igor: 0.418
+      Ksenks: 0.2362
+      Umputun: 0.1912
+    ep425_661.92:
+      Igor: 0.4023
+      Umputun: 0.3071
+      Ksenks: 0.2127
+  action: investigate
+  reason: 'Inconclusive. Best: Igor=0.4174'
+- episode: 435
+  speaker: SPEAKER_03
+  best_match: Gray
+  best_avg: 0.5389
+  all_scores:
+    Gray: 0.5389
+    Bobuk: 0.3969
+    Ksenks: 0.1937
+    Umputun: 0.1649
+  per_segment:
+    ep435_5098.68:
+      Gray: 0.5495
+      Bobuk: 0.4155
+      Ksenks: 0.2076
+      Umputun: 0.1623
+    ep435_5511.98:
+      Gray: 0.5261
+      Bobuk: 0.3934
+      Ksenks: 0.2074
+      Umputun: 0.1769
+    ep435_6656.03:
+      Gray: 0.5412
+      Bobuk: 0.3819
+      Ksenks: 0.1662
+      Umputun: 0.1555
+  action: investigate
+  reason: 'Inconclusive. Best: Gray=0.5389'
+- episode: 445
+  speaker: SPEAKER_06
+  best_match: Gray
+  best_avg: 0.3234
+  all_scores:
+    Gray: 0.3234
+    Umputun: 0.2795
+    Ksenks: 0.1792
+  per_segment:
+    ep445_1301.55:
+      Gray: 0.257
+      Umputun: 0.2408
+      Ksenks: 0.1537
+    ep445_2223.08:
+      Gray: 0.2966
+      Umputun: 0.2956
+      Ksenks: 0.1438
+    ep445_6824.24:
+      Gray: 0.4166
+      Umputun: 0.3022
+      Ksenks: 0.2401
+  action: investigate
+  reason: 'Inconclusive. Best: Gray=0.3234'
+- episode: 461
+  speaker: SPEAKER_02
+  best_match: Gray
+  best_avg: 0.5866
+  all_scores:
+    Gray: 0.5866
+    Bobuk: 0.3375
+    IlyaBalashov: 0.3159
+    Ksenks: 0.2338
+    Umputun: 0.099
+  per_segment:
+    ep461_8441.95:
+      Gray: 0.5866
+      Bobuk: 0.3375
+      IlyaBalashov: 0.3159
+      Ksenks: 0.2338
+      Umputun: 0.099
+  action: investigate
+  reason: 'Inconclusive. Best: Gray=0.5866'
+- episode: 462
+  speaker: SPEAKER_05
+  best_match: Umputun
+  best_avg: 0.3717
+  all_scores:
+    Umputun: 0.3717
+    Bobuk: 0.3188
+    sergey_selectel_462: 0.2458
+    Ksenks: 0.2363
+  per_segment:
+    ep462_1111.07:
+      Umputun: 0.3208
+      Bobuk: 0.2772
+      Ksenks: 0.2274
+      sergey_selectel_462: 0.2222
+    ep462_1785.77:
+      Umputun: 0.374
+      Bobuk: 0.3615
+      sergey_selectel_462: 0.2818
+      Ksenks: 0.2289
+    ep462_6063.87:
+      Umputun: 0.4203
+      Bobuk: 0.3176
+      Ksenks: 0.2526
+      sergey_selectel_462: 0.2334
+  action: investigate
+  reason: 'Inconclusive. Best: Umputun=0.3717'
+- episode: 505
+  speaker: SPEAKER_03
+  best_match: Alek.sys
+  best_avg: 0.8899
+  all_scores:
+    Alek.sys: 0.8899
+    Bobuk: 0.8683
+    Gray: 0.386
+    EldarMurtazin: 0.2496
+    Ksenks: 0.24
+  per_segment:
+    ep505_1466.22:
+      Alek.sys: 0.9005
+      Bobuk: 0.8385
+      Gray: 0.3577
+      Ksenks: 0.2514
+      EldarMurtazin: 0.2408
+    ep505_3716.8:
+      Alek.sys: 0.8972
+      Bobuk: 0.8927
+      Gray: 0.4334
+      EldarMurtazin: 0.2647
+      Ksenks: 0.2376
+    ep505_6691.58:
+      Bobuk: 0.8736
+      Alek.sys: 0.872
+      Gray: 0.3669
+      EldarMurtazin: 0.2434
+      Ksenks: 0.2311
+  action: investigate
+  reason: 'Ambiguous: multiple references above 0.8: Alek.sys=0.8899, Bobuk=0.8683'
+- episode: 506
+  speaker: SPEAKER_06
+  best_match: Alek.sys
+  best_avg: 0.88
+  all_scores:
+    Alek.sys: 0.88
+    Bobuk: 0.8549
+    Gray: 0.4273
+    EldarMurtazin: 0.3136
+    Ksenks: 0.2877
+  per_segment:
+    ep506_2067.92:
+      Alek.sys: 0.8864
+      Bobuk: 0.8474
+      Gray: 0.4576
+      EldarMurtazin: 0.3393
+      Ksenks: 0.2791
+    ep506_2458.73:
+      Alek.sys: 0.8772
+      Bobuk: 0.8701
+      Gray: 0.4363
+      EldarMurtazin: 0.3238
+      Ksenks: 0.262
+    ep506_5622.77:
+      Alek.sys: 0.8765
+      Bobuk: 0.8473
+      Gray: 0.3881
+      Ksenks: 0.3221
+      EldarMurtazin: 0.2776
+  action: investigate
+  reason: 'Ambiguous: multiple references above 0.8: Alek.sys=0.8800, Bobuk=0.8549'
+- episode: 536
+  speaker: SPEAKER_07
+  best_match: Bobuk
+  best_avg: 0.5025
+  all_scores:
+    Bobuk: 0.5025
+    Alek.sys: 0.3444
+    Umputun: 0.2763
+    Gray: 0.2747
+    Ksenks: 0.2332
+  per_segment:
+    ep536_3163.89:
+      Bobuk: 0.5215
+      Alek.sys: 0.3404
+      Gray: 0.308
+      Umputun: 0.2741
+      Ksenks: 0.2405
+    ep536_3261.9:
+      Bobuk: 0.4853
+      Alek.sys: 0.3635
+      Umputun: 0.264
+      Ksenks: 0.2594
+      Gray: 0.2577
+    ep536_4448.05:
+      Bobuk: 0.5006
+      Alek.sys: 0.3292
+      Umputun: 0.2909
+      Gray: 0.2584
+      Ksenks: 0.1998
+  action: investigate
+  reason: 'Inconclusive. Best: Bobuk=0.5025'
+- episode: 566
+  speaker: SPEAKER_06
+  best_match: Alek.sys
+  best_avg: 0.4584
+  all_scores:
+    Alek.sys: 0.4584
+    Артур: 0.3148
+    Umputun: 0.2659
+    Ksenks: 0.1469
+  per_segment:
+    ep566_3975.67:
+      Alek.sys: 0.43
+      Артур: 0.3244
+      Umputun: 0.2616
+      Ksenks: 0.1541
+    ep566_5753.47:
+      Alek.sys: 0.4675
+      Артур: 0.3494
+      Umputun: 0.2829
+      Ksenks: 0.1562
+    ep566_5828.89:
+      Alek.sys: 0.4777
+      Артур: 0.2707
+      Umputun: 0.2532
+      Ksenks: 0.1305
+  action: investigate
+  reason: 'Inconclusive. Best: Alek.sys=0.4584'
+- episode: 627
+  speaker: SPEAKER_02
+  best_match: Ksenks
+  best_avg: 0.4716
+  all_scores:
+    Ksenks: 0.4716
+    Umputun: 0.2245
+    Alek.sys: 0.209
+    Bobuk: 0.1721
+    Gray: 0.16
+  per_segment:
+    ep627_4120.32:
+      Ksenks: 0.4973
+      Alek.sys: 0.2058
+      Umputun: 0.2027
+      Gray: 0.1607
+      Bobuk: 0.1557
+    ep627_5267.99:
+      Ksenks: 0.4484
+      Umputun: 0.2213
+      Alek.sys: 0.2142
+      Bobuk: 0.1706
+      Gray: 0.1442
+    ep627_988.49:
+      Ksenks: 0.469
+      Umputun: 0.2494
+      Alek.sys: 0.207
+      Bobuk: 0.19
+      Gray: 0.1751
+  action: investigate
+  reason: 'Inconclusive. Best: Ksenks=0.4716'
+- episode: 628
+  speaker: SPEAKER_04
+  best_match: Umputun
+  best_avg: 0.3813
+  all_scores:
+    Umputun: 0.3813
+    Anya: 0.2175
+    Ksenks: 0.2036
+  per_segment:
+    ep628_3246.99:
+      Umputun: 0.3658
+      Anya: 0.2223
+      Ksenks: 0.1996
+    ep628_6583.56:
+      Umputun: 0.3671
+      Ksenks: 0.2241
+      Anya: 0.2235
+    ep628_7424.87:
+      Umputun: 0.4111
+      Anya: 0.2067
+      Ksenks: 0.187
+  action: investigate
+  reason: 'Inconclusive. Best: Umputun=0.3813'
+- episode: 675
+  speaker: SPEAKER_05
+  best_match: Umputun
+  best_avg: 0.477
+  all_scores:
+    Umputun: 0.477
+    Alek.sys: 0.351
+    Ksenks: 0.2258
+  per_segment:
+    ep675_2289.82:
+      Umputun: 0.4646
+      Alek.sys: 0.371
+      Ksenks: 0.2213
+    ep675_570.71:
+      Umputun: 0.4943
+      Alek.sys: 0.3632
+      Ksenks: 0.2347
+    ep675_7691.2:
+      Umputun: 0.4721
+      Alek.sys: 0.3188
+      Ksenks: 0.2215
+  action: investigate
+  reason: 'Inconclusive. Best: Umputun=0.4770'

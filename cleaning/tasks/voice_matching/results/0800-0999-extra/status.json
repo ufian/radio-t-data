@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-02-03T21:29:22.364653",
+  "episodes": {
+    "868": {
+      "status": "completed",
+      "segments_processed": 5,
+      "segments_total": 5,
+      "completed_at": "2026-02-03T21:30:06.579105"
+    },
+    "888": {
+      "status": "completed",
+      "segments_processed": 7,
+      "segments_total": 7,
+      "completed_at": "2026-02-03T21:30:42.973607"
+    },
+    "972": {
+      "status": "completed",
+      "segments_processed": 6,
+      "segments_total": 6,
+      "completed_at": "2026-02-03T21:31:22.119901"
+    }
+  },
+  "batch": "0800-0999-extra"
+}
