@@ -26,3 +26,6 @@ data/
 
 # Haiku analysis intermediate files
 haiku_analysis/
+
+# Voice processing cache (downloaded MP3 files)
+cache/

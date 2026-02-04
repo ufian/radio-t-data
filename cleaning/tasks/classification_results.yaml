@@ -1,7 +1,8 @@
 # Результаты ручной классификации неразмеченных спикеров
 # Дата начала: 2026-02-02
 # Последнее обновление: 2026-02-03
-# Статус: основная классификация завершена, осталось 3 embeddings-проверки
+# Статус: ВСЕ ЗАДАЧИ ЗАВЕРШЕНЫ. Юбилейные сплиты (ep100,150,202) в config 13.
+#         EP425 Ruslan объединён с RuslanTelecom. Embeddings завершены.
 
 # ============================================================
 # ЗАВЕРШЁННЫЕ НАЗНАЧЕНИЯ
@@ -22,9 +23,10 @@ completed_assignments:
   - episode: 100
     speaker: Guest_Unknown
     assign_to: _split
-    context: "Юбилейный выпуск, несколько звонивших слушателей"
+    status: completed
+    context: "Юбилейный выпуск, несколько звонивших слушателей. Config 13_jubilee_splits.yaml"
     split_into:
-      - Caller_ep100_1
+      - Caller_Denis_ep100  # Денис (имя из Skype, хосты называют по имени)
       - Aleksandr_Pozitiv
       - Caller_ep100_JapaneseTea
       - Pingvinator
@@ -37,7 +39,8 @@ completed_assignments:
   - episode: 150
     speaker: Guest_Unknown
     assign_to: _split
-    context: "Юбилейный выпуск, множество звонивших слушателей (Guest3-Guest29)"
+    status: completed
+    context: "Юбилейный выпуск, множество звонивших слушателей (Guest3-Guest29). Config 13_jubilee_splits.yaml"
     split_into:
       - Guest3: Caller_ep150_Poem
       - Guest4: AlexeyPonomar
@@ -57,7 +60,8 @@ completed_assignments:
   - episode: 202
     speaker: Guest_Unknown
     assign_to: _split
-    context: "Юбилейный выпуск, множество звонивших слушателей"
+    status: completed
+    context: "Юбилейный выпуск, множество звонивших слушателей. Config 13_jubilee_splits.yaml"
     split_into:
       - Ruslan_ep202
       - Leya_ep202
@@ -215,6 +219,7 @@ completed_assignments:
     speaker: SPEAKER_NEEDS_VOICE_CHECK
     assign_to: RuslanTelecom
     context: "Мисатрибуция Bobuk/Gray/Eldar. По контексту (Docker, saltstack) — Руслан (интернет-провайдер)"
+    notes: "Ruslan (76 реплик) = тот же RuslanTelecom. 40 переходов с зазором 0-0.1с. Объединены в config 12."
 
   - episode: 435
     speaker: SPEAKER_03
@@ -434,6 +439,7 @@ discovered_patterns:
     AlexeyMS: [255, 262, 309]
     AlekseyAbashev: [339, 373, 386]
     RomanDell: [369, 382]
+    Caller_Denis_ep100: [100]  # Денис из Skype, слушатель 1 месяц
     Pingvinator: [100, 150]
     RuslanTelecom: [299, 327, 397, 402, 404, 425]  # интернет-провайдер
     AntonArkhipov: [423, 603, 890]  # JetBrains, TeamCity DevAdvocate

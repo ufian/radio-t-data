@@ -1,0 +1,331 @@
+version: 1
+name: Jubilee episode splits - individual caller identification
+priority: 13
+description: |
+  Юбилейные выпуски (ep100, 150, 202) содержат множество звонящих слушателей.
+  Оригинальные данные имеют нумерацию Guest1-GuestN.
+  Config 08 ранее сливал их в Guest_Unknown — теперь правила перенесены сюда
+  с правильными именами на основе контекста эпизодов.
+  Также переименовывает промежуточные имена из config 08 (Guest_Ruslan и т.п.)
+  в финальные имена из classification_results.yaml.
+
+rules:
+
+# ============================================================
+# Episode 100 - Юбилейный выпуск (окт 2008)
+# Guest4→Olyapka (config 03), Guest6→Gimlis (config 08) — уже обработаны
+# ============================================================
+
+- id: jub_e100_Guest1_to_Caller_Denis_ep100
+  type: rename_episode
+  episode: 100
+  from: Guest1
+  to: Caller_Denis_ep100
+  reason: "Денис (имя из Skype). Хосты называют 'Денис' (6191s, 6200s, 6236s). Слушает 1 месяц, первый звонок."
+
+- id: jub_e100_Guest2_to_Aleksandr_Pozitiv
+  type: rename_episode
+  episode: 100
+  from: Guest2
+  to: Aleksandr_Pozitiv
+  reason: "Александр, подкаст 'Позитив' на Rpod, сайт Светляк.ру, плагин для Lightroom."
+
+- id: jub_e100_Guest3_to_Caller_ep100_JapaneseTea
+  type: rename_episode
+  episode: 100
+  from: Guest3
+  to: Caller_ep100_JapaneseTea
+  reason: "Вокабри, подкаст 'Японский чай'. Хосты: 'Спасибо, Вокабри' (7037s)."
+
+- id: jub_e100_Guest5_to_Pingvinator
+  type: rename_episode
+  episode: 100
+  from: Guest5
+  to: Pingvinator
+  reason: "'Ну, я Пингвинатор' (7245s). Бобук: 'не Терминатор, а Пингвинатор' (7259s)."
+
+# ============================================================
+# Episode 150 - Юбилейный выпуск (авг 2009)
+# Guest1→Rosnovsky (config 03), Guest2→Golodniy (config 03) — уже обработаны
+# ============================================================
+
+- id: jub_e150_Guest3_to_Caller_ep150_Poem
+  type: rename_episode
+  episode: 150
+  from: Guest3
+  to: Caller_ep150_Poem
+  reason: "Звонящий слушатель, читал стихи/поэму."
+
+- id: jub_e150_Guest4_to_AlexeyPonomar
+  type: rename_episode
+  episode: 150
+  from: Guest4
+  to: AlexeyPonomar
+  reason: "Алексей Пономарь, идентифицирован по контексту эпизода."
+
+- id: jub_e150_Guest5_to_Caller_ep150_5
+  type: rename_episode
+  episode: 150
+  from: Guest5
+  to: Caller_ep150_5
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest6_to_Caller_Aleksandr_ep150
+  type: rename_episode
+  episode: 150
+  from: Guest6
+  to: Caller_Aleksandr_ep150
+  reason: "Александр, звонящий слушатель."
+
+- id: jub_e150_Guest7_to_Caller_ep150_7
+  type: rename_episode
+  episode: 150
+  from: Guest7
+  to: Caller_ep150_7
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest8_to_Caller_ep150_8
+  type: rename_episode
+  episode: 150
+  from: Guest8
+  to: Caller_ep150_8
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest9_to_Caller_ep150_9
+  type: rename_episode
+  episode: 150
+  from: Guest9
+  to: Caller_ep150_9
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest10_to_Caller_ep150_10
+  type: rename_episode
+  episode: 150
+  from: Guest10
+  to: Caller_ep150_10
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest11_to_Caller_ep150_11
+  type: rename_episode
+  episode: 150
+  from: Guest11
+  to: Caller_ep150_11
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest12_to_Caller_ep150_12
+  type: rename_episode
+  episode: 150
+  from: Guest12
+  to: Caller_ep150_12
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest13_to_Pingvinator
+  type: rename_episode
+  episode: 150
+  from: Guest13
+  to: Pingvinator
+  reason: "Пингвинатор, повторный звонок (также ep100)."
+
+- id: jub_e150_Guest14_to_Caller_ep150_14
+  type: rename_episode
+  episode: 150
+  from: Guest14
+  to: Caller_ep150_14
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest15_to_Caller_ep150_15
+  type: rename_episode
+  episode: 150
+  from: Guest15
+  to: Caller_ep150_15
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest16_to_ViziPulatov
+  type: rename_episode
+  episode: 150
+  from: Guest16
+  to: ViziPulatov
+  reason: "Визи Пулатов, идентифицирован по контексту эпизода."
+
+- id: jub_e150_Guest17_to_Caller_ep150_17
+  type: rename_episode
+  episode: 150
+  from: Guest17
+  to: Caller_ep150_17
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest18_to_Caller_ep150_18
+  type: rename_episode
+  episode: 150
+  from: Guest18
+  to: Caller_ep150_18
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest19_to_Caller_ep150_19
+  type: rename_episode
+  episode: 150
+  from: Guest19
+  to: Caller_ep150_19
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest20_to_Caller_ep150_20
+  type: rename_episode
+  episode: 150
+  from: Guest20
+  to: Caller_ep150_20
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest21_to_VizarV
+  type: rename_episode
+  episode: 150
+  from: Guest21
+  to: VizarV
+  reason: "VizarV, идентифицирован по контексту эпизода."
+
+- id: jub_e150_Guest22_to_Caller_ep150_22
+  type: rename_episode
+  episode: 150
+  from: Guest22
+  to: Caller_ep150_22
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest23_to_Caller_ep150_23
+  type: rename_episode
+  episode: 150
+  from: Guest23
+  to: Caller_ep150_23
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest24_to_Caller_ep150_24
+  type: rename_episode
+  episode: 150
+  from: Guest24
+  to: Caller_ep150_24
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest25_to_Caller_ep150_25
+  type: rename_episode
+  episode: 150
+  from: Guest25
+  to: Caller_ep150_25
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest26_to_Caller_Vladimir_Volgograd_ep150
+  type: rename_episode
+  episode: 150
+  from: Guest26
+  to: Caller_Vladimir_Volgograd_ep150
+  reason: "Владимир из Волгограда."
+
+- id: jub_e150_Guest27_to_Caller_ep150_27
+  type: rename_episode
+  episode: 150
+  from: Guest27
+  to: Caller_ep150_27
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest28_to_Caller_ep150_28
+  type: rename_episode
+  episode: 150
+  from: Guest28
+  to: Caller_ep150_28
+  reason: "Безымянный звонящий слушатель."
+
+- id: jub_e150_Guest29_to_Caller_ep150_29
+  type: rename_episode
+  episode: 150
+  from: Guest29
+  to: Caller_ep150_29
+  reason: "Безымянный звонящий слушатель."
+
+# ============================================================
+# Episode 202 - Юбилейный выпуск (авг 2010)
+# Guest1→Guest_Ruslan, Guest2→Guest_Leya, Guest4→Anton_Nikitchuk (config 08) —
+# переименовываем в финальные имена
+# ============================================================
+
+# Финализация имён из config 08
+- id: jub_e202_Guest_Ruslan_to_Ruslan_ep202
+  type: rename_episode
+  episode: 202
+  from: Guest_Ruslan
+  to: Ruslan_ep202
+  reason: "Руслан, представился 'Меня зовут Руслан' (1289s). Финальное имя."
+
+- id: jub_e202_Guest_Leya_to_Leya_ep202
+  type: rename_episode
+  episode: 202
+  from: Guest_Leya
+  to: Leya_ep202
+  reason: "Лея, 19 лет. Umputun: 'Здравствуй, Лея' (2036s). Финальное имя."
+
+- id: jub_e202_Anton_Nikitchuk_to_AntonNikitchuk
+  type: rename_episode
+  episode: 202
+  from: Anton_Nikitchuk
+  to: AntonNikitchuk
+  reason: "'Никитчук Антон, SPB.net user group' (2313s). Нормализация имени."
+
+# Новые правила для Guest3, Guest5-12
+- id: jub_e202_Guest3_to_Caller_ep202_3
+  type: rename_episode
+  episode: 202
+  from: Guest3
+  to: Caller_ep202_3
+  reason: "Влад, повторный звонящий. Umputun: 'некий Влад' (2161s)."
+
+- id: jub_e202_Guest5_to_Caller_Wisconsin_ep202
+  type: rename_episode
+  episode: 202
+  from: Guest5
+  to: Caller_Wisconsin_ep202
+  reason: "Сергей из Висконсина. 'Звоню из штата Висконсин' (2886s)."
+
+- id: jub_e202_Guest6_to_Caller_Illinois_ep202
+  type: rename_episode
+  episode: 202
+  from: Guest6
+  to: Caller_Illinois_ep202
+  reason: "Слушатель из Иллинойса. Ездит на конференции, знает Маринку лично."
+
+- id: jub_e202_Guest7_to_Caller_Sweden_ep202
+  type: rename_episode
+  episode: 202
+  from: Guest7
+  to: Caller_Sweden_ep202
+  reason: "Слушатель из Швеции. 'Из дождливой Швеции' (3743s)."
+
+- id: jub_e202_Guest8_to_Caller_Portugal_ep202
+  type: rename_episode
+  episode: 202
+  from: Guest8
+  to: Caller_Portugal_ep202
+  reason: "Слушатель из Молдовы, живёт/учится в Португалии (3848s)."
+
+- id: jub_e202_Guest9_to_Caller_SPb_ep202
+  type: rename_episode
+  episode: 202
+  from: Guest9
+  to: Caller_SPb_ep202
+  reason: "'Из Санкт-Петербурга, из самого натурального' (4442s). 42 реплики."
+
+- id: jub_e202_Guest10_to_Caller_Finland_ep202
+  type: rename_episode
+  episode: 202
+  from: Guest10
+  to: Caller_Finland_ep202
+  reason: "Из России, на курсах финского в Хельсинки (5367s)."
+
+- id: jub_e202_Guest11_to_Caller_Krasnoyarsk_ep202
+  type: rename_episode
+  episode: 202
+  from: Guest11
+  to: Caller_Krasnoyarsk_ep202
+  reason: "Сергей из Красноярска. Umputun: 'Сергей, в Красноярске' (5789s)."
+
+- id: jub_e202_Guest12_to_Caller_Espoo_ep202
+  type: rename_episode
+  episode: 202
+  from: Guest12
+  to: Caller_Espoo_ep202
+  reason: "'Из города Эспо, Финляндия', 12 км от Хельсинки (6425s)."

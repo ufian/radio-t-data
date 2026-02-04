@@ -253,6 +253,12 @@ rules:
   from: SPEAKER_NEEDS_VOICE_CHECK
   to: RuslanTelecom
   reason: 'Мисатрибуция Bobuk/Gray/Eldar. По контексту (Docker, saltstack) — Руслан (интернет-провайдер)'
+- id: cls_e425_Ruslan_to_RuslanTelecom
+  type: rename_episode
+  episode: 425
+  from: Ruslan
+  to: RuslanTelecom
+  reason: 'Тот же RuslanTelecom (интернет-провайдер). 40 переходов Ruslan↔RuslanTelecom с зазором 0-0.1с, разрыв предложений. Сам говорит: "Руслан просто работает в интернет-провайдере" (7010s)'
 - id: cls_e435_SPEAKER_03_to_Bobuk
   type: rename_episode
   episode: 435
@@ -462,7 +468,7 @@ rules:
   reason: 'Дмитрий, Python/Linux/DevOps. "Нарушаю diversity". Voice 0.70 = ep441,462'
 
 # ============================================================
-# TODO: Юбилейные выпуски (ep100, 150, 202) — split
-# Требуют time-range правил, не поддерживается rename_episode.
-# См. classification_results.yaml → completed_assignments.
+# Юбилейные выпуски (ep100, 150, 202) — РЕШЕНО
+# Перенесены в 13_jubilee_splits.yaml. Оригинальная нумерация Guest1-GuestN
+# сохранена — стандартный rename_episode, time-range не понадобился.
 # ============================================================
