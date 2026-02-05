@@ -1,0 +1,27 @@
+# Финальная нормализация имён
+# Приоритет: 99 (выполняется последним)
+# Исправляет варианты транслитерации после всех других правил
+version: 1
+name: "Финальная нормализация"
+priority: 99
+
+rules:
+  # Aleksey/Alexey variants
+  - id: final_normalize_alexey_abashev
+    type: normalize
+    from: ["AlekseyAbashev", "alexey_abashev"]
+    to: "AlexeyAbashev"
+    reason: "Унификация транслитерации Aleksey → Alexey"
+
+  - id: final_normalize_alexey_ruby
+    type: normalize
+    from: ["AlekseyRuby"]
+    to: "AlexeyRuby"
+    reason: "Унификация транслитерации Aleksey → Alexey"
+
+  # Case normalization
+  - id: final_normalize_andrey_dotnet
+    type: normalize
+    from: ["andrey_dotnet"]
+    to: "AndreyDotNet"
+    reason: "Унификация регистра"

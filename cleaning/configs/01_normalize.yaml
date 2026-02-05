@@ -114,3 +114,23 @@ rules:
     to: "_artifact_99"
     reason: "SPEAKER_99 — аудио-артефакты, джинглы, звуковые эффекты"
 
+  # === Транслитерация Aleksey/Alexey ===
+
+  - id: normalize_alexey_abashev
+    type: normalize
+    from: ["AlekseyAbashev", "alexey_abashev"]
+    to: "AlexeyAbashev"
+    reason: "Унификация транслитерации"
+
+  - id: normalize_alexey_ruby
+    type: normalize
+    from: ["AlekseyRuby"]
+    to: "AlexeyRuby"
+    reason: "Унификация транслитерации"
+
+  - id: normalize_andrey_dotnet
+    type: normalize
+    from: ["andrey_dotnet"]
+    to: "AndreyDotNet"
+    reason: "Унификация регистра"
+

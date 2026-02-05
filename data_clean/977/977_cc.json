@@ -373,7 +373,7 @@
       "id": "68bdabcfc2b8022933af000b",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 109.2,
       "etime": 110.28,
       "text": "Да."
@@ -382,7 +382,7 @@
       "id": "68bdabcfc2b8022933af000c",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 110.36,
       "etime": 113.82,
       "text": "Меня зовут Андрей, и я .NET-программист."
@@ -436,7 +436,7 @@
       "id": "68bdabcfc2b8022933af0012",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 130.39,
       "etime": 132.56,
       "text": "Снова пришел спасать подкаст."
@@ -1048,7 +1048,7 @@
       "id": "68bdabcfc2b8022933af0056",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 357.68,
       "etime": 368.03,
       "text": "Я сейчас сам практикую сеанс скорочтения, но, судя по всему, он описывает просто свой обычный стандартный опыт, как все."
@@ -1057,7 +1057,7 @@
       "id": "68bdabcfc2b8022933af0057",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 368.15,
       "etime": 370.03,
       "text": "Я думаю, у меня опыт примерно такой же."
@@ -1066,7 +1066,7 @@
       "id": "68bdabcfc2b8022933af0058",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 370.07,
       "etime": 378.56,
       "text": "То есть сначала люди пытаются просто написать какой-то запрос, он плохо работает, потом, соответственно, начинают заниматься сооружением контекста."
@@ -1075,7 +1075,7 @@
       "id": "68bdabcfc2b8022933af0059",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 378.66,
       "etime": 385.53,
       "text": "Соответственно, начинаются CloudMD файлы, в которых описывается архитектура, потом описывается..."
@@ -1084,7 +1084,7 @@
       "id": "68bdabcfc2b8022933af005a",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 386.94,
       "etime": 392.35,
       "text": "То, что ревью, то, что Клод должен сам поревьюить это все, потом ты ревьювишь."
@@ -1705,7 +1705,7 @@
       "id": "68bdabcfc2b8022933af009f",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 701.39,
       "etime": 710.58,
       "text": "Да, я бы хотел, наверное, не согласиться с тем, что именно очень мелкие задачи, которые меньше, чем дают Junior, можно давать."
@@ -1714,7 +1714,7 @@
       "id": "68bdabcfc2b8022933af00a0",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 710.6,
       "etime": 719.09,
       "text": "В принципе, можно давать довольно обширные задачи, и как раз задачи, которые связаны с модификацией довольно большого количества кода."
@@ -1723,7 +1723,7 @@
       "id": "68bdabcfc2b8022933af00a1",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 719.13,
       "etime": 724.36,
       "text": "Не знаю, вот, например, недавно я давал задачу, вот есть небольшой сервис, он..."
@@ -1732,7 +1732,7 @@
       "id": "68bdabcfc2b8022933af00a2",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 724.34,
       "etime": 725.96,
       "text": "стучится в Монгу."
@@ -1741,7 +1741,7 @@
       "id": "68bdabcfc2b8022933af00a3",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 727.41,
       "etime": 735.1,
       "text": "Но для того, чтобы развернуть на инфраструктуре заказчика, им туда тянуть целую Монгу, потому что она у них там не согласована, ничего такого, жирно."
@@ -1750,7 +1750,7 @@
       "id": "68bdabcfc2b8022933af00a4",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 735.16,
       "etime": 738.21,
       "text": "Поэтому нужно добавить поддержку Postgres еще."
@@ -1759,7 +1759,7 @@
       "id": "68bdabcfc2b8022933af00a5",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 738.23,
       "etime": 744.02,
       "text": "И вот, соответственно, я дал задачу, что давайте, пожалуйста, сбегай, посмотри, как устроено в проекте."
@@ -1768,7 +1768,7 @@
       "id": "68bdabcfc2b8022933af00a6",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 744.49,
       "etime": 747.65,
       "text": "Потом составь план в Markdown."
@@ -1777,7 +1777,7 @@
       "id": "68bdabcfc2b8022933af00a7",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 747.77,
       "etime": 749.77,
       "text": "И будем дальше с этим беседовать."
@@ -1786,7 +1786,7 @@
       "id": "68bdabcfc2b8022933af00a8",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 749.83,
       "etime": 754.8,
       "text": "Он составляет, что вот я наисследовал, что хранение данных устроено так-то, так-то."
@@ -1795,7 +1795,7 @@
       "id": "68bdabcfc2b8022933af00a9",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 754.86,
       "etime": 758.87,
       "text": "Соответственно, нужно... Я планирую сделать то-то и то-то."
@@ -1804,7 +1804,7 @@
       "id": "68bdabcfc2b8022933af00aa",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 758.89,
       "etime": 761.25,
       "text": "Внести изменения в такие-то классы."
@@ -1813,7 +1813,7 @@
       "id": "68bdabcfc2b8022933af00ab",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 761.29,
       "etime": 762.47,
       "text": "Примерно так-то и так-то."
@@ -1822,7 +1822,7 @@
       "id": "68bdabcfc2b8022933af00ac",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 762.51,
       "etime": 763.75,
       "text": "И пошаговый план."
@@ -1831,7 +1831,7 @@
       "id": "68bdabcfc2b8022933af00ad",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 763.77,
       "etime": 765.81,
       "text": "Потом, соответственно, я иду и критикую его."
@@ -1840,7 +1840,7 @@
       "id": "68bdabcfc2b8022933af00ae",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 765.85,
       "etime": 770.88,
       "text": "Говорю, что нет, чувак, тут то не так, тут подход неправильный, тут вот так."
@@ -1849,7 +1849,7 @@
       "id": "68bdabcfc2b8022933af00af",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 770.9,
       "etime": 773.8,
       "text": "И, соответственно, когда мы уже договорились о плане действий,"
@@ -1858,7 +1858,7 @@
       "id": "68bdabcfc2b8022933af00b0",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 773.78,
       "etime": 777.05,
       "text": "И я ему говорю, ну что, иди делай."
@@ -1867,7 +1867,7 @@
       "id": "68bdabcfc2b8022933af00b1",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 777.07,
       "etime": 791.37,
       "text": "Он берет и делает, да, он в процессе допускает ошибки, да, оно там, может, не компилируется, он может местами забывать какие-то мелкие детали доделать, то есть, типа, даже если у него в плане было, он может это забыть, сделать какого-то фига."
@@ -2398,7 +2398,7 @@
       "id": "68bdabcfc2b8022933af00ec",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1003.25,
       "etime": 1009.99,
       "text": "А написание мусора можно превратить в преимущество."
@@ -2407,7 +2407,7 @@
       "id": "68bdabcfc2b8022933af00ed",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1010.35,
       "etime": 1020.97,
       "text": "Например, в случае с той же самой добавлением поддержки Postgres, очень быстро таким образом проверяются гипотезы, которые требуют изменения нескольких десятков файлов."
@@ -2416,7 +2416,7 @@
       "id": "68bdabcfc2b8022933af00ee",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1021.19,
       "etime": 1026.88,
       "text": "То есть, типа, вот я составил план, мне с первого взгляда показался план нормальный."
@@ -2425,7 +2425,7 @@
       "id": "68bdabcfc2b8022933af00ef",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1026.98,
       "etime": 1028.84,
       "text": "Я такой, все, пошел, иди делай."
@@ -2434,7 +2434,7 @@
       "id": "68bdabcfc2b8022933af00f0",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1029.5,
       "etime": 1036,
       "text": "Он в итоге делает его, я смотрю, что получилось, я такой, блин, ну, наверное, получилось не так, как я хотел бы."
@@ -2443,7 +2443,7 @@
       "id": "68bdabcfc2b8022933af00f1",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1036.04,
       "etime": 1039.12,
       "text": "А давай составим другой план, вот как это, только получше."
@@ -2452,7 +2452,7 @@
       "id": "68bdabcfc2b8022933af00f2",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1039.16,
       "etime": 1044.51,
       "text": "И, соответственно, оп, и еще раз можно кучу монотонной работы проделать, но немножечко по-другому."
@@ -2461,7 +2461,7 @@
       "id": "68bdabcfc2b8022933af00f3",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1044.49,
       "etime": 1047.56,
       "text": "И, ну, это как-то не знаю."
@@ -3064,7 +3064,7 @@
       "id": "68bdabcfc2b8022933af0136",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1281.08,
       "etime": 1291.84,
       "text": "Кстати, кодекс в моем опыте, как раз выплюнуть MD-шку, в которой будет план, он как-то с этим прям плохо справляется."
@@ -3073,7 +3073,7 @@
       "id": "68bdabcfc2b8022933af0137",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1291.88,
       "etime": 1296.67,
       "text": "Она получается какая-то такая машинная, для машин предназначенная, а не для человека."
@@ -3082,7 +3082,7 @@
       "id": "68bdabcfc2b8022933af0138",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1296.73,
       "etime": 1301.54,
       "text": "То есть там в основном какая-то рост сепклассов, номеров срок, куда он ссылается и так далее."
@@ -3505,7 +3505,7 @@
       "id": "68bdabcfc2b8022933af0167",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1487.13,
       "etime": 1489.59,
       "text": "А как можно отозвать JWT без сессии?"
@@ -3532,7 +3532,7 @@
       "id": "68bdabcfc2b8022933af016a",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 1500,
       "etime": 1503.74,
       "text": "Не-не-не, но он же будет жить пока, собственно, время жизни у него."
@@ -5386,7 +5386,7 @@
       "id": "68bdabcfc2b8022933af0238",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2239.5,
       "etime": 2244.74,
       "text": "Ну да, но, типа, мне кажется, нужна поддержка именно со стороны, собственно, самого агентского силы."
@@ -5647,7 +5647,7 @@
       "id": "68bdabcfc2b8022933af0255",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2340.87,
       "etime": 2344.8,
       "text": "Я вообще не понимаю, какой степени костыльности у них интеграция."
@@ -5656,7 +5656,7 @@
       "id": "68bdabcfc2b8022933af0256",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2344.84,
       "etime": 2356.75,
       "text": "Ну, то есть, если сами Антропик в свой код-код не вносили изменений, а все это чисто нахлобучка сбоку, то непонятно, насколько она может быть... Вокруг SDK."
@@ -6070,7 +6070,7 @@
       "id": "68bdabcfc2b8022933af0284",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2515.57,
       "etime": 2518.76,
       "text": "Я могу накинуть темы не про AI."
@@ -6097,7 +6097,7 @@
       "id": "68bdabcfc2b8022933af0287",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2525.69,
       "etime": 2527.96,
       "text": "Да, да, да."
@@ -6106,7 +6106,7 @@
       "id": "68bdabcfc2b8022933af0288",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2528.02,
       "etime": 2532.65,
       "text": "Например, KDE решили выпустить свой собственный дистрибутив Linux."
@@ -6115,7 +6115,7 @@
       "id": "68bdabcfc2b8022933af0289",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2532.63,
       "etime": 2533.47,
       "text": "Погоди, погоди."
@@ -6214,7 +6214,7 @@
       "id": "68bdabcfc2b8022933af0294",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2573.6,
       "etime": 2575.68,
       "text": "Да, да, да."
@@ -6223,7 +6223,7 @@
       "id": "68bdabcfc2b8022933af0295",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2576.44,
       "etime": 2586.3,
       "text": "Они как бы все время были чисто оконным менеджером и тусовались, соответственно, вокруг каких-то других дистрибутивов, типа Ubuntu, Debian, whatever."
@@ -6232,7 +6232,7 @@
       "id": "68bdabcfc2b8022933af0296",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2586.34,
       "etime": 2590.48,
       "text": "А теперь они решили, что альфа-версия своего собственного дистрибутива."
@@ -6241,7 +6241,7 @@
       "id": "68bdabcfc2b8022933af0297",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2590.46,
       "etime": 2597.89,
       "text": "И, как они пишут, он основан на некоторой Immutable Base OS и использует пакеты из Arch'а."
@@ -6250,7 +6250,7 @@
       "id": "68bdabcfc2b8022933af0298",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2597.93,
       "etime": 2598.79,
       "text": "Внезапно."
@@ -6367,7 +6367,7 @@
       "id": "68bdabcfc2b8022933af02a5",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2628.19,
       "etime": 2628.63,
       "text": "Объясните мне."
@@ -6376,7 +6376,7 @@
       "id": "68bdabcfc2b8022933af02a6",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2628.85,
       "etime": 2638.68,
       "text": "Нет, MUTUBLE операционная система означает, что когда ты хочешь внести какое-то изменение, например, поставить новый пакет или поменять какую-то конфигурацию, она условно работает как инфраструктура за код."
@@ -6385,7 +6385,7 @@
       "id": "68bdabcfc2b8022933af02a7",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2638.7,
       "etime": 2642.71,
       "text": "То есть ты меняешь какой-то конфиг, и потом перезагружаешь, собственно, весь компьютер."
@@ -6394,7 +6394,7 @@
       "id": "68bdabcfc2b8022933af02a8",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2642.77,
       "etime": 2650.91,
       "text": "И, соответственно, если у тебя что-то ломается, она, во-первых, ничего сломать не может физически, потому что все, что она может сломать, это максимум твоей конфиги перетереть."
@@ -6403,7 +6403,7 @@
       "id": "68bdabcfc2b8022933af02a9",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2650.93,
       "etime": 2654.02,
       "text": "То есть саму по себе операционную систему трудно..."
@@ -6412,7 +6412,7 @@
       "id": "68bdabcfc2b8022933af02aa",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2654,
       "etime": 2656.34,
       "text": "сделать сломанный."
@@ -6421,7 +6421,7 @@
       "id": "68bdabcfc2b8022933af02ab",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2657.06,
       "etime": 2666.06,
       "text": "Примерами таких операционок являются... Блин, по-моему, у Редхата была какая-то своя собственная... Сентос."
@@ -6439,7 +6439,7 @@
       "id": "68bdabcfc2b8022933af02ad",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2666.74,
       "etime": 2668.02,
       "text": "Не-не-не, не Сентос."
@@ -6448,7 +6448,7 @@
       "id": "68bdabcfc2b8022933af02ae",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2668.1,
       "etime": 2669.4,
       "text": "Сентос-то старая Федора."
@@ -6709,7 +6709,7 @@
       "id": "68bdabcfc2b8022933af02cb",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2742.54,
       "etime": 2749.75,
       "text": "На самом деле, macOS и все ее форки в виде iOS, iPadOS и прочее, это тоже, по сути, мьютабл операционная система."
@@ -6736,7 +6736,7 @@
       "id": "68bdabcfc2b8022933af02ce",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2756.38,
       "etime": 2756.84,
       "text": "А почему?"
@@ -6745,7 +6745,7 @@
       "id": "68bdabcfc2b8022933af02cf",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2756.92,
       "etime": 2757.48,
       "text": "Да, да, да."
@@ -6754,7 +6754,7 @@
       "id": "68bdabcfc2b8022933af02d0",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2757.54,
       "etime": 2761.73,
       "text": "Ну, потому что у тебя ты можешь, во-первых, откатиться всегда к предыдущему состоянию."
@@ -6763,7 +6763,7 @@
       "id": "68bdabcfc2b8022933af02d1",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2761.75,
       "etime": 2767.9,
       "text": "Ну, то есть у тебя, ты, например, внес изменение конфига, у тебя, условно, в бутлодере будет две версии твоей операционной системы."
@@ -6772,7 +6772,7 @@
       "id": "68bdabcfc2b8022933af02d2",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2767.96,
       "etime": 2770.32,
       "text": "Одна со старой конфигурацией, другая с новой конфигурацией."
@@ -6781,7 +6781,7 @@
       "id": "68bdabcfc2b8022933af02d3",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2770.34,
       "etime": 2772.99,
       "text": "Что-то пошло не так, запускаешь со старой."
@@ -6880,7 +6880,7 @@
       "id": "68bdabcfc2b8022933af02de",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2820.58,
       "etime": 2821.82,
       "text": "А, Вов вспомнил еще."
@@ -6889,7 +6889,7 @@
       "id": "68bdabcfc2b8022933af02df",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2821.86,
       "etime": 2824.4,
       "text": "Steam Deck использует мьютабл операционную систему."
@@ -7231,7 +7231,7 @@
       "id": "68bdabcfc2b8022933af0305",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 2976.89,
       "etime": 2978.49,
       "text": "Чтобы патчить не нужно было."
@@ -7366,7 +7366,7 @@
       "id": "68bdabcfc2b8022933af0314",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3016.57,
       "etime": 3019.71,
       "text": "Просто Ubuntu... А Ubuntu они снова отказались от этого."
@@ -7375,7 +7375,7 @@
       "id": "68bdabcfc2b8022933af0315",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3019.75,
       "etime": 3021.92,
       "text": "Они делали свой фонд гнома."
@@ -7384,7 +7384,7 @@
       "id": "68bdabcfc2b8022933af0316",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3021.94,
       "etime": 3023.34,
       "text": "Они же скакали куда-то."
@@ -7393,7 +7393,7 @@
       "id": "68bdabcfc2b8022933af0317",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3023.42,
       "etime": 3029.44,
       "text": "Забыл, как называется, а потом, соответственно, они решили, что слишком уж много усиленно это нужно тратить, поэтому вернулись обратно на гном."
@@ -7582,7 +7582,7 @@
       "id": "68bdabcfc2b8022933af032c",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3097.88,
       "etime": 3102.25,
       "text": "Нет, это, кстати, большое заблуждение, что дотнетчики на винде."
@@ -7591,7 +7591,7 @@
       "id": "68bdabcfc2b8022933af032d",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3102.29,
       "etime": 3110.6,
       "text": "Сейчас вполне себе дотнет отлично работает на маке, если не нужно поддерживать какие-то легаси древней версии дотнета, которые были только под винду."
@@ -7600,7 +7600,7 @@
       "id": "68bdabcfc2b8022933af032e",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3111.49,
       "etime": 3118.7,
       "text": "Что вот прямо реально можно, как белый человек... Да, я вот на Маке разрабатываю все хорошо."
@@ -7636,7 +7636,7 @@
       "id": "68bdabcfc2b8022933af0332",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3125.15,
       "etime": 3130.05,
       "text": "Нет, саму студию никогда не портируют, потому что она написана под старый Дутнет-образ, на куче Legacy."
@@ -7645,7 +7645,7 @@
       "id": "68bdabcfc2b8022933af0333",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3130.07,
       "etime": 3140.22,
       "text": "Там был проект под названием Visual Studio for Mac, который на самом деле MonoDevelop, который был переименован в Xamarin Studio."
@@ -7654,7 +7654,7 @@
       "id": "68bdabcfc2b8022933af0334",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3140.3,
       "etime": 3141.16,
       "text": "Да-да-да."
@@ -7663,7 +7663,7 @@
       "id": "68bdabcfc2b8022933af0335",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3141.14,
       "etime": 3145.13,
       "text": "Который потом переименовали в Visual Studio for Mac."
@@ -7672,7 +7672,7 @@
       "id": "68bdabcfc2b8022933af0336",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3145.21,
       "etime": 3155.41,
       "text": "И они в итоге его прикрыли, потому что у них у самих же есть плагин для VS Code под названием C-Sharp DevKit, который добавляет, по сути, все то же самое, что умеет Visual Studio почти что."
@@ -7690,7 +7690,7 @@
       "id": "68bdabcfc2b8022933af0338",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3159.81,
       "etime": 3161.4,
       "text": "Райдер лучше студии."
@@ -7699,7 +7699,7 @@
       "id": "68bdabcfc2b8022933af0339",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3161.38,
       "etime": 3161.9,
       "text": "Да."
@@ -7717,7 +7717,7 @@
       "id": "68bdabcfc2b8022933af033b",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3169.01,
       "etime": 3189.31,
       "text": "И вот за счет того, что все основное, то, что делается под AI, вот эти все агенты и прочее, оно в основном разрабатывается сейчас или как плагин к VS Code, или в форках VS Code, или в виде CLite Olds, ну, немножечко больно становится от того, что, типа, блин, у тебя есть райдер такой хороший, классный, но у нем интеграция ишек, ну, прям, типа, не очень..."
@@ -7726,7 +7726,7 @@
       "id": "68bdabcfc2b8022933af033c",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3189.29,
       "etime": 3193.8,
       "text": "в том числе того же самого Купайлота, а JetBrains и я вообще без слез не взглянуть."
@@ -7744,7 +7744,7 @@
       "id": "68bdabcfc2b8022933af033e",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3206.4,
       "etime": 3208.02,
       "text": "ВПФ?"
@@ -7762,7 +7762,7 @@
       "id": "68bdabcfc2b8022933af0340",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3208.94,
       "etime": 3213.94,
       "text": "Communication Foundation, который... А, VCF."
@@ -7771,7 +7771,7 @@
       "id": "68bdabcfc2b8022933af0341",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3214,
       "etime": 3220.95,
       "text": "Они его частично поддерживают, то есть они какой-то сабсет того, что там какие фичи были, поддерживают, и кроссплатформенно."
@@ -7780,7 +7780,7 @@
       "id": "68bdabcfc2b8022933af0342",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3221.07,
       "etime": 3222.33,
       "text": "Но не все."
@@ -7789,7 +7789,7 @@
       "id": "68bdabcfc2b8022933af0343",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3222.31,
       "etime": 3228,
       "text": "Они сейчас сами предлагают на замену gRPC использовать."
@@ -7798,7 +7798,7 @@
       "id": "68bdabcfc2b8022933af0344",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3228.04,
       "etime": 3230.69,
       "text": "И, собственно, сами же его внутри под .NET разрабатывают."
@@ -7879,7 +7879,7 @@
       "id": "68bdabcfc2b8022933af034d",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3255.58,
       "etime": 3257.5,
       "text": "Но он остался все еще только под винду."
@@ -7888,7 +7888,7 @@
       "id": "68bdabcfc2b8022933af034e",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3257.54,
       "etime": 3259.24,
       "text": "То есть они сделали финтушами."
@@ -7897,7 +7897,7 @@
       "id": "68bdabcfc2b8022933af034f",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3259.26,
       "etime": 3264.75,
       "text": "Они его заставили работать на свежем .NET, но только при компиляции под винду."
@@ -7906,7 +7906,7 @@
       "id": "68bdabcfc2b8022933af0350",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3264.81,
       "etime": 3270.73,
       "text": "Есть, например, замечательный проект под названием Avalonia, который такой бесплатный."
@@ -7915,7 +7915,7 @@
       "id": "68bdabcfc2b8022933af0351",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3270.81,
       "etime": 3278.12,
       "text": "У них бизнес-модель, они продают интерпрайсам модель перехода с WPF как раз на Avalonia."
@@ -7924,7 +7924,7 @@
       "id": "68bdabcfc2b8022933af0352",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3279.3,
       "etime": 3288.96,
       "text": "А Волония сама по себе, она похожа на... Ну, то есть она пишется как WPF, то есть там вот эти все ксамлы, и вот это все вот какое-то, не знаю, мне вот не очень нравится."
@@ -7933,7 +7933,7 @@
       "id": "68bdabcfc2b8022933af0353",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3289.02,
       "etime": 3294.03,
       "text": "А рендерит это все в канвасе как флаттер какой-нибудь."
@@ -7969,7 +7969,7 @@
       "id": "68bdabcfc2b8022933af0357",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3299.85,
       "etime": 3303.94,
       "text": "Так они же сами не докфудят свои технологии, Microsoft."
@@ -7978,7 +7978,7 @@
       "id": "68bdabcfc2b8022933af0358",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3303.98,
       "etime": 3309.85,
       "text": "То есть, например, вот у них есть MyUI, который типа трижды переименованный этот Mono."
@@ -7987,7 +7987,7 @@
       "id": "68bdabcfc2b8022933af0359",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3309.89,
       "etime": 3317.32,
       "text": "То есть, у них опять же Mono, потом они его купили Xamarin, потом они его решили такие, блин, мы переименуем и сделаем MyUI."
@@ -7996,7 +7996,7 @@
       "id": "68bdabcfc2b8022933af035a",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3317.54,
       "etime": 3324.05,
       "text": "И там была новость, что, по-моему, они то ли всю команду распустили, то ли всех основных людей распустили."
@@ -8005,7 +8005,7 @@
       "id": "68bdabcfc2b8022933af035b",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3324.13,
       "etime": 3327.74,
       "text": "И, кажется, это еще очередной фреймворк от Microsoft, который умрет."
@@ -8122,7 +8122,7 @@
       "id": "68bdabcfc2b8022933af0368",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3384.39,
       "etime": 3386.05,
       "text": "У Майкрософта не совсем так."
@@ -8131,7 +8131,7 @@
       "id": "68bdabcfc2b8022933af0369",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3386.09,
       "etime": 3390.67,
       "text": "Ну, то есть, типа, да, есть какие-то штуки, которые прям явно проталкиваются."
@@ -8149,7 +8149,7 @@
       "id": "68bdabcfc2b8022933af036b",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3396.46,
       "etime": 3399.16,
       "text": "Ну, то есть еще до того, как .NET стал кроссплатформенным."
@@ -8176,7 +8176,7 @@
       "id": "68bdabcfc2b8022933af036e",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3404.01,
       "etime": 3405.51,
       "text": "Они были жутко кривые."
@@ -8500,7 +8500,7 @@
       "id": "68bdabcfc2b8022933af0392",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3499.74,
       "etime": 3510.72,
       "text": "Но, к счастью, использовать сейчас .NET и разрабатывать, допустим, микросервисы на .NET, это не означает, что ты привязан к технологиям Microsoft."
@@ -8509,7 +8509,7 @@
       "id": "68bdabcfc2b8022933af0393",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3510.78,
       "etime": 3515.75,
       "text": "Ты можешь использовать все те же самые технологии, которые ты будешь использовать на каком-нибудь Go."
@@ -8518,7 +8518,7 @@
       "id": "68bdabcfc2b8022933af0394",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3515.81,
       "etime": 3522.98,
       "text": "Ну, то есть, имеется в виду, что там какие-нибудь gRPC, те же самые докеры, ну, то есть..."
@@ -8527,7 +8527,7 @@
       "id": "68bdabcfc2b8022933af0395",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3524.53,
       "etime": 3528.79,
       "text": "Ничто не мешает тебе разрабатывать не без привязки вообще к Майкрософту."
@@ -8536,7 +8536,7 @@
       "id": "68bdabcfc2b8022933af0396",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3529.01,
       "etime": 3531.94,
       "text": "Даже SPNF, в принципе, можно не использовать."
@@ -8590,7 +8590,7 @@
       "id": "68bdabcfc2b8022933af039c",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3553.86,
       "etime": 3558.15,
       "text": "Да, потому что его на самом деле разрабатывает сотрудник Майкрософта."
@@ -8599,7 +8599,7 @@
       "id": "68bdabcfc2b8022933af039d",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3558.73,
       "etime": 3562.2,
       "text": "Ну, вот, да, не знаю."
@@ -8608,7 +8608,7 @@
       "id": "68bdabcfc2b8022933af039e",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3562.22,
       "etime": 3567.25,
       "text": "NPG SQL разрабатывается, по сути, одним человеком."
@@ -8851,7 +8851,7 @@
       "id": "68bdabcfc2b8022933af03b9",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3730.9,
       "etime": 3738.83,
       "text": "Не знаю, у меня сейчас ощущение такое, что они скорее делают фокус на том, чтобы .NET чаще использовали, ну, типа, с Azure."
@@ -8860,7 +8860,7 @@
       "id": "68bdabcfc2b8022933af03ba",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3738.91,
       "etime": 3743,
       "text": "И, соответственно, там, куча библиотек делает для взаимодействия с Azure."
@@ -8869,7 +8869,7 @@
       "id": "68bdabcfc2b8022933af03bb",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3743.02,
       "etime": 3746.46,
       "text": "AI тоже, типа, чтобы с Azure использовать."
@@ -8878,7 +8878,7 @@
       "id": "68bdabcfc2b8022933af03bc",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3746.52,
       "etime": 3754.91,
       "text": "Тот же вот Aspire, про который я рассказывал, типа, вот у меня было ощущение, что они в основном делали для того, чтобы упростить тебе деплой этого всего в Azure."
@@ -8887,7 +8887,7 @@
       "id": "68bdabcfc2b8022933af03bd",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3754.97,
       "etime": 3757.37,
       "text": "А уже во вторую очередь для всего остального."
@@ -8986,7 +8986,7 @@
       "id": "68bdabcfc2b8022933af03c8",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3805.65,
       "etime": 3807.37,
       "text": "Скорее, Swagger, наверное."
@@ -9094,7 +9094,7 @@
       "id": "68bdabcfc2b8022933af03d4",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3850.73,
       "etime": 3853.46,
       "text": "С совместимостью у Винды, кстати, все не настолько хорошо."
@@ -9103,7 +9103,7 @@
       "id": "68bdabcfc2b8022933af03d5",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3853.52,
       "etime": 3863.63,
       "text": "Например, известный факт, что можно какие-нибудь там, типа, игры из 90-х запустить только через какой-нибудь DOS-бокс, потому что у Винды эмуляция DOS будет не очень хорошая."
@@ -9229,7 +9229,7 @@
       "id": "68bdabcfc2b8022933af03e3",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3898.19,
       "etime": 3900.38,
       "text": "Можно, кстати, далеко от Майкрософтов не уходить."
@@ -9238,7 +9238,7 @@
       "id": "68bdabcfc2b8022933af03e4",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3900.48,
       "etime": 3905.6,
       "text": "Есть еще новость про то, что они опенсорснули исходные коды Basic 6502."
@@ -9247,7 +9247,7 @@
       "id": "68bdabcfc2b8022933af03e5",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3905.86,
       "etime": 3913.07,
       "text": "Если вам есть что-то про это сказать."
@@ -9256,7 +9256,7 @@
       "id": "68bdabcfc2b8022933af03e6",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 3913.11,
       "etime": 3914.54,
       "text": "Так, ссылочку сейчас скину."
@@ -9859,7 +9859,7 @@
       "id": "68bdabcfc2b8022933af0429",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 4125.48,
       "etime": 4139.97,
       "text": "В школе у нас был бейсик, у нас было такое замечательное упражнение, нас заставляли на всяком разном заниматься рисованием всяких штук, например, елочек каких-нибудь."
@@ -9868,7 +9868,7 @@
       "id": "68bdabcfc2b8022933af042a",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 4140.09,
       "etime": 4144.6,
       "text": "Довольно странное занятие, но тем не менее, вот это, наверное, мой единственный опыт работы с бейсиком."
@@ -11749,7 +11749,7 @@
       "id": "68bdabcfc2b8022933af04fb",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5043.15,
       "etime": 5045.27,
       "text": "Atlassian купил браузер компанией."
@@ -11857,7 +11857,7 @@
       "id": "68bdabcfc2b8022933af0507",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5099.67,
       "etime": 5103.42,
       "text": "У меня на работе как минимум один человек есть, которому Warp понравился."
@@ -11866,7 +11866,7 @@
       "id": "68bdabcfc2b8022933af0508",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5103.48,
       "etime": 5106.64,
       "text": "Именно с точки зрения агента."
@@ -12379,7 +12379,7 @@
       "id": "68bdabcfc2b8022933af0541",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5336.85,
       "etime": 5340.57,
       "text": "Мне в Warp ценообразование какое-то кажется странным."
@@ -12388,7 +12388,7 @@
       "id": "68bdabcfc2b8022933af0542",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5340.61,
       "etime": 5354.09,
       "text": "Они дают за подписку какое-то количество вызовов API, но это на самом деле не вызовы API, но это в том числе и не запросы как таковые."
@@ -12397,7 +12397,7 @@
       "id": "68bdabcfc2b8022933af0543",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5354.11,
       "etime": 5358.15,
       "text": "То есть, например, у тебя, если там какой-нибудь Copilot дается 300 запросов в месяц,"
@@ -12406,7 +12406,7 @@
       "id": "68bdabcfc2b8022933af0544",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5358.13,
       "etime": 5364.45,
       "text": "Это значит, что ты написал запрос, у тебя же под капотом все вызовы тулов, это, по сути, отдельный вызов API."
@@ -12415,7 +12415,7 @@
       "id": "68bdabcfc2b8022933af0545",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5365.03,
       "etime": 5368.46,
       "text": "И это все считается как один вызов."
@@ -12424,7 +12424,7 @@
       "id": "68bdabcfc2b8022933af0546",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5368.5,
       "etime": 5373.98,
       "text": "А у них считается не как один, но и не как по количеству вызовов тылов, а что-то непонятное."
@@ -12433,7 +12433,7 @@
       "id": "68bdabcfc2b8022933af0547",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5374.02,
       "etime": 5377.99,
       "text": "То есть у тебя есть какое-то количество кредитов, и оно как-то тратится."
@@ -12595,7 +12595,7 @@
       "id": "68bdabcfc2b8022933af0559",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5456.87,
       "etime": 5460.11,
       "text": "Выглядит как переобывание в воздухе, на самом деле."
@@ -12604,7 +12604,7 @@
       "id": "68bdabcfc2b8022933af055a",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5460.13,
       "etime": 5464.12,
       "text": "То есть, у них изначально была какая-то странная и нишевая идея терминала."
@@ -12613,7 +12613,7 @@
       "id": "68bdabcfc2b8022933af055b",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5464.16,
       "etime": 5471.19,
       "text": "Потом, когда появились эти все AI и агенты, они такие, опа, а как нам вырастить нашу выручку и привлечь инвестиции?"
@@ -12622,7 +12622,7 @@
       "id": "68bdabcfc2b8022933af055c",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5471.23,
       "etime": 5474.69,
       "text": "А давайте встроим туда агента, а почему нет?"
@@ -12631,7 +12631,7 @@
       "id": "68bdabcfc2b8022933af055d",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5474.79,
       "etime": 5477.9,
       "text": "И, не знаю, по мне так тоже эта идея довольно странная."
@@ -12640,7 +12640,7 @@
       "id": "68bdabcfc2b8022933af055e",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5478,
       "etime": 5482.28,
       "text": "Гораздо лучше, когда у тебя есть отдельное агентское приложение."
@@ -12730,7 +12730,7 @@
       "id": "68bdabcfc2b8022933af0568",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5527.44,
       "etime": 5533.83,
       "text": "Короче... Нет, тут имеется в виду, что поддержка просто, в принципе, есть."
@@ -12739,7 +12739,7 @@
       "id": "68bdabcfc2b8022933af0569",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5534.37,
       "etime": 5536.69,
       "text": "Типа поддержка при помощи инженеров."
@@ -12748,7 +12748,7 @@
       "id": "68bdabcfc2b8022933af056a",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5536.71,
       "etime": 5537.75,
       "text": "Поддержка по почте."
@@ -12793,7 +12793,7 @@
       "id": "68bdabcfc2b8022933af056f",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5552.4,
       "etime": 5556.5,
       "text": "Так сейчас все называют себя AI, AI, AI."
@@ -12802,7 +12802,7 @@
       "id": "68bdabcfc2b8022933af0570",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5556.52,
       "etime": 5562.85,
       "text": "Например, все базы сейчас называют себя AI First, потому что у них там есть какой-нибудь поиск по векторам."
@@ -12811,7 +12811,7 @@
       "id": "68bdabcfc2b8022933af0571",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5562.91,
       "etime": 5564.4,
       "text": "Вот."
@@ -12820,7 +12820,7 @@
       "id": "68bdabcfc2b8022933af0572",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 5564.5,
       "etime": 5565.12,
       "text": "Ну да."
@@ -14728,7 +14728,7 @@
       "id": "68bdabcfc2b8022933af0646",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6393.59,
       "etime": 6400.58,
       "text": "Я не очень понимаю, как может быть неэксклюзивное право на установку дефолтного браузера, дефолтного поиска."
@@ -14746,7 +14746,7 @@
       "id": "68bdabcfc2b8022933af0648",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6407.72,
       "etime": 6416.58,
       "text": "Ну, то есть, типа, вот сейчас Firefox, например, по сути, живет на деньги с Google, которые Google платит бешеные миллиарды за то, чтобы в Firefox был дефолт."
@@ -15115,7 +15115,7 @@
       "id": "68bdabcfc2b8022933af0671",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6621.89,
       "etime": 6623.09,
       "text": "Дешево или качественно?"
@@ -15124,7 +15124,7 @@
       "id": "68bdabcfc2b8022933af0672",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6623.13,
       "etime": 6626.32,
       "text": "И насколько документы паршивые?"
@@ -15142,7 +15142,7 @@
       "id": "68bdabcfc2b8022933af0674",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6634.78,
       "etime": 6642.75,
       "text": "Потому что сейчас вроде лучшие модели для OCR это там вот Mistral типа OCR имел свой или что там."
@@ -15151,7 +15151,7 @@
       "id": "68bdabcfc2b8022933af0675",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6642.77,
       "etime": 6645.07,
       "text": "В принципе, LLM."
@@ -15196,7 +15196,7 @@
       "id": "68bdabcfc2b8022933af067a",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6657.73,
       "etime": 6659.97,
       "text": "Tesseract какой-нибудь там вот это вот."
@@ -15529,7 +15529,7 @@
       "id": "68bdabcfc2b8022933af069f",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6824.44,
       "etime": 6826.37,
       "text": "Они же померли уже или помирают."
@@ -15538,7 +15538,7 @@
       "id": "68bdabcfc2b8022933af06a0",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6826.47,
       "etime": 6833.32,
       "text": "Не, они не померли, они же типа распустили по сути всех своих программистов и вместо этого наняли индусов."
@@ -15682,7 +15682,7 @@
       "id": "68bdabcfc2b8022933af06b0",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6902.83,
       "etime": 6911.32,
       "text": "Я так понимаю, это связано с тем, что есть же DNS, который работает типа DOT и DOH, которые типа через HTTP или через TCP."
@@ -15691,7 +15691,7 @@
       "id": "68bdabcfc2b8022933af06b1",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 6911.38,
       "etime": 6919.19,
       "text": "Там, соответственно, устанавливается зашифрованное соединение с сертификатом, и, соответственно, вот с этим сертификатом беда."
@@ -16267,7 +16267,7 @@
       "id": "68bdabcfc2b8022933af06f1",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7170.95,
       "etime": 7172.55,
       "text": "Еще и на венчурные инвестиции."
@@ -16510,7 +16510,7 @@
       "id": "68bdabcfc2b8022933af070c",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7278.24,
       "etime": 7281.5,
       "text": "Не, это скорее то, что делает, например, тот же Кира."
@@ -16519,7 +16519,7 @@
       "id": "68bdabcfc2b8022933af070d",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7281.56,
       "etime": 7289.94,
       "text": "То есть ты ему даешь задачу, он из нее делает сначала спеку, потом делает архитектурную, потом плодит натаски и, соответственно, бежит их исполнять."
@@ -16528,7 +16528,7 @@
       "id": "68bdabcfc2b8022933af070e",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7290.02,
       "etime": 7295.63,
       "text": "Только для, соответственно, гитхаба и, видимо, купайлота."
@@ -16537,7 +16537,7 @@
       "id": "68bdabcfc2b8022933af070f",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7295.75,
       "etime": 7298.05,
       "text": "И в виде консольной тулы."
@@ -16726,7 +16726,7 @@
       "id": "68bdabcfc2b8022933af0724",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7418.21,
       "etime": 7424.33,
       "text": "Но в целом, я думаю, все равно, если скормить какой-нибудь сырой Клод МД и просто переименовать его в Эджит МД, скорее всего, оно пойдет."
@@ -17167,7 +17167,7 @@
       "id": "68bdabcfc2b8022933af0755",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7624.39,
       "etime": 7629.08,
       "text": "То есть они уберут галочку разрешить установку из неавторизованных источников?"
@@ -17761,7 +17761,7 @@
       "id": "68bdabcfc2b8022933af0797",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7897.69,
       "etime": 7912.22,
       "text": "Тут чатики правильно пишут комментарии по поводу этой ситуации с Android, что, скорее всего, они просто следуют своей стратегии, что когда они заставляют разработчика получить сертификацию, разработчика телефона получить сертификацию для..."
@@ -17770,7 +17770,7 @@
       "id": "68bdabcfc2b8022933af0798",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7912.2,
       "etime": 7916.4,
       "text": "того, что плей-сервисы работали, соответственно, и они дальше уже гнут свою линию."
@@ -17779,7 +17779,7 @@
       "id": "68bdabcfc2b8022933af0799",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7916.42,
       "etime": 7921.37,
       "text": "Например, то, что заставляют Google ставить дефолтным поиском и так далее."
@@ -17788,7 +17788,7 @@
       "id": "68bdabcfc2b8022933af079a",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7921.47,
       "etime": 7924.5,
       "text": "Тут просто будут заставлять реально выбирать."
@@ -17797,7 +17797,7 @@
       "id": "68bdabcfc2b8022933af079b",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 7924.58,
       "etime": 7931.66,
       "text": "Или пользуйтесь плей-сервисами, или используйте АОСПу и загружайте туда, соответственно, АПКшки, если хотите."
@@ -18094,7 +18094,7 @@
       "id": "68bdabcfc2b8022933af07bc",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 8009.14,
       "etime": 8009.84,
       "text": "Поверяйте."
@@ -18103,7 +18103,7 @@
       "id": "68bdabcfc2b8022933af07bd",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 8011.35,
       "etime": 8018.8,
       "text": "Основной сайт для изучения пердолинга с андроидом это, естественно, fopda.ru."
@@ -18112,7 +18112,7 @@
       "id": "68bdabcfc2b8022933af07be",
       "issue": 977,
       "type": "cc",
-      "author": "andrey_dotnet",
+      "author": "AndreyDotNet",
       "stime": 8018.88,
       "etime": 8027.19,
       "text": "Там сумасшедших, которые все возможное и невозможное с андроидом делают, все хаки, все инструкции, все там лежит."
