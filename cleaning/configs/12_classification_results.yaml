@@ -472,3 +472,68 @@ rules:
 # Перенесены в 13_jubilee_splits.yaml. Оригинальная нумерация Guest1-GuestN
 # сохранена — стандартный rename_episode, time-range не понадобился.
 # ============================================================
+
+# ============================================================
+# Финальная зачистка SPEAKER_XX >60 сек (2026-02-04)
+# Анализ контекста реплик для идентификации неразмеченных спикеров
+# ============================================================
+
+# --- Звонящие гости (идентифицированы по репликам) ---
+
+- id: cls_e350_SPEAKER_01_to_Caller_Artem_ep350
+  type: rename_episode
+  episode: 350
+  from: SPEAKER_01
+  to: Caller_Artem_ep350
+  reason: 'Звонящий Артём (504s: "Меня зовут Артем"). Работал на заводе, обсуждает Linux-админ.'
+
+- id: cls_e353_SPEAKER_04_to_Caller_Artem_ep353
+  type: rename_episode
+  episode: 353
+  from: SPEAKER_04
+  to: Caller_Artem_ep353
+  reason: 'Звонящий Артём (814s: "Меня зовут Артем, возможно меня кто-то по голосу узнал"). Debian, BigBlueButton.'
+
+- id: cls_e232_SPEAKER_06_to_Caller_ep232
+  type: rename_episode
+  episode: 232
+  from: SPEAKER_06
+  to: Caller_ep232
+  reason: 'Звонящий слушатель-фанат (4370s: "Большое спасибо, что пригласили всех моих любимых подкастеров"). Firefox на Linux/Windows/Mac.'
+
+- id: cls_e284_SPEAKER_02_to_Caller_Programmer_ep284
+  type: rename_episode
+  episode: 284
+  from: SPEAKER_02
+  to: Caller_Programmer_ep284
+  reason: 'Звонящий программист (1430s: "Да, я программист"). C++/Python/Perl, Google Plus видеовстречи. Второй звонящий в эпизоде.'
+
+- id: cls_e329_SPEAKER_05_to_Caller_Vladimir_ep329
+  type: rename_episode
+  episode: 329
+  from: SPEAKER_05
+  to: Caller_Vladimir_ep329
+  reason: 'Звонящий Владимир (6442s: "Меня зовут Владимир"). Обсуждает презентацию Sony, облачный гейминг.'
+
+# --- Ошибки сегментации хостов (вероятные) ---
+
+- id: cls_e378_SPEAKER_00_to_Bobuk
+  type: rename_episode
+  episode: 378
+  from: SPEAKER_00
+  to: Bobuk
+  reason: 'Вероятно Bobuk. Umputun в начале: "Бобук с нами пока отсутствует". Bobuk только 0.4 мин в эпизоде. SPEAKER_00 в 26/41 случаях после Umputun.'
+
+- id: cls_e395_SPEAKER_06_to_Alek.sys
+  type: rename_episode
+  episode: 395
+  from: SPEAKER_06
+  to: Alek.sys
+  reason: 'Вероятно Alek.sys. Umputun отсутствует (0 сек). SPEAKER_06 делает технические комментарии, равномерно с хостами.'
+
+- id: cls_e461_SPEAKER_02_to_Alek.sys
+  type: rename_episode
+  episode: 461
+  from: SPEAKER_02
+  to: Alek.sys
+  reason: 'Вероятно Alek.sys. Alek.sys размечен только 0.6 мин. SPEAKER_02 чередуется с Alek.sys, технические реплики про iPad/размеры экранов.'
