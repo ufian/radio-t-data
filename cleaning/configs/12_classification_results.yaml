@@ -1688,3 +1688,67 @@ rules:
   from: Alek.sys
   to: _artifact
   reason: 'ep527 (2016-12-24): Alek.sys 6 replies, 10s — артефакт распознавания'
+
+# Alek.sys верификация оставшихся эпизодов 2014-2016 (сессия 7)
+- id: cls_e395_Alek.sys_to_AlexeyAbashev
+  type: rename_episode
+  episode: 395
+  from: Alek.sys
+  to: AlexeyAbashev
+  reason: 'ep395 (2014-06-07): Alek.sys 45 replies, 112s — Alexey Abashev из Разбора полётов'
+- id: cls_e412_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 412
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep412 (2014-10-04): Alek.sys 32 replies, 64s — артефакт, нет обращений по имени'
+- id: cls_e446_Alek.sys_to_AlexeyAbashev
+  type: rename_episode
+  episode: 446
+  from: Alek.sys
+  to: AlexeyAbashev
+  reason: 'ep446 (2015-05-30): Alek.sys 25 replies, 146s — путаница голосов с AlexeyAbashev'
+- id: cls_e461_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 461
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep461 (2015-09-12): Alek.sys 70 replies, 117s — артефакт, нет обращений по имени'
+- id: cls_e479_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 479
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep479 (2016-01-16): Alek.sys 29 replies, 73s — артефакт, нет обращений по имени'
+- id: cls_e521_Alek.sys_to_AlexeyAbashev
+  type: rename_episode
+  episode: 521
+  from: Alek.sys
+  to: AlexeyAbashev
+  reason: 'ep521 (2016-11-12): Alek.sys 16 replies, 87s — путаница голосов с AlexeyAbashev из Разбора полётов'
+
+# Унификация имён AlexeyAbashev (Разбор полётов)
+- id: cls_e416_RazborPoletovAlexey_to_AlexeyAbashev
+  type: rename_episode
+  episode: 416
+  from: RazborPoletovAlexey
+  to: AlexeyAbashev
+  reason: 'ep416: RazborPoletovAlexey = AlexeyAbashev из Разбора полётов'
+- id: cls_e475_AlexeyFriendPodcast_to_AlexeyAbashev
+  type: rename_episode
+  episode: 475
+  from: AlexeyFriendPodcast
+  to: AlexeyAbashev
+  reason: 'ep475: AlexeyFriendPodcast = AlexeyAbashev из Разбора полётов'
+- id: cls_e477_alexey_razbor_poletov_to_AlexeyAbashev
+  type: rename_episode
+  episode: 477
+  from: alexey_razbor_poletov
+  to: AlexeyAbashev
+  reason: 'ep477: alexey_razbor_poletov = AlexeyAbashev из Разбора полётов'
+- id: cls_e521_AlexeyDruzhestvennyPodcast_to_AlexeyAbashev
+  type: rename_episode
+  episode: 521
+  from: AlexeyDruzhestvennyPodcast
+  to: AlexeyAbashev
+  reason: 'ep521: AlexeyDruzhestvennyPodcast = AlexeyAbashev из Разбора полётов'

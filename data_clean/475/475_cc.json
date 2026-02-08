@@ -76,7 +76,7 @@
       "id": "65c9a96ca933803858de02f4",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 30.26,
       "etime": 33.28,
       "text": "Ну, надеюсь, я буду самая лучшая часть."
@@ -130,7 +130,7 @@
       "id": "65c9a96ca933803858de02fa",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 43.27,
       "etime": 44.03,
       "text": "Толстый край."
@@ -220,7 +220,7 @@
       "id": "65c9a96ca933803858de0304",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 63.6,
       "etime": 67.36,
       "text": "Блин, я вроде выкрутил потише, но сейчас еще."
@@ -310,7 +310,7 @@
       "id": "65c9a96ca933803858de030e",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 90.44,
       "etime": 92.37,
       "text": "Ну, что-то сделал, это мьют был."
@@ -355,7 +355,7 @@
       "id": "65c9a96ca933803858de0313",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 101.9,
       "etime": 104.2,
       "text": "Ну, я еще параллельно трансляцию слушаю."
@@ -364,7 +364,7 @@
       "id": "65c9a96ca933803858de0314",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 104.26,
       "etime": 105.6,
       "text": "Ну, вот я сейчас выкрутил вас."
@@ -436,7 +436,7 @@
       "id": "65c9a96ca933803858de031c",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 122.73,
       "etime": 126.25,
       "text": "Чтобы слышать, что вы там говорили, до меня тяжело доходит."
@@ -508,7 +508,7 @@
       "id": "65c9a96ca933803858de0324",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 146.16,
       "etime": 147.78,
       "text": "Там в Одессе они бегали."
@@ -517,7 +517,7 @@
       "id": "65c9a96ca933803858de0325",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 147.82,
       "etime": 148.9,
       "text": "Я не помню, что по ним там."
@@ -850,7 +850,7 @@
       "id": "65c9a96ca933803858de034a",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 309.67,
       "etime": 313.25,
       "text": "А если 28 раз нажать?"
@@ -895,7 +895,7 @@
       "id": "65c9a96ca933803858de034f",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 324.03,
       "etime": 325.01,
       "text": "Может быть."
@@ -958,7 +958,7 @@
       "id": "65c9a96ca933803858de0356",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 348.27,
       "etime": 351.99,
       "text": "Ну, я практически совсем специалист, но только не с Linux."
@@ -967,7 +967,7 @@
       "id": "65c9a96ca933803858de0357",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 352.83,
       "etime": 357.5,
       "text": "Тем более, это не совсем Linux, я так понимаю, а загрузчик, который Grab."
@@ -976,7 +976,7 @@
       "id": "65c9a96ca933803858de0358",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 359.18,
       "etime": 373.29,
       "text": "И в нем найдена ошибка, довольно интересная, я так понимаю, что-то вроде переполнения буфера, когда при загрузке системы нажать именно 28 раз, не 27, не 26, а именно 28 раз нажать Backspace, то можно зайти, я так понимаю, в Single User Mode или там Shell какой-то, и получить доступ к системе."
@@ -1075,7 +1075,7 @@
       "id": "65c9a96ca933803858de0363",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 428.63,
       "etime": 444.89,
       "text": "Ну, вообще-то, да, любой человек, который заходит в дата-центр, открывает просто произвольную консоль, нажимает 28 раз Backspace, и опачки, можно сыграть на любом серваке, не знаю, во что-нибудь, в кваку какую."
@@ -1129,7 +1129,7 @@
       "id": "65c9a96ca933803858de0369",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 471.44,
       "etime": 473.74,
       "text": "Физическое... А, кстати, вот вопрос."
@@ -1147,7 +1147,7 @@
       "id": "65c9a96ca933803858de036b",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 477.76,
       "etime": 479.78,
       "text": "Или КВМ достаточно?"
@@ -1183,7 +1183,7 @@
       "id": "65c9a96ca933803858de036f",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 484.84,
       "etime": 491.56,
       "text": "Плюс айпишный КВМ, то есть вообще-то это должно быть из любого места, можно в любой сервер."
@@ -1264,7 +1264,7 @@
       "id": "65c9a96ca933803858de0378",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 527.19,
       "etime": 532.02,
       "text": "Не, ну не произвольный, а там, не знаю, какой-нибудь айпишный КВМ, который торчит где-нибудь."
@@ -1282,7 +1282,7 @@
       "id": "65c9a96ca933803858de037a",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 537.17,
       "etime": 543.79,
       "text": "Есть же приблуды такие, которые дома, например, включаешь, и у тебя как будто USB-разъем."
@@ -1291,7 +1291,7 @@
       "id": "65c9a96ca933803858de037b",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 543.83,
       "etime": 547.95,
       "text": "Ты в него включаешь, и это то же самое, что ты подключился к серваку."
@@ -1831,7 +1831,7 @@
       "id": "65c9a96ca933803858de03b7",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 763.51,
       "etime": 764.93,
       "text": "И все, вот она сбрасывает все, что может."
@@ -1840,7 +1840,7 @@
       "id": "65c9a96ca933803858de03b8",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 765.05,
       "etime": 765.75,
       "text": "Ну, вот типа да."
@@ -1903,7 +1903,7 @@
       "id": "65c9a96ca933803858de03bf",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 812.24,
       "etime": 814.95,
       "text": "Нет, я по поводу того, как он распространяется."
@@ -1921,7 +1921,7 @@
       "id": "65c9a96ca933803858de03c1",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 830.22,
       "etime": 831.74,
       "text": "То есть вот эта дрянь даже там"
@@ -1939,7 +1939,7 @@
       "id": "65c9a96ca933803858de03c3",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 834.1,
       "etime": 841.03,
       "text": "И как они ее впихивают так навязчиво, я не знаю, насколько это адекватно."
@@ -1948,7 +1948,7 @@
       "id": "65c9a96ca933803858de03c4",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 841.09,
       "etime": 842.09,
       "text": "Да жулики."
@@ -2551,7 +2551,7 @@
       "id": "65c9a96ca933803858de0407",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1105.2,
       "etime": 1106.64,
       "text": "Ну, что-то привязался."
@@ -2560,7 +2560,7 @@
       "id": "65c9a96ca933803858de0408",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1106.7,
       "etime": 1108.08,
       "text": "Может, им так удобнее, да?"
@@ -2569,7 +2569,7 @@
       "id": "65c9a96ca933803858de0409",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1108.12,
       "etime": 1109.88,
       "text": "Сидит там админ."
@@ -2578,7 +2578,7 @@
       "id": "65c9a96ca933803858de040a",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1109.96,
       "etime": 1112.46,
       "text": "Чего какие-то пароли, логины запоминать?"
@@ -2587,7 +2587,7 @@
       "id": "65c9a96ca933803858de040b",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1112.52,
       "etime": 1114.76,
       "text": "Так зашел по порту по какому-то."
@@ -2596,7 +2596,7 @@
       "id": "65c9a96ca933803858de040c",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1114.8,
       "etime": 1116.43,
       "text": "Никто же не знает этот порт."
@@ -2614,7 +2614,7 @@
       "id": "65c9a96ca933803858de040e",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1117.97,
       "etime": 1118.51,
       "text": "Вот он..."
@@ -2659,7 +2659,7 @@
       "id": "65c9a96ca933803858de0413",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1138.27,
       "etime": 1140.15,
       "text": "Ну, так-то гораздо труднее будет."
@@ -2668,7 +2668,7 @@
       "id": "65c9a96ca933803858de0414",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1140.17,
       "etime": 1142.67,
       "text": "Так вообще прям подъемная зона."
@@ -2938,7 +2938,7 @@
       "id": "65c9a96ca933803858de0432",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1256.83,
       "etime": 1265.97,
       "text": "Там может быть один вот дебил, который просто у него там, не знаю, уснул на клавиатуре, и у него много-много этих инстансов в Монге открывается, да?"
@@ -3172,7 +3172,7 @@
       "id": "65c9a96ca933803858de044c",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1370.67,
       "etime": 1372.99,
       "text": "Нет, смотри."
@@ -3181,7 +3181,7 @@
       "id": "65c9a96ca933803858de044d",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1373.09,
       "etime": 1379.42,
       "text": "Почему ты так уверен, что вот это 684 терабайта, это все какие-то продакшн-данные?"
@@ -3370,7 +3370,7 @@
       "id": "65c9a96ca933803858de0462",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1484.14,
       "etime": 1488.66,
       "text": "Разве маркет не открывает, если ты покупаешь в маркете что-то?"
@@ -3379,7 +3379,7 @@
       "id": "65c9a96ca933803858de0463",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1488.68,
       "etime": 1491.14,
       "text": "Они, по-моему, Security Group сразу тебе создают."
@@ -3973,7 +3973,7 @@
       "id": "65c9a96ca933803858de04a5",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1767.72,
       "etime": 1774.32,
       "text": "А вот про эту уязвимость ты, по-моему, рассказывал выпуска, не знаю, выпуска 5 назад, нет?"
@@ -4027,7 +4027,7 @@
       "id": "65c9a96ca933803858de04ab",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 1811.99,
       "etime": 1815.33,
       "text": "Ну, если DigitalOcean ничего не сделал, то, наверное, да."
@@ -4702,7 +4702,7 @@
       "id": "65c9a96ca933803858de04f6",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2050.93,
       "etime": 2061.43,
       "text": "Женя, ты считаешь, что здесь, наверное, пользователи или разработчики должны что-то конфигурировать в системах, которые они используют?"
@@ -4711,7 +4711,7 @@
       "id": "65c9a96ca933803858de04f7",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2061.47,
       "etime": 2063.19,
       "text": "Вот обязательно."
@@ -4720,7 +4720,7 @@
       "id": "65c9a96ca933803858de04f8",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2063.23,
       "etime": 2069.23,
       "text": "То есть там, не знаю, они берут IC, они его должны как какие-то конфигурационные параметры что-то менять."
@@ -4729,7 +4729,7 @@
       "id": "65c9a96ca933803858de04f9",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2069.25,
       "etime": 2070.97,
       "text": "Они берут Java, они должны там..."
@@ -4828,7 +4828,7 @@
       "id": "65c9a96ca933803858de0504",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2127.22,
       "etime": 2128.76,
       "text": "Не, просто как бы..."
@@ -4837,7 +4837,7 @@
       "id": "65c9a96ca933803858de0505",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2130.33,
       "etime": 2141.66,
       "text": "Некоторые, например, считают, что настраивать вот системы не имеет никакого смысла, потому что основные проблемы, они заключаются очень часто в архитектуре."
@@ -4846,7 +4846,7 @@
       "id": "65c9a96ca933803858de0506",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2141.76,
       "etime": 2159.18,
       "text": "То есть, ну, можно там настройки памяти накинуть, там, не знаю, логику-то сложить, да, а вот есть такие тонкие настройки, где там, не знаю, а давайте вот здесь вот мы добавим потоков, которые на чтение, ну, берем там количество потоков, которые на запись, или давайте вот мы там"
@@ -4855,7 +4855,7 @@
       "id": "65c9a96ca933803858de0507",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2159.78,
       "etime": 2165.66,
       "text": "гарбидж-коллектор, там время какой-нибудь миллисекунды, поставим не 500 миллисекунд, а поставим 100 миллисекунд."
@@ -5224,7 +5224,7 @@
       "id": "65c9a96ca933803858de0530",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2317.32,
       "etime": 2318.68,
       "text": "А при чем тут Java?"
@@ -5233,7 +5233,7 @@
       "id": "65c9a96ca933803858de0531",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2318.72,
       "etime": 2321.45,
       "text": "Это же кривые ручки, по идее, разработчиков."
@@ -5359,7 +5359,7 @@
       "id": "65c9a96ca933803858de053f",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2384.33,
       "etime": 2388.35,
       "text": "Тебя же ругали, что ты там радиотип пишешь то русскими, то английскими."
@@ -5368,7 +5368,7 @@
       "id": "65c9a96ca933803858de0540",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2388.41,
       "etime": 2392.33,
       "text": "Вот где-нибудь по-русски написал какой-нибудь ты или что-нибудь такое."
@@ -5557,7 +5557,7 @@
       "id": "65c9a96ca933803858de0555",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2455.6,
       "etime": 2465.95,
       "text": "Я живу, и мне приходилось искать этот имидж с NAT, смотреть, чего там с ним было не так, поднимать его, что-то настраивать, куда-то направлять."
@@ -5566,7 +5566,7 @@
       "id": "65c9a96ca933803858de0556",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2465.99,
       "etime": 2472.3,
       "text": "Теперь они все это завернули в одну большую кнопочку, где создать NAT китовый."
@@ -5575,7 +5575,7 @@
       "id": "65c9a96ca933803858de0557",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2472.36,
       "etime": 2475.78,
       "text": "Но, честно говоря, я не разделяю каких-то таких восторгов."
@@ -5764,7 +5764,7 @@
       "id": "65c9a96ca933803858de056c",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2546.8,
       "etime": 2563.55,
       "text": "Ну, это как бы сама концепция VPC подразумевает, что ты там строишь такой black box, в котором у тебя что-то считается, или там, например, данные закачиваются туда внутрь, да, и при этом они там что-то процессятся и что-то делаются."
@@ -5773,7 +5773,7 @@
       "id": "65c9a96ca933803858de056d",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2563.61,
       "etime": 2568.09,
       "text": "Единственная проблема, когда у меня были с NAT, это то есть вот изначально сервак,"
@@ -5782,7 +5782,7 @@
       "id": "65c9a96ca933803858de056e",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2569.21,
       "etime": 2573.67,
       "text": "Не знаю, устанавливаешь, да, он хочет скачать обновление или что-то такое."
@@ -5791,7 +5791,7 @@
       "id": "65c9a96ca933803858de056f",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2573.73,
       "etime": 2575.31,
       "text": "Ну, да, он загрузит."
@@ -5800,7 +5800,7 @@
       "id": "65c9a96ca933803858de0570",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2575.39,
       "etime": 2577.31,
       "text": "А так, ну, он работает и работает."
@@ -5953,7 +5953,7 @@
       "id": "65c9a96ca933803858de0581",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2639.45,
       "etime": 2642.55,
       "text": "А как ты представляешь себе E-chain NAT?"
@@ -5962,7 +5962,7 @@
       "id": "65c9a96ca933803858de0582",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2642.65,
       "etime": 2650.32,
       "text": "Там же в настройках устанавливается только, ну, для настройки сети ты устанавливаешь только один сервак, который делает роутинг."
@@ -5971,7 +5971,7 @@
       "id": "65c9a96ca933803858de0583",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2650.34,
       "etime": 2651.24,
       "text": "Во-первых, это можно."
@@ -6088,7 +6088,7 @@
       "id": "65c9a96ca933803858de0590",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2687.09,
       "etime": 2691.32,
       "text": "Ну, это и чей над Gateway?"
@@ -6160,7 +6160,7 @@
       "id": "65c9a96ca933803858de0598",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2730.91,
       "etime": 2741.2,
       "text": "Не, ну, менеджер, то есть там как бы за этим фасадом запущены, там, не знаю, два инстанса, и в случае превышения нагрузки они там что-то как-то их скидывают."
@@ -6196,7 +6196,7 @@
       "id": "65c9a96ca933803858de059c",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2747.36,
       "etime": 2752.82,
       "text": "Ну, как лоуд балансер, который работает не всегда, но когда-то он работает."
@@ -6268,7 +6268,7 @@
       "id": "65c9a96ca933803858de05a4",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2768.91,
       "etime": 2770.83,
       "text": "Надо вот эти наты прогревать?"
@@ -6286,7 +6286,7 @@
       "id": "65c9a96ca933803858de05a6",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2774.73,
       "etime": 2776.29,
       "text": "Ну, может, мы просто не знаем."
@@ -6340,7 +6340,7 @@
       "id": "65c9a96ca933803858de05ac",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2802.87,
       "etime": 2807.87,
       "text": "Насколько это получается тогда?"
@@ -6349,7 +6349,7 @@
       "id": "65c9a96ca933803858de05ad",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2807.91,
       "etime": 2811.85,
       "text": "Конфигурация специфичная конкретно для Амазона."
@@ -6358,7 +6358,7 @@
       "id": "65c9a96ca933803858de05ae",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2811.91,
       "etime": 2820.26,
       "text": "То есть, если, например, брать гугловый клауд, то там, не знаю, сетка настраивается совсем по-другому, я так понимаю."
@@ -6367,7 +6367,7 @@
       "id": "65c9a96ca933803858de05af",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2820.34,
       "etime": 2820.68,
       "text": "Конечно."
@@ -6376,7 +6376,7 @@
       "id": "65c9a96ca933803858de05b0",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2820.7,
       "etime": 2820.88,
       "text": "SDN, Software Defined Network, она..."
@@ -6421,7 +6421,7 @@
       "id": "65c9a96ca933803858de05b5",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2835.41,
       "etime": 2844.92,
       "text": "Вот тот же самый амазоновский API, который там натовский гейтвейд, интернет-гейтвейд, и все вот это как-то стандартизировать."
@@ -6529,7 +6529,7 @@
       "id": "65c9a96ca933803858de05c1",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 2885.55,
       "etime": 2887.83,
       "text": "У Cloud Storage, да, у него совсем другое IP."
@@ -6754,7 +6754,7 @@
       "id": "65c9a96ca933803858de05da",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 3008.7,
       "etime": 3011.58,
       "text": "Слушай, а микро, они разве не 512 были?"
@@ -6772,7 +6772,7 @@
       "id": "65c9a96ca933803858de05dc",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 3017.99,
       "etime": 3018.97,
       "text": "А, правда."
@@ -6988,7 +6988,7 @@
       "id": "65c9a96ca933803858de05f4",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 3130.76,
       "etime": 3132.42,
       "text": "Не входящие, они, по-моему, не берут."
@@ -7330,7 +7330,7 @@
       "id": "65c9a96ca933803858de061a",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 3272.05,
       "etime": 3273.88,
       "text": "Почему из каждого?"
@@ -7555,7 +7555,7 @@
       "id": "65c9a96ca933803858de0633",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 3354.28,
       "etime": 3361.26,
       "text": "Не, а почему вот в последнее время, я не знаю, из каждого утюга, по-моему, доносится, что Evernote сдох."
@@ -7564,7 +7564,7 @@
       "id": "65c9a96ca933803858de0634",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 3361.3,
       "etime": 3370.28,
       "text": "То есть все-все-все, они закончили, там этот единорог умер, все, уже они ничего не могут, и все такое."
@@ -8032,7 +8032,7 @@
       "id": "65c9a96ca933803858de0668",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 3623.34,
       "etime": 3625.88,
       "text": "А фоточка это типа не технология?"
@@ -8230,7 +8230,7 @@
       "id": "65c9a96ca933803858de067e",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 3714.42,
       "etime": 3718.58,
       "text": "Это, видимо, вместе с презентациями ты открываешь."
@@ -8797,7 +8797,7 @@
       "id": "65c9a96ca933803858de06bd",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 3972.57,
       "etime": 3977.13,
       "text": "Чем хорошо получилось, они нас слушаются."
@@ -9040,7 +9040,7 @@
       "id": "65c9a96ca933803858de06d8",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4044.65,
       "etime": 4049.49,
       "text": "Ну, вообще-то странно, что это занимало столько времени."
@@ -9067,7 +9067,7 @@
       "id": "65c9a96ca933803858de06db",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4056.74,
       "etime": 4069.42,
       "text": "Так, может быть, и не было бы тогда столько открытых Монгопортов везде и столько терабайт данных доступных, если бы в школе уже учили, типа, закрывай и подтирай за собой."
@@ -9319,7 +9319,7 @@
       "id": "65c9a96ca933803858de06f7",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4174.26,
       "etime": 4181.07,
       "text": "Компьютеры сейчас и какие-либо компьютерные вещи, они вокруг нас."
@@ -9328,7 +9328,7 @@
       "id": "65c9a96ca933803858de06f8",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4181.15,
       "etime": 4193.29,
       "text": "И если человек не понимает, как это работает и относится к черному ящику непонятному, то тут возникает эффект магии."
@@ -9355,7 +9355,7 @@
       "id": "65c9a96ca933803858de06fb",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4205.76,
       "etime": 4219.65,
       "text": "А так, если детям рассказать изначально какие-то основы, рассказать им, что куда течет, откуда вытекает, и рассказать базовые элементы поведения в интернете, например."
@@ -9364,7 +9364,7 @@
       "id": "65c9a96ca933803858de06fc",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4219.75,
       "etime": 4221.21,
       "text": "Не оставлять свои фотки."
@@ -9661,7 +9661,7 @@
       "id": "65c9a96ca933803858de071d",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4363.57,
       "etime": 4382.99,
       "text": "Ну вот смотри, да, там про советское образование много всего плохого говорят, да, но один из таких плюсов, который был в этом образовании, это как бы объем знаний, которые давали, то есть давали, ну и сейчас дают, да, дают знания базовые там по физике, по химии."
@@ -9814,7 +9814,7 @@
       "id": "65c9a96ca933803858de072e",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4456.42,
       "etime": 4467.28,
       "text": "Это вот образование, оно не, скажем так, не для того, чтобы научить, а для того, чтобы дать задатки и показать, как это делается."
@@ -9823,7 +9823,7 @@
       "id": "65c9a96ca933803858de072f",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4467.3,
       "etime": 4480.57,
       "text": "И опять же, если медицинскую аналогию, хорошо бы, например, и даже сейчас, по-моему, это делается в школах, рассказывают и показывают о базовых медицинских оказаниях помощи."
@@ -9859,7 +9859,7 @@
       "id": "65c9a96ca933803858de0733",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4498.34,
       "etime": 4498.8,
       "text": "Опять же..."
@@ -10048,7 +10048,7 @@
       "id": "65c9a96ca933803858de0748",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4602.23,
       "etime": 4603.83,
       "text": "Ну, разве это плохо?"
@@ -10156,7 +10156,7 @@
       "id": "65c9a96ca933803858de0754",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4628.82,
       "etime": 4636.07,
       "text": "Понимаешь, когда рассказывают базовые навыки медицинской оказания помощи, они не делают тебя медиком."
@@ -10174,7 +10174,7 @@
       "id": "65c9a96ca933803858de0756",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4648.93,
       "etime": 4651.79,
       "text": "Не более того, это не программисты."
@@ -10282,7 +10282,7 @@
       "id": "65c9a96ca933803858de0762",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4698.88,
       "etime": 4699.94,
       "text": "Как забудешь такое?"
@@ -10795,7 +10795,7 @@
       "id": "65c9a96ca933803858de079b",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4998.6,
       "etime": 4999.76,
       "text": "Жень, да не ставится."
@@ -10804,7 +10804,7 @@
       "id": "65c9a96ca933803858de079c",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 4999.8,
       "etime": 5003.12,
       "text": "Это задача просто показать, что они вот что-то делают."
@@ -10813,7 +10813,7 @@
       "id": "65c9a96ca933803858de079d",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5003.14,
       "etime": 5007.68,
       "text": "Это то же самое, как, не знаю, какое-нибудь базовое сексуальное воспитание в школе."
@@ -10822,7 +10822,7 @@
       "id": "65c9a96ca933803858de079e",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5007.7,
       "etime": 5012.98,
       "text": "Оно не делает всех там проститутками и тому подобное."
@@ -10831,7 +10831,7 @@
       "id": "65c9a96ca933803858de079f",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5013.14,
       "etime": 5013.5,
       "text": "То есть"
@@ -10840,7 +10840,7 @@
       "id": "65c9a96ca933803858de07a0",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5014.02,
       "etime": 5034.94,
       "text": "Ну, показали, что вот это вот можно вот так вот сделать, да, но от программиста, от того, что ему показали, что можно там на Basic что-то писать или там на JavaScript, до того, как он станет программистом и его возьмут хотя бы на первую работу, во-первых, курс вуза, да, то есть надо, ну, как минимум, бакалавра пройти, да, и..."
@@ -10984,7 +10984,7 @@
       "id": "65c9a96ca933803858de07b0",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5102.14,
       "etime": 5107,
       "text": "С твоей точки зрения, ты вот учился, получал какой-то объем знаний."
@@ -10993,7 +10993,7 @@
       "id": "65c9a96ca933803858de07b1",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5107.06,
       "etime": 5107.99,
       "text": "С этого момента"
@@ -11002,7 +11002,7 @@
       "id": "65c9a96ca933803858de07b2",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5108.95,
       "etime": 5110.93,
       "text": "человечество, оно двигалось вперед."
@@ -11011,7 +11011,7 @@
       "id": "65c9a96ca933803858de07b3",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5111.03,
       "etime": 5116.63,
       "text": "И надо людям рассказать о том, что существует вокруг них."
@@ -11038,7 +11038,7 @@
       "id": "65c9a96ca933803858de07b6",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5129.06,
       "etime": 5132.96,
       "text": "Рассказывают про какие-нибудь экзопланеты новые, которые нашли."
@@ -11047,7 +11047,7 @@
       "id": "65c9a96ca933803858de07b7",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5133.06,
       "etime": 5135.14,
       "text": "А у нас этого ничего не было."
@@ -11623,7 +11623,7 @@
       "id": "65c9a96ca933803858de07f7",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5364.63,
       "etime": 5369.35,
       "text": "Жень, вот ты, как говорили в одном фильме, политично рассуждаешь."
@@ -11632,7 +11632,7 @@
       "id": "65c9a96ca933803858de07f8",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5369.41,
       "etime": 5374.44,
       "text": "Вот ты живешь в обществе потребления, да?"
@@ -11641,7 +11641,7 @@
       "id": "65c9a96ca933803858de07f9",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5374.48,
       "etime": 5376.6,
       "text": "Там, например, предмет есть астрономия."
@@ -11650,7 +11650,7 @@
       "id": "65c9a96ca933803858de07fa",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5376.92,
       "etime": 5381.82,
       "text": "Да, вот если бы не было этого предмета, то у ребенка ничего бы и не было."
@@ -11659,7 +11659,7 @@
       "id": "65c9a96ca933803858de07fb",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5381.88,
       "etime": 5393.41,
       "text": "А так вот, там пришел он в школу на урок астрономии, о, сразу пришел домой такой, а вот давайте-ка мне телескоп купим, а давайте там еще какое-нибудь приложение на айфон, чтобы звезды смотреть туда-сюда."
@@ -11686,7 +11686,7 @@
       "id": "65c9a96ca933803858de07fe",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5408.56,
       "etime": 5415.32,
       "text": "И он такой сразу, о, давай, папа, бабло, сейчас я поеду, посмотрю, а чего там еще рядом?"
@@ -11695,7 +11695,7 @@
       "id": "65c9a96ca933803858de07ff",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5415.42,
       "etime": 5416.18,
       "text": "Ливан есть?"
@@ -11704,7 +11704,7 @@
       "id": "65c9a96ca933803858de0800",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5416.2,
       "etime": 5418.12,
       "text": "Вот давай я еще в Ливан съезжу."
@@ -11785,7 +11785,7 @@
       "id": "65c9a96ca933803858de0809",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5462.89,
       "etime": 5464.81,
       "text": "А так ты будешь знать, куда ехать."
@@ -11983,7 +11983,7 @@
       "id": "65c9a96ca933803858de081f",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5597.39,
       "etime": 5599.73,
       "text": "А если у него нет телевизора?"
@@ -12091,7 +12091,7 @@
       "id": "65c9a96ca933803858de082b",
       "issue": 475,
       "type": "cc",
-      "author": "AlexeyFriendPodcast",
+      "author": "AlexeyAbashev",
       "stime": 5640.95,
       "etime": 5644.35,
       "text": "А физика и химия это какой-нибудь дискавери?"

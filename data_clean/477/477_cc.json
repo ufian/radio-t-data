@@ -130,7 +130,7 @@
       "id": "65c9a9739d1aec037525918a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 28.45,
       "etime": 29.11,
       "text": "Не дай бог."
@@ -544,7 +544,7 @@
       "id": "65c9a9739d1aec03752591b8",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 204.96,
       "etime": 219.51,
       "text": "Ну, если они обсуждали код-ревью в январе, то обсудить-то это всегда возможно, это не мешки ворочать, а проводить конкретно 1 января или 31 декабря код-ревью я всячески осуждаю."
@@ -616,7 +616,7 @@
       "id": "65c9a9739d1aec03752591c0",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 252.97,
       "etime": 273.47,
       "text": "Ну, так это может зависеть от того, как ты относишься к этому процессу, то есть есть разные люди там, одни, например, проводят код-ревью, они садятся и читают код, вот как будто они прям реализовывают задачу, да, и вот все, что они видят, все, что они применяют, они там конкретно смотрят."
@@ -625,7 +625,7 @@
       "id": "65c9a9739d1aec03752591c1",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 274.01,
       "etime": 280.53,
       "text": "какие методы чего делают, куда методы вызывают, смотрят, как все нормально."
@@ -634,7 +634,7 @@
       "id": "65c9a9739d1aec03752591c2",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 280.61,
       "etime": 293.7,
       "text": "Есть вторые, которые смотрят более-менее формальные критерии, общие шаблоны, общие способы хранения конфигурационных файлов."
@@ -643,7 +643,7 @@
       "id": "65c9a9739d1aec03752591c3",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 293.74,
       "etime": 299.4,
       "text": "Какие-то такие общие шаблоны, при этом не затачиваясь на конкретную реализацию."
@@ -652,7 +652,7 @@
       "id": "65c9a9739d1aec03752591c4",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 299.48,
       "etime": 301.58,
       "text": "И, честно говоря, с моей точки зрения,"
@@ -661,7 +661,7 @@
       "id": "65c9a9739d1aec03752591c5",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 302.1,
       "etime": 311.45,
       "text": "Второй вариант наиболее близок к реальной разработке, и он имеет смысл для передачи информации внутри команды."
@@ -1066,7 +1066,7 @@
       "id": "65c9a9739d1aec03752591f2",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 493.74,
       "etime": 514.8,
       "text": "Жень, смотри, по крайней мере могу, я могу так более-менее рассказать, как у нас это сделано, да, всякие там вот запятые, табуляции, пробелы туда-сюда, это у нас автоматически проверяется сонаром, то есть здесь какого-то таких стилистических проверок, да, там вот ты там табы здесь, два пробела, а не три, да,"
@@ -1102,7 +1102,7 @@
       "id": "65c9a9739d1aec03752591f6",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 552.9,
       "etime": 556.27,
       "text": "И смысла тут большого тогда в код-ревью нет."
@@ -1111,7 +1111,7 @@
       "id": "65c9a9739d1aec03752591f7",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 556.31,
       "etime": 558.47,
       "text": "Это получается двойное программирование."
@@ -1120,7 +1120,7 @@
       "id": "65c9a9739d1aec03752591f8",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 559.33,
       "etime": 562.69,
       "text": "Чтобы вычистить все ошибки, тебе надо самому сесть"
@@ -1138,7 +1138,7 @@
       "id": "65c9a9739d1aec03752591fa",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 577.9,
       "etime": 592.61,
       "text": "Вот такие код-ревью, особенно если большой поток кода идет, это ты просто будешь там, не знаю, будешь только заниматься тем, что такое код-ревью делать и переписывать один за другим."
@@ -1579,7 +1579,7 @@
       "id": "65c9a9739d1aec037525922b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 805.24,
       "etime": 807.2,
       "text": "Это не обязательно код какой-то."
@@ -1588,7 +1588,7 @@
       "id": "65c9a9739d1aec037525922c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 807.24,
       "etime": 810.03,
       "text": "Например, в компании общие шаблоны к чему-то."
@@ -1597,7 +1597,7 @@
       "id": "65c9a9739d1aec037525922d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 810.27,
       "etime": 813.17,
       "text": "Я не знаю, как работают с конфигурационными файлами."
@@ -1606,7 +1606,7 @@
       "id": "65c9a9739d1aec037525922e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 813.25,
       "etime": 818.7,
       "text": "Например, мы там кладем в properties, мы там используем не равно, а двоеточие во всех properties."
@@ -1615,7 +1615,7 @@
       "id": "65c9a9739d1aec037525922f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 819.78,
       "etime": 821.3,
       "text": "Вот у нас вот так."
@@ -2191,7 +2191,7 @@
       "id": "65c9a9739d1aec037525926f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1071.45,
       "etime": 1076.32,
       "text": "Ну смотри, во-первых, ты говоришь, я не хочу ходить смотреть за кодом."
@@ -2200,7 +2200,7 @@
       "id": "65c9a9739d1aec0375259270",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1076.34,
       "etime": 1082.86,
       "text": "У тебя получается, ты будешь ходить, и постоянно он тебя будет дергать и разговаривать на какие-то вопросы."
@@ -2209,7 +2209,7 @@
       "id": "65c9a9739d1aec0375259271",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1082.94,
       "etime": 1083.76,
       "text": "Не знаю."
@@ -2227,7 +2227,7 @@
       "id": "65c9a9739d1aec0375259273",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1089.54,
       "etime": 1090.46,
       "text": "Как у вас принято?"
@@ -2236,7 +2236,7 @@
       "id": "65c9a9739d1aec0375259274",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1090.48,
       "etime": 1091.89,
       "text": "Что мне надо в этом случае сделать?"
@@ -2245,7 +2245,7 @@
       "id": "65c9a9739d1aec0375259275",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1091.93,
       "etime": 1094.59,
       "text": "Хороший вопрос."
@@ -2281,7 +2281,7 @@
       "id": "65c9a9739d1aec0375259279",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1102.45,
       "etime": 1104.29,
       "text": "И он выучится, молодец."
@@ -2290,7 +2290,7 @@
       "id": "65c9a9739d1aec037525927a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1104.37,
       "etime": 1113.62,
       "text": "Окей, если тебе нужен очень упертый индус с очень хорошей памятью, который будет делать то же самое, что он уже видел однажды."
@@ -2299,7 +2299,7 @@
       "id": "65c9a9739d1aec037525927b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1113.64,
       "etime": 1119.66,
       "text": "То есть он видел, вот здесь мы сортируем по дате, и вот он херачит везде по дате."
@@ -2308,7 +2308,7 @@
       "id": "65c9a9739d1aec037525927c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1119.74,
       "etime": 1123,
       "text": "А вот здесь он сказал, что мы конфиги храним вот так."
@@ -2389,7 +2389,7 @@
       "id": "65c9a9739d1aec0375259285",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1150.75,
       "etime": 1153.87,
       "text": "Я просто как бы, чтобы... Я предполагаю, что мы..."
@@ -2479,7 +2479,7 @@
       "id": "65c9a9739d1aec037525928f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1184.04,
       "etime": 1187.72,
       "text": "Так это получается, ты не удочку, а рыбой по морде ему просто бьешь, и все."
@@ -2488,7 +2488,7 @@
       "id": "65c9a9739d1aec0375259290",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1187.76,
       "etime": 1189.86,
       "text": "То есть он что-то сделал, ты ему рыбой по морде."
@@ -2497,7 +2497,7 @@
       "id": "65c9a9739d1aec0375259291",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1189.9,
       "etime": 1191.44,
       "text": "А, не так, не так, не так."
@@ -2551,7 +2551,7 @@
       "id": "65c9a9739d1aec0375259297",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1204.79,
       "etime": 1206.03,
       "text": "Ну, окей, хорошо."
@@ -2560,7 +2560,7 @@
       "id": "65c9a9739d1aec0375259298",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1206.07,
       "etime": 1211.31,
       "text": "Вот ты даешь удочку, удочку, удочку, да, а вот надо сеть, например, дальше."
@@ -2569,7 +2569,7 @@
       "id": "65c9a9739d1aec0375259299",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1211.39,
       "etime": 1212.39,
       "text": "И в какой..."
@@ -2596,7 +2596,7 @@
       "id": "65c9a9739d1aec037525929c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1223.28,
       "etime": 1226.53,
       "text": "Сеть ему нужна, ты знаешь, что там, не знаю, сеть вот нужна."
@@ -2758,7 +2758,7 @@
       "id": "65c9a9739d1aec03752592ae",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1319.44,
       "etime": 1337.2,
       "text": "Ну, так вот, тут главное слово, надеюсь, да, вот у меня, например, в практике бывает часто, то есть вот чувак, да, ты там делаешь ревью его кода, да, вот он пишет, пишет что-то нормально, да, как все делает, как все делает, потом ему там приходит задача, я не знаю, что у него там, не знаю, в семье дела какие-то, или он там"
@@ -3181,7 +3181,7 @@
       "id": "65c9a9739d1aec03752592dd",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1623.44,
       "etime": 1625.22,
       "text": "У тебя может быть своя загрузка."
@@ -3316,7 +3316,7 @@
       "id": "65c9a9739d1aec03752592ec",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1671.6,
       "etime": 1673.26,
       "text": "Мне кажется, это не ревью."
@@ -3325,7 +3325,7 @@
       "id": "65c9a9739d1aec03752592ed",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1673.38,
       "etime": 1675.42,
       "text": "Стой, стой, стой."
@@ -3334,7 +3334,7 @@
       "id": "65c9a9739d1aec03752592ee",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1675.52,
       "etime": 1677.72,
       "text": "Есть там вариант."
@@ -3343,7 +3343,7 @@
       "id": "65c9a9739d1aec03752592ef",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1677.84,
       "etime": 1679.92,
       "text": "Чувак делает агрегейшн-запросы."
@@ -3352,7 +3352,7 @@
       "id": "65c9a9739d1aec03752592f0",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1680.17,
       "etime": 1687.23,
       "text": "Вот он что-то делает, ты его побил по морде рыбой, вот он фигачит эти запросы, повторяет одно и то же."
@@ -3361,7 +3361,7 @@
       "id": "65c9a9739d1aec03752592f1",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1687.79,
       "etime": 1692.94,
       "text": "И тут, не знаю, ты такой умный, почитал книжку, что что-то надо делать."
@@ -3370,7 +3370,7 @@
       "id": "65c9a9739d1aec03752592f2",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1692.98,
       "etime": 1699.93,
       "text": "Маленький кусочек сниппета вместо сортировки по true и сортировки по false делает сортировку и. True и false, например."
@@ -3379,7 +3379,7 @@
       "id": "65c9a9739d1aec03752592f3",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1699.95,
       "etime": 1700.03,
       "text": "Вот."
@@ -3388,7 +3388,7 @@
       "id": "65c9a9739d1aec03752592f4",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1702.91,
       "etime": 1708.82,
       "text": "И ты на код-ревью, если вот чувак тебе закидывает вот эти запросы, ты на код-ревью ему можешь ответить."
@@ -3397,7 +3397,7 @@
       "id": "65c9a9739d1aec03752592f5",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1708.86,
       "etime": 1714.84,
       "text": "Вот я там, не знаю, почитал чего-то, да, вот сделай вот это вот по-другому."
@@ -3415,7 +3415,7 @@
       "id": "65c9a9739d1aec03752592f7",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1725.41,
       "etime": 1726.83,
       "text": "Ничего от этого не поменяется."
@@ -3541,7 +3541,7 @@
       "id": "65c9a9739d1aec0375259305",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1790.46,
       "etime": 1795.47,
       "text": "Смотри, во-первых, не все тиммемберы могут собраться в одной комнате."
@@ -3559,7 +3559,7 @@
       "id": "65c9a9739d1aec0375259307",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1804.82,
       "etime": 1807.1,
       "text": "У нас тим из пяти людей, но они раскиданы по глобусу."
@@ -3568,7 +3568,7 @@
       "id": "65c9a9739d1aec0375259308",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1808.06,
       "etime": 1809.06,
       "text": "Мы не можем собраться."
@@ -3604,7 +3604,7 @@
       "id": "65c9a9739d1aec037525930c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1813.74,
       "etime": 1820.9,
       "text": "Я не знаю, как ты себе представляешь, типа, люди, давайте в скайпе, давайте мы включим скайп, сейчас мы будем обмениваться знаниями."
@@ -3676,7 +3676,7 @@
       "id": "65c9a9739d1aec0375259314",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1843.87,
       "etime": 1845.39,
       "text": "Ты, не знаю..."
@@ -3685,7 +3685,7 @@
       "id": "65c9a9739d1aec0375259315",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1846.64,
       "etime": 1857.23,
       "text": "У меня, по крайней мере, если там митинг длится больше часа, уже башка через час начинает что-то там заскакивать, да, и понимать, что происходит, и запоминать уже не получается."
@@ -3694,7 +3694,7 @@
       "id": "65c9a9739d1aec0375259316",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1857.27,
       "etime": 1863.56,
       "text": "Когда встречаются люди сами по себе, там, не знаю, сидят на диване, то сидеть и дуть пиво можно и час, и два, и три."
@@ -3703,7 +3703,7 @@
       "id": "65c9a9739d1aec0375259317",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1863.58,
       "etime": 1867.98,
       "text": "Это не такой как бы процесс, который затратный."
@@ -3820,7 +3820,7 @@
       "id": "65c9a9739d1aec0375259324",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1904.45,
       "etime": 1904.75,
       "text": "Ладно."
@@ -3829,7 +3829,7 @@
       "id": "65c9a9739d1aec0375259325",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1904.81,
       "etime": 1907.88,
       "text": "Сюша, а угадай, почему Большой Дим для Бутуна?"
@@ -3838,7 +3838,7 @@
       "id": "65c9a9739d1aec0375259326",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1907.9,
       "etime": 1910.62,
       "text": "Потому что там поддерживается что?"
@@ -3964,7 +3964,7 @@
       "id": "65c9a9739d1aec0375259334",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1953.68,
       "etime": 1955.66,
       "text": "Нет, а у них go-memdb."
@@ -3973,7 +3973,7 @@
       "id": "65c9a9739d1aec0375259335",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1955.72,
       "etime": 1956.72,
       "text": "Почему?"
@@ -3991,7 +3991,7 @@
       "id": "65c9a9739d1aec0375259337",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1958,
       "etime": 1958.24,
       "text": "Go-memdb они. Boltdb."
@@ -4009,7 +4009,7 @@
       "id": "65c9a9739d1aec0375259339",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 1975.24,
       "etime": 1975.46,
       "text": "Нет."
@@ -4189,7 +4189,7 @@
       "id": "65c9a9739d1aec037525934d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2060.62,
       "etime": 2063.45,
       "text": "Ну, не всем нужны документы как таковые."
@@ -4198,7 +4198,7 @@
       "id": "65c9a9739d1aec037525934e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2063.49,
       "etime": 2075.59,
       "text": "Очень часто для таких вот стороджей, которые просто тупо надо сохранить, KeyValue самый эффективный вариант, когда какие-нибудь токены или что-нибудь по ключу у тебя."
@@ -4450,7 +4450,7 @@
       "id": "65c9a9739d1aec037525936a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2172.42,
       "etime": 2178.87,
       "text": "Во всяких симплах, во всяких динамо, когда тебе надо искать по какому-то полю, ты делаешь ки."
@@ -4477,7 +4477,7 @@
       "id": "65c9a9739d1aec037525936d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2185.86,
       "etime": 2192.06,
       "text": "Я не знаю, может, я тебя расстрою или удивлю, но, скорее всего, она внутри именно так и устроена."
@@ -4486,7 +4486,7 @@
       "id": "65c9a9739d1aec037525936e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2192.16,
       "etime": 2197.98,
       "text": "Те индексы, которые по полям, они как раз сделаны на основе документов."
@@ -4504,7 +4504,7 @@
       "id": "65c9a9739d1aec0375259370",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2199.51,
       "etime": 2209.09,
       "text": "Ну, там ID-шник, я не знаю, хранится ID-шник и хранится JSON, и те, которые дополнительные индексы, там вот они строятся, ссылаются на тот же самый документ."
@@ -4567,7 +4567,7 @@
       "id": "65c9a9739d1aec0375259377",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2239.56,
       "etime": 2242,
       "text": "Вот смотри, мы, например, используем у себя Elasticsearch."
@@ -4585,7 +4585,7 @@
       "id": "65c9a9739d1aec0375259379",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2256.88,
       "etime": 2260.06,
       "text": "То есть у нас получается для всех обратный индекс."
@@ -4612,7 +4612,7 @@
       "id": "65c9a9739d1aec037525937c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2278.43,
       "etime": 2283.13,
       "text": "И, опять же, можно его там в Embedded какой-то засунуть, это все будет быстро работать."
@@ -4621,7 +4621,7 @@
       "id": "65c9a9739d1aec037525937d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2283.19,
       "etime": 2292.27,
       "text": "Ну, да, когда добавляется новое поле, по которому надо искать, надо там перестраивать индексы, надо искать по текущим документам, это все проблемы такие."
@@ -4792,7 +4792,7 @@
       "id": "65c9a9739d1aec0375259390",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2372.38,
       "etime": 2376.33,
       "text": "Ты хочешь сказать, что везде-везде-везде-везде надо использовать «Монгу»."
@@ -4801,7 +4801,7 @@
       "id": "65c9a9739d1aec0375259391",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2377.35,
       "etime": 2385.44,
       "text": "А если не будет таких документов, и таких поисков, и таких aggregation фреймворков, то это вообще ересь, и это никому не надо."
@@ -4810,7 +4810,7 @@
       "id": "65c9a9739d1aec0375259392",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2385.46,
       "etime": 2388.3,
       "text": "Такие легкие решения, они не нужны никому."
@@ -4927,7 +4927,7 @@
       "id": "65c9a9739d1aec037525939f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2442.96,
       "etime": 2455.86,
       "text": "Нет, но по большому счету все какие-либо сторожа – это такой как бы синтаксический сахар над K-value, потому что у тебя есть K как ID-шник и есть value как какой-либо документ."
@@ -4945,7 +4945,7 @@
       "id": "65c9a9739d1aec03752593a1",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2468.31,
       "etime": 2482.51,
       "text": "Ничего такого здесь нет, и если появляются продукты, да, которые там минимально необходимые конфигурации и минимальный там какой-то кубик лего, да, для конструктора, который можно использовать, то почему бы его не использовать?"
@@ -5098,7 +5098,7 @@
       "id": "65c9a9739d1aec03752593b2",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2563.08,
       "etime": 2565.67,
       "text": "Это вообще как маленький Global Lock."
@@ -5350,7 +5350,7 @@
       "id": "65c9a9739d1aec03752593ce",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2690.14,
       "etime": 2691.62,
       "text": "Не хватает памяти."
@@ -5404,7 +5404,7 @@
       "id": "65c9a9739d1aec03752593d4",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2713.41,
       "etime": 2715.76,
       "text": "Опять же, вот по поводу извращаться."
@@ -5413,7 +5413,7 @@
       "id": "65c9a9739d1aec03752593d5",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2715.88,
       "etime": 2720.24,
       "text": "Консул — это сам по себе система сервис-дискавери."
@@ -5422,7 +5422,7 @@
       "id": "65c9a9739d1aec03752593d6",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2721.6,
       "etime": 2727.73,
       "text": "Вот этот key value, он нужен для хранения конфигурационных каких-то параметров, но не более того."
@@ -5449,7 +5449,7 @@
       "id": "65c9a9739d1aec03752593d9",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2744.2,
       "etime": 2751.69,
       "text": "Здесь там хранение конфигурации есть, там кей есть в элю, да, ну и нормально, оно работает, что..."
@@ -5539,7 +5539,7 @@
       "id": "65c9a9739d1aec03752593e3",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2773.93,
       "etime": 2779.83,
       "text": "Как в этом анекдоте, дяденька, я эту маску на улице на стройке нашел, ничего такого."
@@ -5548,7 +5548,7 @@
       "id": "65c9a9739d1aec03752593e4",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2779.91,
       "etime": 2780.83,
       "text": "Я просто это делаю."
@@ -5557,7 +5557,7 @@
       "id": "65c9a9739d1aec03752593e5",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2780.87,
       "etime": 2782.37,
       "text": "Мне надо хранить кейвы."
@@ -5638,7 +5638,7 @@
       "id": "65c9a9739d1aec03752593ee",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2810.02,
       "etime": 2813.55,
       "text": "А разве это прям... Как она замолчала?"
@@ -5656,7 +5656,7 @@
       "id": "65c9a9739d1aec03752593f0",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2816.43,
       "etime": 2817.75,
       "text": "Не знаю, вроде."
@@ -5665,7 +5665,7 @@
       "id": "65c9a9739d1aec03752593f1",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2817.83,
       "etime": 2819.35,
       "text": "Мы с тобой вдвоем остались."
@@ -5719,7 +5719,7 @@
       "id": "65c9a9739d1aec03752593f7",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2829.24,
       "etime": 2830.94,
       "text": "Ну, а разве консул — это база данных?"
@@ -5764,7 +5764,7 @@
       "id": "65c9a9739d1aec03752593fc",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2846.21,
       "etime": 2847.49,
       "text": "Но это его основная фишка."
@@ -5845,7 +5845,7 @@
       "id": "65c9a9739d1aec0375259405",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2895.49,
       "etime": 2897.09,
       "text": "Ну, те, которые близко вообще."
@@ -5917,7 +5917,7 @@
       "id": "65c9a9739d1aec037525940d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2920.96,
       "etime": 2924.59,
       "text": "По поводу Proximity, разве там не было возможности дата-центров?"
@@ -5926,7 +5926,7 @@
       "id": "65c9a9739d1aec037525940e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2924.67,
       "etime": 2930.25,
       "text": "И для дата-центров, если ты подключаешься к какому-то дата-центру, он тебе и указывал конкретно."
@@ -6034,7 +6034,7 @@
       "id": "65c9a9739d1aec037525941a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2978.34,
       "etime": 2981.28,
       "text": "Насколько я понимаю, это просто поиск по маске."
@@ -6043,7 +6043,7 @@
       "id": "65c9a9739d1aec037525941b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2981.34,
       "etime": 2987.63,
       "text": "То есть надо какие-то дополнительные теги вешать на сервисы."
@@ -6052,7 +6052,7 @@
       "id": "65c9a9739d1aec037525941c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2987.71,
       "etime": 2990.47,
       "text": "Дополнительные эти сервисы, дополнительные атрибуты."
@@ -6061,7 +6061,7 @@
       "id": "65c9a9739d1aec037525941d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 2990.75,
       "etime": 2992.83,
       "text": "Сколько будет это определяться?"
@@ -6079,7 +6079,7 @@
       "id": "65c9a9739d1aec037525941f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3020.65,
       "etime": 3027.21,
       "text": "Это позволяет тебе... Ты говоришь, вот health check там, не знаю, отвечает не у всех серваков, например."
@@ -6088,7 +6088,7 @@
       "id": "65c9a9739d1aec0375259420",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3027.23,
       "etime": 3033.76,
       "text": "Или там у какого-то сервака он отвечает, что вот смотри, я сейчас загружен сильно."
@@ -6205,7 +6205,7 @@
       "id": "65c9a9739d1aec037525942d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3076.27,
       "etime": 3084.96,
       "text": "Так нет, ну вот как определяется, что ну вот типа он дышит, не дышит, да, то есть... Как фантазии хватит."
@@ -6250,7 +6250,7 @@
       "id": "65c9a9739d1aec0375259432",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3104.8,
       "etime": 3114.33,
       "text": "Нет, окей, это я понял, что он отвечает через DNS, ты его спрашиваешь, дай-ка мне сервис такой, то он тебе ответит то, что тебе надо."
@@ -6259,7 +6259,7 @@
       "id": "65c9a9739d1aec0375259433",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3114.41,
       "etime": 3116.43,
       "text": "Я говорю про то, как он определяет."
@@ -6268,7 +6268,7 @@
       "id": "65c9a9739d1aec0375259434",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3116.45,
       "etime": 3126.74,
       "text": "Ты там прописываешь правила, что надо, чтобы серваки были нагружены не более чем на 20%, например, и находились в этом дата-центре."
@@ -6277,7 +6277,7 @@
       "id": "65c9a9739d1aec0375259435",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3127.26,
       "etime": 3137.77,
       "text": "Как ты ему опишешь какие-то дополнительные правила, типа вот не больше 100 запросов по загрузке картинки он должен обрабатывать сейчас?"
@@ -6340,7 +6340,7 @@
       "id": "65c9a9739d1aec037525943c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3158.24,
       "etime": 3164.93,
       "text": "Ну, окей, то есть тебе надо где-то записать, что он должен из твоего сервиса дергать откуда-то значение."
@@ -6376,7 +6376,7 @@
       "id": "65c9a9739d1aec0375259440",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3184.1,
       "etime": 3195.18,
       "text": "И то есть в endpoint я ему должен прописать, что я ему должен возвратить не просто жив я сервак или нет, а должен я ему возвратить количество картинок, которые я сейчас обрабатываю."
@@ -6475,7 +6475,7 @@
       "id": "65c9a9739d1aec037525944b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3261.92,
       "etime": 3273.44,
       "text": "Но такого, что вот конкретно, например, я хочу настроить, что 100 картинок вот на этом серваке обработались, а больше на этот сервак, не знаю, не закидывать, такого сделать не получится."
@@ -6619,7 +6619,7 @@
       "id": "65c9a9739d1aec037525945b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3334.1,
       "etime": 3339.88,
       "text": "Логику ты засовываешь внутрь не проверяльщика, а самого проверяемого."
@@ -6628,7 +6628,7 @@
       "id": "65c9a9739d1aec037525945c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3339.94,
       "etime": 3343.17,
       "text": "То есть ты там, не знаю, внутри своего кода проверяешь."
@@ -6637,7 +6637,7 @@
       "id": "65c9a9739d1aec037525945d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3343.23,
       "etime": 3347.97,
       "text": "Ага, мне пришел хелф-чек, дай-ка я посмотрю, сколько я обработал картинок."
@@ -6673,7 +6673,7 @@
       "id": "65c9a9739d1aec0375259461",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3357.76,
       "etime": 3358.88,
       "text": "Хорошо."
@@ -6682,7 +6682,7 @@
       "id": "65c9a9739d1aec0375259462",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3358.96,
       "etime": 3377.25,
       "text": "Чем это отличается от того, что консул сам по себе проверяет хелфчеки, он кидает хелфчек, я внутри на своем серваке проверяю, ой, я там 100 картинок, не знаю, еще не обработал, давай-ка я ему отвечу, что хелфчек у меня нормальный, окей, консул подсовывает этот сервак внутрь."
@@ -6853,7 +6853,7 @@
       "id": "65c9a9739d1aec0375259475",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3450.43,
       "etime": 3465.46,
       "text": "То есть вместо того, чтобы как все прогрессивное человечество двигаться в сторону микросервисов, микросервисов, в которых у них есть отдельный хелф-чек, мы берем один большой монолит и вот давай-ка мы его разными хелф-чеками проверяем."
@@ -6862,7 +6862,7 @@
       "id": "65c9a9739d1aec0375259476",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3465.5,
       "etime": 3467.1,
       "text": "А вот если посмотрим с этой стороны, то он живой."
@@ -6880,7 +6880,7 @@
       "id": "65c9a9739d1aec0375259478",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3470.14,
       "etime": 3475.6,
       "text": "А вот если еще сверху посмотреть, то он как бы живой, но мы его как бы не будем отдавать."
@@ -6952,7 +6952,7 @@
       "id": "65c9a9739d1aec0375259480",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3514.08,
       "etime": 3517.07,
       "text": "У нас получаются просто те же самые два сервиса."
@@ -6961,7 +6961,7 @@
       "id": "65c9a9739d1aec0375259481",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3517.09,
       "etime": 3519.29,
       "text": "Это нам даже два инстанца поднимать не надо."
@@ -7024,7 +7024,7 @@
       "id": "65c9a9739d1aec0375259488",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3539.65,
       "etime": 3543.42,
       "text": "У тебя будет там, не знаю, сервис read, да, сервис read, у него чек будет, check read."
@@ -7033,7 +7033,7 @@
       "id": "65c9a9739d1aec0375259489",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3544.42,
       "etime": 3546.86,
       "text": "Будет у тебя сервис write, будет у него чек write."
@@ -7051,7 +7051,7 @@
       "id": "65c9a9739d1aec037525948b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3553.33,
       "etime": 3554.23,
       "text": "Зачем два сервиса?"
@@ -7060,7 +7060,7 @@
       "id": "65c9a9739d1aec037525948c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3554.25,
       "etime": 3556.15,
       "text": "Они будут один и тот же порт смотреть."
@@ -7222,7 +7222,7 @@
       "id": "65c9a9739d1aec037525949e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3651.1,
       "etime": 3658.44,
       "text": "Нам нужны вот такие развесистые health-чеки с множеством всего, вместо того, чтобы завести просто двое записей с сервисами."
@@ -7483,7 +7483,7 @@
       "id": "65c9a9739d1aec03752594bb",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3747.61,
       "etime": 3750.15,
       "text": "То есть что-то в будущем будет."
@@ -7528,7 +7528,7 @@
       "id": "65c9a9739d1aec03752594c0",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3765.45,
       "etime": 3765.95,
       "text": "Знаешь, как это?"
@@ -7537,7 +7537,7 @@
       "id": "65c9a9739d1aec03752594c1",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3766.03,
       "etime": 3768.31,
       "text": "Статью не читай, комментарий пиши."
@@ -7546,7 +7546,7 @@
       "id": "65c9a9739d1aec03752594c2",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3768.43,
       "etime": 3770.47,
       "text": "Я прочитал название."
@@ -7798,7 +7798,7 @@
       "id": "65c9a9739d1aec03752594de",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3872.47,
       "etime": 3887.41,
       "text": "нет, а он, я так понимаю, что вот эти Java Experience, да, вот Java развитие, оно будет каннибализироваться именно такими вот DSL'ями, то есть я не знаю, как Spark, да, там, не знаю, какие-нибудь"
@@ -7816,7 +7816,7 @@
       "id": "65c9a9739d1aec03752594e0",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3896.08,
       "etime": 3900.06,
       "text": "На уровне ходу бы там что-нибудь, какие-нибудь MapReduce писать, не знаю."
@@ -7924,7 +7924,7 @@
       "id": "65c9a9739d1aec03752594ec",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 3950.86,
       "etime": 3952.2,
       "text": "Тренд вот как раз."
@@ -8050,7 +8050,7 @@
       "id": "65c9a9739d1aec03752594fa",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4002.76,
       "etime": 4011.24,
       "text": "Ну, может, просто большие компании, как бы, там, не знаю, есть всякие IBM, их Юлия Пакарда, которые двигаются в сторону сервисов."
@@ -8059,7 +8059,7 @@
       "id": "65c9a9739d1aec03752594fb",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4011.52,
       "etime": 4015.59,
       "text": "И Dell, видимо, покупая EMC... Там просто на мую пишется..."
@@ -8194,7 +8194,7 @@
       "id": "65c9a9739d1aec037525950a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4073.56,
       "etime": 4075.3,
       "text": "Как у вас говорят?"
@@ -8212,7 +8212,7 @@
       "id": "65c9a9739d1aec037525950c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4075.34,
       "etime": 4076.3,
       "text": "Everything."
@@ -8221,7 +8221,7 @@
       "id": "65c9a9739d1aec037525950d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4075.4,
       "etime": 4076.3,
       "text": "Подожди."
@@ -8437,7 +8437,7 @@
       "id": "65c9a9739d1aec0375259525",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4187.99,
       "etime": 4189.59,
       "text": "Продавай, продавай в реал-тайме."
@@ -8446,7 +8446,7 @@
       "id": "65c9a9739d1aec0375259526",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4189.65,
       "etime": 4193.09,
       "text": "А так-то что можно еще в реал-тайме делать?"
@@ -8455,7 +8455,7 @@
       "id": "65c9a9739d1aec0375259527",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4193.11,
       "etime": 4195.28,
       "text": "И разве это роботы не должны делать все это?"
@@ -8599,7 +8599,7 @@
       "id": "65c9a9739d1aec0375259537",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4254.02,
       "etime": 4256.52,
       "text": "Мы что-то забили на него."
@@ -8608,7 +8608,7 @@
       "id": "65c9a9739d1aec0375259538",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4256.54,
       "etime": 4260.77,
       "text": "А, не, мы делаем это для миграции всяких."
@@ -8617,7 +8617,7 @@
       "id": "65c9a9739d1aec0375259539",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4260.79,
       "etime": 4266.03,
       "text": "Всякие джобы типа миграции данных из одного места в другое, переложить туда-сюда."
@@ -8626,7 +8626,7 @@
       "id": "65c9a9739d1aec037525953a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4266.07,
       "etime": 4270.05,
       "text": "Вот это вот на SpringBatch хорошо как раз получается."
@@ -8635,7 +8635,7 @@
       "id": "65c9a9739d1aec037525953b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4270.11,
       "etime": 4275.18,
       "text": "А таких каких-то задач, чтобы что-то делать, проще свое простое написать."
@@ -8662,7 +8662,7 @@
       "id": "65c9a9739d1aec037525953e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4287.59,
       "etime": 4295.88,
       "text": "Ну, да, особенно учитывая то, что, не знаю, при высокой нагрузке идут у него проблемы с сохранением этих всех тасков в базу данных."
@@ -8671,7 +8671,7 @@
       "id": "65c9a9739d1aec037525953f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4295.94,
       "etime": 4304.96,
       "text": "То есть я не знаю, как они там что-то сделали, но у них, видимо, транзакции где-то потеряны, и как только вы там попытаетесь больше, не знаю..."
@@ -8698,7 +8698,7 @@
       "id": "65c9a9739d1aec0375259542",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4324.76,
       "etime": 4338.85,
       "text": "что произошло там с Таском, посмотреть его статус, посмотреть все его степы, которые там были, посмотреть везде, где у него там статус, а статус может быть не всегда установлен, а установлена ошибка, то есть как-то, не знаю..."
@@ -8707,7 +8707,7 @@
       "id": "65c9a9739d1aec0375259543",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4340.67,
       "etime": 4344.89,
       "text": "Писали, конечно, такие, да, приварочные."
@@ -8725,7 +8725,7 @@
       "id": "65c9a9739d1aec0375259545",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4349.63,
       "etime": 4359.32,
       "text": "Вообще, по-моему, вот этот SpringBatch, он родился не внутри Spring, а они, по-моему, его купили или не купили, как-то взяли там у кого-то."
@@ -8734,7 +8734,7 @@
       "id": "65c9a9739d1aec0375259546",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4359.36,
       "etime": 4362.68,
       "text": "Или кто-то законтрибьютил им, по-моему, сап, что ли."
@@ -8815,7 +8815,7 @@
       "id": "65c9a9739d1aec037525954f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4393.69,
       "etime": 4395.55,
       "text": "То есть, денег не будет ни у кого, да?"
@@ -8860,7 +8860,7 @@
       "id": "65c9a9739d1aec0375259554",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4411.92,
       "etime": 4413.88,
       "text": "Ну да, я говорю, ни у кого не будет денег."
@@ -8869,7 +8869,7 @@
       "id": "65c9a9739d1aec0375259555",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4413.92,
       "etime": 4422.6,
       "text": "То есть сначала ты сам купил себе телефон, потом ты покупаешь себе компьютер, потом ты покупаешь себе Dropbox, потом ты сам в Клауде все это делаешь."
@@ -8878,7 +8878,7 @@
       "id": "65c9a9739d1aec0375259556",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4422.64,
       "etime": 4429.13,
       "text": "В результате только IP-владелец остается для компании."
@@ -9031,7 +9031,7 @@
       "id": "65c9a9739d1aec0375259567",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4499.97,
       "etime": 4506.77,
       "text": "Раньше говорили, мы все уйдем в облака, то теперь облака это не модно, мы теперь уйдем в контейнер фармс."
@@ -9040,7 +9040,7 @@
       "id": "65c9a9739d1aec0375259568",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4507.09,
       "etime": 4508.15,
       "text": "Да, да, да."
@@ -9094,7 +9094,7 @@
       "id": "65c9a9739d1aec037525956e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4525.61,
       "etime": 4533.44,
       "text": "А вообще вот сомнительно, я не знаю, вот эта практика Фейсбука, да, давайте мы ухудшим жизнь разработчикам."
@@ -9193,7 +9193,7 @@
       "id": "65c9a9739d1aec0375259579",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4595.22,
       "etime": 4598.12,
       "text": "Ну, Ксюша, посмотри, это мне напоминает."
@@ -9202,7 +9202,7 @@
       "id": "65c9a9739d1aec037525957a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4598.18,
       "etime": 4606.29,
       "text": "Там Цукерберг с ломом приходит в офис такой, подходит к Ксюше такой, а, руки у тебя есть, да, хера к ломам по рукам."
@@ -9211,7 +9211,7 @@
       "id": "65c9a9739d1aec037525957b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4606.39,
       "etime": 4609.11,
       "text": "Что, не можешь без рук программировать?"
@@ -9229,7 +9229,7 @@
       "id": "65c9a9739d1aec037525957d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4610.19,
       "etime": 4611.89,
       "text": "Что ты придумаешь интересное?"
@@ -9256,7 +9256,7 @@
       "id": "65c9a9739d1aec0375259580",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 4617.38,
       "etime": 4618.96,
       "text": "Я не знаю."
@@ -10012,7 +10012,7 @@
       "id": "65c9a9739d1aec03752595d4",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5055.11,
       "etime": 5068.1,
       "text": "Ну, то есть ты хочешь сказать, что где-то там в Уганде на, не знаю, 1, 2, 3 смартфона, которые у них есть, вот им обязательно нужен будет Фейсбук, и ради вот этих трех пользователей надо в Уганде... Вообще, кто сказал про Уганду?"
@@ -10282,7 +10282,7 @@
       "id": "65c9a9739d1aec03752595f2",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5208.02,
       "etime": 5209.89,
       "text": "Ну, он, по-моему, не Меркурион, а Bitbucket."
@@ -10291,7 +10291,7 @@
       "id": "65c9a9739d1aec03752595f3",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5210.25,
       "etime": 5218.78,
       "text": "Они, по-моему, как раз рекламировали начало, что вот, смотрите, у нас питон и, по-моему, тортос."
@@ -10453,7 +10453,7 @@
       "id": "65c9a9739d1aec0375259605",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5298.04,
       "etime": 5303.91,
       "text": "Как же Python, как он на Enterprise перейдет на свой?"
@@ -10588,7 +10588,7 @@
       "id": "65c9a9739d1aec0375259614",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5376.46,
       "etime": 5380.23,
       "text": "А вообще так получается, по-моему, единственное вот гитхаб."
@@ -10597,7 +10597,7 @@
       "id": "65c9a9739d1aec0375259615",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5380.27,
       "etime": 5388.8,
       "text": "То есть вот этот вот момент в истории, да, переломный, когда двигался Меркуриал и Меркуриал Базар, по-моему, и гид."
@@ -10615,7 +10615,7 @@
       "id": "65c9a9739d1aec0375259617",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5393.02,
       "etime": 5395.71,
       "text": "Но вот такая вещь появилась, как гитхаб."
@@ -10624,7 +10624,7 @@
       "id": "65c9a9739d1aec0375259618",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5396.51,
       "etime": 5400.94,
       "text": "Причем самое главное, ланчпад, который с базаром, он почему-то не выстрелил."
@@ -10705,7 +10705,7 @@
       "id": "65c9a9739d1aec0375259621",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5419.97,
       "etime": 5420.77,
       "text": "Окей, хорошо."
@@ -10714,7 +10714,7 @@
       "id": "65c9a9739d1aec0375259622",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5420.79,
       "etime": 5425.81,
       "text": "А вот почему ты все-таки цепляешься за это?"
@@ -11029,7 +11029,7 @@
       "id": "65c9a9739d1aec0375259645",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5568.83,
       "etime": 5574.15,
       "text": "Не, а разве ты не использовал этот, как он, Source 3, да?"
@@ -11038,7 +11038,7 @@
       "id": "65c9a9739d1aec0375259646",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5574.21,
       "etime": 5578.79,
       "text": "Тот же один и тот же интерфейс, те же самые пулы, пуши, коммиты, стэши, да?"
@@ -11092,7 +11092,7 @@
       "id": "65c9a9739d1aec037525964c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5601.84,
       "etime": 5603.08,
       "text": "А зачем контроль там?"
@@ -11101,7 +11101,7 @@
       "id": "65c9a9739d1aec037525964d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5603.18,
       "etime": 5610.87,
       "text": "Не знаю, ты нажала галочку, да, поставила, вот добавила там в коммит или убрала из коммит, или там пуш сделать."
@@ -11110,7 +11110,7 @@
       "id": "65c9a9739d1aec037525964e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5610.89,
       "etime": 5615.33,
       "text": "Нафига мне какой-то контроль, когда я могу просто кнопку пуш нажать там, и все."
@@ -11119,7 +11119,7 @@
       "id": "65c9a9739d1aec037525964f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5615.35,
       "etime": 5616.61,
       "text": "Ну, контроль и контроль."
@@ -11128,7 +11128,7 @@
       "id": "65c9a9739d1aec0375259650",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5616.67,
       "etime": 5617.33,
       "text": "Контроль чего?"
@@ -11227,7 +11227,7 @@
       "id": "65c9a9739d1aec037525965b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5654.2,
       "etime": 5654.88,
       "text": "И да."
@@ -11236,7 +11236,7 @@
       "id": "65c9a9739d1aec037525965c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5655.58,
       "etime": 5657.9,
       "text": "Показывает, вот как я там делаю."
@@ -11245,7 +11245,7 @@
       "id": "65c9a9739d1aec037525965d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5658.02,
       "etime": 5665.62,
       "text": "Я делаю только из UI всякие конфликты, потому что в текстовом у меня что-то не... Открывается по кнопке калейдоскопа."
@@ -11254,7 +11254,7 @@
       "id": "65c9a9739d1aec037525965e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5665.64,
       "etime": 5670.05,
       "text": "Вот я посмотрел, нажал кнопочку влево, нажал кнопочку вправо."
@@ -11398,7 +11398,7 @@
       "id": "65c9a9739d1aec037525966e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5704.68,
       "etime": 5705.76,
       "text": "Ну, окей, хорошо."
@@ -11407,7 +11407,7 @@
       "id": "65c9a9739d1aec037525966f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5705.8,
       "etime": 5706.94,
       "text": "А чем отличается?"
@@ -11416,7 +11416,7 @@
       "id": "65c9a9739d1aec0375259670",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5707,
       "etime": 5712.15,
       "text": "Ты открываешь Araxis Merge в конфликте Меркуриала или ты открываешь Araxis в конфликте кита?"
@@ -11488,7 +11488,7 @@
       "id": "65c9a9739d1aec0375259678",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5739.93,
       "etime": 5742.41,
       "text": "Не, на удаленном, да, тут не спорю."
@@ -11875,7 +11875,7 @@
       "id": "65c9a9739d1aec03752596a3",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5855.12,
       "etime": 5870.23,
       "text": "Я не знаю, я, по-моему, вообще даже не пулю, я ни разу не пулил из одной ветки в другую, то есть, например, там, не знаю, разрабатываю в своей, да, девелоп где-то отъехал, да, то я пулю сначала в девелоп, потом делаю ребейс на этот девелоп."
@@ -11884,7 +11884,7 @@
       "id": "65c9a9739d1aec03752596a4",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5870.81,
       "etime": 5873.49,
       "text": "Да, и потом, если надо, там, пушу куда-то."
@@ -11974,7 +11974,7 @@
       "id": "65c9a9739d1aec03752596ae",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 5895.15,
       "etime": 5912.39,
       "text": "Нет, что значит бранч не подразумевалось, по-моему, я не помню еще когда-то давно, когда был этот холивар между Меркуриалом и Гитом, там было, по-моему, то, что в Меркуриале каждый коммит это тег, а в Гите каждый коммит это бранч, что ли, или наоборот."
@@ -12469,7 +12469,7 @@
       "id": "65c9a9739d1aec03752596e5",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6118.67,
       "etime": 6122.05,
       "text": "Так может, потому что просто не так много времени прошло."
@@ -12478,7 +12478,7 @@
       "id": "65c9a9739d1aec03752596e6",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6122.47,
       "etime": 6126.71,
       "text": "Spring же тоже для Java не прям сразу с первого года появился."
@@ -12523,7 +12523,7 @@
       "id": "65c9a9739d1aec03752596eb",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6144.6,
       "etime": 6163.8,
       "text": "Самое, что на Java, там куча, неимоверная куча каких-то маленьких библиотек, не знаю, для работы совсем от разных вариантов логинга до каких-то калькуляций денег или дат операции."
@@ -12532,7 +12532,7 @@
       "id": "65c9a9739d1aec03752596ec",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6164.08,
       "etime": 6169.4,
       "text": "Все это в отдельных маленьких фреймворках, вернее, в отдельных маленьких библиотеках."
@@ -12559,7 +12559,7 @@
       "id": "65c9a9739d1aec03752596ef",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6183.21,
       "etime": 6184.63,
       "text": "Ну, окей."
@@ -12577,7 +12577,7 @@
       "id": "65c9a9739d1aec03752596f1",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6196.75,
       "etime": 6199.26,
       "text": "Сейчас стало модно, там dependency injection появился, большой Spring."
@@ -12586,7 +12586,7 @@
       "id": "65c9a9739d1aec03752596f2",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6201.22,
       "etime": 6204.96,
       "text": "появились там разные джусы, там, не знаю, какие."
@@ -12739,7 +12739,7 @@
       "id": "65c9a9739d1aec0375259703",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6266.59,
       "etime": 6281.72,
       "text": "Ну, понимаешь, как бы, что такое уровень магии, да, там, не знаю, для какого-нибудь необразованного человека любая вещь, это будет уровень магии, там, о, микроволновка, о, какая магия, или там компьютер, о, магия, что там духи, которые сидят."
@@ -12748,7 +12748,7 @@
       "id": "65c9a9739d1aec0375259704",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6282.78,
       "etime": 6290.69,
       "text": "То, что ты не разбираешься в этом, это не значит, что ты не можешь пользоваться микроволновкой или там машина какая-то, магия машины."
@@ -12766,7 +12766,7 @@
       "id": "65c9a9739d1aec0375259706",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6293.45,
       "etime": 6297.03,
       "text": "Они не знают, как там что-то делают, они знают, на педальки нажимают."
@@ -12784,7 +12784,7 @@
       "id": "65c9a9739d1aec0375259708",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6303.61,
       "etime": 6308.26,
       "text": "Они могут пользоваться, ездить, грузы развозить, работать, но почему нет?"
@@ -12793,7 +12793,7 @@
       "id": "65c9a9739d1aec0375259709",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6309.91,
       "etime": 6318.42,
       "text": "Почему обязательно должен быть какой-нибудь суперкрутой профессионал, космонавт или раллийный гонщик только ездить на автомобиле?"
@@ -12874,7 +12874,7 @@
       "id": "65c9a9739d1aec0375259712",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6377.82,
       "etime": 6385.28,
       "text": "Это вы, по-моему, в прошлом подкасте, по-моему, с Бобуком обсуждали по поводу того, что есть там маляры и есть художники."
@@ -12883,7 +12883,7 @@
       "id": "65c9a9739d1aec0375259713",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6385.62,
       "etime": 6398.24,
       "text": "Есть маляры, которым неважно, как там эта краска производится, как там эта кисточка работает, он макает кисточку в краску, он рисует на стену, вот он зарисовал на стену."
@@ -12892,7 +12892,7 @@
       "id": "65c9a9739d1aec0375259714",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6398.3,
       "etime": 6404.38,
       "text": "Учитывая то, что у нас огромное количество стен, которые надо так закрасить просто тупо белой краской."
@@ -12901,7 +12901,7 @@
       "id": "65c9a9739d1aec0375259715",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6405.34,
       "etime": 6410.39,
       "text": "то нужно огромное количество людей, которые просто будут возюкать этой кисточкой по стене."
@@ -12964,7 +12964,7 @@
       "id": "65c9a9739d1aec037525971c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6451.49,
       "etime": 6463.16,
       "text": "Я не помню, кто-то... Ты, по-моему, разговаривал в каком-то подкасте, что к тебе приходила тетенька, ей нужно было сайт сделать, что ли, какой-то."
@@ -12973,7 +12973,7 @@
       "id": "65c9a9739d1aec037525971d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6463.2,
       "etime": 6464.28,
       "text": "Нет?"
@@ -12982,7 +12982,7 @@
       "id": "65c9a9739d1aec037525971e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6464.52,
       "etime": 6465.8,
       "text": "Нет."
@@ -12991,7 +12991,7 @@
       "id": "65c9a9739d1aec037525971f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6465.9,
       "etime": 6474.38,
       "text": "Я не помню, тоже слушал там чувак, ну, там обращалась тетенька, ей для школы нужно было сделать сайт, где там, не помню, какой-то календарь, что ли, сделать."
@@ -13054,7 +13054,7 @@
       "id": "65c9a9739d1aec0375259726",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6490.87,
       "etime": 6495.45,
       "text": "Смотри, у тебя есть там, не знаю, какой-нибудь знакомый, Java-программист, да?"
@@ -13063,7 +13063,7 @@
       "id": "65c9a9739d1aec0375259727",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6496.19,
       "etime": 6500.04,
       "text": "Например, ему надо быстро скалякать сайт, да, и хранить данные."
@@ -13072,7 +13072,7 @@
       "id": "65c9a9739d1aec0375259728",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6500.06,
       "etime": 6506.2,
       "text": "Вот он фигачит, да, вот репозиторий, давай я не буду заморачиваться, там есть имя, не знаю, дата, и все."
@@ -13081,7 +13081,7 @@
       "id": "65c9a9739d1aec0375259729",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6506.24,
       "etime": 6511.19,
       "text": "И вот выводится там в скафолдинге какой-нибудь календарик, да, тупой."
@@ -13090,7 +13090,7 @@
       "id": "65c9a9739d1aec037525972a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6511.21,
       "etime": 6520.39,
       "text": "Вот тебе все, готовый сайт, он известно, как разворачивается, да, ты сказал, вот, или один раз запустил эту джау-машину, вот она и работает, и крутится."
@@ -13099,7 +13099,7 @@
       "id": "65c9a9739d1aec037525972b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6520.49,
       "etime": 6522.6,
       "text": "Чего там надо, что делать-то еще?"
@@ -13126,7 +13126,7 @@
       "id": "65c9a9739d1aec037525972e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6537.05,
       "etime": 6542.79,
       "text": "Ты говоришь, ты заплати за это, ты же не говоришь там, бесплатно сделай мне такое."
@@ -13180,7 +13180,7 @@
       "id": "65c9a9739d1aec0375259734",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6568.34,
       "etime": 6574.6,
       "text": "Ну, хорошо, вот ты чинишь свою машину сам, копаешься там, двигатели чего-нибудь делаешь, не знаю, свечи меняешь."
@@ -13198,7 +13198,7 @@
       "id": "65c9a9739d1aec0375259736",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6576.91,
       "etime": 6579.99,
       "text": "Ну, окей, дизель, не знаю, что-то заливаешь."
@@ -13306,7 +13306,7 @@
       "id": "65c9a9739d1aec0375259742",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6626.1,
       "etime": 6638.44,
       "text": "Ты довольный, поджимаешь эту кнопочку, и в следующий раз, когда к тебе приходит тетка и говорит, мне там надо на 500 команд, ты знаешь, что вот эту кнопочку поджимаешь, и она на 500 команд."
@@ -13315,7 +13315,7 @@
       "id": "65c9a9739d1aec0375259743",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6638.48,
       "etime": 6644.3,
       "text": "В следующий раз, когда другая тетенька приходит, ты с другой задачей приходишь."
@@ -13369,7 +13369,7 @@
       "id": "65c9a9739d1aec0375259749",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6678.3,
       "etime": 6682.18,
       "text": "Ты не специалист по двигателям, ты специалист по фреймворкам."
@@ -13378,7 +13378,7 @@
       "id": "65c9a9739d1aec037525974a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6682.22,
       "etime": 6689.13,
       "text": "То же самое, вот как там, не знаю, у нас первая тема, которая выводится, там, про этого индуса, который рассказывает, там, application server, web server, там, туда-сюда."
@@ -13387,7 +13387,7 @@
       "id": "65c9a9739d1aec037525974b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6691.47,
       "etime": 6694.91,
       "text": "Это то же самое индусское веб-программирование."
@@ -13504,7 +13504,7 @@
       "id": "65c9a9739d1aec0375259758",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6762.01,
       "etime": 6765.25,
       "text": "Женя, это просто, не знаю, профессиональная деформация."
@@ -13513,7 +13513,7 @@
       "id": "65c9a9739d1aec0375259759",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6765.29,
       "etime": 6772.1,
       "text": "Ты считаешь, что все вокруг, кто работает, не знаю, пишет на Java, они все такие же, как ты."
@@ -13522,7 +13522,7 @@
       "id": "65c9a9739d1aec037525975a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6773.04,
       "etime": 6778.32,
       "text": "Они все получают, не знаю, офигенные зарплаты, они все пишут какие-то большие системы."
@@ -13531,7 +13531,7 @@
       "id": "65c9a9739d1aec037525975b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6778.92,
       "etime": 6793.31,
       "text": "Но если там посмотреть, зайти на какую-нибудь биржу фрилансеров, то вот эти фрилансеры по 5 баксов, они фигачат всякие сайты, типа сайты визитки, сайты календарей, сайты расписания."
@@ -13540,7 +13540,7 @@
       "id": "65c9a9739d1aec037525975c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6793.39,
       "etime": 6795.2,
       "text": "И для этого, если там, не знаю..."
@@ -13567,7 +13567,7 @@
       "id": "65c9a9739d1aec037525975f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6817.45,
       "etime": 6818.11,
       "text": "Ну?"
@@ -13585,7 +13585,7 @@
       "id": "65c9a9739d1aec0375259761",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6820.29,
       "etime": 6835.38,
       "text": "Так ты посчитай, нет, ну что значит, зачем ему Spring Boot, если ему надо быстро там веб-приложение какое-то сделать, да, там тот же календарик, и ему там в институте рассказывали про Java, ему не рассказывали в институте про Go, ему про Python не рассказывали, да, вот."
@@ -13603,7 +13603,7 @@
       "id": "65c9a9739d1aec0375259763",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6838.23,
       "etime": 6839.47,
       "text": "И про ПХП не рассказывали."
@@ -13612,7 +13612,7 @@
       "id": "65c9a9739d1aec0375259764",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6839.49,
       "etime": 6841.23,
       "text": "Нам вот в институте не рассказывали."
@@ -13828,7 +13828,7 @@
       "id": "65c9a9739d1aec037525977c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6984.34,
       "etime": 6990.73,
       "text": "Жень, ты почему-то считаешь, что все остановилось, вот Spring есть, вот теперь на Java все пишут на Spring."
@@ -13837,7 +13837,7 @@
       "id": "65c9a9739d1aec037525977d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 6991.73,
       "etime": 7000.65,
       "text": "Я тебе могу уверить, что тонны всяких различных библиотек дополнительных, которые делают очень много всего, что вообще никак не пересекается со Spring."
@@ -13846,7 +13846,7 @@
       "id": "65c9a9739d1aec037525977e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7001.13,
       "etime": 7003.17,
       "text": "Например, Spring Boot."
@@ -13855,7 +13855,7 @@
       "id": "65c9a9739d1aec037525977f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7004.07,
       "etime": 7007.07,
       "text": "Ты можешь на Spring Boot быстро нафигачить приложение."
@@ -13873,7 +13873,7 @@
       "id": "65c9a9739d1aec0375259781",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7010.73,
       "etime": 7018.44,
       "text": "Но без этого ты можешь, например, взять какую-нибудь капсулу, которая заворачивает все твои зависимости в один файл."
@@ -13882,7 +13882,7 @@
       "id": "65c9a9739d1aec0375259782",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7018.52,
       "etime": 7020.6,
       "text": "При этом он будет даже выполняемым."
@@ -13891,7 +13891,7 @@
       "id": "65c9a9739d1aec0375259783",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7020.66,
       "etime": 7022.84,
       "text": "Можешь взять какой-нибудь Redpack."
@@ -13909,7 +13909,7 @@
       "id": "65c9a9739d1aec0375259785",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7031.6,
       "etime": 7033.5,
       "text": "Так они все будут внутри."
@@ -13999,7 +13999,7 @@
       "id": "65c9a9739d1aec037525978f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7072.08,
       "etime": 7076.92,
       "text": "Ну, окей, это проблема, но это не такая проблема, что прям ужас-ужас-ужас."
@@ -14044,7 +14044,7 @@
       "id": "65c9a9739d1aec0375259794",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7082.87,
       "etime": 7088.31,
       "text": "Ты говоришь про сложные системы или ты говоришь про простые системы из одной страницы?"
@@ -14053,7 +14053,7 @@
       "id": "65c9a9739d1aec0375259795",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7088.33,
       "etime": 7089.65,
       "text": "Про любую систему."
@@ -14062,7 +14062,7 @@
       "id": "65c9a9739d1aec0375259796",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7090.15,
       "etime": 7093.86,
       "text": "Один джар, не знаю, какой-нибудь Redpack и все."
@@ -14107,7 +14107,7 @@
       "id": "65c9a9739d1aec037525979b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7110.28,
       "etime": 7111.84,
       "text": "Ну, и что это доказывает?"
@@ -14134,7 +14134,7 @@
       "id": "65c9a9739d1aec037525979e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7122.07,
       "etime": 7128.57,
       "text": "Ну, опять же, хорошо, ты знаешь, что Spring Data, он работает с определенной версией MongoDriver."
@@ -14161,7 +14161,7 @@
       "id": "65c9a9739d1aec03752597a1",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7142.62,
       "etime": 7144.97,
       "text": "Тебе не обязательно знать почему."
@@ -14233,7 +14233,7 @@
       "id": "65c9a9739d1aec03752597a9",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7196.36,
       "etime": 7202.68,
       "text": "Ты говоришь по поводу того, что собираются профили бутовские или конкретно само приложение, которое бутовское?"
@@ -14260,7 +14260,7 @@
       "id": "65c9a9739d1aec03752597ac",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7207.42,
       "etime": 7210.08,
       "text": "Актуаторы, логинг, спрингбуд."
@@ -14269,7 +14269,7 @@
       "id": "65c9a9739d1aec03752597ad",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7210.14,
       "etime": 7211.61,
       "text": "А, стартеры они называются."
@@ -14368,7 +14368,7 @@
       "id": "65c9a9739d1aec03752597b8",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7248.07,
       "etime": 7256.4,
       "text": "То есть ты хочешь сказать, что если я там использую 2-3 этих стартера, а потом буду подключать библиотеки, то у меня никаких джархэлов не будет."
@@ -14386,7 +14386,7 @@
       "id": "65c9a9739d1aec03752597ba",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7257.22,
       "etime": 7261.48,
       "text": "И те же самые джархэлы у меня будут, даже если я просто обычной библиотеки до..."
@@ -14395,7 +14395,7 @@
       "id": "65c9a9739d1aec03752597bb",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7262.1,
       "etime": 7274.97,
       "text": "Этого Spring Boot, я не знаю, когда мне надо с базой данных, например, я подключаю MySQL драйвер, MySQL драйвер тянет с собой какую-нибудь гуаву, тянет логинг, еще чего-то."
@@ -14404,7 +14404,7 @@
       "id": "65c9a9739d1aec03752597bc",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7274.99,
       "etime": 7278.12,
       "text": "Это то же самое, но какой-то более высокий уровень."
@@ -14413,7 +14413,7 @@
       "id": "65c9a9739d1aec03752597bd",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7278.72,
       "etime": 7282.68,
       "text": "Вот эти компоненты, они как-то притерты из разных проектов."
@@ -14485,7 +14485,7 @@
       "id": "65c9a9739d1aec03752597c5",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7318.74,
       "etime": 7332.27,
       "text": "Ну, опять же, хорошо, вот ты говоришь там, вот это решает проблему, но этих стартеров, например, сейчас, по-моему, не знаю, ну, штук 20 от силы, да, ну, окей, как будут появляться новые базы данных, там, добавляться, я не знаю, Spring Data, Mongo, там, Couch,"
@@ -14494,7 +14494,7 @@
       "id": "65c9a9739d1aec03752597c6",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7334.57,
       "etime": 7338.85,
       "text": "там еще чего-то, еще чего-то, они все все равно будут конфликтовать."
@@ -14503,7 +14503,7 @@
       "id": "65c9a9739d1aec03752597c7",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7338.89,
       "etime": 7349.75,
       "text": "Ну да, окей, Spring Boot берет на себя обязанность, там, не знаю, проверять какие-нибудь тесты, да, что вот все-все-все-все эти стартеры, они там будут как-то работать."
@@ -14512,7 +14512,7 @@
       "id": "65c9a9739d1aec03752597c8",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7349.83,
       "etime": 7353.66,
       "text": "Но то же самое, они будут вот эти конфликты разруливать внутри себя."
@@ -14629,7 +14629,7 @@
       "id": "65c9a9739d1aec03752597d5",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7390.75,
       "etime": 7393.04,
       "text": "Ну, и с паром-то они приходят, того же Spring."
@@ -14665,7 +14665,7 @@
       "id": "65c9a9739d1aec03752597d9",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7401.52,
       "etime": 7403.42,
       "text": "Нет, смотри."
@@ -14674,7 +14674,7 @@
       "id": "65c9a9739d1aec03752597da",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7403.46,
       "etime": 7407.71,
       "text": "То есть ты говоришь, что ну хорошо, Гуава, да, вот берите, пишите Гуаву."
@@ -14692,7 +14692,7 @@
       "id": "65c9a9739d1aec03752597dc",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7411.47,
       "etime": 7413.97,
       "text": "А сейчас уже вот вышел релиз, там, не знаю, какой-нибудь 25-й, да?"
@@ -14701,7 +14701,7 @@
       "id": "65c9a9739d1aec03752597dd",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7414.01,
       "etime": 7414.13,
       "text": "Ты не"
@@ -14746,7 +14746,7 @@
       "id": "65c9a9739d1aec03752597e2",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7430.17,
       "etime": 7437.38,
       "text": "Так я и говорю, вот у тебя есть машина, ты пользуешь то, что тебе дали, то, что тебе дали под капотом, вот этот драйвер."
@@ -14764,7 +14764,7 @@
       "id": "65c9a9739d1aec03752597e4",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7445.5,
       "etime": 7467.6,
       "text": "куда-нибудь прикручу сбоку карбюратор, да, но это все не будет бегать, ну, как бы, зачем тебе вот эти знания, зачем тебе лазить где-то по помойкам, подбираться там, не знаю, карбюраторы тащить, когда у тебя есть конкретный там, не знаю, вот закрытый пакет, да, вот набор стартеров, да, вот законченный для разработки приложений чего-то, вот ты его используешь, ты не напрягаешь свой мозг,"
@@ -14773,7 +14773,7 @@
       "id": "65c9a9739d1aec03752597e5",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7468,
       "etime": 7476.47,
       "text": "как оно там само взаимодействует, да, вот эти все версии подогнаны, все сделано, все клево, ты сидишь, нажимаешь на педальки и вот едешь."
@@ -14800,7 +14800,7 @@
       "id": "65c9a9739d1aec03752597e8",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7483.82,
       "etime": 7487.08,
       "text": "Вдруг произойдет... А в внешнем мире выйдет какой-нибудь «Вайр Тайгер»"
@@ -14818,7 +14818,7 @@
       "id": "65c9a9739d1aec03752597ea",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7503.76,
       "etime": 7510.47,
       "text": "Тогда, опять же, вот у тебя есть Hammer, там вышла Tesla, да, вот суперэлектронная, вот ты хочешь, спать не можешь, вот"
@@ -14827,7 +14827,7 @@
       "id": "65c9a9739d1aec03752597eb",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7510.91,
       "etime": 7516.55,
       "text": "хочешь ее Теслу, окей, ты подожди, либо иди, переходи там на этот фреймворк, на эту библиотеку."
@@ -14836,7 +14836,7 @@
       "id": "65c9a9739d1aec03752597ec",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7516.59,
       "etime": 7522.39,
       "text": "Ты же не потащишь там, не знаю, дай-ка я колеса от Хаммера я свои заберу и поставлю на свою Теслу."
@@ -15052,7 +15052,7 @@
       "id": "65c9a9739d1aec0375259804",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7571.25,
       "etime": 7572.97,
       "text": "Я смотрел."
@@ -15097,7 +15097,7 @@
       "id": "65c9a9739d1aec0375259809",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7581.71,
       "etime": 7583.61,
       "text": "А ты не смотрел?"
@@ -15106,7 +15106,7 @@
       "id": "65c9a9739d1aec037525980a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7583.69,
       "etime": 7586.85,
       "text": "Там смысла нет в том, что там говорят."
@@ -15115,7 +15115,7 @@
       "id": "65c9a9739d1aec037525980b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7586.91,
       "etime": 7589.79,
       "text": "Ты, скорее всего, даже, наверное, и не поймешь, что там говорят."
@@ -15124,7 +15124,7 @@
       "id": "65c9a9739d1aec037525980c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7589.83,
       "etime": 7592.39,
       "text": "Там просто само по себе."
@@ -15133,7 +15133,7 @@
       "id": "65c9a9739d1aec037525980d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7592.43,
       "etime": 7595.42,
       "text": "Это как бы такой прикол, да, по интернету ходят."
@@ -15142,7 +15142,7 @@
       "id": "65c9a9739d1aec037525980e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7596.6,
       "etime": 7601.86,
       "text": "Я не помню, ты видел или, по-моему, это у вас было там про собеседование чувака, который put my screwdriver everywhere."
@@ -15160,7 +15160,7 @@
       "id": "65c9a9739d1aec0375259810",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7606.58,
       "etime": 7608.53,
       "text": "Ну, не помню, что-то он там делал."
@@ -15169,7 +15169,7 @@
       "id": "65c9a9739d1aec0375259811",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7608.57,
       "etime": 7620.63,
       "text": "И это вот тоже чувака какого-то описали, который вот на индийской мове, индийско-английской мове говорит, что там веб-сервер, что-то application-сервер, туда-сюда."
@@ -15178,7 +15178,7 @@
       "id": "65c9a9739d1aec0375259812",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7621.38,
       "etime": 7627.22,
       "text": "И там внизу еще такое замечательное название его, Дургософт."
@@ -15196,7 +15196,7 @@
       "id": "65c9a9739d1aec0375259814",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7640.68,
       "etime": 7643.66,
       "text": "Я видел все просто после этого."
@@ -15313,7 +15313,7 @@
       "id": "65c9a9739d1aec0375259821",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7664.8,
       "etime": 7665.52,
       "text": "Да, мы слышим."
@@ -15322,7 +15322,7 @@
       "id": "65c9a9739d1aec0375259822",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7665.56,
       "etime": 7676.39,
       "text": "А почему-то у меня вот, я когда задаю лучшие в начале, у меня вот он с шестью, а, например, про то, как замочили чувака, я номер ДК, на с девятью и внизу."
@@ -15349,7 +15349,7 @@
       "id": "65c9a9739d1aec0375259825",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7695.27,
       "etime": 7709.98,
       "text": "А это не переходит, вернее, как бы не противоречит той новости, которую ты запостил по поводу того, что Google подтверждает, что следующий Android будет использовать ракловый OpenJDK Java API?"
@@ -15385,7 +15385,7 @@
       "id": "65c9a9739d1aec0375259829",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7723.54,
       "etime": 7724.7,
       "text": "ConfirmedNetWillUse, да, это вот оно и есть."
@@ -15466,7 +15466,7 @@
       "id": "65c9a9739d1aec0375259832",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7766.6,
       "etime": 7774,
       "text": "После Дальвика была какая-то хрень, которая, по-моему, на LLVM, что ли, компилировала или чего-то."
@@ -15475,7 +15475,7 @@
       "id": "65c9a9739d1aec0375259833",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7774.02,
       "etime": 7780.63,
       "text": "И вот это вот, я так понимаю, они ее собираются заменить с форком OpenJDK."
@@ -15529,7 +15529,7 @@
       "id": "65c9a9739d1aec0375259839",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7797.02,
       "etime": 7797.81,
       "text": "Ну ладно."
@@ -15565,7 +15565,7 @@
       "id": "65c9a9739d1aec037525983d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7819.97,
       "etime": 7822.51,
       "text": "Честно говоря, не знаю, насколько это клево."
@@ -15574,7 +15574,7 @@
       "id": "65c9a9739d1aec037525983e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7822.59,
       "etime": 7833.4,
       "text": "То есть весь OpenJDK, я так понимаю, они закоммитили к себе внутрь, и как веб-кит его форкнут, не знаю, что они там с ним делают."
@@ -15673,7 +15673,7 @@
       "id": "65c9a9739d1aec0375259849",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7869.05,
       "etime": 7888.31,
       "text": "Не, а там закончилось, я так понимаю, там закончилось тем, что этот докер отозвал, ну, вернее, забрал вот эту страницу, где они прощаются с ним, все твиты, которые он писал по поводу того, что я committed suicide и то, что копы, как это..."
@@ -15682,7 +15682,7 @@
       "id": "65c9a9739d1aec037525984a",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7891.7,
       "etime": 7892.86,
       "text": "На позорной скамье."
@@ -15691,7 +15691,7 @@
       "id": "65c9a9739d1aec037525984b",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7892.88,
       "etime": 7896.36,
       "text": "Я забыл, как это называется."
@@ -15700,7 +15700,7 @@
       "id": "65c9a9739d1aec037525984c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7896.38,
       "etime": 7899.14,
       "text": "Ну, типа в шансонную."
@@ -15709,7 +15709,7 @@
       "id": "65c9a9739d1aec037525984d",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7899.2,
       "etime": 7903.52,
       "text": "То, что меня там копы повязали, что-то меня волокут."
@@ -15718,7 +15718,7 @@
       "id": "65c9a9739d1aec037525984e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7903.56,
       "etime": 7906.33,
       "text": "Вот это вот он все убрал."
@@ -15727,7 +15727,7 @@
       "id": "65c9a9739d1aec037525984f",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7906.37,
       "etime": 7909.55,
       "text": "Но при этом сам он нигде не появляется."
@@ -15736,7 +15736,7 @@
       "id": "65c9a9739d1aec0375259850",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7909.59,
       "etime": 7913.33,
       "text": "И, по-моему, ни в одном госпитале его не нашли."
@@ -15745,7 +15745,7 @@
       "id": "65c9a9739d1aec0375259851",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7913.37,
       "etime": 7917.31,
       "text": "Хотя он там писал, что в госпиталь вроде как его менты отвезли."
@@ -15844,7 +15844,7 @@
       "id": "65c9a9739d1aec037525985c",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7952.72,
       "etime": 7954.02,
       "text": "Вот скинули тут какой-то True Voice."
@@ -15862,7 +15862,7 @@
       "id": "65c9a9739d1aec037525985e",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 7956.32,
       "etime": 7960.82,
       "text": "Реально."
@@ -16204,7 +16204,7 @@
       "id": "65c9a9739d1aec0375259884",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 8050.06,
       "etime": 8050.68,
       "text": "Да."
@@ -16222,7 +16222,7 @@
       "id": "65c9a9739d1aec0375259886",
       "issue": 477,
       "type": "cc",
-      "author": "alexey_razbor_poletov",
+      "author": "AlexeyAbashev",
       "stime": 8051.7,
       "etime": 8052.1,
       "text": "Всем пока."
