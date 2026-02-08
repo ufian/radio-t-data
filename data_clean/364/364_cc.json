@@ -400,7 +400,7 @@
       "id": "65c9a11a259e657f6271a796",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 137.23,
       "etime": 139.51,
       "text": "Ты понимаешь, был бы весь свой... Конечно, конечно."
@@ -1291,7 +1291,7 @@
       "id": "65c9a11a259e657f6271a7f9",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 473.18,
       "etime": 474.66,
       "text": "Мне надо по-шведски."
@@ -1966,7 +1966,7 @@
       "id": "65c9a11a259e657f6271a844",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 748.24,
       "etime": 750.22,
       "text": "И тут все то же самое."
@@ -2704,7 +2704,7 @@
       "id": "65c9a11a259e657f6271a896",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 1068.94,
       "etime": 1071.02,
       "text": "Также и с его книжкой про C++."
@@ -3973,7 +3973,7 @@
       "id": "65c9a11a259e657f6271a923",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 1558.55,
       "etime": 1560.75,
       "text": "Да, кто не знает инмэп."
@@ -4234,7 +4234,7 @@
       "id": "65c9a11a259e657f6271a940",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 1662.13,
       "etime": 1663.29,
       "text": "Гениальная защита."
@@ -4909,7 +4909,7 @@
       "id": "65c9a11a259e657f6271a98b",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 1986.22,
       "etime": 1994.78,
       "text": "Я только хотел спросить, что вот здесь он ничего про это не пишет, а как же по ключикам и так далее, как это лучше, больше помогает, не помогает."
@@ -5836,7 +5836,7 @@
       "id": "65c9a11a259e657f6271a9f2",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 2324.75,
       "etime": 2325.29,
       "text": "Я не знаю."
@@ -6079,7 +6079,7 @@
       "id": "65c9a11a259e657f6271aa0d",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 2401.41,
       "etime": 2403.96,
       "text": "Нет, в Dropbox я бэкапы ключей точно не делаю."
@@ -7258,7 +7258,7 @@
       "id": "65c9a11a259e657f6271aa90",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 2845.2,
       "etime": 2851.87,
       "text": "У меня чудесная программа под названием Skype ведет себя просто потрясающим образом."
@@ -7267,7 +7267,7 @@
       "id": "65c9a11a259e657f6271aa91",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 2852.13,
       "etime": 2857.03,
       "text": "Ее пока не убьешь, она не перестанет себя так вести, поэтому я решил ее быстренько переубить."
@@ -7573,7 +7573,7 @@
       "id": "65c9a11a259e657f6271aab3",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 3017.4,
       "etime": 3021.96,
       "text": "То есть достаточно быстро для каких-то таких вещей."
@@ -8374,7 +8374,7 @@
       "id": "65c9a11a259e657f6271ab0c",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 3366.31,
       "etime": 3368.83,
       "text": "Ты скажи, что у тебя на клиента должно полетать."
@@ -8491,7 +8491,7 @@
       "id": "65c9a11a259e657f6271ab19",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 3440.74,
       "etime": 3447.15,
       "text": "Но понимаешь, априори все, что ты выдаешь на клиента, уже считается, что оно туда пришло."
@@ -8527,7 +8527,7 @@
       "id": "65c9a11a259e657f6271ab1d",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 3463.66,
       "etime": 3481.26,
       "text": "То есть тебе нужно защищать доступ к своему браузерному или к какому-то клиенту с помощью уже средств, которые, например, делают киоск какой-нибудь из этой машины, который не позволяет... Ну да, или писать, я не знаю, плагин для браузера, который там как-нибудь будет, чтобы можно было только скриншотами все снять."
@@ -8878,7 +8878,7 @@
       "id": "65c9a11a259e657f6271ab44",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 3638.57,
       "etime": 3645.01,
       "text": "То есть, например, у нас есть приложение, оно тоже является single-page application,"
@@ -9733,7 +9733,7 @@
       "id": "65c9a11a259e657f6271aba3",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 4013.27,
       "etime": 4015.51,
       "text": "Ну, досадно, ну и хрен с ним."
@@ -9904,7 +9904,7 @@
       "id": "65c9a11a259e657f6271abb6",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 4105.63,
       "etime": 4110.11,
       "text": "То есть он перегенерирует тебе email, и сразу же приходить всякая фигня перестанет."
@@ -10003,7 +10003,7 @@
       "id": "65c9a11a259e657f6271abc1",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 4156.54,
       "etime": 4163.76,
       "text": "Ну да, а в случае того, что нужно быстро что-то девелопить, я полностью поддерживаю подход, какой Леша предложил."
@@ -10021,7 +10021,7 @@
       "id": "65c9a11a259e657f6271abc3",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 4165.28,
       "etime": 4175.21,
       "text": "То есть, если нужно выкатить какие-то схемы, какие-то данные, просто дамп выкатывается из MongoLab и переносится на свой, либо амазоновский, либо на свою какую-то железку."
@@ -10084,7 +10084,7 @@
       "id": "65c9a11a259e657f6271abca",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 4198.91,
       "etime": 4205.97,
       "text": "Я много пишу... Или у тебя просто там миллиарды записей один раз записались, и потом ты их должен вычитывать каким-то образом?"
@@ -11479,7 +11479,7 @@
       "id": "65c9a11a259e657f6271ac65",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 4793.78,
       "etime": 4795.5,
       "text": "Даже не знаю, что сказать."
@@ -11542,7 +11542,7 @@
       "id": "65c9a11a259e657f6271ac6c",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 4848.16,
       "etime": 4870.41,
       "text": "И поэтому я слушал интервью с их вот этим СИО, с Монголским, да, он говорит, что поэтому и переписываем, мы думаем, как этот язык запросов упростить, и aggregation framework упростить, чтобы этим пацанам, которые вот привыкли вот такие делать вещи, которые на SQL просто, а вот на этом, оказывается, не совсем просто, ну, то есть скоро что-то будет."
@@ -12118,7 +12118,7 @@
       "id": "65c9a11a259e657f6271acac",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 5129.32,
       "etime": 5133.34,
       "text": "Не-не, филипсы тут ни при чем, конечно."
@@ -12550,7 +12550,7 @@
       "id": "65c9a11a259e657f6271acdc",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 5303.47,
       "etime": 5306.43,
       "text": "Причем после того, как... Нет, Леша, они тут очень непростые."
@@ -12928,7 +12928,7 @@
       "id": "65c9a11a259e657f6271ad06",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 5413.98,
       "etime": 5429.82,
       "text": "Так он мне рассказал, что тут поломалось, как эти контроллеры тоже тут, это трудно достать, потому что модель такая-то непростая и попалось так, что серийный номер у него тоже попал в какую-то группу специальную, они там тоже, значит, изучают."
@@ -12982,7 +12982,7 @@
       "id": "65c9a11a259e657f6271ad0c",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 5445.15,
       "etime": 5448.27,
       "text": "То есть интересные типы попадаются, которые приходят чинить."
@@ -13054,7 +13054,7 @@
       "id": "65c9a11a259e657f6271ad14",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 5469,
       "etime": 5470.58,
       "text": "Что это вообще за штука?"
@@ -13639,7 +13639,7 @@
       "id": "65c9a11a259e657f6271ad55",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 5666.31,
       "etime": 5667.76,
       "text": "Я не знаю, честно."
@@ -15259,7 +15259,7 @@
       "id": "65c9a11a259e657f6271ae09",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 6344.51,
       "etime": 6363.62,
       "text": "никто не говорит о том, что, значит, а вот мне нужно то чисто, вот, я не хочу возиться жить в DBC, я хочу взять Spring Template, который абсолютно тебе не накладывает никаких облигаций на то, что плохое слово, никаких обязательств на то, что ты должен использовать их DI."
@@ -15421,7 +15421,7 @@
       "id": "65c9a11a259e657f6271ae1b",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 6430.59,
       "etime": 6439.52,
       "text": "Потому что там нужно, потому что они все-таки эти контроллеры, они же там этими проксями потом оборачиваются."
@@ -15502,7 +15502,7 @@
       "id": "65c9a11a259e657f6271ae24",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 6458.02,
       "etime": 6459.52,
       "text": "Не, не хочу."
@@ -16132,7 +16132,7 @@
       "id": "65c9a11a259e657f6271ae6a",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 6809.81,
       "etime": 6825.27,
       "text": "Я хотел сказать о том, что все представляют себе джаву, как либо пишутся какие-то страшные окошки в виде мотив вот этого локенфила, либо какая-то адская аппликейшн сервер в виде вебсферы, и чтобы ты на это запустить, тебе нужно потратить кучу времени."
@@ -16141,7 +16141,7 @@
       "id": "65c9a11a259e657f6271ae6b",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 6825.31,
       "etime": 6836.88,
       "text": "Поэтому тенденция к тому, что появляются вот такие фреймворки, которые позволяют себе быстро бутстрапить приложение, это еще, помню, Jetty, не нужен какой-то полный контейнер JettyMOOC,"
@@ -16159,7 +16159,7 @@
       "id": "65c9a11a259e657f6271ae6d",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 6841.04,
       "etime": 6855.13,
       "text": "Потом есть, например, Vertex, старый добрый, показал то, что действительно может работать, и фреймворк вполне себе может давать, можно вполне себе нормальные приложения быстро, удобно и красиво писать на Java."
@@ -16582,7 +16582,7 @@
       "id": "65c9a11a259e657f6271ae9c",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 7014.17,
       "etime": 7016.83,
       "text": "Ты должен побывать во всех позициях."
@@ -16627,7 +16627,7 @@
       "id": "65c9a11a259e657f6271aea1",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 7030.38,
       "etime": 7032.2,
       "text": "Ну, потому что на прошлой работе я использовал спринт."
@@ -16726,7 +16726,7 @@
       "id": "65c9a11a259e657f6271aeac",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 7117.05,
       "etime": 7132.4,
       "text": "То есть тебе не нужно писать ручную конфигурацию, тебе не нужно писать конфигурацию в xml, тебе не нужно писать конфигурацию в app.xml, тебе не нужно это все делать, запаковывать его в файл, потом нести его на application server, тебе есть такая команда, которая все это делает за тебя."
@@ -17482,7 +17482,7 @@
       "id": "65c9a11a259e657f6271af00",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 7432.03,
       "etime": 7437.85,
       "text": "И сейчас, которые контейнеры выходят, достаточно легкие, и все эти API уже присутствуют."
@@ -18229,7 +18229,7 @@
       "id": "65c9a11a259e657f6271af53",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 7689.45,
       "etime": 7691.3,
       "text": "Я забыл, кто им еще был."
@@ -18814,7 +18814,7 @@
       "id": "65c9a11a259e657f6271af94",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 7915.93,
       "etime": 7923.71,
       "text": "А почему тогда Firefox не родил до этого 264 кодек у себя?"
@@ -20947,7 +20947,7 @@
       "id": "65c9a11a259e657f6271b081",
       "issue": 364,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "AlexeyAbashev",
       "stime": 8830.72,
       "etime": 8832.52,
       "text": "Что про Yota?"

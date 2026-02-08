@@ -1543,7 +1543,7 @@
       "id": "65c9216ebffe56cb06f06bf9",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 683.96,
       "etime": 685.34,
       "text": "Ну, чудес не бывает."
@@ -1903,7 +1903,7 @@
       "id": "65c9216ebffe56cb06f06c21",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 848.25,
       "etime": 860.53,
       "text": "И, по-моему, можно движок у них за денежку взять и поставить на свой, ну как, не то, что поставить, как СААС, то есть сделать свой какой-то стек-экшенч и на основе их движка."
@@ -6331,7 +6331,7 @@
       "id": "65c9216ebffe56cb06f06e0d",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 2891.66,
       "etime": 2893.88,
       "text": "Ну да, кто на что учился?"
@@ -10435,7 +10435,7 @@
       "id": "65c9216ebffe56cb06f06fd5",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 4847.2,
       "etime": 4863.85,
       "text": "Я видел мужичка, он тоже делал презентацию, и как раз презентацию он делал в сравнении с Apache Commons, с Guava, и еще он из Groovy приводил примеры, что в Groovy сделаны некоторые вещи уже на уровне языка, а здесь они делаются на уровне библиотек."
@@ -11848,7 +11848,7 @@
       "id": "65c9216ebffe56cb06f07072",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 5589.1,
       "etime": 5598.8,
       "text": "То есть, соответственно, никакая операция не может происходить на определенном сокете или там что-то, если до конца все не прочиталось или до кольца все не записалось."
@@ -11875,7 +11875,7 @@
       "id": "65c9216ebffe56cb06f07075",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 5628.43,
       "etime": 5632.37,
       "text": "Можно использовать различные асинхронные подходы."
@@ -13513,7 +13513,7 @@
       "id": "65c9216ebffe56cb06f0712b",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 6462.93,
       "etime": 6467.45,
       "text": "NIU 2 есть отличная штука, которая позволяет zip-файлы читать."
@@ -13540,7 +13540,7 @@
       "id": "65c9216ebffe56cb06f0712e",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 6477.25,
       "etime": 6481.15,
       "text": "унифицированный доступ к различным файлам, системам через Java."
@@ -13558,7 +13558,7 @@
       "id": "65c9216ebffe56cb06f07130",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 6485.76,
       "etime": 6491.28,
       "text": "Есть поддержка или это, опять же, проприетарщина и по NTFS нельзя читать?"
@@ -13828,7 +13828,7 @@
       "id": "65c9216ebffe56cb06f0714e",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 6555.65,
       "etime": 6559.44,
       "text": "То есть, есть уже именно на продакшене?"
@@ -13999,7 +13999,7 @@
       "id": "65c9216ebffe56cb06f07161",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 6637.55,
       "etime": 6642.16,
       "text": "Ну, например, я не знаю, запустить какой-нибудь IntelliJ под 7-й JVM."
@@ -14944,7 +14944,7 @@
       "id": "65c9216ebffe56cb06f071ca",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 6980.92,
       "etime": 6982.68,
       "text": "А кто вот с какого года его пользует?"
@@ -15196,7 +15196,7 @@
       "id": "65c9216ebffe56cb06f071e6",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 7154.71,
       "etime": 7164.71,
       "text": "То есть, соответственно, под каждое дело можно сделать свой редактор, можно сделать там группу редакторов, группу окошечек, группу вьюшек, которые называются там перспектива."
@@ -15205,7 +15205,7 @@
       "id": "65c9216ebffe56cb06f071e7",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 7164.83,
       "etime": 7174.92,
       "text": "И это все зависит от конкретной там задачи, я считаю, что если нужно править протобаф файла, должен быть отдельный редактор протобаф файла, который может показать их."
@@ -15214,7 +15214,7 @@
       "id": "65c9216ebffe56cb06f071e8",
       "issue": 262,
       "type": "cc",
-      "author": "EldarMurtazin",
+      "author": "VictorGamusa",
       "stime": 7175.34,
       "etime": 7182.12,
       "text": "И, например, и в текстовом виде, и, например, там, я не знаю, как он, Property Files показывает в табличках."

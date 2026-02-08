@@ -546,3 +546,727 @@ rules:
   from: Marin_k_a
   to: Ksenks
   reason: 'Ошибочно размечена как Marin_k_a. На самом деле Ksenks (ep493 = 2016-04-30, Маринка уже не участвовала).'
+
+# ============================================================
+# Мисатрибуция EldarMurtazin и PetrDidenko (<5 мин, 2026-02-07)
+# Контекстный анализ: кто говорит до/после, упоминания имени
+# ============================================================
+
+# --- EldarMurtazin → другой спикер ---
+
+- id: cls_e230_EldarMurtazin_to_Plushev
+  type: rename_episode
+  episode: 230
+  from: EldarMurtazin
+  to: Plushev
+  reason: 'Мисатрибуция. Контекст 89%/89% Plushev. Нет упоминаний Эльдара. Plushev — гость в этом эпизоде.'
+
+- id: cls_e340_EldarMurtazin_to_Gray
+  type: rename_episode
+  episode: 340
+  from: EldarMurtazin
+  to: Gray
+  reason: 'Мисатрибуция. Контекст 68%/77% Gray. Нет упоминаний Эльдара. Ошибка сегментации голоса Gray.'
+
+- id: cls_e383_EldarMurtazin_to_Plushev
+  type: rename_episode
+  episode: 383
+  from: EldarMurtazin
+  to: Plushev
+  reason: 'Мисатрибуция. Контекст 68%/73% Plushev. Нет упоминаний Эльдара. Plushev — гость в этом эпизоде.'
+
+- id: cls_e406_EldarMurtazin_to_Gray
+  type: rename_episode
+  episode: 406
+  from: EldarMurtazin
+  to: Gray
+  reason: 'Мисатрибуция. Контекст 68%/77% Gray. Нет упоминаний Эльдара. Ошибка сегментации голоса Gray.'
+
+- id: cls_e410_EldarMurtazin_to_Gray
+  type: rename_episode
+  episode: 410
+  from: EldarMurtazin
+  to: Gray
+  reason: 'Мисатрибуция. Контекст 69%/69% Gray. Нет упоминаний Эльдара. Ошибка сегментации голоса Gray.'
+
+# --- PetrDidenko → другой спикер ---
+
+- id: cls_e275_PetrDidenko_to_andrey_breslav
+  type: rename_episode
+  episode: 275
+  from: PetrDidenko
+  to: andrey_breslav
+  reason: 'Мисатрибуция. Контекст 72%/76% andrey_breslav. Нет упоминаний Петра. andrey_breslav — гость в этом эпизоде.'
+
+- id: cls_e315_PetrDidenko_to_vadzay
+  type: rename_episode
+  episode: 315
+  from: PetrDidenko
+  to: vadzay
+  reason: 'Мисатрибуция. Контекст 81%/69% vadzay. Нет упоминаний Петра. vadzay — гость в этом эпизоде.'
+
+- id: cls_e248_EldarMurtazin_to_VolodyaIvanov
+  type: rename_episode
+  episode: 248
+  from: EldarMurtazin
+  to: VolodyaIvanov
+  reason: 'Мисатрибуция. Bobuk: "Эльдара, кстати, сегодня нет" (572s). Единственный гость — VolodyaIvanov.'
+
+- id: cls_e262_EldarMurtazin_to_VictorGamusa
+  type: rename_episode
+  episode: 262
+  from: EldarMurtazin
+  to: VictorGamusa
+  reason: 'Мисатрибуция. Контекст 47% VictorGamusa. 15 реплик, 97s. Java-тематика не характерна для мобильного аналитика.'
+
+- id: cls_e359_EldarMurtazin_to_Gray
+  type: rename_episode
+  episode: 359
+  from: EldarMurtazin
+  to: Gray
+  reason: 'Мисатрибуция. Эльдар не представлен и не упоминается. Реплики продолжают речь Gray (Evernote/Nexus/SDK).'
+
+- id: cls_e441_EldarMurtazin_to_DmitryPython
+  type: rename_episode
+  episode: 441
+  from: EldarMurtazin
+  to: DmitryPython
+  reason: 'Мисатрибуция. 17 реплик перемежаются с SPEAKER_06 (=Dmitry/DmitryPython). Тот же спикер.'
+
+- id: cls_e416_PetrDidenko_to_DevZenAlexandr
+  type: rename_episode
+  episode: 416
+  from: PetrDidenko
+  to: DevZenAlexandr
+  reason: 'Мисатрибуция. Контекст 53% DevZenAlexandr. Пётр не представлен. В эпизоде только 2 гостя: DevZen и Разбор Полётов.'
+
+# ============================================================
+# Marin_k_a → Ksenks (ep305-408, 2026-02-07)
+# Верификация: скрипт verify_low_speaking_guests.py
+# В ep300-400 найдено обращение "Ксюш" в тексте → не Marin_k_a.
+# В ep400+ Marin_k_a уже не участвовала.
+# ============================================================
+
+- id: cls_e305_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 305
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep305: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e307_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 307
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep307: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e308_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 308
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep308: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e309_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 309
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep309: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e310_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 310
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep310: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e313_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 313
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep313: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e314_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 314
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep314: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e315_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 315
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep315: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e317_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 317
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep317: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e318_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 318
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep318: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e320_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 320
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep320: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e322_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 322
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep322: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e327_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 327
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep327: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e328_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 328
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep328: Validation suggests rename. Обращения "Ксюша" → отвечает Marin_k_a.'
+- id: cls_e329_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 329
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep329: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e334_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 334
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep334: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e336_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 336
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep336: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e337_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 337
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep337: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e338_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 338
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep338: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e339_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 339
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep339: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e340_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 340
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep340: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e342_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 342
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep342: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e345_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 345
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep345: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e346_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 346
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep346: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e347_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 347
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep347: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e348_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 348
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep348: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e350_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 350
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep350: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e351_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 351
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep351: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e352_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 352
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep352: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e353_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 353
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep353: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e354_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 354
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep354: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e358_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 358
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep358: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e359_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 359
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep359: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e365_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 365
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep365: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e367_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 367
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep367: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e368_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 368
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep368: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e369_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 369
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep369: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e371_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 371
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep371: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e372_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 372
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep372: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e373_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 373
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep373: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e374_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 374
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep374: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e377_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 377
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep377: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e378_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 378
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep378: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e379_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 379
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep379: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e380_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 380
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep380: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e381_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 381
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep381: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e382_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 382
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep382: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e383_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 383
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep383: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e384_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 384
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep384: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e385_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 385
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep385: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e386_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 386
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep386: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e387_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 387
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep387: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e391_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 391
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep391: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e393_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 393
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep393: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e395_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 395
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep395: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e396_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 396
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep396: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e398_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 398
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep398: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e399_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 399
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep399: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e400_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 400
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep400: Найдено "Ксюш" в тексте. Marin_k_a ошибочно вместо Ksenks.'
+- id: cls_e401_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 401
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep401: Marin_k_a не участвовала после ~ep400. Нет "Марин" в тексте.'
+- id: cls_e403_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 403
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep403: Marin_k_a не участвовала после ~ep400. Нет "Марин" в тексте.'
+- id: cls_e404_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 404
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep404: Marin_k_a не участвовала после ~ep400. Нет "Марин" в тексте.'
+- id: cls_e406_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 406
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep406: Marin_k_a не участвовала после ~ep400. Нет "Марин" в тексте.'
+- id: cls_e407_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 407
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep407: Marin_k_a не участвовала после ~ep400. Нет "Марин" в тексте.'
+- id: cls_e408_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 408
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep408: Marin_k_a не участвовала после ~ep400. Нет "Марин" в тексте.'
+
+# ============================================================
+# Ручная верификация (сессия 5)
+# ============================================================
+
+# --- EldarMurtazin misattributions ---
+
+- id: cls_e364_EldarMurtazin_to_AlexeyAbashev
+  type: rename_episode
+  episode: 364
+  from: EldarMurtazin
+  to: AlexeyAbashev
+  reason: 'ep364: EldarMurtazin не участвовал. Соседи — ViktorGamov (45%). Ручная проверка: AlexeyAbashev.'
+
+- id: cls_e388_EldarMurtazin_to_Gray
+  type: rename_episode
+  episode: 388
+  from: EldarMurtazin
+  to: Gray
+  reason: 'ep388: EldarMurtazin не участвовал. Соседи — Gray (50%). Ручная проверка: Gray.'
+
+- id: cls_e423_EldarMurtazin_to_ViktorGamov
+  type: rename_episode
+  episode: 423
+  from: EldarMurtazin
+  to: ViktorGamov
+  reason: 'ep423: Umputun обращается "Виктор?" @71s, ответ от EldarMurtazin. Привёл AntonArkhipov.'
+
+- id: cls_e434_EldarMurtazin_to_alexey_bragin
+  type: rename_episode
+  episode: 434
+  from: EldarMurtazin
+  to: alexey_bragin
+  reason: 'ep434: EldarMurtazin не участвовал. Соседи — alexey_bragin (42%). Ручная проверка.'
+
+- id: cls_e452_EldarMurtazin_to_denis_podcaster
+  type: rename_episode
+  episode: 452
+  from: EldarMurtazin
+  to: denis_podcaster
+  reason: 'ep452: EldarMurtazin не участвовал. Ручная проверка: denis_podcaster.'
+
+- id: cls_e452_PetrDidenko_to_denis_podcaster
+  type: rename_episode
+  episode: 452
+  from: PetrDidenko
+  to: denis_podcaster
+  reason: 'ep452: PetrDidenko не участвовал. Ручная проверка: denis_podcaster.'
+
+# --- Marin_k_a → Ksenks (overlap zone) ---
+
+- id: cls_e332_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 332
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep332: Обе размечены, но Marin_k_a — на самом деле Ksenks. Ручная проверка.'
+
+- id: cls_e402_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 402
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep402: После ep400, Ksenks основная. Umputun обращается «Ксюша». Ручная проверка.'
+
+# --- ep306: Marin_k_a split → OlyaSexpertiza + Ksenks ---
+# Дуэт Umputun + Ksenks + гостья Оля (пиарщик). Olya по контексту обращений.
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_1
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [48, 55]
+  reason: 'ep306 @0:48: Ответ на "Здравствуй, Оля"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_2
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [325, 337]
+  reason: 'ep306 @5:25: Ответ на "Оля спрячет стэк"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_3
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [376, 382]
+  reason: 'ep306 @6:16: Ответ на "Оля, ты понимаешь?"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_4
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [482, 537]
+  reason: 'ep306 @8:02: Ответ на "А у тебя, Оля, как?"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_5
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [1041, 1138]
+  reason: 'ep306 @17:21: Ответ на "Олечка, Рыбонька" — про утечки/PR'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_6
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [1613, 1627]
+  reason: 'ep306 @26:53: Ответ на "ты, Оля, заказала?"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_7
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [1851, 1854]
+  reason: 'ep306 @30:51: Ответ на "Оля, скажи нам как маркетолог"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_8
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [1891, 1909]
+  reason: 'ep306 @31:31: "я же не как маркетолог, а как пиарщик"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_9
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [1962, 1965]
+  reason: 'ep306 @32:42: Ответ на "тут Оля права"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_10
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [3606, 3645]
+  reason: 'ep306 @60:06: Ответ на "Оля, скажи, тебе приятнее..."'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_11
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [5893, 5933]
+  reason: 'ep306 @98:13: Ответ на "Оля, среди маркетологов..." — "я же пиарщик"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_12
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [6154, 6163]
+  reason: 'ep306 @102:34: Ответ на "Оля, я даже спрашивать не буду"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_13
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [6196, 6227]
+  reason: 'ep306 @103:16: Ответ на "Оля, я тебе объясню"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_14
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [7252, 7262]
+  reason: 'ep306 @120:52: Ответ на "комментарии про тебя, Оля"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_15
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [7438, 7444]
+  reason: 'ep306 @123:58: Ответ на "Как тебе, Оля?"'
+
+- id: cls_e306_Marin_k_a_to_OlyaSexpertiza_16
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: OlyaSexpertiza
+  time_range: [8155, 8160]
+  reason: 'ep306 @135:55: Ответ на "Была с нами вновь Оля"'
+
+# Остальное Marin_k_a в ep306 → Ksenks (после OlyaSexpertiza time_range правил)
+- id: cls_e306_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 306
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'ep306: Остальное — Ksenks (основной co-host в дуэте с Umputun)'
+
+# --- Lavale misattributions (2010-2013) ---
+
+- id: cls_e246_Lavale_to_Olyapka
+  type: rename_episode
+  episode: 246
+  from: Lavale
+  to: Olyapka
+  reason: 'ep246: Lavale не участвовала. Рядом Olyapka — скорее всего её речь.'
+
+- id: cls_e285_Lavale_to_natali_yandex
+  type: rename_episode
+  episode: 285
+  from: Lavale
+  to: natali_yandex
+  reason: 'ep285: Lavale не участвовала. Соседи natali_yandex (42%). Гостья — Натали.'
+
+- id: cls_e307_Lavale_to_Ksenks
+  type: rename_episode
+  episode: 307
+  from: Lavale
+  to: Ksenks
+  reason: 'ep307: Lavale не участвовала. Соседи Ksenks (50%). Ручная проверка.'
+
+- id: cls_e343_Lavale_to_Ksenks
+  type: rename_episode
+  episode: 343
+  from: Lavale
+  to: Ksenks
+  reason: 'ep343: Lavale не участвовала. Соседи Ksenks (33%). Ручная проверка.'

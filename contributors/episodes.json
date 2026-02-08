@@ -6684,7 +6684,7 @@
       },
       {
         "name": "Plushev",
-        "seconds": 1894.9,
+        "seconds": 2052.8,
         "type": "guest",
         "female": false,
         "former": false
@@ -6695,13 +6695,6 @@
         "type": "host",
         "female": true,
         "former": true
-      },
-      {
-        "name": "EldarMurtazin",
-        "seconds": 157.8,
-        "type": "guest",
-        "female": false,
-        "former": false
       }
     ]
   },
@@ -7849,7 +7842,7 @@
       },
       {
         "name": "VictorGamusa",
-        "seconds": 506.8,
+        "seconds": 603.9,
         "type": "guest",
         "female": false,
         "former": false
@@ -7857,13 +7850,6 @@
       {
         "name": "Vera",
         "seconds": 184.9,
-        "type": "guest",
-        "female": false,
-        "former": false
-      },
-      {
-        "name": "EldarMurtazin",
-        "seconds": 97.1,
         "type": "guest",
         "female": false,
         "former": false
@@ -8242,14 +8228,7 @@
       },
       {
         "name": "andrey_breslav",
-        "seconds": 1634.4,
-        "type": "guest",
-        "female": false,
-        "former": false
-      },
-      {
-        "name": "PetrDidenko",
-        "seconds": 235.0,
+        "seconds": 1869.3,
         "type": "guest",
         "female": false,
         "former": false
@@ -9170,11 +9149,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1346.4,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -9218,7 +9197,7 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 588.5,
+        "seconds": 658.8,
         "type": "host",
         "female": true,
         "former": false
@@ -9252,7 +9231,7 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 591.9,
+        "seconds": 796.2,
         "type": "host",
         "female": true,
         "former": false
@@ -9263,13 +9242,6 @@
         "type": "guest",
         "female": false,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 204.3,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -9299,11 +9271,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 761.3,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -9326,11 +9298,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1098.4,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -9421,11 +9393,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 896.0,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -9462,11 +9434,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 401.8,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -9490,30 +9462,16 @@
       },
       {
         "name": "vadzay",
-        "seconds": 1233.4,
+        "seconds": 1378.4,
         "type": "guest",
         "female": false,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 421.7,
-        "type": "host",
-        "female": true,
-        "former": true
       },
       {
         "name": "Ksenks",
-        "seconds": 186.8,
+        "seconds": 608.5,
         "type": "host",
         "female": true,
-        "former": false
-      },
-      {
-        "name": "PetrDidenko",
-        "seconds": 144.9,
-        "type": "guest",
-        "female": false,
         "former": false
       }
     ]
@@ -9565,17 +9523,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 466.7,
+        "seconds": 875.1,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 408.4,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -9598,11 +9549,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1364.7,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "ListenerIgor",
@@ -9673,15 +9624,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 608.9,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 501.2,
+        "seconds": 1110.1,
         "type": "host",
         "female": true,
         "former": false
@@ -9741,24 +9685,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 790.3,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Gray",
         "seconds": 667.1,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 551.1,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 239.3,
-        "type": "host",
-        "female": true,
         "former": false
       }
     ]
@@ -9904,15 +9841,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 1421.6,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 1027.4,
+        "seconds": 2449.0,
         "type": "host",
         "female": true,
         "former": false
@@ -9945,11 +9875,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1019.4,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -9965,11 +9895,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 2118.1,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "Igor_Ukraine_ep329",
@@ -10114,11 +10044,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1456.9,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -10176,17 +10106,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 892.1,
+        "seconds": 1145.7,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 253.6,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -10202,15 +10125,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 1753.9,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 884.0,
+        "seconds": 2638.0,
         "type": "host",
         "female": true,
         "former": false
@@ -10243,11 +10159,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1701.4,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -10278,17 +10194,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 340.0,
+        "seconds": 676.0,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 335.9,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -10312,30 +10221,16 @@
       },
       {
         "name": "Gray",
-        "seconds": 1176.9,
+        "seconds": 1305.5,
         "type": "host",
         "female": false,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 428.0,
-        "type": "host",
-        "female": true,
-        "former": true
       },
       {
         "name": "Ksenks",
-        "seconds": 237.2,
+        "seconds": 665.2,
         "type": "host",
         "female": true,
-        "former": false
-      },
-      {
-        "name": "EldarMurtazin",
-        "seconds": 128.6,
-        "type": "guest",
-        "female": false,
         "former": false
       }
     ]
@@ -10400,15 +10295,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 990.8,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 404.9,
+        "seconds": 1395.7,
         "type": "host",
         "female": true,
         "former": false
@@ -10509,18 +10397,18 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 1070.5,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Gray",
         "seconds": 897.2,
         "type": "host",
         "female": false,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 705.9,
-        "type": "host",
-        "female": true,
-        "former": true
       },
       {
         "name": "Alexmak",
@@ -10534,13 +10422,6 @@
         "seconds": 384.0,
         "type": "guest",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 364.6,
-        "type": "host",
-        "female": true,
         "former": false
       }
     ]
@@ -10565,17 +10446,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 672.2,
+        "seconds": 1209.1,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 536.9,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -10598,24 +10472,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 597.7,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Gray",
         "seconds": 537.0,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 387.4,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 210.3,
-        "type": "host",
-        "female": true,
         "former": false
       }
     ]
@@ -10639,11 +10506,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1066.7,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "EldarMurtazin",
@@ -10700,15 +10567,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 855.3,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 459.4,
+        "seconds": 1314.7,
         "type": "host",
         "female": true,
         "former": false
@@ -10755,15 +10615,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 439.2,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 196.0,
+        "seconds": 635.3,
         "type": "host",
         "female": true,
         "former": false
@@ -10810,11 +10663,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 558.6,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -10827,6 +10680,13 @@
         "seconds": 3292.7,
         "type": "host",
         "female": false,
+        "former": false
+      },
+      {
+        "name": "Ksenks",
+        "seconds": 978.7,
+        "type": "host",
+        "female": true,
         "former": false
       },
       {
@@ -10858,20 +10718,6 @@
         "former": false
       },
       {
-        "name": "Ksenks",
-        "seconds": 514.6,
-        "type": "host",
-        "female": true,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 464.2,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Gray",
         "seconds": 141.0,
         "type": "host",
@@ -10899,11 +10745,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1485.4,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "CallerRoman",
@@ -11049,11 +10895,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 286.1,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "EldarMurtazin",
@@ -11091,35 +10937,21 @@
       },
       {
         "name": "Gray",
-        "seconds": 932.5,
+        "seconds": 1119.8,
         "type": "host",
-        "female": false,
-        "former": false
-      },
-      {
-        "name": "Guest_LEDshop_ep359",
-        "seconds": 388.6,
-        "type": "guest",
         "female": false,
         "former": false
       },
       {
         "name": "Ksenks",
-        "seconds": 348.5,
+        "seconds": 647.7,
         "type": "host",
         "female": true,
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 299.2,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "EldarMurtazin",
-        "seconds": 187.2,
+        "name": "Guest_LEDshop_ep359",
+        "seconds": 388.6,
         "type": "guest",
         "female": false,
         "former": false
@@ -11308,15 +11140,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 915.3,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 589.0,
+        "seconds": 1504.3,
         "type": "host",
         "female": true,
         "former": false
@@ -11369,11 +11194,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1257.2,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -11396,15 +11221,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 565.5,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 521.0,
+        "seconds": 1086.6,
         "type": "host",
         "female": true,
         "former": false
@@ -11437,24 +11255,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 752.4,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "RomanDell",
         "seconds": 701.2,
         "type": "guest",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 433.5,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 318.9,
-        "type": "host",
-        "female": true,
         "former": false
       },
       {
@@ -11512,24 +11323,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 1096.8,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Gray",
         "seconds": 1068.4,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 678.2,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 418.6,
-        "type": "host",
-        "female": true,
         "former": false
       }
     ]
@@ -11553,24 +11357,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 1072.0,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Gray",
         "seconds": 986.2,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 638.6,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 433.3,
-        "type": "host",
-        "female": true,
         "former": false
       },
       {
@@ -11608,24 +11405,17 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 563.8,
+        "name": "Ksenks",
+        "seconds": 916.9,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "Gray",
         "seconds": 357.5,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 353.2,
-        "type": "host",
-        "female": true,
         "former": false
       }
     ]
@@ -11664,17 +11454,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 361.4,
+        "seconds": 685.7,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 324.3,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -11751,25 +11534,18 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 1756.8,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Gray",
         "seconds": 1686.2,
         "type": "host",
         "female": false,
         "former": false
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 1169.9,
-        "type": "host",
-        "female": true,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 586.8,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -11785,24 +11561,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 2179.7,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Gray",
         "seconds": 1308.3,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 1189.1,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 990.6,
-        "type": "host",
-        "female": true,
         "former": false
       },
       {
@@ -11833,11 +11602,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1288.8,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "Gray",
@@ -11867,24 +11636,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 1326.7,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Gray",
         "seconds": 1060.7,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 737.5,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 589.2,
-        "type": "host",
-        "female": true,
         "former": false
       }
     ]
@@ -11915,24 +11677,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 894.0,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "ViktorGamov",
         "seconds": 872.5,
         "type": "guest",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 525.1,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 368.9,
-        "type": "host",
-        "female": true,
         "former": false
       }
     ]
@@ -11956,24 +11711,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 1120.6,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Vodom",
         "seconds": 935.2,
         "type": "guest",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 639.1,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 481.5,
-        "type": "host",
-        "female": true,
         "former": false
       },
       {
@@ -12005,30 +11753,16 @@
       },
       {
         "name": "Plushev",
-        "seconds": 1405.3,
+        "seconds": 1695.6,
         "type": "guest",
         "female": false,
         "former": false
       },
       {
         "name": "Ksenks",
-        "seconds": 522.5,
+        "seconds": 983.7,
         "type": "host",
         "female": true,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 461.2,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "EldarMurtazin",
-        "seconds": 290.3,
-        "type": "guest",
-        "female": false,
         "former": false
       }
     ]
@@ -12045,24 +11779,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 1789.6,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Gray",
         "seconds": 1572.5,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 1133.7,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 655.9,
-        "type": "host",
-        "female": true,
         "former": false
       },
       {
@@ -12093,15 +11820,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 999.6,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 566.3,
+        "seconds": 1565.9,
         "type": "host",
         "female": true,
         "former": false
@@ -12142,17 +11862,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 172.9,
+        "seconds": 313.8,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 140.8,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -12175,11 +11888,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1054.1,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "Gray",
@@ -12318,24 +12031,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 2406.9,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Umputun",
         "seconds": 2045.5,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 1366.4,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 1040.5,
-        "type": "host",
-        "female": true,
         "former": false
       }
     ]
@@ -12393,11 +12099,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1433.5,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "MaximKursk",
@@ -12461,24 +12167,17 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 1646.7,
+        "name": "Ksenks",
+        "seconds": 2548.4,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "Gray",
         "seconds": 1481.3,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 901.7,
-        "type": "host",
-        "female": true,
         "former": false
       },
       {
@@ -12502,11 +12201,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 2340.2,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       },
       {
         "name": "Gray",
@@ -12585,17 +12284,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 806.4,
+        "seconds": 1457.1,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 650.7,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -12618,24 +12310,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 913.4,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "AlexeyRuby",
         "seconds": 679.3,
         "type": "guest",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 596.7,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 316.7,
-        "type": "host",
-        "female": true,
         "former": false
       }
     ]
@@ -12660,17 +12345,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 1054.5,
+        "seconds": 1712.4,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 657.9,
-        "type": "host",
-        "female": true,
-        "former": true
       },
       {
         "name": "Gray",
@@ -12700,15 +12378,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 710.6,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 386.8,
+        "seconds": 1097.4,
         "type": "host",
         "female": true,
         "former": false
@@ -12789,15 +12460,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 388.9,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 306.1,
+        "seconds": 695.0,
         "type": "host",
         "female": true,
         "former": false
@@ -12831,7 +12495,7 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 309.8,
+        "seconds": 388.1,
         "type": "host",
         "female": true,
         "former": false
@@ -12898,23 +12562,16 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
+        "name": "Ksenks",
         "seconds": 1676.2,
         "type": "host",
         "female": true,
-        "former": true
-      },
-      {
-        "name": "Gray",
-        "seconds": 1462.8,
-        "type": "host",
-        "female": false,
         "former": false
       },
       {
-        "name": "EldarMurtazin",
-        "seconds": 104.8,
-        "type": "guest",
+        "name": "Gray",
+        "seconds": 1567.6,
+        "type": "host",
         "female": false,
         "former": false
       }
@@ -12932,24 +12589,17 @@
         "former": false
       },
       {
+        "name": "Ksenks",
+        "seconds": 2335.4,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
         "name": "Bobuk",
         "seconds": 2125.2,
         "type": "host",
         "female": false,
-        "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 1532.6,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Ksenks",
-        "seconds": 802.8,
-        "type": "host",
-        "female": true,
         "former": false
       }
     ]
@@ -12973,11 +12623,11 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 1964.7,
+        "name": "Ksenks",
+        "seconds": 1968.7,
         "type": "host",
         "female": true,
-        "former": true
+        "former": false
       }
     ]
   },
@@ -13028,7 +12678,7 @@
       },
       {
         "name": "Gray",
-        "seconds": 2178.5,
+        "seconds": 2329.3,
         "type": "host",
         "female": false,
         "former": false
@@ -13038,13 +12688,6 @@
         "seconds": 1894.1,
         "type": "host",
         "female": true,
-        "former": false
-      },
-      {
-        "name": "EldarMurtazin",
-        "seconds": 150.7,
-        "type": "guest",
-        "female": false,
         "former": false
       }
     ]
@@ -13273,24 +12916,17 @@
         "former": false
       },
       {
+        "name": "DevZenAlexandr",
+        "seconds": 434.0,
+        "type": "guest",
+        "female": false,
+        "former": false
+      },
+      {
         "name": "Ksenks",
         "seconds": 377.4,
         "type": "host",
         "female": true,
-        "former": false
-      },
-      {
-        "name": "DevZenAlexandr",
-        "seconds": 337.2,
-        "type": "guest",
-        "female": false,
-        "former": false
-      },
-      {
-        "name": "PetrDidenko",
-        "seconds": 96.8,
-        "type": "guest",
-        "female": false,
         "former": false
       }
     ]
@@ -14159,14 +13795,7 @@
       },
       {
         "name": "DmitryPython",
-        "seconds": 381.4,
-        "type": "guest",
-        "female": false,
-        "former": false
-      },
-      {
-        "name": "EldarMurtazin",
-        "seconds": 118.4,
+        "seconds": 499.8,
         "type": "guest",
         "female": false,
         "former": false
