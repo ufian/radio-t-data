@@ -4738,7 +4738,7 @@
       "id": "65c9a556f0a23fd675ba46d6",
       "issue": 433,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_artifact",
       "stime": 2286.48,
       "etime": 2291.6,
       "text": "Ну, то есть, да, нужно иметь возможность как-то конструировать программу."
@@ -5170,7 +5170,7 @@
       "id": "65c9a556f0a23fd675ba4706",
       "issue": 433,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_artifact",
       "stime": 2565.35,
       "etime": 2571.67,
       "text": "Если у вас проект ссылается на зависимости из репистория автора."
@@ -6664,7 +6664,7 @@
       "id": "65c9a556f0a23fd675ba47ac",
       "issue": 433,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_artifact",
       "stime": 3149.34,
       "etime": 3153.04,
       "text": "Я хочу сказать, что тенденция все-таки существует, и ее нельзя отрицать."
@@ -6961,7 +6961,7 @@
       "id": "65c9a556f0a23fd675ba47cd",
       "issue": 433,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_artifact",
       "stime": 3267.03,
       "etime": 3270.37,
       "text": "Так если бы проблема была только в H-файлах."
@@ -6979,7 +6979,7 @@
       "id": "65c9a556f0a23fd675ba47cf",
       "issue": 433,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_artifact",
       "stime": 3272.51,
       "etime": 3277.94,
       "text": "Различные спецификации, учитывая, как эти спецификации поддерживаются компиляторами."
@@ -7042,7 +7042,7 @@
       "id": "65c9a556f0a23fd675ba47d6",
       "issue": 433,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_artifact",
       "stime": 3295.95,
       "etime": 3304.29,
       "text": "И в какой-то момент времени я понял, что я перестаю быть таким счастливым разработчиком, которому нравится, что он делает."
@@ -7051,7 +7051,7 @@
       "id": "65c9a556f0a23fd675ba47d7",
       "issue": 433,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_artifact",
       "stime": 3304.55,
       "etime": 3306.54,
       "text": "И в тот момент я ушел в сторону C++, C++."
@@ -9076,7 +9076,7 @@
       "id": "65c9a556f0a23fd675ba48b8",
       "issue": 433,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_artifact",
       "stime": 4567.64,
       "etime": 4571.93,
       "text": "Каждый интерфейс будет работать со своим контейнером."
@@ -14251,7 +14251,7 @@
       "id": "65c9a556f0a23fd675ba4af7",
       "issue": 433,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_artifact",
       "stime": 6989.5,
       "etime": 6990.9,
       "text": "Не все так просто."
@@ -14260,7 +14260,7 @@
       "id": "65c9a556f0a23fd675ba4af8",
       "issue": 433,
       "type": "cc",
-      "author": "Alek.sys",
+      "author": "_artifact",
       "stime": 6990.98,
       "etime": 6995.13,
       "text": "Показывается индикатор использования геолокации."

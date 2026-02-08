@@ -1270,3 +1270,421 @@ rules:
   from: Lavale
   to: Ksenks
   reason: 'ep343: Lavale не участвовала. Соседи Ksenks (33%). Ручная проверка.'
+
+# --- Alek.sys артефакты распознавания (2014-2016, <60s) ---
+# 69 эпизодов: модель кратковременно путала голос другого ведущего с Alek.sys
+
+- id: cls_e410_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 410
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep410 (2014-09-20): Alek.sys 8 replies, 14s — артефакт распознавания'
+- id: cls_e411_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 411
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep411 (2014-09-27): Alek.sys 9 replies, 16s — артефакт распознавания'
+- id: cls_e413_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 413
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep413 (2014-10-11): Alek.sys 5 replies, 8s — артефакт распознавания'
+- id: cls_e414_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 414
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep414 (2014-10-18): Alek.sys 15 replies, 32s — артефакт распознавания'
+- id: cls_e415_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 415
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep415 (2014-10-25): Alek.sys 7 replies, 15s — артефакт распознавания'
+- id: cls_e417_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 417
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep417 (2014-11-08): Alek.sys 4 replies, 11s — артефакт распознавания'
+- id: cls_e418_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 418
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep418 (2014-11-15): Alek.sys 7 replies, 11s — артефакт распознавания'
+- id: cls_e419_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 419
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep419 (2014-11-22): Alek.sys 5 replies, 17s — артефакт распознавания'
+- id: cls_e420_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 420
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep420 (2014-11-29): Alek.sys 13 replies, 30s — артефакт распознавания'
+- id: cls_e422_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 422
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep422 (2014-12-13): Alek.sys 3 replies, 6s — артефакт распознавания'
+- id: cls_e424_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 424
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep424 (2014-12-27): Alek.sys 4 replies, 6s — артефакт распознавания'
+- id: cls_e426_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 426
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep426 (2015-01-10): Alek.sys 2 replies, 4s — артефакт распознавания'
+- id: cls_e428_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 428
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep428 (2015-01-24): Alek.sys 1 replies, 1s — артефакт распознавания'
+- id: cls_e430_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 430
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep430 (2015-02-07): Alek.sys 7 replies, 14s — артефакт распознавания'
+- id: cls_e432_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 432
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep432 (2015-02-21): Alek.sys 6 replies, 10s — артефакт распознавания'
+- id: cls_e433_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 433
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep433 (2015-02-28): Alek.sys 10 replies, 44s — артефакт распознавания'
+- id: cls_e434_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 434
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep434 (2015-03-07): Alek.sys 8 replies, 20s — артефакт распознавания'
+- id: cls_e435_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 435
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep435 (2015-03-14): Alek.sys 5 replies, 12s — артефакт распознавания'
+- id: cls_e436_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 436
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep436 (2015-03-21): Alek.sys 3 replies, 7s — артефакт распознавания'
+- id: cls_e438_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 438
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep438 (2015-04-04): Alek.sys 13 replies, 27s — артефакт распознавания'
+- id: cls_e439_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 439
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep439 (2015-04-11): Alek.sys 4 replies, 12s — артефакт распознавания'
+- id: cls_e440_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 440
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep440 (2015-04-18): Alek.sys 12 replies, 21s — артефакт распознавания'
+- id: cls_e442_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 442
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep442 (2015-05-02): Alek.sys 4 replies, 8s — артефакт распознавания'
+- id: cls_e444_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 444
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep444 (2015-05-16): Alek.sys 8 replies, 16s — артефакт распознавания'
+- id: cls_e445_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 445
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep445 (2015-05-23): Alek.sys 1 replies, 8s — артефакт распознавания'
+- id: cls_e447_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 447
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep447 (2015-06-06): Alek.sys 8 replies, 14s — артефакт распознавания'
+- id: cls_e448_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 448
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep448 (2015-06-13): Alek.sys 7 replies, 14s — артефакт распознавания'
+- id: cls_e449_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 449
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep449 (2015-06-20): Alek.sys 5 replies, 7s — артефакт распознавания'
+- id: cls_e450_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 450
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep450 (2015-06-27): Alek.sys 3 replies, 6s — артефакт распознавания'
+- id: cls_e451_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 451
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep451 (2015-07-04): Alek.sys 17 replies, 25s — артефакт распознавания'
+- id: cls_e454_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 454
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep454 (2015-07-26): Alek.sys 15 replies, 54s — артефакт распознавания'
+- id: cls_e456_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 456
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep456 (2015-08-08): Alek.sys 8 replies, 25s — артефакт распознавания'
+- id: cls_e457_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 457
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep457 (2015-08-15): Alek.sys 1 replies, 1s — артефакт распознавания'
+- id: cls_e458_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 458
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep458 (2015-08-22): Alek.sys 9 replies, 29s — артефакт распознавания'
+- id: cls_e459_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 459
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep459 (2015-08-29): Alek.sys 4 replies, 8s — артефакт распознавания'
+- id: cls_e460_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 460
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep460 (2015-09-05): Alek.sys 11 replies, 17s — артефакт распознавания'
+- id: cls_e462_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 462
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep462 (2015-09-19): Alek.sys 12 replies, 25s — артефакт распознавания'
+- id: cls_e463_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 463
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep463 (2015-09-26): Alek.sys 8 replies, 15s — артефакт распознавания'
+- id: cls_e464_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 464
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep464 (2015-10-03): Alek.sys 11 replies, 18s — артефакт распознавания'
+- id: cls_e465_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 465
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep465 (2015-10-10): Alek.sys 6 replies, 16s — артефакт распознавания'
+- id: cls_e467_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 467
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep467 (2015-10-24): Alek.sys 7 replies, 10s — артефакт распознавания'
+- id: cls_e468_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 468
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep468 (2015-10-31): Alek.sys 15 replies, 21s — артефакт распознавания'
+- id: cls_e469_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 469
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep469 (2015-11-07): Alek.sys 25 replies, 48s — артефакт распознавания'
+- id: cls_e472_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 472
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep472 (2015-11-28): Alek.sys 2 replies, 3s — артефакт распознавания'
+- id: cls_e476_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 476
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep476 (2015-12-26): Alek.sys 5 replies, 7s — артефакт распознавания'
+- id: cls_e480_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 480
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep480 (2016-01-23): Alek.sys 8 replies, 15s — артефакт распознавания'
+- id: cls_e481_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 481
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep481 (2016-01-30): Alek.sys 10 replies, 10s — артефакт распознавания'
+- id: cls_e483_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 483
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep483 (2016-02-13): Alek.sys 3 replies, 9s — артефакт распознавания'
+- id: cls_e484_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 484
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep484 (2016-02-20): Alek.sys 7 replies, 12s — артефакт распознавания'
+- id: cls_e485_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 485
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep485 (2016-02-27): Alek.sys 14 replies, 19s — артефакт распознавания'
+- id: cls_e486_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 486
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep486 (2016-03-05): Alek.sys 26 replies, 47s — артефакт распознавания'
+- id: cls_e487_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 487
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep487 (2016-03-12): Alek.sys 13 replies, 20s — артефакт распознавания'
+- id: cls_e488_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 488
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep488 (2016-03-19): Alek.sys 10 replies, 25s — артефакт распознавания'
+- id: cls_e492_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 492
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep492 (2016-04-23): Alek.sys 8 replies, 11s — артефакт распознавания'
+- id: cls_e493_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 493
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep493 (2016-04-30): Alek.sys 13 replies, 20s — артефакт распознавания'
+- id: cls_e495_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 495
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep495 (2016-05-14): Alek.sys 4 replies, 4s — артефакт распознавания'
+- id: cls_e496_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 496
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep496 (2016-05-21): Alek.sys 3 replies, 8s — артефакт распознавания'
+- id: cls_e497_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 497
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep497 (2016-05-28): Alek.sys 7 replies, 16s — артефакт распознавания'
+- id: cls_e500_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 500
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep500 (2016-06-18): Alek.sys 7 replies, 12s — артефакт распознавания'
+- id: cls_e501_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 501
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep501 (2016-06-25): Alek.sys 9 replies, 11s — артефакт распознавания'
+- id: cls_e502_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 502
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep502 (2016-07-02): Alek.sys 7 replies, 8s — артефакт распознавания'
+- id: cls_e503_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 503
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep503 (2016-07-09): Alek.sys 5 replies, 7s — артефакт распознавания'
+- id: cls_e504_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 504
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep504 (2016-07-16): Alek.sys 2 replies, 4s — артефакт распознавания'
+- id: cls_e520_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 520
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep520 (2016-11-05): Alek.sys 9 replies, 12s — артефакт распознавания'
+- id: cls_e522_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 522
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep522 (2016-11-19): Alek.sys 4 replies, 6s — артефакт распознавания'
+- id: cls_e523_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 523
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep523 (2016-11-26): Alek.sys 6 replies, 8s — артефакт распознавания'
+- id: cls_e524_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 524
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep524 (2016-12-03): Alek.sys 7 replies, 9s — артефакт распознавания'
+- id: cls_e525_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 525
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep525 (2016-12-10): Alek.sys 8 replies, 15s — артефакт распознавания'
+- id: cls_e527_Alek.sys_to_artifact
+  type: rename_episode
+  episode: 527
+  from: Alek.sys
+  to: _artifact
+  reason: 'ep527 (2016-12-24): Alek.sys 6 replies, 10s — артефакт распознавания'
