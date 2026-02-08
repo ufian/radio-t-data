@@ -537,3 +537,12 @@ rules:
   from: SPEAKER_02
   to: Alek.sys
   reason: 'Вероятно Alek.sys. Alek.sys размечен только 0.6 мин. SPEAKER_02 чередуется с Alek.sys, технические реплики про iPad/размеры экранов.'
+
+# --- Исправление ошибочной разметки Marin_k_a ---
+
+- id: cls_e493_Marin_k_a_to_Ksenks
+  type: rename_episode
+  episode: 493
+  from: Marin_k_a
+  to: Ksenks
+  reason: 'Ошибочно размечена как Marin_k_a. На самом деле Ksenks (ep493 = 2016-04-30, Маринка уже не участвовала).'
