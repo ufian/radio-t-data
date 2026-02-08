@@ -7241,8 +7241,8 @@
         "former": false
       },
       {
-        "name": "Lavale",
-        "seconds": 410.8,
+        "name": "Olyapka",
+        "seconds": 630.3,
         "type": "host",
         "female": true,
         "former": true
@@ -7264,13 +7264,6 @@
       {
         "name": "Marin_k_a",
         "seconds": 246.5,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
-        "name": "Olyapka",
-        "seconds": 219.5,
         "type": "host",
         "female": true,
         "former": true
@@ -8540,7 +8533,7 @@
       },
       {
         "name": "natali_yandex",
-        "seconds": 285.0,
+        "seconds": 347.5,
         "type": "guest",
         "female": false,
         "former": false
@@ -9162,16 +9155,23 @@
     "date": "2012-09-15",
     "contributors": [
       {
-        "name": "Marin_k_a",
-        "seconds": 3796.3,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Umputun",
         "seconds": 3701.9,
         "type": "host",
+        "female": false,
+        "former": false
+      },
+      {
+        "name": "Ksenks",
+        "seconds": 3465.0,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
+        "name": "OlyaSexpertiza",
+        "seconds": 331.3,
+        "type": "guest",
         "female": false,
         "former": false
       }
@@ -9197,17 +9197,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 658.8,
+        "seconds": 904.7,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Lavale",
-        "seconds": 245.9,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -9976,15 +9969,8 @@
         "former": false
       },
       {
-        "name": "Marin_k_a",
-        "seconds": 561.7,
-        "type": "host",
-        "female": true,
-        "former": true
-      },
-      {
         "name": "Ksenks",
-        "seconds": 303.2,
+        "seconds": 864.8,
         "type": "host",
         "female": true,
         "former": false
@@ -10323,17 +10309,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 624.4,
+        "seconds": 753.3,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Lavale",
-        "seconds": 128.9,
-        "type": "host",
-        "female": true,
-        "former": true
       }
     ]
   },
@@ -11100,7 +11079,7 @@
       },
       {
         "name": "AlexeyAbashev",
-        "seconds": 978.4,
+        "seconds": 1241.9,
         "type": "guest",
         "female": false,
         "former": false
@@ -11108,13 +11087,6 @@
       {
         "name": "ViktorGamov",
         "seconds": 918.0,
-        "type": "guest",
-        "female": false,
-        "former": false
-      },
-      {
-        "name": "EldarMurtazin",
-        "seconds": 263.5,
         "type": "guest",
         "female": false,
         "former": false
@@ -11944,15 +11916,8 @@
       },
       {
         "name": "Gray",
-        "seconds": 1020.2,
+        "seconds": 1111.9,
         "type": "host",
-        "female": false,
-        "former": false
-      },
-      {
-        "name": "EldarMurtazin",
-        "seconds": 91.7,
-        "type": "guest",
         "female": false,
         "former": false
       }
@@ -12406,17 +12371,10 @@
       },
       {
         "name": "Ksenks",
-        "seconds": 517.4,
+        "seconds": 788.1,
         "type": "host",
         "female": true,
         "former": false
-      },
-      {
-        "name": "Marin_k_a",
-        "seconds": 270.6,
-        "type": "host",
-        "female": true,
-        "former": true
       },
       {
         "name": "ruslan_guest",
@@ -13154,7 +13112,7 @@
         "former": false
       },
       {
-        "name": "EldarMurtazin",
+        "name": "ViktorGamov",
         "seconds": 1179.3,
         "type": "guest",
         "female": false,
@@ -13571,14 +13529,7 @@
       },
       {
         "name": "alexey_bragin",
-        "seconds": 344.5,
-        "type": "guest",
-        "female": false,
-        "former": false
-      },
-      {
-        "name": "EldarMurtazin",
-        "seconds": 96.0,
+        "seconds": 440.5,
         "type": "guest",
         "female": false,
         "former": false
@@ -14169,14 +14120,7 @@
       },
       {
         "name": "denis_podcaster",
-        "seconds": 441.2,
-        "type": "guest",
-        "female": false,
-        "former": false
-      },
-      {
-        "name": "PetrDidenko",
-        "seconds": 410.5,
+        "seconds": 923.7,
         "type": "guest",
         "female": false,
         "former": false
