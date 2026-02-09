@@ -1752,3 +1752,11 @@ rules:
   from: AlexeyDruzhestvennyPodcast
   to: AlexeyAbashev
   reason: 'ep521: AlexeyDruzhestvennyPodcast = AlexeyAbashev из Разбора полётов'
+
+# Идентификация гостей в новых эпизодах
+- id: cls_e998_Guest1_to_AlekseyTypeScript
+  type: rename_episode
+  episode: 998
+  from: Guest1
+  to: AlekseyTypeScript
+  reason: 'ep998 (2026-01-31): Guest1 = Алексей, мейнтейнер Remark42, представляет TypeScript'

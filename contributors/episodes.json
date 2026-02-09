@@ -33503,5 +33503,87 @@
         "former": false
       }
     ]
+  },
+  {
+    "episode": 998,
+    "date": "2026-01-31",
+    "contributors": [
+      {
+        "name": "Gray",
+        "seconds": 3571.6,
+        "type": "host",
+        "female": false,
+        "former": false
+      },
+      {
+        "name": "Umputun",
+        "seconds": 2516.6,
+        "type": "host",
+        "female": false,
+        "former": false
+      },
+      {
+        "name": "Ksenks",
+        "seconds": 1724.5,
+        "type": "host",
+        "female": true,
+        "former": false
+      },
+      {
+        "name": "Alek.sys",
+        "seconds": 1520.8,
+        "type": "host",
+        "female": false,
+        "former": false
+      },
+      {
+        "name": "AlekseyTypeScript",
+        "seconds": 284.8,
+        "type": "guest",
+        "female": false,
+        "former": false
+      }
+    ]
+  },
+  {
+    "episode": 999,
+    "date": "2026-02-07",
+    "contributors": [
+      {
+        "name": "Umputun",
+        "seconds": 4046.3,
+        "type": "host",
+        "female": false,
+        "former": false
+      },
+      {
+        "name": "Bobuk",
+        "seconds": 2854.9,
+        "type": "host",
+        "female": false,
+        "former": false
+      },
+      {
+        "name": "Gray",
+        "seconds": 1994.9,
+        "type": "host",
+        "female": false,
+        "former": false
+      },
+      {
+        "name": "Alek.sys",
+        "seconds": 1114.5,
+        "type": "host",
+        "female": false,
+        "former": false
+      },
+      {
+        "name": "Ksenks",
+        "seconds": 974.2,
+        "type": "host",
+        "female": true,
+        "former": false
+      }
+    ]
   }
 ]
